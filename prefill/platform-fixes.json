@@ -373,6 +373,12 @@
   "tolgee": [
    "web",
    "server"
+  ],
+  "youcoded": [
+   "windows",
+   "mac",
+   "linux",
+   "android"
   ]
  }
 }
