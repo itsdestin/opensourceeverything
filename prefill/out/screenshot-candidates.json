@@ -1543,5 +1543,17 @@
   "https://raw.githubusercontent.com/yacy/yacy_search_server/HEAD/screenshots/screenshot_expert_crawl_start.png",
   "https://raw.githubusercontent.com/yacy/yacy_search_server/HEAD/screenshots/screenshot_index_browser.png"
  ],
- "zammad": []
+ "zammad": [],
+ "goose": [],
+ "youcoded": [
+  "https://raw.githubusercontent.com/itsdestin/youcoded/HEAD/docs/readme/empty-chat.webp",
+  "https://raw.githubusercontent.com/itsdestin/youcoded/HEAD/docs/readme/spreadsheet.webp",
+  "https://raw.githubusercontent.com/itsdestin/youcoded/HEAD/docs/readme/home.webp",
+  "https://raw.githubusercontent.com/itsdestin/youcoded/HEAD/docs/readme/finance.webp",
+  "https://youcoded.ai/og-image.png?v=7"
+ ],
+ "open-interpreter": [
+  "https://raw.githubusercontent.com/openinterpreter/openinterpreter/HEAD/docs-site/assets/open-interpreter-terminal-hero.png",
+  "https://www.openinterpreter.com/open-interpreter-social.jpg"
+ ]
 }

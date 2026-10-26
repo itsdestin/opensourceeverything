@@ -14,7 +14,9 @@ const HERE = dirname(fileURLToPath(import.meta.url));
 const ROOT = join(HERE, '..');
 const GH = process.env.GH_TOKEN;
 if (!GH) { console.error('Set GH_TOKEN (e.g. GH_TOKEN=$(gh auth token)).'); process.exit(1); }
-const projects = JSON.parse(readFileSync(join(ROOT, 'data/projects.json'), 'utf8')).projects;
+// --only "id1,id2": look up just these projects and merge them into the existing candidates (used when adding a few).
+const oi = process.argv.indexOf('--only'); const ONLY = oi > 0 ? new Set(process.argv[oi + 1].split(',')) : null;
+const projects = JSON.parse(readFileSync(join(ROOT, 'data/projects.json'), 'utf8')).projects.filter((p) => !ONLY || ONLY.has(p.id));
 
 const NOT_UI = /shields\.io|badge|badgen|\.svg(\?|$)|logo|icon|avatar|favicon|banner|sponsor|opencollective|contrib\.rocks|star-history|starchart|repobeats|codecov|buymeacoffee|ko-fi|patreon|liberapay|deploy|button|github-readme-stats|vercel\.com\/button|flathub|get-it-on|google-play|app-store|f-droid|weblate|translate|crowdin|discord|matrix\.to|reddit|mastodon|twitter|qr/i;
 const IMG_EXT = /\.(png|jpe?g|gif|webp)(\?|#|$)/i;
@@ -72,7 +74,8 @@ await Promise.all(Array.from({ length: 12 }, async () => {
     if (++done % 50 === 0) console.log(`${done}/${projects.length}`);
   }
 }));
-writeFileSync(join(HERE, 'out/screenshot-candidates.json'), JSON.stringify(result, null, 1));
+const candFile = join(HERE, 'out/screenshot-candidates.json');
+writeFileSync(candFile, JSON.stringify(ONLY ? { ...JSON.parse(readFileSync(candFile, 'utf8')), ...result } : result, null, 1));
 const n = Object.values(result);
 console.log(`screenshots: ${n.filter((x) => x.length).length} of ${n.length} projects have at least one (${n.reduce((s, x) => s + x.length, 0)} pictures)`);
 

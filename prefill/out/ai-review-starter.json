@@ -8526,5 +8526,200 @@
    "inference_geo": "global",
    "speed": "standard"
   }
+ },
+ {
+  "id": "starter:goose",
+  "name": "Goose",
+  "repo": "github.com/aaif-goose/goose",
+  "answer": {
+   "summary": "Goose is a general-purpose AI agent that runs on your own computer as a desktop app, a terminal tool, or an API. It is aimed at people who want an AI helper for research, writing, automation, data analysis, and coding tasks.",
+   "replaces": [
+    {
+     "closedApp": "Claude Cowork",
+     "fit": "partial",
+     "reason": "Both are AI agents that work on files and tasks on the user's machine, but the material given does not describe Claude Cowork's features, so the match is only a general one."
+    },
+    {
+     "closedApp": "ChatGPT agent",
+     "fit": "partial",
+     "reason": "Both are general AI agents that carry out tasks for the user, but the material given does not describe ChatGPT agent's features in detail, so the overlap is only general."
+    }
+   ],
+   "kind": "app",
+   "license": {
+    "verdict": "open",
+    "note": "The host reports Apache-2.0, an OSI-approved license, and nothing given contradicts it. The license file was not provided."
+   },
+   "groups": [
+    "ai-agents"
+   ],
+   "newGroup": null,
+   "unconfirmed": [
+    "Whether the desktop app, CLI and API are all under Apache-2.0 or whether any parts are separately licensed.",
+    "Exact features of Claude Cowork and ChatGPT agent, so the depth of the replacement match cannot be confirmed.",
+    "Whether the AI providers it connects to (such as Anthropic or OpenAI) require paid accounts or API keys beyond the software itself."
+   ]
+  },
+  "usage": {
+   "input_tokens": 5111,
+   "cache_creation_input_tokens": 0,
+   "cache_read_input_tokens": 0,
+   "cache_creation": {
+    "ephemeral_5m_input_tokens": 0,
+    "ephemeral_1h_input_tokens": 0
+   },
+   "output_tokens": 465,
+   "output_tokens_details": {
+    "thinking_tokens": 0
+   },
+   "service_tier": "standard",
+   "inference_geo": "global",
+   "speed": "standard"
+  }
+ },
+ {
+  "id": "starter:youcoded",
+  "name": "YouCoded",
+  "repo": "github.com/itsdestin/youcoded",
+  "answer": {
+   "summary": "YouCoded is a free AI assistant app for Windows, macOS, Linux and Android that can also be opened from a web browser on your network. It is aimed at students, professionals and anyone who uses AI regularly, and lets you pick which AI model powers it.",
+   "replaces": [
+    {
+     "closedApp": "ChatGPT",
+     "fit": "partial",
+     "reason": "The README says you can use a ChatGPT plan as the model behind YouCoded, so it works with ChatGPT rather than replacing its own service."
+    },
+    {
+     "closedApp": "Claude",
+     "fit": "partial",
+     "reason": "YouCoded can use Claude Code as an integration, but it is not a replacement for the Claude chat service itself."
+    },
+    {
+     "closedApp": "Google Gemini",
+     "fit": "no",
+     "reason": "The README does not mention Google Gemini as a supported model or replacement."
+    },
+    {
+     "closedApp": "GitHub Copilot",
+     "fit": "no",
+     "reason": "The README does not describe a coding-completion assistant comparable to GitHub Copilot."
+    },
+    {
+     "closedApp": "Cursor",
+     "fit": "no",
+     "reason": "The README does not describe a code editor comparable to Cursor."
+    },
+    {
+     "closedApp": "Windsurf",
+     "fit": "no",
+     "reason": "The README does not describe a code editor comparable to Windsurf."
+    },
+    {
+     "closedApp": "Claude Code",
+     "fit": "partial",
+     "reason": "YouCoded integrates Claude Code as a model option but does not replace it; the README says it needs a Claude Pro or Max plan for Claude Code."
+    },
+    {
+     "closedApp": "OpenAI Codex app",
+     "fit": "no",
+     "reason": "The README does not mention OpenAI Codex."
+    },
+    {
+     "closedApp": "Claude Cowork",
+     "fit": "partial",
+     "reason": "YouCoded has its own permission-based agent that uses tools and files, which is similar in spirit, but the README does not name Claude Cowork."
+    },
+    {
+     "closedApp": "ChatGPT agent",
+     "fit": "partial",
+     "reason": "YouCoded has a permission-based agent that works on files and can use a browser on desktop, which is similar in spirit to ChatGPT agent."
+    }
+   ],
+   "kind": "app",
+   "license": {
+    "verdict": "open",
+    "note": "The host reports MIT. The README says YouCoded-authored code is MIT but bundled third-party components keep their own licenses, including GPL/LGPL pieces in the Android build."
+   },
+   "groups": [
+    "ai-chat",
+    "ai-agents",
+    "ai-coding"
+   ],
+   "newGroup": null,
+   "unconfirmed": [
+    "Whether YouCoded works with Google Gemini",
+    "Whether YouCoded has a coding-completion feature like GitHub Copilot",
+    "Whether YouCoded is a code editor like Cursor or Windsurf",
+    "Whether YouCoded relates to OpenAI Codex",
+    "The exact scope of the agent compared with Claude Cowork and ChatGPT agent"
+   ]
+  },
+  "usage": {
+   "input_tokens": 7286,
+   "cache_creation_input_tokens": 0,
+   "cache_read_input_tokens": 0,
+   "cache_creation": {
+    "ephemeral_5m_input_tokens": 0,
+    "ephemeral_1h_input_tokens": 0
+   },
+   "output_tokens": 930,
+   "output_tokens_details": {
+    "thinking_tokens": 0
+   },
+   "service_tier": "standard",
+   "inference_geo": "global",
+   "speed": "standard"
+  }
+ },
+ {
+  "id": "starter:openinterpreter",
+  "name": "Open Interpreter",
+  "repo": "github.com/openinterpreter/openinterpreter",
+  "answer": {
+   "summary": "Open Interpreter is a coding assistant you run in a terminal, where it can read your project and run commands for you. It is aimed at programmers who want an AI agent that works well with lower-cost AI models.",
+   "replaces": [
+    {
+     "closedApp": "Claude Cowork",
+     "fit": "partial",
+     "reason": "Both are AI agents that act on files and run tasks for you, but the README describes Open Interpreter as a coding agent run in the terminal, not a general file and app assistant."
+    },
+    {
+     "closedApp": "ChatGPT agent",
+     "fit": "no",
+     "reason": "The README describes Open Interpreter as a coding agent. It does not say it browses the web or completes general tasks the way ChatGPT agent does."
+    }
+   ],
+   "kind": "developer_tool",
+   "license": {
+    "verdict": "open",
+    "note": "The host reports Apache-2.0, an OSI-approved license, and nothing given contradicts it. The README also states Apache-2.0."
+   },
+   "groups": [
+    "ai-coding",
+    "ai-agents"
+   ],
+   "newGroup": null,
+   "unconfirmed": [
+    "Whether it can work on non-coding files and apps outside the terminal, as the ai-agents group describes.",
+    "Whether the QA skill's browser and native app testing counts as general computer use.",
+    "Which model providers it works with beyond the OpenAI-compatible ones and Kimi, DeepSeek, and Z.AI guides mentioned."
+   ]
+  },
+  "usage": {
+   "input_tokens": 7071,
+   "cache_creation_input_tokens": 0,
+   "cache_read_input_tokens": 0,
+   "cache_creation": {
+    "ephemeral_5m_input_tokens": 0,
+    "ephemeral_1h_input_tokens": 0
+   },
+   "output_tokens": 1074,
+   "output_tokens_details": {
+    "thinking_tokens": 624
+   },
+   "service_tier": "standard",
+   "inference_geo": "global",
+   "speed": "standard"
+  }
  }
 ]

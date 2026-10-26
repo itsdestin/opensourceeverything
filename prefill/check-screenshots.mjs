@@ -13,7 +13,9 @@ const HERE = dirname(fileURLToPath(import.meta.url));
 const OUT = join(HERE, 'out');
 const apiKey = process.env.ANTHROPIC_API_KEY ?? readFileSync(join(homedir(), '.config/alternatives-map/anthropic-key'), 'utf8').trim();
 const client = new Anthropic({ apiKey, maxRetries: 3 });
-const candidates = JSON.parse(readFileSync(join(OUT, 'screenshot-candidates.json'), 'utf8'));
+// --only "id1,id2": judge just these projects' pictures and merge them into the existing screenshots.json.
+const oi = process.argv.indexOf('--only'); const ONLY = oi > 0 ? new Set(process.argv[oi + 1].split(',')) : null;
+const candidates = Object.fromEntries(Object.entries(JSON.parse(readFileSync(join(OUT, 'screenshot-candidates.json'), 'utf8'))).filter(([id]) => !ONLY || ONLY.has(id)));
 const names = new Map(JSON.parse(readFileSync(join(HERE, '..', 'data/projects.json'), 'utf8')).projects.map((p) => [p.id, p.name]));
 
 const SCHEMA = { type: 'object', additionalProperties: false, required: ['isInterface', 'quality'],
@@ -51,7 +53,7 @@ for (const [id, urls] of Object.entries(candidates)) {
   out[id] = verdicts.filter((v) => v.id === id && v.isInterface && v.quality !== 'poor')
     .sort((a, b) => rank[a.quality] - rank[b.quality] || urls.indexOf(a.url) - urls.indexOf(b.url)).slice(0, 4).map((v) => v.url);
 }
-writeFileSync(join(OUT, 'screenshots.json'), JSON.stringify(out, null, 1));
+writeFileSync(join(OUT, 'screenshots.json'), JSON.stringify(ONLY ? { ...JSON.parse(readFileSync(join(OUT, 'screenshots.json'), 'utf8')), ...out } : out, null, 1));
 const cost = verdicts.reduce((s, v) => s + ((v.usage?.input_tokens ?? 0) * 0.10 + (v.usage?.output_tokens ?? 0) * 0.50) / 1e6, 0);
 const have = Object.values(out).filter((x) => x.length).length;
 const msg = `\n## Screenshots (${new Date().toISOString().slice(0, 10)}, claude-haiku-5-5)\n\n- Looked at **${jobs.length}** candidate pictures in ${Math.round((Date.now() - started) / 1000)} seconds for **$${cost.toFixed(2)}** (${verdicts.filter((v) => v.error).length} couldn't be loaded).\n- **${have}** of ${Object.keys(out).length} projects have at least one real screenshot (${Object.values(out).reduce((s, x) => s + x.length, 0)} kept).\n`;

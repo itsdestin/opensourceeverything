@@ -4,6 +4,9 @@
 import { esc, url, ICON, SITE_URL, API_URL, codeUrl } from '../lib.mjs';
 import { altCard, appUrl, sortAlts } from '../cards.mjs';
 
+// WHY only the first letter, and not before a capital: "AI agents" and "PDF tools" keep their capitals mid-sentence.
+const midSentence = (name) => name.replace(/^[A-Z](?![A-Z])/, (c) => c.toLowerCase());
+
 function promptText(g, alts, full) {
   const ask = 'Compare it with my project or idea below. Tell me which projects overlap, what I could reuse instead of rewriting, and what mine does that none of them do.';
   if (!full) return `Read the list of open-source alternatives at ${SITE_URL}data/groups/${g.id}.json. ${ask}\n\nMy project or idea:\n`;
@@ -58,7 +61,7 @@ export default function groupPages(d) {
     <div>
       <section class="surface sec" id="build">
         <h2 class="h-large">Before you build</h2>
-        <p class="small2">Planning something for ${esc(g.name.toLowerCase())}? See what exists first, so you can reuse parts or explain what's different. Paste this into any AI assistant:</p>
+        <p class="small2">Planning something for ${esc(midSentence(g.name))}? See what exists first, so you can reuse parts or explain what's different. Paste this into any AI assistant:</p>
         <div class="lvl2 prompt" id="prompt-short">${esc(promptText(g, alts, false))}</div>
         <div id="prompt-full" hidden>${esc(promptText(g, alts, true))}</div>
         <div class="stack">

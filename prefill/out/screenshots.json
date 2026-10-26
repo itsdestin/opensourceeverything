@@ -870,5 +870,12 @@
   "https://raw.githubusercontent.com/yacy/yacy_search_server/HEAD/screenshots/screenshot_expert_crawl_start.png",
   "https://raw.githubusercontent.com/yacy/yacy_search_server/HEAD/screenshots/screenshot_index_browser.png"
  ],
- "zammad": []
+ "zammad": [],
+ "goose": [],
+ "youcoded": [
+  "https://raw.githubusercontent.com/itsdestin/youcoded/HEAD/docs/readme/empty-chat.webp",
+  "https://raw.githubusercontent.com/itsdestin/youcoded/HEAD/docs/readme/home.webp",
+  "https://raw.githubusercontent.com/itsdestin/youcoded/HEAD/docs/readme/finance.webp"
+ ],
+ "open-interpreter": []
 }

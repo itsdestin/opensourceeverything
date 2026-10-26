@@ -3324,7 +3324,7 @@
   {
    "id": "goose",
    "name": "Goose",
-   "summary": "",
+   "summary": "Goose is a general-purpose AI agent that runs on your own computer as a desktop app, a terminal tool, or an API. It is aimed at people who want an AI helper for research, writing, automation, data analysis, and coding tasks.",
    "kind": "app",
    "code": "github.com/aaif-goose/goose",
    "website": "https://goose-docs.ai/",
@@ -3335,7 +3335,11 @@
    "stars": 55735,
    "archived": false,
    "inactive": false,
-   "unconfirmed": [],
+   "unconfirmed": [
+    "Whether the desktop app, CLI and API are all under Apache-2.0 or whether any parts are separately licensed.",
+    "Exact features of Claude Cowork and ChatGPT agent, so the depth of the replacement match cannot be confirmed.",
+    "Whether the AI providers it connects to (such as Anthropic or OpenAI) require paid accounts or API keys beyond the software itself."
+   ],
    "source": "starter",
    "verified": false,
    "release": "https://github.com/aaif-goose/goose/releases/tag/v1.56.0",
@@ -6439,8 +6443,8 @@
   {
    "id": "open-interpreter",
    "name": "Open Interpreter",
-   "summary": "",
-   "kind": "app",
+   "summary": "Open Interpreter is a coding assistant you run in a terminal, where it can read your project and run commands for you. It is aimed at programmers who want an AI agent that works well with lower-cost AI models.",
+   "kind": "developer_tool",
    "code": "github.com/openinterpreter/openinterpreter",
    "website": "http://openinterpreter.com/",
    "download": null,
@@ -6450,7 +6454,11 @@
    "stars": 68674,
    "archived": false,
    "inactive": false,
-   "unconfirmed": [],
+   "unconfirmed": [
+    "Whether it can work on non-coding files and apps outside the terminal, as the ai-agents group describes.",
+    "Whether the QA skill's browser and native app testing counts as general computer use.",
+    "Which model providers it works with beyond the OpenAI-compatible ones and Kimi, DeepSeek, and Z.AI guides mentioned."
+   ],
    "source": "starter",
    "verified": false,
    "release": "https://github.com/openinterpreter/openinterpreter/releases/tag/rust-v0.0.56",
@@ -10061,7 +10069,7 @@
   {
    "id": "youcoded",
    "name": "YouCoded",
-   "summary": "Made by itsdestin, a r/TrueOpenSource moderator who also runs this site.",
+   "summary": "YouCoded is a free AI assistant app for Windows, macOS, Linux and Android that can also be opened from a web browser on your network. It is aimed at students, professionals and anyone who uses AI regularly, and lets you pick which AI model powers it. Made by itsdestin, a r/TrueOpenSource moderator who also runs this site.",
    "kind": "app",
    "code": "github.com/itsdestin/youcoded",
    "website": "https://youcoded.ai",
@@ -10072,11 +10080,21 @@
    "stars": 11,
    "archived": false,
    "inactive": false,
-   "unconfirmed": [],
+   "unconfirmed": [
+    "Whether YouCoded works with Google Gemini",
+    "Whether YouCoded has a coding-completion feature like GitHub Copilot",
+    "Whether YouCoded is a code editor like Cursor or Windsurf",
+    "Whether YouCoded relates to OpenAI Codex",
+    "The exact scope of the agent compared with Claude Cowork and ChatGPT agent"
+   ],
    "source": "starter",
    "verified": false,
    "release": "https://github.com/itsdestin/youcoded/releases/tag/v1.3.3",
-   "screenshots": []
+   "screenshots": [
+    "https://raw.githubusercontent.com/itsdestin/youcoded/HEAD/docs/readme/empty-chat.webp",
+    "https://raw.githubusercontent.com/itsdestin/youcoded/HEAD/docs/readme/home.webp",
+    "https://raw.githubusercontent.com/itsdestin/youcoded/HEAD/docs/readme/finance.webp"
+   ]
   },
   {
    "id": "yourls",
