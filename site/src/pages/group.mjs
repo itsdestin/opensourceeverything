@@ -2,7 +2,7 @@
 // Ported from mockups/group-page.html. Votes, comments, "still missing", suggest and report need the server,
 // so they only appear once API_URL is set (see lib.mjs).
 import { esc, url, ICON, SITE_URL, API_URL, codeUrl } from '../lib.mjs';
-import { altCard, appUrl, sortAlts } from '../cards.mjs';
+import { altCard, appUrl, sortAlts, deviceFilter } from '../cards.mjs';
 
 // WHY only the first letter, and not before a capital: "AI agents" and "PDF tools" keep their capitals mid-sentence.
 const midSentence = (name) => name.replace(/^[A-Z](?![A-Z])/, (c) => c.toLowerCase());
@@ -49,11 +49,11 @@ export default function groupPages(d) {
       <section class="surface sec">
         <div class="sec-head">
           <div><h2 class="h-large">Open alternatives<span class="count">${alts.length}</span></h2><p class="desc12">Open-source apps that replace <span data-compare-name>${esc(g.closed.length > 2 ? g.closed.slice(0, 2).join(', ') + ' and more' : g.closed.join(' and '))}</span></p></div>
-          ${alts.length > 1 ? `<div class="dd"><button class="select sm" type="button" data-menu="sortMenu" aria-haspopup="listbox" aria-expanded="false"><span data-sort-label>${SORTS[0][1]}</span>${ICON.chev}</button>
-            <div class="menu" id="sortMenu" role="listbox">${SORTS.map(([k, v], i) => `<button class="mi${i ? '' : ' sel'}" type="button" role="option" data-sort="${k}">${v}</button>`).join('')}</div></div>` : ''}
+          ${alts.length > 1 ? `<div class="tools">${deviceFilter('devMenu')}<div class="dd"><button class="select sm" type="button" data-menu="sortMenu" aria-haspopup="listbox" aria-expanded="false"><span data-sort-label>${SORTS[0][1]}</span>${ICON.chev}</button>
+            <div class="menu" id="sortMenu" role="listbox">${SORTS.map(([k, v], i) => `<button class="mi${i ? '' : ' sel'}" type="button" role="option" data-sort="${k}">${v}</button>`).join('')}</div></div></div>` : ''}
         </div>
         ${alts.length
-          ? `<div class="grid" data-alts>${alts.map((x, i) => altCard(x.p, x.a, i)).join('')}</div>`
+          ? `<div class="grid" data-alts>${alts.map((x, i) => altCard(x.p, x.a, i)).join('')}</div><div class="callout info" data-nomatch hidden>None of these match. Try another device.</div>`
           : `<div class="callout info">Nothing open does this job yet. That makes it a gap: if you're building one, <a href="${API_URL ? url(`g/${g.id}/#add`) : 'https://www.reddit.com/r/TrueOpenSource/'}" rel="noopener">${API_URL ? 'add it here' : 'share it on r/TrueOpenSource'}</a>.</div>`}
       </section>
     </div>

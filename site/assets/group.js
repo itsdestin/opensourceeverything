@@ -20,7 +20,26 @@
     const label = document.querySelector(`[data-sort="${key}"]`);
     document.querySelector('[data-sort-label]').textContent = label ? label.textContent : '';
   };
+  // "Works on" filter: hides cards that don't run on the chosen device; every list on the page follows it.
+  const APPS = ['windows', 'mac', 'linux', 'android', 'ios', 'web'];
+  const filterBy = (key) => {
+    document.querySelectorAll('[data-alts]').forEach((grid) => {
+      let shown = 0;
+      [...grid.children].forEach((c) => {
+        const pl = (c.dataset.platforms || '').split(' ');
+        const ok = !key || (key === 'noserver' ? pl.some((x) => APPS.includes(x)) : pl.includes(key));
+        c.hidden = !ok; if (ok) shown++;
+      });
+      const none = grid.nextElementSibling;
+      if (none && none.hasAttribute('data-nomatch')) none.hidden = shown > 0;
+    });
+    document.querySelectorAll('[data-device]').forEach((o) => o.classList.toggle('sel', o.dataset.device === key));
+    const opt = document.querySelector(`[data-device="${key}"]`);
+    document.querySelectorAll('[data-device-label]').forEach((l) => { l.textContent = key ? `Works on: ${opt.textContent}` : 'Works on: any device'; });
+  };
   document.addEventListener('click', (e) => {
+    const f = e.target.closest('[data-device]');
+    if (f) { filterBy(f.dataset.device); f.closest('.menu').classList.remove('open'); return; }
     const s = e.target.closest('[data-sort]');
     if (s) { sortBy(s.dataset.sort); s.closest('.menu').classList.remove('open'); }
   });

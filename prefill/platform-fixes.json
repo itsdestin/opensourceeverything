@@ -1,0 +1,32 @@
+{
+ "note": "Hand corrections to prefill/out/platforms.json for well-known projects the automatic passes got wrong or missed, usually because their apps ship from a different repo or their own website (Signal's listed code is only its Android app). Each entry replaces that project's device list. assemble.mjs applies it.",
+ "fixes": {
+  "libreoffice-writer": ["windows", "mac", "linux"],
+  "libreoffice-calc": ["windows", "mac", "linux"],
+  "libreoffice-impress": ["windows", "mac", "linux"],
+  "okular": ["windows", "mac", "linux"],
+  "gnumeric": ["linux"],
+  "signal": ["windows", "mac", "linux", "android", "ios"],
+  "brave": ["windows", "mac", "linux", "android", "ios"],
+  "delta-chat": ["windows", "mac", "linux", "android", "ios"],
+  "ungoogled-chromium": ["windows", "mac", "linux"],
+  "jitsi-meet": ["web", "android", "ios", "server"],
+  "element-call": ["web", "server"],
+  "kodi": ["windows", "mac", "linux", "android"],
+  "jellyfin": ["server", "android", "ios"],
+  "mattermost": ["windows", "mac", "linux", "android", "ios", "server"],
+  "zulip": ["windows", "mac", "linux", "android", "ios", "server"],
+  "organic-maps": ["android", "ios"],
+  "osmand": ["android", "ios"],
+  "mumble": ["windows", "mac", "linux"],
+  "ente-auth": ["windows", "mac", "linux", "android", "ios", "web"],
+  "ente-photos": ["windows", "mac", "linux", "android", "ios", "web"],
+  "immich": ["android", "ios", "server"],
+  "bitwarden": ["windows", "mac", "linux", "android", "ios", "web"],
+  "nextcloud": ["windows", "mac", "linux", "android", "ios", "server"],
+  "cryptpad": ["web", "server"],
+  "aider": ["windows", "mac", "linux"],
+  "continue": ["windows", "mac", "linux"],
+  "postmarketos": ["linux"]
+ }
+}

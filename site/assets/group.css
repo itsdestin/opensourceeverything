@@ -71,3 +71,8 @@ a.footchip { text-decoration:none; }
 a.chip { color:var(--fg-2); text-decoration:none; }
 a.chip:hover { border-color:var(--accent); }
 a.chip.hl { color:var(--on-accent); }
+
+/* The "Works on" filter sits beside the sort; on an app page, at the right of the top card. */
+.tools { display:flex; gap:8px; align-items:center; flex-wrap:wrap; justify-content:flex-end; }
+.card[hidden] { display:none; }
+.identity > .row { display:flex; justify-content:space-between; align-items:flex-start; gap:12px; }

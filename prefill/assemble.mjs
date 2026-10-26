@@ -141,6 +141,15 @@ if (existsSync(linksFile)) {
 const shotsFile = join(OUT, 'screenshots.json');
 if (existsSync(shotsFile)) { const shots = read(shotsFile); for (const p of projects.values()) p.screenshots = shots[p.id] ?? []; }
 
+// ── Devices (prefill/fetch-platforms.mjs + check-platforms.mjs, then hand fixes in prefill/platform-fixes.json) ──
+// WHY (Destin, Oct 27): "can I just install this on my laptop or phone?" is a newcomer's first question.
+const platFile = join(OUT, 'platforms.json');
+if (existsSync(platFile)) {
+  const plat = read(platFile); const fixes = read(join(HERE, 'platform-fixes.json')).fixes;
+  const ORDER = ['windows', 'mac', 'linux', 'android', 'ios', 'web', 'server'];
+  for (const p of projects.values()) p.platforms = (fixes[p.id] ?? plat[p.id]?.platforms ?? []).slice().sort((a, b) => ORDER.indexOf(a) - ORDER.indexOf(b));
+}
+
 // ── Write ──
 const groupList = [...groups.values()].sort((a, b) => categories.findIndex((c) => c.id === a.category) - categories.findIndex((c) => c.id === b.category));
 const unknownCat = groupList.filter((g) => !categories.some((c) => c.id === g.category));

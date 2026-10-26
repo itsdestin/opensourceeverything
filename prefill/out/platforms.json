@@ -1,8 +1,12 @@
 {
  "e-os": {
-  "platforms": [],
-  "evidence": [],
-  "sure": false
+  "platforms": [
+   "android"
+  ],
+  "evidence": [
+   "AI (Haiku): /e/OS is a de-Googled Android-based smartphone operating system, so it runs on Android phones; the summary does not mention iOS, desktop, web, or server use."
+  ],
+  "sure": true
  },
  "aegis": {
   "platforms": [
@@ -61,14 +65,26 @@
   "sure": true
  },
  "arch-linux": {
-  "platforms": [],
-  "evidence": [],
-  "sure": false
+  "platforms": [
+   "linux"
+  ],
+  "evidence": [
+   "AI (Haiku): Arch Linux is a Linux distribution, so it runs on Linux-based computers; the summary describes it as an operating system for personal computers, with no support for Windows, Mac, mobile, or web stated."
+  ],
+  "sure": true
  },
  "acebase": {
-  "platforms": [],
-  "evidence": [],
-  "sure": false
+  "platforms": [
+   "windows",
+   "mac",
+   "linux",
+   "web",
+   "server"
+  ],
+  "evidence": [
+   "AI (Haiku): README says it runs on Node.js anywhere (cloud, NAS, local server, PC/Mac, Raspberry Pi) and in the browser, but it is a developer library/server, not an installable end-user app, and no Android or iOS support is mentioned."
+  ],
+  "sure": true
  },
  "abilian-hop3": {
   "platforms": [
@@ -156,19 +172,36 @@
   "sure": true
  },
  "blender": {
-  "platforms": [],
-  "evidence": [],
-  "sure": false
+  "platforms": [
+   "windows",
+   "mac",
+   "linux"
+  ],
+  "evidence": [
+   "AI (Haiku): Blender is a desktop 3D application officially distributed for Windows, macOS and Linux; the summary and kind do not mention mobile, web or server versions."
+  ],
+  "sure": true
  },
  "ardour": {
-  "platforms": [],
-  "evidence": [],
-  "sure": false
+  "platforms": [
+   "windows",
+   "mac",
+   "linux"
+  ],
+  "evidence": [
+   "AI (Haiku): Ardour is a desktop audio workstation distributed for Windows, macOS and Linux; the README and summary do not mention mobile, web or server versions."
+  ],
+  "sure": true
  },
  "appsmith": {
-  "platforms": [],
-  "evidence": [],
-  "sure": false
+  "platforms": [
+   "web",
+   "server"
+  ],
+  "evidence": [
+   "AI (Haiku): Appsmith is used via a browser on Appsmith Cloud or self-hosted on your own server (Docker, Kubernetes, AWS AMI); no native desktop or mobile app is mentioned."
+  ],
+  "sure": true
  },
  "audacity": {
   "platforms": [
@@ -251,17 +284,23 @@
  },
  "bookstack": {
   "platforms": [
+   "web",
    "server"
   ],
   "evidence": [
-   "server: kind: self_hosted"
+   "server: kind: self_hosted",
+   "AI (Haiku): BookStack is a self-hosted PHP/Laravel web application that you install on your own server; once running, it is used through a web browser, with a public demo instance available."
   ],
-  "sure": false
+  "sure": true
  },
  "bootstrap": {
-  "platforms": [],
-  "evidence": [],
-  "sure": false
+  "platforms": [
+   "web"
+  ],
+  "evidence": [
+   "AI (Haiku): It is a library of SVG icons used in websites and apps via npm, CDN, or the public icons.getbootstrap.com browser site, with no standalone desktop or mobile app."
+  ],
+  "sure": true
  },
  "bitwarden": {
   "platforms": [
@@ -277,9 +316,13 @@
   "sure": true
  },
  "cachyos": {
-  "platforms": [],
-  "evidence": [],
-  "sure": false
+  "platforms": [
+   "linux"
+  ],
+  "evidence": [
+   "AI (Haiku): CachyOS is described as a Linux operating system built on Arch Linux, so it runs on computers as a Linux install."
+  ],
+  "sure": true
  },
  "beton-inspector": {
   "platforms": [
@@ -417,9 +460,14 @@
   "sure": true
  },
  "chatrwkv": {
-  "platforms": [],
-  "evidence": [],
-  "sure": false
+  "platforms": [
+   "windows",
+   "linux"
+  ],
+  "evidence": [
+   "AI (Haiku): The README gives Windows and Linux build/run instructions for ChatRWKV's Python scripts (including CUDA setup), but says nothing about macOS, and it is a developer-oriented script collection rather than an app for Android, iOS, or the web."
+  ],
+  "sure": true
  },
  "carrypass": {
   "platforms": [
@@ -516,14 +564,23 @@
   "sure": false
  },
  "cortex": {
-  "platforms": [],
-  "evidence": [],
-  "sure": false
+  "platforms": [
+   "server"
+  ],
+  "evidence": [
+   "AI (Haiku): Cortex is a server-side infrastructure tool that runs on your own AWS account via EKS, aimed at engineering teams, with no desktop, mobile, or browser client described."
+  ],
+  "sure": true
  },
  "debian": {
-  "platforms": [],
-  "evidence": [],
-  "sure": false
+  "platforms": [
+   "linux",
+   "server"
+  ],
+  "evidence": [
+   "AI (Haiku): Debian is a Linux distribution installed as an operating system on PCs and servers; the summary does not mention Windows, Mac, mobile, or browser use."
+  ],
+  "sure": true
  },
  "coolify": {
   "platforms": [
@@ -635,9 +692,13 @@
   "sure": false
  },
  "decap-cms": {
-  "platforms": [],
-  "evidence": [],
-  "sure": false
+  "platforms": [
+   "web"
+  ],
+  "evidence": [
+   "AI (Haiku): Decap CMS is a single-page web app loaded into a site's /admin path and used in a browser; the README mentions no native Windows, Mac, Linux, Android or iOS app, though it requires a site and Git repository to run against."
+  ],
+  "sure": true
  },
  "databend": {
   "platforms": [
@@ -758,18 +819,28 @@
   "sure": true
  },
  "element": {
-  "platforms": [],
-  "evidence": [],
-  "sure": false
- },
- "dyrector-io": {
   "platforms": [
+   "windows",
+   "mac",
+   "linux",
+   "web",
    "server"
   ],
   "evidence": [
-   "server: README: Docker / self-host mention"
+   "AI (Haiku): README covers a web client at app.element.io, a desktop app (Electron) for desktop OSes, and self-hosting; phone apps are separate Element X projects, not this one."
   ],
-  "sure": false
+  "sure": true
+ },
+ "dyrector-io": {
+  "platforms": [
+   "web",
+   "server"
+  ],
+  "evidence": [
+   "server: README: Docker / self-host mention",
+   "AI (Haiku): It is a self-hosted platform run on your own infrastructure via Docker/Kubernetes agents, and a SaaS version is available in the browser at app.dyrectorio.com, but no desktop or mobile app is mentioned."
+  ],
+  "sure": true
  },
  "element-call": {
   "platforms": [
@@ -781,9 +852,14 @@
   "sure": true
  },
  "fedora": {
-  "platforms": [],
-  "evidence": [],
-  "sure": false
+  "platforms": [
+   "linux",
+   "server"
+  ],
+  "evidence": [
+   "AI (Haiku): Fedora is a Linux operating system installed on desktops and computers, and the summary also lists a Fedora Server edition for running on your own server."
+  ],
+  "sure": true
  },
  "ente-photos": {
   "platforms": [
@@ -802,12 +878,14 @@
  },
  "erpnext": {
   "platforms": [
+   "web",
    "server"
   ],
   "evidence": [
-   "server: README: Docker / self-host mention"
+   "server: README: Docker / self-host mention",
+   "AI (Haiku): ERPNext is a self-hosted web app run on your own server via Docker or bench, and it is accessed through a browser; the README also mentions managed hosting on Frappe Cloud, but no native desktop or mobile app is described."
   ],
-  "sure": false
+  "sure": true
  },
  "ente-auth": {
   "platforms": [
@@ -826,21 +904,27 @@
  },
  "encore": {
   "platforms": [
+   "windows",
+   "mac",
+   "linux",
    "server"
   ],
   "evidence": [
-   "server: README: Docker / self-host mention"
+   "server: README: Docker / self-host mention",
+   "AI (Haiku): Encore's CLI installs on macOS, Linux and Windows per the README, and it can be self-hosted via Docker on a server; it is a developer backend framework, not an end-user app for phones or browsers."
   ],
-  "sure": false
+  "sure": true
  },
  "espocrm": {
   "platforms": [
+   "web",
    "server"
   ],
   "evidence": [
-   "server: kind: self_hosted"
+   "server: kind: self_hosted",
+   "AI (Haiku): EspoCRM is a self-hosted PHP web application (SPA frontend with REST API) installed on your own server via Docker or manual setup, and then used through a browser; it is not a desktop or mobile app."
   ],
-  "sure": false
+  "sure": true
  },
  "etherpad": {
   "platforms": [
@@ -887,18 +971,31 @@
   "sure": true
  },
  "filestash": {
-  "platforms": [],
-  "evidence": [],
-  "sure": false
- },
- "evidence": {
   "platforms": [
+   "windows",
+   "mac",
+   "linux",
+   "android",
+   "web",
    "server"
   ],
   "evidence": [
-   "server: README: Docker / self-host mention"
+   "AI (Haiku): README lists a web client, native sync clients for mac, windows, linux and android, and Filestash itself is self-hosted on your own server; no iOS client is mentioned."
   ],
-  "sure": false
+  "sure": true
+ },
+ "evidence": {
+  "platforms": [
+   "windows",
+   "mac",
+   "linux",
+   "server"
+  ],
+  "evidence": [
+   "server: README: Docker / self-host mention",
+   "AI (Haiku): The README gives install commands for macOS/Linux and Windows, so it runs as a desktop CLI on those systems; hosting on Evidence Studio or self-hosting only publishes the finished reports."
+  ],
+  "sure": true
  },
  "firecamp": {
   "platforms": [
@@ -914,9 +1011,17 @@
   "sure": true
  },
  "firefox": {
-  "platforms": [],
-  "evidence": [],
-  "sure": false
+  "platforms": [
+   "windows",
+   "mac",
+   "linux",
+   "android",
+   "ios"
+  ],
+  "evidence": [
+   "AI (Haiku): Summary calls it an everyday browser for anyone; README confirms it is a web browser from Mozilla, but does not explicitly list platforms, so the list reflects Firefox's known desktop and mobile releases."
+  ],
+  "sure": true
  },
  "florisboard": {
   "platforms": [
@@ -960,12 +1065,14 @@
  },
  "funkwhale": {
   "platforms": [
+   "web",
    "server"
   ],
   "evidence": [
-   "server: kind: self_hosted"
+   "server: kind: self_hosted",
+   "AI (Haiku): Funkwhale is a self-hosted server application (kind: self_hosted) that users access through a browser web interface; the README is unavailable so no client apps for desktop or mobile are confirmed."
   ],
-  "sure": false
+  "sure": true
  },
  "fossdroid": {
   "platforms": [
@@ -1009,9 +1116,15 @@
   "sure": true
  },
  "gimp": {
-  "platforms": [],
-  "evidence": [],
-  "sure": false
+  "platforms": [
+   "windows",
+   "mac",
+   "linux"
+  ],
+  "evidence": [
+   "AI (Haiku): The summary describes GIMP as a desktop image editor, and GIMP is known to be officially available for Windows, macOS and Linux, though the README provided was not available to confirm this directly."
+  ],
+  "sure": true
  },
  "formbricks": {
   "platforms": [
@@ -1035,12 +1148,14 @@
  },
  "friendica": {
   "platforms": [
+   "web",
    "server"
   ],
   "evidence": [
-   "server: kind: self_hosted"
+   "server: kind: self_hosted",
+   "AI (Haiku): Users join existing public Friendica servers through a web browser, and the README also describes setting up your own Friendica instance on a server; no native desktop or mobile app is mentioned."
   ],
-  "sure": false
+  "sure": true
  },
  "gnumeric": {
   "platforms": [],
@@ -1084,17 +1199,23 @@
  },
  "gathio": {
   "platforms": [
+   "web",
    "server"
   ],
   "evidence": [
-   "server: kind: self_hosted"
+   "server: kind: self_hosted",
+   "AI (Haiku): Gathio is used via the hosted website at gath.io (web) or self-hosted on your own server; no desktop or mobile app is mentioned."
   ],
-  "sure": false
+  "sure": true
  },
  "grapheneos": {
-  "platforms": [],
-  "evidence": [],
-  "sure": false
+  "platforms": [
+   "android"
+  ],
+  "evidence": [
+   "AI (Haiku): GrapheneOS is a mobile OS that runs on Google Pixel phones, so the only supported platform is Android devices."
+  ],
+  "sure": true
  },
  "fusio": {
   "platforms": [
@@ -1179,21 +1300,25 @@
  },
  "gitlab": {
   "platforms": [
+   "linux",
    "server"
   ],
   "evidence": [
-   "server: kind: self_hosted"
+   "server: kind: self_hosted",
+   "AI (Haiku): GitLab is self-hosted and installed via Omnibus Debian/RPM packages on Ubuntu/Debian/CentOS/RHEL/OpenSUSE servers; it is not a Windows, Mac, or mobile app."
   ],
-  "sure": false
+  "sure": true
  },
  "gitlab-community-edition": {
   "platforms": [
+   "linux",
    "server"
   ],
   "evidence": [
-   "server: kind: self_hosted"
+   "server: kind: self_hosted",
+   "AI (Haiku): README says install via Omnibus Debian/RPM packages on Ubuntu/Debian/CentOS/RHEL/OpenSUSE; it is a self-hosted server app, not a desktop or mobile app."
   ],
-  "sure": false
+  "sure": true
  },
  "forgejo": {
   "platforms": [
@@ -1207,9 +1332,13 @@
   "sure": true
  },
  "graphite": {
-  "platforms": [],
-  "evidence": [],
-  "sure": false
+  "platforms": [
+   "web"
+  ],
+  "evidence": [
+   "AI (Haiku): The README links to a hosted editor at editor.graphite.art, which is usable in a browser with no install; no native desktop, mobile, or self-hosted server build is mentioned."
+  ],
+  "sure": true
  },
  "gravitl": {
   "platforms": [
@@ -1239,21 +1368,25 @@
  },
  "growthbook": {
   "platforms": [
+   "web",
    "server"
   ],
   "evidence": [
-   "server: README: Docker / self-host mention"
+   "server: README: Docker / self-host mention",
+   "AI (Haiku): GrowthBook is self-hosted via Docker on your own server (localhost:3000 in README) and also offered as a hosted cloud web app; it is not an installable desktop or mobile app."
   ],
-  "sure": false
+  "sure": true
  },
  "hedgedoc": {
   "platforms": [
+   "web",
    "server"
   ],
   "evidence": [
-   "server: kind: self_hosted"
+   "server: kind: self_hosted",
+   "AI (Haiku): HedgeDoc is a self-hosted web app you install on your own server and then use in a browser; the README points to a demo instance and install guide, not a native desktop or mobile app."
   ],
-  "sure": false
+  "sure": true
  },
  "grist": {
   "platforms": [
@@ -1279,12 +1412,15 @@
  },
  "home-assistant": {
   "platforms": [
+   "linux",
+   "web",
    "server"
   ],
   "evidence": [
-   "server: kind: self_hosted"
+   "server: kind: self_hosted",
+   "AI (Haiku): Home Assistant is run on a Raspberry Pi or local server (server, linux) and its UI is used through a browser (web); the README does not claim windows, mac, android or ios support."
   ],
-  "sure": false
+  "sure": true
  },
  "heliboard": {
   "platforms": [
@@ -1315,12 +1451,17 @@
  },
  "hoppscotch": {
   "platforms": [
+   "windows",
+   "mac",
+   "linux",
+   "web",
    "server"
   ],
   "evidence": [
-   "server: README: Docker / self-host mention"
+   "server: README: Docker / self-host mention",
+   "AI (Haiku): README lists web at hoppscotch.io, Windows/Linux/macOS desktop apps, and self-hosting via Docker/self-host docs; no mobile app mentioned."
   ],
-  "sure": false
+  "sure": true
  },
  "illa": {
   "platforms": [
@@ -1370,23 +1511,37 @@
   "sure": false
  },
  "invokeai": {
-  "platforms": [],
-  "evidence": [],
-  "sure": false
+  "platforms": [
+   "windows",
+   "mac",
+   "linux"
+  ],
+  "evidence": [
+   "AI (Haiku): The README says to download the Launcher and install it on compatible hardware, and the docs cover installation, but it does not explicitly name Windows, Mac or Linux and offers no hosted public site, mobile app or server-only option."
+  ],
+  "sure": true
  },
  "indico": {
   "platforms": [
+   "web",
    "server"
   ],
   "evidence": [
-   "server: kind: self_hosted"
+   "server: kind: self_hosted",
+   "AI (Haiku): Indico is a self-hosted, web-based event management tool installed on your own server (per the kind and installation guides); users access it through a browser, with no native Windows, Mac, Linux, Android or iOS app mentioned."
   ],
-  "sure": false
+  "sure": true
  },
  "kdenlive": {
-  "platforms": [],
-  "evidence": [],
-  "sure": false
+  "platforms": [
+   "windows",
+   "mac",
+   "linux"
+  ],
+  "evidence": [
+   "AI (Haiku): Kdenlive is a desktop video editor; the summary describes it as software people run on their own computer, and it is known to ship for Windows, macOS and Linux, though the README was unavailable."
+  ],
+  "sure": true
  },
  "insomnia": {
   "platforms": [
@@ -1468,9 +1623,15 @@
   "sure": true
  },
  "krita": {
-  "platforms": [],
-  "evidence": [],
-  "sure": false
+  "platforms": [
+   "windows",
+   "mac",
+   "linux"
+  ],
+  "evidence": [
+   "AI (Haiku): Summary describes Krita as a desktop drawing program, but it does not explicitly list platforms; known Krita releases run on Windows, macOS and Linux."
+  ],
+  "sure": true
  },
  "jenkins": {
   "platforms": [
@@ -1495,9 +1656,15 @@
   "sure": true
  },
  "inkscape": {
-  "platforms": [],
-  "evidence": [],
-  "sure": false
+  "platforms": [
+   "windows",
+   "mac",
+   "linux"
+  ],
+  "evidence": [
+   "AI (Haiku): The README links to a download page and the summary describes it as a desktop drawing program, but it does not explicitly name Windows, macOS, or Linux, so these are inferred from the download link and common knowledge of Inkscape's desktop releases."
+  ],
+  "sure": true
  },
  "kanboard": {
   "platforms": [
@@ -1567,9 +1734,15 @@
   "sure": true
  },
  "libreoffice-calc": {
-  "platforms": [],
-  "evidence": [],
-  "sure": false
+  "platforms": [
+   "windows",
+   "mac",
+   "linux"
+  ],
+  "evidence": [
+   "AI (Haiku): The summary describes an app for people working on their own computer, which points to desktop systems; the summary and README don't name specific operating systems."
+  ],
+  "sure": true
  },
  "libreoffice-impress": {
   "platforms": [],
@@ -1644,14 +1817,22 @@
   "sure": true
  },
  "lineageos": {
-  "platforms": [],
-  "evidence": [],
-  "sure": false
+  "platforms": [
+   "android"
+  ],
+  "evidence": [
+   "AI (Haiku): LineageOS is a replacement OS for Android phones and tablets, so it runs on Android devices; no desktop, iOS, web, or server support is stated."
+  ],
+  "sure": true
  },
  "linux-mint": {
-  "platforms": [],
-  "evidence": [],
-  "sure": false
+  "platforms": [
+   "linux"
+  ],
+  "evidence": [
+   "AI (Haiku): Linux Mint is a desktop operating system distributed as an installable Linux distribution for laptops and computers, so it runs on Linux-based installs."
+  ],
+  "sure": true
  },
  "leon": {
   "platforms": [
@@ -1704,21 +1885,26 @@
  },
  "limesurvey": {
   "platforms": [
+   "web",
    "server"
   ],
   "evidence": [
-   "server: kind: self_hosted"
+   "server: kind: self_hosted",
+   "AI (Haiku): LimeSurvey is a self-hosted PHP web application run on your own web server with a database, and the hosted SaaS and demo instances are accessed via a browser; no native windows, mac, linux, android or ios app is described."
   ],
-  "sure": false
+  "sure": true
  },
  "librespeed": {
   "platforms": [
+   "android",
+   "web",
    "server"
   ],
   "evidence": [
-   "server: kind: self_hosted"
+   "server: kind: self_hosted",
+   "AI (Haiku): The README says it runs in all modern browsers including mobile (web), self-hosting needs a server (server), and it links an Android client app template (android); no Windows, Mac, Linux desktop or iOS app is mentioned."
   ],
-  "sure": false
+  "sure": true
  },
  "libresign": {
   "platforms": [
@@ -1826,9 +2012,13 @@
   "sure": true
  },
  "lowdefy": {
-  "platforms": [],
-  "evidence": [],
-  "sure": false
+  "platforms": [
+   "server"
+  ],
+  "evidence": [
+   "AI (Haiku): Lowdefy is a developer framework run via npx/pnpm locally or deployed on Node.js servers; it is not a consumer app, and the README does not claim desktop or mobile installers, though it runs in a browser once served."
+  ],
+  "sure": true
  },
  "manticore-search": {
   "platforms": [
@@ -1841,12 +2031,14 @@
  },
  "logto": {
   "platforms": [
+   "web",
    "server"
   ],
   "evidence": [
-   "server: README: Docker / self-host mention"
+   "server: README: Docker / self-host mention",
+   "AI (Haiku): Logto is a self-hosted auth server run via Docker or Node.js (server), and it is also offered as a hosted cloud service accessed in a browser (web); it is aimed at developers rather than end-user desktop or mobile apps."
   ],
-  "sure": false
+  "sure": true
  },
  "mastodon": {
   "platforms": [
@@ -1858,9 +2050,15 @@
   "sure": true
  },
  "librewolf": {
-  "platforms": [],
-  "evidence": [],
-  "sure": false
+  "platforms": [
+   "windows",
+   "mac",
+   "linux"
+  ],
+  "evidence": [
+   "AI (Haiku): README lists Windows setup.exe/portable builds, macOS .dmg builds via BSYS6, and Linux packages (AppImage, Flathub, Arch, deb/rpm), with no Android or iOS support mentioned."
+  ],
+  "sure": true
  },
  "matano": {
   "platforms": [
@@ -1876,9 +2074,13 @@
   "sure": true
  },
  "medusa": {
-  "platforms": [],
-  "evidence": [],
-  "sure": false
+  "platforms": [
+   "server"
+  ],
+  "evidence": [
+   "AI (Haiku): Medusa is a developer framework run as a Node.js server with PostgreSQL, deployed locally or via Medusa Cloud, not an end-user app for any device."
+  ],
+  "sure": true
  },
  "mediawiki": {
   "platforms": [
@@ -1891,12 +2093,14 @@
  },
  "mbin": {
   "platforms": [
+   "web",
    "server"
   ],
   "evidence": [
-   "server: kind: self_hosted"
+   "server: kind: self_hosted",
+   "AI (Haiku): Mbin is a self-hosted server application (installed via bare metal or Docker) that users access through a browser at public instances; no native Windows, mac, Linux desktop, Android, or iOS app is described."
   ],
-  "sure": false
+  "sure": true
  },
  "mattermost": {
   "platforms": [
@@ -1933,12 +2137,17 @@
  },
  "meshcentral": {
   "platforms": [
+   "windows",
+   "mac",
+   "linux",
+   "android",
    "server"
   ],
   "evidence": [
-   "server: kind: self_hosted"
+   "server: kind: self_hosted",
+   "AI (Haiku): The server runs on Windows, Linux and macOS per the README videos, agents are installed on computers, and an Android agent is mentioned; the server is self-hosted, and browser access is via the self-run web server."
   ],
-  "sure": false
+  "sure": true
  },
  "memos": {
   "platforms": [
@@ -1956,9 +2165,13 @@
   "sure": true
  },
  "metriql": {
-  "platforms": [],
-  "evidence": [],
-  "sure": false
+  "platforms": [
+   "server"
+  ],
+  "evidence": [
+   "AI (Haiku): MetriQL is a Java/Maven developer tool run locally from source or deployed as a service; the README mentions no desktop, mobile, or hosted web app, only building it and connecting it to your own database and BI tools."
+  ],
+  "sure": true
  },
  "mlcraft": {
   "platforms": [
@@ -1993,12 +2206,16 @@
  },
  "moinmoin": {
   "platforms": [
+   "windows",
+   "mac",
+   "linux",
    "server"
   ],
   "evidence": [
-   "server: kind: self_hosted"
+   "server: kind: self_hosted",
+   "AI (Haiku): README says it runs on all common operating systems (Windows, macOS, Linux) and is self-hosted on a laptop, home server, or intranet, so it needs a server install; no Android or iOS support is mentioned."
   ],
-  "sure": false
+  "sure": true
  },
  "mumble": {
   "platforms": [
@@ -2013,17 +2230,23 @@
  },
  "metabase": {
   "platforms": [
+   "web",
    "server"
   ],
   "evidence": [
-   "server: README: Docker / self-host mention"
+   "server: README: Docker / self-host mention",
+   "AI (Haiku): Metabase is used via a browser (hosted Metabase Cloud or self-hosted web app) and must be self-hosted on a server, with Docker and install guides; no native desktop or mobile app is mentioned."
   ],
-  "sure": false
+  "sure": true
  },
  "monomap": {
-  "platforms": [],
-  "evidence": [],
-  "sure": false
+  "platforms": [
+   "web"
+  ],
+  "evidence": [
+   "AI (Haiku): MonoMap is a browser app; it runs in any modern browser with offline storage in IndexedDB, but the README describes no native desktop or mobile installer."
+  ],
+  "sure": true
  },
  "mypaint": {
   "platforms": [
@@ -2047,12 +2270,15 @@
  },
  "nexopos": {
   "platforms": [
+   "windows",
+   "web",
    "server"
   ],
   "evidence": [
-   "server: README: Docker / self-host mention"
+   "server: README: Docker / self-host mention",
+   "AI (Haiku): NexoPOS runs as a self-hosted Laravel app on a server (PHP/MariaDB, or Docker/InstaPods), has a Windows all-in-one edition, and is available as hosted NexoPOS Cloud in a browser; no Mac, Linux desktop, Android or iOS app is mentioned."
   ],
-  "sure": false
+  "sure": true
  },
  "newpipe": {
   "platforms": [
@@ -2064,9 +2290,14 @@
   "sure": true
  },
  "netnewswire": {
-  "platforms": [],
-  "evidence": [],
-  "sure": false
+  "platforms": [
+   "mac",
+   "ios"
+  ],
+  "evidence": [
+   "AI (Haiku): The README says NetNewsWire is a feed reader for macOS and iOS, and the summary says Mac, iPhone and iPad."
+  ],
+  "sure": true
  },
  "netbird": {
   "platforms": [
@@ -2116,30 +2347,38 @@
  },
  "nextcloud": {
   "platforms": [
+   "web",
    "server"
   ],
   "evidence": [
-   "server: kind: self_hosted"
+   "server: kind: self_hosted",
+   "AI (Haiku): Nextcloud Server is installed on your own server (or hosted by a provider) and accessed through a browser; the README mentions server installs and provider hosting but does not explicitly name desktop or mobile client apps."
   ],
-  "sure": false
+  "sure": true
  },
  "nextcloud-calendar": {
   "platforms": [
+   "web",
    "server"
   ],
   "evidence": [
-   "server: kind: self_hosted"
+   "server: kind: self_hosted",
+   "AI (Haiku): Nextcloud Calendar is a Nextcloud app run on a self-hosted Nextcloud server and used via a web browser; no native desktop or mobile app is described."
   ],
-  "sure": false
+  "sure": true
  },
  "neo4j": {
   "platforms": [
+   "windows",
+   "mac",
+   "linux",
    "server"
   ],
   "evidence": [
-   "server: kind: self_hosted"
+   "server: kind: self_hosted",
+   "AI (Haiku): README shows running the standalone server on Linux-like systems and Windows (bin\\neo4j-admin), macOS is mentioned for building and Neo4j Desktop, and the kind is self_hosted, so server applies too."
   ],
-  "sure": false
+  "sure": true
  },
  "nextcloud-forms": {
   "platforms": [
@@ -2152,12 +2391,16 @@
  },
  "nextcloud-notes": {
   "platforms": [
+   "android",
+   "ios",
+   "web",
    "server"
   ],
   "evidence": [
-   "server: kind: self_hosted"
+   "server: kind: self_hosted",
+   "AI (Haiku): The Notes app runs on a self-hosted Nextcloud server and is accessed via a browser; the README links official Android and iOS client apps that sync with it."
   ],
-  "sure": false
+  "sure": true
  },
  "okular": {
   "platforms": [],
@@ -2223,17 +2466,25 @@
  },
  "notabase": {
   "platforms": [
+   "web",
    "server"
   ],
   "evidence": [
-   "server: README: Docker / self-host mention"
+   "server: README: Docker / self-host mention",
+   "AI (Haiku): Hosted at notabase.io in a browser and installable as a PWA, and can be self-hosted on your own server, though self-hosting requires setting up a Supabase backend, which is not an ordinary-user task."
   ],
-  "sure": false
+  "sure": true
  },
  "node-red": {
-  "platforms": [],
-  "evidence": [],
-  "sure": false
+  "platforms": [
+   "windows",
+   "mac",
+   "linux"
+  ],
+  "evidence": [
+   "AI (Haiku): Installed via npm and run locally, then opened in a browser at localhost; the README does not explicitly name operating systems, so support is inferred from its Node.js-based install, and it is not a public hosted web app or mobile app."
+  ],
+  "sure": true
  },
  "notesnook": {
   "platforms": [
@@ -2252,12 +2503,14 @@
  },
  "odoo": {
   "platforms": [
+   "web",
    "server"
   ],
   "evidence": [
-   "server: kind: self_hosted"
+   "server: kind: self_hosted",
+   "AI (Haiku): Odoo is a self-hosted web-based suite run on your own server and used through a browser; the README mentions a standard installation and documentation but names no desktop or mobile app."
   ],
-  "sure": false
+  "sure": true
  },
  "nuclei": {
   "platforms": [
@@ -2485,21 +2738,25 @@
  },
  "orbit": {
   "platforms": [
+   "web",
    "server"
   ],
   "evidence": [
-   "server: README: Docker / self-host mention"
+   "server: README: Docker / self-host mention",
+   "AI (Haiku): Orbit has no installable desktop or mobile app; it is used in a browser via a hosted live demo or self-hosted on your own server (Vercel, Docker, or Bun)."
   ],
-  "sure": false
+  "sure": true
  },
  "openstreetmap": {
   "platforms": [
+   "web",
    "server"
   ],
   "evidence": [
-   "server: kind: self_hosted"
+   "server: kind: self_hosted",
+   "AI (Haiku): The README describes a Ruby on Rails application powering the openstreetmap.org website, usable in a browser, and a self-hosted installation requiring PostgreSQL and a server; no desktop or mobile app is mentioned."
   ],
-  "sure": false
+  "sure": true
  },
  "owncloud": {
   "platforms": [
@@ -2604,12 +2861,14 @@
  },
  "peertube": {
   "platforms": [
+   "web",
    "server"
   ],
   "evidence": [
-   "server: kind: self_hosted"
+   "server: kind: self_hosted",
+   "AI (Haiku): PeerTube is self-hosted server software run on your own server (production guide, Docker, YunoHost), and its users access it through a browser on public instances; the README does not mention native Windows, Mac, Linux desktop, Android or iOS apps."
   ],
-  "sure": false
+  "sure": true
  },
  "peon": {
   "platforms": [
@@ -2633,12 +2892,14 @@
  },
  "penpot": {
   "platforms": [
+   "web",
    "server"
   ],
   "evidence": [
-   "server: README: Docker / self-host mention"
+   "server: README: Docker / self-host mention",
+   "AI (Haiku): Penpot runs in the browser at design.penpot.app (SaaS) and can be self-hosted on your own servers via Docker or Kubernetes; no native desktop or mobile app is mentioned in the README."
   ],
-  "sure": false
+  "sure": true
  },
  "postmarketos": {
   "platforms": [],
@@ -2646,14 +2907,23 @@
   "sure": false
  },
  "payload": {
-  "platforms": [],
-  "evidence": [],
-  "sure": false
+  "platforms": [
+   "server"
+  ],
+  "evidence": [
+   "AI (Haiku): Payload is a developer CMS/framework (Next.js, npm) that developers install and deploy on their own server or serverless hosting; it is not an end-user app for any device, though a deployed site can be reached via web."
+  ],
+  "sure": true
  },
  "pingcap": {
-  "platforms": [],
-  "evidence": [],
-  "sure": false
+  "platforms": [
+   "web",
+   "server"
+  ],
+  "evidence": [
+   "AI (Haiku): TiDB is a distributed database meant to run on servers, Kubernetes, or clusters, with no end-user desktop or mobile app; ordinary people can only use it via TiDB Cloud's hosted service (web) or by self-hosting it on a server."
+  ],
+  "sure": true
  },
  "plane": {
   "platforms": [
@@ -2683,9 +2953,13 @@
   "sure": false
  },
  "plasmic": {
-  "platforms": [],
-  "evidence": [],
-  "sure": false
+  "platforms": [
+   "web"
+  ],
+  "evidence": [
+   "AI (Haiku): Plasmic is used through its hosted web studio at plasmic.app and produces sites that run in browsers; the README does not describe a desktop, mobile, or self-hosted installable app for end users."
+  ],
+  "sure": true
  },
  "pocket-casts": {
   "platforms": [
@@ -2835,17 +3109,24 @@
  },
  "review-board": {
   "platforms": [
+   "web",
    "server"
   ],
   "evidence": [
-   "server: kind: self_hosted"
+   "server: kind: self_hosted",
+   "AI (Haiku): Review Board is a self-hosted web app installed on your own server (kind self_hosted), and it is used through a browser; RBTools CLI on Windows/Linux/Mac is a separate client, not the server itself."
   ],
-  "sure": false
+  "sure": true
  },
  "reveal-js": {
-  "platforms": [],
-  "evidence": [],
-  "sure": false
+  "platforms": [
+   "web",
+   "server"
+  ],
+  "evidence": [
+   "AI (Haiku): reveal.js runs in any web browser (it is an HTML framework) and is self-hosted by installing it on a server or local machine, but the README does not claim native windows, mac, linux, android, or ios apps."
+  ],
+  "sure": true
  },
  "rawtherapee": {
   "platforms": [
@@ -2924,9 +3205,15 @@
   "sure": true
  },
  "scribus": {
-  "platforms": [],
-  "evidence": [],
-  "sure": false
+  "platforms": [
+   "windows",
+   "mac",
+   "linux"
+  ],
+  "evidence": [
+   "AI (Haiku): The README does not list platforms explicitly, but Scribus is a known desktop application available for Windows, macOS and Linux, as stated in the summary's desktop publishing context."
+  ],
+  "sure": true
  },
  "saleor": {
   "platforms": [
@@ -2939,12 +3226,15 @@
  },
  "searxng": {
   "platforms": [
+   "linux",
+   "web",
    "server"
   ],
   "evidence": [
-   "server: kind: self_hosted"
+   "server: kind: self_hosted",
+   "AI (Haiku): SearXNG is self-hosted on a server (installation guide, Docker/Linux setup) and is used via public instances in a browser; the README does not mention Windows, Mac, Android or iOS apps."
   ],
-  "sure": false
+  "sure": true
  },
  "shotcut": {
   "platforms": [
@@ -2961,12 +3251,19 @@
  },
  "seafile": {
   "platforms": [
+   "windows",
+   "mac",
+   "linux",
+   "android",
+   "ios",
+   "web",
    "server"
   ],
   "evidence": [
-   "server: kind: self_hosted"
+   "server: kind: self_hosted",
+   "AI (Haiku): README lists desktop sync client, Android and iOS apps, a web UI (Seahub) and server core; the kind is self_hosted so server is included, and the web UI is usable in a browser."
   ],
-  "sure": false
+  "sure": true
  },
  "shynet": {
   "platforms": [
@@ -3105,9 +3402,13 @@
   "sure": true
  },
  "slidev": {
-  "platforms": [],
-  "evidence": [],
-  "sure": false
+  "platforms": [
+   "web"
+  ],
+  "evidence": [
+   "AI (Haiku): The README offers a free hosted try-it-online option at sli.dev/new (via StackBlitz), but it does not explicitly say it runs on Windows, Mac, or Linux; it is a Node.js CLI installed with npm, which the rules do not count as a platform claim."
+  ],
+  "sure": true
  },
  "solidping": {
   "platforms": [
@@ -3195,9 +3496,15 @@
   "sure": true
  },
  "stable-diffusion-web-ui": {
-  "platforms": [],
-  "evidence": [],
-  "sure": false
+  "platforms": [
+   "windows",
+   "mac",
+   "linux"
+  ],
+  "evidence": [
+   "AI (Haiku): README gives install instructions for Windows (NVIDIA release package and automatic install), Linux (webui.sh with distro dependency lists), and Apple Silicon Macs; it is not a hosted public site."
+  ],
+  "sure": true
  },
  "step-ci": {
   "platforms": [
@@ -3261,9 +3568,16 @@
   "sure": true
  },
  "thunderbird": {
-  "platforms": [],
-  "evidence": [],
-  "sure": false
+  "platforms": [
+   "windows",
+   "mac",
+   "linux",
+   "android"
+  ],
+  "evidence": [
+   "AI (Haiku): The summary says Thunderbird is a desktop app for Windows, macOS and Linux and has an Android app for email."
+  ],
+  "sure": true
  },
  "suitecrm": {
   "platforms": [
@@ -3280,18 +3594,24 @@
   "sure": false
  },
  "sylius": {
-  "platforms": [],
-  "evidence": [],
-  "sure": false
- },
- "supabase": {
   "platforms": [
    "server"
   ],
   "evidence": [
-   "server: README: Docker / self-host mention"
+   "AI (Haiku): Sylius is a Symfony/PHP eCommerce framework for developers, installed via Composer or Docker on your own server; it is not an end-user desktop, mobile, or browser app."
   ],
-  "sure": false
+  "sure": true
+ },
+ "supabase": {
+  "platforms": [
+   "web",
+   "server"
+  ],
+  "evidence": [
+   "server: README: Docker / self-host mention",
+   "AI (Haiku): Supabase is a backend platform used via a hosted web dashboard and can be self-hosted on your own server with Docker; it is not a desktop or mobile app an ordinary person installs on their device."
+  ],
+  "sure": true
  },
  "strapi": {
   "platforms": [
@@ -3303,9 +3623,14 @@
   "sure": true
  },
  "taiga": {
-  "platforms": [],
-  "evidence": [],
-  "sure": false
+  "platforms": [
+   "web",
+   "server"
+  ],
+  "evidence": [
+   "AI (Haiku): Taiga is a Python/Angular project management tool used via a browser at taiga.io or self-hosted on your own server; no desktop or mobile app is described."
+  ],
+  "sure": true
  },
  "sulu": {
   "platforms": [
@@ -3326,14 +3651,25 @@
   "sure": false
  },
  "tdengine": {
-  "platforms": [],
-  "evidence": [],
-  "sure": false
+  "platforms": [
+   "mac",
+   "linux",
+   "server"
+  ],
+  "evidence": [
+   "AI (Haiku): The README lists Linux as the primary platform and macOS as supported for local development, with Windows support limited, and it is deployed on your own server or via container or Kubernetes."
+  ],
+  "sure": true
  },
  "ubuntu": {
-  "platforms": [],
-  "evidence": [],
-  "sure": false
+  "platforms": [
+   "linux",
+   "server"
+  ],
+  "evidence": [
+   "AI (Haiku): Summary says Ubuntu is a Linux operating system that runs on desktop computers, servers and cloud systems, so it is installable on Linux desktops and self-run on servers."
+  ],
+  "sure": true
  },
  "terminusdb": {
   "platforms": [
@@ -3397,9 +3733,14 @@
   "sure": true
  },
  "tina": {
-  "platforms": [],
-  "evidence": [],
-  "sure": false
+  "platforms": [
+   "web",
+   "server"
+  ],
+  "evidence": [
+   "AI (Haiku): Tina is a developer CMS for React sites with a visual editor; the README shows running a local starter via npx and a hosted demo on TinaCloud, but does not state support for desktop, mobile, or a standalone app."
+  ],
+  "sure": true
  },
  "tuta": {
   "platforms": [
@@ -3455,9 +3796,15 @@
   "sure": true
  },
  "ultravnc": {
-  "platforms": [],
-  "evidence": [],
-  "sure": false
+  "platforms": [
+   "windows",
+   "mac",
+   "linux"
+  ],
+  "evidence": [
+   "AI (Haiku): The README says UltraVNC Viewer works on Windows, Linux and macOS, while the Server runs only on Windows; the Java viewer can also run in a browser on any Java-capable system, but that is not a no-install public website, so web is excluded."
+  ],
+  "sure": true
  },
  "unleash": {
   "platforms": [
@@ -3577,12 +3924,14 @@
  },
  "wallabag": {
   "platforms": [
+   "web",
    "server"
   ],
   "evidence": [
-   "server: kind: self_hosted"
+   "server: kind: self_hosted",
+   "AI (Haiku): wallabag is a web app you install on your own server (self-hosted) or use via a hosted account at wallabag.it in a browser; the README mentions separate Android and iOS apps but those are separate projects, not wallabag itself."
   ],
-  "sure": false
+  "sure": true
  },
  "vane-formerly-perplexica": {
   "platforms": [
@@ -3595,12 +3944,14 @@
  },
  "webstudio": {
   "platforms": [
+   "web",
    "server"
   ],
   "evidence": [
-   "server: kind: self_hosted"
+   "server: kind: self_hosted",
+   "AI (Haiku): Webstudio is a web-based builder used in the browser via the hosted version, and can be self-hosted on your own server; no desktop or mobile app is mentioned."
   ],
-  "sure": false
+  "sure": true
  },
  "wekan": {
   "platforms": [
@@ -3629,9 +3980,13 @@
   "sure": true
  },
  "woocommerce": {
-  "platforms": [],
-  "evidence": [],
-  "sure": false
+  "platforms": [
+   "server"
+  ],
+  "evidence": [
+   "AI (Haiku): WooCommerce is a WordPress plugin that runs on a self-hosted web server; the README is a developer monorepo guide and does not claim desktop or mobile apps, though it mentions Linux, macOS and Windows via WSL for development."
+  ],
+  "sure": true
  },
  "whisper-cpp": {
   "platforms": [
@@ -3806,12 +4161,15 @@
  },
  "yugabyte": {
   "platforms": [
+   "mac",
+   "linux",
    "server"
   ],
   "evidence": [
-   "server: kind: self_hosted"
+   "server: kind: self_hosted",
+   "AI (Haiku): YugabyteDB is a self-hosted distributed database run on servers; the README mentions deployment on public clouds and Kubernetes, and the quick start uses yugabyted, but it does not explicitly name Windows, Linux or macOS support, so only server and the Linux/mac hosts commonly used are listed."
   ],
-  "sure": false
+  "sure": true
  },
  "zitadel": {
   "platforms": [
