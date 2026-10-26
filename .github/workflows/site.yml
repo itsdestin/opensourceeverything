@@ -1,6 +1,6 @@
-# Builds and checks the site on every push and pull request. Publishing to GitHub Pages only happens when
-# someone presses "Run workflow" on the Actions tab and ticks "publish".
-# WHY manual publishing: the site goes public only when Destin decides it's ready to launch.
+# Builds and checks the site on every push and pull request, and publishes to opensourceeverything.org whenever
+# main changes (or when someone presses "Run workflow" and ticks "publish").
+# WHY publish on main (launched Oct 27): a merged suggestion or weekly refresh goes live without anyone pressing a button.
 name: Site
 on:
   push:
@@ -29,12 +29,12 @@ jobs:
       - name: Check the site
         run: node site/check.mjs
       - uses: actions/upload-pages-artifact@v3
-        if: github.event_name == 'workflow_dispatch' && inputs.publish
+        if: (github.event_name == 'push' && github.ref == 'refs/heads/main') || (github.event_name == 'workflow_dispatch' && inputs.publish)
         with:
           path: site/dist
   publish:
     needs: build
-    if: github.event_name == 'workflow_dispatch' && inputs.publish
+    if: (github.event_name == 'push' && github.ref == 'refs/heads/main') || (github.event_name == 'workflow_dispatch' && inputs.publish)
     runs-on: ubuntu-latest
     permissions:
       pages: write

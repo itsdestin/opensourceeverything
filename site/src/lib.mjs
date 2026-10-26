@@ -67,8 +67,13 @@ export const devicesText = (p) => (p.platforms ?? []).filter((x) => DEVICE[x]).m
 
 // The fact chips every listing shows, in one order everywhere (YouCoded's "one chip row" rule).
 export function factChips(p, alt) {
-  // WHY activity is a plain chip first in the row (Destin, Oct 27): the card's corner is for the Actions menu.
-  const c = [`<span class="chip">${p.inactive ? 'Quiet for a year' : 'Active'}</span>`];
+  // WHY GitHub stars first (Destin, Oct 27): the number people already know how to read. Projects hosted
+  // elsewhere (GIMP, LibreOffice) say so instead, so the first chip is never missing.
+  const c = [];
+  if (p.stars) c.push(`<span class="chip">${ICON.star}${fmtStars(p.stars)} on GitHub</span>`);
+  else if (hostOf(p) !== 'github.com') c.push('<span class="chip">Not on GitHub</span>');
+  // WHY activity next, as a plain chip (Destin, Oct 27): the card's corner is for the Actions menu.
+  c.push(`<span class="chip">${p.inactive ? 'Quiet for a year' : 'Active'}</span>`);
   // WHY right after activity (Destin, Oct 27): "does it run on my computer or phone?" is a newcomer's first question.
   // Server-only projects get no device chip; their "Runs on your own server" chip says it.
   if (devicesText(p)) c.push(`<span class="chip">${esc(devicesText(p))}</span>`);
@@ -76,8 +81,6 @@ export function factChips(p, alt) {
   c.push(`<span class="chip"${p.licenseNeedsCheck ? ' title="A mod is confirming this license"' : ''}>${esc(p.license ?? 'License being checked')}</span>`);
   if (p.licenseClass === 'open_core') c.push('<span class="chip" title="Open source, with some parts paid or under another license">Open core</span>');
   if (alt?.fit === 'partial') c.push(`<span class="chip" title="${esc(alt.note || 'Covers part of the job')}">Replaces partly</span>`);
-  if (p.stars) c.push(`<span class="chip">${ICON.star}${fmtStars(p.stars)} on GitHub</span>`);
-  else if (hostOf(p) !== 'github.com') c.push('<span class="chip">Not on GitHub</span>');
   if (KIND[p.kind]) c.push(`<span class="chip">${esc(KIND[p.kind])}</span>`);
   return c.join('');
 }
