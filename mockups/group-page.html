@@ -9,6 +9,7 @@
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600&display=swap">
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fontsource/cascadia-mono@5.2.3/400.css">
 <link rel="stylesheet" href="demo.css">
+<script src="map-data.js"></script>
 </head>
 <body>
 <div class="demo-note">Clickable demo. Real project names; every number, person and comment is made up, and nothing is saved.</div>
@@ -48,7 +49,7 @@ const ICON = {
   plus: `<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M12 5v14M5 12h14"/></svg>`,
   check: `<svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="m5 12 5 5 9-10"/></svg>`,
 };
-const CLOSED = ['Google Docs','Microsoft Word','Apple Pages','Zoho Writer'];
+let CLOSED = ['Google Docs','Microsoft Word','Apple Pages','Zoho Writer'];
 const BUILT = ['Hand-built','AI-assisted','Agentic engineering','Vibe-coded'];
 const BUILT_HINT = {
   'Hand-built':'Written mostly by people.',
@@ -105,8 +106,37 @@ const esc = s => String(s).replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>'
 const initial = u => u ? u[0].toUpperCase() : '?';
 // WHY per-alternative thumbs instead of stars (Destin, Oct 27): GitHub stars stay as information;
 // our own signal is "does it work as a replacement for you?", the Marketplace's Helpful / Not for me.
-const myVote = {onlyoffice:'up'};
+const myVote = {};
 const MIN_VOTES_FOR_PCT = 5;
+
+/* ═══ Real map data (map-data.js) ═══ */
+// WHY: any of the 92 groups opens here (?g=<id>) with its real projects, descriptions and licenses.
+// Votes and comments are pretend: Documents keeps its hand-written samples, other groups get steady made-up numbers.
+const PROJ = new Map(MAP.projects.map(p => [p.id, p]));
+const GID = new URLSearchParams(location.search).get('g') || 'documents';
+const G = MAP.groups.find(g => g.id === GID) || MAP.groups.find(g => g.id === 'documents');
+const CAT = MAP.categories.find(c => c.id === G.category);
+const isDocs = G.id === 'documents';
+// A small seeded random so the pretend numbers stay the same on every visit.
+const seeded = s => { let h = 2166136261; for (const ch of s) h = Math.imul(h ^ ch.charCodeAt(0), 16777619); return () => { h = Math.imul(h ^ (h >>> 15), 2246822507) ^ Math.imul(h ^ (h >>> 13), 3266489909); return ((h >>> 0) % 10000) / 10000; }; };
+const KIND = {app:'App', self_hosted:'Runs on your own server', developer_tool:'For developers', library:'Code library'};
+const fmtStars = n => n >= 1000 ? (n / 1000).toFixed(n >= 10000 ? 0 : 1).replace(/\.0$/, '') + 'k' : String(n);
+{
+  const sample = new Map(D.alts.map(a => [a.name.toLowerCase(), a]));
+  CLOSED = G.closed.length ? G.closed : ['(not named yet)'];
+  D.compared = CLOSED[0];
+  D.alts = G.alternatives.map(x => {
+    const p = PROJ.get(x.project); const s = isDocs ? sample.get(p.name.toLowerCase()) : null; const r = seeded(p.id);
+    const up = s ? s.up : (r() < 0.2 ? 0 : 1 + Math.floor(r() * 40)); const down = s ? s.down : Math.floor(up * r() * 0.35);
+    return { id: p.id, name: p.name, fit: x.fit, note: x.note, status: p.inactive ? ['warn','Quiet for a year'] : ['ok','Active'],
+      verified: s?.verified ?? false, owner: s?.owner ?? false, up, down, ghN: p.stars || 0, gh: p.stars ? fmtStars(p.stars) : null,
+      license: p.license || 'License to confirm', openCore: p.licenseClass === 'open_core', built: s?.built ?? 'Not labeled',
+      age: s?.age ?? '', ageN: s?.ageN ?? 0, tag: KIND[p.kind] || '', active: p.inactive ? 0 : (s?.active ?? 2),
+      blurb: p.summary, code: p.code || p.website, people: s?.people ?? 'Not counted yet', last: p.inactive ? 'Over a year ago' : (s?.last ?? 'Within the last year'),
+      reusable: s?.reusable ?? null, help: s?.help ?? null, comments: s?.comments ?? [] };
+  });
+  if (!isDocs) { D.missing = []; D.reasons = {}; const r = seeded(G.id); D.gapTotal = 20 + Math.floor(r() * 600); D.gapYes = Math.floor(D.gapTotal * (G.alternatives.length ? 0.3 + r() * 0.6 : 0.05)); }
+}
 
 /* ═══ Rendering ═══ */
 function chips(a) {
@@ -121,7 +151,8 @@ function chips(a) {
   if (a.gh) c.push(`<span class="chip">${ICON.star(false).replace('16','12').replace('16','12')}${a.gh} on GitHub</span>`);
   // WHY: projects hosted on Codeberg, GitLab or their own servers have no GitHub stars; say so instead of showing nothing.
   if (!a.gh) c.push(`<span class="chip">Not on GitHub</span>`);
-  if (a.part) c.push(`<span class="chip">${a.part}</span>`);
+  if (a.openCore) c.push(`<span class="chip" title="Open source, with some parts paid or under another license">Open core</span>`);
+  if (a.fit === 'partial') c.push(`<span class="chip" title="${esc(a.note || 'Covers part of the job')}">Replaces partly</span>`);
   c.push(`<span class="chip">${esc(a.built)}</span>`);
   return c.join('');
 }
@@ -144,7 +175,7 @@ function score(a){ const n=a.up+a.down; if(!n) return 0; const z=1.96, p=a.up/n;
 
 function card(a) {
   const n = a.comments.reduce((s,c)=>s+1+c.replies.length,0);
-  const foot = (a.up+a.down||n) ? `${n} ${n===1?'comment':'comments'} · ${a.age} · ${a.tag}` : `No votes or comments yet · ${a.age}`;
+  const foot = [(a.up+a.down||n) ? `${n} ${n===1?'comment':'comments'}` : 'No votes or comments yet', a.age, a.tag].filter(Boolean).join(' · ');
   return `<div class="card" data-act="openAlt" data-id="${a.id}" role="button" tabindex="0">
     <div class="head"><h3>${esc(a.name)}</h3>
       <div class="corner" style="margin-right:0"><span class="pill ${a.status[0]}"><i></i>${a.status[1]}</span></div></div>
@@ -160,11 +191,11 @@ function rankedRows(list, kind) {
 }
 function latest() {
   const items = [
-    {where:'On OnlyOffice Docs · 2 hours ago', text:'Tables finally open right from .docx in the newest version.', act:'openAlt', id:'onlyoffice'},
+    {where:'On OnlyOffice Docs · 2 hours ago', text:'Tables finally open right from .docx in the newest version.', act:'openAlt', id:'onlyoffice-docs'},
     {where:'Still missing · 5 hours ago', text:'Nothing open matches Google Docs\' suggestion mode yet.', act:'openItem', id:'m1', kind:'missing'},
     {where:'On CryptPad · yesterday', text:'Encrypted and in the browser. Slower with big files.', act:'openAlt', id:'cryptpad'},
     {where:'Why people leave Google Docs · 2 days ago', text:'Offline mode needs Chrome and an extension.', act:'openItem', id:'r2', kind:'reason', app:'Google Docs'},
-    {where:'On LibreOffice Writer · 5 days ago', text:'Best fully offline option, but the look is dated.', act:'openAlt', id:'libreoffice'},
+    {where:'On LibreOffice Writer · 5 days ago', text:'Best fully offline option, but the look is dated.', act:'openAlt', id:'libreoffice-writer'},
   ];
   return items.map(i => `<button class="lvl1" data-act="${i.act}" data-id="${i.id}" ${i.kind?`data-kind="${i.kind}"`:''} ${i.app?`data-app="${i.app}"`:''}><span class="muted11">${i.where}</span><p>${esc(i.text)}</p></button>`).join('');
 }
@@ -177,7 +208,7 @@ function render() {
   document.getElementById('page').innerHTML = `
   <div class="surface identity">
     <div class="row">
-      <div><h1 class="h-subject">Documents</h1><p class="desc12" style="margin-top:4px">Open-source apps for writing and editing documents.</p></div>
+      <div><div class="muted11">${esc(CAT ? CAT.name : '')}</div><h1 class="h-subject">${esc(G.name)}</h1><p class="desc12" style="margin-top:4px">${esc(G.job)}.</p></div>
       <div class="field-col"><span class="label">Compared with</span>
         <div class="dd"><button class="select" data-act="menu" data-menu="cmpMenu">${esc(D.compared)}${ICON.chev}</button>
           <div class="menu" id="cmpMenu">${CLOSED.map(c=>`<button class="mi ${c===D.compared?'sel':''}" data-act="setCompared" data-v="${c}">${c}${c===D.compared?ICON.check:''}</button>`).join('')}</div></div></div>
@@ -186,14 +217,14 @@ function render() {
       <span class="chip"><b>${D.alts.length}</b>open alternatives</span>
       <span class="chip"><b>${verified}</b>verified</span>
       <span class="chip"><b>${pct}%</b>say one works</span>
-      <span class="chip">Also replaces ${esc(others)}</span>
+      ${others ? `<span class="chip">Also replaces ${esc(others)}</span>` : ''}
     </div>
   </div>
 
-  <section class="surface sec">
+  ${isDocs ? `<section class="surface sec">
     <div class="sec-head"><h2 class="h-large">Latest across Documents</h2></div>
     <div class="rail">${latest()}</div>
-  </section>
+  </section>` : ''}
 
   <div class="cols">
     <div>
@@ -209,7 +240,9 @@ function render() {
             <span style="font-size:14px;font-weight:500;color:var(--fg)">Add your project</span>
             <span>Built an open alternative to ${esc(D.compared)}? List it, in your own words, so people can find and rate it.</span></button>
         </div>
+        ${alts.length ? '' : `<div class="callout info">Nothing open does this job yet. That makes it a gap: if you're building one, add it here.</div>`}
         ${alts.length > 5 ? `<div><button class="btn md secondary full" data-act="toggleAll">${D.showAll?'Show fewer':`Show all ${alts.length}`}</button></div>` : ''}
+        <div><button class="btn md secondary full" data-act="suggestAlt">Suggest an open alternative that isn't yours</button></div>
       </section>
 
       <section class="surface sec">
@@ -228,7 +261,7 @@ function render() {
 
       <section class="surface sec">
         <div class="sec-head"><div><h2 class="h-large">Why people leave ${esc(D.compared)}</h2><p class="desc12">Problems with the closed app itself. Follows "Compared with" above.</p></div></div>
-          <div class="lvl2 ranked">${rankedRows(D.reasons[D.compared],'reason')}</div>
+          <div class="lvl2 ranked">${rankedRows(D.reasons[D.compared] || [],'reason')}</div>
           <button class="btn md secondary full" data-act="addItem" data-kind="reason">+ Add a reason</button>
       </section>
     </div>
@@ -236,7 +269,7 @@ function render() {
     <div>
       <section class="surface sec">
           <h2 class="h-large">Before you build</h2>
-          <p class="small2">Planning a Documents app? See what exists first, so you can reuse parts or explain what's different.</p>
+          <p class="small2">Building something for ${esc(G.name.toLowerCase())}? See what exists first, so you can reuse parts or explain what's different.</p>
           <div class="lvl2 prompt">${esc(promptText(false))}</div>
           <div class="stack">
             <button class="btn md primary" data-act="copy" data-full="0">Copy prompt</button>
@@ -256,7 +289,7 @@ function render() {
   renderAcct();
 }
 function promptText(full) {
-  const base = `Read the list at r-trueopensource.github.io/map/documents.json. Compare it with my project or idea below. Tell me which projects overlap, what I could reuse, and what mine does that none of them do.`;
+  const base = `Read the list at r-trueopensource.github.io/map/${G.id}.json. Compare it with my project or idea below. Tell me which projects overlap, what I could reuse, and what mine does that none of them do.`;
   if (!full) return base;
   return `Here is a list of open-source alternatives to ${CLOSED.join(', ')}:\n` +
     D.alts.map(a=>`- ${a.name} (${a.license}, ${a.code}): ${a.blurb}${a.reusable?` Reusable: ${a.reusable}`:''}`).join('\n') +
@@ -319,11 +352,12 @@ function openAlt(id) {
       <div class="chiprow">${chips(a)}</div>
       <p class="body2">${esc(a.blurb)}</p>
       <div class="lvl2 feedback">
-        <div><div class="small2">Does it work as a ${'Documents'} replacement for you?</div><div class="small2" style="margin-top:2px">${summary}</div></div>
+        <div><div class="small2">Does it replace ${esc(D.compared)} for you?</div><div class="small2" style="margin-top:2px">${summary}</div></div>
         <div class="btns">
           <button class="btn sm secondary ${mv==='up'?'on':''}" data-act="rate" data-v="up" data-id="${id}">${ICON.thumb(false)}Yes</button>
           <button class="btn sm secondary ${mv==='down'?'on':''}" data-act="rate" data-v="down" data-id="${id}">${ICON.thumb(true)}No</button>
         </div></div>
+      <div class="foot-btns"><button class="btn sm secondary" data-act="reportListing" data-id="${id}">Report this listing…</button></div>
     </div>
     <div class="cols"><div>
       <section><span class="label">Comments<span class="count">${a.comments.reduce((s,c)=>s+1+c.replies.length,0)}</span></span>
@@ -333,7 +367,7 @@ function openAlt(id) {
     </div><div>
       <section><span class="label">Facts</span><div class="lvl1 facts">
         <div class="fact"><span>License</span><span>${a.license}</span></div>
-        <div class="fact"><span>First published</span><span>${a.age.replace(' old',' ago')}</span></div>
+        ${a.age ? `<div class="fact"><span>First published</span><span>${a.age.replace(' old',' ago')}</span></div>` : ''}
         <div class="fact"><span>Last change</span><span>${a.last}</span></div>
         <div class="fact"><span>People who worked on it</span><span>${a.people}</span></div>
         <div class="fact"><span>How it was built</span><span>${a.built}</span></div>
@@ -455,15 +489,40 @@ function saveProjectFields() {
 
 /* ═══ Search ═══ */
 const q = document.getElementById('q'), sm = document.getElementById('searchMenu');
-function searchResults(t) {
-  t = t.trim().toLowerCase();
+const ALLC = MAP.groups.flatMap(g => g.closed.map(c => ({c, g})));
+const groupOf = pid => MAP.groups.find(g => g.alternatives.some(x => x.project === pid));
+function searchResults(raw) {
+  const t = raw.trim().toLowerCase();
   if (!t) return '';
-  const closed = CLOSED.filter(c => c.toLowerCase().includes(t)).map(c => `<button class="mi" data-act="goClosed" data-v="${c}">${c}<span class="muted11">Documents</span></button>`);
-  const open = D.alts.filter(a => a.name.toLowerCase().includes(t)).map(a => `<button class="mi" data-act="openAlt" data-id="${a.id}">${esc(a.name)}<span class="muted11">Open alternative</span></button>`);
-  const other = ['Notion','Slack','Figma','Photoshop','Google Sheets','Zoom'].filter(c => c.toLowerCase().includes(t)).map(c => `<button class="mi" disabled>${c}<span class="muted11">Other group · not in this demo</span></button>`);
-  const all = [...closed, ...open, ...other];
-  return all.length ? (closed.length?'<div class="menu-note">Closed apps</div>':'') + [...closed].join('') + (open.length?'<div class="menu-note">Open projects</div>':'') + open.join('') + other.join('')
-    : `<div class="menu-note">Nothing matches "${esc(t)}" yet. Suggest it on r/TrueOpenSource.</div>`;
+  const closed = ALLC.filter(x => x.c.toLowerCase().includes(t)).slice(0, 6).map(x => `<button class="mi" data-act="goClosed" data-v="${esc(x.c)}" data-g="${x.g.id}">${esc(x.c)}<span class="muted11">${esc(x.g.name)}</span></button>`);
+  const grp = MAP.groups.filter(g => g.name.toLowerCase().includes(t)).slice(0, 4).map(g => `<button class="mi" data-act="goGroup" data-g="${g.id}">${esc(g.name)}<span class="muted11">Group</span></button>`);
+  const open = MAP.projects.filter(p => p.name.toLowerCase().includes(t)).slice(0, 6).map(p => { const g = groupOf(p.id); return `<button class="mi" data-act="goProject" data-id="${p.id}" data-g="${g ? g.id : ''}">${esc(p.name)}<span class="muted11">${g ? esc(g.name) : 'Open project'}</span></button>`; });
+  return (closed.length ? '<div class="menu-note">Closed apps</div>' + closed.join('') : '') + (grp.length ? '<div class="menu-note">Groups</div>' + grp.join('') : '') + (open.length ? '<div class="menu-note">Open projects</div>' + open.join('') : '')
+    || `<button class="mi" data-act="suggestClosed" data-v="${esc(raw.trim())}">Can't find "${esc(raw.trim())}"? Suggest it<span class="muted11">Goes to the mods</span></button>`;
+}
+function suggestAlt() {
+  if (!needSignIn(suggestAlt)) return;
+  openDialog(`${bar('Suggest an alternative')}<div class="body">
+    <p class="small2">Know an open-source project that replaces ${esc(CLOSED.join(', '))}? It doesn't have to be yours.</p>
+    <div><span class="label">Its link</span><input class="field" id="sgUrl" placeholder="github.com/someone/project" autofocus>
+      <p class="fieldhint">GitHub, GitLab or Codeberg. We check its license and activity automatically.</p></div>
+    <div><span class="label">Why it fits (optional)</span><textarea class="field" id="sgWhy" rows="2" placeholder="e.g. I switched from ${esc(D.compared)} to it last year"></textarea></div>
+    <div class="foot-btns"><button class="btn md secondary" data-act="close">Cancel</button><button class="btn md primary" data-act="sendSuggestAlt">Send to the mods</button></div></div>`, 'narrow');
+}
+function suggestClosed(name) {
+  if (!needSignIn(() => suggestClosed(name))) return;
+  openDialog(`${bar('Suggest a closed app')}<div class="body">
+    <div><span class="label">The closed app</span><input class="field" id="scName" value="${esc(name)}" autofocus></div>
+    <div><span class="label">What do people use it for?</span><select class="field" id="scGroup">${MAP.groups.map(g => `<option value="${g.id}">${esc(g.name)}</option>`).join('')}<option value="new">None of these fit: suggest a new group</option></select></div>
+    <div><span class="label">Link (optional)</span><input class="field" id="scLink" placeholder="https://"></div>
+    <div class="foot-btns"><button class="btn md secondary" data-act="close">Cancel</button><button class="btn md primary" data-act="sendSuggestClosed">Send to the mods</button></div></div>`, 'narrow');
+}
+const REPORT_REASONS = ['Wrong group', 'Doesn\'t really replace this', 'Not open source', 'Abandoned', 'Duplicate', 'Something else'];
+function reportListing(id) {
+  const a = altById(id);
+  openDialog(`${bar('Report ' + esc(a.name))}<div class="body">
+    <div class="lvl1" style="padding:4px">${REPORT_REASONS.map((r, i) => `<label class="radio"><input type="radio" name="rr" value="${esc(r)}" ${i ? '' : 'checked'}><span style="font-size:14px">${esc(r)}</span></label>`).join('')}</div>
+    <div class="foot-btns"><button class="btn md secondary" data-act="close">Cancel</button><button class="btn md primary" data-act="sendReport">Report</button></div></div>`, 'narrow');
 }
 q.addEventListener('input', () => { sm.innerHTML = searchResults(q.value); sm.classList.toggle('open', !!q.value.trim()); });
 q.addEventListener('focus', () => { if (q.value.trim()) sm.classList.add('open'); });
@@ -484,7 +543,19 @@ document.addEventListener('click', e => {
     case 'menu': { const m = document.getElementById(el.dataset.menu); const was = m.classList.contains('open'); closeMenus(); m.classList.toggle('open', !was); e.stopPropagation(); break; }
     case 'acct': { const m = document.getElementById('acctMenu'); const was = m.classList.contains('open'); closeMenus(); m.classList.toggle('open', !was); break; }
     case 'setCompared': D.compared = el.dataset.v; render(); toast(`Comparing with ${D.compared}`); break;
-    case 'goClosed': D.compared = el.dataset.v; q.value = ''; sm.classList.remove('open'); render(); window.scrollTo({top:0,behavior:'smooth'}); toast(`${el.dataset.v} is in Documents`); break;
+    case 'goClosed':
+      if (el.dataset.g && el.dataset.g !== G.id) { location.href = `group-page.html?g=${el.dataset.g}&compare=${encodeURIComponent(el.dataset.v)}`; return; }
+      D.compared = el.dataset.v; q.value = ''; sm.classList.remove('open'); render(); window.scrollTo({top:0,behavior:'smooth'}); toast(`Comparing with ${el.dataset.v}`); break;
+    case 'goGroup': location.href = `group-page.html?g=${el.dataset.g}`; return;
+    case 'goProject':
+      if (altById(id)) { q.value = ''; sm.classList.remove('open'); openAlt(id); break; }
+      if (el.dataset.g) location.href = `group-page.html?g=${el.dataset.g}#${id}`; return;
+    case 'suggestAlt': suggestAlt(); break;
+    case 'suggestClosed': q.value = ''; sm.classList.remove('open'); suggestClosed(el.dataset.v); break;
+    case 'sendSuggestAlt': if (!document.getElementById('sgUrl').value.trim()) { toast('Paste its link first.'); return; } closeDialog(); toast('Sent to the mods. They check it and add it here.'); break;
+    case 'sendSuggestClosed': if (!document.getElementById('scName').value.trim()) { toast('Name the app first.'); return; } closeDialog(); toast('Sent to the mods. Others can say they want it too.'); break;
+    case 'reportListing': if (!needSignIn(() => reportListing(id))) return; reportListing(id); break;
+    case 'sendReport': { const r = dialog.querySelector('input[name=rr]:checked'); closeDialog(); toast(`Reported (${r ? r.value.toLowerCase() : 'other'}). A mod will look at it.`); break; }
     case 'setSort': D.sort = el.dataset.v; render(); break;
     case 'toggleAll': D.showAll = !D.showAll; render(); break;
     case 'openAlt': e.stopPropagation(); q.value=''; sm.classList.remove('open'); openAlt(id); break;
@@ -522,7 +593,7 @@ document.addEventListener('click', e => {
       const v = document.getElementById('itemText').value.trim();
       if (!v) { toast('Write one short line first.'); return; }
       const it = {id:'x'+Date.now(), title:v, u:D.user, up:canCount()?1:0, voted:canCount(), replies:[]};
-      (el.dataset.kind === 'missing' ? D.missing : D.reasons[D.compared]).push(it);
+      (el.dataset.kind === 'missing' ? D.missing : (D.reasons[D.compared] ??= [])).push(it);
       closeDialog(); render(); toast(D.newAccount ? 'Added. A mod will check it first, because your account is new.' : 'Added, with your upvote.'); break;
     }
     case 'postCmt': case 'postReply': {
@@ -550,10 +621,10 @@ document.addEventListener('click', e => {
       break;
     }
     case 'download': {
-      const data = JSON.stringify({group:'Documents', replaces:CLOSED, license:'CC BY-SA 4.0', alternatives:D.alts.map(a=>({name:a.name, license:a.license, code:a.code, verified:!!a.verified, yes:a.up, no:a.down, github_stars:a.ghN, description:a.blurb, reusable:a.reusable}))}, null, 2);
+      const data = JSON.stringify({group:G.name, replaces:CLOSED, license:'CC BY-SA 4.0', alternatives:D.alts.map(a=>({name:a.name, license:a.license, code:a.code, verified:!!a.verified, yes:a.up, no:a.down, github_stars:a.ghN, description:a.blurb, reusable:a.reusable}))}, null, 2);
       const url = URL.createObjectURL(new Blob([data], {type:'application/json'}));
-      const link = document.createElement('a'); link.href = url; link.download = 'documents.json'; link.click(); URL.revokeObjectURL(url);
-      toast('Downloaded documents.json'); break;
+      const link = document.createElement('a'); link.href = url; link.download = `${G.id}.json`; link.click(); URL.revokeObjectURL(url);
+      toast(`Downloaded ${G.id}.json`); break;
     }
     case 'signin': needSignIn(null); break;
     case 'ghpage': ghPage(); break;
@@ -592,6 +663,7 @@ if (CLOSED.includes(params.get('compare'))) D.compared = params.get('compare');
 render();
 if (location.hash && altById(location.hash.slice(1))) openAlt(location.hash.slice(1));
 else if (location.hash === '#add') addProject();
+else if (location.hash === '#suggest') suggestAlt();
 </script>
 </body>
 </html>

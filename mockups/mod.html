@@ -47,8 +47,18 @@
 .btn.danger-outline { background:transparent; color:#B4302A; border:1px solid rgb(194 54 47 / .5); }
 @media (prefers-color-scheme: dark) { .btn.danger-outline { color:#F2948E; } }
 .select-native { width:100%; }
+/* Suggestions tab: a group picker sits beside its button on one line (the shared control height). */
+.pickrow { display:flex; gap:8px; align-items:center; flex-wrap:wrap; }
+.pickrow select.field { flex:1; min-width:180px; width:auto; padding:6px 12px; font-size:12px; }
+select.field { font-family:inherit; }
+.subhead { display:flex; align-items:baseline; justify-content:space-between; gap:8px; margin-top:4px; }
+.subhead .label { margin:0; }
+.wants { font-size:12px; color:var(--fg-2); white-space:nowrap; flex:none; }
+.wants b { font-weight:500; color:var(--fg); }
+a.codelink { color:var(--link, var(--fg-2)); font-size:12px; overflow-wrap:anywhere; }
 @media (max-width:640px) {
   .item .actions { flex-direction:column-reverse; } .item .actions .btn { width:100%; }
+  .pickrow { flex-direction:column; align-items:stretch; } .pickrow .btn, .pickrow select.field { width:100%; }
 }
 </style>
 </head>
@@ -59,6 +69,8 @@
 <div class="scrim" id="scrim"><div class="dialog surface" id="dialog"></div></div>
 <div class="toast" id="toast"></div>
 
+<!-- The real map (groups, categories, projects set aside with no group): generated from data/*.json. -->
+<script src="map-data.js"></script>
 <script>
 const ICON = {
   home: `<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 4 3 6v14l6-2 6 2 6-2V4l-6 2-6-2Z"/><path d="M9 4v14M15 6v14"/></svg>`,
@@ -68,8 +80,30 @@ const ICON = {
 const esc = s => String(s).replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
 
 /* ═══ Demo data (all made up) ═══ */
+// WHY real groups: the Suggestions tab places things into the map's actual 92 groups (map-data.js).
+const groupById = id => MAP.groups.find(g => g.id === id);
+const catName = id => (MAP.categories.find(c => c.id === id) || {}).name || id;
+const projectByName = n => MAP.projects.find(p => p.name.toLowerCase() === n.toLowerCase());
+const groupOf = projectId => MAP.groups.find(g => g.alternatives.some(a => a.project === projectId));
+// The listing report below points at a real listing when Strapi is on the map; otherwise the first listed project.
+const reportedProject = projectByName('Strapi') || MAP.projects[0];
+const reportedGroup = groupOf(reportedProject.id) || MAP.groups[0];
 const M = {
-  tab:'projects',
+  tab:'suggest',
+  // Pretend requests from visitors ("Can't find Procreate? Suggest it").
+  apps:[
+    {id:'a1', name:'Procreate', u:'ink-and-pixels', wants:23, group:'painting', note:'Drawing on an iPad.'},
+    {id:'a2', name:'Airtable', u:'spreadsheet-sam', wants:41, group:null, newName:'Databases & spreadsheets', note:'None of the groups fit: it\'s a spreadsheet and a database.'},
+    {id:'a3', name:'Twitch', u:'streamer-jo', wants:17, group:null, newName:'Live streaming', note:'Watching and running live streams.'},
+    {id:'a4', name:'Microsoft Loop', u:'notes-fan', wants:6, group:'notes', note:'Shared notes and pages at work.'},
+  ],
+  // Projects the pre-fill set aside because no group covers what they replace (prefill/out/unplaced.json).
+  unplaced: MAP.unplaced.map((u, i) => ({...u, id:'u'+i})),
+  // Alternatives suggested by someone who isn't the owner.
+  alts:[
+    {id:'s1', name:'Nextcloud Office', url:'github.com/nextcloud/richdocuments', u:'office-admin', group:'documents', facts:[['ok','AGPL-3.0 · open source'],['','8 years old'],['','Active this month']]},
+    {id:'s2', name:'Kanboard', url:'github.com/kanboard/kanboard', u:'boards-person', group:'tasks', facts:[['ok','MIT · open source'],['','15 years old'],['warn','Maintenance mode']]},
+  ],
   projects:[
     {id:'p1', name:'Writer', url:'github.com/acme/writer', by:'acme-dev', acct:'4 years', group:'Documents', vs:'Google Docs', built:'AI-assisted',
       facts:[['ok','MIT · open source'],['','1 year old'],['','140 days with changes'],['','README'],['','Some commits credit an AI assistant']],
@@ -91,6 +125,9 @@ const M = {
   reports:[
     {id:'r1', u:'loud-opinions', acct:'3 years', where:'On LibreOffice Writer', text:'Anyone still using this in 2026 is a dinosaur. Delete your account.', count:4, reason:'Rude or hostile'},
     {id:'r2', u:'owner-of-x', acct:'2 years', where:'On CryptPad', text:'Just use XDocs instead, it\'s way better (I made it).', count:2, reason:'Self-promotion'},
+    // A report on a listing (not a comment), using the listing-report reasons.
+    {id:'r3', listing:true, u:'sam-k', acct:'2 years', project:reportedProject.name, group:reportedGroup.id, count:3, reason:'Wrong group',
+      text:`${reportedProject.name} doesn't really belong under "${reportedGroup.name}".`},
   ],
   robot:[
     {id:'w1', kind:'license', title:'Collabora Online changed its license', detail:'MPL-2.0 → Business Source License 1.1 (not open source). The robot proposes moving it to "No longer open source".', yes:'Move it', no:'Dismiss', logYes:'moved Collabora Online to "No longer open source"', logNo:'dismissed the license warning for Collabora Online'},
@@ -112,6 +149,7 @@ const M = {
   ],
 };
 const TABS = [
+  ['suggest','Suggestions', () => M.apps.length + M.unplaced.length + M.alts.length],
   ['projects','Projects to approve', () => M.projects.length],
   ['held','Held comments', () => M.held.length],
   ['reports','Reports', () => M.reports.length],
@@ -138,7 +176,79 @@ function projectCard(p) {
       <button class="btn md primary" data-act="approve" data-id="${p.id}">Approve</button>
     </div></div>`;
 }
+// A dropdown of the map's real groups, shelved by category.
+// WHY the empty first choice: when nobody suggested a group, the picker must not pretend one ("Documents") was chosen.
+function groupOptions(selected) {
+  return (selected ? '' : `<option value="" selected disabled>Pick a group…</option>`) + MAP.categories.map(c => {
+    const gs = MAP.groups.filter(g => g.category === c.id);
+    return gs.length ? `<optgroup label="${esc(c.name)}">${gs.map(g => `<option value="${g.id}" ${g.id===selected?'selected':''}>${esc(g.name)}</option>`).join('')}</optgroup>` : '';
+  }).join('');
+}
+function appCard(a) {
+  const g = a.group && groupById(a.group);
+  return `<div class="card item">
+    <div class="head"><div style="min-width:0"><h3>${esc(a.name)}</h3><div class="meta">Asked by ${esc(a.u)} · ${g ? `suggested group: ${esc(g.name)}` : `"None of these fit": suggests a new group, ${esc(a.newName)}`}</div></div>
+      <span class="wants"><b>${a.wants}</b> want this</span></div>
+    <div class="lvl2 quote">${esc(a.note)}</div>
+    <div class="pickrow"><select class="field" id="pick-${a.id}" aria-label="Group">${groupOptions(a.group || '')}</select>
+      <button class="btn md ${g ? 'primary' : 'secondary'}" data-act="appApprove" data-id="${a.id}">Approve into this group</button></div>
+    <div class="actions">
+      <button class="btn md secondary" data-act="appTurnDown" data-id="${a.id}">Turn down…</button>
+      <button class="btn md secondary" data-act="appMerge" data-id="${a.id}">Merge into an existing app…</button>
+      ${/* WHY: when the asker said no group fits, creating one is the likely next step, so it gets the fill. */''}
+      <button class="btn md ${g ? 'secondary' : 'primary'}" data-act="newGroup" data-kind="apps" data-id="${a.id}">Create a new group…</button>
+    </div></div>`;
+}
+function unplacedCard(u) {
+  // WHY default to the AI's first pick when it names a real group: one click if the AI was right.
+  const guess = (u.aiGroups || []).find(id => groupById(id)) || '';
+  return `<div class="card item">
+    <div class="head"><div style="min-width:0"><h3>${esc(u.name)}</h3>
+      <a class="codelink" href="https://${esc(u.code)}" target="_blank" rel="noopener">${esc(u.code)}</a></div>
+      <span class="pill info">No group yet</span></div>
+    <div class="chiprow"><span class="muted11" style="flex:none;align-self:center">Replaces</span>${u.replaces.map(r => `<span class="chip">${esc(r)}</span>`).join('')}</div>
+    <p class="small2">${esc(u.summary)}</p>
+    <div class="pickrow"><select class="field" id="pick-${u.id}" aria-label="Group">${groupOptions(guess)}</select>
+      <button class="btn md primary" data-act="place" data-id="${u.id}">Place in this group</button></div>
+    <div class="actions">
+      <button class="btn md secondary" data-act="unTurnDown" data-id="${u.id}">Turn down</button>
+      <button class="btn md secondary" data-act="newGroup" data-kind="unplaced" data-id="${u.id}">Needs a new group…</button>
+    </div></div>`;
+}
+function altCard(s) {
+  const g = groupById(s.group);
+  return `<div class="card item">
+    <div class="head"><div style="min-width:0"><h3>${esc(s.name)}</h3><div class="meta">${esc(s.url)} · for ${esc(g ? g.name : s.group)} · suggested by ${esc(s.u)}, not the owner</div></div>
+      <span class="pill info">Not by the owner</span></div>
+    <div class="chiprow">${s.facts.map(([t,f]) => t ? `<span class="pill ${t}"><i></i>${esc(f)}</span>` : `<span class="chip">${esc(f)}</span>`).join('')}</div>
+    <p class="fieldhint" style="margin:0">Listed without the Owner tag or a pitch; the owner can claim it later.</p>
+    <div class="actions">
+      <button class="btn md secondary" data-act="altTurnDown" data-id="${s.id}">Turn down</button>
+      <button class="btn md primary" data-act="altApprove" data-id="${s.id}">Approve</button>
+    </div></div>`;
+}
+function suggestList() {
+  const part = (label, n, items, none) => `<div class="subhead"><span class="label">${label}<span class="count">${n}</span></span></div>` +
+    (n ? items : `<div class="card item" style="align-items:center;text-align:center"><p class="small2" style="margin:0">${none}</p></div>`);
+  return part('Closed app requests', M.apps.length, M.apps.map(appCard).join(''), 'No requests waiting.')
+    + part('Projects with no group yet', M.unplaced.length, M.unplaced.map(unplacedCard).join(''), 'Every project has a group.')
+    + part('Suggested alternatives', M.alts.length, M.alts.map(altCard).join(''), 'No suggestions waiting.');
+}
+function listingReportCard(c) {
+  const g = groupById(c.group);
+  return `<div class="card item">
+    <div class="head"><div style="min-width:0"><div style="font-weight:500">${esc(c.project)} in ${esc(g ? g.name : c.group)}</div><div class="meta">Listing report · first by ${esc(c.u)} (account ${c.acct} old)</div></div>
+      <span class="pill warn"><i></i>Reported ${c.count} times · ${esc(c.reason)}</span></div>
+    <div class="lvl2 quote">${esc(c.text)}</div>
+    <div class="pickrow"><select class="field" id="pick-${c.id}" aria-label="Move to group">${groupOptions(c.group)}</select>
+      <button class="btn md secondary" data-act="moveListing" data-id="${c.id}">Move to another group</button></div>
+    <div class="actions">
+      <button class="btn md secondary" data-act="keep" data-kind="reports" data-id="${c.id}">Keep it</button>
+      <button class="btn md primary" data-act="hideListing" data-id="${c.id}">Hide the listing</button>
+    </div></div>`;
+}
 function commentCard(c, kind) {
+  if (c.listing) return listingReportCard(c);
   const report = kind === 'reports';
   return `<div class="card item">
     <div class="head"><div style="min-width:0"><div style="font-weight:500">${esc(c.u)}</div><div class="meta">${esc(c.where)} · account ${c.acct} old</div></div>
@@ -165,8 +275,9 @@ function verifiedList() {
 }
 function empty(msg) { return `<div class="card item" style="align-items:center;text-align:center"><div style="font-weight:500">Nothing waiting</div><p class="small2">${msg}</p></div>`; }
 function render() {
-  const total = M.projects.length + M.held.length + M.reports.length + M.robot.length;
+  const total = M.projects.length + M.held.length + M.reports.length + M.robot.length + M.apps.length + M.unplaced.length + M.alts.length;
   const body = {
+    suggest: () => suggestList(),
     projects: () => M.projects.length ? M.projects.map(projectCard).join('') : empty('New project submissions show up here.'),
     held: () => M.held.length ? M.held.map(c => commentCard(c,'held')).join('') : empty('Comments from accounts under 14 days old wait here before anyone sees them.'),
     reports: () => M.reports.length ? M.reports.map(c => commentCard(c,'reports')).join('') : empty('Anything people report shows up here.'),
@@ -174,9 +285,10 @@ function render() {
     verified: () => verifiedList(),
   }[M.tab]();
   const desc = {
+    suggest:'Closed apps people asked for, projects the map couldn\'t place, and alternatives suggested by someone other than the owner.',
     projects:'People who added their own project. Check the facts and the pitch, then approve or turn it down.',
     held:'First comments from new accounts. Nobody else sees them until one of you approves.',
-    reports:'Comments people flagged. Hiding removes it for everyone; the person is told why.',
+    reports:'Comments and listings people flagged. Hiding removes it for everyone; the person is told why.',
     robot:'What the weekly check found. Nothing changes until one of you decides.',
     verified:'Which alternatives get the Verified mark, group by group.',
   }[M.tab];
@@ -241,7 +353,68 @@ document.addEventListener('click', e => {
     case 'rejectGo': { const why = document.getElementById('why').value; const p = take('projects', id); log(`turned down ${p.name} (${why.toLowerCase()})`); closeDialog(); render(); toast(`${p.by} has been told why.`); break; }
     case 'allow': { const c = take('held', id); log(`approved a held comment by ${c.u}`); render(); toast('Approved. Everyone can see it now.'); break; }
     case 'drop': { const c = take('held', id); log(`deleted a held comment by ${c.u}`); render(); toast('Deleted.'); break; }
-    case 'keep': { const c = take('reports', id); log(`kept a reported comment by ${c.u}`); render(); toast('Kept. The reports are cleared.'); break; }
+    case 'keep': { const c = take('reports', id); log(c.listing ? `kept ${c.project} in ${groupById(c.group).name} (reports cleared)` : `kept a reported comment by ${c.u}`); render(); toast('Kept. The reports are cleared.'); break; }
+    case 'hideListing': { const c = take('reports', id); log(`hid the ${c.project} listing in ${groupById(c.group).name} (${c.reason.toLowerCase()})`); render(); toast(`Hidden. ${c.project} no longer shows in that group.`); break; }
+    case 'moveListing': {
+      const to = groupById(document.getElementById('pick-' + id).value); const c = M.reports.find(x => x.id === id);
+      if (to.id === c.group) { toast('Pick a different group to move it to.'); return; }
+      take('reports', id); log(`moved ${c.project} from ${groupById(c.group).name} to ${to.name}`); render(); toast(`${c.project} now shows under ${to.name}.`); break;
+    }
+    case 'appApprove': {
+      const g = groupById(document.getElementById('pick-' + id).value);
+      if (!g) { toast('Pick a group first, or create a new one.'); return; }
+      const a = take('apps', id);
+      g.closed.push(a.name); log(`added ${a.name} to ${g.name} (${a.wants} people asked)`); render();
+      // WHY: a closed app in a group with nothing listed is the clearest gap signal the map can show.
+      toast(g.alternatives.length ? `${a.name} is on the map under ${g.name}. ${a.u} gets a note.` : `${a.name} is on the map. ${g.name} has no alternatives yet, so its page shows as a gap.`);
+      break;
+    }
+    case 'appMerge': {
+      const a = M.apps.find(x => x.id === id);
+      const apps = [...new Set(MAP.groups.flatMap(g => g.closed))].sort((x, y) => x.localeCompare(y));
+      openDialog(`${bar('Merge ' + esc(a.name))}<div class="body">
+        <p class="small2">Use this when ${esc(a.name)} is another name for an app already on the map. Searching either name finds the same page.</p>
+        <div><span class="label">Same app as</span><select class="field" id="mergeInto"><option value="">Pick the app it duplicates…</option>${apps.map(x => `<option>${esc(x)}</option>`).join('')}</select></div>
+        <div class="foot-btns"><button class="btn md secondary" data-act="close">Cancel</button><button class="btn md primary" data-act="appMergeGo" data-id="${id}">Merge</button></div></div>`);
+      break;
+    }
+    case 'appMergeGo': { const into = document.getElementById('mergeInto').value; if (!into) { toast('Pick the app it duplicates first.'); return; } const a = take('apps', id); log(`merged the request for ${a.name} into ${into}`); closeDialog(); render(); toast(`Searching "${a.name}" now finds ${into}.`); break; }
+    case 'appTurnDown': {
+      const a = M.apps.find(x => x.id === id);
+      openDialog(`${bar('Turn down ' + esc(a.name))}<div class="body">
+        <div><span class="label">Reason</span><select class="field" id="why">${['It\'s open source already', 'Not an app people use', 'Already on the map under another name', 'Something else'].map(r => `<option>${esc(r)}</option>`).join('')}</select>
+          <p class="fieldhint">${esc(a.u)} and the ${a.wants - 1} others who asked see this.</p></div>
+        <div class="foot-btns"><button class="btn md secondary" data-act="close">Cancel</button><button class="btn md primary" data-act="appTurnDownGo" data-id="${id}">Turn down</button></div></div>`);
+      break;
+    }
+    case 'appTurnDownGo': { const why = document.getElementById('why').value; const a = take('apps', id); log(`turned down the request for ${a.name} (${why.toLowerCase()})`); closeDialog(); render(); toast('Turned down. The people who asked are told why.'); break; }
+    case 'newGroup': {
+      const item = M[kind].find(x => x.id === id);
+      const suggested = kind === 'apps' ? (item.newName || '') : '';
+      openDialog(`${bar('Create a new group')}<div class="body">
+        <div><span class="label">Name</span><input class="field" id="ngName" value="${esc(suggested)}" placeholder="e.g. Live streaming" autofocus>
+          <p class="fieldhint">One job people need done, in plain words.</p></div>
+        <div><span class="label">What the job is</span><input class="field" id="ngJob" placeholder="e.g. Watching and running live streams"></div>
+        <div><span class="label">Category</span><select class="field" id="ngCat">${MAP.categories.map(c => `<option value="${c.id}">${esc(c.name)}</option>`).join('')}</select></div>
+        <p class="small2" style="margin:0">${kind === 'apps' ? `${esc(item.name)} goes in it as its first closed app.` : `${esc(item.name)} goes in it as its first alternative, replacing ${esc(item.replaces.join(', '))}.`}</p>
+        <div class="foot-btns"><button class="btn md secondary" data-act="close">Cancel</button><button class="btn md primary" data-act="newGroupGo" data-kind="${kind}" data-id="${id}">Create group</button></div></div>`);
+      break;
+    }
+    case 'newGroupGo': {
+      const name = document.getElementById('ngName').value.trim(); const job = document.getElementById('ngJob').value.trim(); const cat = document.getElementById('ngCat').value;
+      if (!name) { toast('Give the group a name first.'); return; }
+      if (MAP.groups.some(g => g.name.toLowerCase() === name.toLowerCase())) { toast(`"${name}" already exists. Pick it from the list instead.`); return; }
+      const item = take(kind, id);
+      const g = {id:'new-' + name.toLowerCase().replace(/[^a-z0-9]+/g, '-'), name, category:cat, job, closed: kind === 'apps' ? [item.name] : [...item.replaces], alternatives: kind === 'apps' ? [] : [{project:item.name}]};
+      MAP.groups.push(g);
+      log(`created the group "${name}" in ${catName(cat)} for ${item.name}`); closeDialog(); render();
+      toast(kind === 'apps' ? `"${name}" is on the map with ${item.name}. It has no alternatives yet, so it shows as a gap.` : `"${name}" is on the map with ${item.name} listed.`);
+      break;
+    }
+    case 'place': { const g = groupById(document.getElementById('pick-' + id).value); if (!g) { toast('Pick a group first, or create a new one.'); return; } const u = take('unplaced', id); g.alternatives.push({project:u.name}); log(`placed ${u.name} in ${g.name}`); render(); toast(`${u.name} now shows under ${g.name}.`); break; }
+    case 'unTurnDown': { const u = take('unplaced', id); log(`left ${u.name} off the map`); render(); toast(`${u.name} stays off the map.`); break; }
+    case 'altApprove': { const s = take('alts', id); log(`approved ${s.name} for ${groupById(s.group).name} (suggested by ${s.u})`); render(); toast(`${s.name} is listed. Its owner can claim it later.`); break; }
+    case 'altTurnDown': { const s = take('alts', id); log(`turned down ${s.name} for ${groupById(s.group).name}`); render(); toast(`${s.u} is told why.`); break; }
     case 'hide': { const c = take('reports', id); log(`hid a comment by ${c.u} (${c.reason.toLowerCase()})`); render(); toast(`Hidden. ${c.u} is told why.`); break; }
     case 'ban': {
       const c = M[kind].find(x => x.id === id);

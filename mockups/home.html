@@ -20,34 +20,32 @@
 .pop { display:flex; align-items:center; gap:8px; min-width:0; padding-left:40px; }
 .headline { flex:1; min-width:0; }
 .headline h1 { font-size:16px; font-weight:600; margin:0; }
-.hometop .searchwrap { width:min(520px,45%); }
 .row1 { display:grid; grid-template-columns:repeat(auto-fill,minmax(280px,1fr)); gap:12px; }
-.gcard .gap-line { min-height:2.9em; }
-.hero { padding:24px; display:flex; flex-direction:column; gap:12px; align-items:center; text-align:center; }
-.hero h1 { font-size:18px; font-weight:600; margin:0; }
-.hero .searchwrap { width:min(640px,100%); }
-.hero .searchpill { padding:8px 8px 8px 16px; }
-.hero .searchpill input { font-size:14px; }
-.hero .fchips { justify-content:center; flex-wrap:nowrap; max-width:100%; }
 .fchips { display:flex; gap:6px; overflow-x:auto; scrollbar-width:none; }
 .fchips::-webkit-scrollbar { display:none; }
 .fchip { flex:none; padding:4px 12px; border-radius:var(--radius-control); font-size:12px; background:var(--inset); color:var(--fg-2); border:1px solid var(--edge); white-space:nowrap; }
 .fchip:hover { color:var(--fg); }
-.rail .card { flex:0 0 300px; }
-.rail { padding:8px 4px 16px; margin:-8px -4px -16px; }
-.gcard .gap-line { font-size:12px; color:var(--fg-2); margin:0; }
-.gcard .gap-line b { font-weight:500; color:var(--fg); }
-.groups { display:grid; grid-template-columns:repeat(auto-fill,minmax(240px,1fr)); gap:8px; }
-.grow-row { display:flex; align-items:center; justify-content:space-between; gap:8px; padding:10px 12px; cursor:pointer; text-align:left; width:100%; }
-.grow-row:hover { background:var(--inset); }
-.grow-row .nm { font-size:14px; color:var(--fg); }
-.grow-row .rp { font-size:11px; color:var(--fg-muted); white-space:nowrap; overflow:hidden; text-overflow:ellipsis; }
+.gcard .job { font-size:12px; color:var(--fg-2); margin:0; }
+/* Most requested: a closed app people asked for, with its "I want this too" button. */
+.req .head { align-items:center; }
+.req .want { flex:none; }
+/* Browse by category: one raised card per category; its groups wrap as chips (no dead space, nothing bare). */
+.cats { columns:320px; column-gap:12px; }
+/* WHY columns, not a grid: categories hold 3 to 18 groups; grid rows stretch every card to the tallest and leave dead space. */
+.catcard { cursor:default; gap:10px; break-inside:avoid; margin-bottom:12px; width:100%; }
+.catcard h3 { white-space:normal; }
+@media (hover:hover) { .catcard:hover { transform:none; } }
+.catcard .head { align-items:center; }
+.gchips { display:flex; flex-wrap:wrap; gap:6px; }
+.gchips .fchip .n { color:var(--fg-faint); margin-left:4px; font-size:11px; }
 .builders { padding:16px; display:flex; align-items:center; justify-content:space-between; gap:16px; flex-wrap:wrap; }
 .builders .btns { display:flex; gap:8px; flex-wrap:wrap; }
 .footer { display:flex; gap:8px; flex-wrap:wrap; justify-content:center; }
 .footchip { padding:4px 12px; border-radius:var(--radius-control); font-size:12px; color:var(--fg-2); border:1px solid var(--edge);
   background:var(--glass); backdrop-filter:blur(16px); -webkit-backdrop-filter:blur(16px); }
 .footchip:hover { color:var(--fg); border-color:var(--edge-strong); }
+.mi.suggest { color:var(--fg); font-weight:500; }
+select.field { appearance:auto; }
 @media (max-width:640px) {
   .hero-row { flex-wrap:wrap; }
   .hero-row .headline { flex-basis:calc(100% - 44px); }
@@ -55,108 +53,127 @@
   .pop { padding-left:0; }
   .row1 { display:flex; overflow-x:auto; scrollbar-width:none; padding:8px 4px 16px; margin:-8px -4px -16px; }
   .row1 .card { flex:0 0 260px; }
-  .hero { padding:16px; }
-  .hero .fchips { justify-content:flex-start; }
-  .rail .card { flex-basis:260px; }
+  .cats { columns:1; }
   .builders .btns { width:100%; flex-direction:column-reverse; } .builders .btns .btn { width:100%; }
 }
 </style>
 </head>
 <body>
-<div class="demo-note">Clickable demo. Real project names; every number, person and comment is made up, and nothing is saved. Only Documents opens.</div>
+<div class="demo-note">Clickable demo on the real map: real groups and projects; every vote, count, person and comment is made up, and nothing is saved.</div>
 
 <div class="page" id="page"></div>
 
 <div class="scrim" id="scrim"><div class="dialog surface" id="dialog"></div></div>
 <div class="toast" id="toast"></div>
 
+<!-- WHY: the real map (data/*.json, built by prefill/make-demo-data.mjs) drives every group, project and search result. -->
+<script src="map-data.js"></script>
 <script>
 const ICON = {
   thumb: d => `<svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" ${d?'style="transform:scaleY(-1)"':''}><path d="M7 10v11H4a1 1 0 0 1-1-1v-9a1 1 0 0 1 1-1z"/><path d="M7 10l4-7a2 2 0 0 1 2 2v4h5.5a2 2 0 0 1 2 2.3l-1.2 7a2 2 0 0 1-2 1.7H7"/></svg>`,
   star: `<svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"><path d="m12 2 3.1 6.3 6.9 1-5 4.9 1.2 6.8L12 17.8 5.8 21l1.2-6.8-5-4.9 6.9-1L12 2Z"/></svg>`,
-  shield: `<svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10"/><path d="m9 12 2 2 4-4"/></svg>`,
   user: `<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="8" r="4"/><path d="M4 21c1.5-4 4.5-6 8-6s6.5 2 8 6"/></svg>`,
   owner: `<svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="8" r="4"/><path d="M4 21c1.5-4 4.5-6 8-6s6.5 2 8 6"/></svg>`,
-  chev: `<svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="m6 9 6 6 6-6"/></svg>`,
-  check: `<svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="m5 12 5 5 9-10"/></svg>`,
   close: `<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M6 6l12 12M18 6 6 18"/></svg>`,
   search: `<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>`,
 };
 const esc = s => String(s).replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+const keyOf = s => s.toLowerCase().replace(/[^a-z0-9]/g, '');
+// WHY seeded numbers: pretend votes must stay the same on every reload, or the demo looks broken.
+const hash = s => { let h = 2166136261; for (const ch of s) h = Math.imul(h ^ ch.charCodeAt(0), 16777619); return h >>> 0; };
 
-/* ═══ Demo data (all made up) ═══ */
-const GROUPS = [
-  {id:'documents', name:'Documents', closed:['Google Docs','Microsoft Word','Apple Pages'], alts:7, notYet:38, votes:1084, wanted:'Suggestion mode as smooth as Google Docs\''},
-  {id:'design', name:'Design', closed:['Figma','Canva','Adobe XD'], alts:6, notYet:78, votes:912, wanted:'Live multiplayer editing like Figma'},
-  {id:'maps', name:'Maps', closed:['Google Maps','Apple Maps'], alts:4, notYet:71, votes:640, wanted:'Live traffic'},
-  {id:'photo', name:'Photo editing', closed:['Photoshop','Lightroom'], alts:8, notYet:64, votes:1203, wanted:'Adjustment layers that open Photoshop files'},
-  {id:'video', name:'Video editing', closed:['Premiere Pro','Final Cut','CapCut'], alts:7, notYet:58, votes:587, wanted:'Fast export on any graphics card'},
-  {id:'notes', name:'Notes & wikis', closed:['Notion','Evernote','Obsidian'], alts:31, notYet:52, votes:2410, wanted:'Linked databases like Notion\'s'},
-  {id:'sheets', name:'Spreadsheets', closed:['Excel','Google Sheets'], alts:9, notYet:41, votes:733, wanted:'Excel macros that just run'},
-  {id:'email', name:'Email', closed:['Gmail','Outlook'], alts:8, notYet:35, votes:498, wanted:'A phone app as polished as Gmail'},
-  {id:'chat', name:'Team chat', closed:['Slack','Discord','Teams'], alts:12, notYet:33, votes:1544, wanted:'Voice rooms like Discord'},
-  {id:'calls', name:'Video calls', closed:['Zoom','Google Meet'], alts:6, notYet:29, votes:802, wanted:'Calls with 100+ people that stay smooth'},
-  {id:'storage', name:'Cloud storage', closed:['Dropbox','Google Drive','OneDrive'], alts:10, notYet:22, votes:961, wanted:'Phone photo backup that never misses one'},
-  {id:'passwords', name:'Password managers', closed:['1Password','LastPass'], alts:5, notYet:8, votes:1320, wanted:'Sharing with family without a server'},
-];
-const BEST = [
-  {name:'Bitwarden', group:'Password managers', pct:96, votes:412, license:'GPL-3.0', gh:'17k', verified:true, blurb:'Passwords on every device, with a free plan and the option to host it yourself.'},
-  {name:'OnlyOffice Docs', group:'Documents', gid:'documents', id:'onlyoffice', pct:91, votes:47, license:'AGPL-3.0', gh:'6.2k', verified:true, blurb:'Office suite focused on matching Microsoft\'s file formats. Runs in the browser or as a desktop app.'},
-  {name:'Jitsi Meet', group:'Video calls', pct:88, votes:233, license:'Apache-2.0', gh:'24k', verified:true, blurb:'Video calls in the browser with no account needed. Host it yourself or use theirs.'},
-  {name:'LibreOffice Writer', group:'Documents', gid:'documents', id:'libreoffice', pct:87, votes:45, license:'MPL-2.0', gh:null, verified:true, blurb:'The long-running free office suite\'s word processor. Desktop only; no live co-editing.'},
-  {name:'Thunderbird', group:'Email', pct:84, votes:190, license:'MPL-2.0', gh:null, verified:true, blurb:'Desktop email, calendar and contacts from Mozilla.'},
-  {name:'Penpot', group:'Design', pct:74, votes:121, license:'MPL-2.0', gh:'34k', verified:true, blurb:'Design and prototyping in the browser, built on open web standards.'},
-  {name:'Organic Maps', group:'Maps', pct:81, votes:98, license:'Apache-2.0', gh:'11k', verified:true, blurb:'Offline maps for hiking and travel, with no tracking.'},
-  {name:'Kdenlive', group:'Video editing', pct:79, votes:144, license:'GPL-3.0', gh:null, verified:true, blurb:'Multi-track video editor from the KDE project.'},
-];
+/* ═══ The real map ═══ */
+const MAP = window.MAP;
+const PROJ = new Map(MAP.projects.map(p => [p.id, p]));
+const CAT = new Map(MAP.categories.map(c => [c.id, c]));
+const groupsOf = new Map();
+for (const g of MAP.groups) for (const a of g.alternatives) { if (!groupsOf.has(a.project)) groupsOf.set(a.project, []); groupsOf.get(a.project).push(g); }
+const ALL_CLOSED = [];
+for (const g of MAP.groups) for (const c of g.closed) if (!ALL_CLOSED.some(x => x.c === c && x.g === g)) ALL_CLOSED.push({ c, g });
+const POPULAR = ['Google Docs','Notion','Adobe Photoshop','Slack','Figma','Spotify','Zoom'].filter(p => ALL_CLOSED.some(x => x.c === p));
+const fullCount = g => g.alternatives.filter(a => a.fit === 'full').length;
+
+// Biggest gaps: groups with nothing open, or only one alternative that does the whole job. Everyday shelves first.
+const GAPS = MAP.groups
+  .filter(g => fullCount(g) <= 1)
+  .map(g => ({ g, notYet: g.alternatives.length ? 52 + hash(g.id) % 40 : 90 + hash(g.id) % 9, votes: 120 + hash(g.id + 'v') % 1400 }))
+  .sort((a, b) => (['dev','business'].includes(a.g.category) - ['dev','business'].includes(b.g.category)) || b.notYet - a.notYet);
+
+// Best rated: hand-picked, active, fully replacing projects; the % is pretend.
+const BEST = MAP.projects
+  .filter(p => p.source === 'starter' && !p.inactive && p.licenseClass === 'open' && (groupsOf.get(p.id) || []).some(g => g.alternatives.some(a => a.project === p.id && a.fit === 'full')))
+  .map(p => ({ p, g: groupsOf.get(p.id)[0], pct: 80 + hash(p.name) % 18, votes: 30 + hash(p.name + 'v') % 420 }))
+  .sort((a, b) => b.pct - a.pct || b.votes - a.votes)
+  .slice(0, 12);
+
+// Sample owner projects (not in the map yet), placed in the real groups they'd join.
 const NEW = [
-  {name:'NoteNest', group:'Notes & wikis', age:'3 weeks old', built:'Vibe-coded', help:'Testers on Windows', blurb:'Owner says: Notion-style tables that run fully offline in one file. Early.'},
-  {name:'Framewise', group:'Video editing', age:'2 months old', built:'AI-assisted', help:'Faster export on AMD cards', blurb:'Owner says: a simple editor for short clips, built on Kdenlive\'s engine.'},
-  {name:'Tallyo', group:'Spreadsheets', age:'5 weeks old', built:'Hand-built', help:'Someone who knows Excel formulas', blurb:'Owner says: a spreadsheet that opens Excel files in the browser, nothing uploaded.'},
-  {name:'Sketchroom', group:'Design', age:'6 weeks old', built:'Agentic engineering', help:'Design feedback', blurb:'Owner says: Figma-style live editing, self-hosted. Text tools still rough.'},
-];
-NEW.push({name:'Inkwell', group:'Email', age:'4 weeks old', built:'Hand-built', help:'Testers with Outlook accounts', blurb:'Owner says: a calm desktop email app that reads Outlook and Gmail.'},
-  {name:'Huddle', group:'Video calls', age:'7 weeks old', built:'AI-assisted', help:'Someone who knows WebRTC', blurb:'Owner says: drop-in voice rooms like Discord, for small teams.'});
-const POPULAR = ['Google Docs','Notion','Photoshop','Slack','Figma','Microsoft Word','Zoom'];
-const S = { user:null, groupSort:'gap' };
+  {name:'NoteNest', gid:'notes', age:'3 weeks old', built:'Vibe-coded', help:'Testers on Windows', blurb:'Owner says: Notion-style tables that run fully offline in one file. Early.'},
+  {name:'Framewise', gid:'video-editing', age:'2 months old', built:'AI-assisted', help:'Faster export on AMD cards', blurb:'Owner says: a simple editor for short clips, built on Kdenlive\'s engine.'},
+  {name:'Tallyo', gid:'spreadsheets', age:'5 weeks old', built:'Hand-built', help:'Someone who knows Excel formulas', blurb:'Owner says: a spreadsheet that opens Excel files in the browser, nothing uploaded.'},
+  {name:'Sketchroom', gid:'ui-design', age:'6 weeks old', built:'Agentic engineering', help:'Design feedback', blurb:'Owner says: Figma-style live editing, self-hosted. Text tools still rough.'},
+  {name:'Inkwell', gid:'email', age:'4 weeks old', built:'Hand-built', help:'Testers with Outlook accounts', blurb:'Owner says: a calm desktop email app that reads Outlook and Gmail.'},
+  {name:'Huddle', gid:'video-calls', age:'7 weeks old', built:'AI-assisted', help:'Someone who knows WebRTC', blurb:'Owner says: drop-in voice rooms like Discord, for small teams.'},
+].map(n => ({ ...n, group: (MAP.groups.find(g => g.id === n.gid) || {}).name || '' }));
+
+// Most requested: closed apps no group covers yet (from projects set aside during the pre-fill). Counts are pretend.
+const REQUESTED = (() => {
+  const m = new Map();
+  for (const u of MAP.unplaced) for (const c of u.replaces) {
+    const k = keyOf(c);
+    if (!m.has(k)) m.set(k, { name: c, projects: [] });
+    if (!m.get(k).projects.includes(u.name)) m.get(k).projects.push(u.name);
+  }
+  return [...m.values()].map(r => ({ ...r, want: 20 + hash(r.name) % 180 })).sort((a, b) => b.projects.length - a.projects.length || b.want - a.want).slice(0, 12);
+})();
+
+const S = { user:null, wanted:new Set() };
 try { S.user = sessionStorage.getItem('demoUser'); } catch (e) {}
 
 /* ═══ Rendering ═══ */
-function gapCard(g) {
+function gapCard({ g, notYet, votes }) {
+  const n = g.alternatives.length;
   return `<button class="card gcard" data-act="openGroup" data-id="${g.id}">
-    <div class="head"><h3>${esc(g.name)}</h3><div class="corner" style="margin-right:0"><span class="pill warn"><i></i>${g.notYet}% say not yet</span></div></div>
-    <div class="chiprow"><span class="chip"><b>${g.alts}</b>open alternatives</span><span class="chip"><b>${g.votes.toLocaleString()}</b>votes</span></div>
-    <p class="gap-line">Most wanted: <b>${esc(g.wanted)}</b></p>
-    <div class="foot">Replaces ${esc(g.closed.join(', '))}</div></button>`;
+    <div class="head"><h3>${esc(g.name)}</h3><div class="corner" style="margin-right:0"><span class="pill warn"><i></i>${notYet}% say not yet</span></div></div>
+    <div class="chiprow">${n ? `<span class="chip"><b>${n}</b>open ${n === 1 ? 'alternative' : 'alternatives'}</span><span class="chip"><b>${fullCount(g)}</b>${fullCount(g) === 1 ? 'does' : 'do'} the whole job</span>` : `<span class="chip">No open alternative yet</span>`}<span class="chip"><b>${votes.toLocaleString()}</b>votes</span></div>
+    <p class="job">${esc(g.job)}.</p>
+    <div class="foot">Replaces ${esc(g.closed.slice(0, 4).join(', '))}</div></button>`;
 }
-function altCard(a) {
-  return `<button class="card" data-act="openAlt" data-gid="${a.gid||''}" data-id="${a.id||''}" data-group="${esc(a.group)}">
-    <div class="head"><h3>${esc(a.name)}</h3></div>
+function altCard({ p, g, pct, votes }) {
+  return `<button class="card" data-act="openAlt" data-gid="${g.id}" data-id="${p.id}">
+    <div class="head"><h3>${esc(p.name)}</h3></div>
     <div class="chiprow">
-      ${a.verified?`<span class="chip">${ICON.shield}Verified</span>`:''}
-      <span class="chip" title="${a.pct}% of ${a.votes} say it works as a replacement">${ICON.thumb(false)}${a.pct}%</span>
-      <span class="chip">${esc(a.group)}</span>
-      <span class="chip">${a.license}</span>
-      ${a.gh?`<span class="chip">${ICON.star}${a.gh} on GitHub</span>`:`<span class="chip">Not on GitHub</span>`}
+      <span class="chip" title="${pct}% of ${votes} say it works as a replacement">${ICON.thumb(false)}${pct}%</span>
+      <span class="chip">${esc(g.name)}</span>
+      <span class="chip">${esc(p.license || 'License to confirm')}</span>
+      ${p.stars ? `<span class="chip">${ICON.star}${p.stars >= 1000 ? (p.stars / 1000).toFixed(p.stars >= 10000 ? 0 : 1) + 'k' : p.stars} on GitHub</span>` : `<span class="chip">Not on GitHub</span>`}
     </div>
-    <p class="blurb">${esc(a.blurb)}</p></button>`;
+    <p class="blurb">${esc(p.summary)}</p></button>`;
 }
 function newCard(a) {
-  return `<button class="card" data-act="openOther" data-group="${esc(a.group)}">
+  return `<button class="card" data-act="openGroup" data-id="${a.gid}">
     <div class="head"><h3>${esc(a.name)}</h3><div class="corner" style="margin-right:0"><span class="pill info">New</span></div></div>
     <div class="chiprow"><span class="chip">${ICON.owner}Owner</span><span class="chip">${esc(a.group)}</span><span class="chip">${a.built}</span><span class="chip">${a.age}</span></div>
     <p class="blurb">${esc(a.blurb)}</p>
     <div class="foot">Help wanted: ${esc(a.help)}</div></button>`;
 }
-const GSORTS = {gap:'Biggest gap first', az:'A to Z', most:'Most alternatives'};
-function groupList() {
-  const list = GROUPS.slice().sort({gap:(a,b)=>b.notYet-a.notYet, az:(a,b)=>a.name.localeCompare(b.name), most:(a,b)=>b.alts-a.alts}[S.groupSort]);
-  return list.map(g => `<button class="lvl1 grow-row" data-act="openGroup" data-id="${g.id}">
-    <div style="min-width:0"><div class="nm">${esc(g.name)}</div><div class="rp">${esc(g.closed.join(', '))}</div></div>
-    <span class="chip"><b>${g.alts}</b>alternatives</span></button>`).join('');
+function reqCard(r) {
+  const on = S.wanted.has(r.name), n = r.want + (on ? 1 : 0);
+  return `<div class="card req" data-act="suggest" data-v="${esc(r.name)}" role="button" tabindex="0">
+    <div class="head"><h3>${esc(r.name)}</h3>
+      <button class="btn sm secondary want ${on ? 'on' : ''}" data-act="want" data-v="${esc(r.name)}">${on ? '✓ ' : ''}I want this too</button></div>
+    <div class="chiprow"><span class="chip"><b>${n}</b>want this</span><span class="chip"><b>${r.projects.length}</b>open ${r.projects.length === 1 ? 'project' : 'projects'} waiting for a group</span></div>
+    <p class="blurb">No group covers ${esc(r.name)} yet. Open projects people pointed to: ${esc(r.projects.slice(0, 3).join(', '))}.</p></div>`;
+}
+function catCard(c) {
+  const gs = MAP.groups.filter(g => g.category === c.id);
+  const alts = gs.reduce((s, g) => s + g.alternatives.length, 0);
+  return `<div class="card catcard">
+    <div class="head"><h3>${esc(c.name)}</h3><span class="chip"><b>${gs.length}</b>${gs.length === 1 ? 'group' : 'groups'} · <b>${alts}</b>listings</span></div>
+    <div class="gchips">${gs.map(g => `<button class="fchip" data-act="openGroup" data-id="${g.id}" title="${esc(g.job)}">${esc(g.name)}<span class="n">${g.alternatives.length}</span></button>`).join('')}</div></div>`;
 }
 function render() {
-  const gaps = GROUPS.filter(g => g.votes >= 100).sort((a,b) => b.notYet - a.notYet).slice(0, 6);
+  const listings = MAP.groups.reduce((s, g) => s + g.alternatives.length, 0);
   document.getElementById('page').innerHTML = `
   <!-- Hero card: account, headline, search and popular picks in one card (no bare text on the wallpaper). -->
   <div class="surface hero2">
@@ -171,16 +188,21 @@ function render() {
         <div class="menu search-menu" id="searchMenu"></div>
       </div>
     </div>
-    <div class="pop"><span class="muted11">Popular</span><div class="fchips">${POPULAR.map(p=>`<button class="fchip" data-act="pick" data-v="${p}">${p}</button>`).join('')}</div></div>
+    <div class="pop"><span class="muted11">Popular</span><div class="fchips">${POPULAR.map(p=>`<button class="fchip" data-act="pick" data-v="${esc(p)}">${esc(p)}</button>`).join('')}</div></div>
   </div>
   <section class="surface sec">
-    <div class="sec-head"><div><h2 class="h-large">Biggest gaps</h2><p class="desc12">Where most people say nothing good replaces it yet. A good place to start building.</p></div><button class="btn sm secondary" data-act="toast" data-msg="Opens the full list. Not part of this demo.">See all</button></div>
-    <div class="row1" data-row="gaps">${gaps.map(gapCard).join('')}</div>
+    <div class="sec-head"><div><h2 class="h-large">Biggest gaps</h2><p class="desc12">Where nothing open does the whole job yet. A good place to start building.</p></div><button class="btn sm secondary" data-act="toast" data-msg="Opens the full list. Not part of this demo.">See all</button></div>
+    <div class="row1" data-row="gaps">${GAPS.slice(0, 10).map(gapCard).join('')}</div>
   </section>
 
   <section class="surface sec">
     <div class="sec-head"><div><h2 class="h-large">Best rated</h2><p class="desc12">Alternatives people here say really work as a replacement</p></div><button class="btn sm secondary" data-act="toast" data-msg="Opens the full list. Not part of this demo.">See all</button></div>
     <div class="row1" data-row="best">${BEST.map(altCard).join('')}</div>
+  </section>
+
+  <section class="surface sec">
+    <div class="sec-head"><div><h2 class="h-large">Most requested</h2><p class="desc12">Closed apps people asked for that no group covers yet</p></div><button class="btn sm secondary" data-act="suggest" data-v="">Suggest a closed app</button></div>
+    <div class="row1" data-row="requested">${REQUESTED.map(reqCard).join('')}</div>
   </section>
 
   <section class="surface sec">
@@ -200,12 +222,8 @@ function render() {
   </div>
 
   <section class="surface sec">
-    <div class="sec-head">
-      <div><h2 class="h-large">All groups<span class="count">${GROUPS.length}</span></h2><p class="desc12">Every kind of app on the map</p></div>
-      <div class="dd"><button class="select sm" data-act="menu" data-menu="gsortMenu">${GSORTS[S.groupSort]}${ICON.chev}</button>
-        <div class="menu" id="gsortMenu">${Object.entries(GSORTS).map(([k,v])=>`<button class="mi ${k===S.groupSort?'sel':''}" data-act="setGSort" data-v="${k}">${v}${k===S.groupSort?ICON.check:''}</button>`).join('')}</div></div>
-    </div>
-    <div class="groups">${groupList()}</div>
+    <div class="sec-head"><div><h2 class="h-large">Browse by category<span class="count">${MAP.categories.length}</span></h2><p class="desc12">${MAP.groups.length} groups, ${listings} listings. Pick the job you need done.</p></div></div>
+    <div class="cats">${MAP.categories.map(catCard).join('')}</div>
   </section>
 
   <!-- WHY separate chips (Destin, Oct 27): each footer link is its own glass chip, not words in one bar. -->
@@ -222,11 +240,6 @@ function render() {
 }
 
 /* ═══ Search ═══ */
-function showPopular() {
-  const sm = document.getElementById('searchMenu');
-  sm.innerHTML = '<div class="menu-note">Popular</div>' + POPULAR.map(p => `<button class="mi" data-act="pick" data-v="${p}">${p}<span class="muted11">${esc(ALL_CLOSED.find(x=>x.c===p).g.name)}</span></button>`).join('');
-  sm.classList.add('open');
-}
 // WHY: show as many cards as fit on one line, so a row never ends in empty space; phones scroll instead.
 function fitRows() {
   document.querySelectorAll('.row1').forEach(r => {
@@ -237,20 +250,23 @@ function fitRows() {
   });
 }
 addEventListener('resize', fitRows);
-const ALL_CLOSED = GROUPS.flatMap(g => g.closed.map(c => ({c, g})));
+function searchMenu(raw) {
+  const t = raw.trim().toLowerCase();
+  const closed = ALL_CLOSED.filter(x => x.c.toLowerCase().includes(t)).slice(0, 6)
+    .map(x => `<button class="mi" data-act="goClosed" data-g="${x.g.id}" data-v="${esc(x.c)}">${esc(x.c)}<span class="muted11">${esc(x.g.name)}</span></button>`);
+  const groups = MAP.groups.filter(g => g.name.toLowerCase().includes(t)).slice(0, 5)
+    .map(g => `<button class="mi" data-act="openGroup" data-id="${g.id}">${esc(g.name)}<span class="muted11">Group · ${esc(CAT.get(g.category).name)}</span></button>`);
+  const projects = MAP.projects.filter(p => p.name.toLowerCase().includes(t) && groupsOf.has(p.id)).slice(0, 6)
+    .map(p => `<button class="mi" data-act="openAlt" data-gid="${groupsOf.get(p.id)[0].id}" data-id="${p.id}">${esc(p.name)}<span class="muted11">Open alternative · ${esc(groupsOf.get(p.id)[0].name)}</span></button>`);
+  const found = (closed.length ? '<div class="menu-note">Closed apps</div>' + closed.join('') : '') + (groups.length ? '<div class="menu-note">Groups</div>' + groups.join('') : '') + (projects.length ? '<div class="menu-note">Open projects</div>' + projects.join('') : '');
+  // WHY a suggest row: an empty search is exactly when someone knows of a closed app the map is missing.
+  return found || `<div class="menu-note">Nothing matches "${esc(raw.trim())}" yet.</div><button class="mi suggest" data-act="suggest" data-v="${esc(raw.trim())}">Can't find "${esc(raw.trim())}"? Suggest it</button>`;
+}
 function wireSearch() {
   const q = document.getElementById('q'), sm = document.getElementById('searchMenu');
   q.addEventListener('input', () => {
-    const t = q.value.trim().toLowerCase();
-    if (!t) { sm.classList.remove('open'); return; }
-    const closed = ALL_CLOSED.filter(x => x.c.toLowerCase().includes(t)).slice(0, 6)
-      .map(x => `<button class="mi" data-act="pick" data-v="${esc(x.c)}">${esc(x.c)}<span class="muted11">${esc(x.g.name)}</span></button>`);
-    const groups = GROUPS.filter(g => g.name.toLowerCase().includes(t))
-      .map(g => `<button class="mi" data-act="openGroup" data-id="${g.id}">${esc(g.name)}<span class="muted11">Group</span></button>`);
-    const alts = [...BEST, ...NEW].filter(a => a.name.toLowerCase().includes(t))
-      .map(a => `<button class="mi" data-act="${a.gid?'openAlt':'openOther'}" data-gid="${a.gid||''}" data-id="${a.id||''}" data-group="${esc(a.group)}">${esc(a.name)}<span class="muted11">Open alternative · ${esc(a.group)}</span></button>`);
-    sm.innerHTML = (closed.length?'<div class="menu-note">Closed apps</div>'+closed.join(''):'') + (groups.length?'<div class="menu-note">Groups</div>'+groups.join(''):'') + (alts.length?'<div class="menu-note">Open projects</div>'+alts.join(''):'')
-      || `<div class="menu-note">Nothing matches "${esc(q.value)}" yet. Ask for it on r/TrueOpenSource.</div>`;
+    if (!q.value.trim()) { sm.classList.remove('open'); return; }
+    sm.innerHTML = searchMenu(q.value);
     sm.classList.add('open');
   });
   q.addEventListener('keydown', e => { if (e.key === 'Enter') { const f = sm.querySelector('.mi:not(:disabled)'); if (f) f.click(); } });
@@ -266,40 +282,74 @@ function renderAcct() {
   try { S.user ? sessionStorage.setItem('demoUser', S.user) : sessionStorage.removeItem('demoUser'); } catch (e) {}
 }
 const scrim = document.getElementById('scrim'), dialog = document.getElementById('dialog');
-function openDialog(html, size='') { dialog.className = 'dialog surface ' + size; dialog.innerHTML = html; scrim.classList.add('open'); }
+function openDialog(html, size='') { dialog.className = 'dialog surface ' + size; dialog.innerHTML = html; scrim.classList.add('open'); const f = dialog.querySelector('[autofocus]'); if (f) f.focus(); }
 function closeDialog() { scrim.classList.remove('open'); }
 const bar = t => `<div class="bar"><span class="t">${t}</span><button class="icon-btn" data-act="close" aria-label="Close">${ICON.close}</button></div>`;
-function signIn() {
+let afterSignIn = null;
+// Same flow as the group page: ask to sign in, then carry on with what the person was doing.
+function needSignIn(then) {
+  if (S.user) return true;
+  afterSignIn = then;
   openDialog(`${bar('Sign in to take part')}<div class="body">
-    <p class="body2">Reading is open to everyone. To vote or comment, sign in with your GitHub account.</p>
+    <p class="body2">Reading is open to everyone. To vote, suggest or comment, sign in with your GitHub account.</p>
     <p class="small2">We only see your public GitHub name and picture. Nothing else, and nothing in your code.</p>
     <div class="foot-btns"><button class="btn md secondary" data-act="close">Not now</button><button class="btn md primary" data-act="ghpage">Sign in with GitHub</button></div></div>`, 'narrow');
+  return false;
+}
+function suggestDialog(name) {
+  if (!needSignIn(() => suggestDialog(name))) return;
+  const options = MAP.categories.map(c => `<optgroup label="${esc(c.name)}">${MAP.groups.filter(g => g.category === c.id).map(g => `<option value="${g.id}">${esc(g.name)}</option>`).join('')}</optgroup>`).join('');
+  openDialog(`${bar('Suggest a closed app')}<div class="body">
+    <div><span class="label">Closed app</span><input class="field" id="sgName" value="${esc(name)}" placeholder="e.g. Procreate" ${name ? '' : 'autofocus'}></div>
+    <div><span class="label">What do people use it for?</span>
+      <select class="field" id="sgGroup" ${name ? 'autofocus' : ''}><option value="">Pick a group…</option>${options}<option value="__new">None of these fit — suggest a new group</option></select>
+      <p class="fieldhint">The group is the job, not the company: Canva goes under "Graphic design & templates".</p></div>
+    <div id="sgNewWrap" style="display:none"><span class="label">New group</span><input class="field" id="sgNew" placeholder="e.g. Digital painting">
+      <p class="fieldhint">A short name for the job. Mods create new groups.</p></div>
+    <div><span class="label">Link (optional)</span><input class="field" id="sgLink" placeholder="The app's website"></div>
+    <div class="foot-btns"><button class="btn md secondary" data-act="close">Cancel</button><button class="btn md primary" data-act="sendSuggest">Send to the mods</button></div></div>`, 'medium');
+  document.getElementById('sgGroup').addEventListener('change', e => { document.getElementById('sgNewWrap').style.display = e.target.value === '__new' ? '' : 'none'; });
 }
 
 /* ═══ Actions ═══ */
 let toastT;
 function toast(msg) { const t = document.getElementById('toast'); t.textContent = msg; t.classList.add('show'); clearTimeout(toastT); toastT = setTimeout(()=>t.classList.remove('show'), 2600); }
 function closeMenus() { document.querySelectorAll('.menu.open').forEach(m => m.classList.remove('open')); }
-const goGroup = (id, extra='') => { if (id === 'documents') location.href = 'group-page.html' + extra; else toast('Only the Documents group opens in this demo.'); };
+// Every group opens: group-page.html reads ?g=<id> (and ?compare=, #<project>, #add).
+const goGroup = (id, { compare, hash: h } = {}) => { location.href = `group-page.html?g=${encodeURIComponent(id)}${compare ? '&compare=' + encodeURIComponent(compare) : ''}${h ? '#' + h : ''}`; };
 
 document.addEventListener('click', e => {
   const el = e.target.closest('[data-act]');
   if (!el) { if (!e.target.closest('.menu') && !e.target.closest('.searchwrap')) closeMenus(); if (e.target === scrim) closeDialog(); return; }
   const act = el.dataset.act;
-  if (act !== 'menu' && act !== 'acct') closeMenus();
+  if (act !== 'acct') closeMenus();
   if (el.tagName === 'A') e.preventDefault();
   switch (act) {
-    case 'menu': { const m = document.getElementById(el.dataset.menu); const was = m.classList.contains('open'); closeMenus(); m.classList.toggle('open', !was); break; }
     case 'acct': { const m = document.getElementById('acctMenu'); const was = m.classList.contains('open'); closeMenus(); m.classList.toggle('open', !was); break; }
-    case 'setGSort': S.groupSort = el.dataset.v; render(); break;
-    case 'pick': { const hit = ALL_CLOSED.find(x => x.c === el.dataset.v); if (hit) goGroup(hit.g.id, '?compare=' + encodeURIComponent(hit.c)); break; }
+    case 'pick': { const hit = ALL_CLOSED.find(x => x.c === el.dataset.v); if (hit) goGroup(hit.g.id, { compare: hit.c }); break; }
+    case 'goClosed': goGroup(el.dataset.g, { compare: el.dataset.v }); break;
     case 'openGroup': goGroup(el.dataset.id); break;
-    case 'openAlt': if (el.dataset.gid) goGroup(el.dataset.gid, '#' + el.dataset.id); else toast(`${el.dataset.group} doesn't open in this demo. Only Documents does.`); break;
-    case 'openOther': toast(`${el.dataset.group} doesn't open in this demo. Only Documents does.`); break;
+    case 'openAlt': goGroup(el.dataset.gid, { hash: el.dataset.id }); break;
     case 'toast': toast(el.dataset.msg); break;
-    case 'addProject': goGroup('documents', '#add'); break;
+    case 'addProject': goGroup('documents', { hash: 'add' }); break;
+    case 'suggest': e.stopPropagation(); suggestDialog(el.dataset.v || ''); break;
+    case 'sendSuggest': {
+      const name = document.getElementById('sgName').value.trim(), g = document.getElementById('sgGroup').value;
+      if (!name) { toast('Name the closed app first.'); return; }
+      if (!g) { toast('Pick what people use it for.'); return; }
+      if (g === '__new' && !document.getElementById('sgNew').value.trim()) { toast('Give the new group a short name.'); return; }
+      closeDialog(); toast('Sent to the mods. Others can say they want it too.'); break;
+    }
+    case 'want': {
+      e.stopPropagation();
+      const name = el.dataset.v;
+      if (!needSignIn(() => document.querySelector(`[data-act=want][data-v="${CSS.escape(name)}"]`).click())) return;
+      if (S.wanted.has(name)) S.wanted.delete(name); else { S.wanted.add(name); toast(`Counted. Mods see how many people want ${name}.`); }
+      const card = el.closest('.req'); const r = REQUESTED.find(x => x.name === name);
+      card.outerHTML = reqCard(r); fitRows(); break;
+    }
     case 'download': {
-      const data = JSON.stringify({license:'CC BY-SA 4.0', groups:GROUPS.map(g=>({name:g.name, replaces:g.closed, open_alternatives:g.alts, say_not_yet_percent:g.notYet, most_wanted:g.wanted}))}, null, 2);
+      const data = JSON.stringify({ license:'CC BY-SA 4.0', categories:MAP.categories, groups:MAP.groups, projects:MAP.projects }, null, 2);
       const url = URL.createObjectURL(new Blob([data], {type:'application/json'}));
       const a = document.createElement('a'); a.href = url; a.download = 'alternatives-map.json'; a.click(); URL.revokeObjectURL(url);
       toast('Downloaded alternatives-map.json'); break;
@@ -312,21 +362,27 @@ document.addEventListener('click', e => {
         <div><span class="label">How it was built</span><div class="lvl1 pitch"><p class="small2">Owners pick one: Hand-built, AI-assisted, Agentic engineering or Vibe-coded. Imported projects say "Not labeled" until their owner picks. We never guess.</p></div></div>
         <div class="foot-btns"><button class="btn md primary" data-act="close">Done</button></div></div>`, 'medium'); break;
     case 'credits':
-      openDialog(`${bar('Credits')}<div class="body"><p class="small2">The first list was built from awesome-privacy (CC0), awesome-foss-alternatives (CC BY 4.0), switching.software (CC BY-SA 4.0), awesome-oss-alternatives and open-source-alternatives (MIT), OpenAlternative (CC0) and awesome-selfhosted (CC BY-SA 3.0). Thank you to everyone who maintains them.</p>
+      openDialog(`${bar('Credits')}<div class="body"><p class="small2">The first list was built once from awesome-privacy (CC0), awesome-foss-alternatives (CC BY 4.0), switching.software (CC BY-SA 4.0), awesome-oss-alternatives and open-source-alternatives (MIT) and awesome-selfhosted (CC BY-SA 3.0). Thank you to everyone who maintains them.</p>
         <div class="foot-btns"><button class="btn md primary" data-act="close">Done</button></div></div>`, 'narrow'); break;
-    case 'close': closeDialog(); break;
-    case 'signin': signIn(); break;
+    case 'close': closeDialog(); afterSignIn = null; break;
+    case 'signin': needSignIn(null); break;
     case 'ghpage':
       openDialog(`${bar('github.com (simulated)')}<div class="body"><div class="gh">
         <div style="font-size:18px;font-weight:600">Authorize Alternatives Map</div>
         <div style="font-size:14px">Alternatives Map by <b>r-TrueOpenSource</b> wants to access your <b>sample-user</b> account.</div>
         <div style="font-size:13px;color:#59636e">Public profile information only (read-only).</div>
         <button class="ghbtn" data-act="authorize">Authorize</button></div></div>`, 'narrow'); break;
-    case 'authorize': S.user = 'sample-user'; closeDialog(); renderAcct(); toast('Signed in as @sample-user'); break;
+    case 'authorize': {
+      S.user = 'sample-user'; closeDialog(); renderAcct(); toast('Signed in as @sample-user');
+      const then = afterSignIn; afterSignIn = null; if (then) then(); break;
+    }
     case 'signout': S.user = null; renderAcct(); toast('Signed out'); break;
   }
 });
-document.addEventListener('keydown', e => { if (e.key === 'Escape') { closeDialog(); closeMenus(); } });
+document.addEventListener('keydown', e => {
+  if (e.key === 'Escape') { closeDialog(); closeMenus(); }
+  if ((e.key === 'Enter' || e.key === ' ') && e.target.matches('.req[data-act]')) { e.preventDefault(); suggestDialog(e.target.dataset.v); }
+});
 render();
 </script>
 </body>
