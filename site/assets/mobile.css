@@ -14,9 +14,8 @@
   .h-subject { font-size:20px; }
   body { -webkit-tap-highlight-color:transparent; }
 
-  /* ── Bottom tab bar: Home, Search, Boards, Gaps, You ── */
+  /* ── Bottom tab bar: Home, Search, Boards, Gaps ── */
   /* WHY: on a phone the thumb lives at the bottom; a top bar of small targets wastes the first screen. */
-  .top { display:none; }
   body.searching .top { display:flex; position:fixed; inset:0 0 auto 0; z-index:65; padding:12px 16px; background:var(--glass); backdrop-filter:blur(16px); -webkit-backdrop-filter:blur(16px); border-bottom:1px solid var(--edge); }
   body.searching .top .icon-btn { display:none; }
   body.searching .top .acct { display:none; }
@@ -28,11 +27,6 @@
   .tab svg { width:22px; height:22px; }
   .tab[aria-current="page"], .tab.on { color:var(--accent); }
   .tab:active { background:var(--inset); }
-  /* The account tab holds the sign-in button or your avatar; make it look like a tab. */
-  .tab.acct-tab .btn { border:0; background:transparent; padding:0; flex-direction:column; gap:2px; font-size:11px; color:var(--fg-muted); min-height:44px; }
-  .tab.acct-tab .btn svg { width:22px; height:22px; }
-  .tab.acct-tab .avatar { width:26px; height:26px; }
-  .tab.acct-tab .dd { display:flex; justify-content:center; }
   .hero-acct { display:none; }
 
   /* ── Project cards become compact rows: picture left, words right; 4–5 per screen instead of 1 ── */
@@ -107,4 +101,31 @@
   /* While a sheet or pop-up is open, the tab bar steps aside so nothing is hidden behind it. */
   body:has(.menu.open:not(.search-menu)) .tabbar, body:has(.scrim.open) .tabbar { display:none; }
   .scrim { z-index:90; }
+}
+
+@media (max-width:640px) {
+  /* ── A slim app header: the site's name, and Sign in or your avatar (Destin, Oct 27: sign-in isn't a tab) ── */
+  .top, body:has(.hero3) > .top { display:flex; padding:10px 16px 6px; gap:8px; }
+  .top .searchwrap { display:none; }
+  .top .icon-btn { width:28px; height:28px; }
+  .top-title { display:block; flex:1; font-size:15px; font-weight:600; color:var(--fg); text-decoration:none; white-space:nowrap; overflow:hidden; text-overflow:ellipsis; }
+  body.searching .top .searchwrap { display:block; flex:1; }
+  body.searching .top .top-title { display:none; }
+  body:has(.hero3) .page { padding-top:6px; }
+
+  /* ── Less dead space ── */
+  .sec-head .desc12, .sec > .sec-head p.desc12 { display:none; }
+  .identity .desc12 { margin-top:2px !important; }
+  .page { gap:10px; }
+  .sec { padding:12px 12px 14px; }
+  .footer { flex-wrap:nowrap; justify-content:flex-start; overflow-x:auto; scrollbar-width:none; padding:2px 0 4px; }
+  .footchip { flex:none; }
+  .idfoot .muted11 { display:none; }
+
+  /* ── The home page's top card: headline, search and Try chips only ── */
+  .hero3 { padding:16px; gap:12px; }
+  .hero3 .hero-text { gap:12px; }
+  .hero3 .eyebrow, .hero3 .lede, .hero3 .stats-line { display:none; }
+  .hero3 h1 { font-size:24px; }
+  .searchwrap.big .searchpill { padding:10px 14px; }
 }

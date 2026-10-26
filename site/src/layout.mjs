@@ -9,6 +9,7 @@ const asset = (p) => `${url(p)}?v=${BUILD}`;
 export function topStrip({ search = true } = {}) {
   return `<div class="top">
   <a class="icon-btn" href="${url()}" title="Home" aria-label="Open Source Everything home">${ICON.home}</a>
+  <a class="top-title" href="${url()}">Open Source Everything</a>
   <div class="grow"></div>
   ${search ? `<div class="searchwrap" data-search>
     <div class="searchpill">${ICON.search}<input type="search" placeholder="Search a closed app or open project…" autocomplete="off" aria-label="Search"></div>
@@ -32,7 +33,6 @@ export function tabbar(path) {
   <button class="tab" type="button" data-open-search>${TAB_ICON.search}Search</button>
   ${SOCIAL ? `<a class="tab" href="${url('boards/')}"${here('boards/') || (path.endsWith('/board/') ? ' aria-current="page"' : '')}>${TAB_ICON.boards}Boards</a>` : ''}
   <a class="tab" href="${url('gaps/')}"${here('gaps/')}>${TAB_ICON.gaps}Gaps</a>
-  ${SOCIAL ? '<div class="tab acct-tab" data-account></div>' : ''}
 </nav>`;
 }
 

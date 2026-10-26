@@ -424,3 +424,4 @@ a.chip.link:focus-visible { outline:2px solid var(--accent); outline-offset:1px;
 .nr-where a:hover { color:var(--fg); }
 .note-own { justify-content:flex-end; }
 @media (max-width:640px) { .links { flex-wrap:wrap; } .notice-line { flex-direction:column; align-items:flex-start; } }
+.top-title { display:none; }
