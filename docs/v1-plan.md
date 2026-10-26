@@ -98,6 +98,30 @@ question. It reads our public files, so this costs nothing extra.
 **AI prompt:** two buttons on every group, **Copy prompt** (points the assistant at our file for that
 group) and **Copy prompt with the list included** (for assistants that can't open links).
 
+## 4b. How people grow the map (Destin, Oct 27)
+
+- **Suggest a closed app:** from an empty search ("Can't find Procreate? Suggest it") or a button. Name, what
+  it's used for (pick a group or "none of these fit"), optional link. Others click "I want this too".
+- **Suggest a group:** same form, via "none of these fit". Groups: suggested by anyone, created by mods.
+  **Categories** (Creative, Office, Social, Operating systems, Browsers, AI tools, Media, Developer &
+  business…): mods only, suggestions welcome.
+- **Suggest an alternative that isn't yours:** link → checker → mods. Listed without the Owner tag or pitch;
+  the owner can claim it later.
+- **Fix mistakes:** listing reports with reasons: wrong group, doesn't really replace this, not open source,
+  abandoned, duplicate.
+- **Mod page → Suggestions tab:** each request with its "I want this too" count; Approve / Merge into existing /
+  Turn down. An approved closed app with no alternatives gets a page at once, shown as a gap.
+- **Home page → "Most requested":** requested apps by votes, including ones with nothing open yet.
+- **Pull requests:** the data is a public repo, so technical people can propose edits there; same review.
+- **Spam:** suggestions from GitHub accounts under 14 days wait for a mod; per-person limits; duplicates merged.
+
+## Structure (Destin, Oct 27): category → group → closed apps / alternatives
+
+A **category** is for browsing (Creative). A **group** is one job (Photo editing; Graphic design and templates;
+Interface design; Illustration; Digital painting). Photoshop and Canva sit in different groups, so they are
+never compared. A closed app that does several jobs is in each; an alternative is in each group whose job it
+does, marked "Replaces fully" or "Replaces partly".
+
 ## 5. Filling it before launch (one time only)
 
 - **Import once** from the free lists checked Oct 25: awesome-privacy (CC0), awesome-foss-alternatives
