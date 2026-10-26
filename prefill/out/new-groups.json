@@ -1,0 +1,545 @@
+{
+ "newCategories": [
+  {
+   "id": "business",
+   "name": "Business & finance"
+  }
+ ],
+ "groups": [
+  {
+   "id": "dating",
+   "name": "Dating",
+   "category": "social",
+   "job": "Meet people for dating",
+   "closed": [
+    "Grindr",
+    "Badoo",
+    "Lovoo"
+   ],
+   "merges": [
+    "Dating"
+   ]
+  },
+  {
+   "id": "app-hosting",
+   "name": "App hosting & deployment",
+   "category": "dev",
+   "job": "Put your web apps online",
+   "closed": [
+    "Heroku",
+    "Fly",
+    "Render",
+    "Netlify",
+    "Vercel"
+   ],
+   "merges": [
+    "Platform as a service (app hosting)",
+    "Application hosting (PaaS)",
+    "App deployment (PaaS)",
+    "App hosting & deployment",
+    "App deployment & hosting",
+    "Cloud app deployment"
+   ]
+  },
+  {
+   "id": "api-tools",
+   "name": "API tools",
+   "category": "dev",
+   "job": "Build, test and manage APIs",
+   "closed": [
+    "apigee",
+    "Postman",
+    "Checkly"
+   ],
+   "merges": [
+    "API gateway",
+    "API management",
+    "API testing",
+    "API clients"
+   ]
+  },
+  {
+   "id": "internal-tools",
+   "name": "Internal tool builders",
+   "category": "dev",
+   "job": "Build admin panels and internal apps quickly",
+   "closed": [
+    "Retool"
+   ],
+   "merges": [
+    "Internal tools",
+    "Internal tools & low-code",
+    "Internal admin tools",
+    "Internal tools & app builders"
+   ]
+  },
+  {
+   "id": "databases",
+   "name": "Databases",
+   "category": "dev",
+   "job": "Store and query data",
+   "closed": [
+    "Firebase",
+    "Kdb+",
+    "TigerGraph",
+    "Amazon Neptune",
+    "Amazon Aurora",
+    "Google Cloud Spanner",
+    "Elastic Cloud",
+    "Algolia",
+    "Snowflake"
+   ],
+   "merges": [
+    "Databases",
+    "Time series databases",
+    "Time-series databases",
+    "Graph databases",
+    "Distributed databases",
+    "Search databases",
+    "Vector databases",
+    "Data warehousing"
+   ]
+  },
+  {
+   "id": "backend-service",
+   "name": "App backends",
+   "category": "dev",
+   "job": "Ready-made backend for your app",
+   "closed": [
+    "Firebase"
+   ],
+   "merges": [
+    "Backend servers",
+    "Backend as a service",
+    "Backend & databases"
+   ]
+  },
+  {
+   "id": "icons",
+   "name": "Icon libraries",
+   "category": "creative",
+   "job": "Free icons for designs",
+   "closed": [
+    "Noun Project"
+   ],
+   "merges": [
+    "Icon libraries"
+   ]
+  },
+  {
+   "id": "login-identity",
+   "name": "Login & identity",
+   "category": "dev",
+   "job": "Let users sign in securely",
+   "closed": [
+    "Auth0",
+    "Okta"
+   ],
+   "merges": [
+    "Enterprise single sign-on",
+    "Authentication & login",
+    "Identity & access management",
+    "Identity & login",
+    "Authentication & identity",
+    "User login & sessions"
+   ]
+  },
+  {
+   "id": "identity-proofs",
+   "name": "Online identity proofs",
+   "category": "web",
+   "job": "Prove which online accounts are yours",
+   "closed": [
+    "Keybase"
+   ],
+   "merges": [
+    "Identity verification"
+   ]
+  },
+  {
+   "id": "bi",
+   "name": "Business dashboards & reports",
+   "category": "business",
+   "job": "Turn business data into charts and reports",
+   "closed": [
+    "Tableau",
+    "Looker",
+    "Power BI",
+    "PowerBI",
+    "Mode Analytics",
+    "AWS Lookout",
+    "Anodot",
+    "Sisu Data",
+    "Outlier"
+   ],
+   "merges": [
+    "Business metrics analytics",
+    "Business intelligence reports",
+    "Business metrics & BI",
+    "Semantic layer & metrics",
+    "Business intelligence",
+    "Business intelligence dashboards"
+   ]
+  },
+  {
+   "id": "customer-insights",
+   "name": "Customer & community insights",
+   "category": "business",
+   "job": "See who engages with your product and community",
+   "closed": [
+    "Pocus",
+    "Common Room",
+    "Orbit",
+    "Commsor"
+   ],
+   "merges": [
+    "Revenue intelligence",
+    "Community analytics"
+   ]
+  },
+  {
+   "id": "ci",
+   "name": "Automated builds & tests",
+   "category": "dev",
+   "job": "Build and test code automatically",
+   "closed": [
+    "CircleCI"
+   ],
+   "merges": [
+    "Continuous integration"
+   ]
+  },
+  {
+   "id": "cms",
+   "name": "Website builders & content management",
+   "category": "dev",
+   "job": "Build websites and manage their content",
+   "closed": [
+    "Contentful",
+    "Wix",
+    "Strikingly",
+    "Webflow"
+   ],
+   "merges": [
+    "Visual page builders & CMS",
+    "Website content management",
+    "Headless content management",
+    "Content management systems",
+    "Headless CMS",
+    "Content management",
+    "Website builders"
+   ]
+  },
+  {
+   "id": "data-pipelines",
+   "name": "Data pipelines",
+   "category": "dev",
+   "job": "Move data between tools automatically",
+   "closed": [
+    "Fivetran",
+    "Airflow",
+    "Hightouch",
+    "Segment"
+   ],
+   "merges": [
+    "Data pipelines",
+    "Data sync",
+    "Event data pipelines"
+   ]
+  },
+  {
+   "id": "ml-platforms",
+   "name": "Machine learning platforms",
+   "category": "ai",
+   "job": "Build and run AI models and apps",
+   "closed": [
+    "AWS SageMaker",
+    "AWS Kendra",
+    "QnA Maker"
+   ],
+   "merges": [
+    "ML model deployment",
+    "ML pipelines",
+    "LLM application frameworks"
+   ]
+  },
+  {
+   "id": "monitoring",
+   "name": "Server & app monitoring",
+   "category": "dev",
+   "job": "Watch servers and apps for problems",
+   "closed": [
+    "Datadog",
+    "DataDog",
+    "NewRelic",
+    "Elastic Cloud"
+   ],
+   "merges": [
+    "Application observability",
+    "Monitoring & observability",
+    "Observability & monitoring",
+    "Kubernetes operations",
+    "Infrastructure monitoring",
+    "Log management & observability",
+    "Application monitoring",
+    "Log management",
+    "Metrics & monitoring",
+    "Uptime monitoring"
+   ]
+  },
+  {
+   "id": "erp",
+   "name": "Business management (ERP)",
+   "category": "business",
+   "job": "Run accounting, stock and operations in one place",
+   "closed": [
+    "SAP",
+    "Oracle Fusion ERP Cloud",
+    "Odoo",
+    "Microsoft Dynamics",
+    "SAP Business One"
+   ],
+   "merges": [
+    "Business management (ERP & CRM)",
+    "Business management (ERP)",
+    "Accounting & ERP"
+   ]
+  },
+  {
+   "id": "invoicing",
+   "name": "Invoicing & billing",
+   "category": "business",
+   "job": "Send invoices and get paid",
+   "closed": [
+    "FreshBooks",
+    "QuickBooks"
+   ],
+   "merges": [
+    "Invoicing & billing"
+   ]
+  },
+  {
+   "id": "crm",
+   "name": "Customer relationships (CRM)",
+   "category": "business",
+   "job": "Track customers and sales deals",
+   "closed": [
+    "Salesforce",
+    "Hubspot"
+   ],
+   "merges": [
+    "CRM & sales pipeline",
+    "CRM (customer relationships)",
+    "Customer relationship management (CRM)",
+    "CRM (customer relationship management)"
+   ]
+  },
+  {
+   "id": "signing",
+   "name": "Document signing",
+   "category": "office",
+   "job": "Sign documents online",
+   "closed": [
+    "DocuSign"
+   ],
+   "merges": [
+    "Digital signing",
+    "Document signing"
+   ]
+  },
+  {
+   "id": "security-scanning",
+   "name": "Security scanning",
+   "category": "web",
+   "job": "Find and track security weaknesses",
+   "closed": [
+    "Plextrac",
+    "Vulcan",
+    "Tenable Nessus"
+   ],
+   "merges": [
+    "Vulnerability management",
+    "Vulnerability scanning"
+   ]
+  },
+  {
+   "id": "vpn",
+   "name": "VPN & private networks",
+   "category": "web",
+   "job": "Connect devices over a private network",
+   "closed": [
+    "OpenVPN Access Server",
+    "Tailscale",
+    "OpenVPN",
+    "AWS VPC"
+   ],
+   "merges": [
+    "Remote access VPN",
+    "VPN & private networks",
+    "Mesh VPN & private networking"
+   ]
+  },
+  {
+   "id": "feature-flags",
+   "name": "Feature flags",
+   "category": "dev",
+   "job": "Turn app features on and off safely",
+   "closed": [
+    "LaunchDarkly"
+   ],
+   "merges": [
+    "Feature flags"
+   ]
+  },
+  {
+   "id": "voice-apis",
+   "name": "Phone & voice APIs",
+   "category": "dev",
+   "job": "Add calls and texts to apps",
+   "closed": [
+    "Twilio"
+   ],
+   "merges": [
+    "Phone & voice APIs"
+   ]
+  },
+  {
+   "id": "events",
+   "name": "Events & meetups",
+   "category": "social",
+   "job": "Organize and manage events",
+   "closed": [
+    "MeetUp",
+    "EasyChair"
+   ],
+   "merges": [
+    "Event hosting",
+    "Event management"
+   ]
+  },
+  {
+   "id": "feeds",
+   "name": "News feeds & read-it-later",
+   "category": "media",
+   "job": "Follow sites and save articles to read",
+   "closed": [
+    "Feedly",
+    "Inoreader",
+    "Google News",
+    "Pocket"
+   ],
+   "merges": [
+    "Feed reading",
+    "Feed readers",
+    "Read-it-later"
+   ]
+  },
+  {
+   "id": "link-shortening",
+   "name": "Link shortening",
+   "category": "web",
+   "job": "Make short links",
+   "closed": [
+    "Bitly"
+   ],
+   "merges": [
+    "Link shortening",
+    "URL shortening"
+   ]
+  },
+  {
+   "id": "time-tracking",
+   "name": "Time tracking",
+   "category": "business",
+   "job": "Track hours spent on work",
+   "closed": [
+    "Toggl",
+    "Clockify"
+   ],
+   "merges": [
+    "Time tracking"
+   ]
+  },
+  {
+   "id": "speed-test",
+   "name": "Internet speed test",
+   "category": "everyday",
+   "job": "Check your internet speed",
+   "closed": [
+    "Speedtest.net"
+   ],
+   "merges": [
+    "Internet speed testing"
+   ]
+  },
+  {
+   "id": "saas-starters",
+   "name": "SaaS starter kits",
+   "category": "dev",
+   "job": "Start a software business from a template",
+   "closed": [
+    "ShipFast",
+    "Supastarter",
+    "SaaS Pegasus"
+   ],
+   "merges": [
+    "SaaS starter kits"
+   ]
+  },
+  {
+   "id": "remote-desktop",
+   "name": "Remote desktop",
+   "category": "os",
+   "job": "Control another computer remotely",
+   "closed": [
+    "TeamViewer",
+    "AnyDesk"
+   ],
+   "merges": [
+    "Remote desktop & device management",
+    "Remote desktop",
+    "Remote desktop access"
+   ]
+  },
+  {
+   "id": "investment-research",
+   "name": "Investment research",
+   "category": "business",
+   "job": "Research stocks and markets",
+   "closed": [
+    "Bloomberg"
+   ],
+   "merges": [
+    "Investment research"
+   ]
+  },
+  {
+   "id": "pos",
+   "name": "Point of sale",
+   "category": "business",
+   "job": "Ring up sales in a shop",
+   "closed": [
+    "Square POS",
+    "Clover"
+   ],
+   "merges": [
+    "Point of sale"
+   ]
+  },
+  {
+   "id": "shared-expenses",
+   "name": "Shared expenses",
+   "category": "everyday",
+   "job": "Split bills with friends",
+   "closed": [
+    "Splitwise"
+   ],
+   "merges": [
+    "Shared expenses"
+   ]
+  }
+ ],
+ "unplaced": [
+  "Code review"
+ ]
+}

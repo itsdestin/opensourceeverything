@@ -34,3 +34,19 @@ Looked up **436** GitHub projects in 9 batch requests.
 - **12** have no license file at all.
 - Of the open-source ones: **11** are archived and **27** more had no changes in a year (they'd show "Inactive").
 - GitLab and Codeberg projects (12) and website-only ones (96) still need a look.
+
+
+## Step 3: AI review (2026-10-26, claude-haiku-5-5)
+
+- Reviewed **366** of 366 projects in 86 seconds; 0 failed.
+- Cost: **$0.34** (2,546,193 tokens read, 178,180 written).
+- License: 300 open, 32 open core, 23 not open, 11 unclear.
+- Kind: 71 apps, 206 self-hosted, 78 developer tools, 11 libraries.
+- Pairings the AI says the lists got wrong ("no"): 93.
+- Fit an existing group: 199; proposed a new group: 201 (169 distinct names).
+
+## Step 4: merging proposed groups (2026-10-26, claude-opus-5-5)
+
+- 100 proposed names → **34 new groups** and **1 new categories** (Business & finance).
+- 1 proposals judged to duplicate an existing group (matched later).
+- Cost: **$0.12**.
