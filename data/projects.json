@@ -14470,8 +14470,7 @@
     "windows",
     "mac",
     "linux",
-    "android",
-    "web"
+    "android"
    ],
    "thumbs": [
     "assets/shots/youcoded-0.webp",
