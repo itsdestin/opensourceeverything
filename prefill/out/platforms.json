@@ -1,0 +1,3831 @@
+{
+ "e-os": {
+  "platforms": [],
+  "evidence": [],
+  "sure": false
+ },
+ "aegis": {
+  "platforms": [
+   "android"
+  ],
+  "evidence": [
+   "android: release file: aegis-v3.4.3.apk"
+  ],
+  "sure": true
+ },
+ "abilian-nua": {
+  "platforms": [
+   "server"
+  ],
+  "evidence": [
+   "server: README: Docker / self-host mention"
+  ],
+  "sure": true
+ },
+ "affine": {
+  "platforms": [
+   "mac",
+   "linux"
+  ],
+  "evidence": [
+   "mac: release file: affine-2026.10.25-canary.907-canary-macos-arm64.dmg",
+   "linux: release file: latest-linux.yml"
+  ],
+  "sure": true
+ },
+ "aliasvault": {
+  "platforms": [
+   "android"
+  ],
+  "evidence": [
+   "android: release file: aliasvault-0.31.1-android.apk"
+  ],
+  "sure": true
+ },
+ "2fas": {
+  "platforms": [
+   "android"
+  ],
+  "evidence": [
+   "android: release file: TwoFas-6.1.0-41.apk"
+  ],
+  "sure": true
+ },
+ "accrescent": {
+  "platforms": [
+   "android"
+  ],
+  "evidence": [
+   "android: release file: accrescent-0.28.1.apk"
+  ],
+  "sure": true
+ },
+ "arch-linux": {
+  "platforms": [],
+  "evidence": [],
+  "sure": false
+ },
+ "acebase": {
+  "platforms": [],
+  "evidence": [],
+  "sure": false
+ },
+ "abilian-hop3": {
+  "platforms": [
+   "server"
+  ],
+  "evidence": [
+   "server: README: Docker / self-host mention"
+  ],
+  "sure": true
+ },
+ "alovoa": {
+  "platforms": [
+   "android"
+  ],
+  "evidence": [
+   "android: README: Google Play link"
+  ],
+  "sure": true
+ },
+ "aider": {
+  "platforms": [],
+  "evidence": [],
+  "sure": false
+ },
+ "activepieces": {
+  "platforms": [
+   "server"
+  ],
+  "evidence": [
+   "server: README: Docker / self-host mention"
+  ],
+  "sure": true
+ },
+ "antennapod": {
+  "platforms": [
+   "android"
+  ],
+  "evidence": [
+   "android: README: Google Play link"
+  ],
+  "sure": true
+ },
+ "anysoftkeyboard": {
+  "platforms": [
+   "android"
+  ],
+  "evidence": [
+   "android: release file: ime_release.aab"
+  ],
+  "sure": true
+ },
+ "appflowy": {
+  "platforms": [
+   "windows",
+   "mac",
+   "linux",
+   "android",
+   "ios"
+  ],
+  "evidence": [
+   "windows: release file: AppFlowy-0.14.11-windows-x86_64.exe",
+   "mac: release file: AppFlowy-0.14.11-macos-universal.zip",
+   "linux: release file: AppFlowy-0.14.11-linux-x86_64.tar.gz",
+   "android: release file: AppFlowy-0.14.11-android.apk",
+   "ios: README: App Store link (iPhone/iPad)"
+  ],
+  "sure": true
+ },
+ "apache-apisix": {
+  "platforms": [
+   "server"
+  ],
+  "evidence": [
+   "server: README: Docker / self-host mention"
+  ],
+  "sure": true
+ },
+ "appwrite": {
+  "platforms": [
+   "server"
+  ],
+  "evidence": [
+   "server: README: Docker / self-host mention"
+  ],
+  "sure": true
+ },
+ "blender": {
+  "platforms": [],
+  "evidence": [],
+  "sure": false
+ },
+ "ardour": {
+  "platforms": [],
+  "evidence": [],
+  "sure": false
+ },
+ "appsmith": {
+  "platforms": [],
+  "evidence": [],
+  "sure": false
+ },
+ "audacity": {
+  "platforms": [
+   "windows",
+   "mac",
+   "linux"
+  ],
+  "evidence": [
+   "windows: release file: audacity-win-4.0.1-arm64.7z",
+   "mac: release file: audacity-macOS-4.0.1-arm64.dmg",
+   "linux: release file: audacity-linux-4.0.1-aarch64.AppImage"
+  ],
+  "sure": true
+ },
+ "audiobookshelf": {
+  "platforms": [
+   "windows",
+   "mac",
+   "linux",
+   "android",
+   "server"
+  ],
+  "evidence": [
+   "windows: README: Microsoft Store / winget / Chocolatey / Scoop",
+   "mac: README: Homebrew cask / MacPorts",
+   "linux: README: Snap Store link",
+   "android: README: Google Play link",
+   "server: README: Docker / self-host mention"
+  ],
+  "sure": true
+ },
+ "bagisto": {
+  "platforms": [
+   "server"
+  ],
+  "evidence": [
+   "server: README: Docker / self-host mention"
+  ],
+  "sure": true
+ },
+ "authgear": {
+  "platforms": [
+   "linux",
+   "server"
+  ],
+  "evidence": [
+   "linux: release file: authgear-portal-lite-linux-amd64-git-9ab32fe6a33d",
+   "server: README: Docker / self-host mention"
+  ],
+  "sure": true
+ },
+ "automatisch": {
+  "platforms": [
+   "server"
+  ],
+  "evidence": [
+   "server: README: Docker / self-host mention"
+  ],
+  "sure": true
+ },
+ "bigbluebutton": {
+  "platforms": [
+   "server"
+  ],
+  "evidence": [
+   "server: kind: self_hosted"
+  ],
+  "sure": false
+ },
+ "bluesky": {
+  "platforms": [
+   "android",
+   "ios"
+  ],
+  "evidence": [
+   "android: release file: Bluesky-1.136.0.apk",
+   "ios: README: App Store link (iPhone/iPad)"
+  ],
+  "sure": true
+ },
+ "bookstack": {
+  "platforms": [
+   "server"
+  ],
+  "evidence": [
+   "server: kind: self_hosted"
+  ],
+  "sure": false
+ },
+ "bootstrap": {
+  "platforms": [],
+  "evidence": [],
+  "sure": false
+ },
+ "bitwarden": {
+  "platforms": [
+   "windows",
+   "mac",
+   "linux"
+  ],
+  "evidence": [
+   "windows: release file: Bitwarden-Portable-2026.10.1.exe",
+   "mac: release file: Bitwarden-2026.10.1-universal-mac.zip",
+   "linux: release file: Bitwarden-2026.10.1-amd64.deb"
+  ],
+  "sure": true
+ },
+ "cachyos": {
+  "platforms": [],
+  "evidence": [],
+  "sure": false
+ },
+ "beton-inspector": {
+  "platforms": [
+   "server"
+  ],
+  "evidence": [
+   "server: README: Docker / self-host mention"
+  ],
+  "sure": true
+ },
+ "boxyhq": {
+  "platforms": [
+   "server"
+  ],
+  "evidence": [
+   "server: README: Docker / self-host mention"
+  ],
+  "sure": true
+ },
+ "borgbackup": {
+  "platforms": [
+   "windows",
+   "mac",
+   "linux"
+  ],
+  "evidence": [
+   "windows: release file: borg-windows-x86_64-gh.exe",
+   "mac: release file: borg-macos-15-arm64-gh",
+   "linux: release file: borg-linux-glibc239-arm64-gh"
+  ],
+  "sure": true
+ },
+ "brave": {
+  "platforms": [
+   "mac"
+  ],
+  "evidence": [
+   "mac: release file: brave-origin-v1.99.51-darwin-arm64.zip"
+  ],
+  "sure": true
+ },
+ "aurora-store": {
+  "platforms": [
+   "android"
+  ],
+  "evidence": [
+   "android: README: F-Droid link"
+  ],
+  "sure": true
+ },
+ "bruin": {
+  "platforms": [
+   "windows",
+   "mac",
+   "linux",
+   "android"
+  ],
+  "evidence": [
+   "windows: release file: bruin_Windows_x86_64.zip",
+   "mac: release file: bruin_Darwin_x86_64.tar.gz",
+   "linux: release file: bruin_Linux_arm64.tar.gz",
+   "android: release file: bruin_0.11.797_linux_amd64.apk"
+  ],
+  "sure": true
+ },
+ "btw": {
+  "platforms": [
+   "server"
+  ],
+  "evidence": [
+   "server: README: Docker / self-host mention"
+  ],
+  "sure": true
+ },
+ "bugzilla": {
+  "platforms": [
+   "server"
+  ],
+  "evidence": [
+   "server: README: Docker / self-host mention"
+  ],
+  "sure": true
+ },
+ "budibase": {
+  "platforms": [
+   "server"
+  ],
+  "evidence": [
+   "server: README: Docker / self-host mention"
+  ],
+  "sure": true
+ },
+ "buzz": {
+  "platforms": [
+   "windows",
+   "mac",
+   "linux"
+  ],
+  "evidence": [
+   "windows: release file: Buzz-1.4.5-windows-2.bin",
+   "mac: release file: Buzz-1.4.5-mac-ARM64.dmg",
+   "linux: README: Flathub link"
+  ],
+  "sure": true
+ },
+ "calibre": {
+  "platforms": [
+   "windows",
+   "mac"
+  ],
+  "evidence": [
+   "windows: release file: calibre-64bit-9.17.0.msi",
+   "mac: release file: calibre-9.17.0.dmg"
+  ],
+  "sure": true
+ },
+ "buildbot": {
+  "platforms": [
+   "windows",
+   "linux"
+  ],
+  "evidence": [
+   "windows: release file: buildbot-worker-windows-v4.4.0a1.exe",
+   "linux: release file: buildbot-worker-linux-v4.4.0a1.bin"
+  ],
+  "sure": true
+ },
+ "caprover": {
+  "platforms": [
+   "server"
+  ],
+  "evidence": [
+   "server: README: Docker / self-host mention"
+  ],
+  "sure": true
+ },
+ "chatrwkv": {
+  "platforms": [],
+  "evidence": [],
+  "sure": false
+ },
+ "carrypass": {
+  "platforms": [
+   "server"
+  ],
+  "evidence": [
+   "server: README: Docker / self-host mention"
+  ],
+  "sure": true
+ },
+ "chatwoot": {
+  "platforms": [
+   "server"
+  ],
+  "evidence": [
+   "server: README: Docker / self-host mention"
+  ],
+  "sure": true
+ },
+ "collabora-online": {
+  "platforms": [
+   "server"
+  ],
+  "evidence": [
+   "server: kind: self_hosted"
+  ],
+  "sure": false
+ },
+ "cline": {
+  "platforms": [
+   "windows",
+   "mac",
+   "linux"
+  ],
+  "evidence": [
+   "windows: release file: Cline_0.0.49_x64-setup.exe",
+   "mac: release file: Cline_0.0.49_universal.dmg",
+   "linux: release file: Cline_0.0.49_amd64.deb"
+  ],
+  "sure": true
+ },
+ "codex-cli": {
+  "platforms": [
+   "windows",
+   "mac",
+   "linux"
+  ],
+  "evidence": [
+   "windows: release file: codex-aarch64-pc-windows-msvc-bazel.exe",
+   "mac: release file: codex-app-server-package-aarch64-apple-darwin-bazel.tar.gz",
+   "linux: release file: codex-app-server-aarch64-unknown-linux-musl-bazel.sigstore"
+  ],
+  "sure": true
+ },
+ "cal-com": {
+  "platforms": [
+   "server"
+  ],
+  "evidence": [
+   "server: README: Docker / self-host mention"
+  ],
+  "sure": true
+ },
+ "comfyui": {
+  "platforms": [
+   "windows"
+  ],
+  "evidence": [
+   "windows: release file: ComfyUI_windows_portable_nvidia.7z"
+  ],
+  "sure": true
+ },
+ "continue": {
+  "platforms": [],
+  "evidence": [],
+  "sure": false
+ },
+ "coroot": {
+  "platforms": [
+   "server"
+  ],
+  "evidence": [
+   "server: kind: self_hosted"
+  ],
+  "sure": false
+ },
+ "concrete": {
+  "platforms": [
+   "server"
+  ],
+  "evidence": [
+   "server: kind: self_hosted"
+  ],
+  "sure": false
+ },
+ "cortex": {
+  "platforms": [],
+  "evidence": [],
+  "sure": false
+ },
+ "debian": {
+  "platforms": [],
+  "evidence": [],
+  "sure": false
+ },
+ "coolify": {
+  "platforms": [
+   "server"
+  ],
+  "evidence": [
+   "server: README: Docker / self-host mention"
+  ],
+  "sure": true
+ },
+ "cratedb": {
+  "platforms": [
+   "server"
+  ],
+  "evidence": [
+   "server: README: Docker / self-host mention"
+  ],
+  "sure": false
+ },
+ "crater": {
+  "platforms": [
+   "android",
+   "ios"
+  ],
+  "evidence": [
+   "android: README: Google Play link",
+   "ios: README: App Store link (iPhone/iPad)"
+  ],
+  "sure": true
+ },
+ "cube-js": {
+  "platforms": [
+   "windows",
+   "mac",
+   "linux"
+  ],
+  "evidence": [
+   "windows: release file: cube-x86_64-pc-windows-msvc.tar.gz",
+   "mac: release file: cube-aarch64-apple-darwin.tar.gz",
+   "linux: release file: cube-x86_64-unknown-linux-musl.tar.gz"
+  ],
+  "sure": true
+ },
+ "crowd-dev": {
+  "platforms": [
+   "server"
+  ],
+  "evidence": [
+   "server: README: Docker / self-host mention"
+  ],
+  "sure": true
+ },
+ "darktable": {
+  "platforms": [
+   "windows",
+   "mac",
+   "linux"
+  ],
+  "evidence": [
+   "windows: release file: darktable-5.7.0+1554.g27276e5a40-win64.exe",
+   "mac: release file: darktable-5.7.0+1554.g27276e5a40-arm64.dmg",
+   "linux: release file: Darktable-5.7.0+1554.g27276e5a40-x86_64.AppImage"
+  ],
+  "sure": true
+ },
+ "customermates": {
+  "platforms": [
+   "server"
+  ],
+  "evidence": [
+   "server: README: Docker / self-host mention"
+  ],
+  "sure": true
+ },
+ "cryptpad": {
+  "platforms": [
+   "server"
+  ],
+  "evidence": [
+   "server: README: Docker / self-host mention"
+  ],
+  "sure": true
+ },
+ "dashpress": {
+  "platforms": [
+   "server"
+  ],
+  "evidence": [
+   "server: kind: self_hosted"
+  ],
+  "sure": false
+ },
+ "delta-chat": {
+  "platforms": [
+   "android"
+  ],
+  "evidence": [
+   "android: release file: deltachat-gplay-release-2.62.0.apk"
+  ],
+  "sure": true
+ },
+ "deepset": {
+  "platforms": [
+   "server"
+  ],
+  "evidence": [
+   "server: README: Docker / self-host mention"
+  ],
+  "sure": false
+ },
+ "decap-cms": {
+  "platforms": [],
+  "evidence": [],
+  "sure": false
+ },
+ "databend": {
+  "platforms": [
+   "linux",
+   "server"
+  ],
+  "evidence": [
+   "linux: release file: databend-debug-default-v1.2.955-nightly-x86_64-unknown-linux-gnu.tar.gz",
+   "server: README: Docker / self-host mention"
+  ],
+  "sure": true
+ },
+ "dexio": {
+  "platforms": [
+   "server"
+  ],
+  "evidence": [
+   "server: README: Docker / self-host mention"
+  ],
+  "sure": true
+ },
+ "discourse": {
+  "platforms": [
+   "server"
+  ],
+  "evidence": [
+   "server: README: Docker / self-host mention"
+  ],
+  "sure": true
+ },
+ "comaps": {
+  "platforms": [
+   "linux",
+   "android"
+  ],
+  "evidence": [
+   "linux: README: Flathub link",
+   "android: release file: CoMaps-26100519-main-release.apk"
+  ],
+  "sure": true
+ },
+ "docmost": {
+  "platforms": [
+   "server"
+  ],
+  "evidence": [
+   "server: README: Docker / self-host mention"
+  ],
+  "sure": true
+ },
+ "docuseal": {
+  "platforms": [
+   "server"
+  ],
+  "evidence": [
+   "server: README: Docker / self-host mention"
+  ],
+  "sure": true
+ },
+ "documenso": {
+  "platforms": [
+   "server"
+  ],
+  "evidence": [
+   "server: README: Docker / self-host mention"
+  ],
+  "sure": true
+ },
+ "dolibarr": {
+  "platforms": [
+   "server"
+  ],
+  "evidence": [
+   "server: README: Docker / self-host mention"
+  ],
+  "sure": true
+ },
+ "dokku": {
+  "platforms": [
+   "linux",
+   "server"
+  ],
+  "evidence": [
+   "linux: README: AUR link",
+   "server: kind: self_hosted"
+  ],
+  "sure": true
+ },
+ "dub": {
+  "platforms": [
+   "server"
+  ],
+  "evidence": [
+   "server: README: Docker / self-host mention"
+  ],
+  "sure": true
+ },
+ "duplicati": {
+  "platforms": [
+   "windows",
+   "mac",
+   "linux"
+  ],
+  "evidence": [
+   "windows: release file: duplicati-2.4.0.105_canary_2026-10-24-win-x64-gui.zip",
+   "mac: release file: duplicati-2.4.0.105_canary_2026-10-24-osx-x64-gui.dmg",
+   "linux: release file: duplicati-2.4.0.105_canary_2026-10-24-linux-x64-gui.zip"
+  ],
+  "sure": true
+ },
+ "drone": {
+  "platforms": [
+   "server"
+  ],
+  "evidence": [
+   "server: README: Docker / self-host mention"
+  ],
+  "sure": true
+ },
+ "element": {
+  "platforms": [],
+  "evidence": [],
+  "sure": false
+ },
+ "dyrector-io": {
+  "platforms": [
+   "server"
+  ],
+  "evidence": [
+   "server: README: Docker / self-host mention"
+  ],
+  "sure": false
+ },
+ "element-call": {
+  "platforms": [
+   "server"
+  ],
+  "evidence": [
+   "server: README: Docker / self-host mention"
+  ],
+  "sure": true
+ },
+ "fedora": {
+  "platforms": [],
+  "evidence": [],
+  "sure": false
+ },
+ "ente-photos": {
+  "platforms": [
+   "windows",
+   "mac",
+   "linux",
+   "android"
+  ],
+  "evidence": [
+   "windows: release file: ente-cli-v0.4.1-windows-amd64.zip",
+   "mac: release file: ente-cli-v0.4.1-darwin-arm64.tar.gz",
+   "linux: release file: ente-cli-v0.4.1-linux-amd64.tar.gz",
+   "android: release file: ensu-v0.1.22.apk"
+  ],
+  "sure": true
+ },
+ "erpnext": {
+  "platforms": [
+   "server"
+  ],
+  "evidence": [
+   "server: README: Docker / self-host mention"
+  ],
+  "sure": false
+ },
+ "ente-auth": {
+  "platforms": [
+   "windows",
+   "mac",
+   "linux",
+   "android"
+  ],
+  "evidence": [
+   "windows: release file: ente-cli-v0.4.1-windows-amd64.zip",
+   "mac: release file: ente-cli-v0.4.1-darwin-arm64.tar.gz",
+   "linux: release file: ente-cli-v0.4.1-linux-amd64.tar.gz",
+   "android: release file: ensu-v0.1.22.apk"
+  ],
+  "sure": true
+ },
+ "encore": {
+  "platforms": [
+   "server"
+  ],
+  "evidence": [
+   "server: README: Docker / self-host mention"
+  ],
+  "sure": false
+ },
+ "espocrm": {
+  "platforms": [
+   "server"
+  ],
+  "evidence": [
+   "server: kind: self_hosted"
+  ],
+  "sure": false
+ },
+ "etherpad": {
+  "platforms": [
+   "linux",
+   "server"
+  ],
+  "evidence": [
+   "linux: release file: etherpad_3.3.11-1_arm64.deb",
+   "server: README: Docker / self-host mention"
+  ],
+  "sure": true
+ },
+ "faraday": {
+  "platforms": [
+   "linux",
+   "server"
+  ],
+  "evidence": [
+   "linux: release file: faraday-server_ubuntu24_amd64.deb",
+   "server: README: Docker / self-host mention"
+  ],
+  "sure": true
+ },
+ "etesync": {
+  "platforms": [
+   "windows",
+   "mac",
+   "linux"
+  ],
+  "evidence": [
+   "windows: release file: dist-windows-latest.zip",
+   "mac: release file: dist-macos-13.zip",
+   "linux: release file: dist-ubuntu-latest.zip"
+  ],
+  "sure": true
+ },
+ "flagsmith": {
+  "platforms": [
+   "server"
+  ],
+  "evidence": [
+   "server: README: Docker / self-host mention"
+  ],
+  "sure": true
+ },
+ "filestash": {
+  "platforms": [],
+  "evidence": [],
+  "sure": false
+ },
+ "evidence": {
+  "platforms": [
+   "server"
+  ],
+  "evidence": [
+   "server: README: Docker / self-host mention"
+  ],
+  "sure": false
+ },
+ "firecamp": {
+  "platforms": [
+   "windows",
+   "mac",
+   "linux"
+  ],
+  "evidence": [
+   "windows: release file: Firecamp-3.3.0-beta.3.x64.exe",
+   "mac: release file: Firecamp-3.3.0-beta.3.x64.dmg",
+   "linux: release file: Firecamp-3.3.0-beta.3.x86_64.AppImage"
+  ],
+  "sure": true
+ },
+ "firefox": {
+  "platforms": [],
+  "evidence": [],
+  "sure": false
+ },
+ "florisboard": {
+  "platforms": [
+   "android"
+  ],
+  "evidence": [
+   "android: release file: florisboard-0.6.0-alpha02-preview.apk"
+  ],
+  "sure": true
+ },
+ "fauxpilot": {
+  "platforms": [
+   "server"
+  ],
+  "evidence": [
+   "server: README: Docker / self-host mention"
+  ],
+  "sure": true
+ },
+ "f-droid": {
+  "platforms": [
+   "android"
+  ],
+  "evidence": [
+   "android: README: F-Droid link"
+  ],
+  "sure": true
+ },
+ "fluent-reader": {
+  "platforms": [
+   "windows",
+   "mac",
+   "linux"
+  ],
+  "evidence": [
+   "windows: release file: Fluent.Reader.Setup.1.3.1.x64.exe",
+   "mac: release file: Fluent.Reader.1.3.1.dmg",
+   "linux: release file: Fluent.Reader.1.3.1.AppImage"
+  ],
+  "sure": true
+ },
+ "funkwhale": {
+  "platforms": [
+   "server"
+  ],
+  "evidence": [
+   "server: kind: self_hosted"
+  ],
+  "sure": false
+ },
+ "fossdroid": {
+  "platforms": [
+   "android"
+  ],
+  "evidence": [
+   "android: README: F-Droid link"
+  ],
+  "sure": true
+ },
+ "folio-wiki": {
+  "platforms": [
+   "server"
+  ],
+  "evidence": [
+   "server: README: Docker / self-host mention"
+  ],
+  "sure": true
+ },
+ "fonoster": {
+  "platforms": [
+   "server"
+  ],
+  "evidence": [
+   "server: README: Docker / self-host mention"
+  ],
+  "sure": true
+ },
+ "font-awesome": {
+  "platforms": [],
+  "evidence": [],
+  "sure": false
+ },
+ "formio": {
+  "platforms": [
+   "server"
+  ],
+  "evidence": [
+   "server: README: Docker / self-host mention"
+  ],
+  "sure": true
+ },
+ "gimp": {
+  "platforms": [],
+  "evidence": [],
+  "sure": false
+ },
+ "formbricks": {
+  "platforms": [
+   "server"
+  ],
+  "evidence": [
+   "server: README: Docker / self-host mention"
+  ],
+  "sure": true
+ },
+ "freshrss": {
+  "platforms": [
+   "android",
+   "server"
+  ],
+  "evidence": [
+   "android: README: Google Play link",
+   "server: README: Docker / self-host mention"
+  ],
+  "sure": true
+ },
+ "friendica": {
+  "platforms": [
+   "server"
+  ],
+  "evidence": [
+   "server: kind: self_hosted"
+  ],
+  "sure": false
+ },
+ "gnumeric": {
+  "platforms": [],
+  "evidence": [],
+  "sure": false
+ },
+ "friction": {
+  "platforms": [
+   "windows",
+   "mac",
+   "linux"
+  ],
+  "evidence": [
+   "windows: release file: friction-1.0.0-rc.3-setup-win64.exe",
+   "mac: release file: Friction-1.0.0-rc.3.dmg",
+   "linux: release file: Friction-1.0.0-rc.3-x86_64.AppImage"
+  ],
+  "sure": true
+ },
+ "freetube": {
+  "platforms": [
+   "windows",
+   "mac",
+   "linux"
+  ],
+  "evidence": [
+   "windows: release file: freetube-0.25.3-beta-setup-arm64.exe",
+   "mac: release file: freetube-0.25.3-beta-mac-x64.dmg",
+   "linux: release file: freetube-0.25.3-beta-linux-armv7l-portable.zip"
+  ],
+  "sure": true
+ },
+ "galene": {
+  "platforms": [
+   "server"
+  ],
+  "evidence": [
+   "server: kind: self_hosted"
+  ],
+  "sure": false
+ },
+ "gathio": {
+  "platforms": [
+   "server"
+  ],
+  "evidence": [
+   "server: kind: self_hosted"
+  ],
+  "sure": false
+ },
+ "grapheneos": {
+  "platforms": [],
+  "evidence": [],
+  "sure": false
+ },
+ "fusio": {
+  "platforms": [
+   "server"
+  ],
+  "evidence": [
+   "server: README: Docker / self-host mention"
+  ],
+  "sure": true
+ },
+ "gitea": {
+  "platforms": [
+   "windows",
+   "mac",
+   "linux",
+   "server"
+  ],
+  "evidence": [
+   "windows: release file: gitea-28.2.0-windows-amd64.exe",
+   "mac: release file: gitea-28.2.0-darwin-amd64",
+   "linux: release file: gitea-28.2.0-linux-amd64",
+   "server: README: Docker / self-host mention"
+  ],
+  "sure": true
+ },
+ "gerrit": {
+  "platforms": [
+   "server"
+  ],
+  "evidence": [
+   "server: README: Docker / self-host mention"
+  ],
+  "sure": true
+ },
+ "ghost": {
+  "platforms": [
+   "server"
+  ],
+  "evidence": [
+   "server: kind: self_hosted"
+  ],
+  "sure": false
+ },
+ "goatcounter": {
+  "platforms": [
+   "linux",
+   "server"
+  ],
+  "evidence": [
+   "linux: release file: goatcounter-v2.7.0-linux-amd64.gz",
+   "server: README: Docker / self-host mention"
+  ],
+  "sure": true
+ },
+ "gogs": {
+  "platforms": [
+   "windows",
+   "mac",
+   "linux",
+   "server"
+  ],
+  "evidence": [
+   "windows: release file: gogs_dbbd717_windows_amd64_mws.zip",
+   "mac: release file: gogs_dbbd717_darwin_amd64.zip",
+   "linux: release file: gogs_dbbd717_linux_amd64.zip",
+   "server: README: Docker / self-host mention"
+  ],
+  "sure": true
+ },
+ "goose": {
+  "platforms": [
+   "windows",
+   "mac",
+   "linux"
+  ],
+  "evidence": [
+   "windows: release file: goose-x86_64-pc-windows-msvc.zip",
+   "mac: release file: goose-x86_64-apple-darwin.tar.bz2",
+   "linux: release file: goose-x86_64-unknown-linux-musl.tar.bz2"
+  ],
+  "sure": true
+ },
+ "gitlab": {
+  "platforms": [
+   "server"
+  ],
+  "evidence": [
+   "server: kind: self_hosted"
+  ],
+  "sure": false
+ },
+ "gitlab-community-edition": {
+  "platforms": [
+   "server"
+  ],
+  "evidence": [
+   "server: kind: self_hosted"
+  ],
+  "sure": false
+ },
+ "forgejo": {
+  "platforms": [
+   "linux",
+   "server"
+  ],
+  "evidence": [
+   "linux: release file: forgejo-17.0.0-linux-amd64",
+   "server: kind: self_hosted"
+  ],
+  "sure": true
+ },
+ "graphite": {
+  "platforms": [],
+  "evidence": [],
+  "sure": false
+ },
+ "gravitl": {
+  "platforms": [
+   "windows",
+   "mac",
+   "linux",
+   "server"
+  ],
+  "evidence": [
+   "windows: release file: nmctl-windows-amd64.exe",
+   "mac: release file: nmctl-darwin-arm64",
+   "linux: release file: nmctl-linux-amd64",
+   "server: README: Docker / self-host mention"
+  ],
+  "sure": true
+ },
+ "grafana": {
+  "platforms": [
+   "linux",
+   "server"
+  ],
+  "evidence": [
+   "linux: release file: grafana_12.4.13_38228500293_linux_amd64.rpm",
+   "server: kind: self_hosted"
+  ],
+  "sure": true
+ },
+ "growthbook": {
+  "platforms": [
+   "server"
+  ],
+  "evidence": [
+   "server: README: Docker / self-host mention"
+  ],
+  "sure": false
+ },
+ "hedgedoc": {
+  "platforms": [
+   "server"
+  ],
+  "evidence": [
+   "server: kind: self_hosted"
+  ],
+  "sure": false
+ },
+ "grist": {
+  "platforms": [
+   "server"
+  ],
+  "evidence": [
+   "server: README: Docker / self-host mention"
+  ],
+  "sure": true
+ },
+ "hanko": {
+  "platforms": [
+   "windows",
+   "mac",
+   "linux"
+  ],
+  "evidence": [
+   "windows: release file: hanko_Windows_arm64.zip",
+   "mac: release file: hanko_Darwin_arm64.tar.gz",
+   "linux: release file: hanko_Linux_arm64.tar.gz"
+  ],
+  "sure": true
+ },
+ "home-assistant": {
+  "platforms": [
+   "server"
+  ],
+  "evidence": [
+   "server: kind: self_hosted"
+  ],
+  "sure": false
+ },
+ "heliboard": {
+  "platforms": [
+   "android"
+  ],
+  "evidence": [
+   "android: release file: HeliBoard_4.3-beta1-release.apk"
+  ],
+  "sure": true
+ },
+ "heyform": {
+  "platforms": [
+   "server"
+  ],
+  "evidence": [
+   "server: README: Docker / self-host mention"
+  ],
+  "sure": true
+ },
+ "huginn": {
+  "platforms": [
+   "server"
+  ],
+  "evidence": [
+   "server: README: Docker / self-host mention"
+  ],
+  "sure": true
+ },
+ "hoppscotch": {
+  "platforms": [
+   "server"
+  ],
+  "evidence": [
+   "server: README: Docker / self-host mention"
+  ],
+  "sure": false
+ },
+ "illa": {
+  "platforms": [
+   "server"
+  ],
+  "evidence": [
+   "server: README: Docker / self-host mention"
+  ],
+  "sure": true
+ },
+ "idurar-erp-crm": {
+  "platforms": [
+   "server"
+  ],
+  "evidence": [
+   "server: README: Docker / self-host mention"
+  ],
+  "sure": true
+ },
+ "hyperdx": {
+  "platforms": [
+   "server"
+  ],
+  "evidence": [
+   "server: README: Docker / self-host mention"
+  ],
+  "sure": true
+ },
+ "immich": {
+  "platforms": [
+   "android",
+   "server"
+  ],
+  "evidence": [
+   "android: release file: app-arm64-v8a-release.apk",
+   "server: README: Docker / self-host mention"
+  ],
+  "sure": true
+ },
+ "influxdb": {
+  "platforms": [
+   "server"
+  ],
+  "evidence": [
+   "server: kind: self_hosted"
+  ],
+  "sure": false
+ },
+ "invokeai": {
+  "platforms": [],
+  "evidence": [],
+  "sure": false
+ },
+ "indico": {
+  "platforms": [
+   "server"
+  ],
+  "evidence": [
+   "server: kind: self_hosted"
+  ],
+  "sure": false
+ },
+ "kdenlive": {
+  "platforms": [],
+  "evidence": [],
+  "sure": false
+ },
+ "insomnia": {
+  "platforms": [
+   "windows",
+   "mac",
+   "linux"
+  ],
+  "evidence": [
+   "windows: release file: Insomnia.Core-nsis-13.4.0-beta.0.exe",
+   "mac: release file: Insomnia.Core-13.4.0-beta.0.dmg",
+   "linux: release file: Insomnia.Core-13.4.0-beta.0.AppImage"
+  ],
+  "sure": true
+ },
+ "janssen": {
+  "platforms": [
+   "mac",
+   "linux",
+   "server"
+  ],
+  "evidence": [
+   "mac: release file: jans-linux-macos-setup.pyz",
+   "linux: release file: jans-linux-macos-setup.pyz",
+   "server: kind: self_hosted"
+  ],
+  "sure": true
+ },
+ "jan": {
+  "platforms": [
+   "windows",
+   "mac",
+   "linux"
+  ],
+  "evidence": [
+   "windows: release file: Jan_0.8.7_arm64-setup.exe",
+   "mac: release file: jan-mac-universal-0.8.7.zip",
+   "linux: release file: Jan_0.8.7_amd64.AppImage"
+  ],
+  "sure": true
+ },
+ "jitsu": {
+  "platforms": [
+   "server"
+  ],
+  "evidence": [
+   "server: README: Docker / self-host mention"
+  ],
+  "sure": true
+ },
+ "indic-keyboard": {
+  "platforms": [
+   "android"
+  ],
+  "evidence": [
+   "android: README: Google Play link"
+  ],
+  "sure": true
+ },
+ "jellyfin": {
+  "platforms": [
+   "server"
+  ],
+  "evidence": [
+   "server: README: Docker / self-host mention"
+  ],
+  "sure": true
+ },
+ "joplin": {
+  "platforms": [
+   "windows",
+   "mac",
+   "linux"
+  ],
+  "evidence": [
+   "windows: release file: Joplin-Setup-3.7.21.exe",
+   "mac: release file: Joplin-3.7.21.pkg",
+   "linux: release file: Joplin-3.7.21.AppImage"
+  ],
+  "sure": true
+ },
+ "krita": {
+  "platforms": [],
+  "evidence": [],
+  "sure": false
+ },
+ "jenkins": {
+  "platforms": [
+   "windows",
+   "linux"
+  ],
+  "evidence": [
+   "windows: release file: jenkins.msi",
+   "linux: release file: jenkins-2.587-1.noarch.rpm"
+  ],
+  "sure": true
+ },
+ "jitsi-meet": {
+  "platforms": [
+   "android",
+   "ios"
+  ],
+  "evidence": [
+   "android: README: Google Play link",
+   "ios: README: iTunes link"
+  ],
+  "sure": true
+ },
+ "inkscape": {
+  "platforms": [],
+  "evidence": [],
+  "sure": false
+ },
+ "kanboard": {
+  "platforms": [
+   "server"
+  ],
+  "evidence": [
+   "server: kind: self_hosted"
+  ],
+  "sure": false
+ },
+ "keepassxc": {
+  "platforms": [
+   "windows",
+   "mac",
+   "linux"
+  ],
+  "evidence": [
+   "windows: release file: KeePassXC-2.8.0-ARM64.msi",
+   "mac: release file: KeePassXC-2.8.0-arm64.dmg",
+   "linux: release file: KeePassXC-2.8.0-aarch64.AppImage"
+  ],
+  "sure": true
+ },
+ "kestra": {
+  "platforms": [
+   "server"
+  ],
+  "evidence": [
+   "server: README: Docker / self-host mention"
+  ],
+  "sure": true
+ },
+ "keycloak": {
+  "platforms": [
+   "server"
+  ],
+  "evidence": [
+   "server: README: Docker / self-host mention"
+  ],
+  "sure": true
+ },
+ "kimai": {
+  "platforms": [
+   "server"
+  ],
+  "evidence": [
+   "server: README: Docker / self-host mention"
+  ],
+  "sure": true
+ },
+ "kodi": {
+  "platforms": [
+   "android"
+  ],
+  "evidence": [
+   "android: README: Google Play link"
+  ],
+  "sure": true
+ },
+ "kutt": {
+  "platforms": [
+   "server"
+  ],
+  "evidence": [
+   "server: README: Docker / self-host mention"
+  ],
+  "sure": true
+ },
+ "libreoffice-calc": {
+  "platforms": [],
+  "evidence": [],
+  "sure": false
+ },
+ "libreoffice-impress": {
+  "platforms": [],
+  "evidence": [],
+  "sure": false
+ },
+ "libreoffice-writer": {
+  "platforms": [],
+  "evidence": [],
+  "sure": false
+ },
+ "kubestellar-console": {
+  "platforms": [
+   "mac",
+   "linux"
+  ],
+  "evidence": [
+   "mac: release file: kc-agent_0.3.43-nightly.20261026_darwin_arm64.tar.gz",
+   "linux: release file: kc-agent_0.3.43-nightly.20261026_linux_arm64.tar.gz"
+  ],
+  "sure": true
+ },
+ "koreader": {
+  "platforms": [
+   "mac",
+   "linux",
+   "android"
+  ],
+  "evidence": [
+   "mac: release file: koreader-macos-10.15-x86_64-v2026.07.2-273-gf84ac04_2026-10-21.7z",
+   "linux: release file: koreader-v2026.07.2-273-gf84ac04_2026-10-21-aarch64.AppImage",
+   "android: release file: koreader-android-x86-v2026.07.2-273-gf84ac04_2026-10-21.apk"
+  ],
+  "sure": true
+ },
+ "kubero": {
+  "platforms": [
+   "server"
+  ],
+  "evidence": [
+   "server: README: Docker / self-host mention"
+  ],
+  "sure": true
+ },
+ "lastsaas": {
+  "platforms": [
+   "mac",
+   "linux"
+  ],
+  "evidence": [
+   "mac: release file: lastsaas_darwin_arm64.tar.gz",
+   "linux: release file: lastsaas_linux_amd64.tar.gz"
+  ],
+  "sure": true
+ },
+ "kuzzle": {
+  "platforms": [
+   "server"
+  ],
+  "evidence": [
+   "server: README: Docker / self-host mention"
+  ],
+  "sure": false
+ },
+ "leantime": {
+  "platforms": [
+   "server"
+  ],
+  "evidence": [
+   "server: README: Docker / self-host mention"
+  ],
+  "sure": true
+ },
+ "lineageos": {
+  "platforms": [],
+  "evidence": [],
+  "sure": false
+ },
+ "linux-mint": {
+  "platforms": [],
+  "evidence": [],
+  "sure": false
+ },
+ "leon": {
+  "platforms": [
+   "windows",
+   "mac",
+   "linux"
+  ],
+  "evidence": [
+   "windows: release file: leon-tcp-server-win-amd64.zip",
+   "mac: release file: leon-tcp-server-macosx-x86_64.zip",
+   "linux: release file: leon-tcp-server-linux-aarch64.zip"
+  ],
+  "sure": true
+ },
+ "lemmy": {
+  "platforms": [
+   "server"
+  ],
+  "evidence": [
+   "server: README: Docker / self-host mention"
+  ],
+  "sure": true
+ },
+ "librengine": {
+  "platforms": [
+   "server"
+  ],
+  "evidence": [
+   "server: README: Docker / self-host mention"
+  ],
+  "sure": true
+ },
+ "keyoxide": {
+  "platforms": [
+   "server"
+  ],
+  "evidence": [
+   "server: README: Docker / self-host mention"
+  ],
+  "sure": true
+ },
+ "librechat": {
+  "platforms": [
+   "server"
+  ],
+  "evidence": [
+   "server: README: Docker / self-host mention"
+  ],
+  "sure": true
+ },
+ "limesurvey": {
+  "platforms": [
+   "server"
+  ],
+  "evidence": [
+   "server: kind: self_hosted"
+  ],
+  "sure": false
+ },
+ "librespeed": {
+  "platforms": [
+   "server"
+  ],
+  "evidence": [
+   "server: kind: self_hosted"
+  ],
+  "sure": false
+ },
+ "libresign": {
+  "platforms": [
+   "server"
+  ],
+  "evidence": [
+   "server: kind: self_hosted"
+  ],
+  "sure": false
+ },
+ "lightdash": {
+  "platforms": [
+   "mac",
+   "linux",
+   "server"
+  ],
+  "evidence": [
+   "mac: release file: lightdash-cli-3.53.10-macos-arm64.tar.gz",
+   "linux: release file: lightdash-cli-3.53.10-linux-x64.tar.gz",
+   "server: README: Docker / self-host mention"
+  ],
+  "sure": true
+ },
+ "libretranslate": {
+  "platforms": [
+   "server"
+  ],
+  "evidence": [
+   "server: README: Docker / self-host mention"
+  ],
+  "sure": true
+ },
+ "lmms": {
+  "platforms": [
+   "windows",
+   "mac",
+   "linux"
+  ],
+  "evidence": [
+   "windows: release file: lmms-1.3.0-alpha.2-windows-arm64.exe",
+   "mac: release file: lmms-1.3.0-alpha.2-mac10.13-x86_64.dmg",
+   "linux: release file: lmms-1.3.0-alpha.2-linux-arm64.AppImage"
+  ],
+  "sure": true
+ },
+ "litekart": {
+  "platforms": [
+   "server"
+  ],
+  "evidence": [
+   "server: README: Docker / self-host mention"
+  ],
+  "sure": true
+ },
+ "localsend": {
+  "platforms": [
+   "windows",
+   "mac",
+   "linux",
+   "android"
+  ],
+  "evidence": [
+   "windows: release file: LocalSend-1.18.2-windows-x86-64-unsigned.exe",
+   "mac: release file: LocalSend-1.18.2.dmg",
+   "linux: release file: LocalSend-1.18.2-linux-x86-64.tar.gz",
+   "android: release file: LocalSend-1.18.2-android-arm32v7.apk"
+  ],
+  "sure": true
+ },
+ "livekit": {
+  "platforms": [
+   "windows",
+   "linux",
+   "server"
+  ],
+  "evidence": [
+   "windows: release file: livekit_1.13.11_windows_amd64.zip",
+   "linux: release file: livekit_1.13.11_linux_arm64.tar.gz",
+   "server: README: Docker / self-host mention"
+  ],
+  "sure": true
+ },
+ "logseq": {
+  "platforms": [
+   "windows",
+   "mac",
+   "linux",
+   "android"
+  ],
+  "evidence": [
+   "windows: release file: Logseq-win-x64-2.0.2-alpha+nightly.20261025-nsis.exe",
+   "mac: release file: Logseq-darwin-arm64-2.0.2-alpha+nightly.20261025.zip",
+   "linux: release file: Logseq-linux-x86_64-2.0.2.AppImage",
+   "android: release file: Logseq-android-2.0.2-alpha+nightly.20261025.apk"
+  ],
+  "sure": true
+ },
+ "loops": {
+  "platforms": [
+   "server"
+  ],
+  "evidence": [
+   "server: README: Docker / self-host mention"
+  ],
+  "sure": true
+ },
+ "lowdefy": {
+  "platforms": [],
+  "evidence": [],
+  "sure": false
+ },
+ "manticore-search": {
+  "platforms": [
+   "server"
+  ],
+  "evidence": [
+   "server: README: Docker / self-host mention"
+  ],
+  "sure": false
+ },
+ "logto": {
+  "platforms": [
+   "server"
+  ],
+  "evidence": [
+   "server: README: Docker / self-host mention"
+  ],
+  "sure": false
+ },
+ "mastodon": {
+  "platforms": [
+   "server"
+  ],
+  "evidence": [
+   "server: README: Docker / self-host mention"
+  ],
+  "sure": true
+ },
+ "librewolf": {
+  "platforms": [],
+  "evidence": [],
+  "sure": false
+ },
+ "matano": {
+  "platforms": [
+   "mac",
+   "linux",
+   "server"
+  ],
+  "evidence": [
+   "mac: release file: matano-macos-x64.sh",
+   "linux: release file: matano-linux-x64.sh",
+   "server: kind: self_hosted"
+  ],
+  "sure": true
+ },
+ "medusa": {
+  "platforms": [],
+  "evidence": [],
+  "sure": false
+ },
+ "mediawiki": {
+  "platforms": [
+   "server"
+  ],
+  "evidence": [
+   "server: kind: self_hosted"
+  ],
+  "sure": false
+ },
+ "mbin": {
+  "platforms": [
+   "server"
+  ],
+  "evidence": [
+   "server: kind: self_hosted"
+  ],
+  "sure": false
+ },
+ "mattermost": {
+  "platforms": [
+   "ios",
+   "server"
+  ],
+  "evidence": [
+   "ios: README: iTunes link",
+   "server: README: Docker / self-host mention"
+  ],
+  "sure": true
+ },
+ "matomo": {
+  "platforms": [
+   "server"
+  ],
+  "evidence": [
+   "server: kind: self_hosted"
+  ],
+  "sure": false
+ },
+ "mellisearch": {
+  "platforms": [
+   "windows",
+   "mac",
+   "linux"
+  ],
+  "evidence": [
+   "windows: release file: meilisearch-enterprise-windows-amd64.exe",
+   "mac: release file: meilisearch-enterprise-macos-apple-silicon",
+   "linux: release file: meilisearch-enterprise-linux-amd64"
+  ],
+  "sure": true
+ },
+ "meshcentral": {
+  "platforms": [
+   "server"
+  ],
+  "evidence": [
+   "server: kind: self_hosted"
+  ],
+  "sure": false
+ },
+ "memos": {
+  "platforms": [
+   "windows",
+   "mac",
+   "linux",
+   "server"
+  ],
+  "evidence": [
+   "windows: release file: memos_26.10-rc.1_windows_amd64.zip",
+   "mac: release file: memos_26.10-rc.1_darwin_arm64.tar.gz",
+   "linux: release file: memos_26.10-rc.1_linux_amd64.tar.gz",
+   "server: README: Docker / self-host mention"
+  ],
+  "sure": true
+ },
+ "metriql": {
+  "platforms": [],
+  "evidence": [],
+  "sure": false
+ },
+ "mlcraft": {
+  "platforms": [
+   "server"
+  ],
+  "evidence": [
+   "server: README: Docker / self-host mention"
+  ],
+  "sure": true
+ },
+ "misskey": {
+  "platforms": [
+   "server"
+  ],
+  "evidence": [
+   "server: README: Docker / self-host mention"
+  ],
+  "sure": true
+ },
+ "miniflux": {
+  "platforms": [
+   "mac",
+   "linux",
+   "server"
+  ],
+  "evidence": [
+   "mac: release file: miniflux-darwin-arm64",
+   "linux: release file: miniflux_2.3.4_amd64.deb",
+   "server: kind: self_hosted"
+  ],
+  "sure": true
+ },
+ "moinmoin": {
+  "platforms": [
+   "server"
+  ],
+  "evidence": [
+   "server: kind: self_hosted"
+  ],
+  "sure": false
+ },
+ "mumble": {
+  "platforms": [
+   "windows",
+   "mac"
+  ],
+  "evidence": [
+   "windows: release file: mumble_server-1.6.1001.x64.exe",
+   "mac: release file: mumble_server-1.6.1001.x64.macos"
+  ],
+  "sure": true
+ },
+ "metabase": {
+  "platforms": [
+   "server"
+  ],
+  "evidence": [
+   "server: README: Docker / self-host mention"
+  ],
+  "sure": false
+ },
+ "monomap": {
+  "platforms": [],
+  "evidence": [],
+  "sure": false
+ },
+ "mypaint": {
+  "platforms": [
+   "windows",
+   "linux"
+  ],
+  "evidence": [
+   "windows: release file: mypaint-w32-2.0.1-installer.exe",
+   "linux: release file: MyPaint-v2.0.1.AppImage"
+  ],
+  "sure": true
+ },
+ "natron": {
+  "platforms": [
+   "mac"
+  ],
+  "evidence": [
+   "mac: release file: Natron-RB-2.5-202409121906-7eea73e-macOS12-x86_64.dmg"
+  ],
+  "sure": true
+ },
+ "nexopos": {
+  "platforms": [
+   "server"
+  ],
+  "evidence": [
+   "server: README: Docker / self-host mention"
+  ],
+  "sure": false
+ },
+ "newpipe": {
+  "platforms": [
+   "android"
+  ],
+  "evidence": [
+   "android: release file: NewPipe_v0.29.1.apk"
+  ],
+  "sure": true
+ },
+ "netnewswire": {
+  "platforms": [],
+  "evidence": [],
+  "sure": false
+ },
+ "netbird": {
+  "platforms": [
+   "windows",
+   "mac",
+   "linux"
+  ],
+  "evidence": [
+   "windows: release file: netbird-ui-windows_0.81.4_windows_arm64.tar.gz",
+   "mac: release file: netbird-ui_0.81.4_darwin_arm64.tar.gz",
+   "linux: release file: netbird-ui-linux-gtk3_0.81.4_linux_amd64.tar.gz"
+  ],
+  "sure": true
+ },
+ "navidrome": {
+  "platforms": [
+   "windows",
+   "mac",
+   "linux",
+   "server"
+  ],
+  "evidence": [
+   "windows: release file: navidrome_0.64.2_windows_amd64.zip",
+   "mac: release file: navidrome_0.64.2_darwin_arm64.tar.gz",
+   "linux: release file: navidrome_0.64.2_linux_386.tar.gz",
+   "server: README: Docker / self-host mention"
+  ],
+  "sure": true
+ },
+ "netdata": {
+  "platforms": [
+   "windows"
+  ],
+  "evidence": [
+   "windows: release file: netdata-x64.msi"
+  ],
+  "sure": true
+ },
+ "newsboat": {
+  "platforms": [
+   "linux"
+  ],
+  "evidence": [
+   "linux: README: Snap Store link"
+  ],
+  "sure": true
+ },
+ "nextcloud": {
+  "platforms": [
+   "server"
+  ],
+  "evidence": [
+   "server: kind: self_hosted"
+  ],
+  "sure": false
+ },
+ "nextcloud-calendar": {
+  "platforms": [
+   "server"
+  ],
+  "evidence": [
+   "server: kind: self_hosted"
+  ],
+  "sure": false
+ },
+ "neo4j": {
+  "platforms": [
+   "server"
+  ],
+  "evidence": [
+   "server: kind: self_hosted"
+  ],
+  "sure": false
+ },
+ "nextcloud-forms": {
+  "platforms": [
+   "server"
+  ],
+  "evidence": [
+   "server: README: Docker / self-host mention"
+  ],
+  "sure": true
+ },
+ "nextcloud-notes": {
+  "platforms": [
+   "server"
+  ],
+  "evidence": [
+   "server: kind: self_hosted"
+  ],
+  "sure": false
+ },
+ "okular": {
+  "platforms": [],
+  "evidence": [],
+  "sure": false
+ },
+ "nhost": {
+  "platforms": [
+   "mac",
+   "linux"
+  ],
+  "evidence": [
+   "mac: release file: cli-1.52.1-darwin-amd64.tar.gz",
+   "linux: release file: cli-1.52.1-linux-arm64.tar.gz"
+  ],
+  "sure": true
+ },
+ "notally": {
+  "platforms": [
+   "android"
+  ],
+  "evidence": [
+   "android: release file: Notally.v6.2.apk"
+  ],
+  "sure": true
+ },
+ "obtainium": {
+  "platforms": [
+   "android"
+  ],
+  "evidence": [
+   "android: release file: app-arm64-v8a-fdroid-release.apk"
+  ],
+  "sure": true
+ },
+ "notegen": {
+  "platforms": [
+   "windows",
+   "mac",
+   "linux",
+   "android"
+  ],
+  "evidence": [
+   "windows: release file: NoteGen_0.39.0_x64_en-US.msi",
+   "mac: release file: NoteGen_0.39.0_aarch64.dmg",
+   "linux: release file: NoteGen_0.39.0_amd64.deb",
+   "android: release file: NoteGen_0.39.0_android-arm64.apk"
+  ],
+  "sure": true
+ },
+ "obs-studio": {
+  "platforms": [
+   "windows",
+   "mac",
+   "linux"
+  ],
+  "evidence": [
+   "windows: release file: OBS-Studio-33.0.0-Windows-x64.zip",
+   "mac: release file: OBS-Studio-33.0.0-macOS-Intel.dmg",
+   "linux: release file: OBS-Studio-33.0.0-Ubuntu-26.04-x86_64.deb"
+  ],
+  "sure": true
+ },
+ "notabase": {
+  "platforms": [
+   "server"
+  ],
+  "evidence": [
+   "server: README: Docker / self-host mention"
+  ],
+  "sure": false
+ },
+ "node-red": {
+  "platforms": [],
+  "evidence": [],
+  "sure": false
+ },
+ "notesnook": {
+  "platforms": [
+   "windows",
+   "mac",
+   "linux",
+   "android"
+  ],
+  "evidence": [
+   "windows: release file: notesnook_win_arm64.exe.blockmap",
+   "mac: release file: notesnook_mac_x64.zip.blockmap",
+   "linux: release file: notesnook_linux_x86_64.AppImage",
+   "android: release file: notesnook-arm64-v8a.apk"
+  ],
+  "sure": true
+ },
+ "odoo": {
+  "platforms": [
+   "server"
+  ],
+  "evidence": [
+   "server: kind: self_hosted"
+  ],
+  "sure": false
+ },
+ "nuclei": {
+  "platforms": [
+   "windows",
+   "mac",
+   "linux"
+  ],
+  "evidence": [
+   "windows: release file: nuclei_3.11.1_windows_386.zip",
+   "mac: release file: nuclei_3.11.1_macOS_arm64.zip",
+   "linux: release file: nuclei_3.11.1_linux_386.zip"
+  ],
+  "sure": true
+ },
+ "olive-video-editor": {
+  "platforms": [
+   "windows",
+   "mac",
+   "linux"
+  ],
+  "evidence": [
+   "windows: release file: Olive-8ac191ce-Windows-x86_64.exe",
+   "mac: release file: Olive-ea47e4d8-macOS-x86_64.dmg",
+   "linux: release file: Olive-8ac191ce-Linux-x86_64.AppImage"
+  ],
+  "sure": true
+ },
+ "offpdf": {
+  "platforms": [
+   "windows",
+   "mac",
+   "ios"
+  ],
+  "evidence": [
+   "windows: release file: OffPDF_0.5.0_x64-setup.exe",
+   "mac: release file: OffPDF_0.5.0_aarch64.dmg",
+   "ios: README: App Store link (iPhone/iPad)"
+  ],
+  "sure": true
+ },
+ "ollama": {
+  "platforms": [
+   "windows",
+   "mac",
+   "linux"
+  ],
+  "evidence": [
+   "windows: release file: ollama-windows-amd64-mlx.zip",
+   "mac: release file: Ollama-darwin.zip",
+   "linux: release file: ollama-linux-amd64-mlx.tar.zst"
+  ],
+  "sure": true
+ },
+ "omniedge": {
+  "platforms": [
+   "windows",
+   "mac",
+   "linux",
+   "android"
+  ],
+  "evidence": [
+   "windows: release file: omniedge-cli-2.9.0-windows-x64.zip",
+   "mac: release file: omniedge-cli-2.9.0-macos-arm64.tar.gz",
+   "linux: release file: omniedge-cli-2.9.0-linux-riscv64.tar.gz",
+   "android: release file: omniedge-2.9.0-openwrt-x64.apk"
+  ],
+  "sure": true
+ },
+ "openboard": {
+  "platforms": [
+   "android"
+  ],
+  "evidence": [
+   "android: release file: app-release.apk"
+  ],
+  "sure": true
+ },
+ "openblocks": {
+  "platforms": [
+   "server"
+  ],
+  "evidence": [
+   "server: README: Docker / self-host mention"
+  ],
+  "sure": true
+ },
+ "open-interpreter": {
+  "platforms": [
+   "windows",
+   "mac",
+   "linux"
+  ],
+  "evidence": [
+   "windows: release file: open-interpreter-package-x86_64-pc-windows-msvc.tar.zst",
+   "mac: release file: codex-app-server-x86_64-apple-darwin.zst",
+   "linux: release file: codex-app-server-x86_64-unknown-linux-musl.zst"
+  ],
+  "sure": true
+ },
+ "openassistant": {
+  "platforms": [
+   "server"
+  ],
+  "evidence": [
+   "server: README: Docker / self-host mention"
+  ],
+  "sure": false
+ },
+ "onlyoffice-docs": {
+  "platforms": [
+   "windows",
+   "linux",
+   "server"
+  ],
+  "evidence": [
+   "windows: release file: onlyoffice-documentserver.exe",
+   "linux: release file: onlyoffice-documentserver.x86_64.rpm",
+   "server: kind: self_hosted"
+  ],
+  "sure": true
+ },
+ "openbooks": {
+  "platforms": [
+   "server"
+  ],
+  "evidence": [
+   "server: README: Docker / self-host mention"
+  ],
+  "sure": true
+ },
+ "opencut": {
+  "platforms": [
+   "windows",
+   "mac",
+   "linux"
+  ],
+  "evidence": [
+   "windows: release file: ffmpeg-8.1.3-windows-aarch64.tar.gz",
+   "mac: release file: ffmpeg-8.1.3-macos-aarch64.tar.gz",
+   "linux: release file: ffmpeg-8.1.3-linux-x86_64.tar.gz"
+  ],
+  "sure": true
+ },
+ "openhands": {
+  "platforms": [
+   "windows",
+   "mac",
+   "linux",
+   "server"
+  ],
+  "evidence": [
+   "windows: release file: OpenHands-Agent-Canvas-Setup-1.33.0.exe",
+   "mac: release file: OpenHands-Agent-Canvas-1.33.0-universal.dmg",
+   "linux: release file: OpenHands.Agent.Canvas-1.33.0.AppImage",
+   "server: README: Docker / self-host mention"
+  ],
+  "sure": true
+ },
+ "openshot": {
+  "platforms": [
+   "windows",
+   "mac",
+   "linux"
+  ],
+  "evidence": [
+   "windows: release file: OpenShot-v4.0.1-x86.exe",
+   "mac: release file: OpenShot-v4.0.1-x86_64.dmg",
+   "linux: release file: OpenShot-v4.0.1-x86_64.AppImage"
+  ],
+  "sure": true
+ },
+ "openproject": {
+  "platforms": [
+   "server"
+  ],
+  "evidence": [
+   "server: README: Docker / self-host mention"
+  ],
+  "sure": true
+ },
+ "openstatus": {
+  "platforms": [
+   "server"
+  ],
+  "evidence": [
+   "server: README: Docker / self-host mention"
+  ],
+  "sure": true
+ },
+ "organic-maps": {
+  "platforms": [
+   "android"
+  ],
+  "evidence": [
+   "android: release file: OrganicMaps-26092932-web-release.apk"
+  ],
+  "sure": true
+ },
+ "openwebanalytics": {
+  "platforms": [
+   "server"
+  ],
+  "evidence": [
+   "server: kind: self_hosted"
+  ],
+  "sure": false
+ },
+ "openvidu": {
+  "platforms": [
+   "server"
+  ],
+  "evidence": [
+   "server: README: Docker / self-host mention"
+  ],
+  "sure": true
+ },
+ "osmand": {
+  "platforms": [
+   "android"
+  ],
+  "evidence": [
+   "android: README: Google Play link"
+  ],
+  "sure": true
+ },
+ "orbit": {
+  "platforms": [
+   "server"
+  ],
+  "evidence": [
+   "server: README: Docker / self-host mention"
+  ],
+  "sure": false
+ },
+ "openstreetmap": {
+  "platforms": [
+   "server"
+  ],
+  "evidence": [
+   "server: kind: self_hosted"
+  ],
+  "sure": false
+ },
+ "owncloud": {
+  "platforms": [
+   "server"
+  ],
+  "evidence": [
+   "server: README: Docker / self-host mention"
+  ],
+  "sure": true
+ },
+ "ory": {
+  "platforms": [
+   "windows",
+   "mac",
+   "linux",
+   "server"
+  ],
+  "evidence": [
+   "windows: release file: kratos_26.2.0-windows_sqlite_64bit.zip",
+   "mac: release file: kratos_26.2.0-macOS_sqlite_arm64.tar.gz",
+   "linux: release file: kratos_26.2.0-linux_sqlite_armv6.tar.gz",
+   "server: README: Docker / self-host mention"
+  ],
+  "sure": true
+ },
+ "otomi": {
+  "platforms": [
+   "server"
+  ],
+  "evidence": [
+   "server: README: Docker / self-host mention"
+  ],
+  "sure": true
+ },
+ "padloc": {
+  "platforms": [
+   "windows",
+   "mac",
+   "linux",
+   "android"
+  ],
+  "evidence": [
+   "windows: release file: padloc_4.3.0_windows_electron_x64.exe.blockmap",
+   "mac: release file: padloc_4.3.0_macos_electron_x64.zip",
+   "linux: release file: padloc_4.3.0_linux_electron_x86_64.AppImage",
+   "android: release file: padloc_4.3.0_android.apk"
+  ],
+  "sure": true
+ },
+ "owncloud-infinite-scale": {
+  "platforms": [
+   "mac",
+   "linux",
+   "server"
+  ],
+  "evidence": [
+   "mac: release file: ocis-8.2.2-darwin-arm64",
+   "linux: release file: ocis-8.2.2-linux-arm64",
+   "server: README: Docker / self-host mention"
+  ],
+  "sure": true
+ },
+ "papercups": {
+  "platforms": [
+   "server"
+  ],
+  "evidence": [
+   "server: README: Docker / self-host mention"
+  ],
+  "sure": true
+ },
+ "pagure": {
+  "platforms": [
+   "server"
+  ],
+  "evidence": [
+   "server: README: Docker / self-host mention"
+  ],
+  "sure": true
+ },
+ "passbolt": {
+  "platforms": [
+   "android",
+   "server"
+  ],
+  "evidence": [
+   "android: README: Google Play link",
+   "server: kind: self_hosted"
+  ],
+  "sure": true
+ },
+ "pdf-arranger": {
+  "platforms": [
+   "windows",
+   "linux"
+  ],
+  "evidence": [
+   "windows: release file: pdfarranger-1.14.0-windows-installer.msi",
+   "linux: README: Flathub link"
+  ],
+  "sure": true
+ },
+ "peertube": {
+  "platforms": [
+   "server"
+  ],
+  "evidence": [
+   "server: kind: self_hosted"
+  ],
+  "sure": false
+ },
+ "peon": {
+  "platforms": [
+   "server"
+  ],
+  "evidence": [
+   "server: README: Docker / self-host mention"
+  ],
+  "sure": true
+ },
+ "photoprism": {
+  "platforms": [
+   "linux",
+   "server"
+  ],
+  "evidence": [
+   "linux: release file: photoprism_261007-65faaae5d-linux-amd64.tar.gz",
+   "server: README: Docker / self-host mention"
+  ],
+  "sure": true
+ },
+ "penpot": {
+  "platforms": [
+   "server"
+  ],
+  "evidence": [
+   "server: README: Docker / self-host mention"
+  ],
+  "sure": false
+ },
+ "postmarketos": {
+  "platforms": [],
+  "evidence": [],
+  "sure": false
+ },
+ "payload": {
+  "platforms": [],
+  "evidence": [],
+  "sure": false
+ },
+ "pingcap": {
+  "platforms": [],
+  "evidence": [],
+  "sure": false
+ },
+ "plane": {
+  "platforms": [
+   "server"
+  ],
+  "evidence": [
+   "server: README: Docker / self-host mention"
+  ],
+  "sure": true
+ },
+ "plausible": {
+  "platforms": [
+   "server"
+  ],
+  "evidence": [
+   "server: README: Docker / self-host mention"
+  ],
+  "sure": true
+ },
+ "piefed": {
+  "platforms": [
+   "server"
+  ],
+  "evidence": [
+   "server: kind: self_hosted"
+  ],
+  "sure": false
+ },
+ "plasmic": {
+  "platforms": [],
+  "evidence": [],
+  "sure": false
+ },
+ "pocket-casts": {
+  "platforms": [
+   "android"
+  ],
+  "evidence": [
+   "android: release file: app-8.24-rc-1.aab"
+  ],
+  "sure": true
+ },
+ "pixelfed": {
+  "platforms": [
+   "server"
+  ],
+  "evidence": [
+   "server: README: Docker / self-host mention"
+  ],
+  "sure": true
+ },
+ "plume": {
+  "platforms": [
+   "server"
+  ],
+  "evidence": [
+   "server: README: Docker / self-host mention"
+  ],
+  "sure": true
+ },
+ "pocketbase": {
+  "platforms": [
+   "windows",
+   "mac",
+   "linux"
+  ],
+  "evidence": [
+   "windows: release file: pocketbase_0.40.6_windows_amd64.zip",
+   "mac: release file: pocketbase_0.40.6_darwin_arm64.zip",
+   "linux: release file: pocketbase_0.40.6_linux_s390x.zip"
+  ],
+  "sure": true
+ },
+ "preset": {
+  "platforms": [
+   "server"
+  ],
+  "evidence": [
+   "server: README: Docker / self-host mention"
+  ],
+  "sure": true
+ },
+ "presta": {
+  "platforms": [
+   "server"
+  ],
+  "evidence": [
+   "server: README: Docker / self-host mention"
+  ],
+  "sure": true
+ },
+ "posnic-pos": {
+  "platforms": [
+   "windows",
+   "mac",
+   "linux"
+  ],
+  "evidence": [
+   "windows: release file: Posnic-1.9.2-beta.1076-windows-x64-installer.exe",
+   "mac: release file: latest-mac.yml",
+   "linux: release file: posnic_1.9.2-beta.1076_amd64.deb"
+  ],
+  "sure": true
+ },
+ "prisme-analytics": {
+  "platforms": [
+   "server"
+  ],
+  "evidence": [
+   "server: README: Docker / self-host mention"
+  ],
+  "sure": true
+ },
+ "psitransfer": {
+  "platforms": [
+   "server"
+  ],
+  "evidence": [
+   "server: README: Docker / self-host mention"
+  ],
+  "sure": true
+ },
+ "qdrant": {
+  "platforms": [
+   "windows",
+   "mac",
+   "linux"
+  ],
+  "evidence": [
+   "windows: release file: qdrant-x86_64-pc-windows-msvc.zip",
+   "mac: release file: qdrant-aarch64-apple-darwin.tar.gz",
+   "linux: release file: qdrant-x86_64-unknown-linux-gnu.tar.gz"
+  ],
+  "sure": true
+ },
+ "quant-ux": {
+  "platforms": [
+   "server"
+  ],
+  "evidence": [
+   "server: README: Docker / self-host mention"
+  ],
+  "sure": true
+ },
+ "questdb": {
+  "platforms": [
+   "windows",
+   "linux",
+   "server"
+  ],
+  "evidence": [
+   "windows: release file: questdb-10.1.0-rt-windows-x86-64.tar.gz",
+   "linux: release file: questdb-10.1.0-rt-linux-x86-64.tar.gz",
+   "server: README: Docker / self-host mention"
+  ],
+  "sure": true
+ },
+ "quillpad": {
+  "platforms": [
+   "android"
+  ],
+  "evidence": [
+   "android: release file: quillpad-1.5.15.apk"
+  ],
+  "sure": true
+ },
+ "restic": {
+  "platforms": [
+   "windows",
+   "mac",
+   "linux"
+  ],
+  "evidence": [
+   "windows: release file: restic_0.19.1_windows_amd64.zip",
+   "mac: release file: restic_0.19.1_darwin_arm64.bz2",
+   "linux: release file: restic_0.19.1_linux_s390x.bz2"
+  ],
+  "sure": true
+ },
+ "review-board": {
+  "platforms": [
+   "server"
+  ],
+  "evidence": [
+   "server: kind: self_hosted"
+  ],
+  "sure": false
+ },
+ "reveal-js": {
+  "platforms": [],
+  "evidence": [],
+  "sure": false
+ },
+ "rawtherapee": {
+  "platforms": [
+   "windows",
+   "mac",
+   "linux"
+  ],
+  "evidence": [
+   "windows: release file: RawTherapee_5.13_win64_arm64_debug-AboutThisBuild.txt",
+   "mac: release file: RawTherapee_MacOS_26.0_Universal_5.13.zip",
+   "linux: release file: RawTherapee_5.13_arm64_debug.AppImage"
+  ],
+  "sure": true
+ },
+ "redmine": {
+  "platforms": [
+   "server"
+  ],
+  "evidence": [
+   "server: kind: self_hosted"
+  ],
+  "sure": false
+ },
+ "roundcube": {
+  "platforms": [
+   "server"
+  ],
+  "evidence": [
+   "server: kind: self_hosted"
+  ],
+  "sure": false
+ },
+ "quickwit": {
+  "platforms": [
+   "mac",
+   "linux",
+   "server"
+  ],
+  "evidence": [
+   "mac: release file: quickwit-v0.9.3-x86_64-apple-darwin.tar.gz",
+   "linux: release file: quickwit-v0.9.3-x86_64-unknown-linux-gnu.tar.gz",
+   "server: kind: self_hosted"
+  ],
+  "sure": true
+ },
+ "rocket-chat": {
+  "platforms": [
+   "windows",
+   "mac",
+   "linux",
+   "android",
+   "server"
+  ],
+  "evidence": [
+   "windows: README: Microsoft Store / winget / Chocolatey / Scoop",
+   "mac: README: Mac App Store link",
+   "linux: README: Snap Store link",
+   "android: README: Google Play link",
+   "server: README: Docker / self-host mention"
+  ],
+  "sure": true
+ },
+ "rustdesk": {
+  "platforms": [
+   "windows",
+   "mac",
+   "linux",
+   "android"
+  ],
+  "evidence": [
+   "windows: release file: rustdesk-1.5.0-x86-sciter.exe",
+   "mac: release file: rustdesk-1.5.0-aarch64.dmg",
+   "linux: release file: rustdesk-1.5.0-x86_64-sciter.deb",
+   "android: release file: rustdesk-1.5.0-aarch64-signed.apk"
+  ],
+  "sure": true
+ },
+ "scribus": {
+  "platforms": [],
+  "evidence": [],
+  "sure": false
+ },
+ "saleor": {
+  "platforms": [
+   "server"
+  ],
+  "evidence": [
+   "server: README: Docker / self-host mention"
+  ],
+  "sure": true
+ },
+ "searxng": {
+  "platforms": [
+   "server"
+  ],
+  "evidence": [
+   "server: kind: self_hosted"
+  ],
+  "sure": false
+ },
+ "shotcut": {
+  "platforms": [
+   "windows",
+   "mac",
+   "linux"
+  ],
+  "evidence": [
+   "windows: release file: shotcut-win_ARM-26.9.27.zip",
+   "mac: release file: shotcut-macos-26.9.27.dmg",
+   "linux: release file: shotcut-linux-x86_64-26.9.27.AppImage"
+  ],
+  "sure": true
+ },
+ "seafile": {
+  "platforms": [
+   "server"
+  ],
+  "evidence": [
+   "server: kind: self_hosted"
+  ],
+  "sure": false
+ },
+ "shynet": {
+  "platforms": [
+   "server"
+  ],
+  "evidence": [
+   "server: README: Docker / self-host mention"
+  ],
+  "sure": true
+ },
+ "semi": {
+  "platforms": [
+   "mac",
+   "linux"
+  ],
+  "evidence": [
+   "mac: release file: weaviate-v1.37.18-darwin-all.zip",
+   "linux: release file: weaviate-v1.37.18-linux-amd64.tar.gz"
+  ],
+  "sure": true
+ },
+ "shuup": {
+  "platforms": [
+   "server"
+  ],
+  "evidence": [
+   "server: README: Docker / self-host mention"
+  ],
+  "sure": true
+ },
+ "shlink": {
+  "platforms": [
+   "server"
+  ],
+  "evidence": [
+   "server: README: Docker / self-host mention"
+  ],
+  "sure": true
+ },
+ "signoz": {
+  "platforms": [
+   "mac",
+   "linux",
+   "server"
+  ],
+  "evidence": [
+   "mac: release file: signoz-community_darwin_amd64.tar.gz",
+   "linux: release file: signoz-community_linux_arm64.tar.gz",
+   "server: README: Docker / self-host mention"
+  ],
+  "sure": true
+ },
+ "signal": {
+  "platforms": [
+   "android"
+  ],
+  "evidence": [
+   "android: release file: Signal-Android-github-prod-universal-release-8.33.1.apk"
+  ],
+  "sure": true
+ },
+ "silex": {
+  "platforms": [
+   "windows",
+   "mac",
+   "linux",
+   "server"
+  ],
+  "evidence": [
+   "windows: release file: Silex_3.10.0-canary.4_x64-setup.exe",
+   "mac: release file: Silex_aarch64.dmg",
+   "linux: release file: Silex_3.10.0-canary.4_amd64.deb",
+   "server: README: Docker / self-host mention"
+  ],
+  "sure": true
+ },
+ "simplex-chat": {
+  "platforms": [
+   "windows",
+   "mac",
+   "linux",
+   "android",
+   "ios"
+  ],
+  "evidence": [
+   "windows: release file: simplex-chat-windows-x86-64",
+   "mac: release file: simplex-chat-macos-aarch64",
+   "linux: release file: simplex-chat-ubuntu-24_04-aarch64",
+   "android: release file: simplex-aarch64.apk",
+   "ios: README: App Store link (iPhone/iPad)"
+  ],
+  "sure": true
+ },
+ "simple-keyboard": {
+  "platforms": [
+   "android"
+  ],
+  "evidence": [
+   "android: release file: app-release.apk"
+  ],
+  "sure": true
+ },
+ "solidinvoice": {
+  "platforms": [
+   "mac",
+   "linux",
+   "android",
+   "server"
+  ],
+  "evidence": [
+   "mac: release file: solidinvoice-mac-arm64",
+   "linux: release file: solidinvoice-linux-arm64",
+   "android: release file: solidinvoice_3.1.2-r1_aarch64.apk",
+   "server: README: Docker / self-host mention"
+  ],
+  "sure": true
+ },
+ "sonic": {
+  "platforms": [
+   "linux",
+   "server"
+  ],
+  "evidence": [
+   "linux: release file: v1.10.2-x86_64-gnu.tar.gz",
+   "server: README: Docker / self-host mention"
+  ],
+  "sure": true
+ },
+ "snikket": {
+  "platforms": [
+   "server"
+  ],
+  "evidence": [
+   "server: README: Docker / self-host mention"
+  ],
+  "sure": true
+ },
+ "slidev": {
+  "platforms": [],
+  "evidence": [],
+  "sure": false
+ },
+ "solidping": {
+  "platforms": [
+   "windows",
+   "mac",
+   "linux",
+   "server"
+  ],
+  "evidence": [
+   "windows: release file: sp-windows-amd64.zip",
+   "mac: release file: sp-darwin-arm64.gz",
+   "linux: release file: sp-linux-arm64.gz",
+   "server: README: Docker / self-host mention"
+  ],
+  "sure": true
+ },
+ "solidtime": {
+  "platforms": [
+   "server"
+  ],
+  "evidence": [
+   "server: README: Docker / self-host mention"
+  ],
+  "sure": true
+ },
+ "spacebar": {
+  "platforms": [
+   "server"
+  ],
+  "evidence": [
+   "server: README: Docker / self-host mention"
+  ],
+  "sure": true
+ },
+ "siyuan": {
+  "platforms": [
+   "windows",
+   "mac",
+   "linux",
+   "android"
+  ],
+  "evidence": [
+   "windows: release file: siyuan-3.8.9-beta.1-win.exe",
+   "mac: release file: siyuan-3.8.9-beta.1-mac-arm64.dmg",
+   "linux: release file: siyuan-3.8.9-beta.1-linux.deb",
+   "android: release file: siyuan-3.8.9-beta.1.apk"
+  ],
+  "sure": true
+ },
+ "spacedrive": {
+  "platforms": [
+   "windows",
+   "mac",
+   "linux"
+  ],
+  "evidence": [
+   "windows: release file: sd-daemon-windows-x86_64.exe",
+   "mac: release file: sd-daemon-macos-aarch64",
+   "linux: release file: sd-daemon-linux-x86_64"
+  ],
+  "sure": true
+ },
+ "standard-notes": {
+  "platforms": [
+   "mac",
+   "linux",
+   "android",
+   "ios"
+  ],
+  "evidence": [
+   "mac: release file: latest-mac.yml",
+   "linux: release file: latest-linux.yml",
+   "android: release file: app-prod-release.aab",
+   "ios: README: iTunes link"
+  ],
+  "sure": true
+ },
+ "spliit-app": {
+  "platforms": [
+   "server"
+  ],
+  "evidence": [
+   "server: README: Docker / self-host mention"
+  ],
+  "sure": true
+ },
+ "stable-diffusion-web-ui": {
+  "platforms": [],
+  "evidence": [],
+  "sure": false
+ },
+ "step-ci": {
+  "platforms": [
+   "server"
+  ],
+  "evidence": [
+   "server: README: Docker / self-host mention"
+  ],
+  "sure": false
+ },
+ "stirling-pdf": {
+  "platforms": [
+   "windows",
+   "mac",
+   "linux",
+   "server"
+  ],
+  "evidence": [
+   "windows: release file: Stirling-PDF-windows-x86_64.msi",
+   "mac: release file: Stirling-PDF-macos-universal.dmg",
+   "linux: release file: Stirling-PDF-linux-x86_64.AppImage",
+   "server: README: Docker / self-host mention"
+  ],
+  "sure": true
+ },
+ "stoat": {
+  "platforms": [
+   "server"
+  ],
+  "evidence": [
+   "server: README: Docker / self-host mention"
+  ],
+  "sure": true
+ },
+ "syncthing": {
+  "platforms": [
+   "windows",
+   "mac",
+   "linux"
+  ],
+  "evidence": [
+   "windows: release file: syncthing-windows-386-v2.1.7.zip",
+   "mac: release file: syncthing-macos-amd64-v2.1.7.zip",
+   "linux: release file: syncthing-linux-386-v2.1.7.tar.gz"
+  ],
+  "sure": true
+ },
+ "super-productivity": {
+  "platforms": [
+   "windows",
+   "mac",
+   "linux",
+   "android"
+  ],
+  "evidence": [
+   "windows: release file: superProductivity-arm64.exe",
+   "mac: release file: superProductivity-arm64.dmg",
+   "linux: release file: superProductivity-x86_64.AppImage",
+   "android: release file: app-play-release.apk"
+  ],
+  "sure": true
+ },
+ "thunderbird": {
+  "platforms": [],
+  "evidence": [],
+  "sure": false
+ },
+ "suitecrm": {
+  "platforms": [
+   "server"
+  ],
+  "evidence": [
+   "server: README: Docker / self-host mention"
+  ],
+  "sure": true
+ },
+ "tabler-icons": {
+  "platforms": [],
+  "evidence": [],
+  "sure": false
+ },
+ "sylius": {
+  "platforms": [],
+  "evidence": [],
+  "sure": false
+ },
+ "supabase": {
+  "platforms": [
+   "server"
+  ],
+  "evidence": [
+   "server: README: Docker / self-host mention"
+  ],
+  "sure": false
+ },
+ "strapi": {
+  "platforms": [
+   "server"
+  ],
+  "evidence": [
+   "server: README: Docker / self-host mention"
+  ],
+  "sure": true
+ },
+ "taiga": {
+  "platforms": [],
+  "evidence": [],
+  "sure": false
+ },
+ "sulu": {
+  "platforms": [
+   "server"
+  ],
+  "evidence": [
+   "server: kind: self_hosted"
+  ],
+  "sure": false
+ },
+ "supertokens": {
+  "platforms": [
+   "server"
+  ],
+  "evidence": [
+   "server: kind: self_hosted"
+  ],
+  "sure": false
+ },
+ "tdengine": {
+  "platforms": [],
+  "evidence": [],
+  "sure": false
+ },
+ "ubuntu": {
+  "platforms": [],
+  "evidence": [],
+  "sure": false
+ },
+ "terminusdb": {
+  "platforms": [
+   "linux"
+  ],
+  "evidence": [
+   "linux: README: Snap Store link"
+  ],
+  "sure": true
+ },
+ "telemetry-tracker": {
+  "platforms": [
+   "server"
+  ],
+  "evidence": [
+   "server: README: Docker / self-host mention"
+  ],
+  "sure": true
+ },
+ "tinode": {
+  "platforms": [
+   "windows",
+   "mac",
+   "linux",
+   "android",
+   "ios",
+   "server"
+  ],
+  "evidence": [
+   "windows: release file: tinode-alldbs.windows-amd64.zip",
+   "mac: release file: tinode-alldbs.mac-amd64.tar.gz",
+   "linux: release file: tinode-alldbs.linux-amd64.tar.gz",
+   "android: README: Google Play link",
+   "ios: README: App Store link (iPhone/iPad)",
+   "server: README: Docker / self-host mention"
+  ],
+  "sure": true
+ },
+ "trench": {
+  "platforms": [
+   "server"
+  ],
+  "evidence": [
+   "server: README: Docker / self-host mention"
+  ],
+  "sure": true
+ },
+ "trilium-notes": {
+  "platforms": [
+   "windows",
+   "mac",
+   "linux",
+   "ios"
+  ],
+  "evidence": [
+   "windows: release file: TriliumNotes-v0.106.1-windows-arm64.exe",
+   "mac: release file: TriliumNotes-v0.106.1-macos-x64.dmg",
+   "linux: release file: TriliumNotes-v0.106.1-linux-x64.zip",
+   "ios: README: App Store link (iPhone/iPad)"
+  ],
+  "sure": true
+ },
+ "tina": {
+  "platforms": [],
+  "evidence": [],
+  "sure": false
+ },
+ "tuta": {
+  "platforms": [
+   "windows",
+   "mac",
+   "linux",
+   "android",
+   "ios"
+  ],
+  "evidence": [
+   "windows: release file: tutanota-desktop-win.exe",
+   "mac: release file: tutanota-desktop-mac.dmg",
+   "linux: release file: tutanota-desktop-linux.AppImage",
+   "android: release file: drive-tutao-release-362.261020.0.apk",
+   "ios: README: iTunes link"
+  ],
+  "sure": true
+ },
+ "twenty": {
+  "platforms": [
+   "server"
+  ],
+  "evidence": [
+   "server: README: Docker / self-host mention"
+  ],
+  "sure": true
+ },
+ "tymeslot": {
+  "platforms": [
+   "server"
+  ],
+  "evidence": [
+   "server: README: Docker / self-host mention"
+  ],
+  "sure": true
+ },
+ "typesense": {
+  "platforms": [
+   "server"
+  ],
+  "evidence": [
+   "server: README: Docker / self-host mention"
+  ],
+  "sure": true
+ },
+ "tooljet": {
+  "platforms": [
+   "server"
+  ],
+  "evidence": [
+   "server: README: Docker / self-host mention"
+  ],
+  "sure": true
+ },
+ "ultravnc": {
+  "platforms": [],
+  "evidence": [],
+  "sure": false
+ },
+ "unleash": {
+  "platforms": [
+   "server"
+  ],
+  "evidence": [
+   "server: README: Docker / self-host mention"
+  ],
+  "sure": true
+ },
+ "umami": {
+  "platforms": [
+   "server"
+  ],
+  "evidence": [
+   "server: README: Docker / self-host mention"
+  ],
+  "sure": true
+ },
+ "vaultwarden": {
+  "platforms": [
+   "server"
+  ],
+  "evidence": [
+   "server: README: Docker / self-host mention"
+  ],
+  "sure": true
+ },
+ "uptrace": {
+  "platforms": [
+   "windows",
+   "mac",
+   "linux",
+   "server"
+  ],
+  "evidence": [
+   "windows: release file: uptrace_windows_amd64.exe",
+   "mac: release file: uptrace_darwin_arm64",
+   "linux: release file: uptrace-2.1.0_rc.2-1.aarch64.rpm",
+   "server: kind: self_hosted"
+  ],
+  "sure": true
+ },
+ "ungoogled-chromium": {
+  "platforms": [
+   "mac",
+   "linux"
+  ],
+  "evidence": [
+   "mac: README: Homebrew cask / MacPorts",
+   "linux: README: Flathub link"
+  ],
+  "sure": true
+ },
+ "uvdesk": {
+  "platforms": [
+   "server"
+  ],
+  "evidence": [
+   "server: README: Docker / self-host mention"
+  ],
+  "sure": true
+ },
+ "vendure": {
+  "platforms": [
+   "server"
+  ],
+  "evidence": [
+   "server: README: Docker / self-host mention"
+  ],
+  "sure": false
+ },
+ "victorialogs": {
+  "platforms": [
+   "windows",
+   "mac",
+   "linux"
+  ],
+  "evidence": [
+   "windows: release file: victoria-logs-windows-amd64-v1.53.0-enterprise.zip",
+   "mac: release file: victoria-logs-darwin-amd64-v1.53.0-enterprise.tar.gz",
+   "linux: release file: victoria-logs-linux-386-v1.53.0-enterprise.tar.gz"
+  ],
+  "sure": true
+ },
+ "victoriametrics": {
+  "platforms": [
+   "windows",
+   "mac",
+   "linux",
+   "server"
+  ],
+  "evidence": [
+   "windows: release file: victoria-metrics-windows-amd64-v1.154.1-cluster.zip",
+   "mac: release file: victoria-metrics-darwin-amd64-v1.154.1-cluster.tar.gz",
+   "linux: release file: victoria-metrics-linux-386-v1.154.1-enterprise.tar.gz",
+   "server: README: Docker / self-host mention"
+  ],
+  "sure": true
+ },
+ "vikunja": {
+  "platforms": [
+   "windows",
+   "mac",
+   "linux",
+   "android",
+   "server"
+  ],
+  "evidence": [
+   "windows: release file: vikunja-v2.7.1-windows-4.0-386.exe-full.zip",
+   "mac: release file: vikunja-v2.7.1-darwin-10.15-arm64-full.zip",
+   "linux: release file: vikunja-v2.7.1-linux-riscv64-full.zip",
+   "android: release file: vikunja-v2.7.1-armv7.apk",
+   "server: README: Docker / self-host mention"
+  ],
+  "sure": true
+ },
+ "wallabag": {
+  "platforms": [
+   "server"
+  ],
+  "evidence": [
+   "server: kind: self_hosted"
+  ],
+  "sure": false
+ },
+ "vane-formerly-perplexica": {
+  "platforms": [
+   "server"
+  ],
+  "evidence": [
+   "server: README: Docker / self-host mention"
+  ],
+  "sure": true
+ },
+ "webstudio": {
+  "platforms": [
+   "server"
+  ],
+  "evidence": [
+   "server: kind: self_hosted"
+  ],
+  "sure": false
+ },
+ "wekan": {
+  "platforms": [
+   "windows",
+   "mac",
+   "linux",
+   "android",
+   "server"
+  ],
+  "evidence": [
+   "windows: release file: wekan-12.65-win64.zip",
+   "mac: release file: wekan-12.65-mac-x64.zip",
+   "linux: release file: wekan-12.65-linux-arm64-musl.zip",
+   "android: release file: wekan-12.65-bun-android-arm64.zip",
+   "server: README: Docker / self-host mention"
+  ],
+  "sure": true
+ },
+ "webiny": {
+  "platforms": [
+   "server"
+  ],
+  "evidence": [
+   "server: README: Docker / self-host mention"
+  ],
+  "sure": true
+ },
+ "woocommerce": {
+  "platforms": [],
+  "evidence": [],
+  "sure": false
+ },
+ "whisper-cpp": {
+  "platforms": [
+   "windows",
+   "linux"
+  ],
+  "evidence": [
+   "windows: release file: whisper-bin-Win32.zip",
+   "linux: release file: whisper-bin-ubuntu-arm64.tar.gz"
+  ],
+  "sure": true
+ },
+ "whisper": {
+  "platforms": [
+   "windows"
+  ],
+  "evidence": [
+   "windows: README: Microsoft Store / winget / Chocolatey / Scoop"
+  ],
+  "sure": true
+ },
+ "windmill": {
+  "platforms": [
+   "windows",
+   "server"
+  ],
+  "evidence": [
+   "windows: release file: windmill-ee.exe",
+   "server: README: Docker / self-host mention"
+  ],
+  "sure": true
+ },
+ "writefreely": {
+  "platforms": [
+   "windows",
+   "mac",
+   "linux",
+   "server"
+  ],
+  "evidence": [
+   "windows: release file: writefreely_0.17.2_windows_amd64.zip",
+   "mac: release file: writefreely_0.17.2_macos_arm64.tar.gz",
+   "linux: release file: writefreely_0.17.2_linux_arm64.tar.gz",
+   "server: README: Docker / self-host mention"
+  ],
+  "sure": true
+ },
+ "xwiki": {
+  "platforms": [
+   "server"
+  ],
+  "evidence": [
+   "server: kind: self_hosted"
+  ],
+  "sure": false
+ },
+ "wordpress": {
+  "platforms": [
+   "server"
+  ],
+  "evidence": [
+   "server: kind: self_hosted"
+  ],
+  "sure": false
+ },
+ "xournal": {
+  "platforms": [
+   "windows",
+   "mac",
+   "linux",
+   "android"
+  ],
+  "evidence": [
+   "windows: release file: xournalpp-1.3.8+dev-nightly-20261025-windows-setup-ARM64.exe",
+   "mac: release file: xournalpp-1.3.8+dev-nightly-20261025-macOS-X64.dmg",
+   "linux: release file: xournalpp-1.3.8+dev-nightly-20261025-x86_64.AppImage",
+   "android: README: F-Droid link"
+  ],
+  "sure": true
+ },
+ "yacy": {
+  "platforms": [
+   "server"
+  ],
+  "evidence": [
+   "server: README: Docker / self-host mention"
+  ],
+  "sure": true
+ },
+ "yanknote": {
+  "platforms": [
+   "windows",
+   "mac",
+   "linux"
+  ],
+  "evidence": [
+   "windows: release file: Yank-Note-win-x64-3.93.1.exe.blockmap",
+   "mac: release file: Yank-Note-mac-arm64-3.93.1.dmg.blockmap",
+   "linux: release file: Yank-Note-linux-arm64-3.93.1.AppImage"
+  ],
+  "sure": true
+ },
+ "youcoded": {
+  "platforms": [
+   "windows",
+   "mac",
+   "linux",
+   "android"
+  ],
+  "evidence": [
+   "windows: release file: YouCoded-Installer-1.3.3.exe",
+   "mac: release file: YouCoded-Installer-1.3.3-x64.dmg",
+   "linux: release file: youcoded-1.3.3.x86_64.rpm",
+   "android: release file: YouCoded-1.3.3.apk"
+  ],
+  "sure": true
+ },
+ "zammad": {
+  "platforms": [
+   "server"
+  ],
+  "evidence": [
+   "server: README: Docker / self-host mention"
+  ],
+  "sure": true
+ },
+ "yourls": {
+  "platforms": [
+   "server"
+  ],
+  "evidence": [
+   "server: kind: self_hosted"
+  ],
+  "sure": false
+ },
+ "zen-browser": {
+  "platforms": [
+   "windows",
+   "mac",
+   "linux"
+  ],
+  "evidence": [
+   "windows: release file: windows.mar",
+   "mac: release file: zen.macos-universal.dmg",
+   "linux: release file: linux-aarch64.mar"
+  ],
+  "sure": true
+ },
+ "zinc-labs": {
+  "platforms": [
+   "windows",
+   "mac",
+   "linux",
+   "server"
+  ],
+  "evidence": [
+   "windows: release file: zincsearch_1.0.0-beta3_windows_arm64.tar.gz",
+   "mac: release file: zincsearch_1.0.0-beta3_darwin_arm64.tar.gz",
+   "linux: release file: zincsearch_1.0.0-beta3_linux_armv7.tar.gz",
+   "server: README: Docker / self-host mention"
+  ],
+  "sure": true
+ },
+ "zulip": {
+  "platforms": [
+   "server"
+  ],
+  "evidence": [
+   "server: README: Docker / self-host mention"
+  ],
+  "sure": true
+ },
+ "yugabyte": {
+  "platforms": [
+   "server"
+  ],
+  "evidence": [
+   "server: kind: self_hosted"
+  ],
+  "sure": false
+ },
+ "zitadel": {
+  "platforms": [
+   "windows",
+   "mac",
+   "linux",
+   "server"
+  ],
+  "evidence": [
+   "windows: release file: zitadel-windows-amd64.tar.gz",
+   "mac: release file: zitadel-darwin-arm64.tar.gz",
+   "linux: release file: zitadel-linux-arm64.tar.gz",
+   "server: README: Docker / self-host mention"
+  ],
+  "sure": true
+ }
+}
