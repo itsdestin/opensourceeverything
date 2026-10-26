@@ -15,7 +15,7 @@ MODS = "itsdestin"
 [[d1_databases]]
 binding = "DB"
 database_name = "opensourceeverything"
-database_id = "REPLACE_AFTER_CREATE"
+database_id = "3855f173-9357-4b74-9ea0-4f6bc00aef01"
 migrations_dir = "migrations"
 
 # Local testing only (`npm run dev`): the site preview on :4322 talks to this server on :8787, and a test-only sign-in

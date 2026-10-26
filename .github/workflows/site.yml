@@ -25,6 +25,9 @@ jobs:
         working-directory: checker
         run: npm ci && npm test
       - name: Build the site
+        # WHY: voting, notes and boards talk to the server at api.opensourceeverything.org (worker/).
+        env:
+          API_URL: https://api.opensourceeverything.org
         run: node site/build.mjs
       - name: Check the site
         run: node site/check.mjs
