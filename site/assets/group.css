@@ -38,3 +38,12 @@ a.footchip { text-decoration:none; }
 .replaces-row .muted11 { flex:none; }
 .chip.hl { background:var(--accent); color:var(--on-accent); border-color:var(--accent); }
 .replaces-row .chiprow { flex:1; }
+
+/* Group cards: the title link covers the whole card; the outside links sit above it so they stay clickable. */
+.card { position:relative; }
+.cardlink { color:inherit; text-decoration:none; }
+.cardlink::after { content:""; position:absolute; inset:0; border-radius:inherit; }
+.cardlink:focus-visible { outline:none; }
+.card:has(.cardlink:focus-visible) { box-shadow:0 0 0 2px var(--accent); }
+.outlinks { position:relative; z-index:1; display:flex; gap:6px; flex-wrap:wrap; }
+.outlinks .btn { text-decoration:none; }

@@ -57,7 +57,9 @@ if (STARTER) {
     if (note) e.descriptions.push({ text: note });
     byName.set(name, e);
   }
-  todo.length = 0; todo.push(...[...byName.values()].slice(0, LIMIT));
+  // --only "A,B": review just these starter projects and merge them into the existing results (used when adding a few).
+  const oi = process.argv.indexOf('--only'); const ONLY = oi > 0 ? new Set(process.argv[oi + 1].split(',').map((x) => x.trim())) : null;
+  todo.length = 0; todo.push(...[...byName.values()].filter((p) => !ONLY || ONLY.has(p.name)).slice(0, LIMIT));
   for (const p of todo) { const r = checked[p.link] ?? {}; facts.set(p.id, { license: r.sniffed?.found ?? r.license ?? null, licenseVerdict: r.license && !r.sniffed ? 'open' : 'unclear' }); }
 }
 
@@ -151,7 +153,10 @@ await Promise.all(Array.from({ length: CONCURRENCY }, async () => {
 const inTok = results.reduce((s, r) => s + (r.usage?.input_tokens ?? 0), 0);
 const outTok = results.reduce((s, r) => s + (r.usage?.output_tokens ?? 0), 0);
 const cost = (inTok * 0.10 + outTok * 0.50) / 1e6;
-writeFileSync(join(OUT, STARTER ? 'ai-review-starter.json' : 'ai-review.json'), JSON.stringify(results, null, 1));
+const outFile = join(OUT, STARTER ? 'ai-review-starter.json' : 'ai-review.json');
+const merged = process.argv.includes('--only') && existsSync(outFile)
+  ? [...JSON.parse(readFileSync(outFile, 'utf8')).filter((r) => !results.some((x) => x.name === r.name)), ...results] : results;
+writeFileSync(outFile, JSON.stringify(merged, null, 1));
 const ok = results.filter((r) => r.answer);
 const by = (fn) => ok.filter(fn).length;
 const newGroups = {};

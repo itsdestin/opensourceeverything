@@ -3,7 +3,7 @@
 Drafted Oct 27, 2026, then every link checked automatically (2026-10-26).
 ✅ open-source license confirmed · ⚠️ needs a person to check the license · ❌ problem · 🔍 not on a host we can read; check by hand · 🗄️ archived · 💤 quiet for a year
 
-**10 categories, 58 groups, 138 closed apps, 164 listings.** 129 confirmed open source, 10 need a license check, 25 to check by hand, 0 problems.
+**10 categories, 58 groups, 138 closed apps, 166 listings.** 129 confirmed open source, 10 need a license check, 27 to check by hand, 0 problems.
 
 "Full" = replaces the main job; "partly" = covers part of it.
 
@@ -281,6 +281,8 @@ No open alternative yet. **A gap.**
 | Fedora | Full | 🔍 check the license by hand (its host doesn't report it) |  |
 | Ubuntu | Full | 🔍 check the license by hand (its host doesn't report it) |  |
 | Debian | Full | 🔍 check the license by hand (its host doesn't report it) |  |
+| Arch Linux | Full | 🔍 check the license by hand (its host doesn't report it) | For experienced users: you choose and set up every part |
+| CachyOS | Full | 🔍 check the license by hand (its host doesn't report it) | Based on Arch, tuned for speed, with an easy installer |
 
 ### Phone operating systems
 *What runs your phone.* Replaces: Google Android, Apple iOS

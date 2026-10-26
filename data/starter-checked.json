@@ -24,7 +24,7 @@
   "license": "AGPL-3.0",
   "archived": false,
   "lastChange": "2026-10-23T12:09:18Z",
-  "stars": 8028
+  "stars": 8029
  },
  "github.com/ether/etherpad": {
   "found": true,
@@ -45,7 +45,7 @@
   "license": "MIT",
   "archived": false,
   "lastChange": "2026-10-23T06:54:55Z",
-  "stars": 49216
+  "stars": 49220
  },
  "github.com/hakimel/reveal.js": {
   "found": true,
@@ -59,14 +59,14 @@
   "license": "AGPL-3.0",
   "archived": false,
   "lastChange": "2026-10-26T00:59:22Z",
-  "stars": 77779
+  "stars": 77780
  },
  "github.com/toeverything/AFFiNE": {
   "found": true,
   "license": "NOASSERTION",
   "archived": false,
   "lastChange": "2026-10-26T08:51:33Z",
-  "stars": 73850,
+  "stars": 73853,
   "sniffed": {
    "found": "MIT",
    "openCore": false,
@@ -81,7 +81,7 @@
   "license": "NOASSERTION",
   "archived": false,
   "lastChange": "2026-10-25T22:43:43Z",
-  "stars": 56876,
+  "stars": 56877,
   "sniffed": {
    "openCore": false,
    "licenseFiles": [
@@ -93,7 +93,7 @@
   "found": true,
   "license": "AGPL-3.0",
   "archived": false,
-  "lastChange": "2026-10-26T08:15:50Z",
+  "lastChange": "2026-10-26T09:25:09Z",
   "stars": 45382
  },
  "github.com/TriliumNext/Trilium": {
@@ -101,13 +101,13 @@
   "license": "AGPL-3.0",
   "archived": false,
   "lastChange": "2026-10-26T06:42:47Z",
-  "stars": 38567
+  "stars": 38568
  },
  "github.com/siyuan-note/siyuan": {
   "found": true,
   "license": "AGPL-3.0",
   "archived": false,
-  "lastChange": "2026-10-26T09:03:42Z",
+  "lastChange": "2026-10-26T10:04:59Z",
   "stars": 46939
  },
  "github.com/standardnotes/app": {
@@ -122,21 +122,21 @@
   "license": "AGPL-3.0",
   "archived": false,
   "lastChange": "2026-10-23T15:40:15Z",
-  "stars": 61459
+  "stars": 61460
  },
  "github.com/opf/openproject": {
   "found": true,
   "license": "GPL-3.0",
   "archived": false,
-  "lastChange": "2026-10-26T09:14:34Z",
-  "stars": 16684
+  "lastChange": "2026-10-26T10:07:15Z",
+  "stars": 16686
  },
  "github.com/go-vikunja/vikunja": {
   "found": true,
   "license": "AGPL-3.0",
   "archived": false,
   "lastChange": "2026-10-26T05:04:38Z",
-  "stars": 5860
+  "stars": 5861
  },
  "github.com/wekan/wekan": {
   "found": true,
@@ -156,7 +156,7 @@
   "found": true,
   "license": "NOASSERTION",
   "archived": false,
-  "lastChange": "2026-10-26T09:12:18Z",
+  "lastChange": "2026-10-26T10:06:42Z",
   "stars": 3778,
   "sniffed": {
    "found": "LGPL-2.1",
@@ -170,8 +170,8 @@
   "found": true,
   "license": "NOASSERTION",
   "archived": false,
-  "lastChange": "2026-10-26T09:16:13Z",
-  "stars": 13154,
+  "lastChange": "2026-10-26T09:40:11Z",
+  "stars": 13156,
   "sniffed": {
    "found": "AGPL-3.0",
    "openCore": true,
@@ -192,7 +192,7 @@
   "license": "MIT",
   "archived": false,
   "lastChange": "2026-10-26T06:15:27Z",
-  "stars": 49379,
+  "stars": 49384,
   "movedTo": "calcom/cal.diy"
  },
  "github.com/nextcloud/calendar": {
@@ -207,7 +207,7 @@
   "license": "NOASSERTION",
   "archived": false,
   "lastChange": "2026-10-26T06:08:00Z",
-  "stars": 95040,
+  "stars": 95043,
   "sniffed": {
    "found": "MIT",
    "openCore": false,
@@ -241,7 +241,7 @@
   "found": true,
   "license": "NOASSERTION",
   "archived": false,
-  "lastChange": "2026-10-26T09:10:59Z",
+  "lastChange": "2026-10-26T10:07:52Z",
   "stars": 39435,
   "sniffed": {
    "found": "AGPL-3.0",
@@ -257,7 +257,7 @@
   "license": "NOASSERTION",
   "archived": false,
   "lastChange": "2026-10-26T07:54:23Z",
-  "stars": 46330,
+  "stars": 46331,
   "sniffed": {
    "found": "MIT",
    "openCore": true,
@@ -270,7 +270,7 @@
   "found": true,
   "license": "AGPL-3.0",
   "archived": false,
-  "lastChange": "2026-10-26T09:04:05Z",
+  "lastChange": "2026-10-26T09:33:44Z",
   "stars": 13614
  },
  "github.com/mumble-voip/mumble": {
@@ -298,7 +298,7 @@
   "found": true,
   "license": "AGPL-3.0",
   "archived": false,
-  "lastChange": "2026-10-26T08:58:49Z",
+  "lastChange": "2026-10-26T09:18:37Z",
   "stars": 19598
  },
  "github.com/deltachat/deltachat-android": {
@@ -312,7 +312,7 @@
   "found": true,
   "license": "AGPL-3.0",
   "archived": false,
-  "lastChange": "2026-10-26T09:07:48Z",
+  "lastChange": "2026-10-26T10:04:13Z",
   "stars": 2462
  },
  "github.com/jitsi/jitsi-meet": {
@@ -333,14 +333,14 @@
   "found": true,
   "license": "AGPL-3.0",
   "archived": false,
-  "lastChange": "2026-10-26T08:57:34Z",
+  "lastChange": "2026-10-26T09:58:31Z",
   "stars": 1016
  },
  "github.com/mastodon/mastodon": {
   "found": true,
   "license": "AGPL-3.0",
   "archived": false,
-  "lastChange": "2026-10-26T07:59:47Z",
+  "lastChange": "2026-10-26T09:57:31Z",
   "stars": 50453
  },
  "github.com/misskey-dev/misskey": {
@@ -375,8 +375,8 @@
   "found": true,
   "license": "GPL-2.0",
   "archived": false,
-  "lastChange": "2026-10-26T09:07:06Z",
-  "stars": 48014
+  "lastChange": "2026-10-26T10:01:44Z",
+  "stars": 48015
  },
  "github.com/pixelfed/pixelfed": {
   "found": true,
@@ -389,22 +389,22 @@
   "found": true,
   "license": "AGPL-3.0",
   "archived": false,
-  "lastChange": "2026-10-26T08:43:19Z",
+  "lastChange": "2026-10-26T10:03:39Z",
   "stars": 15366
  },
  "github.com/joinloops/loops-server": {
   "found": true,
   "license": "AGPL-3.0",
   "archived": false,
-  "lastChange": "2026-10-26T09:06:22Z",
+  "lastChange": "2026-10-26T10:05:59Z",
   "stars": 460
  },
  "github.com/FreeTubeApp/FreeTube": {
   "found": true,
   "license": "AGPL-3.0",
   "archived": false,
-  "lastChange": "2026-10-26T07:47:01Z",
-  "stars": 22148
+  "lastChange": "2026-10-26T09:20:35Z",
+  "stars": 22149
  },
  "github.com/TeamNewPipe/NewPipe": {
   "found": true,
@@ -417,8 +417,8 @@
   "found": true,
   "license": "MIT",
   "archived": false,
-  "lastChange": "2026-10-26T08:13:36Z",
-  "stars": 55607
+  "lastChange": "2026-10-26T09:50:00Z",
+  "stars": 55608
  },
  "github.com/writefreely/writefreely": {
   "found": true,
@@ -466,15 +466,15 @@
   "found": true,
   "license": "Apache-2.0",
   "archived": false,
-  "lastChange": "2026-10-26T09:02:42Z",
-  "stars": 27730
+  "lastChange": "2026-10-26T10:00:24Z",
+  "stars": 27731
  },
  "github.com/penpot/penpot": {
   "found": true,
   "license": "MPL-2.0",
   "archived": false,
-  "lastChange": "2026-10-26T09:04:19Z",
-  "stars": 61681
+  "lastChange": "2026-10-26T10:04:08Z",
+  "stars": 61686
  },
  "github.com/scribusproject/scribus": {
   "found": true,
@@ -522,8 +522,8 @@
   "found": true,
   "license": "NOASSERTION",
   "archived": false,
-  "lastChange": "2026-10-25T12:24:23Z",
-  "stars": 18837,
+  "lastChange": "2026-10-26T10:03:42Z",
+  "stars": 18838,
   "sniffed": {
    "found": "GPL-3.0",
    "openCore": false,
@@ -558,14 +558,14 @@
   "license": "GPL-2.0",
   "archived": false,
   "lastChange": "2026-10-23T20:48:25Z",
-  "stars": 78247
+  "stars": 78249
  },
  "github.com/florisboard/florisboard": {
   "found": true,
   "license": "Apache-2.0",
   "archived": false,
   "lastChange": "2026-10-25T16:03:24Z",
-  "stars": 8724
+  "stars": 8723
  },
  "github.com/HeliBorg/HeliBoard": {
   "found": true,
@@ -578,8 +578,8 @@
   "found": true,
   "license": "NOASSERTION",
   "archived": false,
-  "lastChange": "2026-10-26T09:04:47Z",
-  "stars": 13585,
+  "lastChange": "2026-10-26T09:50:51Z",
+  "stars": 13586,
   "sniffed": {
    "openCore": false,
    "licenseFiles": [
@@ -606,14 +606,14 @@
   "license": "BSD-3-Clause",
   "archived": false,
   "lastChange": "2026-10-25T13:46:38Z",
-  "stars": 28100
+  "stars": 28101
  },
  "github.com/searxng/searxng": {
   "found": true,
   "license": "AGPL-3.0",
   "archived": false,
   "lastChange": "2026-10-25T18:37:23Z",
-  "stars": 38858
+  "stars": 38859
  },
  "github.com/yacy/yacy_search_server": {
   "found": true,
@@ -632,8 +632,8 @@
   "found": true,
   "license": "NOASSERTION",
   "archived": false,
-  "lastChange": "2026-10-26T07:23:17Z",
-  "stars": 14062,
+  "lastChange": "2026-10-26T09:53:50Z",
+  "stars": 14063,
   "sniffed": {
    "openCore": false,
    "licenseFiles": [
@@ -647,8 +647,8 @@
   "found": true,
   "license": "NOASSERTION",
   "archived": false,
-  "lastChange": "2026-10-23T23:14:20Z",
-  "stars": 29500,
+  "lastChange": "2026-10-26T10:04:14Z",
+  "stars": 29501,
   "sniffed": {
    "openCore": false,
    "licenseFiles": [
@@ -670,7 +670,7 @@
   "license": "AGPL-3.0",
   "archived": false,
   "lastChange": "2026-10-25T19:42:35Z",
-  "stars": 69688
+  "stars": 69693
  },
  "github.com/beemdevelopment/Aegis": {
   "found": true,
@@ -683,8 +683,8 @@
   "found": true,
   "license": "AGPL-3.0",
   "archived": false,
-  "lastChange": "2026-10-26T08:39:41Z",
-  "stars": 29603
+  "lastChange": "2026-10-26T10:05:52Z",
+  "stars": 29604
  },
  "github.com/twofas/2fas-android": {
   "found": true,
@@ -697,7 +697,7 @@
   "found": true,
   "license": "NOASSERTION",
   "archived": false,
-  "lastChange": "2026-10-26T06:41:32Z",
+  "lastChange": "2026-10-26T09:26:25Z",
   "stars": 45090,
   "sniffed": {
    "found": "Apache-2.0",
@@ -712,14 +712,14 @@
   "license": "MIT",
   "archived": false,
   "lastChange": "2026-10-26T09:08:00Z",
-  "stars": 46336
+  "stars": 46339
  },
  "github.com/ollama/ollama": {
   "found": true,
   "license": "MIT",
   "archived": false,
   "lastChange": "2026-10-26T04:25:58Z",
-  "stars": 184818
+  "stars": 184824
  },
  "github.com/continuedev/continue": {
   "found": true,
@@ -733,7 +733,7 @@
   "license": "Apache-2.0",
   "archived": false,
   "lastChange": "2026-10-26T09:11:58Z",
-  "stars": 70860
+  "stars": 70861
  },
  "github.com/Aider-AI/aider": {
   "found": true,
@@ -746,28 +746,28 @@
   "found": true,
   "license": "MIT",
   "archived": false,
-  "lastChange": "2026-10-26T08:59:46Z",
-  "stars": 91877
+  "lastChange": "2026-10-26T10:07:01Z",
+  "stars": 91878
  },
  "github.com/openai/codex": {
   "found": true,
   "license": "Apache-2.0",
   "archived": false,
   "lastChange": "2026-10-23T18:51:12Z",
-  "stars": 130963
+  "stars": 130972
  },
  "github.com/Comfy-Org/ComfyUI": {
   "found": true,
   "license": "GPL-3.0",
   "archived": false,
-  "lastChange": "2026-10-26T06:46:31Z",
-  "stars": 143083
+  "lastChange": "2026-10-26T09:45:59Z",
+  "stars": 143103
  },
  "github.com/invoke-ai/InvokeAI": {
   "found": true,
   "license": "Apache-2.0",
   "archived": false,
-  "lastChange": "2026-10-26T07:16:22Z",
+  "lastChange": "2026-10-26T09:48:04Z",
   "stars": 28866
  },
  "github.com/AUTOMATIC1111/stable-diffusion-webui": {
@@ -782,21 +782,21 @@
   "license": "MIT",
   "archived": false,
   "lastChange": "2026-10-25T11:39:42Z",
-  "stars": 22191
+  "stars": 22193
  },
  "github.com/ggml-org/whisper.cpp": {
   "found": true,
   "license": "MIT",
   "archived": false,
   "lastChange": "2026-10-19T14:14:00Z",
-  "stars": 54678
+  "stars": 54679
  },
  "github.com/openai/whisper": {
   "found": true,
   "license": "MIT",
   "archived": false,
   "lastChange": "2026-08-31T17:19:19Z",
-  "stars": 111283
+  "stars": 111288
  },
  "github.com/ItzCrazyKns/Vane": {
   "found": true,
@@ -810,21 +810,21 @@
   "license": "GPL-3.0",
   "archived": false,
   "lastChange": "2026-10-26T03:20:49Z",
-  "stars": 24364
+  "stars": 24365
  },
  "github.com/jellyfin/jellyfin": {
   "found": true,
   "license": "GPL-2.0",
   "archived": false,
-  "lastChange": "2026-10-25T23:07:00Z",
-  "stars": 58609
+  "lastChange": "2026-10-26T09:20:44Z",
+  "stars": 58610
  },
  "github.com/xbmc/xbmc": {
   "found": true,
   "license": "NOASSERTION",
   "archived": false,
   "lastChange": "2026-10-26T05:56:34Z",
-  "stars": 21386,
+  "stars": 21387,
   "sniffed": {
    "openCore": false,
    "licenseFiles": [
@@ -838,14 +838,14 @@
   "license": "AGPL-3.0",
   "archived": false,
   "lastChange": "2026-10-26T07:51:54Z",
-  "stars": 117269
+  "stars": 117272
  },
  "github.com/photoprism/photoprism": {
   "found": true,
   "license": "NOASSERTION",
   "archived": false,
-  "lastChange": "2026-10-26T08:39:56Z",
-  "stars": 40362,
+  "lastChange": "2026-10-26T09:56:31Z",
+  "stars": 40365,
   "sniffed": {
    "found": "AGPL-3.0",
    "openCore": false,
@@ -865,7 +865,7 @@
   "found": true,
   "license": "MPL-2.0",
   "archived": false,
-  "lastChange": "2026-10-26T08:07:30Z",
+  "lastChange": "2026-10-26T09:58:52Z",
   "stars": 2848
  },
  "github.com/kovidgoyal/calibre": {
@@ -873,14 +873,14 @@
   "license": "GPL-3.0",
   "archived": false,
   "lastChange": "2026-10-26T08:51:11Z",
-  "stars": 26254
+  "stars": 26256
  },
  "github.com/koreader/koreader": {
   "found": true,
   "license": "AGPL-3.0",
   "archived": false,
-  "lastChange": "2026-10-26T07:07:17Z",
-  "stars": 30621
+  "lastChange": "2026-10-26T09:25:01Z",
+  "stars": 30622
  },
  "github.com/advplyr/audiobookshelf": {
   "found": true,
@@ -893,8 +893,8 @@
   "found": true,
   "license": "AGPL-3.0",
   "archived": false,
-  "lastChange": "2026-10-26T08:21:11Z",
-  "stars": 37299
+  "lastChange": "2026-10-26T09:55:05Z",
+  "stars": 37300
  },
  "github.com/haiwen/seafile": {
   "found": true,
@@ -914,7 +914,7 @@
   "found": true,
   "license": "Apache-2.0",
   "archived": false,
-  "lastChange": "2026-10-26T09:11:19Z",
+  "lastChange": "2026-10-26T09:29:09Z",
   "stars": 2167
  },
  "github.com/syncthing/syncthing": {
@@ -922,14 +922,14 @@
   "license": "MPL-2.0",
   "archived": false,
   "lastChange": "2026-10-26T03:58:08Z",
-  "stars": 89760
+  "stars": 89761
  },
  "github.com/localsend/localsend": {
   "found": true,
   "license": "Apache-2.0",
   "archived": false,
   "lastChange": "2026-10-25T12:11:01Z",
-  "stars": 95672
+  "stars": 95676
  },
  "github.com/psi-4ward/psitransfer": {
   "found": true,
@@ -976,8 +976,8 @@
   "found": true,
   "license": "NOASSERTION",
   "archived": false,
-  "lastChange": "2026-10-26T09:06:16Z",
-  "stars": 15777,
+  "lastChange": "2026-10-26T09:57:04Z",
+  "stars": 15778,
   "sniffed": {
    "found": "Apache-2.0",
    "openCore": false,
@@ -991,7 +991,7 @@
   "found": true,
   "license": "NOASSERTION",
   "archived": false,
-  "lastChange": "2026-10-26T04:02:45Z",
+  "lastChange": "2026-10-26T10:01:22Z",
   "stars": 6110,
   "sniffed": {
    "notOpen": "Fair Use License",
@@ -1013,21 +1013,21 @@
   "found": true,
   "license": "Apache-2.0",
   "archived": false,
-  "lastChange": "2026-10-26T09:02:13Z",
-  "stars": 91731
+  "lastChange": "2026-10-26T10:03:19Z",
+  "stars": 91736
  },
  "github.com/go-gitea/gitea": {
   "found": true,
   "license": "MIT",
   "archived": false,
-  "lastChange": "2026-10-26T05:59:50Z",
-  "stars": 58697
+  "lastChange": "2026-10-26T09:48:19Z",
+  "stars": 58698
  },
  "github.com/plausible/analytics": {
   "found": true,
   "license": "AGPL-3.0",
   "archived": false,
-  "lastChange": "2026-10-26T08:44:51Z",
+  "lastChange": "2026-10-26T09:35:05Z",
   "stars": 29666
  },
  "github.com/umami-software/umami": {
@@ -1035,7 +1035,7 @@
   "license": "MIT",
   "archived": false,
   "lastChange": "2026-10-23T21:58:32Z",
-  "stars": 39694
+  "stars": 39696
  },
  "github.com/matomo-org/matomo": {
   "found": true,
@@ -1048,14 +1048,14 @@
   "found": true,
   "license": "GPL-2.0",
   "archived": false,
-  "lastChange": "2026-10-26T09:14:51Z",
+  "lastChange": "2026-10-26T10:07:54Z",
   "stars": 10569
  },
  "github.com/medusajs/medusa": {
   "found": true,
   "license": "NOASSERTION",
   "archived": false,
-  "lastChange": "2026-10-26T09:09:01Z",
+  "lastChange": "2026-10-26T10:07:05Z",
   "stars": 36949,
   "sniffed": {
    "found": "MIT",
@@ -1076,8 +1076,8 @@
   "found": true,
   "license": "NOASSERTION",
   "archived": false,
-  "lastChange": "2026-10-26T09:11:17Z",
-  "stars": 38313,
+  "lastChange": "2026-10-26T10:01:08Z",
+  "stars": 38320,
   "sniffed": {
    "found": "MIT",
    "openCore": true,
@@ -1090,7 +1090,7 @@
   "found": true,
   "license": "AGPL-3.0",
   "archived": false,
-  "lastChange": "2026-10-26T08:52:21Z",
+  "lastChange": "2026-10-26T09:31:57Z",
   "stars": 6031
  },
  "github.com/node-red/node-red": {
@@ -1104,8 +1104,8 @@
   "found": true,
   "license": "NOASSERTION",
   "archived": false,
-  "lastChange": "2026-10-26T09:08:42Z",
-  "stars": 25229,
+  "lastChange": "2026-10-26T09:55:34Z",
+  "stars": 25232,
   "sniffed": {
    "found": "MIT",
    "openCore": true,
@@ -1119,12 +1119,12 @@
   "license": "MIT",
   "archived": false,
   "lastChange": "2026-10-24T19:12:51Z",
-  "stars": 50141
+  "stars": 50142
  },
  "gitlab.com/inkscape/inkscape": {
   "found": true,
   "license": "other",
-  "lastChange": "2026-10-26T02:26:30.199Z",
+  "lastChange": "2026-10-26T09:22:16.109Z",
   "stars": 4017
  },
  "gitlab.com/fdroid/fdroidclient": {
@@ -1142,7 +1142,7 @@
  "gitlab.com/gitlab-org/gitlab-foss": {
   "found": true,
   "license": "MIT",
-  "lastChange": "2026-10-26T08:33:59.517Z",
+  "lastChange": "2026-10-26T09:39:29.719Z",
   "stars": 7173
  },
  "codeberg.org/rimu/pyfedi": {
@@ -1163,15 +1163,15 @@
   "found": true,
   "byHand": true,
   "archived": false,
-  "lastChange": "2026-10-26T08:46:23+01:00",
+  "lastChange": "2026-10-26T10:53:36+01:00",
   "stars": 2188
  },
  "codeberg.org/forgejo/forgejo": {
   "found": true,
   "byHand": true,
   "archived": false,
-  "lastChange": "2026-10-26T06:54:04+01:00",
-  "stars": 5717
+  "lastChange": "2026-10-26T10:51:12+01:00",
+  "stars": 5718
  },
  "https://git.libreoffice.org/core": {
   "found": true,
@@ -1218,6 +1218,14 @@
   "byHand": true
  },
  "https://www.debian.org": {
+  "found": true,
+  "byHand": true
+ },
+ "https://archlinux.org": {
+  "found": true,
+  "byHand": true
+ },
+ "https://cachyos.org": {
   "found": true,
   "byHand": true
  },

@@ -49,13 +49,16 @@ function addProject(p) {
 
 // Starter projects: group, fit and license were set by hand and checked; the AI wrote the summary.
 const starterIds = new Map();
-for (const c of starter.categories) for (const g of c.groups) for (const [name, link, fit, note] of g.alts) {
+for (const c of starter.categories) for (const g of c.groups) for (const [name, link, fit, note, extra] of g.alts) {
   if (!starterIds.has(name)) {
     const r = checked[link] ?? {}; const ai = starterAI.get(name);
     const lic = r.sniffed?.found ?? (licenseVerdict(r.license ?? undefined) === 'open' ? r.license : null);
     starterIds.set(name, addProject({
       id: slug(name), name, summary: ai?.summary ?? '', kind: ai?.kind ?? 'app',
-      code: codeHost(link) ? link : null, website: codeHost(link) ? null : link,
+      // WHY extra: projects on their own code hosts (GIMP, KDE apps, LibreOffice) get their website, download page
+      // and code link by hand in starter.json, because no API reports them.
+      code: codeHost(link) ? link : (extra?.code ?? (extra?.website ? link : null)), website: extra?.website ?? (codeHost(link) ? null : link),
+      download: extra?.download ?? null,
       license: lic, licenseClass: r.sniffed?.openCore ? 'open_core' : 'open',
       // WHY: byHand = its host doesn't report a license (LibreOffice, GIMP, the Linux distributions…); a mod confirms before launch.
       licenseNeedsCheck: !!(r.byHand || (!lic && !r.sniffed?.notOpen)),
@@ -122,6 +125,15 @@ if (existsSync(fixFile)) {
   // A project whose every listing was removed leaves the map.
   const listed = new Set([...groups.values()].flatMap((g) => g.alternatives.map((a) => a.project)));
   for (const id of [...projects.keys()]) if (!listed.has(id)) projects.delete(id);
+}
+
+// ── Website and download links (prefill/fetch-links.mjs) ──
+// WHY: pages link "Website" and "Download" next to "Source code" (Destin, Oct 27). A project's own site wins over
+// one a list gave; "release" is its latest downloadable release page.
+const linksFile = join(OUT, 'links.json');
+if (existsSync(linksFile)) {
+  const links = read(linksFile);
+  for (const p of projects.values()) { const l = p.code && links[p.code]; if (l) { if (l.website) p.website = l.website; p.release = l.release ?? null; } }
 }
 
 // ── Write ──

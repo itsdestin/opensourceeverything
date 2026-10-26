@@ -1,0 +1,1470 @@
+{
+ "github.com/twofas/2fas-android": {
+  "website": null,
+  "release": "https://github.com/twofas/2fas-android/releases/tag/6.1.0"
+ },
+ "github.com/abilian/hop3": {
+  "website": null,
+  "release": null
+ },
+ "github.com/abilian/nua": {
+  "website": "https://nua.rocks/",
+  "release": null
+ },
+ "github.com/accrescent/accrescent": {
+  "website": "https://accrescent.app",
+  "release": "https://github.com/accrescent/accrescent/releases/tag/0.28.1"
+ },
+ "github.com/appy-one/acebase": {
+  "website": null,
+  "release": "https://github.com/appy-one/acebase/releases/tag/v1.29.13"
+ },
+ "github.com/activepieces/activepieces": {
+  "website": "https://www.activepieces.com",
+  "release": "https://github.com/activepieces/activepieces/releases/tag/0.92.3-hotfix.1"
+ },
+ "github.com/beemdevelopment/Aegis": {
+  "website": "https://getaegis.app",
+  "release": "https://github.com/beemdevelopment/Aegis/releases/tag/v3.4.3"
+ },
+ "github.com/toeverything/AFFiNE": {
+  "website": "https://affine.pro",
+  "release": "https://github.com/toeverything/AFFiNE/releases/tag/v0.27.4"
+ },
+ "github.com/Aider-AI/aider": {
+  "website": "https://aider.chat/",
+  "release": "https://github.com/Aider-AI/aider/releases/tag/v0.86.0"
+ },
+ "github.com/aliasvault/aliasvault": {
+  "website": "https://www.aliasvault.com",
+  "release": "https://github.com/aliasvault/aliasvault/releases/tag/0.31.1"
+ },
+ "github.com/Alovoa/alovoa": {
+  "website": "https://alovoa.com",
+  "release": "https://github.com/Alovoa/alovoa/releases/tag/v2.0.0"
+ },
+ "github.com/AntennaPod/AntennaPod": {
+  "website": "https://antennapod.org",
+  "release": "https://github.com/AntennaPod/AntennaPod/releases/tag/3.12.3"
+ },
+ "github.com/AnySoftKeyboard/AnySoftKeyboard": {
+  "website": "http://anysoftkeyboard.github.io/",
+  "release": "https://github.com/AnySoftKeyboard/AnySoftKeyboard/releases/tag/1.13-r2"
+ },
+ "github.com/apache/apisix": {
+  "website": "https://apisix.apache.org/blog/",
+  "release": "https://github.com/apache/apisix/releases/tag/3.19.0"
+ },
+ "github.com/AppFlowy-IO/AppFlowy": {
+  "website": "https://appflowy.com",
+  "release": "https://github.com/AppFlowy-IO/AppFlowy/releases/tag/0.14.11"
+ },
+ "github.com/appsmithorg/appsmith": {
+  "website": "https://www.appsmith.com",
+  "release": "https://github.com/appsmithorg/appsmith/releases/tag/v2.5.1"
+ },
+ "github.com/appwrite/appwrite": {
+  "website": "https://appwrite.io",
+  "release": "https://github.com/appwrite/appwrite/releases/tag/2.6.2"
+ },
+ "github.com/Ardour/ardour": {
+  "website": "http://ardour.org",
+  "release": null
+ },
+ "github.com/audacity/audacity": {
+  "website": "https://www.audacityteam.org/manual/getting-started/",
+  "release": "https://github.com/audacity/audacity/releases/tag/Audacity-4.0.1"
+ },
+ "github.com/advplyr/audiobookshelf": {
+  "website": "https://audiobookshelf.org",
+  "release": "https://github.com/advplyr/audiobookshelf/releases/tag/v2.37.2"
+ },
+ "github.com/authgear/authgear-server": {
+  "website": "https://www.authgear.com",
+  "release": "https://github.com/authgear/authgear-server/releases/tag/2026-10-22.0"
+ },
+ "github.com/automatisch/automatisch": {
+  "website": "https://automatisch.io",
+  "release": "https://github.com/automatisch/automatisch/releases/tag/v0.15.0"
+ },
+ "github.com/bagisto/bagisto": {
+  "website": "https://bagisto.com",
+  "release": "https://github.com/bagisto/bagisto/releases/tag/v2.5.0"
+ },
+ "github.com/getbeton/inspector": {
+  "website": "https://www.getbeton.ai/",
+  "release": "https://github.com/getbeton/inspector/releases/tag/v0.0.1"
+ },
+ "github.com/bigbluebutton/bigbluebutton": {
+  "website": "https://bigbluebutton.org",
+  "release": "https://github.com/bigbluebutton/bigbluebutton/releases/tag/v4.0.0"
+ },
+ "github.com/bitwarden/clients": {
+  "website": "https://bitwarden.com",
+  "release": "https://github.com/bitwarden/clients/releases/tag/desktop-v2026.10.1"
+ },
+ "github.com/bluesky-social/social-app": {
+  "website": "https://bsky.app",
+  "release": "https://github.com/bluesky-social/social-app/releases/tag/1.136.0"
+ },
+ "github.com/BookStackApp/BookStack": {
+  "website": "https://codeberg.org/bookstack/bookstack",
+  "release": "https://github.com/BookStackApp/BookStack/releases/tag/v26.09.2"
+ },
+ "github.com/twbs/icons": {
+  "website": "https://icons.getbootstrap.com",
+  "release": "https://github.com/twbs/icons/releases/tag/v1.13.2"
+ },
+ "github.com/borgbackup/borg": {
+  "website": "https://www.borgbackup.org/",
+  "release": "https://github.com/borgbackup/borg/releases/tag/1.4.5"
+ },
+ "github.com/ory/polis": {
+  "website": "https://www.ory.com/?utm_source=github&utm_medium=banner&utm_campaign=polis",
+  "release": "https://github.com/ory/polis/releases/tag/v26.2.0"
+ },
+ "github.com/brave/brave-browser": {
+  "website": "https://brave.com",
+  "release": "https://github.com/brave/brave-browser/releases/tag/v1.98.60"
+ },
+ "github.com/bruin-data/bruin": {
+  "website": "https://getbruin.com/docs/bruin/",
+  "release": "https://github.com/bruin-data/bruin/releases/tag/v0.11.796"
+ },
+ "github.com/btw-so/btw": {
+  "website": "https://btw.so",
+  "release": null
+ },
+ "github.com/Budibase/budibase": {
+  "website": "https://budibase.com",
+  "release": "https://github.com/Budibase/budibase/releases/tag/v3.50.0"
+ },
+ "github.com/bugzilla/bugzilla": {
+  "website": "http://www.bugzilla.org",
+  "release": null
+ },
+ "github.com/buildbot/buildbot": {
+  "website": "https://www.buildbot.net",
+  "release": "https://github.com/buildbot/buildbot/releases/tag/v4.3.0"
+ },
+ "github.com/chidiwilliams/buzz": {
+  "website": "https://chidiwilliams.github.io/buzz",
+  "release": "https://github.com/chidiwilliams/buzz/releases/tag/v1.4.5"
+ },
+ "github.com/calcom/cal.com": {
+  "website": "https://cal.diy",
+  "release": "https://github.com/calcom/cal.diy/releases/tag/v6.2.0"
+ },
+ "github.com/kovidgoyal/calibre": {
+  "website": "https://calibre-ebook.com",
+  "release": "https://github.com/kovidgoyal/calibre/releases/tag/v9.17.0"
+ },
+ "github.com/caprover/caprover": {
+  "website": "https://CapRover.com",
+  "release": "https://github.com/caprover/caprover/releases/tag/v1.15.5"
+ },
+ "github.com/racz-zoltan/carrypass-self-host": {
+  "website": null,
+  "release": null
+ },
+ "github.com/BlinkDL/ChatRWKV": {
+  "website": null,
+  "release": null
+ },
+ "github.com/chatwoot/chatwoot": {
+  "website": "https://www.chatwoot.com/help-center",
+  "release": "https://github.com/chatwoot/chatwoot/releases/tag/v4.19.1"
+ },
+ "github.com/cline/cline": {
+  "website": "https://cline.bot",
+  "release": "https://github.com/cline/cline/releases/tag/v4.1.26"
+ },
+ "github.com/openai/codex": {
+  "website": null,
+  "release": "https://github.com/openai/codex/releases/tag/rust-v0.164.0"
+ },
+ "github.com/CollaboraOnline/online": {
+  "website": "https://collaboraonline.com",
+  "release": "https://github.com/CollaboraOnline/online/releases/tag/25.04.7-mobile"
+ },
+ "github.com/Comfy-Org/ComfyUI": {
+  "website": "https://www.comfy.org/",
+  "release": "https://github.com/Comfy-Org/ComfyUI/releases/tag/v0.42.1"
+ },
+ "github.com/concretecms/concretecms": {
+  "website": "https://www.concretecms.org",
+  "release": "https://github.com/concretecms/concretecms/releases/tag/9.5.7"
+ },
+ "github.com/continuedev/continue": {
+  "website": "https://continue.dev",
+  "release": "https://github.com/continuedev/continue/releases/tag/v2.0.0-vscode"
+ },
+ "github.com/coollabsio/coolify": {
+  "website": "https://coolify.io",
+  "release": "https://github.com/coollabsio/coolify/releases/tag/v4.5.0"
+ },
+ "github.com/coroot/coroot": {
+  "website": "https://coroot.com",
+  "release": "https://github.com/coroot/coroot/releases/tag/v1.28.1"
+ },
+ "github.com/cortexlabs/cortex": {
+  "website": "https://cortexlabs.com/",
+  "release": "https://github.com/cortexlabs/cortex/releases/tag/v0.42.1"
+ },
+ "github.com/crate/crate": {
+  "website": "https://cratedb.com/database",
+  "release": "https://github.com/crate/crate/releases/tag/6.4.6"
+ },
+ "github.com/crater-invoice-inc/crater": {
+  "website": "https://craterapp.com",
+  "release": "https://github.com/crater-invoice-inc/crater/releases/tag/6.0.6"
+ },
+ "github.com/linuxfoundation/crowd.dev": {
+  "website": "https://lfx.linuxfoundation.org",
+  "release": "https://github.com/linuxfoundation/crowd.dev/releases/tag/v0.49.0"
+ },
+ "github.com/cryptpad/cryptpad": {
+  "website": "https://cryptpad.org",
+  "release": "https://github.com/cryptpad/cryptpad/releases/tag/2026.10.0"
+ },
+ "github.com/cube-js/cube": {
+  "website": "https://cube.dev",
+  "release": "https://github.com/cube-js/cube/releases/tag/v1.8.13"
+ },
+ "github.com/customermates/customermates": {
+  "website": "https://www.customermates.com",
+  "release": "https://github.com/customermates/customermates/releases/tag/v.1.1.0"
+ },
+ "github.com/darktable-org/darktable": {
+  "website": "https://www.darktable.org",
+  "release": "https://github.com/darktable-org/darktable/releases/tag/release-5.6.2"
+ },
+ "github.com/dashpresshq/dashpress": {
+  "website": "http://demo.dashpress.io",
+  "release": null
+ },
+ "github.com/databendlabs/databend": {
+  "website": "https://docs.databend.com",
+  "release": "https://github.com/databendlabs/databend/releases/tag/v1.2.881"
+ },
+ "github.com/decaporg/decap-cms": {
+  "website": "https://decapcms.org",
+  "release": "https://github.com/decaporg/decap-cms/releases/tag/decap-cms%403.17.2"
+ },
+ "github.com/deepset-ai/haystack": {
+  "website": "https://haystack.deepset.ai",
+  "release": "https://github.com/deepset-ai/haystack/releases/tag/v3.4.1"
+ },
+ "github.com/deltachat/deltachat-android": {
+  "website": null,
+  "release": "https://github.com/deltachat/deltachat-android/releases/tag/v2.62.0"
+ },
+ "github.com/dexio-wiki/dexio": {
+  "website": "https://dexio.wiki",
+  "release": "https://github.com/dexio-wiki/dexio/releases/tag/v1.0.0"
+ },
+ "github.com/discourse/discourse": {
+  "website": "https://www.discourse.org",
+  "release": null
+ },
+ "github.com/docmost/docmost": {
+  "website": "https://docmost.com",
+  "release": "https://github.com/docmost/docmost/releases/tag/v0.97.0"
+ },
+ "github.com/documenso/documenso": {
+  "website": "https://documenso.com",
+  "release": "https://github.com/documenso/documenso/releases/tag/v2.21.1"
+ },
+ "github.com/docusealco/docuseal": {
+  "website": "https://www.docuseal.com",
+  "release": "https://github.com/docusealco/docuseal/releases/tag/3.3.3"
+ },
+ "github.com/dokku/dokku": {
+  "website": "https://dokku.com",
+  "release": "https://github.com/dokku/dokku/releases/tag/v0.38.32"
+ },
+ "github.com/Dolibarr/dolibarr": {
+  "website": "https://www.dolibarr.org",
+  "release": "https://github.com/Dolibarr/dolibarr/releases/tag/24.0.1"
+ },
+ "github.com/harness/harness": {
+  "website": "https://www.harness.io/open-source",
+  "release": "https://github.com/harness/harness/releases/tag/v2.28.2"
+ },
+ "github.com/dubinc/dub": {
+  "website": "https://dub.co",
+  "release": null
+ },
+ "github.com/duplicati/duplicati": {
+  "website": null,
+  "release": "https://github.com/duplicati/duplicati/releases/tag/v2.4.0.1_stable_2026-10-07"
+ },
+ "github.com/dyrector-io/dyrectorio": {
+  "website": "https://dyrectorio.com",
+  "release": "https://github.com/dyrector-io/dyrectorio/releases/tag/0.15.4"
+ },
+ "github.com/element-hq/element-web": {
+  "website": "https://element.io",
+  "release": "https://github.com/element-hq/element-web/releases/tag/v1.12.32"
+ },
+ "github.com/element-hq/element-call": {
+  "website": "https://call.element.io",
+  "release": "https://github.com/element-hq/element-call/releases/tag/v0.26.1"
+ },
+ "github.com/encoredev/encore": {
+  "website": "https://encore.dev",
+  "release": "https://github.com/encoredev/encore/releases/tag/v1.58.8"
+ },
+ "github.com/ente/ente": {
+  "website": "https://ente.com",
+  "release": "https://github.com/ente/ente/releases/tag/locker-v1.0.11"
+ },
+ "github.com/frappe/erpnext": {
+  "website": "https://frappe.io/erpnext",
+  "release": "https://github.com/frappe/erpnext/releases/tag/v15.124.1"
+ },
+ "github.com/espocrm/espocrm": {
+  "website": "https://www.espocrm.com",
+  "release": "https://github.com/espocrm/espocrm/releases/tag/10.0.11"
+ },
+ "github.com/etesync/etesync-dav": {
+  "website": "https://www.etesync.com",
+  "release": "https://github.com/etesync/etesync-dav/releases/tag/v0.35.1"
+ },
+ "github.com/ether/etherpad": {
+  "website": "https://etherpad.org",
+  "release": "https://github.com/ether/etherpad/releases/tag/v3.3.11"
+ },
+ "github.com/evidence-dev/evidence": {
+  "website": "https://evidence.dev",
+  "release": "https://github.com/evidence-dev/evidence/releases/tag/%40evidence-dev/evidence%4040.1.8"
+ },
+ "github.com/infobyte/faraday": {
+  "website": "https://www.faradaysec.com",
+  "release": "https://github.com/infobyte/faraday/releases/tag/v5.25.1"
+ },
+ "github.com/fauxpilot/fauxpilot": {
+  "website": null,
+  "release": null
+ },
+ "github.com/mickael-kerjean/filestash": {
+  "website": "https://www.filestash.app/",
+  "release": null
+ },
+ "github.com/firecamp-dev/firecamp": {
+  "website": "https://firecamp.dev",
+  "release": "https://github.com/firecamp-dev/firecamp/releases/tag/v3.3.0-beta.3"
+ },
+ "github.com/mozilla-firefox/firefox": {
+  "website": "https://www.firefox.com/",
+  "release": null
+ },
+ "github.com/Flagsmith/flagsmith": {
+  "website": "https://www.flagsmith.com",
+  "release": "https://github.com/Flagsmith/flagsmith/releases/tag/v2.287.0"
+ },
+ "github.com/florisboard/florisboard": {
+  "website": "https://florisboard.org",
+  "release": "https://github.com/florisboard/florisboard/releases/tag/v0.5.2"
+ },
+ "github.com/yang991178/fluent-reader": {
+  "website": "https://hyliu.me/fluent-reader/",
+  "release": "https://github.com/yang991178/fluent-reader/releases/tag/v1.3.1"
+ },
+ "github.com/evergreen-it-dev/folio": {
+  "website": "https://foliowiki.online",
+  "release": "https://github.com/evergreen-it-dev/folio/releases/tag/v0.4.2"
+ },
+ "github.com/fonoster/fonoster": {
+  "website": "https://fonoster.com",
+  "release": "https://github.com/fonoster/fonoster/releases/tag/v0.33.0"
+ },
+ "github.com/FortAwesome/Font-Awesome": {
+  "website": "https://fontawesome.com",
+  "release": "https://github.com/FortAwesome/Font-Awesome/releases/tag/7.3.1"
+ },
+ "github.com/formbricks/formbricks": {
+  "website": "https://formbricks.com",
+  "release": "https://github.com/formbricks/formbricks/releases/tag/6.1.1"
+ },
+ "github.com/formio/formio": {
+  "website": "https://form.io",
+  "release": null
+ },
+ "github.com/SnaKKo/Fossdroid-Core": {
+  "website": "https://fossdroid.com/",
+  "release": null
+ },
+ "github.com/FreeTubeApp/FreeTube": {
+  "website": "https://freetubeapp.io/",
+  "release": null
+ },
+ "github.com/FreshRSS/FreshRSS": {
+  "website": "https://freshrss.org",
+  "release": "https://github.com/FreshRSS/FreshRSS/releases/tag/1.30.4"
+ },
+ "github.com/friction2d/friction": {
+  "website": "https://friction.graphics",
+  "release": "https://github.com/friction2d/friction/releases/tag/v1.0.0-rc.3"
+ },
+ "github.com/friendica/friendica": {
+  "website": "https://friendi.ca",
+  "release": "https://github.com/friendica/friendica/releases/tag/2026.05-1"
+ },
+ "github.com/apioo/fusio": {
+  "website": "https://www.fusio-project.org",
+  "release": "https://github.com/apioo/fusio/releases/tag/v7.2.1"
+ },
+ "github.com/jech/galene": {
+  "website": "https://galene.org",
+  "release": null
+ },
+ "github.com/lowercasename/gathio": {
+  "website": null,
+  "release": "https://github.com/lowercasename/gathio/releases/tag/v1.6.7"
+ },
+ "github.com/GerritCodeReview/gerrit": {
+  "website": null,
+  "release": null
+ },
+ "github.com/TryGhost/Ghost": {
+  "website": "https://ghost.org",
+  "release": "https://github.com/TryGhost/Ghost/releases/tag/v6.72.0"
+ },
+ "github.com/go-gitea/gitea": {
+  "website": "https://gitea.com",
+  "release": "https://github.com/go-gitea/gitea/releases/tag/v28.2.0"
+ },
+ "github.com/gitlabhq/gitlabhq": {
+  "website": "https://about.gitlab.com/getting-help/",
+  "release": null
+ },
+ "github.com/arp242/goatcounter": {
+  "website": "https://www.goatcounter.com",
+  "release": "https://github.com/arp242/goatcounter/releases/tag/v2.7.0"
+ },
+ "github.com/gogs/gogs": {
+  "website": "https://gogs.io",
+  "release": "https://github.com/gogs/gogs/releases/tag/v0.14.3"
+ },
+ "github.com/grafana/grafana": {
+  "website": "https://grafana.com",
+  "release": "https://github.com/grafana/grafana/releases/tag/v13.2.4"
+ },
+ "github.com/GraphiteEditor/Graphite": {
+  "website": "https://graphite.art",
+  "release": null
+ },
+ "github.com/gravitl/netmaker": {
+  "website": "https://netmaker.io",
+  "release": "https://github.com/gravitl/netmaker/releases/tag/v1.7.0"
+ },
+ "github.com/gristlabs/grist-core": {
+  "website": "https://www.getgrist.com",
+  "release": "https://github.com/gristlabs/grist-core/releases/tag/v1.7.21"
+ },
+ "github.com/growthbook/growthbook": {
+  "website": "https://www.growthbook.io",
+  "release": "https://github.com/growthbook/growthbook/releases/tag/v5.1.0"
+ },
+ "github.com/teamhanko/hanko": {
+  "website": "https://www.hanko.io",
+  "release": "https://github.com/teamhanko/hanko/releases/tag/backend/v3.1.0"
+ },
+ "github.com/hedgedoc/hedgedoc": {
+  "website": "https://hedgedoc.org",
+  "release": "https://github.com/hedgedoc/hedgedoc/releases/tag/1.12.0"
+ },
+ "github.com/HeliBorg/HeliBoard": {
+  "website": null,
+  "release": "https://github.com/HeliBorg/HeliBoard/releases/tag/v4.2"
+ },
+ "github.com/heyform/heyform": {
+  "website": "https://heyform.net",
+  "release": "https://github.com/heyform/heyform/releases/tag/v3.0.5"
+ },
+ "github.com/home-assistant/core": {
+  "website": "https://www.home-assistant.io",
+  "release": "https://github.com/home-assistant/core/releases/tag/2026.10.4"
+ },
+ "github.com/hoppscotch/hoppscotch": {
+  "website": "https://hoppscotch.io",
+  "release": "https://github.com/hoppscotch/hoppscotch/releases/tag/2026.9.0"
+ },
+ "github.com/huginn/huginn": {
+  "website": null,
+  "release": "https://github.com/huginn/huginn/releases/tag/v2026.10.24"
+ },
+ "github.com/hyperdxio/hyperdx": {
+  "website": "https://hyperdx.io/",
+  "release": "https://github.com/hyperdxio/hyperdx/releases/tag/cli-v0.8.0"
+ },
+ "github.com/idurar/idurar-erp-crm": {
+  "website": "https://cloud.idurarapp.com",
+  "release": "https://github.com/idurar/idurar-erp-crm/releases/tag/4.1.1"
+ },
+ "github.com/illacloud/illa-builder": {
+  "website": null,
+  "release": "https://github.com/illacloud/illa-builder/releases/tag/illa-builder%404.8.5"
+ },
+ "github.com/immich-app/immich": {
+  "website": "https://immich.app",
+  "release": "https://github.com/immich-app/immich/releases/tag/v3.3.5"
+ },
+ "github.com/indico/indico": {
+  "website": "https://getindico.io",
+  "release": "https://github.com/indico/indico/releases/tag/v3.3.14"
+ },
+ "github.com/influxdata/influxdb": {
+  "website": "https://influxdata.com",
+  "release": "https://github.com/influxdata/influxdb/releases/tag/v3.12.1"
+ },
+ "github.com/Kong/insomnia": {
+  "website": "https://insomnia.rest",
+  "release": "https://github.com/Kong/insomnia/releases/tag/core%4013.3.1"
+ },
+ "github.com/invoke-ai/InvokeAI": {
+  "website": "https://invoke-ai.github.io/InvokeAI/",
+  "release": "https://github.com/invoke-ai/InvokeAI/releases/tag/v6.14.2"
+ },
+ "github.com/janhq/jan": {
+  "website": "https://jan.ai/",
+  "release": "https://github.com/janhq/jan/releases/tag/v0.8.7"
+ },
+ "github.com/JanssenProject/jans": {
+  "website": "https://docs.jans.io",
+  "release": "https://github.com/JanssenProject/jans/releases/tag/v2.5.0"
+ },
+ "github.com/jellyfin/jellyfin": {
+  "website": "https://jellyfin.org",
+  "release": "https://github.com/jellyfin/jellyfin/releases/tag/v12.3"
+ },
+ "github.com/jenkinsci/jenkins": {
+  "website": "https://www.jenkins.io",
+  "release": "https://github.com/jenkinsci/jenkins/releases/tag/jenkins-2.587"
+ },
+ "github.com/jitsi/jitsi-meet": {
+  "website": "https://jitsi.org/meet",
+  "release": "https://github.com/jitsi/jitsi-meet/releases/tag/stable/jitsi-meet_11248"
+ },
+ "github.com/jitsucom/jitsu": {
+  "website": "https://jitsu.com",
+  "release": "https://github.com/jitsucom/jitsu/releases/tag/jitsu-cli1.11.0"
+ },
+ "github.com/laurent22/joplin": {
+  "website": "https://joplinapp.org",
+  "release": "https://github.com/laurent22/joplin/releases/tag/v3.7.21"
+ },
+ "github.com/kanboard/kanboard": {
+  "website": "https://kanboard.org",
+  "release": "https://github.com/kanboard/kanboard/releases/tag/v1.2.56"
+ },
+ "github.com/keepassxreboot/keepassxc": {
+  "website": "https://keepassxc.org/",
+  "release": "https://github.com/keepassxreboot/keepassxc/releases/tag/2.8.0"
+ },
+ "github.com/kestra-io/kestra": {
+  "website": "https://go.kestra.io/home",
+  "release": "https://github.com/kestra-io/kestra/releases/tag/v2.0.7"
+ },
+ "github.com/keycloak/keycloak": {
+  "website": "https://www.keycloak.org",
+  "release": "https://github.com/keycloak/keycloak/releases/tag/26.8.1"
+ },
+ "github.com/kimai/kimai": {
+  "website": "https://www.kimai.org",
+  "release": "https://github.com/kimai/kimai/releases/tag/2.71.0"
+ },
+ "github.com/xbmc/xbmc": {
+  "website": "https://kodi.tv/",
+  "release": "https://github.com/xbmc/xbmc/releases/tag/21.3-Omega"
+ },
+ "github.com/koreader/koreader": {
+  "website": "http://koreader.rocks/",
+  "release": "https://github.com/koreader/koreader/releases/tag/v2026.07.1"
+ },
+ "github.com/kubero-dev/kubero": {
+  "website": "https://demo.kubero.dev",
+  "release": "https://github.com/kubero-dev/kubero/releases/tag/v3.1.1"
+ },
+ "github.com/kubestellar/console": {
+  "website": "https://console.kubestellar.io",
+  "release": "https://github.com/kubestellar/console/releases/tag/v0.3.42"
+ },
+ "github.com/thedevs-network/kutt": {
+  "website": "https://kutt.to",
+  "release": "https://github.com/thedevs-network/kutt/releases/tag/v3.2.6"
+ },
+ "github.com/kuzzleio/kuzzle": {
+  "website": "https://kuzzle.io",
+  "release": "https://github.com/kuzzleio/kuzzle/releases/tag/v2.59.0"
+ },
+ "github.com/metavert-io/lastsaas": {
+  "website": "https://metavert.io/lastsaas",
+  "release": "https://github.com/metavert-io/lastsaas/releases/tag/v1.0.0"
+ },
+ "github.com/Leantime/leantime": {
+  "website": "https://leantime.io",
+  "release": "https://github.com/Leantime/leantime/releases/tag/v3.12.0"
+ },
+ "github.com/LemmyNet/lemmy": {
+  "website": "https://join-lemmy.org",
+  "release": "https://github.com/LemmyNet/lemmy/releases/tag/0.19.20"
+ },
+ "github.com/leon-ai/leon": {
+  "website": "https://getleon.ai",
+  "release": null
+ },
+ "github.com/LibreChat-AI/LibreChat": {
+  "website": "https://librechat.ai/",
+  "release": null
+ },
+ "github.com/liameno/librengine": {
+  "website": null,
+  "release": "https://github.com/liameno/librengine/releases/tag/v1.2"
+ },
+ "github.com/LibreSign/libresign": {
+  "website": "https://libresign.coop",
+  "release": "https://github.com/LibreSign/libresign/releases/tag/v15.0.9"
+ },
+ "github.com/librespeed/speedtest": {
+  "website": "https://librespeed.org",
+  "release": "https://github.com/librespeed/speedtest/releases/tag/v6.3.1"
+ },
+ "github.com/LibreTranslate/LibreTranslate": {
+  "website": "https://libretranslate.com",
+  "release": "https://github.com/LibreTranslate/LibreTranslate/releases/tag/v1.9.6"
+ },
+ "github.com/lightdash/lightdash": {
+  "website": "https://lightdash.com",
+  "release": "https://github.com/lightdash/lightdash/releases/tag/3.53.10"
+ },
+ "github.com/LimeSurvey/LimeSurvey": {
+  "website": "https://www.limesurvey.org",
+  "release": null
+ },
+ "github.com/itswadesh/svelte-commerce": {
+  "website": "https://kitcommerce.store/svelte-commerce/",
+  "release": "https://github.com/itswadesh/svelte-commerce/releases/tag/v4.0.0"
+ },
+ "github.com/livekit/livekit": {
+  "website": "https://docs.livekit.io",
+  "release": "https://github.com/livekit/livekit/releases/tag/v1.13.11"
+ },
+ "github.com/LMMS/lmms": {
+  "website": "https://lmms.io",
+  "release": "https://github.com/LMMS/lmms/releases/tag/v1.2.2"
+ },
+ "github.com/localsend/localsend": {
+  "website": "https://localsend.org",
+  "release": "https://github.com/localsend/localsend/releases/tag/v1.18.2"
+ },
+ "github.com/logseq/logseq": {
+  "website": "https://logseq.com",
+  "release": "https://github.com/logseq/logseq/releases/tag/2.0.2"
+ },
+ "github.com/logto-io/logto": {
+  "website": "https://logto.io",
+  "release": "https://github.com/logto-io/logto/releases/tag/v1.45.0"
+ },
+ "github.com/joinloops/loops-server": {
+  "website": "https://joinloops.org",
+  "release": "https://github.com/joinloops/loops-server/releases/tag/v1.0.0-beta.15"
+ },
+ "github.com/lowdefy/lowdefy": {
+  "website": "https://lowdefy.com",
+  "release": "https://github.com/lowdefy/lowdefy/releases/tag/v6.2.0"
+ },
+ "github.com/manticoresoftware/manticoresearch": {
+  "website": "https://manticoresearch.com",
+  "release": "https://github.com/manticoresoftware/manticoresearch/releases/tag/release-29.9.0"
+ },
+ "github.com/mastodon/mastodon": {
+  "website": "https://joinmastodon.org",
+  "release": "https://github.com/mastodon/mastodon/releases/tag/v4.7.3"
+ },
+ "github.com/matanolabs/matano": {
+  "website": "https://matano.dev",
+  "release": null
+ },
+ "github.com/matomo-org/matomo": {
+  "website": "https://matomo.org/",
+  "release": "https://github.com/matomo-org/matomo/releases/tag/5.14.2"
+ },
+ "github.com/mattermost/mattermost": {
+  "website": "https://mattermost.com",
+  "release": "https://github.com/mattermost/mattermost/releases/tag/v12.0.1"
+ },
+ "github.com/MbinOrg/mbin": {
+  "website": "https://joinmbin.org",
+  "release": "https://github.com/MbinOrg/mbin/releases/tag/v1.11.0"
+ },
+ "github.com/wikimedia/mediawiki": {
+  "website": "https://www.mediawiki.org",
+  "release": null
+ },
+ "github.com/medusajs/medusa": {
+  "website": "https://medusajs.com",
+  "release": "https://github.com/medusajs/medusa/releases/tag/v2.22.1"
+ },
+ "github.com/meilisearch/meilisearch": {
+  "website": "https://www.meilisearch.com",
+  "release": "https://github.com/meilisearch/meilisearch/releases/tag/v1.56.0"
+ },
+ "github.com/usememos/memos": {
+  "website": "https://usememos.com",
+  "release": "https://github.com/usememos/memos/releases/tag/v0.31.0"
+ },
+ "github.com/Ylianst/MeshCentral": {
+  "website": "https://meshcentral.com",
+  "release": "https://github.com/Ylianst/MeshCentral/releases/tag/1.3.1"
+ },
+ "github.com/metabase/metabase": {
+  "website": "https://metabase.com",
+  "release": "https://github.com/metabase/metabase/releases/tag/v0.64.1"
+ },
+ "github.com/metriql/metriql": {
+  "website": "https://metriql.com",
+  "release": null
+ },
+ "github.com/miniflux/v2": {
+  "website": "https://miniflux.app",
+  "release": "https://github.com/miniflux/v2/releases/tag/2.3.4"
+ },
+ "github.com/misskey-dev/misskey": {
+  "website": "https://misskey-hub.net/",
+  "release": "https://github.com/misskey-dev/misskey/releases/tag/2026.10.1"
+ },
+ "github.com/synmetrix/synmetrix": {
+  "website": "https://synmetrix.org",
+  "release": "https://github.com/synmetrix/synmetrix/releases/tag/v0.1.55"
+ },
+ "github.com/moinwiki/moin": {
+  "website": "https://moinmo.in/",
+  "release": null
+ },
+ "github.com/tehnika-mk/monomap": {
+  "website": "https://monomap.app",
+  "release": "https://github.com/tehnika-mk/monomap/releases/tag/v1.2"
+ },
+ "github.com/mumble-voip/mumble": {
+  "website": "https://www.mumble.info",
+  "release": "https://github.com/mumble-voip/mumble/releases/tag/v1.5.939"
+ },
+ "github.com/mypaint/mypaint": {
+  "website": "https://mypaint.app",
+  "release": "https://github.com/mypaint/mypaint/releases/tag/v2.0.1"
+ },
+ "github.com/NatronGitHub/Natron": {
+  "website": "http://NatronGitHub.github.io",
+  "release": "https://github.com/NatronGitHub/Natron/releases/tag/v2.5.0"
+ },
+ "github.com/navidrome/navidrome": {
+  "website": "https://www.navidrome.org",
+  "release": "https://github.com/navidrome/navidrome/releases/tag/v0.64.2"
+ },
+ "github.com/neo4j/neo4j": {
+  "website": "http://neo4j.com",
+  "release": "https://github.com/neo4j/neo4j/releases/tag/3.2.0-alpha08"
+ },
+ "github.com/netbirdio/netbird": {
+  "website": "https://netbird.io",
+  "release": "https://github.com/netbirdio/netbird/releases/tag/v0.81.4"
+ },
+ "github.com/netdata/netdata": {
+  "website": "https://www.netdata.cloud",
+  "release": "https://github.com/netdata/netdata/releases/tag/v2.12.2"
+ },
+ "github.com/Ranchero-Software/NetNewsWire": {
+  "website": "https://netnewswire.com/",
+  "release": "https://github.com/Ranchero-Software/NetNewsWire/releases/tag/mac-7.2.1"
+ },
+ "github.com/TeamNewPipe/NewPipe": {
+  "website": "https://newpipe.net",
+  "release": "https://github.com/TeamNewPipe/NewPipe/releases/tag/v0.29.1"
+ },
+ "github.com/newsboat/newsboat": {
+  "website": "https://newsboat.org/",
+  "release": null
+ },
+ "github.com/Blair2004/NexoPOS": {
+  "website": "https://my.nexopos.com",
+  "release": "https://github.com/Blair2004/NexoPOS/releases/tag/v6.3.0"
+ },
+ "github.com/nextcloud/server": {
+  "website": "https://nextcloud.com",
+  "release": "https://github.com/nextcloud/server/releases/tag/v33.0.10"
+ },
+ "github.com/nextcloud/calendar": {
+  "website": "https://apps.nextcloud.com/apps/calendar",
+  "release": "https://github.com/nextcloud/calendar/releases/tag/v3.3.2"
+ },
+ "github.com/nextcloud/forms": {
+  "website": "https://apps.nextcloud.com/apps/forms",
+  "release": "https://github.com/nextcloud/forms/releases/tag/v5.4.1"
+ },
+ "github.com/nextcloud/notes": {
+  "website": "https://apps.nextcloud.com/apps/notes",
+  "release": "https://github.com/nextcloud/notes/releases/tag/v6.1.0"
+ },
+ "github.com/nhost/nhost": {
+  "website": "https://nhost.io",
+  "release": "https://github.com/nhost/nhost/releases/tag/%40nhost/dashboard%403.8.1"
+ },
+ "github.com/node-red/node-red": {
+  "website": "http://nodered.org",
+  "release": "https://github.com/node-red/node-red/releases/tag/5.0.9"
+ },
+ "github.com/churichard/notabase": {
+  "website": "https://notabase.io",
+  "release": null
+ },
+ "github.com/OmGodse/Notally": {
+  "website": null,
+  "release": "https://github.com/OmGodse/Notally/releases/tag/v6.2"
+ },
+ "github.com/codexu/note-gen": {
+  "website": "https://notegen.top",
+  "release": "https://github.com/codexu/note-gen/releases/tag/note-gen-v0.39.0"
+ },
+ "github.com/streetwriters/notesnook": {
+  "website": "https://notesnook.com/",
+  "release": "https://github.com/streetwriters/notesnook/releases/tag/v3.4.10"
+ },
+ "github.com/projectdiscovery/nuclei": {
+  "website": "https://docs.projectdiscovery.io/tools/nuclei",
+  "release": "https://github.com/projectdiscovery/nuclei/releases/tag/v3.11.1"
+ },
+ "github.com/obsproject/obs-studio": {
+  "website": "https://obsproject.com",
+  "release": "https://github.com/obsproject/obs-studio/releases/tag/33.0.0"
+ },
+ "github.com/ImranR98/Obtainium": {
+  "website": "https://obtainium.imranr.dev",
+  "release": "https://github.com/ImranR98/Obtainium/releases/tag/v1.7.3"
+ },
+ "github.com/odoo/odoo": {
+  "website": "https://www.odoo.com",
+  "release": null
+ },
+ "github.com/McanKul/offpdf": {
+  "website": "https://offpdf.com",
+  "release": "https://github.com/McanKul/offpdf/releases/tag/v0.5.0"
+ },
+ "github.com/olive-editor/olive": {
+  "website": "https://olivevideoeditor.org/",
+  "release": null
+ },
+ "github.com/ollama/ollama": {
+  "website": "https://ollama.com",
+  "release": "https://github.com/ollama/ollama/releases/tag/v0.40.11"
+ },
+ "github.com/omniedgeio/omniedge": {
+  "website": "https://connect.omniedge.io",
+  "release": "https://github.com/omniedgeio/omniedge/releases/tag/v2.9.0"
+ },
+ "github.com/ONLYOFFICE/DocumentServer": {
+  "website": "https://www.onlyoffice.com/see-it-in-action",
+  "release": "https://github.com/ONLYOFFICE/DocumentServer/releases/tag/v10.0.0"
+ },
+ "github.com/LAION-AI/Open-Assistant": {
+  "website": "https://open-assistant.io",
+  "release": "https://github.com/LAION-AI/Open-Assistant/releases/tag/v0.0.4-alpha2"
+ },
+ "github.com/openblocks-dev/openblocks": {
+  "website": "https://cloud.openblocks.dev",
+  "release": "https://github.com/openblocks-dev/openblocks/releases/tag/v1.1.8"
+ },
+ "github.com/openboard-team/openboard": {
+  "website": null,
+  "release": "https://github.com/openboard-team/openboard/releases/tag/v1.4.5"
+ },
+ "github.com/braedonsaunders/openbooks": {
+  "website": "https://openbooks-site.vercel.app",
+  "release": null
+ },
+ "github.com/OpenCut-app/OpenCut": {
+  "website": "https://opencut.app",
+  "release": "https://github.com/OpenCut-app/OpenCut/releases/tag/v0.3.0"
+ },
+ "github.com/OpenHands/OpenHands": {
+  "website": "https://openhands.dev",
+  "release": "https://github.com/OpenHands/OpenHands/releases/tag/v1.33.0"
+ },
+ "github.com/opf/openproject": {
+  "website": "https://www.openproject.org",
+  "release": "https://github.com/opf/openproject/releases/tag/v17.9.4"
+ },
+ "github.com/OpenShot/openshot-qt": {
+  "website": "http://www.openshot.org",
+  "release": "https://github.com/OpenShot/openshot-qt/releases/tag/v4.0.1"
+ },
+ "github.com/openstatusHQ/openstatus": {
+  "website": "https://openstatus.dev",
+  "release": null
+ },
+ "github.com/openstreetmap/openstreetmap-website": {
+  "website": "https://www.openstreetmap.org/",
+  "release": null
+ },
+ "github.com/OpenVidu/openvidu": {
+  "website": "https://openvidu.io",
+  "release": "https://github.com/OpenVidu/openvidu/releases/tag/v3.9.0"
+ },
+ "github.com/Open-Web-Analytics/Open-Web-Analytics": {
+  "website": "http://www.openwebanalytics.com",
+  "release": "https://github.com/Open-Web-Analytics/Open-Web-Analytics/releases/tag/1.14.2"
+ },
+ "github.com/Noveum/orbit": {
+  "website": "https://orbit.noveum.ai",
+  "release": "https://github.com/Noveum/orbit/releases/tag/2026.10.25"
+ },
+ "github.com/organicmaps/organicmaps": {
+  "website": "https://organicmaps.app",
+  "release": "https://github.com/organicmaps/organicmaps/releases/tag/2026.09.29-32-android"
+ },
+ "github.com/ory/kratos": {
+  "website": "https://www.ory.com/?utm_source=github&utm_medium=banner&utm_campaign=kratos",
+  "release": "https://github.com/ory/kratos/releases/tag/v26.2.0"
+ },
+ "github.com/osmandapp/OsmAnd": {
+  "website": "https://osmand.net",
+  "release": "https://github.com/osmandapp/OsmAnd/releases/tag/2.0.0"
+ },
+ "github.com/linode/apl-core": {
+  "website": "https://techdocs.akamai.com/app-platform/docs/welcome",
+  "release": "https://github.com/linode/apl-core/releases/tag/v6.4.2"
+ },
+ "github.com/owncloud/core": {
+  "website": "https://owncloud.com",
+  "release": "https://github.com/owncloud/core/releases/tag/v10.16.6"
+ },
+ "github.com/owncloud/ocis": {
+  "website": "https://doc.owncloud.com/ocis/",
+  "release": "https://github.com/owncloud/ocis/releases/tag/v8.2.2"
+ },
+ "github.com/padloc/padloc": {
+  "website": "https://padloc.app",
+  "release": "https://github.com/padloc/padloc/releases/tag/v4.3.0"
+ },
+ "github.com/Pagure/pagure": {
+  "website": "https://pagure.io/pagure",
+  "release": null
+ },
+ "github.com/papercups-io/papercups": {
+  "website": null,
+  "release": "https://github.com/papercups-io/papercups/releases/tag/v1.0.0"
+ },
+ "github.com/passbolt/passbolt_api": {
+  "website": "https://passbolt.com",
+  "release": "https://github.com/passbolt/passbolt_api/releases/tag/v5.17.0"
+ },
+ "github.com/payloadcms/payload": {
+  "website": "https://payloadcms.com",
+  "release": "https://github.com/payloadcms/payload/releases/tag/v3.92.0"
+ },
+ "github.com/pdfarranger/pdfarranger": {
+  "website": null,
+  "release": "https://github.com/pdfarranger/pdfarranger/releases/tag/1.14.0"
+ },
+ "github.com/Chocobozzz/PeerTube": {
+  "website": "https://joinpeertube.org/",
+  "release": "https://github.com/Chocobozzz/PeerTube/releases/tag/v8.3.1"
+ },
+ "github.com/penpot/penpot": {
+  "website": "https://penpot.app",
+  "release": "https://github.com/penpot/penpot/releases/tag/2.18.5"
+ },
+ "github.com/Peon-sh/Peon": {
+  "website": "https://peon.sh",
+  "release": "https://github.com/Peon-sh/Peon/releases/tag/v1.2.0"
+ },
+ "github.com/photoprism/photoprism": {
+  "website": "https://www.photoprism.app",
+  "release": "https://github.com/photoprism/photoprism/releases/tag/261007-65faaae5d"
+ },
+ "github.com/pingcap/tidb": {
+  "website": "https://www.tidb.io/",
+  "release": "https://github.com/pingcap/tidb/releases/tag/v7.5.8"
+ },
+ "github.com/pixelfed/pixelfed": {
+  "website": "https://pixelfed.org",
+  "release": "https://github.com/pixelfed/pixelfed/releases/tag/v0.15.2"
+ },
+ "github.com/makeplane/plane": {
+  "website": "http://plane.so",
+  "release": "https://github.com/makeplane/plane/releases/tag/v1.4.2"
+ },
+ "github.com/plasmicapp/plasmic": {
+  "website": "https://www.plasmic.app",
+  "release": null
+ },
+ "github.com/plausible/analytics": {
+  "website": "https://plausible.io",
+  "release": "https://github.com/plausible/analytics/releases/tag/v3.2.1"
+ },
+ "github.com/Plume-org/Plume": {
+  "website": "https://joinplu.me",
+  "release": null
+ },
+ "github.com/Automattic/pocket-casts-android": {
+  "website": "https://forums.pocketcasts.com",
+  "release": "https://github.com/Automattic/pocket-casts-android/releases/tag/8.22"
+ },
+ "github.com/pocketbase/pocketbase": {
+  "website": "https://pocketbase.io",
+  "release": "https://github.com/pocketbase/pocketbase/releases/tag/v0.40.6"
+ },
+ "github.com/Posnic/POS": {
+  "website": "https://www.posnic.com/",
+  "release": "https://github.com/Posnic/POS/releases/tag/v1.9.0"
+ },
+ "github.com/apache/superset": {
+  "website": "https://superset.apache.org/",
+  "release": "https://github.com/apache/superset/releases/tag/6.1.0"
+ },
+ "github.com/PrestaShop/PrestaShop": {
+  "website": "https://www.prestashop-project.org/",
+  "release": "https://github.com/PrestaShop/PrestaShop/releases/tag/9.2.0"
+ },
+ "github.com/prismelabs/analytics": {
+  "website": "https://www.prismeanalytics.com",
+  "release": "https://github.com/prismelabs/analytics/releases/tag/v0.20.0"
+ },
+ "github.com/psi-4ward/psitransfer": {
+  "website": null,
+  "release": "https://github.com/psi-4ward/psitransfer/releases/tag/v2.4.5"
+ },
+ "github.com/qdrant/qdrant": {
+  "website": "https://qdrant.tech",
+  "release": "https://github.com/qdrant/qdrant/releases/tag/v1.20.0"
+ },
+ "github.com/KlausSchaefers/quant-ux": {
+  "website": null,
+  "release": null
+ },
+ "github.com/questdb/questdb": {
+  "website": "https://questdb.com",
+  "release": "https://github.com/questdb/questdb/releases/tag/10.1.0"
+ },
+ "github.com/quickwit-oss/quickwit": {
+  "website": "https://quickwit.io",
+  "release": "https://github.com/quickwit-oss/quickwit/releases/tag/v0.9.3"
+ },
+ "github.com/quillpad/quillpad": {
+  "website": "https://quillpad.github.io",
+  "release": "https://github.com/quillpad/quillpad/releases/tag/v1.5.15"
+ },
+ "github.com/RawTherapee/RawTherapee": {
+  "website": "https://rawtherapee.com",
+  "release": "https://github.com/RawTherapee/RawTherapee/releases/tag/5.13"
+ },
+ "github.com/redmine/redmine": {
+  "website": "https://www.redmine.org",
+  "release": null
+ },
+ "github.com/restic/restic": {
+  "website": "https://restic.net",
+  "release": "https://github.com/restic/restic/releases/tag/v0.19.1"
+ },
+ "github.com/hakimel/reveal.js": {
+  "website": "https://revealjs.com",
+  "release": "https://github.com/hakimel/reveal.js/releases/tag/6.0.2"
+ },
+ "github.com/reviewboard/reviewboard": {
+  "website": "https://www.reviewboard.org/",
+  "release": "https://github.com/reviewboard/reviewboard/releases/tag/release-8.0"
+ },
+ "github.com/RocketChat/Rocket.Chat": {
+  "website": "https://rocket.chat/",
+  "release": "https://github.com/RocketChat/Rocket.Chat/releases/tag/8.9.0"
+ },
+ "github.com/roundcube/roundcubemail": {
+  "website": "https://roundcube.net",
+  "release": "https://github.com/roundcube/roundcubemail/releases/tag/1.7.5"
+ },
+ "github.com/rustdesk/rustdesk": {
+  "website": "https://rustdesk.com",
+  "release": "https://github.com/rustdesk/rustdesk/releases/tag/1.5.0"
+ },
+ "github.com/saleor/saleor": {
+  "website": "https://saleor.io",
+  "release": "https://github.com/saleor/saleor/releases/tag/3.23.44"
+ },
+ "github.com/scribusproject/scribus": {
+  "website": "https://scribus.net",
+  "release": null
+ },
+ "github.com/haiwen/seafile": {
+  "website": "http://seafile.com/",
+  "release": "https://github.com/haiwen/seafile/releases/tag/v9.0.5"
+ },
+ "github.com/searxng/searxng": {
+  "website": "https://docs.searxng.org",
+  "release": null
+ },
+ "github.com/weaviate/weaviate": {
+  "website": "https://weaviate.io/developers/weaviate/",
+  "release": "https://github.com/weaviate/weaviate/releases/tag/v1.40.2"
+ },
+ "github.com/shlinkio/shlink": {
+  "website": "https://shlink.io",
+  "release": "https://github.com/shlinkio/shlink/releases/tag/v5.1.8"
+ },
+ "github.com/mltframework/shotcut": {
+  "website": "https://www.shotcut.org",
+  "release": "https://github.com/mltframework/shotcut/releases/tag/v26.9.27"
+ },
+ "github.com/shuup/shuup": {
+  "website": "https://www.shuup.com",
+  "release": "https://github.com/shuup/shuup/releases/tag/v3.1.0"
+ },
+ "github.com/milesmcc/shynet": {
+  "website": null,
+  "release": "https://github.com/milesmcc/shynet/releases/tag/v0.14.0"
+ },
+ "github.com/signalapp/Signal-Android": {
+  "website": "https://signal.org",
+  "release": "https://github.com/signalapp/Signal-Android/releases/tag/v8.32.3"
+ },
+ "github.com/SigNoz/signoz": {
+  "website": "https://signoz.io",
+  "release": "https://github.com/SigNoz/signoz/releases/tag/v0.147.0"
+ },
+ "github.com/silexlabs/Silex": {
+  "website": "https://www.silex.me",
+  "release": "https://github.com/silexlabs/Silex/releases/tag/v3.9.0"
+ },
+ "github.com/rkkr/simple-keyboard": {
+  "website": null,
+  "release": "https://github.com/rkkr/simple-keyboard/releases/tag/149"
+ },
+ "github.com/simplex-chat/simplex-chat": {
+  "website": "https://simplex.chat",
+  "release": "https://github.com/simplex-chat/simplex-chat/releases/tag/v7.0.3"
+ },
+ "github.com/siyuan-note/siyuan": {
+  "website": "https://b3log.org/siyuan",
+  "release": "https://github.com/siyuan-note/siyuan/releases/tag/v3.8.8"
+ },
+ "github.com/slidevjs/slidev": {
+  "website": "https://sli.dev",
+  "release": "https://github.com/slidevjs/slidev/releases/tag/v53.0.0"
+ },
+ "github.com/snikket-im/snikket-server": {
+  "website": "https://snikket.org/service/",
+  "release": null
+ },
+ "github.com/SolidInvoice/SolidInvoice": {
+  "website": "http://solidinvoice.co",
+  "release": "https://github.com/SolidInvoice/SolidInvoice/releases/tag/3.1.2"
+ },
+ "github.com/fclairamb/solidping": {
+  "website": "https://www.solidping.io",
+  "release": "https://github.com/fclairamb/solidping/releases/tag/v0.41.0"
+ },
+ "github.com/solidtime-io/solidtime": {
+  "website": "https://www.solidtime.io",
+  "release": "https://github.com/solidtime-io/solidtime/releases/tag/v0.22.1"
+ },
+ "github.com/valeriansaliou/sonic": {
+  "website": "https://crates.io/crates/sonic-server",
+  "release": "https://github.com/valeriansaliou/sonic/releases/tag/v1.10.2"
+ },
+ "github.com/spacebarchat/spacebarchat": {
+  "website": "https://spacebar.chat",
+  "release": null
+ },
+ "github.com/spacedriveapp/spacedrive": {
+  "website": "https://spacedrive.com",
+  "release": "https://github.com/spacedriveapp/spacedrive/releases/tag/0.4.3"
+ },
+ "github.com/spliit-app/spliit": {
+  "website": "https://spliit.app",
+  "release": "https://github.com/spliit-app/spliit/releases/tag/1.30.0"
+ },
+ "github.com/AUTOMATIC1111/stable-diffusion-webui": {
+  "website": null,
+  "release": "https://github.com/AUTOMATIC1111/stable-diffusion-webui/releases/tag/v1.10.1"
+ },
+ "github.com/standardnotes/app": {
+  "website": "https://standardnotes.com",
+  "release": "https://github.com/standardnotes/app/releases/tag/%40standardnotes/desktop%403.202.10"
+ },
+ "github.com/stepci/stepci": {
+  "website": "https://stepci.com",
+  "release": "https://github.com/stepci/stepci/releases/tag/2.8.2"
+ },
+ "github.com/Stirling-Tools/Stirling-PDF": {
+  "website": "https://stirling.com",
+  "release": "https://github.com/Stirling-Tools/Stirling-PDF/releases/tag/v3.2.2"
+ },
+ "github.com/stoatchat/self-hosted": {
+  "website": "https://stoat.chat",
+  "release": null
+ },
+ "github.com/strapi/strapi": {
+  "website": "https://strapi.io",
+  "release": "https://github.com/strapi/strapi/releases/tag/v5.59.0"
+ },
+ "github.com/SuiteCRM/SuiteCRM": {
+  "website": "https://www.suitecrm.com",
+  "release": "https://github.com/SuiteCRM/SuiteCRM/releases/tag/v7.15.2"
+ },
+ "github.com/sulu/sulu": {
+  "website": "https://sulu.io",
+  "release": "https://github.com/sulu/sulu/releases/tag/3.0.10"
+ },
+ "github.com/supabase/supabase": {
+  "website": "https://supabase.com",
+  "release": "https://github.com/supabase/supabase/releases/tag/v1.26.08"
+ },
+ "github.com/super-productivity/super-productivity": {
+  "website": "http://super-productivity.com?ref=github",
+  "release": "https://github.com/super-productivity/super-productivity/releases/tag/v19.3.1"
+ },
+ "github.com/supertokens/supertokens-core": {
+  "website": "https://supertokens.com",
+  "release": "https://github.com/supertokens/supertokens-core/releases/tag/v12.4.1"
+ },
+ "github.com/Sylius/Sylius": {
+  "website": "https://sylius.com",
+  "release": "https://github.com/Sylius/Sylius/releases/tag/v2.3.2"
+ },
+ "github.com/syncthing/syncthing": {
+  "website": "https://syncthing.net/",
+  "release": "https://github.com/syncthing/syncthing/releases/tag/v2.1.7"
+ },
+ "github.com/tabler/tabler-icons": {
+  "website": "https://tabler.io/icons",
+  "release": "https://github.com/tabler/tabler-icons/releases/tag/v3.49.0"
+ },
+ "github.com/kaleidos-ventures/taiga": {
+  "website": null,
+  "release": null
+ },
+ "github.com/taosdata/TDengine": {
+  "website": "https://tdengine.com",
+  "release": "https://github.com/taosdata/TDengine/releases/tag/ver-3.4.3.3"
+ },
+ "github.com/Telemetry-Tracker/telemetry-tracker": {
+  "website": "https://telemetry-tracker.com",
+  "release": "https://github.com/Telemetry-Tracker/telemetry-tracker/releases/tag/v1.22.14"
+ },
+ "github.com/terminusdb/terminusdb": {
+  "website": "https://terminusdb.com",
+  "release": "https://github.com/terminusdb/terminusdb/releases/tag/v12.0.8"
+ },
+ "github.com/tinacms/tinacms": {
+  "website": "https://tina.io",
+  "release": "https://github.com/tinacms/tinacms/releases/tag/tinacms%403.15.0"
+ },
+ "github.com/tinode/chat": {
+  "website": null,
+  "release": "https://github.com/tinode/chat/releases/tag/v0.25.3"
+ },
+ "github.com/ToolJet/ToolJet": {
+  "website": "https://tooljet.com",
+  "release": "https://github.com/ToolJet/ToolJet/releases/tag/v3.20.250-lts"
+ },
+ "github.com/FrigadeHQ/trench": {
+  "website": "https://trench.dev",
+  "release": "https://github.com/FrigadeHQ/trench/releases/tag/trench-js%400.0.17"
+ },
+ "github.com/TriliumNext/Trilium": {
+  "website": "https://triliumnotes.org",
+  "release": "https://github.com/TriliumNext/Trilium/releases/tag/v0.106.1"
+ },
+ "github.com/tutao/tutanota": {
+  "website": "https://tuta.com",
+  "release": "https://github.com/tutao/tutanota/releases/tag/tutanota-desktop-release-362.261023.2"
+ },
+ "github.com/twentyhq/twenty": {
+  "website": "https://twenty.com",
+  "release": "https://github.com/twentyhq/twenty/releases/tag/twenty/v2.51.0"
+ },
+ "github.com/Tymeslot/tymeslot": {
+  "website": "https://tymeslot.app",
+  "release": "https://github.com/Tymeslot/tymeslot/releases/tag/v1.31.0"
+ },
+ "github.com/typesense/typesense": {
+  "website": "https://typesense.org",
+  "release": "https://github.com/typesense/typesense/releases/tag/v30.2"
+ },
+ "github.com/ultravnc/UltraVNC": {
+  "website": "https://uvnc.com",
+  "release": null
+ },
+ "github.com/umami-software/umami": {
+  "website": "https://umami.is",
+  "release": "https://github.com/umami-software/umami/releases/tag/v3.4.1"
+ },
+ "github.com/ungoogled-software/ungoogled-chromium": {
+  "website": null,
+  "release": "https://github.com/ungoogled-software/ungoogled-chromium/releases/tag/156.0.8078.47-1"
+ },
+ "github.com/Unleash/unleash": {
+  "website": "https://www.getunleash.io",
+  "release": "https://github.com/Unleash/unleash/releases/tag/v8.2.1"
+ },
+ "github.com/uptrace/uptrace": {
+  "website": "https://uptrace.dev/get/hosted/open-source-apm",
+  "release": "https://github.com/uptrace/uptrace/releases/tag/v2.1.0-rc.2"
+ },
+ "github.com/uvdesk/community-skeleton": {
+  "website": "https://www.uvdesk.com",
+  "release": "https://github.com/uvdesk/community-skeleton/releases/tag/v1.1.8"
+ },
+ "github.com/ItzCrazyKns/Vane": {
+  "website": null,
+  "release": "https://github.com/ItzCrazyKns/Vane/releases/tag/v1.12.2"
+ },
+ "github.com/dani-garcia/vaultwarden": {
+  "website": null,
+  "release": "https://github.com/dani-garcia/vaultwarden/releases/tag/1.37.4"
+ },
+ "github.com/vendurehq/vendure": {
+  "website": "https://www.vendure.io",
+  "release": "https://github.com/vendurehq/vendure/releases/tag/v3.8.1"
+ },
+ "github.com/VictoriaMetrics/VictoriaLogs": {
+  "website": "https://docs.victoriametrics.com/victorialogs/",
+  "release": "https://github.com/VictoriaMetrics/VictoriaLogs/releases/tag/v1.53.0"
+ },
+ "github.com/VictoriaMetrics/VictoriaMetrics": {
+  "website": "https://victoriametrics.com/",
+  "release": "https://github.com/VictoriaMetrics/VictoriaMetrics/releases/tag/v1.154.1"
+ },
+ "github.com/go-vikunja/vikunja": {
+  "website": "https://vikunja.io",
+  "release": "https://github.com/go-vikunja/vikunja/releases/tag/v2.7.1"
+ },
+ "github.com/wallabag/wallabag": {
+  "website": "https://wallabag.org",
+  "release": "https://github.com/wallabag/wallabag/releases/tag/2.6.14"
+ },
+ "github.com/webiny/webiny-js": {
+  "website": "https://www.webiny.com",
+  "release": "https://github.com/webiny/webiny-js/releases/tag/v6.5.0"
+ },
+ "github.com/webstudio-is/webstudio": {
+  "website": "https://webstudio.is",
+  "release": "https://github.com/webstudio-is/webstudio/releases/tag/0.307.0"
+ },
+ "github.com/wekan/wekan": {
+  "website": "https://wekan.fi",
+  "release": "https://github.com/wekan/wekan/releases/tag/v12.65"
+ },
+ "github.com/openai/whisper": {
+  "website": null,
+  "release": "https://github.com/openai/whisper/releases/tag/v20250625"
+ },
+ "github.com/ggml-org/whisper.cpp": {
+  "website": null,
+  "release": "https://github.com/ggml-org/whisper.cpp/releases/tag/v1.9.5"
+ },
+ "github.com/windmill-labs/windmill": {
+  "website": "https://windmill.dev",
+  "release": "https://github.com/windmill-labs/windmill/releases/tag/v1.849.0"
+ },
+ "github.com/woocommerce/woocommerce": {
+  "website": "https://woocommerce.com",
+  "release": "https://github.com/woocommerce/woocommerce/releases/tag/11.2.1"
+ },
+ "github.com/WordPress/WordPress": {
+  "website": "https://wordpress.org",
+  "release": null
+ },
+ "github.com/writefreely/writefreely": {
+  "website": "https://writefreely.org",
+  "release": "https://github.com/writefreely/writefreely/releases/tag/v0.17.2"
+ },
+ "github.com/xournalpp/xournalpp": {
+  "website": "https://xournalpp.github.io",
+  "release": "https://github.com/xournalpp/xournalpp/releases/tag/v1.3.8"
+ },
+ "github.com/xwiki/xwiki-platform": {
+  "website": "http://platform.xwiki.org/",
+  "release": "https://github.com/xwiki/xwiki-platform/releases/tag/xwiki-platform-18.9.0-rc-1"
+ },
+ "github.com/yacy/yacy_search_server": {
+  "website": "http://yacy.net",
+  "release": null
+ },
+ "github.com/purocean/yn": {
+  "website": "https://yank-note.com",
+  "release": "https://github.com/purocean/yn/releases/tag/v3.93.1"
+ },
+ "github.com/YOURLS/YOURLS": {
+  "website": "https://yourls.org",
+  "release": "https://github.com/YOURLS/YOURLS/releases/tag/1.10.6"
+ },
+ "github.com/yugabyte/yugabyte-db": {
+  "website": "https://www.yugabyte.com",
+  "release": "https://github.com/yugabyte/yugabyte-db/releases/tag/v2026.1.2.0"
+ },
+ "github.com/zammad/zammad": {
+  "website": "https://zammad.org",
+  "release": null
+ },
+ "github.com/zen-browser/desktop": {
+  "website": "https://zen-browser.app",
+  "release": "https://github.com/zen-browser/desktop/releases/tag/1.23.4b"
+ },
+ "github.com/zincsearch/zincsearch": {
+  "website": "https://zincsearch-docs.zinc.dev",
+  "release": "https://github.com/zincsearch/zincsearch/releases/tag/v1.0.0-beta3"
+ },
+ "github.com/zitadel/zitadel": {
+  "website": "https://zitadel.com",
+  "release": "https://github.com/zitadel/zitadel/releases/tag/v4.20.0"
+ },
+ "github.com/zulip/zulip": {
+  "website": "https://zulip.com",
+  "release": "https://github.com/zulip/zulip/releases/tag/12.3"
+ },
+ "github.com/element-hq/element-x-android": {
+  "website": null,
+  "release": "https://github.com/element-hq/element-x-android/releases/tag/v26.10.0"
+ },
+ "codeberg.org/comaps/comaps": {
+  "website": "https://www.comaps.app/",
+  "release": "https://codeberg.org/comaps/comaps/releases/tag/v2026.10.05-19"
+ },
+ "codeberg.org/forgejo/forgejo": {
+  "website": "https://forgejo.org",
+  "release": "https://codeberg.org/forgejo/forgejo/releases/tag/v17.0.0"
+ },
+ "codeberg.org/keyoxide/keyoxide-web": {
+  "website": "https://keyoxide.org",
+  "release": "https://codeberg.org/keyoxide/keyoxide-web/releases/tag/5.1.0"
+ },
+ "codeberg.org/librewolf/source": {
+  "website": null,
+  "release": "https://codeberg.org/librewolf/source/releases/tag/153.0.4-1"
+ },
+ "codeberg.org/rimu/pyfedi": {
+  "website": "https://join.piefed.social",
+  "release": "https://codeberg.org/rimu/pyfedi/releases/tag/v1.8.8"
+ },
+ "gitlab.com/AuroraOSS/AuroraStore": {
+  "website": null,
+  "release": "https://gitlab.com/AuroraOSS/AuroraStore/-/releases/4.8.4"
+ },
+ "gitlab.com/fdroid/fdroidclient": {
+  "website": null,
+  "release": "https://gitlab.com/fdroid/fdroidclient/-/releases/1.23.2"
+ },
+ "gitlab.com/gitlab-org/gitlab-foss": {
+  "website": null,
+  "release": null
+ },
+ "gitlab.com/indicproject/indic-keyboard": {
+  "website": null,
+  "release": "https://gitlab.com/indicproject/indic-keyboard/-/releases/v3.4"
+ },
+ "gitlab.com/inkscape/inkscape": {
+  "website": null,
+  "release": "https://gitlab.com/inkscape/inkscape/-/releases/INKSCAPE_1_4"
+ }
+}

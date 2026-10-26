@@ -15,8 +15,22 @@ export const url = (path = '') => BASE + path.replace(/^\//, '');
 export const esc = (s) => String(s ?? '').replace(/[&<>"']/g, (c) => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c]));
 export const fmtStars = (n) => (n >= 1000 ? (n / 1000).toFixed(n >= 10000 ? 0 : 1).replace(/\.0$/, '') + 'k' : String(n));
 export const KIND = { app: 'App', self_hosted: 'Runs on your own server', developer_tool: 'For developers', library: 'Code library' };
-export const codeUrl = (p) => (p.code ? `https://${p.code}` : p.website);
-export const hostOf = (p) => (p.code ? p.code.split('/')[0] : null);
+// WHY both forms: API-read hosts are stored as "github.com/owner/repo"; hand-added ones (GIMP, KDE) as full https links.
+export const codeUrl = (p) => (p.code ? (/^https?:\/\//.test(p.code) ? p.code : `https://${p.code}`) : null);
+export const hostOf = (p) => (p.code ? p.code.replace(/^https?:\/\//, '').split('/')[0] : null);
+
+// The outside links a project gets, most useful first (Destin, Oct 27: "download links or website outlinks …
+// in addition to the source code links"). A GitHub release counts as a download only for apps people install;
+// for servers and developer tools it's labelled "Latest release".
+export function outLinks(p) {
+  const l = [];
+  const download = p.download ?? (p.release && p.kind === 'app' ? p.release : null);
+  if (download) l.push({ label: 'Download', href: download });
+  if (p.website) l.push({ label: 'Website', href: p.website });
+  if (p.release && !download) l.push({ label: 'Latest release', href: p.release });
+  if (codeUrl(p)) l.push({ label: 'Source code', href: codeUrl(p) });
+  return l;
+}
 
 export function loadData(root) {
   const read = (f) => JSON.parse(readFileSync(join(root, 'data', f), 'utf8'));

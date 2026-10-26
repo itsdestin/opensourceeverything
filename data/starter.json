@@ -19,7 +19,11 @@
        "LibreOffice Writer",
        "https://git.libreoffice.org/core",
        "full",
-       "Desktop; no live co-editing"
+       "Desktop; no live co-editing",
+       {
+        "website": "https://www.libreoffice.org",
+        "download": "https://www.libreoffice.org/download/download-libreoffice/"
+       }
       ],
       [
        "OnlyOffice Docs",
@@ -59,7 +63,12 @@
       [
        "LibreOffice Calc",
        "https://git.libreoffice.org/core",
-       "full"
+       "full",
+       null,
+       {
+        "website": "https://www.libreoffice.org",
+        "download": "https://www.libreoffice.org/download/download-libreoffice/"
+       }
       ],
       [
        "OnlyOffice Docs",
@@ -75,7 +84,11 @@
       [
        "Gnumeric",
        "https://gitlab.gnome.org/GNOME/gnumeric",
-       "partial"
+       "partial",
+       null,
+       {
+        "website": "http://www.gnumeric.org"
+       }
       ]
      ]
     },
@@ -92,7 +105,12 @@
       [
        "LibreOffice Impress",
        "https://git.libreoffice.org/core",
-       "full"
+       "full",
+       null,
+       {
+        "website": "https://www.libreoffice.org",
+        "download": "https://www.libreoffice.org/download/download-libreoffice/"
+       }
       ],
       [
        "OnlyOffice Docs",
@@ -250,7 +268,10 @@
        "Thunderbird",
        "https://www.thunderbird.net",
        "partial",
-       "Calendar in the desktop app"
+       "Calendar in the desktop app",
+       {
+        "download": "https://www.thunderbird.net/download/"
+       }
       ],
       [
        "Nextcloud Calendar",
@@ -277,7 +298,11 @@
        "Okular",
        "https://invent.kde.org/graphics/okular",
        "partial",
-       "Reading and notes"
+       "Reading and notes",
+       {
+        "website": "https://okular.kde.org",
+        "download": "https://okular.kde.org/download/"
+       }
       ],
       [
        "PDF Arranger",
@@ -300,7 +325,10 @@
        "Thunderbird",
        "https://www.thunderbird.net",
        "full",
-       "Desktop and Android apps"
+       "Desktop and Android apps",
+       {
+        "download": "https://www.thunderbird.net/download/"
+       }
       ],
       [
        "Roundcube",
@@ -594,7 +622,12 @@
       [
        "GIMP",
        "https://gitlab.gnome.org/GNOME/gimp",
-       "full"
+       "full",
+       null,
+       {
+        "website": "https://www.gimp.org",
+        "download": "https://www.gimp.org/downloads/"
+       }
       ],
       [
        "darktable",
@@ -612,7 +645,11 @@
        "Krita",
        "https://invent.kde.org/graphics/krita",
        "partial",
-       "Better for painting"
+       "Better for painting",
+       {
+        "website": "https://krita.org",
+        "download": "https://krita.org/en/download/"
+       }
       ]
      ]
     },
@@ -629,7 +666,12 @@
       [
        "Krita",
        "https://invent.kde.org/graphics/krita",
-       "full"
+       "full",
+       null,
+       {
+        "website": "https://krita.org",
+        "download": "https://krita.org/en/download/"
+       }
       ],
       [
        "MyPaint",
@@ -725,7 +767,12 @@
       [
        "Kdenlive",
        "https://invent.kde.org/multimedia/kdenlive",
-       "full"
+       "full",
+       null,
+       {
+        "website": "https://kdenlive.org",
+        "download": "https://kdenlive.org/download/"
+       }
       ],
       [
        "Shotcut",
@@ -753,7 +800,12 @@
       [
        "Blender",
        "https://www.blender.org",
-       "full"
+       "full",
+       null,
+       {
+        "download": "https://www.blender.org/download/",
+        "code": "https://projects.blender.org/blender/blender"
+       }
       ],
       [
        "Natron",
@@ -830,22 +882,55 @@
        "Linux Mint",
        "https://linuxmint.com",
        "full",
-       "Closest to Windows"
+       "Closest to Windows",
+       {
+        "download": "https://linuxmint.com/download.php"
+       }
       ],
       [
        "Fedora",
        "https://fedoraproject.org",
-       "full"
+       "full",
+       null,
+       {
+        "download": "https://fedoraproject.org/workstation/download"
+       }
       ],
       [
        "Ubuntu",
        "https://ubuntu.com",
-       "full"
+       "full",
+       null,
+       {
+        "download": "https://ubuntu.com/download/desktop"
+       }
       ],
       [
        "Debian",
        "https://www.debian.org",
-       "full"
+       "full",
+       null,
+       {
+        "download": "https://www.debian.org/distrib/"
+       }
+      ],
+      [
+       "Arch Linux",
+       "https://archlinux.org",
+       "full",
+       "For experienced users: you choose and set up every part",
+       {
+        "download": "https://archlinux.org/download/"
+       }
+      ],
+      [
+       "CachyOS",
+       "https://cachyos.org",
+       "full",
+       "Based on Arch, tuned for speed, with an easy installer",
+       {
+        "download": "https://cachyos.org/download/"
+       }
       ]
      ]
     },
@@ -862,23 +947,37 @@
        "GrapheneOS",
        "https://grapheneos.org",
        "full",
-       "Pixel phones only"
+       "Pixel phones only",
+       {
+        "download": "https://grapheneos.org/install/"
+       }
       ],
       [
        "LineageOS",
        "https://lineageos.org",
-       "full"
+       "full",
+       null,
+       {
+        "download": "https://wiki.lineageos.org/devices/"
+       }
       ],
       [
        "/e/OS",
        "https://e.foundation",
-       "full"
+       "full",
+       null,
+       {
+        "download": "https://doc.e.foundation/devices"
+       }
       ],
       [
        "postmarketOS",
        "https://postmarketos.org",
        "partial",
-       "Early on most phones"
+       "Early on most phones",
+       {
+        "download": "https://postmarketos.org/download/"
+       }
       ]
      ]
     },
@@ -1215,7 +1314,10 @@
        "Funkwhale",
        "https://dev.funkwhale.audio/funkwhale/funkwhale",
        "partial",
-       "Music you own, shared with others"
+       "Music you own, shared with others",
+       {
+        "website": "https://www.funkwhale.audio"
+       }
       ]
      ]
     },

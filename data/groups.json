@@ -1340,6 +1340,16 @@
      "project": "debian",
      "fit": "full",
      "note": null
+    },
+    {
+     "project": "arch-linux",
+     "fit": "full",
+     "note": "For experienced users: you choose and set up every part"
+    },
+    {
+     "project": "cachyos",
+     "fit": "full",
+     "note": "Based on Arch, tuned for speed, with an easy installer"
     }
    ]
   },

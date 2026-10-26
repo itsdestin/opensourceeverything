@@ -8425,5 +8425,106 @@
    "inference_geo": "global",
    "speed": "standard"
   }
+ },
+ {
+  "id": "starter:cachyos",
+  "name": "CachyOS",
+  "repo": "https://cachyos.org",
+  "answer": {
+   "summary": "CachyOS is a free Linux operating system for computers, built on Arch Linux and tuned to run faster. It is aimed at people who want a speedy desktop with an easy installer and a choice of desktop environments.",
+   "replaces": [
+    {
+     "closedApp": "Microsoft Windows",
+     "fit": "full",
+     "reason": "CachyOS is a computer operating system that runs a laptop or desktop, which is the main job of Windows."
+    },
+    {
+     "closedApp": "macOS",
+     "fit": "full",
+     "reason": "CachyOS is a computer operating system that runs a laptop or desktop, which is the main job of macOS."
+    }
+   ],
+   "kind": "app",
+   "license": {
+    "verdict": "unclear",
+    "note": "No license was reported by the host and no license file was provided, so the license cannot be confirmed from the material given."
+   },
+   "groups": [
+    "desktop-os"
+   ],
+   "newGroup": null,
+   "unconfirmed": [
+    "License terms for CachyOS and its packages are not stated in the material given.",
+    "The README does not state whether CachyOS is free of charge beyond its donation requests.",
+    "The README does not say which desktop environments are installed by default."
+   ]
+  },
+  "usage": {
+   "input_tokens": 5050,
+   "cache_creation_input_tokens": 0,
+   "cache_read_input_tokens": 0,
+   "cache_creation": {
+    "ephemeral_5m_input_tokens": 0,
+    "ephemeral_1h_input_tokens": 0
+   },
+   "output_tokens": 356,
+   "output_tokens_details": {
+    "thinking_tokens": 0
+   },
+   "service_tier": "standard",
+   "inference_geo": "global",
+   "speed": "standard"
+  }
+ },
+ {
+  "id": "starter:archlinux",
+  "name": "Arch Linux",
+  "repo": "https://archlinux.org",
+  "answer": {
+   "summary": "Arch Linux is a lightweight Linux operating system that lets experienced users choose and set up every part of their computer. It is aimed at people who want a simple, flexible base and are comfortable doing their own setup.",
+   "replaces": [
+    {
+     "closedApp": "Microsoft Windows",
+     "fit": "full",
+     "reason": "Arch Linux is an operating system for laptops and desktops, which is the same job Windows does, though it is a different system with a different setup process."
+    },
+    {
+     "closedApp": "macOS",
+     "fit": "full",
+     "reason": "Arch Linux is an operating system for laptops and desktops, which is the same job macOS does, though it is a different system with a different setup process."
+    }
+   ],
+   "kind": "app",
+   "license": {
+    "verdict": "unclear",
+    "note": "The host did not report a license and no license file was provided, so the license cannot be confirmed from the material given."
+   },
+   "groups": [
+    "desktop-os"
+   ],
+   "newGroup": null,
+   "unconfirmed": [
+    "License not reported by host and no license file provided",
+    "Whether the project is open source is not stated in the README",
+    "Whether Arch Linux is free of cost is not stated in the README",
+    "Whether the README's claim of being lightweight and flexible applies to every install is not verified"
+   ]
+  },
+  "usage": {
+   "input_tokens": 6414,
+   "cache_creation_input_tokens": 0,
+   "cache_read_input_tokens": 0,
+   "cache_creation": {
+    "ephemeral_5m_input_tokens": 0,
+    "ephemeral_1h_input_tokens": 0
+   },
+   "output_tokens": 384,
+   "output_tokens_details": {
+    "thinking_tokens": 0
+   },
+   "service_tier": "standard",
+   "inference_geo": "global",
+   "speed": "standard"
+  }
  }
 ]

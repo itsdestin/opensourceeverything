@@ -1,5 +1,5 @@
 // One page per open-source project (p/<id>/): what it is, which groups it's listed in, and its facts.
-import { esc, url, SITE_URL, KIND, factChips, statusPill, hostOf, fmtStars } from '../lib.mjs';
+import { esc, url, SITE_URL, KIND, factChips, statusPill, hostOf, fmtStars, outLinks, codeUrl } from '../lib.mjs';
 
 const HOSTS = { 'github.com': 'GitHub', 'gitlab.com': 'GitLab', 'codeberg.org': 'Codeberg' };
 
@@ -7,10 +7,7 @@ export default function projectPages(d) {
   return d.projects.map((p) => {
     const listed = d.groupsByProject.get(p.id) ?? [];
     const host = HOSTS[hostOf(p)] ?? (p.code ? hostOf(p) : 'Its own website');
-    const links = [
-      p.code ? `<a class="btn md primary" href="https://${esc(p.code)}" rel="noopener">Code</a>` : '',
-      p.website ? `<a class="btn md ${p.code ? 'secondary' : 'primary'}" href="${esc(p.website)}" rel="noopener">Website</a>` : '',
-    ].filter(Boolean).join('');
+    const links = outLinks(p).map((l, i) => `<a class="btn md ${i ? 'secondary' : 'primary'}" href="${esc(l.href)}" rel="noopener">${l.label}</a>`).join('');
     const replaces = [...new Set(listed.flatMap(({ group }) => group.closed.slice(0, 3)))];
     const description = `${p.name}: ${p.summary}`.slice(0, 300);
 
@@ -60,7 +57,7 @@ export default function projectPages(d) {
 
     const jsonLd = {
       '@context': 'https://schema.org', '@type': 'SoftwareApplication', name: p.name, description: p.summary, url: `${SITE_URL}p/${p.id}/`,
-      ...(p.license ? { license: p.license } : {}), ...(p.code ? { codeRepository: `https://${p.code}` } : {}), ...(p.website ? { sameAs: p.website } : {}),
+      ...(p.license ? { license: p.license } : {}), ...(codeUrl(p) ? { codeRepository: codeUrl(p) } : {}), ...(p.website ? { sameAs: p.website } : {}),
       applicationCategory: listed[0]?.group.name,
     };
     return { path: `p/${p.id}/`, title: replaces.length ? `${p.name}: open-source alternative to ${replaces.slice(0, 2).join(' and ')}` : p.name, description, body, styles: ['group.css'], jsonLd };
