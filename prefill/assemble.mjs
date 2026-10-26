@@ -171,7 +171,9 @@ const confirmed = new Set(optional(join(ROOT, 'data/license-confirmed.json'))?.p
 for (const [id, f] of Object.entries(optional(join(HERE, 'license-fixes.json'))?.fixes ?? {})) {
   const p = projects.get(id); if (!p) continue;
   if (f.verdict === 'not_open') { dropProject(id); continue; }
-  if (f.verdict === 'open' || f.verdict === 'open_core') { p.license = f.license; p.licenseClass = f.verdict; p.licenseSource = f.evidence; }
+  // WHY confirmed here (Destin, Oct 27: "i dont wanna deal with this many things"): a license read from the
+  // project's own LICENSE file, with the link kept, counts as checked. Mods only see the unclear ones.
+  if (f.verdict === 'open' || f.verdict === 'open_core') { p.license = f.license; p.licenseClass = f.verdict; p.licenseSource = f.evidence; p.licenseNeedsCheck = false; }
 }
 for (const p of projects.values()) if (confirmed.has(p.id)) p.licenseNeedsCheck = false;
 // Verified tags: chosen by r/TrueOpenSource mods (data/verified.json): open-source license, maintained, really does the job.

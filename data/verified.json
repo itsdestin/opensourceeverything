@@ -1,4 +1,35 @@
 {
- "note": "Projects r/TrueOpenSource mods have checked themselves: an open-source license, still maintained, and it really does the job. Shown as a Verified chip. Mods add ids here (or ask Claude to). Proposals: docs/mod-review.md.",
- "projects": []
+ "note": "Projects r/TrueOpenSource mods vouch for: an open-source license, still maintained, and it really does the job. Shown as a Verified chip. Approved by Destin, Oct 27 (29 proposed in docs/mod-review.md, plus YouCoded).",
+ "projects": [
+  "libreoffice-writer",
+  "libreoffice-calc",
+  "libreoffice-impress",
+  "thunderbird",
+  "firefox",
+  "gimp",
+  "darktable",
+  "krita",
+  "inkscape",
+  "kdenlive",
+  "blender",
+  "obs-studio",
+  "linux-mint",
+  "fedora",
+  "grapheneos",
+  "immich",
+  "jellyfin",
+  "nextcloud",
+  "signal",
+  "element",
+  "jitsi-meet",
+  "organic-maps",
+  "logseq",
+  "penpot",
+  "stirling-pdf",
+  "home-assistant",
+  "actual-budget",
+  "aegis",
+  "mastodon",
+  "youcoded"
+ ]
 }

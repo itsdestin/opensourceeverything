@@ -13,7 +13,7 @@
    "download": "https://doc.e.foundation/devices",
    "license": "Apache-2.0",
    "licenseClass": "open",
-   "licenseNeedsCheck": true,
+   "licenseNeedsCheck": false,
    "stars": null,
    "archived": false,
    "inactive": false,
@@ -54,11 +54,17 @@
    "source": "starter",
    "verified": false,
    "release": "https://github.com/twofas/2fas-android/releases/tag/6.1.0",
-   "screenshots": [],
+   "screenshots": [
+    "https://2fas.com/_next/static/media/app-phone-light.547049aa.png",
+    "https://2fas.com/_next/static/media/app-pass-phone-light.beddf45b.png"
+   ],
    "platforms": [
     "android"
    ],
-   "thumbs": []
+   "thumbs": [
+    null,
+    null
+   ]
   },
   {
    "id": "abilian-hop3",
@@ -239,7 +245,7 @@
     "Closed app descriptions were not provided, so fit ratings rely on the list names alone."
    ],
    "source": "starter",
-   "verified": false,
+   "verified": true,
    "release": "https://github.com/actualbudget/actual/releases/tag/v26.10.0",
    "screenshots": [
     "https://raw.githubusercontent.com/actualbudget/actual/HEAD/demo.png"
@@ -274,7 +280,7 @@
     "The README says the app is for Android only; iOS support is not mentioned."
    ],
    "source": "starter",
-   "verified": false,
+   "verified": true,
    "release": "https://github.com/beemdevelopment/Aegis/releases/tag/v3.4.3",
    "screenshots": [
     "https://raw.githubusercontent.com/beemdevelopment/Aegis/HEAD/metadata/en-US/images/phoneScreenshots/screenshot6.png?raw=true",
@@ -487,11 +493,17 @@
    ],
    "verified": false,
    "release": "https://github.com/AnySoftKeyboard/AnySoftKeyboard/releases/tag/1.13-r2",
-   "screenshots": [],
+   "screenshots": [
+    "https://f-droid.org/repo/com.menny.android.anysoftkeyboard/en-US/phoneScreenshots/10109441489807555794.png",
+    "https://f-droid.org/repo/com.menny.android.anysoftkeyboard/en-US/phoneScreenshots/10377682646923045670.png"
+   ],
    "platforms": [
     "android"
    ],
-   "thumbs": []
+   "thumbs": [
+    null,
+    null
+   ]
   },
   {
    "id": "anythingllm",
@@ -741,7 +753,7 @@
    "download": "https://archlinux.org/download/",
    "license": "GPL-3.0",
    "licenseClass": "open",
-   "licenseNeedsCheck": true,
+   "licenseNeedsCheck": false,
    "stars": null,
    "archived": false,
    "inactive": false,
@@ -946,7 +958,7 @@
    "website": "https://automatisch.io",
    "license": "AGPL-3.0",
    "licenseClass": "open_core",
-   "licenseNeedsCheck": true,
+   "licenseNeedsCheck": false,
    "stars": 14000,
    "archived": false,
    "inactive": false,
@@ -1052,9 +1064,9 @@
    "kind": "self_hosted",
    "code": "gitlab.com/bramw/baserow",
    "website": "https://baserow.io/",
-   "license": null,
+   "license": "MIT",
    "licenseClass": "open_core",
-   "licenseNeedsCheck": true,
+   "licenseNeedsCheck": false,
    "stars": null,
    "archived": false,
    "inactive": false,
@@ -1075,6 +1087,7 @@
     "web",
     "server"
    ],
+   "licenseSource": "https://gitlab.com/bramw/baserow/-/raw/develop/LICENSE",
    "thumbs": []
   },
   {
@@ -1192,7 +1205,7 @@
    "download": null,
    "license": "GPL-3.0",
    "licenseClass": "open_core",
-   "licenseNeedsCheck": true,
+   "licenseNeedsCheck": false,
    "stars": 14063,
    "archived": false,
    "inactive": false,
@@ -1230,7 +1243,7 @@
    "download": "https://www.blender.org/download/",
    "license": "GPL-2.0-or-later",
    "licenseClass": "open",
-   "licenseNeedsCheck": true,
+   "licenseNeedsCheck": false,
    "stars": null,
    "archived": false,
    "inactive": false,
@@ -1240,7 +1253,7 @@
     "Whether the host's license field should be checked directly is not stated."
    ],
    "source": "starter",
-   "verified": false,
+   "verified": true,
    "screenshots": [
     "https://dl.flathub.org/media/org/blender/Blender/c6b07403115901571923d99f1b725b0e/screenshots/image-1_1248x703@1.png",
     "https://dl.flathub.org/media/org/blender/Blender/c6b07403115901571923d99f1b725b0e/screenshots/image-3_1248x702@1.png",
@@ -1367,7 +1380,7 @@
    "download": null,
    "license": "BSD-3-Clause",
    "licenseClass": "open",
-   "licenseNeedsCheck": true,
+   "licenseNeedsCheck": false,
    "stars": 13881,
    "archived": false,
    "inactive": false,
@@ -1464,9 +1477,9 @@
    "code": "https://code.briarproject.org/briar/briar",
    "website": "https://briarproject.org",
    "download": null,
-   "license": null,
+   "license": "GPL-3.0-or-later",
    "licenseClass": "open",
-   "licenseNeedsCheck": true,
+   "licenseNeedsCheck": false,
    "stars": null,
    "archived": false,
    "inactive": false,
@@ -1479,14 +1492,19 @@
    ],
    "source": "starter",
    "verified": false,
-   "screenshots": [],
+   "screenshots": [
+    "https://dl.flathub.org/media/org/briarproject/Briar/c2ef7fea27203052757438c993d8db84/screenshots/image-1_orig.png"
+   ],
    "platforms": [
     "windows",
     "mac",
     "linux",
     "android"
    ],
-   "thumbs": []
+   "licenseSource": "https://raw.githubusercontent.com/briar/briar/master/LICENSE.txt",
+   "thumbs": [
+    null
+   ]
   },
   {
    "id": "bruin",
@@ -1564,7 +1582,7 @@
    "website": "https://budibase.com",
    "license": "GPL-3.0",
    "licenseClass": "open_core",
-   "licenseNeedsCheck": true,
+   "licenseNeedsCheck": false,
    "stars": 28354,
    "archived": false,
    "inactive": false,
@@ -1618,11 +1636,15 @@
    ],
    "verified": false,
    "release": null,
-   "screenshots": [],
+   "screenshots": [
+    "https://upload.wikimedia.org/wikipedia/commons/0/09/Bugzilla.mozilla.org_screenshot.png"
+   ],
    "platforms": [
     "server"
    ],
-   "thumbs": []
+   "thumbs": [
+    null
+   ]
   },
   {
    "id": "buildbot",
@@ -1704,7 +1726,7 @@
    "download": "https://cachyos.org/download/",
    "license": "GPL-3.0",
    "licenseClass": "open",
-   "licenseNeedsCheck": true,
+   "licenseNeedsCheck": false,
    "stars": null,
    "archived": false,
    "inactive": false,
@@ -1799,7 +1821,7 @@
    "website": "https://CapRover.com",
    "license": "Apache-2.0",
    "licenseClass": "open",
-   "licenseNeedsCheck": true,
+   "licenseNeedsCheck": false,
    "stars": 15192,
    "archived": false,
    "inactive": false,
@@ -1976,7 +1998,7 @@
    "download": null,
    "license": "MPL-2.0",
    "licenseClass": "open",
-   "licenseNeedsCheck": true,
+   "licenseNeedsCheck": false,
    "stars": 3382,
    "archived": false,
    "inactive": false,
@@ -2012,7 +2034,7 @@
    "download": null,
    "license": "Apache-2.0",
    "licenseClass": "open",
-   "licenseNeedsCheck": true,
+   "licenseNeedsCheck": false,
    "stars": 2189,
    "archived": false,
    "inactive": false,
@@ -2335,7 +2357,7 @@
    "website": "https://cube.dev",
    "license": "Apache-2.0",
    "licenseClass": "open",
-   "licenseNeedsCheck": true,
+   "licenseNeedsCheck": false,
    "stars": 21075,
    "archived": false,
    "inactive": false,
@@ -2367,7 +2389,7 @@
    "website": "https://www.customermates.com",
    "license": "AGPL-3.0-only",
    "licenseClass": "open_core",
-   "licenseNeedsCheck": true,
+   "licenseNeedsCheck": false,
    "stars": 222,
    "archived": false,
    "inactive": false,
@@ -2409,7 +2431,7 @@
     "Whether the optional AI features require any paid or non-free components beyond the optional ONNX Runtime is not fully confirmed."
    ],
    "source": "starter",
-   "verified": false,
+   "verified": true,
    "release": "https://github.com/darktable-org/darktable/releases/tag/release-5.6.2",
    "screenshots": [
     "https://user-images.githubusercontent.com/45535283/148689197-e53dd75f-32f1-4297-9a0f-a9547fd4e7c7.jpg"
@@ -2495,7 +2517,7 @@
    "download": "https://www.debian.org/distrib/",
    "license": "GPL-2.0-or-later",
    "licenseClass": "open",
-   "licenseNeedsCheck": true,
+   "licenseNeedsCheck": false,
    "stars": null,
    "archived": false,
    "inactive": false,
@@ -2653,9 +2675,9 @@
    "code": "https://invent.kde.org/graphics/digikam",
    "website": "https://www.digikam.org",
    "download": null,
-   "license": null,
+   "license": "GPL-2.0-or-later",
    "licenseClass": "open",
-   "licenseNeedsCheck": true,
+   "licenseNeedsCheck": false,
    "stars": null,
    "archived": false,
    "inactive": false,
@@ -2667,13 +2689,22 @@
    ],
    "source": "starter",
    "verified": false,
-   "screenshots": [],
+   "screenshots": [
+    "https://dl.flathub.org/media/org/kde/digikam.desktop/bfdc34e6e097e2ce8fae542d45980247/screenshots/image-2_1248x605@1.png",
+    "https://dl.flathub.org/media/org/kde/digikam.desktop/bfdc34e6e097e2ce8fae542d45980247/screenshots/image-3_1248x804@1.png",
+    "https://dl.flathub.org/media/org/kde/digikam.desktop/bfdc34e6e097e2ce8fae542d45980247/screenshots/image-4_1248x746@1.png"
+   ],
    "platforms": [
     "windows",
     "mac",
     "linux"
    ],
-   "thumbs": []
+   "licenseSource": "https://invent.kde.org/graphics/digikam/-/raw/master/core/app/main/main.cpp",
+   "thumbs": [
+    null,
+    null,
+    null
+   ]
   },
   {
    "id": "discourse",
@@ -2920,7 +2951,7 @@
    "website": "https://dub.co",
    "license": "AGPL-3.0",
    "licenseClass": "open_core",
-   "licenseNeedsCheck": true,
+   "licenseNeedsCheck": false,
    "stars": 24947,
    "archived": false,
    "inactive": false,
@@ -3021,7 +3052,7 @@
     "Specific feature parity with Slack, Teams, WhatsApp or Telegram."
    ],
    "source": "starter",
-   "verified": false,
+   "verified": true,
    "release": "https://github.com/element-hq/element-web/releases/tag/v1.12.32",
    "screenshots": [
     "https://dl.flathub.org/media/im/riot/Riot/74b860715fb8cfcdf59807de6709ceb3/screenshots/image-1_1248x679@1.png"
@@ -3410,11 +3441,19 @@
    "source": "starter",
    "verified": false,
    "release": "https://github.com/M66B/FairEmail/releases/tag/1.2339",
-   "screenshots": [],
+   "screenshots": [
+    "https://f-droid.org/repo/eu.faircode.email/en-US/phoneScreenshots/2_messages.png",
+    "https://f-droid.org/repo/eu.faircode.email/en-US/phoneScreenshots/1_navigation.png",
+    "https://f-droid.org/repo/eu.faircode.email/en-US/phoneScreenshots/3_messages-black.png"
+   ],
    "platforms": [
     "android"
    ],
-   "thumbs": []
+   "thumbs": [
+    null,
+    null,
+    null
+   ]
   },
   {
    "id": "faraday",
@@ -3464,7 +3503,7 @@
    "download": "https://fedoraproject.org/workstation/download",
    "license": "GPL-2.0-or-later",
    "licenseClass": "open",
-   "licenseNeedsCheck": true,
+   "licenseNeedsCheck": false,
    "stars": null,
    "archived": false,
    "inactive": false,
@@ -3474,7 +3513,7 @@
     "Descriptions from community lists were not provided."
    ],
    "source": "starter",
-   "verified": false,
+   "verified": true,
    "screenshots": [
     "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/1d/Fedora_42_Workstation_Desktop_English.png/1280px-Fedora_42_Workstation_Desktop_English.png",
     "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/86/Fedora_42_KDE_Plasma_Desktop_English.png/1280px-Fedora_42_KDE_Plasma_Desktop_English.png"
@@ -3616,7 +3655,7 @@
    "download": null,
    "license": "MPL-2.0",
    "licenseClass": "open",
-   "licenseNeedsCheck": true,
+   "licenseNeedsCheck": false,
    "stars": 13588,
    "archived": false,
    "inactive": false,
@@ -3626,7 +3665,7 @@
     "No list descriptions were provided."
    ],
    "source": "starter",
-   "verified": false,
+   "verified": true,
    "release": null,
    "screenshots": [
     "https://dl.flathub.org/media/org.mozilla.firefox-stable/1504x846/org.mozilla.firefox-c6f98b38b8b28b113a75a6b34037b759.png",
@@ -3819,34 +3858,6 @@
    "thumbs": []
   },
   {
-   "id": "font-awesome",
-   "name": "Font-Awesome",
-   "summary": "Font Awesome is a free library of icons and fonts that designers and developers add to websites and apps. It is for anyone who needs ready-made symbols like arrows, social logos and tools.",
-   "kind": "library",
-   "code": "github.com/FortAwesome/Font-Awesome",
-   "website": "https://fontawesome.com",
-   "license": null,
-   "licenseClass": "open",
-   "licenseNeedsCheck": true,
-   "stars": 76994,
-   "archived": false,
-   "inactive": false,
-   "unconfirmed": [
-    "The Noun Project's exact offering and whether Font Awesome covers the same use cases was not described in the material.",
-    "Whether the Pro edition or paid parts exist was not addressed in the README, so the open verdict covers the Free download only.",
-    "Descriptions from the lists were empty, so no list-provided job description was available."
-   ],
-   "source": "lists",
-   "sourceLists": [
-    "open-source-alternatives"
-   ],
-   "verified": false,
-   "release": "https://github.com/FortAwesome/Font-Awesome/releases/tag/7.3.1",
-   "screenshots": [],
-   "platforms": [],
-   "thumbs": []
-  },
-  {
    "id": "forgejo",
    "name": "Forgejo",
    "summary": "Forgejo is a self-hosted place to store and work on code together with others. It is aimed at people who want to run their own code hosting service.",
@@ -3856,7 +3867,7 @@
    "download": null,
    "license": "GPL-3.0-or-later",
    "licenseClass": "open",
-   "licenseNeedsCheck": true,
+   "licenseNeedsCheck": false,
    "stars": 5718,
    "archived": false,
    "inactive": false,
@@ -4207,7 +4218,7 @@
    "download": null,
    "license": "AGPL-3.0",
    "licenseClass": "open",
-   "licenseNeedsCheck": true,
+   "licenseNeedsCheck": false,
    "stars": null,
    "archived": false,
    "inactive": false,
@@ -4363,13 +4374,17 @@
    "source": "starter",
    "verified": false,
    "release": "https://github.com/google-gemini/gemini-cli/releases/tag/v0.65.0",
-   "screenshots": [],
+   "screenshots": [
+    "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/56/Gemini_CLI_screenshot.png/1280px-Gemini_CLI_screenshot.png"
+   ],
    "platforms": [
     "windows",
     "mac",
     "linux"
    ],
-   "thumbs": []
+   "thumbs": [
+    null
+   ]
   },
   {
    "id": "gerrit",
@@ -4476,7 +4491,7 @@
    "download": "https://www.gimp.org/downloads/",
    "license": "GPL-3.0-or-later",
    "licenseClass": "open",
-   "licenseNeedsCheck": true,
+   "licenseNeedsCheck": false,
    "stars": null,
    "archived": false,
    "inactive": false,
@@ -4488,7 +4503,7 @@
     "Community descriptions of the closed apps (the lists gave none)"
    ],
    "source": "starter",
-   "verified": false,
+   "verified": true,
    "screenshots": [
     "https://dl.flathub.org/media/org/gimp/GIMP/95e6d7d59d33a0f9364535dbe023d807/screenshots/image-2_1248x681@1.png",
     "https://dl.flathub.org/media/org/gimp/GIMP/95e6d7d59d33a0f9364535dbe023d807/screenshots/image-1_1248x702@1.png",
@@ -4555,7 +4570,7 @@
    "website": "https://about.gitlab.com/getting-help/",
    "license": "MIT",
    "licenseClass": "open_core",
-   "licenseNeedsCheck": true,
+   "licenseNeedsCheck": false,
    "stars": 24544,
    "archived": false,
    "inactive": false,
@@ -4615,7 +4630,7 @@
    "download": null,
    "license": "GPL-2.0-only",
    "licenseClass": "open",
-   "licenseNeedsCheck": true,
+   "licenseNeedsCheck": false,
    "stars": null,
    "archived": false,
    "inactive": false,
@@ -4644,9 +4659,9 @@
    "kind": "self_hosted",
    "code": "github.com/arp242/goatcounter",
    "website": "https://www.goatcounter.com",
-   "license": null,
+   "license": "EUPL-1.2",
    "licenseClass": "open",
-   "licenseNeedsCheck": true,
+   "licenseNeedsCheck": false,
    "stars": 6100,
    "archived": false,
    "inactive": false,
@@ -4665,6 +4680,7 @@
     "linux",
     "server"
    ],
+   "licenseSource": "https://raw.githubusercontent.com/arp242/goatcounter/main/LICENSE",
    "thumbs": []
   },
   {
@@ -4774,7 +4790,7 @@
    "download": "https://grapheneos.org/install/",
    "license": "MIT",
    "licenseClass": "open",
-   "licenseNeedsCheck": true,
+   "licenseNeedsCheck": false,
    "stars": null,
    "archived": false,
    "inactive": false,
@@ -4784,7 +4800,7 @@
     "Whether iOS is replaced in any sense: the material gives no basis for this."
    ],
    "source": "starter",
-   "verified": false,
+   "verified": true,
    "screenshots": [
     "https://upload.wikimedia.org/wikipedia/commons/8/8e/GrapheneOS_%22Apps%22_app.png",
     "https://upload.wikimedia.org/wikipedia/commons/0/0c/GrapheneOS_home_screen_Android_17.png"
@@ -4841,7 +4857,7 @@
    "website": "https://netmaker.io",
    "license": "Apache-2.0",
    "licenseClass": "open_core",
-   "licenseNeedsCheck": true,
+   "licenseNeedsCheck": false,
    "stars": 11838,
    "archived": false,
    "inactive": false,
@@ -4914,7 +4930,7 @@
    "website": "https://www.growthbook.io",
    "license": "MIT",
    "licenseClass": "open_core",
-   "licenseNeedsCheck": true,
+   "licenseNeedsCheck": false,
    "stars": 8532,
    "archived": false,
    "inactive": false,
@@ -5061,12 +5077,18 @@
    "source": "starter",
    "verified": false,
    "release": "https://github.com/NousResearch/hermes-agent/releases/tag/v0.22.5",
-   "screenshots": [],
+   "screenshots": [
+    "https://raw.githubusercontent.com/NousResearch/hermes-agent/main/website/static/img/docs/dashboard-models/overview.png",
+    "https://raw.githubusercontent.com/NousResearch/hermes-agent/main/website/static/img/kanban-tutorial/01-board-overview.png"
+   ],
    "platforms": [
     "mac",
     "linux"
    ],
-   "thumbs": []
+   "thumbs": [
+    null,
+    null
+   ]
   },
   {
    "id": "heyform",
@@ -5106,9 +5128,9 @@
    "kind": "self_hosted",
    "code": "github.com/highlight/highlight",
    "website": "https://app.highlight.io",
-   "license": null,
+   "license": "Apache-2.0",
    "licenseClass": "open_core",
-   "licenseNeedsCheck": true,
+   "licenseNeedsCheck": false,
    "stars": 9384,
    "archived": false,
    "inactive": false,
@@ -5132,6 +5154,7 @@
    "platforms": [
     "server"
    ],
+   "licenseSource": "https://raw.githubusercontent.com/highlight/highlight/main/LICENSE",
    "thumbs": [
     null,
     null,
@@ -5158,7 +5181,7 @@
     "No closed-app descriptions were provided to confirm the replacement claims."
    ],
    "source": "starter",
-   "verified": false,
+   "verified": true,
    "release": "https://github.com/home-assistant/core/releases/tag/2026.10.4",
    "screenshots": [
     "https://raw.githubusercontent.com/home-assistant/core/dev/.github/assets/screenshot-integrations.png"
@@ -5356,7 +5379,7 @@
     "Descriptions of the closed apps from the lists were not provided."
    ],
    "source": "starter",
-   "verified": false,
+   "verified": true,
    "release": "https://github.com/immich-app/immich/releases/tag/v3.3.5",
    "screenshots": [
     "https://raw.githubusercontent.com/immich-app/immich/HEAD/design/immich-screenshots.png"
@@ -5379,7 +5402,7 @@
    "website": null,
    "license": "Apache-2.0",
    "licenseClass": "open",
-   "licenseNeedsCheck": true,
+   "licenseNeedsCheck": false,
    "stars": null,
    "archived": false,
    "inactive": false,
@@ -5475,7 +5498,7 @@
    "download": null,
    "license": "GPL-2.0-or-later",
    "licenseClass": "open",
-   "licenseNeedsCheck": true,
+   "licenseNeedsCheck": false,
    "stars": 4017,
    "archived": false,
    "inactive": false,
@@ -5484,7 +5507,7 @@
     "Whether Inkscape runs on phones; the README only covers desktop-style use and downloads."
    ],
    "source": "starter",
-   "verified": false,
+   "verified": true,
    "release": "https://gitlab.com/inkscape/inkscape/-/releases/INKSCAPE_1_4",
    "screenshots": [
     "https://dl.flathub.org/media/org/inkscape/Inkscape/d06b79da7ad6df73032683fbcf8c4d56/screenshots/image-1_1248x767@1.png",
@@ -5547,9 +5570,9 @@
    "kind": "app",
    "code": "codeberg.org/inventaire/inventaire",
    "website": "https://wiki.inventaire.io/wiki/Inventaire_software",
-   "license": null,
+   "license": "AGPL-3.0",
    "licenseClass": "open",
-   "licenseNeedsCheck": true,
+   "licenseNeedsCheck": false,
    "stars": null,
    "archived": false,
    "inactive": false,
@@ -5569,6 +5592,7 @@
     "web",
     "server"
    ],
+   "licenseSource": "https://codeberg.org/inventaire/inventaire/raw/branch/main/README.md",
    "thumbs": []
   },
   {
@@ -5627,7 +5651,10 @@
    "source": "starter",
    "verified": false,
    "release": null,
-   "screenshots": [],
+   "screenshots": [
+    "https://dl.flathub.org/media/net/jami/Jami/3eeca5b736fa712e07bd3ea9894b0fd2/screenshots/image-2_1248x624@1.png",
+    "https://dl.flathub.org/media/net/jami/Jami/3eeca5b736fa712e07bd3ea9894b0fd2/screenshots/image-3_1248x624@1.png"
+   ],
    "platforms": [
     "windows",
     "mac",
@@ -5635,7 +5662,10 @@
     "android",
     "ios"
    ],
-   "thumbs": []
+   "thumbs": [
+    null,
+    null
+   ]
   },
   {
    "id": "jan",
@@ -5726,7 +5756,7 @@
     "The lists gave no descriptions, so the replacement fit rests on the README wording alone."
    ],
    "source": "starter",
-   "verified": false,
+   "verified": true,
    "release": "https://github.com/jellyfin/jellyfin/releases/tag/v12.3",
    "screenshots": [
     "https://jellyfin.org/assets/images/10.8-home-4a73a92bf90d1eeffa5081201ca9c7bb.png"
@@ -5789,7 +5819,7 @@
     "The README does not state whether all features are free on the self-hosted version."
    ],
    "source": "starter",
-   "verified": false,
+   "verified": true,
    "release": "https://github.com/jitsi/jitsi-meet/releases/tag/stable/jitsi-meet_11248",
    "screenshots": [
     "https://raw.githubusercontent.com/jitsi/jitsi-meet/master/readme-img1.png"
@@ -5846,7 +5876,7 @@
    "download": null,
    "license": "AGPL-3.0-or-later",
    "licenseClass": "open_core",
-   "licenseNeedsCheck": true,
+   "licenseNeedsCheck": false,
    "stars": 56879,
    "archived": false,
    "inactive": false,
@@ -5918,7 +5948,7 @@
    "download": "https://kdenlive.org/download/",
    "license": "GPL-3.0-only",
    "licenseClass": "open",
-   "licenseNeedsCheck": true,
+   "licenseNeedsCheck": false,
    "stars": null,
    "archived": false,
    "inactive": false,
@@ -5928,7 +5958,7 @@
     "Operating systems supported are not stated in the material."
    ],
    "source": "starter",
-   "verified": false,
+   "verified": true,
    "screenshots": [
     "https://dl.flathub.org/media/org/kde/kdenlive.desktop/ed746a0f36b42446cedf1605b1c4f0cb/screenshots/image-5_orig.png",
     "https://dl.flathub.org/media/org/kde/kdenlive.desktop/ed746a0f36b42446cedf1605b1c4f0cb/screenshots/image-1_orig.png",
@@ -5987,7 +6017,7 @@
    "download": null,
    "license": "GPL-3.0-only",
    "licenseClass": "open",
-   "licenseNeedsCheck": true,
+   "licenseNeedsCheck": false,
    "stars": 29507,
    "archived": false,
    "inactive": false,
@@ -6125,7 +6155,7 @@
    "website": "https://keyoxide.org",
    "license": "AGPL-3.0",
    "licenseClass": "open",
-   "licenseNeedsCheck": true,
+   "licenseNeedsCheck": false,
    "stars": null,
    "archived": false,
    "inactive": false,
@@ -6226,7 +6256,7 @@
    "download": null,
    "license": "GPL-2.0-or-later",
    "licenseClass": "open",
-   "licenseNeedsCheck": true,
+   "licenseNeedsCheck": false,
    "stars": 21388,
    "archived": false,
    "inactive": false,
@@ -6298,7 +6328,7 @@
    "download": "https://krita.org/en/download/",
    "license": "GPL-3.0",
    "licenseClass": "open",
-   "licenseNeedsCheck": true,
+   "licenseNeedsCheck": false,
    "stars": null,
    "archived": false,
    "inactive": false,
@@ -6308,7 +6338,7 @@
     "The README does not describe photo editing features, so the photo-editing group and the Photoshop and Affinity Photo fits rest on the list descriptions only."
    ],
    "source": "starter",
-   "verified": false,
+   "verified": true,
    "screenshots": [
     "https://dl.flathub.org/media/org/kde/krita/1348962dcc0842250c4ce6876acc36cc/screenshots/image-1_1248x677@1.png",
     "https://dl.flathub.org/media/org/kde/krita/1348962dcc0842250c4ce6876acc36cc/screenshots/image-4_1248x677@1.png",
@@ -6665,11 +6695,17 @@
    "source": "starter",
    "verified": false,
    "release": null,
-   "screenshots": [],
+   "screenshots": [
+    "https://www.librechat.ai/_next/static/media/demo_light.f6e232d4.png",
+    "https://www.librechat.ai/_next/static/media/demo_dark.102d59a6.png"
+   ],
    "platforms": [
     "server"
    ],
-   "thumbs": []
+   "thumbs": [
+    null,
+    null
+   ]
   },
   {
    "id": "librengine",
@@ -6716,7 +6752,7 @@
    "download": "https://www.libreoffice.org/download/download-libreoffice/",
    "license": "MPL-2.0",
    "licenseClass": "open",
-   "licenseNeedsCheck": true,
+   "licenseNeedsCheck": false,
    "stars": null,
    "archived": false,
    "inactive": false,
@@ -6726,7 +6762,7 @@
     "Whether the code repository's build and platform details apply to the Calc app as shipped to end users."
    ],
    "source": "starter",
-   "verified": false,
+   "verified": true,
    "screenshots": [
     "https://dl.flathub.org/media/org/libreoffice/LibreOffice/6a06e0ec2876ffc989b0e2a1340d3331/screenshots/image-2_orig.png"
    ],
@@ -6750,7 +6786,7 @@
    "download": "https://www.libreoffice.org/download/download-libreoffice/",
    "license": "MPL-2.0",
    "licenseClass": "open",
-   "licenseNeedsCheck": true,
+   "licenseNeedsCheck": false,
    "stars": null,
    "archived": false,
    "inactive": false,
@@ -6760,7 +6796,7 @@
     "Supported platforms for the Impress app itself were not stated beyond the build and runtime requirements for the suite."
    ],
    "source": "starter",
-   "verified": false,
+   "verified": true,
    "screenshots": [
     "https://dl.flathub.org/media/org/libreoffice/LibreOffice/6a06e0ec2876ffc989b0e2a1340d3331/screenshots/image-3_orig.png"
    ],
@@ -6784,7 +6820,7 @@
    "download": "https://www.libreoffice.org/download/download-libreoffice/",
    "license": "MPL-2.0",
    "licenseClass": "open",
-   "licenseNeedsCheck": true,
+   "licenseNeedsCheck": false,
    "stars": null,
    "archived": false,
    "inactive": false,
@@ -6794,7 +6830,7 @@
     "How Writer compares to Apple Pages in features."
    ],
    "source": "starter",
-   "verified": false,
+   "verified": true,
    "screenshots": [
     "https://dl.flathub.org/media/org/libreoffice/LibreOffice/6a06e0ec2876ffc989b0e2a1340d3331/screenshots/image-1_orig.png"
    ],
@@ -6919,7 +6955,7 @@
    "download": null,
    "license": "MPL-2.0",
    "licenseClass": "open",
-   "licenseNeedsCheck": true,
+   "licenseNeedsCheck": false,
    "stars": 1351,
    "archived": false,
    "inactive": false,
@@ -6953,7 +6989,7 @@
    "website": "https://lightdash.com",
    "license": "MIT",
    "licenseClass": "open_core",
-   "licenseNeedsCheck": true,
+   "licenseNeedsCheck": false,
    "stars": 6198,
    "archived": false,
    "inactive": false,
@@ -7020,7 +7056,7 @@
    "download": "https://wiki.lineageos.org/devices/",
    "license": "Apache-2.0",
    "licenseClass": "open",
-   "licenseNeedsCheck": true,
+   "licenseNeedsCheck": false,
    "stars": null,
    "archived": false,
    "inactive": false,
@@ -7032,7 +7068,6 @@
    "source": "starter",
    "verified": false,
    "screenshots": [
-    "https://upload.wikimedia.org/wikipedia/commons/e/e6/LineageOS_20_home_screen.png",
     "https://upload.wikimedia.org/wikipedia/commons/a/aa/LineageOS_22.1_Home_Screen.png"
    ],
    "platforms": [
@@ -7040,7 +7075,6 @@
    ],
    "licenseSource": "https://raw.githubusercontent.com/LineageOS/android_vendor_lineage/lineage-23.0/LICENSE",
    "thumbs": [
-    null,
     null
    ]
   },
@@ -7054,7 +7088,7 @@
    "download": "https://linuxmint.com/download.php",
    "license": "GPL-3.0-or-later",
    "licenseClass": "open",
-   "licenseNeedsCheck": true,
+   "licenseNeedsCheck": false,
    "stars": null,
    "archived": false,
    "inactive": false,
@@ -7064,7 +7098,7 @@
     "Any direct comparison with macOS beyond being a desktop operating system."
    ],
    "source": "starter",
-   "verified": false,
+   "verified": true,
    "screenshots": [
     "https://linuxmint.com/web/img/screenshots/c1.jpg",
     "https://linuxmint.com/web/img/screenshots/c5.jpg"
@@ -7273,7 +7307,7 @@
     "Whether the README's claims about PDF annotation and task management match the features in the current release."
    ],
    "source": "starter",
-   "verified": false,
+   "verified": true,
    "release": "https://github.com/logseq/logseq/releases/tag/2.0.2",
    "screenshots": [
     "https://user-images.githubusercontent.com/25513724/221387376-4dc419c2-0d0a-460c-a920-2d211e78b456.gif"
@@ -7511,7 +7545,7 @@
     "The official public mastodon servers' hosting terms are not stated in the material given."
    ],
    "source": "starter",
-   "verified": false,
+   "verified": true,
    "release": "https://github.com/mastodon/mastodon/releases/tag/v4.7.3",
    "screenshots": [
     "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/57/Mastodon-v4.3.1-screenshot.jpg/1280px-Mastodon-v4.3.1-screenshot.jpg",
@@ -7672,7 +7706,7 @@
    "website": "https://www.mediawiki.org",
    "license": "GPL-2.0-or-later",
    "licenseClass": "open",
-   "licenseNeedsCheck": true,
+   "licenseNeedsCheck": false,
    "stars": 5214,
    "archived": false,
    "inactive": false,
@@ -7686,13 +7720,19 @@
    ],
    "verified": false,
    "release": null,
-   "screenshots": [],
+   "screenshots": [
+    "https://upload.wikimedia.org/wikipedia/commons/a/af/20210524_MediaWiki_software_screenshot_en.png",
+    "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/1b/Screenshot_of_Winter%2C_a_proposed_MediaWiki_theme.png/1280px-Screenshot_of_Winter%2C_a_proposed_MediaWiki_theme.png"
+   ],
    "platforms": [
     "web",
     "server"
    ],
    "licenseSource": "https://raw.githubusercontent.com/wikimedia/mediawiki/master/COPYING",
-   "thumbs": []
+   "thumbs": [
+    null,
+    null
+   ]
   },
   {
    "id": "medusa",
@@ -7730,7 +7770,7 @@
    "website": "https://www.meilisearch.com",
    "license": "MIT",
    "licenseClass": "open_core",
-   "licenseNeedsCheck": true,
+   "licenseNeedsCheck": false,
    "stars": 59673,
    "archived": false,
    "inactive": false,
@@ -7822,7 +7862,9 @@
    ],
    "verified": false,
    "release": "https://github.com/Ylianst/MeshCentral/releases/tag/1.3.1",
-   "screenshots": [],
+   "screenshots": [
+    "https://thumb.wikimedia.org/wikipedia/commons/thumb/9/93/MeshCentral_device_overview.png/1280px-MeshCentral_device_overview.png"
+   ],
    "platforms": [
     "windows",
     "mac",
@@ -7830,7 +7872,9 @@
     "android",
     "server"
    ],
-   "thumbs": []
+   "thumbs": [
+    null
+   ]
   },
   {
    "id": "metabase",
@@ -7841,7 +7885,7 @@
    "website": "https://metabase.com",
    "license": "AGPL-3.0",
    "licenseClass": "open_core",
-   "licenseNeedsCheck": true,
+   "licenseNeedsCheck": false,
    "stars": 49845,
    "archived": false,
    "inactive": false,
@@ -7976,7 +8020,7 @@
    "website": "https://synmetrix.org",
    "license": "Apache-2.0",
    "licenseClass": "open",
-   "licenseNeedsCheck": true,
+   "licenseNeedsCheck": false,
    "stars": 626,
    "archived": false,
    "inactive": true,
@@ -8205,7 +8249,7 @@
    "website": "https://netbird.io",
    "license": "BSD-3-Clause",
    "licenseClass": "open",
-   "licenseNeedsCheck": true,
+   "licenseNeedsCheck": false,
    "stars": 30226,
    "archived": false,
    "inactive": false,
@@ -8417,7 +8461,7 @@
     "Whether the apps listed in the README (Calendar, Contacts, Mail) are part of this repository."
    ],
    "source": "starter",
-   "verified": false,
+   "verified": true,
    "release": "https://github.com/nextcloud/server/releases/tag/v33.0.10",
    "screenshots": [
     "https://raw.githubusercontent.com/nextcloud/screenshots/master/nextcloud-hub-25-files.png"
@@ -8936,7 +8980,7 @@
     "Whether OBS includes stream alerts and overlay store features like Streamlabs"
    ],
    "source": "starter",
-   "verified": false,
+   "verified": true,
    "release": "https://github.com/obsproject/obs-studio/releases/tag/33.0.0",
    "screenshots": [
     "https://dl.flathub.org/media/com/obsproject/Studio/d95756e227c3b10951a83e14e063c185/screenshots/image-1_orig.png"
@@ -8998,7 +9042,7 @@
    "website": "https://www.odoo.com",
    "license": "LGPL-3.0",
    "licenseClass": "open_core",
-   "licenseNeedsCheck": true,
+   "licenseNeedsCheck": false,
    "stars": 55324,
    "archived": false,
    "inactive": false,
@@ -9069,7 +9113,7 @@
    "download": "https://okular.kde.org/download/",
    "license": "GPL-2.0-or-later",
    "licenseClass": "open",
-   "licenseNeedsCheck": true,
+   "licenseNeedsCheck": false,
    "stars": null,
    "archived": false,
    "inactive": false,
@@ -9117,13 +9161,17 @@
    "source": "starter",
    "verified": false,
    "release": "https://github.com/ollama/ollama/releases/tag/v0.40.11",
-   "screenshots": [],
+   "screenshots": [
+    "https://files.ollama.com/ollama-app-screenshot.png"
+   ],
    "platforms": [
     "windows",
     "mac",
     "linux"
    ],
-   "thumbs": []
+   "thumbs": [
+    null
+   ]
   },
   {
    "id": "omniedge",
@@ -9383,13 +9431,17 @@
    "source": "starter",
    "verified": false,
    "release": "https://github.com/openclaw/openclaw/releases/tag/v2026.10.7",
-   "screenshots": [],
+   "screenshots": [
+    "https://raw.githubusercontent.com/openclaw/openclaw/main/.github/pr-proof/claw-creator/main-chat.png"
+   ],
    "platforms": [
     "windows",
     "mac",
     "linux"
    ],
-   "thumbs": []
+   "thumbs": [
+    null
+   ]
   },
   {
    "id": "opencode",
@@ -9572,9 +9624,9 @@
    "kind": "self_hosted",
    "code": "github.com/openreplay/openreplay",
    "website": "https://openreplay.com",
-   "license": null,
+   "license": "AGPL-3.0",
    "licenseClass": "open_core",
-   "licenseNeedsCheck": true,
+   "licenseNeedsCheck": false,
    "stars": 13052,
    "archived": false,
    "inactive": false,
@@ -9597,6 +9649,7 @@
     "web",
     "server"
    ],
+   "licenseSource": "https://raw.githubusercontent.com/openreplay/openreplay/main/LICENSE",
    "thumbs": [
     null
    ]
@@ -9822,7 +9875,7 @@
     "Exact feature parity with Google Maps or Apple Maps beyond the README's feature list"
    ],
    "source": "starter",
-   "verified": false,
+   "verified": true,
    "release": "https://github.com/organicmaps/organicmaps/releases/tag/2026.09.29-32-android",
    "screenshots": [
     "https://raw.githubusercontent.com/organicmaps/organicmaps/HEAD/android/app/src/fdroid/play/listings/en-US/graphics/phone-screenshots/1.jpg",
@@ -9960,12 +10013,16 @@
    "source": "starter",
    "verified": false,
    "release": "https://github.com/owncast/owncast/releases/tag/v0.3.0",
-   "screenshots": [],
+   "screenshots": [
+    "https://raw.githubusercontent.com/owncast/owncast/develop/web/.storybook/story-assets/project/owncast-browser-mobile.png"
+   ],
    "platforms": [
     "web",
     "server"
    ],
-   "thumbs": []
+   "thumbs": [
+    null
+   ]
   },
   {
    "id": "owncloud",
@@ -10297,7 +10354,7 @@
     "Whether Penpot can produce posters, social posts or slides from templates is not stated; the list says it has no template library like Canva's."
    ],
    "source": "starter",
-   "verified": false,
+   "verified": true,
    "release": "https://github.com/penpot/penpot/releases/tag/2.18.5",
    "screenshots": [
     "https://github.com/user-attachments/assets/cce75ad6-f783-473f-8803-da9eb8255fef",
@@ -10392,7 +10449,7 @@
    "download": null,
    "license": "AGPL-3.0",
    "licenseClass": "open",
-   "licenseNeedsCheck": true,
+   "licenseNeedsCheck": false,
    "stars": 265,
    "archived": false,
    "inactive": false,
@@ -10464,13 +10521,17 @@
    "source": "starter",
    "verified": false,
    "release": "https://github.com/PintaProject/Pinta/releases/tag/3.1.2",
-   "screenshots": [],
+   "screenshots": [
+    "https://dl.flathub.org/media/com/github/PintaProject.Pinta/6036b596f8f5a6ce7c2dc8a7d9c0565f/screenshots/image-1_orig.png"
+   ],
    "platforms": [
     "windows",
     "mac",
     "linux"
    ],
-   "thumbs": []
+   "thumbs": [
+    null
+   ]
   },
   {
    "id": "pixelfed",
@@ -10709,9 +10770,9 @@
    "code": "https://github.com/pop-os",
    "website": "https://system76.com/pop/",
    "download": null,
-   "license": null,
+   "license": "GPL-3.0",
    "licenseClass": "open",
-   "licenseNeedsCheck": true,
+   "licenseNeedsCheck": false,
    "stars": null,
    "archived": false,
    "inactive": false,
@@ -10723,11 +10784,18 @@
    ],
    "source": "starter",
    "verified": false,
-   "screenshots": [],
+   "screenshots": [
+    "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/49/Pop%21_OS_24.04_LTS_Settings_Desktop_-_English.png/1280px-Pop%21_OS_24.04_LTS_Settings_Desktop_-_English.png",
+    "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/3e/Pop%21_OS_24.04_LTS_default_desktop_-_English.png/1280px-Pop%21_OS_24.04_LTS_default_desktop_-_English.png"
+   ],
    "platforms": [
     "linux"
    ],
-   "thumbs": []
+   "licenseSource": "https://raw.githubusercontent.com/pop-os/installer/master/COPYING",
+   "thumbs": [
+    null,
+    null
+   ]
   },
   {
    "id": "posnic-pos",
@@ -10803,9 +10871,9 @@
    "kind": "self_hosted",
    "code": "github.com/PostHog/posthog",
    "website": "https://posthog.com",
-   "license": null,
+   "license": "MIT",
    "licenseClass": "open_core",
-   "licenseNeedsCheck": true,
+   "licenseNeedsCheck": false,
    "stars": 40447,
    "archived": false,
    "inactive": false,
@@ -10829,6 +10897,7 @@
     "web",
     "server"
    ],
+   "licenseSource": "https://raw.githubusercontent.com/PostHog/posthog/master/LICENSE",
    "thumbs": []
   },
   {
@@ -10881,7 +10950,7 @@
    "download": "https://postmarketos.org/download/",
    "license": "GPL-3.0-or-later",
    "licenseClass": "open",
-   "licenseNeedsCheck": true,
+   "licenseNeedsCheck": false,
    "stars": null,
    "archived": false,
    "inactive": false,
@@ -10952,7 +11021,7 @@
    "website": "https://www.prestashop-project.org/",
    "license": "OSL-3.0",
    "licenseClass": "open",
-   "licenseNeedsCheck": true,
+   "licenseNeedsCheck": false,
    "stars": 9235,
    "archived": false,
    "inactive": false,
@@ -11286,7 +11355,7 @@
    "website": "https://www.redmine.org",
    "license": "GPL-2.0-or-later",
    "licenseClass": "open",
-   "licenseNeedsCheck": true,
+   "licenseNeedsCheck": false,
    "stars": 6061,
    "archived": false,
    "inactive": false,
@@ -11468,9 +11537,9 @@
    "kind": "developer_tool",
    "code": "github.com/buildship-ai/rowy",
    "website": "http://rowy.io",
-   "license": null,
+   "license": "Apache-2.0",
    "licenseClass": "open",
-   "licenseNeedsCheck": true,
+   "licenseNeedsCheck": false,
    "stars": 6843,
    "archived": false,
    "inactive": true,
@@ -11488,6 +11557,7 @@
    "platforms": [
     "web"
    ],
+   "licenseSource": "https://raw.githubusercontent.com/buildship-ai/rowy/main/LICENSE",
    "thumbs": []
   },
   {
@@ -11675,7 +11745,7 @@
    "website": "https://weaviate.io/developers/weaviate/",
    "license": "BSD-3-Clause",
    "licenseClass": "open_core",
-   "licenseNeedsCheck": true,
+   "licenseNeedsCheck": false,
    "stars": 16915,
    "archived": false,
    "inactive": false,
@@ -11770,7 +11840,7 @@
    "website": "https://www.shuup.com",
    "license": "OSL-3.0",
    "licenseClass": "open",
-   "licenseNeedsCheck": true,
+   "licenseNeedsCheck": false,
    "stars": 2407,
    "archived": false,
    "inactive": true,
@@ -11848,7 +11918,7 @@
     "Whether the project has any paid or differently licensed parts"
    ],
    "source": "starter",
-   "verified": false,
+   "verified": true,
    "release": "https://github.com/signalapp/Signal-Android/releases/tag/v8.32.3",
    "screenshots": [
     "https://dl.flathub.org/media/org/signal/Signal/c016aa3d4937d4b8de5bf549a10f7788/screenshots/image-1_orig.png"
@@ -11873,7 +11943,7 @@
    "website": "https://signoz.io",
    "license": "MIT",
    "licenseClass": "open_core",
-   "licenseNeedsCheck": true,
+   "licenseNeedsCheck": false,
    "stars": 32455,
    "archived": false,
    "inactive": false,
@@ -12490,7 +12560,7 @@
     "The README does not say which parts of the paid Server Plan or Enterprise offering are closed."
    ],
    "source": "starter",
-   "verified": false,
+   "verified": true,
    "release": "https://github.com/Stirling-Tools/Stirling-PDF/releases/tag/v3.2.2",
    "screenshots": [
     "https://raw.githubusercontent.com/Stirling-Tools/Stirling-PDF/HEAD/docs/images/home-light.png"
@@ -12514,7 +12584,7 @@
    "website": "https://strapi.io",
    "license": "MIT",
    "licenseClass": "open_core",
-   "licenseNeedsCheck": true,
+   "licenseNeedsCheck": false,
    "stars": 73381,
    "archived": false,
    "inactive": false,
@@ -12684,7 +12754,7 @@
    "website": "https://supertokens.com",
    "license": "Apache-2.0",
    "licenseClass": "open_core",
-   "licenseNeedsCheck": true,
+   "licenseNeedsCheck": false,
    "stars": 15332,
    "archived": false,
    "inactive": false,
@@ -12979,7 +13049,7 @@
    "download": "https://www.thunderbird.net/download/",
    "license": "MPL-2.0",
    "licenseClass": "open",
-   "licenseNeedsCheck": true,
+   "licenseNeedsCheck": false,
    "stars": null,
    "archived": false,
    "inactive": false,
@@ -12990,7 +13060,7 @@
     "Exact feature set of the contacts component"
    ],
    "source": "starter",
-   "verified": false,
+   "verified": true,
    "screenshots": [
     "https://dl.flathub.org/media/org.mozilla.Thunderbird-stable/1504x846/org.mozilla.Thunderbird-6d680df8fa5a1a0c374882c019e09714.png",
     "https://dl.flathub.org/media/org.mozilla.Thunderbird-stable/1504x846/org.mozilla.Thunderbird-70c1d7576c238e58e02e7ae0fcb7906b.png"
@@ -13093,9 +13163,9 @@
    "kind": "self_hosted",
    "code": "github.com/tolgee/tolgee-platform",
    "website": "https://tolgee.io",
-   "license": null,
-   "licenseClass": "open",
-   "licenseNeedsCheck": true,
+   "license": "Apache-2.0",
+   "licenseClass": "open_core",
+   "licenseNeedsCheck": false,
    "stars": 4140,
    "archived": false,
    "inactive": false,
@@ -13121,6 +13191,7 @@
     "web",
     "server"
    ],
+   "licenseSource": "https://raw.githubusercontent.com/tolgee/tolgee-platform/main/LICENSE",
    "thumbs": [
     null,
     null,
@@ -13166,9 +13237,9 @@
    "code": "https://gitlab.torproject.org/tpo/applications/tor-browser",
    "website": "https://www.torproject.org",
    "download": null,
-   "license": null,
+   "license": "MPL-2.0",
    "licenseClass": "open",
-   "licenseNeedsCheck": true,
+   "licenseNeedsCheck": false,
    "stars": null,
    "archived": false,
    "inactive": false,
@@ -13179,14 +13250,19 @@
    ],
    "source": "starter",
    "verified": false,
-   "screenshots": [],
+   "screenshots": [
+    "https://dl.flathub.org/media/org/torproject/torbrowser-launcher/8bbf3d7c3768830e11a10b6b47366829/screenshots/image-1_orig.png"
+   ],
    "platforms": [
     "windows",
     "mac",
     "linux",
     "android"
    ],
-   "thumbs": []
+   "licenseSource": "https://gitlab.torproject.org/tpo/applications/tor-browser/-/raw/tor-browser-140.5.0esr-15.0-1/toolkit/content/license.html",
+   "thumbs": [
+    null
+   ]
   },
   {
    "id": "trench",
@@ -13310,7 +13386,7 @@
    "website": "https://twenty.com",
    "license": "AGPL-3.0",
    "licenseClass": "open_core",
-   "licenseNeedsCheck": true,
+   "licenseNeedsCheck": false,
    "stars": 59761,
    "archived": false,
    "inactive": false,
@@ -13424,7 +13500,7 @@
    "download": "https://ubuntu.com/download/desktop",
    "license": "GPL-3.0",
    "licenseClass": "open",
-   "licenseNeedsCheck": true,
+   "licenseNeedsCheck": false,
    "stars": null,
    "archived": false,
    "inactive": false,
@@ -13457,9 +13533,9 @@
    "code": "https://gitlab.com/ubports",
    "website": "https://ubports.com",
    "download": null,
-   "license": null,
+   "license": "GPL-3.0",
    "licenseClass": "open",
-   "licenseNeedsCheck": true,
+   "licenseNeedsCheck": false,
    "stars": null,
    "archived": false,
    "inactive": false,
@@ -13470,11 +13546,16 @@
    ],
    "source": "starter",
    "verified": false,
-   "screenshots": [],
+   "screenshots": [
+    "https://upload.wikimedia.org/wikipedia/commons/e/e1/Ubuntu_Touch_applications_list%2C_24.04-1.0_Beta_2.png"
+   ],
    "platforms": [
     "linux"
    ],
-   "thumbs": []
+   "licenseSource": "https://gitlab.com/ubports/development/core/lomiri/-/raw/main/COPYING",
+   "thumbs": [
+    null
+   ]
   },
   {
    "id": "ultravnc",
@@ -13749,7 +13830,7 @@
    "website": "https://www.vendure.io",
    "license": "GPL-3.0",
    "licenseClass": "open_core",
-   "licenseNeedsCheck": true,
+   "licenseNeedsCheck": false,
    "stars": 8544,
    "archived": false,
    "inactive": false,
@@ -13918,7 +13999,7 @@
    "website": "https://www.webiny.com",
    "license": "MIT",
    "licenseClass": "open_core",
-   "licenseNeedsCheck": true,
+   "licenseNeedsCheck": false,
    "stars": 8048,
    "archived": false,
    "inactive": false,
@@ -14078,7 +14159,7 @@
    "website": "https://windmill.dev",
    "license": "AGPL-3.0",
    "licenseClass": "open_core",
-   "licenseNeedsCheck": true,
+   "licenseNeedsCheck": false,
    "stars": 18269,
    "archived": false,
    "inactive": false,
@@ -14288,7 +14369,7 @@
    "download": null,
    "license": "GPL-2.0-or-later",
    "licenseClass": "open",
-   "licenseNeedsCheck": true,
+   "licenseNeedsCheck": false,
    "stars": 4080,
    "archived": false,
    "inactive": false,
@@ -14378,7 +14459,7 @@
     "The exact scope of the agent compared with Claude Cowork and ChatGPT agent"
    ],
    "source": "starter",
-   "verified": false,
+   "verified": true,
    "release": "https://github.com/itsdestin/youcoded/releases/tag/v1.3.3",
    "screenshots": [
     "https://raw.githubusercontent.com/itsdestin/youcoded/HEAD/docs/readme/empty-chat.webp",
@@ -14436,7 +14517,7 @@
    "website": "https://www.yugabyte.com",
    "license": "Apache-2.0",
    "licenseClass": "open_core",
-   "licenseNeedsCheck": true,
+   "licenseNeedsCheck": false,
    "stars": 10630,
    "archived": false,
    "inactive": false,
@@ -14604,7 +14685,7 @@
    "website": "https://zincsearch-docs.zinc.dev",
    "license": "Apache-2.0",
    "licenseClass": "open",
-   "licenseNeedsCheck": true,
+   "licenseNeedsCheck": false,
    "stars": 17920,
    "archived": false,
    "inactive": false,
