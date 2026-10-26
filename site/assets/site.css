@@ -320,3 +320,62 @@ a.footchip { text-decoration:none; display:inline-block; }
 
 /* Links drawn as buttons never show the link underline. */
 a.btn { text-decoration:none; }
+
+/* ═══ Voting, notes and boards (assets/social.js), Oct 27 ═══ */
+/* Sign-in sits at the right end of the top strip, beside the search box; on the home page, in the hero's corner. */
+.acct { flex:none; display:flex; align-items:center; }
+.hero-acct { position:absolute; top:16px; right:16px; z-index:3; }
+.acct-btn { font-size:12px; font-weight:600; color:var(--fg); cursor:pointer; }
+.acct-menu { right:0; left:auto; min-width:240px; }
+.acct-menu .menu-note b { color:var(--fg); }
+.btn svg { flex:none; }
+.btn.danger { background:rgb(220 38 38); color:#fff; border:1px solid transparent; }
+.btn.danger:hover { background:rgb(185 28 28); }
+/* WHY a ribbon: the preview's posts and votes are pretend, and it must never be mistaken for the real site. */
+.demo-ribbon { position:sticky; top:0; z-index:40; text-align:center; font-size:11px; padding:4px 12px; color:var(--fg);
+  background:color-mix(in srgb,var(--accent) 22%,var(--panel)); border-bottom:1px solid var(--edge); }
+
+/* Note rows: the vote button, then the title with its facts under it. */
+.note-row { align-items:flex-start; }
+.nr-main { flex:1; min-width:0; display:flex; flex-direction:column; gap:4px; }
+.note-row .rt { text-decoration:none; color:var(--fg); font-size:14px; overflow-wrap:anywhere; }
+.note-row .rt:hover { text-decoration:underline; }
+.nr-meta { display:flex; align-items:center; gap:6px; flex-wrap:wrap; }
+.vote.static { cursor:default; border-style:dashed; }
+.vote.big { width:56px; padding:8px 0; font-size:13px; }
+.note-id .row { display:flex; align-items:flex-start; justify-content:space-between; gap:16px; }
+.note-id h1 { overflow-wrap:anywhere; }
+.note-body { white-space:pre-wrap; overflow-wrap:anywhere; }
+
+/* The "Add a note" window. */
+.kindpick { display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:8px; }
+.kopt { padding:10px 12px; display:flex; flex-direction:column; gap:2px; cursor:pointer; position:relative; }
+.kopt input { position:absolute; opacity:0; pointer-events:none; }
+.kopt b { font-size:13px; font-weight:500; }
+.kopt:has(input:checked) { border-color:var(--accent); box-shadow:0 0 0 1px var(--accent); }
+.kopt:has(input:focus-visible) { outline:2px solid var(--accent); outline-offset:2px; }
+.two { display:grid; grid-template-columns:1fr 1fr; gap:8px; }
+.two[hidden] { display:none; }
+select.field { appearance:auto; }
+.dlg-btns { display:flex; justify-content:flex-end; gap:8px; }
+
+/* Boards: kind chips on the left, dropdowns on the right. */
+.board-tools { display:flex; align-items:center; justify-content:space-between; gap:8px; flex-wrap:wrap; margin-bottom:8px; }
+button.fchip { cursor:pointer; }
+.fchip.sel { background:var(--accent); color:var(--on-accent); border-color:var(--accent); }
+.menu .mi.sel { font-weight:600; color:var(--fg); }
+
+/* Ratings on project pages, and counts on cards. */
+.rate { position:relative; z-index:1; display:flex; align-items:center; gap:6px; flex-wrap:wrap; }
+.rate .muted11 { margin-right:auto; }
+.missing-count::before { content:"· "; }
+.modrow { padding:12px; display:flex; gap:12px; align-items:flex-start; justify-content:space-between; flex-wrap:wrap; }
+.modrow .rt { color:var(--fg); }
+.callout.info a, .callout.warn a, .small2 a { color:var(--fg); }
+
+@media (max-width:640px) {
+  .kindpick, .two { grid-template-columns:1fr; }
+  .hero-acct { top:12px; right:12px; }
+}
+/* The note and mod pages are filled in by social.js inside one wrapper; keep the page's 16px between its cards. */
+[data-note-page], [data-mod] { display:flex; flex-direction:column; gap:16px; min-width:0; }

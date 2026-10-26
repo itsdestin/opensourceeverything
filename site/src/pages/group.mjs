@@ -1,7 +1,7 @@
 // One page per group (g/<id>/): the job, the closed apps it replaces, and its open alternatives.
 // Ported from mockups/group-page.html. Votes, comments, "still missing", suggest and report need the server,
 // so they only appear once API_URL is set (see lib.mjs).
-import { esc, url, ICON, SITE_URL, API_URL, codeUrl, suggestUrl } from '../lib.mjs';
+import { esc, url, ICON, SITE_URL, API_URL, SOCIAL, codeUrl, suggestUrl } from '../lib.mjs';
 import { altCard, appUrl, sortAlts, deviceFilter } from '../cards.mjs';
 
 // WHY only the first letter, and not before a capital: "AI agents" and "PDF tools" keep their capitals mid-sentence.
@@ -56,6 +56,11 @@ export default function groupPages(d) {
           ? `<div class="grid" data-alts>${alts.map((x, i) => altCard(x.p, x.a, i, g)).join('')}</div><div class="callout info" data-nomatch hidden>None of these match. Try another device.</div>`
           : `<div class="callout info">Nothing open does this job yet. That makes it a gap: if you're building one, <a href="${esc(suggestUrl('1-add-project', { group: g.name }))}" rel="noopener">add it here</a>.</div>`}
       </section>
+      ${SOCIAL ? `<section class="surface sec" id="missing">
+        <div class="sec-head"><div><h2 class="h-large">What's missing</h2><p class="desc12">What people still miss here, and wish existed. Upvote what matters to you.</p></div>
+          <div class="btns-row"><a class="btn sm secondary" href="${url(`c/${g.category}/board/`)}">${esc(cat?.name ?? '')} board</a><button class="btn sm primary" type="button" data-add-note data-category="${g.category}" data-group="${g.id}">Add a note</button></div></div>
+        <div data-notes data-group="${g.id}" data-limit="6" data-empty="Nothing noted yet. Using one of these and something's missing? Add a note."></div>
+      </section>` : ''}
     </div>
 
     <div>

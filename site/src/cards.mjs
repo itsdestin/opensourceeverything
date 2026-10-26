@@ -1,6 +1,6 @@
 // Pieces more than one page draws: the alternative card (group pages and closed-app pages) and the address of a
 // closed app's own page.
-import { esc, url, ICON, KIND, factChips, hostOf, actions, suggestUrl, shot as shotOf } from './lib.mjs';
+import { esc, url, ICON, KIND, factChips, hostOf, actions, suggestUrl, SOCIAL, shot as shotOf } from './lib.mjs';
 
 // WHY its own address per closed app (Destin, Oct 27): people search "alternatives to Notion", not "Notes".
 // "alternatives-to/notion/" reads well in a search result and stays stable when an app moves group.
@@ -24,9 +24,9 @@ export function altCard(p, alt, i, group) {
         <div class="head"><h3><a class="cardlink" href="${url(`p/${p.id}/`)}">${esc(p.name)}</a></h3>
           ${acts.length ? `<div class="dd actions"><button class="btn sm secondary" type="button" data-menu="${menuId}" aria-haspopup="menu" aria-expanded="false">Actions ${ICON.chev}</button>
             <div class="menu" id="${menuId}" role="menu">${acts.map((l) => `<a class="mi" role="menuitem" href="${esc(l.href)}" rel="noopener">${l.label}</a>`).join('')}<a class="mi" role="menuitem" href="${url(`p/${p.id}/`)}">See full details</a><a class="mi" role="menuitem" href="${esc(suggestUrl('2-fix', { project: p.name, ...(group ? { group: group.name } : {}) }))}" rel="noopener">Suggest a change</a></div></div>` : ''}</div>
-        <div class="chiprow">${factChips(p, alt)}</div>
+        <div class="chiprow">${factChips(p, alt, SOCIAL && group ? `<span class="chip" data-rating data-group="${group.id}" data-project="${esc(p.id)}" hidden></span>` : '')}</div>
         <p class="blurb">${esc(p.summary)}</p>
-        <div class="foot">${esc(foot)}</div>
+        <div class="foot">${esc(foot)}${SOCIAL && group ? ` <span class="missing-count" data-missing-count data-group="${group.id}" data-project="${esc(p.id)}" hidden></span>` : ''}</div>
       </div>
     </div>`;
 }

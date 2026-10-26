@@ -1,5 +1,5 @@
 // The frame every page shares: <head>, the top strip (home + search) and the footer chips.
-import { esc, url, ICON, SITE_URL, SUBREDDIT, REPO } from './lib.mjs';
+import { esc, url, ICON, SITE_URL, SUBREDDIT, REPO, SOCIAL, DEMO, API_URL } from './lib.mjs';
 
 export function topStrip({ search = true } = {}) {
   return `<div class="top">
@@ -9,6 +9,7 @@ export function topStrip({ search = true } = {}) {
     <div class="searchpill">${ICON.search}<input type="search" placeholder="Search a closed app or open project…" autocomplete="off" aria-label="Search"></div>
     <div class="menu search-menu" role="listbox"></div>
   </div>` : ''}
+  ${SOCIAL ? '<div class="acct" data-account></div>' : ''}
 </div>`;
 }
 
@@ -16,6 +17,7 @@ export function footer() {
   // WHY separate chips (Destin, Oct 27): each footer link is its own glass chip, not words in one bar.
   return `<div class="footer">
   <a class="footchip" href="${url('gaps/')}">Gaps</a>
+  ${SOCIAL ? `<a class="footchip" href="${url('boards/')}">Boards</a>` : ''}
   <a class="footchip" href="${url('about/')}">How this works</a>
   <a class="footchip" href="${url('about/#open-source')}">What counts as open source</a>
   <a class="footchip" href="${url('credits/')}">Data license: CC BY-SA 4.0</a>
@@ -45,7 +47,7 @@ export function page({ path, title, description, body, styles = [], scripts = []
 <link rel="stylesheet" href="${url('assets/site.css')}">
 ${styles.map((s) => `<link rel="stylesheet" href="${url('assets/' + s)}">`).join('\n')}
 ${jsonLd ? `<script type="application/ld+json">${JSON.stringify(jsonLd)}</script>` : ''}
-<script>window.OI = { base: ${JSON.stringify(url())} };</script>
+<script>window.OI = { base: ${JSON.stringify(url())}, repo: ${JSON.stringify(REPO)}, chev: ${JSON.stringify(ICON.chev)} };</script>
 </head>
 <body>
 ${topStrip({ search })}
@@ -55,7 +57,9 @@ ${footer()}
 </main>
 <div class="toast" id="toast" role="status"></div>
 <script src="${url('assets/site.js')}" defer></script>
+${SOCIAL ? `<script src="${url(DEMO ? 'assets/fake-api.js' : 'assets/api.js')}" defer></script>${DEMO ? '' : `<script>window.OI_API_URL = ${JSON.stringify(API_URL)};</script>`}` : ''}
 ${scripts.map((s) => `<script src="${url('assets/' + s)}" defer></script>`).join('\n')}
+${SOCIAL ? `<script src="${url('assets/social.js')}" defer></script>` : ''}
 </body>
 </html>`;
 }

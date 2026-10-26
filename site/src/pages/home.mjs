@@ -1,7 +1,7 @@
 // The home page, in the order a newcomer needs it (Destin, Oct 27: "clearer… more polished for newcomers"):
 // 1. what this is and a big search, 2. popular switches with real screenshots, 3. every category as a tidy card,
 // 4. what's still missing, 5. the builders' card. Everything sits inside a raised card (no bare text).
-import { url, esc, ICON, suggestUrl, shot, SITE_URL } from '../lib.mjs';
+import { url, esc, ICON, suggestUrl, shot, SITE_URL, SOCIAL } from '../lib.mjs';
 import { appUrl, sortAlts } from '../cards.mjs';
 
 // WHY two lists: the picture cards need a replacement with a real screenshot, while the "Try" chips can name any
@@ -78,6 +78,7 @@ export default function home(d) {
 
   const body = `
   <div class="surface hero3">
+    ${SOCIAL ? '<div class="hero-acct" data-account></div>' : ''}
     <div class="hero-text">
       <div class="eyebrow"><span class="avatar brand">${ICON.home}</span>Open Source Everything · supported by r/TrueOpenSource</div>
       <h1>Find an open-source replacement for the apps you use</h1>

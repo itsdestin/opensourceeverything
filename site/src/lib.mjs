@@ -9,6 +9,10 @@ export const SITE_URL = process.env.SITE_URL ?? 'https://opensourceeverything.or
 // WHY: voting, comments and suggestions need the server (built next). Until it exists, pages leave those
 // controls out entirely rather than showing buttons that do nothing (YouCoded design rule).
 export const API_URL = process.env.API_URL ?? '';
+// WHY a switch: voting, notes and boards show only when there's a server to talk to. API_URL=demo builds the preview,
+// which uses a pretend server in the browser (assets/fake-api.js) so the screens can be tried before the real one exists.
+export const SOCIAL = !!API_URL;
+export const DEMO = API_URL === 'demo';
 export const SUBREDDIT = 'https://www.reddit.com/r/TrueOpenSource/';
 export const REPO = 'https://github.com/itsdestin/opensourceeverything';
 
@@ -66,12 +70,14 @@ export const DEVICE = { windows: 'Windows', mac: 'Mac', linux: 'Linux', android:
 export const devicesText = (p) => (p.platforms ?? []).filter((x) => DEVICE[x]).map((x) => DEVICE[x]).join(' · ');
 
 // The fact chips every listing shows, in one order everywhere (YouCoded's "one chip row" rule).
-export function factChips(p, alt) {
+export function factChips(p, alt, afterStars = '') {
   // WHY GitHub stars first (Destin, Oct 27): the number people already know how to read. Projects hosted
   // elsewhere (GIMP, LibreOffice) say so instead, so the first chip is never missing.
   const c = [];
   if (p.stars) c.push(`<span class="chip">${ICON.star}${fmtStars(p.stars)} on GitHub</span>`);
   else if (hostOf(p) !== 'github.com') c.push('<span class="chip">Not on GitHub</span>');
+  // WHY the rating right after stars: our own community's answer to "does it work as a replacement?" sits beside GitHub's popularity.
+  c.push(afterStars);
   // WHY activity next, as a plain chip (Destin, Oct 27): the card's corner is for the Actions menu.
   c.push(`<span class="chip">${p.inactive ? 'Quiet for a year' : 'Active'}</span>`);
   // WHY right after activity (Destin, Oct 27): "does it run on my computer or phone?" is a newcomer's first question.

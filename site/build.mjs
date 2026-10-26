@@ -38,6 +38,13 @@ for (const g of d.groups) {
   }, null, 1));
 }
 
+// ── Names for voting and boards (assets/social.js): who's in which group, in one small file ──
+write(join('data', 'names.json'), JSON.stringify({
+  categories: Object.fromEntries(d.categories.map((c) => [c.id, c.name])),
+  groups: Object.fromEntries(d.groups.map((g) => [g.id, { n: g.name, c: g.category, closed: g.closed, alts: g.alternatives.map((a) => a.project) }])),
+  projects: Object.fromEntries(d.projects.map((p) => [p.id, p.name])),
+}));
+
 // ── Search index: short keys keep it small (it loads the first time someone types) ──
 const firstGroup = (pid) => d.groupsByProject.get(pid)?.[0]?.group;
 write('search.json', JSON.stringify({

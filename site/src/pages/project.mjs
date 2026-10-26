@@ -1,5 +1,5 @@
 // One page per open-source project (p/<id>/): what it is, which groups it's listed in, and its facts.
-import { esc, url, SITE_URL, KIND, factChips, hostOf, fmtStars, actions, codeUrl, devicesText, suggestUrl, shot } from '../lib.mjs';
+import { esc, url, SITE_URL, KIND, factChips, hostOf, fmtStars, actions, codeUrl, devicesText, suggestUrl, shot, SOCIAL } from '../lib.mjs';
 
 const HOSTS = { 'github.com': 'GitHub', 'gitlab.com': 'GitLab', 'codeberg.org': 'Codeberg' };
 
@@ -32,12 +32,18 @@ export default function projectPages(d) {
       <section class="surface sec">
         <div class="sec-head"><div><h2 class="h-large">Listed in<span class="count">${listed.length}</span></h2><p class="desc12">The jobs it does, and the closed apps it replaces</p></div></div>
         <div class="stack">${listed.map(({ group, alt }) => `
-          <a class="card listing" href="${url(`g/${group.id}/`)}">
-            <div class="head"><h3>${esc(group.name)}</h3><span class="pill ${alt.fit === 'full' ? 'ok' : 'info'}">${alt.fit === 'full' ? '<i></i>Replaces fully' : 'Replaces partly'}</span></div>
+          <div class="card listing">
+            <div class="head"><h3><a class="cardlink" href="${url(`g/${group.id}/`)}">${esc(group.name)}</a></h3><span class="pill ${alt.fit === 'full' ? 'ok' : 'info'}">${alt.fit === 'full' ? '<i></i>Replaces fully' : 'Replaces partly'}</span></div>
             <p class="small2">Instead of ${esc(group.closed.join(', '))}${alt.note ? ` · ${esc(alt.note)}` : ''}</p>
-          </a>`).join('')}
+            ${SOCIAL ? `<div class="rate" data-rate data-group="${group.id}" data-project="${esc(p.id)}"></div>` : ''}
+          </div>`).join('')}
         </div>
       </section>
+      ${SOCIAL && listed.length ? `<section class="surface sec">
+        <div class="sec-head"><div><h2 class="h-large">What's missing</h2><p class="desc12">Things people miss in ${esc(p.name)}. Upvote what matters to you; it helps its team decide.</p></div>
+          <button class="btn sm primary" type="button" data-add-note data-category="${listed[0].group.category}" data-group="${listed[0].group.id}" data-project="${esc(p.id)}" data-kind="missing">Add a note</button></div>
+        <div data-notes data-project="${esc(p.id)}" data-empty="Nothing noted yet."></div>
+      </section>` : ''}
     </div>
     <div>
       <section class="surface sec">
