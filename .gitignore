@@ -4,3 +4,5 @@ dist/
 .env
 prefill/.cache/
 site/dist/
+worker/node_modules/
+worker/.wrangler/

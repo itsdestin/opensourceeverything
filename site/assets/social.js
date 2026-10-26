@@ -73,11 +73,14 @@
     { size: opts.area ? 'medium' : 'narrow', onOpen: (el, close) => { if (opts.value) $('#askIn', el).value = opts.value; $('[data-ok]', el).addEventListener('click', async () => { try { await run($('#askIn', el).value); close(); } catch (e) { oops(e); } }); } });
 
   // ── The account button, and a line for new accounts ──
+  // WHY a numbered menu per slot: the home page has two account buttons (the hero's, and the hidden top bar's);
+  // sharing one menu name made the visible avatar open the hidden menu, so nothing appeared.
+  let acctN = 0;
   async function renderAccount(slot) {
-    const { user } = await getMe();
+    const { user } = await getMe(); const mid = `acctMenu${++acctN}`;
     if (!user) { slot.innerHTML = `<button class="btn sm secondary" type="button" data-signin>${icon.gh}Sign in</button>`; return; }
-    slot.innerHTML = `<div class="dd"><button class="avatar acct-btn" type="button" data-menu="acctMenu" aria-haspopup="menu" aria-expanded="false" title="@${esc(user.login)}">${esc(user.login[0].toUpperCase())}</button>
-      <div class="menu acct-menu" id="acctMenu" role="menu">
+    slot.innerHTML = `<div class="dd"><button class="avatar acct-btn" type="button" data-menu="${mid}" aria-haspopup="menu" aria-expanded="false" title="@${esc(user.login)}">${esc(user.login[0].toUpperCase())}</button>
+      <div class="menu acct-menu" id="${mid}" role="menu">
         <div class="menu-note">Signed in as <b>@${esc(user.login)}</b></div>
         ${user.isMod ? `<a class="mi" role="menuitem" href="${BASE}mod/">Mod tools</a>` : ''}
         ${api.demo ? '<button class="mi" type="button" data-demo-reset>Preview: start over</button>' : ''}
