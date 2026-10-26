@@ -66,4 +66,29 @@
     }
   });
   document.addEventListener('keydown', (e) => { if (e.key === 'Escape') closeMenus(); });
+
+  // ── Phones: the Search tab, and side sections that fold (mobile.css) ──
+  const phone = matchMedia('(max-width:640px)');
+  document.addEventListener('click', (e) => {
+    if (!e.target.closest('[data-open-search]')) return;
+    // WHY two cases: the home page has its own big search box; other pages slide the search bar down from the top.
+    const hero = document.querySelector('.hero3 [data-search] input');
+    if (hero) { hero.scrollIntoView({ block: 'center', behavior: 'smooth' }); hero.focus(); return; }
+    document.body.classList.add('searching');
+    const input = document.querySelector('.top [data-search] input'); input?.focus();
+  });
+  document.addEventListener('focusout', (e) => {
+    if (!document.body.classList.contains('searching') || !e.target.closest('.top')) return;
+    setTimeout(() => { if (!document.activeElement?.closest('.top')) document.body.classList.remove('searching'); }, 150);
+  });
+  document.addEventListener('keydown', (e) => { if (e.key === 'Escape') document.body.classList.remove('searching'); });
+  // WHY folded on phones: the main content comes first; "Before you build", "About this page" and the like open on a tap.
+  document.querySelectorAll('.fold-phone').forEach((sec) => {
+    if (phone.matches) sec.classList.add('folded');
+    const head = sec.querySelector(':scope > .fold-head');
+    head?.setAttribute('role', 'button'); head?.setAttribute('tabindex', '0');
+    const toggle = () => { if (phone.matches) { sec.classList.toggle('folded'); head.setAttribute('aria-expanded', String(!sec.classList.contains('folded'))); } };
+    head?.addEventListener('click', toggle);
+    head?.addEventListener('keydown', (e) => { if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); toggle(); } });
+  });
 })();

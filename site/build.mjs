@@ -61,6 +61,13 @@ write('llms.txt', `# Open Source Everything\n\n> Open-source replacements for cl
   `## Data\n\n- [All groups](${SITE_URL}data/groups.json): every group, the closed apps it replaces and its alternatives (by project id)\n- [All projects](${SITE_URL}data/projects.json): every open-source project with summary, license and links\n- [Categories](${SITE_URL}data/categories.json)\n- One file per group, projects included: ${SITE_URL}data/groups/<group-id>.json\n\n` +
   `## Groups\n\n${d.groups.map((g) => `- [${g.name}](${SITE_URL}data/groups/${g.id}.json): replaces ${g.closed.join(', ')}`).join('\n')}\n`);
 
+// ── "Add to Home screen" on phones: name, colours and icon for the installed app ──
+write('manifest.webmanifest', JSON.stringify({
+  name: 'Open Source Everything', short_name: 'Open Source', description: 'Open-source replacements for the apps you use.',
+  start_url: url(), scope: url(), display: 'standalone', background_color: '#F7F0FB', theme_color: '#8B47B8',
+  icons: [192, 512].map((s) => ({ src: url(`assets/icon-${s}.png`), sizes: `${s}x${s}`, type: 'image/png', purpose: 'any maskable' })),
+}));
+
 // ── Assets ──
 cpSync(join(HERE, 'assets'), join(DIST, 'assets'), { recursive: true });
 // WHY: GitHub Pages runs files through Jekyll unless told not to; this keeps the folders exactly as built.

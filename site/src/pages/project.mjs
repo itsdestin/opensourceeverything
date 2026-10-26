@@ -46,8 +46,8 @@ export default function projectPages(d) {
       </section>` : ''}
     </div>
     <div>
-      <section class="surface sec">
-        <h2 class="h-large">Facts</h2>
+      <section class="surface sec fold-phone">
+        <h2 class="h-large fold-head">Facts</h2>
         <div class="lvl1 facts">
           <div class="fact"><span>License</span><span>${esc(p.license ?? 'Being checked')}</span></div>
           ${p.licenseNeedsCheck ? '<div class="fact"><span></span><span class="muted11">A mod is confirming this license</span></div>' : ''}
@@ -59,8 +59,8 @@ export default function projectPages(d) {
           <div class="fact"><span>Activity</span><span>${p.inactive ? 'No changes in over a year' : 'Changed within the last year'}</span></div>
         </div>
       </section>
-      <section class="surface sec">
-        <div><h2 class="h-large">Something wrong?</h2><p class="desc12" style="margin-top:4px">Wrong devices, a wrong description, or it isn't really open source? A mod reviews every suggestion.</p></div>
+      <section class="surface sec fold-phone">
+        <div class="fold-head"><h2 class="h-large">Something wrong?</h2><p class="desc12" style="margin-top:4px">Wrong devices, a wrong description, or it isn't really open source? A mod reviews every suggestion.</p></div>
         <div class="stack">
           <a class="btn md secondary" href="${esc(suggestUrl('2-fix', { project: p.name }))}" rel="noopener">Suggest a fix</a>
           <a class="btn md secondary" href="${esc(suggestUrl('5-report', { project: p.name }))}" rel="noopener">Report this project</a>

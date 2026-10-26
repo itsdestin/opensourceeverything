@@ -18,6 +18,24 @@ export function topStrip({ search = true } = {}) {
 </div>`;
 }
 
+// The phone tab bar (shown only on narrow screens, mobile.css): the places people go most, within thumb reach.
+const TAB_ICON = {
+  home: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 10.5 12 3l9 7.5V20a1 1 0 0 1-1 1h-5v-6H9v6H4a1 1 0 0 1-1-1z"/></svg>',
+  search: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>',
+  boards: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 12a8 8 0 0 1-11.8 7L4 20l1.1-4.6A8 8 0 1 1 21 12z"/></svg>',
+  gaps: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3v4M12 17v4M3 12h4M17 12h4"/><circle cx="12" cy="12" r="4" stroke-dasharray="3 3"/></svg>',
+};
+export function tabbar(path) {
+  const here = (p) => (p === '' ? path === '' : path.startsWith(p)) ? ' aria-current="page"' : '';
+  return `<nav class="tabbar" aria-label="Main">
+  <a class="tab" href="${url()}"${here('')}>${TAB_ICON.home}Home</a>
+  <button class="tab" type="button" data-open-search>${TAB_ICON.search}Search</button>
+  ${SOCIAL ? `<a class="tab" href="${url('boards/')}"${here('boards/') || (path.endsWith('/board/') ? ' aria-current="page"' : '')}>${TAB_ICON.boards}Boards</a>` : ''}
+  <a class="tab" href="${url('gaps/')}"${here('gaps/')}>${TAB_ICON.gaps}Gaps</a>
+  ${SOCIAL ? '<div class="tab acct-tab" data-account></div>' : ''}
+</nav>`;
+}
+
 export function footer() {
   // WHY separate chips (Destin, Oct 27): each footer link is its own glass chip, not words in one bar.
   return `<div class="footer">
@@ -41,7 +59,11 @@ export function page({ path, title, description, body, styles = [], scripts = []
 <head>
 <meta charset="utf-8">
 <script>/* WHY: the site is served through Cloudflare with a padlock; anyone arriving on plain http is moved to https. */ if (location.protocol === 'http:' && location.hostname === 'opensourceeverything.org') location.replace('https:' + location.href.slice(5));</script>
-<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="theme-color" content="#EFE3F6" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#1F1329" media="(prefers-color-scheme: dark)">
+<link rel="manifest" href="${url('manifest.webmanifest')}">
+<link rel="apple-touch-icon" href="${url('assets/icon-192.png')}">
 <title>${esc(full)}</title>
 <meta name="description" content="${esc(description)}">
 <link rel="canonical" href="${SITE_URL}${path}">
@@ -53,6 +75,7 @@ export function page({ path, title, description, body, styles = [], scripts = []
 <link rel="stylesheet" href="${asset('assets/fonts.css')}">
 <link rel="stylesheet" href="${asset('assets/site.css')}">
 ${styles.map((s) => `<link rel="stylesheet" href="${asset('assets/' + s)}">`).join('\n')}
+<link rel="stylesheet" href="${asset('assets/mobile.css')}">
 ${jsonLd ? `<script type="application/ld+json">${JSON.stringify(jsonLd)}</script>` : ''}
 <script>window.OI = { base: ${JSON.stringify(url())}, repo: ${JSON.stringify(REPO)}, chev: ${JSON.stringify(ICON.chev)} };</script>
 </head>
@@ -62,6 +85,7 @@ ${topStrip({ search })}
 ${body}
 ${footer()}
 </main>
+${tabbar(path)}
 <div class="toast" id="toast" role="status"></div>
 <script src="${asset('assets/site.js')}" defer></script>
 ${SOCIAL ? `<script src="${asset(DEMO ? 'assets/fake-api.js' : 'assets/api.js')}" defer></script>${DEMO ? '' : `<script>window.OI_API_URL = ${JSON.stringify(API_URL)};</script>`}` : ''}

@@ -1,0 +1,110 @@
+/* Phones and narrow touch screens (Destin, Oct 27: "see more content and feel more mobile native").
+   Loaded last on every page; nothing here applies above 640px, so the desktop site is unchanged.
+   Follows the app's phone rules: chip rows scroll sideways instead of wrapping, long side sections fold,
+   and controls sit within thumb reach. */
+
+/* The tab bar exists on every page but only shows on phones. */
+.tabbar { display:none; }
+
+@media (max-width:640px) {
+  /* ── Room for content: tighter edges and gaps (16px gutter stays, per the design guide) ── */
+  .page { gap:12px; padding-bottom:calc(88px + env(safe-area-inset-bottom)); }
+  .sec, .identity { padding:12px; }
+  .sec { gap:10px; }
+  .h-subject { font-size:20px; }
+  body { -webkit-tap-highlight-color:transparent; }
+
+  /* ── Bottom tab bar: Home, Search, Boards, Gaps, You ── */
+  /* WHY: on a phone the thumb lives at the bottom; a top bar of small targets wastes the first screen. */
+  .top { display:none; }
+  body.searching .top { display:flex; position:fixed; inset:0 0 auto 0; z-index:65; padding:12px 16px; background:var(--glass); backdrop-filter:blur(16px); -webkit-backdrop-filter:blur(16px); border-bottom:1px solid var(--edge); }
+  body.searching .top .icon-btn { display:none; }
+  body.searching .top .acct { display:none; }
+  .tabbar { display:grid; grid-template-columns:repeat(auto-fit,minmax(0,1fr)); position:fixed; left:0; right:0; bottom:0; z-index:60;
+    padding:6px 8px calc(6px + env(safe-area-inset-bottom)); background:var(--glass); backdrop-filter:blur(20px); -webkit-backdrop-filter:blur(20px);
+    border-top:1px solid var(--edge); box-shadow:0 -4px 20px rgb(0 0 0 / .08); }
+  .tab { display:flex; flex-direction:column; align-items:center; justify-content:center; gap:2px; min-height:48px; padding:4px 0; border:0; background:transparent;
+    color:var(--fg-muted); font-size:11px; text-decoration:none; border-radius:var(--radius-md); cursor:pointer; }
+  .tab svg { width:22px; height:22px; }
+  .tab[aria-current="page"], .tab.on { color:var(--accent); }
+  .tab:active { background:var(--inset); }
+  /* The account tab holds the sign-in button or your avatar; make it look like a tab. */
+  .tab.acct-tab .btn { border:0; background:transparent; padding:0; flex-direction:column; gap:2px; font-size:11px; color:var(--fg-muted); min-height:44px; }
+  .tab.acct-tab .btn svg { width:22px; height:22px; }
+  .tab.acct-tab .avatar { width:26px; height:26px; }
+  .tab.acct-tab .dd { display:flex; justify-content:center; }
+  .hero-acct { display:none; }
+
+  /* ── Project cards become compact rows: picture left, words right; 4–5 per screen instead of 1 ── */
+  .card.pic { flex-direction:row; align-items:stretch; min-height:0; }
+  .card.pic .preview { flex:0 0 92px; width:92px; aspect-ratio:auto; min-height:92px; margin:6px 0 6px 6px; border-radius:var(--radius-md); }
+  .card.pic .preview.empty { font-size:0; }
+  .card.pic .inner { padding:10px 10px 10px 12px; gap:6px; }
+  .card.pic h3 { font-size:15px; }
+  .card.pic .blurb { min-height:0; }
+  .card.pic .foot { display:none; }
+  .card.pic .dd.actions { margin:-2px -2px 0 0; }
+  .card.pic .dd.actions .btn { padding:4px 8px; }
+  .grid { gap:8px; }
+  /* Popular switches stay a sideways row of picture cards on the home page. */
+  .swgrid > .card.pic { flex-direction:column; flex:0 0 200px; }
+  .swgrid > .card.pic .preview { flex:none; width:auto; aspect-ratio:16/10; min-height:0; margin:4px 4px 0; }
+
+  /* ── Chip rows scroll sideways, never wrap (app rule) ── */
+  .gchips, .fchips { flex-wrap:nowrap; overflow-x:auto; scrollbar-width:none; }
+  .gchips::-webkit-scrollbar { display:none; }
+  .catgrid { gap:8px; }
+  .catcard2 { padding:12px; gap:10px; }
+
+  /* ── Menus become sheets that slide up from the bottom, with bigger rows ── */
+  .menu.open:not(.search-menu) { position:fixed; left:8px; right:8px; top:auto; bottom:calc(8px + env(safe-area-inset-bottom)); min-width:0;
+    max-height:70vh; overflow-y:auto; z-index:80; padding:8px; border-radius:var(--radius-xl);
+    box-shadow:0 0 0 100vmax rgb(0 0 0 / .35), 0 8px 32px rgb(0 0 0 / .3); animation:sheet-up .18s ease-out; }
+  .menu.open:not(.search-menu) .mi { min-height:46px; font-size:15px; padding:10px 12px; }
+  .menu.open .menu-note { font-size:12px; padding:8px 12px; }
+  @keyframes sheet-up { from { transform:translateY(24px); opacity:.6; } to { transform:none; opacity:1; } }
+
+  /* ── Pop-ups become bottom sheets ── */
+  .scrim { align-items:flex-end; padding:0; }
+  .scrim .dialog { max-width:none; border-radius:var(--radius-xl) var(--radius-xl) 0 0; max-height:92vh; overflow-y:auto;
+    padding-bottom:env(safe-area-inset-bottom); animation:sheet-up .2s ease-out; }
+  .dlg-btns .btn { flex:1; min-height:44px; }
+  .field, .field-select { font-size:16px; } /* WHY 16px: phones zoom into smaller text boxes when you tap them */
+
+  /* ── Side sections fold on phones, content first (app rule: long sections fold, the first open) ── */
+  .fold-phone > .fold-head { display:flex; align-items:center; justify-content:space-between; gap:8px; cursor:pointer; margin:0; }
+  .fold-phone > .fold-head::after { content:""; flex:none; width:8px; height:8px; border-right:2px solid var(--fg-muted); border-bottom:2px solid var(--fg-muted); transform:rotate(45deg); transition:transform .15s; }
+  .fold-phone.folded > .fold-head::after { transform:rotate(-45deg); }
+  .fold-phone.folded > :not(.fold-head) { display:none; }
+
+  /* ── Touch: bigger targets, pressed feedback instead of hover ── */
+  .btn.sm { padding:7px 12px; font-size:12px; }
+  a.chip.link { padding:4px 9px; }
+  .vote { width:58px; padding:6px 2px; }
+  .rrow { padding:10px 6px; gap:10px; }
+  .btn:active, .card:active, .fchip:active, .vote:active { transform:scale(.98); }
+  .footer { padding-bottom:4px; }
+}
+@media (hover:none) { .card:hover { transform:none; } }
+@media (max-width:640px) { .fold-phone.folded > .fold-head p { display:none; } }
+@media (max-width:640px) {
+  /* Section tools (Works on, sort, board buttons) get their own row under the heading, scrolling sideways if needed. */
+  .sec-head { flex-direction:column; align-items:stretch; gap:8px; }
+  .sec-head > .tools, .sec-head > .btns-row { justify-content:flex-start; flex-wrap:nowrap; overflow-x:auto; scrollbar-width:none; }
+  .sec-head > .tools .select { flex:none; }
+  /* A lone filled button under a heading spans the width (design rule: never alone at the bottom-left). */
+  .identity .row > .btn, .identity .row > .vote { align-self:stretch; }
+  .identity .row > .btn { width:100%; }
+  .note-id .row { flex-direction:row; }
+}
+@media (max-width:640px) {
+  /* WHY no blur on phones: a blurred panel traps "fixed" sheets inside itself (they slid up within their section, not
+     the screen), and live blur is heavy work for phones while scrolling. A slightly more solid glass looks the same. */
+  .surface, .card, .footchip, .menu { backdrop-filter:none; -webkit-backdrop-filter:none; }
+  .surface { background:color-mix(in srgb, var(--panel) 90%, transparent); }
+  .card { background:color-mix(in srgb, var(--panel) 96%, var(--well)); }
+  .menu { background:var(--panel); }
+  /* While a sheet or pop-up is open, the tab bar steps aside so nothing is hidden behind it. */
+  body:has(.menu.open:not(.search-menu)) .tabbar, body:has(.scrim.open) .tabbar { display:none; }
+  .scrim { z-index:90; }
+}

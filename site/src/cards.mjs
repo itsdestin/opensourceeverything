@@ -52,8 +52,8 @@ function promptText({ closed, job, json, alts }, full) {
     `\n\n${ask}\n\nMy project or idea:\n`;
 }
 export function buildBox(t) {
-  return `<section class="surface sec" id="build">
-        <h2 class="h-large">Before you build</h2>
+  return `<section class="surface sec fold-phone" id="build">
+        <h2 class="h-large fold-head">Before you build</h2>
         <p class="small2">Planning something for ${esc(t.about)}? See what exists first, so you can reuse parts or explain what's different. Paste this into any AI assistant:</p>
         <div class="lvl2 prompt" id="prompt-short">${esc(promptText(t, false))}</div>
         <div id="prompt-full" hidden>${esc(promptText(t, true))}</div>
