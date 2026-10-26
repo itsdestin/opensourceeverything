@@ -17,7 +17,7 @@ export default function projectPages(d) {
     <div class="row">
       <div style="display:flex;align-items:center;gap:8px;flex-wrap:wrap"><h1 class="h-subject">${esc(p.name)}</h1></div>
     </div>
-    <div class="chiprow">${factChips(p)}</div>
+    <div class="chiprow">${factChips(p, null, '', { links: true })}</div>
     <p class="body2">${esc(p.summary)}</p>
     <div class="idfoot"><p class="muted11">Description written from the project's own page; checked by AI.</p>${links ? `<div class="links">${links}</div>` : ''}</div>
   </div>
@@ -54,7 +54,7 @@ export default function projectPages(d) {
           ${p.licenseClass === 'open_core' ? '<div class="fact"><span>Paid parts</span><span>Open core: some parts paid</span></div>' : ''}
           ${devicesText(p) || p.platforms?.includes('server') ? `<div class="fact"><span>Runs on</span><span>${esc([devicesText(p), p.platforms?.includes('server') ? 'your own server' : ''].filter(Boolean).join(' · '))}</span></div>` : ''}
           <div class="fact"><span>Kind</span><span>${esc(KIND[p.kind] ?? 'App')}</span></div>
-          ${p.stars ? `<div class="fact"><span>GitHub stars</span><span>${fmtStars(p.stars)}</span></div>` : ''}
+          ${p.stars ? `<div class="fact"><span>Stars on GitHub</span><span>${fmtStars(p.stars)}</span></div>` : ''}
           <div class="fact"><span>Hosted on</span><span>${esc(host)}</span></div>
           <div class="fact"><span>Activity</span><span>${p.inactive ? 'No changes in over a year' : 'Changed within the last year'}</span></div>
         </div>

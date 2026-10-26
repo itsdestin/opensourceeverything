@@ -20,6 +20,7 @@ export function footer() {
   ${SOCIAL ? `<a class="footchip" href="${url('boards/')}">Boards</a>` : ''}
   <a class="footchip" href="${url('about/')}">How this works</a>
   <a class="footchip" href="${url('about/#open-source')}">What counts as open source</a>
+  <a class="footchip" href="${url('licenses/')}">Licenses explained</a>
   <a class="footchip" href="${url('credits/')}">Data license: CC BY-SA 4.0</a>
   <a class="footchip" href="${url('credits/')}">Credits</a>
   <a class="footchip" href="${url('privacy/')}">Privacy</a>

@@ -69,24 +69,33 @@ export const ICON = {
 export const DEVICE = { windows: 'Windows', mac: 'Mac', linux: 'Linux', android: 'Android', ios: 'iPhone', web: 'In your browser' };
 export const devicesText = (p) => (p.platforms ?? []).filter((x) => DEVICE[x]).map((x) => DEVICE[x]).join(' · ');
 
+// Which section of licenses/ explains a license (licenses.mjs), from its SPDX name.
+export const licenseAnchor = (spdx = '') => [[/AGPL/, 'agpl'], [/LGPL/, 'lgpl'], [/GPL/, 'gpl'], [/MPL/, 'mpl'], [/Apache/, 'apache'], [/MIT/, 'mit'], [/BSD/, 'bsd'], [/OSL/, 'osl'], [/EUPL/, 'eupl']].find(([re]) => re.test(spdx))?.[1] ?? '';
+
 // The fact chips every listing shows, in one order everywhere (YouCoded's "one chip row" rule).
-export function factChips(p, alt, afterStars = '') {
-  // WHY GitHub stars first (Destin, Oct 27): the number people already know how to read. Projects hosted
-  // elsewhere (GIMP, LibreOffice) say so instead, so the first chip is never missing.
+// With links (project pages), chips go somewhere useful; on cards they stay plain, because the whole card is a link.
+export function factChips(p, alt, afterStars = '', { links = false } = {}) {
+  const chip = (html, href, title) => (links && href
+    ? `<a class="chip link" href="${esc(href)}"${/^https?:/.test(href) ? ' rel="noopener"' : ''}${title ? ` title="${esc(title)}"` : ''}>${html}</a>`
+    : `<span class="chip"${title ? ` title="${esc(title)}"` : ''}>${html}</span>`);
+  const gh = hostOf(p) === 'github.com' ? codeUrl(p) : null;
+  // WHY GitHub stars first, as a bare number (Destin, Oct 27): the number people already know how to read; the star
+  // says what it is. Projects hosted elsewhere (GIMP, LibreOffice) say so instead, so the first chip is never missing.
   const c = [];
-  if (p.stars) c.push(`<span class="chip">${ICON.star}${fmtStars(p.stars)} on GitHub</span>`);
-  else if (hostOf(p) !== 'github.com') c.push('<span class="chip">Not on GitHub</span>');
-  // WHY the rating right after stars: our own community's answer to "does it work as a replacement?" sits beside GitHub's popularity.
+  if (p.stars) c.push(chip(`${ICON.star}${fmtStars(p.stars)}`, gh, `${p.stars.toLocaleString('en')} stars on GitHub`));
+  else if (hostOf(p) !== 'github.com') c.push(chip('Not on GitHub', codeUrl(p) ?? p.website, 'Its code lives on its own site'));
+  // WHY the rating right after stars: our own community's answer to "a good replacement?" sits beside GitHub's popularity.
   c.push(afterStars);
   // WHY activity next, as a plain chip (Destin, Oct 27): the card's corner is for the Actions menu.
-  c.push(`<span class="chip">${p.inactive ? 'Quiet for a year' : 'Active'}</span>`);
+  c.push(chip(p.inactive ? 'Quiet for a year' : 'Active', gh && `${gh}/commits`, p.inactive ? 'No changes in over a year' : 'Changed within the last year: see its latest work'));
   // WHY right after activity (Destin, Oct 27): "does it run on my computer or phone?" is a newcomer's first question.
   // Server-only projects get no device chip; their "Runs on your own server" chip says it.
-  if (devicesText(p)) c.push(`<span class="chip">${esc(devicesText(p))}</span>`);
-  if (p.verified) c.push(`<span class="chip">${ICON.shield}Verified</span>`);
-  c.push(`<span class="chip"${p.licenseNeedsCheck ? ' title="A mod is confirming this license"' : ''}>${esc(p.license ?? 'License being checked')}</span>`);
-  if (p.licenseClass === 'open_core') c.push('<span class="chip" title="Open source, with some parts paid or under another license">Open core</span>');
-  if (alt?.fit === 'partial') c.push(`<span class="chip" title="${esc(alt.note || 'Covers part of the job')}">Replaces partly</span>`);
-  if (KIND[p.kind]) c.push(`<span class="chip">${esc(KIND[p.kind])}</span>`);
+  const dl = p.download ?? (p.release && p.kind === 'app' ? p.release : null) ?? p.website;
+  if (devicesText(p)) c.push(chip(esc(devicesText(p)), dl, 'Where to get it'));
+  if (p.verified) c.push(chip(`${ICON.shield}Verified`, url('about/#verified'), 'r/TrueOpenSource mods vouch for it'));
+  c.push(chip(esc(p.license ?? 'License being checked'), p.license && url(`licenses/#${licenseAnchor(p.license)}`), p.licenseNeedsCheck ? 'A mod is confirming this license' : 'What this license means'));
+  if (p.licenseClass === 'open_core') c.push(chip('Open core', url('licenses/#open-core'), 'Open source, with some parts paid or under another license'));
+  if (alt?.fit === 'partial') c.push(chip('Replaces partly', null, alt.note || 'Covers part of the job'));
+  if (KIND[p.kind]) c.push(chip(esc(KIND[p.kind])));
   return c.join('');
 }

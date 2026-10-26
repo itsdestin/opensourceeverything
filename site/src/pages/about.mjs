@@ -35,7 +35,7 @@ export default function about(d) {
       <li>The first version was filled in once from free, openly licensed lists of alternatives. They're named on the <a href="${url('credits/')}">Credits</a> page.</li>
       <li>Each project's own page was read to write a short, neutral description and to check what it really replaces. That was done with AI, then checked again with a stronger AI model, and every change it made was recorded with its reason.</li>
       <li>Licenses are read from each project's code. Where the host doesn't report one, a mod confirms it before it counts.</li>
-      <li><b class="num">Verified</b> means r/TrueOpenSource mods checked it themselves: an open-source license, still maintained, and it really does the job.</li>
+      <li id="verified"><b class="num">Verified</b> means r/TrueOpenSource mods checked it themselves: an open-source license, still maintained, and it really does the job.</li>
     </ul>`)}
   ${section('add', 'Get listed, or suggest something', `
     <div class="textrow">

@@ -86,7 +86,7 @@ export default function groupPages(d) {
       <section class="surface sec" style="gap:8px">
         <h2 class="h-large">About this page</h2>
         <p class="small2"><b class="num">Replaces fully</b> means it does the main job of these apps; <b class="num">Replaces partly</b> means it covers some of it.</p>
-        <p class="small2"><b class="num">Licenses</b>: every project here uses an open-source license. <b class="num">Open core</b> means some parts are paid or under another license.</p>
+        <p class="small2"><b class="num">Licenses</b>: every project here uses an open-source license (<a href="${url('licenses/')}">what each one means</a>). <b class="num">Open core</b> means some parts are paid or under another license.</p>
         <p class="small2"><b class="num">GitHub stars</b> are shown for reference. They measure popularity, not whether it replaces anything.</p>
         <p class="small2"><b class="num">Verified</b> means r/TrueOpenSource mods checked it: open-source license, maintained, and it really does the job.</p>
         <a class="btn md secondary full" href="${url('about/')}">How Open Source Everything works</a>
