@@ -366,8 +366,14 @@ button.fchip { cursor:pointer; }
 .menu .mi.sel { font-weight:600; color:var(--fg); }
 
 /* Ratings on project pages, and counts on cards. */
-.rate { position:relative; z-index:1; display:flex; align-items:center; gap:6px; flex-wrap:wrap; }
-.rate .muted11 { margin-right:auto; }
+/* The "good replacement?" question: its own inset box inside the listing card, words left, answers right. */
+.rate { position:relative; z-index:1; display:flex; align-items:center; justify-content:space-between; gap:12px; flex-wrap:wrap; padding:10px 12px; margin-top:4px; }
+.rate-q { flex:1 1 280px; min-width:0; display:flex; flex-direction:column; gap:6px; }
+.rate-text { font-size:13px; color:var(--fg); }
+.rate-res { display:flex; align-items:center; gap:8px; flex-wrap:wrap; }
+.rate-res .meter { margin-top:0; width:140px; }
+.rate-res .meter i { background:var(--accent); }
+.rate-btns { display:flex; gap:6px; flex:none; }
 .missing-count::before { content:"· "; }
 .modrow { padding:12px; display:flex; gap:12px; align-items:flex-start; justify-content:space-between; flex-wrap:wrap; }
 .modrow .rt { color:var(--fg); }

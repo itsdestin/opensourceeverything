@@ -65,7 +65,7 @@
     }
   });
 
-  // ── "Works as a replacement?" ratings: a chip on cards, buttons on project pages ──
+  // ── "Good replacement?" ratings, one per project per job: a chip on cards, the question on project pages ──
   const pct = (r) => (r.up + r.down >= 5 ? `${Math.round((r.up / (r.up + r.down)) * 100)}%` : null);
   async function renderRatings() {
     const chips = $$('[data-rating]'); const rows = $$('[data-rate]'); if (!chips.length && !rows.length) return;
@@ -75,14 +75,20 @@
     for (const el of chips) {
       const r = all[el.dataset.group]?.[el.dataset.project]; const p = r && pct(r);
       // WHY hidden under 5 votes: "100%" from one person would mislead.
-      if (p) { el.hidden = false; el.innerHTML = `${icon.up.replace(/14/g, '12')}${p}`; el.title = `${r.up} of ${r.up + r.down} people say it works as a replacement`; }
+      if (p) { el.hidden = false; el.innerHTML = `${icon.up.replace(/14/g, '12')}${p}`; el.title = `${r.up} of ${r.up + r.down} people say it's a good replacement`; }
     }
     for (const el of rows) drawRate(el, all[el.dataset.group]?.[el.dataset.project] ?? { up: 0, down: 0, mine: 0 });
   }
+  // WHY a full question per job (Destin, Oct 27: "make this clearer"): a project listed in three jobs gets three
+  // separate answers, and each names the closed apps it's being compared with, so it never reads as one question asked three times.
   function drawRate(el, r) {
-    el.innerHTML = `<span class="muted11">Works as a replacement?</span>
-      <button class="btn sm secondary${r.mine > 0 ? ' on' : ''}" type="button" data-v="1" aria-pressed="${r.mine > 0}" aria-label="Yes">${icon.up}${r.up}</button>
-      <button class="btn sm secondary${r.mine < 0 ? ' on' : ''}" type="button" data-v="-1" aria-pressed="${r.mine < 0}" aria-label="No">${icon.down}${r.down}</button>`;
+    const t = r.up + r.down; const p = t >= 5 ? Math.round((r.up / t) * 100) : null;
+    el.innerHTML = `<div class="rate-q"><div class="rate-text"></div>
+        <div class="rate-res">${p === null ? `<span class="muted11">${t ? `${t} ${t === 1 ? 'answer' : 'answers'} so far, not enough to show a score` : 'No answers yet'}</span>`
+          : `<div class="meter"><i style="width:${p}%"></i></div><span class="muted11"><b class="num">${p}%</b> of ${t} say yes</span>`}${r.mine ? `<span class="muted11"> · You said ${r.mine > 0 ? 'yes' : 'not really'}</span>` : ''}</div></div>
+      <div class="rate-btns"><button class="btn sm secondary${r.mine > 0 ? ' on' : ''}" type="button" data-v="1" aria-pressed="${r.mine > 0}">${icon.up}Yes</button>
+        <button class="btn sm secondary${r.mine < 0 ? ' on' : ''}" type="button" data-v="-1" aria-pressed="${r.mine < 0}">${icon.down}Not really</button></div>`;
+    $('.rate-text', el).textContent = el.dataset.question || 'Is it a good replacement?';
     el.onclick = async (e) => {
       const b = e.target.closest('[data-v]'); if (!b) return; e.preventDefault();
       const v = +b.dataset.v === r.mine ? 0 : +b.dataset.v;

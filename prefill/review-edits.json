@@ -1,5 +1,5 @@
 {
- "note": "Expert review of 24 high-traffic groups. Removals are dead/off-topic items; fit changes are strictness calls. Contains unverified judgment calls listed in docs/group-review.md. Destin/Claude overrides: Arch and CachyOS keep \"full\"; Proton Mail/Pass not added (closed servers). Additions moved into data/starter.json.",
+ "note": "Expert review of 24 high-traffic groups. Removals are dead/off-topic items; fit changes are strictness calls. Contains unverified judgment calls listed in docs/group-review.md. Destin/Claude overrides: Arch and CachyOS keep \"full\"; Proton Mail/Pass not added (closed servers). Additions moved into data/starter.json. YouCoded keeps Windows/Mac/Linux/Android: its browser access is only on your own network, not a public web app.",
  "fit": {
   "documents/cryptpad": "partial",
   "spreadsheets/gnumeric": "partial",
@@ -346,13 +346,6 @@
    "ios",
    "web",
    "server"
-  ],
-  "youcoded": [
-   "windows",
-   "mac",
-   "linux",
-   "android",
-   "web"
   ],
   "quant-ux": [
    "web",

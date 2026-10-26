@@ -35,7 +35,7 @@ export default function projectPages(d) {
           <div class="card listing">
             <div class="head"><h3><a class="cardlink" href="${url(`g/${group.id}/`)}">${esc(group.name)}</a></h3><span class="pill ${alt.fit === 'full' ? 'ok' : 'info'}">${alt.fit === 'full' ? '<i></i>Replaces fully' : 'Replaces partly'}</span></div>
             <p class="small2">Instead of ${esc(group.closed.join(', '))}${alt.note ? ` · ${esc(alt.note)}` : ''}</p>
-            ${SOCIAL ? `<div class="rate" data-rate data-group="${group.id}" data-project="${esc(p.id)}"></div>` : ''}
+            ${SOCIAL ? `<div class="rate lvl2" data-rate data-group="${group.id}" data-project="${esc(p.id)}" data-question="${esc(`Is ${p.name} a good replacement for ${group.closed.length > 3 ? group.closed.slice(0, 3).join(', ') + ' and others' : group.closed.length > 1 ? group.closed.slice(0, -1).join(', ') + ' and ' + group.closed.at(-1) : group.closed[0] ?? 'these'}?`)}"></div>` : ''}
           </div>`).join('')}
         </div>
       </section>

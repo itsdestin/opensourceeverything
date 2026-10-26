@@ -70,7 +70,7 @@
       // WHY a steady sample count per project: so the preview shows percentages, not empty ratings.
       const out = {};
       for (const pid of new Set([...Object.keys(g), ...ids])) {
-        const v = Object.values(g[pid] ?? {}); const h = [...pid].reduce((s, c) => s + c.charCodeAt(0), 0);
+        const v = Object.values(g[pid] ?? {}); const h = [...(pid + group)].reduce((s, c) => s * 31 + c.charCodeAt(0), 7) >>> 0; // WHY the group too: a project's ratings differ per job
         out[pid] = { up: v.filter((x) => x > 0).length + (h % 40) + 3, down: v.filter((x) => x < 0).length + (h % 7), mine: m ? (g[pid]?.[m.login] ?? 0) : 0 };
       }
       return delay(out);
