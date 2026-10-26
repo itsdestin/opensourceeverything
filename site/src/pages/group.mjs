@@ -1,7 +1,7 @@
 // One page per group (g/<id>/): the job, the closed apps it replaces, and its open alternatives.
 // Ported from mockups/group-page.html. Votes, comments, "still missing", suggest and report need the server,
 // so they only appear once API_URL is set (see lib.mjs).
-import { esc, url, ICON, SITE_URL, API_URL, codeUrl } from '../lib.mjs';
+import { esc, url, ICON, SITE_URL, API_URL, codeUrl, suggestUrl } from '../lib.mjs';
 import { altCard, appUrl, sortAlts, deviceFilter } from '../cards.mjs';
 
 // WHY only the first letter, and not before a capital: "AI agents" and "PDF tools" keep their capitals mid-sentence.
@@ -53,8 +53,8 @@ export default function groupPages(d) {
             <div class="menu" id="sortMenu" role="listbox">${SORTS.map(([k, v], i) => `<button class="mi${i ? '' : ' sel'}" type="button" role="option" data-sort="${k}">${v}</button>`).join('')}</div></div></div>` : ''}
         </div>
         ${alts.length
-          ? `<div class="grid" data-alts>${alts.map((x, i) => altCard(x.p, x.a, i)).join('')}</div><div class="callout info" data-nomatch hidden>None of these match. Try another device.</div>`
-          : `<div class="callout info">Nothing open does this job yet. That makes it a gap: if you're building one, <a href="${API_URL ? url(`g/${g.id}/#add`) : 'https://www.reddit.com/r/TrueOpenSource/'}" rel="noopener">${API_URL ? 'add it here' : 'share it on r/TrueOpenSource'}</a>.</div>`}
+          ? `<div class="grid" data-alts>${alts.map((x, i) => altCard(x.p, x.a, i, g)).join('')}</div><div class="callout info" data-nomatch hidden>None of these match. Try another device.</div>`
+          : `<div class="callout info">Nothing open does this job yet. That makes it a gap: if you're building one, <a href="${esc(suggestUrl('1-add-project', { group: g.name }))}" rel="noopener">add it here</a>.</div>`}
       </section>
     </div>
 
@@ -68,6 +68,14 @@ export default function groupPages(d) {
           <button class="btn md primary" type="button" data-copy="prompt-short" data-copied="Copied. Paste it into any AI assistant.">Copy prompt</button>
           <button class="btn md secondary" type="button" data-copy="prompt-full" data-copied="Copied, with the list. Paste it into any AI assistant.">Copy with the list included</button>
           <a class="btn md secondary" href="${url(`data/groups/${g.id}.json`)}" download="${g.id}.json">Download the list</a>
+        </div>
+      </section>
+      <section class="surface sec">
+        <div><h2 class="h-large">Something missing or wrong?</h2><p class="desc12" style="margin-top:4px">Suggest it with a short form on GitHub. A r/TrueOpenSource mod reviews every suggestion.</p></div>
+        <div class="stack">
+          <a class="btn md primary" href="${esc(suggestUrl('1-add-project', { group: g.name }))}" rel="noopener">Add a project here</a>
+          <a class="btn md secondary" href="${esc(suggestUrl('3-add-closed-app', { group: g.name }))}" rel="noopener">Add a closed app it replaces</a>
+          <a class="btn md secondary" href="${esc(suggestUrl('2-fix', { group: g.name }))}" rel="noopener">Fix something on this page</a>
         </div>
       </section>
       <section class="surface sec" style="gap:8px">

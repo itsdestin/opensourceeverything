@@ -28,7 +28,7 @@
     return (closed.length ? '<div class="menu-note">Closed apps</div>' + closed.join('') : '') +
       (groups.length ? '<div class="menu-note">Groups</div>' + groups.join('') : '') +
       (projects.length ? '<div class="menu-note">Open projects</div>' + projects.join('') : '') ||
-      `<div class="menu-note">Nothing matches "${esc(t.trim())}" yet. Ask for it on <a href="https://www.reddit.com/r/TrueOpenSource/" rel="noopener">r/TrueOpenSource</a>.</div>`;
+      `<div class="menu-note">Nothing matches "${esc(t.trim())}" yet. <a href="https://github.com/itsdestin/opensourceeverything/issues/new?template=4-new-group.yml&closed=${encodeURIComponent(t.trim())}" rel="noopener">Suggest it</a>.</div>`;
   }
   document.querySelectorAll('[data-search]').forEach((wrap) => {
     const input = wrap.querySelector('input'); const menu = wrap.querySelector('.search-menu');

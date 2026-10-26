@@ -1,0 +1,26 @@
+name: Suggest a new group
+description: A job the map doesn't cover yet, even if nothing open does it (that's a gap worth showing)
+title: "New group: "
+labels: [suggestion, new-group]
+body:
+  - type: input
+    id: name
+    attributes: { label: Name of the job, placeholder: "e.g. Habit tracking" }
+    validations: { required: true }
+  - type: input
+    id: job
+    attributes: { label: In one line, what people do with it, placeholder: "Tracking daily habits and streaks" }
+    validations: { required: true }
+  - type: input
+    id: closed
+    attributes: { label: Closed apps that do this job, placeholder: "Habitica, Streaks" }
+    validations: { required: true }
+  - type: dropdown
+    id: category
+    attributes:
+      label: Category
+      options: ["Office & productivity", "Communication & social", "Creative", "Operating systems & phones", "Browsers, search & security", "AI tools", "Media & entertainment", "Files & cloud", "Everyday", "Developer & business", "Business & finance"]
+    validations: { required: true }
+  - type: textarea
+    id: projects
+    attributes: { label: Open-source projects that do it, description: "Links, if you know any. They're added with \"Add a project\" after the group exists." }

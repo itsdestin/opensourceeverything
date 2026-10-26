@@ -1,5 +1,5 @@
 // One page per open-source project (p/<id>/): what it is, which groups it's listed in, and its facts.
-import { esc, url, SITE_URL, KIND, factChips, hostOf, fmtStars, actions, codeUrl, devicesText } from '../lib.mjs';
+import { esc, url, SITE_URL, KIND, factChips, hostOf, fmtStars, actions, codeUrl, devicesText, suggestUrl } from '../lib.mjs';
 
 const HOSTS = { 'github.com': 'GitHub', 'gitlab.com': 'GitLab', 'codeberg.org': 'Codeberg' };
 
@@ -51,6 +51,13 @@ export default function projectPages(d) {
           ${p.stars ? `<div class="fact"><span>GitHub stars</span><span>${fmtStars(p.stars)}</span></div>` : ''}
           <div class="fact"><span>Hosted on</span><span>${esc(host)}</span></div>
           <div class="fact"><span>Activity</span><span>${p.inactive ? 'No changes in over a year' : 'Changed within the last year'}</span></div>
+        </div>
+      </section>
+      <section class="surface sec">
+        <div><h2 class="h-large">Something wrong?</h2><p class="desc12" style="margin-top:4px">Wrong devices, a wrong description, or it isn't really open source? A mod reviews every suggestion.</p></div>
+        <div class="stack">
+          <a class="btn md secondary" href="${esc(suggestUrl('2-fix', { project: p.name }))}" rel="noopener">Suggest a fix</a>
+          <a class="btn md secondary" href="${esc(suggestUrl('5-report', { project: p.name }))}" rel="noopener">Report this project</a>
         </div>
       </section>
       ${p.unconfirmed?.length ? `<section class="surface sec">

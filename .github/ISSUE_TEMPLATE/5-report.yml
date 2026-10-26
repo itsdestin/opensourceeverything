@@ -1,0 +1,24 @@
+name: Report a project
+description: Not really open source, abandoned, not what it claims, or spam
+title: "Report: "
+labels: [suggestion, report]
+body:
+  - type: input
+    id: project
+    attributes: { label: Project, description: "As named on the site. The button on a project page fills this in." }
+    validations: { required: true }
+  - type: dropdown
+    id: reason
+    attributes:
+      label: What's the problem?
+      options:
+        - It isn't open source
+        - It's abandoned or no longer works
+        - It doesn't do what the listing says
+        - It's spam or a duplicate
+        - Something else
+    validations: { required: true }
+  - type: textarea
+    id: details
+    attributes: { label: Details, description: "A link that shows it helps a lot" }
+    validations: { required: true }

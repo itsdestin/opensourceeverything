@@ -25,7 +25,7 @@ export default function appPages(d) {
     <div class="sec-head"><div><h2 class="h-large">${groups.length > 1 ? esc(g.name) : 'Open alternatives'}<span class="count">${alts.length}</span></h2>
       <p class="desc12">${esc(g.job)}. <a class="crumb" href="${url(`g/${g.id}/`)}">See the whole group</a></p></div></div>
     ${alts.length
-      ? `<div class="grid" data-alts>${alts.map((x) => altCard(x.p, x.a, i++)).join('')}</div><div class="callout info" data-nomatch hidden>None of these match. Try another device.</div>`
+      ? `<div class="grid" data-alts>${alts.map((x) => altCard(x.p, x.a, i++, g)).join('')}</div><div class="callout info" data-nomatch hidden>None of these match. Try another device.</div>`
       : `<div class="callout info">Nothing open does this yet. It's one of the <a href="${url('gaps/')}">gaps on the map</a>: if you're building one, <a href="${url(`g/${g.id}/#build`)}">see what to reuse first</a>.</div>`}
   </section>`;
 

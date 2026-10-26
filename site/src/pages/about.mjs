@@ -1,6 +1,6 @@
 // How this works (about/): what the site is, how it's organised, what counts as open source, where the
 // listings came from, how to get listed, and that everything about the site is open.
-import { url, REPO, SUBREDDIT } from '../lib.mjs';
+import { url, esc, REPO, SUBREDDIT, suggestUrl } from '../lib.mjs';
 
 export default function about(d) {
   const section = (id, title, html) => `<section class="surface sec prose"${id ? ` id="${id}"` : ''}><h2 class="h-large">${title}</h2>${html}</section>`;
@@ -39,11 +39,11 @@ export default function about(d) {
     </ul>`)}
   ${section('add', 'Get listed, or suggest something', `
     <div class="textrow">
-      <div><p class="body2">Built an open-source alternative, or know one that's missing? Until sign-in opens on this site, post it on the subreddit or suggest it on GitHub.</p>
-        <p class="small2" style="margin-top:4px">On GitHub you can also change the data directly with a pull request. Mods review every suggestion.</p></div>
+      <div><p class="body2">Built an open-source alternative, or know one that's missing? Fill in a short form on GitHub: add a project, fix something, add a closed app, suggest a missing job, or report a project.</p>
+        <p class="small2" style="margin-top:4px">A robot checks the license and the project's age first (the same checks as r/TrueOpenSource), then a mod reviews it. Once a mod approves, the change goes on the site. Every suggestion and decision stays public.</p></div>
       <div class="btns-row">
-        <a class="btn md secondary" href="${SUBREDDIT}" rel="noopener">Post on r/TrueOpenSource</a>
-        <a class="btn md primary" href="${REPO}/issues/new" rel="noopener">Suggest it on GitHub</a>
+        <a class="btn md secondary" href="${REPO}/issues/new/choose" rel="noopener">See all the forms</a>
+        <a class="btn md primary" href="${esc(suggestUrl('1-add-project'))}" rel="noopener">Add a project</a>
       </div>
     </div>`)}
   ${section('open', 'This site is open too', `

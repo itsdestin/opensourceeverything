@@ -1,0 +1,55 @@
+name: Add a project
+description: An open-source project that replaces a closed app
+title: "Add: "
+labels: [suggestion, add-project]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks! A robot checks the license and age first, then a r/TrueOpenSource mod reviews it. Only projects under an [open-source license](https://opensource.org/licenses) can be listed.
+  - type: input
+    id: name
+    attributes: { label: Project name }
+    validations: { required: true }
+  - type: input
+    id: code
+    attributes: { label: Link to its code, description: "Its GitHub, GitLab or Codeberg page", placeholder: "https://github.com/owner/project" }
+    validations: { required: true }
+  - type: input
+    id: website
+    attributes: { label: Its website, description: Optional }
+  - type: input
+    id: group
+    attributes: { label: Group, description: "The job it does, as named on the site (e.g. Documents). The button on a group page fills this in." }
+    validations: { required: true }
+  - type: input
+    id: replaces
+    attributes: { label: Closed apps it replaces, placeholder: "Google Docs, Microsoft Word" }
+    validations: { required: true }
+  - type: dropdown
+    id: fit
+    attributes: { label: How much of the job does it do?, options: ["Replaces fully: someone could switch and do the main job", "Replaces partly: it covers some of the job"] }
+    validations: { required: true }
+  - type: input
+    id: missing
+    attributes: { label: What's missing compared with the closed apps?, description: "Short, e.g. \"No live co-editing\". Leave empty if nothing important." }
+  - type: textarea
+    id: summary
+    attributes: { label: What it is, description: "One or two plain sentences a non-developer understands: what it does and who it's for." }
+    validations: { required: true }
+  - type: checkboxes
+    id: devices
+    attributes:
+      label: Works on
+      options:
+        - label: Windows
+        - label: Mac
+        - label: Linux
+        - label: Android
+        - label: iPhone
+        - label: In your browser (no install)
+        - label: Your own server
+  - type: dropdown
+    id: relation
+    attributes: { label: Are you involved with it?, description: "Fine either way. Projects posted by their own team say so on the site.", options: ["No, I just use it or know of it", "Yes, I'm on its team"] }
+    validations: { required: true }

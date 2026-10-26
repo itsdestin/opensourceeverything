@@ -124,3 +124,4 @@ table.credits a { color:var(--fg); }
   .swgrid > .card { flex:0 0 240px; } .gapgrid > .card { flex:0 0 240px; }
   .catgrid { grid-template-columns:1fr; }
 }
+.builders .small2 a { color:var(--fg); }

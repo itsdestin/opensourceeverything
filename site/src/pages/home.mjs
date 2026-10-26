@@ -1,7 +1,7 @@
 // The home page, in the order a newcomer needs it (Destin, Oct 27: "clearer… more polished for newcomers"):
 // 1. what this is and a big search, 2. popular switches with real screenshots, 3. every category as a tidy card,
 // 4. what's still missing, 5. the builders' card. Everything sits inside a raised card (no bare text).
-import { url, esc, ICON, API_URL } from '../lib.mjs';
+import { url, esc, ICON, suggestUrl } from '../lib.mjs';
 import { appUrl, sortAlts } from '../cards.mjs';
 
 // WHY two lists: the picture cards need a replacement with a real screenshot (Windows and Chrome have none yet),
@@ -106,11 +106,11 @@ export default function home(d) {
   <div class="surface builders">
     <div style="min-width:0;max-width:640px">
       <h2 class="h-large">Building an open alternative?</h2>
-      <p class="small2" style="margin-top:4px">See what already exists, reuse parts of it, or get your project listed so people can find it. The whole map is free to download, for people and AI assistants.</p>
+      <p class="small2" style="margin-top:4px">See what already exists, reuse parts of it, or get your project listed so people can find it. The whole map is also <a href="${url('data/groups.json')}" download>free to download</a>, for people and AI assistants.</p>
     </div>
     <div class="btns">
-      <a class="btn md secondary" href="${url('data/groups.json')}" download>Download the whole map</a>
-      ${API_URL ? `<a class="btn md primary" href="${url('g/documents/#add')}">Add your project</a>` : `<a class="btn md primary" href="${url('about/#add')}">How to get listed</a>`}
+      <a class="btn md secondary" href="${esc(suggestUrl('4-new-group'))}" rel="noopener">Suggest a missing job</a>
+      <a class="btn md primary" href="${esc(suggestUrl('1-add-project'))}" rel="noopener">Add your project</a>
     </div>
   </div>`;
 

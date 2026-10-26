@@ -1,0 +1,6 @@
+# WHY no blank issues: every suggestion uses a form, so the robot can read it and a mod can approve it with one label.
+blank_issues_enabled: false
+contact_links:
+  - name: Talk about it on r/TrueOpenSource
+    url: https://www.reddit.com/r/TrueOpenSource/
+    about: Questions, ideas and discussion

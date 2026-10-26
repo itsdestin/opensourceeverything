@@ -1,0 +1,37 @@
+name: Fix something
+description: Wrong devices, wrong "fully / partly", a wrong description, a broken link or a wrong license
+title: "Fix: "
+labels: [suggestion, fix]
+body:
+  - type: input
+    id: project
+    attributes: { label: Project, description: "As named on the site. The button on a project or card fills this in." }
+    validations: { required: true }
+  - type: input
+    id: group
+    attributes: { label: Group, description: "Only needed for \"fully / partly\" and the short note under a card" }
+  - type: dropdown
+    id: what
+    attributes:
+      label: What's wrong?
+      options:
+        - The devices it works on
+        - Replaces fully / partly
+        - The short note under its card
+        - Its description
+        - Its website or download link
+        - Its license
+        - Something else
+    validations: { required: true }
+  - type: textarea
+    id: correct
+    attributes:
+      label: What it should be
+      description: |
+        Devices: list them (Windows, Mac, Linux, Android, iPhone, In your browser, Your own server).
+        Fully / partly: write "fully" or "partly", and what's missing.
+        Description, link or license: write the correct one.
+    validations: { required: true }
+  - type: input
+    id: proof
+    attributes: { label: Where you saw this, description: "A link that shows it, e.g. its download page or license file" }

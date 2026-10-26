@@ -1,0 +1,77 @@
+# The suggestion robot (.github/robot/suggestion.mjs).
+# - A suggestion is opened or edited → the robot checks it and posts one comment (updated in place).
+# - A mod adds the "approved" label → the robot writes the change, rebuilds the data, and opens a pull request
+#   that closes the suggestion. A mod merges it; nothing changes on the site before that.
+# WHY a pull request, not a direct change: a mod sees exactly what changed before it goes live.
+# Only people with triage access or above (the mods) can add labels, so only they can trigger "apply".
+name: Suggestions
+on:
+  issues:
+    types: [opened, edited, labeled]
+permissions:
+  contents: write
+  issues: write
+  pull-requests: write
+concurrency:
+  group: suggestion-${{ github.event.issue.number }}
+jobs:
+  check:
+    if: (github.event.action == 'opened' || github.event.action == 'edited') && contains(github.event.issue.labels.*.name, 'suggestion')
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 24
+      - name: Build the shared checker
+        working-directory: checker
+        run: npm ci && npm run build
+      - name: Check the suggestion
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: node .github/robot/suggestion.mjs check "$GITHUB_EVENT_PATH"
+      - name: Post or update the robot's comment
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          N: ${{ github.event.issue.number }}
+        run: |
+          id=$(gh api "repos/$GITHUB_REPOSITORY/issues/$N/comments" --jq '[.[] | select(.body | startswith("<!-- suggestion-robot -->"))][0].id // empty')
+          if [ -n "$id" ]; then gh api -X PATCH "repos/$GITHUB_REPOSITORY/issues/comments/$id" -F body=@robot-comment.md >/dev/null
+          else gh issue comment "$N" --body-file robot-comment.md; fi
+
+  apply:
+    if: github.event.action == 'labeled' && github.event.label.name == 'approved' && contains(github.event.issue.labels.*.name, 'suggestion')
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 24
+      - name: Build the shared checker
+        working-directory: checker
+        run: npm ci && npm run build
+      - name: Write the change and rebuild the data
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          node .github/robot/suggestion.mjs apply "$GITHUB_EVENT_PATH"
+          node prefill/assemble.mjs
+          node site/build.mjs && node site/check.mjs
+      - name: Open a pull request
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          N: ${{ github.event.issue.number }}
+          TITLE: ${{ github.event.issue.title }}
+        run: |
+          git config user.name "suggestion-robot"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git checkout -b "suggestion-$N"
+          git add data/edits.json data/groups.json data/projects.json data/categories.json
+          git commit -m "Suggestion #$N: $TITLE"
+          git push -f origin "suggestion-$N"
+          gh pr create --head "suggestion-$N" --title "Suggestion #$N: $TITLE" --body "Closes #$N. Approved by @${{ github.actor }}; written by the suggestion robot. Merge to put it on the site."
+      - name: Tell the suggestion what happened
+        if: failure()
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: gh issue comment "${{ github.event.issue.number }}" --body "The robot couldn't apply this one automatically (see the robot's check above). A mod will make the change by hand."

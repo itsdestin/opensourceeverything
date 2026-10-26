@@ -1,0 +1,16 @@
+name: Add a closed app
+description: A closed app missing from a group, so people searching for it find the open alternatives
+title: "Closed app: "
+labels: [suggestion, add-closed-app]
+body:
+  - type: input
+    id: app
+    attributes: { label: Closed app, placeholder: "e.g. Microsoft Loop" }
+    validations: { required: true }
+  - type: input
+    id: group
+    attributes: { label: Group, description: "The job it does, as named on the site. The button on a group page fills this in." }
+    validations: { required: true }
+  - type: textarea
+    id: why
+    attributes: { label: Anything else, description: Optional }

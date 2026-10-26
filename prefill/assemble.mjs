@@ -150,6 +150,65 @@ if (existsSync(platFile)) {
   for (const p of projects.values()) p.platforms = (fixes[p.id] ?? plat[p.id]?.platforms ?? []).slice().sort((a, b) => ORDER.indexOf(a) - ORDER.indexOf(b));
 }
 
+// ── Hand corrections and approved suggestions, applied last so nothing automatic overwrites them ──
+// WHY in this order: researched fixes first (licenses, screenshots, the expert review), then mods' approved
+// suggestions (data/edits.json), so a later human decision always wins over an earlier one.
+const optional = (f) => (existsSync(f) ? read(f) : null);
+const dropProject = (id) => { projects.delete(id); for (const g of groups.values()) g.alternatives = g.alternatives.filter((a) => a.project !== id); };
+const alt = (gid, pid) => groups.get(gid)?.alternatives.find((a) => a.project === pid);
+
+// Licenses researched from each project's own LICENSE file (prefill/license-fixes.json). A mod still confirms
+// them (licenseNeedsCheck stays on) until data/license-confirmed.json lists the project.
+const confirmed = new Set(optional(join(ROOT, 'data/license-confirmed.json'))?.projects ?? []);
+for (const [id, f] of Object.entries(optional(join(HERE, 'license-fixes.json'))?.fixes ?? {})) {
+  const p = projects.get(id); if (!p) continue;
+  if (f.verdict === 'not_open') { dropProject(id); continue; }
+  if (f.verdict === 'open' || f.verdict === 'open_core') { p.license = f.license; p.licenseClass = f.verdict; p.licenseSource = f.evidence; }
+}
+for (const p of projects.values()) if (confirmed.has(p.id)) p.licenseNeedsCheck = false;
+
+// Screenshots picked by hand from official sources (Flathub, project sites, Wikimedia Commons) for projects with none.
+for (const [id, urls] of Object.entries(optional(join(HERE, 'screenshot-fixes.json'))?.fixes ?? {})) {
+  const p = projects.get(id); if (p && !p.screenshots?.length) p.screenshots = urls.slice(0, 4);
+}
+
+// The expert review of the most-visited groups (prefill/review-edits.json, written by Opus).
+const review = optional(join(HERE, 'review-edits.json'));
+if (review) {
+  for (const [k, fit] of Object.entries(review.fit ?? {})) { const [g, p] = k.split('/'); const a = alt(g, p); if (a) a.fit = fit; }
+  for (const [k, note] of Object.entries(review.note_text ?? {})) { const [g, p] = k.split('/'); const a = alt(g, p); if (a) a.note = note; }
+  for (const [id, s] of Object.entries(review.summary ?? {})) { const p = projects.get(id); if (p) p.summary = s; }
+  for (const [id, pl] of Object.entries(review.platforms ?? {})) { const p = projects.get(id); if (p) p.platforms = pl; }
+  for (const k of review.remove ?? []) { const [g, p] = k.split('/'); const gr = groups.get(g); if (gr) gr.alternatives = gr.alternatives.filter((a) => a.project !== p); }
+}
+
+// Mods' approved suggestions (data/edits.json, written by .github/robot/suggestion.mjs).
+for (const e of optional(join(ROOT, 'data/edits.json'))?.edits ?? []) {
+  if (e.type === 'add-project' && groups.has(e.group)) {
+    const id = projects.has(slug(e.name)) ? projects.get(slug(e.name)).id : addProject({
+      id: slug(e.name), name: e.name, summary: e.byTeam ? `${e.summary} Listed by the project's own team.` : e.summary,
+      kind: e.platforms?.length === 1 && e.platforms[0] === 'server' ? 'self_hosted' : 'app', code: e.code, website: e.website, download: null,
+      license: e.license ?? null, licenseClass: 'open', licenseNeedsCheck: !e.license, stars: null, archived: false, inactive: false,
+      unconfirmed: [], source: `suggestion #${e.issue}`, verified: false, screenshots: [], platforms: e.platforms ?? [] });
+    if (!alt(e.group, id)) groups.get(e.group).alternatives.push({ project: id, fit: e.fit, note: e.note });
+    for (const c of e.replaces ?? []) if (![...groups.values()].some((g) => g.closed.includes(c))) groups.get(e.group).closed.push(c);
+  } else if (e.type === 'fix') {
+    const p = projects.get(e.project); if (!p) continue;
+    if (e.field === 'platforms') p.platforms = e.value;
+    else if (e.field === 'summary') p.summary = e.value;
+    else if (e.field === 'license') { p.license = e.value; p.licenseNeedsCheck = false; }
+    else if (e.field === 'link') p.website = e.value;
+    else if (e.field === 'fit' && alt(e.group, e.project)) alt(e.group, e.project).fit = e.value;
+    else if (e.field === 'note' && alt(e.group, e.project)) alt(e.group, e.project).note = e.value;
+  } else if (e.type === 'add-closed-app' && groups.has(e.group) && !groups.get(e.group).closed.includes(e.app)) {
+    groups.get(e.group).closed.push(e.app);
+  } else if (e.type === 'new-group' && !groups.has(e.id)) {
+    groups.set(e.id, { id: e.id, name: e.name, category: e.category, job: e.job, closed: e.closed, source: `suggestion #${e.issue}`, alternatives: [] });
+  } else if (e.type === 'remove-project') {
+    dropProject(e.project);
+  }
+}
+
 // ── Write ──
 const groupList = [...groups.values()].sort((a, b) => categories.findIndex((c) => c.id === a.category) - categories.findIndex((c) => c.id === b.category));
 const unknownCat = groupList.filter((g) => !categories.some((c) => c.id === g.category));

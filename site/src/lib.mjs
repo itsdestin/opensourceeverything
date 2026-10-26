@@ -11,6 +11,9 @@ export const API_URL = process.env.API_URL ?? '';
 export const SUBREDDIT = 'https://www.reddit.com/r/TrueOpenSource/';
 export const REPO = 'https://github.com/itsdestin/opensourceeverything';
 
+// A suggestion form on GitHub (.github/ISSUE_TEMPLATE/), with fields filled in from the page it's opened on.
+// WHY prefilled: the visitor only writes what's new; the robot reads exact names it can match.
+export const suggestUrl = (template, fields = {}) => `${REPO}/issues/new?template=${template}.yml${Object.entries(fields).map(([k, v]) => `&${k}=${encodeURIComponent(v)}`).join('')}`;
 export const url = (path = '') => BASE + path.replace(/^\//, '');
 export const esc = (s) => String(s ?? '').replace(/[&<>"']/g, (c) => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c]));
 export const fmtStars = (n) => (n >= 1000 ? (n / 1000).toFixed(n >= 10000 ? 0 : 1).replace(/\.0$/, '') + 'k' : String(n));
