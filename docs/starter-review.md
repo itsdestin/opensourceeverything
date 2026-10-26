@@ -3,7 +3,7 @@
 Drafted Oct 27, 2026, then every link checked automatically (2026-10-26).
 ✅ open-source license confirmed · ⚠️ needs a person to check the license · ❌ problem · 🔍 not on a host we can read; check by hand · 🗄️ archived · 💤 quiet for a year
 
-**10 categories, 58 groups, 138 closed apps, 169 listings.** 129 confirmed open source, 10 need a license check, 25 to check by hand, 5 problems.
+**10 categories, 58 groups, 138 closed apps, 164 listings.** 129 confirmed open source, 10 need a license check, 25 to check by hand, 0 problems.
 
 "Full" = replaces the main job; "partly" = covers part of it.
 
@@ -52,7 +52,6 @@ Drafted Oct 27, 2026, then every link checked automatically (2026-10-26).
 | Trilium Notes | Full | ✅ AGPL-3.0 |  |
 | SiYuan | Full | ✅ AGPL-3.0 |  |
 | Standard Notes | Partly | ✅ AGPL-3.0 | Encrypted notes, fewer layouts |
-| Anytype | Full | ❌ Any Source Available License: not open source |  |
 
 ### Tasks & project boards
 *To-do lists, boards and project tracking.* Replaces: Trello, Asana, Jira, Monday.com, Todoist
@@ -63,7 +62,6 @@ Drafted Oct 27, 2026, then every link checked automatically (2026-10-26).
 | OpenProject | Full | ✅ GPL-3.0 |  |
 | Vikunja | Full | ✅ AGPL-3.0 |  |
 | Wekan | Partly | ✅ MIT | Boards only |
-| Planka | Partly | ❌ Fair Use License: not open source | Boards only |
 | Taiga | Full | ✅ MPL-2.0 · 💤 no changes in a year |  |
 
 ### Forms & surveys
@@ -356,7 +354,6 @@ No open alternative yet. **A gap.**
 
 | Alternative | Fit | Check | Note |
 |---|---|---|---|
-| Open WebUI | Full | ❌ Open WebUI License: not open source | Works with local or online models |
 | Jan | Full | ✅ Apache-2.0 (read from its license file) | Runs models on your computer |
 | LibreChat | Full | ✅ MIT |  |
 | Ollama | Partly | ✅ MIT | Runs models; needs a chat app on top |
@@ -440,7 +437,6 @@ No open alternative yet. **A gap.**
 | Calibre | Full | ✅ GPL-3.0 | Library and reader |
 | KOReader | Full | ✅ AGPL-3.0 | E-reader app |
 | Audiobookshelf | Full | ✅ GPL-3.0 | Your own audiobooks |
-| BookWyrm | Full | ❌ Anti-Capitalist Software License: not open source | Like Goodreads |
 
 ## Files & cloud
 
@@ -541,4 +537,3 @@ No open alternative yet. **A gap.**
 | Node-RED | Full | ✅ Apache-2.0 |  |
 | Activepieces | Full | ✅ MIT (read from its license file) · 🔒 open core: some parts paid |  |
 | Huginn | Partly | ✅ MIT | For technical users |
-| n8n | Full | ❌ Sustainable Use License: not open source |  |

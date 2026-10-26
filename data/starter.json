@@ -1,252 +1,1647 @@
 {
-  "note": "Hand-picked starter set: the everyday core of the map, our own data (not copied from any list). Each alternative is [name, code link or website, fit, optional note]. fit: full = replaces the main job; partial = covers part of it. Checked by prefill/check-starter.mjs.",
-  "categories": [
-    { "id": "office", "name": "Office & productivity", "groups": [
-      { "id": "documents", "name": "Documents", "job": "Writing and editing documents, alone or with others", "closed": ["Google Docs", "Microsoft Word", "Apple Pages"], "alts": [
-        ["LibreOffice Writer", "https://git.libreoffice.org/core", "full", "Desktop; no live co-editing"],
-        ["OnlyOffice Docs", "github.com/ONLYOFFICE/DocumentServer", "full"],
-        ["Collabora Online", "github.com/CollaboraOnline/online", "full", "Needs your own server"],
-        ["CryptPad", "github.com/cryptpad/cryptpad", "partial", "Encrypted, simpler formatting"],
-        ["Etherpad", "github.com/ether/etherpad", "partial", "Plain shared text"]]},
-      { "id": "spreadsheets", "name": "Spreadsheets", "job": "Tables, formulas and charts", "closed": ["Microsoft Excel", "Google Sheets", "Apple Numbers"], "alts": [
-        ["LibreOffice Calc", "https://git.libreoffice.org/core", "full"],
-        ["OnlyOffice Docs", "github.com/ONLYOFFICE/DocumentServer", "full"],
-        ["Grist", "github.com/gristlabs/grist-core", "partial", "Spreadsheet-database hybrid"],
-        ["Gnumeric", "https://gitlab.gnome.org/GNOME/gnumeric", "partial"]]},
-      { "id": "slides", "name": "Presentations", "job": "Slide decks", "closed": ["Microsoft PowerPoint", "Google Slides", "Apple Keynote"], "alts": [
-        ["LibreOffice Impress", "https://git.libreoffice.org/core", "full"],
-        ["OnlyOffice Docs", "github.com/ONLYOFFICE/DocumentServer", "full"],
-        ["Slidev", "github.com/slidevjs/slidev", "partial", "Slides written as text, for developers"],
-        ["reveal.js", "github.com/hakimel/reveal.js", "partial", "Web slides, for developers"]]},
-      { "id": "notes", "name": "Notes & wikis", "job": "Notes, personal knowledge and team wikis", "closed": ["Notion", "Evernote", "Microsoft OneNote", "Obsidian", "Google Keep"], "alts": [
-        ["AppFlowy", "github.com/AppFlowy-IO/AppFlowy", "full"],
-        ["AFFiNE", "github.com/toeverything/AFFiNE", "full"],
-        ["Joplin", "github.com/laurent22/joplin", "full"],
-        ["Logseq", "github.com/logseq/logseq", "full"],
-        ["Trilium Notes", "github.com/TriliumNext/Trilium", "full"],
-        ["SiYuan", "github.com/siyuan-note/siyuan", "full"],
-        ["Standard Notes", "github.com/standardnotes/app", "partial", "Encrypted notes, fewer layouts"],
-        ["Anytype", "github.com/anyproto/anytype-ts", "full"]]},
-      { "id": "tasks", "name": "Tasks & project boards", "job": "To-do lists, boards and project tracking", "closed": ["Trello", "Asana", "Jira", "Monday.com", "Todoist"], "alts": [
-        ["Plane", "github.com/makeplane/plane", "full"],
-        ["OpenProject", "github.com/opf/openproject", "full"],
-        ["Vikunja", "github.com/go-vikunja/vikunja", "full"],
-        ["Wekan", "github.com/wekan/wekan", "partial", "Boards only"],
-        ["Planka", "github.com/plankanban/planka", "partial", "Boards only"],
-        ["Taiga", "github.com/kaleidos-ventures/taiga", "full"]]},
-      { "id": "forms", "name": "Forms & surveys", "job": "Questionnaires and sign-up forms", "closed": ["Google Forms", "Typeform", "SurveyMonkey"], "alts": [
-        ["LimeSurvey", "github.com/LimeSurvey/LimeSurvey", "full"],
-        ["Formbricks", "github.com/formbricks/formbricks", "full"],
-        ["HeyForm", "github.com/heyform/heyform", "full"]]},
-      { "id": "scheduling", "name": "Calendar & scheduling", "job": "Calendars and booking meetings", "closed": ["Google Calendar", "Calendly", "Outlook Calendar"], "alts": [
-        ["Cal.com", "github.com/calcom/cal.com", "full", "Booking pages"],
-        ["Thunderbird", "https://www.thunderbird.net", "partial", "Calendar in the desktop app"],
-        ["Nextcloud Calendar", "github.com/nextcloud/calendar", "full", "Needs a Nextcloud server"]]},
-      { "id": "pdf", "name": "PDF tools", "job": "Reading, editing and signing PDFs", "closed": ["Adobe Acrobat"], "alts": [
-        ["Stirling-PDF", "github.com/Stirling-Tools/Stirling-PDF", "full"],
-        ["Okular", "https://invent.kde.org/graphics/okular", "partial", "Reading and notes"],
-        ["PDF Arranger", "github.com/pdfarranger/pdfarranger", "partial", "Merge, split, reorder"]]},
-      { "id": "email", "name": "Email", "job": "Reading and sending email", "closed": ["Gmail", "Microsoft Outlook"], "alts": [
-        ["Thunderbird", "https://www.thunderbird.net", "full", "Desktop and Android apps"],
-        ["Roundcube", "github.com/roundcube/roundcubemail", "partial", "Webmail for your own server"]]}
-    ]},
-    { "id": "social", "name": "Communication & social", "groups": [
-      { "id": "team-chat", "name": "Team chat", "job": "Chat for workplaces and projects", "closed": ["Slack", "Microsoft Teams"], "alts": [
-        ["Zulip", "github.com/zulip/zulip", "full"],
-        ["Mattermost", "github.com/mattermost/mattermost", "full"],
-        ["Rocket.Chat", "github.com/RocketChat/Rocket.Chat", "full"],
-        ["Element", "github.com/element-hq/element-web", "full"]]},
-      { "id": "community-chat", "name": "Community chat & voice", "job": "Servers with channels and voice rooms", "closed": ["Discord", "TeamSpeak"], "alts": [
-        ["Element", "github.com/element-hq/element-web", "partial", "No drop-in voice rooms yet"],
-        ["Mumble", "github.com/mumble-voip/mumble", "partial", "Voice only"]]},
-      { "id": "messaging", "name": "Messaging", "job": "Private messages and group chats on your phone", "closed": ["WhatsApp", "Telegram", "Facebook Messenger", "iMessage"], "alts": [
-        ["Signal", "github.com/signalapp/Signal-Android", "full"],
-        ["SimpleX Chat", "github.com/simplex-chat/simplex-chat", "full"],
-        ["Delta Chat", "github.com/deltachat/deltachat-android", "full", "Works over email"],
-        ["Element", "github.com/element-hq/element-x-android", "full"]]},
-      { "id": "video-calls", "name": "Video calls", "job": "Meetings and calls with video", "closed": ["Zoom", "Google Meet", "Microsoft Teams"], "alts": [
-        ["Jitsi Meet", "github.com/jitsi/jitsi-meet", "full"],
-        ["BigBlueButton", "github.com/bigbluebutton/bigbluebutton", "full", "Built for teaching"],
-        ["Element Call", "github.com/element-hq/element-call", "full"]]},
-      { "id": "microblogging", "name": "Microblogging", "job": "Short public posts and follows", "closed": ["Twitter / X", "Threads"], "alts": [
-        ["Mastodon", "github.com/mastodon/mastodon", "full"],
-        ["Misskey", "github.com/misskey-dev/misskey", "full"],
-        ["Bluesky", "github.com/bluesky-social/social-app", "full", "The app is open; the main network is run by one company"]]},
-      { "id": "forums", "name": "Forums & link sharing", "job": "Communities, threads and voting", "closed": ["Reddit"], "alts": [
-        ["Lemmy", "github.com/LemmyNet/lemmy", "full"],
-        ["PieFed", "codeberg.org/rimu/pyfedi", "full"],
-        ["Mbin", "github.com/MbinOrg/mbin", "full"],
-        ["Discourse", "github.com/discourse/discourse", "partial", "Forum for one community"]]},
-      { "id": "photo-sharing", "name": "Photo sharing", "job": "Sharing photos with followers", "closed": ["Instagram"], "alts": [
-        ["Pixelfed", "github.com/pixelfed/pixelfed", "full"]]},
-      { "id": "video-sharing", "name": "Video sharing", "job": "Posting and watching videos", "closed": ["YouTube", "TikTok"], "alts": [
-        ["PeerTube", "github.com/Chocobozzz/PeerTube", "full"],
-        ["Loops", "github.com/joinloops/loops-server", "partial", "Short videos; early"],
-        ["FreeTube", "github.com/FreeTubeApp/FreeTube", "partial", "A private way to watch YouTube"],
-        ["NewPipe", "github.com/TeamNewPipe/NewPipe", "partial", "A private way to watch YouTube on Android"]]},
-      { "id": "blogging", "name": "Blogs & newsletters", "job": "Publishing writing and email newsletters", "closed": ["Medium", "Substack"], "alts": [
-        ["Ghost", "github.com/TryGhost/Ghost", "full"],
-        ["WriteFreely", "github.com/writefreely/writefreely", "partial", "Blogging only"],
-        ["WordPress", "github.com/WordPress/WordPress", "full"]]},
-      { "id": "pro-network", "name": "Professional networking", "job": "Profiles, jobs and work contacts", "closed": ["LinkedIn"], "alts": []}
-    ]},
-    { "id": "creative", "name": "Creative", "groups": [
-      { "id": "photo-editing", "name": "Photo editing", "job": "Retouching and adjusting photos", "closed": ["Adobe Photoshop", "Adobe Lightroom", "Affinity Photo"], "alts": [
-        ["GIMP", "https://gitlab.gnome.org/GNOME/gimp", "full"],
-        ["darktable", "github.com/darktable-org/darktable", "full", "Raw photos, like Lightroom"],
-        ["RawTherapee", "github.com/RawTherapee/RawTherapee", "full", "Raw photos"],
-        ["Krita", "https://invent.kde.org/graphics/krita", "partial", "Better for painting"]]},
-      { "id": "painting", "name": "Digital painting", "job": "Drawing and painting", "closed": ["Procreate", "Clip Studio Paint", "Adobe Photoshop"], "alts": [
-        ["Krita", "https://invent.kde.org/graphics/krita", "full"],
-        ["MyPaint", "github.com/mypaint/mypaint", "partial"]]},
-      { "id": "illustration", "name": "Illustration & vector", "job": "Logos, icons and vector drawings", "closed": ["Adobe Illustrator", "Affinity Designer", "CorelDRAW"], "alts": [
-        ["Inkscape", "gitlab.com/inkscape/inkscape", "full"],
-        ["Graphite", "github.com/GraphiteEditor/Graphite", "partial", "Early"]]},
-      { "id": "ui-design", "name": "Interface design", "job": "Designing apps and websites", "closed": ["Figma", "Sketch", "Adobe XD"], "alts": [
-        ["Penpot", "github.com/penpot/penpot", "full"]]},
-      { "id": "graphic-design", "name": "Graphic design & templates", "job": "Posters, social posts and slides from templates", "closed": ["Canva", "Adobe Express"], "alts": [
-        ["Penpot", "github.com/penpot/penpot", "partial", "No template library like Canva's"]]},
-      { "id": "layout", "name": "Page layout", "job": "Magazines, flyers and books", "closed": ["Adobe InDesign", "Affinity Publisher"], "alts": [
-        ["Scribus", "github.com/scribusproject/scribus", "full"]]},
-      { "id": "video-editing", "name": "Video editing", "job": "Cutting and editing videos", "closed": ["Adobe Premiere Pro", "Final Cut Pro", "CapCut", "DaVinci Resolve"], "alts": [
-        ["Kdenlive", "https://invent.kde.org/multimedia/kdenlive", "full"],
-        ["Shotcut", "github.com/mltframework/shotcut", "full"],
-        ["OpenShot", "github.com/OpenShot/openshot-qt", "full"]]},
-      { "id": "3d", "name": "3D & motion graphics", "job": "3D models, animation and visual effects", "closed": ["Autodesk Maya", "Cinema 4D", "Adobe After Effects", "3ds Max"], "alts": [
-        ["Blender", "https://www.blender.org", "full"],
-        ["Natron", "github.com/NatronGitHub/Natron", "partial", "Compositing only"]]},
-      { "id": "audio", "name": "Audio & music making", "job": "Recording, editing and making music", "closed": ["Adobe Audition", "GarageBand", "FL Studio", "Ableton Live"], "alts": [
-        ["Audacity", "github.com/audacity/audacity", "full", "Editing recordings"],
-        ["Ardour", "github.com/Ardour/ardour", "full", "Recording studio"],
-        ["LMMS", "github.com/LMMS/lmms", "full", "Making beats"]]},
-      { "id": "recording", "name": "Screen recording & streaming", "job": "Recording your screen and live streaming", "closed": ["Loom", "Camtasia", "Streamlabs"], "alts": [
-        ["OBS Studio", "github.com/obsproject/obs-studio", "full"]]}
-    ]},
-    { "id": "os", "name": "Operating systems & phones", "groups": [
-      { "id": "desktop-os", "name": "Computer operating systems", "job": "What runs your laptop or desktop", "closed": ["Microsoft Windows", "macOS"], "alts": [
-        ["Linux Mint", "https://linuxmint.com", "full", "Closest to Windows"],
-        ["Fedora", "https://fedoraproject.org", "full"],
-        ["Ubuntu", "https://ubuntu.com", "full"],
-        ["Debian", "https://www.debian.org", "full"]]},
-      { "id": "phone-os", "name": "Phone operating systems", "job": "What runs your phone", "closed": ["Google Android", "Apple iOS"], "alts": [
-        ["GrapheneOS", "https://grapheneos.org", "full", "Pixel phones only"],
-        ["LineageOS", "https://lineageos.org", "full"],
-        ["/e/OS", "https://e.foundation", "full"],
-        ["postmarketOS", "https://postmarketos.org", "partial", "Early on most phones"]]},
-      { "id": "app-stores", "name": "App stores", "job": "Finding and installing phone apps", "closed": ["Google Play Store", "Apple App Store"], "alts": [
-        ["F-Droid", "gitlab.com/fdroid/fdroidclient", "full", "Open-source apps only"],
-        ["Aurora Store", "gitlab.com/AuroraOSS/AuroraStore", "partial", "A private way to use Google Play"]]},
-      { "id": "keyboards", "name": "Phone keyboards", "job": "Typing on your phone", "closed": ["Gboard", "SwiftKey"], "alts": [
-        ["FlorisBoard", "github.com/florisboard/florisboard", "full"],
-        ["HeliBoard", "github.com/HeliBorg/HeliBoard", "full"]]}
-    ]},
-    { "id": "web", "name": "Browsers, search & security", "groups": [
-      { "id": "browsers", "name": "Web browsers", "job": "Browsing the web", "closed": ["Google Chrome", "Safari", "Microsoft Edge"], "alts": [
-        ["Firefox", "github.com/mozilla-firefox/firefox", "full"],
-        ["LibreWolf", "codeberg.org/librewolf/source", "full"],
-        ["Brave", "github.com/brave/brave-browser", "full"],
-        ["Zen Browser", "github.com/zen-browser/desktop", "full"],
-        ["Ungoogled Chromium", "github.com/ungoogled-software/ungoogled-chromium", "full"]]},
-      { "id": "search", "name": "Search engines", "job": "Searching the web", "closed": ["Google Search", "Bing"], "alts": [
-        ["SearXNG", "github.com/searxng/searxng", "partial", "Combines other engines' results"],
-        ["YaCy", "github.com/yacy/yacy_search_server", "partial", "Its own index; smaller"]]},
-      { "id": "passwords", "name": "Password managers", "job": "Storing and filling passwords", "closed": ["1Password", "LastPass", "Dashlane"], "alts": [
-        ["Bitwarden", "github.com/bitwarden/clients", "full"],
-        ["KeePassXC", "github.com/keepassxreboot/keepassxc", "full", "Offline"],
-        ["Vaultwarden", "github.com/dani-garcia/vaultwarden", "full", "Self-hosted Bitwarden server"]]},
-      { "id": "2fa", "name": "Two-factor codes", "job": "Login codes for two-step sign-in", "closed": ["Google Authenticator", "Authy"], "alts": [
-        ["Aegis", "github.com/beemdevelopment/Aegis", "full", "Android"],
-        ["Ente Auth", "github.com/ente/ente", "full"],
-        ["2FAS", "github.com/twofas/2fas-android", "full"]]}
-    ]},
-    { "id": "ai", "name": "AI tools", "groups": [
-      { "id": "ai-chat", "name": "AI chat apps", "job": "Chatting with an AI assistant", "closed": ["ChatGPT", "Claude", "Google Gemini"], "alts": [
-        ["Open WebUI", "github.com/open-webui/open-webui", "full", "Works with local or online models"],
-        ["Jan", "github.com/janhq/jan", "full", "Runs models on your computer"],
-        ["LibreChat", "github.com/LibreChat-AI/LibreChat", "full"],
-        ["Ollama", "github.com/ollama/ollama", "partial", "Runs models; needs a chat app on top"]]},
-      { "id": "ai-coding", "name": "AI coding assistants", "job": "AI help writing and changing code", "closed": ["GitHub Copilot", "Cursor", "Windsurf", "Claude Code"], "alts": [
-        ["Continue", "github.com/continuedev/continue", "full"],
-        ["Cline", "github.com/cline/cline", "full"],
-        ["Aider", "github.com/Aider-AI/aider", "full"],
-        ["OpenHands", "github.com/OpenHands/OpenHands", "full"],
-        ["Codex CLI", "github.com/openai/codex", "full"]]},
-      { "id": "ai-images", "name": "AI image generation", "job": "Making images from text", "closed": ["Midjourney", "DALL·E"], "alts": [
-        ["ComfyUI", "github.com/Comfy-Org/ComfyUI", "full"],
-        ["InvokeAI", "github.com/invoke-ai/InvokeAI", "full"],
-        ["Stable Diffusion web UI", "github.com/AUTOMATIC1111/stable-diffusion-webui", "full"]]},
-      { "id": "transcription", "name": "Transcription", "job": "Turning speech into text", "closed": ["Otter.ai", "Rev"], "alts": [
-        ["Buzz", "github.com/chidiwilliams/buzz", "full"],
-        ["whisper.cpp", "github.com/ggml-org/whisper.cpp", "partial", "For developers"],
-        ["Whisper", "github.com/openai/whisper", "partial", "For developers"]]},
-      { "id": "ai-search", "name": "AI search", "job": "Asking questions answered from the web", "closed": ["Perplexity"], "alts": [
-        ["Vane (formerly Perplexica)", "github.com/ItzCrazyKns/Vane", "full"]]}
-    ]},
-    { "id": "media", "name": "Media & entertainment", "groups": [
-      { "id": "music", "name": "Music streaming", "job": "Listening to music", "closed": ["Spotify", "Apple Music"], "alts": [
-        ["Navidrome", "github.com/navidrome/navidrome", "partial", "Streams music you own"],
-        ["Funkwhale", "https://dev.funkwhale.audio/funkwhale/funkwhale", "partial", "Music you own, shared with others"]]},
-      { "id": "home-media", "name": "Home media server", "job": "Streaming your own films and shows", "closed": ["Plex", "Emby"], "alts": [
-        ["Jellyfin", "github.com/jellyfin/jellyfin", "full"],
-        ["Kodi", "github.com/xbmc/xbmc", "partial", "Player, not a server"]]},
-      { "id": "photo-backup", "name": "Photo backup & library", "job": "Backing up and browsing your photos", "closed": ["Google Photos", "iCloud Photos"], "alts": [
-        ["Immich", "github.com/immich-app/immich", "full"],
-        ["Ente Photos", "github.com/ente/ente", "full"],
-        ["PhotoPrism", "github.com/photoprism/photoprism", "full"]]},
-      { "id": "podcasts", "name": "Podcasts", "job": "Following and playing podcasts", "closed": ["Apple Podcasts", "Spotify"], "alts": [
-        ["AntennaPod", "github.com/AntennaPod/AntennaPod", "full"],
-        ["Pocket Casts", "github.com/Automattic/pocket-casts-android", "full"]]},
-      { "id": "books", "name": "E-books & audiobooks", "job": "Reading e-books and listening to audiobooks", "closed": ["Amazon Kindle", "Audible", "Goodreads"], "alts": [
-        ["Calibre", "github.com/kovidgoyal/calibre", "full", "Library and reader"],
-        ["KOReader", "github.com/koreader/koreader", "full", "E-reader app"],
-        ["Audiobookshelf", "github.com/advplyr/audiobookshelf", "full", "Your own audiobooks"],
-        ["BookWyrm", "github.com/bookwyrm-social/bookwyrm", "full", "Like Goodreads"]]}
-    ]},
-    { "id": "files", "name": "Files & cloud", "groups": [
-      { "id": "cloud-storage", "name": "Cloud storage & sync", "job": "Keeping files in sync across devices", "closed": ["Dropbox", "Google Drive", "Microsoft OneDrive", "iCloud Drive"], "alts": [
-        ["Nextcloud", "github.com/nextcloud/server", "full", "Needs a server"],
-        ["Seafile", "github.com/haiwen/seafile", "full"],
-        ["ownCloud Infinite Scale", "github.com/owncloud/ocis", "full"],
-        ["Syncthing", "github.com/syncthing/syncthing", "partial", "Syncs devices directly, no cloud"]]},
-      { "id": "file-transfer", "name": "Sending big files", "job": "Sending a file too big for email", "closed": ["WeTransfer"], "alts": [
-        ["LocalSend", "github.com/localsend/localsend", "partial", "Nearby devices only"],
-        ["PsiTransfer", "github.com/psi-4ward/psitransfer", "full", "Needs a server"]]},
-      { "id": "backup", "name": "Backup", "job": "Backing up a computer", "closed": ["Backblaze", "Time Machine"], "alts": [
-        ["restic", "github.com/restic/restic", "full", "For technical users"],
-        ["BorgBackup", "github.com/borgbackup/borg", "full", "For technical users"],
-        ["Duplicati", "github.com/duplicati/duplicati", "full"]]}
-    ]},
-    { "id": "everyday", "name": "Everyday", "groups": [
-      { "id": "maps", "name": "Maps & navigation", "job": "Maps, directions and places", "closed": ["Google Maps", "Apple Maps"], "alts": [
-        ["Organic Maps", "github.com/organicmaps/organicmaps", "full", "Offline; no live traffic"],
-        ["CoMaps", "codeberg.org/comaps/comaps", "full"],
-        ["OsmAnd", "github.com/osmandapp/OsmAnd", "full"]]},
-      { "id": "translation", "name": "Translation", "job": "Translating text", "closed": ["Google Translate", "DeepL"], "alts": [
-        ["LibreTranslate", "github.com/LibreTranslate/LibreTranslate", "full"]]},
-      { "id": "smart-home", "name": "Smart home", "job": "Controlling lights and devices at home", "closed": ["Google Home", "Amazon Alexa", "SmartThings"], "alts": [
-        ["Home Assistant", "github.com/home-assistant/core", "full"]]}
-    ]},
-    { "id": "dev", "name": "Developer & business", "groups": [
-      { "id": "code-hosting", "name": "Code hosting", "job": "Hosting code and collaborating on it", "closed": ["GitHub"], "alts": [
-        ["Forgejo", "codeberg.org/forgejo/forgejo", "full"],
-        ["Gitea", "github.com/go-gitea/gitea", "full"],
-        ["GitLab Community Edition", "gitlab.com/gitlab-org/gitlab-foss", "full"]]},
-      { "id": "analytics", "name": "Website analytics", "job": "Counting website visitors", "closed": ["Google Analytics"], "alts": [
-        ["Plausible", "github.com/plausible/analytics", "full"],
-        ["Umami", "github.com/umami-software/umami", "full"],
-        ["Matomo", "github.com/matomo-org/matomo", "full"]]},
-      { "id": "shop", "name": "Online stores", "job": "Selling things online", "closed": ["Shopify"], "alts": [
-        ["WooCommerce", "github.com/woocommerce/woocommerce", "full"],
-        ["Medusa", "github.com/medusajs/medusa", "full", "For developers"],
-        ["Saleor", "github.com/saleor/saleor", "full", "For developers"]]},
-      { "id": "support", "name": "Customer support", "job": "Answering customers by chat and email", "closed": ["Zendesk", "Intercom"], "alts": [
-        ["Chatwoot", "github.com/chatwoot/chatwoot", "full"],
-        ["Zammad", "github.com/zammad/zammad", "full"]]},
-      { "id": "automation", "name": "Automation", "job": "Connecting apps so tasks run by themselves", "closed": ["Zapier", "Make"], "alts": [
-        ["Node-RED", "github.com/node-red/node-red", "full"],
-        ["Activepieces", "github.com/activepieces/activepieces", "full"],
-        ["Huginn", "github.com/huginn/huginn", "partial", "For technical users"],
-        ["n8n", "github.com/n8n-io/n8n", "full"]]}
-    ]}
+ "note": "Hand-picked starter set: the everyday core of the map, our own data (not copied from any list). Each alternative is [name, code link or website, fit, optional note]. fit: full = replaces the main job; partial = covers part of it. Checked by prefill/check-starter.mjs.",
+ "categories": [
+  {
+   "id": "office",
+   "name": "Office & productivity",
+   "groups": [
+    {
+     "id": "documents",
+     "name": "Documents",
+     "job": "Writing and editing documents, alone or with others",
+     "closed": [
+      "Google Docs",
+      "Microsoft Word",
+      "Apple Pages"
+     ],
+     "alts": [
+      [
+       "LibreOffice Writer",
+       "https://git.libreoffice.org/core",
+       "full",
+       "Desktop; no live co-editing"
+      ],
+      [
+       "OnlyOffice Docs",
+       "github.com/ONLYOFFICE/DocumentServer",
+       "full"
+      ],
+      [
+       "Collabora Online",
+       "github.com/CollaboraOnline/online",
+       "full",
+       "Needs your own server"
+      ],
+      [
+       "CryptPad",
+       "github.com/cryptpad/cryptpad",
+       "partial",
+       "Encrypted, simpler formatting"
+      ],
+      [
+       "Etherpad",
+       "github.com/ether/etherpad",
+       "partial",
+       "Plain shared text"
+      ]
+     ]
+    },
+    {
+     "id": "spreadsheets",
+     "name": "Spreadsheets",
+     "job": "Tables, formulas and charts",
+     "closed": [
+      "Microsoft Excel",
+      "Google Sheets",
+      "Apple Numbers"
+     ],
+     "alts": [
+      [
+       "LibreOffice Calc",
+       "https://git.libreoffice.org/core",
+       "full"
+      ],
+      [
+       "OnlyOffice Docs",
+       "github.com/ONLYOFFICE/DocumentServer",
+       "full"
+      ],
+      [
+       "Grist",
+       "github.com/gristlabs/grist-core",
+       "partial",
+       "Spreadsheet-database hybrid"
+      ],
+      [
+       "Gnumeric",
+       "https://gitlab.gnome.org/GNOME/gnumeric",
+       "partial"
+      ]
+     ]
+    },
+    {
+     "id": "slides",
+     "name": "Presentations",
+     "job": "Slide decks",
+     "closed": [
+      "Microsoft PowerPoint",
+      "Google Slides",
+      "Apple Keynote"
+     ],
+     "alts": [
+      [
+       "LibreOffice Impress",
+       "https://git.libreoffice.org/core",
+       "full"
+      ],
+      [
+       "OnlyOffice Docs",
+       "github.com/ONLYOFFICE/DocumentServer",
+       "full"
+      ],
+      [
+       "Slidev",
+       "github.com/slidevjs/slidev",
+       "partial",
+       "Slides written as text, for developers"
+      ],
+      [
+       "reveal.js",
+       "github.com/hakimel/reveal.js",
+       "partial",
+       "Web slides, for developers"
+      ]
+     ]
+    },
+    {
+     "id": "notes",
+     "name": "Notes & wikis",
+     "job": "Notes, personal knowledge and team wikis",
+     "closed": [
+      "Notion",
+      "Evernote",
+      "Microsoft OneNote",
+      "Obsidian",
+      "Google Keep"
+     ],
+     "alts": [
+      [
+       "AppFlowy",
+       "github.com/AppFlowy-IO/AppFlowy",
+       "full"
+      ],
+      [
+       "AFFiNE",
+       "github.com/toeverything/AFFiNE",
+       "full"
+      ],
+      [
+       "Joplin",
+       "github.com/laurent22/joplin",
+       "full"
+      ],
+      [
+       "Logseq",
+       "github.com/logseq/logseq",
+       "full"
+      ],
+      [
+       "Trilium Notes",
+       "github.com/TriliumNext/Trilium",
+       "full"
+      ],
+      [
+       "SiYuan",
+       "github.com/siyuan-note/siyuan",
+       "full"
+      ],
+      [
+       "Standard Notes",
+       "github.com/standardnotes/app",
+       "partial",
+       "Encrypted notes, fewer layouts"
+      ]
+     ]
+    },
+    {
+     "id": "tasks",
+     "name": "Tasks & project boards",
+     "job": "To-do lists, boards and project tracking",
+     "closed": [
+      "Trello",
+      "Asana",
+      "Jira",
+      "Monday.com",
+      "Todoist"
+     ],
+     "alts": [
+      [
+       "Plane",
+       "github.com/makeplane/plane",
+       "full"
+      ],
+      [
+       "OpenProject",
+       "github.com/opf/openproject",
+       "full"
+      ],
+      [
+       "Vikunja",
+       "github.com/go-vikunja/vikunja",
+       "full"
+      ],
+      [
+       "Wekan",
+       "github.com/wekan/wekan",
+       "partial",
+       "Boards only"
+      ],
+      [
+       "Taiga",
+       "github.com/kaleidos-ventures/taiga",
+       "full"
+      ]
+     ]
+    },
+    {
+     "id": "forms",
+     "name": "Forms & surveys",
+     "job": "Questionnaires and sign-up forms",
+     "closed": [
+      "Google Forms",
+      "Typeform",
+      "SurveyMonkey"
+     ],
+     "alts": [
+      [
+       "LimeSurvey",
+       "github.com/LimeSurvey/LimeSurvey",
+       "full"
+      ],
+      [
+       "Formbricks",
+       "github.com/formbricks/formbricks",
+       "full"
+      ],
+      [
+       "HeyForm",
+       "github.com/heyform/heyform",
+       "full"
+      ]
+     ]
+    },
+    {
+     "id": "scheduling",
+     "name": "Calendar & scheduling",
+     "job": "Calendars and booking meetings",
+     "closed": [
+      "Google Calendar",
+      "Calendly",
+      "Outlook Calendar"
+     ],
+     "alts": [
+      [
+       "Cal.com",
+       "github.com/calcom/cal.com",
+       "full",
+       "Booking pages"
+      ],
+      [
+       "Thunderbird",
+       "https://www.thunderbird.net",
+       "partial",
+       "Calendar in the desktop app"
+      ],
+      [
+       "Nextcloud Calendar",
+       "github.com/nextcloud/calendar",
+       "full",
+       "Needs a Nextcloud server"
+      ]
+     ]
+    },
+    {
+     "id": "pdf",
+     "name": "PDF tools",
+     "job": "Reading, editing and signing PDFs",
+     "closed": [
+      "Adobe Acrobat"
+     ],
+     "alts": [
+      [
+       "Stirling-PDF",
+       "github.com/Stirling-Tools/Stirling-PDF",
+       "full"
+      ],
+      [
+       "Okular",
+       "https://invent.kde.org/graphics/okular",
+       "partial",
+       "Reading and notes"
+      ],
+      [
+       "PDF Arranger",
+       "github.com/pdfarranger/pdfarranger",
+       "partial",
+       "Merge, split, reorder"
+      ]
+     ]
+    },
+    {
+     "id": "email",
+     "name": "Email",
+     "job": "Reading and sending email",
+     "closed": [
+      "Gmail",
+      "Microsoft Outlook"
+     ],
+     "alts": [
+      [
+       "Thunderbird",
+       "https://www.thunderbird.net",
+       "full",
+       "Desktop and Android apps"
+      ],
+      [
+       "Roundcube",
+       "github.com/roundcube/roundcubemail",
+       "partial",
+       "Webmail for your own server"
+      ]
+     ]
+    }
+   ]
+  },
+  {
+   "id": "social",
+   "name": "Communication & social",
+   "groups": [
+    {
+     "id": "team-chat",
+     "name": "Team chat",
+     "job": "Chat for workplaces and projects",
+     "closed": [
+      "Slack",
+      "Microsoft Teams"
+     ],
+     "alts": [
+      [
+       "Zulip",
+       "github.com/zulip/zulip",
+       "full"
+      ],
+      [
+       "Mattermost",
+       "github.com/mattermost/mattermost",
+       "full"
+      ],
+      [
+       "Rocket.Chat",
+       "github.com/RocketChat/Rocket.Chat",
+       "full"
+      ],
+      [
+       "Element",
+       "github.com/element-hq/element-web",
+       "full"
+      ]
+     ]
+    },
+    {
+     "id": "community-chat",
+     "name": "Community chat & voice",
+     "job": "Servers with channels and voice rooms",
+     "closed": [
+      "Discord",
+      "TeamSpeak"
+     ],
+     "alts": [
+      [
+       "Element",
+       "github.com/element-hq/element-web",
+       "partial",
+       "No drop-in voice rooms yet"
+      ],
+      [
+       "Mumble",
+       "github.com/mumble-voip/mumble",
+       "partial",
+       "Voice only"
+      ]
+     ]
+    },
+    {
+     "id": "messaging",
+     "name": "Messaging",
+     "job": "Private messages and group chats on your phone",
+     "closed": [
+      "WhatsApp",
+      "Telegram",
+      "Facebook Messenger",
+      "iMessage"
+     ],
+     "alts": [
+      [
+       "Signal",
+       "github.com/signalapp/Signal-Android",
+       "full"
+      ],
+      [
+       "SimpleX Chat",
+       "github.com/simplex-chat/simplex-chat",
+       "full"
+      ],
+      [
+       "Delta Chat",
+       "github.com/deltachat/deltachat-android",
+       "full",
+       "Works over email"
+      ],
+      [
+       "Element",
+       "github.com/element-hq/element-x-android",
+       "full"
+      ]
+     ]
+    },
+    {
+     "id": "video-calls",
+     "name": "Video calls",
+     "job": "Meetings and calls with video",
+     "closed": [
+      "Zoom",
+      "Google Meet",
+      "Microsoft Teams"
+     ],
+     "alts": [
+      [
+       "Jitsi Meet",
+       "github.com/jitsi/jitsi-meet",
+       "full"
+      ],
+      [
+       "BigBlueButton",
+       "github.com/bigbluebutton/bigbluebutton",
+       "full",
+       "Built for teaching"
+      ],
+      [
+       "Element Call",
+       "github.com/element-hq/element-call",
+       "full"
+      ]
+     ]
+    },
+    {
+     "id": "microblogging",
+     "name": "Microblogging",
+     "job": "Short public posts and follows",
+     "closed": [
+      "Twitter / X",
+      "Threads"
+     ],
+     "alts": [
+      [
+       "Mastodon",
+       "github.com/mastodon/mastodon",
+       "full"
+      ],
+      [
+       "Misskey",
+       "github.com/misskey-dev/misskey",
+       "full"
+      ],
+      [
+       "Bluesky",
+       "github.com/bluesky-social/social-app",
+       "full",
+       "The app is open; the main network is run by one company"
+      ]
+     ]
+    },
+    {
+     "id": "forums",
+     "name": "Forums & link sharing",
+     "job": "Communities, threads and voting",
+     "closed": [
+      "Reddit"
+     ],
+     "alts": [
+      [
+       "Lemmy",
+       "github.com/LemmyNet/lemmy",
+       "full"
+      ],
+      [
+       "PieFed",
+       "codeberg.org/rimu/pyfedi",
+       "full"
+      ],
+      [
+       "Mbin",
+       "github.com/MbinOrg/mbin",
+       "full"
+      ],
+      [
+       "Discourse",
+       "github.com/discourse/discourse",
+       "partial",
+       "Forum for one community"
+      ]
+     ]
+    },
+    {
+     "id": "photo-sharing",
+     "name": "Photo sharing",
+     "job": "Sharing photos with followers",
+     "closed": [
+      "Instagram"
+     ],
+     "alts": [
+      [
+       "Pixelfed",
+       "github.com/pixelfed/pixelfed",
+       "full"
+      ]
+     ]
+    },
+    {
+     "id": "video-sharing",
+     "name": "Video sharing",
+     "job": "Posting and watching videos",
+     "closed": [
+      "YouTube",
+      "TikTok"
+     ],
+     "alts": [
+      [
+       "PeerTube",
+       "github.com/Chocobozzz/PeerTube",
+       "full"
+      ],
+      [
+       "Loops",
+       "github.com/joinloops/loops-server",
+       "partial",
+       "Short videos; early"
+      ],
+      [
+       "FreeTube",
+       "github.com/FreeTubeApp/FreeTube",
+       "partial",
+       "A private way to watch YouTube"
+      ],
+      [
+       "NewPipe",
+       "github.com/TeamNewPipe/NewPipe",
+       "partial",
+       "A private way to watch YouTube on Android"
+      ]
+     ]
+    },
+    {
+     "id": "blogging",
+     "name": "Blogs & newsletters",
+     "job": "Publishing writing and email newsletters",
+     "closed": [
+      "Medium",
+      "Substack"
+     ],
+     "alts": [
+      [
+       "Ghost",
+       "github.com/TryGhost/Ghost",
+       "full"
+      ],
+      [
+       "WriteFreely",
+       "github.com/writefreely/writefreely",
+       "partial",
+       "Blogging only"
+      ],
+      [
+       "WordPress",
+       "github.com/WordPress/WordPress",
+       "full"
+      ]
+     ]
+    },
+    {
+     "id": "pro-network",
+     "name": "Professional networking",
+     "job": "Profiles, jobs and work contacts",
+     "closed": [
+      "LinkedIn"
+     ],
+     "alts": []
+    }
+   ]
+  },
+  {
+   "id": "creative",
+   "name": "Creative",
+   "groups": [
+    {
+     "id": "photo-editing",
+     "name": "Photo editing",
+     "job": "Retouching and adjusting photos",
+     "closed": [
+      "Adobe Photoshop",
+      "Adobe Lightroom",
+      "Affinity Photo"
+     ],
+     "alts": [
+      [
+       "GIMP",
+       "https://gitlab.gnome.org/GNOME/gimp",
+       "full"
+      ],
+      [
+       "darktable",
+       "github.com/darktable-org/darktable",
+       "full",
+       "Raw photos, like Lightroom"
+      ],
+      [
+       "RawTherapee",
+       "github.com/RawTherapee/RawTherapee",
+       "full",
+       "Raw photos"
+      ],
+      [
+       "Krita",
+       "https://invent.kde.org/graphics/krita",
+       "partial",
+       "Better for painting"
+      ]
+     ]
+    },
+    {
+     "id": "painting",
+     "name": "Digital painting",
+     "job": "Drawing and painting",
+     "closed": [
+      "Procreate",
+      "Clip Studio Paint",
+      "Adobe Photoshop"
+     ],
+     "alts": [
+      [
+       "Krita",
+       "https://invent.kde.org/graphics/krita",
+       "full"
+      ],
+      [
+       "MyPaint",
+       "github.com/mypaint/mypaint",
+       "partial"
+      ]
+     ]
+    },
+    {
+     "id": "illustration",
+     "name": "Illustration & vector",
+     "job": "Logos, icons and vector drawings",
+     "closed": [
+      "Adobe Illustrator",
+      "Affinity Designer",
+      "CorelDRAW"
+     ],
+     "alts": [
+      [
+       "Inkscape",
+       "gitlab.com/inkscape/inkscape",
+       "full"
+      ],
+      [
+       "Graphite",
+       "github.com/GraphiteEditor/Graphite",
+       "partial",
+       "Early"
+      ]
+     ]
+    },
+    {
+     "id": "ui-design",
+     "name": "Interface design",
+     "job": "Designing apps and websites",
+     "closed": [
+      "Figma",
+      "Sketch",
+      "Adobe XD"
+     ],
+     "alts": [
+      [
+       "Penpot",
+       "github.com/penpot/penpot",
+       "full"
+      ]
+     ]
+    },
+    {
+     "id": "graphic-design",
+     "name": "Graphic design & templates",
+     "job": "Posters, social posts and slides from templates",
+     "closed": [
+      "Canva",
+      "Adobe Express"
+     ],
+     "alts": [
+      [
+       "Penpot",
+       "github.com/penpot/penpot",
+       "partial",
+       "No template library like Canva's"
+      ]
+     ]
+    },
+    {
+     "id": "layout",
+     "name": "Page layout",
+     "job": "Magazines, flyers and books",
+     "closed": [
+      "Adobe InDesign",
+      "Affinity Publisher"
+     ],
+     "alts": [
+      [
+       "Scribus",
+       "github.com/scribusproject/scribus",
+       "full"
+      ]
+     ]
+    },
+    {
+     "id": "video-editing",
+     "name": "Video editing",
+     "job": "Cutting and editing videos",
+     "closed": [
+      "Adobe Premiere Pro",
+      "Final Cut Pro",
+      "CapCut",
+      "DaVinci Resolve"
+     ],
+     "alts": [
+      [
+       "Kdenlive",
+       "https://invent.kde.org/multimedia/kdenlive",
+       "full"
+      ],
+      [
+       "Shotcut",
+       "github.com/mltframework/shotcut",
+       "full"
+      ],
+      [
+       "OpenShot",
+       "github.com/OpenShot/openshot-qt",
+       "full"
+      ]
+     ]
+    },
+    {
+     "id": "3d",
+     "name": "3D & motion graphics",
+     "job": "3D models, animation and visual effects",
+     "closed": [
+      "Autodesk Maya",
+      "Cinema 4D",
+      "Adobe After Effects",
+      "3ds Max"
+     ],
+     "alts": [
+      [
+       "Blender",
+       "https://www.blender.org",
+       "full"
+      ],
+      [
+       "Natron",
+       "github.com/NatronGitHub/Natron",
+       "partial",
+       "Compositing only"
+      ]
+     ]
+    },
+    {
+     "id": "audio",
+     "name": "Audio & music making",
+     "job": "Recording, editing and making music",
+     "closed": [
+      "Adobe Audition",
+      "GarageBand",
+      "FL Studio",
+      "Ableton Live"
+     ],
+     "alts": [
+      [
+       "Audacity",
+       "github.com/audacity/audacity",
+       "full",
+       "Editing recordings"
+      ],
+      [
+       "Ardour",
+       "github.com/Ardour/ardour",
+       "full",
+       "Recording studio"
+      ],
+      [
+       "LMMS",
+       "github.com/LMMS/lmms",
+       "full",
+       "Making beats"
+      ]
+     ]
+    },
+    {
+     "id": "recording",
+     "name": "Screen recording & streaming",
+     "job": "Recording your screen and live streaming",
+     "closed": [
+      "Loom",
+      "Camtasia",
+      "Streamlabs"
+     ],
+     "alts": [
+      [
+       "OBS Studio",
+       "github.com/obsproject/obs-studio",
+       "full"
+      ]
+     ]
+    }
+   ]
+  },
+  {
+   "id": "os",
+   "name": "Operating systems & phones",
+   "groups": [
+    {
+     "id": "desktop-os",
+     "name": "Computer operating systems",
+     "job": "What runs your laptop or desktop",
+     "closed": [
+      "Microsoft Windows",
+      "macOS"
+     ],
+     "alts": [
+      [
+       "Linux Mint",
+       "https://linuxmint.com",
+       "full",
+       "Closest to Windows"
+      ],
+      [
+       "Fedora",
+       "https://fedoraproject.org",
+       "full"
+      ],
+      [
+       "Ubuntu",
+       "https://ubuntu.com",
+       "full"
+      ],
+      [
+       "Debian",
+       "https://www.debian.org",
+       "full"
+      ]
+     ]
+    },
+    {
+     "id": "phone-os",
+     "name": "Phone operating systems",
+     "job": "What runs your phone",
+     "closed": [
+      "Google Android",
+      "Apple iOS"
+     ],
+     "alts": [
+      [
+       "GrapheneOS",
+       "https://grapheneos.org",
+       "full",
+       "Pixel phones only"
+      ],
+      [
+       "LineageOS",
+       "https://lineageos.org",
+       "full"
+      ],
+      [
+       "/e/OS",
+       "https://e.foundation",
+       "full"
+      ],
+      [
+       "postmarketOS",
+       "https://postmarketos.org",
+       "partial",
+       "Early on most phones"
+      ]
+     ]
+    },
+    {
+     "id": "app-stores",
+     "name": "App stores",
+     "job": "Finding and installing phone apps",
+     "closed": [
+      "Google Play Store",
+      "Apple App Store"
+     ],
+     "alts": [
+      [
+       "F-Droid",
+       "gitlab.com/fdroid/fdroidclient",
+       "full",
+       "Open-source apps only"
+      ],
+      [
+       "Aurora Store",
+       "gitlab.com/AuroraOSS/AuroraStore",
+       "partial",
+       "A private way to use Google Play"
+      ]
+     ]
+    },
+    {
+     "id": "keyboards",
+     "name": "Phone keyboards",
+     "job": "Typing on your phone",
+     "closed": [
+      "Gboard",
+      "SwiftKey"
+     ],
+     "alts": [
+      [
+       "FlorisBoard",
+       "github.com/florisboard/florisboard",
+       "full"
+      ],
+      [
+       "HeliBoard",
+       "github.com/HeliBorg/HeliBoard",
+       "full"
+      ]
+     ]
+    }
+   ]
+  },
+  {
+   "id": "web",
+   "name": "Browsers, search & security",
+   "groups": [
+    {
+     "id": "browsers",
+     "name": "Web browsers",
+     "job": "Browsing the web",
+     "closed": [
+      "Google Chrome",
+      "Safari",
+      "Microsoft Edge"
+     ],
+     "alts": [
+      [
+       "Firefox",
+       "github.com/mozilla-firefox/firefox",
+       "full"
+      ],
+      [
+       "LibreWolf",
+       "codeberg.org/librewolf/source",
+       "full"
+      ],
+      [
+       "Brave",
+       "github.com/brave/brave-browser",
+       "full"
+      ],
+      [
+       "Zen Browser",
+       "github.com/zen-browser/desktop",
+       "full"
+      ],
+      [
+       "Ungoogled Chromium",
+       "github.com/ungoogled-software/ungoogled-chromium",
+       "full"
+      ]
+     ]
+    },
+    {
+     "id": "search",
+     "name": "Search engines",
+     "job": "Searching the web",
+     "closed": [
+      "Google Search",
+      "Bing"
+     ],
+     "alts": [
+      [
+       "SearXNG",
+       "github.com/searxng/searxng",
+       "partial",
+       "Combines other engines' results"
+      ],
+      [
+       "YaCy",
+       "github.com/yacy/yacy_search_server",
+       "partial",
+       "Its own index; smaller"
+      ]
+     ]
+    },
+    {
+     "id": "passwords",
+     "name": "Password managers",
+     "job": "Storing and filling passwords",
+     "closed": [
+      "1Password",
+      "LastPass",
+      "Dashlane"
+     ],
+     "alts": [
+      [
+       "Bitwarden",
+       "github.com/bitwarden/clients",
+       "full"
+      ],
+      [
+       "KeePassXC",
+       "github.com/keepassxreboot/keepassxc",
+       "full",
+       "Offline"
+      ],
+      [
+       "Vaultwarden",
+       "github.com/dani-garcia/vaultwarden",
+       "full",
+       "Self-hosted Bitwarden server"
+      ]
+     ]
+    },
+    {
+     "id": "2fa",
+     "name": "Two-factor codes",
+     "job": "Login codes for two-step sign-in",
+     "closed": [
+      "Google Authenticator",
+      "Authy"
+     ],
+     "alts": [
+      [
+       "Aegis",
+       "github.com/beemdevelopment/Aegis",
+       "full",
+       "Android"
+      ],
+      [
+       "Ente Auth",
+       "github.com/ente/ente",
+       "full"
+      ],
+      [
+       "2FAS",
+       "github.com/twofas/2fas-android",
+       "full"
+      ]
+     ]
+    }
+   ]
+  },
+  {
+   "id": "ai",
+   "name": "AI tools",
+   "groups": [
+    {
+     "id": "ai-chat",
+     "name": "AI chat apps",
+     "job": "Chatting with an AI assistant",
+     "closed": [
+      "ChatGPT",
+      "Claude",
+      "Google Gemini"
+     ],
+     "alts": [
+      [
+       "Jan",
+       "github.com/janhq/jan",
+       "full",
+       "Runs models on your computer"
+      ],
+      [
+       "LibreChat",
+       "github.com/LibreChat-AI/LibreChat",
+       "full"
+      ],
+      [
+       "Ollama",
+       "github.com/ollama/ollama",
+       "partial",
+       "Runs models; needs a chat app on top"
+      ]
+     ]
+    },
+    {
+     "id": "ai-coding",
+     "name": "AI coding assistants",
+     "job": "AI help writing and changing code",
+     "closed": [
+      "GitHub Copilot",
+      "Cursor",
+      "Windsurf",
+      "Claude Code"
+     ],
+     "alts": [
+      [
+       "Continue",
+       "github.com/continuedev/continue",
+       "full"
+      ],
+      [
+       "Cline",
+       "github.com/cline/cline",
+       "full"
+      ],
+      [
+       "Aider",
+       "github.com/Aider-AI/aider",
+       "full"
+      ],
+      [
+       "OpenHands",
+       "github.com/OpenHands/OpenHands",
+       "full"
+      ],
+      [
+       "Codex CLI",
+       "github.com/openai/codex",
+       "full"
+      ]
+     ]
+    },
+    {
+     "id": "ai-images",
+     "name": "AI image generation",
+     "job": "Making images from text",
+     "closed": [
+      "Midjourney",
+      "DALL·E"
+     ],
+     "alts": [
+      [
+       "ComfyUI",
+       "github.com/Comfy-Org/ComfyUI",
+       "full"
+      ],
+      [
+       "InvokeAI",
+       "github.com/invoke-ai/InvokeAI",
+       "full"
+      ],
+      [
+       "Stable Diffusion web UI",
+       "github.com/AUTOMATIC1111/stable-diffusion-webui",
+       "full"
+      ]
+     ]
+    },
+    {
+     "id": "transcription",
+     "name": "Transcription",
+     "job": "Turning speech into text",
+     "closed": [
+      "Otter.ai",
+      "Rev"
+     ],
+     "alts": [
+      [
+       "Buzz",
+       "github.com/chidiwilliams/buzz",
+       "full"
+      ],
+      [
+       "whisper.cpp",
+       "github.com/ggml-org/whisper.cpp",
+       "partial",
+       "For developers"
+      ],
+      [
+       "Whisper",
+       "github.com/openai/whisper",
+       "partial",
+       "For developers"
+      ]
+     ]
+    },
+    {
+     "id": "ai-search",
+     "name": "AI search",
+     "job": "Asking questions answered from the web",
+     "closed": [
+      "Perplexity"
+     ],
+     "alts": [
+      [
+       "Vane (formerly Perplexica)",
+       "github.com/ItzCrazyKns/Vane",
+       "full"
+      ]
+     ]
+    }
+   ]
+  },
+  {
+   "id": "media",
+   "name": "Media & entertainment",
+   "groups": [
+    {
+     "id": "music",
+     "name": "Music streaming",
+     "job": "Listening to music",
+     "closed": [
+      "Spotify",
+      "Apple Music"
+     ],
+     "alts": [
+      [
+       "Navidrome",
+       "github.com/navidrome/navidrome",
+       "partial",
+       "Streams music you own"
+      ],
+      [
+       "Funkwhale",
+       "https://dev.funkwhale.audio/funkwhale/funkwhale",
+       "partial",
+       "Music you own, shared with others"
+      ]
+     ]
+    },
+    {
+     "id": "home-media",
+     "name": "Home media server",
+     "job": "Streaming your own films and shows",
+     "closed": [
+      "Plex",
+      "Emby"
+     ],
+     "alts": [
+      [
+       "Jellyfin",
+       "github.com/jellyfin/jellyfin",
+       "full"
+      ],
+      [
+       "Kodi",
+       "github.com/xbmc/xbmc",
+       "partial",
+       "Player, not a server"
+      ]
+     ]
+    },
+    {
+     "id": "photo-backup",
+     "name": "Photo backup & library",
+     "job": "Backing up and browsing your photos",
+     "closed": [
+      "Google Photos",
+      "iCloud Photos"
+     ],
+     "alts": [
+      [
+       "Immich",
+       "github.com/immich-app/immich",
+       "full"
+      ],
+      [
+       "Ente Photos",
+       "github.com/ente/ente",
+       "full"
+      ],
+      [
+       "PhotoPrism",
+       "github.com/photoprism/photoprism",
+       "full"
+      ]
+     ]
+    },
+    {
+     "id": "podcasts",
+     "name": "Podcasts",
+     "job": "Following and playing podcasts",
+     "closed": [
+      "Apple Podcasts",
+      "Spotify"
+     ],
+     "alts": [
+      [
+       "AntennaPod",
+       "github.com/AntennaPod/AntennaPod",
+       "full"
+      ],
+      [
+       "Pocket Casts",
+       "github.com/Automattic/pocket-casts-android",
+       "full"
+      ]
+     ]
+    },
+    {
+     "id": "books",
+     "name": "E-books & audiobooks",
+     "job": "Reading e-books and listening to audiobooks",
+     "closed": [
+      "Amazon Kindle",
+      "Audible",
+      "Goodreads"
+     ],
+     "alts": [
+      [
+       "Calibre",
+       "github.com/kovidgoyal/calibre",
+       "full",
+       "Library and reader"
+      ],
+      [
+       "KOReader",
+       "github.com/koreader/koreader",
+       "full",
+       "E-reader app"
+      ],
+      [
+       "Audiobookshelf",
+       "github.com/advplyr/audiobookshelf",
+       "full",
+       "Your own audiobooks"
+      ]
+     ]
+    }
+   ]
+  },
+  {
+   "id": "files",
+   "name": "Files & cloud",
+   "groups": [
+    {
+     "id": "cloud-storage",
+     "name": "Cloud storage & sync",
+     "job": "Keeping files in sync across devices",
+     "closed": [
+      "Dropbox",
+      "Google Drive",
+      "Microsoft OneDrive",
+      "iCloud Drive"
+     ],
+     "alts": [
+      [
+       "Nextcloud",
+       "github.com/nextcloud/server",
+       "full",
+       "Needs a server"
+      ],
+      [
+       "Seafile",
+       "github.com/haiwen/seafile",
+       "full"
+      ],
+      [
+       "ownCloud Infinite Scale",
+       "github.com/owncloud/ocis",
+       "full"
+      ],
+      [
+       "Syncthing",
+       "github.com/syncthing/syncthing",
+       "partial",
+       "Syncs devices directly, no cloud"
+      ]
+     ]
+    },
+    {
+     "id": "file-transfer",
+     "name": "Sending big files",
+     "job": "Sending a file too big for email",
+     "closed": [
+      "WeTransfer"
+     ],
+     "alts": [
+      [
+       "LocalSend",
+       "github.com/localsend/localsend",
+       "partial",
+       "Nearby devices only"
+      ],
+      [
+       "PsiTransfer",
+       "github.com/psi-4ward/psitransfer",
+       "full",
+       "Needs a server"
+      ]
+     ]
+    },
+    {
+     "id": "backup",
+     "name": "Backup",
+     "job": "Backing up a computer",
+     "closed": [
+      "Backblaze",
+      "Time Machine"
+     ],
+     "alts": [
+      [
+       "restic",
+       "github.com/restic/restic",
+       "full",
+       "For technical users"
+      ],
+      [
+       "BorgBackup",
+       "github.com/borgbackup/borg",
+       "full",
+       "For technical users"
+      ],
+      [
+       "Duplicati",
+       "github.com/duplicati/duplicati",
+       "full"
+      ]
+     ]
+    }
+   ]
+  },
+  {
+   "id": "everyday",
+   "name": "Everyday",
+   "groups": [
+    {
+     "id": "maps",
+     "name": "Maps & navigation",
+     "job": "Maps, directions and places",
+     "closed": [
+      "Google Maps",
+      "Apple Maps"
+     ],
+     "alts": [
+      [
+       "Organic Maps",
+       "github.com/organicmaps/organicmaps",
+       "full",
+       "Offline; no live traffic"
+      ],
+      [
+       "CoMaps",
+       "codeberg.org/comaps/comaps",
+       "full"
+      ],
+      [
+       "OsmAnd",
+       "github.com/osmandapp/OsmAnd",
+       "full"
+      ]
+     ]
+    },
+    {
+     "id": "translation",
+     "name": "Translation",
+     "job": "Translating text",
+     "closed": [
+      "Google Translate",
+      "DeepL"
+     ],
+     "alts": [
+      [
+       "LibreTranslate",
+       "github.com/LibreTranslate/LibreTranslate",
+       "full"
+      ]
+     ]
+    },
+    {
+     "id": "smart-home",
+     "name": "Smart home",
+     "job": "Controlling lights and devices at home",
+     "closed": [
+      "Google Home",
+      "Amazon Alexa",
+      "SmartThings"
+     ],
+     "alts": [
+      [
+       "Home Assistant",
+       "github.com/home-assistant/core",
+       "full"
+      ]
+     ]
+    }
+   ]
+  },
+  {
+   "id": "dev",
+   "name": "Developer & business",
+   "groups": [
+    {
+     "id": "code-hosting",
+     "name": "Code hosting",
+     "job": "Hosting code and collaborating on it",
+     "closed": [
+      "GitHub"
+     ],
+     "alts": [
+      [
+       "Forgejo",
+       "codeberg.org/forgejo/forgejo",
+       "full"
+      ],
+      [
+       "Gitea",
+       "github.com/go-gitea/gitea",
+       "full"
+      ],
+      [
+       "GitLab Community Edition",
+       "gitlab.com/gitlab-org/gitlab-foss",
+       "full"
+      ]
+     ]
+    },
+    {
+     "id": "analytics",
+     "name": "Website analytics",
+     "job": "Counting website visitors",
+     "closed": [
+      "Google Analytics"
+     ],
+     "alts": [
+      [
+       "Plausible",
+       "github.com/plausible/analytics",
+       "full"
+      ],
+      [
+       "Umami",
+       "github.com/umami-software/umami",
+       "full"
+      ],
+      [
+       "Matomo",
+       "github.com/matomo-org/matomo",
+       "full"
+      ]
+     ]
+    },
+    {
+     "id": "shop",
+     "name": "Online stores",
+     "job": "Selling things online",
+     "closed": [
+      "Shopify"
+     ],
+     "alts": [
+      [
+       "WooCommerce",
+       "github.com/woocommerce/woocommerce",
+       "full"
+      ],
+      [
+       "Medusa",
+       "github.com/medusajs/medusa",
+       "full",
+       "For developers"
+      ],
+      [
+       "Saleor",
+       "github.com/saleor/saleor",
+       "full",
+       "For developers"
+      ]
+     ]
+    },
+    {
+     "id": "support",
+     "name": "Customer support",
+     "job": "Answering customers by chat and email",
+     "closed": [
+      "Zendesk",
+      "Intercom"
+     ],
+     "alts": [
+      [
+       "Chatwoot",
+       "github.com/chatwoot/chatwoot",
+       "full"
+      ],
+      [
+       "Zammad",
+       "github.com/zammad/zammad",
+       "full"
+      ]
+     ]
+    },
+    {
+     "id": "automation",
+     "name": "Automation",
+     "job": "Connecting apps so tasks run by themselves",
+     "closed": [
+      "Zapier",
+      "Make"
+     ],
+     "alts": [
+      [
+       "Node-RED",
+       "github.com/node-red/node-red",
+       "full"
+      ],
+      [
+       "Activepieces",
+       "github.com/activepieces/activepieces",
+       "full"
+      ],
+      [
+       "Huginn",
+       "github.com/huginn/huginn",
+       "partial",
+       "For technical users"
+      ]
+     ]
+    }
+   ]
+  }
+ ],
+ "excluded": {
+  "why": "Not open source by the OSI definition (Destin, Oct 27: leave them out). Kept here so imports never add them back.",
+  "projects": [
+   {
+    "name": "Anytype",
+    "link": "github.com/anyproto/anytype-ts",
+    "group": "notes",
+    "license": "Any Source Available License"
+   },
+   {
+    "name": "Planka",
+    "link": "github.com/plankanban/planka",
+    "group": "tasks",
+    "license": "Fair Use License"
+   },
+   {
+    "name": "Open WebUI",
+    "link": "github.com/open-webui/open-webui",
+    "group": "ai-chat",
+    "license": "Open WebUI License (branding restriction)"
+   },
+   {
+    "name": "BookWyrm",
+    "link": "github.com/bookwyrm-social/bookwyrm",
+    "group": "books",
+    "license": "Anti-Capitalist Software License"
+   },
+   {
+    "name": "n8n",
+    "link": "github.com/n8n-io/n8n",
+    "group": "automation",
+    "license": "Sustainable Use License"
+   }
   ]
+ }
 }
