@@ -92,7 +92,7 @@
 
   // ── Notes lists ──
   function noteRow(n, N, { showGroup }) {
-    const where = [n.project ? N.projects[n.project] : null, n.closedApp ? `vs ${n.closedApp}` : null, showGroup ? N.groups[n.group]?.n : null].filter(Boolean).join(' · ');
+    const where = [(n.projects ?? []).map((p) => N.projects[p]).join(', '), n.closedApps?.length ? `vs ${n.closedApps.join(', ')}` : null, showGroup ? N.groups[n.group]?.n : null].filter(Boolean).join(' · ');
     const st = STATUS[n.status];
     const claim = n.status === 'open' && n.fixed ? '<span class="pill info">Someone says it\'s fixed</span>' : '';
     return `<div class="rrow note-row" data-href="${BASE}n/?id=${n.id}">
@@ -120,6 +120,28 @@
     if (row && !e.target.closest('a,button')) location.href = row.dataset.href;
   });
 
+  // ── A dropdown in the site's style, for one choice or several ──
+  // Shows the picked names on the button; for several, the menu stays open while you tick, like a checklist.
+  let pickN = 0;
+  function picker(host, options, { single = false, selected = [], none = '', labelledBy, onChange } = {}) {
+    const id = `pick${++pickN}`; let sel = new Set(selected);
+    const label = () => { const names = options.filter(([v]) => sel.has(v)).map(([, n]) => n); return names.length ? (names.length > 2 ? `${names.slice(0, 2).join(', ')} and ${names.length - 2} more` : names.join(', ')) : none; };
+    const draw = () => {
+      host.innerHTML = `<div class="dd"><button class="select field-select${sel.size ? '' : ' empty'}" type="button" data-menu="${id}" aria-haspopup="listbox" aria-expanded="false"${labelledBy ? ` aria-labelledby="${labelledBy} ${id}b"` : ''}><span id="${id}b">${esc(label())}</span>${OI.chev}</button>
+        <div class="menu pick-menu" id="${id}" role="listbox"${single ? '' : ' aria-multiselectable="true"'}>${options.map(([v, n]) => `<button class="mi${sel.has(v) ? ' sel' : ''}" type="button" role="option" aria-selected="${sel.has(v)}" data-v="${esc(v)}">${single ? '' : `<span class="tick">${sel.has(v) ? '✓' : ''}</span>`}${esc(n)}</button>`).join('')}</div></div>`;
+    };
+    host.onclick = (e) => {
+      const o = e.target.closest('.mi'); if (!o) return;
+      e.stopPropagation();
+      const v = o.dataset.v;
+      if (single) { sel = new Set([v]); draw(); onChange?.(); return; }
+      sel.has(v) ? sel.delete(v) : sel.add(v);
+      draw(); $(`#${id}`, host).classList.add('open'); onChange?.();
+    };
+    draw();
+    return { value: () => [...sel] };
+  }
+
   // ── Adding a note ──
   async function composer(ctx) {
     // WHY a fresh check: the visitor may have signed in or out in another tab since the page loaded.
@@ -129,27 +151,32 @@
     const kinds = [['missing', 'Missing feature', 'Something a listed project can\'t do yet'], ['wish', 'Wish', 'A job nothing open does well'], ['talk', 'Discussion', 'A question or anything else']];
     const { el, close } = dialog('Add a note', `
       <div><span class="label">What kind of note?</span><div class="kindpick">${kinds.map(([k, t, h], i) => `<label class="lvl1 kopt"><input type="radio" name="kind" value="${k}"${(ctx.kind ?? 'missing') === k || (!ctx.kind && i === 0) ? ' checked' : ''}><b>${t}</b><span class="muted11">${h}</span></label>`).join('')}</div></div>
-      ${ctx.group ? '' : `<div><label class="label" for="nGroup">Which job?</label><select class="field" id="nGroup">${groupsIn.map(([id, g]) => `<option value="${id}">${esc(g.n)}</option>`).join('')}</select></div>`}
-      <div data-for="missing" class="two"><div><label class="label" for="nProject">Which project?</label><select class="field" id="nProject"></select></div>
-        <div><label class="label" for="nClosed">Compared with</label><select class="field" id="nClosed"></select></div></div>
+      ${ctx.group ? '' : `<div><span class="label" id="lGroup">Which job?</span><div class="pick" id="nGroup" data-single></div></div>`}
+      <div class="two"><div data-for="missing"><span class="label" id="lProject">Which projects?</span><div class="pick" id="nProject"></div></div>
+        <div><span class="label" id="lClosed">Compared with</span><div class="pick" id="nClosed"></div></div></div>
       <div><label class="label" for="nTitle">In one line</label><input class="field" id="nTitle" maxlength="140" autocomplete="off"></div>
       <div><label class="label" for="nBody">Details</label><textarea class="field" id="nBody" rows="4" maxlength="4000" placeholder="Optional"></textarea>
         <p class="fieldhint">${user.canVote ? 'Shown with your GitHub username. Plain text only; links are fine.' : 'Your GitHub account is under 14 days old, so this waits for a mod before others see it.'}</p></div>
       <div class="dlg-btns"><button class="btn md secondary" type="button" data-close>Cancel</button><button class="btn md primary" type="button" data-post>Post</button></div>`);
-    const gsel = $('#nGroup', el); const groupId = () => ctx.group ?? gsel.value;
+    // WHY the site's own dropdowns (Destin, Oct 27): the browser's built-in ones ignored the site's font and look.
+    // Projects and closed apps take several at once: one missing feature often applies to more than one of each.
+    const gPick = ctx.group ? null : picker($('#nGroup', el), groupsIn.map(([id, g]) => [id, g.n]), { single: true, selected: [groupsIn[0][0]], labelledBy: 'lGroup', onChange: () => fill() });
+    const groupId = () => ctx.group ?? gPick.value()[0];
+    let pPick, cPick;
     const fill = () => {
       const g = N.groups[groupId()]; const kind = $('input[name=kind]:checked', el).value;
       $('[data-for=missing]', el).hidden = kind !== 'missing';
-      $('#nProject', el).innerHTML = g.alts.map((p) => `<option value="${p}"${p === ctx.project ? ' selected' : ''}>${esc(N.projects[p])}</option>`).join('');
-      $('#nClosed', el).innerHTML = `<option value="">Any of them</option>${g.closed.map((c) => `<option${c === ctx.closedApp ? ' selected' : ''}>${esc(c)}</option>`).join('')}`;
+      pPick = picker($('#nProject', el), g.alts.map((p) => [p, N.projects[p]]), { selected: ctx.project && g.alts.includes(ctx.project) ? [ctx.project] : [], none: 'Pick at least one', labelledBy: 'lProject' });
+      cPick = picker($('#nClosed', el), g.closed.map((c) => [c, c]), { selected: ctx.closedApp ? [ctx.closedApp] : [], none: 'Any of them', labelledBy: 'lClosed' });
       $('#nTitle', el).placeholder = { missing: 'e.g. No live co-editing', wish: 'e.g. A phone app that edits, not just views', talk: 'e.g. Which one works best with Word files?' }[kind];
     };
-    el.addEventListener('change', fill); fill();
+    el.addEventListener('change', (e) => { if (e.target.name === 'kind') fill(); }); fill();
     $('[data-post]', el).addEventListener('click', async () => {
       const kind = $('input[name=kind]:checked', el).value; const g = groupId();
       try {
-        const n = await api.addNote({ kind, category: N.groups[g].c, group: g, project: kind === 'missing' ? $('#nProject', el).value : undefined,
-          closedApp: $('#nClosed', el).value || undefined, title: $('#nTitle', el).value, body: $('#nBody', el).value });
+        if (kind === 'missing' && !pPick.value().length) { toast('Pick the project, or projects, it applies to.'); return; }
+        const n = await api.addNote({ kind, category: N.groups[g].c, group: g, projects: kind === 'missing' ? pPick.value() : [],
+          closedApps: cPick.value(), title: $('#nTitle', el).value, body: $('#nBody', el).value });
         close(); location.href = `${BASE}n/?id=${n.id}`;
       } catch (err) { oops(err); }
     });
@@ -186,7 +213,7 @@
     let n; try { n = await api.note(id); } catch (e) { slot.innerHTML = `<div class="surface sec"><h1 class="h-large">Note not found</h1><p class="small2">${esc(e.message)}</p><a class="btn md secondary" href="${BASE}boards/">See all boards</a></div>`; return; }
     document.title = `${n.title} · Open Source Everything`;
     const g = N.groups[n.group]; const st = STATUS[n.status];
-    const where = [n.project && `<a class="chip" href="${BASE}p/${n.project}/">${esc(N.projects[n.project])}</a>`, n.closedApp && `<span class="chip">vs ${esc(n.closedApp)}</span>`,
+    const where = [...(n.projects ?? []).map((p) => `<a class="chip" href="${BASE}p/${p}/">${esc(N.projects[p])}</a>`), ...(n.closedApps ?? []).map((c) => `<span class="chip">vs ${esc(c)}</span>`),
       g && `<a class="chip" href="${BASE}g/${n.group}/">${esc(g.n)}</a>`].filter(Boolean).join('');
     const isOpen = ['open', 'building'].includes(n.status);
     let statusCard = '';
@@ -253,7 +280,7 @@
       const n = [...q.held, ...q.reported, ...q.claims, ...q.popular].find((x) => x.id === +b.dataset.id);
       try {
         if (b.dataset.act === 'fixed') await api.setStatus(n.id, 'fixed');
-        else if (b.dataset.act === 'partly') { window.open(`${OI.repo}/issues/new?template=2-fix.yml&project=${encodeURIComponent(N.projects[n.project] ?? '')}&group=${encodeURIComponent(N.groups[n.group]?.n ?? '')}`, '_blank', 'noopener'); return; }
+        else if (b.dataset.act === 'partly') { window.open(`${OI.repo}/issues/new?template=2-fix.yml&project=${encodeURIComponent(N.projects[n.projects?.[0]] ?? '')}&group=${encodeURIComponent(N.groups[n.group]?.n ?? '')}`, '_blank', 'noopener'); return; }
         else if (b.dataset.act === 'keep') { b.closest('.modrow').remove(); return; }
         else await api.modAct(n.id, b.dataset.act);
         renderMod(slot);
@@ -265,7 +292,7 @@
   async function renderCounts() {
     const slots = $$('[data-missing-count]'); if (!slots.length) return;
     const list = await api.notes({ group: slots[0].dataset.group, kind: 'missing', status: 'open', limit: 500 });
-    for (const s of slots) { const c = list.filter((n) => n.project === s.dataset.project).length; if (c) { s.hidden = false; s.textContent = `${c} missing ${c === 1 ? 'feature' : 'features'}`; } }
+    for (const s of slots) { const c = list.filter((n) => n.projects?.includes(s.dataset.project)).length; if (c) { s.hidden = false; s.textContent = `${c} missing ${c === 1 ? 'feature' : 'features'}`; } }
   }
 
   // ── Start ──
