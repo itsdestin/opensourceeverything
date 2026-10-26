@@ -147,3 +147,44 @@ Looked up **436** GitHub projects in 9 batch requests.
 - Opus corrections applied: 8 listings removed, 103 fits changed, 54 descriptions rewritten.
 - Groups with no alternative yet (gaps): Professional networking, Investment research.
 - By category: Office & productivity 10 groups / 70 listings · Communication & social 12 groups / 41 listings · Creative 11 groups / 28 listings · Operating systems & phones 5 groups / 24 listings · Browsers, search & security 8 groups / 28 listings · AI tools 7 groups / 26 listings · Media & entertainment 6 groups / 18 listings · Files & cloud 3 groups / 12 listings · Everyday 5 groups / 8 listings · Developer & business 18 groups / 134 listings · Business & finance 8 groups / 24 listings.
+
+## Step 3b: AI descriptions for the starter set (2026-10-26, claude-haiku-5-5)
+
+- Reviewed **25** of 25 projects in 9 seconds; 0 failed.
+- Cost: **$0.02** (170,454 tokens read, 13,793 written).
+- License: 20 open, 0 open core, 0 not open, 5 unclear.
+- Kind: 18 apps, 3 self-hosted, 4 developer tools, 0 libraries.
+- Pairings the AI says the lists got wrong ("no"): 12.
+- Fit an existing group: 25; proposed a new group: 0 (0 distinct names).
+
+## Step 5: the map's data files (2026-10-26, free)
+
+- **11 categories, 93 groups, 237 closed apps, 416 projects, 425 listings.**
+- From the long tail, left out: 34 not open source or unclear, 45 wrongly listed, 8 archived, 40 with no matching group (listed in prefill/out/unplaced.json for a person to place).
+- Licenses a mod confirms before launch: 73. Inactive (no change in a year): 19.
+- Opus corrections applied: 8 listings removed, 103 fits changed, 54 descriptions rewritten.
+- Groups with no alternative yet (gaps): Professional networking, Investment research.
+- By category: Office & productivity 10 groups / 73 listings · Communication & social 12 groups / 41 listings · Creative 11 groups / 29 listings · Operating systems & phones 5 groups / 27 listings · Browsers, search & security 8 groups / 29 listings · AI tools 7 groups / 31 listings · Media & entertainment 6 groups / 18 listings · Files & cloud 3 groups / 11 listings · Everyday 5 groups / 8 listings · Developer & business 18 groups / 134 listings · Business & finance 8 groups / 24 listings.
+
+## Step 5: the map's data files (2026-10-26, free)
+
+- **11 categories, 93 groups, 237 closed apps, 405 projects, 425 listings.**
+- From the long tail, left out: 34 not open source or unclear, 45 wrongly listed, 8 archived, 40 with no matching group (listed in prefill/out/unplaced.json for a person to place).
+- Licenses a mod confirms before launch: 72. Inactive (no change in a year): 16.
+- Opus corrections applied: 8 listings removed, 103 fits changed, 54 descriptions rewritten.
+- Groups with no alternative yet (gaps): Professional networking, Investment research.
+- By category: Office & productivity 10 groups / 73 listings · Communication & social 12 groups / 41 listings · Creative 11 groups / 29 listings · Operating systems & phones 5 groups / 27 listings · Browsers, search & security 8 groups / 29 listings · AI tools 7 groups / 31 listings · Media & entertainment 6 groups / 18 listings · Files & cloud 3 groups / 11 listings · Everyday 5 groups / 8 listings · Developer & business 18 groups / 134 listings · Business & finance 8 groups / 24 listings.
+
+## Screenshots (2026-10-26, claude-haiku-5-5)
+
+- Looked at **56** candidate pictures in 8 seconds for **$0.01** (9 couldn't be loaded).
+- **12** of 25 projects have at least one real screenshot (19 kept).
+
+## Step 5: the map's data files (2026-10-26, free)
+
+- **11 categories, 93 groups, 237 closed apps, 405 projects, 425 listings.**
+- From the long tail, left out: 34 not open source or unclear, 45 wrongly listed, 8 archived, 40 with no matching group (listed in prefill/out/unplaced.json for a person to place).
+- Licenses a mod confirms before launch: 72. Inactive (no change in a year): 16.
+- Opus corrections applied: 8 listings removed, 103 fits changed, 54 descriptions rewritten.
+- Groups with no alternative yet (gaps): Professional networking, Investment research.
+- By category: Office & productivity 10 groups / 73 listings · Communication & social 12 groups / 41 listings · Creative 11 groups / 29 listings · Operating systems & phones 5 groups / 27 listings · Browsers, search & security 8 groups / 29 listings · AI tools 7 groups / 31 listings · Media & entertainment 6 groups / 18 listings · Files & cloud 3 groups / 11 listings · Everyday 5 groups / 8 listings · Developer & business 18 groups / 134 listings · Business & finance 8 groups / 24 listings.

@@ -23,7 +23,7 @@
     {
      "project": "onlyoffice-docs",
      "fit": "full",
-     "note": null
+     "note": "Server, or free desktop app; ask for hosting"
     },
     {
      "project": "collabora-online",
@@ -36,8 +36,8 @@
     },
     {
      "project": "cryptpad",
-     "fit": "full",
-     "note": "Encrypted, simpler formatting",
+     "fit": "partial",
+     "note": "Encrypted; simpler formatting than Word",
      "review": {
       "by": "claude-opus-5-5",
       "reason": "Upgraded fit to full because CryptPad includes a full Document editor with real-time collaborative editing that can be self-hosted, which covers the main job of Google Docs and Word."
@@ -46,7 +46,7 @@
     {
      "project": "etherpad",
      "fit": "partial",
-     "note": "Plain shared text"
+     "note": "Plain shared text; no page layout"
     }
    ]
   },
@@ -75,12 +75,12 @@
     {
      "project": "grist",
      "fit": "partial",
-     "note": "Spreadsheet-database hybrid"
+     "note": "Database-style; you host it"
     },
     {
      "project": "gnumeric",
-     "fit": "full",
-     "note": null,
+     "fit": "partial",
+     "note": "Basic charts; Linux-focused; no co-editing",
      "review": {
       "by": "claude-opus-5-5",
       "reason": "Changed fit to full because Gnumeric is a complete desktop spreadsheet with formulas and charts, covering the main job of Excel, Sheets and Numbers."
@@ -113,7 +113,7 @@
     {
      "project": "slidev",
      "fit": "partial",
-     "note": "Slides written as text, for developers"
+     "note": "Slides written as text; for developers"
     },
     {
      "project": "reveal-js",
@@ -162,8 +162,8 @@
     },
     {
      "project": "trilium-notes",
-     "fit": "full",
-     "note": null
+     "fit": "partial",
+     "note": "No native phone app; steep learning curve"
     },
     {
      "project": "siyuan",
@@ -176,24 +176,29 @@
      "note": "Encrypted notes, fewer layouts"
     },
     {
+     "project": "zettlr",
+     "fit": "partial",
+     "note": "Desktop only; no phone app"
+    },
+    {
+     "project": "silverbullet",
+     "fit": "partial",
+     "note": "You host it; for tech-minded users"
+    },
+    {
      "project": "bookstack",
      "fit": "partial",
-     "note": null
+     "note": "Team wiki you host; not for personal notes"
     },
     {
      "project": "docmost",
      "fit": "partial",
-     "note": null
-    },
-    {
-     "project": "dexio",
-     "fit": "partial",
-     "note": null
+     "note": "Team wiki you host; fewer features than Notion"
     },
     {
      "project": "folio-wiki",
-     "fit": "full",
-     "note": null,
+     "fit": "partial",
+     "note": "Very new, small project; you host it",
      "review": {
       "by": "claude-opus-5-5",
       "reason": "Added real-time browser editing and the Notion/Confluence replacement focus, which the page highlights, so the description reflects the main use."
@@ -202,31 +207,26 @@
     {
      "project": "hedgedoc",
      "fit": "partial",
-     "note": null
+     "note": "Shared Markdown pages; no databases or boards"
     },
     {
      "project": "mediawiki",
      "fit": "partial",
-     "note": null
+     "note": "Wikipedia-style wiki; heavy to set up"
     },
     {
      "project": "memos",
      "fit": "partial",
-     "note": null,
+     "note": "Short timeline notes; no folders or rich pages",
      "review": {
       "by": "claude-opus-5-5",
       "reason": "Changed fit to partial because Memos is a timeline of short notes similar to Google Keep, without the notebooks, page hierarchies or team wikis that Notion, OneNote and Obsidian provide."
      }
     },
     {
-     "project": "moinmoin",
-     "fit": "partial",
-     "note": null
-    },
-    {
      "project": "notegen",
-     "fit": "full",
-     "note": null,
+     "fit": "partial",
+     "note": "Young project; desktop-first Markdown notes",
      "review": {
       "by": "claude-opus-5-5",
       "reason": "Changed fit to full because NoteGen is a complete local-first Markdown notes app with an editor, search, a knowledge base and sync across devices, which covers the main job of apps like Obsidian and Evernote."
@@ -235,12 +235,12 @@
     {
      "project": "notally",
      "fit": "partial",
-     "note": null
+     "note": "Android only; simple notes and lists"
     },
     {
      "project": "notabase",
-     "fit": "full",
-     "note": null
+     "fit": "partial",
+     "note": "Browser app; slower updates"
     },
     {
      "project": "notesnook",
@@ -250,12 +250,12 @@
     {
      "project": "nextcloud-notes",
      "fit": "partial",
-     "note": null
+     "note": "Needs a Nextcloud server; basic notes"
     },
     {
      "project": "quillpad",
      "fit": "partial",
-     "note": null,
+     "note": "Android only; basic notes and lists",
      "review": {
       "by": "claude-opus-5-5",
       "reason": "Changed fit to partial because it is an Android-only phone notes app, closer to Google Keep, with no desktop app or team wiki features."
@@ -264,12 +264,12 @@
     {
      "project": "xwiki",
      "fit": "partial",
-     "note": null
+     "note": "Heavy team wiki you host"
     },
     {
      "project": "yanknote",
-     "fit": "full",
-     "note": null,
+     "fit": "partial",
+     "note": "Markdown editor for tech users; no sync or phone app",
      "review": {
       "by": "claude-opus-5-5",
       "reason": "Raised fit to full because it is a complete local Markdown notes app with document links, tags, full-text search and history, covering the main job of apps like Obsidian."
@@ -278,7 +278,7 @@
     {
      "project": "xournal",
      "fit": "partial",
-     "note": null
+     "note": "Handwriting and PDF markup only; phone app is a separate project"
     }
    ]
   },
@@ -428,7 +428,7 @@
     {
      "project": "cal-com",
      "fit": "partial",
-     "note": "Booking pages",
+     "note": "Booking pages only; you host it, no calendar app",
      "review": {
       "by": "claude-opus-5-5",
       "reason": "Changed fit to partial because it replaces Calendly-style booking but is not a full calendar app, and added the project's non-production warning."
@@ -437,7 +437,7 @@
     {
      "project": "thunderbird",
      "fit": "partial",
-     "note": "Calendar in the desktop app",
+     "note": "Desktop only; no phone calendar app",
      "review": {
       "by": "claude-opus-5-5",
       "reason": "Corrected the description because the page presents the Android app as email-only, so calendars are a desktop feature."
@@ -449,14 +449,19 @@
      "note": "Needs a Nextcloud server"
     },
     {
-     "project": "etesync",
+     "project": "fossify-calendar",
      "fit": "partial",
-     "note": null
+     "note": "Android only"
+    },
+    {
+     "project": "etar-calendar",
+     "fit": "partial",
+     "note": "Android only"
     },
     {
      "project": "tymeslot",
      "fit": "partial",
-     "note": null,
+     "note": "Booking pages only; you host it; young project",
      "review": {
       "by": "claude-opus-5-5",
       "reason": "Changed fit to partial because Tymeslot is a self-hosted booking tool like Calendly. It syncs with existing calendars but is not a calendar app itself, so it does not replace Google or Outlook Calendar."
@@ -519,21 +524,31 @@
     {
      "project": "thunderbird",
      "fit": "full",
-     "note": "Desktop and Android apps"
+     "note": "Desktop and Android apps; no iPhone app"
     },
     {
      "project": "roundcube",
-     "fit": "full",
-     "note": "Webmail for your own server",
+     "fit": "partial",
+     "note": "Inbox screen only; needs your own mail server",
      "review": {
       "by": "claude-opus-5-5",
       "reason": "Changed fit to full because Roundcube is a complete browser-based email client with folders, search and an address book, which covers the main job of reading and sending email."
      }
     },
     {
+     "project": "mailspring",
+     "fit": "partial",
+     "note": "Desktop only; some features paid"
+    },
+    {
+     "project": "fairemail",
+     "fit": "partial",
+     "note": "Android only"
+    },
+    {
      "project": "tuta",
      "fit": "full",
-     "note": null,
+     "note": "Moves you to Tuta's own email service; other providers not supported",
      "review": {
       "by": "claude-opus-5-5",
       "reason": "Clarified that only the apps are open source and they work only with Tuta's hosted service."
@@ -601,21 +616,7 @@
     {
      "project": "element",
      "fit": "full",
-     "note": null
-    },
-    {
-     "project": "spacebar",
-     "fit": "full",
-     "note": null
-    },
-    {
-     "project": "stoat",
-     "fit": "full",
-     "note": null,
-     "review": {
-      "by": "claude-opus-5-5",
-      "reason": "Changed fit to full because a self-hosted Stoat instance provides channel-based group chat, file sharing and voice/video, which is the main job of Slack and Teams."
-     }
+     "note": "Chat network (Matrix); some set-up needed"
     }
    ]
   },
@@ -667,7 +668,7 @@
     {
      "project": "signal",
      "fit": "full",
-     "note": null,
+     "note": "Needs a phone number to sign up",
      "review": {
       "by": "claude-opus-5-5",
       "reason": "Removed the mention of web, since Signal offers Android, iOS and desktop apps but no web version."
@@ -676,7 +677,7 @@
     {
      "project": "simplex-chat",
      "fit": "full",
-     "note": null
+     "note": "No phone number needed; smaller network of users"
     },
     {
      "project": "delta-chat",
@@ -686,16 +687,21 @@
     {
      "project": "element",
      "fit": "partial",
-     "note": null,
+     "note": "Friends need Matrix accounts; less polished",
      "review": {
       "by": "claude-opus-5-5",
       "reason": "Changed fit to partial and noted the separate phone apps, because this repository is the browser and desktop client, with mobile browsers only community-supported."
      }
     },
     {
+     "project": "briar",
+     "fit": "partial",
+     "note": "Android only; for sensitive situations"
+    },
+    {
      "project": "snikket",
-     "fit": "full",
-     "note": null,
+     "fit": "partial",
+     "note": "You must run a server for your group",
      "review": {
       "by": "claude-opus-5-5",
       "reason": "Changed fit to full because Snikket is a complete self-hosted messaging service with phone apps for private and group chats."
@@ -703,8 +709,8 @@
     },
     {
      "project": "tinode",
-     "fit": "full",
-     "note": null,
+     "fit": "partial",
+     "note": "Small user base; you host the server",
      "review": {
       "by": "claude-opus-5-5",
       "reason": "Changed fit to full because Tinode includes a server plus Android, iOS and web apps with private and group chats, voice and video calls, and channels, covering the main job of WhatsApp or Telegram."
@@ -727,34 +733,35 @@
     {
      "project": "jitsi-meet",
      "fit": "full",
-     "note": null
+     "note": "Free public site or self-host; weaker for very big meetings"
     },
     {
      "project": "bigbluebutton",
-     "fit": "full",
-     "note": "Built for teaching"
+     "fit": "partial",
+     "note": "Built for classes; you host it"
     },
     {
      "project": "element-call",
-     "fit": "full",
-     "note": null
+     "fit": "partial",
+     "note": "Needs a Matrix account; still maturing"
+    },
+    {
+     "project": "jami",
+     "fit": "partial",
+     "note": "Quality drops in large groups"
+    },
+    {
+     "project": "nextcloud-talk",
+     "fit": "partial",
+     "note": "Needs a Nextcloud server"
     },
     {
      "project": "galene",
-     "fit": "full",
-     "note": null,
+     "fit": "partial",
+     "note": "Plain interface; you host it",
      "review": {
       "by": "claude-opus-5-5",
       "reason": "Changed fit to full because Galene is a complete self-hosted videoconferencing system for browser-based group meetings."
-     }
-    },
-    {
-     "project": "stoat",
-     "fit": "partial",
-     "note": null,
-     "review": {
-      "by": "claude-opus-5-5",
-      "reason": "Added that it supports voice and video calls, which the setup guide covers and which is why it fits this group; it stays partial because it is mainly a chat app, not a meetings tool."
      }
     }
    ]
@@ -1004,7 +1011,7 @@
     {
      "project": "gimp",
      "fit": "full",
-     "note": null
+     "note": "Different layout from Photoshop; no Lightroom-style library"
     },
     {
      "project": "darktable",
@@ -1014,7 +1021,7 @@
     {
      "project": "rawtherapee",
      "fit": "partial",
-     "note": "Raw photos",
+     "note": "Raw development only; weaker photo library",
      "review": {
       "by": "claude-opus-5-5",
       "reason": "Changed fit to partial because RawTherapee handles raw development and photo adjustments like Lightroom's editing side, but not layer-based retouching like Photoshop or photo library management."
@@ -1023,7 +1030,17 @@
     {
      "project": "krita",
      "fit": "partial",
-     "note": "Better for painting"
+     "note": "Made for painting; weak at photo retouching"
+    },
+    {
+     "project": "digikam",
+     "fit": "partial",
+     "note": "Sorting and light edits; not retouching"
+    },
+    {
+     "project": "pinta",
+     "fit": "partial",
+     "note": "Simple edits only"
     }
    ]
   },
@@ -1046,8 +1063,8 @@
     },
     {
      "project": "mypaint",
-     "fit": "full",
-     "note": null,
+     "fit": "partial",
+     "note": "Simpler than Procreate; no text or animation",
      "review": {
       "by": "claude-opus-5-5",
       "reason": "Changed fit to full because MyPaint covers the group's main job of drawing and painting, with configurable brushes, layers and tablet support."
@@ -1075,7 +1092,7 @@
     {
      "project": "graphite",
      "fit": "partial",
-     "note": "Early",
+     "note": "Early alpha; expect missing tools",
      "review": {
       "by": "claude-opus-5-5",
       "reason": "Removed layout building and image editing as current uses, since the page lists photo editing and desktop publishing as planned roadmap items."
@@ -1103,12 +1120,12 @@
     {
      "project": "plasmic",
      "fit": "partial",
-     "note": null
+     "note": "Builds live web pages, not design mockups"
     },
     {
      "project": "quant-ux",
      "fit": "partial",
-     "note": null
+     "note": "Clickable prototypes and user testing; basic drawing"
     }
    ]
   },
@@ -1181,14 +1198,9 @@
      }
     },
     {
-     "project": "olive-video-editor",
-     "fit": "partial",
-     "note": null
-    },
-    {
      "project": "opencut",
      "fit": "partial",
-     "note": null
+     "note": "Early; fewer features than CapCut"
     }
    ]
   },
@@ -1329,7 +1341,7 @@
     {
      "project": "fedora",
      "fit": "full",
-     "note": null
+     "note": "New versions every 6 months; fast-moving"
     },
     {
      "project": "ubuntu",
@@ -1339,17 +1351,27 @@
     {
      "project": "debian",
      "fit": "full",
-     "note": null
+     "note": "Very stable but older app versions; less beginner-friendly"
     },
     {
      "project": "arch-linux",
      "fit": "full",
-     "note": "For experienced users: you choose and set up every part"
+     "note": "For experienced users: you set up every part"
     },
     {
      "project": "cachyos",
      "fit": "full",
-     "note": "Based on Arch, tuned for speed, with an easy installer"
+     "note": "Rolling updates; best for people comfortable fixing things"
+    },
+    {
+     "project": "pop-os",
+     "fit": "full",
+     "note": "Good for newer laptops and graphics cards"
+    },
+    {
+     "project": "bazzite",
+     "fit": "full",
+     "note": "Great for gaming; updates apply safely"
     }
    ]
   },
@@ -1367,22 +1389,27 @@
     {
      "project": "grapheneos",
      "fit": "full",
-     "note": "Pixel phones only"
+     "note": "Pixel phones only; you install it yourself"
     },
     {
      "project": "lineageos",
      "fit": "full",
-     "note": null
+     "note": "You install it yourself; Google apps are an optional add-on"
     },
     {
      "project": "e-os",
      "fit": "full",
-     "note": null
+     "note": "Some bank apps may not work; also sold pre-installed"
     },
     {
      "project": "postmarketos",
      "fit": "partial",
-     "note": "Early on most phones"
+     "note": "Calls, camera or mobile data may not work on most phones"
+    },
+    {
+     "project": "ubuntu-touch",
+     "fit": "partial",
+     "note": "Works on a short list of phones; few apps"
     }
    ]
   },
@@ -1557,12 +1584,17 @@
     {
      "project": "zen-browser",
      "fit": "full",
-     "note": null
+     "note": "Based on Firefox; no phone version"
     },
     {
      "project": "ungoogled-chromium",
-     "fit": "full",
-     "note": null
+     "fit": "partial",
+     "note": "No built-in sync; updates arrive slower"
+    },
+    {
+     "project": "tor-browser",
+     "fit": "partial",
+     "note": "Slower; built for anonymity, not daily use"
     }
    ]
   },
@@ -1613,8 +1645,8 @@
     },
     {
      "project": "keepassxc",
-     "fit": "full",
-     "note": "Offline",
+     "fit": "partial",
+     "note": "Offline file you sync yourself; no phone app",
      "review": {
       "by": "claude-opus-5-5",
       "reason": "The old description said the file stays on your device, but the page says it can be stored anywhere, including cloud storage; it also left out password filling."
@@ -1623,31 +1655,27 @@
     {
      "project": "vaultwarden",
      "fit": "full",
-     "note": "Self-hosted Bitwarden server"
+     "note": "Needs your own server; uses Bitwarden apps"
+    },
+    {
+     "project": "keepassdx",
+     "fit": "partial",
+     "note": "Android only; you sync the file yourself"
     },
     {
      "project": "aliasvault",
-     "fit": "full",
-     "note": null
-    },
-    {
-     "project": "carrypass",
      "fit": "partial",
-     "note": null,
-     "review": {
-      "by": "claude-opus-5-5",
-      "reason": "Changed fit to partial because the page describes a browser web app whose team vault is an encrypted file an admin exports and uploads, with no browser extension or autofill mentioned."
-     }
+     "note": "Young project; smaller feature set"
     },
     {
      "project": "padloc",
-     "fit": "full",
-     "note": null
+     "fit": "partial",
+     "note": "Less polished; smaller community"
     },
     {
      "project": "passbolt",
-     "fit": "full",
-     "note": null,
+     "fit": "partial",
+     "note": "Built for teams; you host it",
      "review": {
       "by": "claude-opus-5-5",
       "reason": "Changed fit to full because Passbolt stores passwords and fills them through browser extensions and mobile apps, which is the main job of 1Password, LastPass and Dashlane."
@@ -1821,17 +1849,17 @@
     {
      "project": "jan",
      "fit": "full",
-     "note": "Runs models on your computer"
+     "note": "Runs on your computer; needs a capable machine"
     },
     {
      "project": "librechat",
      "fit": "full",
-     "note": null
+     "note": "You host it; bring your own AI accounts"
     },
     {
      "project": "ollama",
      "fit": "partial",
-     "note": "Runs models; needs a chat app on top"
+     "note": "Runs models; chat window is basic"
     },
     {
      "project": "youcoded",
@@ -1839,27 +1867,19 @@
      "note": "Desktop and Android app; any AI model"
     },
     {
-     "project": "chatrwkv",
+     "project": "chatbox-community-edition",
+     "fit": "full",
+     "note": "Bring your own AI key or local model"
+    },
+    {
+     "project": "anythingllm",
      "fit": "partial",
-     "note": null,
-     "review": {
-      "by": "claude-opus-5-5",
-      "reason": "Clarified that it is a developer-oriented command-line project rather than a general chat program for everyday users."
-     }
+     "note": "Aimed at chatting with your own documents"
     },
     {
      "project": "leon",
      "fit": "partial",
-     "note": null
-    },
-    {
-     "project": "openassistant",
-     "fit": "partial",
-     "note": null,
-     "review": {
-      "by": "claude-opus-5-5",
-      "reason": "Reworded to make clear the project has ended and is not a ready-to-use chat app for most people."
-     }
+     "note": "Early; for tinkerers"
     }
    ]
   },
@@ -1878,33 +1898,24 @@
    "source": "starter",
    "alternatives": [
     {
-     "project": "continue",
-     "fit": "full",
-     "note": null,
-     "review": {
-      "by": "claude-opus-5-5",
-      "reason": "Added that the repository is now read-only and no longer actively maintained, as its page states."
-     }
-    },
-    {
      "project": "cline",
      "fit": "full",
-     "note": null
+     "note": "Works inside VS Code; you pay for the AI"
     },
     {
      "project": "aider",
      "fit": "full",
-     "note": null
+     "note": "Terminal only; you pay for the AI"
     },
     {
      "project": "openhands",
-     "fit": "full",
-     "note": null
+     "fit": "partial",
+     "note": "Runs agents; heavier set-up"
     },
     {
      "project": "codex-cli",
      "fit": "full",
-     "note": null,
+     "note": "Terminal only; needs an OpenAI plan or key",
      "review": {
       "by": "claude-opus-5-5",
       "reason": "Clarified that the tool runs locally but relies on OpenAI's online models through a ChatGPT plan or API key."
@@ -1916,13 +1927,29 @@
      "note": "Desktop and Android app; any AI model"
     },
     {
-     "project": "fauxpilot",
+     "project": "opencode",
+     "fit": "full",
+     "note": "Terminal and desktop app; any AI model"
+    },
+    {
+     "project": "gemini-cli",
+     "fit": "full",
+     "note": "Terminal only"
+    },
+    {
+     "project": "kilo-code",
+     "fit": "full",
+     "note": "Works inside VS Code; you pay for the AI"
+    },
+    {
+     "project": "zed",
      "fit": "partial",
-     "note": null,
-     "review": {
-      "by": "claude-opus-5-5",
-      "reason": "Changed fit to partial because FauxPilot only serves code completion and lacks the chat and code-editing features of Cursor, Windsurf or Claude Code."
-     }
+     "note": "Code editor with built-in AI; for programmers"
+    },
+    {
+     "project": "tabby",
+     "fit": "partial",
+     "note": "Self-hosted code suggestions; you run the server"
     }
    ]
   },
@@ -1950,7 +1977,17 @@
     {
      "project": "open-interpreter",
      "fit": "partial",
-     "note": "Runs in the terminal"
+     "note": "Terminal only; aimed at programmers"
+    },
+    {
+     "project": "openclaw",
+     "fit": "partial",
+     "note": "Set-up needs a terminal; runs with broad access to your computer"
+    },
+    {
+     "project": "hermes-agent",
+     "fit": "partial",
+     "note": "Terminal set-up; for technical users"
     }
    ]
   },
@@ -2069,12 +2106,12 @@
     {
      "project": "navidrome",
      "fit": "partial",
-     "note": "Streams music you own"
+     "note": "Plays only music files you own; no catalog"
     },
     {
      "project": "funkwhale",
      "fit": "partial",
-     "note": "Music you own, shared with others"
+     "note": "Plays only music you upload or others share; no catalog"
     }
    ]
   },
@@ -2262,7 +2299,7 @@
     {
      "project": "nextcloud",
      "fit": "full",
-     "note": "Needs a server"
+     "note": "Needs a server or a hosting provider"
     },
     {
      "project": "seafile",
@@ -2272,17 +2309,17 @@
     {
      "project": "owncloud-infinite-scale",
      "fit": "full",
-     "note": null
+     "note": "Needs your own server"
     },
     {
      "project": "syncthing",
      "fit": "partial",
-     "note": "Syncs devices directly, no cloud"
+     "note": "No web access or share links; devices sync directly"
     },
     {
      "project": "filestash",
-     "fit": "full",
-     "note": null,
+     "fit": "partial",
+     "note": "Browser front-end for storage you already have",
      "review": {
       "by": "claude-opus-5-5",
       "reason": "Changed fit to full because the page describes a browser file manager plus native clients that sync a folder across Mac, Windows, Linux and Android, which covers the main job of Dropbox-style apps."
@@ -2290,20 +2327,11 @@
     },
     {
      "project": "owncloud",
-     "fit": "full",
-     "note": null,
+     "fit": "partial",
+     "note": "Older version; moving to Infinite Scale",
      "review": {
       "by": "claude-opus-5-5",
       "reason": "Changed fit to full because ownCloud is a complete self-hosted file storage, sync and sharing server that does the main job of Dropbox or Google Drive."
-     }
-    },
-    {
-     "project": "spacedrive",
-     "fit": "partial",
-     "note": null,
-     "review": {
-      "by": "claude-opus-5-5",
-      "reason": "Noted that the project is pre-beta, since only unstable nightly builds are available now."
      }
     }
    ]
@@ -2372,7 +2400,7 @@
     {
      "project": "organic-maps",
      "fit": "full",
-     "note": "Offline; no live traffic",
+     "note": "Offline maps; no live traffic",
      "review": {
       "by": "claude-opus-5-5",
       "reason": "Removed the claim that it runs on computers, since the page only lists phone app stores."
@@ -2381,17 +2409,17 @@
     {
      "project": "comaps",
      "fit": "full",
-     "note": null
+     "note": "Offline maps; no live traffic"
     },
     {
      "project": "osmand",
      "fit": "full",
-     "note": null
+     "note": "Powerful but busy interface; some features paid"
     },
     {
      "project": "openstreetmap",
      "fit": "partial",
-     "note": null
+     "note": "Web map with basic directions; no phone navigation app"
     }
    ]
   },

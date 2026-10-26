@@ -877,5 +877,61 @@
   "https://raw.githubusercontent.com/itsdestin/youcoded/HEAD/docs/readme/home.webp",
   "https://raw.githubusercontent.com/itsdestin/youcoded/HEAD/docs/readme/finance.webp"
  ],
- "open-interpreter": []
+ "open-interpreter": [],
+ "digikam": [],
+ "briar": [],
+ "keepassdx": [
+  "https://raw.githubusercontent.com/Kunzisoft/KeePassDX/master/art/screen.jpg"
+ ],
+ "fossify-calendar": [
+  "https://raw.githubusercontent.com/FossifyOrg/Calendar/HEAD/fastlane/metadata/android/en-US/images/phoneScreenshots/2_en-US.png",
+  "https://raw.githubusercontent.com/FossifyOrg/Calendar/HEAD/fastlane/metadata/android/en-US/images/phoneScreenshots/4_en-US.png",
+  "https://raw.githubusercontent.com/FossifyOrg/Calendar/HEAD/fastlane/metadata/android/en-US/images/phoneScreenshots/1_en-US.png"
+ ],
+ "anythingllm": [],
+ "fairemail": [],
+ "hermes-agent": [],
+ "gemini-cli": [],
+ "bazzite": [
+  "https://raw.githubusercontent.com/ublue-os/bazzite/HEAD/repo_content/desktop1.png?raw=true",
+  "https://raw.githubusercontent.com/ublue-os/bazzite/HEAD/repo_content/desktop2.png?raw=true",
+  "https://raw.githubusercontent.com/ublue-os/bazzite/HEAD/repo_content/gamemode.png?raw=true",
+  "https://raw.githubusercontent.com/ublue-os/bazzite/HEAD/repo_content/distrobox.png?raw=true"
+ ],
+ "jami": [],
+ "opencode": [
+  "https://raw.githubusercontent.com/anomalyco/opencode/HEAD/packages/web/src/assets/lander/screenshot.png"
+ ],
+ "openclaw": [],
+ "etar-calendar": [
+  "https://raw.githubusercontent.com/Etar-Group/Etar-Calendar/HEAD/metadata/animation.gif"
+ ],
+ "mailspring": [
+  "https://www.getmailspring.com/static/img/og-share.jpg"
+ ],
+ "tor-browser": [],
+ "kilo-code": [
+  "https://github.com/user-attachments/assets/0536ca59-ed81-4512-9e05-d186187a1b52"
+ ],
+ "pinta": [],
+ "silverbullet": [
+  "https://silverbullet.md/media/og/default.jpg"
+ ],
+ "pop-os": [],
+ "tabby": [],
+ "ubuntu-touch": [],
+ "nextcloud-talk": [
+  "https://raw.githubusercontent.com/nextcloud/spreed/main/docs/call-in-action.jpg"
+ ],
+ "chatbox-community-edition": [
+  "https://raw.githubusercontent.com/chatboxai/chatbox/HEAD/doc/statics/snapshot_light.png",
+  "https://raw.githubusercontent.com/chatboxai/chatbox/HEAD/doc/statics/snapshot_dark.png"
+ ],
+ "zettlr": [
+  "https://raw.githubusercontent.com/Zettlr/Zettlr/HEAD/resources/screenshots/zettlr_view.png",
+  "https://raw.githubusercontent.com/Zettlr/Zettlr/HEAD/resources/screenshots/zettlr_view_dark.png"
+ ],
+ "zed": [
+  "https://zed.dev/img/home/og.webp"
+ ]
 }

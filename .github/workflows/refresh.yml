@@ -1,0 +1,46 @@
+# Every Monday: re-read the facts the site shows (stars, activity, licenses, archived, website and download links)
+# and open a pull request with what changed. Free: GitHub's own data only, no AI.
+# WHY a pull request: license changes and abandoned projects are listed at the top for a mod to check before merging.
+name: Weekly refresh
+on:
+  schedule:
+    - cron: '17 6 * * 1'
+  workflow_dispatch:
+permissions:
+  contents: write
+  pull-requests: write
+jobs:
+  refresh:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 24
+      - name: Build the shared checker
+        working-directory: checker
+        run: npm ci && npm run build
+      - name: Re-read every project's facts
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          cp data/projects.json /tmp/projects-before.json
+          node prefill/check-starter.mjs
+          node prefill/github-facts.mjs
+          node prefill/fetch-links.mjs
+          node prefill/assemble.mjs
+          node site/build.mjs && node site/check.mjs
+          node .github/robot/refresh-report.mjs /tmp/projects-before.json data/projects.json
+      - name: Open a pull request
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          if git diff --quiet -- data; then echo "Nothing changed."; exit 0; fi
+          B="refresh-$(date +%Y-%m-%d)"
+          git config user.name "refresh-robot"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git checkout -b "$B"
+          git add data prefill/out docs/starter-review.md
+          git commit -m "Weekly refresh $(date +%Y-%m-%d)"
+          git push -f origin "$B"
+          gh pr create --head "$B" --title "Weekly refresh $(date +%Y-%m-%d)" --body-file refresh-report.md

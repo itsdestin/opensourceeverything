@@ -1,6 +1,6 @@
 // Pieces more than one page draws: the alternative card (group pages and closed-app pages) and the address of a
 // closed app's own page.
-import { esc, url, ICON, KIND, factChips, hostOf, actions, suggestUrl } from './lib.mjs';
+import { esc, url, ICON, KIND, factChips, hostOf, actions, suggestUrl, shot as shotOf } from './lib.mjs';
 
 // WHY its own address per closed app (Destin, Oct 27): people search "alternatives to Notion", not "Notes".
 // "alternatives-to/notion/" reads well in a search result and stays stable when an app moves group.
@@ -12,7 +12,7 @@ const hostLabel = (p) => ({ 'github.com': 'GitHub', 'gitlab.com': 'GitLab', 'cod
 export function altCard(p, alt, i, group) {
   const foot = [KIND[p.kind], hostLabel(p), alt.note].filter(Boolean).join(' · ');
   const acts = actions(p);
-  const shot = p.screenshots?.[0];
+  const shot = shotOf(p);
   // WHY this layout (Destin chose option B, Oct 27): a screenshot on every card, framed like the app's
   // Marketplace theme previews, and one "Actions" menu instead of a row of buttons.
   // WHY a stretched title link: the card also holds the Actions menu, and links can't sit inside links.

@@ -178,6 +178,24 @@
        "github.com/standardnotes/app",
        "partial",
        "Encrypted notes, fewer layouts"
+      ],
+      [
+       "Zettlr",
+       "github.com/Zettlr/Zettlr",
+       "partial",
+       "Desktop only; no phone app",
+       {
+        "website": "https://www.zettlr.com"
+       }
+      ],
+      [
+       "SilverBullet",
+       "github.com/silverbulletmd/silverbullet",
+       "partial",
+       "You host it; for tech-minded users",
+       {
+        "website": "https://silverbullet.md"
+       }
       ]
      ]
     },
@@ -278,6 +296,24 @@
        "github.com/nextcloud/calendar",
        "full",
        "Needs a Nextcloud server"
+      ],
+      [
+       "Fossify Calendar",
+       "github.com/FossifyOrg/Calendar",
+       "partial",
+       "Android only",
+       {
+        "website": "https://www.fossify.org"
+       }
+      ],
+      [
+       "Etar Calendar",
+       "github.com/Etar-Group/Etar-Calendar",
+       "partial",
+       "Android only",
+       {
+        "website": "https://etar.app"
+       }
       ]
      ]
     },
@@ -335,6 +371,24 @@
        "github.com/roundcube/roundcubemail",
        "partial",
        "Webmail for your own server"
+      ],
+      [
+       "Mailspring",
+       "github.com/Foundry376/Mailspring",
+       "partial",
+       "Desktop only; some features paid",
+       {
+        "website": "https://getmailspring.com"
+       }
+      ],
+      [
+       "FairEmail",
+       "github.com/M66B/FairEmail",
+       "partial",
+       "Android only",
+       {
+        "website": "https://email.faircode.eu"
+       }
       ]
      ]
     }
@@ -429,6 +483,16 @@
        "Element",
        "github.com/element-hq/element-x-android",
        "full"
+      ],
+      [
+       "Briar",
+       "https://briarproject.org",
+       "partial",
+       "Android only; for sensitive situations",
+       {
+        "website": "https://briarproject.org",
+        "code": "https://code.briarproject.org/briar/briar"
+       }
       ]
      ]
     },
@@ -457,6 +521,24 @@
        "Element Call",
        "github.com/element-hq/element-call",
        "full"
+      ],
+      [
+       "Jami",
+       "github.com/savoirfairelinux/jami-client-qt",
+       "partial",
+       "Quality drops in large groups",
+       {
+        "website": "https://jami.net"
+       }
+      ],
+      [
+       "Nextcloud Talk",
+       "github.com/nextcloud/spreed",
+       "partial",
+       "Needs a Nextcloud server",
+       {
+        "website": "https://nextcloud.com/talk/"
+       }
       ]
      ]
     },
@@ -649,6 +731,25 @@
        {
         "website": "https://krita.org",
         "download": "https://krita.org/en/download/"
+       }
+      ],
+      [
+       "digiKam",
+       "https://www.digikam.org",
+       "partial",
+       "Sorting and light edits; not retouching",
+       {
+        "website": "https://www.digikam.org",
+        "code": "https://invent.kde.org/graphics/digikam"
+       }
+      ],
+      [
+       "Pinta",
+       "github.com/PintaProject/Pinta",
+       "partial",
+       "Simple edits only",
+       {
+        "website": "https://www.pinta-project.com"
        }
       ]
      ]
@@ -931,6 +1032,25 @@
        {
         "download": "https://cachyos.org/download/"
        }
+      ],
+      [
+       "Pop!_OS",
+       "https://system76.com/pop/",
+       "full",
+       "Good for newer laptops and graphics cards",
+       {
+        "website": "https://system76.com/pop/",
+        "code": "https://github.com/pop-os"
+       }
+      ],
+      [
+       "Bazzite",
+       "github.com/ublue-os/bazzite",
+       "full",
+       "Great for gaming; updates apply safely",
+       {
+        "website": "https://bazzite.gg"
+       }
       ]
      ]
     },
@@ -977,6 +1097,16 @@
        "Early on most phones",
        {
         "download": "https://postmarketos.org/download/"
+       }
+      ],
+      [
+       "Ubuntu Touch",
+       "https://ubports.com",
+       "partial",
+       "Works on a short list of phones; few apps",
+       {
+        "website": "https://ubports.com",
+        "code": "https://gitlab.com/ubports"
        }
       ]
      ]
@@ -1065,6 +1195,16 @@
        "Ungoogled Chromium",
        "github.com/ungoogled-software/ungoogled-chromium",
        "full"
+      ],
+      [
+       "Tor Browser",
+       "https://www.torproject.org",
+       "partial",
+       "Slower; built for anonymity, not daily use",
+       {
+        "website": "https://www.torproject.org",
+        "code": "https://gitlab.torproject.org/tpo/applications/tor-browser"
+       }
       ]
      ]
     },
@@ -1117,6 +1257,15 @@
        "github.com/dani-garcia/vaultwarden",
        "full",
        "Self-hosted Bitwarden server"
+      ],
+      [
+       "KeePassDX",
+       "github.com/Kunzisoft/KeePassDX",
+       "partial",
+       "Android only; you sync the file yourself",
+       {
+        "website": "https://www.keepassdx.com"
+       }
       ]
      ]
     },
@@ -1189,6 +1338,24 @@
         "website": "https://youcoded.ai",
         "disclosure": "Made by itsdestin, a r/TrueOpenSource moderator who also runs this site."
        }
+      ],
+      [
+       "Chatbox Community Edition",
+       "github.com/chatboxai/chatbox",
+       "full",
+       "Bring your own AI key or local model",
+       {
+        "website": "https://chatboxai.app"
+       }
+      ],
+      [
+       "AnythingLLM",
+       "github.com/Mintplex-Labs/anything-llm",
+       "partial",
+       "Aimed at chatting with your own documents",
+       {
+        "website": "https://anythingllm.com"
+       }
       ]
      ]
     },
@@ -1238,6 +1405,51 @@
         "website": "https://youcoded.ai",
         "disclosure": "Made by itsdestin, a r/TrueOpenSource moderator who also runs this site."
        }
+      ],
+      [
+       "OpenCode",
+       "github.com/anomalyco/opencode",
+       "full",
+       "Terminal and desktop app; any AI model",
+       {
+        "website": "https://opencode.ai"
+       }
+      ],
+      [
+       "Gemini CLI",
+       "github.com/google-gemini/gemini-cli",
+       "full",
+       "Terminal only",
+       {
+        "website": "https://geminicli.com"
+       }
+      ],
+      [
+       "Kilo Code",
+       "github.com/Kilo-Org/kilocode",
+       "full",
+       "Works inside VS Code; you pay for the AI",
+       {
+        "website": "https://kilo.ai"
+       }
+      ],
+      [
+       "Zed",
+       "github.com/zed-industries/zed",
+       "partial",
+       "Code editor with built-in AI; for programmers",
+       {
+        "website": "https://zed.dev"
+       }
+      ],
+      [
+       "Tabby",
+       "github.com/TabbyML/tabby",
+       "partial",
+       "Self-hosted code suggestions; you run the server",
+       {
+        "website": "https://tabby.tabbyml.com"
+       }
       ]
      ]
     },
@@ -1271,6 +1483,24 @@
        "github.com/openinterpreter/openinterpreter",
        "partial",
        "Runs in the terminal"
+      ],
+      [
+       "OpenClaw",
+       "github.com/openclaw/openclaw",
+       "partial",
+       "Set-up needs a terminal; runs with broad access to your computer",
+       {
+        "website": "https://openclaw.ai"
+       }
+      ],
+      [
+       "Hermes Agent",
+       "github.com/NousResearch/hermes-agent",
+       "partial",
+       "Terminal set-up; for technical users",
+       {
+        "website": "https://hermes-agent.nousresearch.com"
+       }
       ]
      ]
     },

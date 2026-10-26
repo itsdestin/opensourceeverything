@@ -3,7 +3,7 @@
 Drafted Oct 27, 2026, then every link checked automatically (2026-10-26).
 ✅ open-source license confirmed · ⚠️ needs a person to check the license · ❌ problem · 🔍 not on a host we can read; check by hand · 🗄️ archived · 💤 quiet for a year
 
-**10 categories, 59 groups, 141 closed apps, 170 listings.** 133 confirmed open source, 10 need a license check, 27 to check by hand, 0 problems.
+**10 categories, 59 groups, 141 closed apps, 196 listings.** 154 confirmed open source, 10 need a license check, 32 to check by hand, 0 problems.
 
 "Full" = replaces the main job; "partly" = covers part of it.
 
@@ -52,6 +52,8 @@ Drafted Oct 27, 2026, then every link checked automatically (2026-10-26).
 | Trilium Notes | Full | ✅ AGPL-3.0 |  |
 | SiYuan | Full | ✅ AGPL-3.0 |  |
 | Standard Notes | Partly | ✅ AGPL-3.0 | Encrypted notes, fewer layouts |
+| Zettlr | Partly | ✅ GPL-3.0 | Desktop only; no phone app |
+| SilverBullet | Partly | ✅ MIT | You host it; for tech-minded users |
 
 ### Tasks & project boards
 *To-do lists, boards and project tracking.* Replaces: Trello, Asana, Jira, Monday.com, Todoist
@@ -81,6 +83,8 @@ Drafted Oct 27, 2026, then every link checked automatically (2026-10-26).
 | Cal.com | Full | ✅ MIT · ↪️ moved to calcom/cal.diy | Booking pages |
 | Thunderbird | Partly | 🔍 check the license by hand (its host doesn't report it) | Calendar in the desktop app |
 | Nextcloud Calendar | Full | ✅ AGPL-3.0 | Needs a Nextcloud server |
+| Fossify Calendar | Partly | ✅ GPL-3.0 | Android only |
+| Etar Calendar | Partly | ✅ GPL-3.0 | Android only |
 
 ### PDF tools
 *Reading, editing and signing PDFs.* Replaces: Adobe Acrobat
@@ -98,6 +102,8 @@ Drafted Oct 27, 2026, then every link checked automatically (2026-10-26).
 |---|---|---|---|
 | Thunderbird | Full | 🔍 check the license by hand (its host doesn't report it) | Desktop and Android apps |
 | Roundcube | Partly | ✅ GPL-3.0 | Webmail for your own server |
+| Mailspring | Partly | ✅ GPL-3.0 | Desktop only; some features paid |
+| FairEmail | Partly | ✅ GPL-3.0 | Android only |
 
 ## Communication & social
 
@@ -128,6 +134,7 @@ Drafted Oct 27, 2026, then every link checked automatically (2026-10-26).
 | SimpleX Chat | Full | ✅ AGPL-3.0 |  |
 | Delta Chat | Full | ✅ GPL-3.0 | Works over email |
 | Element | Full | ✅ AGPL-3.0 |  |
+| Briar | Partly | 🔍 check the license by hand (its host doesn't report it) | Android only; for sensitive situations |
 
 ### Video calls
 *Meetings and calls with video.* Replaces: Zoom, Google Meet, Microsoft Teams
@@ -137,6 +144,8 @@ Drafted Oct 27, 2026, then every link checked automatically (2026-10-26).
 | Jitsi Meet | Full | ✅ Apache-2.0 |  |
 | BigBlueButton | Full | ✅ LGPL-3.0 | Built for teaching |
 | Element Call | Full | ✅ AGPL-3.0 |  |
+| Jami | Partly | ✅ GPL-3.0 | Quality drops in large groups |
+| Nextcloud Talk | Partly | ✅ AGPL-3.0 | Needs a Nextcloud server |
 
 ### Microblogging
 *Short public posts and follows.* Replaces: Twitter / X, Threads
@@ -199,6 +208,8 @@ No open alternative yet. **A gap.**
 | darktable | Full | ✅ GPL-3.0 | Raw photos, like Lightroom |
 | RawTherapee | Full | ✅ GPL-3.0 | Raw photos |
 | Krita | Partly | 🔍 check the license by hand (its host doesn't report it) | Better for painting |
+| digiKam | Partly | 🔍 check the license by hand (its host doesn't report it) | Sorting and light edits; not retouching |
+| Pinta | Partly | ✅ MIT | Simple edits only |
 
 ### Digital painting
 *Drawing and painting.* Replaces: Procreate, Clip Studio Paint, Adobe Photoshop
@@ -283,6 +294,8 @@ No open alternative yet. **A gap.**
 | Debian | Full | 🔍 check the license by hand (its host doesn't report it) |  |
 | Arch Linux | Full | 🔍 check the license by hand (its host doesn't report it) | For experienced users: you choose and set up every part |
 | CachyOS | Full | 🔍 check the license by hand (its host doesn't report it) | Based on Arch, tuned for speed, with an easy installer |
+| Pop!_OS | Full | 🔍 check the license by hand (its host doesn't report it) | Good for newer laptops and graphics cards |
+| Bazzite | Full | ✅ Apache-2.0 | Great for gaming; updates apply safely |
 
 ### Phone operating systems
 *What runs your phone.* Replaces: Google Android, Apple iOS
@@ -293,6 +306,7 @@ No open alternative yet. **A gap.**
 | LineageOS | Full | 🔍 check the license by hand (its host doesn't report it) |  |
 | /e/OS | Full | 🔍 check the license by hand (its host doesn't report it) |  |
 | postmarketOS | Partly | 🔍 check the license by hand (its host doesn't report it) | Early on most phones |
+| Ubuntu Touch | Partly | 🔍 check the license by hand (its host doesn't report it) | Works on a short list of phones; few apps |
 
 ### App stores
 *Finding and installing phone apps.* Replaces: Google Play Store, Apple App Store
@@ -322,6 +336,7 @@ No open alternative yet. **A gap.**
 | Brave | Full | ✅ MPL-2.0 |  |
 | Zen Browser | Full | ✅ MPL-2.0 |  |
 | Ungoogled Chromium | Full | ✅ BSD-3-Clause |  |
+| Tor Browser | Partly | 🔍 check the license by hand (its host doesn't report it) | Slower; built for anonymity, not daily use |
 
 ### Search engines
 *Searching the web.* Replaces: Google Search, Bing
@@ -339,6 +354,7 @@ No open alternative yet. **A gap.**
 | Bitwarden | Full | ⚠️ license unclear to GitHub: a person checks · several license files (license.txt, license_bitwarden.txt, license_gpl.txt) |  |
 | KeePassXC | Full | ⚠️ license unclear to GitHub: a person checks · several license files (copying, license.bsd, license.cc0, license.gpl-2, license.gpl-3, license.lgpl-2.1, license.lgpl-3, license.mit, license.nokia-lgpl-exception, license.ofl) | Offline |
 | Vaultwarden | Full | ✅ AGPL-3.0 | Self-hosted Bitwarden server |
+| KeePassDX | Partly | ✅ GPL-3.0 | Android only; you sync the file yourself |
 
 ### Two-factor codes
 *Login codes for two-step sign-in.* Replaces: Google Authenticator, Authy
@@ -359,6 +375,9 @@ No open alternative yet. **A gap.**
 | Jan | Full | ✅ Apache-2.0 (read from its license file) | Runs models on your computer |
 | LibreChat | Full | ✅ MIT |  |
 | Ollama | Partly | ✅ MIT | Runs models; needs a chat app on top |
+| YouCoded | Full | ✅ MIT | Desktop and Android app; any AI model |
+| Chatbox Community Edition | Full | ✅ GPL-3.0 | Bring your own AI key or local model |
+| AnythingLLM | Partly | ✅ MIT | Aimed at chatting with your own documents |
 
 ### AI coding assistants
 *AI help writing and changing code.* Replaces: GitHub Copilot, Cursor, Windsurf, Claude Code, OpenAI Codex app
@@ -371,6 +390,11 @@ No open alternative yet. **A gap.**
 | OpenHands | Full | ✅ MIT |  |
 | Codex CLI | Full | ✅ Apache-2.0 |  |
 | YouCoded | Full | ✅ MIT | Desktop and Android app; any AI model |
+| OpenCode | Full | ✅ MIT | Terminal and desktop app; any AI model |
+| Gemini CLI | Full | ✅ Apache-2.0 | Terminal only |
+| Kilo Code | Full | ✅ MIT | Works inside VS Code; you pay for the AI |
+| Zed | Partly | ✅ Apache-2.0 (read from its license file) | Code editor with built-in AI; for programmers |
+| Tabby | Partly | ✅ Apache-2.0 (read from its license file) · 🔒 open core: some parts paid | Self-hosted code suggestions; you run the server |
 
 ### AI agents for everyday work
 *An AI assistant that works on your files and apps for you.* Replaces: Claude Cowork, ChatGPT agent
@@ -380,6 +404,8 @@ No open alternative yet. **A gap.**
 | YouCoded | Full | ✅ MIT | Desktop and Android app; any AI model |
 | Goose | Full | ✅ Apache-2.0 | Desktop app and terminal |
 | Open Interpreter | Partly | ✅ Apache-2.0 | Runs in the terminal |
+| OpenClaw | Partly | ✅ MIT | Set-up needs a terminal; runs with broad access to your computer |
+| Hermes Agent | Partly | ✅ MIT | Terminal set-up; for technical users |
 
 ### AI image generation
 *Making images from text.* Replaces: Midjourney, DALL·E

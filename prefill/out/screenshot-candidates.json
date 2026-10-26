@@ -1555,5 +1555,106 @@
  "open-interpreter": [
   "https://raw.githubusercontent.com/openinterpreter/openinterpreter/HEAD/docs-site/assets/open-interpreter-terminal-hero.png",
   "https://www.openinterpreter.com/open-interpreter-social.jpg"
+ ],
+ "digikam": [],
+ "briar": [],
+ "keepassdx": [
+  "https://raw.githubusercontent.com/Kunzisoft/KeePassDX/master/art/screen.jpg"
+ ],
+ "fossify-calendar": [
+  "https://gitlab.com/IzzyOnDroid/repo/-/raw/master/assets/IzzyOnDroid.png",
+  "https://raw.githubusercontent.com/FossifyOrg/Calendar/HEAD/fastlane/metadata/android/en-US/images/phoneScreenshots/1_en-US.png",
+  "https://raw.githubusercontent.com/FossifyOrg/Calendar/HEAD/fastlane/metadata/android/en-US/images/phoneScreenshots/2_en-US.png",
+  "https://raw.githubusercontent.com/FossifyOrg/Calendar/HEAD/fastlane/metadata/android/en-US/images/phoneScreenshots/4_en-US.png"
+ ],
+ "anythingllm": [
+  "https://github.com/Mintplex-Labs/anything-llm/raw/master/images/wordmark.png?raw=true",
+  "https://github.com/Mintplex-Labs/anything-llm/releases/download/v1.11.2/AnythingLLM720p.gif",
+  "https://raw.githubusercontent.com/Mintplex-Labs/anything-llm/HEAD/images/youtube.png",
+  "https://raw.githubusercontent.com/Mintplex-Labs/anything-llm/HEAD/https:&#x2F;&#x2F;github.com&#x2F;jaschadub.png",
+  "https://raw.githubusercontent.com/Mintplex-Labs/anything-llm/HEAD/https:&#x2F;&#x2F;github.com&#x2F;KickingAss2024.png",
+  "https://raw.githubusercontent.com/Mintplex-Labs/anything-llm/HEAD/https:&#x2F;&#x2F;github.com&#x2F;ShadowArcanist.png",
+  "https://raw.githubusercontent.com/Mintplex-Labs/anything-llm/HEAD/https:&#x2F;&#x2F;github.com&#x2F;AtlasVIA.png",
+  "https://raw.githubusercontent.com/Mintplex-Labs/anything-llm/HEAD/https:&#x2F;&#x2F;github.com&#x2F;cope.png",
+  "https://anythingllm.com/share-card.png"
+ ],
+ "fairemail": [
+  "https://raw.githubusercontent.com/M66B/FairEmail/master/app/src/main/res/mipmap-hdpi/ic_launcher.png",
+  "https://raw.githubusercontent.com/M66B/FairEmail/HEAD/images/localization-at-white-rounded-bordered@1x.png"
+ ],
+ "hermes-agent": [
+  "https://web-assets.nousresearch.com/marketing/9701e4ef45f0554780c86d7edeec6249f14937d5/assets/hermes-agent/og-image.png"
+ ],
+ "gemini-cli": [
+  "https://geminicli.com/assets/social-poster.png"
+ ],
+ "bazzite": [
+  "https://raw.githubusercontent.com/ublue-os/bazzite/HEAD/repo_content/download.png?raw=true",
+  "https://raw.githubusercontent.com/ublue-os/bazzite/HEAD/repo_content/desktop1.png?raw=true",
+  "https://raw.githubusercontent.com/ublue-os/bazzite/HEAD/repo_content/desktop2.png?raw=true",
+  "https://raw.githubusercontent.com/ublue-os/bazzite/HEAD/repo_content/gamemode.png?raw=true",
+  "https://raw.githubusercontent.com/ublue-os/bazzite/HEAD/repo_content/waydroid.png?raw=true",
+  "https://raw.githubusercontent.com/ublue-os/bazzite/HEAD/repo_content/distrobox.png?raw=true",
+  "https://raw.githubusercontent.com/ublue-os/bazzite/HEAD/repo_content/gnome1.png?raw=true",
+  "https://raw.githubusercontent.com/ublue-os/bazzite/HEAD/repo_content/gnome2.png?raw=true",
+  "https://bazzite.gg/content/uploads/2024/08/preview2.png"
+ ],
+ "jami": [],
+ "opencode": [
+  "https://raw.githubusercontent.com/anomalyco/opencode/HEAD/packages/web/src/assets/lander/screenshot.png",
+  "https://opencode.ai/social-share.png"
+ ],
+ "openclaw": [
+  "https://openclaw.ai/og-image.png"
+ ],
+ "etar-calendar": [
+  "https://raw.githubusercontent.com/Etar-Group/Etar-Calendar/HEAD/metadata/en_fdroid.png",
+  "https://raw.githubusercontent.com/Etar-Group/Etar-Calendar/HEAD/metadata/en_google_play.png",
+  "https://raw.githubusercontent.com/Etar-Group/Etar-Calendar/HEAD/metadata/animation.gif"
+ ],
+ "mailspring": [
+  "https://github.com/Foundry376/Mailspring/raw/master/screenshots/hero_graphic_mac%402x.png",
+  "https://www.getmailspring.com/static/img/og-share.jpg"
+ ],
+ "tor-browser": [],
+ "kilo-code": [
+  "https://github.com/user-attachments/assets/bdb0c174-b9fd-40ad-a47b-f3aab9b54e8d",
+  "https://github.com/user-attachments/assets/0536ca59-ed81-4512-9e05-d186187a1b52",
+  "https://kilo.ai/kilocode-social.png"
+ ],
+ "pinta": [
+  "https://pinta-project.com/img/pinta-og.png"
+ ],
+ "silverbullet": [
+  "https://silverbullet.md/media/og/default.jpg"
+ ],
+ "pop-os": [],
+ "tabby": [
+  "https://user-images.githubusercontent.com/388154/230440226-9bc01d05-9f57-478b-b04d-81184eba14ca.gif"
+ ],
+ "ubuntu-touch": [
+  "https://ubports.com/web/image/188173-8f7a3d65/Screenshot%20from%202026-02-25%2011-59-32.webp"
+ ],
+ "nextcloud-talk": [
+  "https://raw.githubusercontent.com/nextcloud/spreed/main/docs/call-in-action.jpg",
+  "https://nextcloud.com/c/uploads/2026/03/Talk-page.png"
+ ],
+ "chatbox-community-edition": [
+  "https://raw.githubusercontent.com/chatboxai/chatbox/HEAD/doc/statics/snapshot_light.png",
+  "https://raw.githubusercontent.com/chatboxai/chatbox/HEAD/doc/statics/snapshot_dark.png",
+  "https://raw.githubusercontent.com/chatboxai/chatbox/HEAD/doc/statics/windows.png",
+  "https://raw.githubusercontent.com/chatboxai/chatbox/HEAD/doc/statics/mac.png",
+  "https://raw.githubusercontent.com/chatboxai/chatbox/HEAD/doc/statics/linux.png",
+  "https://raw.githubusercontent.com/chatboxai/chatbox/HEAD/doc/statics/app_store.webp",
+  "https://raw.githubusercontent.com/chatboxai/chatbox/HEAD/doc/statics/google_play.png",
+  "https://raw.githubusercontent.com/chatboxai/chatbox/HEAD/doc/statics/android.png"
+ ],
+ "zettlr": [
+  "https://raw.githubusercontent.com/Zettlr/Zettlr/HEAD/resources/screenshots/zettlr_view.png",
+  "https://raw.githubusercontent.com/Zettlr/Zettlr/HEAD/resources/screenshots/zettlr_view_dark.png",
+  "https://zettlr.com/storage/app/media/img/social_media_img.png"
+ ],
+ "zed": [
+  "https://zed.dev/img/home/og.webp"
  ]
 }

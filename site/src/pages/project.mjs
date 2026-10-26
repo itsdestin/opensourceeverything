@@ -1,5 +1,5 @@
 // One page per open-source project (p/<id>/): what it is, which groups it's listed in, and its facts.
-import { esc, url, SITE_URL, KIND, factChips, hostOf, fmtStars, actions, codeUrl, devicesText, suggestUrl } from '../lib.mjs';
+import { esc, url, SITE_URL, KIND, factChips, hostOf, fmtStars, actions, codeUrl, devicesText, suggestUrl, shot } from '../lib.mjs';
 
 const HOSTS = { 'github.com': 'GitHub', 'gitlab.com': 'GitLab', 'codeberg.org': 'Codeberg' };
 
@@ -27,7 +27,7 @@ export default function projectPages(d) {
   ${p.screenshots?.length ? `<section class="surface sec">
         <div class="sec-head"><div><h2 class="h-large">Screenshots<span class="count">${p.screenshots.length}</span></h2><p class="desc12">From ${esc(p.name)}'s own page. Click one to see it full size.</p></div></div>
         <!-- WHY small thumbnails (Destin, Oct 27: full-size pictures were "overwhelming"); full size opens in a viewer. -->
-        <div class="thumbstrip">${p.screenshots.map((u, i) => `<button class="thumb" type="button" data-shot="${esc(u)}" aria-label="Screenshot ${i + 1} of ${p.screenshots.length}, full size"><img src="${esc(u)}" alt="" loading="lazy" referrerpolicy="no-referrer"></button>`).join('')}</div>
+        <div class="thumbstrip">${p.screenshots.map((u, i) => `<button class="thumb" type="button" data-shot="${esc(u)}" aria-label="Screenshot ${i + 1} of ${p.screenshots.length}, full size"><img src="${esc(shot(p, i))}" alt="" loading="lazy" referrerpolicy="no-referrer"></button>`).join('')}</div>
       </section>` : ''}
       <section class="surface sec">
         <div class="sec-head"><div><h2 class="h-large">Listed in<span class="count">${listed.length}</span></h2><p class="desc12">The jobs it does, and the closed apps it replaces</p></div></div>

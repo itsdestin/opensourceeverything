@@ -11,7 +11,7 @@
    "code": null,
    "website": "https://e.foundation",
    "download": "https://doc.e.foundation/devices",
-   "license": null,
+   "license": "Apache-2.0",
    "licenseClass": "open",
    "licenseNeedsCheck": true,
    "stars": null,
@@ -27,7 +27,9 @@
    "screenshots": [],
    "platforms": [
     "android"
-   ]
+   ],
+   "licenseSource": "https://gitlab.e.foundation/e/os/android/-/raw/a16/LICENSE",
+   "thumbs": []
   },
   {
    "id": "2fas",
@@ -55,7 +57,8 @@
    "screenshots": [],
    "platforms": [
     "android"
-   ]
+   ],
+   "thumbs": []
   },
   {
    "id": "abilian-hop3",
@@ -85,7 +88,8 @@
    "screenshots": [],
    "platforms": [
     "server"
-   ]
+   ],
+   "thumbs": []
   },
   {
    "id": "abilian-nua",
@@ -116,7 +120,8 @@
    "screenshots": [],
    "platforms": [
     "server"
-   ]
+   ],
+   "thumbs": []
   },
   {
    "id": "accrescent",
@@ -145,7 +150,8 @@
    "screenshots": [],
    "platforms": [
     "android"
-   ]
+   ],
+   "thumbs": []
   },
   {
    "id": "acebase",
@@ -178,7 +184,8 @@
     "linux",
     "web",
     "server"
-   ]
+   ],
+   "thumbs": []
   },
   {
    "id": "activepieces",
@@ -207,6 +214,9 @@
    ],
    "platforms": [
     "server"
+   ],
+   "thumbs": [
+    "assets/shots/activepieces-0.webp"
    ]
   },
   {
@@ -236,12 +246,16 @@
    ],
    "platforms": [
     "android"
+   ],
+   "thumbs": [
+    "assets/shots/aegis-0.webp",
+    "assets/shots/aegis-1.webp"
    ]
   },
   {
    "id": "affine",
    "name": "AFFiNE",
-   "summary": "AFFiNE is a workspace that combines documents, whiteboard canvases and tables in one app, with local-first storage and real-time collaboration. It is aimed at people who want notes, wikis and planning in one place and the option to self-host.",
+   "summary": "AFFiNE is a workspace that combines documents, whiteboards and tables in one app, in the style of Notion. Your notes are stored on your own device by default, and you can host it yourself.",
    "kind": "app",
    "code": "github.com/toeverything/AFFiNE",
    "website": "https://affine.pro",
@@ -249,7 +263,7 @@
    "license": "MIT",
    "licenseClass": "open",
    "licenseNeedsCheck": false,
-   "stars": 73853,
+   "stars": 73855,
    "archived": false,
    "inactive": false,
    "unconfirmed": [
@@ -266,8 +280,14 @@
     "https://user-images.githubusercontent.com/79301703/230891830-0110681e-8c7e-483b-b6d9-9e42b291b9ef.gif"
    ],
    "platforms": [
+    "windows",
     "mac",
-    "linux"
+    "linux",
+    "web",
+    "ios"
+   ],
+   "thumbs": [
+    "assets/shots/affine-0.webp"
    ]
   },
   {
@@ -281,7 +301,7 @@
    "license": "Apache-2.0",
    "licenseClass": "open",
    "licenseNeedsCheck": false,
-   "stars": 49757,
+   "stars": 49759,
    "archived": false,
    "inactive": false,
    "unconfirmed": [
@@ -297,12 +317,13 @@
     "windows",
     "mac",
     "linux"
-   ]
+   ],
+   "thumbs": []
   },
   {
    "id": "aliasvault",
    "name": "AliasVault",
-   "summary": "AliasVault is a password manager that also creates random email aliases for each website you use, so your real address stays private. It is for people who want to control their privacy and can run it in the cloud or on their own server.",
+   "summary": "AliasVault is a password manager that also creates a random email address for each website, so your real address stays private. It works in the browser, as phone apps and on your own server.",
    "kind": "app",
    "code": "github.com/aliasvault/aliasvault",
    "website": "https://www.aliasvault.com",
@@ -327,7 +348,13 @@
     "https://github.com/user-attachments/assets/fa5bf64a-704d-4f09-b4e0-0310ab662204"
    ],
    "platforms": [
-    "android"
+    "web",
+    "android",
+    "ios",
+    "server"
+   ],
+   "thumbs": [
+    "assets/shots/aliasvault-0.webp"
    ]
   },
   {
@@ -357,7 +384,8 @@
    "screenshots": [],
    "platforms": [
     "android"
-   ]
+   ],
+   "thumbs": []
   },
   {
    "id": "antennapod",
@@ -370,7 +398,7 @@
    "license": "GPL-3.0",
    "licenseClass": "open",
    "licenseNeedsCheck": false,
-   "stars": 8248,
+   "stars": 8249,
    "archived": false,
    "inactive": false,
    "unconfirmed": [
@@ -388,6 +416,12 @@
    ],
    "platforms": [
     "android"
+   ],
+   "thumbs": [
+    "assets/shots/antennapod-0.webp",
+    "assets/shots/antennapod-1.webp",
+    "assets/shots/antennapod-2.webp",
+    "assets/shots/antennapod-3.webp"
    ]
   },
   {
@@ -416,7 +450,39 @@
    "screenshots": [],
    "platforms": [
     "android"
-   ]
+   ],
+   "thumbs": []
+  },
+  {
+   "id": "anythingllm",
+   "name": "AnythingLLM",
+   "summary": "AnythingLLM is an app that lets you chat with an AI assistant about your own documents, and can run models locally or connect to cloud AI services. It is aimed at people and teams who want a private, self-hosted or desktop alternative to ChatGPT-style chat tools.",
+   "kind": "app",
+   "code": "github.com/Mintplex-Labs/anything-llm",
+   "website": "https://anythingllm.com",
+   "download": null,
+   "license": "MIT",
+   "licenseClass": "open",
+   "licenseNeedsCheck": false,
+   "stars": 67575,
+   "archived": false,
+   "inactive": false,
+   "unconfirmed": [
+    "Whether the desktop app and mobile app are under the same MIT license as the main repository (the mobile app is described only as open source).",
+    "Whether the hosted instance has terms or features beyond the open-source project.",
+    "Whether the README's Telemetry section changes anything about open status (it describes opt-out telemetry; no license impact stated)."
+   ],
+   "source": "starter",
+   "verified": false,
+   "release": "https://github.com/Mintplex-Labs/anything-llm/releases/tag/v1.18.0",
+   "screenshots": [],
+   "platforms": [
+    "windows",
+    "mac",
+    "linux",
+    "server"
+   ],
+   "thumbs": []
   },
   {
    "id": "apache-apisix",
@@ -444,7 +510,8 @@
    "screenshots": [],
    "platforms": [
     "server"
-   ]
+   ],
+   "thumbs": []
   },
   {
    "id": "appflowy",
@@ -457,7 +524,7 @@
    "license": "AGPL-3.0",
    "licenseClass": "open",
    "licenseNeedsCheck": false,
-   "stars": 77781,
+   "stars": 77783,
    "archived": false,
    "inactive": false,
    "unconfirmed": [
@@ -478,6 +545,10 @@
     "linux",
     "android",
     "ios"
+   ],
+   "thumbs": [
+    "assets/shots/appflowy-0.webp",
+    "assets/shots/appflowy-1.webp"
    ]
   },
   {
@@ -509,7 +580,8 @@
    "platforms": [
     "web",
     "server"
-   ]
+   ],
+   "thumbs": []
   },
   {
    "id": "appwrite",
@@ -542,6 +614,9 @@
    ],
    "platforms": [
     "server"
+   ],
+   "thumbs": [
+    "assets/shots/appwrite-0.webp"
    ]
   },
   {
@@ -552,7 +627,7 @@
    "code": null,
    "website": "https://archlinux.org",
    "download": "https://archlinux.org/download/",
-   "license": null,
+   "license": "GPL-3.0",
    "licenseClass": "open",
    "licenseNeedsCheck": true,
    "stars": null,
@@ -569,7 +644,9 @@
    "screenshots": [],
    "platforms": [
     "linux"
-   ]
+   ],
+   "licenseSource": "https://raw.githubusercontent.com/archlinux/archinstall/master/LICENSE",
+   "thumbs": []
   },
   {
    "id": "ardour",
@@ -601,6 +678,9 @@
     "windows",
     "mac",
     "linux"
+   ],
+   "thumbs": [
+    "assets/shots/ardour-0.webp"
    ]
   },
   {
@@ -630,7 +710,8 @@
     "windows",
     "mac",
     "linux"
-   ]
+   ],
+   "thumbs": []
   },
   {
    "id": "audiobookshelf",
@@ -643,7 +724,7 @@
    "license": "GPL-3.0",
    "licenseClass": "open",
    "licenseNeedsCheck": false,
-   "stars": 14797,
+   "stars": 14798,
    "archived": false,
    "inactive": false,
    "unconfirmed": [
@@ -661,7 +742,8 @@
     "linux",
     "android",
     "server"
-   ]
+   ],
+   "thumbs": []
   },
   {
    "id": "aurora-store",
@@ -688,7 +770,8 @@
    "screenshots": [],
    "platforms": [
     "android"
-   ]
+   ],
+   "thumbs": []
   },
   {
    "id": "authgear",
@@ -719,6 +802,9 @@
    "platforms": [
     "linux",
     "server"
+   ],
+   "thumbs": [
+    "assets/shots/authgear-0.webp"
    ]
   },
   {
@@ -728,7 +814,7 @@
    "kind": "self_hosted",
    "code": "github.com/automatisch/automatisch",
    "website": "https://automatisch.io",
-   "license": null,
+   "license": "AGPL-3.0",
    "licenseClass": "open_core",
    "licenseNeedsCheck": true,
    "stars": 14000,
@@ -750,6 +836,10 @@
    ],
    "platforms": [
     "server"
+   ],
+   "licenseSource": "https://raw.githubusercontent.com/automatisch/automatisch/main/LICENSE",
+   "thumbs": [
+    "assets/shots/automatisch-0.webp"
    ]
   },
   {
@@ -780,6 +870,48 @@
    ],
    "platforms": [
     "server"
+   ],
+   "thumbs": [
+    "assets/shots/bagisto-0.webp"
+   ]
+  },
+  {
+   "id": "bazzite",
+   "name": "Bazzite",
+   "summary": "Bazzite is a free Linux operating system for PCs, built on Fedora, that you install in place of Windows or another system. It is aimed at people who want a Linux desktop that works well for gaming, including on Steam Deck-style handhelds and living-room PCs.",
+   "kind": "app",
+   "code": "github.com/ublue-os/bazzite",
+   "website": "https://bazzite.gg",
+   "download": null,
+   "license": "Apache-2.0",
+   "licenseClass": "open",
+   "licenseNeedsCheck": false,
+   "stars": 9218,
+   "archived": false,
+   "inactive": false,
+   "unconfirmed": [
+    "The README is cut off, so its sections on verification, documentation and the rest of the GNOME build were not visible.",
+    "The README does not say that Bazzite replaces Windows or macOS; the replacement claims come from the community lists.",
+    "The 'Great for gaming' description is from the community list and was not checked against the README beyond its gaming features.",
+    "Whether Bazzite runs on Apple Mac hardware is not stated in the material given."
+   ],
+   "source": "starter",
+   "verified": false,
+   "release": "https://github.com/ublue-os/bazzite/releases/tag/44.20261023",
+   "screenshots": [
+    "https://raw.githubusercontent.com/ublue-os/bazzite/HEAD/repo_content/desktop1.png?raw=true",
+    "https://raw.githubusercontent.com/ublue-os/bazzite/HEAD/repo_content/desktop2.png?raw=true",
+    "https://raw.githubusercontent.com/ublue-os/bazzite/HEAD/repo_content/gamemode.png?raw=true",
+    "https://raw.githubusercontent.com/ublue-os/bazzite/HEAD/repo_content/distrobox.png?raw=true"
+   ],
+   "platforms": [
+    "linux"
+   ],
+   "thumbs": [
+    null,
+    null,
+    null,
+    null
    ]
   },
   {
@@ -811,6 +943,9 @@
    ],
    "platforms": [
     "server"
+   ],
+   "thumbs": [
+    "assets/shots/beton-inspector-0.webp"
    ]
   },
   {
@@ -838,7 +973,8 @@
    "screenshots": [],
    "platforms": [
     "server"
-   ]
+   ],
+   "thumbs": []
   },
   {
    "id": "bitwarden",
@@ -848,8 +984,8 @@
    "code": "github.com/bitwarden/clients",
    "website": "https://bitwarden.com",
    "download": null,
-   "license": null,
-   "licenseClass": "open",
+   "license": "GPL-3.0",
+   "licenseClass": "open_core",
    "licenseNeedsCheck": true,
    "stars": 14063,
    "archived": false,
@@ -872,6 +1008,10 @@
     "android",
     "ios",
     "web"
+   ],
+   "licenseSource": "https://raw.githubusercontent.com/bitwarden/clients/main/LICENSE.txt",
+   "thumbs": [
+    "assets/shots/bitwarden-0.webp"
    ]
   },
   {
@@ -882,7 +1022,7 @@
    "code": "https://projects.blender.org/blender/blender",
    "website": "https://www.blender.org",
    "download": "https://www.blender.org/download/",
-   "license": null,
+   "license": "GPL-2.0-or-later",
    "licenseClass": "open",
    "licenseNeedsCheck": true,
    "stars": null,
@@ -900,7 +1040,9 @@
     "windows",
     "mac",
     "linux"
-   ]
+   ],
+   "licenseSource": "https://projects.blender.org/blender/blender/raw/branch/main/source/blender/blenkernel/intern/mesh.cc",
+   "thumbs": []
   },
   {
    "id": "bluesky",
@@ -928,7 +1070,8 @@
    "platforms": [
     "android",
     "ios"
-   ]
+   ],
+   "thumbs": []
   },
   {
    "id": "bookstack",
@@ -957,7 +1100,8 @@
    "platforms": [
     "web",
     "server"
-   ]
+   ],
+   "thumbs": []
   },
   {
    "id": "bootstrap",
@@ -986,7 +1130,8 @@
    "screenshots": [],
    "platforms": [
     "web"
-   ]
+   ],
+   "thumbs": []
   },
   {
    "id": "borgbackup",
@@ -996,7 +1141,7 @@
    "code": "github.com/borgbackup/borg",
    "website": "https://www.borgbackup.org/",
    "download": null,
-   "license": null,
+   "license": "BSD-3-Clause",
    "licenseClass": "open",
    "licenseNeedsCheck": true,
    "stars": 13881,
@@ -1014,7 +1159,9 @@
     "windows",
     "mac",
     "linux"
-   ]
+   ],
+   "licenseSource": "https://raw.githubusercontent.com/borgbackup/borg/master/LICENSE",
+   "thumbs": []
   },
   {
    "id": "boxyhq",
@@ -1043,7 +1190,8 @@
    "screenshots": [],
    "platforms": [
     "server"
-   ]
+   ],
+   "thumbs": []
   },
   {
    "id": "brave",
@@ -1056,7 +1204,7 @@
    "license": "MPL-2.0",
    "licenseClass": "open",
    "licenseNeedsCheck": false,
-   "stars": 23989,
+   "stars": 23990,
    "archived": false,
    "inactive": false,
    "unconfirmed": [
@@ -1075,7 +1223,40 @@
     "linux",
     "android",
     "ios"
-   ]
+   ],
+   "thumbs": []
+  },
+  {
+   "id": "briar",
+   "name": "Briar",
+   "summary": "Briar is a messaging app that sends private messages directly between phones, using Bluetooth, Wi-Fi or Tor instead of company servers. It is meant for people who need secure communication in sensitive situations, and it can work without internet access.",
+   "kind": "app",
+   "code": "https://code.briarproject.org/briar/briar",
+   "website": "https://briarproject.org",
+   "download": null,
+   "license": null,
+   "licenseClass": "open",
+   "licenseNeedsCheck": true,
+   "stars": null,
+   "archived": false,
+   "inactive": false,
+   "unconfirmed": [
+    "The license name and whether it is OSI-approved",
+    "Whether group chats are supported beyond the forums mentioned in the README",
+    "Whether calls or voice messages are supported",
+    "Current Android version requirements",
+    "Whether the README's 'maintenance mode' note (July 9, 2026) affects ongoing development"
+   ],
+   "source": "starter",
+   "verified": false,
+   "screenshots": [],
+   "platforms": [
+    "windows",
+    "mac",
+    "linux",
+    "android"
+   ],
+   "thumbs": []
   },
   {
    "id": "bruin",
@@ -1107,7 +1288,8 @@
     "mac",
     "linux",
     "android"
-   ]
+   ],
+   "thumbs": []
   },
   {
    "id": "btw",
@@ -1138,6 +1320,9 @@
    ],
    "platforms": [
     "server"
+   ],
+   "thumbs": [
+    "assets/shots/btw-0.webp"
    ]
   },
   {
@@ -1147,7 +1332,7 @@
    "kind": "self_hosted",
    "code": "github.com/Budibase/budibase",
    "website": "https://budibase.com",
-   "license": null,
+   "license": "GPL-3.0",
    "licenseClass": "open_core",
    "licenseNeedsCheck": true,
    "stars": 28354,
@@ -1171,6 +1356,11 @@
    ],
    "platforms": [
     "server"
+   ],
+   "licenseSource": "https://raw.githubusercontent.com/Budibase/budibase/master/LICENSE",
+   "thumbs": [
+    "assets/shots/budibase-0.webp",
+    "assets/shots/budibase-1.webp"
    ]
   },
   {
@@ -1201,7 +1391,8 @@
    "screenshots": [],
    "platforms": [
     "server"
-   ]
+   ],
+   "thumbs": []
   },
   {
    "id": "buildbot",
@@ -1231,7 +1422,8 @@
    "platforms": [
     "windows",
     "linux"
-   ]
+   ],
+   "thumbs": []
   },
   {
    "id": "buzz",
@@ -1244,7 +1436,7 @@
    "license": "MIT",
    "licenseClass": "open",
    "licenseNeedsCheck": false,
-   "stars": 22193,
+   "stars": 22195,
    "archived": false,
    "inactive": false,
    "unconfirmed": [
@@ -1261,7 +1453,8 @@
     "windows",
     "mac",
     "linux"
-   ]
+   ],
+   "thumbs": []
   },
   {
    "id": "cachyos",
@@ -1271,7 +1464,7 @@
    "code": null,
    "website": "https://cachyos.org",
    "download": "https://cachyos.org/download/",
-   "license": null,
+   "license": "GPL-3.0",
    "licenseClass": "open",
    "licenseNeedsCheck": true,
    "stars": null,
@@ -1287,12 +1480,14 @@
    "screenshots": [],
    "platforms": [
     "linux"
-   ]
+   ],
+   "licenseSource": "https://raw.githubusercontent.com/CachyOS/CachyOS-Settings/master/LICENSE.md",
+   "thumbs": []
   },
   {
    "id": "cal-com",
    "name": "Cal.com",
-   "summary": "Cal.diy is the community edition of Cal.com, a self-hosted tool for making booking pages where others pick a meeting time. It is for individuals running their own server, and the project recommends it only for personal, non-production use.",
+   "summary": "Cal.diy is the free community edition of Cal.com, which lets you share a page where others pick a meeting time. It is for people running their own server, and the makers advise it for personal use only.",
    "kind": "self_hosted",
    "code": "github.com/calcom/cal.com",
    "website": "https://cal.diy",
@@ -1300,7 +1495,7 @@
    "license": "MIT",
    "licenseClass": "open",
    "licenseNeedsCheck": false,
-   "stars": 49385,
+   "stars": 49387,
    "archived": false,
    "inactive": false,
    "unconfirmed": [
@@ -1314,7 +1509,8 @@
    "screenshots": [],
    "platforms": [
     "server"
-   ]
+   ],
+   "thumbs": []
   },
   {
    "id": "calibre",
@@ -1327,7 +1523,7 @@
    "license": "GPL-3.0",
    "licenseClass": "open",
    "licenseNeedsCheck": false,
-   "stars": 26254,
+   "stars": 26253,
    "archived": false,
    "inactive": false,
    "unconfirmed": [
@@ -1341,7 +1537,8 @@
    "platforms": [
     "windows",
     "mac"
-   ]
+   ],
+   "thumbs": []
   },
   {
    "id": "caprover",
@@ -1350,8 +1547,8 @@
    "kind": "self_hosted",
    "code": "github.com/caprover/caprover",
    "website": "https://CapRover.com",
-   "license": null,
-   "licenseClass": "open_core",
+   "license": "Apache-2.0",
+   "licenseClass": "open",
    "licenseNeedsCheck": true,
    "stars": 15192,
    "archived": false,
@@ -1373,69 +1570,45 @@
    ],
    "platforms": [
     "server"
+   ],
+   "licenseSource": "https://raw.githubusercontent.com/caprover/caprover/master/LICENSE",
+   "thumbs": [
+    "assets/shots/caprover-0.webp"
    ]
   },
   {
-   "id": "carrypass",
-   "name": "CarryPass",
-   "summary": "CarryPass is a password manager and shared team vault that runs as a web app in the browser, works offline, and keeps data encrypted on your device. It is for individuals and small teams who want to host the app and their encrypted vault file on their own website.",
-   "kind": "self_hosted",
-   "code": "github.com/racz-zoltan/carrypass-self-host",
-   "website": "https://carrypass.net",
-   "license": "MIT",
-   "licenseClass": "open",
-   "licenseNeedsCheck": false,
-   "stars": 0,
-   "archived": false,
-   "inactive": false,
-   "unconfirmed": [
-    "The README is cut off, so the remaining deployment steps, the Netlify section and any other hosting options were not reviewed.",
-    "The license file was not provided, so the MIT license was confirmed only from the host's report.",
-    "The description cites a source link on a different repository (racz-zoltan.github.io), so it is unclear whether the listed description refers to this project.",
-    "The team collaboration and deterministic password generation features come from the list description and were not confirmed in the README excerpt.",
-    "Whether the app works offline and in a browser on phones was not confirmed beyond the README's PWA and offline-capable statements."
-   ],
-   "source": "lists",
-   "sourceLists": [
-    "awesome-privacy"
-   ],
-   "verified": false,
-   "release": null,
-   "screenshots": [],
-   "platforms": [
-    "server"
-   ]
-  },
-  {
-   "id": "chatrwkv",
-   "name": "ChatRWKV",
-   "summary": "ChatRWKV is a set of Python scripts and code examples for chatting with RWKV language models on your own computer, using a GPU or CPU. It is mainly for developers and technical users comfortable with the command line, not a ready-made chat app.",
+   "id": "chatbox-community-edition",
+   "name": "Chatbox Community Edition",
+   "summary": "Chatbox is a desktop app that lets you chat with AI assistants like ChatGPT and Claude, using your own API key or a local model. It is aimed at people who want an AI chat window on their computer, Windows, Mac or Linux.",
    "kind": "app",
-   "code": "github.com/BlinkDL/ChatRWKV",
-   "website": null,
-   "license": "Apache-2.0",
+   "code": "github.com/chatboxai/chatbox",
+   "website": "https://chatboxai.app?utm_medium=github",
+   "download": null,
+   "license": "GPL-3.0",
    "licenseClass": "open",
    "licenseNeedsCheck": false,
-   "stars": 9499,
+   "stars": 42145,
    "archived": false,
    "inactive": false,
    "unconfirmed": [
-    "Whether the model quality matches ChatGPT in practice (the README only says RWKV can match transformers in quality in general terms).",
-    "Whether the chat interface is a desktop app, a web page, or a script; the README mentions Gradio demos and Python scripts.",
-    "Hardware requirements beyond the README's note that 3G VRAM can run a 14B model with the v2 setup."
+    "Whether the paid Pro edition differs in licensing from this repo is not stated beyond the sync note.",
+    "The README does not say whether the Chatbox team or the community maintains the project."
    ],
-   "source": "lists",
-   "sourceLists": [
-    "open-source-alternatives"
-   ],
+   "source": "starter",
    "verified": false,
-   "release": null,
+   "release": "https://github.com/chatboxai/chatbox/releases/tag/v1.23.5",
    "screenshots": [
-    "https://raw.githubusercontent.com/BlinkDL/ChatRWKV/HEAD/misc/sample-1.png"
+    "https://raw.githubusercontent.com/chatboxai/chatbox/HEAD/doc/statics/snapshot_light.png",
+    "https://raw.githubusercontent.com/chatboxai/chatbox/HEAD/doc/statics/snapshot_dark.png"
    ],
    "platforms": [
     "windows",
+    "mac",
     "linux"
+   ],
+   "thumbs": [
+    null,
+    null
    ]
   },
   {
@@ -1449,7 +1622,7 @@
    "license": "MIT",
    "licenseClass": "open_core",
    "licenseNeedsCheck": false,
-   "stars": 38323,
+   "stars": 38328,
    "archived": false,
    "inactive": false,
    "unconfirmed": [
@@ -1467,6 +1640,10 @@
    ],
    "platforms": [
     "server"
+   ],
+   "thumbs": [
+    "assets/shots/chatwoot-0.webp",
+    "assets/shots/chatwoot-1.webp"
    ]
   },
   {
@@ -1480,7 +1657,7 @@
    "license": "Apache-2.0",
    "licenseClass": "open",
    "licenseNeedsCheck": false,
-   "stars": 70863,
+   "stars": 70864,
    "archived": false,
    "inactive": false,
    "unconfirmed": [
@@ -1497,7 +1674,8 @@
     "windows",
     "mac",
     "linux"
-   ]
+   ],
+   "thumbs": []
   },
   {
    "id": "codex-cli",
@@ -1510,7 +1688,7 @@
    "license": "Apache-2.0",
    "licenseClass": "open",
    "licenseNeedsCheck": false,
-   "stars": 130981,
+   "stars": 130985,
    "archived": false,
    "inactive": false,
    "unconfirmed": [
@@ -1525,7 +1703,8 @@
     "windows",
     "mac",
     "linux"
-   ]
+   ],
+   "thumbs": []
   },
   {
    "id": "collabora-online",
@@ -1535,7 +1714,7 @@
    "code": "github.com/CollaboraOnline/online",
    "website": "https://collaboraonline.com",
    "download": null,
-   "license": null,
+   "license": "MPL-2.0",
    "licenseClass": "open",
    "licenseNeedsCheck": true,
    "stars": 3382,
@@ -1555,7 +1734,12 @@
     "https://www.collaboraonline.com/wp-content/uploads/2025/02/Collab-rabbits.png"
    ],
    "platforms": [
+    "web",
     "server"
+   ],
+   "licenseSource": "https://raw.githubusercontent.com/CollaboraOnline/online/main/COPYING",
+   "thumbs": [
+    "assets/shots/collabora-online-0.webp"
    ]
   },
   {
@@ -1566,7 +1750,7 @@
    "code": "codeberg.org/comaps/comaps",
    "website": "https://www.comaps.app/",
    "download": null,
-   "license": null,
+   "license": "Apache-2.0",
    "licenseClass": "open",
    "licenseNeedsCheck": true,
    "stars": 2189,
@@ -1586,6 +1770,10 @@
    "platforms": [
     "linux",
     "android"
+   ],
+   "licenseSource": "https://codeberg.org/comaps/comaps/raw/branch/main/LICENSE",
+   "thumbs": [
+    "assets/shots/comaps-0.webp"
    ]
   },
   {
@@ -1599,7 +1787,7 @@
    "license": "GPL-3.0",
    "licenseClass": "open",
    "licenseNeedsCheck": false,
-   "stars": 143110,
+   "stars": 143124,
    "archived": false,
    "inactive": false,
    "unconfirmed": [
@@ -1614,6 +1802,9 @@
    ],
    "platforms": [
     "windows"
+   ],
+   "thumbs": [
+    "assets/shots/comfyui-0.webp"
    ]
   },
   {
@@ -1643,35 +1834,8 @@
    "screenshots": [],
    "platforms": [
     "server"
-   ]
-  },
-  {
-   "id": "continue",
-   "name": "Continue",
-   "summary": "Continue is an AI coding assistant that runs as a command-line tool, a VS Code extension, or a JetBrains plugin. It is for programmers who want an AI helper in their editor or terminal, but the project is no longer maintained after its final 2.0.0 release.",
-   "kind": "developer_tool",
-   "code": "github.com/continuedev/continue",
-   "website": "https://continue.dev",
-   "download": null,
-   "license": "Apache-2.0",
-   "licenseClass": "open",
-   "licenseNeedsCheck": false,
-   "stars": 36325,
-   "archived": false,
-   "inactive": false,
-   "unconfirmed": [
-    "Feature parity with each closed app is not stated in the README.",
-    "The README says the repository is no longer actively maintained, which the community may want to note."
    ],
-   "source": "starter",
-   "verified": false,
-   "release": "https://github.com/continuedev/continue/releases/tag/v2.0.0-vscode",
-   "screenshots": [],
-   "platforms": [
-    "windows",
-    "mac",
-    "linux"
-   ]
+   "thumbs": []
   },
   {
    "id": "coolify",
@@ -1705,6 +1869,9 @@
    ],
    "platforms": [
     "server"
+   ],
+   "thumbs": [
+    "assets/shots/coolify-0.webp"
    ]
   },
   {
@@ -1738,6 +1905,11 @@
    ],
    "platforms": [
     "server"
+   ],
+   "thumbs": [
+    "assets/shots/coroot-0.webp",
+    "assets/shots/coroot-1.webp",
+    "assets/shots/coroot-2.webp"
    ]
   },
   {
@@ -1766,7 +1938,8 @@
    "screenshots": [],
    "platforms": [
     "server"
-   ]
+   ],
+   "thumbs": []
   },
   {
    "id": "cratedb",
@@ -1794,7 +1967,8 @@
    "screenshots": [],
    "platforms": [
     "server"
-   ]
+   ],
+   "thumbs": []
   },
   {
    "id": "crater",
@@ -1823,7 +1997,8 @@
    "platforms": [
     "android",
     "ios"
-   ]
+   ],
+   "thumbs": []
   },
   {
    "id": "crowd-dev",
@@ -1853,7 +2028,8 @@
    "screenshots": [],
    "platforms": [
     "server"
-   ]
+   ],
+   "thumbs": []
   },
   {
    "id": "cryptpad",
@@ -1884,6 +2060,10 @@
    "platforms": [
     "web",
     "server"
+   ],
+   "thumbs": [
+    "assets/shots/cryptpad-0.webp",
+    "assets/shots/cryptpad-1.webp"
    ]
   },
   {
@@ -1893,7 +2073,7 @@
    "kind": "developer_tool",
    "code": "github.com/cube-js/cube",
    "website": "https://cube.dev",
-   "license": null,
+   "license": "Apache-2.0",
    "licenseClass": "open",
    "licenseNeedsCheck": true,
    "stars": 21075,
@@ -1914,7 +2094,9 @@
     "windows",
     "mac",
     "linux"
-   ]
+   ],
+   "licenseSource": "https://raw.githubusercontent.com/cube-js/cube/master/LICENSE",
+   "thumbs": []
   },
   {
    "id": "customermates",
@@ -1923,7 +2105,7 @@
    "kind": "self_hosted",
    "code": "github.com/customermates/customermates",
    "website": "https://www.customermates.com",
-   "license": null,
+   "license": "AGPL-3.0-only",
    "licenseClass": "open_core",
    "licenseNeedsCheck": true,
    "stars": 222,
@@ -1944,7 +2126,9 @@
    "screenshots": [],
    "platforms": [
     "server"
-   ]
+   ],
+   "licenseSource": "https://raw.githubusercontent.com/customermates/customermates/main/LICENSE",
+   "thumbs": []
   },
   {
    "id": "darktable",
@@ -1974,6 +2158,9 @@
     "windows",
     "mac",
     "linux"
+   ],
+   "thumbs": [
+    "assets/shots/darktable-0.webp"
    ]
   },
   {
@@ -2003,7 +2190,8 @@
    "screenshots": [],
    "platforms": [
     "server"
-   ]
+   ],
+   "thumbs": []
   },
   {
    "id": "databend",
@@ -2034,7 +2222,8 @@
    "platforms": [
     "linux",
     "server"
-   ]
+   ],
+   "thumbs": []
   },
   {
    "id": "debian",
@@ -2044,7 +2233,7 @@
    "code": null,
    "website": "https://www.debian.org",
    "download": "https://www.debian.org/distrib/",
-   "license": null,
+   "license": "GPL-2.0-or-later",
    "licenseClass": "open",
    "licenseNeedsCheck": true,
    "stars": null,
@@ -2061,7 +2250,9 @@
    "platforms": [
     "linux",
     "server"
-   ]
+   ],
+   "licenseSource": "https://salsa.debian.org/installer-team/debian-installer/-/raw/master/debian/copyright",
+   "thumbs": []
   },
   {
    "id": "decap-cms",
@@ -2089,7 +2280,8 @@
    "screenshots": [],
    "platforms": [
     "web"
-   ]
+   ],
+   "thumbs": []
   },
   {
    "id": "deepset",
@@ -2118,12 +2310,13 @@
    "screenshots": [],
    "platforms": [
     "server"
-   ]
+   ],
+   "thumbs": []
   },
   {
    "id": "delta-chat",
    "name": "Delta Chat",
-   "summary": "Delta Chat is a messaging app for Android that lets you send chats and files using ordinary email accounts. It is for people who want private messaging without relying on a single company's chat service.",
+   "summary": "Delta Chat is a messaging app for phones and computers that sends chats and files through ordinary email accounts. It lets you reach anyone with email, without relying on a single company's chat service.",
    "kind": "app",
    "code": "github.com/deltachat/deltachat-android",
    "website": null,
@@ -2151,38 +2344,40 @@
     "linux",
     "android",
     "ios"
+   ],
+   "thumbs": [
+    "assets/shots/delta-chat-0.webp"
    ]
   },
   {
-   "id": "dexio",
-   "name": "Dexio",
-   "summary": "Dexio is a shared wiki of linked markdown pages that AI agents and people can read and edit together. It is for people who run several AI assistants and want them to share what they know, and it can be self-hosted or used as a hosted service.",
-   "kind": "self_hosted",
-   "code": "github.com/dexio-wiki/dexio",
-   "website": "https://dexio.wiki",
-   "license": "AGPL-3.0",
+   "id": "digikam",
+   "name": "digiKam",
+   "summary": "digiKam is a free program for organizing, sorting and lightly editing large collections of photos and videos on a computer. It is aimed at photographers and hobbyists who want to manage their pictures.",
+   "kind": "app",
+   "code": "https://invent.kde.org/graphics/digikam",
+   "website": "https://www.digikam.org",
+   "download": null,
+   "license": null,
    "licenseClass": "open",
-   "licenseNeedsCheck": false,
-   "stars": 4,
+   "licenseNeedsCheck": true,
+   "stars": null,
    "archived": false,
    "inactive": false,
    "unconfirmed": [
-    "Whether Notion's database, block and collaboration features are covered by Dexio is not stated in the material.",
-    "The README does not say which parts, if any, of the hosted service are closed or paid beyond stating the free plan for one person and that self-hosted copies have no plan or member limits."
+    "The software's license (only the website's Creative Commons license is stated)",
+    "Whether digiKam runs on Windows, macOS or Linux, and whether it is a desktop program or web app",
+    "Whether it has any paid or separately licensed parts",
+    "Whether the 'Photo editing' group fits better than 'Photo backup & library'; the README describes editing tools including color correction, cropping and retouching, but the list says it is not for retouching"
    ],
-   "source": "lists",
-   "sourceLists": [
-    "awesome-foss-alternatives"
-   ],
+   "source": "starter",
    "verified": false,
-   "release": "https://github.com/dexio-wiki/dexio/releases/tag/v1.0.0",
-   "screenshots": [
-    "https://raw.githubusercontent.com/dexio-wiki/dexio/HEAD/docs/images/demo-page.png",
-    "https://raw.githubusercontent.com/dexio-wiki/dexio/HEAD/docs/images/demo-graph.png"
-   ],
+   "screenshots": [],
    "platforms": [
-    "server"
-   ]
+    "windows",
+    "mac",
+    "linux"
+   ],
+   "thumbs": []
   },
   {
    "id": "discourse",
@@ -2211,6 +2406,10 @@
    ],
    "platforms": [
     "server"
+   ],
+   "thumbs": [
+    "assets/shots/discourse-0.webp",
+    "assets/shots/discourse-1.webp"
    ]
   },
   {
@@ -2243,7 +2442,13 @@
     "https://docmost.com/screenshots/editor.png"
    ],
    "platforms": [
+    "web",
     "server"
+   ],
+   "thumbs": [
+    "assets/shots/docmost-0.webp",
+    "assets/shots/docmost-1.webp",
+    "assets/shots/docmost-1.webp"
    ]
   },
   {
@@ -2274,7 +2479,8 @@
    "screenshots": [],
    "platforms": [
     "server"
-   ]
+   ],
+   "thumbs": []
   },
   {
    "id": "docuseal",
@@ -2303,7 +2509,8 @@
    "screenshots": [],
    "platforms": [
     "server"
-   ]
+   ],
+   "thumbs": []
   },
   {
    "id": "dokku",
@@ -2334,7 +2541,8 @@
    "platforms": [
     "linux",
     "server"
-   ]
+   ],
+   "thumbs": []
   },
   {
    "id": "dolibarr",
@@ -2364,6 +2572,9 @@
    ],
    "platforms": [
     "server"
+   ],
+   "thumbs": [
+    "assets/shots/dolibarr-0.webp"
    ]
   },
   {
@@ -2393,7 +2604,8 @@
    "screenshots": [],
    "platforms": [
     "server"
-   ]
+   ],
+   "thumbs": []
   },
   {
    "id": "dub",
@@ -2402,7 +2614,7 @@
    "kind": "self_hosted",
    "code": "github.com/dubinc/dub",
    "website": "https://dub.co",
-   "license": null,
+   "license": "AGPL-3.0",
    "licenseClass": "open_core",
    "licenseNeedsCheck": true,
    "stars": 24947,
@@ -2421,7 +2633,9 @@
    "screenshots": [],
    "platforms": [
     "server"
-   ]
+   ],
+   "licenseSource": "https://raw.githubusercontent.com/dubinc/dub/main/LICENSE.md",
+   "thumbs": []
   },
   {
    "id": "duplicati",
@@ -2449,7 +2663,8 @@
     "windows",
     "mac",
     "linux"
-   ]
+   ],
+   "thumbs": []
   },
   {
    "id": "dyrector-io",
@@ -2478,7 +2693,8 @@
    "platforms": [
     "web",
     "server"
-   ]
+   ],
+   "thumbs": []
   },
   {
    "id": "element",
@@ -2508,9 +2724,11 @@
     "windows",
     "mac",
     "linux",
-    "web",
-    "server"
-   ]
+    "android",
+    "ios",
+    "web"
+   ],
+   "thumbs": []
   },
   {
    "id": "element-call",
@@ -2540,6 +2758,9 @@
    "platforms": [
     "web",
     "server"
+   ],
+   "thumbs": [
+    "assets/shots/element-call-0.webp"
    ]
   },
   {
@@ -2572,7 +2793,8 @@
     "mac",
     "linux",
     "server"
-   ]
+   ],
+   "thumbs": []
   },
   {
    "id": "ente-auth",
@@ -2585,7 +2807,7 @@
    "license": "AGPL-3.0",
    "licenseClass": "open",
    "licenseNeedsCheck": false,
-   "stars": 29605,
+   "stars": 29609,
    "archived": false,
    "inactive": false,
    "unconfirmed": [
@@ -2603,7 +2825,8 @@
     "android",
     "ios",
     "web"
-   ]
+   ],
+   "thumbs": []
   },
   {
    "id": "ente-photos",
@@ -2616,7 +2839,7 @@
    "license": "AGPL-3.0",
    "licenseClass": "open",
    "licenseNeedsCheck": false,
-   "stars": 29605,
+   "stars": 29609,
    "archived": false,
    "inactive": false,
    "unconfirmed": [
@@ -2634,7 +2857,8 @@
     "android",
     "ios",
     "web"
-   ]
+   ],
+   "thumbs": []
   },
   {
    "id": "erpnext",
@@ -2668,6 +2892,10 @@
    "platforms": [
     "web",
     "server"
+   ],
+   "thumbs": [
+    "assets/shots/erpnext-0.webp",
+    "assets/shots/erpnext-1.webp"
    ]
   },
   {
@@ -2699,36 +2927,41 @@
    "platforms": [
     "web",
     "server"
+   ],
+   "thumbs": [
+    "assets/shots/espocrm-0.webp"
    ]
   },
   {
-   "id": "etesync",
-   "name": "EteSync",
-   "summary": "A local helper program that lets desktop calendar and contacts apps like Thunderbird and Outlook sync with your encrypted EteSync account. It is for people who already use EteSync and want their calendars and contacts in other programs.",
+   "id": "etar-calendar",
+   "name": "Etar Calendar",
+   "summary": "Etar is a calendar app for Android phones that shows month, week, day and agenda views. It is for people who want a simple calendar that can keep events on the phone or sync them with a calendar server.",
    "kind": "app",
-   "code": "github.com/etesync/etesync-dav",
-   "website": "https://www.etesync.com",
+   "code": "github.com/Etar-Group/Etar-Calendar",
+   "website": "https://f-droid.org/packages/ws.xsoh.etar/",
+   "download": null,
    "license": "GPL-3.0",
    "licenseClass": "open",
    "licenseNeedsCheck": false,
-   "stars": 331,
+   "stars": 2628,
    "archived": false,
    "inactive": false,
    "unconfirmed": [
-    "Whether the GPL-3.0 license applies to the whole project was not confirmed from a license file.",
-    "Descriptions from the community lists were not provided, so the replacement rationale rests on the README alone."
+    "Whether Etar works with Outlook or Microsoft accounts directly",
+    "Whether Etar offers any booking or appointment scheduling features like Calendly",
+    "Whether Etar runs on platforms other than Android"
    ],
-   "source": "lists",
-   "sourceLists": [
-    "switching.software"
-   ],
+   "source": "starter",
    "verified": false,
-   "release": "https://github.com/etesync/etesync-dav/releases/tag/v0.35.1",
-   "screenshots": [],
+   "release": "https://github.com/Etar-Group/Etar-Calendar/releases/tag/v1.0.57",
+   "screenshots": [
+    "https://raw.githubusercontent.com/Etar-Group/Etar-Calendar/HEAD/metadata/animation.gif"
+   ],
    "platforms": [
-    "windows",
-    "mac",
-    "linux"
+    "android"
+   ],
+   "thumbs": [
+    null
    ]
   },
   {
@@ -2760,8 +2993,14 @@
     "https://raw.githubusercontent.com/ether/etherpad/HEAD/doc/public/etherpad_basic.png"
    ],
    "platforms": [
-    "linux",
+    "web",
     "server"
+   ],
+   "thumbs": [
+    "assets/shots/etherpad-0.webp",
+    "assets/shots/etherpad-1.webp",
+    "assets/shots/etherpad-2.webp",
+    "assets/shots/etherpad-3.webp"
    ]
   },
   {
@@ -2793,7 +3032,8 @@
     "mac",
     "linux",
     "server"
-   ]
+   ],
+   "thumbs": []
   },
   {
    "id": "f-droid",
@@ -2819,7 +3059,36 @@
    "screenshots": [],
    "platforms": [
     "android"
-   ]
+   ],
+   "thumbs": []
+  },
+  {
+   "id": "fairemail",
+   "name": "FairEmail",
+   "summary": "FairEmail is an email app for Android phones that works with most email providers, including Gmail and Outlook. It is aimed at people who want a privacy-focused way to read and send email.",
+   "kind": "app",
+   "code": "github.com/M66B/FairEmail",
+   "website": "https://email.faircode.eu/",
+   "download": null,
+   "license": "GPL-3.0",
+   "licenseClass": "open",
+   "licenseNeedsCheck": false,
+   "stars": 4729,
+   "archived": false,
+   "inactive": false,
+   "unconfirmed": [
+    "Whether the full source code matches the Android app distributed through other channels is not stated in the material.",
+    "Whether it runs on any platform other than Android is not stated; the list says Android only.",
+    "Whether the app has any paid or differently licensed parts is not stated in the material."
+   ],
+   "source": "starter",
+   "verified": false,
+   "release": "https://github.com/M66B/FairEmail/releases/tag/1.2339",
+   "screenshots": [],
+   "platforms": [
+    "android"
+   ],
+   "thumbs": []
   },
   {
    "id": "faraday",
@@ -2853,35 +3122,10 @@
    "platforms": [
     "linux",
     "server"
-   ]
-  },
-  {
-   "id": "fauxpilot",
-   "name": "FauxPilot",
-   "summary": "FauxPilot is a server you run yourself that provides AI code completion, meant as a local alternative to GitHub Copilot. It is for developers who want to run code assistance on their own NVIDIA GPU instead of a cloud service.",
-   "kind": "self_hosted",
-   "code": "github.com/fauxpilot/fauxpilot",
-   "website": null,
-   "license": "MIT",
-   "licenseClass": "open",
-   "licenseNeedsCheck": false,
-   "stars": 14671,
-   "archived": false,
-   "inactive": true,
-   "unconfirmed": [
-    "Whether the models it downloads (SalesForce CodeGen, Moyix's GPT-J conversions) carry licenses that restrict use",
-    "Whether it works with editors or only through the OpenAI-style API and client plugins described in linked docs",
-    "Project maturity and whether it is still maintained, since the README says there is no formal support or warranty"
    ],
-   "source": "lists",
-   "sourceLists": [
-    "open-source-alternatives"
-   ],
-   "verified": false,
-   "release": null,
-   "screenshots": [],
-   "platforms": [
-    "server"
+   "thumbs": [
+    "assets/shots/faraday-0.webp",
+    "assets/shots/faraday-1.webp"
    ]
   },
   {
@@ -2892,7 +3136,7 @@
    "code": null,
    "website": "https://fedoraproject.org",
    "download": "https://fedoraproject.org/workstation/download",
-   "license": null,
+   "license": "GPL-2.0-or-later",
    "licenseClass": "open",
    "licenseNeedsCheck": true,
    "stars": null,
@@ -2909,7 +3153,9 @@
    "platforms": [
     "linux",
     "server"
-   ]
+   ],
+   "licenseSource": "https://raw.githubusercontent.com/rhinstaller/anaconda/master/COPYING",
+   "thumbs": []
   },
   {
    "id": "filestash",
@@ -2943,12 +3189,14 @@
     "https://www.filestash.app/img/screenshots/theme_dropbox.png"
    ],
    "platforms": [
-    "windows",
-    "mac",
-    "linux",
-    "android",
     "web",
     "server"
+   ],
+   "thumbs": [
+    "assets/shots/filestash-0.webp",
+    "assets/shots/filestash-1.webp",
+    "assets/shots/filestash-2.webp",
+    "assets/shots/filestash-3.webp"
    ]
   },
   {
@@ -2984,6 +3232,9 @@
     "windows",
     "mac",
     "linux"
+   ],
+   "thumbs": [
+    "assets/shots/firecamp-0.webp"
    ]
   },
   {
@@ -2994,10 +3245,10 @@
    "code": "github.com/mozilla-firefox/firefox",
    "website": "https://www.firefox.com/",
    "download": null,
-   "license": null,
+   "license": "MPL-2.0",
    "licenseClass": "open",
    "licenseNeedsCheck": true,
-   "stars": 13587,
+   "stars": 13588,
    "archived": false,
    "inactive": false,
    "unconfirmed": [
@@ -3015,7 +3266,9 @@
     "linux",
     "android",
     "ios"
-   ]
+   ],
+   "licenseSource": "https://raw.githubusercontent.com/mozilla/gecko-dev/master/toolkit/content/license.html",
+   "thumbs": []
   },
   {
    "id": "flagsmith",
@@ -3047,6 +3300,10 @@
    ],
    "platforms": [
     "server"
+   ],
+   "thumbs": [
+    "assets/shots/flagsmith-0.webp",
+    "assets/shots/flagsmith-1.webp"
    ]
   },
   {
@@ -3074,6 +3331,9 @@
    ],
    "platforms": [
     "android"
+   ],
+   "thumbs": [
+    "assets/shots/florisboard-0.webp"
    ]
   },
   {
@@ -3104,7 +3364,8 @@
     "windows",
     "mac",
     "linux"
-   ]
+   ],
+   "thumbs": []
   },
   {
    "id": "folio-wiki",
@@ -3137,6 +3398,12 @@
    ],
    "platforms": [
     "server"
+   ],
+   "thumbs": [
+    "assets/shots/folio-wiki-0.webp",
+    "assets/shots/folio-wiki-1.webp",
+    "assets/shots/folio-wiki-2.webp",
+    "assets/shots/folio-wiki-3.webp"
    ]
   },
   {
@@ -3167,7 +3434,8 @@
    "screenshots": [],
    "platforms": [
     "server"
-   ]
+   ],
+   "thumbs": []
   },
   {
    "id": "font-awesome",
@@ -3194,7 +3462,8 @@
    "verified": false,
    "release": "https://github.com/FortAwesome/Font-Awesome/releases/tag/7.3.1",
    "screenshots": [],
-   "platforms": []
+   "platforms": [],
+   "thumbs": []
   },
   {
    "id": "forgejo",
@@ -3204,7 +3473,7 @@
    "code": "codeberg.org/forgejo/forgejo",
    "website": "https://forgejo.org",
    "download": null,
-   "license": null,
+   "license": "GPL-3.0-or-later",
    "licenseClass": "open",
    "licenseNeedsCheck": true,
    "stars": 5718,
@@ -3225,6 +3494,10 @@
    "platforms": [
     "linux",
     "server"
+   ],
+   "licenseSource": "https://codeberg.org/forgejo/forgejo/raw/branch/forgejo/README.md",
+   "thumbs": [
+    "assets/shots/forgejo-0.webp"
    ]
   },
   {
@@ -3254,6 +3527,9 @@
    ],
    "platforms": [
     "server"
+   ],
+   "thumbs": [
+    "assets/shots/formbricks-0.webp"
    ]
   },
   {
@@ -3282,7 +3558,8 @@
    "screenshots": [],
    "platforms": [
     "server"
-   ]
+   ],
+   "thumbs": []
   },
   {
    "id": "fossdroid",
@@ -3314,6 +3591,47 @@
    ],
    "platforms": [
     "android"
+   ],
+   "thumbs": [
+    "assets/shots/fossdroid-0.webp",
+    "assets/shots/fossdroid-1.webp",
+    "assets/shots/fossdroid-2.webp"
+   ]
+  },
+  {
+   "id": "fossify-calendar",
+   "name": "Fossify Calendar",
+   "summary": "Fossify Calendar is a calendar app for Android phones that lets you plan events, reminders and repeating appointments. It is aimed at people who want a private calendar with no ads or tracking.",
+   "kind": "app",
+   "code": "github.com/FossifyOrg/Calendar",
+   "website": "https://www.fossify.org",
+   "download": null,
+   "license": "GPL-3.0",
+   "licenseClass": "open",
+   "licenseNeedsCheck": false,
+   "stars": 2253,
+   "archived": false,
+   "inactive": false,
+   "unconfirmed": [
+    "Whether it runs on platforms other than Android (the list says Android only)",
+    "Whether it supports booking pages like Calendly",
+    "Which Outlook features beyond syncing are supported"
+   ],
+   "source": "starter",
+   "verified": false,
+   "release": "https://github.com/FossifyOrg/Calendar/releases/tag/1.12.1",
+   "screenshots": [
+    "https://raw.githubusercontent.com/FossifyOrg/Calendar/HEAD/fastlane/metadata/android/en-US/images/phoneScreenshots/2_en-US.png",
+    "https://raw.githubusercontent.com/FossifyOrg/Calendar/HEAD/fastlane/metadata/android/en-US/images/phoneScreenshots/4_en-US.png",
+    "https://raw.githubusercontent.com/FossifyOrg/Calendar/HEAD/fastlane/metadata/android/en-US/images/phoneScreenshots/1_en-US.png"
+   ],
+   "platforms": [
+    "android"
+   ],
+   "thumbs": [
+    null,
+    null,
+    null
    ]
   },
   {
@@ -3345,6 +3663,11 @@
     "windows",
     "mac",
     "linux"
+   ],
+   "thumbs": [
+    "assets/shots/freetube-0.webp",
+    "assets/shots/freetube-1.webp",
+    "assets/shots/freetube-2.webp"
    ]
   },
   {
@@ -3377,6 +3700,9 @@
    "platforms": [
     "android",
     "server"
+   ],
+   "thumbs": [
+    "assets/shots/freshrss-0.webp"
    ]
   },
   {
@@ -3409,6 +3735,9 @@
     "windows",
     "mac",
     "linux"
+   ],
+   "thumbs": [
+    "assets/shots/friction-0.webp"
    ]
   },
   {
@@ -3443,6 +3772,11 @@
    "platforms": [
     "web",
     "server"
+   ],
+   "thumbs": [
+    "assets/shots/friendica-0.webp",
+    "assets/shots/friendica-1.webp",
+    "assets/shots/friendica-2.webp"
    ]
   },
   {
@@ -3453,7 +3787,7 @@
    "code": "https://dev.funkwhale.audio/funkwhale/funkwhale",
    "website": "https://www.funkwhale.audio",
    "download": null,
-   "license": null,
+   "license": "AGPL-3.0",
    "licenseClass": "open",
    "licenseNeedsCheck": true,
    "stars": null,
@@ -3471,7 +3805,9 @@
    "platforms": [
     "web",
     "server"
-   ]
+   ],
+   "licenseSource": "https://dev.funkwhale.audio/funkwhale/funkwhale/-/raw/develop/LICENSE",
+   "thumbs": []
   },
   {
    "id": "fusio",
@@ -3505,6 +3841,12 @@
    ],
    "platforms": [
     "server"
+   ],
+   "thumbs": [
+    "assets/shots/fusio-0.webp",
+    "assets/shots/fusio-1.webp",
+    "assets/shots/fusio-2.webp",
+    "assets/shots/fusio-3.webp"
    ]
   },
   {
@@ -3534,8 +3876,10 @@
    "release": null,
    "screenshots": [],
    "platforms": [
+    "web",
     "server"
-   ]
+   ],
+   "thumbs": []
   },
   {
    "id": "gathio",
@@ -3566,7 +3910,38 @@
    "platforms": [
     "web",
     "server"
-   ]
+   ],
+   "thumbs": []
+  },
+  {
+   "id": "gemini-cli",
+   "name": "Gemini CLI",
+   "summary": "Gemini CLI is a free, open-source AI assistant that runs in a computer's terminal and helps with coding tasks such as reading, editing and explaining code. It is aimed at developers who want direct access to Google's Gemini models from the command line.",
+   "kind": "developer_tool",
+   "code": "github.com/google-gemini/gemini-cli",
+   "website": "https://geminicli.com",
+   "download": null,
+   "license": "Apache-2.0",
+   "licenseClass": "open",
+   "licenseNeedsCheck": false,
+   "stars": 108401,
+   "archived": false,
+   "inactive": false,
+   "unconfirmed": [
+    "Whether Gemini CLI has any paid or differently licensed parts beyond the Gemini service itself.",
+    "Whether it offers inline code completions or a full editor, as Copilot, Cursor and Windsurf do.",
+    "The status of the project: the README says Gemini CLI was replaced by Antigravity CLI on June 18th, 2026, and this may affect whether it is still the recommended tool."
+   ],
+   "source": "starter",
+   "verified": false,
+   "release": "https://github.com/google-gemini/gemini-cli/releases/tag/v0.65.0",
+   "screenshots": [],
+   "platforms": [
+    "windows",
+    "mac",
+    "linux"
+   ],
+   "thumbs": []
   },
   {
    "id": "gerrit",
@@ -3594,7 +3969,8 @@
    "screenshots": [],
    "platforms": [
     "server"
-   ]
+   ],
+   "thumbs": []
   },
   {
    "id": "ghost",
@@ -3620,7 +3996,8 @@
    "screenshots": [],
    "platforms": [
     "server"
-   ]
+   ],
+   "thumbs": []
   },
   {
    "id": "gimp",
@@ -3630,7 +4007,7 @@
    "code": "https://gitlab.gnome.org/GNOME/gimp",
    "website": "https://www.gimp.org",
    "download": "https://www.gimp.org/downloads/",
-   "license": null,
+   "license": "GPL-3.0-or-later",
    "licenseClass": "open",
    "licenseNeedsCheck": true,
    "stars": null,
@@ -3650,7 +4027,9 @@
     "windows",
     "mac",
     "linux"
-   ]
+   ],
+   "licenseSource": "https://gitlab.gnome.org/GNOME/gimp/-/raw/master/app/main.c",
+   "thumbs": []
   },
   {
    "id": "gitea",
@@ -3663,7 +4042,7 @@
    "license": "MIT",
    "licenseClass": "open",
    "licenseNeedsCheck": false,
-   "stars": 58701,
+   "stars": 58700,
    "archived": false,
    "inactive": false,
    "unconfirmed": [
@@ -3684,6 +4063,12 @@
     "mac",
     "linux",
     "server"
+   ],
+   "thumbs": [
+    "assets/shots/gitea-0.webp",
+    "assets/shots/gitea-1.webp",
+    "assets/shots/gitea-2.webp",
+    "assets/shots/gitea-3.webp"
    ]
   },
   {
@@ -3693,7 +4078,7 @@
    "kind": "self_hosted",
    "code": "github.com/gitlabhq/gitlabhq",
    "website": "https://about.gitlab.com/getting-help/",
-   "license": null,
+   "license": "MIT",
    "licenseClass": "open_core",
    "licenseNeedsCheck": true,
    "stars": 24544,
@@ -3713,7 +4098,9 @@
    "platforms": [
     "linux",
     "server"
-   ]
+   ],
+   "licenseSource": "https://raw.githubusercontent.com/gitlabhq/gitlabhq/master/LICENSE",
+   "thumbs": []
   },
   {
    "id": "gitlab-community-edition",
@@ -3740,17 +4127,18 @@
    "platforms": [
     "linux",
     "server"
-   ]
+   ],
+   "thumbs": []
   },
   {
    "id": "gnumeric",
    "name": "Gnumeric",
-   "summary": "Gnumeric is a spreadsheet program for making tables, formulas and charts on a computer. It is aimed at people who work with numbers and data.",
+   "summary": "Gnumeric is a lightweight spreadsheet program for tables, formulas and statistics. It is mainly for Linux, and is fast but has fewer chart options than LibreOffice.",
    "kind": "app",
    "code": "https://gitlab.gnome.org/GNOME/gnumeric",
    "website": "http://www.gnumeric.org",
    "download": null,
-   "license": null,
+   "license": "GPL-2.0-only",
    "licenseClass": "open",
    "licenseNeedsCheck": true,
    "stars": null,
@@ -3766,7 +4154,9 @@
    "screenshots": [],
    "platforms": [
     "linux"
-   ]
+   ],
+   "licenseSource": "https://gitlab.gnome.org/GNOME/gnumeric/-/raw/master/COPYING",
+   "thumbs": []
   },
   {
    "id": "goatcounter",
@@ -3795,7 +4185,8 @@
    "platforms": [
     "linux",
     "server"
-   ]
+   ],
+   "thumbs": []
   },
   {
    "id": "gogs",
@@ -3826,7 +4217,8 @@
     "mac",
     "linux",
     "server"
-   ]
+   ],
+   "thumbs": []
   },
   {
    "id": "goose",
@@ -3839,7 +4231,7 @@
    "license": "Apache-2.0",
    "licenseClass": "open",
    "licenseNeedsCheck": false,
-   "stars": 55735,
+   "stars": 55738,
    "archived": false,
    "inactive": false,
    "unconfirmed": [
@@ -3855,7 +4247,8 @@
     "windows",
     "mac",
     "linux"
-   ]
+   ],
+   "thumbs": []
   },
   {
    "id": "grafana",
@@ -3885,7 +4278,8 @@
    "platforms": [
     "linux",
     "server"
-   ]
+   ],
+   "thumbs": []
   },
   {
    "id": "grapheneos",
@@ -3895,7 +4289,7 @@
    "code": null,
    "website": "https://grapheneos.org",
    "download": "https://grapheneos.org/install/",
-   "license": null,
+   "license": "MIT",
    "licenseClass": "open",
    "licenseNeedsCheck": true,
    "stars": null,
@@ -3911,7 +4305,9 @@
    "screenshots": [],
    "platforms": [
     "android"
-   ]
+   ],
+   "licenseSource": "https://raw.githubusercontent.com/GrapheneOS/hardened_malloc/main/LICENSE",
+   "thumbs": []
   },
   {
    "id": "graphite",
@@ -3941,6 +4337,10 @@
    ],
    "platforms": [
     "web"
+   ],
+   "thumbs": [
+    "assets/shots/graphite-0.webp",
+    "assets/shots/graphite-1.webp"
    ]
   },
   {
@@ -3950,8 +4350,8 @@
    "kind": "self_hosted",
    "code": "github.com/gravitl/netmaker",
    "website": "https://netmaker.io",
-   "license": null,
-   "licenseClass": "open",
+   "license": "Apache-2.0",
+   "licenseClass": "open_core",
    "licenseNeedsCheck": true,
    "stars": 11838,
    "archived": false,
@@ -3976,6 +4376,11 @@
     "mac",
     "linux",
     "server"
+   ],
+   "licenseSource": "https://raw.githubusercontent.com/gravitl/netmaker/develop/LICENSE.md",
+   "thumbs": [
+    "assets/shots/gravitl-0.webp",
+    null
    ]
   },
   {
@@ -3989,7 +4394,7 @@
    "license": "Apache-2.0",
    "licenseClass": "open",
    "licenseNeedsCheck": false,
-   "stars": 12000,
+   "stars": 12001,
    "archived": false,
    "inactive": false,
    "unconfirmed": [
@@ -4002,8 +4407,10 @@
    "release": "https://github.com/gristlabs/grist-core/releases/tag/v1.7.21",
    "screenshots": [],
    "platforms": [
+    "web",
     "server"
-   ]
+   ],
+   "thumbs": []
   },
   {
    "id": "growthbook",
@@ -4012,7 +4419,7 @@
    "kind": "developer_tool",
    "code": "github.com/growthbook/growthbook",
    "website": "https://www.growthbook.io",
-   "license": null,
+   "license": "MIT",
    "licenseClass": "open_core",
    "licenseNeedsCheck": true,
    "stars": 8532,
@@ -4034,6 +4441,10 @@
    "platforms": [
     "web",
     "server"
+   ],
+   "licenseSource": "https://raw.githubusercontent.com/growthbook/growthbook/main/LICENSE",
+   "thumbs": [
+    "assets/shots/growthbook-0.webp"
    ]
   },
   {
@@ -4065,7 +4476,8 @@
     "windows",
     "mac",
     "linux"
-   ]
+   ],
+   "thumbs": []
   },
   {
    "id": "hedgedoc",
@@ -4095,7 +4507,8 @@
    "platforms": [
     "web",
     "server"
-   ]
+   ],
+   "thumbs": []
   },
   {
    "id": "heliboard",
@@ -4121,7 +4534,36 @@
    "screenshots": [],
    "platforms": [
     "android"
-   ]
+   ],
+   "thumbs": []
+  },
+  {
+   "id": "hermes-agent",
+   "name": "Hermes Agent",
+   "summary": "Hermes Agent is an AI assistant you run in a terminal or through messaging apps like Telegram, and it can remember past conversations and learn reusable skills. It's aimed at technical users who are comfortable setting it up and can bring their own AI model keys.",
+   "kind": "app",
+   "code": "github.com/NousResearch/hermes-agent",
+   "website": "https://hermes-agent.nousresearch.com",
+   "download": null,
+   "license": "MIT",
+   "licenseClass": "open",
+   "licenseNeedsCheck": false,
+   "stars": 257235,
+   "archived": false,
+   "inactive": false,
+   "unconfirmed": [
+    "Whether the closed apps' features map directly, since the README does not mention Claude Cowork or ChatGPT agent.",
+    "Whether the MIT license applies to the whole project, since only the host's report was provided and no license file was included."
+   ],
+   "source": "starter",
+   "verified": false,
+   "release": "https://github.com/NousResearch/hermes-agent/releases/tag/v0.22.5",
+   "screenshots": [],
+   "platforms": [
+    "mac",
+    "linux"
+   ],
+   "thumbs": []
   },
   {
    "id": "heyform",
@@ -4149,6 +4591,9 @@
    ],
    "platforms": [
     "server"
+   ],
+   "thumbs": [
+    "assets/shots/heyform-0.webp"
    ]
   },
   {
@@ -4178,7 +4623,8 @@
     "linux",
     "web",
     "server"
-   ]
+   ],
+   "thumbs": []
   },
   {
    "id": "hoppscotch",
@@ -4211,7 +4657,8 @@
     "linux",
     "web",
     "server"
-   ]
+   ],
+   "thumbs": []
   },
   {
    "id": "huginn",
@@ -4242,6 +4689,12 @@
    ],
    "platforms": [
     "server"
+   ],
+   "thumbs": [
+    "assets/shots/huginn-0.webp",
+    "assets/shots/huginn-1.webp",
+    "assets/shots/huginn-2.webp",
+    "assets/shots/huginn-3.webp"
    ]
   },
   {
@@ -4272,6 +4725,9 @@
    ],
    "platforms": [
     "server"
+   ],
+   "thumbs": [
+    "assets/shots/hyperdx-0.webp"
    ]
   },
   {
@@ -4301,7 +4757,8 @@
    "screenshots": [],
    "platforms": [
     "server"
-   ]
+   ],
+   "thumbs": []
   },
   {
    "id": "illa",
@@ -4331,7 +4788,8 @@
    "screenshots": [],
    "platforms": [
     "server"
-   ]
+   ],
+   "thumbs": []
   },
   {
    "id": "immich",
@@ -4344,7 +4802,7 @@
    "license": "AGPL-3.0",
    "licenseClass": "open",
    "licenseNeedsCheck": false,
-   "stars": 117277,
+   "stars": 117281,
    "archived": false,
    "inactive": false,
    "unconfirmed": [
@@ -4361,6 +4819,9 @@
     "android",
     "ios",
     "server"
+   ],
+   "thumbs": [
+    "assets/shots/immich-0.webp"
    ]
   },
   {
@@ -4370,7 +4831,7 @@
    "kind": "app",
    "code": "gitlab.com/indicproject/indic-keyboard",
    "website": null,
-   "license": null,
+   "license": "Apache-2.0",
    "licenseClass": "open",
    "licenseNeedsCheck": true,
    "stars": null,
@@ -4390,7 +4851,9 @@
    "screenshots": [],
    "platforms": [
     "android"
-   ]
+   ],
+   "licenseSource": "https://gitlab.com/indicproject/indic-keyboard/-/raw/master/LICENSE",
+   "thumbs": []
   },
   {
    "id": "indico",
@@ -4421,6 +4884,9 @@
    "platforms": [
     "web",
     "server"
+   ],
+   "thumbs": [
+    "assets/shots/indico-0.webp"
    ]
   },
   {
@@ -4450,7 +4916,8 @@
    "screenshots": [],
    "platforms": [
     "server"
-   ]
+   ],
+   "thumbs": []
   },
   {
    "id": "inkscape",
@@ -4460,7 +4927,7 @@
    "code": "gitlab.com/inkscape/inkscape",
    "website": null,
    "download": null,
-   "license": null,
+   "license": "GPL-2.0-or-later",
    "licenseClass": "open",
    "licenseNeedsCheck": true,
    "stars": 4017,
@@ -4478,7 +4945,9 @@
     "windows",
     "mac",
     "linux"
-   ]
+   ],
+   "licenseSource": "https://gitlab.com/inkscape/inkscape/-/raw/master/COPYING",
+   "thumbs": []
   },
   {
    "id": "insomnia",
@@ -4511,6 +4980,10 @@
     "windows",
     "mac",
     "linux"
+   ],
+   "thumbs": [
+    "assets/shots/insomnia-0.webp",
+    "assets/shots/insomnia-1.webp"
    ]
   },
   {
@@ -4542,7 +5015,42 @@
     "windows",
     "mac",
     "linux"
+   ],
+   "thumbs": [
+    "assets/shots/invokeai-0.webp"
    ]
+  },
+  {
+   "id": "jami",
+   "name": "Jami",
+   "summary": "Jami is a free app for video calls, chat and file sharing. It works without a central company server, so it suits people who want private communication.",
+   "kind": "app",
+   "code": "github.com/savoirfairelinux/jami-client-qt",
+   "website": "https://git.jami.net/savoirfairelinux/jami-client-qt",
+   "download": null,
+   "license": "GPL-3.0",
+   "licenseClass": "open",
+   "licenseNeedsCheck": false,
+   "stars": 44,
+   "archived": false,
+   "inactive": false,
+   "unconfirmed": [
+    "Whether Jami's group calls support the same participant numbers as Zoom or Google Meet.",
+    "Whether Jami offers team chat features comparable to Microsoft Teams.",
+    "Which platforms the client runs on, beyond what the download link covers."
+   ],
+   "source": "starter",
+   "verified": false,
+   "release": null,
+   "screenshots": [],
+   "platforms": [
+    "windows",
+    "mac",
+    "linux",
+    "android",
+    "ios"
+   ],
+   "thumbs": []
   },
   {
    "id": "jan",
@@ -4570,7 +5078,8 @@
     "windows",
     "mac",
     "linux"
-   ]
+   ],
+   "thumbs": []
   },
   {
    "id": "janssen",
@@ -4601,7 +5110,8 @@
     "mac",
     "linux",
     "server"
-   ]
+   ],
+   "thumbs": []
   },
   {
    "id": "jellyfin",
@@ -4614,7 +5124,7 @@
    "license": "GPL-2.0",
    "licenseClass": "open",
    "licenseNeedsCheck": false,
-   "stars": 58613,
+   "stars": 58616,
    "archived": false,
    "inactive": false,
    "unconfirmed": [
@@ -4630,7 +5140,8 @@
     "android",
     "ios",
     "server"
-   ]
+   ],
+   "thumbs": []
   },
   {
    "id": "jenkins",
@@ -4659,7 +5170,8 @@
    "platforms": [
     "windows",
     "linux"
-   ]
+   ],
+   "thumbs": []
   },
   {
    "id": "jitsi-meet",
@@ -4686,10 +5198,16 @@
     "https://raw.githubusercontent.com/jitsi/jitsi-meet/master/readme-img1.png"
    ],
    "platforms": [
+    "windows",
+    "mac",
+    "linux",
     "android",
     "ios",
     "web",
     "server"
+   ],
+   "thumbs": [
+    "assets/shots/jitsi-meet-0.webp"
    ]
   },
   {
@@ -4718,7 +5236,8 @@
    "screenshots": [],
    "platforms": [
     "server"
-   ]
+   ],
+   "thumbs": []
   },
   {
    "id": "joplin",
@@ -4728,10 +5247,10 @@
    "code": "github.com/laurent22/joplin",
    "website": "https://joplinapp.org",
    "download": null,
-   "license": null,
-   "licenseClass": "open",
+   "license": "AGPL-3.0-or-later",
+   "licenseClass": "open_core",
    "licenseNeedsCheck": true,
-   "stars": 56878,
+   "stars": 56879,
    "archived": false,
    "inactive": false,
    "unconfirmed": [
@@ -4749,7 +5268,13 @@
    "platforms": [
     "windows",
     "mac",
-    "linux"
+    "linux",
+    "android",
+    "ios"
+   ],
+   "licenseSource": "https://raw.githubusercontent.com/laurent22/joplin/dev/LICENSE",
+   "thumbs": [
+    "assets/shots/joplin-0.webp"
    ]
   },
   {
@@ -4779,7 +5304,8 @@
    "screenshots": [],
    "platforms": [
     "server"
-   ]
+   ],
+   "thumbs": []
   },
   {
    "id": "kdenlive",
@@ -4789,7 +5315,7 @@
    "code": "https://invent.kde.org/multimedia/kdenlive",
    "website": "https://kdenlive.org",
    "download": "https://kdenlive.org/download/",
-   "license": null,
+   "license": "GPL-3.0-only",
    "licenseClass": "open",
    "licenseNeedsCheck": true,
    "stars": null,
@@ -4807,6 +5333,39 @@
     "windows",
     "mac",
     "linux"
+   ],
+   "licenseSource": "https://invent.kde.org/multimedia/kdenlive/-/raw/master/src/mainwindow.cpp",
+   "thumbs": []
+  },
+  {
+   "id": "keepassdx",
+   "name": "KeePassDX",
+   "summary": "KeePassDX is a free app for Android phones that stores your passwords and passkeys in one encrypted file, unlocked by a master password or keyfile. It is for people who want to manage many logins securely without a company holding their data.",
+   "kind": "app",
+   "code": "github.com/Kunzisoft/KeePassDX",
+   "website": "https://www.keepassdx.com/",
+   "download": null,
+   "license": "GPL-3.0",
+   "licenseClass": "open",
+   "licenseNeedsCheck": false,
+   "stars": 7543,
+   "archived": false,
+   "inactive": false,
+   "unconfirmed": [
+    "Whether the app is available on platforms other than Android (the list says Android only; the README describes Android only).",
+    "Whether the 'Pro' version is licensed differently from the free version (the README says it is a styles-only paid version, not a different license, but the Pro license terms are not given)."
+   ],
+   "source": "starter",
+   "verified": false,
+   "release": "https://github.com/Kunzisoft/KeePassDX/releases/tag/4.5.6",
+   "screenshots": [
+    "https://raw.githubusercontent.com/Kunzisoft/KeePassDX/master/art/screen.jpg"
+   ],
+   "platforms": [
+    "android"
+   ],
+   "thumbs": [
+    null
    ]
   },
   {
@@ -4817,10 +5376,10 @@
    "code": "github.com/keepassxreboot/keepassxc",
    "website": "https://keepassxc.org/",
    "download": null,
-   "license": null,
+   "license": "GPL-3.0-only",
    "licenseClass": "open",
    "licenseNeedsCheck": true,
-   "stars": 29506,
+   "stars": 29507,
    "archived": false,
    "inactive": false,
    "unconfirmed": [
@@ -4836,7 +5395,9 @@
     "windows",
     "mac",
     "linux"
-   ]
+   ],
+   "licenseSource": "https://raw.githubusercontent.com/keepassxreboot/keepassxc/develop/COPYING",
+   "thumbs": []
   },
   {
    "id": "kestra",
@@ -4866,6 +5427,9 @@
    ],
    "platforms": [
     "server"
+   ],
+   "thumbs": [
+    "assets/shots/kestra-0.webp"
    ]
   },
   {
@@ -4896,7 +5460,8 @@
    "screenshots": [],
    "platforms": [
     "server"
-   ]
+   ],
+   "thumbs": []
   },
   {
    "id": "keyoxide",
@@ -4905,7 +5470,7 @@
    "kind": "self_hosted",
    "code": "codeberg.org/keyoxide/keyoxide-web",
    "website": "https://keyoxide.org",
-   "license": null,
+   "license": "AGPL-3.0",
    "licenseClass": "open",
    "licenseNeedsCheck": true,
    "stars": null,
@@ -4925,6 +5490,43 @@
    "screenshots": [],
    "platforms": [
     "server"
+   ],
+   "licenseSource": "https://codeberg.org/keyoxide/keyoxide-web/raw/branch/main/LICENSE",
+   "thumbs": []
+  },
+  {
+   "id": "kilo-code",
+   "name": "Kilo Code",
+   "summary": "Kilo Code is an open-source AI coding agent that helps programmers write, change and review code inside VS Code, JetBrains IDEs or a command line. It is aimed at software developers who want to pick their own AI models and pay the model provider directly.",
+   "kind": "developer_tool",
+   "code": "github.com/Kilo-Org/kilocode",
+   "website": "https://kilo.ai/",
+   "download": null,
+   "license": "MIT",
+   "licenseClass": "open",
+   "licenseNeedsCheck": false,
+   "stars": 27753,
+   "archived": false,
+   "inactive": false,
+   "unconfirmed": [
+    "Whether the paid model provider usage and the Kilo platform (cloud agent, code reviews, marketplace) are open source beyond the extension and CLI code.",
+    "Whether the Kilo Code extension and CLI are fully MIT-licensed across all packages, since the README mentions separate release docs for JetBrains and the CLI is a fork of OpenCode.",
+    "Whether the 'open pricing' claim means the service has no paid tiers, as the README does not say.",
+    "Whether the replaced apps' feature sets (such as Cursor's editor or Copilot's GitHub integration) are matched, as the README does not compare them directly."
+   ],
+   "source": "starter",
+   "verified": false,
+   "release": "https://github.com/Kilo-Org/kilocode/releases/tag/v7.8.18",
+   "screenshots": [
+    "https://github.com/user-attachments/assets/0536ca59-ed81-4512-9e05-d186187a1b52"
+   ],
+   "platforms": [
+    "windows",
+    "mac",
+    "linux"
+   ],
+   "thumbs": [
+    null
    ]
   },
   {
@@ -4956,6 +5558,9 @@
    ],
    "platforms": [
     "server"
+   ],
+   "thumbs": [
+    "assets/shots/kimai-0.webp"
    ]
   },
   {
@@ -4966,10 +5571,10 @@
    "code": "github.com/xbmc/xbmc",
    "website": "https://kodi.tv/",
    "download": null,
-   "license": null,
+   "license": "GPL-2.0-or-later",
    "licenseClass": "open",
    "licenseNeedsCheck": true,
-   "stars": 21387,
+   "stars": 21388,
    "archived": false,
    "inactive": false,
    "unconfirmed": [
@@ -4988,6 +5593,10 @@
     "mac",
     "linux",
     "android"
+   ],
+   "licenseSource": "https://raw.githubusercontent.com/xbmc/xbmc/master/LICENSE.md",
+   "thumbs": [
+    "assets/shots/kodi-0.webp"
    ]
   },
   {
@@ -5001,7 +5610,7 @@
    "license": "AGPL-3.0",
    "licenseClass": "open",
    "licenseNeedsCheck": false,
-   "stars": 30625,
+   "stars": 30626,
    "archived": false,
    "inactive": false,
    "unconfirmed": [
@@ -5017,7 +5626,8 @@
     "mac",
     "linux",
     "android"
-   ]
+   ],
+   "thumbs": []
   },
   {
    "id": "krita",
@@ -5027,7 +5637,7 @@
    "code": "https://invent.kde.org/graphics/krita",
    "website": "https://krita.org",
    "download": "https://krita.org/en/download/",
-   "license": null,
+   "license": "GPL-3.0",
    "licenseClass": "open",
    "licenseNeedsCheck": true,
    "stars": null,
@@ -5045,7 +5655,9 @@
     "windows",
     "mac",
     "linux"
-   ]
+   ],
+   "licenseSource": "https://invent.kde.org/graphics/krita/-/raw/master/README.md",
+   "thumbs": []
   },
   {
    "id": "kubero",
@@ -5080,6 +5692,12 @@
    ],
    "platforms": [
     "server"
+   ],
+   "thumbs": [
+    "assets/shots/kubero-0.webp",
+    "assets/shots/kubero-1.webp",
+    "assets/shots/kubero-2.webp",
+    "assets/shots/kubero-3.webp"
    ]
   },
   {
@@ -5113,6 +5731,9 @@
    "platforms": [
     "mac",
     "linux"
+   ],
+   "thumbs": [
+    "assets/shots/kubestellar-console-0.webp"
    ]
   },
   {
@@ -5147,6 +5768,12 @@
    ],
    "platforms": [
     "server"
+   ],
+   "thumbs": [
+    "assets/shots/kutt-0.webp",
+    "assets/shots/kutt-1.webp",
+    "assets/shots/kutt-2.webp",
+    "assets/shots/kutt-3.webp"
    ]
   },
   {
@@ -5175,7 +5802,8 @@
    "screenshots": [],
    "platforms": [
     "server"
-   ]
+   ],
+   "thumbs": []
   },
   {
    "id": "lastsaas",
@@ -5206,7 +5834,8 @@
    "platforms": [
     "mac",
     "linux"
-   ]
+   ],
+   "thumbs": []
   },
   {
    "id": "leantime",
@@ -5239,6 +5868,12 @@
    ],
    "platforms": [
     "server"
+   ],
+   "thumbs": [
+    "assets/shots/leantime-0.webp",
+    "assets/shots/leantime-1.webp",
+    "assets/shots/leantime-2.webp",
+    "assets/shots/leantime-3.webp"
    ]
   },
   {
@@ -5268,6 +5903,10 @@
    ],
    "platforms": [
     "server"
+   ],
+   "thumbs": [
+    "assets/shots/lemmy-0.webp",
+    "assets/shots/lemmy-1.webp"
    ]
   },
   {
@@ -5299,7 +5938,8 @@
     "windows",
     "mac",
     "linux"
-   ]
+   ],
+   "thumbs": []
   },
   {
    "id": "librechat",
@@ -5312,7 +5952,7 @@
    "license": "MIT",
    "licenseClass": "open",
    "licenseNeedsCheck": false,
-   "stars": 46340,
+   "stars": 46341,
    "archived": false,
    "inactive": false,
    "unconfirmed": [
@@ -5325,7 +5965,8 @@
    "screenshots": [],
    "platforms": [
     "server"
-   ]
+   ],
+   "thumbs": []
   },
   {
    "id": "librengine",
@@ -5357,6 +5998,9 @@
    ],
    "platforms": [
     "server"
+   ],
+   "thumbs": [
+    "assets/shots/librengine-0.webp"
    ]
   },
   {
@@ -5367,7 +6011,7 @@
    "code": "https://git.libreoffice.org/core",
    "website": "https://www.libreoffice.org",
    "download": "https://www.libreoffice.org/download/download-libreoffice/",
-   "license": null,
+   "license": "MPL-2.0",
    "licenseClass": "open",
    "licenseNeedsCheck": true,
    "stars": null,
@@ -5385,7 +6029,9 @@
     "windows",
     "mac",
     "linux"
-   ]
+   ],
+   "licenseSource": "https://www.libreoffice.org/about-us/licenses/",
+   "thumbs": []
   },
   {
    "id": "libreoffice-impress",
@@ -5395,7 +6041,7 @@
    "code": "https://git.libreoffice.org/core",
    "website": "https://www.libreoffice.org",
    "download": "https://www.libreoffice.org/download/download-libreoffice/",
-   "license": null,
+   "license": "MPL-2.0",
    "licenseClass": "open",
    "licenseNeedsCheck": true,
    "stars": null,
@@ -5413,7 +6059,9 @@
     "windows",
     "mac",
     "linux"
-   ]
+   ],
+   "licenseSource": "https://www.libreoffice.org/about-us/licenses/",
+   "thumbs": []
   },
   {
    "id": "libreoffice-writer",
@@ -5423,7 +6071,7 @@
    "code": "https://git.libreoffice.org/core",
    "website": "https://www.libreoffice.org",
    "download": "https://www.libreoffice.org/download/download-libreoffice/",
-   "license": null,
+   "license": "MPL-2.0",
    "licenseClass": "open",
    "licenseNeedsCheck": true,
    "stars": null,
@@ -5441,7 +6089,9 @@
     "windows",
     "mac",
     "linux"
-   ]
+   ],
+   "licenseSource": "https://www.libreoffice.org/about-us/licenses/",
+   "thumbs": []
   },
   {
    "id": "libresign",
@@ -5471,6 +6121,9 @@
    ],
    "platforms": [
     "server"
+   ],
+   "thumbs": [
+    "assets/shots/libresign-0.webp"
    ]
   },
   {
@@ -5503,6 +6156,9 @@
     "android",
     "web",
     "server"
+   ],
+   "thumbs": [
+    "assets/shots/librespeed-0.webp"
    ]
   },
   {
@@ -5532,6 +6188,10 @@
    ],
    "platforms": [
     "server"
+   ],
+   "thumbs": [
+    "assets/shots/libretranslate-0.webp",
+    "assets/shots/libretranslate-1.webp"
    ]
   },
   {
@@ -5542,7 +6202,7 @@
    "code": "codeberg.org/librewolf/source",
    "website": null,
    "download": null,
-   "license": null,
+   "license": "MPL-2.0",
    "licenseClass": "open",
    "licenseNeedsCheck": true,
    "stars": 1351,
@@ -5561,7 +6221,9 @@
     "windows",
     "mac",
     "linux"
-   ]
+   ],
+   "licenseSource": "https://codeberg.org/librewolf/source/raw/branch/main/LICENSE",
+   "thumbs": []
   },
   {
    "id": "lightdash",
@@ -5570,7 +6232,7 @@
    "kind": "self_hosted",
    "code": "github.com/lightdash/lightdash",
    "website": "https://lightdash.com",
-   "license": null,
+   "license": "MIT",
    "licenseClass": "open_core",
    "licenseNeedsCheck": true,
    "stars": 6198,
@@ -5586,13 +6248,15 @@
     "awesome-oss-alternatives"
    ],
    "verified": false,
-   "release": "https://github.com/lightdash/lightdash/releases/tag/3.53.10",
+   "release": "https://github.com/lightdash/lightdash/releases/tag/3.55.0",
    "screenshots": [],
    "platforms": [
     "mac",
     "linux",
     "server"
-   ]
+   ],
+   "licenseSource": "https://raw.githubusercontent.com/lightdash/lightdash/main/LICENSE",
+   "thumbs": []
   },
   {
    "id": "limesurvey",
@@ -5620,7 +6284,8 @@
    "platforms": [
     "web",
     "server"
-   ]
+   ],
+   "thumbs": []
   },
   {
    "id": "lineageos",
@@ -5630,7 +6295,7 @@
    "code": null,
    "website": "https://lineageos.org",
    "download": "https://wiki.lineageos.org/devices/",
-   "license": null,
+   "license": "Apache-2.0",
    "licenseClass": "open",
    "licenseNeedsCheck": true,
    "stars": null,
@@ -5646,7 +6311,9 @@
    "screenshots": [],
    "platforms": [
     "android"
-   ]
+   ],
+   "licenseSource": "https://raw.githubusercontent.com/LineageOS/android_vendor_lineage/lineage-23.0/LICENSE",
+   "thumbs": []
   },
   {
    "id": "linux-mint",
@@ -5656,7 +6323,7 @@
    "code": null,
    "website": "https://linuxmint.com",
    "download": "https://linuxmint.com/download.php",
-   "license": null,
+   "license": "GPL-3.0-or-later",
    "licenseClass": "open",
    "licenseNeedsCheck": true,
    "stars": null,
@@ -5672,7 +6339,9 @@
    "screenshots": [],
    "platforms": [
     "linux"
-   ]
+   ],
+   "licenseSource": "https://raw.githubusercontent.com/linuxmint/mintupdate/master/debian/copyright",
+   "thumbs": []
   },
   {
    "id": "litekart",
@@ -5706,6 +6375,12 @@
    ],
    "platforms": [
     "server"
+   ],
+   "thumbs": [
+    "assets/shots/litekart-0.webp",
+    "assets/shots/litekart-1.webp",
+    "assets/shots/litekart-2.webp",
+    "assets/shots/litekart-3.webp"
    ]
   },
   {
@@ -5737,7 +6412,8 @@
     "windows",
     "linux",
     "server"
-   ]
+   ],
+   "thumbs": []
   },
   {
    "id": "lmms",
@@ -5750,7 +6426,7 @@
    "license": "GPL-2.0",
    "licenseClass": "open",
    "licenseNeedsCheck": false,
-   "stars": 10543,
+   "stars": 10545,
    "archived": false,
    "inactive": false,
    "unconfirmed": [
@@ -5765,7 +6441,8 @@
     "windows",
     "mac",
     "linux"
-   ]
+   ],
+   "thumbs": []
   },
   {
    "id": "localsend",
@@ -5778,7 +6455,7 @@
    "license": "Apache-2.0",
    "licenseClass": "open",
    "licenseNeedsCheck": false,
-   "stars": 95692,
+   "stars": 95699,
    "archived": false,
    "inactive": false,
    "unconfirmed": [
@@ -5797,6 +6474,10 @@
     "mac",
     "linux",
     "android"
+   ],
+   "thumbs": [
+    "assets/shots/localsend-0.webp",
+    "assets/shots/localsend-1.webp"
    ]
   },
   {
@@ -5828,7 +6509,11 @@
     "windows",
     "mac",
     "linux",
-    "android"
+    "android",
+    "ios"
+   ],
+   "thumbs": [
+    "assets/shots/logseq-0.webp"
    ]
   },
   {
@@ -5863,6 +6548,11 @@
    "platforms": [
     "web",
     "server"
+   ],
+   "thumbs": [
+    "assets/shots/logto-0.webp",
+    "assets/shots/logto-1.webp",
+    "assets/shots/logto-2.webp"
    ]
   },
   {
@@ -5893,6 +6583,9 @@
    ],
    "platforms": [
     "server"
+   ],
+   "thumbs": [
+    "assets/shots/loops-0.webp"
    ]
   },
   {
@@ -5923,6 +6616,43 @@
    ],
    "platforms": [
     "server"
+   ],
+   "thumbs": [
+    "assets/shots/lowdefy-0.webp"
+   ]
+  },
+  {
+   "id": "mailspring",
+   "name": "Mailspring",
+   "summary": "Mailspring is a desktop email app for Windows, Mac and Linux that lets you read and send email from one place. It is aimed at people who want a faster, lighter alternative to web-based or heavy mail clients.",
+   "kind": "app",
+   "code": "github.com/Foundry376/Mailspring",
+   "website": "https://getmailspring.com/",
+   "download": null,
+   "license": "GPL-3.0",
+   "licenseClass": "open",
+   "licenseNeedsCheck": false,
+   "stars": 17943,
+   "archived": false,
+   "inactive": false,
+   "unconfirmed": [
+    "Whether the sync engine license is the same as the UI license beyond the README statement",
+    "Exact list of features that are paid versus free",
+    "Whether Gmail support is a full substitute for the Gmail web service"
+   ],
+   "source": "starter",
+   "verified": false,
+   "release": "https://github.com/Foundry376/Mailspring/releases/tag/1.26.2",
+   "screenshots": [
+    "https://www.getmailspring.com/static/img/og-share.jpg"
+   ],
+   "platforms": [
+    "windows",
+    "mac",
+    "linux"
+   ],
+   "thumbs": [
+    null
    ]
   },
   {
@@ -5951,7 +6681,8 @@
    "screenshots": [],
    "platforms": [
     "server"
-   ]
+   ],
+   "thumbs": []
   },
   {
    "id": "mastodon",
@@ -5977,7 +6708,8 @@
    "screenshots": [],
    "platforms": [
     "server"
-   ]
+   ],
+   "thumbs": []
   },
   {
    "id": "matano",
@@ -6011,6 +6743,10 @@
     "mac",
     "linux",
     "server"
+   ],
+   "thumbs": [
+    "assets/shots/matano-0.webp",
+    "assets/shots/matano-1.webp"
    ]
   },
   {
@@ -6038,6 +6774,9 @@
    ],
    "platforms": [
     "server"
+   ],
+   "thumbs": [
+    "assets/shots/matomo-0.webp"
    ]
   },
   {
@@ -6071,7 +6810,11 @@
     "linux",
     "android",
     "ios",
+    "web",
     "server"
+   ],
+   "thumbs": [
+    "assets/shots/mattermost-0.webp"
    ]
   },
   {
@@ -6099,7 +6842,8 @@
    "platforms": [
     "web",
     "server"
-   ]
+   ],
+   "thumbs": []
   },
   {
    "id": "mediawiki",
@@ -6108,7 +6852,7 @@
    "kind": "self_hosted",
    "code": "github.com/wikimedia/mediawiki",
    "website": "https://www.mediawiki.org",
-   "license": null,
+   "license": "GPL-2.0-or-later",
    "licenseClass": "open",
    "licenseNeedsCheck": true,
    "stars": 5214,
@@ -6126,8 +6870,11 @@
    "release": null,
    "screenshots": [],
    "platforms": [
+    "web",
     "server"
-   ]
+   ],
+   "licenseSource": "https://raw.githubusercontent.com/wikimedia/mediawiki/master/COPYING",
+   "thumbs": []
   },
   {
    "id": "medusa",
@@ -6140,7 +6887,7 @@
    "license": "MIT",
    "licenseClass": "open_core",
    "licenseNeedsCheck": false,
-   "stars": 36949,
+   "stars": 36950,
    "archived": false,
    "inactive": false,
    "unconfirmed": [
@@ -6153,7 +6900,8 @@
    "screenshots": [],
    "platforms": [
     "server"
-   ]
+   ],
+   "thumbs": []
   },
   {
    "id": "mellisearch",
@@ -6162,7 +6910,7 @@
    "kind": "developer_tool",
    "code": "github.com/meilisearch/meilisearch",
    "website": "https://www.meilisearch.com",
-   "license": null,
+   "license": "MIT",
    "licenseClass": "open_core",
    "licenseNeedsCheck": true,
    "stars": 59673,
@@ -6189,6 +6937,11 @@
     "windows",
     "mac",
     "linux"
+   ],
+   "licenseSource": "https://raw.githubusercontent.com/meilisearch/meilisearch/main/LICENSE",
+   "thumbs": [
+    "assets/shots/mellisearch-0.webp",
+    "assets/shots/mellisearch-1.webp"
    ]
   },
   {
@@ -6220,10 +6973,11 @@
     "https://raw.githubusercontent.com/usememos/.github/refs/heads/main/assets/previews/timeline-light.png"
    ],
    "platforms": [
-    "windows",
-    "mac",
-    "linux",
+    "web",
     "server"
+   ],
+   "thumbs": [
+    "assets/shots/memos-0.webp"
    ]
   },
   {
@@ -6257,7 +7011,8 @@
     "linux",
     "android",
     "server"
-   ]
+   ],
+   "thumbs": []
   },
   {
    "id": "metabase",
@@ -6266,7 +7021,7 @@
    "kind": "app",
    "code": "github.com/metabase/metabase",
    "website": "https://metabase.com",
-   "license": null,
+   "license": "AGPL-3.0",
    "licenseClass": "open_core",
    "licenseNeedsCheck": true,
    "stars": 49845,
@@ -6290,6 +7045,10 @@
    "platforms": [
     "web",
     "server"
+   ],
+   "licenseSource": "https://raw.githubusercontent.com/metabase/metabase/master/LICENSE.txt",
+   "thumbs": [
+    "assets/shots/metabase-0.webp"
    ]
   },
   {
@@ -6319,7 +7078,8 @@
    "screenshots": [],
    "platforms": [
     "server"
-   ]
+   ],
+   "thumbs": []
   },
   {
    "id": "miniflux",
@@ -6352,6 +7112,10 @@
     "mac",
     "linux",
     "server"
+   ],
+   "thumbs": [
+    "assets/shots/miniflux-0.webp",
+    "assets/shots/miniflux-1.webp"
    ]
   },
   {
@@ -6380,6 +7144,9 @@
    ],
    "platforms": [
     "server"
+   ],
+   "thumbs": [
+    "assets/shots/misskey-0.webp"
    ]
   },
   {
@@ -6389,7 +7156,7 @@
    "kind": "self_hosted",
    "code": "github.com/synmetrix/synmetrix",
    "website": "https://synmetrix.org",
-   "license": null,
+   "license": "Apache-2.0",
    "licenseClass": "open",
    "licenseNeedsCheck": true,
    "stars": 626,
@@ -6409,39 +7176,9 @@
    "screenshots": [],
    "platforms": [
     "server"
-   ]
-  },
-  {
-   "id": "moinmoin",
-   "name": "MoinMoin",
-   "summary": "MoinMoin is a wiki program written in Python that you install and run yourself on a laptop, home server, or company intranet. It suits people who want to keep personal notes, share a company knowledge base, or host a wiki for a community.",
-   "kind": "self_hosted",
-   "code": "github.com/moinwiki/moin",
-   "website": "https://moinmo.in/",
-   "license": null,
-   "licenseClass": "open",
-   "licenseNeedsCheck": true,
-   "stars": 375,
-   "archived": false,
-   "inactive": false,
-   "unconfirmed": [
-    "The list description says this is the unstable 2.0+ development line and that production use should stick to 1.9.x; the README says Moin2 is not released yet, so current stability is unconfirmed.",
-    "The README does not say whether MoinMoin has features comparable to Notion's databases, sharing permissions, or integrations.",
-    "The 'Other license' label in the list conflicts with the GPL in the license file; which applies to the code at hand is unconfirmed."
    ],
-   "source": "lists",
-   "sourceLists": [
-    "awesome-foss-alternatives"
-   ],
-   "verified": false,
-   "release": null,
-   "screenshots": [],
-   "platforms": [
-    "windows",
-    "mac",
-    "linux",
-    "server"
-   ]
+   "licenseSource": "https://raw.githubusercontent.com/synmetrix/synmetrix/main/LICENSE",
+   "thumbs": []
   },
   {
    "id": "monomap",
@@ -6469,7 +7206,8 @@
    "screenshots": [],
    "platforms": [
     "web"
-   ]
+   ],
+   "thumbs": []
   },
   {
    "id": "mumble",
@@ -6499,6 +7237,9 @@
     "windows",
     "mac",
     "linux"
+   ],
+   "thumbs": [
+    "assets/shots/mumble-0.webp"
    ]
   },
   {
@@ -6527,7 +7268,8 @@
    "platforms": [
     "windows",
     "linux"
-   ]
+   ],
+   "thumbs": []
   },
   {
    "id": "natron",
@@ -6554,7 +7296,8 @@
    "screenshots": [],
    "platforms": [
     "mac"
-   ]
+   ],
+   "thumbs": []
   },
   {
    "id": "navidrome",
@@ -6567,7 +7310,7 @@
    "license": "GPL-3.0",
    "licenseClass": "open",
    "licenseNeedsCheck": false,
-   "stars": 24367,
+   "stars": 24368,
    "archived": false,
    "inactive": false,
    "unconfirmed": [
@@ -6584,10 +7327,14 @@
     "https://raw.githubusercontent.com/navidrome/navidrome/master/.github/screenshots/ss-desktop-player.png"
    ],
    "platforms": [
-    "windows",
-    "mac",
-    "linux",
+    "web",
     "server"
+   ],
+   "thumbs": [
+    "assets/shots/navidrome-0.webp",
+    "assets/shots/navidrome-1.webp",
+    "assets/shots/navidrome-2.webp",
+    "assets/shots/navidrome-3.webp"
    ]
   },
   {
@@ -6620,7 +7367,8 @@
     "mac",
     "linux",
     "server"
-   ]
+   ],
+   "thumbs": []
   },
   {
    "id": "netbird",
@@ -6629,7 +7377,7 @@
    "kind": "app",
    "code": "github.com/netbirdio/netbird",
    "website": "https://netbird.io",
-   "license": null,
+   "license": "BSD-3-Clause",
    "licenseClass": "open",
    "licenseNeedsCheck": true,
    "stars": 30226,
@@ -6651,7 +7399,9 @@
     "windows",
     "mac",
     "linux"
-   ]
+   ],
+   "licenseSource": "https://raw.githubusercontent.com/netbirdio/netbird/main/LICENSE",
+   "thumbs": []
   },
   {
    "id": "netdata",
@@ -6683,6 +7433,9 @@
    ],
    "platforms": [
     "windows"
+   ],
+   "thumbs": [
+    "assets/shots/netdata-0.webp"
    ]
   },
   {
@@ -6714,7 +7467,8 @@
    "platforms": [
     "mac",
     "ios"
-   ]
+   ],
+   "thumbs": []
   },
   {
    "id": "newpipe",
@@ -6745,6 +7499,12 @@
    ],
    "platforms": [
     "android"
+   ],
+   "thumbs": [
+    "assets/shots/newpipe-0.webp",
+    "assets/shots/newpipe-1.webp",
+    "assets/shots/newpipe-2.webp",
+    "assets/shots/newpipe-3.webp"
    ]
   },
   {
@@ -6775,6 +7535,9 @@
    ],
    "platforms": [
     "linux"
+   ],
+   "thumbs": [
+    "assets/shots/newsboat-0.webp"
    ]
   },
   {
@@ -6806,7 +7569,8 @@
     "windows",
     "web",
     "server"
-   ]
+   ],
+   "thumbs": []
   },
   {
    "id": "nextcloud",
@@ -6838,7 +7602,11 @@
     "linux",
     "android",
     "ios",
+    "web",
     "server"
+   ],
+   "thumbs": [
+    "assets/shots/nextcloud-0.webp"
    ]
   },
   {
@@ -6869,6 +7637,9 @@
    "platforms": [
     "web",
     "server"
+   ],
+   "thumbs": [
+    "assets/shots/nextcloud-calendar-0.webp"
    ]
   },
   {
@@ -6901,6 +7672,11 @@
    ],
    "platforms": [
     "server"
+   ],
+   "thumbs": [
+    "assets/shots/nextcloud-forms-0.webp",
+    "assets/shots/nextcloud-forms-1.webp",
+    "assets/shots/nextcloud-forms-2.webp"
    ]
   },
   {
@@ -6938,6 +7714,46 @@
     "ios",
     "web",
     "server"
+   ],
+   "thumbs": [
+    "assets/shots/nextcloud-notes-0.webp"
+   ]
+  },
+  {
+   "id": "nextcloud-talk",
+   "name": "Nextcloud Talk",
+   "summary": "Nextcloud Talk is a video and audio calling app with text chat, screen sharing and password-protected calls. It is for people and teams who run their own Nextcloud server and want calls on it instead of a commercial service.",
+   "kind": "self_hosted",
+   "code": "github.com/nextcloud/spreed",
+   "website": "https://nextcloud.com/talk",
+   "download": null,
+   "license": "AGPL-3.0",
+   "licenseClass": "open",
+   "licenseNeedsCheck": false,
+   "stars": 2220,
+   "archived": false,
+   "inactive": false,
+   "unconfirmed": [
+    "Whether the AGPL-3.0 license covers the whole project, since only the host report was provided and no license file was included.",
+    "Exact feature parity with Zoom, Google Meet or Microsoft Teams (meeting size limits, recording, breakout rooms) is not stated in the README.",
+    "Whether Matterbridge-based sync and federation behave the same across all server versions."
+   ],
+   "source": "starter",
+   "verified": false,
+   "release": "https://github.com/nextcloud/spreed/releases/tag/v25.0.6",
+   "screenshots": [
+    "https://raw.githubusercontent.com/nextcloud/spreed/main/docs/call-in-action.jpg"
+   ],
+   "platforms": [
+    "windows",
+    "mac",
+    "linux",
+    "android",
+    "ios",
+    "server"
+   ],
+   "thumbs": [
+    null
    ]
   },
   {
@@ -6969,7 +7785,8 @@
    "platforms": [
     "mac",
     "linux"
-   ]
+   ],
+   "thumbs": []
   },
   {
    "id": "node-red",
@@ -7001,6 +7818,9 @@
     "windows",
     "mac",
     "linux"
+   ],
+   "thumbs": [
+    "assets/shots/node-red-0.webp"
    ]
   },
   {
@@ -7033,6 +7853,9 @@
    "platforms": [
     "web",
     "server"
+   ],
+   "thumbs": [
+    "assets/shots/notabase-0.webp"
    ]
   },
   {
@@ -7067,12 +7890,17 @@
    ],
    "platforms": [
     "android"
+   ],
+   "thumbs": [
+    "assets/shots/notally-0.webp",
+    "assets/shots/notally-1.webp",
+    "assets/shots/notally-2.webp"
    ]
   },
   {
    "id": "notegen",
    "name": "NoteGen",
-   "summary": "NoteGen is a desktop and phone app for collecting scattered notes, links, images and recordings, then organizing them into Markdown notes with optional AI help. It is aimed at people who want to capture ideas quickly and keep their notes as plain files.",
+   "summary": "NoteGen is an app for collecting notes, links, images and recordings and organizing them into Markdown notes, with optional AI help. Your notes stay as plain files on your computer or phone.",
    "kind": "app",
    "code": "github.com/codexu/note-gen",
    "website": "https://notegen.top",
@@ -7101,6 +7929,9 @@
     "mac",
     "linux",
     "android"
+   ],
+   "thumbs": [
+    "assets/shots/notegen-0.webp"
    ]
   },
   {
@@ -7138,7 +7969,12 @@
     "windows",
     "mac",
     "linux",
-    "android"
+    "android",
+    "ios",
+    "web"
+   ],
+   "thumbs": [
+    "assets/shots/notesnook-0.webp"
    ]
   },
   {
@@ -7170,7 +8006,8 @@
     "windows",
     "mac",
     "linux"
-   ]
+   ],
+   "thumbs": []
   },
   {
    "id": "obs-studio",
@@ -7199,7 +8036,8 @@
     "windows",
     "mac",
     "linux"
-   ]
+   ],
+   "thumbs": []
   },
   {
    "id": "obtainium",
@@ -7232,6 +8070,12 @@
    ],
    "platforms": [
     "android"
+   ],
+   "thumbs": [
+    "assets/shots/obtainium-0.webp",
+    "assets/shots/obtainium-1.webp",
+    "assets/shots/obtainium-2.webp",
+    "assets/shots/obtainium-3.webp"
    ]
   },
   {
@@ -7241,8 +8085,8 @@
    "kind": "self_hosted",
    "code": "github.com/odoo/odoo",
    "website": "https://www.odoo.com",
-   "license": null,
-   "licenseClass": "open",
+   "license": "LGPL-3.0",
+   "licenseClass": "open_core",
    "licenseNeedsCheck": true,
    "stars": 55324,
    "archived": false,
@@ -7264,7 +8108,9 @@
    "platforms": [
     "web",
     "server"
-   ]
+   ],
+   "licenseSource": "https://raw.githubusercontent.com/odoo/odoo/20.0/LICENSE",
+   "thumbs": []
   },
   {
    "id": "offpdf",
@@ -7297,6 +8143,9 @@
     "windows",
     "mac",
     "ios"
+   ],
+   "thumbs": [
+    "assets/shots/offpdf-0.webp"
    ]
   },
   {
@@ -7307,7 +8156,7 @@
    "code": "https://invent.kde.org/graphics/okular",
    "website": "https://okular.kde.org",
    "download": "https://okular.kde.org/download/",
-   "license": null,
+   "license": "GPL-2.0-or-later",
    "licenseClass": "open",
    "licenseNeedsCheck": true,
    "stars": null,
@@ -7328,45 +8177,16 @@
     "windows",
     "mac",
     "linux"
-   ]
-  },
-  {
-   "id": "olive-video-editor",
-   "name": "Olive Video Editor",
-   "summary": "Olive is a free video editor for Windows, macOS and Linux, used to cut and arrange video clips. It is alpha software and the README calls it highly unstable, so it suits people willing to test early builds.",
-   "kind": "app",
-   "code": "github.com/olive-editor/olive",
-   "website": "https://olivevideoeditor.org/",
-   "license": "GPL-3.0",
-   "licenseClass": "open",
-   "licenseNeedsCheck": false,
-   "stars": 9144,
-   "archived": false,
-   "inactive": true,
-   "unconfirmed": [
-    "Whether Olive covers the full feature set of Sony Vegas or DaVinci Resolve (README only says alpha and unstable)",
-    "Whether the GPL-3.0 license applies to the whole project (only the host report was given, no license file)",
-    "Whether the 'video-editing' group id exists; the list of group ids uses 'video-editing' and was used as given"
    ],
-   "source": "lists",
-   "sourceLists": [
-    "awesome-privacy"
-   ],
-   "verified": false,
-   "release": null,
-   "screenshots": [
-    "https://olivevideoeditor.org/img/020-2.png"
-   ],
-   "platforms": [
-    "windows",
-    "mac",
-    "linux"
+   "licenseSource": "https://invent.kde.org/graphics/okular/-/raw/master/core/document.cpp",
+   "thumbs": [
+    "assets/shots/okular-0.webp"
    ]
   },
   {
    "id": "ollama",
    "name": "Ollama",
-   "summary": "Ollama is a free tool that runs AI language models directly on your own computer or server, so you can chat with them and use them from other programs. It is aimed at developers and people who want to run AI models locally, and it needs a separate chat app on top for everyday chatting.",
+   "summary": "Ollama is a free tool that runs AI models on your own computer, so your chats stay on your machine. It now has a simple chat window, and other apps can also use it to run models.",
    "kind": "app",
    "code": "github.com/ollama/ollama",
    "website": "https://ollama.com",
@@ -7374,7 +8194,7 @@
    "license": "MIT",
    "licenseClass": "open",
    "licenseNeedsCheck": false,
-   "stars": 184828,
+   "stars": 184830,
    "archived": false,
    "inactive": false,
    "unconfirmed": [
@@ -7391,7 +8211,8 @@
     "windows",
     "mac",
     "linux"
-   ]
+   ],
+   "thumbs": []
   },
   {
    "id": "omniedge",
@@ -7424,12 +8245,13 @@
     "mac",
     "linux",
     "android"
-   ]
+   ],
+   "thumbs": []
   },
   {
    "id": "onlyoffice-docs",
    "name": "OnlyOffice Docs",
-   "summary": "ONLYOFFICE Docs is a free office suite for writing documents, working with spreadsheets, making presentations, creating forms and editing PDFs, with real-time collaboration. It is aimed at teams and individuals who want to run their own document editing server, and it works with Microsoft Office file formats.",
+   "summary": "ONLYOFFICE Docs is an office suite for documents, spreadsheets, presentations and forms that several people can edit together, and it opens Microsoft Office files well. You run it on your own server, or use ONLYOFFICE's separate free desktop app.",
    "kind": "self_hosted",
    "code": "github.com/ONLYOFFICE/DocumentServer",
    "website": "https://www.onlyoffice.com/see-it-in-action",
@@ -7450,9 +8272,12 @@
    "screenshots": [],
    "platforms": [
     "windows",
+    "mac",
     "linux",
+    "web",
     "server"
-   ]
+   ],
+   "thumbs": []
   },
   {
    "id": "open-interpreter",
@@ -7481,36 +8306,8 @@
     "windows",
     "mac",
     "linux"
-   ]
-  },
-  {
-   "id": "openassistant",
-   "name": "OpenAssistant",
-   "summary": "OpenAssistant was a community project to build an open chat-based AI assistant and collect the training data behind it. The project is now finished, and its main lasting result is a public dataset, as its code is meant for development rather than everyday chatting.",
-   "kind": "app",
-   "code": "github.com/LAION-AI/Open-Assistant",
-   "website": "https://open-assistant.io",
-   "license": "Apache-2.0",
-   "licenseClass": "open",
-   "licenseNeedsCheck": false,
-   "stars": 37372,
-   "archived": false,
-   "inactive": true,
-   "unconfirmed": [
-    "Whether the public chat at open-assistant.io is still running, since the README says the project is completed.",
-    "Whether the model itself is available to run outside the website, since the README only mentions an inference folder for developers.",
-    "Whether the descriptions list for the closed app was empty, so the replacement claim rests only on the community list name."
    ],
-   "source": "lists",
-   "sourceLists": [
-    "open-source-alternatives"
-   ],
-   "verified": false,
-   "release": "https://github.com/LAION-AI/Open-Assistant/releases/tag/v0.0.4-alpha2",
-   "screenshots": [],
-   "platforms": [
-    "server"
-   ]
+   "thumbs": []
   },
   {
    "id": "openblocks",
@@ -7541,6 +8338,9 @@
    ],
    "platforms": [
     "server"
+   ],
+   "thumbs": [
+    "assets/shots/openblocks-0.webp"
    ]
   },
   {
@@ -7570,7 +8370,8 @@
    "screenshots": [],
    "platforms": [
     "android"
-   ]
+   ],
+   "thumbs": []
   },
   {
    "id": "openbooks",
@@ -7604,6 +8405,76 @@
    ],
    "platforms": [
     "server"
+   ],
+   "thumbs": [
+    "assets/shots/openbooks-0.webp",
+    "assets/shots/openbooks-1.webp",
+    "assets/shots/openbooks-2.webp",
+    "assets/shots/openbooks-3.webp"
+   ]
+  },
+  {
+   "id": "openclaw",
+   "name": "OpenClaw",
+   "summary": "OpenClaw is a free AI assistant that runs on your own computer and answers you through chat apps you already use, such as WhatsApp, Telegram, Slack and Discord. It is aimed at people who want an assistant that keeps their data and credentials on their own hardware.",
+   "kind": "app",
+   "code": "github.com/openclaw/openclaw",
+   "website": "https://openclaw.ai",
+   "download": null,
+   "license": "MIT",
+   "licenseClass": "open",
+   "licenseNeedsCheck": false,
+   "stars": 393114,
+   "archived": false,
+   "inactive": false,
+   "unconfirmed": [
+    "Whether OpenClaw can act on files and apps the way the listed closed apps do is not confirmed beyond the README's general description of tools and skills.",
+    "Setup needs a terminal and the list notes broad computer access; the README confirms tools run on the host by default unless sandboxing is configured."
+   ],
+   "source": "starter",
+   "verified": false,
+   "release": "https://github.com/openclaw/openclaw/releases/tag/v2026.10.7",
+   "screenshots": [],
+   "platforms": [
+    "windows",
+    "mac",
+    "linux"
+   ],
+   "thumbs": []
+  },
+  {
+   "id": "opencode",
+   "name": "OpenCode",
+   "summary": "OpenCode is an AI coding agent that runs in your terminal or as a desktop app, and it can work with many different AI models. It is for programmers who want an AI helper that reads and changes code in their projects.",
+   "kind": "developer_tool",
+   "code": "github.com/anomalyco/opencode",
+   "website": "https://opencode.ai",
+   "download": null,
+   "license": "MIT",
+   "licenseClass": "open",
+   "licenseNeedsCheck": false,
+   "stars": 221742,
+   "archived": false,
+   "inactive": false,
+   "unconfirmed": [
+    "Whether OpenCode has editor integrations or inline code completion like GitHub Copilot or Cursor.",
+    "Feature parity with Claude Code or the OpenAI Codex app.",
+    "Whether the desktop app is out of beta and how stable it is.",
+    "Which AI models it supports beyond the list description 'any AI model'."
+   ],
+   "source": "starter",
+   "verified": false,
+   "release": "https://github.com/anomalyco/opencode/releases/tag/v1.19.4",
+   "screenshots": [
+    "https://raw.githubusercontent.com/anomalyco/opencode/HEAD/packages/web/src/assets/lander/screenshot.png"
+   ],
+   "platforms": [
+    "windows",
+    "mac",
+    "linux"
+   ],
+   "thumbs": [
+    null
    ]
   },
   {
@@ -7633,15 +8504,14 @@
    "release": "https://github.com/OpenCut-app/OpenCut/releases/tag/v0.3.0",
    "screenshots": [],
    "platforms": [
-    "windows",
-    "mac",
-    "linux"
-   ]
+    "web"
+   ],
+   "thumbs": []
   },
   {
    "id": "openhands",
    "name": "OpenHands",
-   "summary": "OpenHands Agent Canvas is a self-hosted control center where you start and manage coding agents, including its own agent and third-party ones like Claude Code and Codex. It is aimed at developers who want agents running on their own machines or servers and triggered by tools like Slack and GitHub.",
+   "summary": "OpenHands is a tool for starting and managing AI coding assistants on your own computer or server. It is for programmers who want to run several AI helpers and trigger them from tools like Slack and GitHub.",
    "kind": "self_hosted",
    "code": "github.com/OpenHands/OpenHands",
    "website": "https://openhands.dev",
@@ -7649,7 +8519,7 @@
    "license": "MIT",
    "licenseClass": "open",
    "licenseNeedsCheck": false,
-   "stars": 91882,
+   "stars": 91885,
    "archived": false,
    "inactive": false,
    "unconfirmed": [
@@ -7668,6 +8538,9 @@
     "mac",
     "linux",
     "server"
+   ],
+   "thumbs": [
+    "assets/shots/openhands-0.webp"
    ]
   },
   {
@@ -7697,6 +8570,9 @@
    ],
    "platforms": [
     "server"
+   ],
+   "thumbs": [
+    "assets/shots/openproject-0.webp"
    ]
   },
   {
@@ -7728,6 +8604,9 @@
     "windows",
     "mac",
     "linux"
+   ],
+   "thumbs": [
+    "assets/shots/openshot-0.webp"
    ]
   },
   {
@@ -7758,6 +8637,9 @@
    ],
    "platforms": [
     "server"
+   ],
+   "thumbs": [
+    "assets/shots/openstatus-0.webp"
    ]
   },
   {
@@ -7787,7 +8669,8 @@
    "platforms": [
     "web",
     "server"
-   ]
+   ],
+   "thumbs": []
   },
   {
    "id": "openvidu",
@@ -7817,6 +8700,9 @@
    ],
    "platforms": [
     "server"
+   ],
+   "thumbs": [
+    "assets/shots/openvidu-0.webp"
    ]
   },
   {
@@ -7845,7 +8731,8 @@
    "screenshots": [],
    "platforms": [
     "server"
-   ]
+   ],
+   "thumbs": []
   },
   {
    "id": "orbit",
@@ -7881,6 +8768,12 @@
    "platforms": [
     "web",
     "server"
+   ],
+   "thumbs": [
+    "assets/shots/orbit-0.webp",
+    "assets/shots/orbit-1.webp",
+    "assets/shots/orbit-2.webp",
+    "assets/shots/orbit-3.webp"
    ]
   },
   {
@@ -7894,7 +8787,7 @@
    "license": "Apache-2.0",
    "licenseClass": "open",
    "licenseNeedsCheck": false,
-   "stars": 15778,
+   "stars": 15777,
    "archived": false,
    "inactive": false,
    "unconfirmed": [
@@ -7914,6 +8807,12 @@
    "platforms": [
     "android",
     "ios"
+   ],
+   "thumbs": [
+    "assets/shots/organic-maps-0.webp",
+    "assets/shots/organic-maps-1.webp",
+    "assets/shots/organic-maps-2.webp",
+    "assets/shots/organic-maps-3.webp"
    ]
   },
   {
@@ -7946,7 +8845,8 @@
     "mac",
     "linux",
     "server"
-   ]
+   ],
+   "thumbs": []
   },
   {
    "id": "osmand",
@@ -7974,7 +8874,8 @@
    "platforms": [
     "android",
     "ios"
-   ]
+   ],
+   "thumbs": []
   },
   {
    "id": "otomi",
@@ -8003,7 +8904,8 @@
    "screenshots": [],
    "platforms": [
     "server"
-   ]
+   ],
+   "thumbs": []
   },
   {
    "id": "owncloud",
@@ -8030,8 +8932,15 @@
    "release": "https://github.com/owncloud/core/releases/tag/v10.16.6",
    "screenshots": [],
    "platforms": [
+    "windows",
+    "mac",
+    "linux",
+    "android",
+    "ios",
+    "web",
     "server"
-   ]
+   ],
+   "thumbs": []
   },
   {
    "id": "owncloud-infinite-scale",
@@ -8057,10 +8966,15 @@
    "release": "https://github.com/owncloud/ocis/releases/tag/v8.2.2",
    "screenshots": [],
    "platforms": [
+    "windows",
     "mac",
     "linux",
+    "android",
+    "ios",
+    "web",
     "server"
-   ]
+   ],
+   "thumbs": []
   },
   {
    "id": "padloc",
@@ -8090,11 +9004,14 @@
    "release": "https://github.com/padloc/padloc/releases/tag/v4.3.0",
    "screenshots": [],
    "platforms": [
+    "web",
     "windows",
     "mac",
     "linux",
-    "android"
-   ]
+    "android",
+    "ios"
+   ],
+   "thumbs": []
   },
   {
    "id": "pagure",
@@ -8122,7 +9039,8 @@
    "screenshots": [],
    "platforms": [
     "server"
-   ]
+   ],
+   "thumbs": []
   },
   {
    "id": "papercups",
@@ -8152,6 +9070,9 @@
    ],
    "platforms": [
     "server"
+   ],
+   "thumbs": [
+    "assets/shots/papercups-0.webp"
    ]
   },
   {
@@ -8182,9 +9103,12 @@
    "release": "https://github.com/passbolt/passbolt_api/releases/tag/v5.17.0",
    "screenshots": [],
    "platforms": [
+    "web",
     "android",
+    "ios",
     "server"
-   ]
+   ],
+   "thumbs": []
   },
   {
    "id": "payload",
@@ -8212,7 +9136,8 @@
    "screenshots": [],
    "platforms": [
     "server"
-   ]
+   ],
+   "thumbs": []
   },
   {
    "id": "pdf-arranger",
@@ -8239,7 +9164,8 @@
    "platforms": [
     "windows",
     "linux"
-   ]
+   ],
+   "thumbs": []
   },
   {
    "id": "peertube",
@@ -8272,6 +9198,12 @@
    "platforms": [
     "web",
     "server"
+   ],
+   "thumbs": [
+    "assets/shots/peertube-0.webp",
+    "assets/shots/peertube-1.webp",
+    "assets/shots/peertube-2.webp",
+    "assets/shots/peertube-3.webp"
    ]
   },
   {
@@ -8285,7 +9217,7 @@
    "license": "MPL-2.0",
    "licenseClass": "open",
    "licenseNeedsCheck": false,
-   "stars": 61689,
+   "stars": 61690,
    "archived": false,
    "inactive": false,
    "unconfirmed": [
@@ -8304,6 +9236,12 @@
    "platforms": [
     "web",
     "server"
+   ],
+   "thumbs": [
+    "assets/shots/penpot-0.webp",
+    "assets/shots/penpot-1.webp",
+    "assets/shots/penpot-2.webp",
+    "assets/shots/penpot-3.webp"
    ]
   },
   {
@@ -8332,7 +9270,8 @@
    "screenshots": [],
    "platforms": [
     "server"
-   ]
+   ],
+   "thumbs": []
   },
   {
    "id": "photoprism",
@@ -8345,7 +9284,7 @@
    "license": "AGPL-3.0",
    "licenseClass": "open",
    "licenseNeedsCheck": false,
-   "stars": 40365,
+   "stars": 40366,
    "archived": false,
    "inactive": false,
    "unconfirmed": [
@@ -8364,6 +9303,11 @@
    "platforms": [
     "linux",
     "server"
+   ],
+   "thumbs": [
+    "assets/shots/photoprism-0.webp",
+    "assets/shots/photoprism-1.webp",
+    "assets/shots/photoprism-2.webp"
    ]
   },
   {
@@ -8374,7 +9318,7 @@
    "code": "codeberg.org/rimu/pyfedi",
    "website": "https://join.piefed.social",
    "download": null,
-   "license": null,
+   "license": "AGPL-3.0",
    "licenseClass": "open",
    "licenseNeedsCheck": true,
    "stars": 265,
@@ -8392,7 +9336,9 @@
    "screenshots": [],
    "platforms": [
     "server"
-   ]
+   ],
+   "licenseSource": "https://codeberg.org/rimu/pyfedi/raw/branch/main/LICENSE",
+   "thumbs": []
   },
   {
    "id": "pingcap",
@@ -8422,7 +9368,37 @@
    "platforms": [
     "web",
     "server"
-   ]
+   ],
+   "thumbs": []
+  },
+  {
+   "id": "pinta",
+   "name": "Pinta",
+   "summary": "Pinta is a simple paint program for drawing and making basic edits to pictures. It is aimed at people who want an easy image editor on Linux, Windows, or macOS.",
+   "kind": "app",
+   "code": "github.com/PintaProject/Pinta",
+   "website": "http://www.pinta-project.com/",
+   "download": null,
+   "license": "MIT",
+   "licenseClass": "open",
+   "licenseNeedsCheck": false,
+   "stars": 4112,
+   "archived": false,
+   "inactive": false,
+   "unconfirmed": [
+    "Whether Pinta's photo editing covers retouching and adjustments of the kind Lightroom provides is not stated.",
+    "The README does not describe the full feature set beyond being a Paint.Net-style paint program."
+   ],
+   "source": "starter",
+   "verified": false,
+   "release": "https://github.com/PintaProject/Pinta/releases/tag/3.1.2",
+   "screenshots": [],
+   "platforms": [
+    "windows",
+    "mac",
+    "linux"
+   ],
+   "thumbs": []
   },
   {
    "id": "pixelfed",
@@ -8450,6 +9426,9 @@
    ],
    "platforms": [
     "server"
+   ],
+   "thumbs": [
+    "assets/shots/pixelfed-0.webp"
    ]
   },
   {
@@ -8463,7 +9442,7 @@
    "license": "AGPL-3.0",
    "licenseClass": "open",
    "licenseNeedsCheck": false,
-   "stars": 61461,
+   "stars": 61462,
    "archived": false,
    "inactive": false,
    "unconfirmed": [
@@ -8482,6 +9461,12 @@
    ],
    "platforms": [
     "server"
+   ],
+   "thumbs": [
+    "assets/shots/plane-0.webp",
+    "assets/shots/plane-1.webp",
+    "assets/shots/plane-2.webp",
+    "assets/shots/plane-3.webp"
    ]
   },
   {
@@ -8513,6 +9498,9 @@
    ],
    "platforms": [
     "web"
+   ],
+   "thumbs": [
+    "assets/shots/plasmic-0.webp"
    ]
   },
   {
@@ -8541,6 +9529,9 @@
    ],
    "platforms": [
     "server"
+   ],
+   "thumbs": [
+    "assets/shots/plausible-0.webp"
    ]
   },
   {
@@ -8570,7 +9561,8 @@
    "screenshots": [],
    "platforms": [
     "server"
-   ]
+   ],
+   "thumbs": []
   },
   {
    "id": "pocket-casts",
@@ -8597,7 +9589,8 @@
    "screenshots": [],
    "platforms": [
     "android"
-   ]
+   ],
+   "thumbs": []
   },
   {
    "id": "pocketbase",
@@ -8630,7 +9623,39 @@
     "windows",
     "mac",
     "linux"
+   ],
+   "thumbs": [
+    "assets/shots/pocketbase-0.webp",
+    "assets/shots/pocketbase-1.webp"
    ]
+  },
+  {
+   "id": "pop-os",
+   "name": "Pop!_OS",
+   "summary": "Pop!_OS is a free Linux operating system that runs on computers and aims to be secure and easy to customize. It is made for people who want a productive desktop, including those who buy System76 hardware.",
+   "kind": "app",
+   "code": "https://github.com/pop-os",
+   "website": "https://system76.com/pop/",
+   "download": null,
+   "license": null,
+   "licenseClass": "open",
+   "licenseNeedsCheck": true,
+   "stars": null,
+   "archived": false,
+   "inactive": false,
+   "unconfirmed": [
+    "The specific open-source license for Pop!_OS is not stated in the material.",
+    "The README does not state whether Pop!_OS runs on hardware other than System76 computers.",
+    "The README does not name the exact Ubuntu base or version.",
+    "The list description 'Good for newer laptops and graphics cards' is not confirmed by the README beyond the claim of gaming and driver convenience."
+   ],
+   "source": "starter",
+   "verified": false,
+   "screenshots": [],
+   "platforms": [
+    "linux"
+   ],
+   "thumbs": []
   },
   {
    "id": "posnic-pos",
@@ -8664,17 +9689,20 @@
     "windows",
     "mac",
     "linux"
+   ],
+   "thumbs": [
+    "assets/shots/posnic-pos-0.webp"
    ]
   },
   {
    "id": "postmarketos",
    "name": "postmarketOS",
-   "summary": "Nura is a free Linux-based operating system for phones that aims to keep older devices useful for longer. It is for people who want full control over their phone and are comfortable with an early-stage, not-yet-polished system.",
+   "summary": "postmarketOS is a Linux-based operating system for phones, built to keep older devices useful for many years. It is for tinkerers: on most phones, calls, the camera or mobile data do not fully work yet.",
    "kind": "app",
    "code": null,
    "website": "https://postmarketos.org",
    "download": "https://postmarketos.org/download/",
-   "license": null,
+   "license": "GPL-3.0-or-later",
    "licenseClass": "open",
    "licenseNeedsCheck": true,
    "stars": null,
@@ -8691,7 +9719,9 @@
    "screenshots": [],
    "platforms": [
     "linux"
-   ]
+   ],
+   "licenseSource": "https://gitlab.postmarketos.org/postmarketOS/pmbootstrap/-/raw/main/pmbootstrap.py",
+   "thumbs": []
   },
   {
    "id": "preset",
@@ -8723,6 +9753,11 @@
    ],
    "platforms": [
     "server"
+   ],
+   "thumbs": [
+    "assets/shots/preset-0.webp",
+    "assets/shots/preset-1.webp",
+    "assets/shots/preset-2.webp"
    ]
   },
   {
@@ -8732,7 +9767,7 @@
    "kind": "self_hosted",
    "code": "github.com/PrestaShop/PrestaShop",
    "website": "https://www.prestashop-project.org/",
-   "license": null,
+   "license": "OSL-3.0",
    "licenseClass": "open",
    "licenseNeedsCheck": true,
    "stars": 9235,
@@ -8753,6 +9788,10 @@
    ],
    "platforms": [
     "server"
+   ],
+   "licenseSource": "https://raw.githubusercontent.com/PrestaShop/PrestaShop/develop/LICENSE.md",
+   "thumbs": [
+    "assets/shots/presta-0.webp"
    ]
   },
   {
@@ -8784,6 +9823,9 @@
    ],
    "platforms": [
     "server"
+   ],
+   "thumbs": [
+    "assets/shots/prisme-analytics-0.webp"
    ]
   },
   {
@@ -8812,6 +9854,9 @@
    ],
    "platforms": [
     "server"
+   ],
+   "thumbs": [
+    "assets/shots/psitransfer-0.webp"
    ]
   },
   {
@@ -8845,6 +9890,9 @@
     "windows",
     "mac",
     "linux"
+   ],
+   "thumbs": [
+    "assets/shots/qdrant-0.webp"
    ]
   },
   {
@@ -8873,8 +9921,10 @@
    "release": null,
    "screenshots": [],
    "platforms": [
+    "web",
     "server"
-   ]
+   ],
+   "thumbs": []
   },
   {
    "id": "questdb",
@@ -8906,6 +9956,9 @@
     "windows",
     "linux",
     "server"
+   ],
+   "thumbs": [
+    "assets/shots/questdb-0.webp"
    ]
   },
   {
@@ -8936,7 +9989,8 @@
     "mac",
     "linux",
     "server"
-   ]
+   ],
+   "thumbs": []
   },
   {
    "id": "quillpad",
@@ -8968,6 +10022,10 @@
    ],
    "platforms": [
     "android"
+   ],
+   "thumbs": [
+    "assets/shots/quillpad-0.webp",
+    "assets/shots/quillpad-1.webp"
    ]
   },
   {
@@ -8997,7 +10055,8 @@
     "windows",
     "mac",
     "linux"
-   ]
+   ],
+   "thumbs": []
   },
   {
    "id": "redmine",
@@ -9006,7 +10065,7 @@
    "kind": "self_hosted",
    "code": "github.com/redmine/redmine",
    "website": "https://www.redmine.org",
-   "license": null,
+   "license": "GPL-2.0-or-later",
    "licenseClass": "open",
    "licenseNeedsCheck": true,
    "stars": 6061,
@@ -9026,7 +10085,9 @@
    "screenshots": [],
    "platforms": [
     "server"
-   ]
+   ],
+   "licenseSource": "https://raw.githubusercontent.com/redmine/redmine/master/LICENSE.txt",
+   "thumbs": []
   },
   {
    "id": "restic",
@@ -9051,7 +10112,8 @@
     "windows",
     "mac",
     "linux"
-   ]
+   ],
+   "thumbs": []
   },
   {
    "id": "reveal-js",
@@ -9077,7 +10139,8 @@
    "platforms": [
     "web",
     "server"
-   ]
+   ],
+   "thumbs": []
   },
   {
    "id": "review-board",
@@ -9106,7 +10169,8 @@
    "platforms": [
     "web",
     "server"
-   ]
+   ],
+   "thumbs": []
   },
   {
    "id": "rocket-chat",
@@ -9136,8 +10200,11 @@
     "mac",
     "linux",
     "android",
+    "ios",
+    "web",
     "server"
-   ]
+   ],
+   "thumbs": []
   },
   {
    "id": "roundcube",
@@ -9162,8 +10229,10 @@
    "release": "https://github.com/roundcube/roundcubemail/releases/tag/1.7.5",
    "screenshots": [],
    "platforms": [
+    "web",
     "server"
-   ]
+   ],
+   "thumbs": []
   },
   {
    "id": "rustdesk",
@@ -9198,6 +10267,10 @@
     "mac",
     "linux",
     "android"
+   ],
+   "thumbs": [
+    "assets/shots/rustdesk-0.webp",
+    "assets/shots/rustdesk-1.webp"
    ]
   },
   {
@@ -9227,6 +10300,9 @@
    ],
    "platforms": [
     "server"
+   ],
+   "thumbs": [
+    "assets/shots/saleor-0.webp"
    ]
   },
   {
@@ -9255,7 +10331,8 @@
     "windows",
     "mac",
     "linux"
-   ]
+   ],
+   "thumbs": []
   },
   {
    "id": "seafile",
@@ -9287,7 +10364,8 @@
     "ios",
     "web",
     "server"
-   ]
+   ],
+   "thumbs": []
   },
   {
    "id": "searxng",
@@ -9300,7 +10378,7 @@
    "license": "AGPL-3.0",
    "licenseClass": "open",
    "licenseNeedsCheck": false,
-   "stars": 38859,
+   "stars": 38861,
    "archived": false,
    "inactive": false,
    "unconfirmed": [
@@ -9315,7 +10393,8 @@
     "linux",
     "web",
     "server"
-   ]
+   ],
+   "thumbs": []
   },
   {
    "id": "semi",
@@ -9324,8 +10403,8 @@
    "kind": "developer_tool",
    "code": "github.com/weaviate/weaviate",
    "website": "https://weaviate.io/developers/weaviate/",
-   "license": null,
-   "licenseClass": "open",
+   "license": "BSD-3-Clause",
+   "licenseClass": "open_core",
    "licenseNeedsCheck": true,
    "stars": 16915,
    "archived": false,
@@ -9345,7 +10424,9 @@
    "platforms": [
     "mac",
     "linux"
-   ]
+   ],
+   "licenseSource": "https://raw.githubusercontent.com/weaviate/weaviate/main/LICENSE",
+   "thumbs": []
   },
   {
    "id": "shlink",
@@ -9373,7 +10454,8 @@
    "screenshots": [],
    "platforms": [
     "server"
-   ]
+   ],
+   "thumbs": []
   },
   {
    "id": "shotcut",
@@ -9404,6 +10486,9 @@
     "windows",
     "mac",
     "linux"
+   ],
+   "thumbs": [
+    "assets/shots/shotcut-0.webp"
    ]
   },
   {
@@ -9413,7 +10498,7 @@
    "kind": "self_hosted",
    "code": "github.com/shuup/shuup",
    "website": "https://www.shuup.com",
-   "license": null,
+   "license": "OSL-3.0",
    "licenseClass": "open",
    "licenseNeedsCheck": true,
    "stars": 2407,
@@ -9434,7 +10519,9 @@
    "screenshots": [],
    "platforms": [
     "server"
-   ]
+   ],
+   "licenseSource": "https://raw.githubusercontent.com/shuup/shuup/master/LICENSE",
+   "thumbs": []
   },
   {
    "id": "shynet",
@@ -9465,6 +10552,10 @@
    ],
    "platforms": [
     "server"
+   ],
+   "thumbs": [
+    "assets/shots/shynet-0.webp",
+    "assets/shots/shynet-1.webp"
    ]
   },
   {
@@ -9496,7 +10587,8 @@
     "linux",
     "android",
     "ios"
-   ]
+   ],
+   "thumbs": []
   },
   {
    "id": "signoz",
@@ -9505,7 +10597,7 @@
    "kind": "self_hosted",
    "code": "github.com/SigNoz/signoz",
    "website": "https://signoz.io",
-   "license": null,
+   "license": "MIT",
    "licenseClass": "open_core",
    "licenseNeedsCheck": true,
    "stars": 32455,
@@ -9533,6 +10625,13 @@
     "mac",
     "linux",
     "server"
+   ],
+   "licenseSource": "https://raw.githubusercontent.com/SigNoz/signoz/main/LICENSE",
+   "thumbs": [
+    "assets/shots/signoz-0.webp",
+    "assets/shots/signoz-1.webp",
+    "assets/shots/signoz-2.webp",
+    "assets/shots/signoz-3.webp"
    ]
   },
   {
@@ -9569,6 +10668,44 @@
     "mac",
     "linux",
     "server"
+   ],
+   "thumbs": [
+    "assets/shots/silex-0.webp"
+   ]
+  },
+  {
+   "id": "silverbullet",
+   "name": "SilverBullet",
+   "summary": "SilverBullet is a free notes app that runs in your web browser and stores your notes as plain Markdown pages on a server you control. It is aimed at tech-minded people who want to host their own notes and customize them with scripts.",
+   "kind": "self_hosted",
+   "code": "github.com/silverbulletmd/silverbullet",
+   "website": "https://silverbullet.md",
+   "download": null,
+   "license": "MIT",
+   "licenseClass": "open",
+   "licenseNeedsCheck": false,
+   "stars": 6388,
+   "archived": false,
+   "inactive": false,
+   "unconfirmed": [
+    "Whether the MIT license covers the whole project or only parts of it",
+    "Whether there are paid or differently licensed parts",
+    "Whether a hosted version or mobile apps exist, since the README only describes self-hosting",
+    "Whether team or multi-user collaboration is supported",
+    "Whether handwriting, drawing, clipping or reminders are supported"
+   ],
+   "source": "starter",
+   "verified": false,
+   "release": "https://github.com/silverbulletmd/silverbullet/releases/tag/2.12.1",
+   "screenshots": [
+    "https://silverbullet.md/media/og/default.jpg"
+   ],
+   "platforms": [
+    "web",
+    "server"
+   ],
+   "thumbs": [
+    null
    ]
   },
   {
@@ -9600,6 +10737,9 @@
    ],
    "platforms": [
     "android"
+   ],
+   "thumbs": [
+    "assets/shots/simple-keyboard-0.webp"
    ]
   },
   {
@@ -9613,7 +10753,7 @@
    "license": "AGPL-3.0",
    "licenseClass": "open",
    "licenseNeedsCheck": false,
-   "stars": 19598,
+   "stars": 19597,
    "archived": false,
    "inactive": false,
    "unconfirmed": [
@@ -9637,6 +10777,11 @@
     "linux",
     "android",
     "ios"
+   ],
+   "thumbs": [
+    "assets/shots/simplex-chat-0.webp",
+    "assets/shots/simplex-chat-1.webp",
+    "assets/shots/simplex-chat-2.webp"
    ]
   },
   {
@@ -9670,7 +10815,13 @@
     "windows",
     "mac",
     "linux",
-    "android"
+    "android",
+    "ios",
+    "web"
+   ],
+   "thumbs": [
+    "assets/shots/siyuan-0.webp",
+    "assets/shots/siyuan-1.webp"
    ]
   },
   {
@@ -9697,7 +10848,8 @@
    "screenshots": [],
    "platforms": [
     "web"
-   ]
+   ],
+   "thumbs": []
   },
   {
    "id": "snikket",
@@ -9725,8 +10877,11 @@
    "release": null,
    "screenshots": [],
    "platforms": [
+    "android",
+    "ios",
     "server"
-   ]
+   ],
+   "thumbs": []
   },
   {
    "id": "solidinvoice",
@@ -9762,6 +10917,12 @@
     "linux",
     "android",
     "server"
+   ],
+   "thumbs": [
+    "assets/shots/solidinvoice-0.webp",
+    "assets/shots/solidinvoice-1.webp",
+    "assets/shots/solidinvoice-2.webp",
+    "assets/shots/solidinvoice-3.webp"
    ]
   },
   {
@@ -9797,6 +10958,11 @@
     "mac",
     "linux",
     "server"
+   ],
+   "thumbs": [
+    "assets/shots/solidping-0.webp",
+    "assets/shots/solidping-1.webp",
+    "assets/shots/solidping-2.webp"
    ]
   },
   {
@@ -9827,6 +10993,9 @@
    ],
    "platforms": [
     "server"
+   ],
+   "thumbs": [
+    "assets/shots/solidtime-0.webp"
    ]
   },
   {
@@ -9856,7 +11025,8 @@
    "platforms": [
     "linux",
     "server"
-   ]
+   ],
+   "thumbs": []
   },
   {
    "id": "spacebar",
@@ -9886,40 +11056,8 @@
    "screenshots": [],
    "platforms": [
     "server"
-   ]
-  },
-  {
-   "id": "spacedrive",
-   "name": "Spacedrive",
-   "summary": "Spacedrive is a file manager that shows and searches files across your own drives, computers, servers and chosen cloud services as one filesystem. It is for people who want their files under their own control, but it is still in early development, with a beta planned for November 2026.",
-   "kind": "app",
-   "code": "github.com/spacedriveapp/spacedrive",
-   "website": "https://spacedrive.com",
-   "license": "Apache-2.0",
-   "licenseClass": "open",
-   "licenseNeedsCheck": false,
-   "stars": 39306,
-   "archived": false,
-   "inactive": false,
-   "unconfirmed": [
-    "Whether file sync between devices works in the current release, since the 2.0 Beta is planned for November 1, 2026 and nightly builds can break.",
-    "Whether the desktop app is available for Windows or mobile; the README mentions macOS, Windows and Linux mounts but the install section only lists macOS ARM64 and Linux x86-64 nightly binaries.",
-    "Which cloud providers are supported and how closely they match Dropbox or Google Drive features such as sharing links or version history for hosted files."
    ],
-   "source": "lists",
-   "sourceLists": [
-    "awesome-oss-alternatives"
-   ],
-   "verified": false,
-   "release": "https://github.com/spacedriveapp/spacedrive/releases/tag/0.4.3",
-   "screenshots": [
-    "https://raw.githubusercontent.com/spacedriveapp/spacedrive/HEAD/docs/public/SDGridView.webp"
-   ],
-   "platforms": [
-    "windows",
-    "mac",
-    "linux"
-   ]
+   "thumbs": []
   },
   {
    "id": "spliit-app",
@@ -9948,7 +11086,8 @@
    "screenshots": [],
    "platforms": [
     "server"
-   ]
+   ],
+   "thumbs": []
   },
   {
    "id": "stable-diffusion-web-ui",
@@ -9961,7 +11100,7 @@
    "license": "AGPL-3.0",
    "licenseClass": "open",
    "licenseNeedsCheck": false,
-   "stars": 165149,
+   "stars": 165150,
    "archived": false,
    "inactive": false,
    "unconfirmed": [
@@ -9979,6 +11118,9 @@
     "windows",
     "mac",
     "linux"
+   ],
+   "thumbs": [
+    "assets/shots/stable-diffusion-web-ui-0.webp"
    ]
   },
   {
@@ -10005,11 +11147,14 @@
    "release": "https://github.com/standardnotes/app/releases/tag/%40standardnotes/desktop%403.202.10",
    "screenshots": [],
    "platforms": [
+    "windows",
     "mac",
     "linux",
     "android",
-    "ios"
-   ]
+    "ios",
+    "web"
+   ],
+   "thumbs": []
   },
   {
    "id": "step-ci",
@@ -10037,7 +11182,8 @@
    "screenshots": [],
    "platforms": [
     "server"
-   ]
+   ],
+   "thumbs": []
   },
   {
    "id": "stirling-pdf",
@@ -10068,36 +11214,9 @@
     "mac",
     "linux",
     "server"
-   ]
-  },
-  {
-   "id": "stoat",
-   "name": "Stoat",
-   "summary": "Stoat is a group chat platform that you install on your own server and use through a web browser, with optional voice and video calls. It is for communities or teams who want to run their own chat and calling service instead of relying on a company's servers.",
-   "kind": "self_hosted",
-   "code": "github.com/stoatchat/self-hosted",
-   "website": "https://stoat.chat",
-   "license": "AGPL-3.0",
-   "licenseClass": "open",
-   "licenseNeedsCheck": false,
-   "stars": 2677,
-   "archived": false,
-   "inactive": false,
-   "unconfirmed": [
-    "Whether the project has official desktop or phone apps, since the README says most official clients do not yet support self-hosted instances.",
-    "Whether servers with channels and voice rooms exist, since the material does not describe them.",
-    "The exact video call limits beyond the video resolution setting and whether group video calls are supported.",
-    "Whether the license covers all parts of the project, since the license file was not provided."
    ],
-   "source": "lists",
-   "sourceLists": [
-    "awesome-privacy"
-   ],
-   "verified": false,
-   "release": null,
-   "screenshots": [],
-   "platforms": [
-    "server"
+   "thumbs": [
+    "assets/shots/stirling-pdf-0.webp"
    ]
   },
   {
@@ -10107,7 +11226,7 @@
    "kind": "self_hosted",
    "code": "github.com/strapi/strapi",
    "website": "https://strapi.io",
-   "license": null,
+   "license": "MIT",
    "licenseClass": "open_core",
    "licenseNeedsCheck": true,
    "stars": 73381,
@@ -10128,7 +11247,9 @@
    "screenshots": [],
    "platforms": [
     "server"
-   ]
+   ],
+   "licenseSource": "https://raw.githubusercontent.com/strapi/strapi/develop/LICENSE",
+   "thumbs": []
   },
   {
    "id": "suitecrm",
@@ -10156,7 +11277,8 @@
    "screenshots": [],
    "platforms": [
     "server"
-   ]
+   ],
+   "thumbs": []
   },
   {
    "id": "sulu",
@@ -10186,6 +11308,9 @@
    ],
    "platforms": [
     "server"
+   ],
+   "thumbs": [
+    "assets/shots/sulu-0.webp"
    ]
   },
   {
@@ -10221,6 +11346,10 @@
    "platforms": [
     "web",
     "server"
+   ],
+   "thumbs": [
+    "assets/shots/supabase-0.webp",
+    "assets/shots/supabase-1.webp"
    ]
   },
   {
@@ -10255,6 +11384,9 @@
     "mac",
     "linux",
     "android"
+   ],
+   "thumbs": [
+    "assets/shots/super-productivity-0.webp"
    ]
   },
   {
@@ -10264,7 +11396,7 @@
    "kind": "self_hosted",
    "code": "github.com/supertokens/supertokens-core",
    "website": "https://supertokens.com",
-   "license": null,
+   "license": "Apache-2.0",
    "licenseClass": "open_core",
    "licenseNeedsCheck": true,
    "stars": 15332,
@@ -10289,6 +11421,11 @@
    ],
    "platforms": [
     "server"
+   ],
+   "licenseSource": "https://raw.githubusercontent.com/supertokens/supertokens-core/master/LICENSE.md",
+   "thumbs": [
+    "assets/shots/supertokens-0.webp",
+    "assets/shots/supertokens-1.webp"
    ]
   },
   {
@@ -10320,6 +11457,9 @@
    ],
    "platforms": [
     "server"
+   ],
+   "thumbs": [
+    "assets/shots/sylius-0.webp"
    ]
   },
   {
@@ -10333,7 +11473,7 @@
    "license": "MPL-2.0",
    "licenseClass": "open",
    "licenseNeedsCheck": false,
-   "stars": 89763,
+   "stars": 89765,
    "archived": false,
    "inactive": false,
    "unconfirmed": [
@@ -10348,7 +11488,36 @@
     "windows",
     "mac",
     "linux"
-   ]
+   ],
+   "thumbs": []
+  },
+  {
+   "id": "tabby",
+   "name": "Tabby",
+   "summary": "Tabby is a self-hosted AI coding assistant that suggests code as you type. It is for developers who want to run the server on their own hardware instead of using a cloud service.",
+   "kind": "self_hosted",
+   "code": "github.com/TabbyML/tabby",
+   "website": "https://tabbyml.com",
+   "download": null,
+   "license": "Apache-2.0",
+   "licenseClass": "open_core",
+   "licenseNeedsCheck": false,
+   "stars": 33923,
+   "archived": false,
+   "inactive": false,
+   "unconfirmed": [
+    "Whether the ee/ directory exists and what its license terms are.",
+    "Whether Tabby covers the agent features of Cursor, Windsurf, Claude Code or the OpenAI Codex app.",
+    "Whether a hosted or paid tier exists."
+   ],
+   "source": "starter",
+   "verified": false,
+   "release": "https://github.com/TabbyML/tabby/releases/tag/v0.32.0",
+   "screenshots": [],
+   "platforms": [
+    "server"
+   ],
+   "thumbs": []
   },
   {
    "id": "tabler-icons",
@@ -10374,7 +11543,8 @@
    "verified": false,
    "release": "https://github.com/tabler/tabler-icons/releases/tag/v3.49.0",
    "screenshots": [],
-   "platforms": []
+   "platforms": [],
+   "thumbs": []
   },
   {
    "id": "taiga",
@@ -10403,7 +11573,8 @@
    "platforms": [
     "web",
     "server"
-   ]
+   ],
+   "thumbs": []
   },
   {
    "id": "tdengine",
@@ -10435,7 +11606,8 @@
     "mac",
     "linux",
     "server"
-   ]
+   ],
+   "thumbs": []
   },
   {
    "id": "telemetry-tracker",
@@ -10467,6 +11639,10 @@
    ],
    "platforms": [
     "server"
+   ],
+   "thumbs": [
+    "assets/shots/telemetry-tracker-0.webp",
+    "assets/shots/telemetry-tracker-1.webp"
    ]
   },
   {
@@ -10496,7 +11672,8 @@
    "screenshots": [],
    "platforms": [
     "linux"
-   ]
+   ],
+   "thumbs": []
   },
   {
    "id": "thunderbird",
@@ -10506,7 +11683,7 @@
    "code": null,
    "website": "https://www.thunderbird.net",
    "download": "https://www.thunderbird.net/download/",
-   "license": null,
+   "license": "MPL-2.0",
    "licenseClass": "open",
    "licenseNeedsCheck": true,
    "stars": null,
@@ -10526,7 +11703,9 @@
     "mac",
     "linux",
     "android"
-   ]
+   ],
+   "licenseSource": "https://raw.githubusercontent.com/mozilla/releases-comm-central/master/mail/base/content/mailWindow.js",
+   "thumbs": []
   },
   {
    "id": "tina",
@@ -10557,6 +11736,9 @@
    "platforms": [
     "web",
     "server"
+   ],
+   "thumbs": [
+    "assets/shots/tina-0.webp"
    ]
   },
   {
@@ -10596,6 +11778,12 @@
     "android",
     "ios",
     "server"
+   ],
+   "thumbs": [
+    "assets/shots/tinode-0.webp",
+    "assets/shots/tinode-1.webp",
+    "assets/shots/tinode-2.webp",
+    "assets/shots/tinode-3.webp"
    ]
   },
   {
@@ -10625,7 +11813,38 @@
    "screenshots": [],
    "platforms": [
     "server"
-   ]
+   ],
+   "thumbs": []
+  },
+  {
+   "id": "tor-browser",
+   "name": "Tor Browser",
+   "summary": "Tor Browser is a web browser that hides your location and browsing from trackers and anyone watching your internet connection. It is for people who want privacy online or need to reach sites that may be blocked.",
+   "kind": "app",
+   "code": "https://gitlab.torproject.org/tpo/applications/tor-browser",
+   "website": "https://www.torproject.org",
+   "download": null,
+   "license": null,
+   "licenseClass": "open",
+   "licenseNeedsCheck": true,
+   "stars": null,
+   "archived": false,
+   "inactive": false,
+   "unconfirmed": [
+    "License terms (no license reported by host and no license file provided)",
+    "Whether the source code is published, as the README does not state it",
+    "Exact speed differences compared with Chrome, Safari and Edge beyond the list's description"
+   ],
+   "source": "starter",
+   "verified": false,
+   "screenshots": [],
+   "platforms": [
+    "windows",
+    "mac",
+    "linux",
+    "android"
+   ],
+   "thumbs": []
   },
   {
    "id": "trench",
@@ -10656,6 +11875,9 @@
    ],
    "platforms": [
     "server"
+   ],
+   "thumbs": [
+    "assets/shots/trench-0.webp"
    ]
   },
   {
@@ -10687,7 +11909,11 @@
     "windows",
     "mac",
     "linux",
-    "ios"
+    "web",
+    "server"
+   ],
+   "thumbs": [
+    "assets/shots/trilium-notes-0.webp"
    ]
   },
   {
@@ -10720,8 +11946,10 @@
     "mac",
     "linux",
     "android",
-    "ios"
-   ]
+    "ios",
+    "web"
+   ],
+   "thumbs": []
   },
   {
    "id": "twenty",
@@ -10730,7 +11958,7 @@
    "kind": "self_hosted",
    "code": "github.com/twentyhq/twenty",
    "website": "https://twenty.com",
-   "license": null,
+   "license": "AGPL-3.0",
    "licenseClass": "open_core",
    "licenseNeedsCheck": true,
    "stars": 59761,
@@ -10754,6 +11982,12 @@
    ],
    "platforms": [
     "server"
+   ],
+   "licenseSource": "https://raw.githubusercontent.com/twentyhq/twenty/main/LICENSE",
+   "thumbs": [
+    "assets/shots/twenty-0.webp",
+    "assets/shots/twenty-1.webp",
+    "assets/shots/twenty-2.webp"
    ]
   },
   {
@@ -10787,6 +12021,11 @@
    ],
    "platforms": [
     "server"
+   ],
+   "thumbs": [
+    "assets/shots/tymeslot-0.webp",
+    "assets/shots/tymeslot-1.webp",
+    "assets/shots/tymeslot-2.webp"
    ]
   },
   {
@@ -10820,6 +12059,9 @@
    ],
    "platforms": [
     "server"
+   ],
+   "thumbs": [
+    "assets/shots/typesense-0.webp"
    ]
   },
   {
@@ -10830,7 +12072,7 @@
    "code": null,
    "website": "https://ubuntu.com",
    "download": "https://ubuntu.com/download/desktop",
-   "license": null,
+   "license": "GPL-3.0",
    "licenseClass": "open",
    "licenseNeedsCheck": true,
    "stars": null,
@@ -10847,7 +12089,36 @@
    "platforms": [
     "linux",
     "server"
-   ]
+   ],
+   "licenseSource": "https://raw.githubusercontent.com/canonical/ubuntu-desktop-provision/main/LICENSE",
+   "thumbs": []
+  },
+  {
+   "id": "ubuntu-touch",
+   "name": "Ubuntu Touch",
+   "summary": "Ubuntu Touch is a free, open source operating system for smartphones that aims to work like a full desktop computer. It is for people who want a phone with more privacy and control over their software.",
+   "kind": "app",
+   "code": "https://gitlab.com/ubports",
+   "website": "https://ubports.com",
+   "download": null,
+   "license": null,
+   "licenseClass": "open",
+   "licenseNeedsCheck": true,
+   "stars": null,
+   "archived": false,
+   "inactive": false,
+   "unconfirmed": [
+    "The license of the Ubuntu Touch operating system software itself is not stated in the material.",
+    "The exact list of supported phones is not given in the README.",
+    "App count and app store details are not confirmed beyond the list description."
+   ],
+   "source": "starter",
+   "verified": false,
+   "screenshots": [],
+   "platforms": [
+    "linux"
+   ],
+   "thumbs": []
   },
   {
    "id": "ultravnc",
@@ -10880,6 +12151,9 @@
     "windows",
     "mac",
     "linux"
+   ],
+   "thumbs": [
+    "assets/shots/ultravnc-0.webp"
    ]
   },
   {
@@ -10893,7 +12167,7 @@
    "license": "MIT",
    "licenseClass": "open",
    "licenseNeedsCheck": false,
-   "stars": 39698,
+   "stars": 39700,
    "archived": false,
    "inactive": false,
    "unconfirmed": [
@@ -10908,6 +12182,9 @@
    ],
    "platforms": [
     "server"
+   ],
+   "thumbs": [
+    "assets/shots/umami-0.webp"
    ]
   },
   {
@@ -10936,7 +12213,8 @@
     "windows",
     "mac",
     "linux"
-   ]
+   ],
+   "thumbs": []
   },
   {
    "id": "unleash",
@@ -10964,7 +12242,8 @@
    "screenshots": [],
    "platforms": [
     "server"
-   ]
+   ],
+   "thumbs": []
   },
   {
    "id": "uptrace",
@@ -11001,6 +12280,12 @@
     "mac",
     "linux",
     "server"
+   ],
+   "thumbs": [
+    "assets/shots/uptrace-0.webp",
+    "assets/shots/uptrace-1.webp",
+    "assets/shots/uptrace-2.webp",
+    "assets/shots/uptrace-3.webp"
    ]
   },
   {
@@ -11030,7 +12315,8 @@
    "screenshots": [],
    "platforms": [
     "server"
-   ]
+   ],
+   "thumbs": []
   },
   {
    "id": "vane-formerly-perplexica",
@@ -11059,6 +12345,9 @@
    ],
    "platforms": [
     "server"
+   ],
+   "thumbs": [
+    "assets/shots/vane-formerly-perplexica-0.webp"
    ]
   },
   {
@@ -11072,7 +12361,7 @@
    "license": "AGPL-3.0",
    "licenseClass": "open",
    "licenseNeedsCheck": false,
-   "stars": 69694,
+   "stars": 69697,
    "archived": false,
    "inactive": false,
    "unconfirmed": [
@@ -11086,7 +12375,8 @@
    "screenshots": [],
    "platforms": [
     "server"
-   ]
+   ],
+   "thumbs": []
   },
   {
    "id": "vendure",
@@ -11095,7 +12385,7 @@
    "kind": "developer_tool",
    "code": "github.com/vendurehq/vendure",
    "website": "https://www.vendure.io",
-   "license": null,
+   "license": "GPL-3.0",
    "licenseClass": "open_core",
    "licenseNeedsCheck": true,
    "stars": 8544,
@@ -11115,7 +12405,9 @@
    "screenshots": [],
    "platforms": [
     "server"
-   ]
+   ],
+   "licenseSource": "https://raw.githubusercontent.com/vendurehq/vendure/master/LICENSE.md",
+   "thumbs": []
   },
   {
    "id": "victorialogs",
@@ -11146,7 +12438,8 @@
     "windows",
     "mac",
     "linux"
-   ]
+   ],
+   "thumbs": []
   },
   {
    "id": "victoriametrics",
@@ -11179,7 +12472,8 @@
     "mac",
     "linux",
     "server"
-   ]
+   ],
+   "thumbs": []
   },
   {
    "id": "vikunja",
@@ -11210,7 +12504,8 @@
     "linux",
     "android",
     "server"
-   ]
+   ],
+   "thumbs": []
   },
   {
    "id": "wallabag",
@@ -11241,6 +12536,9 @@
    "platforms": [
     "web",
     "server"
+   ],
+   "thumbs": [
+    "assets/shots/wallabag-0.webp"
    ]
   },
   {
@@ -11250,7 +12548,7 @@
    "kind": "self_hosted",
    "code": "github.com/webiny/webiny-js",
    "website": "https://www.webiny.com",
-   "license": null,
+   "license": "MIT",
    "licenseClass": "open_core",
    "licenseNeedsCheck": true,
    "stars": 8048,
@@ -11271,7 +12569,9 @@
    "screenshots": [],
    "platforms": [
     "server"
-   ]
+   ],
+   "licenseSource": "https://raw.githubusercontent.com/webiny/webiny-js/next/LICENSE",
+   "thumbs": []
   },
   {
    "id": "webstudio",
@@ -11302,7 +12602,8 @@
    "platforms": [
     "web",
     "server"
-   ]
+   ],
+   "thumbs": []
   },
   {
    "id": "wekan",
@@ -11315,7 +12616,7 @@
    "license": "MIT",
    "licenseClass": "open",
    "licenseNeedsCheck": false,
-   "stars": 21140,
+   "stars": 21141,
    "archived": false,
    "inactive": false,
    "unconfirmed": [
@@ -11335,6 +12636,9 @@
     "linux",
     "android",
     "server"
+   ],
+   "thumbs": [
+    "assets/shots/wekan-0.webp"
    ]
   },
   {
@@ -11348,7 +12652,7 @@
    "license": "MIT",
    "licenseClass": "open",
    "licenseNeedsCheck": false,
-   "stars": 111291,
+   "stars": 111292,
    "archived": false,
    "inactive": false,
    "unconfirmed": [
@@ -11361,7 +12665,8 @@
    "screenshots": [],
    "platforms": [
     "windows"
-   ]
+   ],
+   "thumbs": []
   },
   {
    "id": "whisper-cpp",
@@ -11391,6 +12696,9 @@
    "platforms": [
     "windows",
     "linux"
+   ],
+   "thumbs": [
+    "assets/shots/whisper-cpp-0.webp"
    ]
   },
   {
@@ -11400,7 +12708,7 @@
    "kind": "self_hosted",
    "code": "github.com/windmill-labs/windmill",
    "website": "https://windmill.dev",
-   "license": null,
+   "license": "AGPL-3.0",
    "licenseClass": "open_core",
    "licenseNeedsCheck": true,
    "stars": 18269,
@@ -11426,6 +12734,13 @@
    "platforms": [
     "windows",
     "server"
+   ],
+   "licenseSource": "https://raw.githubusercontent.com/windmill-labs/windmill/main/LICENSE",
+   "thumbs": [
+    "assets/shots/windmill-0.webp",
+    "assets/shots/windmill-1.webp",
+    "assets/shots/windmill-2.webp",
+    "assets/shots/windmill-3.webp"
    ]
   },
   {
@@ -11453,7 +12768,8 @@
    "screenshots": [],
    "platforms": [
     "server"
-   ]
+   ],
+   "thumbs": []
   },
   {
    "id": "wordpress",
@@ -11480,7 +12796,8 @@
    "screenshots": [],
    "platforms": [
     "server"
-   ]
+   ],
+   "thumbs": []
   },
   {
    "id": "writefreely",
@@ -11510,6 +12827,9 @@
     "mac",
     "linux",
     "server"
+   ],
+   "thumbs": [
+    "assets/shots/writefreely-0.webp"
    ]
   },
   {
@@ -11547,6 +12867,12 @@
     "mac",
     "linux",
     "android"
+   ],
+   "thumbs": [
+    "assets/shots/xournal-0.webp",
+    "assets/shots/xournal-1.webp",
+    "assets/shots/xournal-2.webp",
+    "assets/shots/xournal-3.webp"
    ]
   },
   {
@@ -11575,7 +12901,8 @@
    "screenshots": [],
    "platforms": [
     "server"
-   ]
+   ],
+   "thumbs": []
   },
   {
    "id": "yacy",
@@ -11585,7 +12912,7 @@
    "code": "github.com/yacy/yacy_search_server",
    "website": "http://yacy.net",
    "download": null,
-   "license": null,
+   "license": "GPL-2.0-or-later",
    "licenseClass": "open",
    "licenseNeedsCheck": true,
    "stars": 4080,
@@ -11605,6 +12932,12 @@
    ],
    "platforms": [
     "server"
+   ],
+   "licenseSource": "https://raw.githubusercontent.com/yacy/yacy_search_server/master/COPYRIGHT",
+   "thumbs": [
+    "assets/shots/yacy-0.webp",
+    "assets/shots/yacy-1.webp",
+    "assets/shots/yacy-2.webp"
    ]
   },
   {
@@ -11641,6 +12974,12 @@
     "windows",
     "mac",
     "linux"
+   ],
+   "thumbs": [
+    "assets/shots/yanknote-0.webp",
+    "assets/shots/yanknote-1.webp",
+    "assets/shots/yanknote-2.webp",
+    "assets/shots/yanknote-3.webp"
    ]
   },
   {
@@ -11676,7 +13015,13 @@
     "windows",
     "mac",
     "linux",
-    "android"
+    "android",
+    "web"
+   ],
+   "thumbs": [
+    "assets/shots/youcoded-0.webp",
+    "assets/shots/youcoded-1.webp",
+    "assets/shots/youcoded-2.webp"
    ]
   },
   {
@@ -11705,7 +13050,8 @@
    "screenshots": [],
    "platforms": [
     "server"
-   ]
+   ],
+   "thumbs": []
   },
   {
    "id": "yugabyte",
@@ -11714,8 +13060,8 @@
    "kind": "self_hosted",
    "code": "github.com/yugabyte/yugabyte-db",
    "website": "https://www.yugabyte.com",
-   "license": null,
-   "licenseClass": "open",
+   "license": "Apache-2.0",
+   "licenseClass": "open_core",
    "licenseNeedsCheck": true,
    "stars": 10630,
    "archived": false,
@@ -11736,7 +13082,9 @@
     "mac",
     "linux",
     "server"
-   ]
+   ],
+   "licenseSource": "https://raw.githubusercontent.com/yugabyte/yugabyte-db/master/LICENSE.md",
+   "thumbs": []
   },
   {
    "id": "zammad",
@@ -11762,6 +13110,42 @@
    "screenshots": [],
    "platforms": [
     "server"
+   ],
+   "thumbs": []
+  },
+  {
+   "id": "zed",
+   "name": "Zed",
+   "summary": "Zed is a fast code editor for writing software, with built-in AI help and support for working with others in real time. It is made for programmers.",
+   "kind": "developer_tool",
+   "code": "github.com/zed-industries/zed",
+   "website": "https://zed.dev",
+   "download": null,
+   "license": "Apache-2.0",
+   "licenseClass": "open",
+   "licenseNeedsCheck": false,
+   "stars": 92215,
+   "archived": false,
+   "inactive": false,
+   "unconfirmed": [
+    "Whether Zed's AI features match the closed apps' features",
+    "Whether Zed provides an agent comparable to Claude Code or the OpenAI Codex app",
+    "Which parts of the codebase are Apache-2.0 versus GPL-3.0-or-later",
+    "Whether the project is open-core or has any paid or differently licensed parts"
+   ],
+   "source": "starter",
+   "verified": false,
+   "release": "https://github.com/zed-industries/zed/releases/tag/v1.25.3",
+   "screenshots": [
+    "https://zed.dev/img/home/og.webp"
+   ],
+   "platforms": [
+    "windows",
+    "mac",
+    "linux"
+   ],
+   "thumbs": [
+    null
    ]
   },
   {
@@ -11775,7 +13159,7 @@
    "license": "MPL-2.0",
    "licenseClass": "open",
    "licenseNeedsCheck": false,
-   "stars": 45299,
+   "stars": 45303,
    "archived": false,
    "inactive": false,
    "unconfirmed": [
@@ -11791,6 +13175,44 @@
     "windows",
     "mac",
     "linux"
+   ],
+   "thumbs": []
+  },
+  {
+   "id": "zettlr",
+   "name": "Zettlr",
+   "summary": "Zettlr is a desktop app for writing notes and publications in plain text, with citation and export support. It is aimed at students, researchers and writers who want to keep their notes on their own computer.",
+   "kind": "app",
+   "code": "github.com/Zettlr/Zettlr",
+   "website": "https://www.zettlr.com",
+   "download": null,
+   "license": "GPL-3.0",
+   "licenseClass": "open",
+   "licenseNeedsCheck": false,
+   "stars": 13823,
+   "archived": false,
+   "inactive": false,
+   "unconfirmed": [
+    "Whether Zettlr has any phone app (the list says desktop only, and the README mentions only macOS, Windows and Linux).",
+    "Whether Zettlr offers team or shared-workspace features.",
+    "Whether Zettlr syncs notes across devices.",
+    "Whether Zettlr has checklists or web clipping."
+   ],
+   "source": "starter",
+   "verified": false,
+   "release": "https://github.com/Zettlr/Zettlr/releases/tag/v4.9.0",
+   "screenshots": [
+    "https://raw.githubusercontent.com/Zettlr/Zettlr/HEAD/resources/screenshots/zettlr_view.png",
+    "https://raw.githubusercontent.com/Zettlr/Zettlr/HEAD/resources/screenshots/zettlr_view_dark.png"
+   ],
+   "platforms": [
+    "windows",
+    "mac",
+    "linux"
+   ],
+   "thumbs": [
+    null,
+    null
    ]
   },
   {
@@ -11800,7 +13222,7 @@
    "kind": "self_hosted",
    "code": "github.com/zincsearch/zincsearch",
    "website": "https://zincsearch-docs.zinc.dev",
-   "license": null,
+   "license": "Apache-2.0",
    "licenseClass": "open",
    "licenseNeedsCheck": true,
    "stars": 17920,
@@ -11826,6 +13248,12 @@
     "mac",
     "linux",
     "server"
+   ],
+   "licenseSource": "https://raw.githubusercontent.com/zincsearch/zincsearch/main/LICENSE",
+   "thumbs": [
+    "assets/shots/zinc-labs-0.webp",
+    "assets/shots/zinc-labs-1.webp",
+    "assets/shots/zinc-labs-2.webp"
    ]
   },
   {
@@ -11857,7 +13285,8 @@
     "mac",
     "linux",
     "server"
-   ]
+   ],
+   "thumbs": []
   },
   {
    "id": "zulip",
@@ -11887,8 +13316,10 @@
     "linux",
     "android",
     "ios",
+    "web",
     "server"
-   ]
+   ],
+   "thumbs": []
   }
  ]
 }

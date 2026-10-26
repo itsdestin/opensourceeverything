@@ -8721,5 +8721,1430 @@
    "inference_geo": "global",
    "speed": "standard"
   }
+ },
+ {
+  "id": "starter:ubuntutouch",
+  "name": "Ubuntu Touch",
+  "repo": "https://ubports.com",
+  "answer": {
+   "summary": "Ubuntu Touch is a free, open source operating system for smartphones that aims to work like a full desktop computer. It is for people who want a phone with more privacy and control over their software.",
+   "replaces": [
+    {
+     "closedApp": "Google Android",
+     "fit": "partial",
+     "reason": "Ubuntu Touch is a phone operating system that covers the same basic role, but the README says it runs on a short list of phones and has few apps, so it does not cover the full Android job."
+    },
+    {
+     "closedApp": "Apple iOS",
+     "fit": "partial",
+     "reason": "Ubuntu Touch is a phone operating system that covers the same basic role, but the README says it runs on a short list of phones and has few apps, so it does not cover the full iOS job."
+    }
+   ],
+   "kind": "app",
+   "license": {
+    "verdict": "unclear",
+    "note": "No license was reported by the host and no license file was provided. The README only mentions CC-BY-SA-4.0 in the website footer, which covers the site content, not the software itself."
+   },
+   "groups": [
+    "phone-os"
+   ],
+   "newGroup": null,
+   "unconfirmed": [
+    "The license of the Ubuntu Touch operating system software itself is not stated in the material.",
+    "The exact list of supported phones is not given in the README.",
+    "App count and app store details are not confirmed beyond the list description."
+   ]
+  },
+  "usage": {
+   "input_tokens": 5865,
+   "cache_creation_input_tokens": 0,
+   "cache_read_input_tokens": 0,
+   "cache_creation": {
+    "ephemeral_5m_input_tokens": 0,
+    "ephemeral_1h_input_tokens": 0
+   },
+   "output_tokens": 411,
+   "output_tokens_details": {
+    "thinking_tokens": 0
+   },
+   "service_tier": "standard",
+   "inference_geo": "global",
+   "speed": "standard"
+  }
+ },
+ {
+  "id": "starter:fairemail",
+  "name": "FairEmail",
+  "repo": "github.com/M66B/FairEmail",
+  "answer": {
+   "summary": "FairEmail is an email app for Android phones that works with most email providers, including Gmail and Outlook. It is aimed at people who want a privacy-focused way to read and send email.",
+   "replaces": [
+    {
+     "closedApp": "Gmail",
+     "fit": "full",
+     "reason": "README says it works with Gmail and provides email reading and sending on Android, which is Gmail's main job."
+    },
+    {
+     "closedApp": "Microsoft Outlook",
+     "fit": "partial",
+     "reason": "README says it works with Outlook accounts, but it does not support Exchange Web Services or ActiveSync, so some Outlook setups are not covered."
+    }
+   ],
+   "kind": "app",
+   "license": {
+    "verdict": "open",
+    "note": "License reported by its host is GPL-3.0, an OSI-approved license, and the README describes the project as 100% open source under the license file."
+   },
+   "groups": [
+    "email"
+   ],
+   "newGroup": null,
+   "unconfirmed": [
+    "Whether the full source code matches the Android app distributed through other channels is not stated in the material.",
+    "Whether it runs on any platform other than Android is not stated; the list says Android only.",
+    "Whether the app has any paid or differently licensed parts is not stated in the material."
+   ]
+  },
+  "usage": {
+   "input_tokens": 4951,
+   "cache_creation_input_tokens": 0,
+   "cache_read_input_tokens": 0,
+   "cache_creation": {
+    "ephemeral_5m_input_tokens": 0,
+    "ephemeral_1h_input_tokens": 0
+   },
+   "output_tokens": 376,
+   "output_tokens_details": {
+    "thinking_tokens": 0
+   },
+   "service_tier": "standard",
+   "inference_geo": "global",
+   "speed": "standard"
+  }
+ },
+ {
+  "id": "starter:torbrowser",
+  "name": "Tor Browser",
+  "repo": "https://www.torproject.org",
+  "answer": {
+   "summary": "Tor Browser is a web browser that hides your location and browsing from trackers and anyone watching your internet connection. It is for people who want privacy online or need to reach sites that may be blocked.",
+   "replaces": [
+    {
+     "closedApp": "Google Chrome",
+     "fit": "partial",
+     "reason": "Both browse the web, but the list notes Tor Browser is slower and built for anonymity rather than daily use, so it covers only part of Chrome's everyday role."
+    },
+    {
+     "closedApp": "Safari",
+     "fit": "partial",
+     "reason": "Both browse the web, but Tor Browser is aimed at anonymity and is slower, so it covers only part of Safari's everyday role."
+    },
+    {
+     "closedApp": "Microsoft Edge",
+     "fit": "partial",
+     "reason": "Both browse the web, but Tor Browser is aimed at anonymity and is slower, so it covers only part of Edge's everyday role."
+    }
+   ],
+   "kind": "app",
+   "license": {
+    "verdict": "unclear",
+    "note": "No license was reported by the host and no license file was provided, so the license cannot be confirmed from the material given."
+   },
+   "groups": [
+    "browsers"
+   ],
+   "newGroup": null,
+   "unconfirmed": [
+    "License terms (no license reported by host and no license file provided)",
+    "Whether the source code is published, as the README does not state it",
+    "Exact speed differences compared with Chrome, Safari and Edge beyond the list's description"
+   ]
+  },
+  "usage": {
+   "input_tokens": 5519,
+   "cache_creation_input_tokens": 0,
+   "cache_read_input_tokens": 0,
+   "cache_creation": {
+    "ephemeral_5m_input_tokens": 0,
+    "ephemeral_1h_input_tokens": 0
+   },
+   "output_tokens": 445,
+   "output_tokens_details": {
+    "thinking_tokens": 0
+   },
+   "service_tier": "standard",
+   "inference_geo": "global",
+   "speed": "standard"
+  }
+ },
+ {
+  "id": "starter:mailspring",
+  "name": "Mailspring",
+  "repo": "github.com/Foundry376/Mailspring",
+  "answer": {
+   "summary": "Mailspring is a desktop email app for Windows, Mac and Linux that lets you read and send email from one place. It is aimed at people who want a faster, lighter alternative to web-based or heavy mail clients.",
+   "replaces": [
+    {
+     "closedApp": "Gmail",
+     "fit": "partial",
+     "reason": "Mailspring is a desktop client that can connect to Gmail accounts, but it is not Gmail's own service; the list pairs it with Gmail as an email client alternative."
+    },
+    {
+     "closedApp": "Microsoft Outlook",
+     "fit": "full",
+     "reason": "Mailspring is a desktop email client for reading and sending email, which matches Outlook's main job."
+    }
+   ],
+   "kind": "app",
+   "license": {
+    "verdict": "open",
+    "note": "Host reports GPL-3.0; README says the UI is GPLv3 and the sync engine is GPLv3. Some features are paid via Mailspring Pro, so the project is open with paid add-ons."
+   },
+   "groups": [
+    "email"
+   ],
+   "newGroup": null,
+   "unconfirmed": [
+    "Whether the sync engine license is the same as the UI license beyond the README statement",
+    "Exact list of features that are paid versus free",
+    "Whether Gmail support is a full substitute for the Gmail web service"
+   ]
+  },
+  "usage": {
+   "input_tokens": 6282,
+   "cache_creation_input_tokens": 0,
+   "cache_read_input_tokens": 0,
+   "cache_creation": {
+    "ephemeral_5m_input_tokens": 0,
+    "ephemeral_1h_input_tokens": 0
+   },
+   "output_tokens": 400,
+   "output_tokens_details": {
+    "thinking_tokens": 0
+   },
+   "service_tier": "standard",
+   "inference_geo": "global",
+   "speed": "standard"
+  }
+ },
+ {
+  "id": "starter:fossifycalendar",
+  "name": "Fossify Calendar",
+  "repo": "github.com/FossifyOrg/Calendar",
+  "answer": {
+   "summary": "Fossify Calendar is a calendar app for Android phones that lets you plan events, reminders and repeating appointments. It is aimed at people who want a private calendar with no ads or tracking.",
+   "replaces": [
+    {
+     "closedApp": "Google Calendar",
+     "fit": "full",
+     "reason": "The README says it syncs with Google Calendar and does the same job of managing events and reminders on a phone."
+    },
+    {
+     "closedApp": "Calendly",
+     "fit": "no",
+     "reason": "Calendly is for letting others book meetings with you; the README describes personal event planning and does not mention booking pages."
+    },
+    {
+     "closedApp": "Outlook Calendar",
+     "fit": "partial",
+     "reason": "The README says it syncs with Outlook and Exchange, so it covers calendar viewing and events, but nothing about Outlook's other features is stated."
+    }
+   ],
+   "kind": "app",
+   "license": {
+    "verdict": "open",
+    "note": "The host reports GPL-3.0, an OSI-approved license; no contradicting material was given."
+   },
+   "groups": [
+    "scheduling"
+   ],
+   "newGroup": null,
+   "unconfirmed": [
+    "Whether it runs on platforms other than Android (the list says Android only)",
+    "Whether it supports booking pages like Calendly",
+    "Which Outlook features beyond syncing are supported"
+   ]
+  },
+  "usage": {
+   "input_tokens": 4981,
+   "cache_creation_input_tokens": 0,
+   "cache_read_input_tokens": 0,
+   "cache_creation": {
+    "ephemeral_5m_input_tokens": 0,
+    "ephemeral_1h_input_tokens": 0
+   },
+   "output_tokens": 407,
+   "output_tokens_details": {
+    "thinking_tokens": 0
+   },
+   "service_tier": "standard",
+   "inference_geo": "global",
+   "speed": "standard"
+  }
+ },
+ {
+  "id": "starter:pinta",
+  "name": "Pinta",
+  "repo": "github.com/PintaProject/Pinta",
+  "answer": {
+   "summary": "Pinta is a simple paint program for drawing and making basic edits to pictures. It is aimed at people who want an easy image editor on Linux, Windows, or macOS.",
+   "replaces": [
+    {
+     "closedApp": "Adobe Photoshop",
+     "fit": "partial",
+     "reason": "Pinta covers simple edits only, not the full range of Photoshop's features."
+    },
+    {
+     "closedApp": "Adobe Lightroom",
+     "fit": "no",
+     "reason": "Pinta is a paint program, not a photo library or batch photo-adjustment tool like Lightroom."
+    },
+    {
+     "closedApp": "Affinity Photo",
+     "fit": "partial",
+     "reason": "Pinta covers simple edits only, not the advanced editing that Affinity Photo offers."
+    }
+   ],
+   "kind": "app",
+   "license": {
+    "verdict": "open",
+    "note": "Host reports MIT License, an OSI-approved license; the README confirms original code is MIT and notes some bundled icon sets under CC BY 3.0."
+   },
+   "groups": [
+    "photo-editing",
+    "painting"
+   ],
+   "newGroup": null,
+   "unconfirmed": [
+    "Whether Pinta's photo editing covers retouching and adjustments of the kind Lightroom provides is not stated.",
+    "The README does not describe the full feature set beyond being a Paint.Net-style paint program."
+   ]
+  },
+  "usage": {
+   "input_tokens": 6149,
+   "cache_creation_input_tokens": 0,
+   "cache_read_input_tokens": 0,
+   "cache_creation": {
+    "ephemeral_5m_input_tokens": 0,
+    "ephemeral_1h_input_tokens": 0
+   },
+   "output_tokens": 419,
+   "output_tokens_details": {
+    "thinking_tokens": 0
+   },
+   "service_tier": "standard",
+   "inference_geo": "global",
+   "speed": "standard"
+  }
+ },
+ {
+  "id": "starter:etarcalendar",
+  "name": "Etar Calendar",
+  "repo": "github.com/Etar-Group/Etar-Calendar",
+  "answer": {
+   "summary": "Etar is a calendar app for Android phones that shows month, week, day and agenda views. It is for people who want a simple calendar that can keep events on the phone or sync them with a calendar server.",
+   "replaces": [
+    {
+     "closedApp": "Google Calendar",
+     "fit": "partial",
+     "reason": "Etar covers viewing and editing calendar events on Android, but the README says a Google calendar must be synced through another app such as DAVx5, and it does not describe Google account integration itself."
+    },
+    {
+     "closedApp": "Calendly",
+     "fit": "no",
+     "reason": "The README lists no booking or appointment scheduling features; it is a plain calendar app."
+    },
+    {
+     "closedApp": "Outlook Calendar",
+     "fit": "partial",
+     "reason": "Etar can show synced calendars and import and export ICS files, but the README does not mention Outlook or Microsoft accounts."
+    }
+   ],
+   "kind": "app",
+   "license": {
+    "verdict": "open",
+    "note": "Host reports GPL-3.0, an OSI-approved license; the README also states GPLv3 for the project."
+   },
+   "groups": [
+    "scheduling"
+   ],
+   "newGroup": null,
+   "unconfirmed": [
+    "Whether Etar works with Outlook or Microsoft accounts directly",
+    "Whether Etar offers any booking or appointment scheduling features like Calendly",
+    "Whether Etar runs on platforms other than Android"
+   ]
+  },
+  "usage": {
+   "input_tokens": 5376,
+   "cache_creation_input_tokens": 0,
+   "cache_read_input_tokens": 0,
+   "cache_creation": {
+    "ephemeral_5m_input_tokens": 0,
+    "ephemeral_1h_input_tokens": 0
+   },
+   "output_tokens": 434,
+   "output_tokens_details": {
+    "thinking_tokens": 0
+   },
+   "service_tier": "standard",
+   "inference_geo": "global",
+   "speed": "standard"
+  }
+ },
+ {
+  "id": "starter:keepassdx",
+  "name": "KeePassDX",
+  "repo": "github.com/Kunzisoft/KeePassDX",
+  "answer": {
+   "summary": "KeePassDX is a free app for Android phones that stores your passwords and passkeys in one encrypted file, unlocked by a master password or keyfile. It is for people who want to manage many logins securely without a company holding their data.",
+   "replaces": [
+    {
+     "closedApp": "1Password",
+     "fit": "partial",
+     "reason": "KeePassDX covers storing and filling passwords on Android only, and the list notes you sync the file yourself; it does not offer 1Password's cross-platform sync service."
+    },
+    {
+     "closedApp": "LastPass",
+     "fit": "partial",
+     "reason": "KeePassDX covers storing and filling passwords on Android only, with no built-in cloud sync; it does not match LastPass's web and browser coverage."
+    },
+    {
+     "closedApp": "Dashlane",
+     "fit": "partial",
+     "reason": "KeePassDX covers storing and filling passwords on Android only, with no built-in cloud sync; it does not match Dashlane's cross-platform service."
+    }
+   ],
+   "kind": "app",
+   "license": {
+    "verdict": "open",
+    "note": "License reported by its host is GPL-3.0, an OSI-approved license, and the README and license notice agree with it."
+   },
+   "groups": [
+    "passwords",
+    "2fa"
+   ],
+   "newGroup": null,
+   "unconfirmed": [
+    "Whether the app is available on platforms other than Android (the list says Android only; the README describes Android only).",
+    "Whether the 'Pro' version is licensed differently from the free version (the README says it is a styles-only paid version, not a different license, but the Pro license terms are not given)."
+   ]
+  },
+  "usage": {
+   "input_tokens": 9812,
+   "cache_creation_input_tokens": 0,
+   "cache_read_input_tokens": 0,
+   "cache_creation": {
+    "ephemeral_5m_input_tokens": 0,
+    "ephemeral_1h_input_tokens": 0
+   },
+   "output_tokens": 490,
+   "output_tokens_details": {
+    "thinking_tokens": 0
+   },
+   "service_tier": "standard",
+   "inference_geo": "global",
+   "speed": "standard"
+  }
+ },
+ {
+  "id": "starter:digikam",
+  "name": "digiKam",
+  "repo": "https://www.digikam.org",
+  "answer": {
+   "summary": "digiKam is a free program for organizing, sorting and lightly editing large collections of photos and videos on a computer. It is aimed at photographers and hobbyists who want to manage their pictures.",
+   "replaces": [
+    {
+     "closedApp": "Adobe Photoshop",
+     "fit": "no",
+     "reason": "The list says digiKam covers sorting and light edits, not retouching, so it does not do Photoshop's main job."
+    },
+    {
+     "closedApp": "Adobe Lightroom",
+     "fit": "partial",
+     "reason": "digiKam covers photo organizing, tagging, search and some edits, which overlaps with Lightroom's library and basic editing, though the README does not claim full parity."
+    },
+    {
+     "closedApp": "Affinity Photo",
+     "fit": "no",
+     "reason": "The list describes digiKam as sorting and light edits only, not the full photo editing that Affinity Photo does."
+    }
+   ],
+   "kind": "app",
+   "license": {
+    "verdict": "unclear",
+    "note": "The host did not report a license and no license file was provided. The README names no license beyond the website's Creative Commons text, which covers site content, not the software."
+   },
+   "groups": [
+    "photo-backup"
+   ],
+   "newGroup": null,
+   "unconfirmed": [
+    "The software's license (only the website's Creative Commons license is stated)",
+    "Whether digiKam runs on Windows, macOS or Linux, and whether it is a desktop program or web app",
+    "Whether it has any paid or separately licensed parts",
+    "Whether the 'Photo editing' group fits better than 'Photo backup & library'; the README describes editing tools including color correction, cropping and retouching, but the list says it is not for retouching"
+   ]
+  },
+  "usage": {
+   "input_tokens": 6077,
+   "cache_creation_input_tokens": 0,
+   "cache_read_input_tokens": 0,
+   "cache_creation": {
+    "ephemeral_5m_input_tokens": 0,
+    "ephemeral_1h_input_tokens": 0
+   },
+   "output_tokens": 519,
+   "output_tokens_details": {
+    "thinking_tokens": 0
+   },
+   "service_tier": "standard",
+   "inference_geo": "global",
+   "speed": "standard"
+  }
+ },
+ {
+  "id": "starter:popos",
+  "name": "Pop!_OS",
+  "repo": "https://system76.com/pop/",
+  "answer": {
+   "summary": "Pop!_OS is a free Linux operating system that runs on computers and aims to be secure and easy to customize. It is made for people who want a productive desktop, including those who buy System76 hardware.",
+   "replaces": [
+    {
+     "closedApp": "Microsoft Windows",
+     "fit": "full",
+     "reason": "Pop!_OS is a desktop operating system that runs laptops and desktops, the same job as Windows."
+    },
+    {
+     "closedApp": "macOS",
+     "fit": "no",
+     "reason": "The lists named macOS, but Pop!_OS is a Linux system and does not run on Apple hardware or stand in for macOS in the material given; the listing appears wrong."
+    }
+   ],
+   "kind": "app",
+   "license": {
+    "verdict": "unclear",
+    "note": "The host did not report a license and no license file was provided. The README says the software is open source and free to download but names no specific license."
+   },
+   "groups": [
+    "desktop-os"
+   ],
+   "newGroup": null,
+   "unconfirmed": [
+    "The specific open-source license for Pop!_OS is not stated in the material.",
+    "The README does not state whether Pop!_OS runs on hardware other than System76 computers.",
+    "The README does not name the exact Ubuntu base or version.",
+    "The list description 'Good for newer laptops and graphics cards' is not confirmed by the README beyond the claim of gaming and driver convenience."
+   ]
+  },
+  "usage": {
+   "input_tokens": 5315,
+   "cache_creation_input_tokens": 0,
+   "cache_read_input_tokens": 0,
+   "cache_creation": {
+    "ephemeral_5m_input_tokens": 0,
+    "ephemeral_1h_input_tokens": 0
+   },
+   "output_tokens": 424,
+   "output_tokens_details": {
+    "thinking_tokens": 0
+   },
+   "service_tier": "standard",
+   "inference_geo": "global",
+   "speed": "standard"
+  }
+ },
+ {
+  "id": "starter:nextcloudtalk",
+  "name": "Nextcloud Talk",
+  "repo": "github.com/nextcloud/spreed",
+  "answer": {
+   "summary": "Nextcloud Talk is a video and audio calling app with text chat, screen sharing and password-protected calls. It is for people and teams who run their own Nextcloud server and want calls on it instead of a commercial service.",
+   "replaces": [
+    {
+     "closedApp": "Zoom",
+     "fit": "partial",
+     "reason": "README describes private, group and public video and audio calls with screen sharing, but it only runs as an add-on to a Nextcloud server, not as a standalone service."
+    },
+    {
+     "closedApp": "Google Meet",
+     "fit": "partial",
+     "reason": "Calls with video and screen sharing are covered, but it requires a Nextcloud server and optional TURN setup for some networks."
+    },
+    {
+     "closedApp": "Microsoft Teams",
+     "fit": "partial",
+     "reason": "Covers video calls and team chat, but the README does not describe Teams-style channels, file collaboration suite or enterprise admin features; it is mainly a calling app within Nextcloud."
+    }
+   ],
+   "kind": "self_hosted",
+   "license": {
+    "verdict": "open",
+    "note": "Host reports AGPL-3.0, an OSI-approved license; no contradicting material was given."
+   },
+   "groups": [
+    "video-calls",
+    "team-chat"
+   ],
+   "newGroup": null,
+   "unconfirmed": [
+    "Whether the AGPL-3.0 license covers the whole project, since only the host report was provided and no license file was included.",
+    "Exact feature parity with Zoom, Google Meet or Microsoft Teams (meeting size limits, recording, breakout rooms) is not stated in the README.",
+    "Whether Matterbridge-based sync and federation behave the same across all server versions."
+   ]
+  },
+  "usage": {
+   "input_tokens": 7627,
+   "cache_creation_input_tokens": 0,
+   "cache_read_input_tokens": 0,
+   "cache_creation": {
+    "ephemeral_5m_input_tokens": 0,
+    "ephemeral_1h_input_tokens": 0
+   },
+   "output_tokens": 521,
+   "output_tokens_details": {
+    "thinking_tokens": 0
+   },
+   "service_tier": "standard",
+   "inference_geo": "global",
+   "speed": "standard"
+  }
+ },
+ {
+  "id": "starter:zettlr",
+  "name": "Zettlr",
+  "repo": "github.com/Zettlr/Zettlr",
+  "answer": {
+   "summary": "Zettlr is a desktop app for writing notes and publications in plain text, with citation and export support. It is aimed at students, researchers and writers who want to keep their notes on their own computer.",
+   "replaces": [
+    {
+     "closedApp": "Notion",
+     "fit": "partial",
+     "reason": "Zettlr covers personal notes and writing, but the material does not describe team wikis or shared databases."
+    },
+    {
+     "closedApp": "Evernote",
+     "fit": "partial",
+     "reason": "Zettlr handles notes on desktop, but the README does not mention web clipping or a note-syncing service."
+    },
+    {
+     "closedApp": "Microsoft OneNote",
+     "fit": "partial",
+     "reason": "Zettlr handles notes on desktop, but the README does not describe OneNote's notebook and sections structure."
+    },
+    {
+     "closedApp": "Obsidian",
+     "fit": "full",
+     "reason": "Zettlr supports Zettelkasten-style linked notes and local Markdown files, which matches Obsidian's core job."
+    },
+    {
+     "closedApp": "Google Keep",
+     "fit": "no",
+     "reason": "Google Keep is a quick, simple note app with checklists; Zettlr is a larger writing workbench and is not described as a quick-note tool."
+    }
+   ],
+   "kind": "app",
+   "license": {
+    "verdict": "open",
+    "note": "Host reports GPL-3.0, which is OSI-approved; nothing given contradicts it."
+   },
+   "groups": [
+    "notes",
+    "documents"
+   ],
+   "newGroup": null,
+   "unconfirmed": [
+    "Whether Zettlr has any phone app (the list says desktop only, and the README mentions only macOS, Windows and Linux).",
+    "Whether Zettlr offers team or shared-workspace features.",
+    "Whether Zettlr syncs notes across devices.",
+    "Whether Zettlr has checklists or web clipping."
+   ]
+  },
+  "usage": {
+   "input_tokens": 8488,
+   "cache_creation_input_tokens": 0,
+   "cache_read_input_tokens": 0,
+   "cache_creation": {
+    "ephemeral_5m_input_tokens": 0,
+    "ephemeral_1h_input_tokens": 0
+   },
+   "output_tokens": 573,
+   "output_tokens_details": {
+    "thinking_tokens": 0
+   },
+   "service_tier": "standard",
+   "inference_geo": "global",
+   "speed": "standard"
+  }
+ },
+ {
+  "id": "starter:jami",
+  "name": "Jami",
+  "repo": "github.com/savoirfairelinux/jami-client-qt",
+  "answer": {
+   "summary": "Jami is a free app for video calls, chat and file sharing. It works without a central company server, so it suits people who want private communication.",
+   "replaces": [
+    {
+     "closedApp": "Zoom",
+     "fit": "partial",
+     "reason": "Jami covers video calls, but the lists note quality drops in large groups, so it does not fully match Zoom's meeting use."
+    },
+    {
+     "closedApp": "Google Meet",
+     "fit": "partial",
+     "reason": "Jami covers video calls, but the lists note quality drops in large groups, so it does not fully match Google Meet's meeting use."
+    },
+    {
+     "closedApp": "Microsoft Teams",
+     "fit": "no",
+     "reason": "The README describes Jami as a general communication tool and says nothing about workplace chat or team features that Teams offers."
+    }
+   ],
+   "kind": "app",
+   "license": {
+    "verdict": "open",
+    "note": "License reported by its host is GPL-3.0, an OSI-approved license, and the README's license section confirms GPL v3 or later."
+   },
+   "groups": [
+    "video-calls"
+   ],
+   "newGroup": null,
+   "unconfirmed": [
+    "Whether Jami's group calls support the same participant numbers as Zoom or Google Meet.",
+    "Whether Jami offers team chat features comparable to Microsoft Teams.",
+    "Which platforms the client runs on, beyond what the download link covers."
+   ]
+  },
+  "usage": {
+   "input_tokens": 4965,
+   "cache_creation_input_tokens": 0,
+   "cache_read_input_tokens": 0,
+   "cache_creation": {
+    "ephemeral_5m_input_tokens": 0,
+    "ephemeral_1h_input_tokens": 0
+   },
+   "output_tokens": 421,
+   "output_tokens_details": {
+    "thinking_tokens": 0
+   },
+   "service_tier": "standard",
+   "inference_geo": "global",
+   "speed": "standard"
+  }
+ },
+ {
+  "id": "starter:silverbullet",
+  "name": "SilverBullet",
+  "repo": "github.com/silverbulletmd/silverbullet",
+  "answer": {
+   "summary": "SilverBullet is a free notes app that runs in your web browser and stores your notes as plain Markdown pages on a server you control. It is aimed at tech-minded people who want to host their own notes and customize them with scripts.",
+   "replaces": [
+    {
+     "closedApp": "Notion",
+     "fit": "partial",
+     "reason": "It covers personal notes and linked pages, but the README does not describe team wikis or the broader workspace features Notion offers."
+    },
+    {
+     "closedApp": "Evernote",
+     "fit": "partial",
+     "reason": "It is a notes app with linked pages, but the README does not mention clipping, syncing across devices, or the other features Evernote is known for."
+    },
+    {
+     "closedApp": "Microsoft OneNote",
+     "fit": "partial",
+     "reason": "It has an outliner and notes features, but the README does not describe free-form notebooks with drawing or handwriting, which OneNote offers."
+    },
+    {
+     "closedApp": "Obsidian",
+     "fit": "full",
+     "reason": "The README describes a Markdown notes editor with wiki-style bi-directional links, which is the core job Obsidian does."
+    },
+    {
+     "closedApp": "Google Keep",
+     "fit": "partial",
+     "reason": "It handles notes, but the README describes a larger wiki-style system rather than Keep's quick notes, checklists and reminders."
+    }
+   ],
+   "kind": "self_hosted",
+   "license": {
+    "verdict": "open",
+    "note": "The host reports the MIT license, which is OSI-approved. The license file was not provided, so this is taken from the host's report."
+   },
+   "groups": [
+    "notes"
+   ],
+   "newGroup": null,
+   "unconfirmed": [
+    "Whether the MIT license covers the whole project or only parts of it",
+    "Whether there are paid or differently licensed parts",
+    "Whether a hosted version or mobile apps exist, since the README only describes self-hosting",
+    "Whether team or multi-user collaboration is supported",
+    "Whether handwriting, drawing, clipping or reminders are supported"
+   ]
+  },
+  "usage": {
+   "input_tokens": 6379,
+   "cache_creation_input_tokens": 0,
+   "cache_read_input_tokens": 0,
+   "cache_creation": {
+    "ephemeral_5m_input_tokens": 0,
+    "ephemeral_1h_input_tokens": 0
+   },
+   "output_tokens": 614,
+   "output_tokens_details": {
+    "thinking_tokens": 0
+   },
+   "service_tier": "standard",
+   "inference_geo": "global",
+   "speed": "standard"
+  }
+ },
+ {
+  "id": "starter:briar",
+  "name": "Briar",
+  "repo": "https://briarproject.org",
+  "answer": {
+   "summary": "Briar is a messaging app that sends private messages directly between phones, using Bluetooth, Wi-Fi or Tor instead of company servers. It is meant for people who need secure communication in sensitive situations, and it can work without internet access.",
+   "replaces": [
+    {
+     "closedApp": "WhatsApp",
+     "fit": "partial",
+     "reason": "Briar covers private messaging on a phone, but the README does not mention calls or a large everyday user base, and it is described as meant for sensitive situations."
+    },
+    {
+     "closedApp": "Telegram",
+     "fit": "partial",
+     "reason": "Briar covers private messaging on a phone, but the README does not mention channels, bots or the other features Telegram offers."
+    },
+    {
+     "closedApp": "Facebook Messenger",
+     "fit": "partial",
+     "reason": "Briar covers private messaging on a phone, but the README does not mention social features or the broad reach of Messenger."
+    },
+    {
+     "closedApp": "iMessage",
+     "fit": "no",
+     "reason": "The list description says Briar is Android only, while iMessage is an Apple-only messaging service."
+    }
+   ],
+   "kind": "app",
+   "license": {
+    "verdict": "unclear",
+    "note": "The host did not report a license and no license file was provided. The README only says it is free and open source software, without naming a license."
+   },
+   "groups": [
+    "messaging"
+   ],
+   "newGroup": null,
+   "unconfirmed": [
+    "The license name and whether it is OSI-approved",
+    "Whether group chats are supported beyond the forums mentioned in the README",
+    "Whether calls or voice messages are supported",
+    "Current Android version requirements",
+    "Whether the README's 'maintenance mode' note (July 9, 2026) affects ongoing development"
+   ]
+  },
+  "usage": {
+   "input_tokens": 4541,
+   "cache_creation_input_tokens": 0,
+   "cache_read_input_tokens": 0,
+   "cache_creation": {
+    "ephemeral_5m_input_tokens": 0,
+    "ephemeral_1h_input_tokens": 0
+   },
+   "output_tokens": 884,
+   "output_tokens_details": {
+    "thinking_tokens": 360
+   },
+   "service_tier": "standard",
+   "inference_geo": "global",
+   "speed": "standard"
+  }
+ },
+ {
+  "id": "starter:chatboxcommunityedition",
+  "name": "Chatbox Community Edition",
+  "repo": "github.com/chatboxai/chatbox",
+  "answer": {
+   "summary": "Chatbox is a desktop app that lets you chat with AI assistants like ChatGPT and Claude, using your own API key or a local model. It is aimed at people who want an AI chat window on their computer, Windows, Mac or Linux.",
+   "replaces": [
+    {
+     "closedApp": "ChatGPT",
+     "fit": "full",
+     "reason": "It is a client for ChatGPT and other AI models, so it covers AI chat, though it needs your own OpenAI key rather than a ChatGPT account."
+    },
+    {
+     "closedApp": "Claude",
+     "fit": "full",
+     "reason": "The README lists Claude as a supported provider, so it works as a chat client for Claude through your own key."
+    },
+    {
+     "closedApp": "Google Gemini",
+     "fit": "partial",
+     "reason": "The README lists Google Gemini Pro as a supported provider, but Gemini is only one of several models it connects to."
+    }
+   ],
+   "kind": "app",
+   "license": {
+    "verdict": "open",
+    "note": "The host reports GPL-3.0, an OSI-approved license, and the README says the Community Edition is open-sourced under GPLv3. The README also notes that code is synced with a separate pro repo, which is not described further."
+   },
+   "groups": [
+    "ai-chat"
+   ],
+   "newGroup": null,
+   "unconfirmed": [
+    "Whether the paid Pro edition differs in licensing from this repo is not stated beyond the sync note.",
+    "The README does not say whether the Chatbox team or the community maintains the project."
+   ]
+  },
+  "usage": {
+   "input_tokens": 7330,
+   "cache_creation_input_tokens": 0,
+   "cache_read_input_tokens": 0,
+   "cache_creation": {
+    "ephemeral_5m_input_tokens": 0,
+    "ephemeral_1h_input_tokens": 0
+   },
+   "output_tokens": 464,
+   "output_tokens_details": {
+    "thinking_tokens": 0
+   },
+   "service_tier": "standard",
+   "inference_geo": "global",
+   "speed": "standard"
+  }
+ },
+ {
+  "id": "starter:openclaw",
+  "name": "OpenClaw",
+  "repo": "github.com/openclaw/openclaw",
+  "answer": {
+   "summary": "OpenClaw is a free AI assistant that runs on your own computer and answers you through chat apps you already use, such as WhatsApp, Telegram, Slack and Discord. It is aimed at people who want an assistant that keeps their data and credentials on their own hardware.",
+   "replaces": [
+    {
+     "closedApp": "Claude Cowork",
+     "fit": "partial",
+     "reason": "Both are AI assistants that act on files and apps for you, but the list describes Claude Cowork as a hosted product and OpenClaw's README says it is a self-run assistant reached through chat channels, so the match is only partial."
+    },
+    {
+     "closedApp": "ChatGPT agent",
+     "fit": "partial",
+     "reason": "OpenClaw can run tools and tasks for a user through an AI model, which overlaps with an agent, but the README does not describe it as a browsing or task-completing agent like ChatGPT agent, so the match is partial."
+    }
+   ],
+   "kind": "app",
+   "license": {
+    "verdict": "open",
+    "note": "Host reports MIT, an OSI-approved license. The README also states the project has no paid tier, hosted service, or token."
+   },
+   "groups": [
+    "ai-agents"
+   ],
+   "newGroup": null,
+   "unconfirmed": [
+    "Whether OpenClaw can act on files and apps the way the listed closed apps do is not confirmed beyond the README's general description of tools and skills.",
+    "Setup needs a terminal and the list notes broad computer access; the README confirms tools run on the host by default unless sandboxing is configured."
+   ]
+  },
+  "usage": {
+   "input_tokens": 7595,
+   "cache_creation_input_tokens": 0,
+   "cache_read_input_tokens": 0,
+   "cache_creation": {
+    "ephemeral_5m_input_tokens": 0,
+    "ephemeral_1h_input_tokens": 0
+   },
+   "output_tokens": 483,
+   "output_tokens_details": {
+    "thinking_tokens": 0
+   },
+   "service_tier": "standard",
+   "inference_geo": "global",
+   "speed": "standard"
+  }
+ },
+ {
+  "id": "starter:opencode",
+  "name": "OpenCode",
+  "repo": "github.com/anomalyco/opencode",
+  "answer": {
+   "summary": "OpenCode is an AI coding agent that runs in your terminal or as a desktop app, and it can work with many different AI models. It is for programmers who want an AI helper that reads and changes code in their projects.",
+   "replaces": [
+    {
+     "closedApp": "GitHub Copilot",
+     "fit": "partial",
+     "reason": "Both are AI coding assistants, but the material given does not describe OpenCode's editor integrations or inline completion features."
+    },
+    {
+     "closedApp": "Cursor",
+     "fit": "partial",
+     "reason": "Both offer AI help on code, but Cursor is a full code editor and OpenCode is a terminal and desktop agent; the material does not describe an editor."
+    },
+    {
+     "closedApp": "Windsurf",
+     "fit": "partial",
+     "reason": "Both offer AI help on code, but Windsurf is an editor and OpenCode is a terminal and desktop agent; the material does not describe an editor."
+    },
+    {
+     "closedApp": "Claude Code",
+     "fit": "partial",
+     "reason": "Both are AI coding agents for the terminal, but the material does not confirm OpenCode's feature parity with Claude Code."
+    },
+    {
+     "closedApp": "OpenAI Codex app",
+     "fit": "partial",
+     "reason": "Both are AI coding agents, but the material does not confirm OpenCode's feature parity with the Codex app."
+    }
+   ],
+   "kind": "developer_tool",
+   "license": {
+    "verdict": "open",
+    "note": "Host reports MIT, an OSI-approved license. No conflicting information was given."
+   },
+   "groups": [
+    "ai-coding"
+   ],
+   "newGroup": null,
+   "unconfirmed": [
+    "Whether OpenCode has editor integrations or inline code completion like GitHub Copilot or Cursor.",
+    "Feature parity with Claude Code or the OpenAI Codex app.",
+    "Whether the desktop app is out of beta and how stable it is.",
+    "Which AI models it supports beyond the list description 'any AI model'."
+   ]
+  },
+  "usage": {
+   "input_tokens": 5389,
+   "cache_creation_input_tokens": 0,
+   "cache_read_input_tokens": 0,
+   "cache_creation": {
+    "ephemeral_5m_input_tokens": 0,
+    "ephemeral_1h_input_tokens": 0
+   },
+   "output_tokens": 611,
+   "output_tokens_details": {
+    "thinking_tokens": 0
+   },
+   "service_tier": "standard",
+   "inference_geo": "global",
+   "speed": "standard"
+  }
+ },
+ {
+  "id": "starter:anythingllm",
+  "name": "AnythingLLM",
+  "repo": "github.com/Mintplex-Labs/anything-llm",
+  "answer": {
+   "summary": "AnythingLLM is an app that lets you chat with an AI assistant about your own documents, and can run models locally or connect to cloud AI services. It is aimed at people and teams who want a private, self-hosted or desktop alternative to ChatGPT-style chat tools.",
+   "replaces": [
+    {
+     "closedApp": "ChatGPT",
+     "fit": "full",
+     "reason": "The README describes it as building a private, fully-featured ChatGPT, with AI chat as its core function."
+    },
+    {
+     "closedApp": "Claude",
+     "fit": "partial",
+     "reason": "It connects to Anthropic's models as one of many providers, so it works as a front end for Claude rather than being a replacement for Claude's own service."
+    },
+    {
+     "closedApp": "Google Gemini",
+     "fit": "partial",
+     "reason": "It supports Google Gemini Pro as one of many LLM providers, so it can serve as a front end for Gemini rather than replacing Gemini itself."
+    }
+   ],
+   "kind": "app",
+   "license": {
+    "verdict": "open",
+    "note": "License reported by its host is MIT, an OSI-approved license; the README does not contradict it. Some features are described as Docker-only and the README mentions a hosted instance, but no paid or differently licensed parts are stated."
+   },
+   "groups": [
+    "ai-chat"
+   ],
+   "newGroup": null,
+   "unconfirmed": [
+    "Whether the desktop app and mobile app are under the same MIT license as the main repository (the mobile app is described only as open source).",
+    "Whether the hosted instance has terms or features beyond the open-source project.",
+    "Whether the README's Telemetry section changes anything about open status (it describes opt-out telemetry; no license impact stated)."
+   ]
+  },
+  "usage": {
+   "input_tokens": 9013,
+   "cache_creation_input_tokens": 0,
+   "cache_read_input_tokens": 0,
+   "cache_creation": {
+    "ephemeral_5m_input_tokens": 0,
+    "ephemeral_1h_input_tokens": 0
+   },
+   "output_tokens": 531,
+   "output_tokens_details": {
+    "thinking_tokens": 0
+   },
+   "service_tier": "standard",
+   "inference_geo": "global",
+   "speed": "standard"
+  }
+ },
+ {
+  "id": "starter:bazzite",
+  "name": "Bazzite",
+  "repo": "github.com/ublue-os/bazzite",
+  "answer": {
+   "summary": "Bazzite is a free Linux operating system for PCs, built on Fedora, that you install in place of Windows or another system. It is aimed at people who want a Linux desktop that works well for gaming, including on Steam Deck-style handhelds and living-room PCs.",
+   "replaces": [
+    {
+     "closedApp": "Microsoft Windows",
+     "fit": "full",
+     "reason": "Bazzite is a Linux operating system for desktop and laptop PCs, which is the job the desktop-os group describes."
+    },
+    {
+     "closedApp": "macOS",
+     "fit": "no",
+     "reason": "The README describes Bazzite as a Fedora Atomic image for PC hardware and does not mention Apple Mac hardware, so the list entry appears to be wrong."
+    }
+   ],
+   "kind": "app",
+   "license": {
+    "verdict": "open",
+    "note": "The host reports Apache-2.0, which is OSI-approved, and nothing provided contradicts it. The license file was not included, so the text was not checked directly."
+   },
+   "groups": [
+    "desktop-os"
+   ],
+   "newGroup": null,
+   "unconfirmed": [
+    "The README is cut off, so its sections on verification, documentation and the rest of the GNOME build were not visible.",
+    "The README does not say that Bazzite replaces Windows or macOS; the replacement claims come from the community lists.",
+    "The 'Great for gaming' description is from the community list and was not checked against the README beyond its gaming features.",
+    "Whether Bazzite runs on Apple Mac hardware is not stated in the material given."
+   ]
+  },
+  "usage": {
+   "input_tokens": 9345,
+   "cache_creation_input_tokens": 0,
+   "cache_read_input_tokens": 0,
+   "cache_creation": {
+    "ephemeral_5m_input_tokens": 0,
+    "ephemeral_1h_input_tokens": 0
+   },
+   "output_tokens": 1321,
+   "output_tokens_details": {
+    "thinking_tokens": 840
+   },
+   "service_tier": "standard",
+   "inference_geo": "global",
+   "speed": "standard"
+  }
+ },
+ {
+  "id": "starter:zed",
+  "name": "Zed",
+  "repo": "github.com/zed-industries/zed",
+  "answer": {
+   "summary": "Zed is a fast code editor for writing software, with built-in AI help and support for working with others in real time. It is made for programmers.",
+   "replaces": [
+    {
+     "closedApp": "GitHub Copilot",
+     "fit": "partial",
+     "reason": "Zed has built-in AI coding help, but the material does not say it matches Copilot's features or completions."
+    },
+    {
+     "closedApp": "Cursor",
+     "fit": "partial",
+     "reason": "Zed is a code editor with built-in AI, which overlaps with Cursor's main job, but the material does not compare the two in detail."
+    },
+    {
+     "closedApp": "Windsurf",
+     "fit": "partial",
+     "reason": "Zed is a code editor with built-in AI, which overlaps with Windsurf's main job, but the material does not compare the two in detail."
+    },
+    {
+     "closedApp": "Claude Code",
+     "fit": "no",
+     "reason": "Claude Code is a terminal-based AI coding agent; the material describes Zed only as a code editor with built-in AI and does not say it provides an equivalent agent."
+    },
+    {
+     "closedApp": "OpenAI Codex app",
+     "fit": "no",
+     "reason": "The material does not describe Zed as providing a Codex-style agent app; it only describes a code editor with built-in AI."
+    }
+   ],
+   "kind": "developer_tool",
+   "license": {
+    "verdict": "open",
+    "note": "The host reports Apache-2.0. The README says the source is licensed primarily under GPL-3.0-or-later, with Apache-2.0 components where marked, so the project license is not fully uniform as stated in the material."
+   },
+   "groups": [
+    "ai-coding"
+   ],
+   "newGroup": null,
+   "unconfirmed": [
+    "Whether Zed's AI features match the closed apps' features",
+    "Whether Zed provides an agent comparable to Claude Code or the OpenAI Codex app",
+    "Which parts of the codebase are Apache-2.0 versus GPL-3.0-or-later",
+    "Whether the project is open-core or has any paid or differently licensed parts"
+   ]
+  },
+  "usage": {
+   "input_tokens": 6223,
+   "cache_creation_input_tokens": 0,
+   "cache_read_input_tokens": 0,
+   "cache_creation": {
+    "ephemeral_5m_input_tokens": 0,
+    "ephemeral_1h_input_tokens": 0
+   },
+   "output_tokens": 628,
+   "output_tokens_details": {
+    "thinking_tokens": 0
+   },
+   "service_tier": "standard",
+   "inference_geo": "global",
+   "speed": "standard"
+  }
+ },
+ {
+  "id": "starter:geminicli",
+  "name": "Gemini CLI",
+  "repo": "github.com/google-gemini/gemini-cli",
+  "answer": {
+   "summary": "Gemini CLI is a free, open-source AI assistant that runs in a computer's terminal and helps with coding tasks such as reading, editing and explaining code. It is aimed at developers who want direct access to Google's Gemini models from the command line.",
+   "replaces": [
+    {
+     "closedApp": "GitHub Copilot",
+     "fit": "partial",
+     "reason": "Both help with code using AI, but Gemini CLI is a terminal agent rather than an editor plugin; the README does not mention Copilot-style inline completions."
+    },
+    {
+     "closedApp": "Cursor",
+     "fit": "partial",
+     "reason": "Gemini CLI offers AI code help in the terminal with an optional VS Code companion, but the README does not describe a full AI code editor like Cursor."
+    },
+    {
+     "closedApp": "Windsurf",
+     "fit": "partial",
+     "reason": "Gemini CLI provides AI coding help in the terminal; the README does not describe a full AI code editor like Windsurf."
+    },
+    {
+     "closedApp": "Claude Code",
+     "fit": "full",
+     "reason": "Both are AI coding agents that work from the terminal on codebases, editing files and running commands."
+    },
+    {
+     "closedApp": "OpenAI Codex app",
+     "fit": "partial",
+     "reason": "Both are AI coding agents, but the README does not confirm the same features or that it matches the Codex app specifically."
+    }
+   ],
+   "kind": "developer_tool",
+   "license": {
+    "verdict": "open",
+    "note": "Host reports Apache-2.0, which is OSI-approved; the README also states Apache 2.0 for the whole project."
+   },
+   "groups": [
+    "ai-coding"
+   ],
+   "newGroup": null,
+   "unconfirmed": [
+    "Whether Gemini CLI has any paid or differently licensed parts beyond the Gemini service itself.",
+    "Whether it offers inline code completions or a full editor, as Copilot, Cursor and Windsurf do.",
+    "The status of the project: the README says Gemini CLI was replaced by Antigravity CLI on June 18th, 2026, and this may affect whether it is still the recommended tool."
+   ]
+  },
+  "usage": {
+   "input_tokens": 8901,
+   "cache_creation_input_tokens": 0,
+   "cache_read_input_tokens": 0,
+   "cache_creation": {
+    "ephemeral_5m_input_tokens": 0,
+    "ephemeral_1h_input_tokens": 0
+   },
+   "output_tokens": 656,
+   "output_tokens_details": {
+    "thinking_tokens": 0
+   },
+   "service_tier": "standard",
+   "inference_geo": "global",
+   "speed": "standard"
+  }
+ },
+ {
+  "id": "starter:tabby",
+  "name": "Tabby",
+  "repo": "github.com/TabbyML/tabby",
+  "answer": {
+   "summary": "Tabby is a self-hosted AI coding assistant that suggests code as you type. It is for developers who want to run the server on their own hardware instead of using a cloud service.",
+   "replaces": [
+    {
+     "closedApp": "GitHub Copilot",
+     "fit": "full",
+     "reason": "README describes Tabby as an open-source, on-premises alternative to GitHub Copilot for code suggestions."
+    },
+    {
+     "closedApp": "Cursor",
+     "fit": "partial",
+     "reason": "Tabby offers AI code completion and an editor-side chat panel, but the material given does not show it covering Cursor's full AI editor."
+    },
+    {
+     "closedApp": "Windsurf",
+     "fit": "partial",
+     "reason": "Tabby provides AI code suggestions and chat in IDE extensions, but the material given does not show it covering all of Windsurf's features."
+    },
+    {
+     "closedApp": "Claude Code",
+     "fit": "partial",
+     "reason": "Tabby has AI chat and code editing via chat, but the material given does not describe an agent that works in a terminal like Claude Code."
+    },
+    {
+     "closedApp": "OpenAI Codex app",
+     "fit": "partial",
+     "reason": "Tabby has AI coding help via chat and editor extensions, but the material given does not show it matching the Codex app's agent workflow."
+    }
+   ],
+   "kind": "self_hosted",
+   "license": {
+    "verdict": "open",
+    "note": "Host reports Apache-2.0; the license file confirms Apache 2.0 for content outside the ee/ directory, which is separately licensed."
+   },
+   "groups": [
+    "ai-coding"
+   ],
+   "newGroup": null,
+   "unconfirmed": [
+    "Whether the ee/ directory exists and what its license terms are.",
+    "Whether Tabby covers the agent features of Cursor, Windsurf, Claude Code or the OpenAI Codex app.",
+    "Whether a hosted or paid tier exists."
+   ]
+  },
+  "usage": {
+   "input_tokens": 9462,
+   "cache_creation_input_tokens": 0,
+   "cache_read_input_tokens": 0,
+   "cache_creation": {
+    "ephemeral_5m_input_tokens": 0,
+    "ephemeral_1h_input_tokens": 0
+   },
+   "output_tokens": 593,
+   "output_tokens_details": {
+    "thinking_tokens": 0
+   },
+   "service_tier": "standard",
+   "inference_geo": "global",
+   "speed": "standard"
+  }
+ },
+ {
+  "id": "starter:kilocode",
+  "name": "Kilo Code",
+  "repo": "github.com/Kilo-Org/kilocode",
+  "answer": {
+   "summary": "Kilo Code is an open-source AI coding agent that helps programmers write, change and review code inside VS Code, JetBrains IDEs or a command line. It is aimed at software developers who want to pick their own AI models and pay the model provider directly.",
+   "replaces": [
+    {
+     "closedApp": "GitHub Copilot",
+     "fit": "partial",
+     "reason": "README describes inline autocomplete with ghost-text suggestions, which overlaps with Copilot, but also an agent, plan and debug modes that go beyond it."
+    },
+    {
+     "closedApp": "Cursor",
+     "fit": "partial",
+     "reason": "Covers AI code generation across files and inline autocomplete inside VS Code, but the README does not describe Cursor's full editor experience."
+    },
+    {
+     "closedApp": "Windsurf",
+     "fit": "partial",
+     "reason": "Covers AI code generation and an agent inside VS Code; the README does not describe Windsurf's specific features."
+    },
+    {
+     "closedApp": "Claude Code",
+     "fit": "partial",
+     "reason": "Offers a CLI coding agent (kilo run / kilo), which overlaps with Claude Code's role, but it uses multiple models rather than Claude alone."
+    },
+    {
+     "closedApp": "OpenAI Codex app",
+     "fit": "partial",
+     "reason": "Offers a coding agent in the CLI and IDE, overlapping with Codex, but the README does not describe Codex's app features."
+    }
+   ],
+   "kind": "developer_tool",
+   "license": {
+    "verdict": "open",
+    "note": "MIT license reported by the host and the README states MIT; nothing given contradicts it."
+   },
+   "groups": [
+    "ai-coding"
+   ],
+   "newGroup": null,
+   "unconfirmed": [
+    "Whether the paid model provider usage and the Kilo platform (cloud agent, code reviews, marketplace) are open source beyond the extension and CLI code.",
+    "Whether the Kilo Code extension and CLI are fully MIT-licensed across all packages, since the README mentions separate release docs for JetBrains and the CLI is a fork of OpenCode.",
+    "Whether the 'open pricing' claim means the service has no paid tiers, as the README does not say.",
+    "Whether the replaced apps' feature sets (such as Cursor's editor or Copilot's GitHub integration) are matched, as the README does not compare them directly."
+   ]
+  },
+  "usage": {
+   "input_tokens": 6364,
+   "cache_creation_input_tokens": 0,
+   "cache_read_input_tokens": 0,
+   "cache_creation": {
+    "ephemeral_5m_input_tokens": 0,
+    "ephemeral_1h_input_tokens": 0
+   },
+   "output_tokens": 738,
+   "output_tokens_details": {
+    "thinking_tokens": 0
+   },
+   "service_tier": "standard",
+   "inference_geo": "global",
+   "speed": "standard"
+  }
+ },
+ {
+  "id": "starter:hermesagent",
+  "name": "Hermes Agent",
+  "repo": "github.com/NousResearch/hermes-agent",
+  "answer": {
+   "summary": "Hermes Agent is an AI assistant you run in a terminal or through messaging apps like Telegram, and it can remember past conversations and learn reusable skills. It's aimed at technical users who are comfortable setting it up and can bring their own AI model keys.",
+   "replaces": [
+    {
+     "closedApp": "Claude Cowork",
+     "fit": "partial",
+     "reason": "The README describes an AI agent that works on files and apps for you, which is similar in purpose, but it does not name Claude Cowork and its setup is terminal-based and aimed at technical users."
+    },
+    {
+     "closedApp": "ChatGPT agent",
+     "fit": "partial",
+     "reason": "The README describes an AI agent that runs tasks and scheduled automations for you, which is similar in purpose, but it does not name ChatGPT agent and it is not a consumer-friendly product."
+    }
+   ],
+   "kind": "app",
+   "license": {
+    "verdict": "open",
+    "note": "The host reports the MIT license, which is OSI-approved, and nothing provided contradicts it."
+   },
+   "groups": [
+    "ai-agents"
+   ],
+   "newGroup": null,
+   "unconfirmed": [
+    "Whether the closed apps' features map directly, since the README does not mention Claude Cowork or ChatGPT agent.",
+    "Whether the MIT license applies to the whole project, since only the host's report was provided and no license file was included."
+   ]
+  },
+  "usage": {
+   "input_tokens": 8505,
+   "cache_creation_input_tokens": 0,
+   "cache_read_input_tokens": 0,
+   "cache_creation": {
+    "ephemeral_5m_input_tokens": 0,
+    "ephemeral_1h_input_tokens": 0
+   },
+   "output_tokens": 430,
+   "output_tokens_details": {
+    "thinking_tokens": 0
+   },
+   "service_tier": "standard",
+   "inference_geo": "global",
+   "speed": "standard"
+  }
  }
 ]

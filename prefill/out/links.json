@@ -51,6 +51,10 @@
   "website": "http://anysoftkeyboard.github.io/",
   "release": "https://github.com/AnySoftKeyboard/AnySoftKeyboard/releases/tag/1.13-r2"
  },
+ "github.com/Mintplex-Labs/anything-llm": {
+  "website": "https://anythingllm.com",
+  "release": "https://github.com/Mintplex-Labs/anything-llm/releases/tag/v1.18.0"
+ },
  "github.com/apache/apisix": {
   "website": "https://apisix.apache.org/blog/",
   "release": "https://github.com/apache/apisix/releases/tag/3.19.0"
@@ -90,6 +94,10 @@
  "github.com/bagisto/bagisto": {
   "website": "https://bagisto.com",
   "release": "https://github.com/bagisto/bagisto/releases/tag/v2.5.0"
+ },
+ "github.com/ublue-os/bazzite": {
+  "website": "https://bazzite.gg",
+  "release": "https://github.com/ublue-os/bazzite/releases/tag/44.20261023"
  },
  "github.com/getbeton/inspector": {
   "website": "https://www.getbeton.ai/",
@@ -166,6 +174,10 @@
  "github.com/racz-zoltan/carrypass-self-host": {
   "website": null,
   "release": null
+ },
+ "github.com/chatboxai/chatbox": {
+  "website": "https://chatboxai.app?utm_medium=github",
+  "release": "https://github.com/chatboxai/chatbox/releases/tag/v1.23.5"
  },
  "github.com/BlinkDL/ChatRWKV": {
   "website": null,
@@ -327,6 +339,10 @@
   "website": "https://www.espocrm.com",
   "release": "https://github.com/espocrm/espocrm/releases/tag/10.0.11"
  },
+ "github.com/Etar-Group/Etar-Calendar": {
+  "website": "https://f-droid.org/packages/ws.xsoh.etar/",
+  "release": "https://github.com/Etar-Group/Etar-Calendar/releases/tag/v1.0.57"
+ },
  "github.com/etesync/etesync-dav": {
   "website": "https://www.etesync.com",
   "release": "https://github.com/etesync/etesync-dav/releases/tag/v0.35.1"
@@ -338,6 +354,10 @@
  "github.com/evidence-dev/evidence": {
   "website": "https://evidence.dev",
   "release": "https://github.com/evidence-dev/evidence/releases/tag/%40evidence-dev/evidence%4040.1.8"
+ },
+ "github.com/M66B/FairEmail": {
+  "website": "https://email.faircode.eu/",
+  "release": "https://github.com/M66B/FairEmail/releases/tag/1.2339"
  },
  "github.com/infobyte/faraday": {
   "website": "https://www.faradaysec.com",
@@ -395,6 +415,10 @@
   "website": "https://fossdroid.com/",
   "release": null
  },
+ "github.com/FossifyOrg/Calendar": {
+  "website": "https://www.fossify.org",
+  "release": "https://github.com/FossifyOrg/Calendar/releases/tag/1.12.1"
+ },
  "github.com/FreeTubeApp/FreeTube": {
   "website": "https://freetubeapp.io/",
   "release": null
@@ -422,6 +446,10 @@
  "github.com/lowercasename/gathio": {
   "website": null,
   "release": "https://github.com/lowercasename/gathio/releases/tag/v1.6.7"
+ },
+ "github.com/google-gemini/gemini-cli": {
+  "website": "https://geminicli.com",
+  "release": "https://github.com/google-gemini/gemini-cli/releases/tag/v0.65.0"
  },
  "github.com/GerritCodeReview/gerrit": {
   "website": null,
@@ -483,6 +511,10 @@
   "website": null,
   "release": "https://github.com/HeliBorg/HeliBoard/releases/tag/v4.2"
  },
+ "github.com/NousResearch/hermes-agent": {
+  "website": "https://hermes-agent.nousresearch.com",
+  "release": "https://github.com/NousResearch/hermes-agent/releases/tag/v0.22.5"
+ },
  "github.com/heyform/heyform": {
   "website": "https://heyform.net",
   "release": "https://github.com/heyform/heyform/releases/tag/v3.0.5"
@@ -531,6 +563,10 @@
   "website": "https://invoke-ai.github.io/InvokeAI/",
   "release": "https://github.com/invoke-ai/InvokeAI/releases/tag/v6.14.2"
  },
+ "github.com/savoirfairelinux/jami-client-qt": {
+  "website": "https://git.jami.net/savoirfairelinux/jami-client-qt",
+  "release": null
+ },
  "github.com/janhq/jan": {
   "website": "https://jan.ai/",
   "release": "https://github.com/janhq/jan/releases/tag/v0.8.7"
@@ -563,6 +599,10 @@
   "website": "https://kanboard.org",
   "release": "https://github.com/kanboard/kanboard/releases/tag/v1.2.56"
  },
+ "github.com/Kunzisoft/KeePassDX": {
+  "website": "https://www.keepassdx.com/",
+  "release": "https://github.com/Kunzisoft/KeePassDX/releases/tag/4.5.6"
+ },
  "github.com/keepassxreboot/keepassxc": {
   "website": "https://keepassxc.org/",
   "release": "https://github.com/keepassxreboot/keepassxc/releases/tag/2.8.0"
@@ -574,6 +614,10 @@
  "github.com/keycloak/keycloak": {
   "website": "https://www.keycloak.org",
   "release": "https://github.com/keycloak/keycloak/releases/tag/26.8.1"
+ },
+ "github.com/Kilo-Org/kilocode": {
+  "website": "https://kilo.ai/",
+  "release": "https://github.com/Kilo-Org/kilocode/releases/tag/v7.8.18"
  },
  "github.com/kimai/kimai": {
   "website": "https://www.kimai.org",
@@ -641,7 +685,7 @@
  },
  "github.com/lightdash/lightdash": {
   "website": "https://lightdash.com",
-  "release": "https://github.com/lightdash/lightdash/releases/tag/3.53.10"
+  "release": "https://github.com/lightdash/lightdash/releases/tag/3.55.0"
  },
  "github.com/LimeSurvey/LimeSurvey": {
   "website": "https://www.limesurvey.org",
@@ -678,6 +722,10 @@
  "github.com/lowdefy/lowdefy": {
   "website": "https://lowdefy.com",
   "release": "https://github.com/lowdefy/lowdefy/releases/tag/v6.2.0"
+ },
+ "github.com/Foundry376/Mailspring": {
+  "website": "https://getmailspring.com/",
+  "release": "https://github.com/Foundry376/Mailspring/releases/tag/1.26.2"
  },
  "github.com/manticoresoftware/manticoresearch": {
   "website": "https://manticoresearch.com",
@@ -811,6 +859,10 @@
   "website": "https://apps.nextcloud.com/apps/notes",
   "release": "https://github.com/nextcloud/notes/releases/tag/v6.1.0"
  },
+ "github.com/nextcloud/spreed": {
+  "website": "https://nextcloud.com/talk",
+  "release": "https://github.com/nextcloud/spreed/releases/tag/v25.0.6"
+ },
  "github.com/nhost/nhost": {
   "website": "https://nhost.io",
   "release": "https://github.com/nhost/nhost/releases/tag/%40nhost/dashboard%403.8.1"
@@ -890,6 +942,14 @@
  "github.com/braedonsaunders/openbooks": {
   "website": "https://openbooks-site.vercel.app",
   "release": null
+ },
+ "github.com/openclaw/openclaw": {
+  "website": "https://openclaw.ai",
+  "release": "https://github.com/openclaw/openclaw/releases/tag/v2026.10.7"
+ },
+ "github.com/anomalyco/opencode": {
+  "website": "https://opencode.ai",
+  "release": "https://github.com/anomalyco/opencode/releases/tag/v1.19.4"
  },
  "github.com/OpenCut-app/OpenCut": {
   "website": "https://opencut.app",
@@ -994,6 +1054,10 @@
  "github.com/pingcap/tidb": {
   "website": "https://www.tidb.io/",
   "release": "https://github.com/pingcap/tidb/releases/tag/v7.5.8"
+ },
+ "github.com/PintaProject/Pinta": {
+  "website": "http://www.pinta-project.com/",
+  "release": "https://github.com/PintaProject/Pinta/releases/tag/3.1.2"
  },
  "github.com/pixelfed/pixelfed": {
   "website": "https://pixelfed.org",
@@ -1143,6 +1207,10 @@
   "website": "https://www.silex.me",
   "release": "https://github.com/silexlabs/Silex/releases/tag/v3.9.0"
  },
+ "github.com/silverbulletmd/silverbullet": {
+  "website": "https://silverbullet.md",
+  "release": "https://github.com/silverbulletmd/silverbullet/releases/tag/2.12.1"
+ },
  "github.com/rkkr/simple-keyboard": {
   "website": null,
   "release": "https://github.com/rkkr/simple-keyboard/releases/tag/149"
@@ -1242,6 +1310,10 @@
  "github.com/syncthing/syncthing": {
   "website": "https://syncthing.net/",
   "release": "https://github.com/syncthing/syncthing/releases/tag/v2.1.7"
+ },
+ "github.com/TabbyML/tabby": {
+  "website": "https://tabbyml.com",
+  "release": "https://github.com/TabbyML/tabby/releases/tag/v0.32.0"
  },
  "github.com/tabler/tabler-icons": {
   "website": "https://tabler.io/icons",
@@ -1419,9 +1491,17 @@
   "website": "https://zammad.org",
   "release": null
  },
+ "github.com/zed-industries/zed": {
+  "website": "https://zed.dev",
+  "release": "https://github.com/zed-industries/zed/releases/tag/v1.25.3"
+ },
  "github.com/zen-browser/desktop": {
   "website": "https://zen-browser.app",
   "release": "https://github.com/zen-browser/desktop/releases/tag/1.23.4b"
+ },
+ "github.com/Zettlr/Zettlr": {
+  "website": "https://www.zettlr.com",
+  "release": "https://github.com/Zettlr/Zettlr/releases/tag/v4.9.0"
  },
  "github.com/zincsearch/zincsearch": {
   "website": "https://zincsearch-docs.zinc.dev",

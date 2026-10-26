@@ -1,0 +1,374 @@
+{
+ "note": "Expert review of 24 high-traffic groups. Removals are dead/off-topic items; fit changes are strictness calls. Contains unverified judgment calls listed in docs/group-review.md. Destin/Claude overrides: Arch and CachyOS keep \"full\"; Proton Mail/Pass not added (closed servers). Additions moved into data/starter.json.",
+ "fit": {
+  "documents/cryptpad": "partial",
+  "spreadsheets/gnumeric": "partial",
+  "notes/trilium-notes": "partial",
+  "notes/folio-wiki": "partial",
+  "notes/notegen": "partial",
+  "notes/notabase": "partial",
+  "notes/yanknote": "partial",
+  "email/roundcube": "partial",
+  "messaging/snikket": "partial",
+  "messaging/tinode": "partial",
+  "video-calls/bigbluebutton": "partial",
+  "video-calls/element-call": "partial",
+  "video-calls/galene": "partial",
+  "browsers/ungoogled-chromium": "partial",
+  "passwords/keepassxc": "partial",
+  "passwords/aliasvault": "partial",
+  "passwords/passbolt": "partial",
+  "passwords/padloc": "partial",
+  "cloud-storage/filestash": "partial",
+  "cloud-storage/owncloud": "partial",
+  "painting/mypaint": "partial",
+  "ai-coding/openhands": "partial"
+ },
+ "note_text": {
+  "documents/onlyoffice-docs": "Server, or free desktop app; ask for hosting",
+  "documents/cryptpad": "Encrypted; simpler formatting than Word",
+  "documents/etherpad": "Plain shared text; no page layout",
+  "spreadsheets/gnumeric": "Basic charts; Linux-focused; no co-editing",
+  "spreadsheets/grist": "Database-style; you host it",
+  "slides/slidev": "Slides written as text; for developers",
+  "notes/trilium-notes": "No native phone app; steep learning curve",
+  "notes/bookstack": "Team wiki you host; not for personal notes",
+  "notes/docmost": "Team wiki you host; fewer features than Notion",
+  "notes/folio-wiki": "Very new, small project; you host it",
+  "notes/hedgedoc": "Shared Markdown pages; no databases or boards",
+  "notes/mediawiki": "Wikipedia-style wiki; heavy to set up",
+  "notes/memos": "Short timeline notes; no folders or rich pages",
+  "notes/notegen": "Young project; desktop-first Markdown notes",
+  "notes/notally": "Android only; simple notes and lists",
+  "notes/notabase": "Browser app; slower updates",
+  "notes/nextcloud-notes": "Needs a Nextcloud server; basic notes",
+  "notes/quillpad": "Android only; basic notes and lists",
+  "notes/xwiki": "Heavy team wiki you host",
+  "notes/yanknote": "Markdown editor for tech users; no sync or phone app",
+  "notes/xournal": "Handwriting and PDF markup only; phone app is a separate project",
+  "email/thunderbird": "Desktop and Android apps; no iPhone app",
+  "email/roundcube": "Inbox screen only; needs your own mail server",
+  "email/tuta": "Moves you to Tuta's own email service; other providers not supported",
+  "scheduling/thunderbird": "Desktop only; no phone calendar app",
+  "scheduling/cal-com": "Booking pages only; you host it, no calendar app",
+  "scheduling/tymeslot": "Booking pages only; you host it; young project",
+  "team-chat/element": "Chat network (Matrix); some set-up needed",
+  "messaging/signal": "Needs a phone number to sign up",
+  "messaging/simplex-chat": "No phone number needed; smaller network of users",
+  "messaging/element": "Friends need Matrix accounts; less polished",
+  "messaging/snikket": "You must run a server for your group",
+  "messaging/tinode": "Small user base; you host the server",
+  "video-calls/jitsi-meet": "Free public site or self-host; weaker for very big meetings",
+  "video-calls/bigbluebutton": "Built for classes; you host it",
+  "video-calls/element-call": "Needs a Matrix account; still maturing",
+  "video-calls/galene": "Plain interface; you host it",
+  "photo-editing/gimp": "Different layout from Photoshop; no Lightroom-style library",
+  "photo-editing/rawtherapee": "Raw development only; weaker photo library",
+  "photo-editing/krita": "Made for painting; weak at photo retouching",
+  "painting/mypaint": "Simpler than Procreate; no text or animation",
+  "illustration/graphite": "Early alpha; expect missing tools",
+  "ui-design/plasmic": "Builds live web pages, not design mockups",
+  "ui-design/quant-ux": "Clickable prototypes and user testing; basic drawing",
+  "video-editing/opencut": "Early; fewer features than CapCut",
+  "music/navidrome": "Plays only music files you own; no catalog",
+  "music/funkwhale": "Plays only music you upload or others share; no catalog",
+  "browsers/ungoogled-chromium": "No built-in sync; updates arrive slower",
+  "browsers/zen-browser": "Based on Firefox; no phone version",
+  "passwords/keepassxc": "Offline file you sync yourself; no phone app",
+  "passwords/vaultwarden": "Needs your own server; uses Bitwarden apps",
+  "passwords/aliasvault": "Young project; smaller feature set",
+  "passwords/passbolt": "Built for teams; you host it",
+  "passwords/padloc": "Less polished; smaller community",
+  "desktop-os/debian": "Very stable but older app versions; less beginner-friendly",
+  "desktop-os/fedora": "New versions every 6 months; fast-moving",
+  "desktop-os/arch-linux": "For experienced users: you set up every part",
+  "desktop-os/cachyos": "Rolling updates; best for people comfortable fixing things",
+  "phone-os/grapheneos": "Pixel phones only; you install it yourself",
+  "phone-os/lineageos": "You install it yourself; Google apps are an optional add-on",
+  "phone-os/e-os": "Some bank apps may not work; also sold pre-installed",
+  "phone-os/postmarketos": "Calls, camera or mobile data may not work on most phones",
+  "cloud-storage/nextcloud": "Needs a server or a hosting provider",
+  "cloud-storage/owncloud-infinite-scale": "Needs your own server",
+  "cloud-storage/syncthing": "No web access or share links; devices sync directly",
+  "cloud-storage/filestash": "Browser front-end for storage you already have",
+  "cloud-storage/owncloud": "Older version; moving to Infinite Scale",
+  "ai-chat/jan": "Runs on your computer; needs a capable machine",
+  "ai-chat/librechat": "You host it; bring your own AI accounts",
+  "ai-chat/ollama": "Runs models; chat window is basic",
+  "ai-chat/leon": "Early; for tinkerers",
+  "ai-coding/cline": "Works inside VS Code; you pay for the AI",
+  "ai-coding/aider": "Terminal only; you pay for the AI",
+  "ai-coding/openhands": "Runs agents; heavier set-up",
+  "ai-coding/codex-cli": "Terminal only; needs an OpenAI plan or key",
+  "ai-agents/open-interpreter": "Terminal only; aimed at programmers",
+  "maps/organic-maps": "Offline maps; no live traffic",
+  "maps/comaps": "Offline maps; no live traffic",
+  "maps/osmand": "Powerful but busy interface; some features paid",
+  "maps/openstreetmap": "Web map with basic directions; no phone navigation app"
+ },
+ "summary": {
+  "onlyoffice-docs": "ONLYOFFICE Docs is an office suite for documents, spreadsheets, presentations and forms that several people can edit together, and it opens Microsoft Office files well. You run it on your own server, or use ONLYOFFICE's separate free desktop app.",
+  "postmarketos": "postmarketOS is a Linux-based operating system for phones, built to keep older devices useful for many years. It is for tinkerers: on most phones, calls, the camera or mobile data do not fully work yet.",
+  "delta-chat": "Delta Chat is a messaging app for phones and computers that sends chats and files through ordinary email accounts. It lets you reach anyone with email, without relying on a single company's chat service.",
+  "ollama": "Ollama is a free tool that runs AI models on your own computer, so your chats stay on your machine. It now has a simple chat window, and other apps can also use it to run models.",
+  "continue": "Continue is an AI coding helper for VS Code, JetBrains and the terminal. The project has been shut down and is read-only, so it no longer gets updates.",
+  "openhands": "OpenHands is a tool for starting and managing AI coding assistants on your own computer or server. It is for programmers who want to run several AI helpers and trigger them from tools like Slack and GitHub.",
+  "openassistant": "OpenAssistant was a community project to build an open AI chat assistant. It ended in 2024, and its main lasting result is a public set of training data.",
+  "gnumeric": "Gnumeric is a lightweight spreadsheet program for tables, formulas and statistics. It is mainly for Linux, and is fast but has fewer chart options than LibreOffice.",
+  "cal-com": "Cal.diy is the free community edition of Cal.com, which lets you share a page where others pick a meeting time. It is for people running their own server, and the makers advise it for personal use only.",
+  "aliasvault": "AliasVault is a password manager that also creates a random email address for each website, so your real address stays private. It works in the browser, as phone apps and on your own server.",
+  "affine": "AFFiNE is a workspace that combines documents, whiteboards and tables in one app, in the style of Notion. Your notes are stored on your own device by default, and you can host it yourself.",
+  "notegen": "NoteGen is an app for collecting notes, links, images and recordings and organizing them into Markdown notes, with optional AI help. Your notes stay as plain files on your computer or phone."
+ },
+ "platforms": {
+  "onlyoffice-docs": [
+   "windows",
+   "mac",
+   "linux",
+   "web",
+   "server"
+  ],
+  "collabora-online": [
+   "web",
+   "server"
+  ],
+  "etherpad": [
+   "web",
+   "server"
+  ],
+  "grist": [
+   "web",
+   "server"
+  ],
+  "affine": [
+   "windows",
+   "mac",
+   "linux",
+   "web",
+   "ios"
+  ],
+  "joplin": [
+   "windows",
+   "mac",
+   "linux",
+   "android",
+   "ios"
+  ],
+  "logseq": [
+   "windows",
+   "mac",
+   "linux",
+   "android",
+   "ios"
+  ],
+  "trilium-notes": [
+   "windows",
+   "mac",
+   "linux",
+   "web",
+   "server"
+  ],
+  "siyuan": [
+   "windows",
+   "mac",
+   "linux",
+   "android",
+   "ios",
+   "web"
+  ],
+  "standard-notes": [
+   "windows",
+   "mac",
+   "linux",
+   "android",
+   "ios",
+   "web"
+  ],
+  "notesnook": [
+   "windows",
+   "mac",
+   "linux",
+   "android",
+   "ios",
+   "web"
+  ],
+  "bookstack": [
+   "web",
+   "server"
+  ],
+  "docmost": [
+   "web",
+   "server"
+  ],
+  "memos": [
+   "web",
+   "server"
+  ],
+  "moinmoin": [
+   "web",
+   "server"
+  ],
+  "mediawiki": [
+   "web",
+   "server"
+  ],
+  "roundcube": [
+   "web",
+   "server"
+  ],
+  "tuta": [
+   "windows",
+   "mac",
+   "linux",
+   "android",
+   "ios",
+   "web"
+  ],
+  "zulip": [
+   "windows",
+   "mac",
+   "linux",
+   "android",
+   "ios",
+   "web",
+   "server"
+  ],
+  "mattermost": [
+   "windows",
+   "mac",
+   "linux",
+   "android",
+   "ios",
+   "web",
+   "server"
+  ],
+  "rocket-chat": [
+   "windows",
+   "mac",
+   "linux",
+   "android",
+   "ios",
+   "web",
+   "server"
+  ],
+  "element": [
+   "windows",
+   "mac",
+   "linux",
+   "android",
+   "ios",
+   "web"
+  ],
+  "snikket": [
+   "android",
+   "ios",
+   "server"
+  ],
+  "jitsi-meet": [
+   "windows",
+   "mac",
+   "linux",
+   "android",
+   "ios",
+   "web",
+   "server"
+  ],
+  "galene": [
+   "web",
+   "server"
+  ],
+  "element-call": [
+   "web",
+   "server"
+  ],
+  "opencut": [
+   "web"
+  ],
+  "navidrome": [
+   "web",
+   "server"
+  ],
+  "funkwhale": [
+   "web",
+   "server"
+  ],
+  "aliasvault": [
+   "web",
+   "android",
+   "ios",
+   "server"
+  ],
+  "passbolt": [
+   "web",
+   "android",
+   "ios",
+   "server"
+  ],
+  "padloc": [
+   "web",
+   "windows",
+   "mac",
+   "linux",
+   "android",
+   "ios"
+  ],
+  "nextcloud": [
+   "windows",
+   "mac",
+   "linux",
+   "android",
+   "ios",
+   "web",
+   "server"
+  ],
+  "owncloud-infinite-scale": [
+   "windows",
+   "mac",
+   "linux",
+   "android",
+   "ios",
+   "web",
+   "server"
+  ],
+  "filestash": [
+   "web",
+   "server"
+  ],
+  "owncloud": [
+   "windows",
+   "mac",
+   "linux",
+   "android",
+   "ios",
+   "web",
+   "server"
+  ],
+  "youcoded": [
+   "windows",
+   "mac",
+   "linux",
+   "android",
+   "web"
+  ],
+  "quant-ux": [
+   "web",
+   "server"
+  ]
+ },
+ "remove": [
+  "notes/dexio",
+  "notes/moinmoin",
+  "scheduling/etesync",
+  "team-chat/spacebar",
+  "team-chat/stoat",
+  "video-calls/stoat",
+  "video-editing/olive-video-editor",
+  "passwords/carrypass",
+  "cloud-storage/spacedrive",
+  "ai-chat/chatrwkv",
+  "ai-chat/openassistant",
+  "ai-coding/continue",
+  "ai-coding/fauxpilot"
+ ],
+ "add": []
+}

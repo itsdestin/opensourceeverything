@@ -1,0 +1,400 @@
+{
+  "note": "Licenses read from each project's own repository or official page (2026-10-26). Moderators: skim and approve; verdicts of open_core/unclear/not_open need a decision.",
+  "fixes": {
+    "automatisch": {
+      "license": "AGPL-3.0",
+      "verdict": "open_core",
+      "evidence": "https://raw.githubusercontent.com/automatisch/automatisch/main/LICENSE",
+      "note": "AGPL-3.0 for everything except files with '.ee.' in the name, which are under a separate enterprise license."
+    },
+    "bitwarden": {
+      "license": "GPL-3.0",
+      "verdict": "open_core",
+      "evidence": "https://raw.githubusercontent.com/bitwarden/clients/main/LICENSE.txt",
+      "note": "GPL-3.0 by default; code in /bitwarden_license is under the proprietary Bitwarden License v1.0."
+    },
+    "blender": {
+      "license": "GPL-2.0-or-later",
+      "verdict": "open",
+      "evidence": "https://projects.blender.org/blender/blender/raw/branch/main/source/blender/blenkernel/intern/mesh.cc",
+      "note": "COPYING points to the GPL; source files carry SPDX 'GPL-2.0-or-later'."
+    },
+    "borgbackup": {
+      "license": "BSD-3-Clause",
+      "verdict": "open",
+      "evidence": "https://raw.githubusercontent.com/borgbackup/borg/master/LICENSE"
+    },
+    "budibase": {
+      "license": "GPL-3.0",
+      "verdict": "open_core",
+      "evidence": "https://raw.githubusercontent.com/Budibase/budibase/master/LICENSE",
+      "note": "'GPLv3 overall'; packages/pro (paid features) is under BSL; app-runtime packages are MPL-2.0."
+    },
+    "caprover": {
+      "license": "Apache-2.0",
+      "verdict": "open",
+      "evidence": "https://raw.githubusercontent.com/caprover/caprover/master/LICENSE"
+    },
+    "collabora-online": {
+      "license": "MPL-2.0",
+      "verdict": "open",
+      "evidence": "https://raw.githubusercontent.com/CollaboraOnline/online/main/COPYING"
+    },
+    "comaps": {
+      "license": "Apache-2.0",
+      "verdict": "open",
+      "evidence": "https://codeberg.org/comaps/comaps/raw/branch/main/LICENSE",
+      "note": "README: 'Licensed under the Apache License 2.0'."
+    },
+    "cube-js": {
+      "license": "Apache-2.0",
+      "verdict": "open",
+      "evidence": "https://raw.githubusercontent.com/cube-js/cube/master/LICENSE",
+      "note": "Apache-2.0 by default; some packages carry their own (e.g. MIT) license."
+    },
+    "customermates": {
+      "license": "AGPL-3.0-only",
+      "verdict": "open_core",
+      "evidence": "https://raw.githubusercontent.com/customermates/customermates/main/LICENSE",
+      "note": "Files outside ee/ are AGPL-3.0-only; ee/ is under a commercial license."
+    },
+    "dub": {
+      "license": "AGPL-3.0",
+      "verdict": "open_core",
+      "evidence": "https://raw.githubusercontent.com/dubinc/dub/main/LICENSE.md",
+      "note": "AGPL-3.0 except the (ee) directories, under a commercial license."
+    },
+    "font-awesome": {
+      "license": "OFL-1.1",
+      "verdict": "unclear",
+      "evidence": "https://raw.githubusercontent.com/FortAwesome/Font-Awesome/7.x/LICENSE.txt",
+      "note": "Free edition: icons CC-BY-4.0 (not OSI-approved), fonts SIL OFL-1.1, code MIT. Paid Pro edition is separate. Moderator call."
+    },
+    "gitlab": {
+      "license": "MIT",
+      "verdict": "open_core",
+      "evidence": "https://raw.githubusercontent.com/gitlabhq/gitlabhq/master/LICENSE",
+      "note": "MIT outside ee/ (ee/ is proprietary); docs CC BY-SA 4.0. This repo is the old mirror of the CE edition."
+    },
+    "goatcounter": {
+      "license": "EUPL-1.2",
+      "verdict": "unclear",
+      "evidence": "https://raw.githubusercontent.com/arp242/goatcounter/main/LICENSE",
+      "note": "'Slightly modified' EUPL 1.2 (shorter Compatible Licenses list). The modified text is not itself on the OSI list; count.js is ISC. Moderator call."
+    },
+    "gravitl": {
+      "license": "Apache-2.0",
+      "verdict": "open_core",
+      "evidence": "https://raw.githubusercontent.com/gravitl/netmaker/develop/LICENSE.md",
+      "note": "Apache-2.0 except pro/ directory under a proprietary license."
+    },
+    "growthbook": {
+      "license": "MIT",
+      "verdict": "open_core",
+      "evidence": "https://raw.githubusercontent.com/growthbook/growthbook/main/LICENSE",
+      "note": "MIT except 'enterprise' directories under the GrowthBook Enterprise License."
+    },
+    "joplin": {
+      "license": "AGPL-3.0-or-later",
+      "verdict": "open_core",
+      "evidence": "https://raw.githubusercontent.com/laurent22/joplin/dev/LICENSE",
+      "note": "Apps are AGPL-3.0-or-later; packages/server is under the Joplin Server Personal Use License (not OSI)."
+    },
+    "keepassxc": {
+      "license": "GPL-3.0-only",
+      "verdict": "open",
+      "evidence": "https://raw.githubusercontent.com/keepassxreboot/keepassxc/develop/COPYING",
+      "note": "Offered under GPL v2 or v3 (at your option)."
+    },
+    "kodi": {
+      "license": "GPL-2.0-or-later",
+      "verdict": "open",
+      "evidence": "https://raw.githubusercontent.com/xbmc/xbmc/master/LICENSE.md",
+      "note": "Other licenses apply to some bundled parts (LICENSES/README.md)."
+    },
+    "lightdash": {
+      "license": "MIT",
+      "verdict": "open_core",
+      "evidence": "https://raw.githubusercontent.com/lightdash/lightdash/main/LICENSE",
+      "note": "MIT except backend/src/ee, under a commercial license."
+    },
+    "mediawiki": {
+      "license": "GPL-2.0-or-later",
+      "verdict": "open",
+      "evidence": "https://raw.githubusercontent.com/wikimedia/mediawiki/master/COPYING"
+    },
+    "mellisearch": {
+      "license": "MIT",
+      "verdict": "open_core",
+      "evidence": "https://raw.githubusercontent.com/meilisearch/meilisearch/main/LICENSE",
+      "note": "Core MIT; Enterprise Edition parts under Business Source License 1.1 (LICENSE-EE), not OSI. SPDX: MIT AND BUSL-1.1."
+    },
+    "metabase": {
+      "license": "AGPL-3.0",
+      "verdict": "open_core",
+      "evidence": "https://raw.githubusercontent.com/metabase/metabase/master/LICENSE.txt",
+      "note": "AGPL outside enterprise/; enterprise/ under Metabase Commercial License."
+    },
+    "mlcraft": {
+      "license": "Apache-2.0",
+      "verdict": "open",
+      "evidence": "https://raw.githubusercontent.com/synmetrix/synmetrix/main/LICENSE"
+    },
+    "moinmoin": {
+      "license": "GPL-2.0-or-later",
+      "verdict": "open",
+      "evidence": "https://raw.githubusercontent.com/moinwiki/moin/master/LICENSE.txt"
+    },
+    "netbird": {
+      "license": "BSD-3-Clause",
+      "verdict": "open",
+      "evidence": "https://raw.githubusercontent.com/netbirdio/netbird/main/LICENSE",
+      "note": "BSD-3-Clause, except management/, signal/, relay/, combined/ (server parts) which are AGPL-3.0; both OSI."
+    },
+    "odoo": {
+      "license": "LGPL-3.0",
+      "verdict": "open_core",
+      "evidence": "https://raw.githubusercontent.com/odoo/odoo/20.0/LICENSE",
+      "note": "This repo (Community) is LGPL-3.0; Odoo Enterprise is a separate proprietary paid edition (not in this repo; from Odoo's business model, not read in a file)."
+    },
+    "presta": {
+      "license": "OSL-3.0",
+      "verdict": "open",
+      "evidence": "https://raw.githubusercontent.com/PrestaShop/PrestaShop/develop/LICENSE.md",
+      "note": "Core OSL-3.0; modules AFL-3.0."
+    },
+    "redmine": {
+      "license": "GPL-2.0-or-later",
+      "verdict": "open",
+      "evidence": "https://raw.githubusercontent.com/redmine/redmine/master/LICENSE.txt"
+    },
+    "semi": {
+      "license": "BSD-3-Clause",
+      "verdict": "open_core",
+      "evidence": "https://raw.githubusercontent.com/weaviate/weaviate/main/LICENSE",
+      "note": "BSD-3-Clause outside the wl/ directory; wl/ is proprietary 'Weaviate License'."
+    },
+    "shuup": {
+      "license": "OSL-3.0",
+      "verdict": "open",
+      "evidence": "https://raw.githubusercontent.com/shuup/shuup/master/LICENSE"
+    },
+    "signoz": {
+      "license": "MIT",
+      "verdict": "open_core",
+      "evidence": "https://raw.githubusercontent.com/SigNoz/signoz/main/LICENSE",
+      "note": "MIT except ee/ and cmd/enterprise/ under a commercial license."
+    },
+    "strapi": {
+      "license": "MIT",
+      "verdict": "open_core",
+      "evidence": "https://raw.githubusercontent.com/strapi/strapi/develop/LICENSE",
+      "note": "MIT for Community Edition; code under ee/ is the proprietary Enterprise Edition."
+    },
+    "supertokens": {
+      "license": "Apache-2.0",
+      "verdict": "open_core",
+      "evidence": "https://raw.githubusercontent.com/supertokens/supertokens-core/master/LICENSE.md",
+      "note": "Apache-2.0 except ee/ directory, under its own license."
+    },
+    "twenty": {
+      "license": "AGPL-3.0",
+      "verdict": "open_core",
+      "evidence": "https://raw.githubusercontent.com/twentyhq/twenty/main/LICENSE",
+      "note": "Mostly AGPL-3.0 (some packages MIT); files marked '@license Enterprise' are commercial."
+    },
+    "vendure": {
+      "license": "GPL-3.0",
+      "verdict": "open_core",
+      "evidence": "https://raw.githubusercontent.com/vendurehq/vendure/master/LICENSE.md",
+      "note": "Dual: GPL-3.0 community edition, or paid Vendure Commercial License."
+    },
+    "webiny": {
+      "license": "MIT",
+      "verdict": "open_core",
+      "evidence": "https://raw.githubusercontent.com/webiny/webiny-js/next/LICENSE",
+      "note": "MIT except enterprise/ directories (own license); packages may have their own LICENSE."
+    },
+    "windmill": {
+      "license": "AGPL-3.0",
+      "verdict": "open_core",
+      "evidence": "https://raw.githubusercontent.com/windmill-labs/windmill/main/LICENSE",
+      "note": "AGPL-3.0 (clients Apache-2.0); 'enterprise' code is proprietary, and the official Community Edition binaries include that proprietary code."
+    },
+    "yacy": {
+      "license": "GPL-2.0-or-later",
+      "verdict": "open",
+      "evidence": "https://raw.githubusercontent.com/yacy/yacy_search_server/master/COPYRIGHT",
+      "note": "LGPL for source/net/yacy/cora, GPL-2.0-or-later for the rest."
+    },
+    "yugabyte": {
+      "license": "Apache-2.0",
+      "verdict": "open_core",
+      "evidence": "https://raw.githubusercontent.com/yugabyte/yugabyte-db/master/LICENSE.md",
+      "note": "Database core Apache-2.0; YugabyteDB Anywhere (managed/) is Polyform Free Trial (not open, 32-day evaluation)."
+    },
+    "zinc-labs": {
+      "license": "Apache-2.0",
+      "verdict": "open",
+      "evidence": "https://raw.githubusercontent.com/zincsearch/zincsearch/main/LICENSE"
+    },
+    "firefox": {
+      "license": "MPL-2.0",
+      "verdict": "open",
+      "evidence": "https://raw.githubusercontent.com/mozilla/gecko-dev/master/toolkit/content/license.html",
+      "note": "Repo LICENSE points to this file; source headers say MPL-2.0. Firefox name/logo are trademarks."
+    },
+    "thunderbird": {
+      "license": "MPL-2.0",
+      "verdict": "open",
+      "evidence": "https://raw.githubusercontent.com/mozilla/releases-comm-central/master/mail/base/content/mailWindow.js",
+      "note": "Desktop source file header is MPL-2.0 (repo has no top-level LICENSE file). Thunderbird for Android repo is Apache-2.0."
+    },
+    "librewolf": {
+      "license": "MPL-2.0",
+      "verdict": "open",
+      "evidence": "https://codeberg.org/librewolf/source/raw/branch/main/LICENSE",
+      "note": "Firefox fork."
+    },
+    "forgejo": {
+      "license": "GPL-3.0-or-later",
+      "verdict": "open",
+      "evidence": "https://codeberg.org/forgejo/forgejo/raw/branch/forgejo/README.md",
+      "note": "README: GPL-3.0-or-later since v9; older versions MIT."
+    },
+    "funkwhale": {
+      "license": "AGPL-3.0",
+      "verdict": "open",
+      "evidence": "https://dev.funkwhale.audio/funkwhale/funkwhale/-/raw/develop/LICENSE"
+    },
+    "gimp": {
+      "license": "GPL-3.0-or-later",
+      "verdict": "open",
+      "evidence": "https://gitlab.gnome.org/GNOME/gimp/-/raw/master/app/main.c",
+      "note": "COPYING is the GPL-3 text; source headers say 'version 3 ... or any later version'."
+    },
+    "gnumeric": {
+      "license": "GPL-2.0-only",
+      "verdict": "open",
+      "evidence": "https://gitlab.gnome.org/GNOME/gnumeric/-/raw/master/COPYING",
+      "note": "Your choice of GPL v2 or GPL v3 (SPDX: GPL-2.0-only OR GPL-3.0-only); both OSI."
+    },
+    "indic-keyboard": {
+      "license": "Apache-2.0",
+      "verdict": "open",
+      "evidence": "https://gitlab.com/indicproject/indic-keyboard/-/raw/master/LICENSE"
+    },
+    "inkscape": {
+      "license": "GPL-2.0-or-later",
+      "verdict": "open",
+      "evidence": "https://gitlab.com/inkscape/inkscape/-/raw/master/COPYING",
+      "note": "Most source GPL-2.0-or-later; combined binaries are GPL-3.0-or-later. Some third-party libraries LGPL/MPL."
+    },
+    "kdenlive": {
+      "license": "GPL-3.0-only",
+      "verdict": "open",
+      "evidence": "https://invent.kde.org/multimedia/kdenlive/-/raw/master/src/mainwindow.cpp",
+      "note": "Source header: 'GPL-3.0-only OR LicenseRef-KDE-Accepted-GPL'."
+    },
+    "keyoxide": {
+      "license": "AGPL-3.0",
+      "verdict": "open",
+      "evidence": "https://codeberg.org/keyoxide/keyoxide-web/raw/branch/main/LICENSE"
+    },
+    "krita": {
+      "license": "GPL-3.0",
+      "verdict": "open",
+      "evidence": "https://invent.kde.org/graphics/krita/-/raw/master/README.md",
+      "note": "README: 'as a whole ... GPL Version 3'; individual files may be GPL-2.0-or-later or other compatible licenses."
+    },
+    "okular": {
+      "license": "GPL-2.0-or-later",
+      "verdict": "open",
+      "evidence": "https://invent.kde.org/graphics/okular/-/raw/master/core/document.cpp",
+      "note": "Source header SPDX GPL-2.0-or-later."
+    },
+    "piefed": {
+      "license": "AGPL-3.0",
+      "verdict": "open",
+      "evidence": "https://codeberg.org/rimu/pyfedi/raw/branch/main/LICENSE"
+    },
+    "libreoffice-calc": {
+      "license": "MPL-2.0",
+      "verdict": "open",
+      "evidence": "https://www.libreoffice.org/about-us/licenses/",
+      "note": "LibreOffice is one suite (this entry shares the core repo). MPL-2.0 main license; includes parts under LGPL-3.0-or-later and other licenses; based on Apache OpenOffice (Apache-2.0)."
+    },
+    "libreoffice-impress": {
+      "license": "MPL-2.0",
+      "verdict": "open",
+      "evidence": "https://www.libreoffice.org/about-us/licenses/",
+      "note": "LibreOffice is one suite (this entry shares the core repo). MPL-2.0 main license; includes parts under LGPL-3.0-or-later and other licenses; based on Apache OpenOffice (Apache-2.0)."
+    },
+    "libreoffice-writer": {
+      "license": "MPL-2.0",
+      "verdict": "open",
+      "evidence": "https://www.libreoffice.org/about-us/licenses/",
+      "note": "LibreOffice is one suite (this entry shares the core repo). MPL-2.0 main license; includes parts under LGPL-3.0-or-later and other licenses; based on Apache OpenOffice (Apache-2.0)."
+    },
+    "arch-linux": {
+      "license": "GPL-3.0",
+      "verdict": "open",
+      "evidence": "https://raw.githubusercontent.com/archlinux/archinstall/master/LICENSE",
+      "note": "Distribution of many packages with their own licenses; Arch's own installer (archinstall) is GPL-3.0."
+    },
+    "cachyos": {
+      "license": "GPL-3.0",
+      "verdict": "open",
+      "evidence": "https://raw.githubusercontent.com/CachyOS/CachyOS-Settings/master/LICENSE.md",
+      "note": "Distribution of many packages; CachyOS's own tooling (CachyOS-Settings, linux-cachyos kernel packaging) is GPL-3.0."
+    },
+    "debian": {
+      "license": "GPL-2.0-or-later",
+      "verdict": "open",
+      "evidence": "https://salsa.debian.org/installer-team/debian-installer/-/raw/master/debian/copyright",
+      "note": "Distribution of many packages under the Debian Free Software Guidelines; debian-installer is GPL-2.0-or-later."
+    },
+    "fedora": {
+      "license": "GPL-2.0-or-later",
+      "verdict": "open",
+      "evidence": "https://raw.githubusercontent.com/rhinstaller/anaconda/master/COPYING",
+      "note": "Distribution of many packages; Fedora's installer (anaconda) is GPL (COPYING is GPL v2 text; 'or later' per file headers, not checked)."
+    },
+    "linux-mint": {
+      "license": "GPL-3.0-or-later",
+      "verdict": "open",
+      "evidence": "https://raw.githubusercontent.com/linuxmint/mintupdate/master/debian/copyright",
+      "note": "Distribution of many packages; Mint's own tools (e.g. mintupdate) are GPL-3+; Cinnamon is GPL-2.0."
+    },
+    "ubuntu": {
+      "license": "GPL-3.0",
+      "verdict": "open",
+      "evidence": "https://raw.githubusercontent.com/canonical/ubuntu-desktop-provision/main/LICENSE",
+      "note": "Distribution of many packages; the installer is GPL-3.0 (subiquity: AGPL-3.0-or-later for subiquity/ dir, GPL-3.0 otherwise)."
+    },
+    "grapheneos": {
+      "license": "MIT",
+      "verdict": "open",
+      "evidence": "https://raw.githubusercontent.com/GrapheneOS/hardened_malloc/main/LICENSE",
+      "note": "Android-based OS; mostly Apache-2.0 (AOSP) with GrapheneOS's own components (hardened_malloc, Auditor, Camera) MIT."
+    },
+    "lineageos": {
+      "license": "Apache-2.0",
+      "verdict": "open",
+      "evidence": "https://raw.githubusercontent.com/LineageOS/android_vendor_lineage/lineage-23.0/LICENSE",
+      "note": "Android-based OS built on AOSP (Apache-2.0); Linux kernel parts GPL-2.0."
+    },
+    "e-os": {
+      "license": "Apache-2.0",
+      "verdict": "open",
+      "evidence": "https://gitlab.e.foundation/e/os/android/-/raw/a16/LICENSE",
+      "note": "Android-based OS built on AOSP (Apache-2.0); /e/ adds its own apps, various licenses."
+    },
+    "postmarketos": {
+      "license": "GPL-3.0-or-later",
+      "verdict": "open",
+      "evidence": "https://gitlab.postmarketos.org/postmarketOS/pmbootstrap/-/raw/main/pmbootstrap.py",
+      "note": "Distribution built on Alpine Linux with many packages; its own tool pmbootstrap is GPL-3.0-or-later."
+    }
+  }
+}

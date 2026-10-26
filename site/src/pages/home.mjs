@@ -1,7 +1,7 @@
 // The home page, in the order a newcomer needs it (Destin, Oct 27: "clearer… more polished for newcomers"):
 // 1. what this is and a big search, 2. popular switches with real screenshots, 3. every category as a tidy card,
 // 4. what's still missing, 5. the builders' card. Everything sits inside a raised card (no bare text).
-import { url, esc, ICON, suggestUrl } from '../lib.mjs';
+import { url, esc, ICON, suggestUrl, shot } from '../lib.mjs';
 import { appUrl, sortAlts } from '../cards.mjs';
 
 // WHY two lists: the picture cards need a replacement with a real screenshot (Windows and Chrome have none yet),
@@ -40,7 +40,7 @@ export default function home(d) {
     return lead ? { name, lead, more: alts.length - 1 } : null;
   }).filter(Boolean);
   const switchCard = ({ name, lead, more }) => `<a class="card pic swcard" href="${appUrl(name)}">
-      ${lead.p.screenshots?.[0] ? `<div class="preview"><img src="${esc(lead.p.screenshots[0])}" alt="${esc(lead.p.name)} screenshot" loading="lazy" referrerpolicy="no-referrer"></div>` : '<div class="preview empty">No screenshot yet</div>'}
+      ${lead.p.screenshots?.[0] ? `<div class="preview"><img src="${esc(shot(lead.p))}" alt="${esc(lead.p.name)} screenshot" loading="lazy" referrerpolicy="no-referrer"></div>` : '<div class="preview empty">No screenshot yet</div>'}
       <div class="inner">
         <div class="muted11">Instead of ${esc(name)}</div>
         <h3>${esc(lead.p.name)}</h3>
@@ -49,7 +49,7 @@ export default function home(d) {
 
   // ── Hero collage: three real screenshots, slightly fanned, so the first thing a visitor sees is real software ──
   // WHY these three: wide desktop screenshots fan out cleanly; tall phone shots (AppFlowy's) looked cluttered there.
-  const collage = ['Figma', 'Adobe Photoshop', 'Google Docs'].map((n) => switches.find((s) => s.name === n)?.lead.p.screenshots?.[0]).filter(Boolean);
+  const collage = ['Figma', 'Adobe Photoshop', 'Google Docs'].map((n) => switches.find((s) => s.name === n)?.lead.p).filter(Boolean).map((p) => shot(p)).filter(Boolean);
 
   // ── Categories: icon, name, a summary line and its first groups; the rest is one "+ more" chip ──
   const SHOWN = 6;

@@ -209,6 +209,18 @@ for (const e of optional(join(ROOT, 'data/edits.json'))?.edits ?? []) {
   }
 }
 
+// WHY after the hand fixes: hand-picked screenshots need their small copies too.
+// Small copies for cards (prefill/make-thumbs.mjs), matched to each screenshot by its address.
+const thumbsFile = join(OUT, 'thumbs.json');
+if (existsSync(thumbsFile)) {
+  const th = read(thumbsFile);
+  for (const p of projects.values()) { const t = (p.screenshots ?? []).map((u) => th[p.id]?.find((x) => x?.from === u)?.file ?? null); p.thumbs = t.map((f) => (f ? `assets/shots/${f}` : null)); }
+}
+
+// WHY: a project whose last listing was removed (by the review or a mod) has no page to belong to.
+const listed = new Set([...groups.values()].flatMap((g) => g.alternatives.map((a) => a.project)));
+for (const id of [...projects.keys()]) if (!listed.has(id)) projects.delete(id);
+
 // ── Write ──
 const groupList = [...groups.values()].sort((a, b) => categories.findIndex((c) => c.id === a.category) - categories.findIndex((c) => c.id === b.category));
 const unknownCat = groupList.filter((g) => !categories.some((c) => c.id === g.category));
