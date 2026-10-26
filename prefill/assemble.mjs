@@ -54,7 +54,8 @@ for (const c of starter.categories) for (const g of c.groups) for (const [name, 
     const r = checked[link] ?? {}; const ai = starterAI.get(name);
     const lic = r.sniffed?.found ?? (licenseVerdict(r.license ?? undefined) === 'open' ? r.license : null);
     starterIds.set(name, addProject({
-      id: slug(name), name, summary: ai?.summary ?? '', kind: ai?.kind ?? 'app',
+      // WHY a disclosure sentence (Destin, Oct 27): a project made by a mod says so in its description, not with a badge.
+      id: slug(name), name, summary: [ai?.summary, extra?.disclosure].filter(Boolean).join(' '), kind: ai?.kind ?? 'app',
       // WHY extra: projects on their own code hosts (GIMP, KDE apps, LibreOffice) get their website, download page
       // and code link by hand in starter.json, because no API reports them.
       code: codeHost(link) ? link : (extra?.code ?? (extra?.website ? link : null)), website: extra?.website ?? (codeHost(link) ? null : link),

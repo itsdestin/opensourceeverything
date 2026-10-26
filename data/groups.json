@@ -1834,6 +1834,11 @@
      "note": "Runs models; needs a chat app on top"
     },
     {
+     "project": "youcoded",
+     "fit": "full",
+     "note": "Desktop and Android app; any AI model"
+    },
+    {
      "project": "chatrwkv",
      "fit": "partial",
      "note": null,
@@ -1867,7 +1872,8 @@
     "GitHub Copilot",
     "Cursor",
     "Windsurf",
-    "Claude Code"
+    "Claude Code",
+    "OpenAI Codex app"
    ],
    "source": "starter",
    "alternatives": [
@@ -1905,6 +1911,11 @@
      }
     },
     {
+     "project": "youcoded",
+     "fit": "full",
+     "note": "Desktop and Android app; any AI model"
+    },
+    {
      "project": "fauxpilot",
      "fit": "partial",
      "note": null,
@@ -1912,6 +1923,34 @@
       "by": "claude-opus-5-5",
       "reason": "Changed fit to partial because FauxPilot only serves code completion and lacks the chat and code-editing features of Cursor, Windsurf or Claude Code."
      }
+    }
+   ]
+  },
+  {
+   "id": "ai-agents",
+   "name": "AI agents for everyday work",
+   "category": "ai",
+   "job": "An AI assistant that works on your files and apps for you",
+   "closed": [
+    "Claude Cowork",
+    "ChatGPT agent"
+   ],
+   "source": "starter",
+   "alternatives": [
+    {
+     "project": "youcoded",
+     "fit": "full",
+     "note": "Desktop and Android app; any AI model"
+    },
+    {
+     "project": "goose",
+     "fit": "full",
+     "note": "Desktop app and terminal"
+    },
+    {
+     "project": "open-interpreter",
+     "fit": "partial",
+     "note": "Runs in the terminal"
     }
    ]
   },

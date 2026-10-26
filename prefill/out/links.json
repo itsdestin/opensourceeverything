@@ -129,7 +129,7 @@
  },
  "github.com/bruin-data/bruin": {
   "website": "https://getbruin.com/docs/bruin/",
-  "release": "https://github.com/bruin-data/bruin/releases/tag/v0.11.796"
+  "release": "https://github.com/bruin-data/bruin/releases/tag/v0.11.797"
  },
  "github.com/btw-so/btw": {
   "website": "https://btw.so",
@@ -249,7 +249,7 @@
  },
  "github.com/decaporg/decap-cms": {
   "website": "https://decapcms.org",
-  "release": "https://github.com/decaporg/decap-cms/releases/tag/decap-cms%403.17.2"
+  "release": "https://github.com/decaporg/decap-cms/releases/tag/decap-cms%403.17.3"
  },
  "github.com/deepset-ai/haystack": {
   "website": "https://haystack.deepset.ai",
@@ -277,7 +277,7 @@
  },
  "github.com/docusealco/docuseal": {
   "website": "https://www.docuseal.com",
-  "release": "https://github.com/docusealco/docuseal/releases/tag/3.3.3"
+  "release": "https://github.com/docusealco/docuseal/releases/tag/3.3.4"
  },
  "github.com/dokku/dokku": {
   "website": "https://dokku.com",
@@ -446,6 +446,10 @@
  "github.com/gogs/gogs": {
   "website": "https://gogs.io",
   "release": "https://github.com/gogs/gogs/releases/tag/v0.14.3"
+ },
+ "github.com/aaif-goose/goose": {
+  "website": "https://goose-docs.ai/",
+  "release": "https://github.com/aaif-goose/goose/releases/tag/v1.56.0"
  },
  "github.com/grafana/grafana": {
   "website": "https://grafana.com",
@@ -867,6 +871,10 @@
   "website": "https://www.onlyoffice.com/see-it-in-action",
   "release": "https://github.com/ONLYOFFICE/DocumentServer/releases/tag/v10.0.0"
  },
+ "github.com/openinterpreter/openinterpreter": {
+  "website": "http://openinterpreter.com/",
+  "release": "https://github.com/openinterpreter/openinterpreter/releases/tag/rust-v0.0.56"
+ },
  "github.com/LAION-AI/Open-Assistant": {
   "website": "https://open-assistant.io",
   "release": "https://github.com/LAION-AI/Open-Assistant/releases/tag/v0.0.4-alpha2"
@@ -1249,7 +1257,7 @@
  },
  "github.com/Telemetry-Tracker/telemetry-tracker": {
   "website": "https://telemetry-tracker.com",
-  "release": "https://github.com/Telemetry-Tracker/telemetry-tracker/releases/tag/v1.22.14"
+  "release": "https://github.com/Telemetry-Tracker/telemetry-tracker/releases/tag/v1.22.15"
  },
  "github.com/terminusdb/terminusdb": {
   "website": "https://terminusdb.com",
@@ -1394,6 +1402,10 @@
  "github.com/purocean/yn": {
   "website": "https://yank-note.com",
   "release": "https://github.com/purocean/yn/releases/tag/v3.93.1"
+ },
+ "github.com/itsdestin/youcoded": {
+  "website": "https://youcoded.ai",
+  "release": "https://github.com/itsdestin/youcoded/releases/tag/v1.3.3"
  },
  "github.com/YOURLS/YOURLS": {
   "website": "https://yourls.org",

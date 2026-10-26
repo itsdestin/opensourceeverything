@@ -1179,6 +1179,16 @@
        "github.com/ollama/ollama",
        "partial",
        "Runs models; needs a chat app on top"
+      ],
+      [
+       "YouCoded",
+       "github.com/itsdestin/youcoded",
+       "full",
+       "Desktop and Android app; any AI model",
+       {
+        "website": "https://youcoded.ai",
+        "disclosure": "Made by itsdestin, a r/TrueOpenSource moderator who also runs this site."
+       }
       ]
      ]
     },
@@ -1225,7 +1235,8 @@
        "full",
        "Desktop and Android app; any AI model",
        {
-        "website": "https://youcoded.ai"
+        "website": "https://youcoded.ai",
+        "disclosure": "Made by itsdestin, a r/TrueOpenSource moderator who also runs this site."
        }
       ]
      ]
@@ -1245,7 +1256,8 @@
        "full",
        "Desktop and Android app; any AI model",
        {
-        "website": "https://youcoded.ai"
+        "website": "https://youcoded.ai",
+        "disclosure": "Made by itsdestin, a r/TrueOpenSource moderator who also runs this site."
        }
       ],
       [
