@@ -1,0 +1,36 @@
+# Pre-fill step 1: what the free lists gave us
+
+Generated 2026-10-26 by `prefill/import-lists.mjs`. No AI, no cost.
+
+| Source | License | Entries read |
+|---|---|---|
+| awesome-privacy | CC0-1.0 | 118 |
+| awesome-foss-alternatives | CC-BY-4.0 | 122 |
+| awesome-oss-alternatives | MIT | 214 |
+| open-source-alternatives | MIT | 113 |
+| switching.software | CC-BY-SA-4.0 | 119 |
+| awesome-selfhosted | CC-BY-SA-3.0 | 1358 (pool, no closed apps named) |
+
+- **544 distinct open projects** named as replacing at least one closed app.
+- **412** of them have a code link (GitHub, GitLab or Codeberg); 34 of those were filled in from awesome-selfhosted by name.
+  The other **132** only have a website, so their license can't be checked automatically yet.
+- **275 distinct closed apps** named.
+- **986 "project replaces closed app" pairs**; **99** of them are named by two or more lists.
+- **awesome-selfhosted** adds **1358** more projects that don't name a closed app; the AI step can match them.
+
+Most-named closed apps (number of open projects): Notion (33), Evernote (24), Microsoft OneNote (21), Google Keep (20), Squid (18), Clubhouse (18), Heroku (14), Auth0 (14), Google Analytics (13), Datadog (13), Google Meet (12), Microsoft Teams (10), Trello (10), Okta (10), Firebase (10), Contentful (10), Shopify (9), LastPass (9), Dashlane (9), Google News (8), Discord (8), Algolia (8), NewRelic (8), Fivetran (8), GitHub (8), Retool (8), Google Forms (8), Google Maps (8), Gmail (8), GBoard (7), SwiftKey (7), Bitly (7), Feedly (7), Inoreader (7), Google (7), Yahoo! (7), Bing (7), Yandex (7), Ecosia (7), Slack (7).
+
+## Step 1b: code links found on project websites (free)
+
+Opened the websites of **107** projects that had no code link: found one for **36**. **71** still have none (often hosted services or closed-source picks that slipped into a list).
+
+## Step 2: GitHub facts (2026-10-26, free)
+
+Looked up **436** GitHub projects in 9 batch requests.
+
+- **6** no longer exist (deleted, renamed or private).
+- **325** have an OSI-approved open-source license (the same list the mod bot uses).
+- **93** have a license GitHub can't match to a known open-source one (often "source-available"); a person decides.
+- **12** have no license file at all.
+- Of the open-source ones: **11** are archived and **27** more had no changes in a year (they'd show "Inactive").
+- GitLab and Codeberg projects (12) and website-only ones (96) still need a look.
