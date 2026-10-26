@@ -49,7 +49,7 @@
   {
    "id": "abilian-hop3",
    "name": "Abilian Hop3",
-   "summary": "Hop3 is an open-source platform that lets you deploy and run web applications on servers you control. It is aimed at small businesses, non-profits, and individual developers who want to host apps without a dedicated platform team.",
+   "summary": "Hop3 is an open-source platform for deploying and running web apps on your own servers, including apps from a ready-made catalog. It is aimed at small businesses, non-profits and individual developers, but is still in early development and not yet recommended for unattended production use.",
    "kind": "self_hosted",
    "code": "github.com/abilian/hop3",
    "website": null,
@@ -74,7 +74,7 @@
   {
    "id": "abilian-nua",
    "name": "Abilian Nua",
-   "summary": "Nua is a self-hosted cloud platform that helps you deploy and run web applications on your own server. It is aimed at small businesses, associations and public services that want cloud-style simplicity without giving up control of their data.",
+   "summary": "Nua is a self-hosted platform for building, deploying and managing web applications on your own server from the command line. It is aimed at small businesses, associations and public services, and is still early-stage software not yet meant for production.",
    "kind": "self_hosted",
    "code": "github.com/abilian/nua",
    "website": null,
@@ -100,7 +100,7 @@
   {
    "id": "accrescent",
    "name": "Accrescent",
-   "summary": "Accrescent is an app store for Android phones that aims to focus on security and privacy when installing apps. It is meant for people who want an alternative to the Google Play Store.",
+   "summary": "Accrescent is an app store for Android phones that focuses on security and privacy, with automatic updates and no account needed to install apps. It is in early alpha and suits people who want a privacy-focused alternative to the Google Play Store.",
    "kind": "app",
    "code": "github.com/accrescent/accrescent",
    "website": null,
@@ -345,30 +345,6 @@
    "verified": false
   },
   {
-   "id": "appbase",
-   "name": "AppBase",
-   "summary": "ReactiveSearch is a set of ready-made search and filter components for React and Vue websites, connected to databases like Elasticsearch or MongoDB. It is for developers who want to add search, filters, and result displays to their web apps.",
-   "kind": "developer_tool",
-   "code": "github.com/appbaseio/reactivesearch",
-   "website": "https://www.appbase.io/",
-   "license": "Apache-2.0",
-   "licenseClass": "open",
-   "licenseNeedsCheck": false,
-   "stars": 4922,
-   "archived": false,
-   "inactive": false,
-   "unconfirmed": [
-    "Whether the ReactiveSearch cloud service that the README mentions is open source or paid",
-    "Whether the components can be used without ReactiveSearch cloud, since the README says the library is designed to work with it",
-    "Whether the AIAnswer component's use of OpenAI models has licensing or cost implications"
-   ],
-   "source": "lists",
-   "sourceLists": [
-    "awesome-oss-alternatives"
-   ],
-   "verified": false
-  },
-  {
    "id": "appflowy",
    "name": "AppFlowy",
    "summary": "AppFlowy is a workspace for writing notes, documents and plans, with an optional AI assistant. It is for people who want a Notion-style tool that keeps their data under their own control, and it runs on desktop, phone and self-hosted servers.",
@@ -465,7 +441,7 @@
   {
    "id": "audacity",
    "name": "Audacity",
-   "summary": "Audacity is an easy-to-use multi-track audio editor and recorder for Windows, macOS and Linux. It is aimed at people who want to record and edit sound.",
+   "summary": "Audacity is a multi-track audio editor and recorder for Windows, macOS and Linux. It is for people who want to record, cut and clean up sound such as voice, podcasts or music recordings.",
    "kind": "app",
    "code": "github.com/audacity/audacity",
    "website": null,
@@ -575,7 +551,7 @@
   {
    "id": "bagisto",
    "name": "Bagisto",
-   "summary": "Bagisto is free software for running an online shop, or a marketplace where many sellers each have their own storefront. It is aimed at businesses and developers who want to build and customise their own store.",
+   "summary": "Bagisto is free, self-hosted software for running your own online shop, built on Laravel. It is aimed at businesses and developers who want to set up and customise their own store.",
    "kind": "self_hosted",
    "code": "github.com/bagisto/bagisto",
    "website": "https://bagisto.com/en/",
@@ -664,7 +640,7 @@
   {
    "id": "blender",
    "name": "Blender",
-   "summary": "Blender is free 3D creation software for modeling, animating, rendering, video tracking and visual effects. It is for artists, designers and studios who want a free alternative to paid 3D tools.",
+   "summary": "Blender is free and open-source 3D software for modeling, sculpting, animation, rendering, camera tracking and visual effects. It is for artists, designers and studios making 3D models, animations and effects.",
    "kind": "app",
    "code": null,
    "website": "https://www.blender.org",
@@ -843,7 +819,7 @@
   {
    "id": "btw",
    "name": "btw",
-   "summary": "btw is a tool for building a personal website or blog, and you can use it in your browser without installing anything. It is aimed at people who want to publish their own writing.",
+   "summary": "btw is an open-source tool for building a personal website or blog, with a hosted version or a self-hosted copy. It is for individuals who want to publish their own writing.",
    "kind": "self_hosted",
    "code": "github.com/btw-so/btw",
    "website": null,
@@ -939,30 +915,6 @@
    "verified": false
   },
   {
-   "id": "builder",
-   "name": "Builder",
-   "summary": "Builder is a visual editor where people can drag and drop page content and publish it to their own website or app. It is aimed at teams that build websites and want non-programmers to edit pages.",
-   "kind": "developer_tool",
-   "code": "github.com/BuilderIO/builder",
-   "website": "https://builder.io/",
-   "license": "MIT",
-   "licenseClass": "open",
-   "licenseNeedsCheck": false,
-   "stars": 8873,
-   "archived": false,
-   "inactive": false,
-   "unconfirmed": [
-    "Whether the hosted Builder.io service has paid or closed-source parts beyond this repository",
-    "Whether the SDKs and starter projects in this repository are all under MIT",
-    "Which exact features of Contentful are covered"
-   ],
-   "source": "lists",
-   "sourceLists": [
-    "awesome-oss-alternatives"
-   ],
-   "verified": false
-  },
-  {
    "id": "buzz",
    "name": "Buzz",
    "summary": "Buzz is a desktop app that transcribes speech from audio and video files into text and captions, running on your own computer. It is aimed at people who need subtitles or transcripts and want to keep their recordings private.",
@@ -987,7 +939,7 @@
   {
    "id": "cal-com",
    "name": "Cal.com",
-   "summary": "Cal.diy is a self-hosted scheduling tool that lets people set up booking pages so others can pick a meeting time. It is aimed at individuals and self-hosters who run it on their own server.",
+   "summary": "Cal.diy is the community edition of Cal.com, a self-hosted tool for making booking pages where others pick a meeting time. It is for individuals running their own server, and the project recommends it only for personal, non-production use.",
    "kind": "self_hosted",
    "code": "github.com/calcom/cal.com",
    "website": null,
@@ -1053,7 +1005,7 @@
   {
    "id": "carrypass",
    "name": "CarryPass",
-   "summary": "CarryPass is a password manager that stores logins in an encrypted vault, which you can host on your own website. It is aimed at individuals and teams who want to keep their shared passwords under their own control.",
+   "summary": "CarryPass is a password manager and shared team vault that runs as a web app in the browser, works offline, and keeps data encrypted on your device. It is for individuals and small teams who want to host the app and their encrypted vault file on their own website.",
    "kind": "self_hosted",
    "code": "github.com/racz-zoltan/carrypass-self-host",
    "website": "https://carrypass.net",
@@ -1079,7 +1031,7 @@
   {
    "id": "chatrwkv",
    "name": "ChatRWKV",
-   "summary": "ChatRWKV is a chat program that runs an RWKV language model, an alternative to ChatGPT, on your own computer. It is aimed at people and developers who want to run a chatbot locally using a GPU or CPU.",
+   "summary": "ChatRWKV is a set of Python scripts and code examples for chatting with RWKV language models on your own computer, using a GPU or CPU. It is mainly for developers and technical users comfortable with the command line, not a ready-made chat app.",
    "kind": "app",
    "code": "github.com/BlinkDL/ChatRWKV",
    "website": null,
@@ -1147,7 +1099,7 @@
   {
    "id": "codex-cli",
    "name": "Codex CLI",
-   "summary": "Codex CLI is a coding agent from OpenAI that runs on your own computer in a terminal and helps write and change code. It is for programmers who want an AI helper working in their local project.",
+   "summary": "Codex CLI is an open-source coding agent from OpenAI that runs in a terminal on your computer and helps write and change code in your project. It is for programmers, and it needs a ChatGPT plan or an OpenAI API key to use OpenAI's AI models.",
    "kind": "developer_tool",
    "code": "github.com/openai/codex",
    "website": null,
@@ -1167,7 +1119,7 @@
   {
    "id": "collabora-online",
    "name": "Collabora Online",
-   "summary": "Collabora Online is software you run on your own server so people can edit office documents in a web browser. The README mainly explains where the code lives and how to report bugs.",
+   "summary": "Collabora Online is office software you run on your own server so people can write and edit documents together in a web browser. It is for groups and organizations that want shared document editing on their own server.",
    "kind": "self_hosted",
    "code": "github.com/CollaboraOnline/online",
    "website": null,
@@ -1255,7 +1207,7 @@
   {
    "id": "continue",
    "name": "Continue",
-   "summary": "Continue is an AI coding assistant that runs as a command-line tool, a VS Code extension, or a JetBrains plugin. It is for programmers who want an AI helper inside their editor or terminal.",
+   "summary": "Continue is an AI coding assistant that runs as a command-line tool, a VS Code extension, or a JetBrains plugin. It is for programmers who want an AI helper in their editor or terminal, but the project is no longer maintained after its final 2.0.0 release.",
    "kind": "developer_tool",
    "code": "github.com/continuedev/continue",
    "website": null,
@@ -1326,7 +1278,7 @@
   {
    "id": "cortex",
    "name": "Cortex",
-   "summary": "Cortex is a tool for running machine learning models in production on Amazon's cloud, scaling them up and down with demand. It is aimed at engineers and teams who need to deploy and manage ML models.",
+   "summary": "Cortex is a tool for running machine learning models in production on your own Amazon Web Services account, scaling them up and down with demand. It is aimed at engineering teams deploying ML models, and its original authors no longer actively maintain it.",
    "kind": "developer_tool",
    "code": "github.com/cortexlabs/cortex",
    "website": "https://www.cortex.dev/",
@@ -1835,7 +1787,7 @@
   {
    "id": "dub",
    "name": "Dub",
-   "summary": "Dub is a platform for creating short links and tracking how people click them and what they lead to. It is aimed at marketing teams and businesses that run links and affiliate programs.",
+   "summary": "Dub is a tool for creating short links and tracking clicks and conversions, with support for affiliate programs. It is aimed at marketing teams and businesses, and can be self-hosted or used as a paid hosted service.",
    "kind": "self_hosted",
    "code": "github.com/dubinc/dub",
    "website": null,
@@ -1901,7 +1853,7 @@
   {
    "id": "element",
    "name": "Element",
-   "summary": "Element is a chat app for sending messages, making calls and sharing files over the Matrix network, usable in a web browser or as a desktop app. It is aimed at people and teams who want chat that they or their organization can control.",
+   "summary": "Element is a chat app for private messages and group chats over the Matrix network, used in a web browser or as a desktop app. It is for people and teams who want chat they can host and control, with phone apps offered as separate Element X projects.",
    "kind": "app",
    "code": "github.com/element-hq/element-web",
    "website": null,
@@ -1944,7 +1896,7 @@
   {
    "id": "encore",
    "name": "Encore",
-   "summary": "Encore is a framework for building backend applications, where you declare databases, queues and storage in code and it sets them up locally and in your AWS or Google Cloud account. It is aimed at developers and teams who build and deploy server-side apps.",
+   "summary": "Encore is a TypeScript and Go framework for writing backend code in which you declare databases, queues and file storage, and its open-source tools run them on your computer or package the app for self-hosting with Docker. Automatic setup in your AWS or Google Cloud account uses Encore's hosted platform, and it is aimed at developers building server-side apps.",
    "kind": "developer_tool",
    "code": "github.com/encoredev/encore",
    "website": "https://encore.dev/",
@@ -2008,7 +1960,7 @@
   {
    "id": "erpnext",
    "name": "ERPNext",
-   "summary": "ERPNext is a business management system that handles invoices, stock, staff and projects in one place. It is aimed at small and medium businesses that want one tool instead of several separate ones.",
+   "summary": "ERPNext is a self-hostable business management system that covers accounting, stock and orders, manufacturing, assets and projects in one place. It is for businesses that want one tool instead of several separate ones.",
    "kind": "app",
    "code": "github.com/frappe/erpnext",
    "website": "https://erpnext.com",
@@ -2238,7 +2190,7 @@
   {
    "id": "firecamp",
    "name": "Firecamp",
-   "summary": "Firecamp is a desktop and web app for designing, testing and documenting APIs, the connection points that software programs use to talk to each other. It is aimed at developers and their teams who build and check those APIs.",
+   "summary": "Firecamp is a desktop and web app for sending and testing requests to APIs, the connection points programs use to talk to each other, including REST, GraphQL, WebSocket and Socket.IO. It is aimed at developers and teams who build APIs and want to share request collections.",
    "kind": "developer_tool",
    "code": "github.com/firecamp-dev/firecamp",
    "website": "https://firecamp.dev/",
@@ -2264,7 +2216,7 @@
   {
    "id": "firefox",
    "name": "Firefox",
-   "summary": "Firefox is a web browser made by the non-profit Mozilla organization for browsing the internet on computers. It is for anyone who wants a fast browser with a focus on privacy.",
+   "summary": "Firefox is a web browser made by the non-profit Mozilla organization. It is for anyone who wants an everyday browser with a focus on privacy.",
    "kind": "app",
    "code": "github.com/mozilla-firefox/firefox",
    "website": null,
@@ -2280,30 +2232,6 @@
     "No list descriptions were provided."
    ],
    "source": "starter",
-   "verified": false
-  },
-  {
-   "id": "firezone",
-   "name": "Firezone",
-   "summary": "Firezone is a remote access tool that lets people securely connect to private apps, servers and networks from their own devices. It is aimed at teams and businesses that need controlled access for their staff.",
-   "kind": "self_hosted",
-   "code": "github.com/firezone/firezone",
-   "website": "https://www.firez.one/",
-   "license": "Apache-2.0",
-   "licenseClass": "open_core",
-   "licenseNeedsCheck": false,
-   "stars": 9127,
-   "archived": false,
-   "inactive": false,
-   "unconfirmed": [
-    "Whether the Elastic License 2.0 portal code is treated as open for this community's purposes was not stated.",
-    "The README does not confirm the exact feature set of OpenVPN Access Server, so fit was judged from the general category only.",
-    "Self-hosted portal support is described as not officially supported, which was not weighed beyond the README text."
-   ],
-   "source": "lists",
-   "sourceLists": [
-    "awesome-oss-alternatives"
-   ],
    "verified": false
   },
   {
@@ -2333,7 +2261,7 @@
   {
    "id": "florisboard",
    "name": "FlorisBoard",
-   "summary": "FlorisBoard is a free keyboard app for Android phones that aims to be customizable and respect privacy. It is for people who want an alternative to the default phone keyboard.",
+   "summary": "FlorisBoard is a free, open-source keyboard app for Android phones, currently in beta, with themes, a clipboard history and an emoji keyboard. It does not yet offer word suggestions or spell checking, so it suits people who value customization and privacy over predictive typing.",
    "kind": "app",
    "code": "github.com/florisboard/florisboard",
    "website": null,
@@ -2375,7 +2303,7 @@
   {
    "id": "folio-wiki",
    "name": "Folio Wiki",
-   "summary": "Folio is a self-hosted team wiki where every page is a Markdown file stored in a Git repository. It is for teams who want to write pages in a browser and keep their own copy of the content.",
+   "summary": "Folio is a self-hosted team wiki where every page is a Markdown file in a Git repository, edited together in the browser in real time. It is for teams replacing Notion or Confluence who want to run it themselves and keep their content as plain files.",
    "kind": "self_hosted",
    "code": "github.com/evergreen-it-dev/folio",
    "website": null,
@@ -2398,7 +2326,7 @@
   {
    "id": "fonoster",
    "name": "Fonoster",
-   "summary": "Fonoster is a platform for building AI voice agents that answer and make real phone calls, and for running phone systems with APIs for SMS, voice and video. It is aimed at developers who want to build phone-based apps, and it can be used through Fonoster Cloud or self-hosted.",
+   "summary": "Fonoster is a self-hostable platform for building voice apps and AI voice agents that make and answer real phone calls, with PBX features and SDKs. It is for developers who want programmable phone calls without relying on a closed service, and it can also be used through Fonoster Cloud.",
    "kind": "self_hosted",
    "code": "github.com/fonoster/fonoster",
    "website": "https://fonoster.com/",
@@ -2469,7 +2397,7 @@
   {
    "id": "formbricks",
    "name": "Formbricks",
-   "summary": "Formbricks is a free survey tool for asking users and customers for feedback through in-app, website, link and email surveys. It is for teams that want to collect feedback without relying on a closed service.",
+   "summary": "Formbricks is an open-source survey tool for building link, website, in-app and email surveys with a no-code editor and templates. It is for teams that want to collect feedback on their own servers instead of a closed service.",
    "kind": "self_hosted",
    "code": "github.com/formbricks/formbricks",
    "website": null,
@@ -2513,7 +2441,7 @@
   {
    "id": "fossdroid",
    "name": "FossDroid",
-   "summary": "Fossdroid is a website that lists free and open source Android apps from the F-Droid repository, so people can browse and find them. It is aimed at Android users who want open source software.",
+   "summary": "Fossdroid Core is the open-source code behind the Fossdroid.com website, a web interface for browsing free and open source Android apps from the F-Droid repository. It is for people who want to run their own catalogue site for F-Droid apps; it does not install apps itself.",
    "kind": "app",
    "code": "github.com/SnaKKo/Fossdroid-Core",
    "website": "https://fossdroid.com/",
@@ -2963,7 +2891,7 @@
   {
    "id": "graphite",
    "name": "Graphite",
-   "summary": "Graphite is a free vector and raster graphics editor that is still in alpha, meaning early testing. It is for artists and designers who want to draw, edit images and build layouts.",
+   "summary": "Graphite is a free vector and raster graphics editor that is still in alpha, meaning early testing. It is for artists and designers who want to make vector drawings and designs, using layers or a node-based editing system.",
    "kind": "app",
    "code": "github.com/GraphiteEditor/Graphite",
    "website": null,
@@ -3388,7 +3316,7 @@
   {
    "id": "insomnia",
    "name": "Insomnia",
-   "summary": "Insomnia is a desktop and web app for testing and designing APIs, the way developers connect programs to web services. It is aimed at programmers and IT teams who build or check APIs.",
+   "summary": "Insomnia is a desktop app for Mac, Windows and Linux for sending requests to, designing, testing and mocking APIs. It is for programmers and IT teams who build or check APIs, and most features need a free account.",
    "kind": "developer_tool",
    "code": "github.com/Kong/insomnia",
    "website": null,
@@ -3630,7 +3558,7 @@
   {
    "id": "keepassxc",
    "name": "KeePassXC",
-   "summary": "KeePassXC is a free password manager that stores logins, notes and other private details in an encrypted file kept on your own device. It is for people who want to control where their sensitive data lives and who are comfortable with desktop software.",
+   "summary": "KeePassXC is a free password manager for Windows, macOS and Linux that keeps logins, notes and other private details in an encrypted file you can store wherever you choose. It fills passwords in browsers and apps, and suits people who want control over where their data lives.",
    "kind": "app",
    "code": "github.com/keepassxreboot/keepassxc",
    "website": null,
@@ -3768,7 +3696,7 @@
   {
    "id": "koreader",
    "name": "KOReader",
-   "summary": "KOReader is a free document reader for e-ink e-readers, phones, and computers that opens books, PDFs and comics. It is aimed at people who want a customizable reading app on devices like Kindle and Kobo.",
+   "summary": "KOReader is a free document reader for e-ink e-readers, Android devices and Linux computers that opens e-books, PDFs and comics. It is for people who want a customizable reading app on devices like Kindle, Kobo and PocketBook.",
    "kind": "app",
    "code": "github.com/koreader/koreader",
    "website": null,
@@ -4194,7 +4122,7 @@
   {
    "id": "lightdash",
    "name": "LightDash",
-   "summary": "Lightdash is a platform for building dashboards, metrics and AI-assisted analytics from a shared set of trusted business definitions. It is aimed at data teams and business users who need governed analytics, and it can be used in the cloud or self-hosted.",
+   "summary": "Lightdash is a business intelligence tool for building charts, dashboards and shared metric definitions on top of a company's data warehouse. It is for data teams and business users, and its open-source core can be self-hosted, while AI agents and some other features are aimed at the paid cloud and enterprise versions.",
    "kind": "self_hosted",
    "code": "github.com/lightdash/lightdash",
    "website": "https://www.lightdash.com/",
@@ -4329,7 +4257,7 @@
   {
    "id": "lmms",
    "name": "LMMS",
-   "summary": "LMMS is free software for making music on a computer, with tools for recording, arranging, and mixing tracks. It is aimed at people who want to compose beats and songs.",
+   "summary": "LMMS is free music production software with a piano roll, beat sequencer, song editor and mixer, plus built-in synthesizers and plugin support. It is for people who want to compose beats and songs on a computer.",
    "kind": "app",
    "code": "github.com/LMMS/lmms",
    "website": null,
@@ -4459,7 +4387,7 @@
   {
    "id": "manticore-search",
    "name": "Manticore Search",
-   "summary": "Manticore Search is a fast open-source database built for searching text, logs and data. It is aimed at developers and teams who want a search engine as an alternative to Elasticsearch.",
+   "summary": "Manticore Search is an open-source database for searching text, logs and other data, with SQL support and vector search. It is for developers and teams who want a self-hosted search engine instead of Elasticsearch or Algolia.",
    "kind": "developer_tool",
    "code": "github.com/manticoresoftware/manticoresearch",
    "website": "https://manticoresearch.com/",
@@ -4844,7 +4772,7 @@
   {
    "id": "monomap",
    "name": "MonoMap",
-   "summary": "MonoMap is a web app for drawing mind maps and running kanban boards in one place, and it works offline in your browser. It is for people who want to plan ideas and track tasks without needing an account.",
+   "summary": "MonoMap is a browser app that combines mind maps and simple kanban boards, saving your work on your own device so it works offline without an account. It is for individuals who want to plan ideas and track their own tasks; syncing across devices and sharing boards require a paid hosted plan.",
    "kind": "app",
    "code": "github.com/tehnika-mk/monomap",
    "website": null,
@@ -5022,7 +4950,7 @@
   {
    "id": "netnewswire",
    "name": "NetNewsWire",
-   "summary": "NetNewsWire is a free feed reader for Mac and iPhone that collects articles from websites and podcasts you follow in one place. It is for people who want to read news and blogs from their own feeds, and it can keep them synced through self-hosted services.",
+   "summary": "NetNewsWire is a free feed reader for Mac, iPhone and iPad that collects new articles from the websites and blogs you follow in one place. It is for Apple users who want to replace apps like Feedly, and it can sync through iCloud or other feed services.",
    "kind": "app",
    "code": "github.com/Ranchero-Software/NetNewsWire",
    "website": "https://netnewswire.com/",
@@ -5090,7 +5018,7 @@
   {
    "id": "nexopos",
    "name": "NexoPOS",
-   "summary": "NexoPOS is a point-of-sale system for shops, restaurants and cafés that handles sales, inventory, customers and reports in one application. It is aimed at retail and service businesses that want to run their own system.",
+   "summary": "NexoPOS is a self-hosted point-of-sale system that handles sales, inventory, purchasing, customers and reports in one application. It is aimed at shops and other small businesses, with restaurant and multi-store features offered as separate add-on modules.",
    "kind": "app",
    "code": "github.com/Blair2004/NexoPOS",
    "website": null,
@@ -5447,7 +5375,7 @@
   {
    "id": "offpdf",
    "name": "OffPDF",
-   "summary": "OffPDF is a desktop toolbox for everyday PDF tasks such as merging, splitting, compressing, converting and signing, and it works without an internet connection. It is for people who want to handle PDFs privately, with no uploads or accounts.",
+   "summary": "OffPDF is a free desktop app for Windows and Mac that edits, annotates, fills in, signs, merges, splits, converts, compresses and OCRs PDFs. It is for people who want to do this work on their own computer without uploads or accounts.",
    "kind": "app",
    "code": "github.com/McanKul/offpdf",
    "website": null,
@@ -5539,7 +5467,7 @@
   {
    "id": "omniedge",
    "name": "OmniEdge",
-   "summary": "OmniEdge is a tool that links computers, phones and devices across different networks into one private mesh so they can reach each other by virtual IP. It is aimed at developers, researchers and teams running robots, edge devices and AI systems.",
+   "summary": "OmniEdge is a mesh VPN that links computers, servers, routers and small boards across different networks so they can reach each other by private IP, and it can run on your own server. It is aimed at developers, researchers and teams connecting robots, edge devices and AI systems.",
    "kind": "developer_tool",
    "code": "github.com/omniedgeio/omniedge",
    "website": "https://omniedge.io/",
@@ -5584,7 +5512,7 @@
   {
    "id": "openassistant",
    "name": "OpenAssistant",
-   "summary": "OpenAssistant is a project that aimed to give everyone access to a chat-based AI language model. It is now finished, and its final dataset is published, with the chat and data collection site having been live for users.",
+   "summary": "OpenAssistant was a community project to build an open chat-based AI assistant and collect the training data behind it. The project is now finished, and its main lasting result is a public dataset, as its code is meant for development rather than everyday chatting.",
    "kind": "app",
    "code": "github.com/LAION-AI/Open-Assistant",
    "website": null,
@@ -5602,31 +5530,6 @@
    "source": "lists",
    "sourceLists": [
     "open-source-alternatives"
-   ],
-   "verified": false
-  },
-  {
-   "id": "openbb-terminal",
-   "name": "OpenBB Terminal",
-   "summary": "OpenBB is a free toolset that pulls financial data from many sources so people can research investments. It is aimed at data engineers, quants and analysts who want to use that data in Python, Excel or AI tools.",
-   "kind": "developer_tool",
-   "code": "github.com/openbq-org/OpenBB",
-   "website": null,
-   "license": null,
-   "licenseClass": "open",
-   "licenseNeedsCheck": true,
-   "stars": 74725,
-   "archived": false,
-   "inactive": false,
-   "unconfirmed": [
-    "Whether the project covers the same markets, data or features as Bloomberg",
-    "Whether OpenBB Workspace, the enterprise UI, is open source or licensed separately",
-    "Whether the data integrations depend on paid or proprietary providers, which the README mentions but does not list",
-    "The Apache license file was cut off in the material given, so only its opening lines were checked"
-   ],
-   "source": "lists",
-   "sourceLists": [
-    "awesome-oss-alternatives"
    ],
    "verified": false
   },
@@ -5681,7 +5584,7 @@
   {
    "id": "openbooks",
    "name": "OpenBooks",
-   "summary": "OpenBooks is a self-hosted business suite for accounting, invoicing, inventory, payroll and HR, run on your own server and used in a web browser. It is aimed at small businesses and growing organizations that want one system for their books and operations.",
+   "summary": "OpenBooks is a self-hosted business suite for accounting, invoicing, inventory, manufacturing, projects, payroll and HR, used in a web browser. It is for businesses from solo operators to multi-company groups, and it is still in early (alpha) development.",
    "kind": "self_hosted",
    "code": "github.com/braedonsaunders/openbooks",
    "website": null,
@@ -5772,7 +5675,7 @@
   {
    "id": "openshot",
    "name": "OpenShot",
-   "summary": "OpenShot is a free video editor for Linux, Mac and Windows that lets you cut, arrange and animate video clips. It is aimed at people who want a simple but capable editor without paying for one.",
+   "summary": "OpenShot is a free, open-source video editor for Linux, Mac and Windows for cutting, arranging and animating video clips on a multi-track timeline. It is for people who want an easy-to-use editor without paying for one.",
    "kind": "app",
    "code": "github.com/OpenShot/openshot-qt",
    "website": null,
@@ -5910,7 +5813,7 @@
   {
    "id": "organic-maps",
    "name": "Organic Maps",
-   "summary": "Organic Maps is a phone and computer maps app that works offline and does not track its users. It is aimed at hikers, cyclists, drivers and travellers who want privacy and free maps.",
+   "summary": "Organic Maps is a free maps and navigation app for phones that works offline and does not track its users. It is for hikers, cyclists, drivers and travellers who want turn-by-turn directions and maps based on OpenStreetMap.",
    "kind": "app",
    "code": "github.com/organicmaps/organicmaps",
    "website": null,
@@ -5976,7 +5879,7 @@
   {
    "id": "otomi",
    "name": "Otomi",
-   "summary": "Otomi is a self-hosted platform that helps software teams build, deploy and run their applications on Kubernetes clusters. It is aimed at developers and platform administrators who want a Heroku-style setup on their own infrastructure.",
+   "summary": "Otomi, now called App Platform and maintained by Akamai, is a self-hosted platform that runs on a Kubernetes cluster and lets teams build apps from source code, deploy them and put them online. It is for developer teams and platform administrators who run their own Kubernetes infrastructure.",
    "kind": "self_hosted",
    "code": "github.com/linode/apl-core",
    "website": "https://otomi.io",
@@ -6401,7 +6304,7 @@
   {
    "id": "plume",
    "name": "Plume",
-   "summary": "Plume is a blogging engine that lets you publish articles and podcasts on your own site. It connects to other sites in the Fediverse so readers on different servers can follow and interact with each other.",
+   "summary": "Plume is a blogging platform you can host yourself or join on an existing server, with support for multiple blogs per account plus image and audio uploads. It is for writers who want Medium-style blogging connected to the Fediverse, but it does not send email newsletters.",
    "kind": "self_hosted",
    "code": "github.com/Plume-org/Plume",
    "website": "https://joinplu.me/",
@@ -6628,29 +6531,6 @@
    "verified": false
   },
   {
-   "id": "qovery",
-   "name": "Qovery",
-   "summary": "Qovery Engine is the software behind the Qovery platform, which sets up Kubernetes clusters in your own cloud and deploys applications to them. It is aimed at developers and IT teams who run their own cloud infrastructure rather than end users.",
-   "kind": "developer_tool",
-   "code": "github.com/Qovery/engine",
-   "website": "https://www.qovery.com/",
-   "license": "GPL-3.0",
-   "licenseClass": "open",
-   "licenseNeedsCheck": false,
-   "stars": 2474,
-   "archived": false,
-   "inactive": false,
-   "unconfirmed": [
-    "Whether the Qovery hosted product, which is separate from the Engine, is open or has paid parts",
-    "Whether the Engine alone can deploy apps without the Qovery control plane"
-   ],
-   "source": "lists",
-   "sourceLists": [
-    "awesome-oss-alternatives"
-   ],
-   "verified": false
-  },
-  {
    "id": "quant-ux",
    "name": "Quant-UX",
    "summary": "Quant-UX is a tool for designing, prototyping and testing app or website screens, and collecting data on how people use them. It is aimed at researchers, UX designers and product teams who want data-driven feedback on their designs.",
@@ -6809,7 +6689,7 @@
   {
    "id": "reveal-js",
    "name": "reveal.js",
-   "summary": "reveal.js is a framework for building slide presentations that run in a web browser, using HTML. It is aimed at developers and anyone comfortable writing code or Markdown who wants free, good-looking slides.",
+   "summary": "reveal.js is a free framework for making slide presentations that run in a web browser, written in HTML or Markdown. It is for people comfortable editing code who want web-based slides with features like speaker notes and PDF export.",
    "kind": "developer_tool",
    "code": "github.com/hakimel/reveal.js",
    "website": null,
@@ -7113,7 +6993,7 @@
   {
    "id": "signal",
    "name": "Signal",
-   "summary": "Signal is a messenger app for private text messages, group chats, and voice or video calls. It is for anyone who wants encrypted communication on their phone, computer, or web.",
+   "summary": "Signal is a messenger app for private text messages, group chats, and voice or video calls. It is for anyone who wants encrypted communication on their phone or computer.",
    "kind": "app",
    "code": "github.com/signalapp/Signal-Android",
    "website": null,
@@ -7415,7 +7295,7 @@
   {
    "id": "spacedrive",
    "name": "Spacedrive",
-   "summary": "Spacedrive is a file manager that lets you see and search files spread across your own drives, computers, servers and chosen cloud services as one filesystem. It is aimed at people who want to keep their files under their own control instead of relying on a hosted account.",
+   "summary": "Spacedrive is a file manager that shows and searches files across your own drives, computers, servers and chosen cloud services as one filesystem. It is for people who want their files under their own control, but it is still in early development, with a beta planned for November 2026.",
    "kind": "app",
    "code": "github.com/spacedriveapp/spacedrive",
    "website": "https://spacedrive.com/",
@@ -7548,7 +7428,7 @@
   {
    "id": "stoat",
    "name": "Stoat",
-   "summary": "Stoat is a chat platform that you install on your own server and use through a web browser. It is for people or groups who want to run their own chat service instead of relying on a company's servers.",
+   "summary": "Stoat is a group chat platform that you install on your own server and use through a web browser, with optional voice and video calls. It is for communities or teams who want to run their own chat and calling service instead of relying on a company's servers.",
    "kind": "self_hosted",
    "code": "github.com/stoatchat/self-hosted",
    "website": "https://stoat.chat/",
@@ -7787,7 +7667,7 @@
   {
    "id": "taiga",
    "name": "Taiga",
-   "summary": "Taiga is a free project management tool that helps teams plan and track their work using agile methods. It is aimed at cross-functional teams who want a shared board for tasks and projects.",
+   "summary": "Taiga is a free, open-source project management tool for agile teams, with boards for planning and tracking tasks and projects. This repository holds the next version of Taiga, which is being redesigned around the same core ideas.",
    "kind": "app",
    "code": "github.com/kaleidos-ventures/taiga",
    "website": null,
@@ -7834,7 +7714,7 @@
   {
    "id": "telemetry-tracker",
    "name": "Telemetry Tracker",
-   "summary": "Telemetry Tracker is software that collects errors, product events and user sessions from your apps so you can see what goes wrong. It is for developers and small teams who want to run it on their own servers or use the official hosted cloud.",
+   "summary": "Telemetry Tracker is a self-hosted tool that collects errors, product events, user sessions and web performance data from JavaScript and React Native apps, with alerts by email, Slack and other channels. It is for developers and small teams who want to see what goes wrong in their apps; an official hosted cloud is also offered.",
    "kind": "self_hosted",
    "code": "github.com/Telemetry-Tracker/telemetry-tracker",
    "website": null,
@@ -7882,7 +7762,7 @@
   {
    "id": "thunderbird",
    "name": "Thunderbird",
-   "summary": "Thunderbird is a free desktop and Android app for email, calendars and contacts, all in one place. It is aimed at people who want to manage several email accounts without relying on a big tech company's service.",
+   "summary": "Thunderbird is a free, open-source email app for Windows, macOS and Linux that also includes calendars and contacts, with an Android app for email. It suits people who want to manage their email and calendars in one desktop program without relying on a big tech company.",
    "kind": "app",
    "code": null,
    "website": "https://www.thunderbird.net",
@@ -8020,7 +7900,7 @@
   {
    "id": "tuta",
    "name": "Tuta",
-   "summary": "Tuta Mail is an email service with built-in end-to-end encryption, so messages stay private between the people communicating. It is for anyone who wants secure email on their phone, computer or web browser.",
+   "summary": "Tuta Mail is an email service with built-in end-to-end encryption, with open-source apps for web, desktop and phones. It is for people who want private email and are fine using Tuta's own hosted service, which cannot be self-hosted.",
    "kind": "app",
    "code": "github.com/tutao/tutanota",
    "website": "https://tuta.com/",
@@ -8433,7 +8313,7 @@
   {
    "id": "webiny",
    "name": "Webiny",
-   "summary": "Webiny is a content management system that companies run themselves on their own Amazon Web Services account, and developers extend it with TypeScript code. It is aimed at engineering teams building complex websites, apps and multi-brand content setups.",
+   "summary": "Webiny is a headless content management system with a drag-and-drop page builder that companies run on their own Amazon Web Services account. It is aimed at developer teams who build complex websites and apps and extend them with TypeScript code.",
    "kind": "self_hosted",
    "code": "github.com/webiny/webiny-js",
    "website": "https://www.webiny.com/",
@@ -8483,7 +8363,7 @@
   {
    "id": "wekan",
    "name": "Wekan",
-   "summary": "WeKan is a free kanban board app for organizing tasks visually, with boards, lists and cards. It is for individuals and teams who want to run it on their own computer or server.",
+   "summary": "WeKan is a free kanban board app for organizing tasks and projects, with boards, lists and cards plus calendar, table, Gantt and sprint views. It is for individuals and teams who want to run it on their own computer or server.",
    "kind": "self_hosted",
    "code": "github.com/wekan/wekan",
    "website": null,
@@ -8569,7 +8449,7 @@
   {
    "id": "woocommerce",
    "name": "WooCommerce",
-   "summary": "WooCommerce is a monorepo holding the source code for the WooCommerce store plugin and its extensions, used to build online shops on WordPress. It is aimed at developers who build or contribute to WooCommerce.",
+   "summary": "WooCommerce is a free plugin that adds an online store to a WordPress website. It is for shop owners who want to sell products from a site they run themselves.",
    "kind": "developer_tool",
    "code": "github.com/woocommerce/woocommerce",
    "website": null,

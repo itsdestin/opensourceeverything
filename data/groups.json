@@ -28,12 +28,20 @@
     {
      "project": "collabora-online",
      "fit": "full",
-     "note": "Needs your own server"
+     "note": "Needs your own server",
+     "review": {
+      "by": "claude-opus-5-5",
+      "reason": "Replaced the sentence about the README with what the software does and who it is for."
+     }
     },
     {
      "project": "cryptpad",
-     "fit": "partial",
-     "note": "Encrypted, simpler formatting"
+     "fit": "full",
+     "note": "Encrypted, simpler formatting",
+     "review": {
+      "by": "claude-opus-5-5",
+      "reason": "Upgraded fit to full because CryptPad includes a full Document editor with real-time collaborative editing that can be self-hosted, which covers the main job of Google Docs and Word."
+     }
     },
     {
      "project": "etherpad",
@@ -71,8 +79,12 @@
     },
     {
      "project": "gnumeric",
-     "fit": "partial",
-     "note": null
+     "fit": "full",
+     "note": null,
+     "review": {
+      "by": "claude-opus-5-5",
+      "reason": "Changed fit to full because Gnumeric is a complete desktop spreadsheet with formulas and charts, covering the main job of Excel, Sheets and Numbers."
+     }
     }
    ]
   },
@@ -106,7 +118,11 @@
     {
      "project": "reveal-js",
      "fit": "partial",
-     "note": "Web slides, for developers"
+     "note": "Web slides, for developers",
+     "review": {
+      "by": "claude-opus-5-5",
+      "reason": "Removed the subjective \"good-looking\" wording and noted that slides are written as code, since the open-source project has no visual editor."
+     }
     }
    ]
   },
@@ -177,7 +193,11 @@
     {
      "project": "folio-wiki",
      "fit": "full",
-     "note": null
+     "note": null,
+     "review": {
+      "by": "claude-opus-5-5",
+      "reason": "Added real-time browser editing and the Notion/Confluence replacement focus, which the page highlights, so the description reflects the main use."
+     }
     },
     {
      "project": "hedgedoc",
@@ -191,8 +211,12 @@
     },
     {
      "project": "memos",
-     "fit": "full",
-     "note": null
+     "fit": "partial",
+     "note": null,
+     "review": {
+      "by": "claude-opus-5-5",
+      "reason": "Changed fit to partial because Memos is a timeline of short notes similar to Google Keep, without the notebooks, page hierarchies or team wikis that Notion, OneNote and Obsidian provide."
+     }
     },
     {
      "project": "moinmoin",
@@ -201,8 +225,12 @@
     },
     {
      "project": "notegen",
-     "fit": "partial",
-     "note": null
+     "fit": "full",
+     "note": null,
+     "review": {
+      "by": "claude-opus-5-5",
+      "reason": "Changed fit to full because NoteGen is a complete local-first Markdown notes app with an editor, search, a knowledge base and sync across devices, which covers the main job of apps like Obsidian and Evernote."
+     }
     },
     {
      "project": "notally",
@@ -226,8 +254,12 @@
     },
     {
      "project": "quillpad",
-     "fit": "full",
-     "note": null
+     "fit": "partial",
+     "note": null,
+     "review": {
+      "by": "claude-opus-5-5",
+      "reason": "Changed fit to partial because it is an Android-only phone notes app, closer to Google Keep, with no desktop app or team wiki features."
+     }
     },
     {
      "project": "xwiki",
@@ -236,8 +268,12 @@
     },
     {
      "project": "yanknote",
-     "fit": "partial",
-     "note": null
+     "fit": "full",
+     "note": null,
+     "review": {
+      "by": "claude-opus-5-5",
+      "reason": "Raised fit to full because it is a complete local Markdown notes app with document links, tags, full-text search and history, covering the main job of apps like Obsidian."
+     }
     },
     {
      "project": "xournal",
@@ -277,13 +313,21 @@
     },
     {
      "project": "wekan",
-     "fit": "partial",
-     "note": "Boards only"
+     "fit": "full",
+     "note": "Boards only",
+     "review": {
+      "by": "claude-opus-5-5",
+      "reason": "Changed fit to full because WeKan now offers calendar, Gantt, Scrum sprints and automation rules beyond boards, and updated the description to mention these views."
+     }
     },
     {
      "project": "taiga",
      "fit": "full",
-     "note": null
+     "note": null,
+     "review": {
+      "by": "claude-opus-5-5",
+      "reason": "Noted that this repository is the redesigned next version of Taiga rather than the established release."
+     }
     },
     {
      "project": "bugzilla",
@@ -303,7 +347,11 @@
     {
      "project": "monomap",
      "fit": "partial",
-     "note": null
+     "note": null,
+     "review": {
+      "by": "claude-opus-5-5",
+      "reason": "Added that cross-device sync and sharing are paid hosted features, since the free version is local and single-user."
+     }
     },
     {
      "project": "orbit",
@@ -342,7 +390,11 @@
     {
      "project": "formbricks",
      "fit": "full",
-     "note": null
+     "note": null,
+     "review": {
+      "by": "claude-opus-5-5",
+      "reason": "Replaced the vague 'free' wording with what the tool actually does and mentioned self-hosting, since some features need a paid enterprise key."
+     }
     },
     {
      "project": "heyform",
@@ -375,13 +427,21 @@
    "alternatives": [
     {
      "project": "cal-com",
-     "fit": "full",
-     "note": "Booking pages"
+     "fit": "partial",
+     "note": "Booking pages",
+     "review": {
+      "by": "claude-opus-5-5",
+      "reason": "Changed fit to partial because it replaces Calendly-style booking but is not a full calendar app, and added the project's non-production warning."
+     }
     },
     {
      "project": "thunderbird",
      "fit": "partial",
-     "note": "Calendar in the desktop app"
+     "note": "Calendar in the desktop app",
+     "review": {
+      "by": "claude-opus-5-5",
+      "reason": "Corrected the description because the page presents the Android app as email-only, so calendars are a desktop feature."
+     }
     },
     {
      "project": "nextcloud-calendar",
@@ -395,8 +455,12 @@
     },
     {
      "project": "tymeslot",
-     "fit": "full",
-     "note": null
+     "fit": "partial",
+     "note": null,
+     "review": {
+      "by": "claude-opus-5-5",
+      "reason": "Changed fit to partial because Tymeslot is a self-hosted booking tool like Calendly. It syncs with existing calendars but is not a calendar app itself, so it does not replace Google or Outlook Calendar."
+     }
     }
    ]
   },
@@ -427,8 +491,12 @@
     },
     {
      "project": "offpdf",
-     "fit": "partial",
-     "note": null
+     "fit": "full",
+     "note": null,
+     "review": {
+      "by": "claude-opus-5-5",
+      "reason": "Raised fit to full and updated the description because the app also covers editing text, annotations, form filling and OCR, which make up the core of what Acrobat is used for."
+     }
     },
     {
      "project": "xournal",
@@ -455,13 +523,21 @@
     },
     {
      "project": "roundcube",
-     "fit": "partial",
-     "note": "Webmail for your own server"
+     "fit": "full",
+     "note": "Webmail for your own server",
+     "review": {
+      "by": "claude-opus-5-5",
+      "reason": "Changed fit to full because Roundcube is a complete browser-based email client with folders, search and an address book, which covers the main job of reading and sending email."
+     }
     },
     {
      "project": "tuta",
      "fit": "full",
-     "note": null
+     "note": null,
+     "review": {
+      "by": "claude-opus-5-5",
+      "reason": "Clarified that only the apps are open source and they work only with Tuta's hosted service."
+     }
     }
    ]
   },
@@ -487,8 +563,12 @@
     },
     {
      "project": "libresign",
-     "fit": "partial",
-     "note": null
+     "fit": "full",
+     "note": null,
+     "review": {
+      "by": "claude-opus-5-5",
+      "reason": "Changed fit to full: it covers DocuSign's main job of sending documents to internal and external signers, setting signing order, sending reminders, and tracking and validating signatures, all self-hosted on Nextcloud."
+     }
     }
    ]
   },
@@ -530,8 +610,12 @@
     },
     {
      "project": "stoat",
-     "fit": "partial",
-     "note": null
+     "fit": "full",
+     "note": null,
+     "review": {
+      "by": "claude-opus-5-5",
+      "reason": "Changed fit to full because a self-hosted Stoat instance provides channel-based group chat, file sharing and voice/video, which is the main job of Slack and Teams."
+     }
     }
    ]
   },
@@ -553,8 +637,12 @@
     },
     {
      "project": "mumble",
-     "fit": "partial",
-     "note": "Voice only"
+     "fit": "full",
+     "note": "Voice only",
+     "review": {
+      "by": "claude-opus-5-5",
+      "reason": "Changed fit to full because Mumble is a complete self-hosted equivalent of TeamSpeak, offering servers with voice channels, which is this group's main job."
+     }
     },
     {
      "project": "spacebar",
@@ -579,7 +667,11 @@
     {
      "project": "signal",
      "fit": "full",
-     "note": null
+     "note": null,
+     "review": {
+      "by": "claude-opus-5-5",
+      "reason": "Removed the mention of web, since Signal offers Android, iOS and desktop apps but no web version."
+     }
     },
     {
      "project": "simplex-chat",
@@ -593,18 +685,30 @@
     },
     {
      "project": "element",
-     "fit": "full",
-     "note": null
+     "fit": "partial",
+     "note": null,
+     "review": {
+      "by": "claude-opus-5-5",
+      "reason": "Changed fit to partial and noted the separate phone apps, because this repository is the browser and desktop client, with mobile browsers only community-supported."
+     }
     },
     {
      "project": "snikket",
-     "fit": "partial",
-     "note": null
+     "fit": "full",
+     "note": null,
+     "review": {
+      "by": "claude-opus-5-5",
+      "reason": "Changed fit to full because Snikket is a complete self-hosted messaging service with phone apps for private and group chats."
+     }
     },
     {
      "project": "tinode",
-     "fit": "partial",
-     "note": null
+     "fit": "full",
+     "note": null,
+     "review": {
+      "by": "claude-opus-5-5",
+      "reason": "Changed fit to full because Tinode includes a server plus Android, iOS and web apps with private and group chats, voice and video calls, and channels, covering the main job of WhatsApp or Telegram."
+     }
     }
    ]
   },
@@ -637,13 +741,21 @@
     },
     {
      "project": "galene",
-     "fit": "partial",
-     "note": null
+     "fit": "full",
+     "note": null,
+     "review": {
+      "by": "claude-opus-5-5",
+      "reason": "Changed fit to full because Galene is a complete self-hosted videoconferencing system for browser-based group meetings."
+     }
     },
     {
      "project": "stoat",
      "fit": "partial",
-     "note": null
+     "note": null,
+     "review": {
+      "by": "claude-opus-5-5",
+      "reason": "Added that it supports voice and video calls, which the setup guide covers and which is why it fits this group; it stays partial because it is mainly a chat app, not a meetings tool."
+     }
     }
    ]
   },
@@ -675,8 +787,12 @@
     },
     {
      "project": "friendica",
-     "fit": "partial",
-     "note": null
+     "fit": "full",
+     "note": null,
+     "review": {
+      "by": "claude-opus-5-5",
+      "reason": "Changed fit to full because Friendica handles public posts and follows and federates with Mastodon, which covers the main job of Twitter/X and Threads."
+     }
     }
    ]
   },
@@ -785,18 +901,30 @@
     },
     {
      "project": "wordpress",
-     "fit": "full",
-     "note": null
+     "fit": "partial",
+     "note": null,
+     "review": {
+      "by": "claude-opus-5-5",
+      "reason": "Changed fit to partial because WordPress handles blog publishing well, but email newsletters and paid subscriptions like Substack's are not built in and need add-ons."
+     }
     },
     {
      "project": "btw",
      "fit": "partial",
-     "note": null
+     "note": null,
+     "review": {
+      "by": "claude-opus-5-5",
+      "reason": "The description only mentioned the hosted sign-up, so I added the self-hosted option; fit stays partial because it has no email newsletter features."
+     }
     },
     {
      "project": "plume",
      "fit": "partial",
-     "note": null
+     "note": null,
+     "review": {
+      "by": "claude-opus-5-5",
+      "reason": "Rewrote the description to say who it is for and to note that it lacks email newsletters, which is why the fit stays partial."
+     }
     }
    ]
   },
@@ -843,13 +971,21 @@
    "alternatives": [
     {
      "project": "gathio",
-     "fit": "full",
-     "note": null
+     "fit": "partial",
+     "note": null,
+     "review": {
+      "by": "claude-opus-5-5",
+      "reason": "Changed fit to partial: Gathio handles simple event pages and RSVPs, but not Meetup-style group discovery or EasyChair-style conference paper management."
+     }
     },
     {
      "project": "indico",
-     "fit": "partial",
-     "note": null
+     "fit": "full",
+     "note": null,
+     "review": {
+      "by": "claude-opus-5-5",
+      "reason": "Changed fit to full because Indico covers the group's main job of organizing and managing events, including EasyChair-style abstract and paper reviewing plus registration."
+     }
     }
    ]
   },
@@ -877,8 +1013,12 @@
     },
     {
      "project": "rawtherapee",
-     "fit": "full",
-     "note": "Raw photos"
+     "fit": "partial",
+     "note": "Raw photos",
+     "review": {
+      "by": "claude-opus-5-5",
+      "reason": "Changed fit to partial because RawTherapee handles raw development and photo adjustments like Lightroom's editing side, but not layer-based retouching like Photoshop or photo library management."
+     }
     },
     {
      "project": "krita",
@@ -906,8 +1046,12 @@
     },
     {
      "project": "mypaint",
-     "fit": "partial",
-     "note": null
+     "fit": "full",
+     "note": null,
+     "review": {
+      "by": "claude-opus-5-5",
+      "reason": "Changed fit to full because MyPaint covers the group's main job of drawing and painting, with configurable brushes, layers and tablet support."
+     }
     }
    ]
   },
@@ -931,7 +1075,11 @@
     {
      "project": "graphite",
      "fit": "partial",
-     "note": "Early"
+     "note": "Early",
+     "review": {
+      "by": "claude-opus-5-5",
+      "reason": "Removed layout building and image editing as current uses, since the page lists photo editing and desktop publishing as planned roadmap items."
+     }
     }
    ]
   },
@@ -1026,7 +1174,11 @@
     {
      "project": "openshot",
      "fit": "full",
-     "note": null
+     "note": null,
+     "review": {
+      "by": "claude-opus-5-5",
+      "reason": "Rewrote the description to say it is open source and to drop the unsupported \"simple but capable\" judgment."
+     }
     },
     {
      "project": "olive-video-editor",
@@ -1056,7 +1208,11 @@
     {
      "project": "blender",
      "fit": "full",
-     "note": null
+     "note": null,
+     "review": {
+      "by": "claude-opus-5-5",
+      "reason": "Removed the comparison to paid tools and added that it is open source and supports sculpting, as the page shows."
+     }
     },
     {
      "project": "natron",
@@ -1085,8 +1241,12 @@
    "alternatives": [
     {
      "project": "audacity",
-     "fit": "full",
-     "note": "Editing recordings"
+     "fit": "partial",
+     "note": "Editing recordings",
+     "review": {
+      "by": "claude-opus-5-5",
+      "reason": "Changed fit to partial because Audacity records and edits audio like Audition but lacks the MIDI and instrument tools of GarageBand, FL Studio or Ableton, and dropped the 'easy-to-use' claim."
+     }
     },
     {
      "project": "ardour",
@@ -1095,8 +1255,12 @@
     },
     {
      "project": "lmms",
-     "fit": "full",
-     "note": "Making beats"
+     "fit": "partial",
+     "note": "Making beats",
+     "review": {
+      "by": "claude-opus-5-5",
+      "reason": "Removed the recording claim the page doesn't support and set fit to partial, since LMMS covers composing and beat-making but not audio recording or editing like Audition."
+     }
     }
    ]
   },
@@ -1235,13 +1399,21 @@
     },
     {
      "project": "accrescent",
-     "fit": "full",
-     "note": null
+     "fit": "partial",
+     "note": null,
+     "review": {
+      "by": "claude-opus-5-5",
+      "reason": "Changed fit to partial and noted early alpha status, because the project calls itself early alpha and offers far fewer apps than the closed stores."
+     }
     },
     {
      "project": "fossdroid",
      "fit": "partial",
-     "note": null
+     "note": null,
+     "review": {
+      "by": "claude-opus-5-5",
+      "reason": "Clarified that this repo is self-hostable website code for browsing F-Droid apps, not an installer, and that it lacks the site's screenshot scraping and popularity data."
+     }
     },
     {
      "project": "obtainium",
@@ -1263,8 +1435,12 @@
    "alternatives": [
     {
      "project": "florisboard",
-     "fit": "full",
-     "note": null
+     "fit": "partial",
+     "note": null,
+     "review": {
+      "by": "claude-opus-5-5",
+      "reason": "Changed fit to partial and updated the description because the project page says it is in beta and lacks word suggestions and spell checking, which are core features of Gboard and SwiftKey."
+     }
     },
     {
      "project": "heliboard",
@@ -1273,13 +1449,21 @@
     },
     {
      "project": "anysoftkeyboard",
-     "fit": "partial",
-     "note": null
+     "fit": "full",
+     "note": null,
+     "review": {
+      "by": "claude-opus-5-5",
+      "reason": "Changed fit to full because it is a complete Android keyboard with word suggestions, autocorrect, gesture typing, voice input and emoji, which covers the main job of Gboard and SwiftKey."
+     }
     },
     {
      "project": "indic-keyboard",
-     "fit": "partial",
-     "note": null
+     "fit": "full",
+     "note": null,
+     "review": {
+      "by": "claude-opus-5-5",
+      "reason": "Changed fit to full because it is a complete Android keyboard that types in English and 23 languages, which is the main job of Gboard and SwiftKey."
+     }
     },
     {
      "project": "openboard",
@@ -1306,8 +1490,12 @@
    "alternatives": [
     {
      "project": "meshcentral",
-     "fit": "partial",
-     "note": null
+     "fit": "full",
+     "note": null,
+     "review": {
+      "by": "claude-opus-5-5",
+      "reason": "Changed fit to full because MeshCentral is a complete self-hosted remote desktop tool with remote screen control, terminal and file access, covering the main job of TeamViewer and AnyDesk."
+     }
     },
     {
      "project": "rustdesk",
@@ -1316,8 +1504,12 @@
     },
     {
      "project": "ultravnc",
-     "fit": "partial",
-     "note": null
+     "fit": "full",
+     "note": null,
+     "review": {
+      "by": "claude-opus-5-5",
+      "reason": "Changed fit to full because it covers the core job of viewing and controlling another Windows PC, including file transfer and no-install help-desk support through Single Click, though the computer being controlled must run Windows."
+     }
     }
    ]
   },
@@ -1336,7 +1528,11 @@
     {
      "project": "firefox",
      "fit": "full",
-     "note": null
+     "note": null,
+     "review": {
+      "by": "claude-opus-5-5",
+      "reason": "Removed the promotional word \"fast\" and the \"on computers\" limit, since Firefox also runs on phones."
+     }
     },
     {
      "project": "librewolf",
@@ -1408,7 +1604,11 @@
     {
      "project": "keepassxc",
      "fit": "full",
-     "note": "Offline"
+     "note": "Offline",
+     "review": {
+      "by": "claude-opus-5-5",
+      "reason": "The old description said the file stays on your device, but the page says it can be stored anywhere, including cloud storage; it also left out password filling."
+     }
     },
     {
      "project": "vaultwarden",
@@ -1422,8 +1622,12 @@
     },
     {
      "project": "carrypass",
-     "fit": "full",
-     "note": null
+     "fit": "partial",
+     "note": null,
+     "review": {
+      "by": "claude-opus-5-5",
+      "reason": "Changed fit to partial because the page describes a browser web app whose team vault is an encrypted file an admin exports and uploads, with no browser extension or autofill mentioned."
+     }
     },
     {
      "project": "padloc",
@@ -1432,8 +1636,12 @@
     },
     {
      "project": "passbolt",
-     "fit": "partial",
-     "note": null
+     "fit": "full",
+     "note": null,
+     "review": {
+      "by": "claude-opus-5-5",
+      "reason": "Changed fit to full because Passbolt stores passwords and fills them through browser extensions and mobile apps, which is the main job of 1Password, LastPass and Dashlane."
+     }
     }
    ]
   },
@@ -1477,8 +1685,12 @@
    "alternatives": [
     {
      "project": "keyoxide",
-     "fit": "partial",
-     "note": null
+     "fit": "full",
+     "note": null,
+     "review": {
+      "by": "claude-opus-5-5",
+      "reason": "Changed fit to full because Keyoxide does the group's main job, proving which online accounts are yours, and can be fully self-hosted; Keybase's chat and file features fall outside this group."
+     }
     }
    ]
   },
@@ -1520,14 +1732,13 @@
    "source": "lists",
    "alternatives": [
     {
-     "project": "firezone",
-     "fit": "full",
-     "note": null
-    },
-    {
      "project": "gravitl",
-     "fit": "partial",
-     "note": null
+     "fit": "full",
+     "note": null,
+     "review": {
+      "by": "claude-opus-5-5",
+      "reason": "Raised fit to full because the open-source version is a complete self-hosted WireGuard VPN with mesh networks, remote access gateways and site-to-site links, the main job of Tailscale and OpenVPN."
+     }
     },
     {
      "project": "netbird",
@@ -1536,8 +1747,12 @@
     },
     {
      "project": "omniedge",
-     "fit": "partial",
-     "note": null
+     "fit": "full",
+     "note": null,
+     "review": {
+      "by": "claude-opus-5-5",
+      "reason": "Raised fit to full because it is a complete Tailscale-style mesh VPN with a self-hosted mode, and removed phones since the page lists only Linux, macOS, Windows and OpenWrt."
+     }
     }
    ]
   },
@@ -1554,7 +1769,11 @@
     {
      "project": "dub",
      "fit": "full",
-     "note": null
+     "note": null,
+     "review": {
+      "by": "claude-opus-5-5",
+      "reason": "Clarified that it can be self-hosted, which matters for an open-source listing, and tightened the wording."
+     }
     },
     {
      "project": "kutt",
@@ -1563,8 +1782,12 @@
     },
     {
      "project": "shlink",
-     "fit": "partial",
-     "note": null
+     "fit": "full",
+     "note": null,
+     "review": {
+      "by": "claude-opus-5-5",
+      "reason": "Changed fit to full because Shlink is a complete self-hosted URL shortener with custom domains, click statistics and a web client, covering Bitly's main job."
+     }
     },
     {
      "project": "yourls",
@@ -1603,7 +1826,11 @@
     {
      "project": "chatrwkv",
      "fit": "partial",
-     "note": null
+     "note": null,
+     "review": {
+      "by": "claude-opus-5-5",
+      "reason": "Clarified that it is a developer-oriented command-line project rather than a general chat program for everyday users."
+     }
     },
     {
      "project": "leon",
@@ -1613,7 +1840,11 @@
     {
      "project": "openassistant",
      "fit": "partial",
-     "note": null
+     "note": null,
+     "review": {
+      "by": "claude-opus-5-5",
+      "reason": "Reworded to make clear the project has ended and is not a ready-to-use chat app for most people."
+     }
     }
    ]
   },
@@ -1633,7 +1864,11 @@
     {
      "project": "continue",
      "fit": "full",
-     "note": null
+     "note": null,
+     "review": {
+      "by": "claude-opus-5-5",
+      "reason": "Added that the repository is now read-only and no longer actively maintained, as its page states."
+     }
     },
     {
      "project": "cline",
@@ -1653,12 +1888,20 @@
     {
      "project": "codex-cli",
      "fit": "full",
-     "note": null
+     "note": null,
+     "review": {
+      "by": "claude-opus-5-5",
+      "reason": "Clarified that the tool runs locally but relies on OpenAI's online models through a ChatGPT plan or API key."
+     }
     },
     {
      "project": "fauxpilot",
-     "fit": "full",
-     "note": null
+     "fit": "partial",
+     "note": null,
+     "review": {
+      "by": "claude-opus-5-5",
+      "reason": "Changed fit to partial because FauxPilot only serves code completion and lacks the chat and code-editing features of Cursor, Windsurf or Claude Code."
+     }
     }
    ]
   },
@@ -1750,7 +1993,11 @@
     {
      "project": "cortex",
      "fit": "partial",
-     "note": null
+     "note": null,
+     "review": {
+      "by": "claude-opus-5-5",
+      "reason": "Added that the project is no longer actively maintained, as its page states."
+     }
     },
     {
      "project": "deepset",
@@ -1870,13 +2117,21 @@
    "alternatives": [
     {
      "project": "calibre",
-     "fit": "full",
-     "note": "Library and reader"
+     "fit": "partial",
+     "note": "Library and reader",
+     "review": {
+      "by": "claude-opus-5-5",
+      "reason": "Changed fit to partial because Calibre manages and reads e-books but does not play audiobooks, which is part of this group's job."
+     }
     },
     {
      "project": "koreader",
-     "fit": "full",
-     "note": "E-reader app"
+     "fit": "partial",
+     "note": "E-reader app",
+     "review": {
+      "by": "claude-opus-5-5",
+      "reason": "Changed fit to partial because it handles e-book reading but not audiobooks or book tracking, and clarified that desktop support is Linux only."
+     }
     },
     {
      "project": "audiobookshelf",
@@ -1915,18 +2170,30 @@
     },
     {
      "project": "newsboat",
-     "fit": "partial",
-     "note": null
+     "fit": "full",
+     "note": null,
+     "review": {
+      "by": "claude-opus-5-5",
+      "reason": "Changed fit to full because Newsboat is a complete feed reader that does the main job of Feedly and Inoreader, even though it runs only in a terminal."
+     }
     },
     {
      "project": "netnewswire",
      "fit": "partial",
-     "note": null
+     "note": null,
+     "review": {
+      "by": "claude-opus-5-5",
+      "reason": "Removed the podcasts claim, which the page doesn't support, and noted it is Apple-only; it stays partial because it is a feed reader with no read-it-later saving like Pocket."
+     }
     },
     {
      "project": "wallabag",
-     "fit": "full",
-     "note": null
+     "fit": "partial",
+     "note": null,
+     "review": {
+      "by": "claude-opus-5-5",
+      "reason": "Changed fit to partial because wallabag replaces read-it-later apps like Pocket but does not follow sites or feeds like Feedly or Inoreader."
+     }
     }
    ]
   },
@@ -1965,18 +2232,30 @@
     },
     {
      "project": "filestash",
-     "fit": "partial",
-     "note": null
+     "fit": "full",
+     "note": null,
+     "review": {
+      "by": "claude-opus-5-5",
+      "reason": "Changed fit to full because the page describes a browser file manager plus native clients that sync a folder across Mac, Windows, Linux and Android, which covers the main job of Dropbox-style apps."
+     }
     },
     {
      "project": "owncloud",
-     "fit": "partial",
-     "note": null
+     "fit": "full",
+     "note": null,
+     "review": {
+      "by": "claude-opus-5-5",
+      "reason": "Changed fit to full because ownCloud is a complete self-hosted file storage, sync and sharing server that does the main job of Dropbox or Google Drive."
+     }
     },
     {
      "project": "spacedrive",
      "fit": "partial",
-     "note": null
+     "note": null,
+     "review": {
+      "by": "claude-opus-5-5",
+      "reason": "Noted that the project is pre-beta, since only unstable nightly builds are available now."
+     }
     }
    ]
   },
@@ -2044,7 +2323,11 @@
     {
      "project": "organic-maps",
      "fit": "full",
-     "note": "Offline; no live traffic"
+     "note": "Offline; no live traffic",
+     "review": {
+      "by": "claude-opus-5-5",
+      "reason": "Removed the claim that it runs on computers, since the page only lists phone app stores."
+     }
     },
     {
      "project": "comaps",
@@ -2112,8 +2395,12 @@
    "alternatives": [
     {
      "project": "librespeed",
-     "fit": "partial",
-     "note": null
+     "fit": "full",
+     "note": null,
+     "review": {
+      "by": "claude-opus-5-5",
+      "reason": "Changed fit to full because LibreSpeed does the main job of Speedtest.net, measuring download, upload, ping and jitter, and it has a public instance plus self-hosting."
+     }
     }
    ]
   },
@@ -2166,8 +2453,12 @@
     },
     {
      "project": "gogs",
-     "fit": "partial",
-     "note": null
+     "fit": "full",
+     "note": null,
+     "review": {
+      "by": "claude-opus-5-5",
+      "reason": "Changed fit to full because Gogs is a complete self-hosted Git service with repositories, issues, pull requests, wikis and organizations, which covers GitHub's main job."
+     }
     },
     {
      "project": "gitlab",
@@ -2251,7 +2542,11 @@
     {
      "project": "woocommerce",
      "fit": "full",
-     "note": null
+     "note": null,
+     "review": {
+      "by": "claude-opus-5-5",
+      "reason": "Rewrote the description to describe the store software for shop owners rather than only the developer code repository."
+     }
     },
     {
      "project": "medusa",
@@ -2266,7 +2561,11 @@
     {
      "project": "bagisto",
      "fit": "full",
-     "note": null
+     "note": null,
+     "review": {
+      "by": "claude-opus-5-5",
+      "reason": "Dropped the marketplace claim because multi-seller marketplace features are a separate add-on sold by the developer, not part of the open-source core."
+     }
     },
     {
      "project": "litekart",
@@ -2280,13 +2579,21 @@
     },
     {
      "project": "shuup",
-     "fit": "partial",
-     "note": null
+     "fit": "full",
+     "note": null,
+     "review": {
+      "by": "claude-opus-5-5",
+      "reason": "Changed fit to full because Shuup is a complete self-hosted e-commerce platform with a storefront and admin for products and orders, covering Shopify's main job."
+     }
     },
     {
      "project": "sylius",
-     "fit": "partial",
-     "note": null
+     "fit": "full",
+     "note": null,
+     "review": {
+      "by": "claude-opus-5-5",
+      "reason": "Changed fit to full because Sylius ships a working storefront, checkout and admin panel for running a self-hosted shop, even though it needs a developer to set up."
+     }
     },
     {
      "project": "vendure",
@@ -2318,13 +2625,21 @@
     },
     {
      "project": "papercups",
-     "fit": "partial",
-     "note": null
+     "fit": "full",
+     "note": null,
+     "review": {
+      "by": "claude-opus-5-5",
+      "reason": "Raised fit to full because it covers the group's core job, answering customers by live chat and email with shared conversation management, as a self-hosted tool."
+     }
     },
     {
      "project": "uvdesk",
-     "fit": "full",
-     "note": null
+     "fit": "partial",
+     "note": null,
+     "review": {
+      "by": "claude-opus-5-5",
+      "reason": "Changed fit to partial because UVDesk handles email tickets and a support portal but has no built-in live chat, which is a core part of this group's job."
+     }
     }
    ]
   },
@@ -2351,8 +2666,12 @@
     },
     {
      "project": "huginn",
-     "fit": "partial",
-     "note": "For technical users"
+     "fit": "full",
+     "note": "For technical users",
+     "review": {
+      "by": "claude-opus-5-5",
+      "reason": "Changed fit to full because Huginn is a self-hosted Zapier-style tool that connects services through triggers and actions, which is the group's main job; the existing 'for technical users' note already covers its harder setup."
+     }
     },
     {
      "project": "automatisch",
@@ -2377,13 +2696,21 @@
    "alternatives": [
     {
      "project": "abilian-hop3",
-     "fit": "partial",
-     "note": null
+     "fit": "full",
+     "note": null,
+     "review": {
+      "by": "claude-opus-5-5",
+      "reason": "Changed fit to full because it is a self-hosted platform-as-a-service that covers the main deployment job, and added a note that it is still early-stage."
+     }
     },
     {
      "project": "abilian-nua",
-     "fit": "partial",
-     "note": null
+     "fit": "full",
+     "note": null,
+     "review": {
+      "by": "claude-opus-5-5",
+      "reason": "Raised fit to full because it builds, deploys, updates, backs up and logs apps like the closed platforms, and noted that the project itself says it is not production-ready."
+     }
     },
     {
      "project": "coolify",
@@ -2407,22 +2734,25 @@
     },
     {
      "project": "kubero",
-     "fit": "partial",
-     "note": null
+     "fit": "full",
+     "note": null,
+     "review": {
+      "by": "claude-opus-5-5",
+      "reason": "Raised fit to full because Kubero is a complete self-hosted Heroku-style platform with git deploys, review apps, pipelines, add-ons and logs."
+     }
     },
     {
      "project": "otomi",
-     "fit": "partial",
-     "note": null
+     "fit": "full",
+     "note": null,
+     "review": {
+      "by": "claude-opus-5-5",
+      "reason": "Upgraded fit to full because it builds, deploys and publicly exposes apps on your own infrastructure; updated the description to mention the rename and removed the 'Heroku-style' claim, which the page does not make."
+     }
     },
     {
      "project": "peon",
      "fit": "full",
-     "note": null
-    },
-    {
-     "project": "qovery",
-     "fit": "partial",
      "note": null
     }
    ]
@@ -2447,7 +2777,11 @@
     {
      "project": "firecamp",
      "fit": "full",
-     "note": null
+     "note": null,
+     "review": {
+      "by": "claude-opus-5-5",
+      "reason": "Removed 'documenting' because API documentation is only on the project's roadmap, and named the supported API types."
+     }
     },
     {
      "project": "fusio",
@@ -2462,7 +2796,11 @@
     {
      "project": "insomnia",
      "fit": "full",
-     "note": null
+     "note": null,
+     "review": {
+      "by": "claude-opus-5-5",
+      "reason": "The page describes a desktop app, not a web app, and says most features require an account, so the description was corrected."
+     }
     },
     {
      "project": "step-ci",
@@ -2542,34 +2880,36 @@
    "source": "lists",
    "alternatives": [
     {
-     "project": "appbase",
-     "fit": "partial",
-     "note": null
-    },
-    {
      "project": "appwrite",
      "fit": "full",
      "note": null
     },
     {
      "project": "acebase",
-     "fit": "partial",
-     "note": null
+     "fit": "full",
+     "note": null,
+     "review": {
+      "by": "claude-opus-5-5",
+      "reason": "Changed fit to full because AceBase is a complete self-hosted database with queries, indexes and realtime updates, which is the group's main job."
+     }
     },
     {
      "project": "cratedb",
-     "fit": "partial",
-     "note": null
+     "fit": "full",
+     "note": null,
+     "review": {
+      "by": "claude-opus-5-5",
+      "reason": "Changed fit to full because CrateDB is a complete self-hosted distributed SQL database that does the group's main job of storing and querying data."
+     }
     },
     {
      "project": "databend",
-     "fit": "partial",
-     "note": null
-    },
-    {
-     "project": "encore",
-     "fit": "partial",
-     "note": null
+     "fit": "full",
+     "note": null,
+     "review": {
+      "by": "claude-opus-5-5",
+      "reason": "Raised fit to full because Databend is a complete self-hostable SQL database for storing and querying data, with built-in full-text and vector search."
+     }
     },
     {
      "project": "influxdb",
@@ -2584,17 +2924,20 @@
     {
      "project": "manticore-search",
      "fit": "partial",
-     "note": null
-    },
-    {
-     "project": "matano",
-     "fit": "partial",
-     "note": null
+     "note": null,
+     "review": {
+      "by": "claude-opus-5-5",
+      "reason": "Removed the promotional word \"fast\" and noted Algolia, since it covers the search-engine apps in this group but not general-purpose databases."
+     }
     },
     {
      "project": "mellisearch",
-     "fit": "full",
-     "note": null
+     "fit": "partial",
+     "note": null,
+     "review": {
+      "by": "claude-opus-5-5",
+      "reason": "Changed fit to partial because Meilisearch is a search engine that replaces Algolia-style search, not a general-purpose database like most apps in this group."
+     }
     },
     {
      "project": "neo4j",
@@ -2608,8 +2951,12 @@
     },
     {
      "project": "pingcap",
-     "fit": "partial",
-     "note": null
+     "fit": "full",
+     "note": null,
+     "review": {
+      "by": "claude-opus-5-5",
+      "reason": "Changed fit to full because TiDB is a complete self-hostable distributed SQL database, directly comparable to Aurora and Cloud Spanner."
+     }
     },
     {
      "project": "pocketbase",
@@ -2643,13 +2990,21 @@
     },
     {
      "project": "supabase",
-     "fit": "partial",
-     "note": null
+     "fit": "full",
+     "note": null,
+     "review": {
+      "by": "claude-opus-5-5",
+      "reason": "Changed fit to full because Supabase is a complete, self-hostable Postgres database platform that does the group's main job and directly replaces Firebase."
+     }
     },
     {
      "project": "terminusdb",
-     "fit": "partial",
-     "note": null
+     "fit": "full",
+     "note": null,
+     "review": {
+      "by": "claude-opus-5-5",
+      "reason": "Changed fit to full because TerminusDB is a complete self-hosted graph database that stores and queries data, comparable to Amazon Neptune or TigerGraph."
+     }
     },
     {
      "project": "tdengine",
@@ -2658,8 +3013,12 @@
     },
     {
      "project": "typesense",
-     "fit": "full",
-     "note": null
+     "fit": "partial",
+     "note": null,
+     "review": {
+      "by": "claude-opus-5-5",
+      "reason": "Changed fit to partial because Typesense replaces search services like Algolia and Elastic Cloud but not general-purpose databases like Aurora, Spanner or Firebase."
+     }
     },
     {
      "project": "zinc-labs",
@@ -2668,8 +3027,12 @@
     },
     {
      "project": "yugabyte",
-     "fit": "partial",
-     "note": null
+     "fit": "full",
+     "note": null,
+     "review": {
+      "by": "claude-opus-5-5",
+      "reason": "Changed fit to full because YugabyteDB is a complete self-hosted distributed SQL database that directly replaces Amazon Aurora and Google Cloud Spanner."
+     }
     }
    ]
   },
@@ -2696,12 +3059,20 @@
     {
      "project": "encore",
      "fit": "partial",
-     "note": null
+     "note": null,
+     "review": {
+      "by": "claude-opus-5-5",
+      "reason": "Clarified that automatic cloud setup is done by Encore's hosted platform, while the open-source part covers local development and Docker self-hosting."
+     }
     },
     {
      "project": "kuzzle",
-     "fit": "partial",
-     "note": null
+     "fit": "full",
+     "note": null,
+     "review": {
+      "by": "claude-opus-5-5",
+      "reason": "Changed fit to full because Kuzzle self-hosts the core Firebase jobs: a database with search, user logins with permissions, real-time updates and client SDKs."
+     }
     },
     {
      "project": "nhost",
@@ -2710,13 +3081,21 @@
     },
     {
      "project": "pocketbase",
-     "fit": "partial",
-     "note": null
+     "fit": "full",
+     "note": null,
+     "review": {
+      "by": "claude-opus-5-5",
+      "reason": "Raised fit to full because PocketBase covers Firebase's core backend job: a realtime database, user accounts, file storage and an admin dashboard in one self-hosted program."
+     }
     },
     {
      "project": "supabase",
-     "fit": "partial",
-     "note": null
+     "fit": "full",
+     "note": null,
+     "review": {
+      "by": "claude-opus-5-5",
+      "reason": "Raised fit to full because Supabase covers Firebase's main job of database, login, file storage, realtime and functions, and it can be self-hosted."
+     }
     }
    ]
   },
@@ -2743,13 +3122,21 @@
     },
     {
      "project": "hanko",
-     "fit": "partial",
-     "note": null
+     "fit": "full",
+     "note": null,
+     "review": {
+      "by": "claude-opus-5-5",
+      "reason": "Changed fit to full because Hanko is a complete self-hostable login and user management backend covering passwords, passkeys, MFA, social login and SAML SSO, which is the main job of Auth0 and Okta."
+     }
     },
     {
      "project": "janssen",
-     "fit": "partial",
-     "note": null
+     "fit": "full",
+     "note": null,
+     "review": {
+      "by": "claude-opus-5-5",
+      "reason": "Changed fit to full because Janssen is a complete self-hosted identity server with certified OpenID Connect, passkey login, user management and custom sign-in flows, which covers the main job of Auth0 and Okta."
+     }
     },
     {
      "project": "keycloak",
@@ -2768,8 +3155,12 @@
     },
     {
      "project": "supertokens",
-     "fit": "partial",
-     "note": null
+     "fit": "full",
+     "note": null,
+     "review": {
+      "by": "claude-opus-5-5",
+      "reason": "Changed fit to full because SuperTokens is a complete self-hosted auth provider covering sign-up, login, social and passwordless login, sessions and roles, the main job of Auth0."
+     }
     },
     {
      "project": "zitadel",
@@ -2790,18 +3181,30 @@
    "alternatives": [
     {
      "project": "buildbot",
-     "fit": "partial",
-     "note": null
+     "fit": "full",
+     "note": null,
+     "review": {
+      "by": "claude-opus-5-5",
+      "reason": "Changed fit to full because Buildbot is a complete self-hosted continuous integration system that does the main job of CircleCI."
+     }
     },
     {
      "project": "drone",
-     "fit": "partial",
-     "note": null
+     "fit": "full",
+     "note": null,
+     "review": {
+      "by": "claude-opus-5-5",
+      "reason": "Changed fit to full because its self-hosted pipelines (the successor to Drone CI) build and test code automatically, which is CircleCI's main job."
+     }
     },
     {
      "project": "jenkins",
-     "fit": "partial",
-     "note": null
+     "fit": "full",
+     "note": null,
+     "review": {
+      "by": "claude-opus-5-5",
+      "reason": "Changed fit to full because Jenkins is a complete self-hosted CI/CD server that builds, tests and deploys code like CircleCI."
+     }
     }
    ]
   },
@@ -2819,14 +3222,13 @@
    "source": "lists",
    "alternatives": [
     {
-     "project": "builder",
-     "fit": "partial",
-     "note": null
-    },
-    {
      "project": "concrete",
-     "fit": "partial",
-     "note": null
+     "fit": "full",
+     "note": null,
+     "review": {
+      "by": "claude-opus-5-5",
+      "reason": "Changed fit to full because Concrete CMS is a complete self-hosted tool for building websites and managing their content, which is the main job of this group."
+     }
     },
     {
      "project": "decap-cms",
@@ -2835,13 +3237,21 @@
     },
     {
      "project": "payload",
-     "fit": "full",
-     "note": null
+     "fit": "partial",
+     "note": null,
+     "review": {
+      "by": "claude-opus-5-5",
+      "reason": "Changed fit to partial because Payload is a developer-oriented headless CMS that replaces Contentful, but it is not a drag-and-drop site builder like Wix, Strikingly or Webflow."
+     }
     },
     {
      "project": "plasmic",
-     "fit": "partial",
-     "note": null
+     "fit": "full",
+     "note": null,
+     "review": {
+      "by": "claude-opus-5-5",
+      "reason": "Changed fit to full because Plasmic is a complete visual website builder that can build and host whole sites, not just parts of them, which makes it a direct Webflow-style alternative."
+     }
     },
     {
      "project": "silex",
@@ -2850,13 +3260,21 @@
     },
     {
      "project": "sulu",
-     "fit": "partial",
-     "note": null
+     "fit": "full",
+     "note": null,
+     "review": {
+      "by": "claude-opus-5-5",
+      "reason": "Changed fit to full because Sulu is a complete self-hosted CMS for building websites and managing their content, which is the main job of this group."
+     }
     },
     {
      "project": "strapi",
-     "fit": "full",
-     "note": null
+     "fit": "partial",
+     "note": null,
+     "review": {
+      "by": "claude-opus-5-5",
+      "reason": "Changed fit to partial: Strapi replaces headless CMSs like Contentful, but it doesn't build or design the website itself the way Wix, Strikingly or Webflow do."
+     }
     },
     {
      "project": "tina",
@@ -2865,13 +3283,21 @@
     },
     {
      "project": "webstudio",
-     "fit": "partial",
-     "note": null
+     "fit": "full",
+     "note": null,
+     "review": {
+      "by": "claude-opus-5-5",
+      "reason": "Raised fit to full because Webstudio is a complete visual website builder, open source and self-hostable, that does the main job of Webflow and Wix."
+     }
     },
     {
      "project": "webiny",
      "fit": "full",
-     "note": null
+     "note": null,
+     "review": {
+      "by": "claude-opus-5-5",
+      "reason": "Rewrote the description to mention the free edition's page builder and to drop multi-brand setups, which need the paid edition."
+     }
     }
    ]
   },
@@ -2900,8 +3326,12 @@
     },
     {
      "project": "kestra",
-     "fit": "partial",
-     "note": null
+     "fit": "full",
+     "note": null,
+     "review": {
+      "by": "claude-opus-5-5",
+      "reason": "Raised fit to full because Kestra is a complete self-hosted workflow orchestrator like Airflow, with built-in plugins for moving data between databases, storage and APIs."
+     }
     },
     {
      "project": "trench",
@@ -2925,8 +3355,12 @@
    "alternatives": [
     {
      "project": "coroot",
-     "fit": "partial",
-     "note": null
+     "fit": "full",
+     "note": null,
+     "review": {
+      "by": "claude-opus-5-5",
+      "reason": "Changed fit to full because Coroot is a self-hosted observability platform covering metrics, logs, traces, profiling, alerting and SLOs, which is the main job of Datadog and New Relic."
+     }
     },
     {
      "project": "grafana",
@@ -2935,8 +3369,12 @@
     },
     {
      "project": "hyperdx",
-     "fit": "partial",
-     "note": null
+     "fit": "full",
+     "note": null,
+     "review": {
+      "by": "claude-opus-5-5",
+      "reason": "Changed fit to full because it is a self-hosted all-in-one stack covering logs, metrics, traces, APM, dashboards and alerts, which is the main job of Datadog and New Relic."
+     }
     },
     {
      "project": "kubestellar-console",
@@ -2946,7 +3384,11 @@
     {
      "project": "manticore-search",
      "fit": "partial",
-     "note": null
+     "note": null,
+     "review": {
+      "by": "claude-opus-5-5",
+      "reason": "Removed the marketing word 'fast' and clarified that it only covers log storage and search, not full monitoring."
+     }
     },
     {
      "project": "matano",
@@ -2955,8 +3397,12 @@
     },
     {
      "project": "netdata",
-     "fit": "partial",
-     "note": null
+     "fit": "full",
+     "note": null,
+     "review": {
+      "by": "claude-opus-5-5",
+      "reason": "Raised fit to full because Netdata monitors servers and apps, collects logs, sends alerts and centralizes nodes, which covers the main job of tools like Datadog."
+     }
     },
     {
      "project": "openstatus",
@@ -2975,18 +3421,30 @@
     },
     {
      "project": "signoz",
-     "fit": "partial",
-     "note": null
+     "fit": "full",
+     "note": null,
+     "review": {
+      "by": "claude-opus-5-5",
+      "reason": "Changed fit to full because the free self-hosted version covers logs, metrics, traces, dashboards and alerts, the core job of Datadog and New Relic."
+     }
     },
     {
      "project": "telemetry-tracker",
      "fit": "partial",
-     "note": null
+     "note": null,
+     "review": {
+      "by": "claude-opus-5-5",
+      "reason": "Clarified that it covers app errors and performance with alerts but not server metrics, logs or traces, which justifies the partial fit."
+     }
     },
     {
      "project": "uptrace",
-     "fit": "partial",
-     "note": null
+     "fit": "full",
+     "note": null,
+     "review": {
+      "by": "claude-opus-5-5",
+      "reason": "Changed fit to full because Uptrace is a self-hosted APM that covers traces, metrics, logs, dashboards and alerting, which is the main job of Datadog and New Relic."
+     }
     },
     {
      "project": "victorialogs",
@@ -2995,11 +3453,6 @@
     },
     {
      "project": "victoriametrics",
-     "fit": "partial",
-     "note": null
-    },
-    {
-     "project": "zinc-labs",
      "fit": "partial",
      "note": null
     }
@@ -3045,12 +3498,20 @@
     {
      "project": "fonoster",
      "fit": "partial",
-     "note": null
+     "note": null,
+     "review": {
+      "by": "claude-opus-5-5",
+      "reason": "Removed the SMS and video claims, which the project page does not support; it covers voice calls only, so fit stays partial."
+     }
     },
     {
      "project": "livekit",
-     "fit": "full",
-     "note": null
+     "fit": "partial",
+     "note": null,
+     "review": {
+      "by": "claude-opus-5-5",
+      "reason": "Changed fit to partial because LiveKit handles in-app voice and video and can connect phone calls over SIP, but it does not send or receive text messages the way Twilio does."
+     }
     },
     {
      "project": "openvidu",
@@ -3073,8 +3534,12 @@
    "alternatives": [
     {
      "project": "lastsaas",
-     "fit": "partial",
-     "note": null
+     "fit": "full",
+     "note": null,
+     "review": {
+      "by": "claude-opus-5-5",
+      "reason": "Changed fit to full because it is a complete MIT-licensed SaaS boilerplate covering the same core job as ShipFast, Supastarter and SaaS Pegasus: authentication, teams, Stripe billing and an admin dashboard."
+     }
     }
    ]
   },
@@ -3103,13 +3568,21 @@
     },
     {
      "project": "evidence",
-     "fit": "partial",
-     "note": null
+     "fit": "full",
+     "note": null,
+     "review": {
+      "by": "claude-opus-5-5",
+      "reason": "Raised fit to full because Evidence is a complete self-hostable tool for turning data into charts and reports; writing code instead of dragging and dropping is a different approach, not a missing feature."
+     }
     },
     {
      "project": "lightdash",
      "fit": "full",
-     "note": null
+     "note": null,
+     "review": {
+      "by": "claude-opus-5-5",
+      "reason": "Rewrote the description to drop marketing wording and note that the AI features are mainly offered in the paid cloud and enterprise versions, not the open-source core."
+     }
     },
     {
      "project": "metriql",
@@ -3123,13 +3596,21 @@
     },
     {
      "project": "metabase",
-     "fit": "partial",
-     "note": null
+     "fit": "full",
+     "note": null,
+     "review": {
+      "by": "claude-opus-5-5",
+      "reason": "Changed fit to full because Metabase is a complete self-hostable BI tool for charts and dashboards, covering the main job of Tableau, Looker and Power BI."
+     }
     },
     {
      "project": "preset",
-     "fit": "partial",
-     "note": null
+     "fit": "full",
+     "note": null,
+     "review": {
+      "by": "claude-opus-5-5",
+      "reason": "Changed fit to full because Superset is a complete self-hosted business intelligence tool for charts and dashboards, comparable to Tableau, Looker and Power BI."
+     }
     }
    ]
   },
@@ -3148,13 +3629,21 @@
    "alternatives": [
     {
      "project": "beton-inspector",
-     "fit": "full",
-     "note": null
+     "fit": "partial",
+     "note": null,
+     "review": {
+      "by": "claude-opus-5-5",
+      "reason": "Changed fit to partial because it only reads product usage from PostHog and does not track community activity, which is the core of Common Room, Orbit and Commsor."
+     }
     },
     {
      "project": "crowd-dev",
-     "fit": "partial",
-     "note": null
+     "fit": "full",
+     "note": null,
+     "review": {
+      "by": "claude-opus-5-5",
+      "reason": "Changed fit to full because it collects member activity from community and product channels, matches profiles and shows contributors and their companies, which is the core job of Common Room and Orbit."
+     }
     }
    ]
   },
@@ -3174,13 +3663,21 @@
    "alternatives": [
     {
      "project": "dolibarr",
-     "fit": "partial",
-     "note": null
+     "fit": "full",
+     "note": null,
+     "review": {
+      "by": "claude-opus-5-5",
+      "reason": "Changed fit to full because Dolibarr is a complete self-hosted ERP covering accounting, stock, sales, purchasing, manufacturing and HR."
+     }
     },
     {
      "project": "erpnext",
-     "fit": "partial",
-     "note": null
+     "fit": "full",
+     "note": null,
+     "review": {
+      "by": "claude-opus-5-5",
+      "reason": "Changed fit to full because ERPNext is a complete ERP covering accounting, stock and operations. Updated the description to match the features listed on the page and removed the unsupported small-business claim."
+     }
     },
     {
      "project": "idurar-erp-crm",
@@ -3189,13 +3686,21 @@
     },
     {
      "project": "odoo",
-     "fit": "partial",
-     "note": null
+     "fit": "full",
+     "note": null,
+     "review": {
+      "by": "claude-opus-5-5",
+      "reason": "Changed fit to full because the open-source edition integrates sales, invoicing and accounting, inventory, manufacturing and other operations into one ERP, which is the group's main job."
+     }
     },
     {
      "project": "openbooks",
-     "fit": "partial",
-     "note": null
+     "fit": "full",
+     "note": null,
+     "review": {
+      "by": "claude-opus-5-5",
+      "reason": "Changed fit to full because it covers accounting, stock, manufacturing, payroll, HR and multi-company operations in one system, and noted its alpha status."
+     }
     }
    ]
   },
@@ -3212,13 +3717,21 @@
    "alternatives": [
     {
      "project": "crater",
-     "fit": "partial",
-     "note": null
+     "fit": "full",
+     "note": null,
+     "review": {
+      "by": "claude-opus-5-5",
+      "reason": "Changed fit to full because Crater covers invoices, estimates, recurring billing, a customer portal and Stripe payments, which is the group's main job."
+     }
     },
     {
      "project": "solidinvoice",
-     "fit": "partial",
-     "note": null
+     "fit": "full",
+     "note": null,
+     "review": {
+      "by": "claude-opus-5-5",
+      "reason": "Changed fit to full because it covers the group's main job of sending quotes, recurring invoices and reminders and taking online payments, even without full accounting."
+     }
     }
    ]
   },
@@ -3235,13 +3748,21 @@
    "alternatives": [
     {
      "project": "customermates",
-     "fit": "partial",
-     "note": null
+     "fit": "full",
+     "note": null,
+     "review": {
+      "by": "claude-opus-5-5",
+      "reason": "Changed fit to full because the free self-hosted edition covers the core CRM job of tracking contacts, organizations and deals; only extras like the unified inbox are cloud-only."
+     }
     },
     {
      "project": "espocrm",
-     "fit": "partial",
-     "note": null
+     "fit": "full",
+     "note": null,
+     "review": {
+      "by": "claude-opus-5-5",
+      "reason": "Changed fit to full because EspoCRM is a complete self-hosted CRM covering leads, contacts, deals, campaigns and cases."
+     }
     },
     {
      "project": "suitecrm",
@@ -3268,8 +3789,12 @@
    "alternatives": [
     {
      "project": "kimai",
-     "fit": "partial",
-     "note": null
+     "fit": "full",
+     "note": null,
+     "review": {
+      "by": "claude-opus-5-5",
+      "reason": "Changed fit to full because Kimai is a complete self-hosted time tracker covering the main job of Toggl and Clockify."
+     }
     },
     {
      "project": "solidtime",
@@ -3287,13 +3812,7 @@
     "Bloomberg"
    ],
    "source": "lists",
-   "alternatives": [
-    {
-     "project": "openbb-terminal",
-     "fit": "partial",
-     "note": null
-    }
-   ]
+   "alternatives": []
   },
   {
    "id": "pos",
@@ -3309,12 +3828,20 @@
     {
      "project": "nexopos",
      "fit": "full",
-     "note": null
+     "note": null,
+     "review": {
+      "by": "claude-opus-5-5",
+      "reason": "Clarified that restaurant and multi-store features come from separately distributed marketplace modules, not the open-source core."
+     }
     },
     {
      "project": "posnic-pos",
-     "fit": "partial",
-     "note": null
+     "fit": "full",
+     "note": null,
+     "review": {
+      "by": "claude-opus-5-5",
+      "reason": "Changed fit to full because Posnic covers the main point-of-sale job, including billing, barcode scanning, returns, stock, receipt printers, cash drawers and sales reports."
+     }
     }
    ]
   }

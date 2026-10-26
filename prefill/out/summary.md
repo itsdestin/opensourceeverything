@@ -64,16 +64,24 @@ Looked up **436** GitHub projects in 9 batch requests.
 
 
 
-## Step 5: the map's data files (2026-10-26, free)
-
-- **11 categories, 92 groups, 234 closed apps, 391 projects, 414 listings.**
-- From the long tail, left out: 34 not open source or unclear, 45 wrongly listed, 8 archived, 40 with no matching group (listed in prefill/out/unplaced.json for a person to place).
-- Licenses a mod confirms before launch: 67. Inactive (no change in a year): 19.
-- Groups with no alternative yet (gaps): Professional networking.
-- By category: Office & productivity 10 groups / 70 listings · Communication & social 12 groups / 41 listings · Creative 11 groups / 28 listings · Operating systems & phones 5 groups / 22 listings · Browsers, search & security 8 groups / 29 listings · AI tools 6 groups / 21 listings · Media & entertainment 6 groups / 18 listings · Files & cloud 3 groups / 12 listings · Everyday 5 groups / 8 listings · Developer & business 18 groups / 140 listings · Business & finance 8 groups / 25 listings.
-
 ## Quality check by Claude Opus 5.5 (2026-10-26)
 
 - Judged **100** random listings in 24 seconds for **$1.31** (0 failed).
 - Fully right: **80%**. Right group: 98% · right fit: 83% · right description: 96%.
 - Hand-picked starter listings fully right: 88% of 42; from the free lists: 74% of 58.
+
+## Correction pass by Claude Opus 5.5 (2026-10-26)
+
+- Reviewed **413** of 414 listings in 112 seconds for **$6.03** (1 failed; those stay as they were).
+- Removed: **8** (Firezone, Qovery, AppBase, Encore, Matano, Builder, Zinc Labs, OpenBB Terminal).
+- Fit changed: **103** (partial → full: 79; full → partial: 24).
+- Descriptions rewritten: **55**.
+
+## Step 5: the map's data files (2026-10-26, free)
+
+- **11 categories, 92 groups, 234 closed apps, 386 projects, 406 listings.**
+- From the long tail, left out: 34 not open source or unclear, 45 wrongly listed, 8 archived, 40 with no matching group (listed in prefill/out/unplaced.json for a person to place).
+- Licenses a mod confirms before launch: 66. Inactive (no change in a year): 19.
+- Opus corrections applied: 8 listings removed, 103 fits changed, 54 descriptions rewritten.
+- Groups with no alternative yet (gaps): Professional networking, Investment research.
+- By category: Office & productivity 10 groups / 70 listings · Communication & social 12 groups / 41 listings · Creative 11 groups / 28 listings · Operating systems & phones 5 groups / 22 listings · Browsers, search & security 8 groups / 28 listings · AI tools 6 groups / 21 listings · Media & entertainment 6 groups / 18 listings · Files & cloud 3 groups / 12 listings · Everyday 5 groups / 8 listings · Developer & business 18 groups / 134 listings · Business & finance 8 groups / 24 listings.

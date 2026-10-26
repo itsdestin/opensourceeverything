@@ -5,7 +5,7 @@
 // WHY three plain JSON files: the map is published as open data people and AI agents can read directly
 // (plan §1); the site is built from these, and edits are reviewable as ordinary diffs.
 
-import { readFileSync, writeFileSync, appendFileSync } from 'node:fs';
+import { readFileSync, writeFileSync, appendFileSync, existsSync } from 'node:fs';
 import { join, dirname } from 'node:path';
 import { fileURLToPath } from 'node:url';
 import { licenseVerdict } from '../checker/dist/from-bot/rules.js';
@@ -103,6 +103,27 @@ for (const r of tail) {
   }
 }
 
+// ── Opus corrections (prefill/opus-fix.mjs), applied last so they survive a rebuild ──
+const fixFile = join(OUT, 'opus-fix.json');
+const fixes = { removed: 0, fit: 0, summary: 0 };
+if (existsSync(fixFile)) {
+  const rewritten = new Set();
+  for (const r of read(fixFile)) {
+    const g = groups.get(r.group); const v = r.verdict;
+    const alt = g?.alternatives.find((x) => x.project === r.project);
+    if (!alt || !v) continue;
+    if (!v.keep) { g.alternatives = g.alternatives.filter((x) => x !== alt); fixes.removed++; continue; }
+    // WHY keep the reason on the listing: a mod can see what the correction pass changed and why.
+    if (v.fit !== alt.fit) { alt.fit = v.fit; fixes.fit++; }
+    if (v.reason) alt.review = { by: 'claude-opus-5-5', reason: v.reason };
+    const proj = projects.get(r.project);
+    if (v.summary && proj && !rewritten.has(r.project)) { proj.summary = v.summary; rewritten.add(r.project); fixes.summary++; }
+  }
+  // A project whose every listing was removed leaves the map.
+  const listed = new Set([...groups.values()].flatMap((g) => g.alternatives.map((a) => a.project)));
+  for (const id of [...projects.keys()]) if (!listed.has(id)) projects.delete(id);
+}
+
 // ── Write ──
 const groupList = [...groups.values()].sort((a, b) => categories.findIndex((c) => c.id === a.category) - categories.findIndex((c) => c.id === b.category));
 const unknownCat = groupList.filter((g) => !categories.some((c) => c.id === g.category));
@@ -121,6 +142,7 @@ const msg = `
 - **${categories.length} categories, ${groupList.length} groups, ${groupList.reduce((s, g) => s + g.closed.length, 0)} closed apps, ${projects.size} projects, ${listings} listings.**
 - From the long tail, left out: ${drop.notOpen} not open source or unclear, ${drop.wrongOnly} wrongly listed, ${drop.archived} archived, ${drop.noGroup} with no matching group (listed in prefill/out/unplaced.json for a person to place).
 - Licenses a mod confirms before launch: ${[...projects.values()].filter((p) => p.licenseNeedsCheck).length}. Inactive (no change in a year): ${[...projects.values()].filter((p) => p.inactive).length}.
+- Opus corrections applied: ${fixes.removed} listings removed, ${fixes.fit} fits changed, ${fixes.summary} descriptions rewritten.
 - Groups with no alternative yet (gaps): ${empty.join(', ') || 'none'}.
 - By category: ${perCat}.
 `;
