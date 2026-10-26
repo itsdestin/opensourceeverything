@@ -1,0 +1,1320 @@
+{
+ "github.com/ONLYOFFICE/DocumentServer": {
+  "found": true,
+  "license": "AGPL-3.0",
+  "archived": false,
+  "lastChange": "2026-10-26T08:59:26Z",
+  "stars": 7054
+ },
+ "github.com/CollaboraOnline/online": {
+  "found": true,
+  "license": "NOASSERTION",
+  "archived": false,
+  "lastChange": "2026-10-23T15:39:18Z",
+  "stars": 3382,
+  "sniffed": {
+   "openCore": false,
+   "licenseFiles": [
+    "copying"
+   ]
+  }
+ },
+ "github.com/cryptpad/cryptpad": {
+  "found": true,
+  "license": "AGPL-3.0",
+  "archived": false,
+  "lastChange": "2026-10-23T12:09:18Z",
+  "stars": 8028
+ },
+ "github.com/ether/etherpad": {
+  "found": true,
+  "license": "Apache-2.0",
+  "archived": false,
+  "lastChange": "2026-10-25T22:29:06Z",
+  "stars": 18597
+ },
+ "github.com/gristlabs/grist-core": {
+  "found": true,
+  "license": "Apache-2.0",
+  "archived": false,
+  "lastChange": "2026-10-26T06:11:51Z",
+  "stars": 12000
+ },
+ "github.com/slidevjs/slidev": {
+  "found": true,
+  "license": "MIT",
+  "archived": false,
+  "lastChange": "2026-10-23T06:54:55Z",
+  "stars": 49216
+ },
+ "github.com/hakimel/reveal.js": {
+  "found": true,
+  "license": "MIT",
+  "archived": false,
+  "lastChange": "2026-09-30T19:38:13Z",
+  "stars": 72473
+ },
+ "github.com/AppFlowy-IO/AppFlowy": {
+  "found": true,
+  "license": "AGPL-3.0",
+  "archived": false,
+  "lastChange": "2026-10-26T00:59:22Z",
+  "stars": 77777
+ },
+ "github.com/toeverything/AFFiNE": {
+  "found": true,
+  "license": "NOASSERTION",
+  "archived": false,
+  "lastChange": "2026-10-26T08:51:33Z",
+  "stars": 73850,
+  "sniffed": {
+   "found": "MIT",
+   "openCore": false,
+   "licenseFiles": [
+    "license",
+    "license-mit"
+   ]
+  }
+ },
+ "github.com/laurent22/joplin": {
+  "found": true,
+  "license": "NOASSERTION",
+  "archived": false,
+  "lastChange": "2026-10-25T22:43:43Z",
+  "stars": 56876,
+  "sniffed": {
+   "openCore": false,
+   "licenseFiles": [
+    "license"
+   ]
+  }
+ },
+ "github.com/logseq/logseq": {
+  "found": true,
+  "license": "AGPL-3.0",
+  "archived": false,
+  "lastChange": "2026-10-26T08:15:50Z",
+  "stars": 45382
+ },
+ "github.com/TriliumNext/Trilium": {
+  "found": true,
+  "license": "AGPL-3.0",
+  "archived": false,
+  "lastChange": "2026-10-26T06:42:47Z",
+  "stars": 38566
+ },
+ "github.com/siyuan-note/siyuan": {
+  "found": true,
+  "license": "AGPL-3.0",
+  "archived": false,
+  "lastChange": "2026-10-26T09:03:42Z",
+  "stars": 46939
+ },
+ "github.com/standardnotes/app": {
+  "found": true,
+  "license": "AGPL-3.0",
+  "archived": false,
+  "lastChange": "2026-10-23T21:25:31Z",
+  "stars": 6681
+ },
+ "github.com/anyproto/anytype-ts": {
+  "found": true,
+  "license": "NOASSERTION",
+  "archived": false,
+  "lastChange": "2026-10-23T12:23:21Z",
+  "stars": 9003,
+  "sniffed": {
+   "notOpen": "Any Source Available License",
+   "openCore": false,
+   "licenseFiles": [
+    "license.md"
+   ]
+  }
+ },
+ "github.com/makeplane/plane": {
+  "found": true,
+  "license": "AGPL-3.0",
+  "archived": false,
+  "lastChange": "2026-10-23T15:40:15Z",
+  "stars": 61459
+ },
+ "github.com/opf/openproject": {
+  "found": true,
+  "license": "GPL-3.0",
+  "archived": false,
+  "lastChange": "2026-10-26T09:03:28Z",
+  "stars": 16684
+ },
+ "github.com/go-vikunja/vikunja": {
+  "found": true,
+  "license": "AGPL-3.0",
+  "archived": false,
+  "lastChange": "2026-10-26T05:04:38Z",
+  "stars": 5859
+ },
+ "github.com/wekan/wekan": {
+  "found": true,
+  "license": "MIT",
+  "archived": false,
+  "lastChange": "2026-10-25T16:13:44Z",
+  "stars": 21140
+ },
+ "github.com/plankanban/planka": {
+  "found": true,
+  "license": "NOASSERTION",
+  "archived": false,
+  "lastChange": "2026-10-23T17:05:53Z",
+  "stars": 12643,
+  "sniffed": {
+   "notOpen": "Fair Use License",
+   "openCore": false,
+   "licenseFiles": [
+    "license.md",
+    "licenses"
+   ]
+  }
+ },
+ "github.com/kaleidos-ventures/taiga": {
+  "found": true,
+  "license": "MPL-2.0",
+  "archived": false,
+  "lastChange": "2023-12-13T09:37:30Z",
+  "stars": 575
+ },
+ "github.com/LimeSurvey/LimeSurvey": {
+  "found": true,
+  "license": "NOASSERTION",
+  "archived": false,
+  "lastChange": "2026-10-26T08:43:53Z",
+  "stars": 3778,
+  "sniffed": {
+   "found": "LGPL-2.1",
+   "openCore": false,
+   "licenseFiles": [
+    "license"
+   ]
+  }
+ },
+ "github.com/formbricks/formbricks": {
+  "found": true,
+  "license": "NOASSERTION",
+  "archived": false,
+  "lastChange": "2026-10-26T09:02:34Z",
+  "stars": 13153,
+  "sniffed": {
+   "found": "AGPL-3.0",
+   "openCore": true,
+   "licenseFiles": [
+    "license"
+   ]
+  }
+ },
+ "github.com/heyform/heyform": {
+  "found": true,
+  "license": "AGPL-3.0",
+  "archived": false,
+  "lastChange": "2026-10-26T04:01:10Z",
+  "stars": 9051
+ },
+ "github.com/calcom/cal.com": {
+  "found": true,
+  "license": "MIT",
+  "archived": false,
+  "lastChange": "2026-10-26T06:15:27Z",
+  "stars": 49378,
+  "movedTo": "calcom/cal.diy"
+ },
+ "github.com/nextcloud/calendar": {
+  "found": true,
+  "license": "AGPL-3.0",
+  "archived": false,
+  "lastChange": "2026-10-26T00:42:23Z",
+  "stars": 1193
+ },
+ "github.com/Stirling-Tools/Stirling-PDF": {
+  "found": true,
+  "license": "NOASSERTION",
+  "archived": false,
+  "lastChange": "2026-10-26T06:08:00Z",
+  "stars": 95039,
+  "sniffed": {
+   "found": "MIT",
+   "openCore": false,
+   "licenseFiles": [
+    "license"
+   ]
+  }
+ },
+ "github.com/pdfarranger/pdfarranger": {
+  "found": true,
+  "license": "GPL-3.0",
+  "archived": false,
+  "lastChange": "2026-10-01T02:15:06Z",
+  "stars": 5996
+ },
+ "github.com/roundcube/roundcubemail": {
+  "found": true,
+  "license": "GPL-3.0",
+  "archived": false,
+  "lastChange": "2026-10-25T10:36:14Z",
+  "stars": 7242
+ },
+ "github.com/zulip/zulip": {
+  "found": true,
+  "license": "Apache-2.0",
+  "archived": false,
+  "lastChange": "2026-10-26T07:29:16Z",
+  "stars": 26115
+ },
+ "github.com/mattermost/mattermost": {
+  "found": true,
+  "license": "NOASSERTION",
+  "archived": false,
+  "lastChange": "2026-10-26T09:03:49Z",
+  "stars": 39435,
+  "sniffed": {
+   "found": "AGPL-3.0",
+   "openCore": false,
+   "licenseFiles": [
+    "license.enterprise",
+    "license.txt"
+   ]
+  }
+ },
+ "github.com/RocketChat/Rocket.Chat": {
+  "found": true,
+  "license": "NOASSERTION",
+  "archived": false,
+  "lastChange": "2026-10-26T07:54:23Z",
+  "stars": 46330,
+  "sniffed": {
+   "found": "MIT",
+   "openCore": true,
+   "licenseFiles": [
+    "license"
+   ]
+  }
+ },
+ "github.com/element-hq/element-web": {
+  "found": true,
+  "license": "AGPL-3.0",
+  "archived": false,
+  "lastChange": "2026-10-26T09:04:05Z",
+  "stars": 13614
+ },
+ "github.com/mumble-voip/mumble": {
+  "found": true,
+  "license": "NOASSERTION",
+  "archived": false,
+  "lastChange": "2026-10-25T11:46:32Z",
+  "stars": 8365,
+  "sniffed": {
+   "found": "BSD-3-Clause",
+   "openCore": false,
+   "licenseFiles": [
+    "license"
+   ]
+  }
+ },
+ "github.com/signalapp/Signal-Android": {
+  "found": true,
+  "license": "AGPL-3.0",
+  "archived": false,
+  "lastChange": "2026-10-22T22:53:04Z",
+  "stars": 29537
+ },
+ "github.com/simplex-chat/simplex-chat": {
+  "found": true,
+  "license": "AGPL-3.0",
+  "archived": false,
+  "lastChange": "2026-10-26T08:58:49Z",
+  "stars": 19598
+ },
+ "github.com/deltachat/deltachat-android": {
+  "found": true,
+  "license": "GPL-3.0",
+  "archived": false,
+  "lastChange": "2026-10-25T02:01:10Z",
+  "stars": 1850
+ },
+ "github.com/element-hq/element-x-android": {
+  "found": true,
+  "license": "AGPL-3.0",
+  "archived": false,
+  "lastChange": "2026-10-26T08:58:07Z",
+  "stars": 2462
+ },
+ "github.com/jitsi/jitsi-meet": {
+  "found": true,
+  "license": "Apache-2.0",
+  "archived": false,
+  "lastChange": "2026-10-23T21:51:31Z",
+  "stars": 30145
+ },
+ "github.com/bigbluebutton/bigbluebutton": {
+  "found": true,
+  "license": "LGPL-3.0",
+  "archived": false,
+  "lastChange": "2026-10-23T17:57:46Z",
+  "stars": 9253
+ },
+ "github.com/element-hq/element-call": {
+  "found": true,
+  "license": "AGPL-3.0",
+  "archived": false,
+  "lastChange": "2026-10-26T08:57:34Z",
+  "stars": 1016
+ },
+ "github.com/mastodon/mastodon": {
+  "found": true,
+  "license": "AGPL-3.0",
+  "archived": false,
+  "lastChange": "2026-10-26T07:59:47Z",
+  "stars": 50453
+ },
+ "github.com/misskey-dev/misskey": {
+  "found": true,
+  "license": "AGPL-3.0",
+  "archived": false,
+  "lastChange": "2026-10-26T06:24:06Z",
+  "stars": 11359
+ },
+ "github.com/bluesky-social/social-app": {
+  "found": true,
+  "license": "MIT",
+  "archived": false,
+  "lastChange": "2026-10-24T07:33:12Z",
+  "stars": 18350
+ },
+ "github.com/LemmyNet/lemmy": {
+  "found": true,
+  "license": "AGPL-3.0",
+  "archived": false,
+  "lastChange": "2026-10-23T19:11:10Z",
+  "stars": 14648
+ },
+ "github.com/MbinOrg/mbin": {
+  "found": true,
+  "license": "AGPL-3.0",
+  "archived": false,
+  "lastChange": "2026-10-23T21:40:06Z",
+  "stars": 429
+ },
+ "github.com/discourse/discourse": {
+  "found": true,
+  "license": "GPL-2.0",
+  "archived": false,
+  "lastChange": "2026-10-26T08:56:52Z",
+  "stars": 48014
+ },
+ "github.com/pixelfed/pixelfed": {
+  "found": true,
+  "license": "AGPL-3.0",
+  "archived": false,
+  "lastChange": "2026-10-26T07:52:41Z",
+  "stars": 7131
+ },
+ "github.com/Chocobozzz/PeerTube": {
+  "found": true,
+  "license": "AGPL-3.0",
+  "archived": false,
+  "lastChange": "2026-10-26T08:43:19Z",
+  "stars": 15366
+ },
+ "github.com/joinloops/loops-server": {
+  "found": true,
+  "license": "AGPL-3.0",
+  "archived": false,
+  "lastChange": "2026-10-26T08:52:19Z",
+  "stars": 460
+ },
+ "github.com/FreeTubeApp/FreeTube": {
+  "found": true,
+  "license": "AGPL-3.0",
+  "archived": false,
+  "lastChange": "2026-10-26T07:47:01Z",
+  "stars": 22148
+ },
+ "github.com/TeamNewPipe/NewPipe": {
+  "found": true,
+  "license": "GPL-3.0",
+  "archived": false,
+  "lastChange": "2026-10-23T14:12:55Z",
+  "stars": 40301
+ },
+ "github.com/TryGhost/Ghost": {
+  "found": true,
+  "license": "MIT",
+  "archived": false,
+  "lastChange": "2026-10-26T08:13:36Z",
+  "stars": 55607
+ },
+ "github.com/writefreely/writefreely": {
+  "found": true,
+  "license": "AGPL-3.0",
+  "archived": false,
+  "lastChange": "2026-10-01T22:21:43Z",
+  "stars": 5275
+ },
+ "github.com/WordPress/WordPress": {
+  "found": true,
+  "license": "NOASSERTION",
+  "archived": false,
+  "lastChange": "2026-10-26T08:36:06Z",
+  "stars": 21503,
+  "sniffed": {
+   "found": "GPL-2.0",
+   "openCore": false,
+   "licenseFiles": [
+    "license.txt"
+   ]
+  }
+ },
+ "github.com/darktable-org/darktable": {
+  "found": true,
+  "license": "GPL-3.0",
+  "archived": false,
+  "lastChange": "2026-10-26T07:22:03Z",
+  "stars": 13330
+ },
+ "github.com/RawTherapee/RawTherapee": {
+  "found": true,
+  "license": "GPL-3.0",
+  "archived": false,
+  "lastChange": "2026-10-20T12:01:53Z",
+  "stars": 4252
+ },
+ "github.com/mypaint/mypaint": {
+  "found": true,
+  "license": "GPL-2.0",
+  "archived": false,
+  "lastChange": "2026-10-20T23:50:30Z",
+  "stars": 2995
+ },
+ "github.com/GraphiteEditor/Graphite": {
+  "found": true,
+  "license": "Apache-2.0",
+  "archived": false,
+  "lastChange": "2026-10-26T09:02:42Z",
+  "stars": 27730
+ },
+ "github.com/penpot/penpot": {
+  "found": true,
+  "license": "MPL-2.0",
+  "archived": false,
+  "lastChange": "2026-10-26T09:04:19Z",
+  "stars": 61680
+ },
+ "github.com/scribusproject/scribus": {
+  "found": true,
+  "license": "NOASSERTION",
+  "archived": false,
+  "lastChange": "2026-10-22T07:56:50Z",
+  "stars": 643,
+  "sniffed": {
+   "found": "GPL-2.0",
+   "openCore": false,
+   "licenseFiles": [
+    "copying"
+   ]
+  }
+ },
+ "github.com/mltframework/shotcut": {
+  "found": true,
+  "license": "GPL-3.0",
+  "archived": false,
+  "lastChange": "2026-10-25T23:57:57Z",
+  "stars": 15503
+ },
+ "github.com/OpenShot/openshot-qt": {
+  "found": true,
+  "license": "NOASSERTION",
+  "archived": false,
+  "lastChange": "2026-10-26T05:14:12Z",
+  "stars": 6693,
+  "sniffed": {
+   "found": "GPL-3.0",
+   "openCore": false,
+   "licenseFiles": [
+    "copying"
+   ]
+  }
+ },
+ "github.com/NatronGitHub/Natron": {
+  "found": true,
+  "license": "GPL-2.0",
+  "archived": false,
+  "lastChange": "2026-07-24T09:49:49Z",
+  "stars": 5598
+ },
+ "github.com/audacity/audacity": {
+  "found": true,
+  "license": "NOASSERTION",
+  "archived": false,
+  "lastChange": "2026-10-25T12:24:23Z",
+  "stars": 18837,
+  "sniffed": {
+   "found": "GPL-3.0",
+   "openCore": false,
+   "licenseFiles": [
+    "license.txt"
+   ]
+  }
+ },
+ "github.com/Ardour/ardour": {
+  "found": true,
+  "license": "NOASSERTION",
+  "archived": false,
+  "lastChange": "2026-10-26T02:26:53Z",
+  "stars": 5382,
+  "sniffed": {
+   "found": "GPL-2.0",
+   "openCore": false,
+   "licenseFiles": [
+    "copying"
+   ]
+  }
+ },
+ "github.com/LMMS/lmms": {
+  "found": true,
+  "license": "GPL-2.0",
+  "archived": false,
+  "lastChange": "2026-10-25T12:12:30Z",
+  "stars": 10543
+ },
+ "github.com/obsproject/obs-studio": {
+  "found": true,
+  "license": "GPL-2.0",
+  "archived": false,
+  "lastChange": "2026-10-23T20:48:25Z",
+  "stars": 78246
+ },
+ "github.com/florisboard/florisboard": {
+  "found": true,
+  "license": "Apache-2.0",
+  "archived": false,
+  "lastChange": "2026-10-25T16:03:24Z",
+  "stars": 8724
+ },
+ "github.com/HeliBorg/HeliBoard": {
+  "found": true,
+  "license": "GPL-3.0",
+  "archived": false,
+  "lastChange": "2026-10-25T19:57:42Z",
+  "stars": 6422
+ },
+ "github.com/mozilla-firefox/firefox": {
+  "found": true,
+  "license": "NOASSERTION",
+  "archived": false,
+  "lastChange": "2026-10-26T09:04:47Z",
+  "stars": 13585,
+  "sniffed": {
+   "openCore": false,
+   "licenseFiles": [
+    "license"
+   ]
+  }
+ },
+ "github.com/brave/brave-browser": {
+  "found": true,
+  "license": "MPL-2.0",
+  "archived": false,
+  "lastChange": "2026-10-26T04:04:03Z",
+  "stars": 23988
+ },
+ "github.com/zen-browser/desktop": {
+  "found": true,
+  "license": "MPL-2.0",
+  "archived": false,
+  "lastChange": "2026-10-25T14:04:33Z",
+  "stars": 45297
+ },
+ "github.com/ungoogled-software/ungoogled-chromium": {
+  "found": true,
+  "license": "BSD-3-Clause",
+  "archived": false,
+  "lastChange": "2026-10-25T13:46:38Z",
+  "stars": 28100
+ },
+ "github.com/searxng/searxng": {
+  "found": true,
+  "license": "AGPL-3.0",
+  "archived": false,
+  "lastChange": "2026-10-25T18:37:23Z",
+  "stars": 38858
+ },
+ "github.com/yacy/yacy_search_server": {
+  "found": true,
+  "license": "NOASSERTION",
+  "archived": false,
+  "lastChange": "2026-09-23T06:34:22Z",
+  "stars": 4080,
+  "sniffed": {
+   "openCore": false,
+   "licenseFiles": [
+    "licenses"
+   ]
+  }
+ },
+ "github.com/bitwarden/clients": {
+  "found": true,
+  "license": "NOASSERTION",
+  "archived": false,
+  "lastChange": "2026-10-26T07:23:17Z",
+  "stars": 14061,
+  "sniffed": {
+   "openCore": false,
+   "licenseFiles": [
+    "license.txt",
+    "license_bitwarden.txt",
+    "license_gpl.txt"
+   ]
+  }
+ },
+ "github.com/keepassxreboot/keepassxc": {
+  "found": true,
+  "license": "NOASSERTION",
+  "archived": false,
+  "lastChange": "2026-10-23T23:14:20Z",
+  "stars": 29500,
+  "sniffed": {
+   "openCore": false,
+   "licenseFiles": [
+    "copying",
+    "license.bsd",
+    "license.cc0",
+    "license.gpl-2",
+    "license.gpl-3",
+    "license.lgpl-2.1",
+    "license.lgpl-3",
+    "license.mit",
+    "license.nokia-lgpl-exception",
+    "license.ofl"
+   ]
+  }
+ },
+ "github.com/dani-garcia/vaultwarden": {
+  "found": true,
+  "license": "AGPL-3.0",
+  "archived": false,
+  "lastChange": "2026-10-25T19:42:35Z",
+  "stars": 69688
+ },
+ "github.com/beemdevelopment/Aegis": {
+  "found": true,
+  "license": "GPL-3.0",
+  "archived": false,
+  "lastChange": "2026-09-06T10:30:01Z",
+  "stars": 13394
+ },
+ "github.com/ente/ente": {
+  "found": true,
+  "license": "AGPL-3.0",
+  "archived": false,
+  "lastChange": "2026-10-26T08:39:41Z",
+  "stars": 29603
+ },
+ "github.com/twofas/2fas-android": {
+  "found": true,
+  "license": "GPL-3.0",
+  "archived": false,
+  "lastChange": "2026-10-19T18:17:10Z",
+  "stars": 1546
+ },
+ "github.com/open-webui/open-webui": {
+  "found": true,
+  "license": "NOASSERTION",
+  "archived": false,
+  "lastChange": "2026-10-26T09:01:13Z",
+  "stars": 156786,
+  "sniffed": {
+   "notOpen": "Open WebUI License",
+   "found": "BSD-3-Clause",
+   "openCore": false,
+   "licenseFiles": [
+    "license",
+    "license_history",
+    "license_notice"
+   ]
+  }
+ },
+ "github.com/janhq/jan": {
+  "found": true,
+  "license": "NOASSERTION",
+  "archived": false,
+  "lastChange": "2026-10-26T06:41:32Z",
+  "stars": 45090,
+  "sniffed": {
+   "found": "Apache-2.0",
+   "openCore": false,
+   "licenseFiles": [
+    "license"
+   ]
+  }
+ },
+ "github.com/LibreChat-AI/LibreChat": {
+  "found": true,
+  "license": "MIT",
+  "archived": false,
+  "lastChange": "2026-10-26T08:58:45Z",
+  "stars": 46336
+ },
+ "github.com/ollama/ollama": {
+  "found": true,
+  "license": "MIT",
+  "archived": false,
+  "lastChange": "2026-10-26T04:25:58Z",
+  "stars": 184817
+ },
+ "github.com/continuedev/continue": {
+  "found": true,
+  "license": "Apache-2.0",
+  "archived": false,
+  "lastChange": "2026-10-26T07:34:12Z",
+  "stars": 36325
+ },
+ "github.com/cline/cline": {
+  "found": true,
+  "license": "Apache-2.0",
+  "archived": false,
+  "lastChange": "2026-10-26T08:56:12Z",
+  "stars": 70860
+ },
+ "github.com/Aider-AI/aider": {
+  "found": true,
+  "license": "Apache-2.0",
+  "archived": false,
+  "lastChange": "2026-05-22T14:02:20Z",
+  "stars": 49756
+ },
+ "github.com/OpenHands/OpenHands": {
+  "found": true,
+  "license": "MIT",
+  "archived": false,
+  "lastChange": "2026-10-26T08:59:46Z",
+  "stars": 91874
+ },
+ "github.com/openai/codex": {
+  "found": true,
+  "license": "Apache-2.0",
+  "archived": false,
+  "lastChange": "2026-10-23T18:51:12Z",
+  "stars": 130959
+ },
+ "github.com/Comfy-Org/ComfyUI": {
+  "found": true,
+  "license": "GPL-3.0",
+  "archived": false,
+  "lastChange": "2026-10-26T06:46:31Z",
+  "stars": 143080
+ },
+ "github.com/invoke-ai/InvokeAI": {
+  "found": true,
+  "license": "Apache-2.0",
+  "archived": false,
+  "lastChange": "2026-10-26T07:16:22Z",
+  "stars": 28866
+ },
+ "github.com/AUTOMATIC1111/stable-diffusion-webui": {
+  "found": true,
+  "license": "AGPL-3.0",
+  "archived": false,
+  "lastChange": "2026-03-02T07:00:53Z",
+  "stars": 165149
+ },
+ "github.com/chidiwilliams/buzz": {
+  "found": true,
+  "license": "MIT",
+  "archived": false,
+  "lastChange": "2026-10-25T11:39:42Z",
+  "stars": 22191
+ },
+ "github.com/ggml-org/whisper.cpp": {
+  "found": true,
+  "license": "MIT",
+  "archived": false,
+  "lastChange": "2026-10-19T14:14:00Z",
+  "stars": 54678
+ },
+ "github.com/openai/whisper": {
+  "found": true,
+  "license": "MIT",
+  "archived": false,
+  "lastChange": "2026-08-31T17:19:19Z",
+  "stars": 111281
+ },
+ "github.com/ItzCrazyKns/Vane": {
+  "found": true,
+  "license": "MIT",
+  "archived": false,
+  "lastChange": "2026-09-01T14:12:12Z",
+  "stars": 37752
+ },
+ "github.com/navidrome/navidrome": {
+  "found": true,
+  "license": "GPL-3.0",
+  "archived": false,
+  "lastChange": "2026-10-26T03:20:49Z",
+  "stars": 24364
+ },
+ "github.com/jellyfin/jellyfin": {
+  "found": true,
+  "license": "GPL-2.0",
+  "archived": false,
+  "lastChange": "2026-10-25T23:07:00Z",
+  "stars": 58609
+ },
+ "github.com/xbmc/xbmc": {
+  "found": true,
+  "license": "NOASSERTION",
+  "archived": false,
+  "lastChange": "2026-10-26T05:56:34Z",
+  "stars": 21386,
+  "sniffed": {
+   "openCore": false,
+   "licenseFiles": [
+    "license.md",
+    "licenses"
+   ]
+  }
+ },
+ "github.com/immich-app/immich": {
+  "found": true,
+  "license": "AGPL-3.0",
+  "archived": false,
+  "lastChange": "2026-10-26T07:51:54Z",
+  "stars": 117270
+ },
+ "github.com/photoprism/photoprism": {
+  "found": true,
+  "license": "NOASSERTION",
+  "archived": false,
+  "lastChange": "2026-10-26T08:39:56Z",
+  "stars": 40362,
+  "sniffed": {
+   "found": "AGPL-3.0",
+   "openCore": false,
+   "licenseFiles": [
+    "license"
+   ]
+  }
+ },
+ "github.com/AntennaPod/AntennaPod": {
+  "found": true,
+  "license": "GPL-3.0",
+  "archived": false,
+  "lastChange": "2026-10-25T20:37:02Z",
+  "stars": 8248
+ },
+ "github.com/Automattic/pocket-casts-android": {
+  "found": true,
+  "license": "MPL-2.0",
+  "archived": false,
+  "lastChange": "2026-10-26T08:07:30Z",
+  "stars": 2848
+ },
+ "github.com/kovidgoyal/calibre": {
+  "found": true,
+  "license": "GPL-3.0",
+  "archived": false,
+  "lastChange": "2026-10-26T08:51:11Z",
+  "stars": 26254
+ },
+ "github.com/koreader/koreader": {
+  "found": true,
+  "license": "AGPL-3.0",
+  "archived": false,
+  "lastChange": "2026-10-26T07:07:17Z",
+  "stars": 30621
+ },
+ "github.com/advplyr/audiobookshelf": {
+  "found": true,
+  "license": "GPL-3.0",
+  "archived": false,
+  "lastChange": "2026-10-23T19:58:38Z",
+  "stars": 14797
+ },
+ "github.com/bookwyrm-social/bookwyrm": {
+  "found": true,
+  "license": "NOASSERTION",
+  "archived": false,
+  "lastChange": "2026-10-26T03:22:29Z",
+  "stars": 2806,
+  "sniffed": {
+   "notOpen": "Anti-Capitalist Software License",
+   "found": "MIT",
+   "openCore": false,
+   "licenseFiles": [
+    "license.md"
+   ]
+  }
+ },
+ "github.com/nextcloud/server": {
+  "found": true,
+  "license": "AGPL-3.0",
+  "archived": false,
+  "lastChange": "2026-10-26T08:21:11Z",
+  "stars": 37299
+ },
+ "github.com/haiwen/seafile": {
+  "found": true,
+  "license": "NOASSERTION",
+  "archived": false,
+  "lastChange": "2026-10-16T10:08:44Z",
+  "stars": 15385,
+  "sniffed": {
+   "found": "GPL-2.0",
+   "openCore": false,
+   "licenseFiles": [
+    "license.txt"
+   ]
+  }
+ },
+ "github.com/owncloud/ocis": {
+  "found": true,
+  "license": "Apache-2.0",
+  "archived": false,
+  "lastChange": "2026-10-26T08:16:15Z",
+  "stars": 2167
+ },
+ "github.com/syncthing/syncthing": {
+  "found": true,
+  "license": "MPL-2.0",
+  "archived": false,
+  "lastChange": "2026-10-26T03:58:08Z",
+  "stars": 89760
+ },
+ "github.com/localsend/localsend": {
+  "found": true,
+  "license": "Apache-2.0",
+  "archived": false,
+  "lastChange": "2026-10-25T12:11:01Z",
+  "stars": 95670
+ },
+ "github.com/psi-4ward/psitransfer": {
+  "found": true,
+  "license": "BSD-2-Clause",
+  "archived": false,
+  "lastChange": "2026-10-24T23:42:29Z",
+  "stars": 1963
+ },
+ "github.com/restic/restic": {
+  "found": true,
+  "license": "BSD-2-Clause",
+  "archived": false,
+  "lastChange": "2026-10-18T14:23:55Z",
+  "stars": 36806
+ },
+ "github.com/borgbackup/borg": {
+  "found": true,
+  "license": "NOASSERTION",
+  "archived": false,
+  "lastChange": "2026-10-26T08:20:01Z",
+  "stars": 13880,
+  "sniffed": {
+   "openCore": false,
+   "licenseFiles": [
+    "license"
+   ]
+  }
+ },
+ "github.com/duplicati/duplicati": {
+  "found": true,
+  "license": "NOASSERTION",
+  "archived": false,
+  "lastChange": "2026-10-25T20:44:02Z",
+  "stars": 15167,
+  "sniffed": {
+   "found": "MIT",
+   "openCore": false,
+   "licenseFiles": [
+    "license"
+   ]
+  }
+ },
+ "github.com/organicmaps/organicmaps": {
+  "found": true,
+  "license": "NOASSERTION",
+  "archived": false,
+  "lastChange": "2026-10-26T09:00:26Z",
+  "stars": 15777,
+  "sniffed": {
+   "found": "Apache-2.0",
+   "openCore": false,
+   "licenseFiles": [
+    "license",
+    "licenses"
+   ]
+  }
+ },
+ "github.com/osmandapp/OsmAnd": {
+  "found": true,
+  "license": "NOASSERTION",
+  "archived": false,
+  "lastChange": "2026-10-26T04:02:45Z",
+  "stars": 6110,
+  "sniffed": {
+   "notOpen": "Fair Use License",
+   "found": "MIT",
+   "openCore": false,
+   "licenseFiles": [
+    "license"
+   ]
+  }
+ },
+ "github.com/LibreTranslate/LibreTranslate": {
+  "found": true,
+  "license": "AGPL-3.0",
+  "archived": false,
+  "lastChange": "2026-10-26T03:14:14Z",
+  "stars": 17185
+ },
+ "github.com/home-assistant/core": {
+  "found": true,
+  "license": "Apache-2.0",
+  "archived": false,
+  "lastChange": "2026-10-26T09:02:13Z",
+  "stars": 91730
+ },
+ "github.com/go-gitea/gitea": {
+  "found": true,
+  "license": "MIT",
+  "archived": false,
+  "lastChange": "2026-10-26T05:59:50Z",
+  "stars": 58695
+ },
+ "github.com/plausible/analytics": {
+  "found": true,
+  "license": "AGPL-3.0",
+  "archived": false,
+  "lastChange": "2026-10-26T08:44:51Z",
+  "stars": 29666
+ },
+ "github.com/umami-software/umami": {
+  "found": true,
+  "license": "MIT",
+  "archived": false,
+  "lastChange": "2026-10-23T21:58:32Z",
+  "stars": 39694
+ },
+ "github.com/matomo-org/matomo": {
+  "found": true,
+  "license": "GPL-3.0",
+  "archived": false,
+  "lastChange": "2026-10-26T08:39:06Z",
+  "stars": 21983
+ },
+ "github.com/woocommerce/woocommerce": {
+  "found": true,
+  "license": "GPL-2.0",
+  "archived": false,
+  "lastChange": "2026-10-26T08:56:54Z",
+  "stars": 10569
+ },
+ "github.com/medusajs/medusa": {
+  "found": true,
+  "license": "NOASSERTION",
+  "archived": false,
+  "lastChange": "2026-10-26T08:56:38Z",
+  "stars": 36949,
+  "sniffed": {
+   "found": "MIT",
+   "openCore": true,
+   "licenseFiles": [
+    "license"
+   ]
+  }
+ },
+ "github.com/saleor/saleor": {
+  "found": true,
+  "license": "BSD-3-Clause",
+  "archived": false,
+  "lastChange": "2026-10-23T17:42:09Z",
+  "stars": 23477
+ },
+ "github.com/chatwoot/chatwoot": {
+  "found": true,
+  "license": "NOASSERTION",
+  "archived": false,
+  "lastChange": "2026-10-26T08:20:03Z",
+  "stars": 38313,
+  "sniffed": {
+   "found": "MIT",
+   "openCore": true,
+   "licenseFiles": [
+    "license"
+   ]
+  }
+ },
+ "github.com/zammad/zammad": {
+  "found": true,
+  "license": "AGPL-3.0",
+  "archived": false,
+  "lastChange": "2026-10-26T08:52:21Z",
+  "stars": 6031
+ },
+ "github.com/node-red/node-red": {
+  "found": true,
+  "license": "Apache-2.0",
+  "archived": false,
+  "lastChange": "2026-10-24T09:41:59Z",
+  "stars": 23784
+ },
+ "github.com/activepieces/activepieces": {
+  "found": true,
+  "license": "NOASSERTION",
+  "archived": false,
+  "lastChange": "2026-10-26T09:03:40Z",
+  "stars": 25229,
+  "sniffed": {
+   "found": "MIT",
+   "openCore": true,
+   "licenseFiles": [
+    "license"
+   ]
+  }
+ },
+ "github.com/huginn/huginn": {
+  "found": true,
+  "license": "MIT",
+  "archived": false,
+  "lastChange": "2026-10-24T19:12:51Z",
+  "stars": 50141
+ },
+ "github.com/n8n-io/n8n": {
+  "found": true,
+  "license": "NOASSERTION",
+  "archived": false,
+  "lastChange": "2026-10-26T09:01:52Z",
+  "stars": 208617,
+  "sniffed": {
+   "notOpen": "Sustainable Use License",
+   "openCore": false,
+   "licenseFiles": [
+    "license.md",
+    "license_ee.md"
+   ]
+  }
+ },
+ "gitlab.com/inkscape/inkscape": {
+  "found": true,
+  "license": "other",
+  "lastChange": "2026-10-26T02:26:30.199Z",
+  "stars": 4017
+ },
+ "gitlab.com/fdroid/fdroidclient": {
+  "found": true,
+  "license": "GPL-3.0",
+  "lastChange": "2026-10-24T11:06:38.510Z",
+  "stars": 2686
+ },
+ "gitlab.com/AuroraOSS/AuroraStore": {
+  "found": true,
+  "license": "GPL-3.0",
+  "lastChange": "2026-10-26T02:42:27.301Z",
+  "stars": 2274
+ },
+ "gitlab.com/gitlab-org/gitlab-foss": {
+  "found": true,
+  "license": "MIT",
+  "lastChange": "2026-10-26T08:33:59.517Z",
+  "stars": 7173
+ },
+ "codeberg.org/rimu/pyfedi": {
+  "found": true,
+  "byHand": true,
+  "archived": false,
+  "lastChange": "2026-10-26T03:10:14+01:00",
+  "stars": 265
+ },
+ "codeberg.org/librewolf/source": {
+  "found": true,
+  "byHand": true,
+  "archived": false,
+  "lastChange": "2026-10-26T09:44:23+01:00",
+  "stars": 1351
+ },
+ "codeberg.org/comaps/comaps": {
+  "found": true,
+  "byHand": true,
+  "archived": false,
+  "lastChange": "2026-10-26T08:46:23+01:00",
+  "stars": 2188
+ },
+ "codeberg.org/forgejo/forgejo": {
+  "found": true,
+  "byHand": true,
+  "archived": false,
+  "lastChange": "2026-10-26T06:54:04+01:00",
+  "stars": 5717
+ },
+ "https://git.libreoffice.org/core": {
+  "found": true,
+  "byHand": true
+ },
+ "https://gitlab.gnome.org/GNOME/gnumeric": {
+  "found": true,
+  "byHand": true
+ },
+ "https://www.thunderbird.net": {
+  "found": true,
+  "byHand": true
+ },
+ "https://invent.kde.org/graphics/okular": {
+  "found": true,
+  "byHand": true
+ },
+ "https://gitlab.gnome.org/GNOME/gimp": {
+  "found": true,
+  "byHand": true
+ },
+ "https://invent.kde.org/graphics/krita": {
+  "found": true,
+  "byHand": true
+ },
+ "https://invent.kde.org/multimedia/kdenlive": {
+  "found": true,
+  "byHand": true
+ },
+ "https://www.blender.org": {
+  "found": true,
+  "byHand": true
+ },
+ "https://linuxmint.com": {
+  "found": true,
+  "byHand": true
+ },
+ "https://fedoraproject.org": {
+  "found": true,
+  "byHand": true
+ },
+ "https://ubuntu.com": {
+  "found": true,
+  "byHand": true
+ },
+ "https://www.debian.org": {
+  "found": true,
+  "byHand": true
+ },
+ "https://grapheneos.org": {
+  "found": true,
+  "byHand": true
+ },
+ "https://lineageos.org": {
+  "found": true,
+  "byHand": true
+ },
+ "https://e.foundation": {
+  "found": true,
+  "byHand": true
+ },
+ "https://postmarketos.org": {
+  "found": true,
+  "byHand": true
+ },
+ "https://dev.funkwhale.audio/funkwhale/funkwhale": {
+  "found": true,
+  "byHand": true
+ }
+}
