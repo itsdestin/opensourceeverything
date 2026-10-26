@@ -2,18 +2,11 @@
 // Ported from mockups/group-page.html. Votes, comments, "still missing", suggest and report need the server,
 // so they only appear once API_URL is set (see lib.mjs).
 import { esc, url, ICON, SITE_URL, API_URL, SOCIAL, codeUrl, suggestUrl } from '../lib.mjs';
-import { altCard, appUrl, sortAlts, deviceFilter } from '../cards.mjs';
+import { altCard, appUrl, sortAlts, deviceFilter, buildBox } from '../cards.mjs';
 
 // WHY only the first letter, and not before a capital: "AI agents" and "PDF tools" keep their capitals mid-sentence.
 const midSentence = (name) => name.replace(/^[A-Z](?![A-Z])/, (c) => c.toLowerCase());
 
-function promptText(g, alts, full) {
-  const ask = 'Compare it with my project or idea below. Tell me which projects overlap, what I could reuse instead of rewriting, and what mine does that none of them do.';
-  if (!full) return `Read the list of open-source alternatives at ${SITE_URL}data/groups/${g.id}.json. ${ask}\n\nMy project or idea:\n`;
-  return `Here is a list of open-source alternatives to ${g.closed.join(', ')} (${g.job.toLowerCase()}), from Open Source Everything (CC BY-SA 4.0):\n` +
-    alts.map(({ p, a }) => `- ${p.name} (${p.license ?? 'license being checked'}${codeUrl(p) ? `, ${codeUrl(p)}` : p.website ? `, ${p.website}` : ''}; replaces ${a.fit === 'full' ? 'fully' : 'partly'}): ${p.summary}`).join('\n') +
-    `\n\n${ask}\n\nMy project or idea:\n`;
-}
 
 const SORTS = [['fit', 'Fully replaces first'], ['stars', 'Most GitHub stars'], ['name', 'A to Z']];
 
@@ -64,17 +57,7 @@ export default function groupPages(d) {
     </div>
 
     <div>
-      <section class="surface sec" id="build">
-        <h2 class="h-large">Before you build</h2>
-        <p class="small2">Planning something for ${esc(midSentence(g.name))}? See what exists first, so you can reuse parts or explain what's different. Paste this into any AI assistant:</p>
-        <div class="lvl2 prompt" id="prompt-short">${esc(promptText(g, alts, false))}</div>
-        <div id="prompt-full" hidden>${esc(promptText(g, alts, true))}</div>
-        <div class="stack">
-          <button class="btn md primary" type="button" data-copy="prompt-short" data-copied="Copied. Paste it into any AI assistant.">Copy prompt</button>
-          <button class="btn md secondary" type="button" data-copy="prompt-full" data-copied="Copied, with the list. Paste it into any AI assistant.">Copy with the list included</button>
-          <a class="btn md secondary" href="${url(`data/groups/${g.id}.json`)}" download="${g.id}.json">Download the list</a>
-        </div>
-      </section>
+      ${buildBox({ about: midSentence(g.name), closed: g.closed, job: g.job, json: `data/groups/${g.id}.json`, alts })}
       <section class="surface sec">
         <div><h2 class="h-large">Fix the list itself</h2><p class="desc12" style="margin-top:4px">A project or closed app missing from this list, or a mistake on it? These open a short form on GitHub, and a mod reviews it. To say what a project can't do, use What's missing.</p></div>
         <div class="stack">

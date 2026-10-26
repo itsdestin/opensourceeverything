@@ -1,6 +1,6 @@
 // Pieces more than one page draws: the alternative card (group pages and closed-app pages) and the address of a
 // closed app's own page.
-import { esc, url, ICON, KIND, factChips, hostOf, actions, suggestUrl, SOCIAL, shot as shotOf } from './lib.mjs';
+import { esc, url, ICON, KIND, factChips, hostOf, actions, suggestUrl, SOCIAL, SITE_URL, codeUrl, shot as shotOf } from './lib.mjs';
 
 // WHY its own address per closed app (Destin, Oct 27): people search "alternatives to Notion", not "Notes".
 // "alternatives-to/notion/" reads well in a search result and stays stable when an app moves group.
@@ -40,3 +40,27 @@ export const sortAlts = (alts) => alts.sort((x, y) => (x.a.fit === y.a.fit ? 0 :
 const FILTERS = [['', 'Any device'], ['noserver', 'No server needed'], ['windows', 'Windows'], ['mac', 'Mac'], ['linux', 'Linux'], ['android', 'Android'], ['ios', 'iPhone'], ['web', 'In your browser']];
 export const deviceFilter = (id) => `<div class="dd"><button class="select sm" type="button" data-menu="${id}" aria-haspopup="listbox" aria-expanded="false"><span data-device-label>Works on: any device</span>${ICON.chev}</button>
   <div class="menu" id="${id}" role="listbox">${FILTERS.map(([k, v], i) => `<button class="mi${i ? '' : ' sel'}" type="button" role="option" data-device="${k}">${v}</button>`).join('')}</div></div>`;
+
+// "Before you build": a prompt to paste into any AI assistant, on group pages and closed-app pages.
+// WHY on both (Destin, Oct 27: "where'd our copyable prompts go?"): search and the home page now lead to closed-app
+// pages, so the prompt has to be there too, not only on group pages.
+function promptText({ closed, job, json, alts }, full) {
+  const ask = 'Compare it with my project or idea below. Tell me which projects overlap, what I could reuse instead of rewriting, and what mine does that none of them do.';
+  if (!full) return `Read the list of open-source alternatives at ${SITE_URL}${json}. ${ask}\n\nMy project or idea:\n`;
+  return `Here is a list of open-source alternatives to ${closed.join(', ')}${job ? ` (${job.toLowerCase()})` : ''}, from Open Source Everything (CC BY-SA 4.0):\n` +
+    alts.map(({ p, a }) => `- ${p.name} (${p.license ?? 'license being checked'}${codeUrl(p) ? `, ${codeUrl(p)}` : p.website ? `, ${p.website}` : ''}; replaces ${a.fit === 'full' ? 'fully' : 'partly'}): ${p.summary}`).join('\n') +
+    `\n\n${ask}\n\nMy project or idea:\n`;
+}
+export function buildBox(t) {
+  return `<section class="surface sec" id="build">
+        <h2 class="h-large">Before you build</h2>
+        <p class="small2">Planning something for ${esc(t.about)}? See what exists first, so you can reuse parts or explain what's different. Paste this into any AI assistant:</p>
+        <div class="lvl2 prompt" id="prompt-short">${esc(promptText(t, false))}</div>
+        <div id="prompt-full" hidden>${esc(promptText(t, true))}</div>
+        <div class="stack">
+          <button class="btn md primary" type="button" data-copy="prompt-short" data-copied="Copied. Paste it into any AI assistant.">Copy prompt</button>
+          <button class="btn md secondary" type="button" data-copy="prompt-full" data-copied="Copied, with the list. Paste it into any AI assistant.">Copy with the list included</button>
+          <a class="btn md secondary" href="${url(t.json)}" download>Download the list</a>
+        </div>
+      </section>`;
+}

@@ -2,7 +2,7 @@
 // WHY (Destin, Oct 27): people search by the app they want to leave, not by our group names. Each page shows the
 // alternatives from every group that replaces the app (Photoshop sits in both Photo editing and Painting).
 import { esc, url, SITE_URL } from '../lib.mjs';
-import { altCard, appSlug, appUrl, sortAlts, deviceFilter } from '../cards.mjs';
+import { altCard, appSlug, appUrl, sortAlts, deviceFilter, buildBox } from '../cards.mjs';
 
 export default function appPages(d) {
   // WHY keyed by address, not spelling: the imported lists spell some apps two ways ("Datadog", "DataDog");
@@ -37,7 +37,8 @@ export default function appPages(d) {
         : `No open-source app replaces ${esc(name)} yet.`}</p></div>${all.length > 1 ? deviceFilter('devMenu') : ''}</div>
     ${others.length ? `<div class="replaces-row"><span class="muted11">Also replaces</span><div class="chiprow">${others.map((c) => `<a class="chip" href="${appUrl(c)}">${esc(c)}</a>`).join('')}</div></div>` : ''}
   </div>
-  ${sections.map(section).join('')}`;
+  ${sections.map(section).join('')}
+  ${buildBox({ about: `an alternative to ${name}`, closed: [name], json: `data/groups/${groups[0].id}.json`, alts: all })}`;
 
     const description = all.length
       ? `${all.length} open-source alternative${all.length === 1 ? '' : 's'} to ${name}: ${all.slice(0, 4).map((x) => x.p.name).join(', ')}${all.length > 4 ? ' and more' : ''}.`
