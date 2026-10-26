@@ -14,20 +14,15 @@
 
   // ── Search ──
   // WHY lazy: the index is only needed once someone types, so pages load without it.
+  // The ranking itself lives in search-core.js, shared with the tests (site/test/search-eval.mjs).
   let index = null, loading = null;
-  const loadIndex = () => loading || (loading = fetch(BASE + 'search.json').then((r) => r.json()).then((d) => (index = d)));
+  const loadIndex = () => loading || (loading = fetch(BASE + 'search.json').then((r) => r.json()).then((d) => (index = window.OISearch.prepare(d))));
+  const HEADINGS = { closed: 'Closed apps', group: 'Groups', project: 'Open projects' };
   function results(t) {
-    const q = t.trim().toLowerCase(); if (!q) return '';
-    const hit = (s) => s.toLowerCase().includes(q);
-    const rank = (s) => (s.toLowerCase().startsWith(q) ? 0 : 1);
-    const pick = (list, n) => list.filter((x) => hit(x.n)).sort((a, b) => rank(a.n) - rank(b.n)).slice(0, n);
-    const row = (x, label) => `<a class="mi" role="option" href="${BASE}${x.u}">${esc(x.n)}<span class="muted11">${esc(label(x))}</span></a>`;
-    const closed = pick(index.closed, 6).map((x) => row(x, (x) => x.g));
-    const groups = pick(index.groups, 4).map((x) => row(x, (x) => x.c));
-    const projects = pick(index.projects, 6).map((x) => row(x, (x) => x.g));
-    return (closed.length ? '<div class="menu-note">Closed apps</div>' + closed.join('') : '') +
-      (groups.length ? '<div class="menu-note">Groups</div>' + groups.join('') : '') +
-      (projects.length ? '<div class="menu-note">Open projects</div>' + projects.join('') : '') ||
+    if (!t.trim()) return '';
+    const row = (x) => `<a class="mi" role="option" href="${BASE}${x.u}">${esc(x.n)}<span class="muted11">${esc(x.label)}</span></a>`;
+    // WHY sections come in the order of their best match: a job search opens on the group, a name on the app.
+    return window.OISearch.search(index, t).map((sec) => `<div class="menu-note">${HEADINGS[sec.kind]}</div>` + sec.items.map(row).join('')).join('') ||
       `<div class="menu-note">Nothing matches "${esc(t.trim())}" yet. <a href="https://github.com/itsdestin/opensourceeverything/issues/new?template=4-new-group.yml&closed=${encodeURIComponent(t.trim())}" rel="noopener">Suggest it</a>.</div>`;
   }
   document.querySelectorAll('[data-search]').forEach((wrap) => {

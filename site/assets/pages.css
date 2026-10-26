@@ -89,6 +89,11 @@ table.credits a { color:var(--fg); }
 .collage .c0 { right:22%; top:2%; transform:rotate(-4deg); }
 .collage .c1 { right:0; top:24%; transform:rotate(3deg); z-index:1; }
 .collage .c2 { right:20%; top:50%; transform:rotate(-1deg); z-index:2; }
+/* WHY: the card hides whatever pokes past its edges (the fanned screenshots), which also cut the search dropdown
+   off after three rows. While the dropdown is open the card lets it hang below, sits above the next section, and
+   clips only the screenshots, at the card's own edges (its 32px padding). */
+.hero3:has(.search-menu.open) { overflow:visible; z-index:5; }
+.hero3:has(.search-menu.open) .collage { clip-path:inset(-32px -32px -32px -32px); }
 
 /* Popular switches: picture cards, four to a row. */
 .swgrid { display:grid; grid-template-columns:repeat(4,minmax(0,1fr)); gap:12px; }

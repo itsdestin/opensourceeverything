@@ -1,0 +1,549 @@
+{
+ "_about": "Held-out searches written without seeing the ranking code (Oct 26, 2026). Used to check the search isn't tuned only to search-queries.json.",
+ "queries": [
+  {
+   "q": "figma",
+   "want": [
+    "c:figma",
+    "p:penpot"
+   ],
+   "kind": "closed app"
+  },
+  {
+   "q": "Dropbox alternative",
+   "want": [
+    "c:dropbox"
+   ],
+   "kind": "closed app"
+  },
+  {
+   "q": "alternative to Trello",
+   "want": [
+    "c:trello"
+   ],
+   "kind": "closed app"
+  },
+  {
+   "q": "spotify open source",
+   "want": [
+    "c:spotify"
+   ],
+   "kind": "closed app"
+  },
+  {
+   "q": "Google Photos",
+   "want": [
+    "c:google-photos"
+   ],
+   "kind": "closed app"
+  },
+  {
+   "q": "1password free",
+   "want": [
+    "c:1password"
+   ],
+   "kind": "closed app"
+  },
+  {
+   "q": "Shopify",
+   "want": [
+    "c:shopify"
+   ],
+   "kind": "closed app"
+  },
+  {
+   "q": "linkedin",
+   "want": [
+    "c:linkedin"
+   ],
+   "kind": "closed app"
+  },
+  {
+   "q": "Twitter",
+   "want": [
+    "c:twitter-x"
+   ],
+   "kind": "closed app"
+  },
+  {
+   "q": "teamviewer",
+   "want": [
+    "c:teamviewer"
+   ],
+   "kind": "closed app"
+  },
+  {
+   "q": "docusign",
+   "want": [
+    "c:docusign"
+   ],
+   "kind": "closed app"
+  },
+  {
+   "q": "Google Analytics replacement",
+   "want": [
+    "c:google-analytics"
+   ],
+   "kind": "closed app"
+  },
+  {
+   "q": "heroku",
+   "want": [
+    "c:heroku"
+   ],
+   "kind": "closed app"
+  },
+  {
+   "q": "Obsidian",
+   "want": [
+    "c:obsidian"
+   ],
+   "kind": "closed app"
+  },
+  {
+   "q": "photoshpo",
+   "want": [
+    "c:adobe-photoshop"
+   ],
+   "kind": "typo"
+  },
+  {
+   "q": "dropbx",
+   "want": [
+    "c:dropbox"
+   ],
+   "kind": "typo"
+  },
+  {
+   "q": "spotfy",
+   "want": [
+    "c:spotify"
+   ],
+   "kind": "typo"
+  },
+  {
+   "q": "whatsap",
+   "want": [
+    "c:whatsapp"
+   ],
+   "kind": "typo"
+  },
+  {
+   "q": "lastpas",
+   "want": [
+    "c:lastpass"
+   ],
+   "kind": "typo"
+  },
+  {
+   "q": "calandly",
+   "want": [
+    "c:calendly"
+   ],
+   "kind": "typo"
+  },
+  {
+   "q": "mailchmp",
+   "want": [
+    "c:mailchimp"
+   ],
+   "kind": "typo"
+  },
+  {
+   "q": "zendsk",
+   "want": [
+    "c:zendesk"
+   ],
+   "kind": "typo"
+  },
+  {
+   "q": "bitwardn",
+   "want": [
+    "p:bitwarden"
+   ],
+   "kind": "typo"
+  },
+  {
+   "q": "nextclod",
+   "want": [
+    "p:nextcloud"
+   ],
+   "kind": "typo"
+  },
+  {
+   "q": "jellyfn",
+   "want": [
+    "p:jellyfin"
+   ],
+   "kind": "typo"
+  },
+  {
+   "q": "kepassxc",
+   "want": [
+    "p:keepassxc"
+   ],
+   "kind": "typo"
+  },
+  {
+   "q": "Google  Maps",
+   "want": [
+    "c:google-maps"
+   ],
+   "kind": "spacing"
+  },
+  {
+   "q": "face book messenger",
+   "want": [
+    "c:facebook-messenger"
+   ],
+   "kind": "spacing"
+  },
+  {
+   "q": "Final Cut",
+   "want": [
+    "c:final-cut-pro"
+   ],
+   "kind": "spacing"
+  },
+  {
+   "q": "FL  studio",
+   "want": [
+    "c:fl-studio"
+   ],
+   "kind": "spacing"
+  },
+  {
+   "q": "DAVINCI resolve",
+   "want": [
+    "c:davinci-resolve"
+   ],
+   "kind": "spacing"
+  },
+  {
+   "q": "power bi",
+   "want": [
+    "c:power-bi",
+    "c:powerbi"
+   ],
+   "kind": "spacing"
+  },
+  {
+   "q": "i cloud photos",
+   "want": [
+    "c:icloud-photos"
+   ],
+   "kind": "spacing"
+  },
+  {
+   "q": "quick books",
+   "want": [
+    "c:quickbooks"
+   ],
+   "kind": "spacing"
+  },
+  {
+   "q": "free alternative to Microsoft Teams",
+   "want": [
+    "c:microsoft-teams"
+   ],
+   "kind": "phrase"
+  },
+  {
+   "q": "open source Canva",
+   "want": [
+    "c:canva"
+   ],
+   "kind": "phrase"
+  },
+  {
+   "q": "like Airtable",
+   "want": [
+    "c:airtable",
+    "p:baserow",
+    "p:grist"
+   ],
+   "kind": "phrase"
+  },
+  {
+   "q": "open source twilio",
+   "want": [
+    "c:twilio"
+   ],
+   "kind": "phrase"
+  },
+  {
+   "q": "something like Calendly",
+   "want": [
+    "c:calendly",
+    "p:cal-com"
+   ],
+   "kind": "phrase"
+  },
+  {
+   "q": "free Camtasia",
+   "want": [
+    "c:camtasia"
+   ],
+   "kind": "phrase"
+  },
+  {
+   "q": "open source zapier",
+   "want": [
+    "c:zapier"
+   ],
+   "kind": "phrase"
+  },
+  {
+   "q": "alternative to Evernote",
+   "want": [
+    "c:evernote"
+   ],
+   "kind": "phrase"
+  },
+  {
+   "q": "plex alternative",
+   "want": [
+    "c:plex",
+    "p:jellyfin"
+   ],
+   "kind": "phrase"
+  },
+  {
+   "q": "free alternative to Tableau",
+   "want": [
+    "c:tableau"
+   ],
+   "kind": "phrase"
+  },
+  {
+   "q": "ollama",
+   "want": [
+    "p:ollama"
+   ],
+   "kind": "project"
+  },
+  {
+   "q": "immich",
+   "want": [
+    "p:immich"
+   ],
+   "kind": "project"
+  },
+  {
+   "q": "obs",
+   "want": [
+    "p:obs-studio"
+   ],
+   "kind": "project"
+  },
+  {
+   "q": "gimp",
+   "want": [
+    "p:gimp"
+   ],
+   "kind": "project"
+  },
+  {
+   "q": "libreoffice",
+   "want": [
+    "p:libreoffice-writer",
+    "p:libreoffice-calc",
+    "p:libreoffice-impress"
+   ],
+   "kind": "project"
+  },
+  {
+   "q": "home assistant",
+   "want": [
+    "p:home-assistant"
+   ],
+   "kind": "project"
+  },
+  {
+   "q": "grapheneos",
+   "want": [
+    "p:grapheneos"
+   ],
+   "kind": "project"
+  },
+  {
+   "q": "syncthing",
+   "want": [
+    "p:syncthing"
+   ],
+   "kind": "project"
+  },
+  {
+   "q": "stirling pdf",
+   "want": [
+    "p:stirling-pdf"
+   ],
+   "kind": "project"
+  },
+  {
+   "q": "blender",
+   "want": [
+    "p:blender"
+   ],
+   "kind": "project"
+  },
+  {
+   "q": "tor",
+   "want": [
+    "p:tor-browser"
+   ],
+   "kind": "project"
+  },
+  {
+   "q": "vaultwarden",
+   "want": [
+    "p:vaultwarden"
+   ],
+   "kind": "project"
+  },
+  {
+   "q": "app to edit videos",
+   "want": [
+    "g:video-editing",
+    "p:kdenlive",
+    "p:shotcut",
+    "p:openshot"
+   ],
+   "kind": "job"
+  },
+  {
+   "q": "manage passwords",
+   "want": [
+    "g:passwords",
+    "p:bitwarden",
+    "p:keepassxc",
+    "p:vaultwarden"
+   ],
+   "kind": "job"
+  },
+  {
+   "q": "chat with friends privately",
+   "want": [
+    "g:messaging",
+    "p:signal",
+    "p:simplex-chat"
+   ],
+   "kind": "job"
+  },
+  {
+   "q": "make music",
+   "want": [
+    "g:audio",
+    "p:ardour",
+    "p:lmms"
+   ],
+   "kind": "job"
+  },
+  {
+   "q": "edit pdfs",
+   "want": [
+    "g:pdf",
+    "p:stirling-pdf"
+   ],
+   "kind": "job"
+  },
+  {
+   "q": "send big files",
+   "want": [
+    "g:file-transfer",
+    "p:psitransfer"
+   ],
+   "kind": "job"
+  },
+  {
+   "q": "split bills with friends",
+   "want": [
+    "g:shared-expenses",
+    "c:splitwise",
+    "p:spliit-app"
+   ],
+   "kind": "job"
+  },
+  {
+   "q": "erp",
+   "want": [
+    "g:erp"
+   ],
+   "kind": "job"
+  },
+  {
+   "q": "self-hosted google drive",
+   "want": [
+    "g:cloud-storage",
+    "p:nextcloud",
+    "p:owncloud",
+    "p:seafile"
+   ],
+   "kind": "described"
+  },
+  {
+   "q": "offline maps for hiking",
+   "want": [
+    "p:organic-maps",
+    "p:osmand",
+    "p:comaps"
+   ],
+   "kind": "described"
+  },
+  {
+   "q": "replace google on my phone",
+   "want": [
+    "g:phone-os",
+    "p:grapheneos",
+    "p:lineageos",
+    "p:e-os"
+   ],
+   "kind": "described"
+  },
+  {
+   "q": "watch youtube without ads on phone",
+   "want": [
+    "p:newpipe",
+    "p:freetube"
+   ],
+   "kind": "described"
+  },
+  {
+   "q": "host my own git server",
+   "want": [
+    "g:code-hosting",
+    "p:gitea",
+    "p:forgejo"
+   ],
+   "kind": "described"
+  },
+  {
+   "q": "private search engine",
+   "want": [
+    "g:search",
+    "p:searxng"
+   ],
+   "kind": "described"
+  },
+  {
+   "q": "backup my laptop automatically",
+   "want": [
+    "g:backup",
+    "p:restic",
+    "p:borgbackup",
+    "p:duplicati"
+   ],
+   "kind": "described"
+  },
+  {
+   "q": "count website visitors without cookies",
+   "want": [
+    "g:analytics",
+    "p:plausible",
+    "p:umami",
+    "p:goatcounter"
+   ],
+   "kind": "described"
+  }
+ ]
+}

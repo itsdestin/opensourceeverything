@@ -31,6 +31,9 @@ jobs:
         run: node site/build.mjs
       - name: Check the site
         run: node site/check.mjs
+      - name: Search ranking tests
+        # WHY: a change to the data or the ranker that makes search worse fails here instead of shipping.
+        run: node site/test/search-eval.mjs && node site/test/search-eval.mjs --heldout
       - uses: actions/upload-pages-artifact@v3
         if: (github.event_name == 'push' && github.ref == 'refs/heads/main') || (github.event_name == 'workflow_dispatch' && inputs.publish)
         with:

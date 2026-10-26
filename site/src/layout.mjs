@@ -87,6 +87,7 @@ ${footer()}
 </main>
 ${tabbar(path)}
 <div class="toast" id="toast" role="status"></div>
+<script src="${asset('assets/search-core.js')}" defer></script>
 <script src="${asset('assets/site.js')}" defer></script>
 ${SOCIAL ? `<script src="${asset(DEMO ? 'assets/fake-api.js' : 'assets/api.js')}" defer></script>${DEMO ? '' : `<script>window.OI_API_URL = ${JSON.stringify(API_URL)};</script>`}` : ''}
 ${scripts.map((s) => `<script src="${asset('assets/' + s)}" defer></script>`).join('\n')}
