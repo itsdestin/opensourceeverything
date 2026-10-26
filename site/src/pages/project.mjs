@@ -35,13 +35,13 @@ export default function projectPages(d) {
           <div class="card listing">
             <div class="head"><h3><a class="cardlink" href="${url(`g/${group.id}/`)}">${esc(group.name)}</a></h3><span class="pill ${alt.fit === 'full' ? 'ok' : 'info'}">${alt.fit === 'full' ? '<i></i>Replaces fully' : 'Replaces partly'}</span></div>
             <p class="small2">Instead of ${esc(group.closed.join(', '))}${alt.note ? ` · ${esc(alt.note)}` : ''}</p>
-            ${SOCIAL ? `<div class="rate lvl2" data-rate data-group="${group.id}" data-project="${esc(p.id)}" data-question="${esc(`Is ${p.name} a good replacement for ${group.closed.length > 3 ? group.closed.slice(0, 3).join(', ') + ' and others' : group.closed.length > 1 ? group.closed.slice(0, -1).join(', ') + ' and ' + group.closed.at(-1) : group.closed[0] ?? 'these'}?`)}"></div>` : ''}
+            ${SOCIAL ? `<div class="rate lvl2" data-rate data-group="${group.id}" data-project="${esc(p.id)}" data-question="${esc(`Does ${p.name} do the job of ${group.closed.length > 3 ? group.closed.slice(0, 3).join(', ') + ' and others' : group.closed.length > 1 ? group.closed.slice(0, -1).join(', ') + ' and ' + group.closed.at(-1) : group.closed[0] ?? 'these apps'}?`)}"></div>` : ''}
           </div>`).join('')}
         </div>
       </section>
       ${SOCIAL && listed.length ? `<section class="surface sec">
         <div class="sec-head"><div><h2 class="h-large">What's missing</h2><p class="desc12">Things people miss in ${esc(p.name)}. Upvote what matters to you; it helps its team decide.</p></div>
-          <button class="btn sm primary" type="button" data-add-note data-category="${listed[0].group.category}" data-group="${listed[0].group.id}" data-project="${esc(p.id)}" data-kind="missing">Add a note</button></div>
+          <button class="btn sm secondary" type="button" data-add-note data-category="${listed[0].group.category}" data-group="${listed[0].group.id}" data-groups="${listed.map(({ group }) => group.id).join(',')}" data-project="${esc(p.id)}" data-kind="missing">Add a note</button></div>
         <div data-notes data-project="${esc(p.id)}" data-empty="Nothing noted yet."></div>
       </section>` : ''}
     </div>

@@ -26,7 +26,8 @@ export function altCard(p, alt, i, group) {
             <div class="menu" id="${menuId}" role="menu">${acts.map((l) => `<a class="mi" role="menuitem" href="${esc(l.href)}" rel="noopener">${l.label}</a>`).join('')}<a class="mi" role="menuitem" href="${url(`p/${p.id}/`)}">See full details</a><a class="mi" role="menuitem" href="${esc(suggestUrl('2-fix', { project: p.name, ...(group ? { group: group.name } : {}) }))}" rel="noopener">Suggest a change</a></div></div>` : ''}</div>
         <div class="chiprow">${factChips(p, alt, SOCIAL && group ? `<span class="chip" data-rating data-group="${group.id}" data-project="${esc(p.id)}" hidden></span>` : '')}</div>
         <p class="blurb">${esc(p.summary)}</p>
-        <div class="foot">${esc(foot)}${SOCIAL && group ? ` <span class="missing-count" data-missing-count data-group="${group.id}" data-project="${esc(p.id)}" hidden></span>` : ''}</div>
+        <div class="foot">${esc(foot)}</div>
+        ${SOCIAL && group ? `<div class="missing-count" data-missing-count data-group="${group.id}" data-project="${esc(p.id)}" hidden></div>` : ''}
       </div>
     </div>`;
 }

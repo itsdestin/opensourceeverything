@@ -58,8 +58,8 @@ export default function groupPages(d) {
       </section>
       ${SOCIAL ? `<section class="surface sec" id="missing">
         <div class="sec-head"><div><h2 class="h-large">What's missing</h2><p class="desc12">What people still miss here, and wish existed. Upvote what matters to you.</p></div>
-          <div class="btns-row"><a class="btn sm secondary" href="${url(`c/${g.category}/board/`)}">${esc(cat?.name ?? '')} board</a><button class="btn sm primary" type="button" data-add-note data-category="${g.category}" data-group="${g.id}">Add a note</button></div></div>
-        <div data-notes data-group="${g.id}" data-limit="6" data-empty="Nothing noted yet. Using one of these and something's missing? Add a note."></div>
+          <div class="btns-row"><a class="btn sm secondary" href="${url(`c/${g.category}/board/`)}">${esc(cat?.name ?? '')} board</a><button class="btn sm secondary" type="button" data-add-note data-category="${g.category}" data-group="${g.id}">Add a note</button></div></div>
+        <div data-notes data-group="${g.id}" data-limit="6" data-more-href="${url(`c/${g.category}/board/?group=${g.id}`)}" data-empty="Nothing noted yet. Using one of these and something's missing? Add a note."></div>
       </section>` : ''}
     </div>
 
@@ -76,9 +76,9 @@ export default function groupPages(d) {
         </div>
       </section>
       <section class="surface sec">
-        <div><h2 class="h-large">Something missing or wrong?</h2><p class="desc12" style="margin-top:4px">Suggest it with a short form on GitHub. A r/TrueOpenSource mod reviews every suggestion.</p></div>
+        <div><h2 class="h-large">Fix the list itself</h2><p class="desc12" style="margin-top:4px">A project or closed app missing from this list, or a mistake on it? These open a short form on GitHub, and a mod reviews it. To say what a project can't do, use What's missing.</p></div>
         <div class="stack">
-          <a class="btn md primary" href="${esc(suggestUrl('1-add-project', { group: g.name }))}" rel="noopener">Add a project here</a>
+          <a class="btn md secondary" href="${esc(suggestUrl('1-add-project', { group: g.name }))}" rel="noopener">Add a project here</a>
           <a class="btn md secondary" href="${esc(suggestUrl('3-add-closed-app', { group: g.name }))}" rel="noopener">Add a closed app it replaces</a>
           <a class="btn md secondary" href="${esc(suggestUrl('2-fix', { group: g.name }))}" rel="noopener">Fix something on this page</a>
         </div>

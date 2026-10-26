@@ -374,7 +374,7 @@ button.fchip { cursor:pointer; }
 .rate-res .meter { margin-top:0; width:140px; }
 .rate-res .meter i { background:var(--accent); }
 .rate-btns { display:flex; gap:6px; flex:none; }
-.missing-count::before { content:"· "; }
+.missing-count { font-size:11px; color:var(--fg-2); }
 .modrow { padding:12px; display:flex; gap:12px; align-items:flex-start; justify-content:space-between; flex-wrap:wrap; }
 .modrow .rt { color:var(--fg); }
 .callout.info a, .callout.warn a, .small2 a { color:var(--fg); }
@@ -405,3 +405,22 @@ a.chip.link:focus-visible { outline:2px solid var(--accent); outline-offset:1px;
 .identity .desc12 a, .sec .body2 a { color:var(--fg); }
 /* WHY: anything marked hidden stays hidden, even when its own style sets a display (the rating chip showed empty, Oct 27). */
 [hidden] { display:none !important; }
+
+/* Vote buttons carry a word ("Me too", "I want this") under the count. */
+.vote { width:64px; gap:1px; padding:5px 2px; }
+.vote b { font-size:12px; font-weight:600; }
+.vote span { font-size:11px; line-height:1.1; text-align:center; }
+.vote.on span { color:var(--on-accent); }
+.vote.big { width:76px; padding:8px 4px; } .vote.big b { font-size:14px; }
+.vote[data-locked] { opacity:.6; }
+.btn.locked { opacity:.6; }
+/* A one-line notice at the top of a page: new accounts, posts waiting for a mod. */
+.notice-line { padding:10px 16px; display:flex; align-items:center; gap:12px; }
+.notice-line .small2 { margin:0; }
+.mi.danger { color:rgb(220 38 38); }
+.more-row:empty { display:none; }
+.more-row { display:flex; justify-content:center; padding-top:8px; }
+.nr-where a { color:var(--fg-2); }
+.nr-where a:hover { color:var(--fg); }
+.note-own { justify-content:flex-end; }
+@media (max-width:640px) { .links { flex-wrap:wrap; } .notice-line { flex-direction:column; align-items:flex-start; } }
