@@ -246,7 +246,7 @@ function render() {
       </section>
       <section class="surface sec" style="gap:8px">
           <h2 class="h-large">About this page</h2>
-          <p class="small2"><b class="num">Ratings</b> come from signed-in people here answering "does it work as a replacement?" Accounts under 30 days old can't vote yet.</p>
+          <p class="small2"><b class="num">Ratings</b> come from signed-in people here answering "does it work as a replacement?" Accounts under 14 days old can't vote yet.</p>
           <p class="small2"><b class="num">GitHub stars</b> are shown for reference. They measure popularity, not whether it replaces anything.</p>
           <p class="small2"><b class="num">Verified</b> means r/TrueOpenSource mods checked it: open-source license, maintained, and it really does the job.</p>
           <p class="small2"><b class="num">Owner</b> means the people who build it wrote its description.</p>
@@ -493,7 +493,7 @@ document.addEventListener('click', e => {
     case 'toast': e.stopPropagation(); toast(el.dataset.msg); break;
     case 'rate': {
       if (!needSignIn(() => openAlt(id))) return;
-      if (!canCount()) { toast('Your GitHub account is under 30 days old, so votes don\'t count yet.'); return; }
+      if (!canCount()) { toast('Your GitHub account is under 14 days old, so votes don\'t count yet.'); return; }
       const a = altById(id), v = el.dataset.v, prev = myVote[id];
       if (prev) a[prev]--;
       if (prev === v) delete myVote[id]; else { myVote[id] = v; a[v]++; }
@@ -503,7 +503,7 @@ document.addEventListener('click', e => {
     }
     case 'gap': {
       if (!needSignIn(() => document.querySelector(`[data-act=gap][data-v=${el.dataset.v}]`).click())) return;
-      if (!canCount()) { toast('Your GitHub account is under 30 days old, so votes don\'t count yet.'); return; }
+      if (!canCount()) { toast('Your GitHub account is under 14 days old, so votes don\'t count yet.'); return; }
       const v = el.dataset.v;
       if (D.gapVote === null) D.gapTotal++; else if (D.gapVote === 'yes') D.gapYes--;
       if (D.gapVote === v) { D.gapVote = null; D.gapTotal--; } else { D.gapVote = v; if (v === 'yes') D.gapYes++; }
@@ -514,7 +514,7 @@ document.addEventListener('click', e => {
     case 'voteItem': {
       e.stopPropagation();
       if (!needSignIn(() => {})) return;
-      if (!canCount()) { toast('Your GitHub account is under 30 days old, so votes don\'t count yet.'); return; }
+      if (!canCount()) { toast('Your GitHub account is under 14 days old, so votes don\'t count yet.'); return; }
       const it = findItem(el.dataset.kind, id); it.voted = !it.voted; it.up += it.voted ? 1 : -1; refresh(); break;
     }
     case 'addItem': addItem(el.dataset.kind); break;
@@ -562,7 +562,7 @@ document.addEventListener('click', e => {
       const then = afterSignIn; afterSignIn = null; if (then) then(); break;
     }
     case 'signout': D.user = null; render(); toast('Signed out'); break;
-    case 'toggleNew': D.newAccount = !D.newAccount; renderAcct(); toast(D.newAccount ? 'Demo: your account is now under 30 days old. Votes won\'t count; comments wait for a mod.' : 'Demo: your account is 2 years old again.'); break;
+    case 'toggleNew': D.newAccount = !D.newAccount; renderAcct(); toast(D.newAccount ? 'Demo: your account is now under 14 days old. Votes won\'t count; comments wait for a mod.' : 'Demo: your account is 2 years old again.'); break;
     case 'addProject': addProject(); break;
     case 'pCheck': saveProjectFields(); if (!P.url.trim()) { toast('Paste your project\'s link first.'); return; } P.checked = true; P.proved = false; renderProject(); break;
     case 'pProve': P.proved = true; renderProject(); break;

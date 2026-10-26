@@ -168,7 +168,7 @@ function render() {
   const total = M.projects.length + M.held.length + M.reports.length + M.robot.length;
   const body = {
     projects: () => M.projects.length ? M.projects.map(projectCard).join('') : empty('New project submissions show up here.'),
-    held: () => M.held.length ? M.held.map(c => commentCard(c,'held')).join('') : empty('Comments from accounts under 30 days old wait here before anyone sees them.'),
+    held: () => M.held.length ? M.held.map(c => commentCard(c,'held')).join('') : empty('Comments from accounts under 14 days old wait here before anyone sees them.'),
     reports: () => M.reports.length ? M.reports.map(c => commentCard(c,'reports')).join('') : empty('Anything people report shows up here.'),
     robot: () => M.robot.length ? M.robot.map(robotCard).join('') : empty('The weekly robot posts license changes, quiet projects and missing pages here.'),
     verified: () => verifiedList(),

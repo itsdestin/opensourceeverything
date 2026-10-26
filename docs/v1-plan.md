@@ -69,9 +69,8 @@ costs more work up front, and gives us the page you described.
 ## 3. Keeping it honest (trust and abuse)
 
 - **One GitHub account, one vote** per thing. They can be changed anytime.
-- **Accounts younger than 30 days** can read and comment, but their votes aren't counted
-  and their first comments wait for a mod. This matches the subreddit's 30-day idea and blocks the
-  easiest fake-account trick.
+- **GitHub accounts younger than 14 days** (Destin, Oct 27; was 30) can read and comment, but their
+  votes aren't counted and their first comments wait for a mod. Blocks the easiest fake-account trick.
 - **Rate limits** on posting and voting.
 - **Report** button on every comment and listing.
 - **Mod page** (only for signed-in mods): reports, held comments, tag requests, Verified tags; hide,
@@ -157,8 +156,8 @@ group) and **Copy prompt with the list included** (for assistants that can't ope
 1. **Empty at launch.** With few early users, ratings start empty. Cards say "No votes yet" instead of
    showing 0%, GitHub stars give a first sense of popularity, and the subreddit launch post asks members to rate their favourites.
    Verified tags carry the trust until ratings build up.
-2. **A second place to moderate.** Comments here are separate from Reddit. The mod page, the 30-day
-   rule and holding first comments keep it small. Recruiting 3–5 more mods (already on the
+2. **A second place to moderate.** Comments here are separate from Reddit. The mod page, the 14-day
+   account rule and holding first comments keep it small. Recruiting 3–5 more mods (already on the
    checklist) matters more now.
 3. **Definitions on one public page:** what counts as open source (OSI license only; "open core" gets a
    tag; "source-available" licenses don't qualify), what Verified means, and the four build labels.
