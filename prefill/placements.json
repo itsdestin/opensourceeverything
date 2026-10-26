@@ -1,0 +1,43 @@
+{
+ "note": "Hand placements for projects the long-tail import couldn't sort (prefill/out/unplaced.json), Oct 27. assemble.mjs reads this before placing the long tail: new groups and extra closed apps let those projects match a group; aliases fix spelling differences between lists; skip leaves a project out on purpose (reason given).",
+ "newGroups": [
+  { "id": "database-apps", "name": "Database apps", "category": "office", "job": "Building simple databases and tables, like a spreadsheet with more structure", "closed": ["Airtable"] },
+  { "id": "newsletters", "name": "Newsletters & email marketing", "category": "business", "job": "Sending newsletters and marketing emails to a mailing list", "closed": ["Mailchimp", "Brevo", "ConvertKit"] },
+  { "id": "email-sending", "name": "Email sending for apps", "category": "dev", "job": "Sending an app's own emails, like sign-ups and password resets", "closed": ["Mailgun", "SendGrid"] },
+  { "id": "social-scheduling", "name": "Social media scheduling", "category": "social", "job": "Planning and scheduling posts across social networks", "closed": ["Buffer", "Hootsuite"] },
+  { "id": "phone-gallery", "name": "Phone photo gallery", "category": "media", "job": "Browsing the photos and videos on your phone", "closed": ["Samsung Gallery", "Xiaomi Gallery", "Huawei Gallery"] },
+  { "id": "product-analytics", "name": "Product analytics & session replay", "category": "dev", "job": "Seeing how people use your app or website, step by step", "closed": ["Mixpanel", "Amplitude", "FullStory", "LogRocket"] },
+  { "id": "push-notifications", "name": "Push notifications", "category": "dev", "job": "Sending notifications to people's phones and computers", "closed": ["OneSignal"] },
+  { "id": "translation-management", "name": "Translation management", "category": "dev", "job": "Translating an app or website into other languages, as a team", "closed": ["Lokalise", "Crowdin", "Transifex", "POEditor"] },
+  { "id": "feedback-boards", "name": "Feedback & feature requests", "category": "business", "job": "Collecting ideas and votes from customers on what to build next", "closed": ["Canny"] }
+ ],
+ "addClosed": {
+  "scheduling": ["Doodle"],
+  "notes": ["Roam Research"],
+  "invoicing": ["Chargebee", "Stripe Billing"],
+  "video-editing": ["Vegas Pro"],
+  "security-scanning": ["Prisma Cloud"]
+ },
+ "aliases": {
+  "AirTable": "Airtable", "Amazon Goodreads": "Goodreads", "Sendinblue": "Brevo", "Fullstory": "FullStory",
+  "Sony Vegas": "Vegas Pro", "Palo Alto Prisma": "Prisma Cloud", "Otter": "Otter.ai"
+ },
+ "skip": {
+  "Athens Research": "Discontinued in 2022",
+  "Dendron": "No longer maintained",
+  "Gitpod": "Its open-source edition was discontinued",
+  "Glimesh": "The service shut down in 2023",
+  "Jam": "Clubhouse-style rooms; little use today",
+  "Botik": "A Discord bot, not a meeting-notes app",
+  "FormKit": "A code library for developers, not an app",
+  "Metarank": "Too specialised for this map",
+  "CloudQuery": "Too specialised for this map",
+  "CrowdSec": "Too specialised for this map",
+  "NSL.SH": "Too new and little known",
+  "Tunnelmole": "Too specialised for this map",
+  "Storj": "A paid storage network; the open part is only the software",
+  "LogicalDOC": "Enterprise document systems are out of scope for now",
+  "Nuxeo": "Enterprise document systems are out of scope for now",
+  "Revert": "Too specialised for this map"
+ }
+}

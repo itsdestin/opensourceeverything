@@ -1703,6 +1703,29 @@
        "Your own audiobooks"
       ]
      ]
+    },
+    {
+     "id": "live-streaming",
+     "name": "Live streaming",
+     "job": "Streaming live video to an audience",
+     "closed": [
+      "Twitch",
+      "YouTube Live"
+     ],
+     "alts": [
+      [
+       "Owncast",
+       "github.com/owncast/owncast",
+       "full",
+       "You run it yourself"
+      ],
+      [
+       "PeerTube",
+       "github.com/Chocobozzz/PeerTube",
+       "partial",
+       "Live streams are part of a video site"
+      ]
+     ]
     }
    ]
   },
@@ -1858,6 +1881,30 @@
        "Home Assistant",
        "github.com/home-assistant/core",
        "full"
+      ]
+     ]
+    },
+    {
+     "id": "budgeting",
+     "name": "Budgeting & personal finance",
+     "job": "Tracking spending, budgets and savings",
+     "closed": [
+      "YNAB",
+      "Monarch Money",
+      "Quicken",
+      "Empower Personal Wealth"
+     ],
+     "alts": [
+      [
+       "Actual Budget",
+       "github.com/actualbudget/actual",
+       "full"
+      ],
+      [
+       "Firefly III",
+       "github.com/firefly-iii/firefly-iii",
+       "full",
+       "You run it yourself"
       ]
      ]
     }

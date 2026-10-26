@@ -23,6 +23,10 @@
   "website": "https://www.activepieces.com",
   "release": "https://github.com/activepieces/activepieces/releases/tag/0.92.3-hotfix.1"
  },
+ "github.com/actualbudget/actual": {
+  "website": "https://actualbudget.org",
+  "release": "https://github.com/actualbudget/actual/releases/tag/v26.10.0"
+ },
  "github.com/beemdevelopment/Aegis": {
   "website": "https://getaegis.app",
   "release": "https://github.com/beemdevelopment/Aegis/releases/tag/v3.4.3"
@@ -59,9 +63,17 @@
   "website": "https://apisix.apache.org/blog/",
   "release": "https://github.com/apache/apisix/releases/tag/3.19.0"
  },
+ "github.com/apitable/apitable": {
+  "website": "https://aitable.ai",
+  "release": "https://github.com/apitable/apitable/releases/tag/v1.14.0-beta"
+ },
  "github.com/AppFlowy-IO/AppFlowy": {
   "website": "https://appflowy.com",
   "release": "https://github.com/AppFlowy-IO/AppFlowy/releases/tag/0.14.11"
+ },
+ "github.com/caronc/apprise": {
+  "website": "https://hub.docker.com/r/caronc/apprise",
+  "release": "https://github.com/caronc/apprise/releases/tag/v2.1.0"
  },
  "github.com/appsmithorg/appsmith": {
   "website": "https://www.appsmith.com",
@@ -90,6 +102,10 @@
  "github.com/automatisch/automatisch": {
   "website": "https://automatisch.io",
   "release": "https://github.com/automatisch/automatisch/releases/tag/v0.15.0"
+ },
+ "github.com/deckerst/aves": {
+  "website": null,
+  "release": "https://github.com/deckerst/aves/releases/tag/v1.15.8"
  },
  "github.com/bagisto/bagisto": {
   "website": "https://bagisto.com",
@@ -171,17 +187,9 @@
   "website": "https://CapRover.com",
   "release": "https://github.com/caprover/caprover/releases/tag/v1.15.5"
  },
- "github.com/racz-zoltan/carrypass-self-host": {
-  "website": null,
-  "release": null
- },
  "github.com/chatboxai/chatbox": {
   "website": "https://chatboxai.app?utm_medium=github",
   "release": "https://github.com/chatboxai/chatbox/releases/tag/v1.23.5"
- },
- "github.com/BlinkDL/ChatRWKV": {
-  "website": null,
-  "release": null
  },
  "github.com/chatwoot/chatwoot": {
   "website": "https://www.chatwoot.com/help-center",
@@ -206,10 +214,6 @@
  "github.com/concretecms/concretecms": {
   "website": "https://www.concretecms.org",
   "release": "https://github.com/concretecms/concretecms/releases/tag/9.5.7"
- },
- "github.com/continuedev/continue": {
-  "website": "https://continue.dev",
-  "release": "https://github.com/continuedev/continue/releases/tag/v2.0.0-vscode"
  },
  "github.com/coollabsio/coolify": {
   "website": "https://coolify.io",
@@ -263,6 +267,10 @@
   "website": "https://decapcms.org",
   "release": "https://github.com/decaporg/decap-cms/releases/tag/decap-cms%403.17.3"
  },
+ "github.com/deepfence/ThreatMapper": {
+  "website": "https://threatmapper.org",
+  "release": "https://github.com/deepfence/ThreatMapper/releases/tag/v2.5.8"
+ },
  "github.com/deepset-ai/haystack": {
   "website": "https://haystack.deepset.ai",
   "release": "https://github.com/deepset-ai/haystack/releases/tag/v3.4.1"
@@ -270,10 +278,6 @@
  "github.com/deltachat/deltachat-android": {
   "website": null,
   "release": "https://github.com/deltachat/deltachat-android/releases/tag/v2.62.0"
- },
- "github.com/dexio-wiki/dexio": {
-  "website": "https://dexio.wiki",
-  "release": "https://github.com/dexio-wiki/dexio/releases/tag/v1.0.0"
  },
  "github.com/discourse/discourse": {
   "website": "https://www.discourse.org",
@@ -343,10 +347,6 @@
   "website": "https://f-droid.org/packages/ws.xsoh.etar/",
   "release": "https://github.com/Etar-Group/Etar-Calendar/releases/tag/v1.0.57"
  },
- "github.com/etesync/etesync-dav": {
-  "website": "https://www.etesync.com",
-  "release": "https://github.com/etesync/etesync-dav/releases/tag/v0.35.1"
- },
  "github.com/ether/etherpad": {
   "website": "https://etherpad.org",
   "release": "https://github.com/ether/etherpad/releases/tag/v3.3.11"
@@ -363,10 +363,6 @@
   "website": "https://www.faradaysec.com",
   "release": "https://github.com/infobyte/faraday/releases/tag/v5.25.1"
  },
- "github.com/fauxpilot/fauxpilot": {
-  "website": null,
-  "release": null
- },
  "github.com/mickael-kerjean/filestash": {
   "website": "https://www.filestash.app/",
   "release": null
@@ -374,6 +370,10 @@
  "github.com/firecamp-dev/firecamp": {
   "website": "https://firecamp.dev",
   "release": "https://github.com/firecamp-dev/firecamp/releases/tag/v3.3.0-beta.3"
+ },
+ "github.com/firefly-iii/firefly-iii": {
+  "website": "https://firefly-iii.org/",
+  "release": "https://github.com/firefly-iii/firefly-iii/releases/tag/v6.7.9"
  },
  "github.com/mozilla-firefox/firefox": {
   "website": "https://www.firefox.com/",
@@ -419,6 +419,10 @@
   "website": "https://www.fossify.org",
   "release": "https://github.com/FossifyOrg/Calendar/releases/tag/1.12.1"
  },
+ "github.com/FossifyOrg/Gallery": {
+  "website": "https://www.fossify.org",
+  "release": "https://github.com/FossifyOrg/Gallery/releases/tag/1.14.1"
+ },
  "github.com/FreeTubeApp/FreeTube": {
   "website": "https://freetubeapp.io/",
   "release": null
@@ -458,6 +462,10 @@
  "github.com/TryGhost/Ghost": {
   "website": "https://ghost.org",
   "release": "https://github.com/TryGhost/Ghost/releases/tag/v6.72.0"
+ },
+ "github.com/ghostfolio/ghostfolio": {
+  "website": "https://Ghostfol.io",
+  "release": "https://github.com/ghostfolio/ghostfolio/releases/tag/3.93.0"
  },
  "github.com/go-gitea/gitea": {
   "website": "https://gitea.com",
@@ -518,6 +526,10 @@
  "github.com/heyform/heyform": {
   "website": "https://heyform.net",
   "release": "https://github.com/heyform/heyform/releases/tag/v3.0.5"
+ },
+ "github.com/highlight/highlight": {
+  "website": "https://app.highlight.io",
+  "release": "https://github.com/highlight/highlight/releases/tag/docker-v0.5.6"
  },
  "github.com/home-assistant/core": {
   "website": "https://www.home-assistant.io",
@@ -607,6 +619,10 @@
   "website": "https://keepassxc.org/",
   "release": "https://github.com/keepassxreboot/keepassxc/releases/tag/2.8.0"
  },
+ "github.com/pentacent/keila": {
+  "website": "https://keila.io",
+  "release": "https://github.com/pentacent/keila/releases/tag/0.30.3"
+ },
  "github.com/kestra-io/kestra": {
   "website": "https://go.kestra.io/home",
   "release": "https://github.com/kestra-io/kestra/releases/tag/v2.0.7"
@@ -646,6 +662,10 @@
  "github.com/kuzzleio/kuzzle": {
   "website": "https://kuzzle.io",
   "release": "https://github.com/kuzzleio/kuzzle/releases/tag/v2.59.0"
+ },
+ "github.com/getlago/lago": {
+  "website": "https://www.getlago.com",
+  "release": "https://github.com/getlago/lago/releases/tag/v1.55.0"
  },
  "github.com/metavert-io/lastsaas": {
   "website": "https://metavert.io/lastsaas",
@@ -691,6 +711,10 @@
   "website": "https://www.limesurvey.org",
   "release": null
  },
+ "github.com/knadh/listmonk": {
+  "website": "https://listmonk.app",
+  "release": "https://github.com/knadh/listmonk/releases/tag/v7.0.0-beta.1"
+ },
  "github.com/itswadesh/svelte-commerce": {
   "website": "https://kitcommerce.store/svelte-commerce/",
   "release": "https://github.com/itswadesh/svelte-commerce/releases/tag/v4.0.0"
@@ -718,6 +742,10 @@
  "github.com/joinloops/loops-server": {
   "website": "https://joinloops.org",
   "release": "https://github.com/joinloops/loops-server/releases/tag/v1.0.0-beta.15"
+ },
+ "github.com/mifi/lossless-cut": {
+  "website": "https://losslesscut.app/",
+  "release": "https://github.com/mifi/lossless-cut/releases/tag/v3.70.1"
  },
  "github.com/lowdefy/lowdefy": {
   "website": "https://lowdefy.com",
@@ -791,10 +819,6 @@
   "website": "https://synmetrix.org",
   "release": "https://github.com/synmetrix/synmetrix/releases/tag/v0.1.55"
  },
- "github.com/moinwiki/moin": {
-  "website": "https://moinmo.in/",
-  "release": null
- },
  "github.com/tehnika-mk/monomap": {
   "website": "https://monomap.app",
   "release": "https://github.com/tehnika-mk/monomap/releases/tag/v1.2"
@@ -859,6 +883,10 @@
   "website": "https://apps.nextcloud.com/apps/notes",
   "release": "https://github.com/nextcloud/notes/releases/tag/v6.1.0"
  },
+ "github.com/nextcloud/polls": {
+  "website": "https://apps.nextcloud.com/apps/polls",
+  "release": "https://github.com/nextcloud/polls/releases/tag/v9.3.0"
+ },
  "github.com/nextcloud/spreed": {
   "website": "https://nextcloud.com/talk",
   "release": "https://github.com/nextcloud/spreed/releases/tag/v25.0.6"
@@ -887,6 +915,10 @@
   "website": "https://notesnook.com/",
   "release": "https://github.com/streetwriters/notesnook/releases/tag/v3.4.10"
  },
+ "github.com/binwiederhier/ntfy": {
+  "website": "https://ntfy.sh",
+  "release": "https://github.com/binwiederhier/ntfy/releases/tag/v2.34.0"
+ },
  "github.com/projectdiscovery/nuclei": {
   "website": "https://docs.projectdiscovery.io/tools/nuclei",
   "release": "https://github.com/projectdiscovery/nuclei/releases/tag/v3.11.1"
@@ -907,10 +939,6 @@
   "website": "https://offpdf.com",
   "release": "https://github.com/McanKul/offpdf/releases/tag/v0.5.0"
  },
- "github.com/olive-editor/olive": {
-  "website": "https://olivevideoeditor.org/",
-  "release": null
- },
  "github.com/ollama/ollama": {
   "website": "https://ollama.com",
   "release": "https://github.com/ollama/ollama/releases/tag/v0.40.11"
@@ -927,9 +955,9 @@
   "website": "http://openinterpreter.com/",
   "release": "https://github.com/openinterpreter/openinterpreter/releases/tag/rust-v0.0.56"
  },
- "github.com/LAION-AI/Open-Assistant": {
-  "website": "https://open-assistant.io",
-  "release": "https://github.com/LAION-AI/Open-Assistant/releases/tag/v0.0.4-alpha2"
+ "github.com/internetarchive/openlibrary": {
+  "website": "https://openlibrary.org",
+  "release": "https://github.com/internetarchive/openlibrary/releases/tag/deploy-2026-10-15-at-22-14"
  },
  "github.com/openblocks-dev/openblocks": {
   "website": "https://cloud.openblocks.dev",
@@ -959,9 +987,17 @@
   "website": "https://openhands.dev",
   "release": "https://github.com/OpenHands/OpenHands/releases/tag/v1.33.0"
  },
+ "github.com/getopenpost/openpost": {
+  "website": "https://openpo.st",
+  "release": "https://github.com/getopenpost/openpost/releases/tag/v7.31.1"
+ },
  "github.com/opf/openproject": {
   "website": "https://www.openproject.org",
   "release": "https://github.com/opf/openproject/releases/tag/v17.9.4"
+ },
+ "github.com/openreplay/openreplay": {
+  "website": "https://openreplay.com",
+  "release": "https://github.com/openreplay/openreplay/releases/tag/v1.28.0"
  },
  "github.com/OpenShot/openshot-qt": {
   "website": "http://www.openshot.org",
@@ -1002,6 +1038,10 @@
  "github.com/linode/apl-core": {
   "website": "https://techdocs.akamai.com/app-platform/docs/welcome",
   "release": "https://github.com/linode/apl-core/releases/tag/v6.4.2"
+ },
+ "github.com/owncast/owncast": {
+  "website": "https://owncast.online",
+  "release": "https://github.com/owncast/owncast/releases/tag/v0.3.0"
  },
  "github.com/owncloud/core": {
   "website": "https://owncloud.com",
@@ -1091,6 +1131,18 @@
   "website": "https://www.posnic.com/",
   "release": "https://github.com/Posnic/POS/releases/tag/v1.9.0"
  },
+ "github.com/postalserver/postal": {
+  "website": "https://postalserver.io",
+  "release": "https://github.com/postalserver/postal/releases/tag/3.3.7"
+ },
+ "github.com/PostHog/posthog": {
+  "website": "https://posthog.com",
+  "release": "https://github.com/PostHog/posthog/releases/tag/desktop-v0.61.839"
+ },
+ "github.com/gitroomhq/postiz-app": {
+  "website": "https://postiz.com",
+  "release": "https://github.com/gitroomhq/postiz-app/releases/tag/v2.25.3"
+ },
  "github.com/apache/superset": {
   "website": "https://superset.apache.org/",
   "release": "https://github.com/apache/superset/releases/tag/6.1.0"
@@ -1110,6 +1162,10 @@
  "github.com/qdrant/qdrant": {
   "website": "https://qdrant.tech",
   "release": "https://github.com/qdrant/qdrant/releases/tag/v1.20.0"
+ },
+ "github.com/QuackbackIO/quackback": {
+  "website": "https://quackback.io",
+  "release": "https://github.com/QuackbackIO/quackback/releases/tag/v0.14.1"
  },
  "github.com/KlausSchaefers/quant-ux": {
   "website": null,
@@ -1154,6 +1210,10 @@
  "github.com/roundcube/roundcubemail": {
   "website": "https://roundcube.net",
   "release": "https://github.com/roundcube/roundcubemail/releases/tag/1.7.5"
+ },
+ "github.com/buildship-ai/rowy": {
+  "website": "http://rowy.io",
+  "release": "https://github.com/buildship-ai/rowy/releases/tag/v3.0.0"
  },
  "github.com/rustdesk/rustdesk": {
   "website": "https://rustdesk.com",
@@ -1251,10 +1311,6 @@
   "website": "https://spacebar.chat",
   "release": null
  },
- "github.com/spacedriveapp/spacedrive": {
-  "website": "https://spacedrive.com",
-  "release": "https://github.com/spacedriveapp/spacedrive/releases/tag/0.4.3"
- },
  "github.com/spliit-app/spliit": {
   "website": "https://spliit.app",
   "release": "https://github.com/spliit-app/spliit/releases/tag/1.30.0"
@@ -1274,10 +1330,6 @@
  "github.com/Stirling-Tools/Stirling-PDF": {
   "website": "https://stirling.com",
   "release": "https://github.com/Stirling-Tools/Stirling-PDF/releases/tag/v3.2.2"
- },
- "github.com/stoatchat/self-hosted": {
-  "website": "https://stoat.chat",
-  "release": null
  },
  "github.com/strapi/strapi": {
   "website": "https://strapi.io",
@@ -1342,6 +1394,10 @@
  "github.com/tinode/chat": {
   "website": null,
   "release": "https://github.com/tinode/chat/releases/tag/v0.25.3"
+ },
+ "github.com/tolgee/tolgee-platform": {
+  "website": "https://tolgee.io",
+  "release": "https://github.com/tolgee/tolgee-platform/releases/tag/v3.240.2"
  },
  "github.com/ToolJet/ToolJet": {
   "website": "https://tooljet.com",
@@ -1519,6 +1575,10 @@
   "website": null,
   "release": "https://github.com/element-hq/element-x-android/releases/tag/v26.10.0"
  },
+ "github.com/continuedev/continue": {
+  "website": "https://continue.dev",
+  "release": "https://github.com/continuedev/continue/releases/tag/v2.0.0-vscode"
+ },
  "codeberg.org/comaps/comaps": {
   "website": "https://www.comaps.app/",
   "release": "https://codeberg.org/comaps/comaps/releases/tag/v2026.10.05-19"
@@ -1526,6 +1586,10 @@
  "codeberg.org/forgejo/forgejo": {
   "website": "https://forgejo.org",
   "release": "https://codeberg.org/forgejo/forgejo/releases/tag/v17.0.0"
+ },
+ "codeberg.org/inventaire/inventaire": {
+  "website": "https://wiki.inventaire.io/wiki/Inventaire_software",
+  "release": null
  },
  "codeberg.org/keyoxide/keyoxide-web": {
   "website": "https://keyoxide.org",
@@ -1542,6 +1606,10 @@
  "gitlab.com/AuroraOSS/AuroraStore": {
   "website": null,
   "release": "https://gitlab.com/AuroraOSS/AuroraStore/-/releases/4.8.4"
+ },
+ "gitlab.com/bramw/baserow": {
+  "website": null,
+  "release": null
  },
  "gitlab.com/fdroid/fdroidclient": {
   "website": null,

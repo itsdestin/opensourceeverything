@@ -10146,5 +10146,174 @@
    "inference_geo": "global",
    "speed": "standard"
   }
+ },
+ {
+  "id": "starter:owncast",
+  "name": "Owncast",
+  "repo": "github.com/owncast/owncast",
+  "answer": {
+   "summary": "Owncast is a free program you run on your own server to broadcast live video and chat to your audience. It is for streamers who want to own their content, interface and moderation instead of using a big streaming site.",
+   "replaces": [
+    {
+     "closedApp": "Twitch",
+     "fit": "full",
+     "reason": "The README describes it as a self-hosted live video streaming and chat server similar in style to mainstream options, which matches Twitch's live streaming job."
+    },
+    {
+     "closedApp": "YouTube Live",
+     "fit": "partial",
+     "reason": "It does live streaming to an audience, but the README only describes a single-user server with chat, not YouTube's wider video platform."
+    }
+   ],
+   "kind": "self_hosted",
+   "license": {
+    "verdict": "open",
+    "note": "The host reports the MIT license, which is OSI-approved, and the README confirms MIT."
+   },
+   "groups": [
+    "live-streaming"
+   ],
+   "newGroup": null,
+   "unconfirmed": [
+    "Whether the Owncast project has any paid or differently licensed parts (open-core status) is not stated.",
+    "Whether a hosted or managed Owncast service exists is not stated."
+   ]
+  },
+  "usage": {
+   "input_tokens": 6389,
+   "cache_creation_input_tokens": 0,
+   "cache_read_input_tokens": 0,
+   "cache_creation": {
+    "ephemeral_5m_input_tokens": 0,
+    "ephemeral_1h_input_tokens": 0
+   },
+   "output_tokens": 350,
+   "output_tokens_details": {
+    "thinking_tokens": 0
+   },
+   "service_tier": "standard",
+   "inference_geo": "global",
+   "speed": "standard"
+  }
+ },
+ {
+  "id": "starter:actualbudget",
+  "name": "Actual Budget",
+  "repo": "github.com/actualbudget/actual",
+  "answer": {
+   "summary": "Actual is a free personal budgeting app that keeps your finances on your own devices and syncs changes between them. It is for people who want to plan spending using envelope budgeting.",
+   "replaces": [
+    {
+     "closedApp": "YNAB",
+     "fit": "full",
+     "reason": "README describes Actual as an envelope budgeting personal finance tool, the same job YNAB does."
+    },
+    {
+     "closedApp": "Monarch Money",
+     "fit": "partial",
+     "reason": "Actual covers budgeting and tracking spending, but the README does not mention investment or net-worth features that Monarch offers."
+    },
+    {
+     "closedApp": "Quicken",
+     "fit": "partial",
+     "reason": "Actual covers budgeting and expense tracking; the README does not mention the broader banking, bill-pay or investment features Quicken offers."
+    },
+    {
+     "closedApp": "Empower Personal Wealth",
+     "fit": "no",
+     "reason": "Empower is centred on investment and retirement tracking; the README describes only a budgeting tool and says nothing about investments."
+    }
+   ],
+   "kind": "app",
+   "license": {
+    "verdict": "open",
+    "note": "Host reports MIT, an OSI-approved license; no contradicting material was given."
+   },
+   "groups": [
+    "budgeting"
+   ],
+   "newGroup": null,
+   "unconfirmed": [
+    "Whether Actual connects to bank accounts automatically is not stated in the README.",
+    "Whether Actual offers investment tracking or net-worth reporting is not stated.",
+    "Closed app descriptions were not provided, so fit ratings rely on the list names alone."
+   ]
+  },
+  "usage": {
+   "input_tokens": 5513,
+   "cache_creation_input_tokens": 0,
+   "cache_read_input_tokens": 0,
+   "cache_creation": {
+    "ephemeral_5m_input_tokens": 0,
+    "ephemeral_1h_input_tokens": 0
+   },
+   "output_tokens": 486,
+   "output_tokens_details": {
+    "thinking_tokens": 0
+   },
+   "service_tier": "standard",
+   "inference_geo": "global",
+   "speed": "standard"
+  }
+ },
+ {
+  "id": "starter:fireflyiii",
+  "name": "Firefly III",
+  "repo": "github.com/firefly-iii/firefly-iii",
+  "answer": {
+   "summary": "Firefly III is a personal finance manager that helps you track income, expenses, budgets and savings. It is meant for tech-savvy people who want to keep their financial records on their own server rather than in the cloud.",
+   "replaces": [
+    {
+     "closedApp": "YNAB",
+     "fit": "partial",
+     "reason": "Covers budgeting and expense tracking, but the README does not describe YNAB's specific zero-based budgeting method."
+    },
+    {
+     "closedApp": "Monarch Money",
+     "fit": "partial",
+     "reason": "Covers tracking spending and budgets, but the README does not mention account linking or the other features Monarch offers."
+    },
+    {
+     "closedApp": "Quicken",
+     "fit": "partial",
+     "reason": "Covers transaction tracking, double-entry bookkeeping and reports, but the README does not claim the full range of Quicken's features."
+    },
+    {
+     "closedApp": "Empower Personal Wealth",
+     "fit": "no",
+     "reason": "Empower focuses on investment and retirement tracking, which the README does not mention; Firefly III is about expenses, income and budgets."
+    }
+   ],
+   "kind": "self_hosted",
+   "license": {
+    "verdict": "open",
+    "note": "The host reports AGPL-3.0, and the README states the same license, which is OSI-approved."
+   },
+   "groups": [
+    "budgeting"
+   ],
+   "newGroup": null,
+   "unconfirmed": [
+    "Whether Firefly III tracks investments or retirement accounts, as Empower Personal Wealth does.",
+    "Whether bank account syncing is supported, as Monarch Money and Quicken offer.",
+    "The exact budgeting method used compared with YNAB."
+   ]
+  },
+  "usage": {
+   "input_tokens": 8621,
+   "cache_creation_input_tokens": 0,
+   "cache_read_input_tokens": 0,
+   "cache_creation": {
+    "ephemeral_5m_input_tokens": 0,
+    "ephemeral_1h_input_tokens": 0
+   },
+   "output_tokens": 510,
+   "output_tokens_details": {
+    "thinking_tokens": 0
+   },
+   "service_tier": "standard",
+   "inference_geo": "global",
+   "speed": "standard"
+  }
  }
 ]

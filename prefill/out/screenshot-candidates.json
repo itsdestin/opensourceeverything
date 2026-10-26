@@ -1656,5 +1656,141 @@
  ],
  "zed": [
   "https://zed.dev/img/home/og.webp"
+ ],
+ "actual-budget": [
+  "https://raw.githubusercontent.com/actualbudget/actual/HEAD/demo.png"
+ ],
+ "fossify-gallery": [
+  "https://gitlab.com/IzzyOnDroid/repo/-/raw/master/assets/IzzyOnDroid.png",
+  "https://raw.githubusercontent.com/FossifyOrg/Gallery/HEAD/fastlane/metadata/android/en-US/images/phoneScreenshots/1_en-US.png",
+  "https://raw.githubusercontent.com/FossifyOrg/Gallery/HEAD/fastlane/metadata/android/en-US/images/phoneScreenshots/2_en-US.png",
+  "https://raw.githubusercontent.com/FossifyOrg/Gallery/HEAD/fastlane/metadata/android/en-US/images/phoneScreenshots/3_en-US.png"
+ ],
+ "deepfence-threatmapper": [],
+ "highlight": [
+  "https://user-images.githubusercontent.com/20292680/233754540-409ee4cf-beab-46b1-b313-d2d717a87fd6.png",
+  "https://user-images.githubusercontent.com/20292680/214499701-86b7deb3-ec8f-4cb2-8661-ff4f9d7ade2d.png",
+  "https://user-images.githubusercontent.com/20292680/214500108-c8e0e289-276a-4863-816a-7c854c97df4e.png",
+  "https://user-images.githubusercontent.com/20292680/233539519-f8f58251-5b88-4703-8bea-2cd8d9549faf.png"
+ ],
+ "ghostfolio": [
+  "https://raw.githubusercontent.com/ghostfolio/ghostfolio/HEAD/apps/client/src/assets/images/video-preview.jpg",
+  "https://raw.githubusercontent.com/ghostfolio/ghostfolio/HEAD/apps/client/src/assets/images/screenshot.png"
+ ],
+ "apitable": [
+  "https://raw.githubusercontent.com/apitable/apitable/HEAD/docs/static/cover.png",
+  "https://raw.githubusercontent.com/apitable/apitable/HEAD/docs/static/feature-realtime.gif",
+  "https://raw.githubusercontent.com/apitable/apitable/HEAD/docs/static/feature-form.gif",
+  "https://raw.githubusercontent.com/apitable/apitable/HEAD/docs/static/feature-api-first-panel.gif",
+  "https://raw.githubusercontent.com/apitable/apitable/HEAD/docs/static/feature-unlimited-cross-table-links.gif",
+  "https://raw.githubusercontent.com/apitable/apitable/HEAD/docs/static/feature-permissions.gif",
+  "https://raw.githubusercontent.com/apitable/apitable/HEAD/docs/static/feature-embed.gif",
+  "https://raw.githubusercontent.com/apitable/apitable/HEAD/docs/static/screenshot-realtime.png"
+ ],
+ "firefly-iii": [
+  "https://raw.githubusercontent.com/firefly-iii/firefly-iii/HEAD/.github/assets/img/europe.png",
+  "https://raw.githubusercontent.com/firefly-iii/firefly-iii/develop/.github/assets/img/testmu.png",
+  "https://raw.githubusercontent.com/firefly-iii/firefly-iii/develop/.github/assets/img/europe.png",
+  "https://raw.githubusercontent.com/firefly-iii/firefly-iii/develop/.github/assets/img/imac-complete.png",
+  "https://raw.githubusercontent.com/firefly-iii/firefly-iii/develop/.github/assets/img/ipad-complete.png",
+  "https://raw.githubusercontent.com/firefly-iii/firefly-iii/develop/.github/assets/img/iphone-complete.png"
+ ],
+ "aves": [
+  "https://gitlab.com/IzzyOnDroid/repo/-/raw/master/assets/IzzyOnDroid.png",
+  "https://raw.githubusercontent.com/deckerst/aves_extra/main/screenshots/readme/en/1.png",
+  "https://raw.githubusercontent.com/deckerst/aves_extra/main/screenshots/readme/en/2.png",
+  "https://raw.githubusercontent.com/deckerst/aves_extra/main/screenshots/readme/en/5.png",
+  "https://raw.githubusercontent.com/deckerst/aves_extra/main/screenshots/readme/en/3.png",
+  "https://raw.githubusercontent.com/deckerst/aves_extra/main/screenshots/readme/en/4.png",
+  "https://raw.githubusercontent.com/deckerst/aves_extra/main/screenshots/readme/en/6.png"
+ ],
+ "apprise": [
+  "https://raw.githubusercontent.com/caronc/apprise/HEAD/Apprise-overview.png"
+ ],
+ "losslesscut": [
+  "https://static.mifi.no/media/InHeghy_4DwVeujK/2000.jpg"
+ ],
+ "listmonk": [
+  "https://user-images.githubusercontent.com/547147/231084896-835dba66-2dfe-497c-ba0f-787564c0819e.png",
+  "https://github.com/user-attachments/assets/689b5fbb-dd25-4956-a36f-e3226a65f9c4"
+ ],
+ "ntfy": [
+  "https://raw.githubusercontent.com/binwiederhier/ntfy/HEAD/web/public/static/images/ntfy.png",
+  "https://raw.githubusercontent.com/binwiederhier/ntfy/HEAD/.github/images/screenshot-curl.png",
+  "https://raw.githubusercontent.com/binwiederhier/ntfy/HEAD/.github/images/screenshot-web-detail.png",
+  "https://raw.githubusercontent.com/binwiederhier/ntfy/HEAD/.github/images/screenshot-phone-main.jpg",
+  "https://raw.githubusercontent.com/binwiederhier/ntfy/HEAD/.github/images/screenshot-phone-detail.jpg",
+  "https://raw.githubusercontent.com/binwiederhier/ntfy/HEAD/.github/images/screenshot-phone-notification.jpg",
+  "https://github.com/neutralinsomniac.png",
+  "https://github.com/aspyct.png"
+ ],
+ "openpost": [
+  "https://raw.githubusercontent.com/getopenpost/openpost/HEAD/assets/demos/publishing.gif",
+  "https://raw.githubusercontent.com/getopenpost/openpost/HEAD/assets/screenshots/mobile-gallery-light.png",
+  "https://raw.githubusercontent.com/getopenpost/openpost/HEAD/assets/demos/image-editor.gif",
+  "https://raw.githubusercontent.com/getopenpost/openpost/HEAD/assets/demos/video-editor.gif"
+ ],
+ "owncast": [
+  "https://owncast.online/images/owncast-splash.png"
+ ],
+ "postal": [],
+ "openreplay": [
+  "https://raw.githubusercontent.com/openreplay/openreplay/HEAD/static/demo.gif",
+  "https://openreplay.com/images/og/openreplay-og.png"
+ ],
+ "quackback": [],
+ "keila": [
+  "https://www.keila.io/_astro/keila-2024-05-01.BUp8L2VZ.png",
+  "https://www.keila.io/og-images/index_en.png"
+ ],
+ "open-library": [],
+ "postiz": [
+  "https://github.com/user-attachments/assets/f0d30d70-dddb-4142-8876-e9aa6ed1cb99",
+  "https://github.com/user-attachments/assets/8b9b7939-da1a-4be5-95be-42c6fce772de",
+  "https://github.com/user-attachments/assets/a27ee220-beb7-4c7e-8c1b-2c44301f82ef",
+  "https://github.com/user-attachments/assets/eb5f5f15-ed90-47fc-811c-03ccba6fa8a2",
+  "https://github.com/user-attachments/assets/d51786ee-ddd8-4ef8-8138-5192e9cfe7c3",
+  "https://github.com/user-attachments/assets/91f83c89-22f6-43d6-b7aa-d2d3378289fb",
+  "https://github.com/user-attachments/assets/25182598-5344-45fc-b9cd-e4cfa16aabfd",
+  "https://github.com/user-attachments/assets/0aa6b058-9a64-46d3-bc26-337abc51737d",
+  "https://cms.postiz.com/wp-content/uploads/2024/06/OG-1-1024x538.png"
+ ],
+ "lago": [
+  "https://raw.githubusercontent.com/getlago/lago/HEAD/docs/images/readme-hero-assets/lago-product-platform.png",
+  "https://raw.githubusercontent.com/getlago/lago/HEAD/docs/images/readme-customer-proof-v1.png",
+  "https://raw.githubusercontent.com/getlago/lago/HEAD/docs/images/how-lago-fits-v1.png",
+  "https://getlago.com/og/og-home.png"
+ ],
+ "inventaire": [],
+ "posthog": [
+  "https://raw.githubusercontent.com/PostHog/brand/main/assets/hoggies/png/coding-group.png",
+  "https://posthog.com/images/og/default.png"
+ ],
+ "rowy": [
+  "https://user-images.githubusercontent.com/307298/218350866-cfd7c011-2247-4074-8b1d-06c26a4d0b96.png",
+  "https://user-images.githubusercontent.com/307298/185548050-e9208fb6-fe53-4c84-bbfa-53c08e03c15f.png",
+  "https://cdn.prod.website-files.com/611c806ecaa429d0993c1e0f/62a55be17c276f6c37370e06_rowy.png"
+ ],
+ "nextcloud-polls": [
+  "https://raw.githubusercontent.com/nextcloud/polls/HEAD/screenshots/overview.png",
+  "https://raw.githubusercontent.com/nextcloud/polls/HEAD/screenshots/edit-poll.png",
+  "https://raw.githubusercontent.com/nextcloud/polls/HEAD/screenshots/share.png",
+  "https://raw.githubusercontent.com/nextcloud/polls/HEAD/screenshots/vote.png"
+ ],
+ "tolgee": [
+  "https://raw.githubusercontent.com/tolgee/tolgee-platform/HEAD/tolgee.gif",
+  "https://raw.githubusercontent.com/tolgee/tolgee-platform/HEAD/Tolgee-specs.gif",
+  "https://raw.githubusercontent.com/tolgee/tolgee-platform/HEAD/tolgee-app.gif",
+  "https://raw.githubusercontent.com/tolgee/tolgee-platform/HEAD/Tolgee-integration.gif",
+  "https://framerusercontent.com/assets/od4noC0fhYjE0sFtp3pHTfh6A2U.png"
+ ],
+ "baserow": [
+  "https://gitlab.com/bramw/baserow/-/raw/HEAD/docs/assets/screenshot.png",
+  "https://gitlab.com/bramw/baserow/-/raw/HEAD/docs/assets/screenshot_kuma_form.png",
+  "https://gitlab.com/bramw/baserow/-/raw/HEAD/docs/assets/screenshot_kanban.png",
+  "https://gitlab.com/bramw/baserow/-/raw/HEAD/docs/assets/screenshot_application_builder.png",
+  "https://gitlab.com/bramw/baserow/-/raw/HEAD/docs/assets/screenshot_automations.png",
+  "https://gitlab.com/bramw/baserow/-/raw/HEAD/docs/assets/screenshot_dashboard.png",
+  "https://baserow.io/img/baserow_open_graph.png"
  ]
 }

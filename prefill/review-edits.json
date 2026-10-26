@@ -22,7 +22,9 @@
   "cloud-storage/filestash": "partial",
   "cloud-storage/owncloud": "partial",
   "painting/mypaint": "partial",
-  "ai-coding/openhands": "partial"
+  "ai-coding/openhands": "partial",
+  "scheduling/nextcloud-polls": "partial",
+  "invoicing/lago": "partial"
  },
  "note_text": {
   "documents/onlyoffice-docs": "Server, or free desktop app; ask for hosting",
@@ -104,7 +106,9 @@
   "maps/organic-maps": "Offline maps; no live traffic",
   "maps/comaps": "Offline maps; no live traffic",
   "maps/osmand": "Powerful but busy interface; some features paid",
-  "maps/openstreetmap": "Web map with basic directions; no phone navigation app"
+  "maps/openstreetmap": "Web map with basic directions; no phone navigation app",
+  "scheduling/nextcloud-polls": "Only for picking a date together, like Doodle",
+  "invoicing/lago": "Billing for subscriptions and usage, not invoices"
  },
  "summary": {
   "onlyoffice-docs": "ONLYOFFICE Docs is an office suite for documents, spreadsheets, presentations and forms that several people can edit together, and it opens Microsoft Office files well. You run it on your own server, or use ONLYOFFICE's separate free desktop app.",

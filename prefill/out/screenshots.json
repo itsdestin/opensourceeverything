@@ -933,5 +933,92 @@
  ],
  "zed": [
   "https://zed.dev/img/home/og.webp"
- ]
+ ],
+ "actual-budget": [
+  "https://raw.githubusercontent.com/actualbudget/actual/HEAD/demo.png"
+ ],
+ "fossify-gallery": [
+  "https://raw.githubusercontent.com/FossifyOrg/Gallery/HEAD/fastlane/metadata/android/en-US/images/phoneScreenshots/1_en-US.png",
+  "https://raw.githubusercontent.com/FossifyOrg/Gallery/HEAD/fastlane/metadata/android/en-US/images/phoneScreenshots/2_en-US.png"
+ ],
+ "deepfence-threatmapper": [],
+ "highlight": [
+  "https://user-images.githubusercontent.com/20292680/214499701-86b7deb3-ec8f-4cb2-8661-ff4f9d7ade2d.png",
+  "https://user-images.githubusercontent.com/20292680/214500108-c8e0e289-276a-4863-816a-7c854c97df4e.png",
+  "https://user-images.githubusercontent.com/20292680/233539519-f8f58251-5b88-4703-8bea-2cd8d9549faf.png"
+ ],
+ "ghostfolio": [
+  "https://raw.githubusercontent.com/ghostfolio/ghostfolio/HEAD/apps/client/src/assets/images/screenshot.png"
+ ],
+ "apitable": [
+  "https://raw.githubusercontent.com/apitable/apitable/HEAD/docs/static/feature-realtime.gif",
+  "https://raw.githubusercontent.com/apitable/apitable/HEAD/docs/static/feature-form.gif",
+  "https://raw.githubusercontent.com/apitable/apitable/HEAD/docs/static/feature-api-first-panel.gif",
+  "https://raw.githubusercontent.com/apitable/apitable/HEAD/docs/static/feature-permissions.gif"
+ ],
+ "firefly-iii": [
+  "https://raw.githubusercontent.com/firefly-iii/firefly-iii/develop/.github/assets/img/imac-complete.png",
+  "https://raw.githubusercontent.com/firefly-iii/firefly-iii/develop/.github/assets/img/ipad-complete.png",
+  "https://raw.githubusercontent.com/firefly-iii/firefly-iii/develop/.github/assets/img/iphone-complete.png"
+ ],
+ "aves": [
+  "https://raw.githubusercontent.com/deckerst/aves_extra/main/screenshots/readme/en/1.png",
+  "https://raw.githubusercontent.com/deckerst/aves_extra/main/screenshots/readme/en/2.png",
+  "https://raw.githubusercontent.com/deckerst/aves_extra/main/screenshots/readme/en/5.png",
+  "https://raw.githubusercontent.com/deckerst/aves_extra/main/screenshots/readme/en/3.png"
+ ],
+ "apprise": [],
+ "losslesscut": [
+  "https://static.mifi.no/media/InHeghy_4DwVeujK/2000.jpg"
+ ],
+ "listmonk": [
+  "https://github.com/user-attachments/assets/689b5fbb-dd25-4956-a36f-e3226a65f9c4"
+ ],
+ "ntfy": [
+  "https://raw.githubusercontent.com/binwiederhier/ntfy/HEAD/.github/images/screenshot-curl.png",
+  "https://raw.githubusercontent.com/binwiederhier/ntfy/HEAD/.github/images/screenshot-web-detail.png",
+  "https://raw.githubusercontent.com/binwiederhier/ntfy/HEAD/.github/images/screenshot-phone-main.jpg",
+  "https://raw.githubusercontent.com/binwiederhier/ntfy/HEAD/.github/images/screenshot-phone-detail.jpg"
+ ],
+ "openpost": [
+  "https://raw.githubusercontent.com/getopenpost/openpost/HEAD/assets/demos/publishing.gif",
+  "https://raw.githubusercontent.com/getopenpost/openpost/HEAD/assets/screenshots/mobile-gallery-light.png",
+  "https://raw.githubusercontent.com/getopenpost/openpost/HEAD/assets/demos/image-editor.gif"
+ ],
+ "owncast": [],
+ "postal": [],
+ "openreplay": [
+  "https://raw.githubusercontent.com/openreplay/openreplay/HEAD/static/demo.gif"
+ ],
+ "quackback": [],
+ "keila": [
+  "https://www.keila.io/_astro/keila-2024-05-01.BUp8L2VZ.png",
+  "https://www.keila.io/og-images/index_en.png"
+ ],
+ "open-library": [],
+ "postiz": [
+  "https://github.com/user-attachments/assets/a27ee220-beb7-4c7e-8c1b-2c44301f82ef",
+  "https://github.com/user-attachments/assets/eb5f5f15-ed90-47fc-811c-03ccba6fa8a2",
+  "https://github.com/user-attachments/assets/d51786ee-ddd8-4ef8-8138-5192e9cfe7c3",
+  "https://github.com/user-attachments/assets/91f83c89-22f6-43d6-b7aa-d2d3378289fb"
+ ],
+ "lago": [
+  "https://raw.githubusercontent.com/getlago/lago/HEAD/docs/images/readme-hero-assets/lago-product-platform.png"
+ ],
+ "inventaire": [],
+ "posthog": [],
+ "rowy": [],
+ "nextcloud-polls": [
+  "https://raw.githubusercontent.com/nextcloud/polls/HEAD/screenshots/overview.png",
+  "https://raw.githubusercontent.com/nextcloud/polls/HEAD/screenshots/edit-poll.png",
+  "https://raw.githubusercontent.com/nextcloud/polls/HEAD/screenshots/share.png",
+  "https://raw.githubusercontent.com/nextcloud/polls/HEAD/screenshots/vote.png"
+ ],
+ "tolgee": [
+  "https://raw.githubusercontent.com/tolgee/tolgee-platform/HEAD/tolgee.gif",
+  "https://raw.githubusercontent.com/tolgee/tolgee-platform/HEAD/Tolgee-specs.gif",
+  "https://raw.githubusercontent.com/tolgee/tolgee-platform/HEAD/tolgee-app.gif",
+  "https://raw.githubusercontent.com/tolgee/tolgee-platform/HEAD/Tolgee-integration.gif"
+ ],
+ "baserow": []
 }

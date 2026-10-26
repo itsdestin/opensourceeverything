@@ -268,6 +268,111 @@
   "hermes-agent": [
    "mac",
    "linux"
+  ],
+  "owncast": [
+   "server",
+   "web"
+  ],
+  "actual-budget": [
+   "windows",
+   "mac",
+   "linux",
+   "web",
+   "server"
+  ],
+  "firefly-iii": [
+   "web",
+   "server"
+  ],
+  "apitable": [
+   "web",
+   "server"
+  ],
+  "apprise": [
+   "windows",
+   "mac",
+   "linux"
+  ],
+  "aves": [
+   "android"
+  ],
+  "baserow": [
+   "web",
+   "server"
+  ],
+  "deepfence-threatmapper": [
+   "server"
+  ],
+  "fossify-gallery": [
+   "android"
+  ],
+  "ghostfolio": [
+   "web",
+   "server"
+  ],
+  "highlight": [
+   "server"
+  ],
+  "inventaire": [
+   "web",
+   "server"
+  ],
+  "keila": [
+   "web",
+   "server"
+  ],
+  "lago": [
+   "web",
+   "server"
+  ],
+  "listmonk": [
+   "server"
+  ],
+  "losslesscut": [
+   "windows",
+   "mac",
+   "linux"
+  ],
+  "nextcloud-polls": [
+   "server"
+  ],
+  "ntfy": [
+   "android",
+   "ios",
+   "web",
+   "server"
+  ],
+  "open-library": [
+   "web"
+  ],
+  "openpost": [
+   "web",
+   "server"
+  ],
+  "openreplay": [
+   "web",
+   "server"
+  ],
+  "postal": [
+   "server"
+  ],
+  "posthog": [
+   "web",
+   "server"
+  ],
+  "postiz": [
+   "web",
+   "server"
+  ],
+  "quackback": [
+   "server"
+  ],
+  "rowy": [
+   "web"
+  ],
+  "tolgee": [
+   "web",
+   "server"
   ]
  }
 }

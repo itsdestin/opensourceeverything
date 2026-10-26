@@ -20,6 +20,7 @@ export function footer() {
   <a class="footchip" href="${url('about/#open-source')}">What counts as open source</a>
   <a class="footchip" href="${url('credits/')}">Data license: CC BY-SA 4.0</a>
   <a class="footchip" href="${url('credits/')}">Credits</a>
+  <a class="footchip" href="${url('privacy/')}">Privacy</a>
   <a class="footchip" href="${SUBREDDIT}" rel="noopener">r/TrueOpenSource</a>
   <a class="footchip" href="${REPO}" rel="noopener">This site's code</a>
 </div>`;
@@ -40,9 +41,7 @@ export function page({ path, title, description, body, styles = [], scripts = []
 <meta property="og:url" content="${SITE_URL}${path}">
 <meta property="og:site_name" content="Open Source Everything">
 <link rel="icon" href="${url('assets/icon.svg')}" type="image/svg+xml">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600&display=swap">
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fontsource/cascadia-mono@5.2.3/400.css">
+<link rel="stylesheet" href="${url('assets/fonts.css')}">
 <link rel="stylesheet" href="${url('assets/site.css')}">
 ${styles.map((s) => `<link rel="stylesheet" href="${url('assets/' + s)}">`).join('\n')}
 ${jsonLd ? `<script type="application/ld+json">${JSON.stringify(jsonLd)}</script>` : ''}

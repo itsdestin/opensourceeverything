@@ -142,7 +142,7 @@
   "found": true,
   "license": "GPL-3.0",
   "archived": false,
-  "lastChange": "2026-10-26T12:00:03Z",
+  "lastChange": "2026-10-26T12:07:39Z",
   "stars": 16688
  },
  "github.com/go-vikunja/vikunja": {
@@ -184,7 +184,7 @@
   "found": true,
   "license": "NOASSERTION",
   "archived": false,
-  "lastChange": "2026-10-26T11:44:30Z",
+  "lastChange": "2026-10-26T12:04:05Z",
   "stars": 13156,
   "sniffed": {
    "found": "AGPL-3.0",
@@ -361,7 +361,7 @@
   "found": true,
   "license": "Apache-2.0",
   "archived": false,
-  "lastChange": "2026-10-26T11:40:49Z",
+  "lastChange": "2026-10-26T12:03:27Z",
   "stars": 30145
  },
  "github.com/bigbluebutton/bigbluebutton": {
@@ -389,7 +389,7 @@
   "found": true,
   "license": "AGPL-3.0",
   "archived": false,
-  "lastChange": "2026-10-26T11:59:34Z",
+  "lastChange": "2026-10-26T12:03:40Z",
   "stars": 2220
  },
  "github.com/mastodon/mastodon": {
@@ -404,7 +404,7 @@
   "license": "AGPL-3.0",
   "archived": false,
   "lastChange": "2026-10-26T06:24:06Z",
-  "stars": 11359
+  "stars": 11360
  },
  "github.com/bluesky-social/social-app": {
   "found": true,
@@ -642,7 +642,7 @@
   "license": "GPL-3.0",
   "archived": false,
   "lastChange": "2026-10-25T19:57:42Z",
-  "stars": 6423
+  "stars": 6424
  },
  "github.com/mozilla-firefox/firefox": {
   "found": true,
@@ -661,7 +661,7 @@
   "found": true,
   "license": "MPL-2.0",
   "archived": false,
-  "lastChange": "2026-10-26T04:04:03Z",
+  "lastChange": "2026-10-26T12:04:01Z",
   "stars": 23990
  },
  "github.com/zen-browser/desktop": {
@@ -669,7 +669,7 @@
   "license": "MPL-2.0",
   "archived": false,
   "lastChange": "2026-10-26T11:57:00Z",
-  "stars": 45303
+  "stars": 45304
  },
  "github.com/ungoogled-software/ungoogled-chromium": {
   "found": true,
@@ -683,7 +683,7 @@
   "license": "AGPL-3.0",
   "archived": false,
   "lastChange": "2026-10-25T18:37:23Z",
-  "stars": 38861
+  "stars": 38862
  },
  "github.com/yacy/yacy_search_server": {
   "found": true,
@@ -817,7 +817,7 @@
   "license": "MIT",
   "archived": false,
   "lastChange": "2026-10-25T18:20:45Z",
-  "stars": 67575
+  "stars": 67576
  },
  "github.com/continuedev/continue": {
   "found": true,
@@ -858,8 +858,8 @@
   "found": true,
   "license": "MIT",
   "archived": false,
-  "lastChange": "2026-10-26T12:00:28Z",
-  "stars": 221742
+  "lastChange": "2026-10-26T12:05:10Z",
+  "stars": 221746
  },
  "github.com/google-gemini/gemini-cli": {
   "found": true,
@@ -908,8 +908,8 @@
   "found": true,
   "license": "Apache-2.0",
   "archived": false,
-  "lastChange": "2026-10-26T11:59:31Z",
-  "stars": 55738
+  "lastChange": "2026-10-26T12:08:00Z",
+  "stars": 55739
  },
  "github.com/openinterpreter/openinterpreter": {
   "found": true,
@@ -922,15 +922,15 @@
   "found": true,
   "license": "MIT",
   "archived": false,
-  "lastChange": "2026-10-26T12:03:26Z",
-  "stars": 393114
+  "lastChange": "2026-10-26T12:07:58Z",
+  "stars": 393116
  },
  "github.com/NousResearch/hermes-agent": {
   "found": true,
   "license": "MIT",
   "archived": false,
-  "lastChange": "2026-10-26T12:03:04Z",
-  "stars": 257235
+  "lastChange": "2026-10-26T12:07:50Z",
+  "stars": 257236
  },
  "github.com/Comfy-Org/ComfyUI": {
   "found": true,
@@ -1056,7 +1056,7 @@
   "license": "AGPL-3.0",
   "archived": false,
   "lastChange": "2026-10-26T11:50:55Z",
-  "stars": 30626
+  "stars": 30627
  },
  "github.com/advplyr/audiobookshelf": {
   "found": true,
@@ -1064,6 +1064,13 @@
   "archived": false,
   "lastChange": "2026-10-23T19:58:38Z",
   "stars": 14798
+ },
+ "github.com/owncast/owncast": {
+  "found": true,
+  "license": "MIT",
+  "archived": false,
+  "lastChange": "2026-10-25T23:08:22Z",
+  "stars": 11624
  },
  "github.com/nextcloud/server": {
   "found": true,
@@ -1098,14 +1105,14 @@
   "license": "MPL-2.0",
   "archived": false,
   "lastChange": "2026-10-26T03:58:08Z",
-  "stars": 89765
+  "stars": 89766
  },
  "github.com/localsend/localsend": {
   "found": true,
   "license": "Apache-2.0",
   "archived": false,
   "lastChange": "2026-10-25T12:11:01Z",
-  "stars": 95699
+  "stars": 95700
  },
  "github.com/psi-4ward/psitransfer": {
   "found": true,
@@ -1189,8 +1196,22 @@
   "found": true,
   "license": "Apache-2.0",
   "archived": false,
-  "lastChange": "2026-10-26T11:59:58Z",
+  "lastChange": "2026-10-26T12:07:13Z",
   "stars": 91736
+ },
+ "github.com/actualbudget/actual": {
+  "found": true,
+  "license": "MIT",
+  "archived": false,
+  "lastChange": "2026-10-26T11:23:35Z",
+  "stars": 29766
+ },
+ "github.com/firefly-iii/firefly-iii": {
+  "found": true,
+  "license": "AGPL-3.0",
+  "archived": false,
+  "lastChange": "2026-10-26T03:17:02Z",
+  "stars": 24999
  },
  "github.com/go-gitea/gitea": {
   "found": true,
@@ -1211,7 +1232,7 @@
   "license": "MIT",
   "archived": false,
   "lastChange": "2026-10-23T21:58:32Z",
-  "stars": 39700
+  "stars": 39701
  },
  "github.com/matomo-org/matomo": {
   "found": true,
@@ -1224,7 +1245,7 @@
   "found": true,
   "license": "GPL-2.0",
   "archived": false,
-  "lastChange": "2026-10-26T11:49:25Z",
+  "lastChange": "2026-10-26T12:04:15Z",
   "stars": 10569
  },
  "github.com/medusajs/medusa": {

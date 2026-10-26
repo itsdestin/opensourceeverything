@@ -220,6 +220,42 @@
    ]
   },
   {
+   "id": "actual-budget",
+   "name": "Actual Budget",
+   "summary": "Actual is a free personal budgeting app that keeps your finances on your own devices and syncs changes between them. It is for people who want to plan spending using envelope budgeting.",
+   "kind": "app",
+   "code": "github.com/actualbudget/actual",
+   "website": "https://actualbudget.org",
+   "download": null,
+   "license": "MIT",
+   "licenseClass": "open",
+   "licenseNeedsCheck": false,
+   "stars": 29766,
+   "archived": false,
+   "inactive": false,
+   "unconfirmed": [
+    "Whether Actual connects to bank accounts automatically is not stated in the README.",
+    "Whether Actual offers investment tracking or net-worth reporting is not stated.",
+    "Closed app descriptions were not provided, so fit ratings rely on the list names alone."
+   ],
+   "source": "starter",
+   "verified": false,
+   "release": "https://github.com/actualbudget/actual/releases/tag/v26.10.0",
+   "screenshots": [
+    "https://raw.githubusercontent.com/actualbudget/actual/HEAD/demo.png"
+   ],
+   "platforms": [
+    "windows",
+    "mac",
+    "linux",
+    "web",
+    "server"
+   ],
+   "thumbs": [
+    null
+   ]
+  },
+  {
    "id": "aegis",
    "name": "Aegis",
    "summary": "Aegis Authenticator is a free, open source app for Android that generates login codes for two-step sign-in. It is for people who want a secure alternative to Google Authenticator and Authy, with encrypted backups.",
@@ -312,13 +348,17 @@
    "source": "starter",
    "verified": false,
    "release": "https://github.com/Aider-AI/aider/releases/tag/v0.86.0",
-   "screenshots": [],
+   "screenshots": [
+    "https://raw.githubusercontent.com/Aider-AI/aider/main/aider/website/assets/screenshot.png"
+   ],
    "platforms": [
     "windows",
     "mac",
     "linux"
    ],
-   "thumbs": []
+   "thumbs": [
+    null
+   ]
   },
   {
    "id": "aliasvault",
@@ -464,7 +504,7 @@
    "license": "MIT",
    "licenseClass": "open",
    "licenseNeedsCheck": false,
-   "stars": 67575,
+   "stars": 67576,
    "archived": false,
    "inactive": false,
    "unconfirmed": [
@@ -514,6 +554,47 @@
    "thumbs": []
   },
   {
+   "id": "apitable",
+   "name": "APITable",
+   "summary": "APITable is a spreadsheet-style database that lets teams organize, share and link records in tables. It can be self-hosted on your own server and is aimed at teams who want an Airtable-like tool they control.",
+   "kind": "self_hosted",
+   "code": "github.com/apitable/apitable",
+   "website": "https://aitable.ai",
+   "license": "AGPL-3.0",
+   "licenseClass": "open",
+   "licenseNeedsCheck": false,
+   "stars": 15651,
+   "archived": false,
+   "inactive": false,
+   "unconfirmed": [
+    "The community lists give no description for this project, so the summary is drawn from the README only.",
+    "Which of the README's listed features are included in the open source edition versus the hosted or enterprise versions is not fully stated; SAML, SSO, audit and watermark are listed under hosted and enterprise features.",
+    "The README does not say whether a self-hosted install includes the AI features mentioned for the hosted aitable.ai version."
+   ],
+   "source": "lists",
+   "sourceLists": [
+    "open-source-alternatives"
+   ],
+   "verified": false,
+   "release": "https://github.com/apitable/apitable/releases/tag/v1.14.0-beta",
+   "screenshots": [
+    "https://raw.githubusercontent.com/apitable/apitable/HEAD/docs/static/feature-realtime.gif",
+    "https://raw.githubusercontent.com/apitable/apitable/HEAD/docs/static/feature-form.gif",
+    "https://raw.githubusercontent.com/apitable/apitable/HEAD/docs/static/feature-api-first-panel.gif",
+    "https://raw.githubusercontent.com/apitable/apitable/HEAD/docs/static/feature-permissions.gif"
+   ],
+   "platforms": [
+    "web",
+    "server"
+   ],
+   "thumbs": [
+    null,
+    null,
+    null,
+    null
+   ]
+  },
+  {
    "id": "appflowy",
    "name": "AppFlowy",
    "summary": "AppFlowy is a workspace for writing notes, documents and plans, with an optional AI assistant. It is for people who want a Notion-style tool that keeps their data under their own control, and it runs on desktop, phone and self-hosted servers.",
@@ -550,6 +631,37 @@
     "assets/shots/appflowy-0.webp",
     "assets/shots/appflowy-1.webp"
    ]
+  },
+  {
+   "id": "apprise",
+   "name": "Apprise",
+   "summary": "Apprise is a library and command-line tool that sends one notification format to many services such as Telegram, Discord, Slack and Gotify. It is aimed at developers and system administrators who need to send alerts to several places without learning each service's own system.",
+   "kind": "library",
+   "code": "github.com/caronc/apprise",
+   "website": "https://hub.docker.com/r/caronc/apprise",
+   "license": "BSD-2-Clause",
+   "licenseClass": "open",
+   "licenseNeedsCheck": false,
+   "stars": 17651,
+   "archived": false,
+   "inactive": false,
+   "unconfirmed": [
+    "Whether Apprise includes a hosted push service for mobile apps as OneSignal does",
+    "Whether the full list of supported services includes mobile push providers such as OneSignal itself"
+   ],
+   "source": "lists",
+   "sourceLists": [
+    "awesome-foss-alternatives"
+   ],
+   "verified": false,
+   "release": "https://github.com/caronc/apprise/releases/tag/v2.1.0",
+   "screenshots": [],
+   "platforms": [
+    "windows",
+    "mac",
+    "linux"
+   ],
+   "thumbs": []
   },
   {
    "id": "appsmith",
@@ -641,12 +753,16 @@
    ],
    "source": "starter",
    "verified": false,
-   "screenshots": [],
+   "screenshots": [
+    "https://upload.wikimedia.org/wikipedia/commons/8/8f/Arch_Linux_KDE_5.6.png"
+   ],
    "platforms": [
     "linux"
    ],
    "licenseSource": "https://raw.githubusercontent.com/archlinux/archinstall/master/LICENSE",
-   "thumbs": []
+   "thumbs": [
+    null
+   ]
   },
   {
    "id": "ardour",
@@ -705,13 +821,17 @@
    "source": "starter",
    "verified": false,
    "release": "https://github.com/audacity/audacity/releases/tag/Audacity-4.0.1",
-   "screenshots": [],
+   "screenshots": [
+    "https://dl.flathub.org/media/org/audacityteam/Audacity/0ad4a24524b6c06220649dc83a08ae81/screenshots/image-1_orig.png"
+   ],
    "platforms": [
     "windows",
     "mac",
     "linux"
    ],
-   "thumbs": []
+   "thumbs": [
+    null
+   ]
   },
   {
    "id": "audiobookshelf",
@@ -735,7 +855,9 @@
    "source": "starter",
    "verified": false,
    "release": "https://github.com/advplyr/audiobookshelf/releases/tag/v2.37.2",
-   "screenshots": [],
+   "screenshots": [
+    "https://raw.githubusercontent.com/advplyr/audiobookshelf/master/images/DemoLibrary.png"
+   ],
    "platforms": [
     "windows",
     "mac",
@@ -743,7 +865,9 @@
     "android",
     "server"
    ],
-   "thumbs": []
+   "thumbs": [
+    null
+   ]
   },
   {
    "id": "aurora-store",
@@ -767,11 +891,17 @@
    "source": "starter",
    "verified": false,
    "release": "https://gitlab.com/AuroraOSS/AuroraStore/-/releases/4.8.4",
-   "screenshots": [],
+   "screenshots": [
+    "https://f-droid.org/repo/com.aurora.store/en-US/phoneScreenshots/screenshot-01.png",
+    "https://f-droid.org/repo/com.aurora.store/en-US/phoneScreenshots/screenshot-03.png"
+   ],
    "platforms": [
     "android"
    ],
-   "thumbs": []
+   "thumbs": [
+    null,
+    null
+   ]
   },
   {
    "id": "authgear",
@@ -843,6 +973,46 @@
    ]
   },
   {
+   "id": "aves",
+   "name": "Aves",
+   "summary": "Aves is a photo and video gallery app for Android that can browse your media and show detailed file information. It is for people who want to organize and view their own pictures and videos on their phone.",
+   "kind": "app",
+   "code": "github.com/deckerst/aves",
+   "website": null,
+   "license": "BSD-3-Clause",
+   "licenseClass": "open",
+   "licenseNeedsCheck": false,
+   "stars": 5464,
+   "archived": false,
+   "inactive": false,
+   "unconfirmed": [
+    "Whether the license applies to the whole project, since no license file was provided.",
+    "Which specific Samsung, Huawei and Xiaomi gallery apps are meant by the list entries.",
+    "Whether the app is available outside Android, since the README says it is built for Android."
+   ],
+   "source": "lists",
+   "sourceLists": [
+    "awesome-privacy"
+   ],
+   "verified": false,
+   "release": "https://github.com/deckerst/aves/releases/tag/v1.15.8",
+   "screenshots": [
+    "https://raw.githubusercontent.com/deckerst/aves_extra/main/screenshots/readme/en/1.png",
+    "https://raw.githubusercontent.com/deckerst/aves_extra/main/screenshots/readme/en/2.png",
+    "https://raw.githubusercontent.com/deckerst/aves_extra/main/screenshots/readme/en/5.png",
+    "https://raw.githubusercontent.com/deckerst/aves_extra/main/screenshots/readme/en/3.png"
+   ],
+   "platforms": [
+    "android"
+   ],
+   "thumbs": [
+    null,
+    null,
+    null,
+    null
+   ]
+  },
+  {
    "id": "bagisto",
    "name": "Bagisto",
    "summary": "Bagisto is free, self-hosted software for running your own online shop, built on Laravel. It is aimed at businesses and developers who want to set up and customise their own store.",
@@ -874,6 +1044,38 @@
    "thumbs": [
     "assets/shots/bagisto-0.webp"
    ]
+  },
+  {
+   "id": "baserow",
+   "name": "Baserow",
+   "summary": "Baserow is a web tool for building databases that look and work like spreadsheets, with forms, boards, dashboards and automations on top. It is aimed at teams who want to organize data and build simple internal tools without writing code.",
+   "kind": "self_hosted",
+   "code": "gitlab.com/bramw/baserow",
+   "website": "https://baserow.io/",
+   "license": null,
+   "licenseClass": "open_core",
+   "licenseNeedsCheck": true,
+   "stars": null,
+   "archived": false,
+   "inactive": false,
+   "unconfirmed": [
+    "The host did not report a license, so the open-core verdict relies on the README claim alone.",
+    "Whether the premium and enterprise features are source-available or closed is not stated in the material.",
+    "The README mentions AI Assistant and AI agents but does not say which AI-tool group it belongs in; it was left out of groups.",
+    "Whether Baserow's cloud service has any hosting restrictions beyond the self-hosted option is not stated."
+   ],
+   "source": "lists",
+   "sourceLists": [
+    "awesome-oss-alternatives"
+   ],
+   "verified": false,
+   "release": null,
+   "screenshots": [],
+   "platforms": [
+    "web",
+    "server"
+   ],
+   "thumbs": []
   },
   {
    "id": "bazzite",
@@ -970,11 +1172,15 @@
    "source": "starter",
    "verified": false,
    "release": "https://github.com/bigbluebutton/bigbluebutton/releases/tag/v4.0.0",
-   "screenshots": [],
+   "screenshots": [
+    "https://raw.githubusercontent.com/bigbluebutton/bigbluebutton/v4.0.x-develop/docs/static/img/22-overview.png"
+   ],
    "platforms": [
     "server"
    ],
-   "thumbs": []
+   "thumbs": [
+    null
+   ]
   },
   {
    "id": "bitwarden",
@@ -1035,14 +1241,22 @@
    ],
    "source": "starter",
    "verified": false,
-   "screenshots": [],
+   "screenshots": [
+    "https://dl.flathub.org/media/org/blender/Blender/c6b07403115901571923d99f1b725b0e/screenshots/image-1_1248x703@1.png",
+    "https://dl.flathub.org/media/org/blender/Blender/c6b07403115901571923d99f1b725b0e/screenshots/image-3_1248x702@1.png",
+    "https://dl.flathub.org/media/org/blender/Blender/c6b07403115901571923d99f1b725b0e/screenshots/image-2_1248x702@1.png"
+   ],
    "platforms": [
     "windows",
     "mac",
     "linux"
    ],
    "licenseSource": "https://projects.blender.org/blender/blender/raw/branch/main/source/blender/blenkernel/intern/mesh.cc",
-   "thumbs": []
+   "thumbs": [
+    null,
+    null,
+    null
+   ]
   },
   {
    "id": "bluesky",
@@ -1066,12 +1280,16 @@
    "source": "starter",
    "verified": false,
    "release": "https://github.com/bluesky-social/social-app/releases/tag/1.136.0",
-   "screenshots": [],
+   "screenshots": [
+    "https://upload.wikimedia.org/wikipedia/commons/e/e2/BlueSky_Social.png"
+   ],
    "platforms": [
     "android",
     "ios"
    ],
-   "thumbs": []
+   "thumbs": [
+    null
+   ]
   },
   {
    "id": "bookstack",
@@ -1096,12 +1314,18 @@
    ],
    "verified": false,
    "release": "https://github.com/BookStackApp/BookStack/releases/tag/v26.09.2",
-   "screenshots": [],
+   "screenshots": [
+    "https://www.bookstackapp.com/images/screenshots/page-view.png",
+    "https://www.bookstackapp.com/images/screenshots/page-edit.png"
+   ],
    "platforms": [
     "web",
     "server"
    ],
-   "thumbs": []
+   "thumbs": [
+    null,
+    null
+   ]
   },
   {
    "id": "bootstrap",
@@ -1216,7 +1440,10 @@
    "source": "starter",
    "verified": false,
    "release": "https://github.com/brave/brave-browser/releases/tag/v1.98.60",
-   "screenshots": [],
+   "screenshots": [
+    "https://dl.flathub.org/media/com/brave/Browser/a5905128892a545b9f8b4d8160d839e3/screenshots/image-2_1248x789@1.png",
+    "https://dl.flathub.org/media/com/brave/Browser/a5905128892a545b9f8b4d8160d839e3/screenshots/image-1_orig.png"
+   ],
    "platforms": [
     "windows",
     "mac",
@@ -1224,7 +1451,10 @@
     "android",
     "ios"
    ],
-   "thumbs": []
+   "thumbs": [
+    null,
+    null
+   ]
   },
   {
    "id": "briar",
@@ -1448,13 +1678,21 @@
    "source": "starter",
    "verified": false,
    "release": "https://github.com/chidiwilliams/buzz/releases/tag/v1.4.5",
-   "screenshots": [],
+   "screenshots": [
+    "https://dl.flathub.org/media/io/github/chidiwilliams.Buzz/3b21cecd9ebc6658547de57af32ba7d1/screenshots/image-2_orig.png",
+    "https://dl.flathub.org/media/io/github/chidiwilliams.Buzz/3b21cecd9ebc6658547de57af32ba7d1/screenshots/image-1_orig.png",
+    "https://dl.flathub.org/media/io/github/chidiwilliams.Buzz/3b21cecd9ebc6658547de57af32ba7d1/screenshots/image-4_orig.png"
+   ],
    "platforms": [
     "windows",
     "mac",
     "linux"
    ],
-   "thumbs": []
+   "thumbs": [
+    null,
+    null,
+    null
+   ]
   },
   {
    "id": "cachyos",
@@ -1477,12 +1715,18 @@
    ],
    "source": "starter",
    "verified": false,
-   "screenshots": [],
+   "screenshots": [
+    "https://cachyos.org/_astro/hero.BwPoqA0v_Z2cTzTB.png",
+    "https://cachyos.org/_astro/hero_dark.Clya6HnN_Z1kUSVU.png"
+   ],
    "platforms": [
     "linux"
    ],
    "licenseSource": "https://raw.githubusercontent.com/CachyOS/CachyOS-Settings/master/LICENSE.md",
-   "thumbs": []
+   "thumbs": [
+    null,
+    null
+   ]
   },
   {
    "id": "cal-com",
@@ -1533,12 +1777,18 @@
    "source": "starter",
    "verified": false,
    "release": "https://github.com/kovidgoyal/calibre/releases/tag/v9.17.0",
-   "screenshots": [],
+   "screenshots": [
+    "https://dl.flathub.org/media/com/calibre_ebook/calibre/2ac083fe30ac8e892f25412b0f652fca/screenshots/image-1_orig.png",
+    "https://dl.flathub.org/media/com/calibre_ebook/calibre/2ac083fe30ac8e892f25412b0f652fca/screenshots/image-2_orig.png"
+   ],
    "platforms": [
     "windows",
     "mac"
    ],
-   "thumbs": []
+   "thumbs": [
+    null,
+    null
+   ]
   },
   {
    "id": "caprover",
@@ -1669,13 +1919,19 @@
    "source": "starter",
    "verified": false,
    "release": "https://github.com/cline/cline/releases/tag/v4.1.26",
-   "screenshots": [],
+   "screenshots": [
+    "https://raw.githubusercontent.com/cline/cline/main/docs/assets/desktop/desktop-customize-installed.png",
+    "https://raw.githubusercontent.com/cline/cline/main/docs/assets/clinepass/clinepass-ide-extension.png"
+   ],
    "platforms": [
     "windows",
     "mac",
     "linux"
    ],
-   "thumbs": []
+   "thumbs": [
+    null,
+    null
+   ]
   },
   {
    "id": "codex-cli",
@@ -1698,13 +1954,17 @@
    "source": "starter",
    "verified": false,
    "release": "https://github.com/openai/codex/releases/tag/rust-v0.164.0",
-   "screenshots": [],
+   "screenshots": [
+    "https://raw.githubusercontent.com/openai/codex/main/.github/codex-cli-splash.png"
+   ],
    "platforms": [
     "windows",
     "mac",
     "linux"
    ],
-   "thumbs": []
+   "thumbs": [
+    null
+   ]
   },
   {
    "id": "collabora-online",
@@ -2246,13 +2506,19 @@
    ],
    "source": "starter",
    "verified": false,
-   "screenshots": [],
+   "screenshots": [
+    "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/e9/Debian_13.0.0_GNOME_default_desktop_-_English.png/1280px-Debian_13.0.0_GNOME_default_desktop_-_English.png",
+    "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/eb/Debian_12_%28Bookworm%29_-_GNOME_desktop.png/1280px-Debian_12_%28Bookworm%29_-_GNOME_desktop.png"
+   ],
    "platforms": [
     "linux",
     "server"
    ],
    "licenseSource": "https://salsa.debian.org/installer-team/debian-installer/-/raw/master/debian/copyright",
-   "thumbs": []
+   "thumbs": [
+    null,
+    null
+   ]
   },
   {
    "id": "decap-cms",
@@ -2280,6 +2546,36 @@
    "screenshots": [],
    "platforms": [
     "web"
+   ],
+   "thumbs": []
+  },
+  {
+   "id": "deepfence-threatmapper",
+   "name": "Deepfence ThreatMapper",
+   "summary": "ThreatMapper is a security tool that scans running cloud, container and server systems for software vulnerabilities, exposed secrets and risky configurations. It is aimed at security and operations teams who watch production infrastructure.",
+   "kind": "self_hosted",
+   "code": "github.com/deepfence/ThreatMapper",
+   "website": "https://threatmapper.org",
+   "license": "Apache-2.0",
+   "licenseClass": "open",
+   "licenseNeedsCheck": false,
+   "stars": 5327,
+   "archived": false,
+   "inactive": false,
+   "unconfirmed": [
+    "Whether the Cloud Scanner and Sensor Agent components are under the same license as the console.",
+    "Whether the ThreatStryker enterprise version shares code with this repository.",
+    "How closely the feature set matches Palo Alto Prisma."
+   ],
+   "source": "lists",
+   "sourceLists": [
+    "awesome-oss-alternatives"
+   ],
+   "verified": false,
+   "release": "https://github.com/deepfence/ThreatMapper/releases/tag/v2.5.8",
+   "screenshots": [],
+   "platforms": [
+    "server"
    ],
    "thumbs": []
   },
@@ -2476,11 +2772,15 @@
    ],
    "verified": false,
    "release": "https://github.com/documenso/documenso/releases/tag/v2.21.1",
-   "screenshots": [],
+   "screenshots": [
+    "https://raw.githubusercontent.com/documenso/documenso/main/apps/docs/public/document-signing/editor-overview.webp"
+   ],
    "platforms": [
     "server"
    ],
-   "thumbs": []
+   "thumbs": [
+    null
+   ]
   },
   {
    "id": "docuseal",
@@ -2506,11 +2806,15 @@
    ],
    "verified": false,
    "release": "https://github.com/docusealco/docuseal/releases/tag/3.3.4",
-   "screenshots": [],
+   "screenshots": [
+    "https://www.docuseal.com/packs/static/images/demo-ff524f4563e1058bc5e6.jpg"
+   ],
    "platforms": [
     "server"
    ],
-   "thumbs": []
+   "thumbs": [
+    null
+   ]
   },
   {
    "id": "dokku",
@@ -2719,7 +3023,9 @@
    "source": "starter",
    "verified": false,
    "release": "https://github.com/element-hq/element-web/releases/tag/v1.12.32",
-   "screenshots": [],
+   "screenshots": [
+    "https://dl.flathub.org/media/im/riot/Riot/74b860715fb8cfcdf59807de6709ceb3/screenshots/image-1_1248x679@1.png"
+   ],
    "platforms": [
     "windows",
     "mac",
@@ -2728,7 +3034,9 @@
     "ios",
     "web"
    ],
-   "thumbs": []
+   "thumbs": [
+    null
+   ]
   },
   {
    "id": "element-call",
@@ -2817,7 +3125,10 @@
    "source": "starter",
    "verified": false,
    "release": "https://github.com/ente/ente/releases/tag/locker-v1.0.11",
-   "screenshots": [],
+   "screenshots": [
+    "https://f-droid.org/repo/io.ente.auth/en-US/phoneScreenshots/2.jpg",
+    "https://f-droid.org/repo/io.ente.auth/en-US/phoneScreenshots/3.jpg"
+   ],
    "platforms": [
     "windows",
     "mac",
@@ -2826,7 +3137,10 @@
     "ios",
     "web"
    ],
-   "thumbs": []
+   "thumbs": [
+    null,
+    null
+   ]
   },
   {
    "id": "ente-photos",
@@ -2849,7 +3163,10 @@
    "source": "starter",
    "verified": false,
    "release": "https://github.com/ente/ente/releases/tag/locker-v1.0.11",
-   "screenshots": [],
+   "screenshots": [
+    "https://f-droid.org/repo/io.ente.photos.fdroid/en-US/phoneScreenshots/1.png",
+    "https://f-droid.org/repo/io.ente.photos.fdroid/en-US/phoneScreenshots/3.png"
+   ],
    "platforms": [
     "windows",
     "mac",
@@ -2858,7 +3175,10 @@
     "ios",
     "web"
    ],
-   "thumbs": []
+   "thumbs": [
+    null,
+    null
+   ]
   },
   {
    "id": "erpnext",
@@ -3056,11 +3376,17 @@
    "source": "starter",
    "verified": false,
    "release": "https://gitlab.com/fdroid/fdroidclient/-/releases/1.23.2",
-   "screenshots": [],
+   "screenshots": [
+    "https://f-droid.org/repo/org.fdroid.fdroid/en-US/phoneScreenshots/01-latest.png",
+    "https://f-droid.org/repo/org.fdroid.fdroid/en-US/phoneScreenshots/02-categories.png"
+   ],
    "platforms": [
     "android"
    ],
-   "thumbs": []
+   "thumbs": [
+    null,
+    null
+   ]
   },
   {
    "id": "fairemail",
@@ -3149,13 +3475,19 @@
    ],
    "source": "starter",
    "verified": false,
-   "screenshots": [],
+   "screenshots": [
+    "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/1d/Fedora_42_Workstation_Desktop_English.png/1280px-Fedora_42_Workstation_Desktop_English.png",
+    "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/86/Fedora_42_KDE_Plasma_Desktop_English.png/1280px-Fedora_42_KDE_Plasma_Desktop_English.png"
+   ],
    "platforms": [
     "linux",
     "server"
    ],
    "licenseSource": "https://raw.githubusercontent.com/rhinstaller/anaconda/master/COPYING",
-   "thumbs": []
+   "thumbs": [
+    null,
+    null
+   ]
   },
   {
    "id": "filestash",
@@ -3238,6 +3570,43 @@
    ]
   },
   {
+   "id": "firefly-iii",
+   "name": "Firefly III",
+   "summary": "Firefly III is a personal finance manager that helps you track income, expenses, budgets and savings. It is meant for tech-savvy people who want to keep their financial records on their own server rather than in the cloud.",
+   "kind": "self_hosted",
+   "code": "github.com/firefly-iii/firefly-iii",
+   "website": "https://firefly-iii.org/",
+   "download": null,
+   "license": "AGPL-3.0",
+   "licenseClass": "open",
+   "licenseNeedsCheck": false,
+   "stars": 24999,
+   "archived": false,
+   "inactive": false,
+   "unconfirmed": [
+    "Whether Firefly III tracks investments or retirement accounts, as Empower Personal Wealth does.",
+    "Whether bank account syncing is supported, as Monarch Money and Quicken offer.",
+    "The exact budgeting method used compared with YNAB."
+   ],
+   "source": "starter",
+   "verified": false,
+   "release": "https://github.com/firefly-iii/firefly-iii/releases/tag/v6.7.9",
+   "screenshots": [
+    "https://raw.githubusercontent.com/firefly-iii/firefly-iii/develop/.github/assets/img/imac-complete.png",
+    "https://raw.githubusercontent.com/firefly-iii/firefly-iii/develop/.github/assets/img/ipad-complete.png",
+    "https://raw.githubusercontent.com/firefly-iii/firefly-iii/develop/.github/assets/img/iphone-complete.png"
+   ],
+   "platforms": [
+    "web",
+    "server"
+   ],
+   "thumbs": [
+    null,
+    null,
+    null
+   ]
+  },
+  {
    "id": "firefox",
    "name": "Firefox",
    "summary": "Firefox is a web browser made by the non-profit Mozilla organization. It is for anyone who wants an everyday browser with a focus on privacy.",
@@ -3259,7 +3628,10 @@
    "source": "starter",
    "verified": false,
    "release": null,
-   "screenshots": [],
+   "screenshots": [
+    "https://dl.flathub.org/media/org.mozilla.firefox-stable/1504x846/org.mozilla.firefox-c6f98b38b8b28b113a75a6b34037b759.png",
+    "https://dl.flathub.org/media/org.mozilla.firefox-stable/1504x846/org.mozilla.firefox-af5d1ae7c121ea4864b3c5a1098f8f9c.png"
+   ],
    "platforms": [
     "windows",
     "mac",
@@ -3268,7 +3640,10 @@
     "ios"
    ],
    "licenseSource": "https://raw.githubusercontent.com/mozilla/gecko-dev/master/toolkit/content/license.html",
-   "thumbs": []
+   "thumbs": [
+    null,
+    null
+   ]
   },
   {
    "id": "flagsmith",
@@ -3359,13 +3734,19 @@
    ],
    "verified": false,
    "release": "https://github.com/yang991178/fluent-reader/releases/tag/v1.3.1",
-   "screenshots": [],
+   "screenshots": [
+    "https://dl.flathub.org/media/me.hyliu.fluentreader-stable/1248x702/me.hyliu.fluentreader-130bcfdc167f2870afeb981f12c6fd65.png",
+    "https://dl.flathub.org/media/me.hyliu.fluentreader-stable/1504x846/me.hyliu.fluentreader-46eba9c63436c341f4fc45234beabdc1.png"
+   ],
    "platforms": [
     "windows",
     "mac",
     "linux"
    ],
-   "thumbs": []
+   "thumbs": [
+    null,
+    null
+   ]
   },
   {
    "id": "folio-wiki",
@@ -3635,6 +4016,43 @@
    ]
   },
   {
+   "id": "fossify-gallery",
+   "name": "Fossify Gallery",
+   "summary": "Fossify Gallery is an Android app for viewing, editing and organizing your photos and videos, with a privacy focus and no ads. It is for people who want a gallery app without data collection.",
+   "kind": "app",
+   "code": "github.com/FossifyOrg/Gallery",
+   "website": "https://www.fossify.org",
+   "license": "GPL-3.0",
+   "licenseClass": "open",
+   "licenseNeedsCheck": false,
+   "stars": 3850,
+   "archived": false,
+   "inactive": false,
+   "unconfirmed": [
+    "Whether the app is available on Android only or on other platforms is not stated in the material.",
+    "The 'Etc.' entry in the closed app list is vague and unverified.",
+    "The README does not state a specific group for general photo viewing; photo-backup was chosen as the closest existing group but it is not confirmed to match the viewing job.",
+    "The README does not confirm how the app handles photo storage or backup."
+   ],
+   "source": "lists",
+   "sourceLists": [
+    "awesome-privacy"
+   ],
+   "verified": false,
+   "release": "https://github.com/FossifyOrg/Gallery/releases/tag/1.14.1",
+   "screenshots": [
+    "https://raw.githubusercontent.com/FossifyOrg/Gallery/HEAD/fastlane/metadata/android/en-US/images/phoneScreenshots/1_en-US.png",
+    "https://raw.githubusercontent.com/FossifyOrg/Gallery/HEAD/fastlane/metadata/android/en-US/images/phoneScreenshots/2_en-US.png"
+   ],
+   "platforms": [
+    "android"
+   ],
+   "thumbs": [
+    null,
+    null
+   ]
+  },
+  {
    "id": "freetube",
    "name": "FreeTube",
    "summary": "FreeTube is a desktop app for watching YouTube videos without ads and without Google tracking through cookies and scripts. It is for people who want a more private way to use YouTube on Windows, Mac or Linux.",
@@ -3801,13 +4219,17 @@
    ],
    "source": "starter",
    "verified": false,
-   "screenshots": [],
+   "screenshots": [
+    "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/d8/Capture_d%27%C3%A9cran_de_la_page_d%27accueil_de_Funkwhale.png/1280px-Capture_d%27%C3%A9cran_de_la_page_d%27accueil_de_Funkwhale.png"
+   ],
    "platforms": [
     "web",
     "server"
    ],
    "licenseSource": "https://dev.funkwhale.audio/funkwhale/funkwhale/-/raw/develop/LICENSE",
-   "thumbs": []
+   "thumbs": [
+    null
+   ]
   },
   {
    "id": "fusio",
@@ -3906,12 +4328,18 @@
    ],
    "verified": false,
    "release": "https://github.com/lowercasename/gathio/releases/tag/v1.6.7",
-   "screenshots": [],
+   "screenshots": [
+    "https://gath.io/images/example-event-2023.png",
+    "https://raw.githubusercontent.com/lowercasename/gathio/main/docs/using-gathio/images/approve-attendees-host-interface.png"
+   ],
    "platforms": [
     "web",
     "server"
    ],
-   "thumbs": []
+   "thumbs": [
+    null,
+    null
+   ]
   },
   {
    "id": "gemini-cli",
@@ -3993,11 +4421,50 @@
    "source": "starter",
    "verified": false,
    "release": "https://github.com/TryGhost/Ghost/releases/tag/v6.72.0",
-   "screenshots": [],
+   "screenshots": [
+    "https://ghost.org/renders/posters/dashboard-1170.2a834c7d0bab2afeac8cc059efa36f9c2d62fef454fa98c2665e0bdf830e3876.webp"
+   ],
    "platforms": [
     "server"
    ],
-   "thumbs": []
+   "thumbs": [
+    null
+   ]
+  },
+  {
+   "id": "ghostfolio",
+   "name": "Ghostfolio",
+   "summary": "Ghostfolio is open source software for tracking your investments such as stocks, ETFs and cryptocurrencies in one place. It is for individual investors who want to see their portfolio performance and composition, and who prefer to keep their data private.",
+   "kind": "self_hosted",
+   "code": "github.com/ghostfolio/ghostfolio",
+   "website": "https://Ghostfol.io",
+   "license": "AGPL-3.0",
+   "licenseClass": "open",
+   "licenseNeedsCheck": false,
+   "stars": 9582,
+   "archived": false,
+   "inactive": false,
+   "unconfirmed": [
+    "Whether Empower's budgeting, banking sync or net-worth features are covered; the README does not mention them.",
+    "Whether the project is hosted only as a web app or also has native phone apps; the README describes a Progressive Web App.",
+    "The closed-app description list is empty, so the intended category of Empower Personal Wealth is only inferred."
+   ],
+   "source": "lists",
+   "sourceLists": [
+    "open-source-alternatives"
+   ],
+   "verified": false,
+   "release": "https://github.com/ghostfolio/ghostfolio/releases/tag/3.93.0",
+   "screenshots": [
+    "https://raw.githubusercontent.com/ghostfolio/ghostfolio/HEAD/apps/client/src/assets/images/screenshot.png"
+   ],
+   "platforms": [
+    "web",
+    "server"
+   ],
+   "thumbs": [
+    null
+   ]
   },
   {
    "id": "gimp",
@@ -4022,14 +4489,22 @@
    ],
    "source": "starter",
    "verified": false,
-   "screenshots": [],
+   "screenshots": [
+    "https://dl.flathub.org/media/org/gimp/GIMP/95e6d7d59d33a0f9364535dbe023d807/screenshots/image-2_1248x681@1.png",
+    "https://dl.flathub.org/media/org/gimp/GIMP/95e6d7d59d33a0f9364535dbe023d807/screenshots/image-1_1248x702@1.png",
+    "https://dl.flathub.org/media/org/gimp/GIMP/95e6d7d59d33a0f9364535dbe023d807/screenshots/image-3_1248x681@1.png"
+   ],
    "platforms": [
     "windows",
     "mac",
     "linux"
    ],
    "licenseSource": "https://gitlab.gnome.org/GNOME/gimp/-/raw/master/app/main.c",
-   "thumbs": []
+   "thumbs": [
+    null,
+    null,
+    null
+   ]
   },
   {
    "id": "gitea",
@@ -4151,12 +4626,16 @@
    ],
    "source": "starter",
    "verified": false,
-   "screenshots": [],
+   "screenshots": [
+    "https://upload.wikimedia.org/wikipedia/commons/9/96/Gnumeric-sample.png"
+   ],
    "platforms": [
     "linux"
    ],
    "licenseSource": "https://gitlab.gnome.org/GNOME/gnumeric/-/raw/master/COPYING",
-   "thumbs": []
+   "thumbs": [
+    null
+   ]
   },
   {
    "id": "goatcounter",
@@ -4231,7 +4710,7 @@
    "license": "Apache-2.0",
    "licenseClass": "open",
    "licenseNeedsCheck": false,
-   "stars": 55738,
+   "stars": 55739,
    "archived": false,
    "inactive": false,
    "unconfirmed": [
@@ -4242,13 +4721,17 @@
    "source": "starter",
    "verified": false,
    "release": "https://github.com/aaif-goose/goose/releases/tag/v1.56.0",
-   "screenshots": [],
+   "screenshots": [
+    "https://raw.githubusercontent.com/aaif-goose/goose/main/documentation/blog/2024-12-06-previewing-goose-v10-beta/goose-gui.png"
+   ],
    "platforms": [
     "windows",
     "mac",
     "linux"
    ],
-   "thumbs": []
+   "thumbs": [
+    null
+   ]
   },
   {
    "id": "grafana",
@@ -4302,12 +4785,18 @@
    ],
    "source": "starter",
    "verified": false,
-   "screenshots": [],
+   "screenshots": [
+    "https://upload.wikimedia.org/wikipedia/commons/8/8e/GrapheneOS_%22Apps%22_app.png",
+    "https://upload.wikimedia.org/wikipedia/commons/0/0c/GrapheneOS_home_screen_Android_17.png"
+   ],
    "platforms": [
     "android"
    ],
    "licenseSource": "https://raw.githubusercontent.com/GrapheneOS/hardened_malloc/main/LICENSE",
-   "thumbs": []
+   "thumbs": [
+    null,
+    null
+   ]
   },
   {
    "id": "graphite",
@@ -4405,12 +4894,16 @@
    "source": "starter",
    "verified": false,
    "release": "https://github.com/gristlabs/grist-core/releases/tag/v1.7.21",
-   "screenshots": [],
+   "screenshots": [
+    "https://raw.githubusercontent.com/gristlabs/grist-core/main/static/img/tutorial-screenshot.png"
+   ],
    "platforms": [
     "web",
     "server"
    ],
-   "thumbs": []
+   "thumbs": [
+    null
+   ]
   },
   {
    "id": "growthbook",
@@ -4503,12 +4996,16 @@
    ],
    "verified": false,
    "release": "https://github.com/hedgedoc/hedgedoc/releases/tag/1.12.0",
-   "screenshots": [],
+   "screenshots": [
+    "https://raw.githubusercontent.com/hedgedoc/hedgedoc/develop/frontend/public/public/screenshot.png"
+   ],
    "platforms": [
     "web",
     "server"
    ],
-   "thumbs": []
+   "thumbs": [
+    null
+   ]
   },
   {
    "id": "heliboard",
@@ -4521,7 +5018,7 @@
    "license": "GPL-3.0",
    "licenseClass": "open",
    "licenseNeedsCheck": false,
-   "stars": 6423,
+   "stars": 6424,
    "archived": false,
    "inactive": false,
    "unconfirmed": [
@@ -4531,11 +5028,17 @@
    "source": "starter",
    "verified": false,
    "release": "https://github.com/HeliBorg/HeliBoard/releases/tag/v4.2",
-   "screenshots": [],
+   "screenshots": [
+    "https://raw.githubusercontent.com/HeliBorg/HeliBoard/main/fastlane/metadata/android/en-US/images/phoneScreenshots/1.png",
+    "https://raw.githubusercontent.com/HeliBorg/HeliBoard/main/fastlane/metadata/android/en-US/images/phoneScreenshots/6.png"
+   ],
    "platforms": [
     "android"
    ],
-   "thumbs": []
+   "thumbs": [
+    null,
+    null
+   ]
   },
   {
    "id": "hermes-agent",
@@ -4548,7 +5051,7 @@
    "license": "MIT",
    "licenseClass": "open",
    "licenseNeedsCheck": false,
-   "stars": 257235,
+   "stars": 257236,
    "archived": false,
    "inactive": false,
    "unconfirmed": [
@@ -4597,6 +5100,45 @@
    ]
   },
   {
+   "id": "highlight",
+   "name": "highlight",
+   "summary": "Highlight is a monitoring platform that records user sessions, tracks errors and collects logs so developers can find out why bugs happen. It is aimed at software developers who run web apps.",
+   "kind": "self_hosted",
+   "code": "github.com/highlight/highlight",
+   "website": "https://app.highlight.io",
+   "license": null,
+   "licenseClass": "open_core",
+   "licenseNeedsCheck": true,
+   "stars": 9384,
+   "archived": false,
+   "inactive": false,
+   "unconfirmed": [
+    "Whether the enterprise/ and highlight.io/ directory licenses are open source or restrictive, since their text was not provided.",
+    "Whether the hosted service at app.highlight.io has paid tiers beyond the free start.",
+    "Descriptions of the closed app list entry: no descriptions were supplied for Fullstory.",
+    "Whether the self-hosted version has feature limits compared with the hosted version."
+   ],
+   "source": "lists",
+   "sourceLists": [
+    "open-source-alternatives"
+   ],
+   "verified": false,
+   "release": "https://github.com/highlight/highlight/releases/tag/docker-v0.5.6",
+   "screenshots": [
+    "https://user-images.githubusercontent.com/20292680/214499701-86b7deb3-ec8f-4cb2-8661-ff4f9d7ade2d.png",
+    "https://user-images.githubusercontent.com/20292680/214500108-c8e0e289-276a-4863-816a-7c854c97df4e.png",
+    "https://user-images.githubusercontent.com/20292680/233539519-f8f58251-5b88-4703-8bea-2cd8d9549faf.png"
+   ],
+   "platforms": [
+    "server"
+   ],
+   "thumbs": [
+    null,
+    null,
+    null
+   ]
+  },
+  {
    "id": "home-assistant",
    "name": "Home Assistant",
    "summary": "Home Assistant is free software that runs smart home devices and automations from one place, with control kept on your own hardware. It is for people who want to manage their home devices locally and privately, often on a Raspberry Pi or local server.",
@@ -4618,13 +5160,17 @@
    "source": "starter",
    "verified": false,
    "release": "https://github.com/home-assistant/core/releases/tag/2026.10.4",
-   "screenshots": [],
+   "screenshots": [
+    "https://raw.githubusercontent.com/home-assistant/core/dev/.github/assets/screenshot-integrations.png"
+   ],
    "platforms": [
     "linux",
     "web",
     "server"
    ],
-   "thumbs": []
+   "thumbs": [
+    null
+   ]
   },
   {
    "id": "hoppscotch",
@@ -4940,14 +5486,22 @@
    "source": "starter",
    "verified": false,
    "release": "https://gitlab.com/inkscape/inkscape/-/releases/INKSCAPE_1_4",
-   "screenshots": [],
+   "screenshots": [
+    "https://dl.flathub.org/media/org/inkscape/Inkscape/d06b79da7ad6df73032683fbcf8c4d56/screenshots/image-1_1248x767@1.png",
+    "https://dl.flathub.org/media/org/inkscape/Inkscape/d06b79da7ad6df73032683fbcf8c4d56/screenshots/image-2_1248x765@1.png",
+    "https://dl.flathub.org/media/org/inkscape/Inkscape/d06b79da7ad6df73032683fbcf8c4d56/screenshots/image-4_1248x763@1.png"
+   ],
    "platforms": [
     "windows",
     "mac",
     "linux"
    ],
    "licenseSource": "https://gitlab.com/inkscape/inkscape/-/raw/master/COPYING",
-   "thumbs": []
+   "thumbs": [
+    null,
+    null,
+    null
+   ]
   },
   {
    "id": "insomnia",
@@ -4985,6 +5539,37 @@
     "assets/shots/insomnia-0.webp",
     "assets/shots/insomnia-1.webp"
    ]
+  },
+  {
+   "id": "inventaire",
+   "name": "Inventaire",
+   "summary": "Inventaire is a free web app for making lists and inventories of your books. It is aimed at people who want to track their own book collections and share them with others.",
+   "kind": "app",
+   "code": "codeberg.org/inventaire/inventaire",
+   "website": "https://wiki.inventaire.io/wiki/Inventaire_software",
+   "license": null,
+   "licenseClass": "open",
+   "licenseNeedsCheck": true,
+   "stars": null,
+   "archived": false,
+   "inactive": false,
+   "unconfirmed": [
+    "Whether the project includes reviews, ratings or social features comparable to Goodreads",
+    "Whether the client repository, which holds the web interface, uses the same AGPLv3 license",
+    "Whether the hosted inventaire.io service has any paid or closed parts"
+   ],
+   "source": "lists",
+   "sourceLists": [
+    "switching.software"
+   ],
+   "verified": false,
+   "release": null,
+   "screenshots": [],
+   "platforms": [
+    "web",
+    "server"
+   ],
+   "thumbs": []
   },
   {
    "id": "invokeai",
@@ -5073,13 +5658,21 @@
    "source": "starter",
    "verified": false,
    "release": "https://github.com/janhq/jan/releases/tag/v0.8.7",
-   "screenshots": [],
+   "screenshots": [
+    "https://dl.flathub.org/media/ai/jan/Jan/f92cccd45dcfb12937a7e37a07d143e7/screenshots/image-2_orig.png",
+    "https://dl.flathub.org/media/ai/jan/Jan/f92cccd45dcfb12937a7e37a07d143e7/screenshots/image-1_orig.png",
+    "https://dl.flathub.org/media/ai/jan/Jan/f92cccd45dcfb12937a7e37a07d143e7/screenshots/image-5_orig.png"
+   ],
    "platforms": [
     "windows",
     "mac",
     "linux"
    ],
-   "thumbs": []
+   "thumbs": [
+    null,
+    null,
+    null
+   ]
   },
   {
    "id": "janssen",
@@ -5135,13 +5728,17 @@
    "source": "starter",
    "verified": false,
    "release": "https://github.com/jellyfin/jellyfin/releases/tag/v12.3",
-   "screenshots": [],
+   "screenshots": [
+    "https://jellyfin.org/assets/images/10.8-home-4a73a92bf90d1eeffa5081201ca9c7bb.png"
+   ],
    "platforms": [
     "android",
     "ios",
     "server"
    ],
-   "thumbs": []
+   "thumbs": [
+    null
+   ]
   },
   {
    "id": "jenkins",
@@ -5301,11 +5898,15 @@
    ],
    "verified": false,
    "release": "https://github.com/kanboard/kanboard/releases/tag/v1.2.56",
-   "screenshots": [],
+   "screenshots": [
+    "https://kanboard.org/assets/img/board.png"
+   ],
    "platforms": [
     "server"
    ],
-   "thumbs": []
+   "thumbs": [
+    null
+   ]
   },
   {
    "id": "kdenlive",
@@ -5328,14 +5929,22 @@
    ],
    "source": "starter",
    "verified": false,
-   "screenshots": [],
+   "screenshots": [
+    "https://dl.flathub.org/media/org/kde/kdenlive.desktop/ed746a0f36b42446cedf1605b1c4f0cb/screenshots/image-5_orig.png",
+    "https://dl.flathub.org/media/org/kde/kdenlive.desktop/ed746a0f36b42446cedf1605b1c4f0cb/screenshots/image-1_orig.png",
+    "https://dl.flathub.org/media/org/kde/kdenlive.desktop/ed746a0f36b42446cedf1605b1c4f0cb/screenshots/image-6_1248x749@1.png"
+   ],
    "platforms": [
     "windows",
     "mac",
     "linux"
    ],
    "licenseSource": "https://invent.kde.org/multimedia/kdenlive/-/raw/master/src/mainwindow.cpp",
-   "thumbs": []
+   "thumbs": [
+    null,
+    null,
+    null
+   ]
   },
   {
    "id": "keepassdx",
@@ -5390,14 +5999,58 @@
    "source": "starter",
    "verified": false,
    "release": "https://github.com/keepassxreboot/keepassxc/releases/tag/2.8.0",
-   "screenshots": [],
+   "screenshots": [
+    "https://dl.flathub.org/media/org/keepassxc/KeePassXC.desktop/8703bd4e659abcb1dac1d6646881bb00/screenshots/image-1_1248x949@1.png",
+    "https://dl.flathub.org/media/org/keepassxc/KeePassXC.desktop/8703bd4e659abcb1dac1d6646881bb00/screenshots/image-4_1248x949@1.png",
+    "https://dl.flathub.org/media/org/keepassxc/KeePassXC.desktop/8703bd4e659abcb1dac1d6646881bb00/screenshots/image-2_orig.png"
+   ],
    "platforms": [
     "windows",
     "mac",
     "linux"
    ],
    "licenseSource": "https://raw.githubusercontent.com/keepassxreboot/keepassxc/develop/COPYING",
-   "thumbs": []
+   "thumbs": [
+    null,
+    null,
+    null
+   ]
+  },
+  {
+   "id": "keila",
+   "name": "Keila",
+   "summary": "Keila is a tool for sending email newsletters and creating sign-up forms. It is aimed at people who want to run newsletters themselves, either on a hosted service or on their own server.",
+   "kind": "self_hosted",
+   "code": "github.com/pentacent/keila",
+   "website": "https://keila.io",
+   "license": "AGPL-3.0",
+   "licenseClass": "open",
+   "licenseNeedsCheck": false,
+   "stars": 2248,
+   "archived": false,
+   "inactive": false,
+   "unconfirmed": [
+    "Whether the hosted Keila Cloud service is open source (only the self-hosted project is described as free software).",
+    "Whether the project is actively maintained beyond what the README states."
+   ],
+   "source": "lists",
+   "sourceLists": [
+    "awesome-oss-alternatives"
+   ],
+   "verified": false,
+   "release": "https://github.com/pentacent/keila/releases/tag/0.30.3",
+   "screenshots": [
+    "https://www.keila.io/_astro/keila-2024-05-01.BUp8L2VZ.png",
+    "https://www.keila.io/og-images/index_en.png"
+   ],
+   "platforms": [
+    "web",
+    "server"
+   ],
+   "thumbs": [
+    null,
+    null
+   ]
   },
   {
    "id": "kestra",
@@ -5610,7 +6263,7 @@
    "license": "AGPL-3.0",
    "licenseClass": "open",
    "licenseNeedsCheck": false,
-   "stars": 30626,
+   "stars": 30627,
    "archived": false,
    "inactive": false,
    "unconfirmed": [
@@ -5621,13 +6274,19 @@
    "source": "starter",
    "verified": false,
    "release": "https://github.com/koreader/koreader/releases/tag/v2026.07.1",
-   "screenshots": [],
+   "screenshots": [
+    "https://dl.flathub.org/media/r/ro/rocks.koreader.koreader/72a553c4e69edb9d1c98df44c07cb01d/screenshots/image-2_1248x872@1.png",
+    "https://dl.flathub.org/media/r/ro/rocks.koreader.koreader/72a553c4e69edb9d1c98df44c07cb01d/screenshots/image-3_1248x872@1.png"
+   ],
    "platforms": [
     "mac",
     "linux",
     "android"
    ],
-   "thumbs": []
+   "thumbs": [
+    null,
+    null
+   ]
   },
   {
    "id": "krita",
@@ -5650,14 +6309,22 @@
    ],
    "source": "starter",
    "verified": false,
-   "screenshots": [],
+   "screenshots": [
+    "https://dl.flathub.org/media/org/kde/krita/1348962dcc0842250c4ce6876acc36cc/screenshots/image-1_1248x677@1.png",
+    "https://dl.flathub.org/media/org/kde/krita/1348962dcc0842250c4ce6876acc36cc/screenshots/image-4_1248x677@1.png",
+    "https://dl.flathub.org/media/org/kde/krita/1348962dcc0842250c4ce6876acc36cc/screenshots/image-6_1248x702@1.png"
+   ],
    "platforms": [
     "windows",
     "mac",
     "linux"
    ],
    "licenseSource": "https://invent.kde.org/graphics/krita/-/raw/master/README.md",
-   "thumbs": []
+   "thumbs": [
+    null,
+    null,
+    null
+   ]
   },
   {
    "id": "kubero",
@@ -5804,6 +6471,42 @@
     "server"
    ],
    "thumbs": []
+  },
+  {
+   "id": "lago",
+   "name": "Lago",
+   "summary": "Lago is a billing system for software products that tracks how customers use a product and turns that usage into prices, invoices and payments. It is aimed at companies that sell usage-based or AI services and the developers who build billing for them.",
+   "kind": "self_hosted",
+   "code": "github.com/getlago/lago",
+   "website": "https://www.getlago.com",
+   "license": "AGPL-3.0",
+   "licenseClass": "open",
+   "licenseNeedsCheck": false,
+   "stars": 10713,
+   "archived": false,
+   "inactive": false,
+   "unconfirmed": [
+    "Whether the full product, including the Lago UI and Premium features, is covered by AGPL-3.0 or only parts of it.",
+    "Whether Stripe and Chargebee are truly replaced in every use case, since the README does not compare feature sets with them.",
+    "Whether the groups listed fit well, since none directly describe billing; a new group was proposed instead."
+   ],
+   "source": "lists",
+   "sourceLists": [
+    "awesome-oss-alternatives",
+    "open-source-alternatives"
+   ],
+   "verified": false,
+   "release": "https://github.com/getlago/lago/releases/tag/v1.55.0",
+   "screenshots": [
+    "https://raw.githubusercontent.com/getlago/lago/HEAD/docs/images/readme-hero-assets/lago-product-platform.png"
+   ],
+   "platforms": [
+    "web",
+    "server"
+   ],
+   "thumbs": [
+    null
+   ]
   },
   {
    "id": "lastsaas",
@@ -6024,14 +6727,18 @@
    ],
    "source": "starter",
    "verified": false,
-   "screenshots": [],
+   "screenshots": [
+    "https://dl.flathub.org/media/org/libreoffice/LibreOffice/6a06e0ec2876ffc989b0e2a1340d3331/screenshots/image-2_orig.png"
+   ],
    "platforms": [
     "windows",
     "mac",
     "linux"
    ],
    "licenseSource": "https://www.libreoffice.org/about-us/licenses/",
-   "thumbs": []
+   "thumbs": [
+    null
+   ]
   },
   {
    "id": "libreoffice-impress",
@@ -6054,14 +6761,18 @@
    ],
    "source": "starter",
    "verified": false,
-   "screenshots": [],
+   "screenshots": [
+    "https://dl.flathub.org/media/org/libreoffice/LibreOffice/6a06e0ec2876ffc989b0e2a1340d3331/screenshots/image-3_orig.png"
+   ],
    "platforms": [
     "windows",
     "mac",
     "linux"
    ],
    "licenseSource": "https://www.libreoffice.org/about-us/licenses/",
-   "thumbs": []
+   "thumbs": [
+    null
+   ]
   },
   {
    "id": "libreoffice-writer",
@@ -6084,14 +6795,18 @@
    ],
    "source": "starter",
    "verified": false,
-   "screenshots": [],
+   "screenshots": [
+    "https://dl.flathub.org/media/org/libreoffice/LibreOffice/6a06e0ec2876ffc989b0e2a1340d3331/screenshots/image-1_orig.png"
+   ],
    "platforms": [
     "windows",
     "mac",
     "linux"
    ],
    "licenseSource": "https://www.libreoffice.org/about-us/licenses/",
-   "thumbs": []
+   "thumbs": [
+    null
+   ]
   },
   {
    "id": "libresign",
@@ -6216,14 +6931,18 @@
    "source": "starter",
    "verified": false,
    "release": "https://codeberg.org/librewolf/source/releases/tag/153.0.4-1",
-   "screenshots": [],
+   "screenshots": [
+    "https://dl.flathub.org/media/io/gitlab/librewolf-community/695668834d7a406c01d5a25c44f90623/screenshots/image-1_orig.png"
+   ],
    "platforms": [
     "windows",
     "mac",
     "linux"
    ],
    "licenseSource": "https://codeberg.org/librewolf/source/raw/branch/main/LICENSE",
-   "thumbs": []
+   "thumbs": [
+    null
+   ]
   },
   {
    "id": "lightdash",
@@ -6280,12 +6999,16 @@
    "source": "starter",
    "verified": false,
    "release": null,
-   "screenshots": [],
+   "screenshots": [
+    "https://www.limesurvey.org/images/2025/home/survey-editor@2x.jpg"
+   ],
    "platforms": [
     "web",
     "server"
    ],
-   "thumbs": []
+   "thumbs": [
+    null
+   ]
   },
   {
    "id": "lineageos",
@@ -6308,12 +7031,18 @@
    ],
    "source": "starter",
    "verified": false,
-   "screenshots": [],
+   "screenshots": [
+    "https://upload.wikimedia.org/wikipedia/commons/e/e6/LineageOS_20_home_screen.png",
+    "https://upload.wikimedia.org/wikipedia/commons/a/aa/LineageOS_22.1_Home_Screen.png"
+   ],
    "platforms": [
     "android"
    ],
    "licenseSource": "https://raw.githubusercontent.com/LineageOS/android_vendor_lineage/lineage-23.0/LICENSE",
-   "thumbs": []
+   "thumbs": [
+    null,
+    null
+   ]
   },
   {
    "id": "linux-mint",
@@ -6336,12 +7065,52 @@
    ],
    "source": "starter",
    "verified": false,
-   "screenshots": [],
+   "screenshots": [
+    "https://linuxmint.com/web/img/screenshots/c1.jpg",
+    "https://linuxmint.com/web/img/screenshots/c5.jpg"
+   ],
    "platforms": [
     "linux"
    ],
    "licenseSource": "https://raw.githubusercontent.com/linuxmint/mintupdate/master/debian/copyright",
-   "thumbs": []
+   "thumbs": [
+    null,
+    null
+   ]
+  },
+  {
+   "id": "listmonk",
+   "name": "listmonk",
+   "summary": "listmonk is a self-hosted tool for sending newsletters and managing mailing lists. It is meant for people and organizations who want to run their own email list server.",
+   "kind": "self_hosted",
+   "code": "github.com/knadh/listmonk",
+   "website": "https://listmonk.app",
+   "license": "AGPL-3.0",
+   "licenseClass": "open",
+   "licenseNeedsCheck": false,
+   "stars": 23973,
+   "archived": false,
+   "inactive": false,
+   "unconfirmed": [
+    "Whether listmonk includes landing pages, paid subscriptions or creator monetization like ConvertKit",
+    "Descriptions from the lists were not provided, so the closed-app mapping was judged from the closed app name alone",
+    "Whether 'blogging' is the best group, since the README describes a mailing list manager rather than a blog or publishing tool; no existing group clearly covers newsletter sending alone"
+   ],
+   "source": "lists",
+   "sourceLists": [
+    "open-source-alternatives"
+   ],
+   "verified": false,
+   "release": "https://github.com/knadh/listmonk/releases/tag/v7.0.0-beta.1",
+   "screenshots": [
+    "https://github.com/user-attachments/assets/689b5fbb-dd25-4956-a36f-e3226a65f9c4"
+   ],
+   "platforms": [
+    "server"
+   ],
+   "thumbs": [
+    null
+   ]
   },
   {
    "id": "litekart",
@@ -6436,13 +7205,17 @@
    "source": "starter",
    "verified": false,
    "release": "https://github.com/LMMS/lmms/releases/tag/v1.2.2",
-   "screenshots": [],
+   "screenshots": [
+    "https://dl.flathub.org/media/io/lmms/LMMS/6107ab24d0136ed99fbf3d732992e171/screenshots/image-1_orig.png"
+   ],
    "platforms": [
     "windows",
     "mac",
     "linux"
    ],
-   "thumbs": []
+   "thumbs": [
+    null
+   ]
   },
   {
    "id": "localsend",
@@ -6455,7 +7228,7 @@
    "license": "Apache-2.0",
    "licenseClass": "open",
    "licenseNeedsCheck": false,
-   "stars": 95699,
+   "stars": 95700,
    "archived": false,
    "inactive": false,
    "unconfirmed": [
@@ -6589,6 +7362,41 @@
    ]
   },
   {
+   "id": "losslesscut",
+   "name": "LosslessCut",
+   "summary": "LosslessCut is a desktop app for quickly cutting and trimming video and audio files without re-encoding them, so quality is kept and file size drops. It is for people who want to rough-cut large camera or drone footage and extract the good parts.",
+   "kind": "app",
+   "code": "github.com/mifi/lossless-cut",
+   "website": "https://losslesscut.app/",
+   "license": "GPL-2.0",
+   "licenseClass": "open",
+   "licenseNeedsCheck": false,
+   "stars": 45246,
+   "archived": false,
+   "inactive": false,
+   "unconfirmed": [
+    "Whether LosslessCut supports re-encoding or colour grading, which the README does not mention.",
+    "Whether the paid store versions differ in licensing beyond what the README describes."
+   ],
+   "source": "lists",
+   "sourceLists": [
+    "awesome-privacy"
+   ],
+   "verified": false,
+   "release": "https://github.com/mifi/lossless-cut/releases/tag/v3.70.1",
+   "screenshots": [
+    "https://static.mifi.no/media/InHeghy_4DwVeujK/2000.jpg"
+   ],
+   "platforms": [
+    "windows",
+    "mac",
+    "linux"
+   ],
+   "thumbs": [
+    null
+   ]
+  },
+  {
    "id": "lowdefy",
    "name": "Lowdefy",
    "summary": "Lowdefy is a framework where you describe a web app in YAML config files instead of writing code, and it runs the app for you. It is aimed at developers and teams who build internal business tools.",
@@ -6705,11 +7513,17 @@
    "source": "starter",
    "verified": false,
    "release": "https://github.com/mastodon/mastodon/releases/tag/v4.7.3",
-   "screenshots": [],
+   "screenshots": [
+    "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/57/Mastodon-v4.3.1-screenshot.jpg/1280px-Mastodon-v4.3.1-screenshot.jpg",
+    "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/04/Mastodon_Screenshot_2.jpg/1280px-Mastodon_Screenshot_2.jpg"
+   ],
    "platforms": [
     "server"
    ],
-   "thumbs": []
+   "thumbs": [
+    null,
+    null
+   ]
   },
   {
    "id": "matano",
@@ -6838,12 +7652,16 @@
    "source": "starter",
    "verified": false,
    "release": "https://github.com/MbinOrg/mbin/releases/tag/v1.11.0",
-   "screenshots": [],
+   "screenshots": [
+    "https://raw.githubusercontent.com/MbinOrg/mbin/main/public/assets/screenshots/screen.png"
+   ],
    "platforms": [
     "web",
     "server"
    ],
-   "thumbs": []
+   "thumbs": [
+    null
+   ]
   },
   {
    "id": "mediawiki",
@@ -7129,7 +7947,7 @@
    "license": "AGPL-3.0",
    "licenseClass": "open",
    "licenseNeedsCheck": false,
-   "stars": 11359,
+   "stars": 11360,
    "archived": false,
    "inactive": false,
    "unconfirmed": [
@@ -7264,12 +8082,16 @@
    "source": "starter",
    "verified": false,
    "release": "https://github.com/mypaint/mypaint/releases/tag/v2.0.1",
-   "screenshots": [],
+   "screenshots": [
+    "https://dl.flathub.org/media/org/mypaint/MyPaint/7ae5ec387d1933b7b5e5ede0c53a9d32/screenshots/image-1_1248x702@1.png"
+   ],
    "platforms": [
     "windows",
     "linux"
    ],
-   "thumbs": []
+   "thumbs": [
+    null
+   ]
   },
   {
    "id": "natron",
@@ -7293,11 +8115,15 @@
    "source": "starter",
    "verified": false,
    "release": "https://github.com/NatronGitHub/Natron/releases/tag/v2.5.0",
-   "screenshots": [],
+   "screenshots": [
+    "https://dl.flathub.org/media/fr/natron/Natron/e1c66133a7851966660edb790e7037dc/screenshots/image-1_1248x702@1.png"
+   ],
    "platforms": [
     "mac"
    ],
-   "thumbs": []
+   "thumbs": [
+    null
+   ]
   },
   {
    "id": "navidrome",
@@ -7720,6 +8546,45 @@
    ]
   },
   {
+   "id": "nextcloud-polls",
+   "name": "Nextcloud Polls",
+   "summary": "Polls is an add-on for Nextcloud, a self-hosted file and collaboration server, that lets you create polls to find a meeting time or pick options. It is for people and teams who run their own Nextcloud and want to schedule without Doodle.",
+   "kind": "self_hosted",
+   "code": "github.com/nextcloud/polls",
+   "website": "https://apps.nextcloud.com/apps/polls",
+   "license": "AGPL-3.0",
+   "licenseClass": "open",
+   "licenseNeedsCheck": false,
+   "stars": 285,
+   "archived": false,
+   "inactive": false,
+   "unconfirmed": [
+    "Descriptions from the lists were not provided, so the closed-app mapping rests on the README comparison only.",
+    "Whether it is a Nextcloud app that requires a Nextcloud server is stated in the README, but the exact server requirements beyond Nextcloud 32-33 are not confirmed."
+   ],
+   "source": "lists",
+   "sourceLists": [
+    "switching.software"
+   ],
+   "verified": false,
+   "release": "https://github.com/nextcloud/polls/releases/tag/v9.3.0",
+   "screenshots": [
+    "https://raw.githubusercontent.com/nextcloud/polls/HEAD/screenshots/overview.png",
+    "https://raw.githubusercontent.com/nextcloud/polls/HEAD/screenshots/edit-poll.png",
+    "https://raw.githubusercontent.com/nextcloud/polls/HEAD/screenshots/share.png",
+    "https://raw.githubusercontent.com/nextcloud/polls/HEAD/screenshots/vote.png"
+   ],
+   "platforms": [
+    "server"
+   ],
+   "thumbs": [
+    null,
+    null,
+    null,
+    null
+   ]
+  },
+  {
    "id": "nextcloud-talk",
    "name": "Nextcloud Talk",
    "summary": "Nextcloud Talk is a video and audio calling app with text chat, screen sharing and password-protected calls. It is for people and teams who run their own Nextcloud server and want calls on it instead of a commercial service.",
@@ -7978,6 +8843,48 @@
    ]
   },
   {
+   "id": "ntfy",
+   "name": "ntfy",
+   "summary": "ntfy is a simple service that sends push notifications to your phone or desktop when a script or program makes a web request. It is for people who want to get alerts from their own tools without signing up or paying, and it can also be self-hosted.",
+   "kind": "self_hosted",
+   "code": "github.com/binwiederhier/ntfy",
+   "website": "https://ntfy.sh",
+   "license": "Apache-2.0",
+   "licenseClass": "open",
+   "licenseNeedsCheck": false,
+   "stars": 35077,
+   "archived": false,
+   "inactive": false,
+   "unconfirmed": [
+    "Whether ntfy offers audience segmentation, analytics, or website push features that OneSignal provides",
+    "Whether the hosted ntfy.sh service has feature parity with OneSignal's paid tiers"
+   ],
+   "source": "lists",
+   "sourceLists": [
+    "awesome-foss-alternatives"
+   ],
+   "verified": false,
+   "release": "https://github.com/binwiederhier/ntfy/releases/tag/v2.34.0",
+   "screenshots": [
+    "https://raw.githubusercontent.com/binwiederhier/ntfy/HEAD/.github/images/screenshot-curl.png",
+    "https://raw.githubusercontent.com/binwiederhier/ntfy/HEAD/.github/images/screenshot-web-detail.png",
+    "https://raw.githubusercontent.com/binwiederhier/ntfy/HEAD/.github/images/screenshot-phone-main.jpg",
+    "https://raw.githubusercontent.com/binwiederhier/ntfy/HEAD/.github/images/screenshot-phone-detail.jpg"
+   ],
+   "platforms": [
+    "android",
+    "ios",
+    "web",
+    "server"
+   ],
+   "thumbs": [
+    null,
+    null,
+    null,
+    null
+   ]
+  },
+  {
    "id": "nuclei",
    "name": "Nuclei",
    "summary": "Nuclei is a free command-line tool that checks websites, servers and networks for known security weaknesses. It is aimed at security professionals and IT teams, who write or reuse simple text-based templates to define each check.",
@@ -8031,13 +8938,17 @@
    "source": "starter",
    "verified": false,
    "release": "https://github.com/obsproject/obs-studio/releases/tag/33.0.0",
-   "screenshots": [],
+   "screenshots": [
+    "https://dl.flathub.org/media/com/obsproject/Studio/d95756e227c3b10951a83e14e063c185/screenshots/image-1_orig.png"
+   ],
    "platforms": [
     "windows",
     "mac",
     "linux"
    ],
-   "thumbs": []
+   "thumbs": [
+    null
+   ]
   },
   {
    "id": "obtainium",
@@ -8269,7 +9180,11 @@
    "source": "starter",
    "verified": false,
    "release": "https://github.com/ONLYOFFICE/DocumentServer/releases/tag/v10.0.0",
-   "screenshots": [],
+   "screenshots": [
+    "https://dl.flathub.org/media/org/onlyoffice/desktopeditors/05940ed2ec8bd1b907711688f3f9d066/screenshots/image-3_1248x873@1.png",
+    "https://dl.flathub.org/media/org/onlyoffice/desktopeditors/05940ed2ec8bd1b907711688f3f9d066/screenshots/image-5_1248x873@1.png",
+    "https://dl.flathub.org/media/org/onlyoffice/desktopeditors/05940ed2ec8bd1b907711688f3f9d066/screenshots/image-6_1248x873@1.png"
+   ],
    "platforms": [
     "windows",
     "mac",
@@ -8277,7 +9192,11 @@
     "web",
     "server"
    ],
-   "thumbs": []
+   "thumbs": [
+    null,
+    null,
+    null
+   ]
   },
   {
    "id": "open-interpreter",
@@ -8306,6 +9225,36 @@
     "windows",
     "mac",
     "linux"
+   ],
+   "thumbs": []
+  },
+  {
+   "id": "open-library",
+   "name": "Open Library",
+   "summary": "Open Library is a free, editable online catalog of books, aiming for a web page for every book ever published. It is for readers and anyone who wants to look up, add or correct book information.",
+   "kind": "self_hosted",
+   "code": "github.com/internetarchive/openlibrary",
+   "website": "https://openlibrary.org",
+   "license": "AGPL-3.0",
+   "licenseClass": "open",
+   "licenseNeedsCheck": false,
+   "stars": 6780,
+   "archived": false,
+   "inactive": false,
+   "unconfirmed": [
+    "Whether the site offers reading lists, reviews or ratings like Goodreads",
+    "Whether the site is run by users on their own servers or only hosted by the Internet Archive",
+    "Whether there are paid or differently licensed parts"
+   ],
+   "source": "lists",
+   "sourceLists": [
+    "switching.software"
+   ],
+   "verified": false,
+   "release": "https://github.com/internetarchive/openlibrary/releases/tag/deploy-2026-10-15-at-22-14",
+   "screenshots": [],
+   "platforms": [
+    "web"
    ],
    "thumbs": []
   },
@@ -8424,7 +9373,7 @@
    "license": "MIT",
    "licenseClass": "open",
    "licenseNeedsCheck": false,
-   "stars": 393114,
+   "stars": 393116,
    "archived": false,
    "inactive": false,
    "unconfirmed": [
@@ -8453,7 +9402,7 @@
    "license": "MIT",
    "licenseClass": "open",
    "licenseNeedsCheck": false,
-   "stars": 221742,
+   "stars": 221746,
    "archived": false,
    "inactive": false,
    "unconfirmed": [
@@ -8544,6 +9493,47 @@
    ]
   },
   {
+   "id": "openpost",
+   "name": "OpenPost",
+   "summary": "OpenPost is a social media tool for writing, designing, scheduling and tracking posts across many networks from one place. It is for people and teams who manage social accounts and want to run it themselves or use a hosted version.",
+   "kind": "self_hosted",
+   "code": "github.com/getopenpost/openpost",
+   "website": "https://openpo.st",
+   "license": "AGPL-3.0",
+   "licenseClass": "open",
+   "licenseNeedsCheck": false,
+   "stars": 772,
+   "archived": false,
+   "inactive": false,
+   "unconfirmed": [
+    "Whether Hootsuite's full feature set (such as social listening or enterprise approval flows) is covered; the README does not say.",
+    "Whether the hosted OpenPost service has terms that differ from the AGPL license; the material only mentions waitlist and plans.",
+    "Whether the AI features depend on a paid external service; the README only says AI writing is optional and self-hosted AI setup exists.",
+    "Whether the mobile Inbox screens are available as a released app; the README only links to screenshots.",
+    "Whether the 'Find people' and 'Auto repost' features work on every listed platform; the README says capabilities vary by platform."
+   ],
+   "source": "lists",
+   "sourceLists": [
+    "awesome-foss-alternatives"
+   ],
+   "verified": false,
+   "release": "https://github.com/getopenpost/openpost/releases/tag/v7.31.1",
+   "screenshots": [
+    "https://raw.githubusercontent.com/getopenpost/openpost/HEAD/assets/demos/publishing.gif",
+    "https://raw.githubusercontent.com/getopenpost/openpost/HEAD/assets/screenshots/mobile-gallery-light.png",
+    "https://raw.githubusercontent.com/getopenpost/openpost/HEAD/assets/demos/image-editor.gif"
+   ],
+   "platforms": [
+    "web",
+    "server"
+   ],
+   "thumbs": [
+    null,
+    null,
+    null
+   ]
+  },
+  {
    "id": "openproject",
    "name": "OpenProject",
    "summary": "OpenProject is web-based software for planning and tracking team projects, tasks and bugs in one place. It is aimed at organizations that want to host their own data.",
@@ -8573,6 +9563,42 @@
    ],
    "thumbs": [
     "assets/shots/openproject-0.webp"
+   ]
+  },
+  {
+   "id": "openreplay",
+   "name": "OpenReplay",
+   "summary": "OpenReplay is a platform you run on your own servers that records and replays how people use your website or app, with product analytics and live help sessions. It is aimed at teams, especially in regulated industries, that cannot send user data to outside companies.",
+   "kind": "self_hosted",
+   "code": "github.com/openreplay/openreplay",
+   "website": "https://openreplay.com",
+   "license": null,
+   "licenseClass": "open_core",
+   "licenseNeedsCheck": true,
+   "stars": 13052,
+   "archived": false,
+   "inactive": false,
+   "unconfirmed": [
+    "The text of ee/LICENSE was not provided, so its terms are unknown.",
+    "The list of directories under the MIT license was not provided, so it is not known which parts of the code are MIT.",
+    "The material does not state whether the AGPLv3 is OSI-approved; the host's NOASSERTION means the license was not automatically recognized.",
+    "The material does not say whether the ee/ directory is part of the publicly distributed self-hosted build."
+   ],
+   "source": "lists",
+   "sourceLists": [
+    "awesome-oss-alternatives"
+   ],
+   "verified": false,
+   "release": "https://github.com/openreplay/openreplay/releases/tag/v1.28.0",
+   "screenshots": [
+    "https://raw.githubusercontent.com/openreplay/openreplay/HEAD/static/demo.gif"
+   ],
+   "platforms": [
+    "web",
+    "server"
+   ],
+   "thumbs": [
+    null
    ]
   },
   {
@@ -8870,12 +9896,18 @@
    "source": "starter",
    "verified": false,
    "release": "https://github.com/osmandapp/OsmAnd/releases/tag/2.0.0",
-   "screenshots": [],
+   "screenshots": [
+    "https://f-droid.org/repo/net.osmand.plus/en-US/phoneScreenshots/00.png",
+    "https://f-droid.org/repo/net.osmand.plus/en-US/phoneScreenshots/02.png"
+   ],
    "platforms": [
     "android",
     "ios"
    ],
-   "thumbs": []
+   "thumbs": [
+    null,
+    null
+   ]
   },
   {
    "id": "otomi",
@@ -8908,6 +9940,34 @@
    "thumbs": []
   },
   {
+   "id": "owncast",
+   "name": "Owncast",
+   "summary": "Owncast is a free program you run on your own server to broadcast live video and chat to your audience. It is for streamers who want to own their content, interface and moderation instead of using a big streaming site.",
+   "kind": "self_hosted",
+   "code": "github.com/owncast/owncast",
+   "website": "https://owncast.online",
+   "download": null,
+   "license": "MIT",
+   "licenseClass": "open",
+   "licenseNeedsCheck": false,
+   "stars": 11624,
+   "archived": false,
+   "inactive": false,
+   "unconfirmed": [
+    "Whether the Owncast project has any paid or differently licensed parts (open-core status) is not stated.",
+    "Whether a hosted or managed Owncast service exists is not stated."
+   ],
+   "source": "starter",
+   "verified": false,
+   "release": "https://github.com/owncast/owncast/releases/tag/v0.3.0",
+   "screenshots": [],
+   "platforms": [
+    "web",
+    "server"
+   ],
+   "thumbs": []
+  },
+  {
    "id": "owncloud",
    "name": "Owncloud",
    "summary": "ownCloud Core is the server part of ownCloud Classic, which stores, syncs and shares files. It is for people and organizations who want to run their own file storage on a server they control.",
@@ -8930,7 +9990,9 @@
    ],
    "verified": false,
    "release": "https://github.com/owncloud/core/releases/tag/v10.16.6",
-   "screenshots": [],
+   "screenshots": [
+    "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/8a/OwnCloud_sharing_in_the_web_interface_10.0.7.png/1280px-OwnCloud_sharing_in_the_web_interface_10.0.7.png"
+   ],
    "platforms": [
     "windows",
     "mac",
@@ -8940,7 +10002,9 @@
     "web",
     "server"
    ],
-   "thumbs": []
+   "thumbs": [
+    null
+   ]
   },
   {
    "id": "owncloud-infinite-scale",
@@ -9101,14 +10165,18 @@
    ],
    "verified": false,
    "release": "https://github.com/passbolt/passbolt_api/releases/tag/v5.17.0",
-   "screenshots": [],
+   "screenshots": [
+    "https://www.passbolt.com/cdn-cgi/image/width=1920/images/home/passbolt-hero.png"
+   ],
    "platforms": [
     "web",
     "android",
     "ios",
     "server"
    ],
-   "thumbs": []
+   "thumbs": [
+    null
+   ]
   },
   {
    "id": "payload",
@@ -9160,12 +10228,16 @@
    "source": "starter",
    "verified": false,
    "release": "https://github.com/pdfarranger/pdfarranger/releases/tag/1.14.0",
-   "screenshots": [],
+   "screenshots": [
+    "https://dl.flathub.org/media/com/github/jeromerobert.pdfarranger/e4ca6b0caccb8aa65fb40f5c22a3752c/screenshots/image-1_orig.png"
+   ],
    "platforms": [
     "windows",
     "linux"
    ],
-   "thumbs": []
+   "thumbs": [
+    null
+   ]
   },
   {
    "id": "peertube",
@@ -9695,6 +10767,111 @@
    ]
   },
   {
+   "id": "postal",
+   "name": "Postal",
+   "summary": "Postal is a mail server that websites use to send and receive email, such as signup confirmations and newsletters. It is for people who want to run their own email sending service on their own servers instead of paying a hosted provider.",
+   "kind": "self_hosted",
+   "code": "github.com/postalserver/postal",
+   "website": "https://postalserver.io",
+   "license": "MIT",
+   "licenseClass": "open",
+   "licenseNeedsCheck": false,
+   "stars": 16893,
+   "archived": false,
+   "inactive": false,
+   "unconfirmed": [
+    "Whether Postal has any paid or differently licensed parts (open core) is not stated in the material given.",
+    "The lists provided no descriptions for this project, so the summary relies on the README alone.",
+    "Specific features and supported email protocols beyond what the README says are not confirmed here."
+   ],
+   "source": "lists",
+   "sourceLists": [
+    "open-source-alternatives"
+   ],
+   "verified": false,
+   "release": "https://github.com/postalserver/postal/releases/tag/3.3.7",
+   "screenshots": [],
+   "platforms": [
+    "server"
+   ],
+   "thumbs": []
+  },
+  {
+   "id": "posthog",
+   "name": "PostHog",
+   "summary": "PostHog is a platform that collects and analyzes how people use a website or app, including analytics, session replays, error tracking, feature flags and surveys. It is aimed at product, engineering and analytics teams, and you can use the hosted cloud or run it on your own server.",
+   "kind": "self_hosted",
+   "code": "github.com/PostHog/posthog",
+   "website": "https://posthog.com",
+   "license": null,
+   "licenseClass": "open_core",
+   "licenseNeedsCheck": true,
+   "stars": 40447,
+   "archived": false,
+   "inactive": false,
+   "unconfirmed": [
+    "The ee/ directory is referenced in the license file but its contents and license text were not provided, so I cannot confirm which parts are paid or differently licensed.",
+    "The host reported the license as NOASSERTION, so the verdict relies on the project's own license file.",
+    "Whether 'Amptitude' is a real separate product or a misspelling of Amplitude.",
+    "Whether PostHog covers all of Mixpanel's or Amplitude's features, since the README only describes its own feature set.",
+    "Whether the 'Forms & surveys' group fits PostHog's surveys well, since PostHog's surveys are not described as general forms.",
+    "Pricing and free tier limits beyond what the README states."
+   ],
+   "source": "lists",
+   "sourceLists": [
+    "awesome-oss-alternatives",
+    "open-source-alternatives"
+   ],
+   "verified": false,
+   "release": "https://github.com/PostHog/posthog/releases/tag/desktop-v0.61.839",
+   "screenshots": [],
+   "platforms": [
+    "web",
+    "server"
+   ],
+   "thumbs": []
+  },
+  {
+   "id": "postiz",
+   "name": "Postiz",
+   "summary": "Postiz is a tool for planning and scheduling posts across social media accounts from one place, and for checking how those posts perform. It is for people and teams who manage social media, and it can be run on your own server or used as a hosted service.",
+   "kind": "self_hosted",
+   "code": "github.com/gitroomhq/postiz-app",
+   "website": "https://postiz.com",
+   "license": "AGPL-3.0",
+   "licenseClass": "open",
+   "licenseNeedsCheck": false,
+   "stars": 37865,
+   "archived": false,
+   "inactive": false,
+   "unconfirmed": [
+    "Which social platforms are supported is not listed in the material, beyond a logo strip with no names.",
+    "Whether the AI features and analytics work in the self-hosted edition without extra setup is only partly described."
+   ],
+   "source": "lists",
+   "sourceLists": [
+    "awesome-oss-alternatives"
+   ],
+   "verified": false,
+   "release": "https://github.com/gitroomhq/postiz-app/releases/tag/v2.25.3",
+   "screenshots": [
+    "https://github.com/user-attachments/assets/a27ee220-beb7-4c7e-8c1b-2c44301f82ef",
+    "https://github.com/user-attachments/assets/eb5f5f15-ed90-47fc-811c-03ccba6fa8a2",
+    "https://github.com/user-attachments/assets/d51786ee-ddd8-4ef8-8138-5192e9cfe7c3",
+    "https://github.com/user-attachments/assets/91f83c89-22f6-43d6-b7aa-d2d3378289fb"
+   ],
+   "platforms": [
+    "web",
+    "server"
+   ],
+   "thumbs": [
+    null,
+    null,
+    null,
+    null
+   ]
+  },
+  {
    "id": "postmarketos",
    "name": "postmarketOS",
    "summary": "postmarketOS is a Linux-based operating system for phones, built to keep older devices useful for many years. It is for tinkerers: on most phones, calls, the camera or mobile data do not fully work yet.",
@@ -9716,12 +10893,18 @@
    ],
    "source": "starter",
    "verified": false,
-   "screenshots": [],
+   "screenshots": [
+    "https://upload.wikimedia.org/wikipedia/commons/0/0f/PostmarketOS-With-Phosh.png",
+    "https://upload.wikimedia.org/wikipedia/commons/e/ee/Phosh_0.14.0.png"
+   ],
    "platforms": [
     "linux"
    ],
    "licenseSource": "https://gitlab.postmarketos.org/postmarketOS/pmbootstrap/-/raw/main/pmbootstrap.py",
-   "thumbs": []
+   "thumbs": [
+    null,
+    null
+   ]
   },
   {
    "id": "preset",
@@ -9896,6 +11079,34 @@
    ]
   },
   {
+   "id": "quackback",
+   "name": "Quackback",
+   "summary": "Quackback is a customer feedback tool where users post and vote on ideas, and companies plan and announce updates on a public roadmap and changelog. It also includes a support inbox and help center, and it can be hosted by the company itself or used through Quackback Cloud.",
+   "kind": "self_hosted",
+   "code": "github.com/QuackbackIO/quackback",
+   "website": "https://quackback.io",
+   "license": "AGPL-3.0",
+   "licenseClass": "open",
+   "licenseNeedsCheck": false,
+   "stars": 330,
+   "archived": false,
+   "inactive": false,
+   "unconfirmed": [
+    "Whether the 'analytics' group fits, since the README does not describe analytics beyond the AI and feedback features."
+   ],
+   "source": "lists",
+   "sourceLists": [
+    "awesome-foss-alternatives"
+   ],
+   "verified": false,
+   "release": "https://github.com/QuackbackIO/quackback/releases/tag/v0.14.1",
+   "screenshots": [],
+   "platforms": [
+    "server"
+   ],
+   "thumbs": []
+  },
+  {
    "id": "quant-ux",
    "name": "Quant-UX",
    "summary": "Quant-UX is a tool for designing, prototyping and testing app or website screens, and collecting data on how people use them. It is aimed at researchers, UX designers and product teams who want data-driven feedback on their designs.",
@@ -10050,13 +11261,21 @@
    "source": "starter",
    "verified": false,
    "release": "https://github.com/RawTherapee/RawTherapee/releases/tag/5.13",
-   "screenshots": [],
+   "screenshots": [
+    "https://dl.flathub.org/media/com/rawtherapee/RawTherapee/1690c20ece4741e6dcb2ed7346d3747e/screenshots/image-1_1248x702@1.png",
+    "https://dl.flathub.org/media/com/rawtherapee/RawTherapee/1690c20ece4741e6dcb2ed7346d3747e/screenshots/image-3_1248x702@1.png",
+    "https://dl.flathub.org/media/com/rawtherapee/RawTherapee/1690c20ece4741e6dcb2ed7346d3747e/screenshots/image-2_1248x702@1.png"
+   ],
    "platforms": [
     "windows",
     "mac",
     "linux"
    ],
-   "thumbs": []
+   "thumbs": [
+    null,
+    null,
+    null
+   ]
   },
   {
    "id": "redmine",
@@ -10194,7 +11413,9 @@
    "source": "starter",
    "verified": false,
    "release": "https://github.com/RocketChat/Rocket.Chat/releases/tag/8.9.0",
-   "screenshots": [],
+   "screenshots": [
+    "https://cdn.prod.website-files.com/611a19b9853b7414a0f6b3f6/6ac734dd72cf323a6f7be53c_platform-main.webp"
+   ],
    "platforms": [
     "windows",
     "mac",
@@ -10204,7 +11425,9 @@
     "web",
     "server"
    ],
-   "thumbs": []
+   "thumbs": [
+    null
+   ]
   },
   {
    "id": "roundcube",
@@ -10227,10 +11450,43 @@
    "source": "starter",
    "verified": false,
    "release": "https://github.com/roundcube/roundcubemail/releases/tag/1.7.5",
-   "screenshots": [],
+   "screenshots": [
+    "https://upload.wikimedia.org/wikipedia/commons/2/25/Roundcube_1.6.0_screenshot.png"
+   ],
    "platforms": [
     "web",
     "server"
+   ],
+   "thumbs": [
+    null
+   ]
+  },
+  {
+   "id": "rowy",
+   "name": "Rowy",
+   "summary": "Rowy is a spreadsheet-style interface for managing data stored in Google Cloud Firestore, with options to run automations. It is aimed at teams and developers who want to build simple internal tools without much coding.",
+   "kind": "developer_tool",
+   "code": "github.com/buildship-ai/rowy",
+   "website": "http://rowy.io",
+   "license": null,
+   "licenseClass": "open",
+   "licenseNeedsCheck": true,
+   "stars": 6843,
+   "archived": false,
+   "inactive": true,
+   "unconfirmed": [
+    "Whether the project is hosted by its own team as a service or only self-installed on the user's Google Cloud project is only partly stated; the README says it runs on the user's own GCP project.",
+    "The README does not explicitly name Airtable as a replaced product; the Airtable link comes from the community list and the README's tweet text."
+   ],
+   "source": "lists",
+   "sourceLists": [
+    "awesome-oss-alternatives"
+   ],
+   "verified": false,
+   "release": "https://github.com/buildship-ai/rowy/releases/tag/v3.0.0",
+   "screenshots": [],
+   "platforms": [
+    "web"
    ],
    "thumbs": []
   },
@@ -10326,13 +11582,19 @@
    "source": "starter",
    "verified": false,
    "release": null,
-   "screenshots": [],
+   "screenshots": [
+    "https://dl.flathub.org/media/net/scribus/Scribus/48ad39685c76efc094f785ce90f3743e/screenshots/image-2_orig.png",
+    "https://dl.flathub.org/media/net/scribus/Scribus/48ad39685c76efc094f785ce90f3743e/screenshots/image-1_orig.png"
+   ],
    "platforms": [
     "windows",
     "mac",
     "linux"
    ],
-   "thumbs": []
+   "thumbs": [
+    null,
+    null
+   ]
   },
   {
    "id": "seafile",
@@ -10355,7 +11617,9 @@
    "source": "starter",
    "verified": false,
    "release": "https://github.com/haiwen/seafile/releases/tag/v9.0.5",
-   "screenshots": [],
+   "screenshots": [
+    "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/7e/Seafile_web_interface.png/1280px-Seafile_web_interface.png"
+   ],
    "platforms": [
     "windows",
     "mac",
@@ -10365,7 +11629,9 @@
     "web",
     "server"
    ],
-   "thumbs": []
+   "thumbs": [
+    null
+   ]
   },
   {
    "id": "searxng",
@@ -10378,7 +11644,7 @@
    "license": "AGPL-3.0",
    "licenseClass": "open",
    "licenseNeedsCheck": false,
-   "stars": 38861,
+   "stars": 38862,
    "archived": false,
    "inactive": false,
    "unconfirmed": [
@@ -10388,13 +11654,17 @@
    "source": "starter",
    "verified": false,
    "release": null,
-   "screenshots": [],
+   "screenshots": [
+    "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/0a/SearXNG_Results_Page.png/1280px-SearXNG_Results_Page.png"
+   ],
    "platforms": [
     "linux",
     "web",
     "server"
    ],
-   "thumbs": []
+   "thumbs": [
+    null
+   ]
   },
   {
    "id": "semi",
@@ -10580,7 +11850,9 @@
    "source": "starter",
    "verified": false,
    "release": "https://github.com/signalapp/Signal-Android/releases/tag/v8.32.3",
-   "screenshots": [],
+   "screenshots": [
+    "https://dl.flathub.org/media/org/signal/Signal/c016aa3d4937d4b8de5bf549a10f7788/screenshots/image-1_orig.png"
+   ],
    "platforms": [
     "windows",
     "mac",
@@ -10588,7 +11860,9 @@
     "android",
     "ios"
    ],
-   "thumbs": []
+   "thumbs": [
+    null
+   ]
   },
   {
    "id": "signoz",
@@ -10845,11 +12119,19 @@
    "source": "starter",
    "verified": false,
    "release": "https://github.com/slidevjs/slidev/releases/tag/v53.0.0",
-   "screenshots": [],
+   "screenshots": [
+    "https://raw.githubusercontent.com/slidevjs/slidev/main/assets/screenshots/cover.png",
+    "https://raw.githubusercontent.com/slidevjs/slidev/main/assets/screenshots/presenter-mode.png",
+    "https://raw.githubusercontent.com/slidevjs/slidev/main/assets/screenshots/slides-overview.png"
+   ],
    "platforms": [
     "web"
    ],
-   "thumbs": []
+   "thumbs": [
+    null,
+    null,
+    null
+   ]
   },
   {
    "id": "snikket",
@@ -10875,13 +12157,17 @@
    ],
    "verified": false,
    "release": null,
-   "screenshots": [],
+   "screenshots": [
+    "https://snikket.org/images/demo-screenshot-2026.png"
+   ],
    "platforms": [
     "android",
     "ios",
     "server"
    ],
-   "thumbs": []
+   "thumbs": [
+    null
+   ]
   },
   {
    "id": "solidinvoice",
@@ -11473,7 +12759,7 @@
    "license": "MPL-2.0",
    "licenseClass": "open",
    "licenseNeedsCheck": false,
-   "stars": 89765,
+   "stars": 89766,
    "archived": false,
    "inactive": false,
    "unconfirmed": [
@@ -11483,13 +12769,17 @@
    "source": "starter",
    "verified": false,
    "release": "https://github.com/syncthing/syncthing/releases/tag/v2.1.7",
-   "screenshots": [],
+   "screenshots": [
+    "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/a7/Syncthing-screenshot-dark.png/1280px-Syncthing-screenshot-dark.png"
+   ],
    "platforms": [
     "windows",
     "mac",
     "linux"
    ],
-   "thumbs": []
+   "thumbs": [
+    null
+   ]
   },
   {
    "id": "tabby",
@@ -11569,12 +12859,16 @@
    "source": "starter",
    "verified": false,
    "release": null,
-   "screenshots": [],
+   "screenshots": [
+    "https://taiga.io/media/images/taiga1.width-800.png"
+   ],
    "platforms": [
     "web",
     "server"
    ],
-   "thumbs": []
+   "thumbs": [
+    null
+   ]
   },
   {
    "id": "tdengine",
@@ -11697,7 +12991,10 @@
    ],
    "source": "starter",
    "verified": false,
-   "screenshots": [],
+   "screenshots": [
+    "https://dl.flathub.org/media/org.mozilla.Thunderbird-stable/1504x846/org.mozilla.Thunderbird-6d680df8fa5a1a0c374882c019e09714.png",
+    "https://dl.flathub.org/media/org.mozilla.Thunderbird-stable/1504x846/org.mozilla.Thunderbird-70c1d7576c238e58e02e7ae0fcb7906b.png"
+   ],
    "platforms": [
     "windows",
     "mac",
@@ -11705,7 +13002,10 @@
     "android"
    ],
    "licenseSource": "https://raw.githubusercontent.com/mozilla/releases-comm-central/master/mail/base/content/mailWindow.js",
-   "thumbs": []
+   "thumbs": [
+    null,
+    null
+   ]
   },
   {
    "id": "tina",
@@ -11784,6 +13084,48 @@
     "assets/shots/tinode-1.webp",
     "assets/shots/tinode-2.webp",
     "assets/shots/tinode-3.webp"
+   ]
+  },
+  {
+   "id": "tolgee",
+   "name": "Tolgee",
+   "summary": "Tolgee is a web platform for translating software into other languages, where developers and translators work on the same texts. It is aimed at software teams who need to localize their apps.",
+   "kind": "self_hosted",
+   "code": "github.com/tolgee/tolgee-platform",
+   "website": "https://tolgee.io",
+   "license": null,
+   "licenseClass": "open",
+   "licenseNeedsCheck": true,
+   "stars": 4140,
+   "archived": false,
+   "inactive": false,
+   "unconfirmed": [
+    "Whether the ee/ directory's Tolgee EL license restricts use in ways that matter for the verdict; the ee/LICENSE text was not provided.",
+    "Whether a hosted cloud version has paid tiers beyond the self-hosted code.",
+    "Whether 'translation' is a suitable category; the existing Translation group covers only translating text, not software localization, so no group was assigned for localization.",
+    "Exact feature parity with each closed app is not stated in the material."
+   ],
+   "source": "lists",
+   "sourceLists": [
+    "awesome-oss-alternatives"
+   ],
+   "verified": false,
+   "release": "https://github.com/tolgee/tolgee-platform/releases/tag/v3.240.2",
+   "screenshots": [
+    "https://raw.githubusercontent.com/tolgee/tolgee-platform/HEAD/tolgee.gif",
+    "https://raw.githubusercontent.com/tolgee/tolgee-platform/HEAD/Tolgee-specs.gif",
+    "https://raw.githubusercontent.com/tolgee/tolgee-platform/HEAD/tolgee-app.gif",
+    "https://raw.githubusercontent.com/tolgee/tolgee-platform/HEAD/Tolgee-integration.gif"
+   ],
+   "platforms": [
+    "web",
+    "server"
+   ],
+   "thumbs": [
+    null,
+    null,
+    null,
+    null
    ]
   },
   {
@@ -11940,7 +13282,11 @@
    ],
    "verified": false,
    "release": "https://github.com/tutao/tutanota/releases/tag/tutanota-desktop-release-362.261023.2",
-   "screenshots": [],
+   "screenshots": [
+    "https://dl.flathub.org/media/com/tutanota/Tutanota/f871d554391c3d76dd0134c62f441960/screenshots/image-1_orig.png",
+    "https://dl.flathub.org/media/com/tutanota/Tutanota/f871d554391c3d76dd0134c62f441960/screenshots/image-2_orig.png",
+    "https://dl.flathub.org/media/com/tutanota/Tutanota/f871d554391c3d76dd0134c62f441960/screenshots/image-3_orig.png"
+   ],
    "platforms": [
     "windows",
     "mac",
@@ -11949,7 +13295,11 @@
     "ios",
     "web"
    ],
-   "thumbs": []
+   "thumbs": [
+    null,
+    null,
+    null
+   ]
   },
   {
    "id": "twenty",
@@ -12085,13 +13435,19 @@
    ],
    "source": "starter",
    "verified": false,
-   "screenshots": [],
+   "screenshots": [
+    "https://thumb.wikimedia.org/wikipedia/commons/thumb/f/f4/Ubuntu_25.04_Plucky_Puffin_Desktop_English.png/1280px-Ubuntu_25.04_Plucky_Puffin_Desktop_English.png",
+    "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/21/Ubuntu_25.04_default_desktop_-_English.png/1280px-Ubuntu_25.04_default_desktop_-_English.png"
+   ],
    "platforms": [
     "linux",
     "server"
    ],
    "licenseSource": "https://raw.githubusercontent.com/canonical/ubuntu-desktop-provision/main/LICENSE",
-   "thumbs": []
+   "thumbs": [
+    null,
+    null
+   ]
   },
   {
    "id": "ubuntu-touch",
@@ -12167,7 +13523,7 @@
    "license": "MIT",
    "licenseClass": "open",
    "licenseNeedsCheck": false,
-   "stars": 39700,
+   "stars": 39701,
    "archived": false,
    "inactive": false,
    "unconfirmed": [
@@ -12208,13 +13564,19 @@
    "source": "starter",
    "verified": false,
    "release": "https://github.com/ungoogled-software/ungoogled-chromium/releases/tag/156.0.8078.47-1",
-   "screenshots": [],
+   "screenshots": [
+    "https://dl.flathub.org/media/io/github/ungoogled_software.ungoogled_chromium/129983f9be628370a143898fdd4104b3/screenshots/image-1_1248x674@1.png",
+    "https://dl.flathub.org/media/io/github/ungoogled_software.ungoogled_chromium/129983f9be628370a143898fdd4104b3/screenshots/image-2_1248x719@1.png"
+   ],
    "platforms": [
     "windows",
     "mac",
     "linux"
    ],
-   "thumbs": []
+   "thumbs": [
+    null,
+    null
+   ]
   },
   {
    "id": "unleash",
@@ -12497,7 +13859,10 @@
    "source": "starter",
    "verified": false,
    "release": "https://github.com/go-vikunja/vikunja/releases/tag/v2.7.1",
-   "screenshots": [],
+   "screenshots": [
+    "https://vikunja.io/_astro/02-task-list.CTo2oooO_Z8aziL.png",
+    "https://vikunja.io/_astro/03-task-gantt.Dgr0fl3Z_1TJksQ.png"
+   ],
    "platforms": [
     "windows",
     "mac",
@@ -12505,7 +13870,10 @@
     "android",
     "server"
    ],
-   "thumbs": []
+   "thumbs": [
+    null,
+    null
+   ]
   },
   {
    "id": "wallabag",
@@ -12793,11 +14161,17 @@
    "source": "starter",
    "verified": false,
    "release": null,
-   "screenshots": [],
+   "screenshots": [
+    "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/e0/WordPress_7.0_Dashboard.png/1280px-WordPress_7.0_Dashboard.png",
+    "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/23/WordPress_6.4_Dashboard.png/1280px-WordPress_6.4_Dashboard.png"
+   ],
    "platforms": [
     "server"
    ],
-   "thumbs": []
+   "thumbs": [
+    null,
+    null
+   ]
   },
   {
    "id": "writefreely",
@@ -13159,7 +14533,7 @@
    "license": "MPL-2.0",
    "licenseClass": "open",
    "licenseNeedsCheck": false,
-   "stars": 45303,
+   "stars": 45304,
    "archived": false,
    "inactive": false,
    "unconfirmed": [
@@ -13170,13 +14544,19 @@
    "source": "starter",
    "verified": false,
    "release": "https://github.com/zen-browser/desktop/releases/tag/1.23.4b",
-   "screenshots": [],
+   "screenshots": [
+    "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/cd/Zen_Browser-1.10.3b_on_Linux-Debian.png/1280px-Zen_Browser-1.10.3b_on_Linux-Debian.png",
+    "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/ed/Captura_de_pantalla_Zen_Browser_en_Wikipedia_en_espa%C3%B1ol_2025-09-10.png/1280px-Captura_de_pantalla_Zen_Browser_en_Wikipedia_en_espa%C3%B1ol_2025-09-10.png"
+   ],
    "platforms": [
     "windows",
     "mac",
     "linux"
    ],
-   "thumbs": []
+   "thumbs": [
+    null,
+    null
+   ]
   },
   {
    "id": "zettlr",
@@ -13309,7 +14689,10 @@
    "source": "starter",
    "verified": false,
    "release": "https://github.com/zulip/zulip/releases/tag/12.3",
-   "screenshots": [],
+   "screenshots": [
+    "https://raw.githubusercontent.com/zulip/zulip/main/static/images/landing-page/hello/original/screen-1.png",
+    "https://raw.githubusercontent.com/zulip/zulip/main/static/images/landing-page/hello/original/screen-2.png"
+   ],
    "platforms": [
     "windows",
     "mac",
@@ -13319,7 +14702,10 @@
     "web",
     "server"
    ],
-   "thumbs": []
+   "thumbs": [
+    null,
+    null
+   ]
   }
  ]
 }

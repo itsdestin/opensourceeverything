@@ -56,7 +56,8 @@ async function shotsFor(p) {
     const path = code.slice(11);
     candidates = readmeImages(await text(`https://gitlab.com/${path}/-/raw/HEAD/README.md`), `https://gitlab.com/${path}/-/raw/HEAD/`);
   }
-  candidates = [...new Set(candidates)].filter((u) => !NOT_UI.test(u) && (IMG_EXT.test(u) || /user-images|user-attachments|githubusercontent\.com\/.*\/assets\//.test(u)));
+  // WHY no "token=": some READMEs link pictures through signed addresses; saving those would publish a credential.
+  candidates = [...new Set(candidates)].filter((u) => !NOT_UI.test(u) && !/[?&]token=/i.test(u) && (IMG_EXT.test(u) || /user-images|user-attachments|githubusercontent\.com\/.*\/assets\//.test(u)));
   // WHY up to 8 and no size test: prefill/check-screenshots.mjs looks at each picture and keeps real interface shots.
   const out = candidates.slice(0, 8);
   if (p.website) {

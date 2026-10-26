@@ -39,6 +39,13 @@ for (const g of merged.groups) {
   for (const m of g.merges) proposalToGroup.set(m, id);
 }
 
+// Hand placements (prefill/placements.json) for projects the import couldn't sort: new groups and extra closed apps
+// let them match, aliases fix list spellings ("AirTable"), and skip leaves some out on purpose.
+const placements = existsSync(join(HERE, 'placements.json')) ? read(join(HERE, 'placements.json')) : { newGroups: [], addClosed: {}, aliases: {}, skip: {} };
+for (const g of placements.newGroups) if (!groups.has(g.id)) groups.set(g.id, { ...g, closed: [...g.closed], source: 'placement', alternatives: [] });
+for (const [gid, apps] of Object.entries(placements.addClosed)) for (const a of apps) if (groups.has(gid) && !groups.get(gid).closed.includes(a)) groups.get(gid).closed.push(a);
+const alias = (s) => placements.aliases[s] ?? s;
+
 // ── Projects ──
 const projects = new Map();
 function addProject(p) {
@@ -79,9 +86,10 @@ for (const r of tail) {
   const good = a.replaces.filter((x) => x.fit !== 'no');
   if (!good.length) { drop.wrongOnly++; continue; }
   if (f.archived) { drop.archived++; continue; }
+  if (placements.skip[r.name]) { drop.skipped = (drop.skipped ?? 0) + 1; continue; }
   // WHY the closed-app match (found Oct 27: a notification tool landed under LinkedIn): an AI-chosen starter group
   // only counts if one of the closed apps this project really replaces is one that group covers.
-  const covers = (gid) => groups.get(gid).closed.some((c) => good.some((x) => key(x.closedApp) === key(c)));
+  const covers = (gid) => groups.get(gid).closed.some((c) => good.some((x) => key(alias(x.closedApp)) === key(c)));
   // Plus: any group (starter or merged) whose closed apps include one this project replaces.
   const byClosed = [...groups.keys()].filter(covers);
   const gids = [...new Set([...byClosed, ...a.groups.filter((g) => groups.has(g) && groups.get(g).source === 'starter' && covers(g)), ...(a.newGroup && proposalToGroup.has(a.newGroup) ? [proposalToGroup.get(a.newGroup)] : [])])];
@@ -166,6 +174,9 @@ for (const [id, f] of Object.entries(optional(join(HERE, 'license-fixes.json'))?
   if (f.verdict === 'open' || f.verdict === 'open_core') { p.license = f.license; p.licenseClass = f.verdict; p.licenseSource = f.evidence; }
 }
 for (const p of projects.values()) if (confirmed.has(p.id)) p.licenseNeedsCheck = false;
+// Verified tags: chosen by r/TrueOpenSource mods (data/verified.json): open-source license, maintained, really does the job.
+const verifiedIds = new Set(optional(join(ROOT, 'data/verified.json'))?.projects ?? []);
+for (const p of projects.values()) p.verified = verifiedIds.has(p.id);
 
 // Screenshots picked by hand from official sources (Flathub, project sites, Wikimedia Commons) for projects with none.
 for (const [id, urls] of Object.entries(optional(join(HERE, 'screenshot-fixes.json'))?.fixes ?? {})) {

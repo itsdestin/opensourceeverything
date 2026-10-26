@@ -136,7 +136,8 @@
     "Evernote",
     "Microsoft OneNote",
     "Obsidian",
-    "Google Keep"
+    "Google Keep",
+    "Roam Research"
    ],
    "source": "starter",
    "alternatives": [
@@ -421,7 +422,8 @@
    "closed": [
     "Google Calendar",
     "Calendly",
-    "Outlook Calendar"
+    "Outlook Calendar",
+    "Doodle"
    ],
    "source": "starter",
    "alternatives": [
@@ -457,6 +459,11 @@
      "project": "etar-calendar",
      "fit": "partial",
      "note": "Android only"
+    },
+    {
+     "project": "nextcloud-polls",
+     "fit": "partial",
+     "note": "Only for picking a date together, like Doodle"
     },
     {
      "project": "tymeslot",
@@ -584,6 +591,33 @@
       "by": "claude-opus-5-5",
       "reason": "Changed fit to full: it covers DocuSign's main job of sending documents to internal and external signers, setting signing order, sending reminders, and tracking and validating signatures, all self-hosted on Nextcloud."
      }
+    }
+   ]
+  },
+  {
+   "id": "database-apps",
+   "name": "Database apps",
+   "category": "office",
+   "job": "Building simple databases and tables, like a spreadsheet with more structure",
+   "closed": [
+    "Airtable"
+   ],
+   "source": "placement",
+   "alternatives": [
+    {
+     "project": "apitable",
+     "fit": "full",
+     "note": null
+    },
+    {
+     "project": "baserow",
+     "fit": "full",
+     "note": null
+    },
+    {
+     "project": "rowy",
+     "fit": "partial",
+     "note": null
     }
    ]
   },
@@ -997,6 +1031,29 @@
    ]
   },
   {
+   "id": "social-scheduling",
+   "name": "Social media scheduling",
+   "category": "social",
+   "job": "Planning and scheduling posts across social networks",
+   "closed": [
+    "Buffer",
+    "Hootsuite"
+   ],
+   "source": "placement",
+   "alternatives": [
+    {
+     "project": "openpost",
+     "fit": "full",
+     "note": null
+    },
+    {
+     "project": "postiz",
+     "fit": "full",
+     "note": null
+    }
+   ]
+  },
+  {
    "id": "photo-editing",
    "name": "Photo editing",
    "category": "creative",
@@ -1174,7 +1231,8 @@
     "Adobe Premiere Pro",
     "Final Cut Pro",
     "CapCut",
-    "DaVinci Resolve"
+    "DaVinci Resolve",
+    "Vegas Pro"
    ],
    "source": "starter",
    "alternatives": [
@@ -1196,6 +1254,11 @@
       "by": "claude-opus-5-5",
       "reason": "Rewrote the description to say it is open source and to drop the unsupported \"simple but capable\" judgment."
      }
+    },
+    {
+     "project": "losslesscut",
+     "fit": "partial",
+     "note": null
     },
     {
      "project": "opencut",
@@ -1740,10 +1803,16 @@
    "closed": [
     "Plextrac",
     "Vulcan",
-    "Tenable Nessus"
+    "Tenable Nessus",
+    "Prisma Cloud"
    ],
    "source": "lists",
    "alternatives": [
+    {
+     "project": "deepfence-threatmapper",
+     "fit": "partial",
+     "note": null
+    },
     {
      "project": "faraday",
      "fit": "partial",
@@ -2223,6 +2292,39 @@
      "project": "audiobookshelf",
      "fit": "full",
      "note": "Your own audiobooks"
+    },
+    {
+     "project": "inventaire",
+     "fit": "partial",
+     "note": null
+    },
+    {
+     "project": "open-library",
+     "fit": "partial",
+     "note": null
+    }
+   ]
+  },
+  {
+   "id": "live-streaming",
+   "name": "Live streaming",
+   "category": "media",
+   "job": "Streaming live video to an audience",
+   "closed": [
+    "Twitch",
+    "YouTube Live"
+   ],
+   "source": "starter",
+   "alternatives": [
+    {
+     "project": "owncast",
+     "fit": "full",
+     "note": "You run it yourself"
+    },
+    {
+     "project": "peertube",
+     "fit": "partial",
+     "note": "Live streams are part of a video site"
     }
    ]
   },
@@ -2280,6 +2382,30 @@
       "by": "claude-opus-5-5",
       "reason": "Changed fit to partial because wallabag replaces read-it-later apps like Pocket but does not follow sites or feeds like Feedly or Inoreader."
      }
+    }
+   ]
+  },
+  {
+   "id": "phone-gallery",
+   "name": "Phone photo gallery",
+   "category": "media",
+   "job": "Browsing the photos and videos on your phone",
+   "closed": [
+    "Samsung Gallery",
+    "Xiaomi Gallery",
+    "Huawei Gallery"
+   ],
+   "source": "placement",
+   "alternatives": [
+    {
+     "project": "aves",
+     "fit": "partial",
+     "note": null
+    },
+    {
+     "project": "fossify-gallery",
+     "fit": "partial",
+     "note": null
     }
    ]
   },
@@ -2456,6 +2582,36 @@
     {
      "project": "home-assistant",
      "fit": "full",
+     "note": null
+    }
+   ]
+  },
+  {
+   "id": "budgeting",
+   "name": "Budgeting & personal finance",
+   "category": "everyday",
+   "job": "Tracking spending, budgets and savings",
+   "closed": [
+    "YNAB",
+    "Monarch Money",
+    "Quicken",
+    "Empower Personal Wealth"
+   ],
+   "source": "starter",
+   "alternatives": [
+    {
+     "project": "actual-budget",
+     "fit": "full",
+     "note": null
+    },
+    {
+     "project": "firefly-iii",
+     "fit": "full",
+     "note": "You run it yourself"
+    },
+    {
+     "project": "ghostfolio",
+     "fit": "partial",
      "note": null
     }
    ]
@@ -3621,6 +3777,101 @@
    ]
   },
   {
+   "id": "email-sending",
+   "name": "Email sending for apps",
+   "category": "dev",
+   "job": "Sending an app's own emails, like sign-ups and password resets",
+   "closed": [
+    "Mailgun",
+    "SendGrid"
+   ],
+   "source": "placement",
+   "alternatives": [
+    {
+     "project": "postal",
+     "fit": "full",
+     "note": null
+    }
+   ]
+  },
+  {
+   "id": "product-analytics",
+   "name": "Product analytics & session replay",
+   "category": "dev",
+   "job": "Seeing how people use your app or website, step by step",
+   "closed": [
+    "Mixpanel",
+    "Amplitude",
+    "FullStory",
+    "LogRocket"
+   ],
+   "source": "placement",
+   "alternatives": [
+    {
+     "project": "highlight",
+     "fit": "partial",
+     "note": null
+    },
+    {
+     "project": "openreplay",
+     "fit": "full",
+     "note": null
+    },
+    {
+     "project": "posthog",
+     "fit": "full",
+     "note": null
+    },
+    {
+     "project": "trench",
+     "fit": "partial",
+     "note": null
+    }
+   ]
+  },
+  {
+   "id": "push-notifications",
+   "name": "Push notifications",
+   "category": "dev",
+   "job": "Sending notifications to people's phones and computers",
+   "closed": [
+    "OneSignal"
+   ],
+   "source": "placement",
+   "alternatives": [
+    {
+     "project": "apprise",
+     "fit": "partial",
+     "note": null
+    },
+    {
+     "project": "ntfy",
+     "fit": "partial",
+     "note": null
+    }
+   ]
+  },
+  {
+   "id": "translation-management",
+   "name": "Translation management",
+   "category": "dev",
+   "job": "Translating an app or website into other languages, as a team",
+   "closed": [
+    "Lokalise",
+    "Crowdin",
+    "Transifex",
+    "POEditor"
+   ],
+   "source": "placement",
+   "alternatives": [
+    {
+     "project": "tolgee",
+     "fit": "full",
+     "note": null
+    }
+   ]
+  },
+  {
    "id": "bi",
    "name": "Business dashboards & reports",
    "category": "business",
@@ -3788,7 +4039,9 @@
    "job": "Send invoices and get paid",
    "closed": [
     "FreshBooks",
-    "QuickBooks"
+    "QuickBooks",
+    "Chargebee",
+    "Stripe Billing"
    ],
    "source": "lists",
    "alternatives": [
@@ -3800,6 +4053,11 @@
       "by": "claude-opus-5-5",
       "reason": "Changed fit to full because Crater covers invoices, estimates, recurring billing, a customer portal and Stripe payments, which is the group's main job."
      }
+    },
+    {
+     "project": "lago",
+     "fit": "partial",
+     "note": "Billing for subscriptions and usage, not invoices"
     },
     {
      "project": "solidinvoice",
@@ -3919,6 +4177,47 @@
       "by": "claude-opus-5-5",
       "reason": "Changed fit to full because Posnic covers the main point-of-sale job, including billing, barcode scanning, returns, stock, receipt printers, cash drawers and sales reports."
      }
+    }
+   ]
+  },
+  {
+   "id": "newsletters",
+   "name": "Newsletters & email marketing",
+   "category": "business",
+   "job": "Sending newsletters and marketing emails to a mailing list",
+   "closed": [
+    "Mailchimp",
+    "Brevo",
+    "ConvertKit"
+   ],
+   "source": "placement",
+   "alternatives": [
+    {
+     "project": "keila",
+     "fit": "full",
+     "note": null
+    },
+    {
+     "project": "listmonk",
+     "fit": "partial",
+     "note": null
+    }
+   ]
+  },
+  {
+   "id": "feedback-boards",
+   "name": "Feedback & feature requests",
+   "category": "business",
+   "job": "Collecting ideas and votes from customers on what to build next",
+   "closed": [
+    "Canny"
+   ],
+   "source": "placement",
+   "alternatives": [
+    {
+     "project": "quackback",
+     "fit": "full",
+     "note": null
     }
    ]
   }

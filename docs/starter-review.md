@@ -3,7 +3,7 @@
 Drafted Oct 27, 2026, then every link checked automatically (2026-10-26).
 ✅ open-source license confirmed · ⚠️ needs a person to check the license · ❌ problem · 🔍 not on a host we can read; check by hand · 🗄️ archived · 💤 quiet for a year
 
-**10 categories, 59 groups, 141 closed apps, 196 listings.** 154 confirmed open source, 10 need a license check, 32 to check by hand, 0 problems.
+**10 categories, 61 groups, 147 closed apps, 200 listings.** 158 confirmed open source, 10 need a license check, 32 to check by hand, 0 problems.
 
 "Full" = replaces the main job; "partly" = covers part of it.
 
@@ -476,6 +476,14 @@ No open alternative yet. **A gap.**
 | KOReader | Full | ✅ AGPL-3.0 | E-reader app |
 | Audiobookshelf | Full | ✅ GPL-3.0 | Your own audiobooks |
 
+### Live streaming
+*Streaming live video to an audience.* Replaces: Twitch, YouTube Live
+
+| Alternative | Fit | Check | Note |
+|---|---|---|---|
+| Owncast | Full | ✅ MIT | You run it yourself |
+| PeerTube | Partly | ✅ AGPL-3.0 | Live streams are part of a video site |
+
 ## Files & cloud
 
 ### Cloud storage & sync
@@ -529,6 +537,14 @@ No open alternative yet. **A gap.**
 | Alternative | Fit | Check | Note |
 |---|---|---|---|
 | Home Assistant | Full | ✅ Apache-2.0 |  |
+
+### Budgeting & personal finance
+*Tracking spending, budgets and savings.* Replaces: YNAB, Monarch Money, Quicken, Empower Personal Wealth
+
+| Alternative | Fit | Check | Note |
+|---|---|---|---|
+| Actual Budget | Full | ✅ MIT |  |
+| Firefly III | Full | ✅ AGPL-3.0 | You run it yourself |
 
 ## Developer & business
 
