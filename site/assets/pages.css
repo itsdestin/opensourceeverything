@@ -1,0 +1,55 @@
+/* Styles for the home, category, about and credits pages (site.css holds everything shared). */
+
+/* WHY hide the top strip on the home page: its hero card already has the home button and the search box;
+   a strip with only a lone icon would be an empty row (Destin, Oct 27: no dead space). */
+body:has(.hero2) > .top { display:none; }
+body:has(.hero2) .page { padding-top:16px; }
+
+/* Links that look like cards, chips and buttons don't get link colours or underlines. */
+a.card, a.fchip, a.footchip, a.btn, .catcard h3 a { color:inherit; text-decoration:none; }
+a.fchip { color:var(--fg-2); }
+a.card:focus-visible, a.fchip:focus-visible, a.btn:focus-visible { outline:2px solid var(--accent); outline-offset:2px; }
+.catcard h3 a:hover { text-decoration:underline; }
+
+.avatar.brand { color:var(--fg-2); }
+.hero2 .stats { padding-left:40px; }
+
+/* WHY flex with growing cards, not the grid: the last line's cards stretch to fill it, so a row never ends in an empty gap. */
+.row1.fill { display:flex; flex-wrap:wrap; gap:12px; }
+.row1.fill > .card { flex:1 1 280px; }
+.gcard { gap:8px; }
+/* WHY wrap: a group name beside its status pill would otherwise be cut off ("Professional netwo…"). */
+.gcard h3 { white-space:normal; }
+.gcard .job { min-height:0; }
+
+/* About page */
+.prose p, .prose ul { margin:0; }
+.prose a:not(.btn) { color:var(--link, var(--accent)); }
+.prose .list { padding-left:20px; display:flex; flex-direction:column; gap:8px; line-height:1.6; }
+.defs { display:grid; grid-template-columns:repeat(auto-fit,minmax(220px,1fr)); gap:8px; }
+.defs .lvl1 { padding:12px; display:flex; flex-direction:column; gap:4px; }
+.defs h3 { font-size:14px; font-weight:500; margin:0; }
+.pop .muted11 { white-space:nowrap; }
+/* WHY one line: text on the left and its buttons on the right, so neither sits alone above empty space. */
+.textrow { display:flex; align-items:center; justify-content:space-between; gap:16px; flex-wrap:wrap; }
+.textrow > div:first-child, .textrow > p { flex:1 1 360px; min-width:0; }
+.btns-row { display:flex; gap:8px; flex-wrap:wrap; justify-content:flex-end; }
+.identity .btns-row { justify-content:flex-start; }
+section[id] { scroll-margin-top:16px; }
+
+/* Credits table */
+.tablewrap { padding:4px 12px; overflow-x:auto; }
+table.credits { width:100%; border-collapse:collapse; font-size:14px; }
+table.credits th { text-align:left; font-size:12px; font-weight:500; color:var(--fg-muted); padding:8px 4px; }
+table.credits td { padding:8px 4px; border-top:1px solid var(--edge-dim); color:var(--fg-2); }
+table.credits a { color:var(--fg); }
+
+@media (max-width:640px) {
+  .hero2 .stats { padding-left:0; }
+  .row1.fill { flex-wrap:nowrap; overflow-x:auto; scrollbar-width:none; padding:8px 4px 16px; margin:-8px -4px -16px; }
+  .row1.fill > .card { flex:0 0 260px; }
+  /* WHY: on a category page the groups are the page itself, so on phones they stack instead of scrolling sideways. */
+  .row1.fill.list { flex-wrap:wrap; overflow:visible; padding:0; margin:0; }
+  .row1.fill.list > .card { flex:1 1 100%; }
+  .btns-row { flex-direction:column-reverse; } .btns-row .btn { width:100%; }
+}

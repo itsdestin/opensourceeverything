@@ -314,3 +314,6 @@ select.field { appearance:auto; }
   .cats { columns:1; }
   .builders .btns { width:100%; flex-direction:column-reverse; } .builders .btns .btn { width:100%; }
 }
+
+/* Footer chips are links on the real site; keep them looking like chips. */
+a.footchip { text-decoration:none; display:inline-block; }
