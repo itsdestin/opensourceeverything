@@ -1,22 +1,27 @@
 // One page per group (g/<id>/): the job, the closed apps it replaces, and its open alternatives.
 // Ported from mockups/group-page.html. Votes, comments, "still missing", suggest and report need the server,
 // so they only appear once API_URL is set (see lib.mjs).
-import { esc, url, ICON, SITE_URL, API_URL, KIND, factChips, statusPill, hostOf, outLinks, codeUrl } from '../lib.mjs';
+import { esc, url, ICON, SITE_URL, API_URL, KIND, factChips, statusPill, hostOf, actions, codeUrl } from '../lib.mjs';
 
 const hostLabel = (p) => ({ 'github.com': 'GitHub', 'gitlab.com': 'GitLab', 'codeberg.org': 'Codeberg' }[hostOf(p)] ?? 'Own website');
 
 function altCard(p, alt, i) {
   const foot = [KIND[p.kind], hostLabel(p), alt.note].filter(Boolean).join(' · ');
-  // WHY data-* sort keys: the sort dropdown reorders these cards in the browser without rebuilding them.
-  // WHY a stretched title link instead of a link wrapping the card: the card also holds its own outside links
-  // (Download, Website, Source code), and links can't sit inside links.
-  const links = outLinks(p).map((l) => `<a class="btn sm secondary" href="${esc(l.href)}" rel="noopener">${l.label}</a>`).join('');
-  return `<div class="card" data-fit="${alt.fit}" data-stars="${p.stars ?? 0}" data-name="${esc(p.name.toLowerCase())}" data-order="${i}">
-      <div class="head"><h3><a class="cardlink" href="${url(`p/${p.id}/`)}">${esc(p.name)}</a></h3><div class="corner" style="margin-right:0">${statusPill(p)}</div></div>
-      <div class="chiprow">${factChips(p, alt)}</div>
-      <p class="blurb">${esc(p.summary)}</p>
-      <div class="foot">${esc(foot)}</div>
-      ${links ? `<div class="outlinks">${links}</div>` : ''}
+  const acts = actions(p);
+  const shot = p.screenshots?.[0];
+  // WHY this layout (Destin chose option B, Oct 27): a screenshot on every card, framed like the app's
+  // Marketplace theme previews, and one "Actions" menu instead of a row of buttons.
+  // WHY a stretched title link: the card also holds the Actions menu, and links can't sit inside links.
+  return `<div class="card pic" data-fit="${alt.fit}" data-stars="${p.stars ?? 0}" data-name="${esc(p.name.toLowerCase())}" data-order="${i}">
+      ${shot ? `<div class="preview"><img src="${esc(shot)}" alt="${esc(p.name)} screenshot" loading="lazy" referrerpolicy="no-referrer"></div>` : '<div class="preview empty">No screenshot yet</div>'}
+      <div class="inner">
+        <div class="head"><h3><a class="cardlink" href="${url(`p/${p.id}/`)}">${esc(p.name)}</a></h3><div class="corner" style="margin-right:0">${statusPill(p)}</div></div>
+        <div class="chiprow">${factChips(p, alt)}</div>
+        <p class="blurb">${esc(p.summary)}</p>
+        <div class="foot">${esc(foot)}</div>
+        ${acts.length ? `<div class="dd actions"><button class="btn sm secondary" type="button" data-menu="act-${esc(p.id)}" aria-haspopup="menu" aria-expanded="false">Actions ${ICON.chev}</button>
+          <div class="menu left" id="act-${esc(p.id)}" role="menu">${acts.map((l) => `<a class="mi" role="menuitem" href="${esc(l.href)}" rel="noopener">${l.label}</a>`).join('')}<a class="mi" role="menuitem" href="${url(`p/${p.id}/`)}">See full details</a></div></div>` : ''}
+      </div>
     </div>`;
 }
 

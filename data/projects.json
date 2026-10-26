@@ -23,7 +23,8 @@
     "Which app store and bundled apps are open source"
    ],
    "source": "starter",
-   "verified": false
+   "verified": false,
+   "screenshots": []
   },
   {
    "id": "2fas",
@@ -47,7 +48,8 @@
    ],
    "source": "starter",
    "verified": false,
-   "release": "https://github.com/twofas/2fas-android/releases/tag/6.1.0"
+   "release": "https://github.com/twofas/2fas-android/releases/tag/6.1.0",
+   "screenshots": []
   },
   {
    "id": "abilian-hop3",
@@ -73,7 +75,8 @@
     "awesome-foss-alternatives"
    ],
    "verified": false,
-   "release": null
+   "release": null,
+   "screenshots": []
   },
   {
    "id": "abilian-nua",
@@ -100,7 +103,8 @@
     "awesome-foss-alternatives"
    ],
    "verified": false,
-   "release": null
+   "release": null,
+   "screenshots": []
   },
   {
    "id": "accrescent",
@@ -125,7 +129,8 @@
     "awesome-privacy"
    ],
    "verified": false,
-   "release": "https://github.com/accrescent/accrescent/releases/tag/0.28.1"
+   "release": "https://github.com/accrescent/accrescent/releases/tag/0.28.1",
+   "screenshots": []
   },
   {
    "id": "acebase",
@@ -150,7 +155,8 @@
     "awesome-oss-alternatives"
    ],
    "verified": false,
-   "release": "https://github.com/appy-one/acebase/releases/tag/v1.29.13"
+   "release": "https://github.com/appy-one/acebase/releases/tag/v1.29.13",
+   "screenshots": []
   },
   {
    "id": "activepieces",
@@ -173,7 +179,10 @@
    ],
    "source": "starter",
    "verified": false,
-   "release": "https://github.com/activepieces/activepieces/releases/tag/0.92.3-hotfix.1"
+   "release": "https://github.com/activepieces/activepieces/releases/tag/0.92.3-hotfix.1",
+   "screenshots": [
+    "https://raw.githubusercontent.com/activepieces/activepieces/HEAD/docs/resources/templates.gif"
+   ]
   },
   {
    "id": "aegis",
@@ -195,7 +204,11 @@
    ],
    "source": "starter",
    "verified": false,
-   "release": "https://github.com/beemdevelopment/Aegis/releases/tag/v3.4.3"
+   "release": "https://github.com/beemdevelopment/Aegis/releases/tag/v3.4.3",
+   "screenshots": [
+    "https://raw.githubusercontent.com/beemdevelopment/Aegis/HEAD/metadata/en-US/images/phoneScreenshots/screenshot6.png?raw=true",
+    "https://raw.githubusercontent.com/beemdevelopment/Aegis/HEAD/metadata/en-US/images/phoneScreenshots/screenshot8.png?raw=true"
+   ]
   },
   {
    "id": "affine",
@@ -220,7 +233,10 @@
    ],
    "source": "starter",
    "verified": false,
-   "release": "https://github.com/toeverything/AFFiNE/releases/tag/v0.27.4"
+   "release": "https://github.com/toeverything/AFFiNE/releases/tag/v0.27.4",
+   "screenshots": [
+    "https://user-images.githubusercontent.com/79301703/230891830-0110681e-8c7e-483b-b6d9-9e42b291b9ef.gif"
+   ]
   },
   {
    "id": "aider",
@@ -243,7 +259,8 @@
    ],
    "source": "starter",
    "verified": false,
-   "release": "https://github.com/Aider-AI/aider/releases/tag/v0.86.0"
+   "release": "https://github.com/Aider-AI/aider/releases/tag/v0.86.0",
+   "screenshots": []
   },
   {
    "id": "aliasvault",
@@ -268,7 +285,10 @@
     "awesome-privacy"
    ],
    "verified": false,
-   "release": "https://github.com/aliasvault/aliasvault/releases/tag/0.31.1"
+   "release": "https://github.com/aliasvault/aliasvault/releases/tag/0.31.1",
+   "screenshots": [
+    "https://github.com/user-attachments/assets/fa5bf64a-704d-4f09-b4e0-0310ab662204"
+   ]
   },
   {
    "id": "alovoa",
@@ -293,7 +313,8 @@
     "awesome-privacy"
    ],
    "verified": false,
-   "release": "https://github.com/Alovoa/alovoa/releases/tag/v2.0.0"
+   "release": "https://github.com/Alovoa/alovoa/releases/tag/v2.0.0",
+   "screenshots": []
   },
   {
    "id": "antennapod",
@@ -315,7 +336,13 @@
    ],
    "source": "starter",
    "verified": false,
-   "release": "https://github.com/AntennaPod/AntennaPod/releases/tag/3.12.3"
+   "release": "https://github.com/AntennaPod/AntennaPod/releases/tag/3.12.3",
+   "screenshots": [
+    "https://raw.githubusercontent.com/AntennaPod/StoreMetadata/main/listings/en-US/graphics/phone-screenshots/00.png",
+    "https://raw.githubusercontent.com/AntennaPod/StoreMetadata/main/listings/en-US/graphics/phone-screenshots/01.png",
+    "https://raw.githubusercontent.com/AntennaPod/StoreMetadata/main/listings/en-US/graphics/phone-screenshots/02.png",
+    "https://raw.githubusercontent.com/AntennaPod/StoreMetadata/main/listings/en-US/graphics/phone-screenshots/04.png"
+   ]
   },
   {
    "id": "anysoftkeyboard",
@@ -339,7 +366,8 @@
     "awesome-privacy"
    ],
    "verified": false,
-   "release": "https://github.com/AnySoftKeyboard/AnySoftKeyboard/releases/tag/1.13-r2"
+   "release": "https://github.com/AnySoftKeyboard/AnySoftKeyboard/releases/tag/1.13-r2",
+   "screenshots": []
   },
   {
    "id": "apache-apisix",
@@ -363,7 +391,8 @@
     "awesome-oss-alternatives"
    ],
    "verified": false,
-   "release": "https://github.com/apache/apisix/releases/tag/3.19.0"
+   "release": "https://github.com/apache/apisix/releases/tag/3.19.0",
+   "screenshots": []
   },
   {
    "id": "appflowy",
@@ -386,7 +415,11 @@
    ],
    "source": "starter",
    "verified": false,
-   "release": "https://github.com/AppFlowy-IO/AppFlowy/releases/tag/0.14.11"
+   "release": "https://github.com/AppFlowy-IO/AppFlowy/releases/tag/0.14.11",
+   "screenshots": [
+    "https://github.com/user-attachments/assets/c2ba6bb8-746c-4743-9393-d008a669be95",
+    "https://github.com/user-attachments/assets/e83dd1a3-4975-4d0e-91a1-9eb6e0d248cd"
+   ]
   },
   {
    "id": "appsmith",
@@ -412,7 +445,8 @@
     "open-source-alternatives"
    ],
    "verified": false,
-   "release": "https://github.com/appsmithorg/appsmith/releases/tag/v2.5.1"
+   "release": "https://github.com/appsmithorg/appsmith/releases/tag/v2.5.1",
+   "screenshots": []
   },
   {
    "id": "appwrite",
@@ -439,7 +473,10 @@
     "open-source-alternatives"
    ],
    "verified": false,
-   "release": "https://github.com/appwrite/appwrite/releases/tag/2.6.2"
+   "release": "https://github.com/appwrite/appwrite/releases/tag/2.6.2",
+   "screenshots": [
+    "https://github.com/user-attachments/assets/55a81268-4ecc-46cd-bdf5-73f7e8662fee"
+   ]
   },
   {
    "id": "arch-linux",
@@ -462,7 +499,8 @@
     "Whether the README's claim of being lightweight and flexible applies to every install is not verified"
    ],
    "source": "starter",
-   "verified": false
+   "verified": false,
+   "screenshots": []
   },
   {
    "id": "ardour",
@@ -486,7 +524,10 @@
    ],
    "source": "starter",
    "verified": false,
-   "release": null
+   "release": null,
+   "screenshots": [
+    "https://ardour.org/images/ardour-og.png"
+   ]
   },
   {
    "id": "audacity",
@@ -509,7 +550,8 @@
    ],
    "source": "starter",
    "verified": false,
-   "release": "https://github.com/audacity/audacity/releases/tag/Audacity-4.0.1"
+   "release": "https://github.com/audacity/audacity/releases/tag/Audacity-4.0.1",
+   "screenshots": []
   },
   {
    "id": "audiobookshelf",
@@ -532,7 +574,8 @@
    ],
    "source": "starter",
    "verified": false,
-   "release": "https://github.com/advplyr/audiobookshelf/releases/tag/v2.37.2"
+   "release": "https://github.com/advplyr/audiobookshelf/releases/tag/v2.37.2",
+   "screenshots": []
   },
   {
    "id": "aurora-store",
@@ -555,7 +598,8 @@
    ],
    "source": "starter",
    "verified": false,
-   "release": "https://gitlab.com/AuroraOSS/AuroraStore/-/releases/4.8.4"
+   "release": "https://gitlab.com/AuroraOSS/AuroraStore/-/releases/4.8.4",
+   "screenshots": []
   },
   {
    "id": "authgear",
@@ -579,7 +623,10 @@
     "awesome-foss-alternatives"
    ],
    "verified": false,
-   "release": "https://github.com/authgear/authgear-server/releases/tag/2026-10-22.0"
+   "release": "https://github.com/authgear/authgear-server/releases/tag/2026-10-22.0",
+   "screenshots": [
+    "https://raw.githubusercontent.com/authgear/.github/main/meta/features/signup-login-page.png"
+   ]
   },
   {
    "id": "automatisch",
@@ -604,7 +651,10 @@
     "open-source-alternatives"
    ],
    "verified": false,
-   "release": "https://github.com/automatisch/automatisch/releases/tag/v0.15.0"
+   "release": "https://github.com/automatisch/automatisch/releases/tag/v0.15.0",
+   "screenshots": [
+    "https://user-images.githubusercontent.com/2501931/191562539-e42f6c34-03c7-4dc4-bcf9-7f9473a9c64f.png"
+   ]
   },
   {
    "id": "bagisto",
@@ -628,7 +678,10 @@
     "open-source-alternatives"
    ],
    "verified": false,
-   "release": "https://github.com/bagisto/bagisto/releases/tag/v2.5.0"
+   "release": "https://github.com/bagisto/bagisto/releases/tag/v2.5.0",
+   "screenshots": [
+    "https://raw.githubusercontent.com/bagisto/temp-media/master/next.png"
+   ]
   },
   {
    "id": "beton-inspector",
@@ -653,7 +706,10 @@
     "awesome-foss-alternatives"
    ],
    "verified": false,
-   "release": "https://github.com/getbeton/inspector/releases/tag/v0.0.1"
+   "release": "https://github.com/getbeton/inspector/releases/tag/v0.0.1",
+   "screenshots": [
+    "https://raw.githubusercontent.com/getbeton/inspector/HEAD/docs/assets/hero.png"
+   ]
   },
   {
    "id": "bigbluebutton",
@@ -676,7 +732,8 @@
    ],
    "source": "starter",
    "verified": false,
-   "release": "https://github.com/bigbluebutton/bigbluebutton/releases/tag/v4.0.0"
+   "release": "https://github.com/bigbluebutton/bigbluebutton/releases/tag/v4.0.0",
+   "screenshots": []
   },
   {
    "id": "bitwarden",
@@ -699,7 +756,10 @@
    ],
    "source": "starter",
    "verified": false,
-   "release": "https://github.com/bitwarden/clients/releases/tag/desktop-v2026.10.1"
+   "release": "https://github.com/bitwarden/clients/releases/tag/desktop-v2026.10.1",
+   "screenshots": [
+    "https://bitwarden.com/assets/7fzQJmr0qt5ggGZp3t66Y/7bf59a6a2379d49fc580ff49e8510efb/bitwarden.com_og_image.png"
+   ]
   },
   {
    "id": "blender",
@@ -721,7 +781,8 @@
     "Whether the host's license field should be checked directly is not stated."
    ],
    "source": "starter",
-   "verified": false
+   "verified": false,
+   "screenshots": []
   },
   {
    "id": "bluesky",
@@ -744,7 +805,8 @@
    ],
    "source": "starter",
    "verified": false,
-   "release": "https://github.com/bluesky-social/social-app/releases/tag/1.136.0"
+   "release": "https://github.com/bluesky-social/social-app/releases/tag/1.136.0",
+   "screenshots": []
   },
   {
    "id": "bookstack",
@@ -768,7 +830,8 @@
     "awesome-foss-alternatives"
    ],
    "verified": false,
-   "release": "https://github.com/BookStackApp/BookStack/releases/tag/v26.09.2"
+   "release": "https://github.com/BookStackApp/BookStack/releases/tag/v26.09.2",
+   "screenshots": []
   },
   {
    "id": "bootstrap",
@@ -793,7 +856,8 @@
     "open-source-alternatives"
    ],
    "verified": false,
-   "release": "https://github.com/twbs/icons/releases/tag/v1.13.2"
+   "release": "https://github.com/twbs/icons/releases/tag/v1.13.2",
+   "screenshots": []
   },
   {
    "id": "borgbackup",
@@ -815,7 +879,8 @@
    ],
    "source": "starter",
    "verified": false,
-   "release": "https://github.com/borgbackup/borg/releases/tag/1.4.5"
+   "release": "https://github.com/borgbackup/borg/releases/tag/1.4.5",
+   "screenshots": []
   },
   {
    "id": "boxyhq",
@@ -840,7 +905,8 @@
     "awesome-oss-alternatives"
    ],
    "verified": false,
-   "release": "https://github.com/ory/polis/releases/tag/v26.2.0"
+   "release": "https://github.com/ory/polis/releases/tag/v26.2.0",
+   "screenshots": []
   },
   {
    "id": "brave",
@@ -864,7 +930,8 @@
    ],
    "source": "starter",
    "verified": false,
-   "release": "https://github.com/brave/brave-browser/releases/tag/v1.98.60"
+   "release": "https://github.com/brave/brave-browser/releases/tag/v1.98.60",
+   "screenshots": []
   },
   {
    "id": "bruin",
@@ -889,7 +956,8 @@
     "awesome-foss-alternatives"
    ],
    "verified": false,
-   "release": "https://github.com/bruin-data/bruin/releases/tag/v0.11.796"
+   "release": "https://github.com/bruin-data/bruin/releases/tag/v0.11.796",
+   "screenshots": []
   },
   {
    "id": "btw",
@@ -914,7 +982,10 @@
     "open-source-alternatives"
    ],
    "verified": false,
-   "release": null
+   "release": null,
+   "screenshots": [
+    "https://user-images.githubusercontent.com/70569022/233320021-e05c995f-4e4e-48a9-83de-f578d3662df1.png"
+   ]
   },
   {
    "id": "budibase",
@@ -940,7 +1011,11 @@
     "open-source-alternatives"
    ],
    "verified": false,
-   "release": "https://github.com/Budibase/budibase/releases/tag/v3.50.0"
+   "release": "https://github.com/Budibase/budibase/releases/tag/v3.50.0",
+   "screenshots": [
+    "https://res.cloudinary.com/daog6scxm/image/upload/v1775572268/github/Agent_preview.jpg",
+    "https://res.cloudinary.com/daog6scxm/image/upload/v1775572270/github/Agent_Actions.jpg"
+   ]
   },
   {
    "id": "bugzilla",
@@ -966,7 +1041,8 @@
     "open-source-alternatives"
    ],
    "verified": false,
-   "release": null
+   "release": null,
+   "screenshots": []
   },
   {
    "id": "buildbot",
@@ -991,7 +1067,8 @@
     "awesome-foss-alternatives"
    ],
    "verified": false,
-   "release": "https://github.com/buildbot/buildbot/releases/tag/v4.3.0"
+   "release": "https://github.com/buildbot/buildbot/releases/tag/v4.3.0",
+   "screenshots": []
   },
   {
    "id": "buzz",
@@ -1015,7 +1092,8 @@
    ],
    "source": "starter",
    "verified": false,
-   "release": "https://github.com/chidiwilliams/buzz/releases/tag/v1.4.5"
+   "release": "https://github.com/chidiwilliams/buzz/releases/tag/v1.4.5",
+   "screenshots": []
   },
   {
    "id": "cachyos",
@@ -1037,7 +1115,8 @@
     "The README does not say which desktop environments are installed by default."
    ],
    "source": "starter",
-   "verified": false
+   "verified": false,
+   "screenshots": []
   },
   {
    "id": "cal-com",
@@ -1060,7 +1139,8 @@
    ],
    "source": "starter",
    "verified": false,
-   "release": "https://github.com/calcom/cal.diy/releases/tag/v6.2.0"
+   "release": "https://github.com/calcom/cal.diy/releases/tag/v6.2.0",
+   "screenshots": []
   },
   {
    "id": "calibre",
@@ -1082,7 +1162,8 @@
    ],
    "source": "starter",
    "verified": false,
-   "release": "https://github.com/kovidgoyal/calibre/releases/tag/v9.17.0"
+   "release": "https://github.com/kovidgoyal/calibre/releases/tag/v9.17.0",
+   "screenshots": []
   },
   {
    "id": "caprover",
@@ -1108,7 +1189,10 @@
     "open-source-alternatives"
    ],
    "verified": false,
-   "release": "https://github.com/caprover/caprover/releases/tag/v1.15.5"
+   "release": "https://github.com/caprover/caprover/releases/tag/v1.15.5",
+   "screenshots": [
+    "https://raw.githubusercontent.com/caprover/caprover-website/master/graphics/screenshots-video-small.png"
+   ]
   },
   {
    "id": "carrypass",
@@ -1135,7 +1219,8 @@
     "awesome-privacy"
    ],
    "verified": false,
-   "release": null
+   "release": null,
+   "screenshots": []
   },
   {
    "id": "chatrwkv",
@@ -1160,7 +1245,10 @@
     "open-source-alternatives"
    ],
    "verified": false,
-   "release": null
+   "release": null,
+   "screenshots": [
+    "https://raw.githubusercontent.com/BlinkDL/ChatRWKV/HEAD/misc/sample-1.png"
+   ]
   },
   {
    "id": "chatwoot",
@@ -1184,7 +1272,11 @@
    ],
    "source": "starter",
    "verified": false,
-   "release": "https://github.com/chatwoot/chatwoot/releases/tag/v4.19.1"
+   "release": "https://github.com/chatwoot/chatwoot/releases/tag/v4.19.1",
+   "screenshots": [
+    "https://raw.githubusercontent.com/chatwoot/chatwoot/HEAD/.github/screenshots/dashboard.png#gh-light-mode-only",
+    "https://raw.githubusercontent.com/chatwoot/chatwoot/HEAD/.github/screenshots/dashboard-dark.png#gh-dark-mode-only"
+   ]
   },
   {
    "id": "cline",
@@ -1208,7 +1300,8 @@
    ],
    "source": "starter",
    "verified": false,
-   "release": "https://github.com/cline/cline/releases/tag/v4.1.26"
+   "release": "https://github.com/cline/cline/releases/tag/v4.1.26",
+   "screenshots": []
   },
   {
    "id": "codex-cli",
@@ -1230,7 +1323,8 @@
    ],
    "source": "starter",
    "verified": false,
-   "release": "https://github.com/openai/codex/releases/tag/rust-v0.164.0"
+   "release": "https://github.com/openai/codex/releases/tag/rust-v0.164.0",
+   "screenshots": []
   },
   {
    "id": "collabora-online",
@@ -1255,7 +1349,10 @@
    ],
    "source": "starter",
    "verified": false,
-   "release": "https://github.com/CollaboraOnline/online/releases/tag/25.04.7-mobile"
+   "release": "https://github.com/CollaboraOnline/online/releases/tag/25.04.7-mobile",
+   "screenshots": [
+    "https://www.collaboraonline.com/wp-content/uploads/2025/02/Collab-rabbits.png"
+   ]
   },
   {
    "id": "comaps",
@@ -1278,7 +1375,10 @@
    ],
    "source": "starter",
    "verified": false,
-   "release": "https://codeberg.org/comaps/comaps/releases/tag/v2026.10.05-19"
+   "release": "https://codeberg.org/comaps/comaps/releases/tag/v2026.10.05-19",
+   "screenshots": [
+    "https://www.comaps.app/images/sections/map-s-3.webp"
+   ]
   },
   {
    "id": "comfyui",
@@ -1300,7 +1400,10 @@
    ],
    "source": "starter",
    "verified": false,
-   "release": "https://github.com/Comfy-Org/ComfyUI/releases/tag/v0.42.1"
+   "release": "https://github.com/Comfy-Org/ComfyUI/releases/tag/v0.42.1",
+   "screenshots": [
+    "https://github.com/user-attachments/assets/36e065e0-bfae-4456-8c7f-8369d5ea48a2"
+   ]
   },
   {
    "id": "concrete",
@@ -1325,7 +1428,8 @@
     "awesome-oss-alternatives"
    ],
    "verified": false,
-   "release": "https://github.com/concretecms/concretecms/releases/tag/9.5.7"
+   "release": "https://github.com/concretecms/concretecms/releases/tag/9.5.7",
+   "screenshots": []
   },
   {
    "id": "continue",
@@ -1347,7 +1451,8 @@
    ],
    "source": "starter",
    "verified": false,
-   "release": "https://github.com/continuedev/continue/releases/tag/v2.0.0-vscode"
+   "release": "https://github.com/continuedev/continue/releases/tag/v2.0.0-vscode",
+   "screenshots": []
   },
   {
    "id": "coolify",
@@ -1375,7 +1480,10 @@
     "open-source-alternatives"
    ],
    "verified": false,
-   "release": "https://github.com/coollabsio/coolify/releases/tag/v4.5.0"
+   "release": "https://github.com/coollabsio/coolify/releases/tag/v4.5.0",
+   "screenshots": [
+    "https://cdn.coollabs.io/og-images/coolify.png"
+   ]
   },
   {
    "id": "coroot",
@@ -1400,7 +1508,12 @@
     "awesome-foss-alternatives"
    ],
    "verified": false,
-   "release": "https://github.com/coroot/coroot/releases/tag/v1.28.1"
+   "release": "https://github.com/coroot/coroot/releases/tag/v1.28.1",
+   "screenshots": [
+    "https://user-images.githubusercontent.com/194465/235189673-833066d1-b18f-4c7a-8b81-81b37f966daf.png",
+    "https://user-images.githubusercontent.com/194465/235190071-21256cbe-6201-4d16-97f3-6565f7256f98.png",
+    "https://user-images.githubusercontent.com/194465/235190425-a7f33c7f-33ef-4ef5-9dc1-525ff7524e93.png"
+   ]
   },
   {
    "id": "cortex",
@@ -1424,7 +1537,8 @@
     "awesome-oss-alternatives"
    ],
    "verified": false,
-   "release": "https://github.com/cortexlabs/cortex/releases/tag/v0.42.1"
+   "release": "https://github.com/cortexlabs/cortex/releases/tag/v0.42.1",
+   "screenshots": []
   },
   {
    "id": "cratedb",
@@ -1448,7 +1562,8 @@
     "awesome-oss-alternatives"
    ],
    "verified": false,
-   "release": "https://github.com/crate/crate/releases/tag/6.4.6"
+   "release": "https://github.com/crate/crate/releases/tag/6.4.6",
+   "screenshots": []
   },
   {
    "id": "crater",
@@ -1472,7 +1587,8 @@
     "awesome-foss-alternatives"
    ],
    "verified": false,
-   "release": "https://github.com/crater-invoice-inc/crater/releases/tag/6.0.6"
+   "release": "https://github.com/crater-invoice-inc/crater/releases/tag/6.0.6",
+   "screenshots": []
   },
   {
    "id": "crowd-dev",
@@ -1498,7 +1614,8 @@
     "awesome-oss-alternatives"
    ],
    "verified": false,
-   "release": "https://github.com/linuxfoundation/crowd.dev/releases/tag/v0.49.0"
+   "release": "https://github.com/linuxfoundation/crowd.dev/releases/tag/v0.49.0",
+   "screenshots": []
   },
   {
    "id": "cryptpad",
@@ -1521,7 +1638,11 @@
    ],
    "source": "starter",
    "verified": false,
-   "release": "https://github.com/cryptpad/cryptpad/releases/tag/2026.10.0"
+   "release": "https://github.com/cryptpad/cryptpad/releases/tag/2026.10.0",
+   "screenshots": [
+    "https://raw.githubusercontent.com/cryptpad/cryptpad/HEAD/screenshot.png",
+    "https://raw.githubusercontent.com/cryptpad/cryptpad/HEAD/screenshot-suite.png"
+   ]
   },
   {
    "id": "cube-js",
@@ -1545,7 +1666,8 @@
     "awesome-oss-alternatives"
    ],
    "verified": false,
-   "release": "https://github.com/cube-js/cube/releases/tag/v1.8.13"
+   "release": "https://github.com/cube-js/cube/releases/tag/v1.8.13",
+   "screenshots": []
   },
   {
    "id": "customermates",
@@ -1571,7 +1693,8 @@
     "awesome-foss-alternatives"
    ],
    "verified": false,
-   "release": "https://github.com/customermates/customermates/releases/tag/v.1.1.0"
+   "release": "https://github.com/customermates/customermates/releases/tag/v.1.1.0",
+   "screenshots": []
   },
   {
    "id": "darktable",
@@ -1593,7 +1716,10 @@
    ],
    "source": "starter",
    "verified": false,
-   "release": "https://github.com/darktable-org/darktable/releases/tag/release-5.6.2"
+   "release": "https://github.com/darktable-org/darktable/releases/tag/release-5.6.2",
+   "screenshots": [
+    "https://user-images.githubusercontent.com/45535283/148689197-e53dd75f-32f1-4297-9a0f-a9547fd4e7c7.jpg"
+   ]
   },
   {
    "id": "dashpress",
@@ -1618,7 +1744,8 @@
     "open-source-alternatives"
    ],
    "verified": false,
-   "release": null
+   "release": null,
+   "screenshots": []
   },
   {
    "id": "databend",
@@ -1644,7 +1771,8 @@
     "open-source-alternatives"
    ],
    "verified": false,
-   "release": "https://github.com/databendlabs/databend/releases/tag/v1.2.881"
+   "release": "https://github.com/databendlabs/databend/releases/tag/v1.2.881",
+   "screenshots": []
   },
   {
    "id": "debian",
@@ -1666,7 +1794,8 @@
     "Whether Windows or macOS programs run on Debian"
    ],
    "source": "starter",
-   "verified": false
+   "verified": false,
+   "screenshots": []
   },
   {
    "id": "decap-cms",
@@ -1690,7 +1819,8 @@
     "awesome-oss-alternatives"
    ],
    "verified": false,
-   "release": "https://github.com/decaporg/decap-cms/releases/tag/decap-cms%403.17.2"
+   "release": "https://github.com/decaporg/decap-cms/releases/tag/decap-cms%403.17.2",
+   "screenshots": []
   },
   {
    "id": "deepset",
@@ -1715,7 +1845,8 @@
     "awesome-oss-alternatives"
    ],
    "verified": false,
-   "release": "https://github.com/deepset-ai/haystack/releases/tag/v3.4.1"
+   "release": "https://github.com/deepset-ai/haystack/releases/tag/v3.4.1",
+   "screenshots": []
   },
   {
    "id": "delta-chat",
@@ -1738,7 +1869,10 @@
    ],
    "source": "starter",
    "verified": false,
-   "release": "https://github.com/deltachat/deltachat-android/releases/tag/v2.62.0"
+   "release": "https://github.com/deltachat/deltachat-android/releases/tag/v2.62.0",
+   "screenshots": [
+    "https://raw.githubusercontent.com/deltachat/deltachat-android/HEAD/fastlane/metadata/android/en-US/images/phoneScreenshots/1.png"
+   ]
   },
   {
    "id": "dexio",
@@ -1762,7 +1896,11 @@
     "awesome-foss-alternatives"
    ],
    "verified": false,
-   "release": "https://github.com/dexio-wiki/dexio/releases/tag/v1.0.0"
+   "release": "https://github.com/dexio-wiki/dexio/releases/tag/v1.0.0",
+   "screenshots": [
+    "https://raw.githubusercontent.com/dexio-wiki/dexio/HEAD/docs/images/demo-page.png",
+    "https://raw.githubusercontent.com/dexio-wiki/dexio/HEAD/docs/images/demo-graph.png"
+   ]
   },
   {
    "id": "discourse",
@@ -1784,7 +1922,11 @@
    ],
    "source": "starter",
    "verified": false,
-   "release": null
+   "release": null,
+   "screenshots": [
+    "https://github.com/user-attachments/assets/abaaf30f-0cfb-4505-a530-6f8e5a43d24b",
+    "https://github.com/user-attachments/assets/a79b5d56-7748-4f6d-8a2d-daa950366fcc"
+   ]
   },
   {
    "id": "docmost",
@@ -1809,7 +1951,12 @@
     "open-source-alternatives"
    ],
    "verified": false,
-   "release": "https://github.com/docmost/docmost/releases/tag/v0.97.0"
+   "release": "https://github.com/docmost/docmost/releases/tag/v0.97.0",
+   "screenshots": [
+    "https://docmost.com/screenshots/home.png",
+    "https://docmost.com/screenshots/editor.png",
+    "https://docmost.com/screenshots/editor.png"
+   ]
   },
   {
    "id": "documenso",
@@ -1835,7 +1982,8 @@
     "open-source-alternatives"
    ],
    "verified": false,
-   "release": "https://github.com/documenso/documenso/releases/tag/v2.21.1"
+   "release": "https://github.com/documenso/documenso/releases/tag/v2.21.1",
+   "screenshots": []
   },
   {
    "id": "docuseal",
@@ -1860,7 +2008,8 @@
     "awesome-oss-alternatives"
    ],
    "verified": false,
-   "release": "https://github.com/docusealco/docuseal/releases/tag/3.3.3"
+   "release": "https://github.com/docusealco/docuseal/releases/tag/3.3.3",
+   "screenshots": []
   },
   {
    "id": "dokku",
@@ -1886,7 +2035,8 @@
     "open-source-alternatives"
    ],
    "verified": false,
-   "release": "https://github.com/dokku/dokku/releases/tag/v0.38.32"
+   "release": "https://github.com/dokku/dokku/releases/tag/v0.38.32",
+   "screenshots": []
   },
   {
    "id": "dolibarr",
@@ -1910,7 +2060,10 @@
     "awesome-foss-alternatives"
    ],
    "verified": false,
-   "release": "https://github.com/Dolibarr/dolibarr/releases/tag/24.0.1"
+   "release": "https://github.com/Dolibarr/dolibarr/releases/tag/24.0.1",
+   "screenshots": [
+    "https://www.dolibarr.org/medias/dolibarr_screenshot1_1920x1080.jpg"
+   ]
   },
   {
    "id": "drone",
@@ -1935,7 +2088,8 @@
     "awesome-foss-alternatives"
    ],
    "verified": false,
-   "release": "https://github.com/harness/harness/releases/tag/v2.28.2"
+   "release": "https://github.com/harness/harness/releases/tag/v2.28.2",
+   "screenshots": []
   },
   {
    "id": "dub",
@@ -1959,7 +2113,8 @@
     "awesome-privacy"
    ],
    "verified": false,
-   "release": null
+   "release": null,
+   "screenshots": []
   },
   {
    "id": "duplicati",
@@ -1981,7 +2136,8 @@
    ],
    "source": "starter",
    "verified": false,
-   "release": "https://github.com/duplicati/duplicati/releases/tag/v2.4.0.1_stable_2026-10-07"
+   "release": "https://github.com/duplicati/duplicati/releases/tag/v2.4.0.1_stable_2026-10-07",
+   "screenshots": []
   },
   {
    "id": "dyrector-io",
@@ -2005,7 +2161,8 @@
     "awesome-oss-alternatives"
    ],
    "verified": false,
-   "release": "https://github.com/dyrector-io/dyrectorio/releases/tag/0.15.4"
+   "release": "https://github.com/dyrector-io/dyrectorio/releases/tag/0.15.4",
+   "screenshots": []
   },
   {
    "id": "element",
@@ -2029,7 +2186,8 @@
    ],
    "source": "starter",
    "verified": false,
-   "release": "https://github.com/element-hq/element-web/releases/tag/v1.12.32"
+   "release": "https://github.com/element-hq/element-web/releases/tag/v1.12.32",
+   "screenshots": []
   },
   {
    "id": "element-call",
@@ -2052,7 +2210,10 @@
    ],
    "source": "starter",
    "verified": false,
-   "release": "https://github.com/element-hq/element-call/releases/tag/v0.26.1"
+   "release": "https://github.com/element-hq/element-call/releases/tag/v0.26.1",
+   "screenshots": [
+    "https://raw.githubusercontent.com/element-hq/element-call/HEAD/demo.gif"
+   ]
   },
   {
    "id": "encore",
@@ -2077,7 +2238,8 @@
     "awesome-oss-alternatives"
    ],
    "verified": false,
-   "release": "https://github.com/encoredev/encore/releases/tag/v1.58.8"
+   "release": "https://github.com/encoredev/encore/releases/tag/v1.58.8",
+   "screenshots": []
   },
   {
    "id": "ente-auth",
@@ -2099,7 +2261,8 @@
    ],
    "source": "starter",
    "verified": false,
-   "release": "https://github.com/ente/ente/releases/tag/locker-v1.0.11"
+   "release": "https://github.com/ente/ente/releases/tag/locker-v1.0.11",
+   "screenshots": []
   },
   {
    "id": "ente-photos",
@@ -2121,7 +2284,8 @@
    ],
    "source": "starter",
    "verified": false,
-   "release": "https://github.com/ente/ente/releases/tag/locker-v1.0.11"
+   "release": "https://github.com/ente/ente/releases/tag/locker-v1.0.11",
+   "screenshots": []
   },
   {
    "id": "erpnext",
@@ -2147,7 +2311,11 @@
     "awesome-oss-alternatives"
    ],
    "verified": false,
-   "release": "https://github.com/frappe/erpnext/releases/tag/v15.124.1"
+   "release": "https://github.com/frappe/erpnext/releases/tag/v15.124.1",
+   "screenshots": [
+    "https://raw.githubusercontent.com/frappe/erpnext/HEAD/erpnext/public/images/v16/hero_image.png",
+    "https://frappe.io/files/ERPNexte2a3b6.png"
+   ]
   },
   {
    "id": "espocrm",
@@ -2171,7 +2339,10 @@
     "awesome-foss-alternatives"
    ],
    "verified": false,
-   "release": "https://github.com/espocrm/espocrm/releases/tag/10.0.11"
+   "release": "https://github.com/espocrm/espocrm/releases/tag/10.0.11",
+   "screenshots": [
+    "https://github.com/user-attachments/assets/d0806394-3691-43a1-83a5-16ad2e7314e2"
+   ]
   },
   {
    "id": "etesync",
@@ -2195,7 +2366,8 @@
     "switching.software"
    ],
    "verified": false,
-   "release": "https://github.com/etesync/etesync-dav/releases/tag/v0.35.1"
+   "release": "https://github.com/etesync/etesync-dav/releases/tag/v0.35.1",
+   "screenshots": []
   },
   {
    "id": "etherpad",
@@ -2218,7 +2390,13 @@
    ],
    "source": "starter",
    "verified": false,
-   "release": "https://github.com/ether/etherpad/releases/tag/v3.3.11"
+   "release": "https://github.com/ether/etherpad/releases/tag/v3.3.11",
+   "screenshots": [
+    "https://raw.githubusercontent.com/ether/etherpad/HEAD/doc/public/etherpad_demo.gif",
+    "https://raw.githubusercontent.com/ether/etherpad/HEAD/doc/public/etherpad_full_features.png",
+    "https://raw.githubusercontent.com/ether/etherpad/HEAD/doc/public/etherpad_skin_variants.gif",
+    "https://raw.githubusercontent.com/ether/etherpad/HEAD/doc/public/etherpad_basic.png"
+   ]
   },
   {
    "id": "evidence",
@@ -2242,7 +2420,8 @@
     "awesome-oss-alternatives"
    ],
    "verified": false,
-   "release": "https://github.com/evidence-dev/evidence/releases/tag/%40evidence-dev/evidence%4040.1.8"
+   "release": "https://github.com/evidence-dev/evidence/releases/tag/%40evidence-dev/evidence%4040.1.8",
+   "screenshots": []
   },
   {
    "id": "f-droid",
@@ -2264,7 +2443,8 @@
    ],
    "source": "starter",
    "verified": false,
-   "release": "https://gitlab.com/fdroid/fdroidclient/-/releases/1.23.2"
+   "release": "https://gitlab.com/fdroid/fdroidclient/-/releases/1.23.2",
+   "screenshots": []
   },
   {
    "id": "faraday",
@@ -2290,7 +2470,11 @@
     "awesome-oss-alternatives"
    ],
    "verified": false,
-   "release": "https://github.com/infobyte/faraday/releases/tag/v5.25.1"
+   "release": "https://github.com/infobyte/faraday/releases/tag/v5.25.1",
+   "screenshots": [
+    "https://raw.githubusercontent.com/infobyte/faraday/HEAD/docs/images/manage.png",
+    "https://raw.githubusercontent.com/infobyte/faraday/HEAD/docs/images/dashboard.png"
+   ]
   },
   {
    "id": "fauxpilot",
@@ -2315,7 +2499,8 @@
     "open-source-alternatives"
    ],
    "verified": false,
-   "release": null
+   "release": null,
+   "screenshots": []
   },
   {
    "id": "fedora",
@@ -2337,7 +2522,8 @@
     "Descriptions from community lists were not provided."
    ],
    "source": "starter",
-   "verified": false
+   "verified": false,
+   "screenshots": []
   },
   {
    "id": "filestash",
@@ -2363,7 +2549,13 @@
     "awesome-oss-alternatives"
    ],
    "verified": false,
-   "release": null
+   "release": null,
+   "screenshots": [
+    "https://raw.githubusercontent.com/mickael-kerjean/filestash_images/master/.assets/photo.jpg",
+    "https://www.filestash.app/img/screenshots/theme_github.png",
+    "https://www.filestash.app/img/screenshots/theme_apple.png",
+    "https://www.filestash.app/img/screenshots/theme_dropbox.png"
+   ]
   },
   {
    "id": "firecamp",
@@ -2390,7 +2582,10 @@
     "open-source-alternatives"
    ],
    "verified": false,
-   "release": "https://github.com/firecamp-dev/firecamp/releases/tag/v3.3.0-beta.3"
+   "release": "https://github.com/firecamp-dev/firecamp/releases/tag/v3.3.0-beta.3",
+   "screenshots": [
+    "https://firecamp.io/og.jpg"
+   ]
   },
   {
    "id": "firefox",
@@ -2413,7 +2608,8 @@
    ],
    "source": "starter",
    "verified": false,
-   "release": null
+   "release": null,
+   "screenshots": []
   },
   {
    "id": "flagsmith",
@@ -2438,7 +2634,11 @@
     "awesome-oss-alternatives"
    ],
    "verified": false,
-   "release": "https://github.com/Flagsmith/flagsmith/releases/tag/v2.287.0"
+   "release": "https://github.com/Flagsmith/flagsmith/releases/tag/v2.287.0",
+   "screenshots": [
+    "https://raw.githubusercontent.com/Flagsmith/flagsmith/HEAD/static-files/ReadMe_Demo.gif",
+    "https://raw.githubusercontent.com/Flagsmith/flagsmith/HEAD/static-files/screenshot.png"
+   ]
   },
   {
    "id": "florisboard",
@@ -2459,7 +2659,10 @@
    ],
    "source": "starter",
    "verified": false,
-   "release": "https://github.com/florisboard/florisboard/releases/tag/v0.5.2"
+   "release": "https://github.com/florisboard/florisboard/releases/tag/v0.5.2",
+   "screenshots": [
+    "https://florisboard.org/card.png"
+   ]
   },
   {
    "id": "fluent-reader",
@@ -2483,7 +2686,8 @@
     "awesome-privacy"
    ],
    "verified": false,
-   "release": "https://github.com/yang991178/fluent-reader/releases/tag/v1.3.1"
+   "release": "https://github.com/yang991178/fluent-reader/releases/tag/v1.3.1",
+   "screenshots": []
   },
   {
    "id": "folio-wiki",
@@ -2507,7 +2711,13 @@
     "awesome-foss-alternatives"
    ],
    "verified": false,
-   "release": "https://github.com/evergreen-it-dev/folio/releases/tag/v0.4.2"
+   "release": "https://github.com/evergreen-it-dev/folio/releases/tag/v0.4.2",
+   "screenshots": [
+    "https://raw.githubusercontent.com/evergreen-it-dev/folio/HEAD/docs/images/overview.png",
+    "https://raw.githubusercontent.com/evergreen-it-dev/folio/HEAD/docs/images/history.png",
+    "https://raw.githubusercontent.com/evergreen-it-dev/folio/HEAD/docs/images/collab.png",
+    "https://raw.githubusercontent.com/evergreen-it-dev/folio/HEAD/docs/images/compare-live.png"
+   ]
   },
   {
    "id": "fonoster",
@@ -2533,7 +2743,8 @@
     "open-source-alternatives"
    ],
    "verified": false,
-   "release": "https://github.com/fonoster/fonoster/releases/tag/v0.33.0"
+   "release": "https://github.com/fonoster/fonoster/releases/tag/v0.33.0",
+   "screenshots": []
   },
   {
    "id": "font-awesome",
@@ -2558,7 +2769,8 @@
     "open-source-alternatives"
    ],
    "verified": false,
-   "release": "https://github.com/FortAwesome/Font-Awesome/releases/tag/7.3.1"
+   "release": "https://github.com/FortAwesome/Font-Awesome/releases/tag/7.3.1",
+   "screenshots": []
   },
   {
    "id": "forgejo",
@@ -2582,7 +2794,10 @@
    ],
    "source": "starter",
    "verified": false,
-   "release": "https://codeberg.org/forgejo/forgejo/releases/tag/v17.0.0"
+   "release": "https://codeberg.org/forgejo/forgejo/releases/tag/v17.0.0",
+   "screenshots": [
+    "https://forgejo.org/_astro/og-preview.Uy75QWb0_6Lpd2.webp"
+   ]
   },
   {
    "id": "formbricks",
@@ -2605,7 +2820,10 @@
    ],
    "source": "starter",
    "verified": false,
-   "release": "https://github.com/formbricks/formbricks/releases/tag/6.1.1"
+   "release": "https://github.com/formbricks/formbricks/releases/tag/6.1.1",
+   "screenshots": [
+    "https://github-production-user-asset-6210df.s3.amazonaws.com/675065/249441967-ccb89ea3-82b4-4bf2-8d2c-528721ec313b.png"
+   ]
   },
   {
    "id": "formio",
@@ -2629,7 +2847,8 @@
     "awesome-oss-alternatives"
    ],
    "verified": false,
-   "release": null
+   "release": null,
+   "screenshots": []
   },
   {
    "id": "fossdroid",
@@ -2653,7 +2872,12 @@
     "awesome-privacy"
    ],
    "verified": false,
-   "release": null
+   "release": null,
+   "screenshots": [
+    "https://raw.githubusercontent.com/SnaKKo/Fossdroid-Core/HEAD/screenshot_1.png?raw=true",
+    "https://raw.githubusercontent.com/SnaKKo/Fossdroid-Core/HEAD/screenshot_2.png?raw=true",
+    "https://fossdroid.com/images/site/og_image.jpg"
+   ]
   },
   {
    "id": "freetube",
@@ -2674,7 +2898,12 @@
    ],
    "source": "starter",
    "verified": false,
-   "release": null
+   "release": null,
+   "screenshots": [
+    "https://raw.githubusercontent.com/FreeTubeApp/FreeTubeApp.io/master/src/images/FreeTube1.png",
+    "https://raw.githubusercontent.com/FreeTubeApp/FreeTubeApp.io/master/src/images/FreeTube2.png",
+    "https://raw.githubusercontent.com/FreeTubeApp/FreeTubeApp.io/master/src/images/FreeTube3.png"
+   ]
   },
   {
    "id": "freshrss",
@@ -2699,7 +2928,10 @@
     "awesome-privacy"
    ],
    "verified": false,
-   "release": "https://github.com/FreshRSS/FreshRSS/releases/tag/1.30.4"
+   "release": "https://github.com/FreshRSS/FreshRSS/releases/tag/1.30.4",
+   "screenshots": [
+    "https://raw.githubusercontent.com/FreshRSS/FreshRSS/HEAD/docs/img/FreshRSS-screenshot.png"
+   ]
   },
   {
    "id": "friction",
@@ -2723,7 +2955,10 @@
     "switching.software"
    ],
    "verified": false,
-   "release": "https://github.com/friction2d/friction/releases/tag/v1.0.0-rc.3"
+   "release": "https://github.com/friction2d/friction/releases/tag/v1.0.0-rc.3",
+   "screenshots": [
+    "https://friction.graphics/assets/screenshots/100/friction-100-linux-screenshot.png?v=1"
+   ]
   },
   {
    "id": "friendica",
@@ -2748,7 +2983,12 @@
     "switching.software"
    ],
    "verified": false,
-   "release": "https://github.com/friendica/friendica/releases/tag/2026.05-1"
+   "release": "https://github.com/friendica/friendica/releases/tag/2026.05-1",
+   "screenshots": [
+    "https://raw.githubusercontent.com/friendica/friendica/HEAD/images/screenshots/friendica-2023-12-frio-desktop.png?raw=true",
+    "https://raw.githubusercontent.com/friendica/friendica/HEAD/images/screenshots/friendica-2023-10-frio-mobile-timeline-dark-blue.png",
+    "https://raw.githubusercontent.com/friendica/friendica/HEAD/images/screenshots/friendica-2023-10-frio-mobile-options-light-blue.png"
+   ]
   },
   {
    "id": "funkwhale",
@@ -2771,7 +3011,8 @@
     "The README excerpt shows only repository details, not the project's feature list."
    ],
    "source": "starter",
-   "verified": false
+   "verified": false,
+   "screenshots": []
   },
   {
    "id": "fusio",
@@ -2796,7 +3037,13 @@
     "awesome-oss-alternatives"
    ],
    "verified": false,
-   "release": "https://github.com/apioo/fusio/releases/tag/v7.2.1"
+   "release": "https://github.com/apioo/fusio/releases/tag/v7.2.1",
+   "screenshots": [
+    "https://www.fusio-project.org/media/backend/action_configuration.png",
+    "https://www.fusio-project.org/media/backend/worker_php_designer.png",
+    "https://www.fusio-project.org/media/backend/agent_message.png",
+    "https://www.fusio-project.org/media/backend/dashboard.png"
+   ]
   },
   {
    "id": "galene",
@@ -2822,7 +3069,8 @@
     "awesome-foss-alternatives"
    ],
    "verified": false,
-   "release": null
+   "release": null,
+   "screenshots": []
   },
   {
    "id": "gathio",
@@ -2848,7 +3096,8 @@
     "switching.software"
    ],
    "verified": false,
-   "release": "https://github.com/lowercasename/gathio/releases/tag/v1.6.7"
+   "release": "https://github.com/lowercasename/gathio/releases/tag/v1.6.7",
+   "screenshots": []
   },
   {
    "id": "gerrit",
@@ -2872,7 +3121,8 @@
     "awesome-foss-alternatives"
    ],
    "verified": false,
-   "release": null
+   "release": null,
+   "screenshots": []
   },
   {
    "id": "ghost",
@@ -2894,7 +3144,8 @@
    ],
    "source": "starter",
    "verified": false,
-   "release": "https://github.com/TryGhost/Ghost/releases/tag/v6.72.0"
+   "release": "https://github.com/TryGhost/Ghost/releases/tag/v6.72.0",
+   "screenshots": []
   },
   {
    "id": "gimp",
@@ -2918,7 +3169,8 @@
     "Community descriptions of the closed apps (the lists gave none)"
    ],
    "source": "starter",
-   "verified": false
+   "verified": false,
+   "screenshots": []
   },
   {
    "id": "gitea",
@@ -2940,7 +3192,13 @@
    ],
    "source": "starter",
    "verified": false,
-   "release": "https://github.com/go-gitea/gitea/releases/tag/v28.2.0"
+   "release": "https://github.com/go-gitea/gitea/releases/tag/v28.2.0",
+   "screenshots": [
+    "https://dl.gitea.com/screenshots/login.png",
+    "https://dl.gitea.com/screenshots/register.png",
+    "https://dl.gitea.com/screenshots/home.png",
+    "https://dl.gitea.com/screenshots/issues.png"
+   ]
   },
   {
    "id": "gitlab",
@@ -2964,7 +3222,8 @@
     "awesome-foss-alternatives"
    ],
    "verified": false,
-   "release": null
+   "release": null,
+   "screenshots": []
   },
   {
    "id": "gitlab-community-edition",
@@ -2986,7 +3245,8 @@
    ],
    "source": "starter",
    "verified": false,
-   "release": null
+   "release": null,
+   "screenshots": []
   },
   {
    "id": "gnumeric",
@@ -3008,7 +3268,8 @@
     "The closed-app lists include no descriptions, so the fit ratings rely on the app names alone."
    ],
    "source": "starter",
-   "verified": false
+   "verified": false,
+   "screenshots": []
   },
   {
    "id": "goatcounter",
@@ -3032,7 +3293,8 @@
     "awesome-oss-alternatives"
    ],
    "verified": false,
-   "release": "https://github.com/arp242/goatcounter/releases/tag/v2.7.0"
+   "release": "https://github.com/arp242/goatcounter/releases/tag/v2.7.0",
+   "screenshots": []
   },
   {
    "id": "gogs",
@@ -3056,7 +3318,8 @@
     "awesome-foss-alternatives"
    ],
    "verified": false,
-   "release": "https://github.com/gogs/gogs/releases/tag/v0.14.3"
+   "release": "https://github.com/gogs/gogs/releases/tag/v0.14.3",
+   "screenshots": []
   },
   {
    "id": "grafana",
@@ -3081,7 +3344,8 @@
     "awesome-oss-alternatives"
    ],
    "verified": false,
-   "release": "https://github.com/grafana/grafana/releases/tag/v13.2.4"
+   "release": "https://github.com/grafana/grafana/releases/tag/v13.2.4",
+   "screenshots": []
   },
   {
    "id": "grapheneos",
@@ -3103,7 +3367,8 @@
     "Whether iOS is replaced in any sense: the material gives no basis for this."
    ],
    "source": "starter",
-   "verified": false
+   "verified": false,
+   "screenshots": []
   },
   {
    "id": "graphite",
@@ -3126,7 +3391,11 @@
    ],
    "source": "starter",
    "verified": false,
-   "release": null
+   "release": null,
+   "screenshots": [
+    "https://github.com/user-attachments/assets/decb7011-18c2-4c68-82af-d1fa5064244a",
+    "https://github.com/user-attachments/assets/9e023997-185b-4f43-a724-797d308d9e7b"
+   ]
   },
   {
    "id": "gravitl",
@@ -3151,7 +3420,11 @@
     "awesome-oss-alternatives"
    ],
    "verified": false,
-   "release": "https://github.com/gravitl/netmaker/releases/tag/v1.7.0"
+   "release": "https://github.com/gravitl/netmaker/releases/tag/v1.7.0",
+   "screenshots": [
+    "https://cdn.prod.website-files.com/64149f8bba6c1301c5e75001/67bf20d0f8eceddc0012d168_demoapp%20(1).webp",
+    "https://raw.githubusercontent.com/gravitl/netmaker-docs/master/images/netmaker-github/readme.gif"
+   ]
   },
   {
    "id": "grist",
@@ -3174,7 +3447,8 @@
    ],
    "source": "starter",
    "verified": false,
-   "release": "https://github.com/gristlabs/grist-core/releases/tag/v1.7.21"
+   "release": "https://github.com/gristlabs/grist-core/releases/tag/v1.7.21",
+   "screenshots": []
   },
   {
    "id": "growthbook",
@@ -3198,7 +3472,10 @@
     "awesome-oss-alternatives"
    ],
    "verified": false,
-   "release": "https://github.com/growthbook/growthbook/releases/tag/v5.1.0"
+   "release": "https://github.com/growthbook/growthbook/releases/tag/v5.1.0",
+   "screenshots": [
+    "https://raw.githubusercontent.com/growthbook/growthbook/HEAD/features-screenshot.png"
+   ]
   },
   {
    "id": "hanko",
@@ -3223,7 +3500,8 @@
     "awesome-oss-alternatives"
    ],
    "verified": false,
-   "release": "https://github.com/teamhanko/hanko/releases/tag/backend/v3.1.0"
+   "release": "https://github.com/teamhanko/hanko/releases/tag/backend/v3.1.0",
+   "screenshots": []
   },
   {
    "id": "hedgedoc",
@@ -3248,7 +3526,8 @@
     "awesome-privacy"
    ],
    "verified": false,
-   "release": "https://github.com/hedgedoc/hedgedoc/releases/tag/1.12.0"
+   "release": "https://github.com/hedgedoc/hedgedoc/releases/tag/1.12.0",
+   "screenshots": []
   },
   {
    "id": "heliboard",
@@ -3270,7 +3549,8 @@
    ],
    "source": "starter",
    "verified": false,
-   "release": "https://github.com/HeliBorg/HeliBoard/releases/tag/v4.2"
+   "release": "https://github.com/HeliBorg/HeliBoard/releases/tag/v4.2",
+   "screenshots": []
   },
   {
    "id": "heyform",
@@ -3292,7 +3572,10 @@
    ],
    "source": "starter",
    "verified": false,
-   "release": "https://github.com/heyform/heyform/releases/tag/v3.0.5"
+   "release": "https://github.com/heyform/heyform/releases/tag/v3.0.5",
+   "screenshots": [
+    "https://raw.githubusercontent.com/heyform/heyform/HEAD/assets/images/screenshot.png"
+   ]
   },
   {
    "id": "home-assistant",
@@ -3315,7 +3598,8 @@
    ],
    "source": "starter",
    "verified": false,
-   "release": "https://github.com/home-assistant/core/releases/tag/2026.10.4"
+   "release": "https://github.com/home-assistant/core/releases/tag/2026.10.4",
+   "screenshots": []
   },
   {
    "id": "hoppscotch",
@@ -3340,7 +3624,8 @@
     "open-source-alternatives"
    ],
    "verified": false,
-   "release": "https://github.com/hoppscotch/hoppscotch/releases/tag/2026.9.0"
+   "release": "https://github.com/hoppscotch/hoppscotch/releases/tag/2026.9.0",
+   "screenshots": []
   },
   {
    "id": "huginn",
@@ -3362,7 +3647,13 @@
    ],
    "source": "starter",
    "verified": false,
-   "release": "https://github.com/huginn/huginn/releases/tag/v2026.10.24"
+   "release": "https://github.com/huginn/huginn/releases/tag/v2026.10.24",
+   "screenshots": [
+    "https://raw.githubusercontent.com/huginn/huginn/master/doc/imgs/your-agents.png",
+    "https://raw.githubusercontent.com/huginn/huginn/master/doc/imgs/diagram.png",
+    "https://raw.githubusercontent.com/huginn/huginn/master/doc/imgs/peaks.png",
+    "https://raw.githubusercontent.com/huginn/huginn/master/doc/imgs/events.png"
+   ]
   },
   {
    "id": "hyperdx",
@@ -3386,7 +3677,10 @@
     "awesome-foss-alternatives"
    ],
    "verified": false,
-   "release": "https://github.com/hyperdxio/hyperdx/releases/tag/cli-v0.8.0"
+   "release": "https://github.com/hyperdxio/hyperdx/releases/tag/cli-v0.8.0",
+   "screenshots": [
+    "https://raw.githubusercontent.com/hyperdxio/hyperdx/HEAD/.github/images/search_splash.png"
+   ]
   },
   {
    "id": "idurar-erp-crm",
@@ -3411,7 +3705,8 @@
     "awesome-foss-alternatives"
    ],
    "verified": false,
-   "release": "https://github.com/idurar/idurar-erp-crm/releases/tag/4.1.1"
+   "release": "https://github.com/idurar/idurar-erp-crm/releases/tag/4.1.1",
+   "screenshots": []
   },
   {
    "id": "illa",
@@ -3437,7 +3732,8 @@
     "open-source-alternatives"
    ],
    "verified": false,
-   "release": "https://github.com/illacloud/illa-builder/releases/tag/illa-builder%404.8.5"
+   "release": "https://github.com/illacloud/illa-builder/releases/tag/illa-builder%404.8.5",
+   "screenshots": []
   },
   {
    "id": "immich",
@@ -3459,7 +3755,10 @@
    ],
    "source": "starter",
    "verified": false,
-   "release": "https://github.com/immich-app/immich/releases/tag/v3.3.5"
+   "release": "https://github.com/immich-app/immich/releases/tag/v3.3.5",
+   "screenshots": [
+    "https://raw.githubusercontent.com/immich-app/immich/HEAD/design/immich-screenshots.png"
+   ]
   },
   {
    "id": "indic-keyboard",
@@ -3484,7 +3783,8 @@
     "awesome-privacy"
    ],
    "verified": false,
-   "release": "https://gitlab.com/indicproject/indic-keyboard/-/releases/v3.4"
+   "release": "https://gitlab.com/indicproject/indic-keyboard/-/releases/v3.4",
+   "screenshots": []
   },
   {
    "id": "indico",
@@ -3508,7 +3808,10 @@
     "switching.software"
    ],
    "verified": false,
-   "release": "https://github.com/indico/indico/releases/tag/v3.3.14"
+   "release": "https://github.com/indico/indico/releases/tag/v3.3.14",
+   "screenshots": [
+    "https://raw.githubusercontent.com/indico/indico/master/sneakpeek.gif"
+   ]
   },
   {
    "id": "influxdb",
@@ -3533,7 +3836,8 @@
     "awesome-oss-alternatives"
    ],
    "verified": false,
-   "release": "https://github.com/influxdata/influxdb/releases/tag/v3.12.1"
+   "release": "https://github.com/influxdata/influxdb/releases/tag/v3.12.1",
+   "screenshots": []
   },
   {
    "id": "inkscape",
@@ -3555,7 +3859,8 @@
    ],
    "source": "starter",
    "verified": false,
-   "release": "https://gitlab.com/inkscape/inkscape/-/releases/INKSCAPE_1_4"
+   "release": "https://gitlab.com/inkscape/inkscape/-/releases/INKSCAPE_1_4",
+   "screenshots": []
   },
   {
    "id": "insomnia",
@@ -3579,7 +3884,11 @@
     "open-source-alternatives"
    ],
    "verified": false,
-   "release": "https://github.com/Kong/insomnia/releases/tag/core%4013.3.1"
+   "release": "https://github.com/Kong/insomnia/releases/tag/core%4013.3.1",
+   "screenshots": [
+    "https://raw.githubusercontent.com/Kong/insomnia/develop/screenshots/main.png",
+    "https://insomnia.rest/images/open-graph-insomnia.png"
+   ]
   },
   {
    "id": "invokeai",
@@ -3602,7 +3911,10 @@
    ],
    "source": "starter",
    "verified": false,
-   "release": "https://github.com/invoke-ai/InvokeAI/releases/tag/v6.14.2"
+   "release": "https://github.com/invoke-ai/InvokeAI/releases/tag/v6.14.2",
+   "screenshots": [
+    "https://invoke.ai/coverimage.png"
+   ]
   },
   {
    "id": "jan",
@@ -3624,7 +3936,8 @@
    ],
    "source": "starter",
    "verified": false,
-   "release": "https://github.com/janhq/jan/releases/tag/v0.8.7"
+   "release": "https://github.com/janhq/jan/releases/tag/v0.8.7",
+   "screenshots": []
   },
   {
    "id": "janssen",
@@ -3649,7 +3962,8 @@
     "awesome-foss-alternatives"
    ],
    "verified": false,
-   "release": "https://github.com/JanssenProject/jans/releases/tag/v2.5.0"
+   "release": "https://github.com/JanssenProject/jans/releases/tag/v2.5.0",
+   "screenshots": []
   },
   {
    "id": "jellyfin",
@@ -3672,7 +3986,8 @@
    ],
    "source": "starter",
    "verified": false,
-   "release": "https://github.com/jellyfin/jellyfin/releases/tag/v12.3"
+   "release": "https://github.com/jellyfin/jellyfin/releases/tag/v12.3",
+   "screenshots": []
   },
   {
    "id": "jenkins",
@@ -3696,7 +4011,8 @@
     "awesome-foss-alternatives"
    ],
    "verified": false,
-   "release": "https://github.com/jenkinsci/jenkins/releases/tag/jenkins-2.587"
+   "release": "https://github.com/jenkinsci/jenkins/releases/tag/jenkins-2.587",
+   "screenshots": []
   },
   {
    "id": "jitsi-meet",
@@ -3718,7 +4034,10 @@
    ],
    "source": "starter",
    "verified": false,
-   "release": "https://github.com/jitsi/jitsi-meet/releases/tag/stable/jitsi-meet_11248"
+   "release": "https://github.com/jitsi/jitsi-meet/releases/tag/stable/jitsi-meet_11248",
+   "screenshots": [
+    "https://raw.githubusercontent.com/jitsi/jitsi-meet/master/readme-img1.png"
+   ]
   },
   {
    "id": "jitsu",
@@ -3742,7 +4061,8 @@
     "open-source-alternatives"
    ],
    "verified": false,
-   "release": "https://github.com/jitsucom/jitsu/releases/tag/jitsu-cli1.11.0"
+   "release": "https://github.com/jitsucom/jitsu/releases/tag/jitsu-cli1.11.0",
+   "screenshots": []
   },
   {
    "id": "joplin",
@@ -3766,7 +4086,10 @@
    ],
    "source": "starter",
    "verified": false,
-   "release": "https://github.com/laurent22/joplin/releases/tag/v3.7.21"
+   "release": "https://github.com/laurent22/joplin/releases/tag/v3.7.21",
+   "screenshots": [
+    "https://raw.githubusercontent.com/laurent22/joplin/dev/Assets/WebsiteAssets/images/home-top-img.png"
+   ]
   },
   {
    "id": "kanboard",
@@ -3791,7 +4114,8 @@
     "open-source-alternatives"
    ],
    "verified": false,
-   "release": "https://github.com/kanboard/kanboard/releases/tag/v1.2.56"
+   "release": "https://github.com/kanboard/kanboard/releases/tag/v1.2.56",
+   "screenshots": []
   },
   {
    "id": "kdenlive",
@@ -3813,7 +4137,8 @@
     "Operating systems supported are not stated in the material."
    ],
    "source": "starter",
-   "verified": false
+   "verified": false,
+   "screenshots": []
   },
   {
    "id": "keepassxc",
@@ -3836,7 +4161,8 @@
    ],
    "source": "starter",
    "verified": false,
-   "release": "https://github.com/keepassxreboot/keepassxc/releases/tag/2.8.0"
+   "release": "https://github.com/keepassxreboot/keepassxc/releases/tag/2.8.0",
+   "screenshots": []
   },
   {
    "id": "kestra",
@@ -3860,7 +4186,10 @@
     "awesome-oss-alternatives"
    ],
    "verified": false,
-   "release": "https://github.com/kestra-io/kestra/releases/tag/v2.0.7"
+   "release": "https://github.com/kestra-io/kestra/releases/tag/v2.0.7",
+   "screenshots": [
+    "https://kestra.io/star.gif"
+   ]
   },
   {
    "id": "keycloak",
@@ -3886,7 +4215,8 @@
     "open-source-alternatives"
    ],
    "verified": false,
-   "release": "https://github.com/keycloak/keycloak/releases/tag/26.8.1"
+   "release": "https://github.com/keycloak/keycloak/releases/tag/26.8.1",
+   "screenshots": []
   },
   {
    "id": "keyoxide",
@@ -3911,7 +4241,8 @@
     "switching.software"
    ],
    "verified": false,
-   "release": "https://codeberg.org/keyoxide/keyoxide-web/releases/tag/5.1.0"
+   "release": "https://codeberg.org/keyoxide/keyoxide-web/releases/tag/5.1.0",
+   "screenshots": []
   },
   {
    "id": "kimai",
@@ -3936,7 +4267,10 @@
     "open-source-alternatives"
    ],
    "verified": false,
-   "release": "https://github.com/kimai/kimai/releases/tag/2.71.0"
+   "release": "https://github.com/kimai/kimai/releases/tag/2.71.0",
+   "screenshots": [
+    "https://www.kimai.org/images/screenshots/screenshot-dashboard.webp"
+   ]
   },
   {
    "id": "kodi",
@@ -3959,7 +4293,10 @@
    ],
    "source": "starter",
    "verified": false,
-   "release": "https://github.com/xbmc/xbmc/releases/tag/21.3-Omega"
+   "release": "https://github.com/xbmc/xbmc/releases/tag/21.3-Omega",
+   "screenshots": [
+    "https://raw.githubusercontent.com/xbmc/xbmc/HEAD/docs/resources/kodi.gif"
+   ]
   },
   {
    "id": "koreader",
@@ -3982,7 +4319,8 @@
    ],
    "source": "starter",
    "verified": false,
-   "release": "https://github.com/koreader/koreader/releases/tag/v2026.07.1"
+   "release": "https://github.com/koreader/koreader/releases/tag/v2026.07.1",
+   "screenshots": []
   },
   {
    "id": "krita",
@@ -4004,7 +4342,8 @@
     "The README does not describe photo editing features, so the photo-editing group and the Photoshop and Affinity Photo fits rest on the list descriptions only."
    ],
    "source": "starter",
-   "verified": false
+   "verified": false,
+   "screenshots": []
   },
   {
    "id": "kubero",
@@ -4030,7 +4369,13 @@
     "open-source-alternatives"
    ],
    "verified": false,
-   "release": "https://github.com/kubero-dev/kubero/releases/tag/v3.1.1"
+   "release": "https://github.com/kubero-dev/kubero/releases/tag/v3.1.1",
+   "screenshots": [
+    "https://www.kubero.dev/assets/images/pipeline-list-a693ac0c7dc36ec9fa42100e8908577c.png",
+    "https://www.kubero.dev/assets/images/app-overview-56c193140fd4f5acd9d8d242da15129b.png",
+    "https://www.kubero.dev/assets/images/app-vulnerabilities-49af1cf7933071f3cc680ab4737249e2.png",
+    "https://www.kubero.dev/assets/images/app-metrics-762b0a7f53e9b3f926bc1c2cc8e33fd8.png"
+   ]
   },
   {
    "id": "kubestellar-console",
@@ -4056,7 +4401,10 @@
     "awesome-foss-alternatives"
    ],
    "verified": false,
-   "release": "https://github.com/kubestellar/console/releases/tag/v0.3.42"
+   "release": "https://github.com/kubestellar/console/releases/tag/v0.3.42",
+   "screenshots": [
+    "https://raw.githubusercontent.com/kubestellar/console/HEAD/docs/images/console-screenshot.png"
+   ]
   },
   {
    "id": "kutt",
@@ -4081,7 +4429,13 @@
     "awesome-privacy"
    ],
    "verified": false,
-   "release": "https://github.com/thedevs-network/kutt/releases/tag/v3.2.6"
+   "release": "https://github.com/thedevs-network/kutt/releases/tag/v3.2.6",
+   "screenshots": [
+    "https://github.com/user-attachments/assets/b74fab78-5e80-4f57-8425-f0cc73e9c68d",
+    "https://github.com/user-attachments/assets/a75d2430-8074-4ce4-93ec-d8bdfd75d917",
+    "https://github.com/user-attachments/assets/b915eb77-3d66-4407-8e5d-b556f80ff453",
+    "https://kutt.to/images/card.png"
+   ]
   },
   {
    "id": "kuzzle",
@@ -4105,7 +4459,8 @@
     "awesome-oss-alternatives"
    ],
    "verified": false,
-   "release": "https://github.com/kuzzleio/kuzzle/releases/tag/v2.59.0"
+   "release": "https://github.com/kuzzleio/kuzzle/releases/tag/v2.59.0",
+   "screenshots": []
   },
   {
    "id": "lastsaas",
@@ -4131,7 +4486,8 @@
     "awesome-foss-alternatives"
    ],
    "verified": false,
-   "release": "https://github.com/metavert-io/lastsaas/releases/tag/v1.0.0"
+   "release": "https://github.com/metavert-io/lastsaas/releases/tag/v1.0.0",
+   "screenshots": []
   },
   {
    "id": "leantime",
@@ -4155,7 +4511,13 @@
     "open-source-alternatives"
    ],
    "verified": false,
-   "release": "https://github.com/Leantime/leantime/releases/tag/v3.12.0"
+   "release": "https://github.com/Leantime/leantime/releases/tag/v3.12.0",
+   "screenshots": [
+    "https://raw.githubusercontent.com/Leantime/leantime/HEAD/public/assets/images/Screenshots/mywork-v3.5.png",
+    "https://raw.githubusercontent.com/Leantime/leantime/HEAD/public/assets/images/Screenshots/dark.png",
+    "https://raw.githubusercontent.com/Leantime/leantime/HEAD/public/assets/images/Screenshots/projectDashboard.png",
+    "https://raw.githubusercontent.com/Leantime/leantime/HEAD/public/assets/images/Screenshots/table.png"
+   ]
   },
   {
    "id": "lemmy",
@@ -4177,7 +4539,11 @@
    ],
    "source": "starter",
    "verified": false,
-   "release": "https://github.com/LemmyNet/lemmy/releases/tag/0.19.20"
+   "release": "https://github.com/LemmyNet/lemmy/releases/tag/0.19.20",
+   "screenshots": [
+    "https://i.postimg.cc/wvYVvKjP/main-screen-2.webp",
+    "https://i.postimg.cc/hjRrjFty/mobile-pic.webp"
+   ]
   },
   {
    "id": "leon",
@@ -4202,7 +4568,8 @@
     "open-source-alternatives"
    ],
    "verified": false,
-   "release": null
+   "release": null,
+   "screenshots": []
   },
   {
    "id": "librechat",
@@ -4224,7 +4591,8 @@
    ],
    "source": "starter",
    "verified": false,
-   "release": null
+   "release": null,
+   "screenshots": []
   },
   {
    "id": "librengine",
@@ -4250,7 +4618,10 @@
     "awesome-privacy"
    ],
    "verified": false,
-   "release": "https://github.com/liameno/librengine/releases/tag/v1.2"
+   "release": "https://github.com/liameno/librengine/releases/tag/v1.2",
+   "screenshots": [
+    "https://raw.githubusercontent.com/liameno/librengine/HEAD/images/demo.png"
+   ]
   },
   {
    "id": "libreoffice-calc",
@@ -4272,7 +4643,8 @@
     "Whether the code repository's build and platform details apply to the Calc app as shipped to end users."
    ],
    "source": "starter",
-   "verified": false
+   "verified": false,
+   "screenshots": []
   },
   {
    "id": "libreoffice-impress",
@@ -4294,7 +4666,8 @@
     "Supported platforms for the Impress app itself were not stated beyond the build and runtime requirements for the suite."
    ],
    "source": "starter",
-   "verified": false
+   "verified": false,
+   "screenshots": []
   },
   {
    "id": "libreoffice-writer",
@@ -4316,7 +4689,8 @@
     "How Writer compares to Apple Pages in features."
    ],
    "source": "starter",
-   "verified": false
+   "verified": false,
+   "screenshots": []
   },
   {
    "id": "libresign",
@@ -4340,7 +4714,10 @@
     "awesome-oss-alternatives"
    ],
    "verified": false,
-   "release": "https://github.com/LibreSign/libresign/releases/tag/v15.0.9"
+   "release": "https://github.com/LibreSign/libresign/releases/tag/v15.0.9",
+   "screenshots": [
+    "https://raw.githubusercontent.com/LibreSign/libresign/HEAD/img/screenshot/request-signature.png"
+   ]
   },
   {
    "id": "librespeed",
@@ -4364,7 +4741,10 @@
     "switching.software"
    ],
    "verified": false,
-   "release": "https://github.com/librespeed/speedtest/releases/tag/v6.3.1"
+   "release": "https://github.com/librespeed/speedtest/releases/tag/v6.3.1",
+   "screenshots": [
+    "https://speedtest.fdossena.com/mpot_v7.gif"
+   ]
   },
   {
    "id": "libretranslate",
@@ -4386,7 +4766,11 @@
    ],
    "source": "starter",
    "verified": false,
-   "release": "https://github.com/LibreTranslate/LibreTranslate/releases/tag/v1.9.6"
+   "release": "https://github.com/LibreTranslate/LibreTranslate/releases/tag/v1.9.6",
+   "screenshots": [
+    "https://github.com/user-attachments/assets/457696b5-dbff-40ab-a18e-7bfb152c5121",
+    "https://user-images.githubusercontent.com/1951843/102724116-32a6df00-42db-11eb-8cc0-129ab39cdfb5.png"
+   ]
   },
   {
    "id": "librewolf",
@@ -4409,7 +4793,8 @@
    ],
    "source": "starter",
    "verified": false,
-   "release": "https://codeberg.org/librewolf/source/releases/tag/153.0.4-1"
+   "release": "https://codeberg.org/librewolf/source/releases/tag/153.0.4-1",
+   "screenshots": []
   },
   {
    "id": "lightdash",
@@ -4434,7 +4819,8 @@
     "awesome-oss-alternatives"
    ],
    "verified": false,
-   "release": "https://github.com/lightdash/lightdash/releases/tag/3.53.10"
+   "release": "https://github.com/lightdash/lightdash/releases/tag/3.53.10",
+   "screenshots": []
   },
   {
    "id": "limesurvey",
@@ -4457,7 +4843,8 @@
    ],
    "source": "starter",
    "verified": false,
-   "release": null
+   "release": null,
+   "screenshots": []
   },
   {
    "id": "lineageos",
@@ -4479,7 +4866,8 @@
     "Which specific devices and manufacturers are supported beyond the README's general claim of more than 20 manufacturers."
    ],
    "source": "starter",
-   "verified": false
+   "verified": false,
+   "screenshots": []
   },
   {
    "id": "linux-mint",
@@ -4501,7 +4889,8 @@
     "Any direct comparison with macOS beyond being a desktop operating system."
    ],
    "source": "starter",
-   "verified": false
+   "verified": false,
+   "screenshots": []
   },
   {
    "id": "litekart",
@@ -4526,7 +4915,13 @@
     "open-source-alternatives"
    ],
    "verified": false,
-   "release": "https://github.com/itswadesh/svelte-commerce/releases/tag/v4.0.0"
+   "release": "https://github.com/itswadesh/svelte-commerce/releases/tag/v4.0.0",
+   "screenshots": [
+    "https://raw.githubusercontent.com/itswadesh/svelte-commerce/HEAD/.github/assets/8.jpg",
+    "https://raw.githubusercontent.com/itswadesh/svelte-commerce/HEAD/.github/assets/9.jpg",
+    "https://raw.githubusercontent.com/itswadesh/svelte-commerce/HEAD/.github/assets/10.jpg",
+    "https://raw.githubusercontent.com/itswadesh/svelte-commerce/HEAD/.github/assets/2.jpg"
+   ]
   },
   {
    "id": "livekit",
@@ -4551,7 +4946,8 @@
     "awesome-oss-alternatives"
    ],
    "verified": false,
-   "release": "https://github.com/livekit/livekit/releases/tag/v1.13.11"
+   "release": "https://github.com/livekit/livekit/releases/tag/v1.13.11",
+   "screenshots": []
   },
   {
    "id": "lmms",
@@ -4573,7 +4969,8 @@
    ],
    "source": "starter",
    "verified": false,
-   "release": "https://github.com/LMMS/lmms/releases/tag/v1.2.2"
+   "release": "https://github.com/LMMS/lmms/releases/tag/v1.2.2",
+   "screenshots": []
   },
   {
    "id": "localsend",
@@ -4595,7 +4992,11 @@
    ],
    "source": "starter",
    "verified": false,
-   "release": "https://github.com/localsend/localsend/releases/tag/v1.18.2"
+   "release": "https://github.com/localsend/localsend/releases/tag/v1.18.2",
+   "screenshots": [
+    "https://localsend.org/img/screenshot-iphone.webp",
+    "https://localsend.org/img/screenshot-pc.webp"
+   ]
   },
   {
    "id": "logseq",
@@ -4618,7 +5019,10 @@
    ],
    "source": "starter",
    "verified": false,
-   "release": "https://github.com/logseq/logseq/releases/tag/2.0.2"
+   "release": "https://github.com/logseq/logseq/releases/tag/2.0.2",
+   "screenshots": [
+    "https://user-images.githubusercontent.com/25513724/221387376-4dc419c2-0d0a-460c-a920-2d211e78b456.gif"
+   ]
   },
   {
    "id": "logto",
@@ -4643,7 +5047,12 @@
     "open-source-alternatives"
    ],
    "verified": false,
-   "release": "https://github.com/logto-io/logto/releases/tag/v1.45.0"
+   "release": "https://github.com/logto-io/logto/releases/tag/v1.45.0",
+   "screenshots": [
+    "https://raw.githubusercontent.com/logto-io/logto/HEAD/assets/showcase-logto-auth-sdks.gif",
+    "https://raw.githubusercontent.com/logto-io/logto/HEAD/assets/showcase-logto-sign-in-exeperience.gif",
+    "https://raw.githubusercontent.com/logto-io/logto/HEAD/assets/showcase-logto-multi-tenancy.gif"
+   ]
   },
   {
    "id": "loops",
@@ -4667,7 +5076,10 @@
    ],
    "source": "starter",
    "verified": false,
-   "release": "https://github.com/joinloops/loops-server/releases/tag/v1.0.0-beta.15"
+   "release": "https://github.com/joinloops/loops-server/releases/tag/v1.0.0-beta.15",
+   "screenshots": [
+    "https://raw.githubusercontent.com/joinloops/loops-server/HEAD/screenshot.png"
+   ]
   },
   {
    "id": "lowdefy",
@@ -4691,7 +5103,10 @@
     "awesome-oss-alternatives"
    ],
    "verified": false,
-   "release": "https://github.com/lowdefy/lowdefy/releases/tag/v6.2.0"
+   "release": "https://github.com/lowdefy/lowdefy/releases/tag/v6.2.0",
+   "screenshots": [
+    "https://user-images.githubusercontent.com/7165064/121780045-d0021200-cb9e-11eb-84f9-ff67c8255ec6.gif"
+   ]
   },
   {
    "id": "manticore-search",
@@ -4715,7 +5130,8 @@
     "awesome-oss-alternatives"
    ],
    "verified": false,
-   "release": "https://github.com/manticoresoftware/manticoresearch/releases/tag/release-29.9.0"
+   "release": "https://github.com/manticoresoftware/manticoresearch/releases/tag/release-29.9.0",
+   "screenshots": []
   },
   {
    "id": "mastodon",
@@ -4737,7 +5153,8 @@
    ],
    "source": "starter",
    "verified": false,
-   "release": "https://github.com/mastodon/mastodon/releases/tag/v4.7.3"
+   "release": "https://github.com/mastodon/mastodon/releases/tag/v4.7.3",
+   "screenshots": []
   },
   {
    "id": "matano",
@@ -4762,7 +5179,11 @@
     "awesome-oss-alternatives"
    ],
    "verified": false,
-   "release": null
+   "release": null,
+   "screenshots": [
+    "https://raw.githubusercontent.com/matanolabs/matano/HEAD/assets/matano_athena.png",
+    "https://raw.githubusercontent.com/matanolabs/matano/HEAD/assets/matano_slack_alert.png"
+   ]
   },
   {
    "id": "matomo",
@@ -4783,7 +5204,10 @@
    ],
    "source": "starter",
    "verified": false,
-   "release": "https://github.com/matomo-org/matomo/releases/tag/5.14.2"
+   "release": "https://github.com/matomo-org/matomo/releases/tag/5.14.2",
+   "screenshots": [
+    "https://matomo.org/wp-content/uploads/2026/04/mockup_matomo-dashboard-2026.webp"
+   ]
   },
   {
    "id": "mattermost",
@@ -4806,7 +5230,10 @@
    ],
    "source": "starter",
    "verified": false,
-   "release": "https://github.com/mattermost/mattermost/releases/tag/v12.0.1"
+   "release": "https://github.com/mattermost/mattermost/releases/tag/v12.0.1",
+   "screenshots": [
+    "https://user-images.githubusercontent.com/7205829/136107976-7a894c9e-290a-490d-8501-e5fdbfc3785a.png"
+   ]
   },
   {
    "id": "mbin",
@@ -4828,7 +5255,8 @@
    ],
    "source": "starter",
    "verified": false,
-   "release": "https://github.com/MbinOrg/mbin/releases/tag/v1.11.0"
+   "release": "https://github.com/MbinOrg/mbin/releases/tag/v1.11.0",
+   "screenshots": []
   },
   {
    "id": "mediawiki",
@@ -4852,7 +5280,8 @@
     "awesome-foss-alternatives"
    ],
    "verified": false,
-   "release": null
+   "release": null,
+   "screenshots": []
   },
   {
    "id": "medusa",
@@ -4874,7 +5303,8 @@
    ],
    "source": "starter",
    "verified": false,
-   "release": "https://github.com/medusajs/medusa/releases/tag/v2.22.1"
+   "release": "https://github.com/medusajs/medusa/releases/tag/v2.22.1",
+   "screenshots": []
   },
   {
    "id": "mellisearch",
@@ -4901,7 +5331,11 @@
     "awesome-oss-alternatives"
    ],
    "verified": false,
-   "release": "https://github.com/meilisearch/meilisearch/releases/tag/v1.56.0"
+   "release": "https://github.com/meilisearch/meilisearch/releases/tag/v1.56.0",
+   "screenshots": [
+    "https://raw.githubusercontent.com/meilisearch/meilisearch/HEAD/assets/demo-light.gif#gh-light-mode-only",
+    "https://raw.githubusercontent.com/meilisearch/meilisearch/HEAD/assets/demo-dark.gif#gh-dark-mode-only"
+   ]
   },
   {
    "id": "memos",
@@ -4927,7 +5361,10 @@
     "awesome-privacy"
    ],
    "verified": false,
-   "release": "https://github.com/usememos/memos/releases/tag/v0.31.0"
+   "release": "https://github.com/usememos/memos/releases/tag/v0.31.0",
+   "screenshots": [
+    "https://raw.githubusercontent.com/usememos/.github/refs/heads/main/assets/previews/timeline-light.png"
+   ]
   },
   {
    "id": "meshcentral",
@@ -4952,7 +5389,8 @@
     "awesome-privacy"
    ],
    "verified": false,
-   "release": "https://github.com/Ylianst/MeshCentral/releases/tag/1.3.1"
+   "release": "https://github.com/Ylianst/MeshCentral/releases/tag/1.3.1",
+   "screenshots": []
   },
   {
    "id": "metabase",
@@ -4978,7 +5416,10 @@
     "open-source-alternatives"
    ],
    "verified": false,
-   "release": "https://github.com/metabase/metabase/releases/tag/v0.64.1"
+   "release": "https://github.com/metabase/metabase/releases/tag/v0.64.1",
+   "screenshots": [
+    "https://raw.githubusercontent.com/metabase/metabase/HEAD/docs/images/metabase-product-screenshot-updated.png"
+   ]
   },
   {
    "id": "metriql",
@@ -5003,7 +5444,8 @@
     "awesome-oss-alternatives"
    ],
    "verified": false,
-   "release": null
+   "release": null,
+   "screenshots": []
   },
   {
    "id": "miniflux",
@@ -5027,7 +5469,11 @@
     "awesome-privacy"
    ],
    "verified": false,
-   "release": "https://github.com/miniflux/v2/releases/tag/2.3.4"
+   "release": "https://github.com/miniflux/v2/releases/tag/2.3.4",
+   "screenshots": [
+    "https://miniflux.app/images/overview.png",
+    "https://miniflux.app/images/item-selection-black-theme.png"
+   ]
   },
   {
    "id": "misskey",
@@ -5049,7 +5495,10 @@
    ],
    "source": "starter",
    "verified": false,
-   "release": "https://github.com/misskey-dev/misskey/releases/tag/2026.10.1"
+   "release": "https://github.com/misskey-dev/misskey/releases/tag/2026.10.1",
+   "screenshots": [
+    "https://misskey-hub.net/img/og/misskey-hub-screenshot-l.png"
+   ]
   },
   {
    "id": "mlcraft",
@@ -5074,7 +5523,8 @@
     "awesome-oss-alternatives"
    ],
    "verified": false,
-   "release": "https://github.com/synmetrix/synmetrix/releases/tag/v0.1.55"
+   "release": "https://github.com/synmetrix/synmetrix/releases/tag/v0.1.55",
+   "screenshots": []
   },
   {
    "id": "moinmoin",
@@ -5099,7 +5549,8 @@
     "awesome-foss-alternatives"
    ],
    "verified": false,
-   "release": null
+   "release": null,
+   "screenshots": []
   },
   {
    "id": "monomap",
@@ -5123,7 +5574,8 @@
     "awesome-foss-alternatives"
    ],
    "verified": false,
-   "release": "https://github.com/tehnika-mk/monomap/releases/tag/v1.2"
+   "release": "https://github.com/tehnika-mk/monomap/releases/tag/v1.2",
+   "screenshots": []
   },
   {
    "id": "mumble",
@@ -5145,7 +5597,10 @@
    ],
    "source": "starter",
    "verified": false,
-   "release": "https://github.com/mumble-voip/mumble/releases/tag/v1.5.939"
+   "release": "https://github.com/mumble-voip/mumble/releases/tag/v1.5.939",
+   "screenshots": [
+    "https://raw.githubusercontent.com/mumble-voip/mumble/HEAD/screenshots/Mumble.png"
+   ]
   },
   {
    "id": "mypaint",
@@ -5168,7 +5623,8 @@
    ],
    "source": "starter",
    "verified": false,
-   "release": "https://github.com/mypaint/mypaint/releases/tag/v2.0.1"
+   "release": "https://github.com/mypaint/mypaint/releases/tag/v2.0.1",
+   "screenshots": []
   },
   {
    "id": "natron",
@@ -5191,7 +5647,8 @@
    ],
    "source": "starter",
    "verified": false,
-   "release": "https://github.com/NatronGitHub/Natron/releases/tag/v2.5.0"
+   "release": "https://github.com/NatronGitHub/Natron/releases/tag/v2.5.0",
+   "screenshots": []
   },
   {
    "id": "navidrome",
@@ -5213,7 +5670,13 @@
    ],
    "source": "starter",
    "verified": false,
-   "release": "https://github.com/navidrome/navidrome/releases/tag/v0.64.2"
+   "release": "https://github.com/navidrome/navidrome/releases/tag/v0.64.2",
+   "screenshots": [
+    "https://raw.githubusercontent.com/navidrome/navidrome/master/.github/screenshots/ss-mobile-login.png",
+    "https://raw.githubusercontent.com/navidrome/navidrome/master/.github/screenshots/ss-mobile-player.png",
+    "https://raw.githubusercontent.com/navidrome/navidrome/master/.github/screenshots/ss-mobile-album-view.png",
+    "https://raw.githubusercontent.com/navidrome/navidrome/master/.github/screenshots/ss-desktop-player.png"
+   ]
   },
   {
    "id": "neo4j",
@@ -5238,7 +5701,8 @@
     "awesome-oss-alternatives"
    ],
    "verified": false,
-   "release": "https://github.com/neo4j/neo4j/releases/tag/3.2.0-alpha08"
+   "release": "https://github.com/neo4j/neo4j/releases/tag/3.2.0-alpha08",
+   "screenshots": []
   },
   {
    "id": "netbird",
@@ -5263,7 +5727,8 @@
     "awesome-oss-alternatives"
    ],
    "verified": false,
-   "release": "https://github.com/netbirdio/netbird/releases/tag/v0.81.4"
+   "release": "https://github.com/netbirdio/netbird/releases/tag/v0.81.4",
+   "screenshots": []
   },
   {
    "id": "netdata",
@@ -5289,7 +5754,10 @@
     "awesome-oss-alternatives"
    ],
    "verified": false,
-   "release": "https://github.com/netdata/netdata/releases/tag/v2.12.2"
+   "release": "https://github.com/netdata/netdata/releases/tag/v2.12.2",
+   "screenshots": [
+    "https://www.netdata.cloud/img/og-image.png"
+   ]
   },
   {
    "id": "netnewswire",
@@ -5315,7 +5783,8 @@
     "awesome-privacy"
    ],
    "verified": false,
-   "release": "https://github.com/Ranchero-Software/NetNewsWire/releases/tag/mac-7.2.1"
+   "release": "https://github.com/Ranchero-Software/NetNewsWire/releases/tag/mac-7.2.1",
+   "screenshots": []
   },
   {
    "id": "newpipe",
@@ -5337,7 +5806,13 @@
    ],
    "source": "starter",
    "verified": false,
-   "release": "https://github.com/TeamNewPipe/NewPipe/releases/tag/v0.29.1"
+   "release": "https://github.com/TeamNewPipe/NewPipe/releases/tag/v0.29.1",
+   "screenshots": [
+    "https://raw.githubusercontent.com/TeamNewPipe/NewPipe/HEAD/fastlane/metadata/android/en-US/images/phoneScreenshots/00.png",
+    "https://raw.githubusercontent.com/TeamNewPipe/NewPipe/HEAD/fastlane/metadata/android/en-US/images/phoneScreenshots/01.png",
+    "https://raw.githubusercontent.com/TeamNewPipe/NewPipe/HEAD/fastlane/metadata/android/en-US/images/phoneScreenshots/04.png",
+    "https://raw.githubusercontent.com/TeamNewPipe/NewPipe/HEAD/fastlane/metadata/android/en-US/images/phoneScreenshots/05.png"
+   ]
   },
   {
    "id": "newsboat",
@@ -5361,7 +5836,10 @@
     "awesome-privacy"
    ],
    "verified": false,
-   "release": null
+   "release": null,
+   "screenshots": [
+    "https://newsboat.org/images/2.25-screenshot_2x-33f26153.png"
+   ]
   },
   {
    "id": "nexopos",
@@ -5386,7 +5864,8 @@
     "awesome-foss-alternatives"
    ],
    "verified": false,
-   "release": "https://github.com/Blair2004/NexoPOS/releases/tag/v6.3.0"
+   "release": "https://github.com/Blair2004/NexoPOS/releases/tag/v6.3.0",
+   "screenshots": []
   },
   {
    "id": "nextcloud",
@@ -5408,7 +5887,10 @@
    ],
    "source": "starter",
    "verified": false,
-   "release": "https://github.com/nextcloud/server/releases/tag/v33.0.10"
+   "release": "https://github.com/nextcloud/server/releases/tag/v33.0.10",
+   "screenshots": [
+    "https://raw.githubusercontent.com/nextcloud/screenshots/master/nextcloud-hub-25-files.png"
+   ]
   },
   {
    "id": "nextcloud-calendar",
@@ -5431,7 +5913,10 @@
    ],
    "source": "starter",
    "verified": false,
-   "release": "https://github.com/nextcloud/calendar/releases/tag/v3.3.2"
+   "release": "https://github.com/nextcloud/calendar/releases/tag/v3.3.2",
+   "screenshots": [
+    "https://raw.githubusercontent.com/nextcloud/documentation/master/user_manual/groupware/images/calendar_application.png"
+   ]
   },
   {
    "id": "nextcloud-forms",
@@ -5455,7 +5940,12 @@
     "switching.software"
    ],
    "verified": false,
-   "release": "https://github.com/nextcloud/forms/releases/tag/v5.4.1"
+   "release": "https://github.com/nextcloud/forms/releases/tag/v5.4.1",
+   "screenshots": [
+    "https://raw.githubusercontent.com/nextcloud/forms/HEAD/screenshots/forms1.png",
+    "https://raw.githubusercontent.com/nextcloud/forms/HEAD/screenshots/forms2.png",
+    "https://raw.githubusercontent.com/nextcloud/forms/HEAD/screenshots/forms3.png"
+   ]
   },
   {
    "id": "nextcloud-notes",
@@ -5483,7 +5973,10 @@
     "awesome-privacy"
    ],
    "verified": false,
-   "release": "https://github.com/nextcloud/notes/releases/tag/v6.1.0"
+   "release": "https://github.com/nextcloud/notes/releases/tag/v6.1.0",
+   "screenshots": [
+    "https://raw.githubusercontent.com/nextcloud/screenshots/master/apps/Notes/notes.png"
+   ]
   },
   {
    "id": "nhost",
@@ -5509,7 +6002,8 @@
     "open-source-alternatives"
    ],
    "verified": false,
-   "release": "https://github.com/nhost/nhost/releases/tag/%40nhost/dashboard%403.8.1"
+   "release": "https://github.com/nhost/nhost/releases/tag/%40nhost/dashboard%403.8.1",
+   "screenshots": []
   },
   {
    "id": "node-red",
@@ -5533,7 +6027,10 @@
    ],
    "source": "starter",
    "verified": false,
-   "release": "https://github.com/node-red/node-red/releases/tag/5.0.9"
+   "release": "https://github.com/node-red/node-red/releases/tag/5.0.9",
+   "screenshots": [
+    "https://nodered.org/images/node-red-screenshot.png"
+   ]
   },
   {
    "id": "notabase",
@@ -5558,7 +6055,10 @@
     "awesome-oss-alternatives"
    ],
    "verified": false,
-   "release": null
+   "release": null,
+   "screenshots": [
+    "https://user-images.githubusercontent.com/4218237/135161184-88b3afa8-3f64-46c2-82e8-d0a22d285642.gif"
+   ]
   },
   {
    "id": "notally",
@@ -5584,7 +6084,12 @@
     "awesome-privacy"
    ],
    "verified": false,
-   "release": "https://github.com/OmGodse/Notally/releases/tag/v6.2"
+   "release": "https://github.com/OmGodse/Notally/releases/tag/v6.2",
+   "screenshots": [
+    "https://raw.githubusercontent.com/OmGodse/Notally/HEAD/fastlane/metadata/android/en-US/images/phoneScreenshots/1.png",
+    "https://raw.githubusercontent.com/OmGodse/Notally/HEAD/fastlane/metadata/android/en-US/images/phoneScreenshots/2.png",
+    "https://raw.githubusercontent.com/OmGodse/Notally/HEAD/fastlane/metadata/android/en-US/images/phoneScreenshots/3.png"
+   ]
   },
   {
    "id": "notegen",
@@ -5609,7 +6114,10 @@
     "awesome-foss-alternatives"
    ],
    "verified": false,
-   "release": "https://github.com/codexu/note-gen/releases/tag/note-gen-v0.39.0"
+   "release": "https://github.com/codexu/note-gen/releases/tag/note-gen-v0.39.0",
+   "screenshots": [
+    "https://s2.loli.net/2025/12/22/jlpEP2c6ogwHhIA.png"
+   ]
   },
   {
    "id": "notesnook",
@@ -5638,7 +6146,10 @@
     "open-source-alternatives"
    ],
    "verified": false,
-   "release": "https://github.com/streetwriters/notesnook/releases/tag/v3.4.10"
+   "release": "https://github.com/streetwriters/notesnook/releases/tag/v3.4.10",
+   "screenshots": [
+    "https://notesnook.com/social-2.png"
+   ]
   },
   {
    "id": "nuclei",
@@ -5663,7 +6174,8 @@
     "awesome-oss-alternatives"
    ],
    "verified": false,
-   "release": "https://github.com/projectdiscovery/nuclei/releases/tag/v3.11.1"
+   "release": "https://github.com/projectdiscovery/nuclei/releases/tag/v3.11.1",
+   "screenshots": []
   },
   {
    "id": "obs-studio",
@@ -5686,7 +6198,8 @@
    ],
    "source": "starter",
    "verified": false,
-   "release": "https://github.com/obsproject/obs-studio/releases/tag/33.0.0"
+   "release": "https://github.com/obsproject/obs-studio/releases/tag/33.0.0",
+   "screenshots": []
   },
   {
    "id": "obtainium",
@@ -5710,7 +6223,13 @@
     "awesome-privacy"
    ],
    "verified": false,
-   "release": "https://github.com/ImranR98/Obtainium/releases/tag/v1.7.3"
+   "release": "https://github.com/ImranR98/Obtainium/releases/tag/v1.7.3",
+   "screenshots": [
+    "https://raw.githubusercontent.com/ImranR98/Obtainium/HEAD/assets/screenshots/1.apps.png",
+    "https://raw.githubusercontent.com/ImranR98/Obtainium/HEAD/assets/screenshots/2.dark_theme.png",
+    "https://raw.githubusercontent.com/ImranR98/Obtainium/HEAD/assets/screenshots/3.material_you.png",
+    "https://raw.githubusercontent.com/ImranR98/Obtainium/HEAD/assets/screenshots/4.app.png"
+   ]
   },
   {
    "id": "odoo",
@@ -5737,7 +6256,8 @@
     "awesome-foss-alternatives"
    ],
    "verified": false,
-   "release": null
+   "release": null,
+   "screenshots": []
   },
   {
    "id": "offpdf",
@@ -5762,7 +6282,10 @@
     "awesome-foss-alternatives"
    ],
    "verified": false,
-   "release": "https://github.com/McanKul/offpdf/releases/tag/v0.5.0"
+   "release": "https://github.com/McanKul/offpdf/releases/tag/v0.5.0",
+   "screenshots": [
+    "https://raw.githubusercontent.com/McanKul/offpdf/HEAD/docs/assets/offpdf-home.png"
+   ]
   },
   {
    "id": "okular",
@@ -5785,7 +6308,10 @@
     "Whether it is maintained as a KDE project in the way the page suggests"
    ],
    "source": "starter",
-   "verified": false
+   "verified": false,
+   "screenshots": [
+    "https://okular.kde.org/images/screenies/okular-main.png"
+   ]
   },
   {
    "id": "olive-video-editor",
@@ -5810,7 +6336,10 @@
     "awesome-privacy"
    ],
    "verified": false,
-   "release": null
+   "release": null,
+   "screenshots": [
+    "https://olivevideoeditor.org/img/020-2.png"
+   ]
   },
   {
    "id": "ollama",
@@ -5834,7 +6363,8 @@
    ],
    "source": "starter",
    "verified": false,
-   "release": "https://github.com/ollama/ollama/releases/tag/v0.40.11"
+   "release": "https://github.com/ollama/ollama/releases/tag/v0.40.11",
+   "screenshots": []
   },
   {
    "id": "omniedge",
@@ -5860,7 +6390,8 @@
     "awesome-oss-alternatives"
    ],
    "verified": false,
-   "release": "https://github.com/omniedgeio/omniedge/releases/tag/v2.9.0"
+   "release": "https://github.com/omniedgeio/omniedge/releases/tag/v2.9.0",
+   "screenshots": []
   },
   {
    "id": "onlyoffice-docs",
@@ -5882,7 +6413,8 @@
    ],
    "source": "starter",
    "verified": false,
-   "release": "https://github.com/ONLYOFFICE/DocumentServer/releases/tag/v10.0.0"
+   "release": "https://github.com/ONLYOFFICE/DocumentServer/releases/tag/v10.0.0",
+   "screenshots": []
   },
   {
    "id": "openassistant",
@@ -5907,7 +6439,8 @@
     "open-source-alternatives"
    ],
    "verified": false,
-   "release": "https://github.com/LAION-AI/Open-Assistant/releases/tag/v0.0.4-alpha2"
+   "release": "https://github.com/LAION-AI/Open-Assistant/releases/tag/v0.0.4-alpha2",
+   "screenshots": []
   },
   {
    "id": "openblocks",
@@ -5932,7 +6465,10 @@
     "open-source-alternatives"
    ],
    "verified": false,
-   "release": "https://github.com/openblocks-dev/openblocks/releases/tag/v1.1.8"
+   "release": "https://github.com/openblocks-dev/openblocks/releases/tag/v1.1.8",
+   "screenshots": [
+    "https://raw.githubusercontent.com/openblocks-dev/openblocks/HEAD/docs/.gitbook/assets/Bu2fpz1h01.gif"
+   ]
   },
   {
    "id": "openboard",
@@ -5957,7 +6493,8 @@
     "awesome-privacy"
    ],
    "verified": false,
-   "release": "https://github.com/openboard-team/openboard/releases/tag/v1.4.5"
+   "release": "https://github.com/openboard-team/openboard/releases/tag/v1.4.5",
+   "screenshots": []
   },
   {
    "id": "openbooks",
@@ -5982,7 +6519,13 @@
     "awesome-foss-alternatives"
    ],
    "verified": false,
-   "release": null
+   "release": null,
+   "screenshots": [
+    "https://raw.githubusercontent.com/braedonsaunders/openbooks/HEAD/.github/assets/screenshots/financial-health.jpg",
+    "https://raw.githubusercontent.com/braedonsaunders/openbooks/HEAD/.github/assets/screenshots/executive-dashboard.jpg",
+    "https://raw.githubusercontent.com/braedonsaunders/openbooks/HEAD/.github/assets/screenshots/profit-and-loss.jpg",
+    "https://raw.githubusercontent.com/braedonsaunders/openbooks/HEAD/.github/assets/screenshots/project-profitability.jpg"
+   ]
   },
   {
    "id": "opencut",
@@ -6008,7 +6551,8 @@
     "awesome-privacy"
    ],
    "verified": false,
-   "release": "https://github.com/OpenCut-app/OpenCut/releases/tag/v0.3.0"
+   "release": "https://github.com/OpenCut-app/OpenCut/releases/tag/v0.3.0",
+   "screenshots": []
   },
   {
    "id": "openhands",
@@ -6031,7 +6575,10 @@
    ],
    "source": "starter",
    "verified": false,
-   "release": "https://github.com/OpenHands/OpenHands/releases/tag/v1.33.0"
+   "release": "https://github.com/OpenHands/OpenHands/releases/tag/v1.33.0",
+   "screenshots": [
+    "https://assets.openhands.dev/screenshot/automation-preview.png"
+   ]
   },
   {
    "id": "openproject",
@@ -6054,7 +6601,10 @@
    ],
    "source": "starter",
    "verified": false,
-   "release": "https://github.com/opf/openproject/releases/tag/v17.9.4"
+   "release": "https://github.com/opf/openproject/releases/tag/v17.9.4",
+   "screenshots": [
+    "https://raw.githubusercontent.com/opf/openproject/HEAD/GitHub-tab-new.png"
+   ]
   },
   {
    "id": "openshot",
@@ -6077,7 +6627,10 @@
    ],
    "source": "starter",
    "verified": false,
-   "release": "https://github.com/OpenShot/openshot-qt/releases/tag/v4.0.1"
+   "release": "https://github.com/OpenShot/openshot-qt/releases/tag/v4.0.1",
+   "screenshots": [
+    "https://cdn.openshot.org/images/hero/openshot-social-poster.jpg"
+   ]
   },
   {
    "id": "openstatus",
@@ -6101,7 +6654,10 @@
     "awesome-oss-alternatives"
    ],
    "verified": false,
-   "release": null
+   "release": null,
+   "screenshots": [
+    "https://www.openstatus.dev/assets/landing/statuspage-meow.png"
+   ]
   },
   {
    "id": "openstreetmap",
@@ -6125,7 +6681,8 @@
     "switching.software"
    ],
    "verified": false,
-   "release": null
+   "release": null,
+   "screenshots": []
   },
   {
    "id": "openvidu",
@@ -6149,7 +6706,10 @@
     "awesome-oss-alternatives"
    ],
    "verified": false,
-   "release": "https://github.com/OpenVidu/openvidu/releases/tag/v3.9.0"
+   "release": "https://github.com/OpenVidu/openvidu/releases/tag/v3.9.0",
+   "screenshots": [
+    "https://openvidu.io/latest/assets/images/meet/embedded/use-cases/support-meeting.png"
+   ]
   },
   {
    "id": "openwebanalytics",
@@ -6173,7 +6733,8 @@
     "open-source-alternatives"
    ],
    "verified": false,
-   "release": "https://github.com/Open-Web-Analytics/Open-Web-Analytics/releases/tag/1.14.2"
+   "release": "https://github.com/Open-Web-Analytics/Open-Web-Analytics/releases/tag/1.14.2",
+   "screenshots": []
   },
   {
    "id": "orbit",
@@ -6199,7 +6760,13 @@
     "awesome-foss-alternatives"
    ],
    "verified": false,
-   "release": "https://github.com/Noveum/orbit/releases/tag/2026.10.25"
+   "release": "https://github.com/Noveum/orbit/releases/tag/2026.10.25",
+   "screenshots": [
+    "https://raw.githubusercontent.com/Noveum/orbit/HEAD/docs/assets/screenshots/board-dark.png",
+    "https://raw.githubusercontent.com/Noveum/orbit/HEAD/docs/assets/screenshots/issues-dark.png",
+    "https://raw.githubusercontent.com/Noveum/orbit/HEAD/docs/assets/screenshots/command-palette-light.png",
+    "https://raw.githubusercontent.com/Noveum/orbit/HEAD/docs/assets/screenshots/sprints-dark.png"
+   ]
   },
   {
    "id": "organic-maps",
@@ -6222,7 +6789,13 @@
    ],
    "source": "starter",
    "verified": false,
-   "release": "https://github.com/organicmaps/organicmaps/releases/tag/2026.09.29-32-android"
+   "release": "https://github.com/organicmaps/organicmaps/releases/tag/2026.09.29-32-android",
+   "screenshots": [
+    "https://raw.githubusercontent.com/organicmaps/organicmaps/HEAD/android/app/src/fdroid/play/listings/en-US/graphics/phone-screenshots/1.jpg",
+    "https://raw.githubusercontent.com/organicmaps/organicmaps/HEAD/android/app/src/fdroid/play/listings/en-US/graphics/phone-screenshots/2.jpg",
+    "https://raw.githubusercontent.com/organicmaps/organicmaps/HEAD/android/app/src/fdroid/play/listings/en-US/graphics/phone-screenshots/3.jpg",
+    "https://raw.githubusercontent.com/organicmaps/organicmaps/HEAD/android/app/src/fdroid/play/listings/en-US/graphics/phone-screenshots/4.jpg"
+   ]
   },
   {
    "id": "ory",
@@ -6247,7 +6820,8 @@
     "awesome-oss-alternatives"
    ],
    "verified": false,
-   "release": "https://github.com/ory/kratos/releases/tag/v26.2.0"
+   "release": "https://github.com/ory/kratos/releases/tag/v26.2.0",
+   "screenshots": []
   },
   {
    "id": "osmand",
@@ -6270,7 +6844,8 @@
    ],
    "source": "starter",
    "verified": false,
-   "release": "https://github.com/osmandapp/OsmAnd/releases/tag/2.0.0"
+   "release": "https://github.com/osmandapp/OsmAnd/releases/tag/2.0.0",
+   "screenshots": []
   },
   {
    "id": "otomi",
@@ -6295,7 +6870,8 @@
     "awesome-oss-alternatives"
    ],
    "verified": false,
-   "release": "https://github.com/linode/apl-core/releases/tag/v6.4.2"
+   "release": "https://github.com/linode/apl-core/releases/tag/v6.4.2",
+   "screenshots": []
   },
   {
    "id": "owncloud",
@@ -6319,7 +6895,8 @@
     "awesome-oss-alternatives"
    ],
    "verified": false,
-   "release": "https://github.com/owncloud/core/releases/tag/v10.16.6"
+   "release": "https://github.com/owncloud/core/releases/tag/v10.16.6",
+   "screenshots": []
   },
   {
    "id": "owncloud-infinite-scale",
@@ -6342,7 +6919,8 @@
    ],
    "source": "starter",
    "verified": false,
-   "release": "https://github.com/owncloud/ocis/releases/tag/v8.2.2"
+   "release": "https://github.com/owncloud/ocis/releases/tag/v8.2.2",
+   "screenshots": []
   },
   {
    "id": "padloc",
@@ -6369,7 +6947,8 @@
     "open-source-alternatives"
    ],
    "verified": false,
-   "release": "https://github.com/padloc/padloc/releases/tag/v4.3.0"
+   "release": "https://github.com/padloc/padloc/releases/tag/v4.3.0",
+   "screenshots": []
   },
   {
    "id": "pagure",
@@ -6393,7 +6972,8 @@
     "awesome-foss-alternatives"
    ],
    "verified": false,
-   "release": null
+   "release": null,
+   "screenshots": []
   },
   {
    "id": "papercups",
@@ -6417,7 +6997,10 @@
     "awesome-oss-alternatives"
    ],
    "verified": false,
-   "release": "https://github.com/papercups-io/papercups/releases/tag/v1.0.0"
+   "release": "https://github.com/papercups-io/papercups/releases/tag/v1.0.0",
+   "screenshots": [
+    "https://user-images.githubusercontent.com/4218509/88716918-a0583180-d0d4-11ea-93b3-12437ac51138.gif"
+   ]
   },
   {
    "id": "passbolt",
@@ -6444,7 +7027,8 @@
     "open-source-alternatives"
    ],
    "verified": false,
-   "release": "https://github.com/passbolt/passbolt_api/releases/tag/v5.17.0"
+   "release": "https://github.com/passbolt/passbolt_api/releases/tag/v5.17.0",
+   "screenshots": []
   },
   {
    "id": "payload",
@@ -6468,7 +7052,8 @@
     "open-source-alternatives"
    ],
    "verified": false,
-   "release": "https://github.com/payloadcms/payload/releases/tag/v3.92.0"
+   "release": "https://github.com/payloadcms/payload/releases/tag/v3.92.0",
+   "screenshots": []
   },
   {
    "id": "pdf-arranger",
@@ -6490,7 +7075,8 @@
    ],
    "source": "starter",
    "verified": false,
-   "release": "https://github.com/pdfarranger/pdfarranger/releases/tag/1.14.0"
+   "release": "https://github.com/pdfarranger/pdfarranger/releases/tag/1.14.0",
+   "screenshots": []
   },
   {
    "id": "peertube",
@@ -6513,7 +7099,13 @@
    ],
    "source": "starter",
    "verified": false,
-   "release": "https://github.com/Chocobozzz/PeerTube/releases/tag/v8.3.1"
+   "release": "https://github.com/Chocobozzz/PeerTube/releases/tag/v8.3.1",
+   "screenshots": [
+    "https://asso.framasoft.org/pic/wI6n1YIH/hKfCL8Xi.png",
+    "https://asso.framasoft.org/pic/lYrgaP2N/Sj3hgkeo.png",
+    "https://asso.framasoft.org/pic/UbNnLlzV/Sx0PSrH1.png",
+    "https://asso.framasoft.org/pic/z6py52z2/61ZyIm65.png"
+   ]
   },
   {
    "id": "penpot",
@@ -6535,7 +7127,13 @@
    ],
    "source": "starter",
    "verified": false,
-   "release": "https://github.com/penpot/penpot/releases/tag/2.18.5"
+   "release": "https://github.com/penpot/penpot/releases/tag/2.18.5",
+   "screenshots": [
+    "https://github.com/user-attachments/assets/cce75ad6-f783-473f-8803-da9eb8255fef",
+    "https://github.com/user-attachments/assets/243e796e-a140-481a-b68f-b24be6a70e37",
+    "https://github.com/user-attachments/assets/4b2a4360-12b5-4994-bd45-641449f86c4e",
+    "https://github.com/user-attachments/assets/0abc02f0-625c-45ab-ad81-4927bec7a055"
+   ]
   },
   {
    "id": "peon",
@@ -6559,7 +7157,8 @@
     "awesome-foss-alternatives"
    ],
    "verified": false,
-   "release": "https://github.com/Peon-sh/Peon/releases/tag/v1.2.0"
+   "release": "https://github.com/Peon-sh/Peon/releases/tag/v1.2.0",
+   "screenshots": []
   },
   {
    "id": "photoprism",
@@ -6582,7 +7181,12 @@
    ],
    "source": "starter",
    "verified": false,
-   "release": "https://github.com/photoprism/photoprism/releases/tag/261007-65faaae5d"
+   "release": "https://github.com/photoprism/photoprism/releases/tag/261007-65faaae5d",
+   "screenshots": [
+    "https://dl.photoprism.app/img/ui/2025/desktop-search.jpg",
+    "https://dl.photoprism.app/img/ui/2025/iphone-crocus-540px.png",
+    "https://dl.photoprism.app/img/ui/2025/upcoming-features-240px.png"
+   ]
   },
   {
    "id": "piefed",
@@ -6606,7 +7210,8 @@
    ],
    "source": "starter",
    "verified": false,
-   "release": "https://codeberg.org/rimu/pyfedi/releases/tag/v1.8.8"
+   "release": "https://codeberg.org/rimu/pyfedi/releases/tag/v1.8.8",
+   "screenshots": []
   },
   {
    "id": "pingcap",
@@ -6631,7 +7236,8 @@
     "awesome-oss-alternatives"
    ],
    "verified": false,
-   "release": "https://github.com/pingcap/tidb/releases/tag/v7.5.8"
+   "release": "https://github.com/pingcap/tidb/releases/tag/v7.5.8",
+   "screenshots": []
   },
   {
    "id": "pixelfed",
@@ -6653,7 +7259,10 @@
    ],
    "source": "starter",
    "verified": false,
-   "release": "https://github.com/pixelfed/pixelfed/releases/tag/v0.15.2"
+   "release": "https://github.com/pixelfed/pixelfed/releases/tag/v0.15.2",
+   "screenshots": [
+    "https://pixelfed.nyc3.cdn.digitaloceanspaces.com/media/pixelfed-readme-light.jpg"
+   ]
   },
   {
    "id": "plane",
@@ -6676,7 +7285,13 @@
    ],
    "source": "starter",
    "verified": false,
-   "release": "https://github.com/makeplane/plane/releases/tag/v1.4.2"
+   "release": "https://github.com/makeplane/plane/releases/tag/v1.4.2",
+   "screenshots": [
+    "https://media.docs.plane.so/GitHub-readme/github-top.webp",
+    "https://media.docs.plane.so/GitHub-readme/github-work-items.webp",
+    "https://media.docs.plane.so/GitHub-readme/github-cycles.webp",
+    "https://media.docs.plane.so/GitHub-readme/github-modules.webp"
+   ]
   },
   {
    "id": "plasmic",
@@ -6701,7 +7316,10 @@
     "open-source-alternatives"
    ],
    "verified": false,
-   "release": null
+   "release": null,
+   "screenshots": [
+    "https://user-images.githubusercontent.com/7129/146098801-0691ff13-e302-40fb-827e-90488a7a28b4.gif"
+   ]
   },
   {
    "id": "plausible",
@@ -6723,7 +7341,10 @@
    ],
    "source": "starter",
    "verified": false,
-   "release": "https://github.com/plausible/analytics/releases/tag/v3.2.1"
+   "release": "https://github.com/plausible/analytics/releases/tag/v3.2.1",
+   "screenshots": [
+    "https://raw.githubusercontent.com/plausible/analytics/HEAD/.github/plausible-analytics-dashboard.webp"
+   ]
   },
   {
    "id": "plume",
@@ -6748,7 +7369,8 @@
     "switching.software"
    ],
    "verified": false,
-   "release": null
+   "release": null,
+   "screenshots": []
   },
   {
    "id": "pocket-casts",
@@ -6771,7 +7393,8 @@
    ],
    "source": "starter",
    "verified": false,
-   "release": "https://github.com/Automattic/pocket-casts-android/releases/tag/8.22"
+   "release": "https://github.com/Automattic/pocket-casts-android/releases/tag/8.22",
+   "screenshots": []
   },
   {
    "id": "pocketbase",
@@ -6795,7 +7418,11 @@
     "awesome-oss-alternatives"
    ],
    "verified": false,
-   "release": "https://github.com/pocketbase/pocketbase/releases/tag/v0.40.6"
+   "release": "https://github.com/pocketbase/pocketbase/releases/tag/v0.40.6",
+   "screenshots": [
+    "https://i.imgur.com/aCBbjKx.png",
+    "https://pocketbase.io/images/og.png"
+   ]
   },
   {
    "id": "posnic-pos",
@@ -6821,7 +7448,10 @@
     "awesome-foss-alternatives"
    ],
    "verified": false,
-   "release": "https://github.com/Posnic/POS/releases/tag/v1.9.0"
+   "release": "https://github.com/Posnic/POS/releases/tag/v1.9.0",
+   "screenshots": [
+    "https://raw.githubusercontent.com/Posnic/POS/HEAD/docs/images/offline-sale-v1-3-0.png"
+   ]
   },
   {
    "id": "postmarketos",
@@ -6844,7 +7474,8 @@
     "Current maturity and daily-use readiness beyond the README statement that it is not yet ready for everyone"
    ],
    "source": "starter",
-   "verified": false
+   "verified": false,
+   "screenshots": []
   },
   {
    "id": "preset",
@@ -6868,7 +7499,12 @@
     "awesome-oss-alternatives"
    ],
    "verified": false,
-   "release": "https://github.com/apache/superset/releases/tag/6.1.0"
+   "release": "https://github.com/apache/superset/releases/tag/6.1.0",
+   "screenshots": [
+    "https://superset.apache.org/img/screenshots/gallery.jpg",
+    "https://superset.apache.org/img/screenshots/dashboard.jpg",
+    "https://superset.apache.org/img/screenshots/explore.jpg"
+   ]
   },
   {
    "id": "presta",
@@ -6892,7 +7528,10 @@
     "open-source-alternatives"
    ],
    "verified": false,
-   "release": "https://github.com/PrestaShop/PrestaShop/releases/tag/9.2.0"
+   "release": "https://github.com/PrestaShop/PrestaShop/releases/tag/9.2.0",
+   "screenshots": [
+    "https://github.com/user-attachments/assets/e6342778-e528-4ae7-acf2-f0d097a1e932"
+   ]
   },
   {
    "id": "prisme-analytics",
@@ -6917,7 +7556,10 @@
     "awesome-foss-alternatives"
    ],
    "verified": false,
-   "release": "https://github.com/prismelabs/analytics/releases/tag/v0.20.0"
+   "release": "https://github.com/prismelabs/analytics/releases/tag/v0.20.0",
+   "screenshots": [
+    "https://raw.githubusercontent.com/prismelabs/analytics/HEAD/.github/images/web-analytics-dashboard.jpg"
+   ]
   },
   {
    "id": "psitransfer",
@@ -6939,7 +7581,10 @@
    ],
    "source": "starter",
    "verified": false,
-   "release": "https://github.com/psi-4ward/psitransfer/releases/tag/v2.4.5"
+   "release": "https://github.com/psi-4ward/psitransfer/releases/tag/v2.4.5",
+   "screenshots": [
+    "https://raw.githubusercontent.com/psi-4ward/psitransfer/master/docs/psitransfer.gif"
+   ]
   },
   {
    "id": "qdrant",
@@ -6964,7 +7609,10 @@
     "awesome-oss-alternatives"
    ],
    "verified": false,
-   "release": "https://github.com/qdrant/qdrant/releases/tag/v1.20.0"
+   "release": "https://github.com/qdrant/qdrant/releases/tag/v1.20.0",
+   "screenshots": [
+    "https://qdrant.tech/docs/gettingstarted/web-ui.png"
+   ]
   },
   {
    "id": "quant-ux",
@@ -6989,7 +7637,8 @@
     "open-source-alternatives"
    ],
    "verified": false,
-   "release": null
+   "release": null,
+   "screenshots": []
   },
   {
    "id": "questdb",
@@ -7013,7 +7662,10 @@
     "awesome-oss-alternatives"
    ],
    "verified": false,
-   "release": "https://github.com/questdb/questdb/releases/tag/10.1.0"
+   "release": "https://github.com/questdb/questdb/releases/tag/10.1.0",
+   "screenshots": [
+    "https://raw.githubusercontent.com/questdb/questdb/HEAD/.github/console.webp"
+   ]
   },
   {
    "id": "quickwit",
@@ -7037,7 +7689,8 @@
     "awesome-oss-alternatives"
    ],
    "verified": false,
-   "release": "https://github.com/quickwit-oss/quickwit/releases/tag/v0.9.3"
+   "release": "https://github.com/quickwit-oss/quickwit/releases/tag/v0.9.3",
+   "screenshots": []
   },
   {
    "id": "quillpad",
@@ -7062,7 +7715,11 @@
     "awesome-privacy"
    ],
    "verified": false,
-   "release": "https://github.com/quillpad/quillpad/releases/tag/v1.5.15"
+   "release": "https://github.com/quillpad/quillpad/releases/tag/v1.5.15",
+   "screenshots": [
+    "https://raw.githubusercontent.com/quillpad/quillpad/HEAD/fastlane/metadata/android/en-US/images/phoneScreenshots/2.png",
+    "https://raw.githubusercontent.com/quillpad/quillpad/HEAD/fastlane/metadata/android/en-US/images/phoneScreenshots/4.png"
+   ]
   },
   {
    "id": "rawtherapee",
@@ -7085,7 +7742,8 @@
    ],
    "source": "starter",
    "verified": false,
-   "release": "https://github.com/RawTherapee/RawTherapee/releases/tag/5.13"
+   "release": "https://github.com/RawTherapee/RawTherapee/releases/tag/5.13",
+   "screenshots": []
   },
   {
    "id": "redmine",
@@ -7110,7 +7768,8 @@
     "awesome-foss-alternatives"
    ],
    "verified": false,
-   "release": null
+   "release": null,
+   "screenshots": []
   },
   {
    "id": "restic",
@@ -7129,7 +7788,8 @@
    "unconfirmed": [],
    "source": "starter",
    "verified": false,
-   "release": "https://github.com/restic/restic/releases/tag/v0.19.1"
+   "release": "https://github.com/restic/restic/releases/tag/v0.19.1",
+   "screenshots": []
   },
   {
    "id": "reveal-js",
@@ -7150,7 +7810,8 @@
    ],
    "source": "starter",
    "verified": false,
-   "release": "https://github.com/hakimel/reveal.js/releases/tag/6.0.2"
+   "release": "https://github.com/hakimel/reveal.js/releases/tag/6.0.2",
+   "screenshots": []
   },
   {
    "id": "review-board",
@@ -7174,7 +7835,8 @@
     "awesome-foss-alternatives"
    ],
    "verified": false,
-   "release": "https://github.com/reviewboard/reviewboard/releases/tag/release-8.0"
+   "release": "https://github.com/reviewboard/reviewboard/releases/tag/release-8.0",
+   "screenshots": []
   },
   {
    "id": "rocket-chat",
@@ -7197,7 +7859,8 @@
    ],
    "source": "starter",
    "verified": false,
-   "release": "https://github.com/RocketChat/Rocket.Chat/releases/tag/8.9.0"
+   "release": "https://github.com/RocketChat/Rocket.Chat/releases/tag/8.9.0",
+   "screenshots": []
   },
   {
    "id": "roundcube",
@@ -7219,7 +7882,8 @@
    ],
    "source": "starter",
    "verified": false,
-   "release": "https://github.com/roundcube/roundcubemail/releases/tag/1.7.5"
+   "release": "https://github.com/roundcube/roundcubemail/releases/tag/1.7.5",
+   "screenshots": []
   },
   {
    "id": "rustdesk",
@@ -7244,7 +7908,11 @@
     "awesome-privacy"
    ],
    "verified": false,
-   "release": "https://github.com/rustdesk/rustdesk/releases/tag/1.5.0"
+   "release": "https://github.com/rustdesk/rustdesk/releases/tag/1.5.0",
+   "screenshots": [
+    "https://user-images.githubusercontent.com/71636191/171661982-430285f0-2e12-4b1d-9957-4a58e375304d.png",
+    "https://rustdesk.com/_astro/default.BnGe5sEj_Mm9fb.webp"
+   ]
   },
   {
    "id": "saleor",
@@ -7267,7 +7935,10 @@
    ],
    "source": "starter",
    "verified": false,
-   "release": "https://github.com/saleor/saleor/releases/tag/3.23.44"
+   "release": "https://github.com/saleor/saleor/releases/tag/3.23.44",
+   "screenshots": [
+    "https://user-images.githubusercontent.com/9268745/224249510-d3c7658e-6d5c-42c5-b4fb-93eaf65a5335.png"
+   ]
   },
   {
    "id": "scribus",
@@ -7289,7 +7960,8 @@
    ],
    "source": "starter",
    "verified": false,
-   "release": null
+   "release": null,
+   "screenshots": []
   },
   {
    "id": "seafile",
@@ -7311,7 +7983,8 @@
    ],
    "source": "starter",
    "verified": false,
-   "release": "https://github.com/haiwen/seafile/releases/tag/v9.0.5"
+   "release": "https://github.com/haiwen/seafile/releases/tag/v9.0.5",
+   "screenshots": []
   },
   {
    "id": "searxng",
@@ -7333,7 +8006,8 @@
    ],
    "source": "starter",
    "verified": false,
-   "release": null
+   "release": null,
+   "screenshots": []
   },
   {
    "id": "semi",
@@ -7358,7 +8032,8 @@
     "awesome-oss-alternatives"
    ],
    "verified": false,
-   "release": "https://github.com/weaviate/weaviate/releases/tag/v1.40.2"
+   "release": "https://github.com/weaviate/weaviate/releases/tag/v1.40.2",
+   "screenshots": []
   },
   {
    "id": "shlink",
@@ -7382,7 +8057,8 @@
     "awesome-privacy"
    ],
    "verified": false,
-   "release": "https://github.com/shlinkio/shlink/releases/tag/v5.1.8"
+   "release": "https://github.com/shlinkio/shlink/releases/tag/v5.1.8",
+   "screenshots": []
   },
   {
    "id": "shotcut",
@@ -7405,7 +8081,10 @@
    ],
    "source": "starter",
    "verified": false,
-   "release": "https://github.com/mltframework/shotcut/releases/tag/v26.9.27"
+   "release": "https://github.com/mltframework/shotcut/releases/tag/v26.9.27",
+   "screenshots": [
+    "https://www.shotcut.org/assets/img/screenshots/Shotcut-18.11.18.png"
+   ]
   },
   {
    "id": "shuup",
@@ -7431,7 +8110,8 @@
     "awesome-oss-alternatives"
    ],
    "verified": false,
-   "release": "https://github.com/shuup/shuup/releases/tag/v3.1.0"
+   "release": "https://github.com/shuup/shuup/releases/tag/v3.1.0",
+   "screenshots": []
   },
   {
    "id": "shynet",
@@ -7455,7 +8135,11 @@
     "awesome-foss-alternatives"
    ],
    "verified": false,
-   "release": "https://github.com/milesmcc/shynet/releases/tag/v0.14.0"
+   "release": "https://github.com/milesmcc/shynet/releases/tag/v0.14.0",
+   "screenshots": [
+    "https://raw.githubusercontent.com/milesmcc/shynet/HEAD/images/homepage.png",
+    "https://raw.githubusercontent.com/milesmcc/shynet/HEAD/images/service.png"
+   ]
   },
   {
    "id": "signal",
@@ -7478,7 +8162,8 @@
    ],
    "source": "starter",
    "verified": false,
-   "release": "https://github.com/signalapp/Signal-Android/releases/tag/v8.32.3"
+   "release": "https://github.com/signalapp/Signal-Android/releases/tag/v8.32.3",
+   "screenshots": []
   },
   {
    "id": "signoz",
@@ -7504,7 +8189,13 @@
     "awesome-oss-alternatives"
    ],
    "verified": false,
-   "release": "https://github.com/SigNoz/signoz/releases/tag/v0.147.0"
+   "release": "https://github.com/SigNoz/signoz/releases/tag/v0.147.0",
+   "screenshots": [
+    "https://raw.githubusercontent.com/SigNoz/signoz/HEAD/docs/readme-assets/monitor/apm.png",
+    "https://raw.githubusercontent.com/SigNoz/signoz/HEAD/docs/readme-assets/monitor/metrics.png",
+    "https://raw.githubusercontent.com/SigNoz/signoz/HEAD/docs/readme-assets/monitor/infrastructure.png",
+    "https://raw.githubusercontent.com/SigNoz/signoz/HEAD/docs/readme-assets/monitor/llm.png"
+   ]
   },
   {
    "id": "silex",
@@ -7531,7 +8222,10 @@
     "open-source-alternatives"
    ],
    "verified": false,
-   "release": "https://github.com/silexlabs/Silex/releases/tag/v3.9.0"
+   "release": "https://github.com/silexlabs/Silex/releases/tag/v3.9.0",
+   "screenshots": [
+    "https://www.silex.me/img/HJKUdOfC5N-2400.webp"
+   ]
   },
   {
    "id": "simple-keyboard",
@@ -7556,7 +8250,10 @@
     "awesome-privacy"
    ],
    "verified": false,
-   "release": "https://github.com/rkkr/simple-keyboard/releases/tag/149"
+   "release": "https://github.com/rkkr/simple-keyboard/releases/tag/149",
+   "screenshots": [
+    "https://raw.githubusercontent.com/rkkr/simple-keyboard/HEAD/images/screenshot-0.png"
+   ]
   },
   {
    "id": "simplex-chat",
@@ -7581,7 +8278,12 @@
    ],
    "source": "starter",
    "verified": false,
-   "release": "https://github.com/simplex-chat/simplex-chat/releases/tag/v7.0.3"
+   "release": "https://github.com/simplex-chat/simplex-chat/releases/tag/v7.0.3",
+   "screenshots": [
+    "https://raw.githubusercontent.com/simplex-chat/.github/refs/heads/master/profile/images/app1.png",
+    "https://raw.githubusercontent.com/simplex-chat/.github/refs/heads/master/profile/images/app2.png",
+    "https://raw.githubusercontent.com/simplex-chat/.github/refs/heads/master/profile/images/app3.png"
+   ]
   },
   {
    "id": "siyuan",
@@ -7605,7 +8307,11 @@
    ],
    "source": "starter",
    "verified": false,
-   "release": "https://github.com/siyuan-note/siyuan/releases/tag/v3.8.8"
+   "release": "https://github.com/siyuan-note/siyuan/releases/tag/v3.8.8",
+   "screenshots": [
+    "https://raw.githubusercontent.com/siyuan-note/siyuan/HEAD/screenshots/feature0.png",
+    "https://raw.githubusercontent.com/siyuan-note/siyuan/HEAD/screenshots/feature5-1.png"
+   ]
   },
   {
    "id": "slidev",
@@ -7627,7 +8333,8 @@
    ],
    "source": "starter",
    "verified": false,
-   "release": "https://github.com/slidevjs/slidev/releases/tag/v53.0.0"
+   "release": "https://github.com/slidevjs/slidev/releases/tag/v53.0.0",
+   "screenshots": []
   },
   {
    "id": "snikket",
@@ -7652,7 +8359,8 @@
     "switching.software"
    ],
    "verified": false,
-   "release": null
+   "release": null,
+   "screenshots": []
   },
   {
    "id": "solidinvoice",
@@ -7676,7 +8384,13 @@
     "awesome-foss-alternatives"
    ],
    "verified": false,
-   "release": "https://github.com/SolidInvoice/SolidInvoice/releases/tag/3.1.2"
+   "release": "https://github.com/SolidInvoice/SolidInvoice/releases/tag/3.1.2",
+   "screenshots": [
+    "https://raw.githubusercontent.com/SolidInvoice/SolidInvoice/HEAD/docs/static/img/dashboard.png",
+    "https://raw.githubusercontent.com/SolidInvoice/SolidInvoice/HEAD/docs/static/img/managing-clients/client-view-overview.png",
+    "https://raw.githubusercontent.com/SolidInvoice/SolidInvoice/HEAD/docs/static/img/invoices/invoice-list.png",
+    "https://raw.githubusercontent.com/SolidInvoice/SolidInvoice/HEAD/docs/static/img/invoices/create-invoice-form.png"
+   ]
   },
   {
    "id": "solidping",
@@ -7700,7 +8414,12 @@
     "awesome-foss-alternatives"
    ],
    "verified": false,
-   "release": "https://github.com/fclairamb/solidping/releases/tag/v0.41.0"
+   "release": "https://github.com/fclairamb/solidping/releases/tag/v0.41.0",
+   "screenshots": [
+    "https://raw.githubusercontent.com/fclairamb/solidping/main/res/screenshots/checks-list.png",
+    "https://raw.githubusercontent.com/fclairamb/solidping/main/res/screenshots/check-form.png",
+    "https://raw.githubusercontent.com/fclairamb/solidping/main/res/screenshots/check-detail.png"
+   ]
   },
   {
    "id": "solidtime",
@@ -7724,7 +8443,10 @@
     "open-source-alternatives"
    ],
    "verified": false,
-   "release": "https://github.com/solidtime-io/solidtime/releases/tag/v0.22.1"
+   "release": "https://github.com/solidtime-io/solidtime/releases/tag/v0.22.1",
+   "screenshots": [
+    "https://www.solidtime.io/og_image.png"
+   ]
   },
   {
    "id": "sonic",
@@ -7748,7 +8470,8 @@
     "awesome-foss-alternatives"
    ],
    "verified": false,
-   "release": "https://github.com/valeriansaliou/sonic/releases/tag/v1.10.2"
+   "release": "https://github.com/valeriansaliou/sonic/releases/tag/v1.10.2",
+   "screenshots": []
   },
   {
    "id": "spacebar",
@@ -7774,7 +8497,8 @@
     "open-source-alternatives"
    ],
    "verified": false,
-   "release": null
+   "release": null,
+   "screenshots": []
   },
   {
    "id": "spacedrive",
@@ -7799,7 +8523,10 @@
     "awesome-oss-alternatives"
    ],
    "verified": false,
-   "release": "https://github.com/spacedriveapp/spacedrive/releases/tag/0.4.3"
+   "release": "https://github.com/spacedriveapp/spacedrive/releases/tag/0.4.3",
+   "screenshots": [
+    "https://raw.githubusercontent.com/spacedriveapp/spacedrive/HEAD/docs/public/SDGridView.webp"
+   ]
   },
   {
    "id": "spliit-app",
@@ -7824,7 +8551,8 @@
     "switching.software"
    ],
    "verified": false,
-   "release": "https://github.com/spliit-app/spliit/releases/tag/1.30.0"
+   "release": "https://github.com/spliit-app/spliit/releases/tag/1.30.0",
+   "screenshots": []
   },
   {
    "id": "stable-diffusion-web-ui",
@@ -7847,7 +8575,10 @@
    ],
    "source": "starter",
    "verified": false,
-   "release": "https://github.com/AUTOMATIC1111/stable-diffusion-webui/releases/tag/v1.10.1"
+   "release": "https://github.com/AUTOMATIC1111/stable-diffusion-webui/releases/tag/v1.10.1",
+   "screenshots": [
+    "https://raw.githubusercontent.com/AUTOMATIC1111/stable-diffusion-webui/HEAD/screenshot.png"
+   ]
   },
   {
    "id": "standard-notes",
@@ -7870,7 +8601,8 @@
    ],
    "source": "starter",
    "verified": false,
-   "release": "https://github.com/standardnotes/app/releases/tag/%40standardnotes/desktop%403.202.10"
+   "release": "https://github.com/standardnotes/app/releases/tag/%40standardnotes/desktop%403.202.10",
+   "screenshots": []
   },
   {
    "id": "step-ci",
@@ -7894,7 +8626,8 @@
     "awesome-oss-alternatives"
    ],
    "verified": false,
-   "release": "https://github.com/stepci/stepci/releases/tag/2.8.2"
+   "release": "https://github.com/stepci/stepci/releases/tag/2.8.2",
+   "screenshots": []
   },
   {
    "id": "stirling-pdf",
@@ -7916,7 +8649,10 @@
    ],
    "source": "starter",
    "verified": false,
-   "release": "https://github.com/Stirling-Tools/Stirling-PDF/releases/tag/v3.2.2"
+   "release": "https://github.com/Stirling-Tools/Stirling-PDF/releases/tag/v3.2.2",
+   "screenshots": [
+    "https://raw.githubusercontent.com/Stirling-Tools/Stirling-PDF/HEAD/docs/images/home-light.png"
+   ]
   },
   {
    "id": "stoat",
@@ -7942,7 +8678,8 @@
     "awesome-privacy"
    ],
    "verified": false,
-   "release": null
+   "release": null,
+   "screenshots": []
   },
   {
    "id": "strapi",
@@ -7968,7 +8705,8 @@
     "open-source-alternatives"
    ],
    "verified": false,
-   "release": "https://github.com/strapi/strapi/releases/tag/v5.59.0"
+   "release": "https://github.com/strapi/strapi/releases/tag/v5.59.0",
+   "screenshots": []
   },
   {
    "id": "suitecrm",
@@ -7992,7 +8730,8 @@
     "awesome-foss-alternatives"
    ],
    "verified": false,
-   "release": "https://github.com/SuiteCRM/SuiteCRM/releases/tag/v7.15.2"
+   "release": "https://github.com/SuiteCRM/SuiteCRM/releases/tag/v7.15.2",
+   "screenshots": []
   },
   {
    "id": "sulu",
@@ -8016,7 +8755,10 @@
     "awesome-oss-alternatives"
    ],
    "verified": false,
-   "release": "https://github.com/sulu/sulu/releases/tag/3.0.10"
+   "release": "https://github.com/sulu/sulu/releases/tag/3.0.10",
+   "screenshots": [
+    "https://sulu.io/uploads/media/800x@2x/07/167-ezgif.gif?v=2"
+   ]
   },
   {
    "id": "supabase",
@@ -8043,7 +8785,11 @@
     "open-source-alternatives"
    ],
    "verified": false,
-   "release": "https://github.com/supabase/supabase/releases/tag/v1.26.08"
+   "release": "https://github.com/supabase/supabase/releases/tag/v1.26.08",
+   "screenshots": [
+    "https://raw.githubusercontent.com/supabase/supabase/master/apps/www/public/images/github/supabase-dashboard.png",
+    "https://raw.githubusercontent.com/supabase/supabase/d5f7f413ab356dc1a92075cb3cee4e40a957d5b1/web/static/watch-repo.gif"
+   ]
   },
   {
    "id": "super-productivity",
@@ -8068,7 +8814,10 @@
     "awesome-foss-alternatives"
    ],
    "verified": false,
-   "release": "https://github.com/super-productivity/super-productivity/releases/tag/v19.3.1"
+   "release": "https://github.com/super-productivity/super-productivity/releases/tag/v19.3.1",
+   "screenshots": [
+    "https://super-productivity.com/_astro/default.0d-Tb3Q-_25CtE7.jpg"
+   ]
   },
   {
    "id": "supertokens",
@@ -8095,7 +8844,11 @@
     "open-source-alternatives"
    ],
    "verified": false,
-   "release": "https://github.com/supertokens/supertokens-core/releases/tag/v12.4.1"
+   "release": "https://github.com/supertokens/supertokens-core/releases/tag/v12.4.1",
+   "screenshots": [
+    "https://raw.githubusercontent.com/supertokens/supertokens-core/HEAD/.github/user-info.png",
+    "https://raw.githubusercontent.com/supertokens/supertokens-core/HEAD/.github/list-user.png"
+   ]
   },
   {
    "id": "sylius",
@@ -8120,7 +8873,10 @@
     "open-source-alternatives"
    ],
    "verified": false,
-   "release": "https://github.com/Sylius/Sylius/releases/tag/v2.3.2"
+   "release": "https://github.com/Sylius/Sylius/releases/tag/v2.3.2",
+   "screenshots": [
+    "https://sylius.com/assets/readme/readme-main.png"
+   ]
   },
   {
    "id": "syncthing",
@@ -8142,7 +8898,8 @@
    ],
    "source": "starter",
    "verified": false,
-   "release": "https://github.com/syncthing/syncthing/releases/tag/v2.1.7"
+   "release": "https://github.com/syncthing/syncthing/releases/tag/v2.1.7",
+   "screenshots": []
   },
   {
    "id": "tabler-icons",
@@ -8166,7 +8923,8 @@
     "open-source-alternatives"
    ],
    "verified": false,
-   "release": "https://github.com/tabler/tabler-icons/releases/tag/v3.49.0"
+   "release": "https://github.com/tabler/tabler-icons/releases/tag/v3.49.0",
+   "screenshots": []
   },
   {
    "id": "taiga",
@@ -8190,7 +8948,8 @@
    ],
    "source": "starter",
    "verified": false,
-   "release": null
+   "release": null,
+   "screenshots": []
   },
   {
    "id": "tdengine",
@@ -8216,7 +8975,8 @@
     "awesome-oss-alternatives"
    ],
    "verified": false,
-   "release": "https://github.com/taosdata/TDengine/releases/tag/ver-3.4.3.3"
+   "release": "https://github.com/taosdata/TDengine/releases/tag/ver-3.4.3.3",
+   "screenshots": []
   },
   {
    "id": "telemetry-tracker",
@@ -8241,7 +9001,11 @@
     "awesome-foss-alternatives"
    ],
    "verified": false,
-   "release": "https://github.com/Telemetry-Tracker/telemetry-tracker/releases/tag/v1.22.14"
+   "release": "https://github.com/Telemetry-Tracker/telemetry-tracker/releases/tag/v1.22.14",
+   "screenshots": [
+    "https://raw.githubusercontent.com/Telemetry-Tracker/telemetry-tracker/HEAD/apps/dashboard/public/screenshot-dashboard-light.png",
+    "https://raw.githubusercontent.com/Telemetry-Tracker/telemetry-tracker/HEAD/apps/dashboard/public/screenshot-errors-light.png"
+   ]
   },
   {
    "id": "terminusdb",
@@ -8266,7 +9030,8 @@
     "awesome-oss-alternatives"
    ],
    "verified": false,
-   "release": "https://github.com/terminusdb/terminusdb/releases/tag/v12.0.8"
+   "release": "https://github.com/terminusdb/terminusdb/releases/tag/v12.0.8",
+   "screenshots": []
   },
   {
    "id": "thunderbird",
@@ -8289,7 +9054,8 @@
     "Exact feature set of the contacts component"
    ],
    "source": "starter",
-   "verified": false
+   "verified": false,
+   "screenshots": []
   },
   {
    "id": "tina",
@@ -8313,7 +9079,10 @@
     "awesome-oss-alternatives"
    ],
    "verified": false,
-   "release": "https://github.com/tinacms/tinacms/releases/tag/tinacms%403.15.0"
+   "release": "https://github.com/tinacms/tinacms/releases/tag/tinacms%403.15.0",
+   "screenshots": [
+    "https://raw.githubusercontent.com/tinacms/tinacms/HEAD/.github/assets/homepage-demo-2.gif"
+   ]
   },
   {
    "id": "tinode",
@@ -8338,7 +9107,13 @@
     "awesome-oss-alternatives"
    ],
    "verified": false,
-   "release": "https://github.com/tinode/chat/releases/tag/v0.25.3"
+   "release": "https://github.com/tinode/chat/releases/tag/v0.25.3",
+   "screenshots": [
+    "https://raw.githubusercontent.com/tinode/chat/HEAD/docs/android-contacts.png",
+    "https://raw.githubusercontent.com/tinode/chat/HEAD/docs/android-chat.png",
+    "https://raw.githubusercontent.com/tinode/chat/HEAD/docs/ios-contacts.png",
+    "https://raw.githubusercontent.com/tinode/chat/HEAD/docs/ios-chat.png"
+   ]
   },
   {
    "id": "tooljet",
@@ -8363,7 +9138,8 @@
     "open-source-alternatives"
    ],
    "verified": false,
-   "release": "https://github.com/ToolJet/ToolJet/releases/tag/v3.20.250-lts"
+   "release": "https://github.com/ToolJet/ToolJet/releases/tag/v3.20.250-lts",
+   "screenshots": []
   },
   {
    "id": "trench",
@@ -8388,7 +9164,10 @@
     "awesome-oss-alternatives"
    ],
    "verified": false,
-   "release": "https://github.com/FrigadeHQ/trench/releases/tag/trench-js%400.0.17"
+   "release": "https://github.com/FrigadeHQ/trench/releases/tag/trench-js%400.0.17",
+   "screenshots": [
+    "https://raw.githubusercontent.com/FrigadeHQ/trench/HEAD/img/trench-dashboard.png"
+   ]
   },
   {
    "id": "trilium-notes",
@@ -8411,7 +9190,10 @@
    ],
    "source": "starter",
    "verified": false,
-   "release": "https://github.com/TriliumNext/Trilium/releases/tag/v0.106.1"
+   "release": "https://github.com/TriliumNext/Trilium/releases/tag/v0.106.1",
+   "screenshots": [
+    "https://raw.githubusercontent.com/TriliumNext/Trilium/HEAD/docs/app.png"
+   ]
   },
   {
    "id": "tuta",
@@ -8436,7 +9218,8 @@
     "switching.software"
    ],
    "verified": false,
-   "release": "https://github.com/tutao/tutanota/releases/tag/tutanota-desktop-release-362.261023.2"
+   "release": "https://github.com/tutao/tutanota/releases/tag/tutanota-desktop-release-362.261023.2",
+   "screenshots": []
   },
   {
    "id": "twenty",
@@ -8461,7 +9244,12 @@
     "open-source-alternatives"
    ],
    "verified": false,
-   "release": "https://github.com/twentyhq/twenty/releases/tag/twenty/v2.51.0"
+   "release": "https://github.com/twentyhq/twenty/releases/tag/twenty/v2.51.0",
+   "screenshots": [
+    "https://raw.githubusercontent.com/twentyhq/twenty/HEAD/packages/twenty-website/public/images/readme/github-cover-light.webp",
+    "https://raw.githubusercontent.com/twentyhq/twenty/HEAD/packages/twenty-website/public/images/readme/v2-version-control-light.webp",
+    "https://raw.githubusercontent.com/twentyhq/twenty/HEAD/packages/twenty-website/public/images/readme/v2-tools-light.webp"
+   ]
   },
   {
    "id": "tymeslot",
@@ -8486,7 +9274,12 @@
     "awesome-foss-alternatives"
    ],
    "verified": false,
-   "release": "https://github.com/Tymeslot/tymeslot/releases/tag/v1.31.0"
+   "release": "https://github.com/Tymeslot/tymeslot/releases/tag/v1.31.0",
+   "screenshots": [
+    "https://raw.githubusercontent.com/Tymeslot/tymeslot/HEAD/priv/static/images/screenshots/dashboard.webp",
+    "https://raw.githubusercontent.com/Tymeslot/tymeslot/HEAD/priv/static/images/screenshots/availability.webp",
+    "https://raw.githubusercontent.com/Tymeslot/tymeslot/HEAD/priv/static/images/screenshots/embed.webp"
+   ]
   },
   {
    "id": "typesense",
@@ -8513,7 +9306,10 @@
     "open-source-alternatives"
    ],
    "verified": false,
-   "release": "https://github.com/typesense/typesense/releases/tag/v30.2"
+   "release": "https://github.com/typesense/typesense/releases/tag/v30.2",
+   "screenshots": [
+    "https://raw.githubusercontent.com/typesense/typesense/HEAD/assets/typesense_books_demo.gif?raw=true"
+   ]
   },
   {
    "id": "ubuntu",
@@ -8535,7 +9331,8 @@
     "Whether the paid Ubuntu Pro subscription changes the license of any parts was not confirmed in the material."
    ],
    "source": "starter",
-   "verified": false
+   "verified": false,
+   "screenshots": []
   },
   {
    "id": "ultravnc",
@@ -8560,7 +9357,10 @@
     "awesome-privacy"
    ],
    "verified": false,
-   "release": null
+   "release": null,
+   "screenshots": [
+    "https://uvnc.com/images/Viewer1230.png"
+   ]
   },
   {
    "id": "umami",
@@ -8582,7 +9382,10 @@
    ],
    "source": "starter",
    "verified": false,
-   "release": "https://github.com/umami-software/umami/releases/tag/v3.4.1"
+   "release": "https://github.com/umami-software/umami/releases/tag/v3.4.1",
+   "screenshots": [
+    "https://umami.is/opengraph-image-j8qpfc.png?opengraph-image.05yuy2qyj01mg.png"
+   ]
   },
   {
    "id": "ungoogled-chromium",
@@ -8604,7 +9407,8 @@
    ],
    "source": "starter",
    "verified": false,
-   "release": "https://github.com/ungoogled-software/ungoogled-chromium/releases/tag/156.0.8078.47-1"
+   "release": "https://github.com/ungoogled-software/ungoogled-chromium/releases/tag/156.0.8078.47-1",
+   "screenshots": []
   },
   {
    "id": "unleash",
@@ -8628,7 +9432,8 @@
     "awesome-oss-alternatives"
    ],
    "verified": false,
-   "release": "https://github.com/Unleash/unleash/releases/tag/v8.2.1"
+   "release": "https://github.com/Unleash/unleash/releases/tag/v8.2.1",
+   "screenshots": []
   },
   {
    "id": "uptrace",
@@ -8653,7 +9458,13 @@
     "awesome-oss-alternatives"
    ],
    "verified": false,
-   "release": "https://github.com/uptrace/uptrace/releases/tag/v2.1.0-rc.2"
+   "release": "https://github.com/uptrace/uptrace/releases/tag/v2.1.0-rc.2",
+   "screenshots": [
+    "https://raw.githubusercontent.com/uptrace/uptrace/HEAD/example/docker/images/home.png",
+    "https://raw.githubusercontent.com/uptrace/uptrace/HEAD/example/docker/images/facets.png",
+    "https://raw.githubusercontent.com/uptrace/uptrace/HEAD/example/docker/images/metrics.png",
+    "https://raw.githubusercontent.com/uptrace/uptrace/HEAD/example/docker/images/alerts.png"
+   ]
   },
   {
    "id": "uvdesk",
@@ -8678,7 +9489,8 @@
     "awesome-oss-alternatives"
    ],
    "verified": false,
-   "release": "https://github.com/uvdesk/community-skeleton/releases/tag/v1.1.8"
+   "release": "https://github.com/uvdesk/community-skeleton/releases/tag/v1.1.8",
+   "screenshots": []
   },
   {
    "id": "vane-formerly-perplexica",
@@ -8701,7 +9513,10 @@
    ],
    "source": "starter",
    "verified": false,
-   "release": "https://github.com/ItzCrazyKns/Vane/releases/tag/v1.12.2"
+   "release": "https://github.com/ItzCrazyKns/Vane/releases/tag/v1.12.2",
+   "screenshots": [
+    "https://raw.githubusercontent.com/ItzCrazyKns/Vane/HEAD/.assets/vane-screenshot.png"
+   ]
   },
   {
    "id": "vaultwarden",
@@ -8724,7 +9539,8 @@
    ],
    "source": "starter",
    "verified": false,
-   "release": "https://github.com/dani-garcia/vaultwarden/releases/tag/1.37.4"
+   "release": "https://github.com/dani-garcia/vaultwarden/releases/tag/1.37.4",
+   "screenshots": []
   },
   {
    "id": "vendure",
@@ -8749,7 +9565,8 @@
     "awesome-oss-alternatives"
    ],
    "verified": false,
-   "release": "https://github.com/vendurehq/vendure/releases/tag/v3.8.1"
+   "release": "https://github.com/vendurehq/vendure/releases/tag/v3.8.1",
+   "screenshots": []
   },
   {
    "id": "victorialogs",
@@ -8774,7 +9591,8 @@
     "awesome-foss-alternatives"
    ],
    "verified": false,
-   "release": "https://github.com/VictoriaMetrics/VictoriaLogs/releases/tag/v1.53.0"
+   "release": "https://github.com/VictoriaMetrics/VictoriaLogs/releases/tag/v1.53.0",
+   "screenshots": []
   },
   {
    "id": "victoriametrics",
@@ -8800,7 +9618,8 @@
     "awesome-oss-alternatives"
    ],
    "verified": false,
-   "release": "https://github.com/VictoriaMetrics/VictoriaMetrics/releases/tag/v1.154.1"
+   "release": "https://github.com/VictoriaMetrics/VictoriaMetrics/releases/tag/v1.154.1",
+   "screenshots": []
   },
   {
    "id": "vikunja",
@@ -8823,7 +9642,8 @@
    ],
    "source": "starter",
    "verified": false,
-   "release": "https://github.com/go-vikunja/vikunja/releases/tag/v2.7.1"
+   "release": "https://github.com/go-vikunja/vikunja/releases/tag/v2.7.1",
+   "screenshots": []
   },
   {
    "id": "wallabag",
@@ -8847,7 +9667,10 @@
     "switching.software"
    ],
    "verified": false,
-   "release": "https://github.com/wallabag/wallabag/releases/tag/2.6.14"
+   "release": "https://github.com/wallabag/wallabag/releases/tag/2.6.14",
+   "screenshots": [
+    "https://raw.githubusercontent.com/wallabag/wallabag/HEAD/.github/images/screenshot.png"
+   ]
   },
   {
    "id": "webiny",
@@ -8873,7 +9696,8 @@
     "open-source-alternatives"
    ],
    "verified": false,
-   "release": "https://github.com/webiny/webiny-js/releases/tag/v6.5.0"
+   "release": "https://github.com/webiny/webiny-js/releases/tag/v6.5.0",
+   "screenshots": []
   },
   {
    "id": "webstudio",
@@ -8899,7 +9723,8 @@
     "open-source-alternatives"
    ],
    "verified": false,
-   "release": "https://github.com/webstudio-is/webstudio/releases/tag/0.307.0"
+   "release": "https://github.com/webstudio-is/webstudio/releases/tag/0.307.0",
+   "screenshots": []
   },
   {
    "id": "wekan",
@@ -8922,7 +9747,10 @@
    ],
    "source": "starter",
    "verified": false,
-   "release": "https://github.com/wekan/wekan/releases/tag/v12.65"
+   "release": "https://github.com/wekan/wekan/releases/tag/v12.65",
+   "screenshots": [
+    "https://wekan.fi/wekan-board-views.png"
+   ]
   },
   {
    "id": "whisper",
@@ -8944,7 +9772,8 @@
    ],
    "source": "starter",
    "verified": false,
-   "release": "https://github.com/openai/whisper/releases/tag/v20250625"
+   "release": "https://github.com/openai/whisper/releases/tag/v20250625",
+   "screenshots": []
   },
   {
    "id": "whisper-cpp",
@@ -8967,7 +9796,10 @@
    ],
    "source": "starter",
    "verified": false,
-   "release": "https://github.com/ggml-org/whisper.cpp/releases/tag/v1.9.5"
+   "release": "https://github.com/ggml-org/whisper.cpp/releases/tag/v1.9.5",
+   "screenshots": [
+    "https://user-images.githubusercontent.com/1991296/197356445-311c8643-9397-4e5e-b46e-0b4b4daa2530.png"
+   ]
   },
   {
    "id": "windmill",
@@ -8992,7 +9824,13 @@
     "open-source-alternatives"
    ],
    "verified": false,
-   "release": "https://github.com/windmill-labs/windmill/releases/tag/v1.849.0"
+   "release": "https://github.com/windmill-labs/windmill/releases/tag/v1.849.0",
+   "screenshots": [
+    "https://raw.githubusercontent.com/windmill-labs/windmill/HEAD/imgs/windmill-editor.png",
+    "https://raw.githubusercontent.com/windmill-labs/windmill/HEAD/imgs/windmill-run.png",
+    "https://raw.githubusercontent.com/windmill-labs/windmill/HEAD/imgs/windmill-result.png",
+    "https://raw.githubusercontent.com/windmill-labs/windmill/HEAD/imgs/windmill-flow.png"
+   ]
   },
   {
    "id": "woocommerce",
@@ -9015,7 +9853,8 @@
    ],
    "source": "starter",
    "verified": false,
-   "release": "https://github.com/woocommerce/woocommerce/releases/tag/11.2.1"
+   "release": "https://github.com/woocommerce/woocommerce/releases/tag/11.2.1",
+   "screenshots": []
   },
   {
    "id": "wordpress",
@@ -9038,7 +9877,8 @@
    ],
    "source": "starter",
    "verified": false,
-   "release": null
+   "release": null,
+   "screenshots": []
   },
   {
    "id": "writefreely",
@@ -9059,7 +9899,10 @@
    ],
    "source": "starter",
    "verified": false,
-   "release": "https://github.com/writefreely/writefreely/releases/tag/v0.17.2"
+   "release": "https://github.com/writefreely/writefreely/releases/tag/v0.17.2",
+   "screenshots": [
+    "https://files.writefreely.org/img/screens/pen-reader.png"
+   ]
   },
   {
    "id": "xournal",
@@ -9084,7 +9927,13 @@
     "switching.software"
    ],
    "verified": false,
-   "release": "https://github.com/xournalpp/xournalpp/releases/tag/v1.3.8"
+   "release": "https://github.com/xournalpp/xournalpp/releases/tag/v1.3.8",
+   "screenshots": [
+    "https://raw.githubusercontent.com/xournalpp/xournalpp/HEAD/readme/main.png",
+    "https://raw.githubusercontent.com/xournalpp/xournalpp/HEAD/readme/main-win.png",
+    "https://raw.githubusercontent.com/xournalpp/xournalpp/HEAD/readme/main-mac.png",
+    "https://raw.githubusercontent.com/xournalpp/xournalpp/HEAD/readme/background.png"
+   ]
   },
   {
    "id": "xwiki",
@@ -9108,7 +9957,8 @@
     "awesome-foss-alternatives"
    ],
    "verified": false,
-   "release": "https://github.com/xwiki/xwiki-platform/releases/tag/xwiki-platform-18.9.0-rc-1"
+   "release": "https://github.com/xwiki/xwiki-platform/releases/tag/xwiki-platform-18.9.0-rc-1",
+   "screenshots": []
   },
   {
    "id": "yacy",
@@ -9130,7 +9980,12 @@
    ],
    "source": "starter",
    "verified": false,
-   "release": null
+   "release": null,
+   "screenshots": [
+    "https://raw.githubusercontent.com/yacy/yacy_search_server/HEAD/screenshots/screenshot_web_search.png",
+    "https://raw.githubusercontent.com/yacy/yacy_search_server/HEAD/screenshots/screenshot_expert_crawl_start.png",
+    "https://raw.githubusercontent.com/yacy/yacy_search_server/HEAD/screenshots/screenshot_index_browser.png"
+   ]
   },
   {
    "id": "yanknote",
@@ -9155,7 +10010,13 @@
     "awesome-privacy"
    ],
    "verified": false,
-   "release": "https://github.com/purocean/yn/releases/tag/v3.93.1"
+   "release": "https://github.com/purocean/yn/releases/tag/v3.93.1",
+   "screenshots": [
+    "https://raw.githubusercontent.com/purocean/yn/HEAD/help/1.png",
+    "https://raw.githubusercontent.com/purocean/yn/HEAD/help/6.png",
+    "https://raw.githubusercontent.com/purocean/yn/HEAD/help/7.png",
+    "https://raw.githubusercontent.com/purocean/yn/HEAD/help/2.png"
+   ]
   },
   {
    "id": "yourls",
@@ -9179,7 +10040,8 @@
     "awesome-privacy"
    ],
    "verified": false,
-   "release": "https://github.com/YOURLS/YOURLS/releases/tag/1.10.6"
+   "release": "https://github.com/YOURLS/YOURLS/releases/tag/1.10.6",
+   "screenshots": []
   },
   {
    "id": "yugabyte",
@@ -9204,7 +10066,8 @@
     "awesome-oss-alternatives"
    ],
    "verified": false,
-   "release": "https://github.com/yugabyte/yugabyte-db/releases/tag/v2026.1.2.0"
+   "release": "https://github.com/yugabyte/yugabyte-db/releases/tag/v2026.1.2.0",
+   "screenshots": []
   },
   {
    "id": "zammad",
@@ -9226,7 +10089,8 @@
    ],
    "source": "starter",
    "verified": false,
-   "release": null
+   "release": null,
+   "screenshots": []
   },
   {
    "id": "zen-browser",
@@ -9249,7 +10113,8 @@
    ],
    "source": "starter",
    "verified": false,
-   "release": "https://github.com/zen-browser/desktop/releases/tag/1.23.4b"
+   "release": "https://github.com/zen-browser/desktop/releases/tag/1.23.4b",
+   "screenshots": []
   },
   {
    "id": "zinc-labs",
@@ -9273,7 +10138,12 @@
     "awesome-oss-alternatives"
    ],
    "verified": false,
-   "release": "https://github.com/zincsearch/zincsearch/releases/tag/v1.0.0-beta3"
+   "release": "https://github.com/zincsearch/zincsearch/releases/tag/v1.0.0-beta3",
+   "screenshots": [
+    "https://raw.githubusercontent.com/zincsearch/zincsearch/HEAD/screenshots/search_screen.jpg",
+    "https://raw.githubusercontent.com/zincsearch/zincsearch/HEAD/screenshots/users_screen.jpg",
+    "https://raw.githubusercontent.com/zincsearch/zincsearch/HEAD/screenshots/zinc-youtube.jpg"
+   ]
   },
   {
    "id": "zitadel",
@@ -9297,7 +10167,8 @@
     "awesome-oss-alternatives"
    ],
    "verified": false,
-   "release": "https://github.com/zitadel/zitadel/releases/tag/v4.20.0"
+   "release": "https://github.com/zitadel/zitadel/releases/tag/v4.20.0",
+   "screenshots": []
   },
   {
    "id": "zulip",
@@ -9319,7 +10190,8 @@
    ],
    "source": "starter",
    "verified": false,
-   "release": "https://github.com/zulip/zulip/releases/tag/12.3"
+   "release": "https://github.com/zulip/zulip/releases/tag/12.3",
+   "screenshots": []
   }
  ]
 }

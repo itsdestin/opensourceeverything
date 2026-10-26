@@ -136,6 +136,10 @@ if (existsSync(linksFile)) {
   for (const p of projects.values()) { const l = p.code && links[p.code]; if (l) { if (l.website) p.website = l.website; p.release = l.release ?? null; } }
 }
 
+// ── Screenshots (prefill/fetch-screenshots.mjs + check-screenshots.mjs): up to 4 real interface shots each ──
+const shotsFile = join(OUT, 'screenshots.json');
+if (existsSync(shotsFile)) { const shots = read(shotsFile); for (const p of projects.values()) p.screenshots = shots[p.id] ?? []; }
+
 // ── Write ──
 const groupList = [...groups.values()].sort((a, b) => categories.findIndex((c) => c.id === a.category) - categories.findIndex((c) => c.id === b.category));
 const unknownCat = groupList.filter((g) => !categories.some((c) => c.id === g.category));

@@ -19,16 +19,17 @@ export const KIND = { app: 'App', self_hosted: 'Runs on your own server', develo
 export const codeUrl = (p) => (p.code ? (/^https?:\/\//.test(p.code) ? p.code : `https://${p.code}`) : null);
 export const hostOf = (p) => (p.code ? p.code.replace(/^https?:\/\//, '').split('/')[0] : null);
 
-// The outside links a project gets, most useful first (Destin, Oct 27: "download links or website outlinks …
-// in addition to the source code links"). A GitHub release counts as a download only for apps people install;
-// for servers and developer tools it's labelled "Latest release".
-export function outLinks(p) {
+// The outside links a project gets, most useful first, worded so a visitor knows where each goes
+// (Destin, Oct 27: an "Actions" menu with "View on GitHub", "View downloads"…). A GitHub release counts as
+// downloads only for apps people install; for servers and developer tools it's "View latest release".
+const HOST_NAME = { 'github.com': 'GitHub', 'gitlab.com': 'GitLab', 'codeberg.org': 'Codeberg' };
+export function actions(p) {
   const l = [];
   const download = p.download ?? (p.release && p.kind === 'app' ? p.release : null);
-  if (download) l.push({ label: 'Download', href: download });
-  if (p.website) l.push({ label: 'Website', href: p.website });
-  if (p.release && !download) l.push({ label: 'Latest release', href: p.release });
-  if (codeUrl(p)) l.push({ label: 'Source code', href: codeUrl(p) });
+  if (download) l.push({ label: 'View downloads', href: download });
+  if (p.website) l.push({ label: 'Visit website', href: p.website });
+  if (p.release && !download) l.push({ label: 'View latest release', href: p.release });
+  if (codeUrl(p)) l.push({ label: HOST_NAME[hostOf(p)] ? `View on ${HOST_NAME[hostOf(p)]}` : 'View source code', href: codeUrl(p) });
   return l;
 }
 

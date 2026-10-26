@@ -1,5 +1,5 @@
 // One page per open-source project (p/<id>/): what it is, which groups it's listed in, and its facts.
-import { esc, url, SITE_URL, KIND, factChips, statusPill, hostOf, fmtStars, outLinks, codeUrl } from '../lib.mjs';
+import { esc, url, SITE_URL, KIND, factChips, statusPill, hostOf, fmtStars, actions, codeUrl } from '../lib.mjs';
 
 const HOSTS = { 'github.com': 'GitHub', 'gitlab.com': 'GitLab', 'codeberg.org': 'Codeberg' };
 
@@ -7,7 +7,7 @@ export default function projectPages(d) {
   return d.projects.map((p) => {
     const listed = d.groupsByProject.get(p.id) ?? [];
     const host = HOSTS[hostOf(p)] ?? (p.code ? hostOf(p) : 'Its own website');
-    const links = outLinks(p).map((l, i) => `<a class="btn md ${i ? 'secondary' : 'primary'}" href="${esc(l.href)}" rel="noopener">${l.label}</a>`).join('');
+    const links = actions(p).map((l, i) => `<a class="btn md ${i ? 'secondary' : 'primary'}" href="${esc(l.href)}" rel="noopener">${l.label}</a>`).join('');
     const replaces = [...new Set(listed.flatMap(({ group }) => group.closed.slice(0, 3)))];
     const description = `${p.name}: ${p.summary}`.slice(0, 300);
 
@@ -23,6 +23,11 @@ export default function projectPages(d) {
 
   <div class="cols">
     <div>
+  ${p.screenshots?.length ? `<section class="surface sec">
+        <div class="sec-head"><div><h2 class="h-large">Screenshots<span class="count">${p.screenshots.length}</span></h2><p class="desc12">From ${esc(p.name)}'s own page. Click one to see it full size.</p></div></div>
+        <!-- WHY small thumbnails (Destin, Oct 27: full-size pictures were "overwhelming"); full size opens in a viewer. -->
+        <div class="thumbstrip">${p.screenshots.map((u, i) => `<button class="thumb" type="button" data-shot="${esc(u)}" aria-label="Screenshot ${i + 1} of ${p.screenshots.length}, full size"><img src="${esc(u)}" alt="" loading="lazy" referrerpolicy="no-referrer"></button>`).join('')}</div>
+      </section>` : ''}
       <section class="surface sec">
         <div class="sec-head"><div><h2 class="h-large">Listed in<span class="count">${listed.length}</span></h2><p class="desc12">The jobs it does, and the closed apps it replaces</p></div></div>
         <div class="stack">${listed.map(({ group, alt }) => `
@@ -60,6 +65,6 @@ export default function projectPages(d) {
       ...(p.license ? { license: p.license } : {}), ...(codeUrl(p) ? { codeRepository: codeUrl(p) } : {}), ...(p.website ? { sameAs: p.website } : {}),
       applicationCategory: listed[0]?.group.name,
     };
-    return { path: `p/${p.id}/`, title: replaces.length ? `${p.name}: open-source alternative to ${replaces.slice(0, 2).join(' and ')}` : p.name, description, body, styles: ['group.css'], jsonLd };
+    return { path: `p/${p.id}/`, title: replaces.length ? `${p.name}: open-source alternative to ${replaces.slice(0, 2).join(' and ')}` : p.name, description, body, styles: ['group.css'], scripts: p.screenshots?.length ? ['gallery.js'] : [], jsonLd };
   });
 }

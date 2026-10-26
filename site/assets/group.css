@@ -47,3 +47,22 @@ a.footchip { text-decoration:none; }
 .card:has(.cardlink:focus-visible) { box-shadow:0 0 0 2px var(--accent); }
 .outlinks { position:relative; z-index:1; display:flex; gap:6px; flex-wrap:wrap; }
 .outlinks .btn { text-decoration:none; }
+
+/* Cards with a screenshot (option B). WHY this frame: the app's Marketplace sets theme previews inside the card,
+   4px in, with corners that follow the card's. */
+.card.pic { padding:0; gap:0; }
+.card.pic .inner { padding:12px 16px 16px; display:flex; flex-direction:column; gap:8px; flex:1; min-width:0; }
+.preview { margin:4px 4px 0; aspect-ratio:16/10; border-radius:calc(var(--radius-xl) - 4px) calc(var(--radius-xl) - 4px) var(--radius-sm) var(--radius-sm); overflow:hidden; background:var(--inset); border:1px solid var(--edge-dim); }
+.preview img { width:100%; height:100%; object-fit:cover; object-position:top; display:block; }
+.preview.empty { display:flex; align-items:center; justify-content:center; font-size:12px; color:var(--fg-muted); }
+.dd.actions { position:relative; z-index:2; align-self:flex-start; }
+.dd.actions .menu { top:auto; bottom:calc(100% + 4px); min-width:190px; }
+.menu a.mi { text-decoration:none; }
+/* Project page screenshots: a row of small pictures; the viewer shows one full size. */
+.thumbstrip { display:flex; gap:8px; overflow-x:auto; scrollbar-width:thin; padding-bottom:4px; }
+.thumb { flex:none; height:140px; padding:0; border:1px solid var(--edge-card); border-radius:var(--radius-md); overflow:hidden; background:var(--inset); cursor:zoom-in; }
+.thumb img { height:100%; width:auto; display:block; }
+.thumb:hover { border-color:var(--accent); }
+.viewer { position:fixed; inset:0; z-index:60; background:color-mix(in srgb,#000 75%,transparent); display:flex; align-items:center; justify-content:center; padding:24px; }
+.viewer img { max-width:100%; max-height:100%; border-radius:var(--radius-lg); box-shadow:0 8px 32px rgba(0,0,0,.5); }
+.viewer .close { position:absolute; top:16px; right:16px; }
