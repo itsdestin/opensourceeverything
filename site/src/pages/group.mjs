@@ -1,7 +1,7 @@
 // One page per group (g/<id>/): the job, the closed apps it replaces, and its open alternatives.
 // Ported from mockups/group-page.html. Votes, comments, "still missing", suggest and report need the server,
 // so they only appear once API_URL is set (see lib.mjs).
-import { esc, url, ICON, SITE_URL, API_URL, KIND, factChips, statusPill, hostOf, actions, codeUrl } from '../lib.mjs';
+import { esc, url, ICON, SITE_URL, API_URL, KIND, factChips, hostOf, actions, codeUrl } from '../lib.mjs';
 
 const hostLabel = (p) => ({ 'github.com': 'GitHub', 'gitlab.com': 'GitLab', 'codeberg.org': 'Codeberg' }[hostOf(p)] ?? 'Own website');
 
@@ -15,12 +15,12 @@ function altCard(p, alt, i) {
   return `<div class="card pic" data-fit="${alt.fit}" data-stars="${p.stars ?? 0}" data-name="${esc(p.name.toLowerCase())}" data-order="${i}">
       ${shot ? `<div class="preview"><img src="${esc(shot)}" alt="${esc(p.name)} screenshot" loading="lazy" referrerpolicy="no-referrer"></div>` : '<div class="preview empty">No screenshot yet</div>'}
       <div class="inner">
-        <div class="head"><h3><a class="cardlink" href="${url(`p/${p.id}/`)}">${esc(p.name)}</a></h3><div class="corner" style="margin-right:0">${statusPill(p)}</div></div>
+        <div class="head"><h3><a class="cardlink" href="${url(`p/${p.id}/`)}">${esc(p.name)}</a></h3>
+          ${acts.length ? `<div class="dd actions"><button class="btn sm secondary" type="button" data-menu="act-${esc(p.id)}" aria-haspopup="menu" aria-expanded="false">Actions ${ICON.chev}</button>
+            <div class="menu" id="act-${esc(p.id)}" role="menu">${acts.map((l) => `<a class="mi" role="menuitem" href="${esc(l.href)}" rel="noopener">${l.label}</a>`).join('')}<a class="mi" role="menuitem" href="${url(`p/${p.id}/`)}">See full details</a></div></div>` : ''}</div>
         <div class="chiprow">${factChips(p, alt)}</div>
         <p class="blurb">${esc(p.summary)}</p>
         <div class="foot">${esc(foot)}</div>
-        ${acts.length ? `<div class="dd actions"><button class="btn sm secondary" type="button" data-menu="act-${esc(p.id)}" aria-haspopup="menu" aria-expanded="false">Actions ${ICON.chev}</button>
-          <div class="menu left" id="act-${esc(p.id)}" role="menu">${acts.map((l) => `<a class="mi" role="menuitem" href="${esc(l.href)}" rel="noopener">${l.label}</a>`).join('')}<a class="mi" role="menuitem" href="${url(`p/${p.id}/`)}">See full details</a></div></div>` : ''}
       </div>
     </div>`;
 }

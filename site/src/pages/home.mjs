@@ -1,6 +1,6 @@
 // The home page: hero with search, the biggest gaps, a hand-picked row, and every category.
 // WHY no vote numbers: this is the real site and nobody has voted yet; gaps are described from the data itself.
-import { url, esc, ICON, API_URL, factChips, statusPill } from '../lib.mjs';
+import { url, esc, ICON, API_URL, factChips } from '../lib.mjs';
 
 // WHY these first: everyday apps are why most visitors arrive; developer and business tools come after.
 const LATER = new Set(['dev', 'business']);
@@ -33,7 +33,7 @@ export default function home(d) {
     if (picks.length === 8) break;
   }
   const pickCard = ({ g, a, p }) => `<a class="card" href="${url(`p/${p.id}/`)}">
-      <div class="head"><h3>${esc(p.name)}</h3><div class="corner" style="margin-right:0">${statusPill(p)}</div></div>
+      <div class="head"><h3>${esc(p.name)}</h3></div>
       <div class="chiprow"><span class="chip">${esc(g.name)}</span>${factChips(p, a)}</div>
       <p class="blurb">${esc(p.summary)}</p></a>`;
 

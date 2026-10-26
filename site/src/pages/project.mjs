@@ -1,5 +1,5 @@
 // One page per open-source project (p/<id>/): what it is, which groups it's listed in, and its facts.
-import { esc, url, SITE_URL, KIND, factChips, statusPill, hostOf, fmtStars, actions, codeUrl } from '../lib.mjs';
+import { esc, url, SITE_URL, KIND, factChips, hostOf, fmtStars, actions, codeUrl } from '../lib.mjs';
 
 const HOSTS = { 'github.com': 'GitHub', 'gitlab.com': 'GitLab', 'codeberg.org': 'Codeberg' };
 
@@ -7,14 +7,15 @@ export default function projectPages(d) {
   return d.projects.map((p) => {
     const listed = d.groupsByProject.get(p.id) ?? [];
     const host = HOSTS[hostOf(p)] ?? (p.code ? hostOf(p) : 'Its own website');
-    const links = actions(p).map((l, i) => `<a class="btn md ${i ? 'secondary' : 'primary'}" href="${esc(l.href)}" rel="noopener">${l.label}</a>`).join('');
+    // WHY reversed: YouCoded's design guide puts the filled main button on the right, outlined ones to its left.
+    const links = actions(p).map((l, i) => `<a class="btn md ${i ? 'secondary' : 'primary'}" href="${esc(l.href)}" rel="noopener">${l.label}</a>`).reverse().join('');
     const replaces = [...new Set(listed.flatMap(({ group }) => group.closed.slice(0, 3)))];
     const description = `${p.name}: ${p.summary}`.slice(0, 300);
 
     const body = `
   <div class="surface identity">
     <div class="row">
-      <div style="display:flex;align-items:center;gap:8px;flex-wrap:wrap"><h1 class="h-subject">${esc(p.name)}</h1>${statusPill(p)}</div>
+      <div style="display:flex;align-items:center;gap:8px;flex-wrap:wrap"><h1 class="h-subject">${esc(p.name)}</h1></div>
     </div>
     <div class="chiprow">${factChips(p)}</div>
     <p class="body2">${esc(p.summary)}</p>

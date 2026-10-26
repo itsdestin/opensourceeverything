@@ -57,7 +57,8 @@ export const ICON = {
 
 // The fact chips every listing shows, in one order everywhere (YouCoded's "one chip row" rule).
 export function factChips(p, alt) {
-  const c = [];
+  // WHY activity is a plain chip first in the row (Destin, Oct 27): the card's corner is for the Actions menu.
+  const c = [`<span class="chip">${p.inactive ? 'Quiet for a year' : 'Active'}</span>`];
   if (p.verified) c.push(`<span class="chip">${ICON.shield}Verified</span>`);
   c.push(`<span class="chip"${p.licenseNeedsCheck ? ' title="A mod is confirming this license"' : ''}>${esc(p.license ?? 'License being checked')}</span>`);
   if (p.licenseClass === 'open_core') c.push('<span class="chip" title="Open source, with some parts paid or under another license">Open core</span>');
@@ -67,4 +68,3 @@ export function factChips(p, alt) {
   if (KIND[p.kind]) c.push(`<span class="chip">${esc(KIND[p.kind])}</span>`);
   return c.join('');
 }
-export const statusPill = (p) => (p.inactive ? '<span class="pill warn"><i></i>Quiet for a year</span>' : '<span class="pill ok"><i></i>Active</span>');
