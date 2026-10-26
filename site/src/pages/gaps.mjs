@@ -1,0 +1,53 @@
+// The gaps page (gaps/): every job where open source falls short, worst first.
+// WHY its own page (Destin, Oct 27): tracking what's still missing is what no other alternatives site does,
+// so it gets a front door instead of one row on the home page.
+import { esc, url } from '../lib.mjs';
+import { appUrl } from '../cards.mjs';
+
+// WHY everyday categories first within each tier: most visitors and most builders care about those.
+const LATER = new Set(['dev', 'business']);
+
+export default function gaps(d) {
+  const catOrder = (g) => (LATER.has(g.category) ? 100 : 0) + d.categories.findIndex((c) => c.id === g.category);
+  const fulls = (g) => g.alternatives.filter((a) => a.fit === 'full');
+  const tiers = [
+    { id: 'none', name: 'Nothing open yet', desc: 'No open-source project does any of this job.', pill: 'No open alternative yet',
+      test: (g) => g.alternatives.length === 0 },
+    { id: 'partial', name: 'Only part of the job', desc: 'Open projects cover some of it, but none replaces the whole thing.', pill: 'Only partial replacements',
+      test: (g) => g.alternatives.length > 0 && fulls(g).length === 0 },
+    { id: 'one', name: 'Only one full replacement', desc: "One open project does the whole job. If it stalls, there's nothing else.", pill: 'One full replacement',
+      test: (g) => fulls(g).length === 1 },
+  ].map((t) => ({ ...t, groups: d.groups.filter(t.test).sort((a, b) => catOrder(a) - catOrder(b) || a.name.localeCompare(b.name)) }));
+
+  const card = (g, t) => {
+    // WHY list what the partial ones do: "only partial" means little until you see what each one is missing.
+    const parts = g.alternatives.filter((a) => a.fit === 'partial').map((a) => ({ a, p: d.projById.get(a.project) })).filter((x) => x.p);
+    const only = t.id === 'one' ? d.projById.get(fulls(g)[0].project) : null;
+    return `<div class="card gcard">
+      <div class="head"><h3><a class="crumb-strong" href="${url(`g/${g.id}/`)}">${esc(g.name)}</a></h3><div class="corner" style="margin-right:0"><span class="pill warn"><i></i>${esc(t.pill)}</span></div></div>
+      <p class="job">${esc(g.job)}.</p>
+      <div class="chiprow">${g.closed.map((c) => `<a class="chip" href="${appUrl(c)}">${esc(c)}</a>`).join('')}</div>
+      ${only ? `<p class="small2">Only <a href="${url(`p/${only.id}/`)}">${esc(only.name)}</a> does the whole job.</p>` : ''}
+      ${t.id === 'partial' && parts.length ? `<ul class="partlist">${parts.map(({ a, p }) => `<li><a href="${url(`p/${p.id}/`)}">${esc(p.name)}</a>${a.note ? `<span>${esc(a.note)}</span>` : ''}</li>`).join('')}</ul>` : ''}
+      <div class="gapbtns"><a class="btn sm secondary" href="${url(`g/${g.id}/`)}">See the group</a><a class="btn sm primary" href="${url(`g/${g.id}/#build`)}">Before you build</a></div>
+    </div>`;
+  };
+
+  const total = tiers[0].groups.length + tiers[1].groups.length;
+  const body = `
+  <div class="surface identity">
+    <div><div class="muted11">Gaps</div><h1 class="h-subject">What open source doesn't replace yet</h1>
+      <p class="desc12" style="margin-top:4px">${total} ${total === 1 ? 'job has' : 'jobs have'} no full open-source replacement, and ${tiers[2].groups.length} rely on a single project. Building something? Start here, and see what you can reuse first.</p></div>
+    <div class="pop" style="padding-left:0"><span class="muted11">Jump to</span><div class="fchips">${tiers.filter((t) => t.groups.length).map((t) => `<a class="fchip" href="#${t.id}">${esc(t.name)}<span class="n">${t.groups.length}</span></a>`).join('')}</div></div>
+  </div>
+  ${tiers.filter((t) => t.groups.length).map((t) => `
+  <section class="surface sec" id="${t.id}">
+    <div class="sec-head"><div><h2 class="h-large">${esc(t.name)}<span class="count">${t.groups.length}</span></h2><p class="desc12">${esc(t.desc)}</p></div></div>
+    <div class="row1 fill list">${t.groups.map((g) => card(g, t)).join('')}</div>
+  </section>`).join('')}`;
+
+  return [{
+    path: 'gaps/', title: "Gaps: what open source doesn't replace yet", styles: ['pages.css'], body,
+    description: `${total} jobs where no open-source app fully replaces the closed ones yet, and ${tiers[2].groups.length} that rely on a single project. Made with r/TrueOpenSource.`,
+  }];
+}

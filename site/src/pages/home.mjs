@@ -1,6 +1,7 @@
 // The home page: hero with search, the biggest gaps, a hand-picked row, and every category.
 // WHY no vote numbers: this is the real site and nobody has voted yet; gaps are described from the data itself.
 import { url, esc, ICON, API_URL, factChips } from '../lib.mjs';
+import { appUrl } from '../cards.mjs';
 
 // WHY these first: everyday apps are why most visitors arrive; developer and business tools come after.
 const LATER = new Set(['dev', 'business']);
@@ -37,7 +38,7 @@ export default function home(d) {
       <div class="chiprow"><span class="chip">${esc(g.name)}</span>${factChips(p, a)}</div>
       <p class="blurb">${esc(p.summary)}</p></a>`;
 
-  const popular = POPULAR.map((name) => { const g = d.groups.find((g) => g.closed.includes(name)); return g ? `<a class="fchip" href="${url(`g/${g.id}/?compare=${encodeURIComponent(name)}`)}">${esc(name)}</a>` : ''; }).join('');
+  const popular = POPULAR.map((name) => { const g = d.groups.find((g) => g.closed.includes(name)); return g ? `<a class="fchip" href="${appUrl(name)}">${esc(name)}</a>` : ''; }).join('');
 
   const cats = d.categories.map((c) => {
     const gs = d.groups.filter((g) => g.category === c.id);
@@ -67,7 +68,7 @@ export default function home(d) {
   </div>
 
   <section class="surface sec">
-    <div class="sec-head"><div><h2 class="h-large">Biggest gaps</h2><p class="desc12">Where nothing open does the whole job yet. A good place to start building.</p></div></div>
+    <div class="sec-head"><div><h2 class="h-large">Biggest gaps</h2><p class="desc12">Where nothing open does the whole job yet. A good place to start building.</p></div><a class="btn sm secondary" href="${url('gaps/')}">See all gaps</a></div>
     <div class="row1 fill">${gaps.map(gapCard).join('')}</div>
   </section>
 

@@ -53,3 +53,17 @@ table.credits a { color:var(--fg); }
   .row1.fill.list > .card { flex:1 1 100%; }
   .btns-row { flex-direction:column-reverse; } .btns-row .btn { width:100%; }
 }
+
+/* Gaps page: what each partial project covers, and the card's two buttons at its bottom right. */
+.crumb-strong { color:inherit; text-decoration:none; }
+.crumb-strong:hover { text-decoration:underline; }
+.gcard .chiprow a.chip, .identity a.chip { color:var(--fg-2); text-decoration:none; }
+.gcard a.chip:hover, .identity a.chip:hover { border-color:var(--accent); }
+.partlist { margin:0; padding:0; list-style:none; display:flex; flex-direction:column; gap:4px; font-size:12px; }
+.partlist li { display:flex; gap:6px; flex-wrap:wrap; color:var(--fg-2); }
+.partlist a { color:var(--fg); }
+.partlist span { color:var(--fg-muted); }
+.partlist span::before { content:"· "; }
+.small2 a { color:var(--fg); }
+/* WHY margin-top:auto: cards in a row stretch to the same height, so the buttons line up along the bottom. */
+.gapbtns { margin-top:auto; padding-top:4px; display:flex; gap:8px; justify-content:flex-end; flex-wrap:wrap; }

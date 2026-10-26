@@ -10,6 +10,7 @@ import { join, dirname } from 'node:path';
 import { fileURLToPath, pathToFileURL } from 'node:url';
 import { loadData, url, SITE_URL } from './src/lib.mjs';
 import { page } from './src/layout.mjs';
+import { appSlug } from './src/cards.mjs';
 
 const HERE = dirname(fileURLToPath(import.meta.url));
 const ROOT = join(HERE, '..');
@@ -40,7 +41,8 @@ for (const g of d.groups) {
 // ── Search index: short keys keep it small (it loads the first time someone types) ──
 const firstGroup = (pid) => d.groupsByProject.get(pid)?.[0]?.group;
 write('search.json', JSON.stringify({
-  closed: d.groups.flatMap((g) => g.closed.map((c) => ({ n: c, g: g.name, u: `g/${g.id}/?compare=${encodeURIComponent(c)}` }))),
+  // WHY one entry per closed app, pointing at its own page: an app in two groups (Photoshop) appears once.
+  closed: [...new Map(d.groups.flatMap((g) => g.closed.map((c) => [appSlug(c), { n: c, g: g.name, u: `alternatives-to/${appSlug(c)}/` }]))).values()],
   groups: d.groups.map((g) => ({ n: g.name, c: d.catById.get(g.category)?.name ?? '', u: `g/${g.id}/` })),
   projects: d.projects.map((p) => ({ n: p.name, g: firstGroup(p.id)?.name ?? '', u: `p/${p.id}/` })),
 }));

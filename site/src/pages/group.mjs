@@ -1,29 +1,8 @@
 // One page per group (g/<id>/): the job, the closed apps it replaces, and its open alternatives.
 // Ported from mockups/group-page.html. Votes, comments, "still missing", suggest and report need the server,
 // so they only appear once API_URL is set (see lib.mjs).
-import { esc, url, ICON, SITE_URL, API_URL, KIND, factChips, hostOf, actions, codeUrl } from '../lib.mjs';
-
-const hostLabel = (p) => ({ 'github.com': 'GitHub', 'gitlab.com': 'GitLab', 'codeberg.org': 'Codeberg' }[hostOf(p)] ?? 'Own website');
-
-function altCard(p, alt, i) {
-  const foot = [KIND[p.kind], hostLabel(p), alt.note].filter(Boolean).join(' · ');
-  const acts = actions(p);
-  const shot = p.screenshots?.[0];
-  // WHY this layout (Destin chose option B, Oct 27): a screenshot on every card, framed like the app's
-  // Marketplace theme previews, and one "Actions" menu instead of a row of buttons.
-  // WHY a stretched title link: the card also holds the Actions menu, and links can't sit inside links.
-  return `<div class="card pic" data-fit="${alt.fit}" data-stars="${p.stars ?? 0}" data-name="${esc(p.name.toLowerCase())}" data-order="${i}">
-      ${shot ? `<div class="preview"><img src="${esc(shot)}" alt="${esc(p.name)} screenshot" loading="lazy" referrerpolicy="no-referrer"></div>` : '<div class="preview empty">No screenshot yet</div>'}
-      <div class="inner">
-        <div class="head"><h3><a class="cardlink" href="${url(`p/${p.id}/`)}">${esc(p.name)}</a></h3>
-          ${acts.length ? `<div class="dd actions"><button class="btn sm secondary" type="button" data-menu="act-${esc(p.id)}" aria-haspopup="menu" aria-expanded="false">Actions ${ICON.chev}</button>
-            <div class="menu" id="act-${esc(p.id)}" role="menu">${acts.map((l) => `<a class="mi" role="menuitem" href="${esc(l.href)}" rel="noopener">${l.label}</a>`).join('')}<a class="mi" role="menuitem" href="${url(`p/${p.id}/`)}">See full details</a></div></div>` : ''}</div>
-        <div class="chiprow">${factChips(p, alt)}</div>
-        <p class="blurb">${esc(p.summary)}</p>
-        <div class="foot">${esc(foot)}</div>
-      </div>
-    </div>`;
-}
+import { esc, url, ICON, SITE_URL, API_URL, codeUrl } from '../lib.mjs';
+import { altCard, appUrl, sortAlts } from '../cards.mjs';
 
 function promptText(g, alts, full) {
   const ask = 'Compare it with my project or idea below. Tell me which projects overlap, what I could reuse instead of rewriting, and what mine does that none of them do.';
@@ -38,9 +17,7 @@ const SORTS = [['fit', 'Fully replaces first'], ['stars', 'Most GitHub stars'], 
 export default function groupPages(d) {
   return d.groups.map((g) => {
     const cat = d.catById.get(g.category);
-    const alts = g.alternatives.map((a) => ({ a, p: d.projById.get(a.project) })).filter((x) => x.p)
-      // WHY default order: whole-job replacements first, then by GitHub stars as a rough popularity signal.
-      .sort((x, y) => (x.a.fit === y.a.fit ? 0 : x.a.fit === 'full' ? -1 : 1) || (y.p.stars ?? 0) - (x.p.stars ?? 0));
+    const alts = sortAlts(g.alternatives.map((a) => ({ a, p: d.projById.get(a.project) })).filter((x) => x.p));
     const full = alts.filter((x) => x.a.fit === 'full').length;
     const first = g.closed[0] ?? '';
     const description = alts.length
@@ -50,7 +27,7 @@ export default function groupPages(d) {
     // WHY no "Compared with" dropdown (Destin, Oct 27: "doesn't seem to do anything"): until the server adds
     // per-app sections ("Why people leave X"), switching apps changed only a label. The closed apps are shown as
     // chips instead; the one a visitor searched for (?compare=) is highlighted by group.js.
-    const replacesRow = g.closed.length ? `<div class="replaces-row"><span class="muted11">Replaces</span><div class="chiprow">${g.closed.map((c) => `<span class="chip" data-app="${esc(c)}">${esc(c)}</span>`).join('')}</div></div>` : '';
+    const replacesRow = g.closed.length ? `<div class="replaces-row"><span class="muted11">Replaces</span><div class="chiprow">${g.closed.map((c) => `<a class="chip" data-app="${esc(c)}" href="${appUrl(c)}">${esc(c)}</a>`).join('')}</div></div>` : '';
 
     const body = `
   <div class="surface identity">
@@ -79,7 +56,7 @@ export default function groupPages(d) {
     </div>
 
     <div>
-      <section class="surface sec">
+      <section class="surface sec" id="build">
         <h2 class="h-large">Before you build</h2>
         <p class="small2">Planning something for ${esc(g.name.toLowerCase())}? See what exists first, so you can reuse parts or explain what's different. Paste this into any AI assistant:</p>
         <div class="lvl2 prompt" id="prompt-short">${esc(promptText(g, alts, false))}</div>

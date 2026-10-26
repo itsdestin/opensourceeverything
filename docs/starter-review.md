@@ -3,7 +3,7 @@
 Drafted Oct 27, 2026, then every link checked automatically (2026-10-26).
 ✅ open-source license confirmed · ⚠️ needs a person to check the license · ❌ problem · 🔍 not on a host we can read; check by hand · 🗄️ archived · 💤 quiet for a year
 
-**10 categories, 58 groups, 138 closed apps, 166 listings.** 129 confirmed open source, 10 need a license check, 27 to check by hand, 0 problems.
+**10 categories, 59 groups, 141 closed apps, 170 listings.** 133 confirmed open source, 10 need a license check, 27 to check by hand, 0 problems.
 
 "Full" = replaces the main job; "partly" = covers part of it.
 
@@ -361,7 +361,7 @@ No open alternative yet. **A gap.**
 | Ollama | Partly | ✅ MIT | Runs models; needs a chat app on top |
 
 ### AI coding assistants
-*AI help writing and changing code.* Replaces: GitHub Copilot, Cursor, Windsurf, Claude Code
+*AI help writing and changing code.* Replaces: GitHub Copilot, Cursor, Windsurf, Claude Code, OpenAI Codex app
 
 | Alternative | Fit | Check | Note |
 |---|---|---|---|
@@ -370,6 +370,16 @@ No open alternative yet. **A gap.**
 | Aider | Full | ✅ Apache-2.0 |  |
 | OpenHands | Full | ✅ MIT |  |
 | Codex CLI | Full | ✅ Apache-2.0 |  |
+| YouCoded | Full | ✅ MIT | Desktop and Android app; any AI model |
+
+### AI agents for everyday work
+*An AI assistant that works on your files and apps for you.* Replaces: Claude Cowork, ChatGPT agent
+
+| Alternative | Fit | Check | Note |
+|---|---|---|---|
+| YouCoded | Full | ✅ MIT | Desktop and Android app; any AI model |
+| Goose | Full | ✅ Apache-2.0 | Desktop app and terminal |
+| Open Interpreter | Partly | ✅ Apache-2.0 | Runs in the terminal |
 
 ### AI image generation
 *Making images from text.* Replaces: Midjourney, DALL·E

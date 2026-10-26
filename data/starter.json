@@ -1190,7 +1190,8 @@
       "GitHub Copilot",
       "Cursor",
       "Windsurf",
-      "Claude Code"
+      "Claude Code",
+      "OpenAI Codex app"
      ],
      "alts": [
       [
@@ -1217,6 +1218,47 @@
        "Codex CLI",
        "github.com/openai/codex",
        "full"
+      ],
+      [
+       "YouCoded",
+       "github.com/itsdestin/youcoded",
+       "full",
+       "Desktop and Android app; any AI model",
+       {
+        "website": "https://youcoded.ai"
+       }
+      ]
+     ]
+    },
+    {
+     "id": "ai-agents",
+     "name": "AI agents for everyday work",
+     "job": "An AI assistant that works on your files and apps for you",
+     "closed": [
+      "Claude Cowork",
+      "ChatGPT agent"
+     ],
+     "alts": [
+      [
+       "YouCoded",
+       "github.com/itsdestin/youcoded",
+       "full",
+       "Desktop and Android app; any AI model",
+       {
+        "website": "https://youcoded.ai"
+       }
+      ],
+      [
+       "Goose",
+       "github.com/aaif-goose/goose",
+       "full",
+       "Desktop app and terminal"
+      ],
+      [
+       "Open Interpreter",
+       "github.com/openinterpreter/openinterpreter",
+       "partial",
+       "Runs in the terminal"
       ]
      ]
     },

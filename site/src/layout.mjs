@@ -15,6 +15,7 @@ export function topStrip({ search = true } = {}) {
 export function footer() {
   // WHY separate chips (Destin, Oct 27): each footer link is its own glass chip, not words in one bar.
   return `<div class="footer">
+  <a class="footchip" href="${url('gaps/')}">Gaps</a>
   <a class="footchip" href="${url('about/')}">How this works</a>
   <a class="footchip" href="${url('about/#open-source')}">What counts as open source</a>
   <a class="footchip" href="${url('credits/')}">Data license: CC BY-SA 4.0</a>

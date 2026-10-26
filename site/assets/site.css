@@ -295,7 +295,7 @@ textarea.field { resize:vertical; min-height:4.8em; }
 @media (hover:hover) { .catcard:hover { transform:none; } }
 .catcard .head { align-items:center; }
 .gchips { display:flex; flex-wrap:wrap; gap:6px; }
-.gchips .fchip .n { color:var(--fg-faint); margin-left:4px; font-size:11px; }
+.fchip .n { color:var(--fg-faint); margin-left:4px; font-size:11px; }
 .builders { padding:16px; display:flex; align-items:center; justify-content:space-between; gap:16px; flex-wrap:wrap; }
 .builders .btns { display:flex; gap:8px; flex-wrap:wrap; }
 .footer { display:flex; gap:8px; flex-wrap:wrap; justify-content:center; }
