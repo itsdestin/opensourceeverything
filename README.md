@@ -1,6 +1,4 @@
-# Open Instead
-
-**Open source everything.**
+# Open Source Everything
 
 A public site, made with [r/TrueOpenSource],(https://www.reddit.com/r/TrueOpenSource/) that shows which open-source
 projects replace each closed-source app, where no good replacement exists yet, and what builders could reuse

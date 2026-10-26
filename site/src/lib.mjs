@@ -1,15 +1,15 @@
-// Shared helpers for building Open Instead's pages: loading the map data, links, small HTML pieces.
+// Shared helpers for building Open Source Everything's pages: loading the map data, links, small HTML pieces.
 import { readFileSync } from 'node:fs';
 import { join } from 'node:path';
 
-// WHY a base path: on GitHub Pages the site lives at itsdestin.github.io/openinstead/; with a custom address it's "/".
-export const BASE = process.env.SITE_BASE ?? '/openinstead/';
-export const SITE_URL = process.env.SITE_URL ?? 'https://itsdestin.github.io/openinstead/';
+// WHY a base path: on GitHub Pages the site lives at itsdestin.github.io/opensourceeverything/; with a custom address it's "/".
+export const BASE = process.env.SITE_BASE ?? '/opensourceeverything/';
+export const SITE_URL = process.env.SITE_URL ?? 'https://itsdestin.github.io/opensourceeverything/';
 // WHY: voting, comments and suggestions need the server (built next). Until it exists, pages leave those
 // controls out entirely rather than showing buttons that do nothing (YouCoded design rule).
 export const API_URL = process.env.API_URL ?? '';
 export const SUBREDDIT = 'https://www.reddit.com/r/TrueOpenSource/';
-export const REPO = 'https://github.com/itsdestin/openinstead';
+export const REPO = 'https://github.com/itsdestin/opensourceeverything';
 
 export const url = (path = '') => BASE + path.replace(/^\//, '');
 export const esc = (s) => String(s ?? '').replace(/[&<>"']/g, (c) => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c]));

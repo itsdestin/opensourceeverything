@@ -27,7 +27,7 @@ const spdx = (s) => (s ? SPDX[s.toLowerCase().replace(/-only|-or-later|\+$/g, ''
 const result = {};
 async function githubBatch(list) {
   const q = `query { ${list.map((l, i) => { const [, o, n] = l.split('/'); return `r${i}: repository(owner: ${JSON.stringify(o)}, name: ${JSON.stringify(n)}) { nameWithOwner stargazerCount isArchived pushedAt licenseInfo { spdxId } }`; }).join('\n')} }`;
-  const res = await fetch('https://api.github.com/graphql', { method: 'POST', headers: { Authorization: `Bearer ${TOKEN}`, 'User-Agent': 'openinstead' }, body: JSON.stringify({ query: q }) });
+  const res = await fetch('https://api.github.com/graphql', { method: 'POST', headers: { Authorization: `Bearer ${TOKEN}`, 'User-Agent': 'opensourceeverything' }, body: JSON.stringify({ query: q }) });
   const body = await res.json();
   list.forEach((l, i) => {
     const d = body.data?.[`r${i}`];
@@ -35,7 +35,7 @@ async function githubBatch(list) {
       : { found: false };
   });
 }
-async function json(url) { try { const r = await fetch(url, { headers: { 'User-Agent': 'openinstead' }, signal: AbortSignal.timeout(15_000) }); return r.ok ? r.json() : null; } catch { return null; } }
+async function json(url) { try { const r = await fetch(url, { headers: { 'User-Agent': 'opensourceeverything' }, signal: AbortSignal.timeout(15_000) }); return r.ok ? r.json() : null; } catch { return null; } }
 
 const all = [...links];
 const gh = all.filter((l) => l.startsWith('github.com/'));
@@ -51,7 +51,7 @@ for (const l of all.filter((l) => l.startsWith('codeberg.org/'))) {
 }
 for (const l of all.filter((l) => l.startsWith('https://'))) {
   let ok = false;
-  try { ok = (await fetch(l, { method: 'GET', signal: AbortSignal.timeout(15_000), headers: { 'User-Agent': 'openinstead' } })).ok; } catch { /* stays false */ }
+  try { ok = (await fetch(l, { method: 'GET', signal: AbortSignal.timeout(15_000), headers: { 'User-Agent': 'opensourceeverything' } })).ok; } catch { /* stays false */ }
   result[l] = { found: ok, byHand: true };
 }
 
@@ -70,9 +70,9 @@ const NOT_OPEN = [[/Sustainable Use License/i, 'Sustainable Use License'], [/Bus
   [/Any Source Available License/i, 'Any Source Available License'], [/Fair Use License/i, 'Fair Use License']];
 async function sniff(link) {
   const [, o, n] = link.split('/');
-  const lic = await fetch(`https://api.github.com/repos/${o}/${n}/license`, { headers: { Authorization: `Bearer ${TOKEN}`, 'User-Agent': 'openinstead' } });
+  const lic = await fetch(`https://api.github.com/repos/${o}/${n}/license`, { headers: { Authorization: `Bearer ${TOKEN}`, 'User-Agent': 'opensourceeverything' } });
   const text = lic.ok ? Buffer.from((await lic.json()).content ?? '', 'base64').toString('utf8') : '';
-  const root = await fetch(`https://api.github.com/repos/${o}/${n}/contents`, { headers: { Authorization: `Bearer ${TOKEN}`, 'User-Agent': 'openinstead' } });
+  const root = await fetch(`https://api.github.com/repos/${o}/${n}/contents`, { headers: { Authorization: `Bearer ${TOKEN}`, 'User-Agent': 'opensourceeverything' } });
   const names = root.ok ? (await root.json()).map((f) => f.name.toLowerCase()) : [];
   const notOpen = NOT_OPEN.find(([re]) => re.test(text))?.[1];
   const found = LICENSE_TEXTS.find(([re]) => re.test(text))?.[1];

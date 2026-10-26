@@ -52,7 +52,7 @@ export default function home(d) {
   <!-- Hero card: headline, search and popular picks in one card (no bare text on the wallpaper). -->
   <div class="surface hero2">
     <div class="hero-row">
-      <a class="avatar brand" href="${url()}" aria-label="Open Instead home">${ICON.home}</a>
+      <a class="avatar brand" href="${url()}" aria-label="Open Source Everything home">${ICON.home}</a>
       <div class="headline">
         <h1>Open-source replacements for the apps you use</h1>
         <p class="desc12">Made with the r/TrueOpenSource community. Shows where nothing good exists yet, too.</p>
@@ -95,7 +95,7 @@ export default function home(d) {
   return [{
     path: '', title: '', search: false, styles: ['pages.css'],
     description: `Open-source replacements for ${closedCount} closed apps, grouped by the job they do, with where nothing good exists yet. Made with r/TrueOpenSource.`,
-    jsonLd: { '@context': 'https://schema.org', '@type': 'WebSite', name: 'Open Instead', url: 'https://itsdestin.github.io/openinstead/' },
+    jsonLd: { '@context': 'https://schema.org', '@type': 'WebSite', name: 'Open Source Everything', url: 'https://itsdestin.github.io/opensourceeverything/' },
     body,
   }];
 }

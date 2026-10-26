@@ -93,7 +93,7 @@ const SCHEMA = {
 };
 
 async function ghText(path) {
-  const res = await fetch(`https://api.github.com/repos/${path}`, { headers: { Authorization: `Bearer ${GH}`, Accept: 'application/vnd.github.raw+json', 'User-Agent': 'openinstead' } });
+  const res = await fetch(`https://api.github.com/repos/${path}`, { headers: { Authorization: `Bearer ${GH}`, Accept: 'application/vnd.github.raw+json', 'User-Agent': 'opensourceeverything' } });
   return res.ok ? res.text() : '';
 }
 async function rawText(url) { try { const r = await fetch(url, { signal: AbortSignal.timeout(15_000) }); return r.ok ? r.text() : ''; } catch { return ''; } }

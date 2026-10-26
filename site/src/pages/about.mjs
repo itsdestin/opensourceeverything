@@ -7,15 +7,15 @@ export default function about(d) {
   const listings = d.groups.reduce((s, g) => s + g.alternatives.length, 0);
   const body = `
   <div class="surface identity">
-    <div><div class="muted11">About</div><h1 class="h-subject">How Open Instead works</h1>
+    <div><div class="muted11">About</div><h1 class="h-subject">How Open Source Everything works</h1>
       <p class="desc12" style="margin-top:4px">What it is, how it's sorted, and how to get something added.</p></div>
     <div class="fchips">
       <a class="fchip" href="#organised">How it's organised</a><a class="fchip" href="#open-source">What counts as open source</a>
-      <a class="fchip" href="#listings">Where listings come from</a><a class="fchip" href="#add">Get listed</a><a class="fchip" href="#open">Open source everything</a>
+      <a class="fchip" href="#listings">Where listings come from</a><a class="fchip" href="#add">Get listed</a><a class="fchip" href="#open">This site is open too</a>
     </div>
   </div>
   ${section('what', 'What this is', `
-    <p class="body2">Open Instead lists open-source replacements for the closed-source apps people use every day, from Google Docs to Photoshop. It also shows where nothing good exists yet, so people who build software can see what's worth making.</p>
+    <p class="body2">Open Source Everything lists open-source replacements for the closed-source apps people use every day, from Google Docs to Photoshop. It also shows where nothing good exists yet, so people who build software can see what's worth making.</p>
     <p class="body2">It's made with the <a href="${SUBREDDIT}" rel="noopener">r/TrueOpenSource</a> community. Right now it holds ${d.groups.length} groups and ${listings} listings.</p>`)}
   ${section('organised', 'How it\'s organised', `
     <div class="defs">
@@ -46,7 +46,7 @@ export default function about(d) {
         <a class="btn md primary" href="${REPO}/issues/new" rel="noopener">Suggest it on GitHub</a>
       </div>
     </div>`)}
-  ${section('open', 'Open source everything', `
+  ${section('open', 'This site is open too', `
     <div class="textrow">
     <p class="body2">The site's code, its data and its design are all open. Anyone can read them, copy them, or help improve them.</p>
     <div class="btns-row">
@@ -55,5 +55,5 @@ export default function about(d) {
       <a class="btn md primary" href="${REPO}" rel="noopener">The code on GitHub</a>
     </div>
     </div>`)}`;
-  return [{ path: 'about/', title: 'How it works', styles: ['pages.css'], description: 'How Open Instead is organised, what counts as open source, where the listings come from, and how to get listed.', body }];
+  return [{ path: 'about/', title: 'How it works', styles: ['pages.css'], description: 'How Open Source Everything is organised, what counts as open source, where the listings come from, and how to get listed.', body }];
 }

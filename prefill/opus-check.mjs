@@ -30,7 +30,7 @@ while (sample.length < 100 && pool.length) sample.push(pool.splice(Math.floor(ra
 
 async function text(url, raw) {
   try {
-    const r = await fetch(url, { headers: raw ? { Authorization: `Bearer ${GH}`, Accept: 'application/vnd.github.raw+json', 'User-Agent': 'openinstead' } : { 'User-Agent': 'openinstead' }, signal: AbortSignal.timeout(15_000) });
+    const r = await fetch(url, { headers: raw ? { Authorization: `Bearer ${GH}`, Accept: 'application/vnd.github.raw+json', 'User-Agent': 'opensourceeverything' } : { 'User-Agent': 'opensourceeverything' }, signal: AbortSignal.timeout(15_000) });
     return r.ok ? r.text() : '';
   } catch { return ''; }
 }

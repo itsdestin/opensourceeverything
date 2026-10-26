@@ -1,4 +1,4 @@
-// Builds the Open Instead site into site/dist/ from the map's data files. No outside packages.
+// Builds the Open Source Everything site into site/dist/ from the map's data files. No outside packages.
 // Run: node site/build.mjs        Preview: node site/serve.mjs  (then open the address it prints)
 //
 // WHY pre-built pages: every group and project gets its own fast page search engines can read; the browser
@@ -48,7 +48,7 @@ write('search.json', JSON.stringify({
 // ── For search engines and AI assistants ──
 write('robots.txt', `User-agent: *\nAllow: /\nSitemap: ${SITE_URL}sitemap.xml\n`);
 write('sitemap.xml', `<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n${pages.filter((p) => !p.noIndex).map((p) => `<url><loc>${SITE_URL}${p.path}</loc></url>`).join('\n')}\n</urlset>\n`);
-write('llms.txt', `# Open Instead\n\n> Open-source replacements for closed-source apps, grouped by the job they do, with where no good replacement exists yet. Made with r/TrueOpenSource. Data: CC BY-SA 4.0.\n\n` +
+write('llms.txt', `# Open Source Everything\n\n> Open-source replacements for closed-source apps, grouped by the job they do, with where no good replacement exists yet. Made with r/TrueOpenSource. Data: CC BY-SA 4.0.\n\n` +
   `## Data\n\n- [All groups](${SITE_URL}data/groups.json): every group, the closed apps it replaces and its alternatives (by project id)\n- [All projects](${SITE_URL}data/projects.json): every open-source project with summary, license and links\n- [Categories](${SITE_URL}data/categories.json)\n- One file per group, projects included: ${SITE_URL}data/groups/<group-id>.json\n\n` +
   `## Groups\n\n${d.groups.map((g) => `- [${g.name}](${SITE_URL}data/groups/${g.id}.json): replaces ${g.closed.join(', ')}`).join('\n')}\n`);
 

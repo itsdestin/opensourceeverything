@@ -17,4 +17,4 @@ createServer((req, res) => {
   if (!existsSync(f)) { res.writeHead(404, { 'Content-Type': TYPES['.html'] }); return res.end(existsSync(join(DIST, '404.html')) ? readFileSync(join(DIST, '404.html')) : 'Not found'); }
   res.writeHead(200, { 'Content-Type': TYPES[extname(f)] ?? 'application/octet-stream' });
   res.end(readFileSync(f));
-}).listen(port, '127.0.0.1', () => console.log(`Open Instead preview: http://127.0.0.1:${port}${BASE}`));
+}).listen(port, '127.0.0.1', () => console.log(`Open Source Everything preview: http://127.0.0.1:${port}${BASE}`));

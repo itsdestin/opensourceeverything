@@ -14,7 +14,7 @@ export default function credits() {
   const body = `
   <div class="surface identity">
     <div><div class="muted11">Credits</div><h1 class="h-subject">Credits and data license</h1>
-      <p class="desc12" style="margin-top:4px">Open Instead's data is free to reuse under CC BY-SA 4.0: give credit, and share your changes the same way.</p></div>
+      <p class="desc12" style="margin-top:4px">Open Source Everything's data is free to reuse under CC BY-SA 4.0: give credit, and share your changes the same way.</p></div>
     <div class="btns-row"><a class="btn md secondary" href="https://creativecommons.org/licenses/by-sa/4.0/" rel="noopener">Read the license</a><a class="btn md primary" href="${url('data/groups.json')}">Download the data</a></div>
   </div>
   <section class="surface sec">
@@ -25,5 +25,5 @@ export default function credits() {
     </table></div>
     <p class="small2">${esc(notices)} Project descriptions were written for this map from each project's own README.</p>
   </section>`;
-  return [{ path: 'credits/', title: 'Credits', styles: ['pages.css'], description: 'Open Instead\'s data license (CC BY-SA 4.0) and the free lists it was first filled from.', body }];
+  return [{ path: 'credits/', title: 'Credits', styles: ['pages.css'], description: 'Open Source Everything\'s data license (CC BY-SA 4.0) and the free lists it was first filled from.', body }];
 }

@@ -18,7 +18,7 @@ const key = (s) => s.toLowerCase().replace(/[^a-z0-9]+/g, '');
 
 async function page(url) {
   try {
-    const res = await fetch(url, { signal: AbortSignal.timeout(10_000), headers: { 'User-Agent': 'openinstead' } });
+    const res = await fetch(url, { signal: AbortSignal.timeout(10_000), headers: { 'User-Agent': 'opensourceeverything' } });
     return res.ok ? (await res.text()).slice(0, 2_000_000) : '';
   } catch { return ''; }
 }

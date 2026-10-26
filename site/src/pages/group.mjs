@@ -19,7 +19,7 @@ function altCard(p, alt, i) {
 function promptText(g, alts, full) {
   const ask = 'Compare it with my project or idea below. Tell me which projects overlap, what I could reuse instead of rewriting, and what mine does that none of them do.';
   if (!full) return `Read the list of open-source alternatives at ${SITE_URL}data/groups/${g.id}.json. ${ask}\n\nMy project or idea:\n`;
-  return `Here is a list of open-source alternatives to ${g.closed.join(', ')} (${g.job.toLowerCase()}), from Open Instead (CC BY-SA 4.0):\n` +
+  return `Here is a list of open-source alternatives to ${g.closed.join(', ')} (${g.job.toLowerCase()}), from Open Source Everything (CC BY-SA 4.0):\n` +
     alts.map(({ p, a }) => `- ${p.name} (${p.license ?? 'license being checked'}${p.code ? `, https://${p.code}` : p.website ? `, ${p.website}` : ''}; replaces ${a.fit === 'full' ? 'fully' : 'partly'}): ${p.summary}`).join('\n') +
     `\n\n${ask}\n\nMy project or idea:\n`;
 }
@@ -87,7 +87,7 @@ export default function groupPages(d) {
         <p class="small2"><b class="num">Licenses</b>: every project here uses an open-source license. <b class="num">Open core</b> means some parts are paid or under another license.</p>
         <p class="small2"><b class="num">GitHub stars</b> are shown for reference. They measure popularity, not whether it replaces anything.</p>
         <p class="small2"><b class="num">Verified</b> means r/TrueOpenSource mods checked it: open-source license, maintained, and it really does the job.</p>
-        <a class="btn md secondary full" href="${url('about/')}">How Open Instead works</a>
+        <a class="btn md secondary full" href="${url('about/')}">How Open Source Everything works</a>
       </section>
     </div>
   </div>`;

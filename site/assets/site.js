@@ -1,4 +1,4 @@
-// Open Instead: the small amount of JavaScript every page shares.
+// Open Source Everything: the small amount of JavaScript every page shares.
 // Search (loads search.json the first time the box is used), dropdown menus, copy buttons and the toast.
 (function () {
   const BASE = (window.OI && window.OI.base) || '/';

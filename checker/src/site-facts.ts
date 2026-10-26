@@ -1,7 +1,7 @@
 import { GitHubUnavailableError } from './from-bot/github.js';
 import type { RepoRef } from './from-bot/rules.js';
 
-// Facts Open Instead shows that the mod bot doesn't need: popularity, whether the project is
+// Facts Open Source Everything shows that the mod bot doesn't need: popularity, whether the project is
 // archived, when it last changed, how many people worked on it, and whether commits credit an AI assistant.
 // WHY separate from the bot's github.ts: those files are shared copies (see from-bot/README.md); the
 // site adds to them rather than changing them.
@@ -22,7 +22,7 @@ type Fetch = typeof fetch;
 const API = 'https://api.github.com';
 
 async function get(fetchImpl: Fetch, url: string, token: string | undefined): Promise<Response> {
-  const headers: Record<string, string> = { Accept: 'application/vnd.github+json', 'User-Agent': 'openinstead' };
+  const headers: Record<string, string> = { Accept: 'application/vnd.github+json', 'User-Agent': 'opensourceeverything' };
   if (token) headers.Authorization = `Bearer ${token}`;
   let res: Response;
   try {

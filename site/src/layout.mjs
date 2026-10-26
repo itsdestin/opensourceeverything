@@ -3,7 +3,7 @@ import { esc, url, ICON, SITE_URL, SUBREDDIT, REPO } from './lib.mjs';
 
 export function topStrip({ search = true } = {}) {
   return `<div class="top">
-  <a class="icon-btn" href="${url()}" title="Home" aria-label="Open Instead home">${ICON.home}</a>
+  <a class="icon-btn" href="${url()}" title="Home" aria-label="Open Source Everything home">${ICON.home}</a>
   <div class="grow"></div>
   ${search ? `<div class="searchwrap" data-search>
     <div class="searchpill">${ICON.search}<input type="search" placeholder="Search a closed app or open project…" autocomplete="off" aria-label="Search"></div>
@@ -20,12 +20,12 @@ export function footer() {
   <a class="footchip" href="${url('credits/')}">Data license: CC BY-SA 4.0</a>
   <a class="footchip" href="${url('credits/')}">Credits</a>
   <a class="footchip" href="${SUBREDDIT}" rel="noopener">r/TrueOpenSource</a>
-  <a class="footchip" href="${REPO}" rel="noopener">Open source everything</a>
+  <a class="footchip" href="${REPO}" rel="noopener">This site's code</a>
 </div>`;
 }
 
 export function page({ path, title, description, body, styles = [], scripts = [], search = true, jsonLd }) {
-  const full = title ? `${title} · Open Instead` : 'Open Instead: open-source replacements for the apps you use';
+  const full = title ? `${title} · Open Source Everything` : 'Open Source Everything: open-source replacements for the apps you use';
   return `<!doctype html>
 <html lang="en">
 <head>
@@ -37,7 +37,7 @@ export function page({ path, title, description, body, styles = [], scripts = []
 <meta property="og:title" content="${esc(full)}">
 <meta property="og:description" content="${esc(description)}">
 <meta property="og:url" content="${SITE_URL}${path}">
-<meta property="og:site_name" content="Open Instead">
+<meta property="og:site_name" content="Open Source Everything">
 <link rel="icon" href="${url('assets/icon.svg')}" type="image/svg+xml">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600&display=swap">
