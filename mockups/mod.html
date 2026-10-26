@@ -1,0 +1,273 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Mod page demo</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600&display=swap">
+<link rel="stylesheet" href="demo.css">
+<style>
+/* Mod-only pieces; everything else comes from demo.css. */
+.page { padding-top:12px; }
+.hero2 { padding:16px; display:flex; flex-direction:column; gap:12px; }
+.hero-row { display:flex; align-items:center; gap:12px; }
+.headline { flex:1; min-width:0; }
+.headline h1 { font-size:16px; font-weight:600; margin:0; }
+.tabs { display:flex; gap:2px; padding:2px; border-radius:17px; background:var(--glass); border:1px solid var(--edge);
+  overflow-x:auto; scrollbar-width:none; width:fit-content; max-width:100%; }
+.tabs::-webkit-scrollbar { display:none; }
+.tab { flex:none; display:inline-flex; align-items:center; gap:6px; padding:4px 12px; border-radius:var(--radius-control); border:0;
+  background:transparent; font-size:14px; font-weight:500; color:var(--fg-2); white-space:nowrap; }
+.tab:hover { background:var(--inset); color:var(--fg); }
+.tab.on { background:var(--accent); color:var(--on-accent); }
+.tab .n { font-size:11px; opacity:.8; }
+.queue { display:flex; flex-direction:column; gap:12px; }
+.item { padding:16px; display:flex; flex-direction:column; gap:10px; cursor:default; }
+.item:hover { transform:none; }
+.item .head { display:flex; align-items:flex-start; justify-content:space-between; gap:12px; }
+.item .meta { font-size:12px; color:var(--fg-muted); }
+.item .actions { display:flex; justify-content:flex-end; gap:8px; flex-wrap:wrap; }
+.quote { padding:10px 12px; font-size:14px; color:var(--fg-2); white-space:pre-wrap; }
+.kv { display:grid; grid-template-columns:repeat(auto-fill,minmax(220px,1fr)); gap:8px; }
+.kv > div { padding:8px 10px; }
+.kv h4 { font-size:11px; font-weight:500; color:var(--fg-muted); margin:0 0 2px; }
+.kv p { font-size:12px; color:var(--fg-2); margin:0; }
+.log { display:flex; flex-direction:column; gap:10px; }
+.log .row { display:flex; gap:8px; font-size:12px; color:var(--fg-2); }
+.log .row .av { width:20px; height:20px; border-radius:9999px; flex:none; display:flex; align-items:center; justify-content:center;
+  font-size:10px; font-weight:600; background:color-mix(in srgb,var(--accent) 20%,transparent); color:var(--fg); }
+.log .t { font-size:11px; color:var(--fg-muted); }
+.vrow { display:flex; align-items:center; justify-content:space-between; gap:12px; padding:10px 12px; }
+.toggle { width:36px; height:20px; border-radius:9999px; border:1px solid var(--edge-strong); background:var(--inset); position:relative; flex:none; padding:0; }
+.toggle i { position:absolute; top:2px; left:2px; width:14px; height:14px; border-radius:9999px; background:var(--fg-muted); transition:.15s; }
+.toggle.on { background:var(--accent); border-color:var(--accent); }
+.toggle.on i { left:18px; background:var(--on-accent); }
+.btn.danger { background:#C2362F; color:#fff; border:1px solid transparent; }
+.btn.danger-outline { background:transparent; color:#B4302A; border:1px solid rgb(194 54 47 / .5); }
+@media (prefers-color-scheme: dark) { .btn.danger-outline { color:#F2948E; } }
+.select-native { width:100%; }
+@media (max-width:640px) {
+  .item .actions { flex-direction:column-reverse; } .item .actions .btn { width:100%; }
+}
+</style>
+</head>
+<body>
+<div class="demo-note">Clickable demo. Every person, project and report is made up, and nothing is saved.</div>
+
+<div class="page" id="page"></div>
+<div class="scrim" id="scrim"><div class="dialog surface" id="dialog"></div></div>
+<div class="toast" id="toast"></div>
+
+<script>
+const ICON = {
+  home: `<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 4 3 6v14l6-2 6 2 6-2V4l-6 2-6-2Z"/><path d="M9 4v14M15 6v14"/></svg>`,
+  close: `<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M6 6l12 12M18 6 6 18"/></svg>`,
+  ok: `<svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="m5 12 5 5 9-10"/></svg>`,
+};
+const esc = s => String(s).replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+
+/* ═══ Demo data (all made up) ═══ */
+const M = {
+  tab:'projects',
+  projects:[
+    {id:'p1', name:'Writer', url:'github.com/acme/writer', by:'acme-dev', acct:'4 years', group:'Documents', vs:'Google Docs', built:'AI-assisted',
+      facts:[['ok','MIT · open source'],['','1 year old'],['','140 days with changes'],['','README'],['','Some commits credit an AI assistant']],
+      proof:'Ownership file found in the project', diff:'Works fully offline in one file, with tables like Notion.',
+      strengths:'Fast, tiny, opens .docx.', weak:'No co-editing yet. Windows build is rough.', reuse:'Its .docx reader is a separate library.', help:'github.com/acme/writer/labels/help-wanted'},
+    {id:'p2', name:'QuickNotes AI', url:'github.com/qn-app/quicknotes', by:'qn-app', acct:'9 days', group:'Notes & wikis', vs:'Notion', built:'Vibe-coded',
+      facts:[['warn','Created 2 days ago'],['','3 commits'],['','1 day with changes'],['warn','No license file'],['','README']],
+      proof:'Project is under their own account', diff:'AI writes your notes for you.',
+      strengths:'Fast setup.', weak:'Early.', reuse:'', help:''},
+    {id:'p3', name:'Paletta', url:'codeberg.org/paletta/paletta', by:'mira-k', acct:'6 years', group:'Design', vs:'Canva', built:'Hand-built',
+      facts:[['ok','GPL-3.0 · open source'],['','2 years old'],['','310 days with changes'],['','README'],['','Hosted on Codeberg']],
+      proof:'Ownership file found in the project', diff:'Templates and brand kits like Canva, but it runs on your own server.',
+      strengths:'Good templates; exports to PDF and SVG.', weak:'No phone app. Slow with big images.', reuse:'Its template format is documented and reusable.', help:'codeberg.org/paletta/paletta/issues'},
+  ],
+  held:[
+    {id:'h1', u:'new-person-22', acct:'6 days', where:'On OnlyOffice Docs', text:'Switched our club\'s meeting notes over from Google Docs. Co-editing works fine for 4 people.'},
+    {id:'h2', u:'deals4u', acct:'1 day', where:'Still missing · Documents', text:'Best cheap office keys here!! www.example-keys.shop'},
+  ],
+  reports:[
+    {id:'r1', u:'loud-opinions', acct:'3 years', where:'On LibreOffice Writer', text:'Anyone still using this in 2026 is a dinosaur. Delete your account.', count:4, reason:'Rude or hostile'},
+    {id:'r2', u:'owner-of-x', acct:'2 years', where:'On CryptPad', text:'Just use XDocs instead, it\'s way better (I made it).', count:2, reason:'Self-promotion'},
+  ],
+  robot:[
+    {id:'w1', kind:'license', title:'Collabora Online changed its license', detail:'MPL-2.0 → Business Source License 1.1 (not open source). The robot proposes moving it to "No longer open source".', yes:'Move it', no:'Dismiss', logYes:'moved Collabora Online to "No longer open source"', logNo:'dismissed the license warning for Collabora Online'},
+    {id:'w2', kind:'quiet', title:'Calligra Words: no changes for 12 months', detail:'Tagged "Inactive" automatically. It stays listed.', yes:'OK', no:'Remove the tag', logYes:'confirmed Calligra Words as Inactive', logNo:'removed the Inactive tag from Calligra Words'},
+    {id:'w3', kind:'gone', title:'NoteNest\'s project page is gone', detail:'github.com/notenest/notenest returns "not found". It may have been deleted or made private.', yes:'Hide the listing', no:'Check again next week', logYes:'hid the NoteNest listing (project page gone)', logNo:'asked the robot to check NoteNest again next week'},
+  ],
+  verified:[
+    {id:'v1', name:'OnlyOffice Docs', group:'Documents', on:true},
+    {id:'v2', name:'LibreOffice Writer', group:'Documents', on:true},
+    {id:'v3', name:'CryptPad', group:'Documents', on:false},
+    {id:'v4', name:'Etherpad', group:'Documents', on:false},
+    {id:'v5', name:'Penpot', group:'Design', on:true},
+    {id:'v6', name:'Paletta', group:'Design', on:false},
+  ],
+  log:[
+    {who:'esk6plays', what:'approved HedgeDoc for Documents', t:'2 hours ago'},
+    {who:'esk6plays', what:'hid a comment on Etherpad (spam)', t:'yesterday'},
+    {who:'destin', what:'gave Penpot the Verified tag in Design', t:'2 days ago'},
+  ],
+};
+const TABS = [
+  ['projects','Projects to approve', () => M.projects.length],
+  ['held','Held comments', () => M.held.length],
+  ['reports','Reports', () => M.reports.length],
+  ['robot','Robot warnings', () => M.robot.length],
+  ['verified','Verified tags', () => null],
+];
+
+/* ═══ Rendering ═══ */
+function projectCard(p) {
+  return `<div class="card item">
+    <div class="head"><div style="min-width:0"><h3>${esc(p.name)}</h3><div class="meta">${esc(p.url)} · for ${esc(p.group)} · sent by ${esc(p.by)} (account ${p.acct} old)</div></div>
+      <span class="pill info">${esc(p.built)}</span></div>
+    <div class="chiprow">${p.facts.map(([t,f]) => t ? `<span class="pill ${t}"><i></i>${esc(f)}</span>` : `<span class="chip">${esc(f)}</span>`).join('')}
+      <span class="chip">${ICON.ok}${esc(p.proof)}</span></div>
+    <div class="kv">
+      <div class="lvl1"><h4>Different from what's listed</h4><p>${esc(p.diff)}</p></div>
+      <div class="lvl1"><h4>Does well</h4><p>${esc(p.strengths)}</p></div>
+      <div class="lvl1"><h4>Falls short</h4><p>${esc(p.weak)}</p></div>
+      <div class="lvl1"><h4>Reusable · help wanted</h4><p>${esc(p.reuse || 'Not given')} · ${esc(p.help || 'Not given')}</p></div>
+    </div>
+    ${p.facts.some(f => f[0]==='warn') ? `<div class="callout warn">The checker flagged this: too new or no license. The subreddit's rule would send it to the Showcase. You can still list it under "New".</div>` : ''}
+    <div class="actions">
+      <button class="btn md secondary" data-act="reject" data-id="${p.id}">Turn down…</button>
+      <button class="btn md primary" data-act="approve" data-id="${p.id}">Approve</button>
+    </div></div>`;
+}
+function commentCard(c, kind) {
+  const report = kind === 'reports';
+  return `<div class="card item">
+    <div class="head"><div style="min-width:0"><div style="font-weight:500">${esc(c.u)}</div><div class="meta">${esc(c.where)} · account ${c.acct} old</div></div>
+      ${report ? `<span class="pill warn"><i></i>Reported ${c.count} times · ${esc(c.reason)}</span>` : `<span class="pill info">New account</span>`}</div>
+    <div class="lvl2 quote">${esc(c.text)}</div>
+    <div class="actions">
+      <button class="btn md danger-outline" data-act="ban" data-kind="${kind}" data-id="${c.id}">Ban ${esc(c.u)}…</button>
+      <button class="btn md secondary" data-act="${report?'keep':'drop'}" data-kind="${kind}" data-id="${c.id}">${report?'Keep it':'Delete'}</button>
+      <button class="btn md primary" data-act="${report?'hide':'allow'}" data-kind="${kind}" data-id="${c.id}">${report?'Hide it':'Approve'}</button>
+    </div></div>`;
+}
+function robotCard(w) {
+  return `<div class="card item">
+    <div class="head"><h3>${esc(w.title)}</h3><span class="pill ${w.kind==='quiet'?'info':'warn'}"><i></i>${w.kind==='license'?'License':w.kind==='quiet'?'Activity':'Missing'}</span></div>
+    <p class="small2">${esc(w.detail)}</p>
+    <div class="actions"><button class="btn md secondary" data-act="robotNo" data-id="${w.id}">${esc(w.no)}</button><button class="btn md primary" data-act="robotYes" data-id="${w.id}">${esc(w.yes)}</button></div></div>`;
+}
+function verifiedList() {
+  const groups = [...new Set(M.verified.map(v => v.group))];
+  return groups.map(g => `<div><span class="label">${esc(g)}</span><div class="stack">${M.verified.filter(v=>v.group===g).map(v => `
+    <div class="card item vrow"><div><div style="font-weight:500">${esc(v.name)}</div><div class="meta">${v.on?'Verified: shows the mark on its card':'Not verified'}</div></div>
+      <button class="toggle ${v.on?'on':''}" data-act="verify" data-id="${v.id}" aria-label="Verified" aria-pressed="${v.on}"><i></i></button></div>`).join('')}</div></div>`).join('')
+    + `<p class="fieldhint">Verified means: an open-source license, still maintained, and it really does the job. Turn it on only after one of you has checked all three.</p>`;
+}
+function empty(msg) { return `<div class="card item" style="align-items:center;text-align:center"><div style="font-weight:500">Nothing waiting</div><p class="small2">${msg}</p></div>`; }
+function render() {
+  const total = M.projects.length + M.held.length + M.reports.length + M.robot.length;
+  const body = {
+    projects: () => M.projects.length ? M.projects.map(projectCard).join('') : empty('New project submissions show up here.'),
+    held: () => M.held.length ? M.held.map(c => commentCard(c,'held')).join('') : empty('Comments from accounts under 30 days old wait here before anyone sees them.'),
+    reports: () => M.reports.length ? M.reports.map(c => commentCard(c,'reports')).join('') : empty('Anything people report shows up here.'),
+    robot: () => M.robot.length ? M.robot.map(robotCard).join('') : empty('The weekly robot posts license changes, quiet projects and missing pages here.'),
+    verified: () => verifiedList(),
+  }[M.tab]();
+  const desc = {
+    projects:'People who added their own project. Check the facts and the pitch, then approve or turn it down.',
+    held:'First comments from new accounts. Nobody else sees them until one of you approves.',
+    reports:'Comments people flagged. Hiding removes it for everyone; the person is told why.',
+    robot:'What the weekly check found. Nothing changes until one of you decides.',
+    verified:'Which alternatives get the Verified mark, group by group.',
+  }[M.tab];
+  document.getElementById('page').innerHTML = `
+  <div class="surface hero2">
+    <div class="hero-row">
+      <span class="avatar" title="Signed in as destin (mod)">D</span>
+      <a class="icon-btn" href="home.html" title="Home" aria-label="Home">${ICON.home}</a>
+      <div class="headline"><h1>Mod page</h1><p class="desc12">Only r/TrueOpenSource mods can open this. ${total ? `<b class="num">${total}</b> things are waiting.` : 'All caught up.'}</p></div>
+    </div>
+    <div class="tabs">${TABS.map(([k,v,n]) => { const c = n(); return `<button class="tab ${k===M.tab?'on':''}" data-act="tab" data-v="${k}">${v}${c!==null?`<span class="n">${c}</span>`:''}</button>`; }).join('')}</div>
+  </div>
+  <div class="cols">
+    <div>
+      <section class="surface sec">
+        <div class="sec-head"><div><h2 class="h-large">${TABS.find(t=>t[0]===M.tab)[1]}</h2><p class="desc12">${desc}</p></div></div>
+        <div class="queue">${body}</div>
+      </section>
+    </div>
+    <div>
+      <section class="surface sec">
+        <div class="sec-head"><div><h2 class="h-large">Recent mod actions</h2><p class="desc12">So you and esk6plays can see what the other did</p></div></div>
+        <div class="log">${M.log.map(l => `<div class="row"><span class="av">${l.who[0].toUpperCase()}</span><div><div><b class="num">${esc(l.who)}</b> ${esc(l.what)}</div><div class="t">${l.t}</div></div></div>`).join('')}</div>
+      </section>
+      <section class="surface sec" style="gap:8px">
+        <h2 class="h-large">Banned from the site</h2>
+        <p class="small2" id="banned">${M.banned && M.banned.length ? M.banned.map(esc).join(', ') : 'Nobody yet.'}</p>
+        <p class="fieldhint" style="margin:0">A ban stops someone voting, commenting and adding projects here. It doesn't touch their Reddit or GitHub account.</p>
+      </section>
+    </div>
+  </div>`;
+}
+
+/* ═══ Popups and actions ═══ */
+const scrim = document.getElementById('scrim'), dialog = document.getElementById('dialog');
+function openDialog(html, size='narrow') { dialog.className = 'dialog surface ' + size; dialog.innerHTML = html; scrim.classList.add('open'); }
+function closeDialog() { scrim.classList.remove('open'); }
+const bar = t => `<div class="bar"><span class="t">${t}</span><button class="icon-btn" data-act="close" aria-label="Close">${ICON.close}</button></div>`;
+let toastT;
+function toast(msg) { const t = document.getElementById('toast'); t.textContent = msg; t.classList.add('show'); clearTimeout(toastT); toastT = setTimeout(()=>t.classList.remove('show'), 2600); }
+function log(what) { M.log.unshift({who:'destin', what, t:'just now'}); }
+const take = (list, id) => { const i = M[list].findIndex(x => x.id === id); return M[list].splice(i, 1)[0]; };
+const REASONS = ['Not open source (no approved license)', 'Doesn\'t replace anything in this group', 'Too new: post it in the Showcase first', 'Spam or advertising', 'Something else'];
+
+document.addEventListener('click', e => {
+  const el = e.target.closest('[data-act]');
+  if (!el) { if (e.target === scrim) closeDialog(); return; }
+  const id = el.dataset.id, kind = el.dataset.kind;
+  switch (el.dataset.act) {
+    case 'tab': M.tab = el.dataset.v; render(); break;
+    case 'close': closeDialog(); break;
+    case 'approve': { const p = take('projects', id); log(`approved ${p.name} for ${p.group}`); render(); toast(`${p.name} is listed. ${p.by} gets a note.`); break; }
+    case 'reject': {
+      const p = M.projects.find(x => x.id === id);
+      openDialog(`${bar('Turn down ' + esc(p.name))}<div class="body">
+        <div><span class="label">Reason</span><select class="field" id="why">${REASONS.map(r=>`<option>${esc(r)}</option>`).join('')}</select></div>
+        <div><span class="label">Note to ${esc(p.by)}</span><textarea class="field" id="note" rows="3">Thanks for adding ${esc(p.name)}. We can't list it yet: </textarea>
+          <p class="fieldhint">They see this, and can fix it and send it again.</p></div>
+        <div class="foot-btns"><button class="btn md secondary" data-act="close">Cancel</button><button class="btn md primary" data-act="rejectGo" data-id="${id}">Turn down</button></div></div>`);
+      break;
+    }
+    case 'rejectGo': { const why = document.getElementById('why').value; const p = take('projects', id); log(`turned down ${p.name} (${why.toLowerCase()})`); closeDialog(); render(); toast(`${p.by} has been told why.`); break; }
+    case 'allow': { const c = take('held', id); log(`approved a held comment by ${c.u}`); render(); toast('Approved. Everyone can see it now.'); break; }
+    case 'drop': { const c = take('held', id); log(`deleted a held comment by ${c.u}`); render(); toast('Deleted.'); break; }
+    case 'keep': { const c = take('reports', id); log(`kept a reported comment by ${c.u}`); render(); toast('Kept. The reports are cleared.'); break; }
+    case 'hide': { const c = take('reports', id); log(`hid a comment by ${c.u} (${c.reason.toLowerCase()})`); render(); toast(`Hidden. ${c.u} is told why.`); break; }
+    case 'ban': {
+      const c = M[kind].find(x => x.id === id);
+      openDialog(`${bar('Ban ' + esc(c.u) + '?')}<div class="body">
+        <p class="body2">${esc(c.u)} won't be able to vote, comment or add projects on this site. Their comments are hidden. Their Reddit and GitHub accounts aren't affected.</p>
+        <div><span class="label">How long</span><select class="field" id="len"><option>7 days</option><option>30 days</option><option>For good</option></select></div>
+        <div class="foot-btns"><button class="btn md secondary" data-act="close">Cancel</button><button class="btn md danger" data-act="banGo" data-kind="${kind}" data-id="${id}">Ban</button></div></div>`);
+      break;
+    }
+    case 'banGo': {
+      const len = document.getElementById('len').value; const c = take(kind, id);
+      (M.banned = M.banned || []).push(`${c.u} (${len.toLowerCase()})`);
+      log(`banned ${c.u} for ${len === 'For good' ? 'good' : len}`); closeDialog(); render(); toast(`${c.u} is banned.`); break;
+    }
+    case 'robotYes': case 'robotNo': {
+      const w = take('robot', id); const yes = el.dataset.act === 'robotYes';
+      log(yes ? w.logYes : w.logNo); render(); toast('Done.'); break;
+    }
+    case 'verify': {
+      const v = M.verified.find(x => x.id === id); v.on = !v.on;
+      log(`${v.on ? 'gave' : 'removed'} the Verified tag ${v.on ? 'to' : 'from'} ${v.name} in ${v.group}`); render(); break;
+    }
+  }
+});
+document.addEventListener('keydown', e => { if (e.key === 'Escape') closeDialog(); });
+render();
+</script>
+</body>
+</html>

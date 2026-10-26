@@ -1,0 +1,17 @@
+{
+  "private": true,
+  "name": "alternatives-map-checker",
+  "version": "0.0.0",
+  "license": "BSD-3-Clause",
+  "type": "module",
+  "scripts": {
+    "build": "tsc -p .",
+    "test": "tsc -p . && node --test \"dist/**/*.test.js\"",
+    "sync-from-bot": "cp ../../trueopensource-bot/src/features/checker/rules.ts ../../trueopensource-bot/src/features/checker/github.ts src/from-bot/ && echo 'Copied. Update the commit named in src/from-bot/README.md.'"
+  },
+  "engines": { "node": ">=24.0.0" },
+  "devDependencies": {
+    "@types/node": "^24.13.3",
+    "typescript": "5.8.3"
+  }
+}

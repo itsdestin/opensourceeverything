@@ -1,0 +1,597 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Group page demo</title>
+<!-- WHY Outfit: the YouCoded theme's font (youcoded.json); Cascadia Mono stays for the AI prompt box. -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600&display=swap">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fontsource/cascadia-mono@5.2.3/400.css">
+<link rel="stylesheet" href="demo.css">
+</head>
+<body>
+<div class="demo-note">Clickable demo. Real project names; every number, person and comment is made up, and nothing is saved.</div>
+
+<div class="top">
+  <div class="dd">
+    <button class="avatar" id="acct" data-act="acct" aria-label="Account"></button>
+    <div class="menu left" id="acctMenu"></div>
+  </div>
+  <a class="icon-btn" href="home.html" title="Home" aria-label="Home">
+    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 4 3 6v14l6-2 6 2 6-2V4l-6 2-6-2Z"/><path d="M9 4v14M15 6v14"/></svg>
+  </a>
+  <div class="grow"></div>
+  <div class="searchwrap">
+    <div class="searchpill">
+      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
+      <input id="q" type="text" placeholder="Search a closed app or open project…" autocomplete="off" aria-label="Search">
+    </div>
+    <div class="menu search-menu" id="searchMenu"></div>
+  </div>
+</div>
+
+<div class="page" id="page"></div>
+
+<div class="scrim" id="scrim"><div class="dialog surface" id="dialog"></div></div>
+<div class="toast" id="toast"></div>
+
+<script>
+/* ═══ Demo data (all made up) ═══ */
+const ICON = {
+  thumb: d => `<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" ${d?'style="transform:scaleY(-1)"':''}><path d="M7 10v11H4a1 1 0 0 1-1-1v-9a1 1 0 0 1 1-1z"/><path d="M7 10l4-7a2 2 0 0 1 2 2v4h5.5a2 2 0 0 1 2 2.3l-1.2 7a2 2 0 0 1-2 1.7H7"/></svg>`,
+  star: f => `<svg width="16" height="16" viewBox="0 0 24 24" fill="${f?'currentColor':'none'}" stroke="currentColor" stroke-width="2" stroke-linejoin="round"><path d="m12 2 3.1 6.3 6.9 1-5 4.9 1.2 6.8L12 17.8 5.8 21l1.2-6.8-5-4.9 6.9-1L12 2Z"/></svg>`,
+  shield: `<svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10"/><path d="m9 12 2 2 4-4"/></svg>`,
+  user: `<svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="8" r="4"/><path d="M4 21c1.5-4 4.5-6 8-6s6.5 2 8 6"/></svg>`,
+  chev: `<svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="m6 9 6 6 6-6"/></svg>`,
+  close: `<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M6 6l12 12M18 6 6 18"/></svg>`,
+  plus: `<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M12 5v14M5 12h14"/></svg>`,
+  check: `<svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="m5 12 5 5 9-10"/></svg>`,
+};
+const CLOSED = ['Google Docs','Microsoft Word','Apple Pages','Zoho Writer'];
+const BUILT = ['Hand-built','AI-assisted','Agentic engineering','Vibe-coded'];
+const BUILT_HINT = {
+  'Hand-built':'Written mostly by people.',
+  'AI-assisted':'Written by people, with AI help.',
+  'Agentic engineering':'AI wrote most of it, with real history, polish and human testing.',
+  'Vibe-coded':'A quick, exploratory build not yet carefully reviewed or tested.',
+};
+const D = {
+  user:null, newAccount:false,
+  compared:'Google Docs', sort:'rated', showAll:false,
+  gapVote:null, gapYes:672, gapTotal:1084,
+  alts:[
+    {id:'onlyoffice', ghN:6200, name:'OnlyOffice Docs', status:['ok','Active'], verified:true, up:43, down:4, license:'AGPL-3.0', gh:'6.2k', built:'Not labeled', age:'9 years old', ageN:9, tag:'Self-host', active:5,
+      blurb:'Office suite focused on matching Microsoft\'s file formats. Runs in the browser or as a desktop app.', code:'github.com/ONLYOFFICE/DocumentServer', people:118, last:'2 days ago',
+      reusable:'Its document editor can be built into other apps.', help:null,
+      comments:[{u:'alice-sample',t:'3 days ago',text:'Best at opening Word files without wrecking the layout. Tracked changes still get lost sometimes.',up:14,replies:[{u:'bob-sample',t:'2 days ago',text:'Same for me with tracked changes. Comments come through fine though.'}]},
+                {u:'cara-sample',t:'last week',text:'Moved our small office off Google Docs with this. Took an afternoon.',up:9,replies:[]}]},
+    {id:'libreoffice', ghN:0, name:'LibreOffice Writer', status:['ok','Active'], verified:true, up:39, down:6, license:'MPL-2.0', gh:null, part:'Part of LibreOffice', built:'Not labeled', age:'14 years old', ageN:14, tag:'Offline', active:4,
+      blurb:'The long-running free office suite\'s word processor. Desktop only; no live co-editing.', code:'git.libreoffice.org/core', people:'1,000+', last:'today',
+      reusable:'File-format converters used by many other projects.', help:'Easy tasks list on their wiki.',
+      comments:[{u:'carol-sample',t:'5 days ago',text:'Best fully offline option, but the look is dated.',up:20,replies:[]}]},
+    {id:'cryptpad', ghN:5400, name:'CryptPad', status:['ok','Active'], owner:true, up:20, down:3, license:'AGPL-3.0', gh:'5.4k', built:'Hand-built', age:'8 years old', ageN:8, tag:'Encrypted', active:3, help:'8 tasks marked "help wanted"',
+      blurb:'Owner says: like Google Docs, but even the server can\'t read your documents. Weaker on big files and Word import.', code:'github.com/cryptpad/cryptpad', people:96, last:'yesterday',
+      reusable:'Encrypted real-time sync, usable in other apps.',
+      comments:[{u:'dan-sample',t:'yesterday',text:'Encrypted and in the browser. Slower with big files.',up:7,replies:[]}]},
+    {id:'collabora', ghN:2100, name:'Collabora Online', status:['warn','Quiet 2 months'], up:0, down:0, license:'MPL-2.0', gh:'2.1k', built:'Not labeled', age:'9 years old', ageN:9, tag:'Self-host', active:1,
+      blurb:'LibreOffice running in the browser, for teams that host their own server.', code:'github.com/CollaboraOnline/online', people:210, last:'2 months ago',
+      reusable:null, help:null, comments:[]},
+    {id:'etherpad', ghN:17000, name:'Etherpad', status:['ok','Active'], up:9, down:4, license:'Apache-2.0', gh:'17k', built:'Not labeled', age:'15 years old', ageN:15, tag:'Real-time', active:2,
+      blurb:'Simple shared text editing in the browser, live. Plain formatting only.', code:'github.com/ether/etherpad-lite', people:340, last:'this week',
+      reusable:'Plugin system; real-time editing engine.', help:null, comments:[]},
+    {id:'hedgedoc', ghN:5800, name:'HedgeDoc', status:['ok','Active'], up:6, down:2, license:'AGPL-3.0', gh:'5.8k', built:'Not labeled', age:'6 years old', ageN:6, tag:'Markdown', active:2,
+      blurb:'Write together in Markdown, with a live preview. Good for notes, less for formal documents.', code:'github.com/hedgedoc/hedgedoc', people:150, last:'this week',
+      reusable:null, help:null, comments:[]},
+    {id:'calligra', ghN:0, name:'Calligra Words', status:['warn','Quiet 5 months'], up:1, down:1, license:'GPL-2.0', gh:null, built:'Not labeled', age:'14 years old', ageN:14, tag:'Desktop', active:0,
+      blurb:'Word processor from the KDE desktop project.', code:'invent.kde.org/office/calligra', people:60, last:'5 months ago',
+      reusable:null, help:null, comments:[]},
+  ],
+  missing:[
+    {id:'m1', title:'Suggestion mode as smooth as Google Docs\'', u:'erin-sample', up:41, voted:false, replies:[{u:'gus-sample',t:'yesterday',text:'OnlyOffice has a review mode, but it breaks when the file goes back to Word.'}]},
+    {id:'m2', title:'Tracked changes that survive a trip through Word', u:'gus-sample', up:29, voted:false, replies:[]},
+    {id:'m3', title:'A phone app that edits, not just views', u:'hana-sample', up:12, voted:false, replies:[]},
+  ],
+  reasons:{
+    'Google Docs':[{id:'r1',title:'Google can read everything I write',u:'ivan-sample',up:33,voted:false,replies:[]},{id:'r2',title:'Offline mode needs Chrome and an extension',u:'jo-sample',up:18,voted:false,replies:[]}],
+    'Microsoft Word':[{id:'r3',title:'Copilot prompts every time it opens',u:'frank-sample',up:17,voted:false,replies:[]},{id:'r4',title:'Subscription for something I used to own',u:'kim-sample',up:15,voted:false,replies:[]}],
+    'Apple Pages':[{id:'r5',title:'Only works on Apple devices',u:'lee-sample',up:8,voted:false,replies:[]}],
+    'Zoho Writer':[],
+  },
+  pending:null,
+};
+const altById = id => D.alts.find(a => a.id === id);
+const esc = s => String(s).replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+const initial = u => u ? u[0].toUpperCase() : '?';
+// WHY per-alternative thumbs instead of stars (Destin, Oct 27): GitHub stars stay as information;
+// our own signal is "does it work as a replacement for you?", the Marketplace's Helpful / Not for me.
+const myVote = {onlyoffice:'up'};
+const MIN_VOTES_FOR_PCT = 5;
+
+/* ═══ Rendering ═══ */
+function chips(a) {
+  const c = [];
+  if (a.pendingMine) c.push(`<span class="pill info">Waiting for a mod · only you see this</span>`);
+  if (a.verified) c.push(`<span class="chip">${ICON.shield}Verified</span>`);
+  if (a.owner) c.push(`<span class="chip">${ICON.user}Owner</span>`);
+  const t = a.up + a.down;
+  if (t >= MIN_VOTES_FOR_PCT) c.push(`<span class="chip" title="${Math.round(a.up/t*100)}% of ${t} people say it works as a replacement">${ICON.thumb(false).replace(/14/g,'12')}${Math.round(a.up/t*100)}%</span>`);
+  else if (t > 0) c.push(`<span class="chip" title="${a.up} of ${t} say it works as a replacement">${ICON.thumb(false).replace(/14/g,'12')}${a.up} of ${t}</span>`);
+  c.push(`<span class="chip">${esc(a.license)}</span>`);
+  if (a.gh) c.push(`<span class="chip">${ICON.star(false).replace('16','12').replace('16','12')}${a.gh} on GitHub</span>`);
+  // WHY: projects hosted on Codeberg, GitLab or their own servers have no GitHub stars; say so instead of showing nothing.
+  if (!a.gh) c.push(`<span class="chip">Not on GitHub</span>`);
+  if (a.part) c.push(`<span class="chip">${a.part}</span>`);
+  c.push(`<span class="chip">${esc(a.built)}</span>`);
+  return c.join('');
+}
+function sortedAlts() {
+  const list = D.alts.slice();
+  const by = {
+    rated:(x,y)=>score(y)-score(x),
+    github:(x,y)=>y.ghN-x.ghN,
+    active:(x,y)=>y.active-x.active,
+    newest:(x,y)=>x.ageN-y.ageN,
+    verified:(x,y)=>(!!y.verified-!!x.verified)||(score(y)-score(x)),
+  }[D.sort];
+  list.sort(by);
+  list.sort((x,y)=>!!y.pendingMine-!!x.pendingMine);
+  return list;
+}
+const SORTS = {rated:'Best rated', verified:'Verified first', active:'Most active', newest:'Newest', github:'Most GitHub stars'};
+// WHY a cautious score, not the raw %: 2 of 2 "yes" must not outrank 90 of 100 (lower bound of the Wilson interval).
+function score(a){ const n=a.up+a.down; if(!n) return 0; const z=1.96, p=a.up/n; return (p+z*z/(2*n)-z*Math.sqrt((p*(1-p)+z*z/(4*n))/n))/(1+z*z/n); }
+
+function card(a) {
+  const n = a.comments.reduce((s,c)=>s+1+c.replies.length,0);
+  const foot = (a.up+a.down||n) ? `${n} ${n===1?'comment':'comments'} · ${a.age} · ${a.tag}` : `No votes or comments yet · ${a.age}`;
+  return `<div class="card" data-act="openAlt" data-id="${a.id}" role="button" tabindex="0">
+    <div class="head"><h3>${esc(a.name)}</h3>
+      <div class="corner" style="margin-right:0"><span class="pill ${a.status[0]}"><i></i>${a.status[1]}</span></div></div>
+    <div class="chiprow">${chips(a)}</div>
+    <p class="blurb">${esc(a.blurb)}</p>
+    <div class="foot">${foot}</div></div>`;
+}
+function rankedRows(list, kind) {
+  if (!list.length) return `<div class="empty">Nothing yet. Be the first to add one.</div>`;
+  return list.slice().sort((x,y)=>y.up-x.up).map(r => `<div class="rrow" data-act="openItem" data-kind="${kind}" data-id="${r.id}">
+    <button class="vote ${r.voted?'on':''}" data-act="voteItem" data-kind="${kind}" data-id="${r.id}" title="Upvote"><span>▲</span>${r.up}</button>
+    <div style="min-width:0"><div class="rt">${esc(r.title)}</div><div class="muted11">${r.replies.length} ${r.replies.length===1?'reply':'replies'} · ${esc(r.u)}</div></div></div>`).join('');
+}
+function latest() {
+  const items = [
+    {where:'On OnlyOffice Docs · 2 hours ago', text:'Tables finally open right from .docx in the newest version.', act:'openAlt', id:'onlyoffice'},
+    {where:'Still missing · 5 hours ago', text:'Nothing open matches Google Docs\' suggestion mode yet.', act:'openItem', id:'m1', kind:'missing'},
+    {where:'On CryptPad · yesterday', text:'Encrypted and in the browser. Slower with big files.', act:'openAlt', id:'cryptpad'},
+    {where:'Why people leave Google Docs · 2 days ago', text:'Offline mode needs Chrome and an extension.', act:'openItem', id:'r2', kind:'reason', app:'Google Docs'},
+    {where:'On LibreOffice Writer · 5 days ago', text:'Best fully offline option, but the look is dated.', act:'openAlt', id:'libreoffice'},
+  ];
+  return items.map(i => `<button class="lvl1" data-act="${i.act}" data-id="${i.id}" ${i.kind?`data-kind="${i.kind}"`:''} ${i.app?`data-app="${i.app}"`:''}><span class="muted11">${i.where}</span><p>${esc(i.text)}</p></button>`).join('');
+}
+function render() {
+  const pct = Math.round(D.gapYes / D.gapTotal * 100);
+  const alts = sortedAlts();
+  const shown = D.showAll ? alts : alts.slice(0, 5);
+  const others = CLOSED.filter(c => c !== D.compared).join(', ');
+  const verified = D.alts.filter(a=>a.verified).length;
+  document.getElementById('page').innerHTML = `
+  <div class="surface identity">
+    <div class="row">
+      <div><h1 class="h-subject">Documents</h1><p class="desc12" style="margin-top:4px">Open-source apps for writing and editing documents.</p></div>
+      <div class="field-col"><span class="label">Compared with</span>
+        <div class="dd"><button class="select" data-act="menu" data-menu="cmpMenu">${esc(D.compared)}${ICON.chev}</button>
+          <div class="menu" id="cmpMenu">${CLOSED.map(c=>`<button class="mi ${c===D.compared?'sel':''}" data-act="setCompared" data-v="${c}">${c}${c===D.compared?ICON.check:''}</button>`).join('')}</div></div></div>
+    </div>
+    <div class="chiprow">
+      <span class="chip"><b>${D.alts.length}</b>open alternatives</span>
+      <span class="chip"><b>${verified}</b>verified</span>
+      <span class="chip"><b>${pct}%</b>say one works</span>
+      <span class="chip">Also replaces ${esc(others)}</span>
+    </div>
+  </div>
+
+  <section class="surface sec">
+    <div class="sec-head"><h2 class="h-large">Latest across Documents</h2></div>
+    <div class="rail">${latest()}</div>
+  </section>
+
+  <div class="cols">
+    <div>
+      <section class="surface sec">
+        <div class="sec-head">
+          <div><h2 class="h-large">Open alternatives<span class="count">${D.alts.length}</span></h2><p class="desc12">Rated by people here: does it work as a replacement?</p></div>
+          <div class="dd"><button class="select sm" data-act="menu" data-menu="sortMenu">${SORTS[D.sort]}${ICON.chev}</button>
+            <div class="menu" id="sortMenu">${Object.entries(SORTS).map(([k,v])=>`<button class="mi ${k===D.sort?'sel':''}" data-act="setSort" data-v="${k}">${v}${k===D.sort?ICON.check:''}</button>`).join('')}</div></div>
+        </div>
+        <div class="grid">
+          ${shown.map(card).join('')}
+          <button class="card compose" data-act="addProject">${ICON.plus}
+            <span style="font-size:14px;font-weight:500;color:var(--fg)">Add your project</span>
+            <span>Built an open alternative to ${esc(D.compared)}? List it, in your own words, so people can find and rate it.</span></button>
+        </div>
+        ${alts.length > 5 ? `<div><button class="btn md secondary full" data-act="toggleAll">${D.showAll?'Show fewer':`Show all ${alts.length}`}</button></div>` : ''}
+      </section>
+
+      <section class="surface sec">
+        <div class="sec-head"><div><h2 class="h-large">Is there a good open replacement yet?</h2><p class="desc12">Vote, then add or upvote what's still missing</p></div></div>
+          <div class="lvl1 feedback">
+            <div><div class="small2"><b class="num">${pct}%</b> say yes <span class="muted11">· ${D.gapTotal.toLocaleString()} votes</span></div>
+              <div class="meter"><i style="width:${pct}%"></i></div></div>
+            <div class="btns">
+              <button class="btn sm secondary ${D.gapVote==='yes'?'on':''}" data-act="gap" data-v="yes">Yes, one works</button>
+              <button class="btn sm secondary ${D.gapVote==='no'?'on':''}" data-act="gap" data-v="no">Not yet</button>
+            </div>
+          </div>
+          <div><span class="label">Still missing</span><div class="lvl2 ranked">${rankedRows(D.missing,'missing')}</div></div>
+          <button class="btn md secondary full" data-act="addItem" data-kind="missing">+ Add what's missing</button>
+      </section>
+
+      <section class="surface sec">
+        <div class="sec-head"><div><h2 class="h-large">Why people leave ${esc(D.compared)}</h2><p class="desc12">Problems with the closed app itself. Follows "Compared with" above.</p></div></div>
+          <div class="lvl2 ranked">${rankedRows(D.reasons[D.compared],'reason')}</div>
+          <button class="btn md secondary full" data-act="addItem" data-kind="reason">+ Add a reason</button>
+      </section>
+    </div>
+
+    <div>
+      <section class="surface sec">
+          <h2 class="h-large">Before you build</h2>
+          <p class="small2">Planning a Documents app? See what exists first, so you can reuse parts or explain what's different.</p>
+          <div class="lvl2 prompt">${esc(promptText(false))}</div>
+          <div class="stack">
+            <button class="btn md primary" data-act="copy" data-full="0">Copy prompt</button>
+            <button class="btn md secondary" data-act="copy" data-full="1">Copy with the list included</button>
+            <button class="btn md secondary" data-act="download">Download the list</button>
+          </div>
+      </section>
+      <section class="surface sec" style="gap:8px">
+          <h2 class="h-large">About this page</h2>
+          <p class="small2"><b class="num">Ratings</b> come from signed-in people here answering "does it work as a replacement?" Accounts under 30 days old can't vote yet.</p>
+          <p class="small2"><b class="num">GitHub stars</b> are shown for reference. They measure popularity, not whether it replaces anything.</p>
+          <p class="small2"><b class="num">Verified</b> means r/TrueOpenSource mods checked it: open-source license, maintained, and it really does the job.</p>
+          <p class="small2"><b class="num">Owner</b> means the people who build it wrote its description.</p>
+      </section>
+    </div>
+  </div>`;
+  renderAcct();
+}
+function promptText(full) {
+  const base = `Read the list at r-trueopensource.github.io/map/documents.json. Compare it with my project or idea below. Tell me which projects overlap, what I could reuse, and what mine does that none of them do.`;
+  if (!full) return base;
+  return `Here is a list of open-source alternatives to ${CLOSED.join(', ')}:\n` +
+    D.alts.map(a=>`- ${a.name} (${a.license}, ${a.code}): ${a.blurb}${a.reusable?` Reusable: ${a.reusable}`:''}`).join('\n') +
+    `\n\nCompare it with my project or idea below. Tell me which projects overlap, what I could reuse, and what mine does that none of them do.\n\nMy project or idea:\n`;
+}
+function renderAcct() {
+  const b = document.getElementById('acct');
+  const m = document.getElementById('acctMenu');
+  if (!D.user) {
+    b.textContent = '';
+    b.innerHTML = ICON.user.replace(/12/g,'14');
+    b.title = 'Sign in';
+    m.innerHTML = `<div class="menu-note">Sign in to vote and comment.</div><button class="mi" data-act="signin">Sign in with GitHub</button>`;
+  } else {
+    b.textContent = initial(D.user);
+    b.title = 'Signed in as ' + D.user;
+    m.innerHTML = `<div class="menu-note">Signed in as <b class="num">@${esc(D.user)}</b></div>
+      <button class="mi" data-act="toggleNew">${D.newAccount?'Demo: my account is new':'Demo: my account is 2 years old'}<span class="muted11">switch</span></button>
+      <a class="mi" href="mod.html">Mod page<span class="muted11">mods only</span></a><div class="menu-sep"></div><button class="mi" data-act="signout">Sign out</button>`;
+  }
+}
+
+/* ═══ Popups ═══ */
+const scrim = document.getElementById('scrim'), dialog = document.getElementById('dialog');
+let reopen = null;
+function openDialog(html, size='') {
+  dialog.className = 'dialog surface ' + size;
+  dialog.innerHTML = html;
+  scrim.classList.add('open');
+  const f = dialog.querySelector('[autofocus]'); if (f) f.focus();
+}
+function closeDialog() { scrim.classList.remove('open'); reopen = null; }
+const bar = t => `<div class="bar"><span class="t">${t}</span><button class="icon-btn" data-act="close" aria-label="Close">${ICON.close}</button></div>`;
+
+function commentHTML(c, path, isReply) {
+  const held = c.held ? `<span class="muted11">Held for review · only you can see it</span>` : '';
+  return `<div class="cmt ${isReply?'reply':''}">
+    <div class="who"><span class="av">${initial(c.u)}</span><span class="n">${esc(c.u)}</span>${held}<span class="t">${c.t}</span></div>
+    <p>${esc(c.text)}</p>
+    ${isReply||c.held ? '' : `<div class="acts"><button class="btn sm secondary ${c.voted?'on':''}" data-act="upCmt" data-path="${path}">▲ ${c.up}</button>
+      <button class="btn sm secondary" data-act="replyCmt" data-path="${path}">Reply</button>
+      <button class="btn sm secondary" data-act="toast" data-msg="Reported. A mod will look at it.">Report</button></div>`}
+  </div>${(c.replies||[]).map(r=>commentHTML(r,'',true)).join('')}`;
+}
+function composer(ph, act, extra='') {
+  return `<div class="lvl2 composer"><textarea id="cbox" rows="3" placeholder="${esc(ph)}"></textarea>
+    <button class="btn sm primary" data-act="${act}" ${extra}>Post</button></div>`;
+}
+function openAlt(id) {
+  const a = altById(id); reopen = () => openAlt(id);
+  const mv = myVote[id], t = a.up + a.down;
+  const summary = t >= MIN_VOTES_FOR_PCT ? `<b class="num">${Math.round(a.up/t*100)}%</b> say yes <span class="muted11">· ${t} votes</span>`
+    : t > 0 ? `${a.up} of ${t} say yes` : `<span class="muted11">No votes yet</span>`;
+  const list = a.comments.length ? `<div class="lvl2 comments">${a.comments.map((c,i)=>commentHTML(c,`${id}:${i}`)).join('')}</div>`
+    : `<div class="lvl2 empty">No comments yet. Used it? Say how it went.</div>`;
+  openDialog(`${bar(esc(a.name))}<div class="body">
+    <div class="lvl1 identity">
+      <div class="row"><div style="display:flex;align-items:center;gap:8px;flex-wrap:wrap"><span class="h-subject">${esc(a.name)}</span><span class="pill ${a.status[0]}"><i></i>${a.status[1]}</span></div>
+</div>
+      <div class="chiprow">${chips(a)}</div>
+      <p class="body2">${esc(a.blurb)}</p>
+      <div class="lvl2 feedback">
+        <div><div class="small2">Does it work as a ${'Documents'} replacement for you?</div><div class="small2" style="margin-top:2px">${summary}</div></div>
+        <div class="btns">
+          <button class="btn sm secondary ${mv==='up'?'on':''}" data-act="rate" data-v="up" data-id="${id}">${ICON.thumb(false)}Yes</button>
+          <button class="btn sm secondary ${mv==='down'?'on':''}" data-act="rate" data-v="down" data-id="${id}">${ICON.thumb(true)}No</button>
+        </div></div>
+    </div>
+    <div class="cols"><div>
+      <section><span class="label">Comments<span class="count">${a.comments.reduce((s,c)=>s+1+c.replies.length,0)}</span></span>
+        <div class="lvl1" style="padding:12px;display:flex;flex-direction:column;gap:12px">
+          ${composer(`Used it instead of ${D.compared}? Say how it went…`,'postCmt',`data-id="${id}"`)}
+          ${list}</div></section>
+    </div><div>
+      <section><span class="label">Facts</span><div class="lvl1 facts">
+        <div class="fact"><span>License</span><span>${a.license}</span></div>
+        <div class="fact"><span>First published</span><span>${a.age.replace(' old',' ago')}</span></div>
+        <div class="fact"><span>Last change</span><span>${a.last}</span></div>
+        <div class="fact"><span>People who worked on it</span><span>${a.people}</span></div>
+        <div class="fact"><span>How it was built</span><span>${a.built}</span></div>
+        <div class="fact"><span>Code</span><span>${a.code}</span></div></div></section>
+      <section><span class="label">For builders</span><div class="lvl1 pitch">
+        <div><h4>Reusable</h4><p class="small2">${a.reusable?esc(a.reusable):'Not listed yet.'}</p></div>
+        <div><h4>Help wanted</h4><p class="small2">${a.help?esc(a.help):'The owners haven\'t said. Owners can add this with "Add your project".'}</p></div></div></section>
+    </div></div></div>`);
+}
+function findItem(kind, id, app) {
+  if (kind === 'missing') return D.missing.find(x=>x.id===id);
+  return (D.reasons[app||D.compared]||[]).find(x=>x.id===id) || Object.values(D.reasons).flat().find(x=>x.id===id);
+}
+function openItem(kind, id) {
+  const it = findItem(kind, id); reopen = () => openItem(kind, id);
+  const head = kind === 'missing' ? 'Still missing' : `Why people leave ${D.compared}`;
+  openDialog(`${bar(head)}<div class="body">
+    <div class="lvl1" style="padding:12px;display:flex;gap:12px;align-items:center">
+      <button class="vote ${it.voted?'on':''}" data-act="voteItem" data-kind="${kind}" data-id="${id}"><span>▲</span>${it.up}</button>
+      <div><div style="font-size:16px;font-weight:500">${esc(it.title)}</div><div class="muted11">Added by ${esc(it.u)}</div></div></div>
+    <section><span class="label">Replies<span class="count">${it.replies.length}</span></span>
+      <div class="lvl1" style="padding:12px;display:flex;flex-direction:column;gap:12px">
+        ${composer(kind==='missing'?'Know a project that does this, or more detail on what\'s missing?':'Agree? Add detail…','postReply',`data-kind="${kind}" data-id="${id}"`)}
+        ${it.replies.length?`<div class="lvl2 comments">${it.replies.map(r=>commentHTML(r,'',false).replace(/<div class="acts">[\s\S]*?<\/div>/,'')).join('')}</div>`:`<div class="lvl2 empty">No replies yet.</div>`}
+      </div></section></div>`, 'medium');
+}
+function addItem(kind) {
+  if (!needSignIn(() => addItem(kind))) return;
+  const q = kind === 'missing' ? 'What\'s still missing from the open alternatives?' : `What's wrong with ${D.compared}?`;
+  const ph = kind === 'missing' ? 'e.g. Suggestion mode as smooth as Google Docs\'' : 'e.g. It nags me to pay for features I don\'t need';
+  openDialog(`${bar(kind==='missing'?'Add what\'s missing':'Add a reason')}<div class="body">
+    <div><span class="label">${esc(q)}</span><input class="field" id="itemText" placeholder="${esc(ph)}" maxlength="120" autofocus>
+      <p class="fieldhint">One short line. People upvote it, and builders read the top ones. Check the list first: upvoting is better than a repeat.</p></div>
+    <div class="foot-btns"><button class="btn md secondary" data-act="close">Cancel</button><button class="btn md primary" data-act="saveItem" data-kind="${kind}">Add</button></div></div>`, 'narrow');
+}
+
+/* Sign-in (simulated GitHub) */
+let afterSignIn = null;
+function needSignIn(then) {
+  if (D.user) return true;
+  afterSignIn = then;
+  openDialog(`${bar('Sign in to take part')}<div class="body">
+    <p class="body2">Reading is open to everyone. To vote or comment, sign in with your GitHub account.</p>
+    <p class="small2">We only see your public GitHub name and picture. Nothing else, and nothing in your code.</p>
+    <div class="foot-btns"><button class="btn md secondary" data-act="close">Not now</button><button class="btn md primary" data-act="ghpage">Sign in with GitHub</button></div></div>`, 'narrow');
+  return false;
+}
+function ghPage() {
+  openDialog(`${bar('github.com (simulated)')}<div class="body"><div class="gh">
+    <div style="font-size:18px;font-weight:600">Authorize Alternatives Map</div>
+    <div style="font-size:14px">Alternatives Map by <b>r-TrueOpenSource</b> wants to access your <b>sample-user</b> account.</div>
+    <div style="font-size:13px;color:#59636e">Public profile information only (read-only).</div>
+    <button class="ghbtn" data-act="authorize">Authorize</button>
+    <div style="font-size:12px;color:#59636e">First time only. After this, sign-in is automatic.</div></div></div>`, 'narrow');
+}
+
+/* Add your project: link → before you build → pitch → sent */
+let P = null;
+function addProject() {
+  if (!needSignIn(addProject)) return;
+  P = P && !P.done ? P : {step:1, url:'', checked:false, proved:false, diff:'', s:'', w:'', r:'', h:'', built:null, done:false};
+  renderProject();
+}
+function steps(n) { return `<div class="steps">${[1,2,3].map(i=>`<i class="${i<=n?'on':''}"></i>`).join('')}</div>`; }
+function renderProject() {
+  reopen = renderProject;
+  let body = '';
+  if (P.done) {
+    body = `<div class="callout ok">Sent to the mods. It shows up in the list right away for you, marked "Waiting for a mod". Everyone else sees it once a mod approves it, usually within a day.</div>
+      <div class="foot-btns"><button class="btn md primary" data-act="close">Done</button></div>`;
+  } else if (P.step === 1) {
+    const mine = /github\.com\/sample-user\//i.test(P.url);
+    body = `${steps(1)}
+      <div><span class="label">Your project's link</span>
+        <div style="display:flex;gap:8px"><input class="field" id="pUrl" value="${esc(P.url)}" placeholder="github.com/you/your-project" autofocus>
+        <button class="btn md secondary" data-act="pCheck">Check</button></div>
+        <p class="fieldhint">GitHub, GitLab or Codeberg. Try github.com/sample-user/notes, or someone else's like github.com/acme/writer.</p></div>
+      ${P.checked ? `
+      <div class="lvl1 facts">
+        <div class="fact"><span>License</span><span>MIT · open source ✓</span></div>
+        <div class="fact"><span>First published</span><span>1 year ago</span></div>
+        <div class="fact"><span>Days with changes</span><span>140</span></div>
+        <div class="fact"><span>README</span><span>Yes</span></div>
+        <div class="fact"><span>Commits that credit an AI assistant</span><span>Some</span></div></div>
+      ${(mine||P.proved) ? `<div class="callout ok">${mine?'This project is under your GitHub account, so we know it\'s yours.':'Found the file. We know it\'s yours.'}</div>`
+        : `<div class="callout warn">This project isn't under your own account, so we can't tell it's yours yet. Add a file named <b>alternatives-map.txt</b> containing <b>sample-user</b> to the project, then check again. Only someone who can change the project can do that.</div>
+           <button class="btn md secondary full" data-act="pProve">I've added it, check again</button>`}` : ''}
+      <div class="foot-btns"><button class="btn md secondary" data-act="close">Cancel</button>
+        <button class="btn md primary" data-act="pNext" ${P.checked&&(mine||P.proved)?'':'disabled'}>Next</button></div>
+      ${P.checked&&!(mine||P.proved)?'<p class="fieldhint" style="text-align:right;margin:-8px 0 0">Next unlocks once we know the project is yours.</p>':''}`;
+  } else if (P.step === 2) {
+    body = `${steps(2)}
+      <div><span class="label">Before you build: these already replace ${esc(D.compared)}</span>
+        <div class="lvl2 ranked">${D.alts.filter(a=>!a.pendingMine).slice(0,5).map(a=>`<div class="rrow" style="cursor:default"><div style="min-width:0"><div class="rt">${esc(a.name)}</div><div class="muted11">${esc(a.blurb)}</div></div></div>`).join('')}</div></div>
+      <div><span class="label">What does yours do differently?</span>
+        <textarea class="field" id="pDiff" rows="3" placeholder="e.g. Works fully offline in one file, with tables like Notion">${esc(P.diff)}</textarea>
+        <p class="fieldhint">Required. Shown on your card, so people see why it's worth a look.</p></div>
+      <div class="foot-btns"><button class="btn md secondary" data-act="pBack">Back</button><button class="btn md primary" data-act="pNext">Next</button></div>`;
+  } else {
+    body = `${steps(3)}
+      <div><span class="label">What it does well</span><textarea class="field" id="pS" rows="2">${esc(P.s)}</textarea></div>
+      <div><span class="label">Where it falls short</span><textarea class="field" id="pW" rows="2">${esc(P.w)}</textarea>
+        <p class="fieldhint">Honest weaknesses earn trust. They're shown as "Owner says".</p></div>
+      <div><span class="label">What others could reuse</span><input class="field" id="pR" value="${esc(P.r)}" placeholder="e.g. Its sync engine is a separate library"></div>
+      <div><span class="label">Where you need help</span><input class="field" id="pH" value="${esc(P.h)}" placeholder="A link to your help-wanted list (optional)"></div>
+      <div><span class="label">How it was built</span><div class="lvl1" style="padding:4px">
+        ${BUILT.map(b=>`<label class="radio"><input type="radio" name="built" value="${b}" ${P.built===b?'checked':''}><span><span style="font-size:14px">${b}</span><br><span class="muted11">${BUILT_HINT[b]}</span></span></label>`).join('')}</div></div>
+      <div class="foot-btns"><button class="btn md secondary" data-act="pBack">Back</button><button class="btn md primary" data-act="pSubmit">Send to the mods</button></div>`;
+  }
+  openDialog(`${bar(P.done?'Sent':'Add your project')}<div class="body">${body}</div>`, 'medium');
+}
+function saveProjectFields() {
+  const g = id => { const el = document.getElementById(id); return el ? el.value : null; };
+  if (g('pUrl') !== null) P.url = g('pUrl');
+  if (g('pDiff') !== null) P.diff = g('pDiff');
+  ['S','W','R','H'].forEach(k => { const v = g('p'+k); if (v !== null) P[k.toLowerCase()] = v; });
+  const r = dialog.querySelector('input[name=built]:checked'); if (r) P.built = r.value;
+}
+
+/* ═══ Search ═══ */
+const q = document.getElementById('q'), sm = document.getElementById('searchMenu');
+function searchResults(t) {
+  t = t.trim().toLowerCase();
+  if (!t) return '';
+  const closed = CLOSED.filter(c => c.toLowerCase().includes(t)).map(c => `<button class="mi" data-act="goClosed" data-v="${c}">${c}<span class="muted11">Documents</span></button>`);
+  const open = D.alts.filter(a => a.name.toLowerCase().includes(t)).map(a => `<button class="mi" data-act="openAlt" data-id="${a.id}">${esc(a.name)}<span class="muted11">Open alternative</span></button>`);
+  const other = ['Notion','Slack','Figma','Photoshop','Google Sheets','Zoom'].filter(c => c.toLowerCase().includes(t)).map(c => `<button class="mi" disabled>${c}<span class="muted11">Other group · not in this demo</span></button>`);
+  const all = [...closed, ...open, ...other];
+  return all.length ? (closed.length?'<div class="menu-note">Closed apps</div>':'') + [...closed].join('') + (open.length?'<div class="menu-note">Open projects</div>':'') + open.join('') + other.join('')
+    : `<div class="menu-note">Nothing matches "${esc(t)}" yet. Suggest it on r/TrueOpenSource.</div>`;
+}
+q.addEventListener('input', () => { sm.innerHTML = searchResults(q.value); sm.classList.toggle('open', !!q.value.trim()); });
+q.addEventListener('focus', () => { if (q.value.trim()) sm.classList.add('open'); });
+
+/* ═══ Actions ═══ */
+let toastT;
+function toast(msg) { const t = document.getElementById('toast'); t.textContent = msg; t.classList.add('show'); clearTimeout(toastT); toastT = setTimeout(()=>t.classList.remove('show'), 2600); }
+function closeMenus(except) { document.querySelectorAll('.menu.open').forEach(m => { if (m !== except) m.classList.remove('open'); }); }
+function canCount() { return !D.newAccount; }
+function refresh() { render(); if (scrim.classList.contains('open') && reopen) reopen(); }
+
+document.addEventListener('click', e => {
+  const el = e.target.closest('[data-act]');
+  if (!el) { if (!e.target.closest('.menu')) closeMenus(); if (e.target === scrim) closeDialog(); return; }
+  const act = el.dataset.act, id = el.dataset.id;
+  if (act !== 'menu' && act !== 'acct') closeMenus();
+  switch (act) {
+    case 'menu': { const m = document.getElementById(el.dataset.menu); const was = m.classList.contains('open'); closeMenus(); m.classList.toggle('open', !was); e.stopPropagation(); break; }
+    case 'acct': { const m = document.getElementById('acctMenu'); const was = m.classList.contains('open'); closeMenus(); m.classList.toggle('open', !was); break; }
+    case 'setCompared': D.compared = el.dataset.v; render(); toast(`Comparing with ${D.compared}`); break;
+    case 'goClosed': D.compared = el.dataset.v; q.value = ''; sm.classList.remove('open'); render(); window.scrollTo({top:0,behavior:'smooth'}); toast(`${el.dataset.v} is in Documents`); break;
+    case 'setSort': D.sort = el.dataset.v; render(); break;
+    case 'toggleAll': D.showAll = !D.showAll; render(); break;
+    case 'openAlt': e.stopPropagation(); q.value=''; sm.classList.remove('open'); openAlt(id); break;
+    case 'openItem': if (el.dataset.app) D.compared = el.dataset.app, render(); openItem(el.dataset.kind, id); break;
+    case 'close': closeDialog(); break;
+    case 'toast': e.stopPropagation(); toast(el.dataset.msg); break;
+    case 'rate': {
+      if (!needSignIn(() => openAlt(id))) return;
+      if (!canCount()) { toast('Your GitHub account is under 30 days old, so votes don\'t count yet.'); return; }
+      const a = altById(id), v = el.dataset.v, prev = myVote[id];
+      if (prev) a[prev]--;
+      if (prev === v) delete myVote[id]; else { myVote[id] = v; a[v]++; }
+      refresh();
+      if (myVote[id] === 'down') { const b = document.getElementById('cbox'); b.placeholder = 'What\'s missing or broken? Your comment helps the people who build it.'; b.focus(); toast('Thanks. A comment saying why helps the builders most.'); }
+      break;
+    }
+    case 'gap': {
+      if (!needSignIn(() => document.querySelector(`[data-act=gap][data-v=${el.dataset.v}]`).click())) return;
+      if (!canCount()) { toast('Your GitHub account is under 30 days old, so votes don\'t count yet.'); return; }
+      const v = el.dataset.v;
+      if (D.gapVote === null) D.gapTotal++; else if (D.gapVote === 'yes') D.gapYes--;
+      if (D.gapVote === v) { D.gapVote = null; D.gapTotal--; } else { D.gapVote = v; if (v === 'yes') D.gapYes++; }
+      render();
+      if (D.gapVote === 'no') { toast('Thanks. What\'s missing? Upvote it below or add it.'); }
+      break;
+    }
+    case 'voteItem': {
+      e.stopPropagation();
+      if (!needSignIn(() => {})) return;
+      if (!canCount()) { toast('Your GitHub account is under 30 days old, so votes don\'t count yet.'); return; }
+      const it = findItem(el.dataset.kind, id); it.voted = !it.voted; it.up += it.voted ? 1 : -1; refresh(); break;
+    }
+    case 'addItem': addItem(el.dataset.kind); break;
+    case 'saveItem': {
+      const v = document.getElementById('itemText').value.trim();
+      if (!v) { toast('Write one short line first.'); return; }
+      const it = {id:'x'+Date.now(), title:v, u:D.user, up:canCount()?1:0, voted:canCount(), replies:[]};
+      (el.dataset.kind === 'missing' ? D.missing : D.reasons[D.compared]).push(it);
+      closeDialog(); render(); toast(D.newAccount ? 'Added. A mod will check it first, because your account is new.' : 'Added, with your upvote.'); break;
+    }
+    case 'postCmt': case 'postReply': {
+      const box = document.getElementById('cbox'); const v = box.value.trim();
+      if (!needSignIn(reopen)) return;
+      if (!v) { box.focus(); return; }
+      const c = {u:D.user, t:'just now', text:v, up:0, replies:[], held:D.newAccount};
+      if (act === 'postCmt') altById(id).comments.unshift(c); else findItem(el.dataset.kind, id).replies.push(c);
+      refresh(); toast(D.newAccount ? 'Posted. A mod will check it first, because your account is new.' : 'Posted.'); break;
+    }
+    case 'upCmt': {
+      if (!needSignIn(reopen)) return;
+      const [aid, i] = el.dataset.path.split(':'); const c = altById(aid).comments[+i];
+      c.voted = !c.voted; c.up += c.voted ? 1 : -1; refresh(); break;
+    }
+    case 'replyCmt': {
+      const [aid, i] = el.dataset.path.split(':'); const box = document.getElementById('cbox');
+      box.value = `@${altById(aid).comments[+i].u} `; box.focus(); break;
+    }
+    case 'copy': {
+      const text = promptText(el.dataset.full === '1');
+      (navigator.clipboard ? navigator.clipboard.writeText(text) : Promise.reject()).then(
+        () => toast(el.dataset.full === '1' ? 'Copied, with the list. Paste it into any AI assistant.' : 'Copied. Paste it into any AI assistant.'),
+        () => toast('Copying needs the page to be open in a browser tab.'));
+      break;
+    }
+    case 'download': {
+      const data = JSON.stringify({group:'Documents', replaces:CLOSED, license:'CC BY-SA 4.0', alternatives:D.alts.map(a=>({name:a.name, license:a.license, code:a.code, verified:!!a.verified, yes:a.up, no:a.down, github_stars:a.ghN, description:a.blurb, reusable:a.reusable}))}, null, 2);
+      const url = URL.createObjectURL(new Blob([data], {type:'application/json'}));
+      const link = document.createElement('a'); link.href = url; link.download = 'documents.json'; link.click(); URL.revokeObjectURL(url);
+      toast('Downloaded documents.json'); break;
+    }
+    case 'signin': needSignIn(null); break;
+    case 'ghpage': ghPage(); break;
+    case 'authorize': {
+      D.user = 'sample-user'; closeDialog(); render(); toast('Signed in as @sample-user');
+      const then = afterSignIn; afterSignIn = null; if (then) then(); break;
+    }
+    case 'signout': D.user = null; render(); toast('Signed out'); break;
+    case 'toggleNew': D.newAccount = !D.newAccount; renderAcct(); toast(D.newAccount ? 'Demo: your account is now under 30 days old. Votes won\'t count; comments wait for a mod.' : 'Demo: your account is 2 years old again.'); break;
+    case 'addProject': addProject(); break;
+    case 'pCheck': saveProjectFields(); if (!P.url.trim()) { toast('Paste your project\'s link first.'); return; } P.checked = true; P.proved = false; renderProject(); break;
+    case 'pProve': P.proved = true; renderProject(); break;
+    case 'pNext': saveProjectFields(); if (P.step === 2 && !P.diff.trim()) { toast('Say what yours does differently first.'); return; } P.step++; renderProject(); break;
+    case 'pBack': saveProjectFields(); P.step--; renderProject(); break;
+    case 'pSubmit': {
+      saveProjectFields();
+      if (!P.built) { toast('Pick how it was built.'); return; }
+      const name = (P.url.split('/').filter(Boolean).pop() || 'My project').replace(/[-_]/g,' ');
+      D.alts.push({id:'mine', name:name.charAt(0).toUpperCase()+name.slice(1), status:['ok','Active'], owner:true, pendingMine:true, up:0, down:0, ghN:12, license:'MIT', gh:'12', built:P.built, age:'1 year old', ageN:1, tag:'New here', active:5,
+        blurb:'Owner says: ' + (P.diff || P.s), code:P.url, people:3, last:'today', reusable:P.r||null, help:P.h||null, comments:[]});
+      P.done = true; render(); renderProject(); break;
+    }
+  }
+});
+document.addEventListener('keydown', e => {
+  if (e.key === 'Escape') { if (scrim.classList.contains('open')) closeDialog(); closeMenus(); sm.classList.remove('open'); }
+  if ((e.key === 'Enter' || e.key === ' ') && e.target.matches('.card[data-act]')) { e.preventDefault(); openAlt(e.target.dataset.id); }
+});
+// WHY sessionStorage: the demo's sign-in carries between home.html and this page; never required.
+try { const u = sessionStorage.getItem('demoUser'); if (u) D.user = u; } catch (e) {}
+const _render = render;
+render = function () { _render(); try { D.user ? sessionStorage.setItem('demoUser', D.user) : sessionStorage.removeItem('demoUser'); } catch (e) {} };
+// home.html links here with ?compare=<closed app> and #<alternative id>
+const params = new URLSearchParams(location.search);
+if (CLOSED.includes(params.get('compare'))) D.compared = params.get('compare');
+render();
+if (location.hash && altById(location.hash.slice(1))) openAlt(location.hash.slice(1));
+else if (location.hash === '#add') addProject();
+</script>
+</body>
+</html>

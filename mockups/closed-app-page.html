@@ -1,0 +1,222 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Alternatives Map mockup</title>
+<style>
+/* WHY: colours and shapes copied from YouCoded's default light/dark theme tokens
+   (youcoded/desktop/src/renderer/styles/globals.css) so the site feels like the app. */
+:root {
+  --canvas:#F2F2F2; --panel:#EAEAEA; --inset:#D7D7D7; --well:#F9F9F9;
+  --accent:#1A1A1A; --on-accent:#F2F2F2;
+  --fg:#1A1A1A; --fg-2:#444; --fg-muted:#5E5E5E; --fg-faint:#989898;
+  --edge:#C0C0C0; --edge-dim:#B3B3B380;
+  --radius-sm:6px; --radius-md:12px; --radius-full:9999px;
+  --shadow-card:0 4px 20px rgb(0 0 0 / .16), 0 1px 3px rgb(0 0 0 / .08);
+  --tint-green:rgb(34 160 90 / .16); --tint-amber:rgb(220 150 20 / .18); --tint-blue:rgb(40 120 220 / .16);
+}
+@media (prefers-color-scheme: dark) {
+  :root {
+    --canvas:#111; --panel:#191919; --inset:#222; --well:#1C1C1C;
+    --accent:#D4D4D4; --on-accent:#111;
+    --fg:#E0E0E0; --fg-2:#B0B0B0; --fg-muted:#898989; --fg-faint:#515151;
+    --edge:#393939; --edge-dim:#44444480;
+  }
+}
+* { box-sizing:border-box; }
+body { margin:0; background:var(--canvas); color:var(--fg);
+  font:14px/1.45 system-ui,-apple-system,"Segoe UI",sans-serif; }
+.wrap { max-width:960px; margin:0 auto; padding:16px; }
+.sample { font-size:12px; color:var(--fg-muted); text-align:center; padding:8px; }
+
+/* top strip: screen name centred, small */
+.strip { display:flex; align-items:center; justify-content:space-between; gap:8px; margin-bottom:16px; }
+.strip .name { font-size:14px; font-weight:500; }
+.search { flex:0 1 280px; background:var(--inset); border:1px solid var(--edge-dim); border-radius:var(--radius-md);
+  padding:8px 12px; color:var(--fg-muted); font-size:14px; }
+
+.card { background:var(--panel); border:1px solid var(--edge-dim); border-radius:var(--radius-md);
+  box-shadow:var(--shadow-card); padding:12px; }
+.label { font-size:12px; font-weight:500; color:var(--fg-muted); margin:16px 0 8px; }
+.row { display:flex; align-items:flex-start; justify-content:space-between; gap:12px; }
+/* WHY: lets a chip row scroll inside its card instead of stretching the page at phone width */
+.row > * { min-width:0; }
+.card { min-width:0; overflow:hidden; }
+h1 { font-size:16px; font-weight:600; margin:0; }
+h2 { font-size:16px; font-weight:500; margin:0; }
+.sub { font-size:12px; color:var(--fg-muted); }
+.desc { color:var(--fg-2); margin:8px 0 0; display:-webkit-box; -webkit-line-clamp:2; -webkit-box-orient:vertical; overflow:hidden; }
+
+/* one chip row, never wraps, scrolls sideways */
+.chips { display:flex; gap:8px; overflow-x:auto; scrollbar-width:none; margin-top:8px; padding:1px; }
+.chips::-webkit-scrollbar { display:none; }
+.chip { flex:none; font-size:12px; color:var(--fg-2); background:var(--well); border:1px solid var(--edge-dim);
+  border-radius:var(--radius-full); padding:2px 8px; white-space:nowrap; }
+.pill { flex:none; font-size:12px; border-radius:var(--radius-full); padding:2px 8px; white-space:nowrap; color:var(--fg); }
+.pill.green { background:var(--tint-green); } .pill.amber { background:var(--tint-amber); } .pill.blue { background:var(--tint-blue); }
+
+.btn { font:inherit; font-size:14px; border-radius:var(--radius-md); padding:6px 12px; cursor:pointer; white-space:nowrap; }
+.btn.primary { background:var(--accent); color:var(--on-accent); border:1px solid var(--accent); }
+.btn.secondary { background:transparent; color:var(--fg); border:1px solid var(--edge); }
+.btn.small { font-size:12px; padding:4px 8px; }
+
+/* segmented tabs */
+.tabs { display:flex; gap:4px; background:var(--inset); border-radius:var(--radius-md); padding:4px; margin-top:16px; overflow-x:auto; }
+.tab { flex:1 0 auto; text-align:center; padding:6px 12px; border-radius:calc(var(--radius-md) - 4px); color:var(--fg-2); cursor:pointer; white-space:nowrap; }
+.tab.on { background:var(--panel); color:var(--fg); font-weight:500; }
+.tab .n { font-size:12px; color:var(--fg-faint); margin-left:4px; }
+
+.grid { display:grid; grid-template-columns:repeat(auto-fill,minmax(280px,1fr)); gap:12px; }
+.star { display:flex; align-items:center; gap:4px; }
+.reuse { font-size:12px; color:var(--fg-muted); margin-top:8px; }
+.reuse b { color:var(--fg-2); font-weight:500; }
+
+.gapbar { margin-top:12px; background:var(--well); border:1px solid var(--edge-dim); border-radius:var(--radius-md); padding:12px; }
+.meter { height:6px; border-radius:var(--radius-full); background:var(--inset); overflow:hidden; margin:8px 0 4px; }
+.meter i { display:block; height:100%; width:38%; background:var(--fg-muted); }
+
+.comment { padding:8px 0; border-top:1px solid var(--edge-dim); }
+.comment:first-child { border-top:0; }
+.who { font-size:12px; color:var(--fg-muted); }
+
+.prompt { font:12px/1.5 ui-monospace,monospace; background:var(--well); border:1px solid var(--edge-dim);
+  border-radius:var(--radius-sm); padding:12px; white-space:pre-wrap; color:var(--fg-2); margin:8px 0 0; }
+.foot { display:flex; justify-content:flex-end; gap:8px; margin-top:12px; }
+
+@media (max-width:600px) {
+  .strip .name { display:none; }
+  .search { flex:1; }
+  .top .row { flex-direction:column; }
+  .top .actions { width:100%; display:flex; }
+  .top .actions .btn { flex:1; }
+}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <div class="sample">Sample data for the mockup — not real numbers.</div>
+
+  <div class="strip">
+    <span class="name">Alternatives Map</span>
+    <div class="search">Search a closed app…</div>
+    <button class="btn secondary small">Sign in with GitHub</button>
+  </div>
+
+  <!-- Top card: the closed app itself (no label above it, per the guide's detail-page rule) -->
+  <div class="card top">
+    <div class="row">
+      <div>
+        <h1>Notion</h1>
+        <div class="chips">
+          <span class="chip">Notes and docs</span>
+          <span class="chip">Closed source</span>
+          <span class="chip">31 open alternatives</span>
+          <span class="chip">412 people want out</span>
+        </div>
+        <p class="desc">All-in-one notes, wikis and project boards. People here leave it for offline use, data ownership and price.</p>
+      </div>
+      <div class="actions"><button class="btn primary">Tag my project</button></div>
+    </div>
+
+    <!-- Gap vote: "are the open alternatives good enough yet?" -->
+    <div class="gapbar">
+      <div class="row">
+        <div>
+          <div>Is there a good open replacement yet?</div>
+          <div class="sub">38% say not yet · 1,084 votes</div>
+        </div>
+        <div style="display:flex;gap:8px">
+          <button class="btn secondary small">Yes, one works</button>
+          <button class="btn secondary small">Not yet</button>
+        </div>
+      </div>
+      <div class="meter"><i></i></div>
+      <div class="sub">Most-named gaps: shared databases, real-time editing with others, the phone app.</div>
+    </div>
+  </div>
+
+  <div class="tabs">
+    <div class="tab on">Alternatives<span class="n">31</span></div>
+    <div class="tab">What's missing<span class="n">58</span></div>
+    <div class="tab">Before you build</div>
+  </div>
+
+  <!-- Tab 1: alternative cards -->
+  <div class="label">Most starred</div>
+  <div class="grid">
+    <div class="card">
+      <div class="row">
+        <h2>AppFlowy</h2>
+        <button class="btn secondary small star">☆ 214</button>
+      </div>
+      <div class="chips">
+        <span class="pill green">Active this week</span>
+        <span class="chip">AGPL-3.0</span>
+        <span class="chip">Hand-built</span>
+        <span class="chip">4 years old</span>
+        <span class="chip">Self-host</span>
+      </div>
+      <p class="desc">Owner says: closest to Notion's pages and boards; weaker on shared databases and the phone app.</p>
+      <div class="reuse"><b>Reusable:</b> its editor is a separate library · <b>Help wanted:</b> 12 tasks</div>
+    </div>
+
+    <div class="card">
+      <div class="row">
+        <h2>AFFiNE</h2>
+        <button class="btn secondary small star">☆ 187</button>
+      </div>
+      <div class="chips">
+        <span class="pill green">Active this week</span>
+        <span class="chip">MIT</span>
+        <span class="chip">AI-assisted</span>
+        <span class="chip">3 years old</span>
+        <span class="chip">Offline first</span>
+      </div>
+      <p class="desc">Owner says: docs and a whiteboard in one; real-time editing works, database views still early.</p>
+      <div class="reuse"><b>Reusable:</b> sync engine · <b>Help wanted:</b> 30 tasks</div>
+    </div>
+
+    <div class="card">
+      <div class="row">
+        <h2>NoteNest</h2>
+        <button class="btn secondary small star">☆ 9</button>
+      </div>
+      <div class="chips">
+        <span class="pill blue">New</span>
+        <span class="chip">GPL-3.0</span>
+        <span class="chip">Vibe-coded</span>
+        <span class="chip">3 weeks old</span>
+      </div>
+      <p class="desc">Owner says: Notion-style tables that run fully offline in one file. Early; looking for testers.</p>
+      <div class="reuse"><b>Builds on:</b> AppFlowy's editor · <b>Different:</b> single-file storage</div>
+    </div>
+  </div>
+
+  <!-- Tab 2 preview: comments on what's missing / the closed app's flaws -->
+  <div class="label">What's missing (preview of the second tab)</div>
+  <div class="card">
+    <div class="comment">
+      <div class="who">u/sample_user · 2 days ago · ▲ 41</div>
+      <div>None of the open ones do linked databases the way Notion does. That's the one thing keeping our team on it.</div>
+    </div>
+    <div class="comment">
+      <div class="who">u/another_sample · 5 days ago · ▲ 17 · About Notion itself</div>
+      <div>Notion's offline mode still loses edits. That's why I'm looking.</div>
+    </div>
+  </div>
+
+  <!-- Tab 3 preview: before you build + agent prompt -->
+  <div class="label">Before you build (preview of the third tab)</div>
+  <div class="card">
+    <div>Planning a Notion alternative? Check what already exists first, so you can reuse it or explain what's different.</div>
+    <div class="prompt">Read the open list at alternativesmap.example/notion.json. Compare it with my project (or idea) below.
+Tell me: which existing projects overlap, which parts I could reuse instead of rewriting, and what my project does that none of them do.</div>
+    <div class="foot">
+      <button class="btn secondary">Download the list</button>
+      <button class="btn primary">Copy prompt</button>
+    </div>
+  </div>
+</div>
+</body>
+</html>
