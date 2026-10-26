@@ -403,3 +403,5 @@ a.chip.link { color:var(--fg-2); text-decoration:none; cursor:pointer; }
 a.chip.link:hover { border-color:var(--accent); color:var(--fg); }
 a.chip.link:focus-visible { outline:2px solid var(--accent); outline-offset:1px; }
 .identity .desc12 a, .sec .body2 a { color:var(--fg); }
+/* WHY: anything marked hidden stays hidden, even when its own style sets a display (the rating chip showed empty, Oct 27). */
+[hidden] { display:none !important; }
