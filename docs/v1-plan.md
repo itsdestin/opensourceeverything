@@ -77,7 +77,7 @@ costs more work up front, and gives us the page you described.
 - **Mod page** (only for signed-in mods): reports, held comments, tag requests, Verified tags; hide,
   restore, or ban a GitHub account from the site.
 - **Owner pitches are always labeled "Owner says,"** and the checker's facts sit next to every claim.
-- **Brand-new projects** (under 30 days, or failing the subreddit's checks) can still be tagged, but
+- **Brand-new projects** (under 14 days, or failing the subreddit's checks) can still be tagged, but
   show as "New" in their own section, like the Showcase.
 
 ## 4. Tag my project

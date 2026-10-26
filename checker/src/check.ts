@@ -10,7 +10,8 @@ export type ProjectCheck =
   | { supported: true; ref: RepoRef; facts: RepoFacts; site: SiteFacts; license: LicenseVerdict; violations: Violation[] };
 
 // WHY the bot's defaults: a project that passes here also passes the subreddit's front-page rule.
-export const DEFAULT_CONFIG: CheckConfig = { minAgeDays: 30, minActiveDays: 3 };
+// 14 days since Oct 27, 2026 (Destin; was 30).
+export const DEFAULT_CONFIG: CheckConfig = { minAgeDays: 14, minActiveDays: 3 };
 
 export async function checkProject(
   ref: RepoRef,
