@@ -35,6 +35,7 @@ export function page({ path, title, description, body, styles = [], scripts = []
 <html lang="en">
 <head>
 <meta charset="utf-8">
+<script>/* WHY: the site is served through Cloudflare with a padlock; anyone arriving on plain http is moved to https. */ if (location.protocol === 'http:' && location.hostname === 'opensourceeverything.org') location.replace('https:' + location.href.slice(5));</script>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>${esc(full)}</title>
 <meta name="description" content="${esc(description)}">
