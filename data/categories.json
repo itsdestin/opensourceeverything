@@ -1,0 +1,51 @@
+{
+ "license": "CC BY-SA 4.0",
+ "generated": "2026-10-26",
+ "credits": "See data/CREDITS.md",
+ "categories": [
+  {
+   "id": "office",
+   "name": "Office & productivity"
+  },
+  {
+   "id": "social",
+   "name": "Communication & social"
+  },
+  {
+   "id": "creative",
+   "name": "Creative"
+  },
+  {
+   "id": "os",
+   "name": "Operating systems & phones"
+  },
+  {
+   "id": "web",
+   "name": "Browsers, search & security"
+  },
+  {
+   "id": "ai",
+   "name": "AI tools"
+  },
+  {
+   "id": "media",
+   "name": "Media & entertainment"
+  },
+  {
+   "id": "files",
+   "name": "Files & cloud"
+  },
+  {
+   "id": "everyday",
+   "name": "Everyday"
+  },
+  {
+   "id": "dev",
+   "name": "Developer & business"
+  },
+  {
+   "id": "business",
+   "name": "Business & finance"
+  }
+ ]
+}

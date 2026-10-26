@@ -1,0 +1,499 @@
+[
+ {
+  "name": "APITable",
+  "code": "github.com/apitable/apitable",
+  "replaces": [
+   "Airtable"
+  ],
+  "aiGroups": [
+   "tasks",
+   "forms",
+   "scheduling",
+   "automation"
+  ],
+  "summary": "APITable is a spreadsheet-style database that lets teams organize, share and link records in tables. It can be self-hosted on your own server and is aimed at teams who want an Airtable-like tool they control."
+ },
+ {
+  "name": "Apprise",
+  "code": "github.com/caronc/apprise",
+  "replaces": [
+   "OneSignal"
+  ],
+  "aiGroups": [
+   "pro-network"
+  ],
+  "summary": "Apprise is a library and command-line tool that sends one notification format to many services such as Telegram, Discord, Slack and Gotify. It is aimed at developers and system administrators who need to send alerts to several places without learning each service's own system."
+ },
+ {
+  "name": "Athens Research",
+  "code": "github.com/athensresearch/athens",
+  "replaces": [
+   "Roam Research"
+  ],
+  "aiGroups": [
+   "notes"
+  ],
+  "summary": "Athens Research is a note-taking tool that links ideas together in a graph, so teams can map complex knowledge. It is aimed at researchers and teams who capture and connect what they learn."
+ },
+ {
+  "name": "Baserow",
+  "code": "gitlab.com/bramw/baserow",
+  "replaces": [
+   "AirTable"
+  ],
+  "aiGroups": [
+   "notes",
+   "tasks",
+   "forms",
+   "automation"
+  ],
+  "summary": "Baserow is a web tool for building databases that look and work like spreadsheets, with forms, boards, dashboards and automations on top. It is aimed at teams who want to organize data and build simple internal tools without writing code."
+ },
+ {
+  "name": "Botik",
+  "code": "github.com/777genius/discord-meeting-assistant",
+  "replaces": [
+   "Otter",
+   "Fireflies",
+   "Fathom"
+  ],
+  "aiGroups": [
+   "transcription",
+   "community-chat",
+   "video-calls"
+  ],
+  "summary": "Botik is a self-hosted assistant that joins Discord voice meetings, shows live captions, and posts a transcript and summary afterward. It is for people who run their own Discord server and want to keep meeting records on it."
+ },
+ {
+  "name": "Aves",
+  "code": "github.com/deckerst/aves",
+  "replaces": [
+   "Samsung Gallery",
+   "Huawei Gallery",
+   "Xiaomi Gallery"
+  ],
+  "aiGroups": [
+   "photo-backup"
+  ],
+  "summary": "Aves is a photo and video gallery app for Android that can browse your media and show detailed file information. It is for people who want to organize and view their own pictures and videos on their phone."
+ },
+ {
+  "name": "CloudQuery",
+  "code": "github.com/cloudquery/cloudquery",
+  "replaces": [
+   "AWS Config",
+   "GCP Cloud Asset Inventory"
+  ],
+  "aiGroups": [
+   "analytics",
+   "backup"
+  ],
+  "summary": "CloudQuery takes information about your cloud accounts, such as AWS, Azure and GCP setups, and loads it into a database you can query with SQL. It is aimed at platform and operations teams who want an inventory of their cloud resources."
+ },
+ {
+  "name": "CrowdSec",
+  "code": "github.com/crowdsecurity/crowdsec",
+  "replaces": [
+   "GreyNoise"
+  ],
+  "aiGroups": [
+   "ai-search"
+  ],
+  "summary": "CrowdSec is a security program that watches server logs and web traffic for attacks and blocks the attacking IP addresses. It also shares a community blocklist of malicious IPs, so people running servers can protect each other."
+ },
+ {
+  "name": "Deepfence ThreatMapper",
+  "code": "github.com/deepfence/ThreatMapper",
+  "replaces": [
+   "Palo Alto Prisma"
+  ],
+  "aiGroups": [
+   "backup"
+  ],
+  "summary": "ThreatMapper is a security tool that scans running cloud, container and server systems for software vulnerabilities, exposed secrets and risky configurations. It is aimed at security and operations teams who watch production infrastructure."
+ },
+ {
+  "name": "Dendron",
+  "code": "github.com/dendronhq/dendron",
+  "replaces": [
+   "Roam Research"
+  ],
+  "aiGroups": [
+   "notes"
+  ],
+  "summary": "Dendron is a note-taking tool that runs inside the VS Code code editor and keeps notes as plain text files. It is built for developers who want to organize large personal knowledge bases."
+ },
+ {
+  "name": "FormKit",
+  "code": "github.com/formkit/formkit",
+  "replaces": [
+   "Vueform"
+  ],
+  "aiGroups": [
+   "forms"
+  ],
+  "summary": "FormKit is a toolkit for building web forms with React or Vue, with built-in validation, labels and error messages. It is aimed at developers who build forms into their websites or apps."
+ },
+ {
+  "name": "Fossify Gallery",
+  "code": "github.com/FossifyOrg/Gallery",
+  "replaces": [
+   "Samsung Gallery",
+   "Huawei Gallery",
+   "Xiaomi Gallery"
+  ],
+  "aiGroups": [
+   "photo-backup"
+  ],
+  "summary": "Fossify Gallery is an Android app for viewing, editing and organizing your photos and videos, with a privacy focus and no ads. It is for people who want a gallery app without data collection."
+ },
+ {
+  "name": "Gitpod",
+  "code": "github.com/gitpod-io/gitpod",
+  "replaces": [
+   "Codespaces"
+  ],
+  "aiGroups": [
+   "code-hosting"
+  ],
+  "summary": "Gitpod is a platform that sets up ready-to-use cloud development environments for code projects, so programmers can start coding without manual setup. It is aimed at software developers and teams who work with Git repositories."
+ },
+ {
+  "name": "Ghostfolio",
+  "code": "github.com/ghostfolio/ghostfolio",
+  "replaces": [
+   "Empower Personal Wealth"
+  ],
+  "aiGroups": [
+   "cloud-storage"
+  ],
+  "summary": "Ghostfolio is open source software for tracking your investments such as stocks, ETFs and cryptocurrencies in one place. It is for individual investors who want to see their portfolio performance and composition, and who prefer to keep their data private."
+ },
+ {
+  "name": "Glimesh",
+  "code": "github.com/glimesh/glimesh.tv",
+  "replaces": [
+   "Twitch"
+  ],
+  "aiGroups": [
+   "video-sharing",
+   "recording"
+  ],
+  "summary": "Glimesh is a live streaming website where creators broadcast to their fans and chat with them. It is built to help new creators get discovered and to bring audiences closer to them."
+ },
+ {
+  "name": "highlight",
+  "code": "github.com/highlight/highlight",
+  "replaces": [
+   "Fullstory"
+  ],
+  "aiGroups": [
+   "analytics"
+  ],
+  "summary": "Highlight is a monitoring platform that records user sessions, tracks errors and collects logs so developers can find out why bugs happen. It is aimed at software developers who run web apps."
+ },
+ {
+  "name": "Inventaire",
+  "code": "codeberg.org/inventaire/inventaire",
+  "replaces": [
+   "Amazon Goodreads"
+  ],
+  "aiGroups": [
+   "books"
+  ],
+  "summary": "Inventaire is a free web app for making lists and inventories of your books. It is aimed at people who want to track their own book collections and share them with others."
+ },
+ {
+  "name": "Jam",
+  "code": "github.com/jam-systems/jam",
+  "replaces": [
+   "Clubhouse"
+  ],
+  "aiGroups": [
+   "community-chat",
+   "video-calls"
+  ],
+  "summary": "Jam is a free, open source app for hosting audio rooms where people talk, perform or debate together, like a live voice chat. It suits communities, friends and groups who want to run their own audio spaces, either on the hosted site or on a server they run themselves."
+ },
+ {
+  "name": "Keila",
+  "code": "github.com/pentacent/keila",
+  "replaces": [
+   "Mailchimp",
+   "Sendinblue"
+  ],
+  "aiGroups": [
+   "forms",
+   "email"
+  ],
+  "summary": "Keila is a tool for sending email newsletters and creating sign-up forms. It is aimed at people who want to run newsletters themselves, either on a hosted service or on their own server."
+ },
+ {
+  "name": "Lago",
+  "code": "github.com/getlago/lago",
+  "replaces": [
+   "Stripe",
+   "Chargebee",
+   "Stripe Billing"
+  ],
+  "aiGroups": [
+   "analytics",
+   "automation",
+   "support"
+  ],
+  "summary": "Lago is a billing system for software products that tracks how customers use a product and turns that usage into prices, invoices and payments. It is aimed at companies that sell usage-based or AI services and the developers who build billing for them."
+ },
+ {
+  "name": "listmonk",
+  "code": "github.com/knadh/listmonk",
+  "replaces": [
+   "ConvertKit"
+  ],
+  "aiGroups": [
+   "blogging"
+  ],
+  "summary": "listmonk is a self-hosted tool for sending newsletters and managing mailing lists. It is meant for people and organizations who want to run their own email list server."
+ },
+ {
+  "name": "LogicalDOC",
+  "code": "github.com/logicaldoc/community",
+  "replaces": [
+   "Documentum"
+  ],
+  "aiGroups": [
+   "cloud-storage"
+  ],
+  "summary": "LogicalDOC is a document management system that stores, organizes and shares company files and tracks who changes them. It is for businesses and teams that want to keep documents in one controlled place."
+ },
+ {
+  "name": "LosslessCut",
+  "code": "github.com/mifi/lossless-cut",
+  "replaces": [
+   "Sony Vegas"
+  ],
+  "aiGroups": [
+   "video-editing"
+  ],
+  "summary": "LosslessCut is a desktop app for quickly cutting and trimming video and audio files without re-encoding them, so quality is kept and file size drops. It is for people who want to rough-cut large camera or drone footage and extract the good parts."
+ },
+ {
+  "name": "Metarank",
+  "code": "github.com/metarank/metarank",
+  "replaces": [
+   "AWS Personalize"
+  ],
+  "aiGroups": [
+   "search",
+   "analytics"
+  ],
+  "summary": "Metarank is an open-source ranking service that reorders search results and recommendations based on user clicks and purchases. It is for developers who want personalized search and recommendations on their own systems."
+ },
+ {
+  "name": "Nextcloud Polls",
+  "code": "github.com/nextcloud/polls",
+  "replaces": [
+   "Doodle"
+  ],
+  "aiGroups": [
+   "scheduling"
+  ],
+  "summary": "Polls is an add-on for Nextcloud, a self-hosted file and collaboration server, that lets you create polls to find a meeting time or pick options. It is for people and teams who run their own Nextcloud and want to schedule without Doodle."
+ },
+ {
+  "name": "ntfy",
+  "code": "github.com/binwiederhier/ntfy",
+  "replaces": [
+   "OneSignal"
+  ],
+  "aiGroups": [
+   "community-chat"
+  ],
+  "summary": "ntfy is a simple service that sends push notifications to your phone or desktop when a script or program makes a web request. It is for people who want to get alerts from their own tools without signing up or paying, and it can also be self-hosted."
+ },
+ {
+  "name": "Nuxeo",
+  "code": "github.com/nuxeo/nuxeo",
+  "replaces": [
+   "Documentum"
+  ],
+  "aiGroups": [
+   "cloud-storage"
+  ],
+  "summary": "Nuxeo is a content management platform that developers use to build business applications for managing documents, digital assets and case files. It is aimed at organizations and software teams that need custom document-centric systems."
+ },
+ {
+  "name": "NSL.SH",
+  "code": "github.com/Yundera/mesh-router-root",
+  "replaces": [
+   "Cloudflare Tunnel",
+   "ngrok"
+  ],
+  "aiGroups": [
+   "cloud-storage"
+  ],
+  "summary": "NSL.SH is a self-hosted routing system that gives home or private servers a public web address with automatic HTTPS, even when they sit behind a router without a public IP. It is aimed at people who run their own services and want them reachable from the internet."
+ },
+ {
+  "name": "Open Library",
+  "code": "github.com/internetarchive/openlibrary",
+  "replaces": [
+   "Amazon Goodreads"
+  ],
+  "aiGroups": [
+   "books"
+  ],
+  "summary": "Open Library is a free, editable online catalog of books, aiming for a web page for every book ever published. It is for readers and anyone who wants to look up, add or correct book information."
+ },
+ {
+  "name": "OpenPost",
+  "code": "github.com/rodrgds/openpost",
+  "replaces": [
+   "Buffer",
+   "Hootsuite"
+  ],
+  "aiGroups": [
+   "slides",
+   "photo-editing",
+   "graphic-design",
+   "video-editing",
+   "tasks",
+   "email",
+   "team-chat",
+   "microblogging",
+   "photo-sharing",
+   "video-sharing",
+   "blogging",
+   "pro-network",
+   "forums",
+   "automation"
+  ],
+  "summary": "OpenPost is a social media tool for writing, designing, scheduling and tracking posts across many networks from one place. It is for people and teams who manage social accounts and want to run it themselves or use a hosted version."
+ },
+ {
+  "name": "OpenReplay",
+  "code": "github.com/openreplay/openreplay",
+  "replaces": [
+   "LogRocket",
+   "FullStory"
+  ],
+  "aiGroups": [
+   "analytics"
+  ],
+  "summary": "OpenReplay is a platform you run on your own servers that records and replays how people use your website or app, with product analytics and live help sessions. It is aimed at teams, especially in regulated industries, that cannot send user data to outside companies."
+ },
+ {
+  "name": "Postal",
+  "code": "github.com/postalserver/postal",
+  "replaces": [
+   "Mailgun",
+   "SendGrid"
+  ],
+  "aiGroups": [
+   "email"
+  ],
+  "summary": "Postal is a mail server that websites use to send and receive email, such as signup confirmations and newsletters. It is for people who want to run their own email sending service on their own servers instead of paying a hosted provider."
+ },
+ {
+  "name": "Postiz",
+  "code": "github.com/gitroomhq/postiz-app",
+  "replaces": [
+   "Buffer",
+   "Hootsuite"
+  ],
+  "aiGroups": [
+   "schedule-placeholder"
+  ],
+  "summary": "Postiz is a tool for planning and scheduling posts across social media accounts from one place, and for checking how those posts perform. It is for people and teams who manage social media, and it can be run on your own server or used as a hosted service."
+ },
+ {
+  "name": "Quackback",
+  "code": "github.com/QuackbackIO/quackback",
+  "replaces": [
+   "Canny"
+  ],
+  "aiGroups": [
+   "tasks",
+   "forums",
+   "support",
+   "blogging",
+   "analytics"
+  ],
+  "summary": "Quackback is a customer feedback tool where users post and vote on ideas, and companies plan and announce updates on a public roadmap and changelog. It also includes a support inbox and help center, and it can be hosted by the company itself or used through Quackback Cloud."
+ },
+ {
+  "name": "Revert",
+  "code": "github.com/revertinc/revert",
+  "replaces": [
+   "Merge.dev"
+  ],
+  "aiGroups": [
+   "automation"
+  ],
+  "summary": "Revert is a developer toolkit that lets software makers add connections to many third-party business tools, such as CRMs and chat apps, through one shared interface. It is aimed at engineers building B2B products who would rather not write each integration from scratch."
+ },
+ {
+  "name": "Rowy",
+  "code": "github.com/rowyio/rowy",
+  "replaces": [
+   "AirTable"
+  ],
+  "aiGroups": [
+   "notes",
+   "tasks",
+   "forms",
+   "automation"
+  ],
+  "summary": "Rowy is a spreadsheet-style interface for managing data stored in Google Cloud Firestore, with options to run automations. It is aimed at teams and developers who want to build simple internal tools without much coding."
+ },
+ {
+  "name": "PostHog",
+  "code": "github.com/PostHog/posthog",
+  "replaces": [
+   "Mixpanel",
+   "Amplitude"
+  ],
+  "aiGroups": [
+   "analytics",
+   "forms",
+   "support",
+   "automation"
+  ],
+  "summary": "PostHog is a platform that collects and analyzes how people use a website or app, including analytics, session replays, error tracking, feature flags and surveys. It is aimed at product, engineering and analytics teams, and you can use the hosted cloud or run it on your own server."
+ },
+ {
+  "name": "Storj",
+  "code": "github.com/storj/storj",
+  "replaces": [
+   "Amazon S3"
+  ],
+  "aiGroups": [
+   "cloud-storage"
+  ],
+  "summary": "Storj is a distributed cloud storage network that splits encrypted files into pieces and spreads them across many computers. It is for people who want S3-compatible storage without relying on a single large provider."
+ },
+ {
+  "name": "Tolgee",
+  "code": "github.com/tolgee/tolgee-platform",
+  "replaces": [
+   "Lokalise",
+   "Transifex",
+   "Crowdin",
+   "POEditor"
+  ],
+  "aiGroups": [
+   "tasks"
+  ],
+  "summary": "Tolgee is a web platform for translating software into other languages, where developers and translators work on the same texts. It is aimed at software teams who need to localize their apps."
+ },
+ {
+  "name": "Tunnelmole",
+  "code": "github.com/robbie-cahill/tunnelmole-client",
+  "replaces": [
+   "Ngrok"
+  ],
+  "aiGroups": [
+   "code-hosting"
+  ],
+  "summary": "Tunnelmole gives a public web address to a website or app that is running on your own computer, so others can see it. It is aimed at developers who want to test or share local work quickly."
+ }
+]

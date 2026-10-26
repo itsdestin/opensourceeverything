@@ -45,6 +45,22 @@ const todo = projects.filter((p) => {
   return true; // GitLab / Codeberg: their license is read from the README by the model and checked by a person
 }).slice(0, LIMIT);
 
+// --starter: review the hand-picked starter set instead (same questions), so every listing gets a description.
+// WHY: the starter projects were skipped above because their groups and licenses were set by hand; they still need summaries.
+const STARTER = process.argv.includes('--starter');
+const checked = STARTER ? JSON.parse(readFileSync(join(ROOT, 'data/starter-checked.json'), 'utf8')) : {};
+if (STARTER) {
+  const byName = new Map();
+  for (const c of starter.categories) for (const g of c.groups) for (const [name, link, , note] of g.alts) {
+    const e = byName.get(name) ?? { id: `starter:${norm(name)}`, name, repo: link.replace(/^https:\/\/(?=(github\.com|gitlab\.com|codeberg\.org)\/)/, ''), link, replaces: [], descriptions: [] };
+    for (const x of g.closed) if (!e.replaces.some((r) => r.name === x)) e.replaces.push({ name: x });
+    if (note) e.descriptions.push({ text: note });
+    byName.set(name, e);
+  }
+  todo.length = 0; todo.push(...[...byName.values()].slice(0, LIMIT));
+  for (const p of todo) { const r = checked[p.link] ?? {}; facts.set(p.id, { license: r.sniffed?.found ?? r.license ?? null, licenseVerdict: r.license && !r.sniffed ? 'open' : 'unclear' }); }
+}
+
 const GROUPS = starter.categories.flatMap((c) => c.groups.map((g) => `${g.id}: ${g.name} (${c.name}) — ${g.job}; replaces ${g.closed.join(', ')}`)).join('\n');
 const SYSTEM = `You help build a public map of open-source alternatives to closed-source apps, for the r/TrueOpenSource community.
 You get one open-source project: its README, sometimes its license file, and the closed apps that community lists say it replaces.
@@ -91,8 +107,11 @@ async function material(p) {
     if (facts.get(p.id)?.licenseVerdict !== 'open') license = await ghText(`${owner}/${name}/license`);
   } else if (host === 'gitlab.com') {
     readme = await rawText(`https://gitlab.com/${owner}/${name}/-/raw/HEAD/README.md`);
-  } else {
+  } else if (host === 'codeberg.org') {
     readme = await rawText(`https://codeberg.org/${owner}/${name}/raw/branch/main/README.md`);
+  } else {
+    // A project known by its website (operating systems, self-hosted forges): read the page's text.
+    readme = (await rawText(p.repo)).replace(/<script[\s\S]*?<\/script>|<style[\s\S]*?<\/style>/gi, ' ').replace(/\s+/g, ' ');
   }
   // WHY trim: the opening of a README says what the project is; install steps further down cost tokens and add nothing.
   const m = { readme: readme.replace(/<[^>]+>/g, '').replace(/\n{3,}/g, '\n\n').slice(0, 12_000), license: license.slice(0, 3_000) };
@@ -132,13 +151,13 @@ await Promise.all(Array.from({ length: CONCURRENCY }, async () => {
 const inTok = results.reduce((s, r) => s + (r.usage?.input_tokens ?? 0), 0);
 const outTok = results.reduce((s, r) => s + (r.usage?.output_tokens ?? 0), 0);
 const cost = (inTok * 0.10 + outTok * 0.50) / 1e6;
-writeFileSync(join(OUT, 'ai-review.json'), JSON.stringify(results, null, 1));
+writeFileSync(join(OUT, STARTER ? 'ai-review-starter.json' : 'ai-review.json'), JSON.stringify(results, null, 1));
 const ok = results.filter((r) => r.answer);
 const by = (fn) => ok.filter(fn).length;
 const newGroups = {};
 for (const r of ok) if (r.answer.newGroup) newGroups[r.answer.newGroup] = (newGroups[r.answer.newGroup] ?? 0) + 1;
 const text = `
-## Step 3: AI review (${new Date().toISOString().slice(0, 10)}, ${MODEL})
+## Step 3${STARTER ? 'b: AI descriptions for the starter set' : ': AI review'} (${new Date().toISOString().slice(0, 10)}, ${MODEL})
 
 - Reviewed **${ok.length}** of ${todo.length} projects in ${Math.round((Date.now() - started) / 1000)} seconds; ${results.length - ok.length} failed.
 - Cost: **$${cost.toFixed(2)}** (${inTok.toLocaleString()} tokens read, ${outTok.toLocaleString()} written).
