@@ -51,7 +51,7 @@ Drafts for Destin to edit and send. Nothing here is posted or sent automatically
 ## 4. Going live (Claude does this once Destin says "launch")
 
 1. Merge the `site` branch into `main` and push. The suggestion forms and robots only work from `main`.
-2. Switch on GitHub Pages: Settings → Pages → Source: GitHub Actions. Then run the "Site" workflow with "publish" ticked.
+2. Run the "Site" workflow with "publish" ticked. GitHub Pages is already switched on (source: GitHub Actions, Oct 27), with nothing published yet.
 3. After launch, publish automatically on every merge to `main`, so approved suggestions go live by themselves.
 4. Pin the launch post and update the subreddit sidebar with the link.
 5. ~~Buy opensourceeverything.org~~ Done Oct 27 (Cloudflare Registrar, auto-renew). DNS points at GitHub Pages
