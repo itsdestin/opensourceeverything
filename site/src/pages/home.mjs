@@ -1,7 +1,7 @@
 // The home page, in the order a newcomer needs it (Destin, Oct 27: "clearer… more polished for newcomers"):
 // 1. what this is and a big search, 2. popular switches with real screenshots, 3. every category as a tidy card,
 // 4. what's still missing, 5. the builders' card. Everything sits inside a raised card (no bare text).
-import { url, esc, ICON, suggestUrl, shot } from '../lib.mjs';
+import { url, esc, ICON, suggestUrl, shot, SITE_URL } from '../lib.mjs';
 import { appUrl, sortAlts } from '../cards.mjs';
 
 // WHY two lists: the picture cards need a replacement with a real screenshot, while the "Try" chips can name any
@@ -121,7 +121,7 @@ export default function home(d) {
   return [{
     path: '', title: '', search: false, styles: ['pages.css', 'group.css'],
     description: `Open-source replacements for ${closedCount} closed apps, grouped by the job they do, with where nothing good exists yet. Supported by r/TrueOpenSource.`,
-    jsonLd: { '@context': 'https://schema.org', '@type': 'WebSite', name: 'Open Source Everything', url: 'https://itsdestin.github.io/opensourceeverything/' },
+    jsonLd: { '@context': 'https://schema.org', '@type': 'WebSite', name: 'Open Source Everything', url: SITE_URL },
     body,
   }];
 }

@@ -11,7 +11,7 @@ const after = new Map(JSON.parse(readFileSync(newFile, 'utf8')).projects.map((p)
 const lines = [];
 for (const [id, a] of after) {
   const b = before.get(id); if (!b) continue;
-  const link = `[${a.name}](https://itsdestin.github.io/opensourceeverything/p/${id}/)`;
+  const link = `[${a.name}](https://opensourceeverything.org/p/${id}/)`;
   // WHY only known → different: a license filled in for the first time isn't a change worth a mod's time.
   if (b.license && b.license !== a.license) lines.push(`- ⚠️ ${link}: license changed from ${b.license ?? 'unknown'} to ${a.license ?? 'unknown'}. **Check it's still open source.**`);
   if (!b.archived && a.archived) lines.push(`- 🗄️ ${link} was archived by its owners (no longer maintained).`);

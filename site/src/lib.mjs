@@ -2,9 +2,10 @@
 import { readFileSync } from 'node:fs';
 import { join } from 'node:path';
 
-// WHY a base path: on GitHub Pages the site lives at itsdestin.github.io/opensourceeverything/; with a custom address it's "/".
-export const BASE = process.env.SITE_BASE ?? '/opensourceeverything/';
-export const SITE_URL = process.env.SITE_URL ?? 'https://itsdestin.github.io/opensourceeverything/';
+// WHY "/": the site has its own address, opensourceeverything.org (Destin registered it Oct 27). SITE_BASE is kept for
+// building a copy that lives in a folder, e.g. itsdestin.github.io/opensourceeverything/ before the address works.
+export const BASE = process.env.SITE_BASE ?? '/';
+export const SITE_URL = process.env.SITE_URL ?? 'https://opensourceeverything.org/';
 // WHY: voting, comments and suggestions need the server (built next). Until it exists, pages leave those
 // controls out entirely rather than showing buttons that do nothing (YouCoded design rule).
 export const API_URL = process.env.API_URL ?? '';

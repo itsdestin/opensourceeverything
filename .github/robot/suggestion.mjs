@@ -45,7 +45,7 @@ function understand() {
     if (!g) issues.push(`No group called "${field('Group')}". A mod should pick the right one, or suggest a new group first.`);
     if (!/^(github\.com|gitlab\.com|codeberg\.org)\/[^/]+\/[^/]+$/.test(code)) issues.push('The code link should be a GitHub, GitLab or Codeberg project page.');
     const dup = projects.find((p) => norm(p.code) === norm(code) || norm(p.name) === norm(field('Project name')));
-    if (dup) issues.push(`Already listed as [${dup.name}](https://itsdestin.github.io/opensourceeverything/p/${dup.id}/). If it belongs in another group too, a mod can add it there.`);
+    if (dup) issues.push(`Already listed as [${dup.name}](https://opensourceeverything.org/p/${dup.id}/). If it belongs in another group too, a mod can add it there.`);
     edit = { type: 'add-project', name: field('Project name'), code, website: field('Its website') || null, group: g?.id ?? null,
       fit: /partly/i.test(field('How much of the job does it do?')) ? 'partial' : 'full', note: field("What's missing compared with the closed apps?") || null,
       summary: field('What it is').replace(/\s+/g, ' '), platforms: devicesFrom(checked('Works on')),
