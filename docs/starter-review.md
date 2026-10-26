@@ -3,7 +3,7 @@
 Drafted Oct 27, 2026, then every link checked automatically (2026-10-26).
 ✅ open-source license confirmed · ⚠️ needs a person to check the license · ❌ problem · 🔍 not on a host we can read; check by hand · 🗄️ archived · 💤 quiet for a year
 
-**10 categories, 58 groups, 138 closed apps, 169 listings.** 129 confirmed open source, 12 need a license check, 25 to check by hand, 3 problems.
+**10 categories, 58 groups, 138 closed apps, 169 listings.** 129 confirmed open source, 10 need a license check, 25 to check by hand, 5 problems.
 
 "Full" = replaces the main job; "partly" = covers part of it.
 
@@ -356,7 +356,7 @@ No open alternative yet. **A gap.**
 
 | Alternative | Fit | Check | Note |
 |---|---|---|---|
-| Open WebUI | Full | ⚠️ BSD-3-Clause plus Open WebUI License: a person checks which parts are open | Works with local or online models |
+| Open WebUI | Full | ❌ Open WebUI License: not open source | Works with local or online models |
 | Jan | Full | ✅ Apache-2.0 (read from its license file) | Runs models on your computer |
 | LibreChat | Full | ✅ MIT |  |
 | Ollama | Partly | ✅ MIT | Runs models; needs a chat app on top |
@@ -440,7 +440,7 @@ No open alternative yet. **A gap.**
 | Calibre | Full | ✅ GPL-3.0 | Library and reader |
 | KOReader | Full | ✅ AGPL-3.0 | E-reader app |
 | Audiobookshelf | Full | ✅ GPL-3.0 | Your own audiobooks |
-| BookWyrm | Full | ⚠️ MIT plus Anti-Capitalist Software License: a person checks which parts are open | Like Goodreads |
+| BookWyrm | Full | ❌ Anti-Capitalist Software License: not open source | Like Goodreads |
 
 ## Files & cloud
 

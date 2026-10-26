@@ -142,7 +142,7 @@
   "found": true,
   "license": "GPL-3.0",
   "archived": false,
-  "lastChange": "2026-10-26T09:03:28Z",
+  "lastChange": "2026-10-26T09:05:29Z",
   "stars": 16684
  },
  "github.com/go-vikunja/vikunja": {
@@ -720,7 +720,7 @@
   "license": "GPL-3.0",
   "archived": false,
   "lastChange": "2026-10-19T18:17:10Z",
-  "stars": 1546
+  "stars": 1547
  },
  "github.com/open-webui/open-webui": {
   "found": true,
@@ -765,7 +765,7 @@
   "license": "MIT",
   "archived": false,
   "lastChange": "2026-10-26T04:25:58Z",
-  "stars": 184817
+  "stars": 184818
  },
  "github.com/continuedev/continue": {
   "found": true,
@@ -778,7 +778,7 @@
   "found": true,
   "license": "Apache-2.0",
   "archived": false,
-  "lastChange": "2026-10-26T08:56:12Z",
+  "lastChange": "2026-10-26T09:06:14Z",
   "stars": 70860
  },
  "github.com/Aider-AI/aider": {
@@ -800,7 +800,7 @@
   "license": "Apache-2.0",
   "archived": false,
   "lastChange": "2026-10-23T18:51:12Z",
-  "stars": 130959
+  "stars": 130960
  },
  "github.com/Comfy-Org/ComfyUI": {
   "found": true,
@@ -1037,7 +1037,7 @@
   "found": true,
   "license": "NOASSERTION",
   "archived": false,
-  "lastChange": "2026-10-26T09:00:26Z",
+  "lastChange": "2026-10-26T09:06:16Z",
   "stars": 15777,
   "sniffed": {
    "found": "Apache-2.0",
@@ -1116,7 +1116,7 @@
   "found": true,
   "license": "NOASSERTION",
   "archived": false,
-  "lastChange": "2026-10-26T08:56:38Z",
+  "lastChange": "2026-10-26T09:06:02Z",
   "stars": 36949,
   "sniffed": {
    "found": "MIT",

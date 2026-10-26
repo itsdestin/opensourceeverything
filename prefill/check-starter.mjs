@@ -91,7 +91,9 @@ function status(r) {
   const sn = r.sniffed;
   const v = licenseVerdict(r.license ?? undefined);
   // WHY: an open license plus a restrictive one usually means open code with restricted parts (assets, a paid edition).
-  const parts = sn?.notOpen && sn?.found ? [`⚠️ ${sn.found} plus ${sn.notOpen}: a person checks which parts are open`]
+  // WHY only these two can be "mixed": the others are whole licenses that merely reuse MIT/BSD wording (Open WebUI, the Anti-Capitalist license).
+  const mixable = ['Fair Use License', 'Commons Clause'].includes(sn?.notOpen ?? '');
+  const parts = sn?.notOpen && sn?.found && mixable ? [`⚠️ ${sn.found} plus ${sn.notOpen}: a person checks which parts are open`]
     : sn?.notOpen ? [`❌ ${sn.notOpen}: not open source`]
     : sn?.found ? [`✅ ${sn.found} (read from its license file)${sn.openCore ? ' · 🔒 open core: some parts paid' : ''}`]
     : [v === 'open' ? `✅ ${r.license}` : v === 'missing' ? '❌ no license found' : `⚠️ ${r.license === 'NOASSERTION' ? 'license unclear to GitHub' : r.license}: a person checks`];
