@@ -1,6 +1,11 @@
 // The frame every page shares: <head>, the top strip (home + search) and the footer chips.
 import { esc, url, ICON, SITE_URL, SUBREDDIT, REPO, SOCIAL, DEMO, API_URL } from './lib.mjs';
 
+// WHY a version on every code and style file (Oct 27): Cloudflare tells browsers to keep them for 4 hours, so after an
+// update people kept running old code (Sign in did nothing). A new address per build makes browsers fetch the new files.
+const BUILD = Date.now().toString(36);
+const asset = (p) => `${url(p)}?v=${BUILD}`;
+
 export function topStrip({ search = true } = {}) {
   return `<div class="top">
   <a class="icon-btn" href="${url()}" title="Home" aria-label="Open Source Everything home">${ICON.home}</a>
@@ -45,9 +50,9 @@ export function page({ path, title, description, body, styles = [], scripts = []
 <meta property="og:url" content="${SITE_URL}${path}">
 <meta property="og:site_name" content="Open Source Everything">
 <link rel="icon" href="${url('assets/icon.svg')}" type="image/svg+xml">
-<link rel="stylesheet" href="${url('assets/fonts.css')}">
-<link rel="stylesheet" href="${url('assets/site.css')}">
-${styles.map((s) => `<link rel="stylesheet" href="${url('assets/' + s)}">`).join('\n')}
+<link rel="stylesheet" href="${asset('assets/fonts.css')}">
+<link rel="stylesheet" href="${asset('assets/site.css')}">
+${styles.map((s) => `<link rel="stylesheet" href="${asset('assets/' + s)}">`).join('\n')}
 ${jsonLd ? `<script type="application/ld+json">${JSON.stringify(jsonLd)}</script>` : ''}
 <script>window.OI = { base: ${JSON.stringify(url())}, repo: ${JSON.stringify(REPO)}, chev: ${JSON.stringify(ICON.chev)} };</script>
 </head>
@@ -58,10 +63,10 @@ ${body}
 ${footer()}
 </main>
 <div class="toast" id="toast" role="status"></div>
-<script src="${url('assets/site.js')}" defer></script>
-${SOCIAL ? `<script src="${url(DEMO ? 'assets/fake-api.js' : 'assets/api.js')}" defer></script>${DEMO ? '' : `<script>window.OI_API_URL = ${JSON.stringify(API_URL)};</script>`}` : ''}
-${scripts.map((s) => `<script src="${url('assets/' + s)}" defer></script>`).join('\n')}
-${SOCIAL ? `<script src="${url('assets/social.js')}" defer></script>` : ''}
+<script src="${asset('assets/site.js')}" defer></script>
+${SOCIAL ? `<script src="${asset(DEMO ? 'assets/fake-api.js' : 'assets/api.js')}" defer></script>${DEMO ? '' : `<script>window.OI_API_URL = ${JSON.stringify(API_URL)};</script>`}` : ''}
+${scripts.map((s) => `<script src="${asset('assets/' + s)}" defer></script>`).join('\n')}
+${SOCIAL ? `<script src="${asset('assets/social.js')}" defer></script>` : ''}
 </body>
 </html>`;
 }
