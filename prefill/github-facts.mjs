@@ -26,7 +26,7 @@ async function batch(list) {
     return `r${i}: repository(owner: ${JSON.stringify(owner)}, name: ${JSON.stringify(name)}) { ${fields} }`;
   }).join('\n')} }`;
   const res = await fetch('https://api.github.com/graphql', {
-    method: 'POST', headers: { Authorization: `Bearer ${TOKEN}`, 'User-Agent': 'alternatives-map-prefill' }, body: JSON.stringify({ query: q }),
+    method: 'POST', headers: { Authorization: `Bearer ${TOKEN}`, 'User-Agent': 'openinstead' }, body: JSON.stringify({ query: q }),
   });
   if (!res.ok) throw new Error(`GitHub ${res.status}: ${await res.text()}`);
   const body = await res.json();

@@ -1,6 +1,6 @@
 # Credits
 
-The Alternatives Map's data is published under **CC BY-SA 4.0**. Anyone may reuse it with credit,
+Open Instead's data is published under **CC BY-SA 4.0**. Anyone may reuse it with credit,
 sharing changes under the same license.
 
 The first version was seeded once (October 2026) from these free lists. Thank you to everyone who maintains them:

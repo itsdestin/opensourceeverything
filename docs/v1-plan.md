@@ -1,6 +1,11 @@
-# Alternatives Map: the v1 plan (rev. 2, Oct 26, 2026)
+# Open Instead (formerly "Alternatives Map"): the v1 plan (rev. 2, Oct 26, 2026)
 
 Replaces the build order in `original-plan.md` (kept for history).
+
+## Name (Oct 27)
+
+**Open Instead** (openinstead.org was free on Oct 27; not bought yet). Repo: itsdestin/openinstead. Tagline:
+"Open source everything."
 
 ## Destin's calls (Oct 26)
 

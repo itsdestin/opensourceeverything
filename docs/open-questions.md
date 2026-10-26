@@ -1,4 +1,4 @@
-# Alternatives Map: what only you can decide (updated Oct 26, 2026)
+# Open Instead: what only you can decide (updated Oct 26, 2026)
 
 Everything else is decided in `v1-plan.md`. Answer in chat.
 

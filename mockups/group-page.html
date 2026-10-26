@@ -289,7 +289,7 @@ function render() {
   renderAcct();
 }
 function promptText(full) {
-  const base = `Read the list at r-trueopensource.github.io/map/${G.id}.json. Compare it with my project or idea below. Tell me which projects overlap, what I could reuse, and what mine does that none of them do.`;
+  const base = `Read the list at itsdestin.github.io/openinstead/data/${G.id}.json. Compare it with my project or idea below. Tell me which projects overlap, what I could reuse, and what mine does that none of them do.`;
   if (!full) return base;
   return `Here is a list of open-source alternatives to ${CLOSED.join(', ')}:\n` +
     D.alts.map(a=>`- ${a.name} (${a.license}, ${a.code}): ${a.blurb}${a.reusable?` Reusable: ${a.reusable}`:''}`).join('\n') +
@@ -417,8 +417,8 @@ function needSignIn(then) {
 }
 function ghPage() {
   openDialog(`${bar('github.com (simulated)')}<div class="body"><div class="gh">
-    <div style="font-size:18px;font-weight:600">Authorize Alternatives Map</div>
-    <div style="font-size:14px">Alternatives Map by <b>r-TrueOpenSource</b> wants to access your <b>sample-user</b> account.</div>
+    <div style="font-size:18px;font-weight:600">Authorize Open Instead</div>
+    <div style="font-size:14px">Open Instead by <b>itsdestin</b> wants to access your <b>sample-user</b> account.</div>
     <div style="font-size:13px;color:#59636e">Public profile information only (read-only).</div>
     <button class="ghbtn" data-act="authorize">Authorize</button>
     <div style="font-size:12px;color:#59636e">First time only. After this, sign-in is automatic.</div></div></div>`, 'narrow');
