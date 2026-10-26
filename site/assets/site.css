@@ -317,3 +317,6 @@ select.field { appearance:auto; }
 
 /* Footer chips are links on the real site; keep them looking like chips. */
 a.footchip { text-decoration:none; display:inline-block; }
+
+/* Links drawn as buttons never show the link underline. */
+a.btn { text-decoration:none; }

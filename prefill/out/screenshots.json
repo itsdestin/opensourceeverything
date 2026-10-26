@@ -1,0 +1,874 @@
+{
+ "2fas": [],
+ "abilian-hop3": [],
+ "accrescent": [],
+ "aider": [],
+ "e-os": [],
+ "activepieces": [
+  "https://raw.githubusercontent.com/activepieces/activepieces/HEAD/docs/resources/templates.gif"
+ ],
+ "affine": [
+  "https://user-images.githubusercontent.com/79301703/230891830-0110681e-8c7e-483b-b6d9-9e42b291b9ef.gif"
+ ],
+ "aegis": [
+  "https://raw.githubusercontent.com/beemdevelopment/Aegis/HEAD/metadata/en-US/images/phoneScreenshots/screenshot6.png?raw=true",
+  "https://raw.githubusercontent.com/beemdevelopment/Aegis/HEAD/metadata/en-US/images/phoneScreenshots/screenshot8.png?raw=true"
+ ],
+ "anysoftkeyboard": [],
+ "antennapod": [
+  "https://raw.githubusercontent.com/AntennaPod/StoreMetadata/main/listings/en-US/graphics/phone-screenshots/00.png",
+  "https://raw.githubusercontent.com/AntennaPod/StoreMetadata/main/listings/en-US/graphics/phone-screenshots/01.png",
+  "https://raw.githubusercontent.com/AntennaPod/StoreMetadata/main/listings/en-US/graphics/phone-screenshots/02.png",
+  "https://raw.githubusercontent.com/AntennaPod/StoreMetadata/main/listings/en-US/graphics/phone-screenshots/04.png"
+ ],
+ "alovoa": [],
+ "aliasvault": [
+  "https://github.com/user-attachments/assets/fa5bf64a-704d-4f09-b4e0-0310ab662204"
+ ],
+ "apache-apisix": [],
+ "ardour": [
+  "https://ardour.org/images/ardour-og.png"
+ ],
+ "abilian-nua": [],
+ "appsmith": [],
+ "aurora-store": [],
+ "audiobookshelf": [],
+ "arch-linux": [],
+ "acebase": [],
+ "audacity": [],
+ "automatisch": [
+  "https://user-images.githubusercontent.com/2501931/191562539-e42f6c34-03c7-4dc4-bcf9-7f9473a9c64f.png"
+ ],
+ "beton-inspector": [
+  "https://raw.githubusercontent.com/getbeton/inspector/HEAD/docs/assets/hero.png"
+ ],
+ "appwrite": [
+  "https://github.com/user-attachments/assets/55a81268-4ecc-46cd-bdf5-73f7e8662fee"
+ ],
+ "appflowy": [
+  "https://github.com/user-attachments/assets/c2ba6bb8-746c-4743-9393-d008a669be95",
+  "https://github.com/user-attachments/assets/e83dd1a3-4975-4d0e-91a1-9eb6e0d248cd"
+ ],
+ "bitwarden": [
+  "https://bitwarden.com/assets/7fzQJmr0qt5ggGZp3t66Y/7bf59a6a2379d49fc580ff49e8510efb/bitwarden.com_og_image.png"
+ ],
+ "bagisto": [
+  "https://raw.githubusercontent.com/bagisto/temp-media/master/next.png"
+ ],
+ "bluesky": [],
+ "bootstrap": [],
+ "authgear": [
+  "https://raw.githubusercontent.com/authgear/.github/main/meta/features/signup-login-page.png"
+ ],
+ "blender": [],
+ "bigbluebutton": [],
+ "brave": [],
+ "boxyhq": [],
+ "borgbackup": [],
+ "budibase": [
+  "https://res.cloudinary.com/daog6scxm/image/upload/v1775572268/github/Agent_preview.jpg",
+  "https://res.cloudinary.com/daog6scxm/image/upload/v1775572270/github/Agent_Actions.jpg"
+ ],
+ "bookstack": [],
+ "chatrwkv": [
+  "https://raw.githubusercontent.com/BlinkDL/ChatRWKV/HEAD/misc/sample-1.png"
+ ],
+ "bruin": [],
+ "bugzilla": [],
+ "buzz": [],
+ "caprover": [
+  "https://raw.githubusercontent.com/caprover/caprover-website/master/graphics/screenshots-video-small.png"
+ ],
+ "buildbot": [],
+ "carrypass": [],
+ "codex-cli": [],
+ "cachyos": [],
+ "cline": [],
+ "btw": [
+  "https://user-images.githubusercontent.com/70569022/233320021-e05c995f-4e4e-48a9-83de-f578d3662df1.png"
+ ],
+ "calibre": [],
+ "continue": [],
+ "cal-com": [],
+ "chatwoot": [
+  "https://raw.githubusercontent.com/chatwoot/chatwoot/HEAD/.github/screenshots/dashboard.png#gh-light-mode-only",
+  "https://raw.githubusercontent.com/chatwoot/chatwoot/HEAD/.github/screenshots/dashboard-dark.png#gh-dark-mode-only"
+ ],
+ "concrete": [],
+ "comaps": [
+  "https://www.comaps.app/images/sections/map-s-3.webp"
+ ],
+ "comfyui": [
+  "https://github.com/user-attachments/assets/36e065e0-bfae-4456-8c7f-8369d5ea48a2"
+ ],
+ "coroot": [
+  "https://user-images.githubusercontent.com/194465/235189673-833066d1-b18f-4c7a-8b81-81b37f966daf.png",
+  "https://user-images.githubusercontent.com/194465/235190071-21256cbe-6201-4d16-97f3-6565f7256f98.png",
+  "https://user-images.githubusercontent.com/194465/235190425-a7f33c7f-33ef-4ef5-9dc1-525ff7524e93.png"
+ ],
+ "cratedb": [],
+ "cortex": [],
+ "dashpress": [],
+ "debian": [],
+ "crowd-dev": [],
+ "coolify": [
+  "https://cdn.coollabs.io/og-images/coolify.png"
+ ],
+ "cube-js": [],
+ "delta-chat": [
+  "https://raw.githubusercontent.com/deltachat/deltachat-android/HEAD/fastlane/metadata/android/en-US/images/phoneScreenshots/1.png"
+ ],
+ "decap-cms": [],
+ "crater": [],
+ "databend": [],
+ "darktable": [
+  "https://user-images.githubusercontent.com/45535283/148689197-e53dd75f-32f1-4297-9a0f-a9547fd4e7c7.jpg"
+ ],
+ "discourse": [
+  "https://github.com/user-attachments/assets/abaaf30f-0cfb-4505-a530-6f8e5a43d24b",
+  "https://github.com/user-attachments/assets/a79b5d56-7748-4f6d-8a2d-daa950366fcc"
+ ],
+ "collabora-online": [
+  "https://www.collaboraonline.com/wp-content/uploads/2025/02/Collab-rabbits.png"
+ ],
+ "deepset": [],
+ "duplicati": [],
+ "docmost": [
+  "https://docmost.com/screenshots/home.png",
+  "https://docmost.com/screenshots/editor.png",
+  "https://docmost.com/screenshots/editor.png"
+ ],
+ "cryptpad": [
+  "https://raw.githubusercontent.com/cryptpad/cryptpad/HEAD/screenshot.png",
+  "https://raw.githubusercontent.com/cryptpad/cryptpad/HEAD/screenshot-suite.png"
+ ],
+ "dexio": [
+  "https://raw.githubusercontent.com/dexio-wiki/dexio/HEAD/docs/images/demo-page.png",
+  "https://raw.githubusercontent.com/dexio-wiki/dexio/HEAD/docs/images/demo-graph.png"
+ ],
+ "documenso": [],
+ "docuseal": [],
+ "drone": [],
+ "dub": [],
+ "dolibarr": [
+  "https://www.dolibarr.org/medias/dolibarr_screenshot1_1920x1080.jpg"
+ ],
+ "dokku": [],
+ "customermates": [],
+ "element-call": [
+  "https://raw.githubusercontent.com/element-hq/element-call/HEAD/demo.gif"
+ ],
+ "ente-photos": [],
+ "ente-auth": [],
+ "dyrector-io": [],
+ "f-droid": [],
+ "etherpad": [
+  "https://raw.githubusercontent.com/ether/etherpad/HEAD/doc/public/etherpad_demo.gif",
+  "https://raw.githubusercontent.com/ether/etherpad/HEAD/doc/public/etherpad_full_features.png",
+  "https://raw.githubusercontent.com/ether/etherpad/HEAD/doc/public/etherpad_skin_variants.gif",
+  "https://raw.githubusercontent.com/ether/etherpad/HEAD/doc/public/etherpad_basic.png"
+ ],
+ "fauxpilot": [],
+ "evidence": [],
+ "fedora": [],
+ "espocrm": [
+  "https://github.com/user-attachments/assets/d0806394-3691-43a1-83a5-16ad2e7314e2"
+ ],
+ "element": [],
+ "firecamp": [
+  "https://firecamp.io/og.jpg"
+ ],
+ "etesync": [],
+ "flagsmith": [
+  "https://raw.githubusercontent.com/Flagsmith/flagsmith/HEAD/static-files/ReadMe_Demo.gif",
+  "https://raw.githubusercontent.com/Flagsmith/flagsmith/HEAD/static-files/screenshot.png"
+ ],
+ "encore": [],
+ "firefox": [],
+ "fonoster": [],
+ "fluent-reader": [],
+ "florisboard": [
+  "https://florisboard.org/card.png"
+ ],
+ "filestash": [
+  "https://raw.githubusercontent.com/mickael-kerjean/filestash_images/master/.assets/photo.jpg",
+  "https://www.filestash.app/img/screenshots/theme_github.png",
+  "https://www.filestash.app/img/screenshots/theme_apple.png",
+  "https://www.filestash.app/img/screenshots/theme_dropbox.png"
+ ],
+ "fossdroid": [
+  "https://raw.githubusercontent.com/SnaKKo/Fossdroid-Core/HEAD/screenshot_1.png?raw=true",
+  "https://raw.githubusercontent.com/SnaKKo/Fossdroid-Core/HEAD/screenshot_2.png?raw=true",
+  "https://fossdroid.com/images/site/og_image.jpg"
+ ],
+ "formio": [],
+ "font-awesome": [],
+ "folio-wiki": [
+  "https://raw.githubusercontent.com/evergreen-it-dev/folio/HEAD/docs/images/overview.png",
+  "https://raw.githubusercontent.com/evergreen-it-dev/folio/HEAD/docs/images/history.png",
+  "https://raw.githubusercontent.com/evergreen-it-dev/folio/HEAD/docs/images/collab.png",
+  "https://raw.githubusercontent.com/evergreen-it-dev/folio/HEAD/docs/images/compare-live.png"
+ ],
+ "formbricks": [
+  "https://github-production-user-asset-6210df.s3.amazonaws.com/675065/249441967-ccb89ea3-82b4-4bf2-8d2c-528721ec313b.png"
+ ],
+ "faraday": [
+  "https://raw.githubusercontent.com/infobyte/faraday/HEAD/docs/images/manage.png",
+  "https://raw.githubusercontent.com/infobyte/faraday/HEAD/docs/images/dashboard.png"
+ ],
+ "freetube": [
+  "https://raw.githubusercontent.com/FreeTubeApp/FreeTubeApp.io/master/src/images/FreeTube1.png",
+  "https://raw.githubusercontent.com/FreeTubeApp/FreeTubeApp.io/master/src/images/FreeTube2.png",
+  "https://raw.githubusercontent.com/FreeTubeApp/FreeTubeApp.io/master/src/images/FreeTube3.png"
+ ],
+ "friction": [
+  "https://friction.graphics/assets/screenshots/100/friction-100-linux-screenshot.png?v=1"
+ ],
+ "gerrit": [],
+ "gimp": [],
+ "funkwhale": [],
+ "ghost": [],
+ "gitlab-community-edition": [],
+ "freshrss": [
+  "https://raw.githubusercontent.com/FreshRSS/FreshRSS/HEAD/docs/img/FreshRSS-screenshot.png"
+ ],
+ "fusio": [
+  "https://www.fusio-project.org/media/backend/action_configuration.png",
+  "https://www.fusio-project.org/media/backend/worker_php_designer.png",
+  "https://www.fusio-project.org/media/backend/agent_message.png",
+  "https://www.fusio-project.org/media/backend/dashboard.png"
+ ],
+ "gathio": [],
+ "gitlab": [],
+ "erpnext": [
+  "https://raw.githubusercontent.com/frappe/erpnext/HEAD/erpnext/public/images/v16/hero_image.png",
+  "https://frappe.io/files/ERPNexte2a3b6.png"
+ ],
+ "forgejo": [
+  "https://forgejo.org/_astro/og-preview.Uy75QWb0_6Lpd2.webp"
+ ],
+ "galene": [],
+ "grapheneos": [],
+ "gnumeric": [],
+ "gitea": [
+  "https://dl.gitea.com/screenshots/login.png",
+  "https://dl.gitea.com/screenshots/register.png",
+  "https://dl.gitea.com/screenshots/home.png",
+  "https://dl.gitea.com/screenshots/issues.png"
+ ],
+ "graphite": [
+  "https://github.com/user-attachments/assets/decb7011-18c2-4c68-82af-d1fa5064244a",
+  "https://github.com/user-attachments/assets/9e023997-185b-4f43-a724-797d308d9e7b"
+ ],
+ "heliboard": [],
+ "grafana": [],
+ "gogs": [],
+ "friendica": [
+  "https://raw.githubusercontent.com/friendica/friendica/HEAD/images/screenshots/friendica-2023-12-frio-desktop.png?raw=true",
+  "https://raw.githubusercontent.com/friendica/friendica/HEAD/images/screenshots/friendica-2023-10-frio-mobile-timeline-dark-blue.png",
+  "https://raw.githubusercontent.com/friendica/friendica/HEAD/images/screenshots/friendica-2023-10-frio-mobile-options-light-blue.png"
+ ],
+ "grist": [],
+ "hanko": [],
+ "goatcounter": [],
+ "hedgedoc": [],
+ "huginn": [
+  "https://raw.githubusercontent.com/huginn/huginn/master/doc/imgs/your-agents.png",
+  "https://raw.githubusercontent.com/huginn/huginn/master/doc/imgs/diagram.png",
+  "https://raw.githubusercontent.com/huginn/huginn/master/doc/imgs/peaks.png",
+  "https://raw.githubusercontent.com/huginn/huginn/master/doc/imgs/events.png"
+ ],
+ "growthbook": [
+  "https://raw.githubusercontent.com/growthbook/growthbook/HEAD/features-screenshot.png"
+ ],
+ "illa": [],
+ "indic-keyboard": [],
+ "gravitl": [
+  "https://cdn.prod.website-files.com/64149f8bba6c1301c5e75001/67bf20d0f8eceddc0012d168_demoapp%20(1).webp",
+  "https://raw.githubusercontent.com/gravitl/netmaker-docs/master/images/netmaker-github/readme.gif"
+ ],
+ "idurar-erp-crm": [],
+ "home-assistant": [],
+ "inkscape": [],
+ "hoppscotch": [],
+ "immich": [
+  "https://raw.githubusercontent.com/immich-app/immich/HEAD/design/immich-screenshots.png"
+ ],
+ "hyperdx": [
+  "https://raw.githubusercontent.com/hyperdxio/hyperdx/HEAD/.github/images/search_splash.png"
+ ],
+ "heyform": [
+  "https://raw.githubusercontent.com/heyform/heyform/HEAD/assets/images/screenshot.png"
+ ],
+ "insomnia": [
+  "https://raw.githubusercontent.com/Kong/insomnia/develop/screenshots/main.png",
+  "https://insomnia.rest/images/open-graph-insomnia.png"
+ ],
+ "indico": [
+  "https://raw.githubusercontent.com/indico/indico/master/sneakpeek.gif"
+ ],
+ "invokeai": [
+  "https://invoke.ai/coverimage.png"
+ ],
+ "jellyfin": [],
+ "jenkins": [],
+ "janssen": [],
+ "influxdb": [],
+ "keepassxc": [],
+ "jan": [],
+ "kanboard": [],
+ "joplin": [
+  "https://raw.githubusercontent.com/laurent22/joplin/dev/Assets/WebsiteAssets/images/home-top-img.png"
+ ],
+ "jitsu": [],
+ "kdenlive": [],
+ "kodi": [
+  "https://raw.githubusercontent.com/xbmc/xbmc/HEAD/docs/resources/kodi.gif"
+ ],
+ "jitsi-meet": [
+  "https://raw.githubusercontent.com/jitsi/jitsi-meet/master/readme-img1.png"
+ ],
+ "kestra": [
+  "https://kestra.io/star.gif"
+ ],
+ "keycloak": [],
+ "koreader": [],
+ "kutt": [
+  "https://github.com/user-attachments/assets/b74fab78-5e80-4f57-8425-f0cc73e9c68d",
+  "https://github.com/user-attachments/assets/a75d2430-8074-4ce4-93ec-d8bdfd75d917",
+  "https://github.com/user-attachments/assets/b915eb77-3d66-4407-8e5d-b556f80ff453",
+  "https://kutt.to/images/card.png"
+ ],
+ "krita": [],
+ "kubero": [
+  "https://www.kubero.dev/assets/images/pipeline-list-a693ac0c7dc36ec9fa42100e8908577c.png",
+  "https://www.kubero.dev/assets/images/app-overview-56c193140fd4f5acd9d8d242da15129b.png",
+  "https://www.kubero.dev/assets/images/app-vulnerabilities-49af1cf7933071f3cc680ab4737249e2.png",
+  "https://www.kubero.dev/assets/images/app-metrics-762b0a7f53e9b3f926bc1c2cc8e33fd8.png"
+ ],
+ "librengine": [
+  "https://raw.githubusercontent.com/liameno/librengine/HEAD/images/demo.png"
+ ],
+ "kubestellar-console": [
+  "https://raw.githubusercontent.com/kubestellar/console/HEAD/docs/images/console-screenshot.png"
+ ],
+ "keyoxide": [],
+ "kimai": [
+  "https://www.kimai.org/images/screenshots/screenshot-dashboard.webp"
+ ],
+ "lastsaas": [],
+ "leantime": [
+  "https://raw.githubusercontent.com/Leantime/leantime/HEAD/public/assets/images/Screenshots/mywork-v3.5.png",
+  "https://raw.githubusercontent.com/Leantime/leantime/HEAD/public/assets/images/Screenshots/dark.png",
+  "https://raw.githubusercontent.com/Leantime/leantime/HEAD/public/assets/images/Screenshots/projectDashboard.png",
+  "https://raw.githubusercontent.com/Leantime/leantime/HEAD/public/assets/images/Screenshots/table.png"
+ ],
+ "leon": [],
+ "librechat": [],
+ "libreoffice-impress": [],
+ "libreoffice-calc": [],
+ "kuzzle": [],
+ "lemmy": [
+  "https://i.postimg.cc/wvYVvKjP/main-screen-2.webp",
+  "https://i.postimg.cc/hjRrjFty/mobile-pic.webp"
+ ],
+ "librewolf": [],
+ "lineageos": [],
+ "libreoffice-writer": [],
+ "libresign": [
+  "https://raw.githubusercontent.com/LibreSign/libresign/HEAD/img/screenshot/request-signature.png"
+ ],
+ "linux-mint": [],
+ "librespeed": [
+  "https://speedtest.fdossena.com/mpot_v7.gif"
+ ],
+ "localsend": [
+  "https://localsend.org/img/screenshot-iphone.webp",
+  "https://localsend.org/img/screenshot-pc.webp"
+ ],
+ "logseq": [
+  "https://user-images.githubusercontent.com/25513724/221387376-4dc419c2-0d0a-460c-a920-2d211e78b456.gif"
+ ],
+ "lmms": [],
+ "litekart": [
+  "https://raw.githubusercontent.com/itswadesh/svelte-commerce/HEAD/.github/assets/8.jpg",
+  "https://raw.githubusercontent.com/itswadesh/svelte-commerce/HEAD/.github/assets/9.jpg",
+  "https://raw.githubusercontent.com/itswadesh/svelte-commerce/HEAD/.github/assets/10.jpg",
+  "https://raw.githubusercontent.com/itswadesh/svelte-commerce/HEAD/.github/assets/2.jpg"
+ ],
+ "livekit": [],
+ "lowdefy": [
+  "https://user-images.githubusercontent.com/7165064/121780045-d0021200-cb9e-11eb-84f9-ff67c8255ec6.gif"
+ ],
+ "libretranslate": [
+  "https://github.com/user-attachments/assets/457696b5-dbff-40ab-a18e-7bfb152c5121",
+  "https://user-images.githubusercontent.com/1951843/102724116-32a6df00-42db-11eb-8cc0-129ab39cdfb5.png"
+ ],
+ "loops": [
+  "https://raw.githubusercontent.com/joinloops/loops-server/HEAD/screenshot.png"
+ ],
+ "lightdash": [],
+ "logto": [
+  "https://raw.githubusercontent.com/logto-io/logto/HEAD/assets/showcase-logto-auth-sdks.gif",
+  "https://raw.githubusercontent.com/logto-io/logto/HEAD/assets/showcase-logto-sign-in-exeperience.gif",
+  "https://raw.githubusercontent.com/logto-io/logto/HEAD/assets/showcase-logto-multi-tenancy.gif"
+ ],
+ "mastodon": [],
+ "limesurvey": [],
+ "manticore-search": [],
+ "medusa": [],
+ "mattermost": [
+  "https://user-images.githubusercontent.com/7205829/136107976-7a894c9e-290a-490d-8501-e5fdbfc3785a.png"
+ ],
+ "matomo": [
+  "https://matomo.org/wp-content/uploads/2026/04/mockup_matomo-dashboard-2026.webp"
+ ],
+ "memos": [
+  "https://raw.githubusercontent.com/usememos/.github/refs/heads/main/assets/previews/timeline-light.png"
+ ],
+ "mediawiki": [],
+ "mellisearch": [
+  "https://raw.githubusercontent.com/meilisearch/meilisearch/HEAD/assets/demo-light.gif#gh-light-mode-only",
+  "https://raw.githubusercontent.com/meilisearch/meilisearch/HEAD/assets/demo-dark.gif#gh-dark-mode-only"
+ ],
+ "meshcentral": [],
+ "mbin": [],
+ "misskey": [
+  "https://misskey-hub.net/img/og/misskey-hub-screenshot-l.png"
+ ],
+ "miniflux": [
+  "https://miniflux.app/images/overview.png",
+  "https://miniflux.app/images/item-selection-black-theme.png"
+ ],
+ "mlcraft": [],
+ "metabase": [
+  "https://raw.githubusercontent.com/metabase/metabase/HEAD/docs/images/metabase-product-screenshot-updated.png"
+ ],
+ "metriql": [],
+ "natron": [],
+ "navidrome": [
+  "https://raw.githubusercontent.com/navidrome/navidrome/master/.github/screenshots/ss-mobile-login.png",
+  "https://raw.githubusercontent.com/navidrome/navidrome/master/.github/screenshots/ss-mobile-player.png",
+  "https://raw.githubusercontent.com/navidrome/navidrome/master/.github/screenshots/ss-mobile-album-view.png",
+  "https://raw.githubusercontent.com/navidrome/navidrome/master/.github/screenshots/ss-desktop-player.png"
+ ],
+ "mypaint": [],
+ "neo4j": [],
+ "netbird": [],
+ "monomap": [],
+ "matano": [
+  "https://raw.githubusercontent.com/matanolabs/matano/HEAD/assets/matano_athena.png",
+  "https://raw.githubusercontent.com/matanolabs/matano/HEAD/assets/matano_slack_alert.png"
+ ],
+ "mumble": [
+  "https://raw.githubusercontent.com/mumble-voip/mumble/HEAD/screenshots/Mumble.png"
+ ],
+ "netnewswire": [],
+ "netdata": [
+  "https://www.netdata.cloud/img/og-image.png"
+ ],
+ "moinmoin": [],
+ "notally": [
+  "https://raw.githubusercontent.com/OmGodse/Notally/HEAD/fastlane/metadata/android/en-US/images/phoneScreenshots/1.png",
+  "https://raw.githubusercontent.com/OmGodse/Notally/HEAD/fastlane/metadata/android/en-US/images/phoneScreenshots/2.png",
+  "https://raw.githubusercontent.com/OmGodse/Notally/HEAD/fastlane/metadata/android/en-US/images/phoneScreenshots/3.png"
+ ],
+ "newsboat": [
+  "https://newsboat.org/images/2.25-screenshot_2x-33f26153.png"
+ ],
+ "nhost": [],
+ "notabase": [
+  "https://user-images.githubusercontent.com/4218237/135161184-88b3afa8-3f64-46c2-82e8-d0a22d285642.gif"
+ ],
+ "newpipe": [
+  "https://raw.githubusercontent.com/TeamNewPipe/NewPipe/HEAD/fastlane/metadata/android/en-US/images/phoneScreenshots/00.png",
+  "https://raw.githubusercontent.com/TeamNewPipe/NewPipe/HEAD/fastlane/metadata/android/en-US/images/phoneScreenshots/01.png",
+  "https://raw.githubusercontent.com/TeamNewPipe/NewPipe/HEAD/fastlane/metadata/android/en-US/images/phoneScreenshots/04.png",
+  "https://raw.githubusercontent.com/TeamNewPipe/NewPipe/HEAD/fastlane/metadata/android/en-US/images/phoneScreenshots/05.png"
+ ],
+ "node-red": [
+  "https://nodered.org/images/node-red-screenshot.png"
+ ],
+ "nextcloud": [
+  "https://raw.githubusercontent.com/nextcloud/screenshots/master/nextcloud-hub-25-files.png"
+ ],
+ "obtainium": [
+  "https://raw.githubusercontent.com/ImranR98/Obtainium/HEAD/assets/screenshots/1.apps.png",
+  "https://raw.githubusercontent.com/ImranR98/Obtainium/HEAD/assets/screenshots/2.dark_theme.png",
+  "https://raw.githubusercontent.com/ImranR98/Obtainium/HEAD/assets/screenshots/3.material_you.png",
+  "https://raw.githubusercontent.com/ImranR98/Obtainium/HEAD/assets/screenshots/4.app.png"
+ ],
+ "nexopos": [],
+ "nextcloud-forms": [
+  "https://raw.githubusercontent.com/nextcloud/forms/HEAD/screenshots/forms1.png",
+  "https://raw.githubusercontent.com/nextcloud/forms/HEAD/screenshots/forms2.png",
+  "https://raw.githubusercontent.com/nextcloud/forms/HEAD/screenshots/forms3.png"
+ ],
+ "nextcloud-calendar": [
+  "https://raw.githubusercontent.com/nextcloud/documentation/master/user_manual/groupware/images/calendar_application.png"
+ ],
+ "obs-studio": [],
+ "omniedge": [],
+ "notesnook": [
+  "https://notesnook.com/social-2.png"
+ ],
+ "olive-video-editor": [
+  "https://olivevideoeditor.org/img/020-2.png"
+ ],
+ "odoo": [],
+ "okular": [
+  "https://okular.kde.org/images/screenies/okular-main.png"
+ ],
+ "nuclei": [],
+ "openboard": [],
+ "openblocks": [
+  "https://raw.githubusercontent.com/openblocks-dev/openblocks/HEAD/docs/.gitbook/assets/Bu2fpz1h01.gif"
+ ],
+ "onlyoffice-docs": [],
+ "ollama": [],
+ "offpdf": [
+  "https://raw.githubusercontent.com/McanKul/offpdf/HEAD/docs/assets/offpdf-home.png"
+ ],
+ "notegen": [
+  "https://s2.loli.net/2025/12/22/jlpEP2c6ogwHhIA.png"
+ ],
+ "opencut": [],
+ "nextcloud-notes": [
+  "https://raw.githubusercontent.com/nextcloud/screenshots/master/apps/Notes/notes.png"
+ ],
+ "openbooks": [
+  "https://raw.githubusercontent.com/braedonsaunders/openbooks/HEAD/.github/assets/screenshots/financial-health.jpg",
+  "https://raw.githubusercontent.com/braedonsaunders/openbooks/HEAD/.github/assets/screenshots/executive-dashboard.jpg",
+  "https://raw.githubusercontent.com/braedonsaunders/openbooks/HEAD/.github/assets/screenshots/profit-and-loss.jpg",
+  "https://raw.githubusercontent.com/braedonsaunders/openbooks/HEAD/.github/assets/screenshots/project-profitability.jpg"
+ ],
+ "openvidu": [
+  "https://openvidu.io/latest/assets/images/meet/embedded/use-cases/support-meeting.png"
+ ],
+ "openstreetmap": [],
+ "openshot": [
+  "https://cdn.openshot.org/images/hero/openshot-social-poster.jpg"
+ ],
+ "openhands": [
+  "https://assets.openhands.dev/screenshot/automation-preview.png"
+ ],
+ "organic-maps": [
+  "https://raw.githubusercontent.com/organicmaps/organicmaps/HEAD/android/app/src/fdroid/play/listings/en-US/graphics/phone-screenshots/1.jpg",
+  "https://raw.githubusercontent.com/organicmaps/organicmaps/HEAD/android/app/src/fdroid/play/listings/en-US/graphics/phone-screenshots/2.jpg",
+  "https://raw.githubusercontent.com/organicmaps/organicmaps/HEAD/android/app/src/fdroid/play/listings/en-US/graphics/phone-screenshots/3.jpg",
+  "https://raw.githubusercontent.com/organicmaps/organicmaps/HEAD/android/app/src/fdroid/play/listings/en-US/graphics/phone-screenshots/4.jpg"
+ ],
+ "openstatus": [
+  "https://www.openstatus.dev/assets/landing/statuspage-meow.png"
+ ],
+ "ory": [],
+ "openproject": [
+  "https://raw.githubusercontent.com/opf/openproject/HEAD/GitHub-tab-new.png"
+ ],
+ "openwebanalytics": [],
+ "orbit": [
+  "https://raw.githubusercontent.com/Noveum/orbit/HEAD/docs/assets/screenshots/board-dark.png",
+  "https://raw.githubusercontent.com/Noveum/orbit/HEAD/docs/assets/screenshots/issues-dark.png",
+  "https://raw.githubusercontent.com/Noveum/orbit/HEAD/docs/assets/screenshots/command-palette-light.png",
+  "https://raw.githubusercontent.com/Noveum/orbit/HEAD/docs/assets/screenshots/sprints-dark.png"
+ ],
+ "owncloud-infinite-scale": [],
+ "osmand": [],
+ "padloc": [],
+ "papercups": [
+  "https://user-images.githubusercontent.com/4218509/88716918-a0583180-d0d4-11ea-93b3-12437ac51138.gif"
+ ],
+ "pdf-arranger": [],
+ "payload": [],
+ "otomi": [],
+ "owncloud": [],
+ "pagure": [],
+ "passbolt": [],
+ "photoprism": [
+  "https://dl.photoprism.app/img/ui/2025/desktop-search.jpg",
+  "https://dl.photoprism.app/img/ui/2025/iphone-crocus-540px.png",
+  "https://dl.photoprism.app/img/ui/2025/upcoming-features-240px.png"
+ ],
+ "pixelfed": [
+  "https://pixelfed.nyc3.cdn.digitaloceanspaces.com/media/pixelfed-readme-light.jpg"
+ ],
+ "peon": [],
+ "plausible": [
+  "https://raw.githubusercontent.com/plausible/analytics/HEAD/.github/plausible-analytics-dashboard.webp"
+ ],
+ "pocket-casts": [],
+ "plume": [],
+ "plasmic": [
+  "https://user-images.githubusercontent.com/7129/146098801-0691ff13-e302-40fb-827e-90488a7a28b4.gif"
+ ],
+ "pingcap": [],
+ "penpot": [
+  "https://github.com/user-attachments/assets/cce75ad6-f783-473f-8803-da9eb8255fef",
+  "https://github.com/user-attachments/assets/243e796e-a140-481a-b68f-b24be6a70e37",
+  "https://github.com/user-attachments/assets/4b2a4360-12b5-4994-bd45-641449f86c4e",
+  "https://github.com/user-attachments/assets/0abc02f0-625c-45ab-ad81-4927bec7a055"
+ ],
+ "plane": [
+  "https://media.docs.plane.so/GitHub-readme/github-top.webp",
+  "https://media.docs.plane.so/GitHub-readme/github-work-items.webp",
+  "https://media.docs.plane.so/GitHub-readme/github-cycles.webp",
+  "https://media.docs.plane.so/GitHub-readme/github-modules.webp"
+ ],
+ "peertube": [
+  "https://asso.framasoft.org/pic/wI6n1YIH/hKfCL8Xi.png",
+  "https://asso.framasoft.org/pic/lYrgaP2N/Sj3hgkeo.png",
+  "https://asso.framasoft.org/pic/UbNnLlzV/Sx0PSrH1.png",
+  "https://asso.framasoft.org/pic/z6py52z2/61ZyIm65.png"
+ ],
+ "preset": [
+  "https://superset.apache.org/img/screenshots/gallery.jpg",
+  "https://superset.apache.org/img/screenshots/dashboard.jpg",
+  "https://superset.apache.org/img/screenshots/explore.jpg"
+ ],
+ "psitransfer": [
+  "https://raw.githubusercontent.com/psi-4ward/psitransfer/master/docs/psitransfer.gif"
+ ],
+ "presta": [
+  "https://github.com/user-attachments/assets/e6342778-e528-4ae7-acf2-f0d097a1e932"
+ ],
+ "quant-ux": [],
+ "pocketbase": [
+  "https://i.imgur.com/aCBbjKx.png",
+  "https://pocketbase.io/images/og.png"
+ ],
+ "qdrant": [
+  "https://qdrant.tech/docs/gettingstarted/web-ui.png"
+ ],
+ "posnic-pos": [
+  "https://raw.githubusercontent.com/Posnic/POS/HEAD/docs/images/offline-sale-v1-3-0.png"
+ ],
+ "piefed": [],
+ "quillpad": [
+  "https://raw.githubusercontent.com/quillpad/quillpad/HEAD/fastlane/metadata/android/en-US/images/phoneScreenshots/2.png",
+  "https://raw.githubusercontent.com/quillpad/quillpad/HEAD/fastlane/metadata/android/en-US/images/phoneScreenshots/4.png"
+ ],
+ "questdb": [
+  "https://raw.githubusercontent.com/questdb/questdb/HEAD/.github/console.webp"
+ ],
+ "prisme-analytics": [
+  "https://raw.githubusercontent.com/prismelabs/analytics/HEAD/.github/images/web-analytics-dashboard.jpg"
+ ],
+ "postmarketos": [],
+ "reveal-js": [],
+ "review-board": [],
+ "rawtherapee": [],
+ "roundcube": [],
+ "redmine": [],
+ "rustdesk": [
+  "https://user-images.githubusercontent.com/71636191/171661982-430285f0-2e12-4b1d-9957-4a58e375304d.png",
+  "https://rustdesk.com/_astro/default.BnGe5sEj_Mm9fb.webp"
+ ],
+ "restic": [],
+ "rocket-chat": [],
+ "scribus": [],
+ "saleor": [
+  "https://user-images.githubusercontent.com/9268745/224249510-d3c7658e-6d5c-42c5-b4fb-93eaf65a5335.png"
+ ],
+ "shynet": [
+  "https://raw.githubusercontent.com/milesmcc/shynet/HEAD/images/homepage.png",
+  "https://raw.githubusercontent.com/milesmcc/shynet/HEAD/images/service.png"
+ ],
+ "searxng": [],
+ "shuup": [],
+ "simple-keyboard": [
+  "https://raw.githubusercontent.com/rkkr/simple-keyboard/HEAD/images/screenshot-0.png"
+ ],
+ "shlink": [],
+ "shotcut": [
+  "https://www.shotcut.org/assets/img/screenshots/Shotcut-18.11.18.png"
+ ],
+ "signal": [],
+ "seafile": [],
+ "signoz": [
+  "https://raw.githubusercontent.com/SigNoz/signoz/HEAD/docs/readme-assets/monitor/apm.png",
+  "https://raw.githubusercontent.com/SigNoz/signoz/HEAD/docs/readme-assets/monitor/metrics.png",
+  "https://raw.githubusercontent.com/SigNoz/signoz/HEAD/docs/readme-assets/monitor/infrastructure.png",
+  "https://raw.githubusercontent.com/SigNoz/signoz/HEAD/docs/readme-assets/monitor/llm.png"
+ ],
+ "simplex-chat": [
+  "https://raw.githubusercontent.com/simplex-chat/.github/refs/heads/master/profile/images/app1.png",
+  "https://raw.githubusercontent.com/simplex-chat/.github/refs/heads/master/profile/images/app2.png",
+  "https://raw.githubusercontent.com/simplex-chat/.github/refs/heads/master/profile/images/app3.png"
+ ],
+ "quickwit": [],
+ "silex": [
+  "https://www.silex.me/img/HJKUdOfC5N-2400.webp"
+ ],
+ "semi": [],
+ "slidev": [],
+ "stable-diffusion-web-ui": [
+  "https://raw.githubusercontent.com/AUTOMATIC1111/stable-diffusion-webui/HEAD/screenshot.png"
+ ],
+ "solidping": [
+  "https://raw.githubusercontent.com/fclairamb/solidping/main/res/screenshots/checks-list.png",
+  "https://raw.githubusercontent.com/fclairamb/solidping/main/res/screenshots/check-form.png",
+  "https://raw.githubusercontent.com/fclairamb/solidping/main/res/screenshots/check-detail.png"
+ ],
+ "solidtime": [
+  "https://www.solidtime.io/og_image.png"
+ ],
+ "sonic": [],
+ "snikket": [],
+ "solidinvoice": [
+  "https://raw.githubusercontent.com/SolidInvoice/SolidInvoice/HEAD/docs/static/img/dashboard.png",
+  "https://raw.githubusercontent.com/SolidInvoice/SolidInvoice/HEAD/docs/static/img/managing-clients/client-view-overview.png",
+  "https://raw.githubusercontent.com/SolidInvoice/SolidInvoice/HEAD/docs/static/img/invoices/invoice-list.png",
+  "https://raw.githubusercontent.com/SolidInvoice/SolidInvoice/HEAD/docs/static/img/invoices/create-invoice-form.png"
+ ],
+ "spacebar": [],
+ "spacedrive": [
+  "https://raw.githubusercontent.com/spacedriveapp/spacedrive/HEAD/docs/public/SDGridView.webp"
+ ],
+ "spliit-app": [],
+ "strapi": [],
+ "supabase": [
+  "https://raw.githubusercontent.com/supabase/supabase/master/apps/www/public/images/github/supabase-dashboard.png",
+  "https://raw.githubusercontent.com/supabase/supabase/d5f7f413ab356dc1a92075cb3cee4e40a957d5b1/web/static/watch-repo.gif"
+ ],
+ "stirling-pdf": [
+  "https://raw.githubusercontent.com/Stirling-Tools/Stirling-PDF/HEAD/docs/images/home-light.png"
+ ],
+ "standard-notes": [],
+ "taiga": [],
+ "stoat": [],
+ "supertokens": [
+  "https://raw.githubusercontent.com/supertokens/supertokens-core/HEAD/.github/user-info.png",
+  "https://raw.githubusercontent.com/supertokens/supertokens-core/HEAD/.github/list-user.png"
+ ],
+ "sulu": [
+  "https://sulu.io/uploads/media/800x@2x/07/167-ezgif.gif?v=2"
+ ],
+ "syncthing": [],
+ "step-ci": [],
+ "thunderbird": [],
+ "openassistant": [],
+ "tabler-icons": [],
+ "super-productivity": [
+  "https://super-productivity.com/_astro/default.0d-Tb3Q-_25CtE7.jpg"
+ ],
+ "tina": [
+  "https://raw.githubusercontent.com/tinacms/tinacms/HEAD/.github/assets/homepage-demo-2.gif"
+ ],
+ "telemetry-tracker": [
+  "https://raw.githubusercontent.com/Telemetry-Tracker/telemetry-tracker/HEAD/apps/dashboard/public/screenshot-dashboard-light.png",
+  "https://raw.githubusercontent.com/Telemetry-Tracker/telemetry-tracker/HEAD/apps/dashboard/public/screenshot-errors-light.png"
+ ],
+ "terminusdb": [],
+ "tinode": [
+  "https://raw.githubusercontent.com/tinode/chat/HEAD/docs/android-contacts.png",
+  "https://raw.githubusercontent.com/tinode/chat/HEAD/docs/android-chat.png",
+  "https://raw.githubusercontent.com/tinode/chat/HEAD/docs/ios-contacts.png",
+  "https://raw.githubusercontent.com/tinode/chat/HEAD/docs/ios-chat.png"
+ ],
+ "tdengine": [],
+ "tooljet": [],
+ "sylius": [
+  "https://sylius.com/assets/readme/readme-main.png"
+ ],
+ "suitecrm": [],
+ "trilium-notes": [
+  "https://raw.githubusercontent.com/TriliumNext/Trilium/HEAD/docs/app.png"
+ ],
+ "ungoogled-chromium": [],
+ "typesense": [
+  "https://raw.githubusercontent.com/typesense/typesense/HEAD/assets/typesense_books_demo.gif?raw=true"
+ ],
+ "ubuntu": [],
+ "vane-formerly-perplexica": [
+  "https://raw.githubusercontent.com/ItzCrazyKns/Vane/HEAD/.assets/vane-screenshot.png"
+ ],
+ "vaultwarden": [],
+ "trench": [
+  "https://raw.githubusercontent.com/FrigadeHQ/trench/HEAD/img/trench-dashboard.png"
+ ],
+ "umami": [
+  "https://umami.is/opengraph-image-j8qpfc.png?opengraph-image.05yuy2qyj01mg.png"
+ ],
+ "unleash": [],
+ "uptrace": [
+  "https://raw.githubusercontent.com/uptrace/uptrace/HEAD/example/docker/images/home.png",
+  "https://raw.githubusercontent.com/uptrace/uptrace/HEAD/example/docker/images/facets.png",
+  "https://raw.githubusercontent.com/uptrace/uptrace/HEAD/example/docker/images/metrics.png",
+  "https://raw.githubusercontent.com/uptrace/uptrace/HEAD/example/docker/images/alerts.png"
+ ],
+ "tymeslot": [
+  "https://raw.githubusercontent.com/Tymeslot/tymeslot/HEAD/priv/static/images/screenshots/dashboard.webp",
+  "https://raw.githubusercontent.com/Tymeslot/tymeslot/HEAD/priv/static/images/screenshots/availability.webp",
+  "https://raw.githubusercontent.com/Tymeslot/tymeslot/HEAD/priv/static/images/screenshots/embed.webp"
+ ],
+ "siyuan": [
+  "https://raw.githubusercontent.com/siyuan-note/siyuan/HEAD/screenshots/feature0.png",
+  "https://raw.githubusercontent.com/siyuan-note/siyuan/HEAD/screenshots/feature5-1.png"
+ ],
+ "victoriametrics": [],
+ "vikunja": [],
+ "twenty": [
+  "https://raw.githubusercontent.com/twentyhq/twenty/HEAD/packages/twenty-website/public/images/readme/github-cover-light.webp",
+  "https://raw.githubusercontent.com/twentyhq/twenty/HEAD/packages/twenty-website/public/images/readme/v2-version-control-light.webp",
+  "https://raw.githubusercontent.com/twentyhq/twenty/HEAD/packages/twenty-website/public/images/readme/v2-tools-light.webp"
+ ],
+ "wallabag": [
+  "https://raw.githubusercontent.com/wallabag/wallabag/HEAD/.github/images/screenshot.png"
+ ],
+ "victorialogs": [],
+ "whisper": [],
+ "tuta": [],
+ "whisper-cpp": [
+  "https://user-images.githubusercontent.com/1991296/197356445-311c8643-9397-4e5e-b46e-0b4b4daa2530.png"
+ ],
+ "webstudio": [],
+ "vendure": [],
+ "wekan": [
+  "https://wekan.fi/wekan-board-views.png"
+ ],
+ "woocommerce": [],
+ "ultravnc": [
+  "https://uvnc.com/images/Viewer1230.png"
+ ],
+ "wordpress": [],
+ "xournal": [
+  "https://raw.githubusercontent.com/xournalpp/xournalpp/HEAD/readme/main.png",
+  "https://raw.githubusercontent.com/xournalpp/xournalpp/HEAD/readme/main-win.png",
+  "https://raw.githubusercontent.com/xournalpp/xournalpp/HEAD/readme/main-mac.png",
+  "https://raw.githubusercontent.com/xournalpp/xournalpp/HEAD/readme/background.png"
+ ],
+ "yourls": [],
+ "yanknote": [
+  "https://raw.githubusercontent.com/purocean/yn/HEAD/help/1.png",
+  "https://raw.githubusercontent.com/purocean/yn/HEAD/help/6.png",
+  "https://raw.githubusercontent.com/purocean/yn/HEAD/help/7.png",
+  "https://raw.githubusercontent.com/purocean/yn/HEAD/help/2.png"
+ ],
+ "yugabyte": [],
+ "uvdesk": [],
+ "windmill": [
+  "https://raw.githubusercontent.com/windmill-labs/windmill/HEAD/imgs/windmill-editor.png",
+  "https://raw.githubusercontent.com/windmill-labs/windmill/HEAD/imgs/windmill-run.png",
+  "https://raw.githubusercontent.com/windmill-labs/windmill/HEAD/imgs/windmill-result.png",
+  "https://raw.githubusercontent.com/windmill-labs/windmill/HEAD/imgs/windmill-flow.png"
+ ],
+ "zen-browser": [],
+ "xwiki": [],
+ "writefreely": [
+  "https://files.writefreely.org/img/screens/pen-reader.png"
+ ],
+ "zinc-labs": [
+  "https://raw.githubusercontent.com/zincsearch/zincsearch/HEAD/screenshots/search_screen.jpg",
+  "https://raw.githubusercontent.com/zincsearch/zincsearch/HEAD/screenshots/users_screen.jpg",
+  "https://raw.githubusercontent.com/zincsearch/zincsearch/HEAD/screenshots/zinc-youtube.jpg"
+ ],
+ "zitadel": [],
+ "webiny": [],
+ "zulip": [],
+ "yacy": [
+  "https://raw.githubusercontent.com/yacy/yacy_search_server/HEAD/screenshots/screenshot_web_search.png",
+  "https://raw.githubusercontent.com/yacy/yacy_search_server/HEAD/screenshots/screenshot_expert_crawl_start.png",
+  "https://raw.githubusercontent.com/yacy/yacy_search_server/HEAD/screenshots/screenshot_index_browser.png"
+ ],
+ "zammad": []
+}
