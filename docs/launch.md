@@ -56,5 +56,6 @@ Drafts for Destin to edit and send. Nothing here is posted or sent automatically
 4. Pin the launch post and update the subreddit sidebar with the link.
 5. ~~Buy opensourceeverything.org~~ Done Oct 27 (Cloudflare Registrar, auto-renew). DNS points at GitHub Pages
    (4 A, 4 AAAA, www CNAME, all "DNS only"), and the repo's Pages site has the domain attached, so nobody else can claim it.
-   At launch: once the first publish is live, turn on "Enforce HTTPS" (`gh api -X PUT repos/itsdestin/opensourceeverything/pages -F https_enforced=true`).
+   GitHub never issued its own certificate, so (Oct 27) the address records go through Cloudflare (proxied), which
+   provides the padlock; the page itself moves plain-http visitors to https. The voting server is api.opensourceeverything.org (worker/).
    The Cloudflare DNS token is in ~/.config/alternatives-map/cloudflare-token (DNS edit only); delete it at Cloudflare when no longer needed.
