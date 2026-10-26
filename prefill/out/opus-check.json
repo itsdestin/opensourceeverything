@@ -1,0 +1,2902 @@
+[
+ {
+  "group": "3d",
+  "project": "friction",
+  "name": "Friction",
+  "fit": "partial",
+  "source": "lists",
+  "verdict": {
+   "groupRight": true,
+   "fitRight": true,
+   "descriptionRight": true,
+   "problem": null
+  },
+  "usage": {
+   "input_tokens": 1807,
+   "cache_creation_input_tokens": 0,
+   "cache_read_input_tokens": 0,
+   "cache_creation": {
+    "ephemeral_5m_input_tokens": 0,
+    "ephemeral_1h_input_tokens": 0
+   },
+   "output_tokens": 35,
+   "output_tokens_details": {
+    "thinking_tokens": 0
+   },
+   "service_tier": "standard",
+   "inference_geo": "global",
+   "speed": "standard"
+  }
+ },
+ {
+  "group": "databases",
+  "project": "cratedb",
+  "name": "CrateDB",
+  "fit": "partial",
+  "source": "lists",
+  "verdict": {
+   "groupRight": true,
+   "fitRight": true,
+   "descriptionRight": true,
+   "problem": null
+  },
+  "usage": {
+   "input_tokens": 3566,
+   "cache_creation_input_tokens": 0,
+   "cache_read_input_tokens": 0,
+   "cache_creation": {
+    "ephemeral_5m_input_tokens": 0,
+    "ephemeral_1h_input_tokens": 0
+   },
+   "output_tokens": 35,
+   "output_tokens_details": {
+    "thinking_tokens": 0
+   },
+   "service_tier": "standard",
+   "inference_geo": "global",
+   "speed": "standard"
+  }
+ },
+ {
+  "group": "backend-service",
+  "project": "nhost",
+  "name": "Nhost",
+  "fit": "full",
+  "source": "lists",
+  "verdict": {
+   "groupRight": true,
+   "fitRight": true,
+   "descriptionRight": true,
+   "problem": null
+  },
+  "usage": {
+   "input_tokens": 2739,
+   "cache_creation_input_tokens": 0,
+   "cache_read_input_tokens": 0,
+   "cache_creation": {
+    "ephemeral_5m_input_tokens": 0,
+    "ephemeral_1h_input_tokens": 0
+   },
+   "output_tokens": 35,
+   "output_tokens_details": {
+    "thinking_tokens": 0
+   },
+   "service_tier": "standard",
+   "inference_geo": "global",
+   "speed": "standard"
+  }
+ },
+ {
+  "group": "keyboards",
+  "project": "simple-keyboard",
+  "name": "Simple Keyboard",
+  "fit": "partial",
+  "source": "lists",
+  "verdict": {
+   "groupRight": true,
+   "fitRight": true,
+   "descriptionRight": true,
+   "problem": null
+  },
+  "usage": {
+   "input_tokens": 871,
+   "cache_creation_input_tokens": 0,
+   "cache_read_input_tokens": 0,
+   "cache_creation": {
+    "ephemeral_5m_input_tokens": 0,
+    "ephemeral_1h_input_tokens": 0
+   },
+   "output_tokens": 35,
+   "output_tokens_details": {
+    "thinking_tokens": 0
+   },
+   "service_tier": "standard",
+   "inference_geo": "global",
+   "speed": "standard"
+  }
+ },
+ {
+  "group": "code-hosting",
+  "project": "gerrit",
+  "name": "Gerrit",
+  "fit": "partial",
+  "source": "lists",
+  "verdict": {
+   "groupRight": true,
+   "fitRight": true,
+   "descriptionRight": true,
+   "problem": null
+  },
+  "usage": {
+   "input_tokens": 1970,
+   "cache_creation_input_tokens": 0,
+   "cache_read_input_tokens": 0,
+   "cache_creation": {
+    "ephemeral_5m_input_tokens": 0,
+    "ephemeral_1h_input_tokens": 0
+   },
+   "output_tokens": 35,
+   "output_tokens_details": {
+    "thinking_tokens": 0
+   },
+   "service_tier": "standard",
+   "inference_geo": "global",
+   "speed": "standard"
+  }
+ },
+ {
+  "group": "login-identity",
+  "project": "ory",
+  "name": "Ory",
+  "fit": "partial",
+  "source": "lists",
+  "verdict": {
+   "groupRight": true,
+   "fitRight": true,
+   "descriptionRight": true,
+   "problem": null
+  },
+  "usage": {
+   "input_tokens": 3309,
+   "cache_creation_input_tokens": 0,
+   "cache_read_input_tokens": 0,
+   "cache_creation": {
+    "ephemeral_5m_input_tokens": 0,
+    "ephemeral_1h_input_tokens": 0
+   },
+   "output_tokens": 35,
+   "output_tokens_details": {
+    "thinking_tokens": 0
+   },
+   "service_tier": "standard",
+   "inference_geo": "global",
+   "speed": "standard"
+  }
+ },
+ {
+  "group": "app-hosting",
+  "project": "abilian-hop3",
+  "name": "Abilian Hop3",
+  "fit": "partial",
+  "source": "lists",
+  "verdict": {
+   "groupRight": true,
+   "fitRight": true,
+   "descriptionRight": true,
+   "problem": null
+  },
+  "usage": {
+   "input_tokens": 3528,
+   "cache_creation_input_tokens": 0,
+   "cache_read_input_tokens": 0,
+   "cache_creation": {
+    "ephemeral_5m_input_tokens": 0,
+    "ephemeral_1h_input_tokens": 0
+   },
+   "output_tokens": 35,
+   "output_tokens_details": {
+    "thinking_tokens": 0
+   },
+   "service_tier": "standard",
+   "inference_geo": "global",
+   "speed": "standard"
+  }
+ },
+ {
+  "group": "tasks",
+  "project": "openproject",
+  "name": "OpenProject",
+  "fit": "full",
+  "source": "starter",
+  "verdict": {
+   "groupRight": true,
+   "fitRight": true,
+   "descriptionRight": true,
+   "problem": null
+  },
+  "usage": {
+   "input_tokens": 3006,
+   "cache_creation_input_tokens": 0,
+   "cache_read_input_tokens": 0,
+   "cache_creation": {
+    "ephemeral_5m_input_tokens": 0,
+    "ephemeral_1h_input_tokens": 0
+   },
+   "output_tokens": 35,
+   "output_tokens_details": {
+    "thinking_tokens": 0
+   },
+   "service_tier": "standard",
+   "inference_geo": "global",
+   "speed": "standard"
+  }
+ },
+ {
+  "group": "backend-service",
+  "project": "kuzzle",
+  "name": "Kuzzle",
+  "fit": "partial",
+  "source": "lists",
+  "verdict": {
+   "groupRight": true,
+   "fitRight": true,
+   "descriptionRight": true,
+   "problem": null
+  },
+  "usage": {
+   "input_tokens": 2499,
+   "cache_creation_input_tokens": 0,
+   "cache_read_input_tokens": 0,
+   "cache_creation": {
+    "ephemeral_5m_input_tokens": 0,
+    "ephemeral_1h_input_tokens": 0
+   },
+   "output_tokens": 35,
+   "output_tokens_details": {
+    "thinking_tokens": 0
+   },
+   "service_tier": "standard",
+   "inference_geo": "global",
+   "speed": "standard"
+  }
+ },
+ {
+  "group": "notes",
+  "project": "nextcloud-notes",
+  "name": "Nextcloud Notes",
+  "fit": "partial",
+  "source": "lists",
+  "verdict": {
+   "groupRight": true,
+   "fitRight": true,
+   "descriptionRight": true,
+   "problem": null
+  },
+  "usage": {
+   "input_tokens": 1977,
+   "cache_creation_input_tokens": 0,
+   "cache_read_input_tokens": 0,
+   "cache_creation": {
+    "ephemeral_5m_input_tokens": 0,
+    "ephemeral_1h_input_tokens": 0
+   },
+   "output_tokens": 171,
+   "output_tokens_details": {
+    "thinking_tokens": 136
+   },
+   "service_tier": "standard",
+   "inference_geo": "global",
+   "speed": "standard"
+  }
+ },
+ {
+  "group": "browsers",
+  "project": "firefox",
+  "name": "Firefox",
+  "fit": "full",
+  "source": "starter",
+  "verdict": {
+   "groupRight": true,
+   "fitRight": true,
+   "descriptionRight": true,
+   "problem": null
+  },
+  "usage": {
+   "input_tokens": 1053,
+   "cache_creation_input_tokens": 0,
+   "cache_read_input_tokens": 0,
+   "cache_creation": {
+    "ephemeral_5m_input_tokens": 0,
+    "ephemeral_1h_input_tokens": 0
+   },
+   "output_tokens": 196,
+   "output_tokens_details": {
+    "thinking_tokens": 161
+   },
+   "service_tier": "standard",
+   "inference_geo": "global",
+   "speed": "standard"
+  }
+ },
+ {
+  "group": "analytics",
+  "project": "goatcounter",
+  "name": "GoatCounter",
+  "fit": "full",
+  "source": "lists",
+  "verdict": {
+   "groupRight": true,
+   "fitRight": true,
+   "descriptionRight": true,
+   "problem": null
+  },
+  "usage": {
+   "input_tokens": 3551,
+   "cache_creation_input_tokens": 0,
+   "cache_read_input_tokens": 0,
+   "cache_creation": {
+    "ephemeral_5m_input_tokens": 0,
+    "ephemeral_1h_input_tokens": 0
+   },
+   "output_tokens": 175,
+   "output_tokens_details": {
+    "thinking_tokens": 140
+   },
+   "service_tier": "standard",
+   "inference_geo": "global",
+   "speed": "standard"
+  }
+ },
+ {
+  "group": "shop",
+  "project": "presta",
+  "name": "Presta",
+  "fit": "full",
+  "source": "lists",
+  "verdict": {
+   "groupRight": true,
+   "fitRight": true,
+   "descriptionRight": true,
+   "problem": null
+  },
+  "usage": {
+   "input_tokens": 3476,
+   "cache_creation_input_tokens": 0,
+   "cache_read_input_tokens": 0,
+   "cache_creation": {
+    "ephemeral_5m_input_tokens": 0,
+    "ephemeral_1h_input_tokens": 0
+   },
+   "output_tokens": 159,
+   "output_tokens_details": {
+    "thinking_tokens": 124
+   },
+   "service_tier": "standard",
+   "inference_geo": "global",
+   "speed": "standard"
+  }
+ },
+ {
+  "group": "bi",
+  "project": "mlcraft",
+  "name": "MLCraft",
+  "fit": "partial",
+  "source": "lists",
+  "verdict": {
+   "groupRight": true,
+   "fitRight": true,
+   "descriptionRight": true,
+   "problem": null
+  },
+  "usage": {
+   "input_tokens": 3808,
+   "cache_creation_input_tokens": 0,
+   "cache_read_input_tokens": 0,
+   "cache_creation": {
+    "ephemeral_5m_input_tokens": 0,
+    "ephemeral_1h_input_tokens": 0
+   },
+   "output_tokens": 35,
+   "output_tokens_details": {
+    "thinking_tokens": 0
+   },
+   "service_tier": "standard",
+   "inference_geo": "global",
+   "speed": "standard"
+  }
+ },
+ {
+  "group": "spreadsheets",
+  "project": "libreoffice-calc",
+  "name": "LibreOffice Calc",
+  "fit": "full",
+  "source": "starter",
+  "verdict": {
+   "groupRight": true,
+   "fitRight": true,
+   "descriptionRight": true,
+   "problem": null
+  },
+  "usage": {
+   "input_tokens": 3316,
+   "cache_creation_input_tokens": 0,
+   "cache_read_input_tokens": 0,
+   "cache_creation": {
+    "ephemeral_5m_input_tokens": 0,
+    "ephemeral_1h_input_tokens": 0
+   },
+   "output_tokens": 35,
+   "output_tokens_details": {
+    "thinking_tokens": 0
+   },
+   "service_tier": "standard",
+   "inference_geo": "global",
+   "speed": "standard"
+  }
+ },
+ {
+  "group": "backend-service",
+  "project": "supabase",
+  "name": "Supabase",
+  "fit": "partial",
+  "source": "lists",
+  "verdict": {
+   "groupRight": true,
+   "fitRight": false,
+   "descriptionRight": true,
+   "problem": "Supabase covers Firebase's main backend job (database, auth, storage, functions, realtime), so the fit should be full rather than partial."
+  },
+  "usage": {
+   "input_tokens": 3966,
+   "cache_creation_input_tokens": 0,
+   "cache_read_input_tokens": 0,
+   "cache_creation": {
+    "ephemeral_5m_input_tokens": 0,
+    "ephemeral_1h_input_tokens": 0
+   },
+   "output_tokens": 287,
+   "output_tokens_details": {
+    "thinking_tokens": 208
+   },
+   "service_tier": "standard",
+   "inference_geo": "global",
+   "speed": "standard"
+  }
+ },
+ {
+  "group": "databases",
+  "project": "questdb",
+  "name": "QuestDB",
+  "fit": "full",
+  "source": "lists",
+  "verdict": {
+   "groupRight": true,
+   "fitRight": true,
+   "descriptionRight": true,
+   "problem": null
+  },
+  "usage": {
+   "input_tokens": 3940,
+   "cache_creation_input_tokens": 0,
+   "cache_read_input_tokens": 0,
+   "cache_creation": {
+    "ephemeral_5m_input_tokens": 0,
+    "ephemeral_1h_input_tokens": 0
+   },
+   "output_tokens": 35,
+   "output_tokens_details": {
+    "thinking_tokens": 0
+   },
+   "service_tier": "standard",
+   "inference_geo": "global",
+   "speed": "standard"
+  }
+ },
+ {
+  "group": "security-scanning",
+  "project": "nuclei",
+  "name": "Nuclei",
+  "fit": "partial",
+  "source": "lists",
+  "verdict": {
+   "groupRight": true,
+   "fitRight": true,
+   "descriptionRight": true,
+   "problem": null
+  },
+  "usage": {
+   "input_tokens": 3721,
+   "cache_creation_input_tokens": 0,
+   "cache_read_input_tokens": 0,
+   "cache_creation": {
+    "ephemeral_5m_input_tokens": 0,
+    "ephemeral_1h_input_tokens": 0
+   },
+   "output_tokens": 35,
+   "output_tokens_details": {
+    "thinking_tokens": 0
+   },
+   "service_tier": "standard",
+   "inference_geo": "global",
+   "speed": "standard"
+  }
+ },
+ {
+  "group": "monitoring",
+  "project": "telemetry-tracker",
+  "name": "Telemetry Tracker",
+  "fit": "partial",
+  "source": "lists",
+  "verdict": {
+   "groupRight": true,
+   "fitRight": true,
+   "descriptionRight": true,
+   "problem": null
+  },
+  "usage": {
+   "input_tokens": 4359,
+   "cache_creation_input_tokens": 0,
+   "cache_read_input_tokens": 0,
+   "cache_creation": {
+    "ephemeral_5m_input_tokens": 0,
+    "ephemeral_1h_input_tokens": 0
+   },
+   "output_tokens": 35,
+   "output_tokens_details": {
+    "thinking_tokens": 0
+   },
+   "service_tier": "standard",
+   "inference_geo": "global",
+   "speed": "standard"
+  }
+ },
+ {
+  "group": "painting",
+  "project": "krita",
+  "name": "Krita",
+  "fit": "full",
+  "source": "starter",
+  "verdict": {
+   "groupRight": true,
+   "fitRight": true,
+   "descriptionRight": true,
+   "problem": null
+  },
+  "usage": {
+   "input_tokens": 762,
+   "cache_creation_input_tokens": 0,
+   "cache_read_input_tokens": 0,
+   "cache_creation": {
+    "ephemeral_5m_input_tokens": 0,
+    "ephemeral_1h_input_tokens": 0
+   },
+   "output_tokens": 35,
+   "output_tokens_details": {
+    "thinking_tokens": 0
+   },
+   "service_tier": "standard",
+   "inference_geo": "global",
+   "speed": "standard"
+  }
+ },
+ {
+  "group": "file-transfer",
+  "project": "psitransfer",
+  "name": "PsiTransfer",
+  "fit": "full",
+  "source": "starter",
+  "verdict": {
+   "groupRight": true,
+   "fitRight": true,
+   "descriptionRight": true,
+   "problem": null
+  },
+  "usage": {
+   "input_tokens": 2642,
+   "cache_creation_input_tokens": 0,
+   "cache_read_input_tokens": 0,
+   "cache_creation": {
+    "ephemeral_5m_input_tokens": 0,
+    "ephemeral_1h_input_tokens": 0
+   },
+   "output_tokens": 35,
+   "output_tokens_details": {
+    "thinking_tokens": 0
+   },
+   "service_tier": "standard",
+   "inference_geo": "global",
+   "speed": "standard"
+  }
+ },
+ {
+  "group": "code-hosting",
+  "project": "gitlab",
+  "name": "Gitlab",
+  "fit": "full",
+  "source": "lists",
+  "verdict": {
+   "groupRight": true,
+   "fitRight": true,
+   "descriptionRight": true,
+   "problem": null
+  },
+  "usage": {
+   "input_tokens": 2644,
+   "cache_creation_input_tokens": 0,
+   "cache_read_input_tokens": 0,
+   "cache_creation": {
+    "ephemeral_5m_input_tokens": 0,
+    "ephemeral_1h_input_tokens": 0
+   },
+   "output_tokens": 35,
+   "output_tokens_details": {
+    "thinking_tokens": 0
+   },
+   "service_tier": "standard",
+   "inference_geo": "global",
+   "speed": "standard"
+  }
+ },
+ {
+  "group": "messaging",
+  "project": "delta-chat",
+  "name": "Delta Chat",
+  "fit": "full",
+  "source": "starter",
+  "verdict": {
+   "groupRight": true,
+   "fitRight": true,
+   "descriptionRight": true,
+   "problem": null
+  },
+  "usage": {
+   "input_tokens": 1071,
+   "cache_creation_input_tokens": 0,
+   "cache_read_input_tokens": 0,
+   "cache_creation": {
+    "ephemeral_5m_input_tokens": 0,
+    "ephemeral_1h_input_tokens": 0
+   },
+   "output_tokens": 35,
+   "output_tokens_details": {
+    "thinking_tokens": 0
+   },
+   "service_tier": "standard",
+   "inference_geo": "global",
+   "speed": "standard"
+  }
+ },
+ {
+  "group": "databases",
+  "project": "influxdb",
+  "name": "InfluxDB",
+  "fit": "partial",
+  "source": "lists",
+  "verdict": {
+   "groupRight": true,
+   "fitRight": true,
+   "descriptionRight": true,
+   "problem": null
+  },
+  "usage": {
+   "input_tokens": 2429,
+   "cache_creation_input_tokens": 0,
+   "cache_read_input_tokens": 0,
+   "cache_creation": {
+    "ephemeral_5m_input_tokens": 0,
+    "ephemeral_1h_input_tokens": 0
+   },
+   "output_tokens": 35,
+   "output_tokens_details": {
+    "thinking_tokens": 0
+   },
+   "service_tier": "standard",
+   "inference_geo": "global",
+   "speed": "standard"
+  }
+ },
+ {
+  "group": "signing",
+  "project": "documenso",
+  "name": "Documenso",
+  "fit": "full",
+  "source": "lists",
+  "verdict": {
+   "groupRight": true,
+   "fitRight": true,
+   "descriptionRight": true,
+   "problem": null
+  },
+  "usage": {
+   "input_tokens": 3434,
+   "cache_creation_input_tokens": 0,
+   "cache_read_input_tokens": 0,
+   "cache_creation": {
+    "ephemeral_5m_input_tokens": 0,
+    "ephemeral_1h_input_tokens": 0
+   },
+   "output_tokens": 35,
+   "output_tokens_details": {
+    "thinking_tokens": 0
+   },
+   "service_tier": "standard",
+   "inference_geo": "global",
+   "speed": "standard"
+  }
+ },
+ {
+  "group": "desktop-os",
+  "project": "fedora",
+  "name": "Fedora",
+  "fit": "full",
+  "source": "starter",
+  "verdict": {
+   "groupRight": true,
+   "fitRight": true,
+   "descriptionRight": false,
+   "problem": "The second sentence claims Fedora is aimed at people wanting an alternative to Windows or macOS, but Fedora's own page does not position it that way; it presents itself as a Linux distribution for desktops, servers, cloud and developers."
+  },
+  "usage": {
+   "input_tokens": 3498,
+   "cache_creation_input_tokens": 0,
+   "cache_read_input_tokens": 0,
+   "cache_creation": {
+    "ephemeral_5m_input_tokens": 0,
+    "ephemeral_1h_input_tokens": 0
+   },
+   "output_tokens": 454,
+   "output_tokens_details": {
+    "thinking_tokens": 343
+   },
+   "service_tier": "standard",
+   "inference_geo": "global",
+   "speed": "standard"
+  }
+ },
+ {
+  "group": "cloud-storage",
+  "project": "owncloud",
+  "name": "Owncloud",
+  "fit": "partial",
+  "source": "lists",
+  "verdict": {
+   "groupRight": true,
+   "fitRight": false,
+   "descriptionRight": true,
+   "problem": "ownCloud is a self-hosted file storage, sync and sharing server with official desktop and mobile sync clients, so it covers the main job of Dropbox and Google Drive and should be listed as full, not partial."
+  },
+  "usage": {
+   "input_tokens": 2721,
+   "cache_creation_input_tokens": 0,
+   "cache_read_input_tokens": 0,
+   "cache_creation": {
+    "ephemeral_5m_input_tokens": 0,
+    "ephemeral_1h_input_tokens": 0
+   },
+   "output_tokens": 316,
+   "output_tokens_details": {
+    "thinking_tokens": 213
+   },
+   "service_tier": "standard",
+   "inference_geo": "global",
+   "speed": "standard"
+  }
+ },
+ {
+  "group": "home-media",
+  "project": "jellyfin",
+  "name": "Jellyfin",
+  "fit": "full",
+  "source": "starter",
+  "verdict": {
+   "groupRight": true,
+   "fitRight": true,
+   "descriptionRight": true,
+   "problem": null
+  },
+  "usage": {
+   "input_tokens": 3142,
+   "cache_creation_input_tokens": 0,
+   "cache_read_input_tokens": 0,
+   "cache_creation": {
+    "ephemeral_5m_input_tokens": 0,
+    "ephemeral_1h_input_tokens": 0
+   },
+   "output_tokens": 35,
+   "output_tokens_details": {
+    "thinking_tokens": 0
+   },
+   "service_tier": "standard",
+   "inference_geo": "global",
+   "speed": "standard"
+  }
+ },
+ {
+  "group": "link-shortening",
+  "project": "dub",
+  "name": "Dub",
+  "fit": "full",
+  "source": "lists",
+  "verdict": {
+   "groupRight": true,
+   "fitRight": true,
+   "descriptionRight": true,
+   "problem": null
+  },
+  "usage": {
+   "input_tokens": 1982,
+   "cache_creation_input_tokens": 0,
+   "cache_read_input_tokens": 0,
+   "cache_creation": {
+    "ephemeral_5m_input_tokens": 0,
+    "ephemeral_1h_input_tokens": 0
+   },
+   "output_tokens": 115,
+   "output_tokens_details": {
+    "thinking_tokens": 80
+   },
+   "service_tier": "standard",
+   "inference_geo": "global",
+   "speed": "standard"
+  }
+ },
+ {
+  "group": "spreadsheets",
+  "project": "grist",
+  "name": "Grist",
+  "fit": "partial",
+  "source": "starter",
+  "verdict": {
+   "groupRight": true,
+   "fitRight": true,
+   "descriptionRight": true,
+   "problem": null
+  },
+  "usage": {
+   "input_tokens": 3572,
+   "cache_creation_input_tokens": 0,
+   "cache_read_input_tokens": 0,
+   "cache_creation": {
+    "ephemeral_5m_input_tokens": 0,
+    "ephemeral_1h_input_tokens": 0
+   },
+   "output_tokens": 35,
+   "output_tokens_details": {
+    "thinking_tokens": 0
+   },
+   "service_tier": "standard",
+   "inference_geo": "global",
+   "speed": "standard"
+  }
+ },
+ {
+  "group": "cms",
+  "project": "decap-cms",
+  "name": "Decap CMS",
+  "fit": "partial",
+  "source": "lists",
+  "verdict": {
+   "groupRight": true,
+   "fitRight": true,
+   "descriptionRight": true,
+   "problem": null
+  },
+  "usage": {
+   "input_tokens": 2128,
+   "cache_creation_input_tokens": 0,
+   "cache_read_input_tokens": 0,
+   "cache_creation": {
+    "ephemeral_5m_input_tokens": 0,
+    "ephemeral_1h_input_tokens": 0
+   },
+   "output_tokens": 35,
+   "output_tokens_details": {
+    "thinking_tokens": 0
+   },
+   "service_tier": "standard",
+   "inference_geo": "global",
+   "speed": "standard"
+  }
+ },
+ {
+  "group": "app-hosting",
+  "project": "qovery",
+  "name": "Qovery",
+  "fit": "partial",
+  "source": "lists",
+  "verdict": {
+   "groupRight": true,
+   "fitRight": true,
+   "descriptionRight": true,
+   "problem": null
+  },
+  "usage": {
+   "input_tokens": 2638,
+   "cache_creation_input_tokens": 0,
+   "cache_read_input_tokens": 0,
+   "cache_creation": {
+    "ephemeral_5m_input_tokens": 0,
+    "ephemeral_1h_input_tokens": 0
+   },
+   "output_tokens": 472,
+   "output_tokens_details": {
+    "thinking_tokens": 437
+   },
+   "service_tier": "standard",
+   "inference_geo": "global",
+   "speed": "standard"
+  }
+ },
+ {
+  "group": "books",
+  "project": "calibre",
+  "name": "Calibre",
+  "fit": "full",
+  "source": "starter",
+  "verdict": {
+   "groupRight": true,
+   "fitRight": true,
+   "descriptionRight": true,
+   "problem": null
+  },
+  "usage": {
+   "input_tokens": 1292,
+   "cache_creation_input_tokens": 0,
+   "cache_read_input_tokens": 0,
+   "cache_creation": {
+    "ephemeral_5m_input_tokens": 0,
+    "ephemeral_1h_input_tokens": 0
+   },
+   "output_tokens": 315,
+   "output_tokens_details": {
+    "thinking_tokens": 280
+   },
+   "service_tier": "standard",
+   "inference_geo": "global",
+   "speed": "standard"
+  }
+ },
+ {
+  "group": "illustration",
+  "project": "graphite",
+  "name": "Graphite",
+  "fit": "partial",
+  "source": "starter",
+  "verdict": {
+   "groupRight": true,
+   "fitRight": true,
+   "descriptionRight": false,
+   "problem": "The description presents image editing and layout building as current uses, but the project lists photo editing and desktop publishing as planned roadmap items."
+  },
+  "usage": {
+   "input_tokens": 1784,
+   "cache_creation_input_tokens": 0,
+   "cache_read_input_tokens": 0,
+   "cache_creation": {
+    "ephemeral_5m_input_tokens": 0,
+    "ephemeral_1h_input_tokens": 0
+   },
+   "output_tokens": 292,
+   "output_tokens_details": {
+    "thinking_tokens": 216
+   },
+   "service_tier": "standard",
+   "inference_geo": "global",
+   "speed": "standard"
+  }
+ },
+ {
+  "group": "cms",
+  "project": "webstudio",
+  "name": "Webstudio",
+  "fit": "partial",
+  "source": "lists",
+  "verdict": {
+   "groupRight": true,
+   "fitRight": true,
+   "descriptionRight": true,
+   "problem": null
+  },
+  "usage": {
+   "input_tokens": 1046,
+   "cache_creation_input_tokens": 0,
+   "cache_read_input_tokens": 0,
+   "cache_creation": {
+    "ephemeral_5m_input_tokens": 0,
+    "ephemeral_1h_input_tokens": 0
+   },
+   "output_tokens": 202,
+   "output_tokens_details": {
+    "thinking_tokens": 167
+   },
+   "service_tier": "standard",
+   "inference_geo": "global",
+   "speed": "standard"
+  }
+ },
+ {
+  "group": "painting",
+  "project": "mypaint",
+  "name": "MyPaint",
+  "fit": "partial",
+  "source": "starter",
+  "verdict": {
+   "groupRight": true,
+   "fitRight": true,
+   "descriptionRight": true,
+   "problem": null
+  },
+  "usage": {
+   "input_tokens": 2630,
+   "cache_creation_input_tokens": 0,
+   "cache_read_input_tokens": 0,
+   "cache_creation": {
+    "ephemeral_5m_input_tokens": 0,
+    "ephemeral_1h_input_tokens": 0
+   },
+   "output_tokens": 35,
+   "output_tokens_details": {
+    "thinking_tokens": 0
+   },
+   "service_tier": "standard",
+   "inference_geo": "global",
+   "speed": "standard"
+  }
+ },
+ {
+  "group": "email",
+  "project": "roundcube",
+  "name": "Roundcube",
+  "fit": "partial",
+  "source": "starter",
+  "verdict": {
+   "groupRight": true,
+   "fitRight": true,
+   "descriptionRight": true,
+   "problem": null
+  },
+  "usage": {
+   "input_tokens": 2099,
+   "cache_creation_input_tokens": 0,
+   "cache_read_input_tokens": 0,
+   "cache_creation": {
+    "ephemeral_5m_input_tokens": 0,
+    "ephemeral_1h_input_tokens": 0
+   },
+   "output_tokens": 175,
+   "output_tokens_details": {
+    "thinking_tokens": 140
+   },
+   "service_tier": "standard",
+   "inference_geo": "global",
+   "speed": "standard"
+  }
+ },
+ {
+  "group": "notes",
+  "project": "folio-wiki",
+  "name": "Folio Wiki",
+  "fit": "full",
+  "source": "lists",
+  "verdict": {
+   "groupRight": true,
+   "fitRight": true,
+   "descriptionRight": true,
+   "problem": null
+  },
+  "usage": {
+   "input_tokens": 3649,
+   "cache_creation_input_tokens": 0,
+   "cache_read_input_tokens": 0,
+   "cache_creation": {
+    "ephemeral_5m_input_tokens": 0,
+    "ephemeral_1h_input_tokens": 0
+   },
+   "output_tokens": 35,
+   "output_tokens_details": {
+    "thinking_tokens": 0
+   },
+   "service_tier": "standard",
+   "inference_geo": "global",
+   "speed": "standard"
+  }
+ },
+ {
+  "group": "notes",
+  "project": "notesnook",
+  "name": "Notesnook",
+  "fit": "full",
+  "source": "lists",
+  "verdict": {
+   "groupRight": true,
+   "fitRight": true,
+   "descriptionRight": true,
+   "problem": null
+  },
+  "usage": {
+   "input_tokens": 2275,
+   "cache_creation_input_tokens": 0,
+   "cache_read_input_tokens": 0,
+   "cache_creation": {
+    "ephemeral_5m_input_tokens": 0,
+    "ephemeral_1h_input_tokens": 0
+   },
+   "output_tokens": 207,
+   "output_tokens_details": {
+    "thinking_tokens": 172
+   },
+   "service_tier": "standard",
+   "inference_geo": "global",
+   "speed": "standard"
+  }
+ },
+ {
+  "group": "spreadsheets",
+  "project": "gnumeric",
+  "name": "Gnumeric",
+  "fit": "partial",
+  "source": "starter",
+  "verdict": {
+   "groupRight": true,
+   "fitRight": false,
+   "descriptionRight": true,
+   "problem": "Gnumeric is a complete desktop spreadsheet with formulas and charts, so it does the main job of Excel and should be rated full rather than partial."
+  },
+  "usage": {
+   "input_tokens": 746,
+   "cache_creation_input_tokens": 0,
+   "cache_read_input_tokens": 0,
+   "cache_creation": {
+    "ephemeral_5m_input_tokens": 0,
+    "ephemeral_1h_input_tokens": 0
+   },
+   "output_tokens": 208,
+   "output_tokens_details": {
+    "thinking_tokens": 124
+   },
+   "service_tier": "standard",
+   "inference_geo": "global",
+   "speed": "standard"
+  }
+ },
+ {
+  "group": "3d",
+  "project": "natron",
+  "name": "Natron",
+  "fit": "partial",
+  "source": "starter",
+  "verdict": {
+   "groupRight": true,
+   "fitRight": true,
+   "descriptionRight": true,
+   "problem": null
+  },
+  "usage": {
+   "input_tokens": 3859,
+   "cache_creation_input_tokens": 0,
+   "cache_read_input_tokens": 0,
+   "cache_creation": {
+    "ephemeral_5m_input_tokens": 0,
+    "ephemeral_1h_input_tokens": 0
+   },
+   "output_tokens": 35,
+   "output_tokens_details": {
+    "thinking_tokens": 0
+   },
+   "service_tier": "standard",
+   "inference_geo": "global",
+   "speed": "standard"
+  }
+ },
+ {
+  "group": "2fa",
+  "project": "2fas",
+  "name": "2FAS",
+  "fit": "full",
+  "source": "starter",
+  "verdict": {
+   "groupRight": true,
+   "fitRight": true,
+   "descriptionRight": true,
+   "problem": null
+  },
+  "usage": {
+   "input_tokens": 1389,
+   "cache_creation_input_tokens": 0,
+   "cache_read_input_tokens": 0,
+   "cache_creation": {
+    "ephemeral_5m_input_tokens": 0,
+    "ephemeral_1h_input_tokens": 0
+   },
+   "output_tokens": 35,
+   "output_tokens_details": {
+    "thinking_tokens": 0
+   },
+   "service_tier": "standard",
+   "inference_geo": "global",
+   "speed": "standard"
+  }
+ },
+ {
+  "group": "notes",
+  "project": "notally",
+  "name": "Notally",
+  "fit": "partial",
+  "source": "lists",
+  "verdict": {
+   "groupRight": true,
+   "fitRight": true,
+   "descriptionRight": true,
+   "problem": null
+  },
+  "usage": {
+   "input_tokens": 1438,
+   "cache_creation_input_tokens": 0,
+   "cache_read_input_tokens": 0,
+   "cache_creation": {
+    "ephemeral_5m_input_tokens": 0,
+    "ephemeral_1h_input_tokens": 0
+   },
+   "output_tokens": 35,
+   "output_tokens_details": {
+    "thinking_tokens": 0
+   },
+   "service_tier": "standard",
+   "inference_geo": "global",
+   "speed": "standard"
+  }
+ },
+ {
+  "group": "photo-editing",
+  "project": "darktable",
+  "name": "darktable",
+  "fit": "full",
+  "source": "starter",
+  "verdict": {
+   "groupRight": true,
+   "fitRight": true,
+   "descriptionRight": true,
+   "problem": null
+  },
+  "usage": {
+   "input_tokens": 3912,
+   "cache_creation_input_tokens": 0,
+   "cache_read_input_tokens": 0,
+   "cache_creation": {
+    "ephemeral_5m_input_tokens": 0,
+    "ephemeral_1h_input_tokens": 0
+   },
+   "output_tokens": 145,
+   "output_tokens_details": {
+    "thinking_tokens": 110
+   },
+   "service_tier": "standard",
+   "inference_geo": "global",
+   "speed": "standard"
+  }
+ },
+ {
+  "group": "code-hosting",
+  "project": "gitlab-community-edition",
+  "name": "GitLab Community Edition",
+  "fit": "full",
+  "source": "starter",
+  "verdict": {
+   "groupRight": true,
+   "fitRight": true,
+   "descriptionRight": true,
+   "problem": null
+  },
+  "usage": {
+   "input_tokens": 2661,
+   "cache_creation_input_tokens": 0,
+   "cache_read_input_tokens": 0,
+   "cache_creation": {
+    "ephemeral_5m_input_tokens": 0,
+    "ephemeral_1h_input_tokens": 0
+   },
+   "output_tokens": 35,
+   "output_tokens_details": {
+    "thinking_tokens": 0
+   },
+   "service_tier": "standard",
+   "inference_geo": "global",
+   "speed": "standard"
+  }
+ },
+ {
+  "group": "transcription",
+  "project": "whisper-cpp",
+  "name": "whisper.cpp",
+  "fit": "partial",
+  "source": "starter",
+  "verdict": {
+   "groupRight": true,
+   "fitRight": true,
+   "descriptionRight": true,
+   "problem": null
+  },
+  "usage": {
+   "input_tokens": 4004,
+   "cache_creation_input_tokens": 0,
+   "cache_read_input_tokens": 0,
+   "cache_creation": {
+    "ephemeral_5m_input_tokens": 0,
+    "ephemeral_1h_input_tokens": 0
+   },
+   "output_tokens": 179,
+   "output_tokens_details": {
+    "thinking_tokens": 144
+   },
+   "service_tier": "standard",
+   "inference_geo": "global",
+   "speed": "standard"
+  }
+ },
+ {
+  "group": "api-tools",
+  "project": "insomnia",
+  "name": "Insomnia",
+  "fit": "full",
+  "source": "lists",
+  "verdict": {
+   "groupRight": true,
+   "fitRight": true,
+   "descriptionRight": false,
+   "problem": "The description calls Insomnia a desktop and web app, but the project page only describes desktop apps for Mac, Windows and Linux (plus a CLI)."
+  },
+  "usage": {
+   "input_tokens": 3451,
+   "cache_creation_input_tokens": 0,
+   "cache_read_input_tokens": 0,
+   "cache_creation": {
+    "ephemeral_5m_input_tokens": 0,
+    "ephemeral_1h_input_tokens": 0
+   },
+   "output_tokens": 291,
+   "output_tokens_details": {
+    "thinking_tokens": 206
+   },
+   "service_tier": "standard",
+   "inference_geo": "global",
+   "speed": "standard"
+  }
+ },
+ {
+  "group": "blogging",
+  "project": "wordpress",
+  "name": "WordPress",
+  "fit": "full",
+  "source": "starter",
+  "verdict": {
+   "groupRight": true,
+   "fitRight": false,
+   "descriptionRight": true,
+   "problem": "WordPress core handles blog publishing but has no built-in email newsletter or paid-subscription features, which are Substack's main job, so 'partial' fits better than 'full'."
+  },
+  "usage": {
+   "input_tokens": 2107,
+   "cache_creation_input_tokens": 0,
+   "cache_read_input_tokens": 0,
+   "cache_creation": {
+    "ephemeral_5m_input_tokens": 0,
+    "ephemeral_1h_input_tokens": 0
+   },
+   "output_tokens": 304,
+   "output_tokens_details": {
+    "thinking_tokens": 213
+   },
+   "service_tier": "standard",
+   "inference_geo": "global",
+   "speed": "standard"
+  }
+ },
+ {
+  "group": "icons",
+  "project": "bootstrap",
+  "name": "Bootstrap",
+  "fit": "partial",
+  "source": "lists",
+  "verdict": {
+   "groupRight": true,
+   "fitRight": true,
+   "descriptionRight": true,
+   "problem": null
+  },
+  "usage": {
+   "input_tokens": 3037,
+   "cache_creation_input_tokens": 0,
+   "cache_read_input_tokens": 0,
+   "cache_creation": {
+    "ephemeral_5m_input_tokens": 0,
+    "ephemeral_1h_input_tokens": 0
+   },
+   "output_tokens": 35,
+   "output_tokens_details": {
+    "thinking_tokens": 0
+   },
+   "service_tier": "standard",
+   "inference_geo": "global",
+   "speed": "standard"
+  }
+ },
+ {
+  "group": "forms",
+  "project": "heyform",
+  "name": "HeyForm",
+  "fit": "full",
+  "source": "starter",
+  "verdict": {
+   "groupRight": true,
+   "fitRight": true,
+   "descriptionRight": true,
+   "problem": null
+  },
+  "usage": {
+   "input_tokens": 1884,
+   "cache_creation_input_tokens": 0,
+   "cache_read_input_tokens": 0,
+   "cache_creation": {
+    "ephemeral_5m_input_tokens": 0,
+    "ephemeral_1h_input_tokens": 0
+   },
+   "output_tokens": 35,
+   "output_tokens_details": {
+    "thinking_tokens": 0
+   },
+   "service_tier": "standard",
+   "inference_geo": "global",
+   "speed": "standard"
+  }
+ },
+ {
+  "group": "slides",
+  "project": "reveal-js",
+  "name": "reveal.js",
+  "fit": "partial",
+  "source": "starter",
+  "verdict": {
+   "groupRight": true,
+   "fitRight": true,
+   "descriptionRight": true,
+   "problem": null
+  },
+  "usage": {
+   "input_tokens": 1165,
+   "cache_creation_input_tokens": 0,
+   "cache_read_input_tokens": 0,
+   "cache_creation": {
+    "ephemeral_5m_input_tokens": 0,
+    "ephemeral_1h_input_tokens": 0
+   },
+   "output_tokens": 35,
+   "output_tokens_details": {
+    "thinking_tokens": 0
+   },
+   "service_tier": "standard",
+   "inference_geo": "global",
+   "speed": "standard"
+  }
+ },
+ {
+  "group": "browsers",
+  "project": "zen-browser",
+  "name": "Zen Browser",
+  "fit": "full",
+  "source": "starter",
+  "verdict": {
+   "groupRight": true,
+   "fitRight": true,
+   "descriptionRight": true,
+   "problem": null
+  },
+  "usage": {
+   "input_tokens": 1148,
+   "cache_creation_input_tokens": 0,
+   "cache_read_input_tokens": 0,
+   "cache_creation": {
+    "ephemeral_5m_input_tokens": 0,
+    "ephemeral_1h_input_tokens": 0
+   },
+   "output_tokens": 35,
+   "output_tokens_details": {
+    "thinking_tokens": 0
+   },
+   "service_tier": "standard",
+   "inference_geo": "global",
+   "speed": "standard"
+  }
+ },
+ {
+  "group": "team-chat",
+  "project": "zulip",
+  "name": "Zulip",
+  "fit": "full",
+  "source": "starter",
+  "verdict": {
+   "groupRight": true,
+   "fitRight": true,
+   "descriptionRight": true,
+   "problem": null
+  },
+  "usage": {
+   "input_tokens": 2564,
+   "cache_creation_input_tokens": 0,
+   "cache_read_input_tokens": 0,
+   "cache_creation": {
+    "ephemeral_5m_input_tokens": 0,
+    "ephemeral_1h_input_tokens": 0
+   },
+   "output_tokens": 201,
+   "output_tokens_details": {
+    "thinking_tokens": 166
+   },
+   "service_tier": "standard",
+   "inference_geo": "global",
+   "speed": "standard"
+  }
+ },
+ {
+  "group": "forms",
+  "project": "nextcloud-forms",
+  "name": "Nextcloud Forms",
+  "fit": "full",
+  "source": "lists",
+  "verdict": {
+   "groupRight": true,
+   "fitRight": true,
+   "descriptionRight": true,
+   "problem": null
+  },
+  "usage": {
+   "input_tokens": 1994,
+   "cache_creation_input_tokens": 0,
+   "cache_read_input_tokens": 0,
+   "cache_creation": {
+    "ephemeral_5m_input_tokens": 0,
+    "ephemeral_1h_input_tokens": 0
+   },
+   "output_tokens": 35,
+   "output_tokens_details": {
+    "thinking_tokens": 0
+   },
+   "service_tier": "standard",
+   "inference_geo": "global",
+   "speed": "standard"
+  }
+ },
+ {
+  "group": "tasks",
+  "project": "kanboard",
+  "name": "Kanboard",
+  "fit": "full",
+  "source": "lists",
+  "verdict": {
+   "groupRight": true,
+   "fitRight": true,
+   "descriptionRight": true,
+   "problem": null
+  },
+  "usage": {
+   "input_tokens": 1252,
+   "cache_creation_input_tokens": 0,
+   "cache_read_input_tokens": 0,
+   "cache_creation": {
+    "ephemeral_5m_input_tokens": 0,
+    "ephemeral_1h_input_tokens": 0
+   },
+   "output_tokens": 35,
+   "output_tokens_details": {
+    "thinking_tokens": 0
+   },
+   "service_tier": "standard",
+   "inference_geo": "global",
+   "speed": "standard"
+  }
+ },
+ {
+  "group": "music",
+  "project": "funkwhale",
+  "name": "Funkwhale",
+  "fit": "partial",
+  "source": "starter",
+  "verdict": {
+   "groupRight": true,
+   "fitRight": true,
+   "descriptionRight": true,
+   "problem": null
+  },
+  "usage": {
+   "input_tokens": 772,
+   "cache_creation_input_tokens": 0,
+   "cache_read_input_tokens": 0,
+   "cache_creation": {
+    "ephemeral_5m_input_tokens": 0,
+    "ephemeral_1h_input_tokens": 0
+   },
+   "output_tokens": 35,
+   "output_tokens_details": {
+    "thinking_tokens": 0
+   },
+   "service_tier": "standard",
+   "inference_geo": "global",
+   "speed": "standard"
+  }
+ },
+ {
+  "group": "monitoring",
+  "project": "openstatus",
+  "name": "OpenStatus",
+  "fit": "partial",
+  "source": "lists",
+  "verdict": {
+   "groupRight": true,
+   "fitRight": true,
+   "descriptionRight": true,
+   "problem": null
+  },
+  "usage": {
+   "input_tokens": 2995,
+   "cache_creation_input_tokens": 0,
+   "cache_read_input_tokens": 0,
+   "cache_creation": {
+    "ephemeral_5m_input_tokens": 0,
+    "ephemeral_1h_input_tokens": 0
+   },
+   "output_tokens": 35,
+   "output_tokens_details": {
+    "thinking_tokens": 0
+   },
+   "service_tier": "standard",
+   "inference_geo": "global",
+   "speed": "standard"
+  }
+ },
+ {
+  "group": "ui-design",
+  "project": "plasmic",
+  "name": "Plasmic",
+  "fit": "partial",
+  "source": "lists",
+  "verdict": {
+   "groupRight": true,
+   "fitRight": true,
+   "descriptionRight": true,
+   "problem": null
+  },
+  "usage": {
+   "input_tokens": 3423,
+   "cache_creation_input_tokens": 0,
+   "cache_read_input_tokens": 0,
+   "cache_creation": {
+    "ephemeral_5m_input_tokens": 0,
+    "ephemeral_1h_input_tokens": 0
+   },
+   "output_tokens": 145,
+   "output_tokens_details": {
+    "thinking_tokens": 110
+   },
+   "service_tier": "standard",
+   "inference_geo": "global",
+   "speed": "standard"
+  }
+ },
+ {
+  "group": "notes",
+  "project": "bookstack",
+  "name": "BookStack",
+  "fit": "partial",
+  "source": "lists",
+  "verdict": {
+   "groupRight": true,
+   "fitRight": true,
+   "descriptionRight": true,
+   "problem": null
+  },
+  "usage": {
+   "input_tokens": 3495,
+   "cache_creation_input_tokens": 0,
+   "cache_read_input_tokens": 0,
+   "cache_creation": {
+    "ephemeral_5m_input_tokens": 0,
+    "ephemeral_1h_input_tokens": 0
+   },
+   "output_tokens": 35,
+   "output_tokens_details": {
+    "thinking_tokens": 0
+   },
+   "service_tier": "standard",
+   "inference_geo": "global",
+   "speed": "standard"
+  }
+ },
+ {
+  "group": "browsers",
+  "project": "ungoogled-chromium",
+  "name": "Ungoogled Chromium",
+  "fit": "full",
+  "source": "starter",
+  "verdict": {
+   "groupRight": true,
+   "fitRight": true,
+   "descriptionRight": true,
+   "problem": null
+  },
+  "usage": {
+   "input_tokens": 3594,
+   "cache_creation_input_tokens": 0,
+   "cache_read_input_tokens": 0,
+   "cache_creation": {
+    "ephemeral_5m_input_tokens": 0,
+    "ephemeral_1h_input_tokens": 0
+   },
+   "output_tokens": 35,
+   "output_tokens_details": {
+    "thinking_tokens": 0
+   },
+   "service_tier": "standard",
+   "inference_geo": "global",
+   "speed": "standard"
+  }
+ },
+ {
+  "group": "cms",
+  "project": "strapi",
+  "name": "Strapi",
+  "fit": "full",
+  "source": "lists",
+  "verdict": {
+   "groupRight": true,
+   "fitRight": false,
+   "descriptionRight": true,
+   "problem": "Strapi is a headless CMS that matches Contentful but has no site builder or frontend like Wix, Strikingly or Webflow, so 'partial' fits better than 'full'."
+  },
+  "usage": {
+   "input_tokens": 3243,
+   "cache_creation_input_tokens": 0,
+   "cache_read_input_tokens": 0,
+   "cache_creation": {
+    "ephemeral_5m_input_tokens": 0,
+    "ephemeral_1h_input_tokens": 0
+   },
+   "output_tokens": 250,
+   "output_tokens_details": {
+    "thinking_tokens": 156
+   },
+   "service_tier": "standard",
+   "inference_geo": "global",
+   "speed": "standard"
+  }
+ },
+ {
+  "group": "music",
+  "project": "navidrome",
+  "name": "Navidrome",
+  "fit": "partial",
+  "source": "starter",
+  "verdict": {
+   "groupRight": true,
+   "fitRight": true,
+   "descriptionRight": true,
+   "problem": null
+  },
+  "usage": {
+   "input_tokens": 2709,
+   "cache_creation_input_tokens": 0,
+   "cache_read_input_tokens": 0,
+   "cache_creation": {
+    "ephemeral_5m_input_tokens": 0,
+    "ephemeral_1h_input_tokens": 0
+   },
+   "output_tokens": 35,
+   "output_tokens_details": {
+    "thinking_tokens": 0
+   },
+   "service_tier": "standard",
+   "inference_geo": "global",
+   "speed": "standard"
+  }
+ },
+ {
+  "group": "monitoring",
+  "project": "signoz",
+  "name": "signoz",
+  "fit": "partial",
+  "source": "lists",
+  "verdict": {
+   "groupRight": true,
+   "fitRight": false,
+   "descriptionRight": true,
+   "problem": "SigNoz covers the main job of Datadog and New Relic (APM, logs, metrics, traces, dashboards, alerts and infrastructure monitoring), so the fit should be \"full\", not \"partial\"."
+  },
+  "usage": {
+   "input_tokens": 3148,
+   "cache_creation_input_tokens": 0,
+   "cache_read_input_tokens": 0,
+   "cache_creation": {
+    "ephemeral_5m_input_tokens": 0,
+    "ephemeral_1h_input_tokens": 0
+   },
+   "output_tokens": 317,
+   "output_tokens_details": {
+    "thinking_tokens": 210
+   },
+   "service_tier": "standard",
+   "inference_geo": "global",
+   "speed": "standard"
+  }
+ },
+ {
+  "group": "phone-os",
+  "project": "grapheneos",
+  "name": "GrapheneOS",
+  "fit": "full",
+  "source": "starter",
+  "verdict": {
+   "groupRight": true,
+   "fitRight": true,
+   "descriptionRight": true,
+   "problem": null
+  },
+  "usage": {
+   "input_tokens": 1626,
+   "cache_creation_input_tokens": 0,
+   "cache_read_input_tokens": 0,
+   "cache_creation": {
+    "ephemeral_5m_input_tokens": 0,
+    "ephemeral_1h_input_tokens": 0
+   },
+   "output_tokens": 35,
+   "output_tokens_details": {
+    "thinking_tokens": 0
+   },
+   "service_tier": "standard",
+   "inference_geo": "global",
+   "speed": "standard"
+  }
+ },
+ {
+  "group": "photo-backup",
+  "project": "immich",
+  "name": "Immich",
+  "fit": "full",
+  "source": "starter",
+  "verdict": {
+   "groupRight": true,
+   "fitRight": true,
+   "descriptionRight": true,
+   "problem": null
+  },
+  "usage": {
+   "input_tokens": 1795,
+   "cache_creation_input_tokens": 0,
+   "cache_read_input_tokens": 0,
+   "cache_creation": {
+    "ephemeral_5m_input_tokens": 0,
+    "ephemeral_1h_input_tokens": 0
+   },
+   "output_tokens": 35,
+   "output_tokens_details": {
+    "thinking_tokens": 0
+   },
+   "service_tier": "standard",
+   "inference_geo": "global",
+   "speed": "standard"
+  }
+ },
+ {
+  "group": "notes",
+  "project": "standard-notes",
+  "name": "Standard Notes",
+  "fit": "partial",
+  "source": "starter",
+  "verdict": {
+   "groupRight": true,
+   "fitRight": true,
+   "descriptionRight": true,
+   "problem": null
+  },
+  "usage": {
+   "input_tokens": 1854,
+   "cache_creation_input_tokens": 0,
+   "cache_read_input_tokens": 0,
+   "cache_creation": {
+    "ephemeral_5m_input_tokens": 0,
+    "ephemeral_1h_input_tokens": 0
+   },
+   "output_tokens": 35,
+   "output_tokens_details": {
+    "thinking_tokens": 0
+   },
+   "service_tier": "standard",
+   "inference_geo": "global",
+   "speed": "standard"
+  }
+ },
+ {
+  "group": "app-hosting",
+  "project": "kubero",
+  "name": "Kubero",
+  "fit": "partial",
+  "source": "lists",
+  "verdict": {
+   "groupRight": true,
+   "fitRight": false,
+   "descriptionRight": true,
+   "problem": "Kubero is a complete self-hosted Heroku-style PaaS (git deploys, pipelines, review apps, add-ons, logs, domains), so it does the main job and should be rated full rather than partial."
+  },
+  "usage": {
+   "input_tokens": 4086,
+   "cache_creation_input_tokens": 0,
+   "cache_read_input_tokens": 0,
+   "cache_creation": {
+    "ephemeral_5m_input_tokens": 0,
+    "ephemeral_1h_input_tokens": 0
+   },
+   "output_tokens": 348,
+   "output_tokens_details": {
+    "thinking_tokens": 246
+   },
+   "service_tier": "standard",
+   "inference_geo": "global",
+   "speed": "standard"
+  }
+ },
+ {
+  "group": "analytics",
+  "project": "shynet",
+  "name": "Shynet",
+  "fit": "full",
+  "source": "lists",
+  "verdict": {
+   "groupRight": true,
+   "fitRight": true,
+   "descriptionRight": true,
+   "problem": null
+  },
+  "usage": {
+   "input_tokens": 3251,
+   "cache_creation_input_tokens": 0,
+   "cache_read_input_tokens": 0,
+   "cache_creation": {
+    "ephemeral_5m_input_tokens": 0,
+    "ephemeral_1h_input_tokens": 0
+   },
+   "output_tokens": 141,
+   "output_tokens_details": {
+    "thinking_tokens": 106
+   },
+   "service_tier": "standard",
+   "inference_geo": "global",
+   "speed": "standard"
+  }
+ },
+ {
+  "group": "notes",
+  "project": "logseq",
+  "name": "Logseq",
+  "fit": "full",
+  "source": "starter",
+  "verdict": {
+   "groupRight": true,
+   "fitRight": true,
+   "descriptionRight": true,
+   "problem": null
+  },
+  "usage": {
+   "input_tokens": 2782,
+   "cache_creation_input_tokens": 0,
+   "cache_read_input_tokens": 0,
+   "cache_creation": {
+    "ephemeral_5m_input_tokens": 0,
+    "ephemeral_1h_input_tokens": 0
+   },
+   "output_tokens": 35,
+   "output_tokens_details": {
+    "thinking_tokens": 0
+   },
+   "service_tier": "standard",
+   "inference_geo": "global",
+   "speed": "standard"
+  }
+ },
+ {
+  "group": "icons",
+  "project": "tabler-icons",
+  "name": "Tabler-Icons",
+  "fit": "partial",
+  "source": "lists",
+  "verdict": {
+   "groupRight": true,
+   "fitRight": true,
+   "descriptionRight": true,
+   "problem": null
+  },
+  "usage": {
+   "input_tokens": 4030,
+   "cache_creation_input_tokens": 0,
+   "cache_read_input_tokens": 0,
+   "cache_creation": {
+    "ephemeral_5m_input_tokens": 0,
+    "ephemeral_1h_input_tokens": 0
+   },
+   "output_tokens": 35,
+   "output_tokens_details": {
+    "thinking_tokens": 0
+   },
+   "service_tier": "standard",
+   "inference_geo": "global",
+   "speed": "standard"
+  }
+ },
+ {
+  "group": "automation",
+  "project": "automatisch",
+  "name": "Automatisch",
+  "fit": "full",
+  "source": "lists",
+  "verdict": {
+   "groupRight": true,
+   "fitRight": true,
+   "descriptionRight": true,
+   "problem": null
+  },
+  "usage": {
+   "input_tokens": 1654,
+   "cache_creation_input_tokens": 0,
+   "cache_read_input_tokens": 0,
+   "cache_creation": {
+    "ephemeral_5m_input_tokens": 0,
+    "ephemeral_1h_input_tokens": 0
+   },
+   "output_tokens": 35,
+   "output_tokens_details": {
+    "thinking_tokens": 0
+   },
+   "service_tier": "standard",
+   "inference_geo": "global",
+   "speed": "standard"
+  }
+ },
+ {
+  "group": "monitoring",
+  "project": "uptrace",
+  "name": "Uptrace",
+  "fit": "partial",
+  "source": "lists",
+  "verdict": {
+   "groupRight": true,
+   "fitRight": false,
+   "descriptionRight": true,
+   "problem": "Uptrace covers traces, metrics, logs, dashboards and alerting, the core APM/observability job of Datadog and New Relic, so it should be rated full rather than partial."
+  },
+  "usage": {
+   "input_tokens": 2086,
+   "cache_creation_input_tokens": 0,
+   "cache_read_input_tokens": 0,
+   "cache_creation": {
+    "ephemeral_5m_input_tokens": 0,
+    "ephemeral_1h_input_tokens": 0
+   },
+   "output_tokens": 480,
+   "output_tokens_details": {
+    "thinking_tokens": 387
+   },
+   "service_tier": "standard",
+   "inference_geo": "global",
+   "speed": "standard"
+  }
+ },
+ {
+  "group": "audio",
+  "project": "ardour",
+  "name": "Ardour",
+  "fit": "full",
+  "source": "starter",
+  "verdict": {
+   "groupRight": true,
+   "fitRight": true,
+   "descriptionRight": true,
+   "problem": null
+  },
+  "usage": {
+   "input_tokens": 706,
+   "cache_creation_input_tokens": 0,
+   "cache_read_input_tokens": 0,
+   "cache_creation": {
+    "ephemeral_5m_input_tokens": 0,
+    "ephemeral_1h_input_tokens": 0
+   },
+   "output_tokens": 35,
+   "output_tokens_details": {
+    "thinking_tokens": 0
+   },
+   "service_tier": "standard",
+   "inference_geo": "global",
+   "speed": "standard"
+  }
+ },
+ {
+  "group": "analytics",
+  "project": "openwebanalytics",
+  "name": "OpenWebAnalytics",
+  "fit": "full",
+  "source": "lists",
+  "verdict": {
+   "groupRight": true,
+   "fitRight": true,
+   "descriptionRight": true,
+   "problem": null
+  },
+  "usage": {
+   "input_tokens": 2558,
+   "cache_creation_input_tokens": 0,
+   "cache_read_input_tokens": 0,
+   "cache_creation": {
+    "ephemeral_5m_input_tokens": 0,
+    "ephemeral_1h_input_tokens": 0
+   },
+   "output_tokens": 35,
+   "output_tokens_details": {
+    "thinking_tokens": 0
+   },
+   "service_tier": "standard",
+   "inference_geo": "global",
+   "speed": "standard"
+  }
+ },
+ {
+  "group": "monitoring",
+  "project": "victorialogs",
+  "name": "VictoriaLogs",
+  "fit": "partial",
+  "source": "lists",
+  "verdict": {
+   "groupRight": true,
+   "fitRight": true,
+   "descriptionRight": true,
+   "problem": null
+  },
+  "usage": {
+   "input_tokens": 2426,
+   "cache_creation_input_tokens": 0,
+   "cache_read_input_tokens": 0,
+   "cache_creation": {
+    "ephemeral_5m_input_tokens": 0,
+    "ephemeral_1h_input_tokens": 0
+   },
+   "output_tokens": 35,
+   "output_tokens_details": {
+    "thinking_tokens": 0
+   },
+   "service_tier": "standard",
+   "inference_geo": "global",
+   "speed": "standard"
+  }
+ },
+ {
+  "group": "recording",
+  "project": "obs-studio",
+  "name": "OBS Studio",
+  "fit": "full",
+  "source": "starter",
+  "verdict": {
+   "groupRight": true,
+   "fitRight": true,
+   "descriptionRight": true,
+   "problem": null
+  },
+  "usage": {
+   "input_tokens": 1667,
+   "cache_creation_input_tokens": 0,
+   "cache_read_input_tokens": 0,
+   "cache_creation": {
+    "ephemeral_5m_input_tokens": 0,
+    "ephemeral_1h_input_tokens": 0
+   },
+   "output_tokens": 142,
+   "output_tokens_details": {
+    "thinking_tokens": 107
+   },
+   "service_tier": "standard",
+   "inference_geo": "global",
+   "speed": "standard"
+  }
+ },
+ {
+  "group": "video-editing",
+  "project": "shotcut",
+  "name": "Shotcut",
+  "fit": "full",
+  "source": "starter",
+  "verdict": {
+   "groupRight": true,
+   "fitRight": true,
+   "descriptionRight": true,
+   "problem": null
+  },
+  "usage": {
+   "input_tokens": 1720,
+   "cache_creation_input_tokens": 0,
+   "cache_read_input_tokens": 0,
+   "cache_creation": {
+    "ephemeral_5m_input_tokens": 0,
+    "ephemeral_1h_input_tokens": 0
+   },
+   "output_tokens": 35,
+   "output_tokens_details": {
+    "thinking_tokens": 0
+   },
+   "service_tier": "standard",
+   "inference_geo": "global",
+   "speed": "standard"
+  }
+ },
+ {
+  "group": "support",
+  "project": "zammad",
+  "name": "Zammad",
+  "fit": "full",
+  "source": "starter",
+  "verdict": {
+   "groupRight": true,
+   "fitRight": true,
+   "descriptionRight": true,
+   "problem": null
+  },
+  "usage": {
+   "input_tokens": 1990,
+   "cache_creation_input_tokens": 0,
+   "cache_read_input_tokens": 0,
+   "cache_creation": {
+    "ephemeral_5m_input_tokens": 0,
+    "ephemeral_1h_input_tokens": 0
+   },
+   "output_tokens": 35,
+   "output_tokens_details": {
+    "thinking_tokens": 0
+   },
+   "service_tier": "standard",
+   "inference_geo": "global",
+   "speed": "standard"
+  }
+ },
+ {
+  "group": "documents",
+  "project": "cryptpad",
+  "name": "CryptPad",
+  "fit": "partial",
+  "source": "starter",
+  "verdict": {
+   "groupRight": true,
+   "fitRight": false,
+   "descriptionRight": true,
+   "problem": "CryptPad's Document app is a full real-time collaborative word processor built on OnlyOffice, so 'partial' with 'simpler formatting' understates it; 'full' fits better."
+  },
+  "usage": {
+   "input_tokens": 2793,
+   "cache_creation_input_tokens": 0,
+   "cache_read_input_tokens": 0,
+   "cache_creation": {
+    "ephemeral_5m_input_tokens": 0,
+    "ephemeral_1h_input_tokens": 0
+   },
+   "output_tokens": 404,
+   "output_tokens_details": {
+    "thinking_tokens": 309
+   },
+   "service_tier": "standard",
+   "inference_geo": "global",
+   "speed": "standard"
+  }
+ },
+ {
+  "group": "voice-apis",
+  "project": "livekit",
+  "name": "LiveKit",
+  "fit": "full",
+  "source": "lists",
+  "verdict": {
+   "groupRight": true,
+   "fitRight": false,
+   "descriptionRight": true,
+   "problem": "LiveKit covers in-app voice/video and SIP calling but has no SMS or phone numbers of its own, so it only partly replaces Twilio."
+  },
+  "usage": {
+   "input_tokens": 3824,
+   "cache_creation_input_tokens": 0,
+   "cache_read_input_tokens": 0,
+   "cache_creation": {
+    "ephemeral_5m_input_tokens": 0,
+    "ephemeral_1h_input_tokens": 0
+   },
+   "output_tokens": 202,
+   "output_tokens_details": {
+    "thinking_tokens": 118
+   },
+   "service_tier": "standard",
+   "inference_geo": "global",
+   "speed": "standard"
+  }
+ },
+ {
+  "group": "support",
+  "project": "chatwoot",
+  "name": "Chatwoot",
+  "fit": "full",
+  "source": "starter",
+  "verdict": {
+   "groupRight": true,
+   "fitRight": true,
+   "descriptionRight": true,
+   "problem": null
+  },
+  "usage": {
+   "input_tokens": 2366,
+   "cache_creation_input_tokens": 0,
+   "cache_read_input_tokens": 0,
+   "cache_creation": {
+    "ephemeral_5m_input_tokens": 0,
+    "ephemeral_1h_input_tokens": 0
+   },
+   "output_tokens": 35,
+   "output_tokens_details": {
+    "thinking_tokens": 0
+   },
+   "service_tier": "standard",
+   "inference_geo": "global",
+   "speed": "standard"
+  }
+ },
+ {
+  "group": "time-tracking",
+  "project": "kimai",
+  "name": "Kimai",
+  "fit": "partial",
+  "source": "lists",
+  "verdict": {
+   "groupRight": true,
+   "fitRight": false,
+   "descriptionRight": true,
+   "problem": "Kimai is a full-featured time tracker covering the main job of Toggl and Clockify, so the fit should be 'full', not 'partial'."
+  },
+  "usage": {
+   "input_tokens": 2513,
+   "cache_creation_input_tokens": 0,
+   "cache_read_input_tokens": 0,
+   "cache_creation": {
+    "ephemeral_5m_input_tokens": 0,
+    "ephemeral_1h_input_tokens": 0
+   },
+   "output_tokens": 165,
+   "output_tokens_details": {
+    "thinking_tokens": 83
+   },
+   "service_tier": "standard",
+   "inference_geo": "global",
+   "speed": "standard"
+  }
+ },
+ {
+  "group": "pdf",
+  "project": "xournal",
+  "name": "Xournal++",
+  "fit": "partial",
+  "source": "lists",
+  "verdict": {
+   "groupRight": true,
+   "fitRight": true,
+   "descriptionRight": true,
+   "problem": null
+  },
+  "usage": {
+   "input_tokens": 3710,
+   "cache_creation_input_tokens": 0,
+   "cache_read_input_tokens": 0,
+   "cache_creation": {
+    "ephemeral_5m_input_tokens": 0,
+    "ephemeral_1h_input_tokens": 0
+   },
+   "output_tokens": 337,
+   "output_tokens_details": {
+    "thinking_tokens": 302
+   },
+   "service_tier": "standard",
+   "inference_geo": "global",
+   "speed": "standard"
+  }
+ },
+ {
+  "group": "databases",
+  "project": "qdrant",
+  "name": "Qdrant",
+  "fit": "partial",
+  "source": "lists",
+  "verdict": {
+   "groupRight": true,
+   "fitRight": true,
+   "descriptionRight": true,
+   "problem": null
+  },
+  "usage": {
+   "input_tokens": 3569,
+   "cache_creation_input_tokens": 0,
+   "cache_read_input_tokens": 0,
+   "cache_creation": {
+    "ephemeral_5m_input_tokens": 0,
+    "ephemeral_1h_input_tokens": 0
+   },
+   "output_tokens": 35,
+   "output_tokens_details": {
+    "thinking_tokens": 0
+   },
+   "service_tier": "standard",
+   "inference_geo": "global",
+   "speed": "standard"
+  }
+ },
+ {
+  "group": "cms",
+  "project": "builder",
+  "name": "Builder",
+  "fit": "partial",
+  "source": "lists",
+  "verdict": {
+   "groupRight": false,
+   "fitRight": false,
+   "descriptionRight": false,
+   "problem": "The repository only holds SDKs, examples, starters and plugins; the visual editor itself is Builder.io's closed hosted service, which needs an account, so this is not an open-source alternative to these apps."
+  },
+  "usage": {
+   "input_tokens": 1003,
+   "cache_creation_input_tokens": 0,
+   "cache_read_input_tokens": 0,
+   "cache_creation": {
+    "ephemeral_5m_input_tokens": 0,
+    "ephemeral_1h_input_tokens": 0
+   },
+   "output_tokens": 298,
+   "output_tokens_details": {
+    "thinking_tokens": 199
+   },
+   "service_tier": "standard",
+   "inference_geo": "global",
+   "speed": "standard"
+  }
+ },
+ {
+  "group": "video-editing",
+  "project": "kdenlive",
+  "name": "Kdenlive",
+  "fit": "full",
+  "source": "starter",
+  "verdict": {
+   "groupRight": true,
+   "fitRight": true,
+   "descriptionRight": true,
+   "problem": null
+  },
+  "usage": {
+   "input_tokens": 763,
+   "cache_creation_input_tokens": 0,
+   "cache_read_input_tokens": 0,
+   "cache_creation": {
+    "ephemeral_5m_input_tokens": 0,
+    "ephemeral_1h_input_tokens": 0
+   },
+   "output_tokens": 35,
+   "output_tokens_details": {
+    "thinking_tokens": 0
+   },
+   "service_tier": "standard",
+   "inference_geo": "global",
+   "speed": "standard"
+  }
+ },
+ {
+  "group": "internal-tools",
+  "project": "lowdefy",
+  "name": "Lowdefy",
+  "fit": "partial",
+  "source": "lists",
+  "verdict": {
+   "groupRight": true,
+   "fitRight": true,
+   "descriptionRight": true,
+   "problem": null
+  },
+  "usage": {
+   "input_tokens": 3080,
+   "cache_creation_input_tokens": 0,
+   "cache_read_input_tokens": 0,
+   "cache_creation": {
+    "ephemeral_5m_input_tokens": 0,
+    "ephemeral_1h_input_tokens": 0
+   },
+   "output_tokens": 129,
+   "output_tokens_details": {
+    "thinking_tokens": 94
+   },
+   "service_tier": "standard",
+   "inference_geo": "global",
+   "speed": "standard"
+  }
+ },
+ {
+  "group": "erp",
+  "project": "erpnext",
+  "name": "ERPNext",
+  "fit": "partial",
+  "source": "lists",
+  "verdict": {
+   "groupRight": true,
+   "fitRight": false,
+   "descriptionRight": true,
+   "problem": "ERPNext is a complete ERP covering accounting, inventory, manufacturing, assets and projects, so its fit should be full rather than partial."
+  },
+  "usage": {
+   "input_tokens": 2812,
+   "cache_creation_input_tokens": 0,
+   "cache_read_input_tokens": 0,
+   "cache_creation": {
+    "ephemeral_5m_input_tokens": 0,
+    "ephemeral_1h_input_tokens": 0
+   },
+   "output_tokens": 253,
+   "output_tokens_details": {
+    "thinking_tokens": 171
+   },
+   "service_tier": "standard",
+   "inference_geo": "global",
+   "speed": "standard"
+  }
+ },
+ {
+  "group": "microblogging",
+  "project": "mastodon",
+  "name": "Mastodon",
+  "fit": "full",
+  "source": "starter",
+  "verdict": {
+   "groupRight": true,
+   "fitRight": true,
+   "descriptionRight": true,
+   "problem": null
+  },
+  "usage": {
+   "input_tokens": 2449,
+   "cache_creation_input_tokens": 0,
+   "cache_read_input_tokens": 0,
+   "cache_creation": {
+    "ephemeral_5m_input_tokens": 0,
+    "ephemeral_1h_input_tokens": 0
+   },
+   "output_tokens": 35,
+   "output_tokens_details": {
+    "thinking_tokens": 0
+   },
+   "service_tier": "standard",
+   "inference_geo": "global",
+   "speed": "standard"
+  }
+ },
+ {
+  "group": "app-hosting",
+  "project": "abilian-nua",
+  "name": "Abilian Nua",
+  "fit": "partial",
+  "source": "lists",
+  "verdict": {
+   "groupRight": true,
+   "fitRight": true,
+   "descriptionRight": true,
+   "problem": null
+  },
+  "usage": {
+   "input_tokens": 2023,
+   "cache_creation_input_tokens": 0,
+   "cache_read_input_tokens": 0,
+   "cache_creation": {
+    "ephemeral_5m_input_tokens": 0,
+    "ephemeral_1h_input_tokens": 0
+   },
+   "output_tokens": 35,
+   "output_tokens_details": {
+    "thinking_tokens": 0
+   },
+   "service_tier": "standard",
+   "inference_geo": "global",
+   "speed": "standard"
+  }
+ },
+ {
+  "group": "ai-coding",
+  "project": "openhands",
+  "name": "OpenHands",
+  "fit": "full",
+  "source": "starter",
+  "verdict": {
+   "groupRight": true,
+   "fitRight": true,
+   "descriptionRight": true,
+   "problem": null
+  },
+  "usage": {
+   "input_tokens": 3666,
+   "cache_creation_input_tokens": 0,
+   "cache_read_input_tokens": 0,
+   "cache_creation": {
+    "ephemeral_5m_input_tokens": 0,
+    "ephemeral_1h_input_tokens": 0
+   },
+   "output_tokens": 35,
+   "output_tokens_details": {
+    "thinking_tokens": 0
+   },
+   "service_tier": "standard",
+   "inference_geo": "global",
+   "speed": "standard"
+  }
+ },
+ {
+  "group": "databases",
+  "project": "appbase",
+  "name": "AppBase",
+  "fit": "partial",
+  "source": "lists",
+  "verdict": {
+   "groupRight": false,
+   "fitRight": false,
+   "descriptionRight": true,
+   "problem": "ReactiveSearch is a front-end UI component library for search interfaces, not a database or search engine, so it does not replace Algolia, Elastic Cloud or the other closed services listed."
+  },
+  "usage": {
+   "input_tokens": 3767,
+   "cache_creation_input_tokens": 0,
+   "cache_read_input_tokens": 0,
+   "cache_creation": {
+    "ephemeral_5m_input_tokens": 0,
+    "ephemeral_1h_input_tokens": 0
+   },
+   "output_tokens": 306,
+   "output_tokens_details": {
+    "thinking_tokens": 211
+   },
+   "service_tier": "standard",
+   "inference_geo": "global",
+   "speed": "standard"
+  }
+ },
+ {
+  "group": "signing",
+  "project": "libresign",
+  "name": "LibreSign",
+  "fit": "partial",
+  "source": "lists",
+  "verdict": {
+   "groupRight": true,
+   "fitRight": false,
+   "descriptionRight": true,
+   "problem": "LibreSign covers DocuSign's main job (sending documents to internal and external signers, signing order, reminders, tracking and validation), so it should be rated a full fit rather than partial."
+  },
+  "usage": {
+   "input_tokens": 2619,
+   "cache_creation_input_tokens": 0,
+   "cache_read_input_tokens": 0,
+   "cache_creation": {
+    "ephemeral_5m_input_tokens": 0,
+    "ephemeral_1h_input_tokens": 0
+   },
+   "output_tokens": 257,
+   "output_tokens_details": {
+    "thinking_tokens": 163
+   },
+   "service_tier": "standard",
+   "inference_geo": "global",
+   "speed": "standard"
+  }
+ },
+ {
+  "group": "pos",
+  "project": "posnic-pos",
+  "name": "Posnic POS",
+  "fit": "partial",
+  "source": "lists",
+  "verdict": {
+   "groupRight": true,
+   "fitRight": false,
+   "descriptionRight": true,
+   "problem": "Posnic is a complete POS (billing, barcode scanning, returns, stock, receipt hardware, restaurant features), so it does the main job of Square POS and Clover and should be listed as \"full\", not \"partial\"."
+  },
+  "usage": {
+   "input_tokens": 3677,
+   "cache_creation_input_tokens": 0,
+   "cache_read_input_tokens": 0,
+   "cache_creation": {
+    "ephemeral_5m_input_tokens": 0,
+    "ephemeral_1h_input_tokens": 0
+   },
+   "output_tokens": 276,
+   "output_tokens_details": {
+    "thinking_tokens": 167
+   },
+   "service_tier": "standard",
+   "inference_geo": "global",
+   "speed": "standard"
+  }
+ },
+ {
+  "group": "login-identity",
+  "project": "zitadel",
+  "name": "Zitadel",
+  "fit": "full",
+  "source": "lists",
+  "verdict": {
+   "groupRight": true,
+   "fitRight": true,
+   "descriptionRight": true,
+   "problem": null
+  },
+  "usage": {
+   "input_tokens": 4148,
+   "cache_creation_input_tokens": 0,
+   "cache_read_input_tokens": 0,
+   "cache_creation": {
+    "ephemeral_5m_input_tokens": 0,
+    "ephemeral_1h_input_tokens": 0
+   },
+   "output_tokens": 35,
+   "output_tokens_details": {
+    "thinking_tokens": 0
+   },
+   "service_tier": "standard",
+   "inference_geo": "global",
+   "speed": "standard"
+  }
+ },
+ {
+  "group": "spreadsheets",
+  "project": "onlyoffice-docs",
+  "name": "OnlyOffice Docs",
+  "fit": "full",
+  "source": "starter",
+  "verdict": {
+   "groupRight": true,
+   "fitRight": true,
+   "descriptionRight": true,
+   "problem": null
+  },
+  "usage": {
+   "input_tokens": 4210,
+   "cache_creation_input_tokens": 0,
+   "cache_read_input_tokens": 0,
+   "cache_creation": {
+    "ephemeral_5m_input_tokens": 0,
+    "ephemeral_1h_input_tokens": 0
+   },
+   "output_tokens": 35,
+   "output_tokens_details": {
+    "thinking_tokens": 0
+   },
+   "service_tier": "standard",
+   "inference_geo": "global",
+   "speed": "standard"
+  }
+ },
+ {
+  "group": "shop",
+  "project": "woocommerce",
+  "name": "WooCommerce",
+  "fit": "full",
+  "source": "starter",
+  "verdict": {
+   "groupRight": true,
+   "fitRight": true,
+   "descriptionRight": true,
+   "problem": null
+  },
+  "usage": {
+   "input_tokens": 2513,
+   "cache_creation_input_tokens": 0,
+   "cache_read_input_tokens": 0,
+   "cache_creation": {
+    "ephemeral_5m_input_tokens": 0,
+    "ephemeral_1h_input_tokens": 0
+   },
+   "output_tokens": 220,
+   "output_tokens_details": {
+    "thinking_tokens": 185
+   },
+   "service_tier": "standard",
+   "inference_geo": "global",
+   "speed": "standard"
+  }
+ },
+ {
+  "group": "code-hosting",
+  "project": "gogs",
+  "name": "Gogs",
+  "fit": "partial",
+  "source": "lists",
+  "verdict": {
+   "groupRight": true,
+   "fitRight": false,
+   "descriptionRight": true,
+   "problem": "Gogs covers GitHub's core job (repository hosting, issues, pull requests, wiki, organizations), so the fit should be \"full\" rather than \"partial\"."
+  },
+  "usage": {
+   "input_tokens": 2748,
+   "cache_creation_input_tokens": 0,
+   "cache_read_input_tokens": 0,
+   "cache_creation": {
+    "ephemeral_5m_input_tokens": 0,
+    "ephemeral_1h_input_tokens": 0
+   },
+   "output_tokens": 425,
+   "output_tokens_details": {
+    "thinking_tokens": 333
+   },
+   "service_tier": "standard",
+   "inference_geo": "global",
+   "speed": "standard"
+  }
+ },
+ {
+  "group": "cms",
+  "project": "webiny",
+  "name": "Webiny",
+  "fit": "full",
+  "source": "lists",
+  "verdict": {
+   "groupRight": true,
+   "fitRight": true,
+   "descriptionRight": true,
+   "problem": null
+  },
+  "usage": {
+   "input_tokens": 3746,
+   "cache_creation_input_tokens": 0,
+   "cache_read_input_tokens": 0,
+   "cache_creation": {
+    "ephemeral_5m_input_tokens": 0,
+    "ephemeral_1h_input_tokens": 0
+   },
+   "output_tokens": 345,
+   "output_tokens_details": {
+    "thinking_tokens": 310
+   },
+   "service_tier": "standard",
+   "inference_geo": "global",
+   "speed": "standard"
+  }
+ },
+ {
+  "group": "crm",
+  "project": "customermates",
+  "name": "Customermates",
+  "fit": "partial",
+  "source": "lists",
+  "verdict": {
+   "groupRight": true,
+   "fitRight": true,
+   "descriptionRight": true,
+   "problem": null
+  },
+  "usage": {
+   "input_tokens": 3768,
+   "cache_creation_input_tokens": 0,
+   "cache_read_input_tokens": 0,
+   "cache_creation": {
+    "ephemeral_5m_input_tokens": 0,
+    "ephemeral_1h_input_tokens": 0
+   },
+   "output_tokens": 431,
+   "output_tokens_details": {
+    "thinking_tokens": 396
+   },
+   "service_tier": "standard",
+   "inference_geo": "global",
+   "speed": "standard"
+  }
+ }
+]

@@ -97,8 +97,9 @@ for (const r of tail) {
   for (const gid of gids) {
     const g = groups.get(gid);
     if (!g.alternatives.some((x) => x.project === id)) g.alternatives.push({ project: id, fit, note: null });
-    // WHY: the lists name extra closed apps (e.g. "Squid" for notes); add them so searching them finds the group.
-    for (const x of good) if (!g.closed.some((c) => key(c) === key(x.closedApp))) g.closed.push(x.closedApp);
+    // WHY no longer adding the project's other closed apps to the group (Opus check, Oct 27): one project that
+    // replaced both Figma and Contentful put "Contentful" on the Figma group, which then pulled in CMS tools.
+    // Group closed-app lists stay as set by hand (starter) or by the group merge.
   }
 }
 

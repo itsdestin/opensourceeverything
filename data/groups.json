@@ -120,10 +120,7 @@
     "Evernote",
     "Microsoft OneNote",
     "Obsidian",
-    "Google Keep",
-    "Squid",
-    "Roam Research",
-    "Adobe Acrobat"
+    "Google Keep"
    ],
    "source": "starter",
    "alternatives": [
@@ -409,10 +406,7 @@
    "category": "office",
    "job": "Reading, editing and signing PDFs",
    "closed": [
-    "Adobe Acrobat",
-    "Evernote",
-    "Google Keep",
-    "Microsoft OneNote"
+    "Adobe Acrobat"
    ],
    "source": "starter",
    "alternatives": [
@@ -505,9 +499,7 @@
    "job": "Chat for workplaces and projects",
    "closed": [
     "Slack",
-    "Microsoft Teams",
-    "Discord",
-    "Google Meet"
+    "Microsoft Teams"
    ],
    "source": "starter",
    "alternatives": [
@@ -550,8 +542,7 @@
    "job": "Servers with channels and voice rooms",
    "closed": [
     "Discord",
-    "TeamSpeak",
-    "Slack"
+    "TeamSpeak"
    ],
    "source": "starter",
    "alternatives": [
@@ -625,8 +616,7 @@
    "closed": [
     "Zoom",
     "Google Meet",
-    "Microsoft Teams",
-    "Webex"
+    "Microsoft Teams"
    ],
    "source": "starter",
    "alternatives": [
@@ -664,8 +654,7 @@
    "job": "Short public posts and follows",
    "closed": [
     "Twitter / X",
-    "Threads",
-    "Facebook"
+    "Threads"
    ],
    "source": "starter",
    "alternatives": [
@@ -954,8 +943,7 @@
    "closed": [
     "Figma",
     "Sketch",
-    "Adobe XD",
-    "Contentful"
+    "Adobe XD"
    ],
    "source": "starter",
    "alternatives": [
@@ -972,26 +960,6 @@
     {
      "project": "quant-ux",
      "fit": "partial",
-     "note": null
-    },
-    {
-     "project": "sulu",
-     "fit": "partial",
-     "note": null
-    },
-    {
-     "project": "strapi",
-     "fit": "full",
-     "note": null
-    },
-    {
-     "project": "tina",
-     "fit": "partial",
-     "note": null
-    },
-    {
-     "project": "webiny",
-     "fit": "full",
      "note": null
     }
    ]
@@ -1041,8 +1009,7 @@
     "Adobe Premiere Pro",
     "Final Cut Pro",
     "CapCut",
-    "DaVinci Resolve",
-    "Sony Vegas"
+    "DaVinci Resolve"
    ],
    "source": "starter",
    "alternatives": [
@@ -1400,8 +1367,7 @@
    "job": "Searching the web",
    "closed": [
     "Google Search",
-    "Bing",
-    "Google"
+    "Bing"
    ],
    "source": "starter",
    "alternatives": [
@@ -2226,9 +2192,7 @@
    "category": "dev",
    "job": "Counting website visitors",
    "closed": [
-    "Google Analytics",
-    "Segment",
-    "Amplitude"
+    "Google Analytics"
    ],
    "source": "starter",
    "alternatives": [
@@ -2280,8 +2244,7 @@
    "category": "dev",
    "job": "Selling things online",
    "closed": [
-    "Shopify",
-    "Ecwid"
+    "Shopify"
    ],
    "source": "starter",
    "alternatives": [
@@ -2574,9 +2537,7 @@
     "Google Cloud Spanner",
     "Elastic Cloud",
     "Algolia",
-    "Snowflake",
-    "Splunk",
-    "Google Vertex AI"
+    "Snowflake"
    ],
    "source": "lists",
    "alternatives": [
@@ -2853,9 +2814,7 @@
     "Contentful",
     "Wix",
     "Strikingly",
-    "Webflow",
-    "Figma",
-    "Squarespace"
+    "Webflow"
    ],
    "source": "lists",
    "alternatives": [
@@ -2881,11 +2840,6 @@
     },
     {
      "project": "plasmic",
-     "fit": "partial",
-     "note": null
-    },
-    {
-     "project": "quant-ux",
      "fit": "partial",
      "note": null
     },
@@ -2930,9 +2884,7 @@
     "Fivetran",
     "Airflow",
     "Hightouch",
-    "Segment",
-    "Google Analytics",
-    "Amplitude"
+    "Segment"
    ],
    "source": "lists",
    "alternatives": [
@@ -2967,8 +2919,7 @@
     "Datadog",
     "DataDog",
     "NewRelic",
-    "Elastic Cloud",
-    "Splunk"
+    "Elastic Cloud"
    ],
    "source": "lists",
    "alternatives": [
@@ -3087,8 +3038,7 @@
    "category": "dev",
    "job": "Add calls and texts to apps",
    "closed": [
-    "Twilio",
-    "Agora"
+    "Twilio"
    ],
    "source": "lists",
    "alternatives": [
