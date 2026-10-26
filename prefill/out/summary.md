@@ -247,3 +247,21 @@ Looked up **436** GitHub projects in 9 batch requests.
 - Opus corrections applied: 8 listings removed, 103 fits changed, 54 descriptions rewritten.
 - Groups with no alternative yet (gaps): Professional networking, Investment research.
 - By category: Office & productivity 11 groups / 77 listings · Communication & social 13 groups / 43 listings · Creative 11 groups / 29 listings · Operating systems & phones 5 groups / 27 listings · Browsers, search & security 8 groups / 30 listings · AI tools 7 groups / 31 listings · Media & entertainment 8 groups / 24 listings · Files & cloud 3 groups / 11 listings · Everyday 6 groups / 11 listings · Developer & business 22 groups / 142 listings · Business & finance 10 groups / 28 listings.
+
+## Step 5: the map's data files (2026-10-26, free)
+
+- **11 categories, 104 groups, 270 closed apps, 431 projects, 453 listings.**
+- From the long tail, left out: 34 not open source or unclear, 45 wrongly listed, 8 archived, 0 with no matching group (listed in prefill/out/unplaced.json for a person to place).
+- Licenses a mod confirms before launch: 0. Inactive (no change in a year): 17.
+- Opus corrections applied: 8 listings removed, 103 fits changed, 54 descriptions rewritten.
+- Groups with no alternative yet (gaps): Professional networking, Investment research.
+- By category: Office & productivity 11 groups / 77 listings · Communication & social 13 groups / 43 listings · Creative 11 groups / 29 listings · Operating systems & phones 5 groups / 27 listings · Browsers, search & security 8 groups / 30 listings · AI tools 7 groups / 31 listings · Media & entertainment 8 groups / 24 listings · Files & cloud 3 groups / 11 listings · Everyday 6 groups / 11 listings · Developer & business 22 groups / 142 listings · Business & finance 10 groups / 28 listings.
+
+## Step 5: the map's data files (2026-10-26, free)
+
+- **11 categories, 104 groups, 270 closed apps, 431 projects, 453 listings.**
+- From the long tail, left out: 34 not open source or unclear, 45 wrongly listed, 8 archived, 0 with no matching group (listed in prefill/out/unplaced.json for a person to place).
+- Licenses a mod confirms before launch: 0. Inactive (no change in a year): 17.
+- Opus corrections applied: 8 listings removed, 103 fits changed, 54 descriptions rewritten.
+- Groups with no alternative yet (gaps): Professional networking, Investment research.
+- By category: Office & productivity 11 groups / 77 listings · Communication & social 13 groups / 43 listings · Creative 11 groups / 29 listings · Operating systems & phones 5 groups / 27 listings · Browsers, search & security 8 groups / 30 listings · AI tools 7 groups / 31 listings · Media & entertainment 8 groups / 24 listings · Files & cloud 3 groups / 11 listings · Everyday 6 groups / 11 listings · Developer & business 22 groups / 142 listings · Business & finance 10 groups / 28 listings.

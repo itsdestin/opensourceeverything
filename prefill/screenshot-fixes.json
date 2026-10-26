@@ -1,0 +1,387 @@
+{
+ "note": "Real interface screenshots for projects that had none, found in a screenshot hunt (2026-10-26). Sources, best first: Flathub appstream (dl.flathub.org, the apps' own screenshots), the projects' own websites or repos (raw.githubusercontent.com), F-Droid repo images (f-droid.org/repo/.../phoneScreenshots), Wikimedia Commons (upload.wikimedia.org, mostly for Linux distributions and a few web apps). Every URL was fetched and returned HTTP 200 with an image content-type, and every picture was looked at. Best picture first, up to 3 per project.",
+ "fixes": {
+  "libreoffice-writer": [
+   "https://dl.flathub.org/media/org/libreoffice/LibreOffice/6a06e0ec2876ffc989b0e2a1340d3331/screenshots/image-1_orig.png"
+  ],
+  "libreoffice-calc": [
+   "https://dl.flathub.org/media/org/libreoffice/LibreOffice/6a06e0ec2876ffc989b0e2a1340d3331/screenshots/image-2_orig.png"
+  ],
+  "libreoffice-impress": [
+   "https://dl.flathub.org/media/org/libreoffice/LibreOffice/6a06e0ec2876ffc989b0e2a1340d3331/screenshots/image-3_orig.png"
+  ],
+  "onlyoffice-docs": [
+   "https://dl.flathub.org/media/org/onlyoffice/desktopeditors/05940ed2ec8bd1b907711688f3f9d066/screenshots/image-3_1248x873@1.png",
+   "https://dl.flathub.org/media/org/onlyoffice/desktopeditors/05940ed2ec8bd1b907711688f3f9d066/screenshots/image-5_1248x873@1.png",
+   "https://dl.flathub.org/media/org/onlyoffice/desktopeditors/05940ed2ec8bd1b907711688f3f9d066/screenshots/image-6_1248x873@1.png"
+  ],
+  "thunderbird": [
+   "https://dl.flathub.org/media/org.mozilla.Thunderbird-stable/1504x846/org.mozilla.Thunderbird-6d680df8fa5a1a0c374882c019e09714.png",
+   "https://dl.flathub.org/media/org.mozilla.Thunderbird-stable/1504x846/org.mozilla.Thunderbird-70c1d7576c238e58e02e7ae0fcb7906b.png"
+  ],
+  "pdf-arranger": [
+   "https://dl.flathub.org/media/com/github/jeromerobert.pdfarranger/e4ca6b0caccb8aa65fb40f5c22a3752c/screenshots/image-1_orig.png"
+  ],
+  "element": [
+   "https://dl.flathub.org/media/im/riot/Riot/74b860715fb8cfcdf59807de6709ceb3/screenshots/image-1_1248x679@1.png"
+  ],
+  "signal": [
+   "https://dl.flathub.org/media/org/signal/Signal/c016aa3d4937d4b8de5bf549a10f7788/screenshots/image-1_orig.png"
+  ],
+  "gimp": [
+   "https://dl.flathub.org/media/org/gimp/GIMP/95e6d7d59d33a0f9364535dbe023d807/screenshots/image-2_1248x681@1.png",
+   "https://dl.flathub.org/media/org/gimp/GIMP/95e6d7d59d33a0f9364535dbe023d807/screenshots/image-1_1248x702@1.png",
+   "https://dl.flathub.org/media/org/gimp/GIMP/95e6d7d59d33a0f9364535dbe023d807/screenshots/image-3_1248x681@1.png"
+  ],
+  "rawtherapee": [
+   "https://dl.flathub.org/media/com/rawtherapee/RawTherapee/1690c20ece4741e6dcb2ed7346d3747e/screenshots/image-1_1248x702@1.png",
+   "https://dl.flathub.org/media/com/rawtherapee/RawTherapee/1690c20ece4741e6dcb2ed7346d3747e/screenshots/image-3_1248x702@1.png",
+   "https://dl.flathub.org/media/com/rawtherapee/RawTherapee/1690c20ece4741e6dcb2ed7346d3747e/screenshots/image-2_1248x702@1.png"
+  ],
+  "krita": [
+   "https://dl.flathub.org/media/org/kde/krita/1348962dcc0842250c4ce6876acc36cc/screenshots/image-1_1248x677@1.png",
+   "https://dl.flathub.org/media/org/kde/krita/1348962dcc0842250c4ce6876acc36cc/screenshots/image-4_1248x677@1.png",
+   "https://dl.flathub.org/media/org/kde/krita/1348962dcc0842250c4ce6876acc36cc/screenshots/image-6_1248x702@1.png"
+  ],
+  "mypaint": [
+   "https://dl.flathub.org/media/org/mypaint/MyPaint/7ae5ec387d1933b7b5e5ede0c53a9d32/screenshots/image-1_1248x702@1.png"
+  ],
+  "inkscape": [
+   "https://dl.flathub.org/media/org/inkscape/Inkscape/d06b79da7ad6df73032683fbcf8c4d56/screenshots/image-1_1248x767@1.png",
+   "https://dl.flathub.org/media/org/inkscape/Inkscape/d06b79da7ad6df73032683fbcf8c4d56/screenshots/image-2_1248x765@1.png",
+   "https://dl.flathub.org/media/org/inkscape/Inkscape/d06b79da7ad6df73032683fbcf8c4d56/screenshots/image-4_1248x763@1.png"
+  ],
+  "scribus": [
+   "https://dl.flathub.org/media/net/scribus/Scribus/48ad39685c76efc094f785ce90f3743e/screenshots/image-2_orig.png",
+   "https://dl.flathub.org/media/net/scribus/Scribus/48ad39685c76efc094f785ce90f3743e/screenshots/image-1_orig.png"
+  ],
+  "kdenlive": [
+   "https://dl.flathub.org/media/org/kde/kdenlive.desktop/ed746a0f36b42446cedf1605b1c4f0cb/screenshots/image-5_orig.png",
+   "https://dl.flathub.org/media/org/kde/kdenlive.desktop/ed746a0f36b42446cedf1605b1c4f0cb/screenshots/image-1_orig.png",
+   "https://dl.flathub.org/media/org/kde/kdenlive.desktop/ed746a0f36b42446cedf1605b1c4f0cb/screenshots/image-6_1248x749@1.png"
+  ],
+  "blender": [
+   "https://dl.flathub.org/media/org/blender/Blender/c6b07403115901571923d99f1b725b0e/screenshots/image-1_1248x703@1.png",
+   "https://dl.flathub.org/media/org/blender/Blender/c6b07403115901571923d99f1b725b0e/screenshots/image-3_1248x702@1.png",
+   "https://dl.flathub.org/media/org/blender/Blender/c6b07403115901571923d99f1b725b0e/screenshots/image-2_1248x702@1.png"
+  ],
+  "natron": [
+   "https://dl.flathub.org/media/fr/natron/Natron/e1c66133a7851966660edb790e7037dc/screenshots/image-1_1248x702@1.png"
+  ],
+  "audacity": [
+   "https://dl.flathub.org/media/org/audacityteam/Audacity/0ad4a24524b6c06220649dc83a08ae81/screenshots/image-1_orig.png"
+  ],
+  "lmms": [
+   "https://dl.flathub.org/media/io/lmms/LMMS/6107ab24d0136ed99fbf3d732992e171/screenshots/image-1_orig.png"
+  ],
+  "obs-studio": [
+   "https://dl.flathub.org/media/com/obsproject/Studio/d95756e227c3b10951a83e14e063c185/screenshots/image-1_orig.png"
+  ],
+  "firefox": [
+   "https://dl.flathub.org/media/org.mozilla.firefox-stable/1504x846/org.mozilla.firefox-c6f98b38b8b28b113a75a6b34037b759.png",
+   "https://dl.flathub.org/media/org.mozilla.firefox-stable/1504x846/org.mozilla.firefox-af5d1ae7c121ea4864b3c5a1098f8f9c.png"
+  ],
+  "librewolf": [
+   "https://dl.flathub.org/media/io/gitlab/librewolf-community/695668834d7a406c01d5a25c44f90623/screenshots/image-1_orig.png"
+  ],
+  "brave": [
+   "https://dl.flathub.org/media/com/brave/Browser/a5905128892a545b9f8b4d8160d839e3/screenshots/image-2_1248x789@1.png",
+   "https://dl.flathub.org/media/com/brave/Browser/a5905128892a545b9f8b4d8160d839e3/screenshots/image-1_orig.png"
+  ],
+  "ungoogled-chromium": [
+   "https://dl.flathub.org/media/io/github/ungoogled_software.ungoogled_chromium/129983f9be628370a143898fdd4104b3/screenshots/image-1_1248x674@1.png",
+   "https://dl.flathub.org/media/io/github/ungoogled_software.ungoogled_chromium/129983f9be628370a143898fdd4104b3/screenshots/image-2_1248x719@1.png"
+  ],
+  "keepassxc": [
+   "https://dl.flathub.org/media/org/keepassxc/KeePassXC.desktop/8703bd4e659abcb1dac1d6646881bb00/screenshots/image-1_1248x949@1.png",
+   "https://dl.flathub.org/media/org/keepassxc/KeePassXC.desktop/8703bd4e659abcb1dac1d6646881bb00/screenshots/image-4_1248x949@1.png",
+   "https://dl.flathub.org/media/org/keepassxc/KeePassXC.desktop/8703bd4e659abcb1dac1d6646881bb00/screenshots/image-2_orig.png"
+  ],
+  "jan": [
+   "https://dl.flathub.org/media/ai/jan/Jan/f92cccd45dcfb12937a7e37a07d143e7/screenshots/image-2_orig.png",
+   "https://dl.flathub.org/media/ai/jan/Jan/f92cccd45dcfb12937a7e37a07d143e7/screenshots/image-1_orig.png",
+   "https://dl.flathub.org/media/ai/jan/Jan/f92cccd45dcfb12937a7e37a07d143e7/screenshots/image-5_orig.png"
+  ],
+  "buzz": [
+   "https://dl.flathub.org/media/io/github/chidiwilliams.Buzz/3b21cecd9ebc6658547de57af32ba7d1/screenshots/image-2_orig.png",
+   "https://dl.flathub.org/media/io/github/chidiwilliams.Buzz/3b21cecd9ebc6658547de57af32ba7d1/screenshots/image-1_orig.png",
+   "https://dl.flathub.org/media/io/github/chidiwilliams.Buzz/3b21cecd9ebc6658547de57af32ba7d1/screenshots/image-4_orig.png"
+  ],
+  "calibre": [
+   "https://dl.flathub.org/media/com/calibre_ebook/calibre/2ac083fe30ac8e892f25412b0f652fca/screenshots/image-1_orig.png",
+   "https://dl.flathub.org/media/com/calibre_ebook/calibre/2ac083fe30ac8e892f25412b0f652fca/screenshots/image-2_orig.png"
+  ],
+  "koreader": [
+   "https://dl.flathub.org/media/r/ro/rocks.koreader.koreader/72a553c4e69edb9d1c98df44c07cb01d/screenshots/image-2_1248x872@1.png",
+   "https://dl.flathub.org/media/r/ro/rocks.koreader.koreader/72a553c4e69edb9d1c98df44c07cb01d/screenshots/image-3_1248x872@1.png"
+  ],
+  "fluent-reader": [
+   "https://dl.flathub.org/media/me.hyliu.fluentreader-stable/1248x702/me.hyliu.fluentreader-130bcfdc167f2870afeb981f12c6fd65.png",
+   "https://dl.flathub.org/media/me.hyliu.fluentreader-stable/1504x846/me.hyliu.fluentreader-46eba9c63436c341f4fc45234beabdc1.png"
+  ],
+  "tuta": [
+   "https://dl.flathub.org/media/com/tutanota/Tutanota/f871d554391c3d76dd0134c62f441960/screenshots/image-1_orig.png",
+   "https://dl.flathub.org/media/com/tutanota/Tutanota/f871d554391c3d76dd0134c62f441960/screenshots/image-2_orig.png",
+   "https://dl.flathub.org/media/com/tutanota/Tutanota/f871d554391c3d76dd0134c62f441960/screenshots/image-3_orig.png"
+  ],
+  "fedora": [
+   "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/1d/Fedora_42_Workstation_Desktop_English.png/1280px-Fedora_42_Workstation_Desktop_English.png",
+   "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/86/Fedora_42_KDE_Plasma_Desktop_English.png/1280px-Fedora_42_KDE_Plasma_Desktop_English.png"
+  ],
+  "ubuntu": [
+   "https://thumb.wikimedia.org/wikipedia/commons/thumb/f/f4/Ubuntu_25.04_Plucky_Puffin_Desktop_English.png/1280px-Ubuntu_25.04_Plucky_Puffin_Desktop_English.png",
+   "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/21/Ubuntu_25.04_default_desktop_-_English.png/1280px-Ubuntu_25.04_default_desktop_-_English.png"
+  ],
+  "debian": [
+   "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/e9/Debian_13.0.0_GNOME_default_desktop_-_English.png/1280px-Debian_13.0.0_GNOME_default_desktop_-_English.png",
+   "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/eb/Debian_12_%28Bookworm%29_-_GNOME_desktop.png/1280px-Debian_12_%28Bookworm%29_-_GNOME_desktop.png"
+  ],
+  "arch-linux": [
+   "https://upload.wikimedia.org/wikipedia/commons/8/8f/Arch_Linux_KDE_5.6.png"
+  ],
+  "grapheneos": [
+   "https://upload.wikimedia.org/wikipedia/commons/8/8e/GrapheneOS_%22Apps%22_app.png",
+   "https://upload.wikimedia.org/wikipedia/commons/0/0c/GrapheneOS_home_screen_Android_17.png"
+  ],
+  "lineageos": [
+   "https://upload.wikimedia.org/wikipedia/commons/a/aa/LineageOS_22.1_Home_Screen.png"
+  ],
+  "postmarketos": [
+   "https://upload.wikimedia.org/wikipedia/commons/0/0f/PostmarketOS-With-Phosh.png",
+   "https://upload.wikimedia.org/wikipedia/commons/e/ee/Phosh_0.14.0.png"
+  ],
+  "f-droid": [
+   "https://f-droid.org/repo/org.fdroid.fdroid/en-US/phoneScreenshots/01-latest.png",
+   "https://f-droid.org/repo/org.fdroid.fdroid/en-US/phoneScreenshots/02-categories.png"
+  ],
+  "searxng": [
+   "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/0a/SearXNG_Results_Page.png/1280px-SearXNG_Results_Page.png"
+  ],
+  "home-assistant": [
+   "https://raw.githubusercontent.com/home-assistant/core/dev/.github/assets/screenshot-integrations.png"
+  ],
+  "roundcube": [
+   "https://upload.wikimedia.org/wikipedia/commons/2/25/Roundcube_1.6.0_screenshot.png"
+  ],
+  "gnumeric": [
+   "https://upload.wikimedia.org/wikipedia/commons/9/96/Gnumeric-sample.png"
+  ],
+  "mastodon": [
+   "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/57/Mastodon-v4.3.1-screenshot.jpg/1280px-Mastodon-v4.3.1-screenshot.jpg",
+   "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/04/Mastodon_Screenshot_2.jpg/1280px-Mastodon_Screenshot_2.jpg"
+  ],
+  "wordpress": [
+   "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/e0/WordPress_7.0_Dashboard.png/1280px-WordPress_7.0_Dashboard.png",
+   "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/23/WordPress_6.4_Dashboard.png/1280px-WordPress_6.4_Dashboard.png"
+  ],
+  "slidev": [
+   "https://raw.githubusercontent.com/slidevjs/slidev/main/assets/screenshots/cover.png",
+   "https://raw.githubusercontent.com/slidevjs/slidev/main/assets/screenshots/presenter-mode.png",
+   "https://raw.githubusercontent.com/slidevjs/slidev/main/assets/screenshots/slides-overview.png"
+  ],
+  "zulip": [
+   "https://raw.githubusercontent.com/zulip/zulip/main/static/images/landing-page/hello/original/screen-1.png",
+   "https://raw.githubusercontent.com/zulip/zulip/main/static/images/landing-page/hello/original/screen-2.png"
+  ],
+  "mbin": [
+   "https://raw.githubusercontent.com/MbinOrg/mbin/main/public/assets/screenshots/screen.png"
+  ],
+  "grist": [
+   "https://raw.githubusercontent.com/gristlabs/grist-core/main/static/img/tutorial-screenshot.png"
+  ],
+  "aider": [
+   "https://raw.githubusercontent.com/Aider-AI/aider/main/aider/website/assets/screenshot.png"
+  ],
+  "goose": [
+   "https://raw.githubusercontent.com/aaif-goose/goose/main/documentation/blog/2024-12-06-previewing-goose-v10-beta/goose-gui.png"
+  ],
+  "audiobookshelf": [
+   "https://raw.githubusercontent.com/advplyr/audiobookshelf/master/images/DemoLibrary.png"
+  ],
+  "bigbluebutton": [
+   "https://raw.githubusercontent.com/bigbluebutton/bigbluebutton/v4.0.x-develop/docs/static/img/22-overview.png"
+  ],
+  "vikunja": [
+   "https://vikunja.io/_astro/02-task-list.CTo2oooO_Z8aziL.png",
+   "https://vikunja.io/_astro/03-task-gantt.Dgr0fl3Z_1TJksQ.png"
+  ],
+  "ghost": [
+   "https://ghost.org/renders/posters/dashboard-1170.2a834c7d0bab2afeac8cc059efa36f9c2d62fef454fa98c2665e0bdf830e3876.webp"
+  ],
+  "limesurvey": [
+   "https://www.limesurvey.org/images/2025/home/survey-editor@2x.jpg"
+  ],
+  "rocket-chat": [
+   "https://cdn.prod.website-files.com/611a19b9853b7414a0f6b3f6/6ac734dd72cf323a6f7be53c_platform-main.webp"
+  ],
+  "taiga": [
+   "https://taiga.io/media/images/taiga1.width-800.png"
+  ],
+  "cachyos": [
+   "https://cachyos.org/_astro/hero.BwPoqA0v_Z2cTzTB.png",
+   "https://cachyos.org/_astro/hero_dark.Clya6HnN_Z1kUSVU.png"
+  ],
+  "linux-mint": [
+   "https://linuxmint.com/web/img/screenshots/c1.jpg",
+   "https://linuxmint.com/web/img/screenshots/c5.jpg"
+  ],
+  "heliboard": [
+   "https://raw.githubusercontent.com/HeliBorg/HeliBoard/main/fastlane/metadata/android/en-US/images/phoneScreenshots/1.png",
+   "https://raw.githubusercontent.com/HeliBorg/HeliBoard/main/fastlane/metadata/android/en-US/images/phoneScreenshots/6.png"
+  ],
+  "aurora-store": [
+   "https://f-droid.org/repo/com.aurora.store/en-US/phoneScreenshots/screenshot-01.png",
+   "https://f-droid.org/repo/com.aurora.store/en-US/phoneScreenshots/screenshot-03.png"
+  ],
+  "ente-auth": [
+   "https://f-droid.org/repo/io.ente.auth/en-US/phoneScreenshots/2.jpg",
+   "https://f-droid.org/repo/io.ente.auth/en-US/phoneScreenshots/3.jpg"
+  ],
+  "ente-photos": [
+   "https://f-droid.org/repo/io.ente.photos.fdroid/en-US/phoneScreenshots/1.png",
+   "https://f-droid.org/repo/io.ente.photos.fdroid/en-US/phoneScreenshots/3.png"
+  ],
+  "osmand": [
+   "https://f-droid.org/repo/net.osmand.plus/en-US/phoneScreenshots/00.png",
+   "https://f-droid.org/repo/net.osmand.plus/en-US/phoneScreenshots/02.png"
+  ],
+  "jellyfin": [
+   "https://jellyfin.org/assets/images/10.8-home-4a73a92bf90d1eeffa5081201ca9c7bb.png"
+  ],
+  "bookstack": [
+   "https://www.bookstackapp.com/images/screenshots/page-view.png",
+   "https://www.bookstackapp.com/images/screenshots/page-edit.png"
+  ],
+  "kanboard": [
+   "https://kanboard.org/assets/img/board.png"
+  ],
+  "documenso": [
+   "https://raw.githubusercontent.com/documenso/documenso/main/apps/docs/public/document-signing/editor-overview.webp"
+  ],
+  "docuseal": [
+   "https://www.docuseal.com/packs/static/images/demo-ff524f4563e1058bc5e6.jpg"
+  ],
+  "snikket": [
+   "https://snikket.org/images/demo-screenshot-2026.png"
+  ],
+  "gathio": [
+   "https://gath.io/images/example-event-2023.png",
+   "https://raw.githubusercontent.com/lowercasename/gathio/main/docs/using-gathio/images/approve-attendees-host-interface.png"
+  ],
+  "hedgedoc": [
+   "https://raw.githubusercontent.com/hedgedoc/hedgedoc/develop/frontend/public/public/screenshot.png"
+  ],
+  "passbolt": [
+   "https://www.passbolt.com/cdn-cgi/image/width=1920/images/home/passbolt-hero.png"
+  ],
+  "bluesky": [
+   "https://upload.wikimedia.org/wikipedia/commons/e/e2/BlueSky_Social.png"
+  ],
+  "zen-browser": [
+   "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/cd/Zen_Browser-1.10.3b_on_Linux-Debian.png/1280px-Zen_Browser-1.10.3b_on_Linux-Debian.png",
+   "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/ed/Captura_de_pantalla_Zen_Browser_en_Wikipedia_en_espa%C3%B1ol_2025-09-10.png/1280px-Captura_de_pantalla_Zen_Browser_en_Wikipedia_en_espa%C3%B1ol_2025-09-10.png"
+  ],
+  "seafile": [
+   "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/7e/Seafile_web_interface.png/1280px-Seafile_web_interface.png"
+  ],
+  "syncthing": [
+   "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/a7/Syncthing-screenshot-dark.png/1280px-Syncthing-screenshot-dark.png"
+  ],
+  "funkwhale": [
+   "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/d8/Capture_d%27%C3%A9cran_de_la_page_d%27accueil_de_Funkwhale.png/1280px-Capture_d%27%C3%A9cran_de_la_page_d%27accueil_de_Funkwhale.png"
+  ],
+  "owncloud": [
+   "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/8a/OwnCloud_sharing_in_the_web_interface_10.0.7.png/1280px-OwnCloud_sharing_in_the_web_interface_10.0.7.png"
+  ],
+  "codex-cli": [
+   "https://raw.githubusercontent.com/openai/codex/main/.github/codex-cli-splash.png"
+  ],
+  "cline": [
+   "https://raw.githubusercontent.com/cline/cline/main/docs/assets/desktop/desktop-customize-installed.png",
+   "https://raw.githubusercontent.com/cline/cline/main/docs/assets/clinepass/clinepass-ide-extension.png"
+  ],
+  "actual-budget": [
+   "https://dl.flathub.org/media/com/actualbudget/actual/bc87bcf615cb2bcc167878421466cc48/screenshots/image-1_orig.png",
+   "https://dl.flathub.org/media/com/actualbudget/actual/bc87bcf615cb2bcc167878421466cc48/screenshots/image-2_orig.png",
+   "https://dl.flathub.org/media/com/actualbudget/actual/bc87bcf615cb2bcc167878421466cc48/screenshots/image-4_orig.png"
+  ],
+  "briar": [
+   "https://dl.flathub.org/media/org/briarproject/Briar/c2ef7fea27203052757438c993d8db84/screenshots/image-1_orig.png"
+  ],
+  "jami": [
+   "https://dl.flathub.org/media/net/jami/Jami/3eeca5b736fa712e07bd3ea9894b0fd2/screenshots/image-2_1248x624@1.png",
+   "https://dl.flathub.org/media/net/jami/Jami/3eeca5b736fa712e07bd3ea9894b0fd2/screenshots/image-3_1248x624@1.png"
+  ],
+  "digikam": [
+   "https://dl.flathub.org/media/org/kde/digikam.desktop/bfdc34e6e097e2ce8fae542d45980247/screenshots/image-2_1248x605@1.png",
+   "https://dl.flathub.org/media/org/kde/digikam.desktop/bfdc34e6e097e2ce8fae542d45980247/screenshots/image-3_1248x804@1.png",
+   "https://dl.flathub.org/media/org/kde/digikam.desktop/bfdc34e6e097e2ce8fae542d45980247/screenshots/image-4_1248x746@1.png"
+  ],
+  "pinta": [
+   "https://dl.flathub.org/media/com/github/PintaProject.Pinta/6036b596f8f5a6ce7c2dc8a7d9c0565f/screenshots/image-1_orig.png"
+  ],
+  "tor-browser": [
+   "https://dl.flathub.org/media/org/torproject/torbrowser-launcher/8bbf3d7c3768830e11a10b6b47366829/screenshots/image-1_orig.png"
+  ],
+  "fairemail": [
+   "https://f-droid.org/repo/eu.faircode.email/en-US/phoneScreenshots/2_messages.png",
+   "https://f-droid.org/repo/eu.faircode.email/en-US/phoneScreenshots/1_navigation.png",
+   "https://f-droid.org/repo/eu.faircode.email/en-US/phoneScreenshots/3_messages-black.png"
+  ],
+  "fossify-gallery": [
+   "https://f-droid.org/repo/org.fossify.gallery/en-US/phoneScreenshots/1_en-US.png",
+   "https://f-droid.org/repo/org.fossify.gallery/en-US/phoneScreenshots/2_en-US.png"
+  ],
+  "anysoftkeyboard": [
+   "https://f-droid.org/repo/com.menny.android.anysoftkeyboard/en-US/phoneScreenshots/10109441489807555794.png",
+   "https://f-droid.org/repo/com.menny.android.anysoftkeyboard/en-US/phoneScreenshots/10377682646923045670.png"
+  ],
+  "librechat": [
+   "https://www.librechat.ai/_next/static/media/demo_light.f6e232d4.png",
+   "https://www.librechat.ai/_next/static/media/demo_dark.102d59a6.png"
+  ],
+  "2fas": [
+   "https://2fas.com/_next/static/media/app-phone-light.547049aa.png",
+   "https://2fas.com/_next/static/media/app-pass-phone-light.beddf45b.png"
+  ],
+  "pop-os": [
+   "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/49/Pop%21_OS_24.04_LTS_Settings_Desktop_-_English.png/1280px-Pop%21_OS_24.04_LTS_Settings_Desktop_-_English.png",
+   "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/3e/Pop%21_OS_24.04_LTS_default_desktop_-_English.png/1280px-Pop%21_OS_24.04_LTS_default_desktop_-_English.png"
+  ],
+  "ubuntu-touch": [
+   "https://upload.wikimedia.org/wikipedia/commons/e/e1/Ubuntu_Touch_applications_list%2C_24.04-1.0_Beta_2.png"
+  ],
+  "gemini-cli": [
+   "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/56/Gemini_CLI_screenshot.png/1280px-Gemini_CLI_screenshot.png"
+  ],
+  "hermes-agent": [
+   "https://raw.githubusercontent.com/NousResearch/hermes-agent/main/website/static/img/docs/dashboard-models/overview.png",
+   "https://raw.githubusercontent.com/NousResearch/hermes-agent/main/website/static/img/kanban-tutorial/01-board-overview.png"
+  ],
+  "ollama": [
+   "https://files.ollama.com/ollama-app-screenshot.png"
+  ],
+  "firefly-iii": [
+   "https://raw.githubusercontent.com/firefly-iii/firefly-iii/main/.github/assets/img/imac-complete.png"
+  ],
+  "owncast": [
+   "https://raw.githubusercontent.com/owncast/owncast/develop/web/.storybook/story-assets/project/owncast-browser-mobile.png"
+  ],
+  "openclaw": [
+   "https://raw.githubusercontent.com/openclaw/openclaw/main/.github/pr-proof/claw-creator/main-chat.png"
+  ],
+  "mediawiki": [
+   "https://upload.wikimedia.org/wikipedia/commons/a/af/20210524_MediaWiki_software_screenshot_en.png",
+   "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/1b/Screenshot_of_Winter%2C_a_proposed_MediaWiki_theme.png/1280px-Screenshot_of_Winter%2C_a_proposed_MediaWiki_theme.png"
+  ],
+  "bugzilla": [
+   "https://upload.wikimedia.org/wikipedia/commons/0/09/Bugzilla.mozilla.org_screenshot.png"
+  ],
+  "meshcentral": [
+   "https://thumb.wikimedia.org/wikipedia/commons/thumb/9/93/MeshCentral_device_overview.png/1280px-MeshCentral_device_overview.png"
+  ],
+  "losslesscut": [
+   "https://dl.flathub.org/media/no/mifi/losslesscut/24400b33bf25ed472706fb8c50663d5e/screenshots/image-1_orig.png"
+  ]
+ }
+}

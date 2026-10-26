@@ -4,10 +4,12 @@
 import { url, esc, ICON, suggestUrl, shot } from '../lib.mjs';
 import { appUrl, sortAlts } from '../cards.mjs';
 
-// WHY two lists: the picture cards need a replacement with a real screenshot (Windows and Chrome have none yet),
-// while the "Try" chips can name any app people search for.
-const POPULAR = ['Google Docs', 'Adobe Photoshop', 'Notion', 'Google Photos', 'Slack', 'Figma', 'Zoom', '1Password'];
-const TRY = ['Google Docs', 'Microsoft Windows', 'Google Chrome', 'Adobe Photoshop', 'WhatsApp', 'Spotify'];
+// WHY two lists: the picture cards need a replacement with a real screenshot, while the "Try" chips can name any
+// app people search for.
+const POPULAR = ['Google Docs', 'Adobe Photoshop', 'Microsoft Windows', 'Google Chrome', 'Notion', 'Google Photos', 'Figma', 'WhatsApp'];
+// WHY by hand: the obvious answer isn't always the most-starred one (GIMP has no GitHub stars; it lives on GNOME's own server).
+const LEAD = { 'Adobe Photoshop': 'gimp' };
+const TRY = ['Google Docs', 'Microsoft Windows', 'Google Chrome', 'Adobe Photoshop', 'Spotify', 'Slack'];
 // WHY these last: everyday apps are why most visitors arrive; developer and business tools come after.
 const LATER = new Set(['dev', 'business']);
 // WHY icons: a category reads at a glance, like the app's Marketplace sections. Lucide-style strokes, as in YouCoded.
@@ -36,7 +38,9 @@ export default function home(d) {
   // ── Popular switches: the best-known replacement with a screenshot leads each card ──
   const switches = POPULAR.map((name) => {
     const alts = altsFor(name);
-    const lead = alts.find((x) => x.a.fit === 'full' && x.p.screenshots?.length) ?? alts.find((x) => x.p.screenshots?.length) ?? alts[0];
+    // WHY a Verified pick first (Oct 27): the card's one name should be the one mods vouch for, e.g. Linux Mint for Windows.
+    const withShot = (x) => x.p.screenshots?.length;
+    const lead = alts.find((x) => x.p.id === LEAD[name]) ?? alts.find((x) => x.p.verified && x.a.fit === 'full' && withShot(x)) ?? alts.find((x) => x.a.fit === 'full' && withShot(x)) ?? alts.find(withShot) ?? alts[0];
     return lead ? { name, lead, more: alts.length - 1 } : null;
   }).filter(Boolean);
   const switchCard = ({ name, lead, more }) => `<a class="card pic swcard" href="${appUrl(name)}">

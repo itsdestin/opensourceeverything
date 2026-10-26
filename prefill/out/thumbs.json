@@ -1914,5 +1914,1400 @@
    "file": "tina-0.webp",
    "kb": 21
   }
+ ],
+ "aider": [
+  {
+   "from": "https://raw.githubusercontent.com/Aider-AI/aider/main/aider/website/assets/screenshot.png",
+   "file": "aider-0.webp",
+   "kb": 10
+  }
+ ],
+ "actual-budget": [
+  {
+   "from": "https://raw.githubusercontent.com/actualbudget/actual/HEAD/demo.png",
+   "file": "actual-budget-0.webp",
+   "kb": 21
+  }
+ ],
+ "2fas": [
+  {
+   "from": "https://2fas.com/_next/static/media/app-phone-light.547049aa.png",
+   "file": "2fas-0.webp",
+   "kb": 113
+  },
+  {
+   "from": "https://2fas.com/_next/static/media/app-pass-phone-light.beddf45b.png",
+   "file": "2fas-1.webp",
+   "kb": 115
+  }
+ ],
+ "anysoftkeyboard": [
+  {
+   "from": "https://f-droid.org/repo/com.menny.android.anysoftkeyboard/en-US/phoneScreenshots/10109441489807555794.png",
+   "file": "anysoftkeyboard-0.webp",
+   "kb": 16
+  },
+  {
+   "from": "https://f-droid.org/repo/com.menny.android.anysoftkeyboard/en-US/phoneScreenshots/10377682646923045670.png",
+   "file": "anysoftkeyboard-1.webp",
+   "kb": 12
+  }
+ ],
+ "audacity": [
+  {
+   "from": "https://dl.flathub.org/media/org/audacityteam/Audacity/0ad4a24524b6c06220649dc83a08ae81/screenshots/image-1_orig.png",
+   "file": "audacity-0.webp",
+   "kb": 32
+  }
+ ],
+ "arch-linux": [
+  {
+   "from": "https://upload.wikimedia.org/wikipedia/commons/8/8f/Arch_Linux_KDE_5.6.png",
+   "file": "arch-linux-0.webp",
+   "kb": 18
+  }
+ ],
+ "aurora-store": [
+  {
+   "from": "https://f-droid.org/repo/com.aurora.store/en-US/phoneScreenshots/screenshot-01.png",
+   "file": "aurora-store-0.webp",
+   "kb": 47
+  },
+  {
+   "from": "https://f-droid.org/repo/com.aurora.store/en-US/phoneScreenshots/screenshot-03.png",
+   "file": "aurora-store-1.webp",
+   "kb": 55
+  }
+ ],
+ "aves": [
+  {
+   "from": "https://raw.githubusercontent.com/deckerst/aves_extra/main/screenshots/readme/en/1.png",
+   "file": "aves-0.webp",
+   "kb": 17
+  },
+  {
+   "from": "https://raw.githubusercontent.com/deckerst/aves_extra/main/screenshots/readme/en/2.png",
+   "file": "aves-1.webp",
+   "kb": 26
+  },
+  {
+   "from": "https://raw.githubusercontent.com/deckerst/aves_extra/main/screenshots/readme/en/5.png",
+   "file": "aves-2.webp",
+   "kb": 11
+  },
+  {
+   "from": "https://raw.githubusercontent.com/deckerst/aves_extra/main/screenshots/readme/en/3.png",
+   "file": "aves-3.webp",
+   "kb": 14
+  }
+ ],
+ "bazzite": [
+  {
+   "from": "https://raw.githubusercontent.com/ublue-os/bazzite/HEAD/repo_content/desktop1.png?raw=true",
+   "file": "bazzite-0.webp",
+   "kb": 18
+  },
+  {
+   "from": "https://raw.githubusercontent.com/ublue-os/bazzite/HEAD/repo_content/desktop2.png?raw=true",
+   "file": "bazzite-1.webp",
+   "kb": 23
+  },
+  {
+   "from": "https://raw.githubusercontent.com/ublue-os/bazzite/HEAD/repo_content/gamemode.png?raw=true",
+   "file": "bazzite-2.webp",
+   "kb": 29
+  },
+  {
+   "from": "https://raw.githubusercontent.com/ublue-os/bazzite/HEAD/repo_content/distrobox.png?raw=true",
+   "file": "bazzite-3.webp",
+   "kb": 20
+  }
+ ],
+ "apitable": [
+  {
+   "from": "https://raw.githubusercontent.com/apitable/apitable/HEAD/docs/static/feature-realtime.gif",
+   "file": "apitable-0.webp",
+   "kb": 21
+  },
+  {
+   "from": "https://raw.githubusercontent.com/apitable/apitable/HEAD/docs/static/feature-form.gif",
+   "file": "apitable-1.webp",
+   "kb": 15
+  },
+  {
+   "from": "https://raw.githubusercontent.com/apitable/apitable/HEAD/docs/static/feature-api-first-panel.gif",
+   "file": "apitable-2.webp",
+   "kb": 15
+  },
+  {
+   "from": "https://raw.githubusercontent.com/apitable/apitable/HEAD/docs/static/feature-permissions.gif",
+   "file": "apitable-3.webp",
+   "kb": 19
+  }
+ ],
+ "bigbluebutton": [
+  {
+   "from": "https://raw.githubusercontent.com/bigbluebutton/bigbluebutton/v4.0.x-develop/docs/static/img/22-overview.png",
+   "file": "bigbluebutton-0.webp",
+   "kb": 17
+  }
+ ],
+ "audiobookshelf": [
+  {
+   "from": "https://raw.githubusercontent.com/advplyr/audiobookshelf/master/images/DemoLibrary.png",
+   "file": "audiobookshelf-0.webp",
+   "kb": 26
+  }
+ ],
+ "blender": [
+  {
+   "from": "https://dl.flathub.org/media/org/blender/Blender/c6b07403115901571923d99f1b725b0e/screenshots/image-1_1248x703@1.png",
+   "file": "blender-0.webp",
+   "kb": 23
+  },
+  {
+   "from": "https://dl.flathub.org/media/org/blender/Blender/c6b07403115901571923d99f1b725b0e/screenshots/image-3_1248x702@1.png",
+   "file": "blender-1.webp",
+   "kb": 40
+  },
+  {
+   "from": "https://dl.flathub.org/media/org/blender/Blender/c6b07403115901571923d99f1b725b0e/screenshots/image-2_1248x702@1.png",
+   "file": "blender-2.webp",
+   "kb": 35
+  }
+ ],
+ "bluesky": [
+  {
+   "from": "https://upload.wikimedia.org/wikipedia/commons/e/e2/BlueSky_Social.png",
+   "file": "bluesky-0.webp",
+   "kb": 13
+  }
+ ],
+ "brave": [
+  {
+   "from": "https://dl.flathub.org/media/com/brave/Browser/a5905128892a545b9f8b4d8160d839e3/screenshots/image-2_1248x789@1.png",
+   "file": "brave-0.webp",
+   "kb": 39
+  },
+  {
+   "from": "https://dl.flathub.org/media/com/brave/Browser/a5905128892a545b9f8b4d8160d839e3/screenshots/image-1_orig.png",
+   "file": "brave-1.webp",
+   "kb": 15
+  }
+ ],
+ "briar": [
+  {
+   "from": "https://dl.flathub.org/media/org/briarproject/Briar/c2ef7fea27203052757438c993d8db84/screenshots/image-1_orig.png",
+   "file": "briar-0.webp",
+   "kb": 30
+  }
+ ],
+ "bugzilla": [
+  {
+   "from": "https://upload.wikimedia.org/wikipedia/commons/0/09/Bugzilla.mozilla.org_screenshot.png",
+   "file": "bugzilla-0.webp",
+   "kb": 10
+  }
+ ],
+ "buzz": [
+  {
+   "from": "https://dl.flathub.org/media/io/github/chidiwilliams.Buzz/3b21cecd9ebc6658547de57af32ba7d1/screenshots/image-2_orig.png",
+   "file": "buzz-0.webp",
+   "kb": 14
+  },
+  {
+   "from": "https://dl.flathub.org/media/io/github/chidiwilliams.Buzz/3b21cecd9ebc6658547de57af32ba7d1/screenshots/image-1_orig.png",
+   "file": "buzz-1.webp",
+   "kb": 9
+  },
+  {
+   "from": "https://dl.flathub.org/media/io/github/chidiwilliams.Buzz/3b21cecd9ebc6658547de57af32ba7d1/screenshots/image-4_orig.png",
+   "file": "buzz-2.webp",
+   "kb": 19
+  }
+ ],
+ "calibre": [
+  {
+   "from": "https://dl.flathub.org/media/com/calibre_ebook/calibre/2ac083fe30ac8e892f25412b0f652fca/screenshots/image-1_orig.png",
+   "file": "calibre-0.webp",
+   "kb": 47
+  },
+  {
+   "from": "https://dl.flathub.org/media/com/calibre_ebook/calibre/2ac083fe30ac8e892f25412b0f652fca/screenshots/image-2_orig.png",
+   "file": "calibre-1.webp",
+   "kb": 47
+  }
+ ],
+ "cachyos": [
+  {
+   "from": "https://cachyos.org/_astro/hero.BwPoqA0v_Z2cTzTB.png",
+   "file": "cachyos-0.webp",
+   "kb": 21
+  },
+  {
+   "from": "https://cachyos.org/_astro/hero_dark.Clya6HnN_Z1kUSVU.png",
+   "file": "cachyos-1.webp",
+   "kb": 21
+  }
+ ],
+ "bookstack": [
+  {
+   "from": "https://www.bookstackapp.com/images/screenshots/page-view.png",
+   "file": "bookstack-0.webp",
+   "kb": 25
+  },
+  {
+   "from": "https://www.bookstackapp.com/images/screenshots/page-edit.png",
+   "file": "bookstack-1.webp",
+   "kb": 21
+  }
+ ],
+ "cline": [
+  {
+   "from": "https://raw.githubusercontent.com/cline/cline/main/docs/assets/desktop/desktop-customize-installed.png",
+   "file": "cline-0.webp",
+   "kb": 13
+  },
+  {
+   "from": "https://raw.githubusercontent.com/cline/cline/main/docs/assets/clinepass/clinepass-ide-extension.png",
+   "file": "cline-1.webp",
+   "kb": 12
+  }
+ ],
+ "digikam": [
+  {
+   "from": "https://dl.flathub.org/media/org/kde/digikam.desktop/bfdc34e6e097e2ce8fae542d45980247/screenshots/image-2_1248x605@1.png",
+   "file": "digikam-0.webp",
+   "kb": 23
+  },
+  {
+   "from": "https://dl.flathub.org/media/org/kde/digikam.desktop/bfdc34e6e097e2ce8fae542d45980247/screenshots/image-3_1248x804@1.png",
+   "file": "digikam-1.webp",
+   "kb": 47
+  },
+  {
+   "from": "https://dl.flathub.org/media/org/kde/digikam.desktop/bfdc34e6e097e2ce8fae542d45980247/screenshots/image-4_1248x746@1.png",
+   "file": "digikam-2.webp",
+   "kb": 32
+  }
+ ],
+ "chatbox-community-edition": [
+  {
+   "from": "https://raw.githubusercontent.com/chatboxai/chatbox/HEAD/doc/statics/snapshot_light.png",
+   "file": "chatbox-community-edition-0.webp",
+   "kb": 21
+  },
+  {
+   "from": "https://raw.githubusercontent.com/chatboxai/chatbox/HEAD/doc/statics/snapshot_dark.png",
+   "file": "chatbox-community-edition-1.webp",
+   "kb": 23
+  }
+ ],
+ "debian": [
+  {
+   "from": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/e9/Debian_13.0.0_GNOME_default_desktop_-_English.png/1280px-Debian_13.0.0_GNOME_default_desktop_-_English.png",
+   "file": "debian-0.webp",
+   "kb": 3
+  },
+  {
+   "from": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/eb/Debian_12_%28Bookworm%29_-_GNOME_desktop.png/1280px-Debian_12_%28Bookworm%29_-_GNOME_desktop.png",
+   "file": "debian-1.webp",
+   "kb": 4
+  }
+ ],
+ "documenso": [
+  {
+   "from": "https://raw.githubusercontent.com/documenso/documenso/main/apps/docs/public/document-signing/editor-overview.webp",
+   "file": "documenso-0.webp",
+   "kb": 11
+  }
+ ],
+ "element": [
+  {
+   "from": "https://dl.flathub.org/media/im/riot/Riot/74b860715fb8cfcdf59807de6709ceb3/screenshots/image-1_1248x679@1.png",
+   "file": "element-0.webp",
+   "kb": 10
+  }
+ ],
+ "codex-cli": [
+  {
+   "from": "https://raw.githubusercontent.com/openai/codex/main/.github/codex-cli-splash.png",
+   "file": "codex-cli-0.webp",
+   "kb": 20
+  }
+ ],
+ "docuseal": [
+  {
+   "from": "https://www.docuseal.com/packs/static/images/demo-ff524f4563e1058bc5e6.jpg",
+   "file": "docuseal-0.webp",
+   "kb": 19
+  }
+ ],
+ "etar-calendar": [
+  {
+   "from": "https://raw.githubusercontent.com/Etar-Group/Etar-Calendar/HEAD/metadata/animation.gif",
+   "file": "etar-calendar-0.webp",
+   "kb": 5
+  }
+ ],
+ "ente-auth": [
+  {
+   "from": "https://f-droid.org/repo/io.ente.auth/en-US/phoneScreenshots/2.jpg",
+   "file": "ente-auth-0.webp",
+   "kb": 28
+  },
+  {
+   "from": "https://f-droid.org/repo/io.ente.auth/en-US/phoneScreenshots/3.jpg",
+   "file": "ente-auth-1.webp",
+   "kb": 26
+  }
+ ],
+ "f-droid": [
+  {
+   "from": "https://f-droid.org/repo/org.fdroid.fdroid/en-US/phoneScreenshots/01-latest.png",
+   "file": "f-droid-0.webp",
+   "kb": 59
+  },
+  {
+   "from": "https://f-droid.org/repo/org.fdroid.fdroid/en-US/phoneScreenshots/02-categories.png",
+   "file": "f-droid-1.webp",
+   "kb": 63
+  }
+ ],
+ "fairemail": [
+  {
+   "from": "https://f-droid.org/repo/eu.faircode.email/en-US/phoneScreenshots/2_messages.png",
+   "file": "fairemail-0.webp",
+   "kb": 34
+  },
+  {
+   "from": "https://f-droid.org/repo/eu.faircode.email/en-US/phoneScreenshots/1_navigation.png",
+   "file": "fairemail-1.webp",
+   "kb": 28
+  },
+  {
+   "from": "https://f-droid.org/repo/eu.faircode.email/en-US/phoneScreenshots/3_messages-black.png",
+   "file": "fairemail-2.webp",
+   "kb": 35
+  }
+ ],
+ "fedora": [
+  {
+   "from": "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/1d/Fedora_42_Workstation_Desktop_English.png/1280px-Fedora_42_Workstation_Desktop_English.png",
+   "file": "fedora-0.webp",
+   "kb": 20
+  },
+  {
+   "from": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/86/Fedora_42_KDE_Plasma_Desktop_English.png/1280px-Fedora_42_KDE_Plasma_Desktop_English.png",
+   "file": "fedora-1.webp",
+   "kb": 24
+  }
+ ],
+ "firefox": [
+  {
+   "from": "https://dl.flathub.org/media/org.mozilla.firefox-stable/1504x846/org.mozilla.firefox-c6f98b38b8b28b113a75a6b34037b759.png",
+   "file": "firefox-0.webp",
+   "kb": 24
+  },
+  {
+   "from": "https://dl.flathub.org/media/org.mozilla.firefox-stable/1504x846/org.mozilla.firefox-af5d1ae7c121ea4864b3c5a1098f8f9c.png",
+   "file": "firefox-1.webp",
+   "kb": 17
+  }
+ ],
+ "ente-photos": [
+  {
+   "from": "https://f-droid.org/repo/io.ente.photos.fdroid/en-US/phoneScreenshots/1.png",
+   "file": "ente-photos-0.webp",
+   "kb": 65
+  },
+  {
+   "from": "https://f-droid.org/repo/io.ente.photos.fdroid/en-US/phoneScreenshots/3.png",
+   "file": "ente-photos-1.webp",
+   "kb": 76
+  }
+ ],
+ "firefly-iii": [
+  {
+   "from": "https://raw.githubusercontent.com/firefly-iii/firefly-iii/develop/.github/assets/img/imac-complete.png",
+   "file": "firefly-iii-0.webp",
+   "kb": 14
+  },
+  {
+   "from": "https://raw.githubusercontent.com/firefly-iii/firefly-iii/develop/.github/assets/img/ipad-complete.png",
+   "file": "firefly-iii-1.webp",
+   "kb": 12
+  },
+  {
+   "from": "https://raw.githubusercontent.com/firefly-iii/firefly-iii/develop/.github/assets/img/iphone-complete.png",
+   "file": "firefly-iii-2.webp",
+   "kb": 34
+  }
+ ],
+ "fluent-reader": [
+  {
+   "from": "https://dl.flathub.org/media/me.hyliu.fluentreader-stable/1248x702/me.hyliu.fluentreader-130bcfdc167f2870afeb981f12c6fd65.png",
+   "file": "fluent-reader-0.webp",
+   "kb": 37
+  },
+  {
+   "from": "https://dl.flathub.org/media/me.hyliu.fluentreader-stable/1504x846/me.hyliu.fluentreader-46eba9c63436c341f4fc45234beabdc1.png",
+   "file": "fluent-reader-1.webp",
+   "kb": 35
+  }
+ ],
+ "funkwhale": [
+  {
+   "from": "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/d8/Capture_d%27%C3%A9cran_de_la_page_d%27accueil_de_Funkwhale.png/1280px-Capture_d%27%C3%A9cran_de_la_page_d%27accueil_de_Funkwhale.png",
+   "file": "funkwhale-0.webp",
+   "kb": 19
+  }
+ ],
+ "gathio": [
+  {
+   "from": "https://gath.io/images/example-event-2023.png",
+   "file": "gathio-0.webp",
+   "kb": 42
+  },
+  {
+   "from": "https://raw.githubusercontent.com/lowercasename/gathio/main/docs/using-gathio/images/approve-attendees-host-interface.png",
+   "file": "gathio-1.webp",
+   "kb": 23
+  }
+ ],
+ "fossify-calendar": [
+  {
+   "from": "https://raw.githubusercontent.com/FossifyOrg/Calendar/HEAD/fastlane/metadata/android/en-US/images/phoneScreenshots/2_en-US.png",
+   "file": "fossify-calendar-0.webp",
+   "kb": 31
+  },
+  {
+   "from": "https://raw.githubusercontent.com/FossifyOrg/Calendar/HEAD/fastlane/metadata/android/en-US/images/phoneScreenshots/4_en-US.png",
+   "file": "fossify-calendar-1.webp",
+   "kb": 38
+  },
+  {
+   "from": "https://raw.githubusercontent.com/FossifyOrg/Calendar/HEAD/fastlane/metadata/android/en-US/images/phoneScreenshots/1_en-US.png",
+   "file": "fossify-calendar-2.webp",
+   "kb": 38
+  }
+ ],
+ "gemini-cli": [
+  {
+   "from": "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/56/Gemini_CLI_screenshot.png/1280px-Gemini_CLI_screenshot.png",
+   "file": "gemini-cli-0.webp",
+   "kb": 29
+  }
+ ],
+ "ghost": [
+  {
+   "from": "https://ghost.org/renders/posters/dashboard-1170.2a834c7d0bab2afeac8cc059efa36f9c2d62fef454fa98c2665e0bdf830e3876.webp",
+   "file": "ghost-0.webp",
+   "kb": 13
+  }
+ ],
+ "ghostfolio": [
+  {
+   "from": "https://raw.githubusercontent.com/ghostfolio/ghostfolio/HEAD/apps/client/src/assets/images/screenshot.png",
+   "file": "ghostfolio-0.webp",
+   "kb": 25
+  }
+ ],
+ "gimp": [
+  {
+   "from": "https://dl.flathub.org/media/org/gimp/GIMP/95e6d7d59d33a0f9364535dbe023d807/screenshots/image-2_1248x681@1.png",
+   "file": "gimp-0.webp",
+   "kb": 31
+  },
+  {
+   "from": "https://dl.flathub.org/media/org/gimp/GIMP/95e6d7d59d33a0f9364535dbe023d807/screenshots/image-1_1248x702@1.png",
+   "file": "gimp-1.webp",
+   "kb": 36
+  },
+  {
+   "from": "https://dl.flathub.org/media/org/gimp/GIMP/95e6d7d59d33a0f9364535dbe023d807/screenshots/image-3_1248x681@1.png",
+   "file": "gimp-2.webp",
+   "kb": 30
+  }
+ ],
+ "gnumeric": [
+  {
+   "from": "https://upload.wikimedia.org/wikipedia/commons/9/96/Gnumeric-sample.png",
+   "file": "gnumeric-0.webp",
+   "kb": 29
+  }
+ ],
+ "grapheneos": [
+  {
+   "from": "https://upload.wikimedia.org/wikipedia/commons/8/8e/GrapheneOS_%22Apps%22_app.png",
+   "file": "grapheneos-0.webp",
+   "kb": 29
+  },
+  {
+   "from": "https://upload.wikimedia.org/wikipedia/commons/0/0c/GrapheneOS_home_screen_Android_17.png",
+   "file": "grapheneos-1.webp",
+   "kb": 11
+  }
+ ],
+ "goose": [
+  {
+   "from": "https://raw.githubusercontent.com/aaif-goose/goose/main/documentation/blog/2024-12-06-previewing-goose-v10-beta/goose-gui.png",
+   "file": "goose-0.webp",
+   "kb": 13
+  }
+ ],
+ "grist": [
+  {
+   "from": "https://raw.githubusercontent.com/gristlabs/grist-core/main/static/img/tutorial-screenshot.png",
+   "file": "grist-0.webp",
+   "kb": 22
+  }
+ ],
+ "heliboard": [
+  {
+   "from": "https://raw.githubusercontent.com/HeliBorg/HeliBoard/main/fastlane/metadata/android/en-US/images/phoneScreenshots/1.png",
+   "file": "heliboard-0.webp",
+   "kb": 17
+  },
+  {
+   "from": "https://raw.githubusercontent.com/HeliBorg/HeliBoard/main/fastlane/metadata/android/en-US/images/phoneScreenshots/6.png",
+   "file": "heliboard-1.webp",
+   "kb": 20
+  }
+ ],
+ "fossify-gallery": [
+  {
+   "from": "https://raw.githubusercontent.com/FossifyOrg/Gallery/HEAD/fastlane/metadata/android/en-US/images/phoneScreenshots/1_en-US.png",
+   "file": "fossify-gallery-0.webp",
+   "kb": 61
+  },
+  {
+   "from": "https://raw.githubusercontent.com/FossifyOrg/Gallery/HEAD/fastlane/metadata/android/en-US/images/phoneScreenshots/2_en-US.png",
+   "file": "fossify-gallery-1.webp",
+   "kb": 20
+  }
+ ],
+ "hedgedoc": [
+  {
+   "from": "https://raw.githubusercontent.com/hedgedoc/hedgedoc/develop/frontend/public/public/screenshot.png",
+   "file": "hedgedoc-0.webp",
+   "kb": 34
+  }
+ ],
+ "home-assistant": [
+  {
+   "from": "https://raw.githubusercontent.com/home-assistant/core/dev/.github/assets/screenshot-integrations.png",
+   "file": "home-assistant-0.webp",
+   "kb": 14
+  }
+ ],
+ "inkscape": [
+  {
+   "from": "https://dl.flathub.org/media/org/inkscape/Inkscape/d06b79da7ad6df73032683fbcf8c4d56/screenshots/image-1_1248x767@1.png",
+   "file": "inkscape-0.webp",
+   "kb": 16
+  },
+  {
+   "from": "https://dl.flathub.org/media/org/inkscape/Inkscape/d06b79da7ad6df73032683fbcf8c4d56/screenshots/image-2_1248x765@1.png",
+   "file": "inkscape-1.webp",
+   "kb": 20
+  },
+  {
+   "from": "https://dl.flathub.org/media/org/inkscape/Inkscape/d06b79da7ad6df73032683fbcf8c4d56/screenshots/image-4_1248x763@1.png",
+   "file": "inkscape-2.webp",
+   "kb": 17
+  }
+ ],
+ "hermes-agent": [
+  {
+   "from": "https://raw.githubusercontent.com/NousResearch/hermes-agent/main/website/static/img/docs/dashboard-models/overview.png",
+   "file": "hermes-agent-0.webp",
+   "kb": 18
+  },
+  {
+   "from": "https://raw.githubusercontent.com/NousResearch/hermes-agent/main/website/static/img/kanban-tutorial/01-board-overview.png",
+   "file": "hermes-agent-1.webp",
+   "kb": 14
+  }
+ ],
+ "jami": [
+  {
+   "from": "https://dl.flathub.org/media/net/jami/Jami/3eeca5b736fa712e07bd3ea9894b0fd2/screenshots/image-2_1248x624@1.png",
+   "file": "jami-0.webp",
+   "kb": 16
+  },
+  {
+   "from": "https://dl.flathub.org/media/net/jami/Jami/3eeca5b736fa712e07bd3ea9894b0fd2/screenshots/image-3_1248x624@1.png",
+   "file": "jami-1.webp",
+   "kb": 13
+  }
+ ],
+ "jan": [
+  {
+   "from": "https://dl.flathub.org/media/ai/jan/Jan/f92cccd45dcfb12937a7e37a07d143e7/screenshots/image-2_orig.png",
+   "file": "jan-0.webp",
+   "kb": 21
+  },
+  {
+   "from": "https://dl.flathub.org/media/ai/jan/Jan/f92cccd45dcfb12937a7e37a07d143e7/screenshots/image-1_orig.png",
+   "file": "jan-1.webp",
+   "kb": 8
+  },
+  {
+   "from": "https://dl.flathub.org/media/ai/jan/Jan/f92cccd45dcfb12937a7e37a07d143e7/screenshots/image-5_orig.png",
+   "file": "jan-2.webp",
+   "kb": 26
+  }
+ ],
+ "highlight": [
+  {
+   "from": "https://user-images.githubusercontent.com/20292680/214499701-86b7deb3-ec8f-4cb2-8661-ff4f9d7ade2d.png",
+   "file": "highlight-0.webp",
+   "kb": 23
+  },
+  {
+   "from": "https://user-images.githubusercontent.com/20292680/214500108-c8e0e289-276a-4863-816a-7c854c97df4e.png",
+   "file": "highlight-1.webp",
+   "kb": 20
+  },
+  {
+   "from": "https://user-images.githubusercontent.com/20292680/233539519-f8f58251-5b88-4703-8bea-2cd8d9549faf.png",
+   "file": "highlight-2.webp",
+   "kb": 13
+  }
+ ],
+ "kanboard": [
+  {
+   "from": "https://kanboard.org/assets/img/board.png",
+   "file": "kanboard-0.webp",
+   "kb": 16
+  }
+ ],
+ "kdenlive": [
+  {
+   "from": "https://dl.flathub.org/media/org/kde/kdenlive.desktop/ed746a0f36b42446cedf1605b1c4f0cb/screenshots/image-5_orig.png",
+   "file": "kdenlive-0.webp",
+   "kb": 24
+  },
+  {
+   "from": "https://dl.flathub.org/media/org/kde/kdenlive.desktop/ed746a0f36b42446cedf1605b1c4f0cb/screenshots/image-1_orig.png",
+   "file": "kdenlive-1.webp",
+   "kb": 32
+  },
+  {
+   "from": "https://dl.flathub.org/media/org/kde/kdenlive.desktop/ed746a0f36b42446cedf1605b1c4f0cb/screenshots/image-6_1248x749@1.png",
+   "file": "kdenlive-2.webp",
+   "kb": 23
+  }
+ ],
+ "keepassxc": [
+  {
+   "from": "https://dl.flathub.org/media/org/keepassxc/KeePassXC.desktop/8703bd4e659abcb1dac1d6646881bb00/screenshots/image-1_1248x949@1.png",
+   "file": "keepassxc-0.webp",
+   "kb": 26
+  },
+  {
+   "from": "https://dl.flathub.org/media/org/keepassxc/KeePassXC.desktop/8703bd4e659abcb1dac1d6646881bb00/screenshots/image-4_1248x949@1.png",
+   "file": "keepassxc-1.webp",
+   "kb": 13
+  },
+  {
+   "from": "https://dl.flathub.org/media/org/keepassxc/KeePassXC.desktop/8703bd4e659abcb1dac1d6646881bb00/screenshots/image-2_orig.png",
+   "file": "keepassxc-2.webp",
+   "kb": 9
+  }
+ ],
+ "keepassdx": [
+  {
+   "from": "https://raw.githubusercontent.com/Kunzisoft/KeePassDX/master/art/screen.jpg",
+   "file": "keepassdx-0.webp",
+   "kb": 16
+  }
+ ],
+ "koreader": [
+  {
+   "from": "https://dl.flathub.org/media/r/ro/rocks.koreader.koreader/72a553c4e69edb9d1c98df44c07cb01d/screenshots/image-2_1248x872@1.png",
+   "file": "koreader-0.webp",
+   "kb": 90
+  },
+  {
+   "from": "https://dl.flathub.org/media/r/ro/rocks.koreader.koreader/72a553c4e69edb9d1c98df44c07cb01d/screenshots/image-3_1248x872@1.png",
+   "file": "koreader-1.webp",
+   "kb": 49
+  }
+ ],
+ "jellyfin": [
+  {
+   "from": "https://jellyfin.org/assets/images/10.8-home-4a73a92bf90d1eeffa5081201ca9c7bb.png",
+   "file": "jellyfin-0.webp",
+   "kb": 41
+  }
+ ],
+ "krita": [
+  {
+   "from": "https://dl.flathub.org/media/org/kde/krita/1348962dcc0842250c4ce6876acc36cc/screenshots/image-1_1248x677@1.png",
+   "file": "krita-0.webp",
+   "kb": 42
+  },
+  {
+   "from": "https://dl.flathub.org/media/org/kde/krita/1348962dcc0842250c4ce6876acc36cc/screenshots/image-4_1248x677@1.png",
+   "file": "krita-1.webp",
+   "kb": 17
+  },
+  {
+   "from": "https://dl.flathub.org/media/org/kde/krita/1348962dcc0842250c4ce6876acc36cc/screenshots/image-6_1248x702@1.png",
+   "file": "krita-2.webp",
+   "kb": 23
+  }
+ ],
+ "libreoffice-calc": [
+  {
+   "from": "https://dl.flathub.org/media/org/libreoffice/LibreOffice/6a06e0ec2876ffc989b0e2a1340d3331/screenshots/image-2_orig.png",
+   "file": "libreoffice-calc-0.webp",
+   "kb": 22
+  }
+ ],
+ "keila": [
+  {
+   "from": "https://www.keila.io/_astro/keila-2024-05-01.BUp8L2VZ.png",
+   "file": "keila-0.webp",
+   "kb": 22
+  },
+  {
+   "from": "https://www.keila.io/og-images/index_en.png",
+   "file": "keila-1.webp",
+   "kb": 10
+  }
+ ],
+ "libreoffice-impress": [
+  {
+   "from": "https://dl.flathub.org/media/org/libreoffice/LibreOffice/6a06e0ec2876ffc989b0e2a1340d3331/screenshots/image-3_orig.png",
+   "file": "libreoffice-impress-0.webp",
+   "kb": 22
+  }
+ ],
+ "libreoffice-writer": [
+  {
+   "from": "https://dl.flathub.org/media/org/libreoffice/LibreOffice/6a06e0ec2876ffc989b0e2a1340d3331/screenshots/image-1_orig.png",
+   "file": "libreoffice-writer-0.webp",
+   "kb": 32
+  }
+ ],
+ "librewolf": [
+  {
+   "from": "https://dl.flathub.org/media/io/gitlab/librewolf-community/695668834d7a406c01d5a25c44f90623/screenshots/image-1_orig.png",
+   "file": "librewolf-0.webp",
+   "kb": 3
+  }
+ ],
+ "lago": [
+  {
+   "from": "https://raw.githubusercontent.com/getlago/lago/HEAD/docs/images/readme-hero-assets/lago-product-platform.png",
+   "file": "lago-0.webp",
+   "kb": 14
+  }
+ ],
+ "librechat": [
+  {
+   "from": "https://www.librechat.ai/_next/static/media/demo_light.f6e232d4.png",
+   "file": "librechat-0.webp",
+   "kb": 12
+  },
+  {
+   "from": "https://www.librechat.ai/_next/static/media/demo_dark.102d59a6.png",
+   "file": "librechat-1.webp",
+   "kb": 12
+  }
+ ],
+ "lmms": [
+  {
+   "from": "https://dl.flathub.org/media/io/lmms/LMMS/6107ab24d0136ed99fbf3d732992e171/screenshots/image-1_orig.png",
+   "file": "lmms-0.webp",
+   "kb": 21
+  }
+ ],
+ "losslesscut": [
+  {
+   "from": "https://static.mifi.no/media/InHeghy_4DwVeujK/2000.jpg",
+   "file": "losslesscut-0.webp",
+   "kb": 55
+  }
+ ],
+ "kilo-code": [
+  {
+   "from": "https://github.com/user-attachments/assets/0536ca59-ed81-4512-9e05-d186187a1b52",
+   "file": "kilo-code-0.webp",
+   "kb": 10
+  }
+ ],
+ "linux-mint": [
+  {
+   "from": "https://linuxmint.com/web/img/screenshots/c1.jpg",
+   "file": "linux-mint-0.webp",
+   "kb": 10
+  },
+  {
+   "from": "https://linuxmint.com/web/img/screenshots/c5.jpg",
+   "file": "linux-mint-1.webp",
+   "kb": 9
+  }
+ ],
+ "lineageos": [
+  {
+   "from": "https://upload.wikimedia.org/wikipedia/commons/a/aa/LineageOS_22.1_Home_Screen.png",
+   "file": "lineageos-0.webp",
+   "kb": 16
+  }
+ ],
+ "mbin": [
+  {
+   "from": "https://raw.githubusercontent.com/MbinOrg/mbin/main/public/assets/screenshots/screen.png",
+   "file": "mbin-0.webp",
+   "kb": 21
+  }
+ ],
+ "mediawiki": [
+  {
+   "from": "https://upload.wikimedia.org/wikipedia/commons/a/af/20210524_MediaWiki_software_screenshot_en.png",
+   "file": "mediawiki-0.webp",
+   "kb": 18
+  },
+  {
+   "from": "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/1b/Screenshot_of_Winter%2C_a_proposed_MediaWiki_theme.png/1280px-Screenshot_of_Winter%2C_a_proposed_MediaWiki_theme.png",
+   "file": "mediawiki-1.webp",
+   "kb": 42
+  }
+ ],
+ "mastodon": [
+  {
+   "from": "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/57/Mastodon-v4.3.1-screenshot.jpg/1280px-Mastodon-v4.3.1-screenshot.jpg",
+   "file": "mastodon-0.webp",
+   "kb": 15
+  },
+  {
+   "from": "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/04/Mastodon_Screenshot_2.jpg/1280px-Mastodon_Screenshot_2.jpg",
+   "file": "mastodon-1.webp",
+   "kb": 39
+  }
+ ],
+ "mailspring": [
+  {
+   "from": "https://www.getmailspring.com/static/img/og-share.jpg",
+   "file": "mailspring-0.webp",
+   "kb": 31
+  }
+ ],
+ "meshcentral": [
+  {
+   "from": "https://thumb.wikimedia.org/wikipedia/commons/thumb/9/93/MeshCentral_device_overview.png/1280px-MeshCentral_device_overview.png",
+   "file": "meshcentral-0.webp",
+   "kb": 7
+  }
+ ],
+ "listmonk": [
+  {
+   "from": "https://github.com/user-attachments/assets/689b5fbb-dd25-4956-a36f-e3226a65f9c4",
+   "file": "listmonk-0.webp",
+   "kb": 16
+  }
+ ],
+ "natron": [
+  {
+   "from": "https://dl.flathub.org/media/fr/natron/Natron/e1c66133a7851966660edb790e7037dc/screenshots/image-1_1248x702@1.png",
+   "file": "natron-0.webp",
+   "kb": 19
+  }
+ ],
+ "mypaint": [
+  {
+   "from": "https://dl.flathub.org/media/org/mypaint/MyPaint/7ae5ec387d1933b7b5e5ede0c53a9d32/screenshots/image-1_1248x702@1.png",
+   "file": "mypaint-0.webp",
+   "kb": 31
+  }
+ ],
+ "limesurvey": [
+  {
+   "from": "https://www.limesurvey.org/images/2025/home/survey-editor@2x.jpg",
+   "file": "limesurvey-0.webp",
+   "kb": 14
+  }
+ ],
+ "nextcloud-polls": [
+  {
+   "from": "https://raw.githubusercontent.com/nextcloud/polls/HEAD/screenshots/overview.png",
+   "file": "nextcloud-polls-0.webp",
+   "kb": 12
+  },
+  {
+   "from": "https://raw.githubusercontent.com/nextcloud/polls/HEAD/screenshots/edit-poll.png",
+   "file": "nextcloud-polls-1.webp",
+   "kb": 21
+  },
+  {
+   "from": "https://raw.githubusercontent.com/nextcloud/polls/HEAD/screenshots/share.png",
+   "file": "nextcloud-polls-2.webp",
+   "kb": 20
+  },
+  {
+   "from": "https://raw.githubusercontent.com/nextcloud/polls/HEAD/screenshots/vote.png",
+   "file": "nextcloud-polls-3.webp",
+   "kb": 31
+  }
+ ],
+ "ntfy": [
+  {
+   "from": "https://raw.githubusercontent.com/binwiederhier/ntfy/HEAD/.github/images/screenshot-curl.png",
+   "file": "ntfy-0.webp",
+   "kb": 16
+  },
+  {
+   "from": "https://raw.githubusercontent.com/binwiederhier/ntfy/HEAD/.github/images/screenshot-web-detail.png",
+   "file": "ntfy-1.webp",
+   "kb": 29
+  },
+  {
+   "from": "https://raw.githubusercontent.com/binwiederhier/ntfy/HEAD/.github/images/screenshot-phone-main.jpg",
+   "file": "ntfy-2.webp",
+   "kb": 16
+  },
+  {
+   "from": "https://raw.githubusercontent.com/binwiederhier/ntfy/HEAD/.github/images/screenshot-phone-detail.jpg",
+   "file": "ntfy-3.webp",
+   "kb": 31
+  }
+ ],
+ "obs-studio": [
+  {
+   "from": "https://dl.flathub.org/media/com/obsproject/Studio/d95756e227c3b10951a83e14e063c185/screenshots/image-1_orig.png",
+   "file": "obs-studio-0.webp",
+   "kb": 26
+  }
+ ],
+ "onlyoffice-docs": [
+  {
+   "from": "https://dl.flathub.org/media/org/onlyoffice/desktopeditors/05940ed2ec8bd1b907711688f3f9d066/screenshots/image-3_1248x873@1.png",
+   "file": "onlyoffice-docs-0.webp",
+   "kb": 40
+  },
+  {
+   "from": "https://dl.flathub.org/media/org/onlyoffice/desktopeditors/05940ed2ec8bd1b907711688f3f9d066/screenshots/image-5_1248x873@1.png",
+   "file": "onlyoffice-docs-1.webp",
+   "kb": 32
+  },
+  {
+   "from": "https://dl.flathub.org/media/org/onlyoffice/desktopeditors/05940ed2ec8bd1b907711688f3f9d066/screenshots/image-6_1248x873@1.png",
+   "file": "onlyoffice-docs-2.webp",
+   "kb": 31
+  }
+ ],
+ "nextcloud-talk": [
+  {
+   "from": "https://raw.githubusercontent.com/nextcloud/spreed/main/docs/call-in-action.jpg",
+   "file": "nextcloud-talk-0.webp",
+   "kb": 38
+  }
+ ],
+ "openclaw": [
+  {
+   "from": "https://raw.githubusercontent.com/openclaw/openclaw/main/.github/pr-proof/claw-creator/main-chat.png",
+   "file": "openclaw-0.webp",
+   "kb": 13
+  }
+ ],
+ "opencode": [
+  {
+   "from": "https://raw.githubusercontent.com/anomalyco/opencode/HEAD/packages/web/src/assets/lander/screenshot.png",
+   "file": "opencode-0.webp",
+   "kb": 30
+  }
+ ],
+ "ollama": [
+  {
+   "from": "https://files.ollama.com/ollama-app-screenshot.png",
+   "file": "ollama-0.webp",
+   "kb": 7
+  }
+ ],
+ "openpost": [
+  {
+   "from": "https://raw.githubusercontent.com/getopenpost/openpost/HEAD/assets/demos/publishing.gif",
+   "file": "openpost-0.webp",
+   "kb": 18
+  },
+  {
+   "from": "https://raw.githubusercontent.com/getopenpost/openpost/HEAD/assets/screenshots/mobile-gallery-light.png",
+   "file": "openpost-1.webp",
+   "kb": 19
+  },
+  {
+   "from": "https://raw.githubusercontent.com/getopenpost/openpost/HEAD/assets/demos/image-editor.gif",
+   "file": "openpost-2.webp",
+   "kb": 16
+  }
+ ],
+ "owncloud": [
+  {
+   "from": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/8a/OwnCloud_sharing_in_the_web_interface_10.0.7.png/1280px-OwnCloud_sharing_in_the_web_interface_10.0.7.png",
+   "file": "owncloud-0.webp",
+   "kb": 17
+  }
+ ],
+ "osmand": [
+  {
+   "from": "https://f-droid.org/repo/net.osmand.plus/en-US/phoneScreenshots/00.png",
+   "file": "osmand-0.webp",
+   "kb": 18
+  },
+  {
+   "from": "https://f-droid.org/repo/net.osmand.plus/en-US/phoneScreenshots/02.png",
+   "file": "osmand-1.webp",
+   "kb": 28
+  }
+ ],
+ "pdf-arranger": [
+  {
+   "from": "https://dl.flathub.org/media/com/github/jeromerobert.pdfarranger/e4ca6b0caccb8aa65fb40f5c22a3752c/screenshots/image-1_orig.png",
+   "file": "pdf-arranger-0.webp",
+   "kb": 32
+  }
+ ],
+ "passbolt": [
+  {
+   "from": "https://www.passbolt.com/cdn-cgi/image/width=1920/images/home/passbolt-hero.png",
+   "file": "passbolt-0.webp",
+   "kb": 27
+  }
+ ],
+ "pinta": [
+  {
+   "from": "https://dl.flathub.org/media/com/github/PintaProject.Pinta/6036b596f8f5a6ce7c2dc8a7d9c0565f/screenshots/image-1_orig.png",
+   "file": "pinta-0.webp",
+   "kb": 20
+  }
+ ],
+ "pop-os": [
+  {
+   "from": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/49/Pop%21_OS_24.04_LTS_Settings_Desktop_-_English.png/1280px-Pop%21_OS_24.04_LTS_Settings_Desktop_-_English.png",
+   "file": "pop-os-0.webp",
+   "kb": 15
+  },
+  {
+   "from": "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/3e/Pop%21_OS_24.04_LTS_default_desktop_-_English.png/1280px-Pop%21_OS_24.04_LTS_default_desktop_-_English.png",
+   "file": "pop-os-1.webp",
+   "kb": 17
+  }
+ ],
+ "owncast": [
+  {
+   "from": "https://raw.githubusercontent.com/owncast/owncast/develop/web/.storybook/story-assets/project/owncast-browser-mobile.png",
+   "file": "owncast-0.webp",
+   "kb": 25
+  }
+ ],
+ "postmarketos": [
+  {
+   "from": "https://upload.wikimedia.org/wikipedia/commons/0/0f/PostmarketOS-With-Phosh.png",
+   "file": "postmarketos-0.webp",
+   "kb": 22
+  },
+  {
+   "from": "https://upload.wikimedia.org/wikipedia/commons/e/ee/Phosh_0.14.0.png",
+   "file": "postmarketos-1.webp",
+   "kb": 27
+  }
+ ],
+ "rawtherapee": [
+  {
+   "from": "https://dl.flathub.org/media/com/rawtherapee/RawTherapee/1690c20ece4741e6dcb2ed7346d3747e/screenshots/image-1_1248x702@1.png",
+   "file": "rawtherapee-0.webp",
+   "kb": 38
+  },
+  {
+   "from": "https://dl.flathub.org/media/com/rawtherapee/RawTherapee/1690c20ece4741e6dcb2ed7346d3747e/screenshots/image-3_1248x702@1.png",
+   "file": "rawtherapee-1.webp",
+   "kb": 36
+  },
+  {
+   "from": "https://dl.flathub.org/media/com/rawtherapee/RawTherapee/1690c20ece4741e6dcb2ed7346d3747e/screenshots/image-2_1248x702@1.png",
+   "file": "rawtherapee-2.webp",
+   "kb": 38
+  }
+ ],
+ "postiz": [
+  {
+   "from": "https://github.com/user-attachments/assets/a27ee220-beb7-4c7e-8c1b-2c44301f82ef",
+   "file": "postiz-0.webp",
+   "kb": 12
+  },
+  {
+   "from": "https://github.com/user-attachments/assets/eb5f5f15-ed90-47fc-811c-03ccba6fa8a2",
+   "file": "postiz-1.webp",
+   "kb": 12
+  },
+  {
+   "from": "https://github.com/user-attachments/assets/d51786ee-ddd8-4ef8-8138-5192e9cfe7c3",
+   "file": "postiz-2.webp",
+   "kb": 11
+  },
+  {
+   "from": "https://github.com/user-attachments/assets/91f83c89-22f6-43d6-b7aa-d2d3378289fb",
+   "file": "postiz-3.webp",
+   "kb": 12
+  }
+ ],
+ "openreplay": [
+  {
+   "from": "https://raw.githubusercontent.com/openreplay/openreplay/HEAD/static/demo.gif",
+   "file": "openreplay-0.webp",
+   "kb": 16
+  }
+ ],
+ "roundcube": [
+  {
+   "from": "https://upload.wikimedia.org/wikipedia/commons/2/25/Roundcube_1.6.0_screenshot.png",
+   "file": "roundcube-0.webp",
+   "kb": 28
+  }
+ ],
+ "scribus": [
+  {
+   "from": "https://dl.flathub.org/media/net/scribus/Scribus/48ad39685c76efc094f785ce90f3743e/screenshots/image-2_orig.png",
+   "file": "scribus-0.webp",
+   "kb": 22
+  },
+  {
+   "from": "https://dl.flathub.org/media/net/scribus/Scribus/48ad39685c76efc094f785ce90f3743e/screenshots/image-1_orig.png",
+   "file": "scribus-1.webp",
+   "kb": 12
+  }
+ ],
+ "seafile": [
+  {
+   "from": "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/7e/Seafile_web_interface.png/1280px-Seafile_web_interface.png",
+   "file": "seafile-0.webp",
+   "kb": 13
+  }
+ ],
+ "signal": [
+  {
+   "from": "https://dl.flathub.org/media/org/signal/Signal/c016aa3d4937d4b8de5bf549a10f7788/screenshots/image-1_orig.png",
+   "file": "signal-0.webp",
+   "kb": 21
+  }
+ ],
+ "rocket-chat": [
+  {
+   "from": "https://cdn.prod.website-files.com/611a19b9853b7414a0f6b3f6/6ac734dd72cf323a6f7be53c_platform-main.webp",
+   "file": "rocket-chat-0.webp",
+   "kb": 27
+  }
+ ],
+ "searxng": [
+  {
+   "from": "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/0a/SearXNG_Results_Page.png/1280px-SearXNG_Results_Page.png",
+   "file": "searxng-0.webp",
+   "kb": 18
+  }
+ ],
+ "syncthing": [
+  {
+   "from": "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/a7/Syncthing-screenshot-dark.png/1280px-Syncthing-screenshot-dark.png",
+   "file": "syncthing-0.webp",
+   "kb": 18
+  }
+ ],
+ "silverbullet": [
+  {
+   "from": "https://silverbullet.md/media/og/default.jpg",
+   "file": "silverbullet-0.webp",
+   "kb": 28
+  }
+ ],
+ "thunderbird": [
+  {
+   "from": "https://dl.flathub.org/media/org.mozilla.Thunderbird-stable/1504x846/org.mozilla.Thunderbird-6d680df8fa5a1a0c374882c019e09714.png",
+   "file": "thunderbird-0.webp",
+   "kb": 28
+  },
+  {
+   "from": "https://dl.flathub.org/media/org.mozilla.Thunderbird-stable/1504x846/org.mozilla.Thunderbird-70c1d7576c238e58e02e7ae0fcb7906b.png",
+   "file": "thunderbird-1.webp",
+   "kb": 28
+  }
+ ],
+ "slidev": [
+  {
+   "from": "https://raw.githubusercontent.com/slidevjs/slidev/main/assets/screenshots/cover.png",
+   "file": "slidev-0.webp",
+   "kb": 24
+  },
+  {
+   "from": "https://raw.githubusercontent.com/slidevjs/slidev/main/assets/screenshots/presenter-mode.png",
+   "file": "slidev-1.webp",
+   "kb": 21
+  },
+  {
+   "from": "https://raw.githubusercontent.com/slidevjs/slidev/main/assets/screenshots/slides-overview.png",
+   "file": "slidev-2.webp",
+   "kb": 21
+  }
+ ],
+ "tor-browser": [
+  {
+   "from": "https://dl.flathub.org/media/org/torproject/torbrowser-launcher/8bbf3d7c3768830e11a10b6b47366829/screenshots/image-1_orig.png",
+   "file": "tor-browser-0.webp",
+   "kb": 28
+  }
+ ],
+ "snikket": [
+  {
+   "from": "https://snikket.org/images/demo-screenshot-2026.png",
+   "file": "snikket-0.webp",
+   "kb": 15
+  }
+ ],
+ "tuta": [
+  {
+   "from": "https://dl.flathub.org/media/com/tutanota/Tutanota/f871d554391c3d76dd0134c62f441960/screenshots/image-1_orig.png",
+   "file": "tuta-0.webp",
+   "kb": 27
+  },
+  {
+   "from": "https://dl.flathub.org/media/com/tutanota/Tutanota/f871d554391c3d76dd0134c62f441960/screenshots/image-2_orig.png",
+   "file": "tuta-1.webp",
+   "kb": 13
+  },
+  {
+   "from": "https://dl.flathub.org/media/com/tutanota/Tutanota/f871d554391c3d76dd0134c62f441960/screenshots/image-3_orig.png",
+   "file": "tuta-2.webp",
+   "kb": 15
+  }
+ ],
+ "ubuntu": [
+  {
+   "from": "https://thumb.wikimedia.org/wikipedia/commons/thumb/f/f4/Ubuntu_25.04_Plucky_Puffin_Desktop_English.png/1280px-Ubuntu_25.04_Plucky_Puffin_Desktop_English.png",
+   "file": "ubuntu-0.webp",
+   "kb": 5
+  },
+  {
+   "from": "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/21/Ubuntu_25.04_default_desktop_-_English.png/1280px-Ubuntu_25.04_default_desktop_-_English.png",
+   "file": "ubuntu-1.webp",
+   "kb": 6
+  }
+ ],
+ "taiga": [
+  {
+   "from": "https://taiga.io/media/images/taiga1.width-800.png",
+   "file": "taiga-0.webp",
+   "kb": 23
+  }
+ ],
+ "ungoogled-chromium": [
+  {
+   "from": "https://dl.flathub.org/media/io/github/ungoogled_software.ungoogled_chromium/129983f9be628370a143898fdd4104b3/screenshots/image-1_1248x674@1.png",
+   "file": "ungoogled-chromium-0.webp",
+   "kb": 6
+  },
+  {
+   "from": "https://dl.flathub.org/media/io/github/ungoogled_software.ungoogled_chromium/129983f9be628370a143898fdd4104b3/screenshots/image-2_1248x719@1.png",
+   "file": "ungoogled-chromium-1.webp",
+   "kb": 9
+  }
+ ],
+ "ubuntu-touch": [
+  {
+   "from": "https://upload.wikimedia.org/wikipedia/commons/e/e1/Ubuntu_Touch_applications_list%2C_24.04-1.0_Beta_2.png",
+   "file": "ubuntu-touch-0.webp",
+   "kb": 38
+  }
+ ],
+ "wordpress": [
+  {
+   "from": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/e0/WordPress_7.0_Dashboard.png/1280px-WordPress_7.0_Dashboard.png",
+   "file": "wordpress-0.webp",
+   "kb": 25
+  },
+  {
+   "from": "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/23/WordPress_6.4_Dashboard.png/1280px-WordPress_6.4_Dashboard.png",
+   "file": "wordpress-1.webp",
+   "kb": 27
+  }
+ ],
+ "vikunja": [
+  {
+   "from": "https://vikunja.io/_astro/02-task-list.CTo2oooO_Z8aziL.png",
+   "file": "vikunja-0.webp",
+   "kb": 12
+  },
+  {
+   "from": "https://vikunja.io/_astro/03-task-gantt.Dgr0fl3Z_1TJksQ.png",
+   "file": "vikunja-1.webp",
+   "kb": 12
+  }
+ ],
+ "zen-browser": [
+  {
+   "from": "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/cd/Zen_Browser-1.10.3b_on_Linux-Debian.png/1280px-Zen_Browser-1.10.3b_on_Linux-Debian.png",
+   "file": "zen-browser-0.webp",
+   "kb": 31
+  },
+  {
+   "from": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/ed/Captura_de_pantalla_Zen_Browser_en_Wikipedia_en_espa%C3%B1ol_2025-09-10.png/1280px-Captura_de_pantalla_Zen_Browser_en_Wikipedia_en_espa%C3%B1ol_2025-09-10.png",
+   "file": "zen-browser-1.webp",
+   "kb": 23
+  }
+ ],
+ "zed": [
+  {
+   "from": "https://zed.dev/img/home/og.webp",
+   "file": "zed-0.webp",
+   "kb": 20
+  }
+ ],
+ "zettlr": [
+  {
+   "from": "https://raw.githubusercontent.com/Zettlr/Zettlr/HEAD/resources/screenshots/zettlr_view.png",
+   "file": "zettlr-0.webp",
+   "kb": 50
+  },
+  {
+   "from": "https://raw.githubusercontent.com/Zettlr/Zettlr/HEAD/resources/screenshots/zettlr_view_dark.png",
+   "file": "zettlr-1.webp",
+   "kb": 50
+  }
+ ],
+ "zulip": [
+  {
+   "from": "https://raw.githubusercontent.com/zulip/zulip/main/static/images/landing-page/hello/original/screen-1.png",
+   "file": "zulip-0.webp",
+   "kb": 21
+  },
+  {
+   "from": "https://raw.githubusercontent.com/zulip/zulip/main/static/images/landing-page/hello/original/screen-2.png",
+   "file": "zulip-1.webp",
+   "kb": 21
+  }
+ ],
+ "tolgee": [
+  {
+   "from": "https://raw.githubusercontent.com/tolgee/tolgee-platform/HEAD/tolgee.gif",
+   "file": "tolgee-0.webp",
+   "kb": 14
+  },
+  {
+   "from": "https://raw.githubusercontent.com/tolgee/tolgee-platform/HEAD/Tolgee-specs.gif",
+   "file": "tolgee-1.webp",
+   "kb": 15
+  },
+  {
+   "from": "https://raw.githubusercontent.com/tolgee/tolgee-platform/HEAD/tolgee-app.gif",
+   "file": "tolgee-2.webp",
+   "kb": 6
+  },
+  {
+   "from": "https://raw.githubusercontent.com/tolgee/tolgee-platform/HEAD/Tolgee-integration.gif",
+   "file": "tolgee-3.webp",
+   "kb": 8
+  }
  ]
 }

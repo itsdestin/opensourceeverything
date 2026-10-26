@@ -62,8 +62,8 @@
     "android"
    ],
    "thumbs": [
-    null,
-    null
+    "assets/shots/2fas-0.webp",
+    "assets/shots/2fas-1.webp"
    ]
   },
   {
@@ -258,7 +258,7 @@
     "server"
    ],
    "thumbs": [
-    null
+    "assets/shots/actual-budget-0.webp"
    ]
   },
   {
@@ -363,7 +363,7 @@
     "linux"
    ],
    "thumbs": [
-    null
+    "assets/shots/aider-0.webp"
    ]
   },
   {
@@ -501,8 +501,8 @@
     "android"
    ],
    "thumbs": [
-    null,
-    null
+    "assets/shots/anysoftkeyboard-0.webp",
+    "assets/shots/anysoftkeyboard-1.webp"
    ]
   },
   {
@@ -600,10 +600,10 @@
     "server"
    ],
    "thumbs": [
-    null,
-    null,
-    null,
-    null
+    "assets/shots/apitable-0.webp",
+    "assets/shots/apitable-1.webp",
+    "assets/shots/apitable-2.webp",
+    "assets/shots/apitable-3.webp"
    ]
   },
   {
@@ -773,7 +773,7 @@
    ],
    "licenseSource": "https://raw.githubusercontent.com/archlinux/archinstall/master/LICENSE",
    "thumbs": [
-    null
+    "assets/shots/arch-linux-0.webp"
    ]
   },
   {
@@ -842,7 +842,7 @@
     "linux"
    ],
    "thumbs": [
-    null
+    "assets/shots/audacity-0.webp"
    ]
   },
   {
@@ -878,7 +878,7 @@
     "server"
    ],
    "thumbs": [
-    null
+    "assets/shots/audiobookshelf-0.webp"
    ]
   },
   {
@@ -911,8 +911,8 @@
     "android"
    ],
    "thumbs": [
-    null,
-    null
+    "assets/shots/aurora-store-0.webp",
+    "assets/shots/aurora-store-1.webp"
    ]
   },
   {
@@ -1018,10 +1018,10 @@
     "android"
    ],
    "thumbs": [
-    null,
-    null,
-    null,
-    null
+    "assets/shots/aves-0.webp",
+    "assets/shots/aves-1.webp",
+    "assets/shots/aves-2.webp",
+    "assets/shots/aves-3.webp"
    ]
   },
   {
@@ -1123,10 +1123,10 @@
     "linux"
    ],
    "thumbs": [
-    null,
-    null,
-    null,
-    null
+    "assets/shots/bazzite-0.webp",
+    "assets/shots/bazzite-1.webp",
+    "assets/shots/bazzite-2.webp",
+    "assets/shots/bazzite-3.webp"
    ]
   },
   {
@@ -1192,7 +1192,7 @@
     "server"
    ],
    "thumbs": [
-    null
+    "assets/shots/bigbluebutton-0.webp"
    ]
   },
   {
@@ -1266,9 +1266,9 @@
    ],
    "licenseSource": "https://projects.blender.org/blender/blender/raw/branch/main/source/blender/blenkernel/intern/mesh.cc",
    "thumbs": [
-    null,
-    null,
-    null
+    "assets/shots/blender-0.webp",
+    "assets/shots/blender-1.webp",
+    "assets/shots/blender-2.webp"
    ]
   },
   {
@@ -1301,7 +1301,7 @@
     "ios"
    ],
    "thumbs": [
-    null
+    "assets/shots/bluesky-0.webp"
    ]
   },
   {
@@ -1336,8 +1336,8 @@
     "server"
    ],
    "thumbs": [
-    null,
-    null
+    "assets/shots/bookstack-0.webp",
+    "assets/shots/bookstack-1.webp"
    ]
   },
   {
@@ -1465,8 +1465,8 @@
     "ios"
    ],
    "thumbs": [
-    null,
-    null
+    "assets/shots/brave-0.webp",
+    "assets/shots/brave-1.webp"
    ]
   },
   {
@@ -1503,7 +1503,7 @@
    ],
    "licenseSource": "https://raw.githubusercontent.com/briar/briar/master/LICENSE.txt",
    "thumbs": [
-    null
+    "assets/shots/briar-0.webp"
    ]
   },
   {
@@ -1643,7 +1643,7 @@
     "server"
    ],
    "thumbs": [
-    null
+    "assets/shots/bugzilla-0.webp"
    ]
   },
   {
@@ -1711,9 +1711,9 @@
     "linux"
    ],
    "thumbs": [
-    null,
-    null,
-    null
+    "assets/shots/buzz-0.webp",
+    "assets/shots/buzz-1.webp",
+    "assets/shots/buzz-2.webp"
    ]
   },
   {
@@ -1746,8 +1746,8 @@
    ],
    "licenseSource": "https://raw.githubusercontent.com/CachyOS/CachyOS-Settings/master/LICENSE.md",
    "thumbs": [
-    null,
-    null
+    "assets/shots/cachyos-0.webp",
+    "assets/shots/cachyos-1.webp"
    ]
   },
   {
@@ -1808,8 +1808,8 @@
     "mac"
    ],
    "thumbs": [
-    null,
-    null
+    "assets/shots/calibre-0.webp",
+    "assets/shots/calibre-1.webp"
    ]
   },
   {
@@ -1879,8 +1879,8 @@
     "linux"
    ],
    "thumbs": [
-    null,
-    null
+    "assets/shots/chatbox-community-edition-0.webp",
+    "assets/shots/chatbox-community-edition-1.webp"
    ]
   },
   {
@@ -1951,8 +1951,8 @@
     "linux"
    ],
    "thumbs": [
-    null,
-    null
+    "assets/shots/cline-0.webp",
+    "assets/shots/cline-1.webp"
    ]
   },
   {
@@ -1985,7 +1985,7 @@
     "linux"
    ],
    "thumbs": [
-    null
+    "assets/shots/codex-cli-0.webp"
    ]
   },
   {
@@ -2538,8 +2538,8 @@
    ],
    "licenseSource": "https://salsa.debian.org/installer-team/debian-installer/-/raw/master/debian/copyright",
    "thumbs": [
-    null,
-    null
+    "assets/shots/debian-0.webp",
+    "assets/shots/debian-1.webp"
    ]
   },
   {
@@ -2701,9 +2701,9 @@
    ],
    "licenseSource": "https://invent.kde.org/graphics/digikam/-/raw/master/core/app/main/main.cpp",
    "thumbs": [
-    null,
-    null,
-    null
+    "assets/shots/digikam-0.webp",
+    "assets/shots/digikam-1.webp",
+    "assets/shots/digikam-2.webp"
    ]
   },
   {
@@ -2810,7 +2810,7 @@
     "server"
    ],
    "thumbs": [
-    null
+    "assets/shots/documenso-0.webp"
    ]
   },
   {
@@ -2844,7 +2844,7 @@
     "server"
    ],
    "thumbs": [
-    null
+    "assets/shots/docuseal-0.webp"
    ]
   },
   {
@@ -3066,7 +3066,7 @@
     "web"
    ],
    "thumbs": [
-    null
+    "assets/shots/element-0.webp"
    ]
   },
   {
@@ -3169,8 +3169,8 @@
     "web"
    ],
    "thumbs": [
-    null,
-    null
+    "assets/shots/ente-auth-0.webp",
+    "assets/shots/ente-auth-1.webp"
    ]
   },
   {
@@ -3207,8 +3207,8 @@
     "web"
    ],
    "thumbs": [
-    null,
-    null
+    "assets/shots/ente-photos-0.webp",
+    "assets/shots/ente-photos-1.webp"
    ]
   },
   {
@@ -3312,7 +3312,7 @@
     "android"
    ],
    "thumbs": [
-    null
+    "assets/shots/etar-calendar-0.webp"
    ]
   },
   {
@@ -3415,8 +3415,8 @@
     "android"
    ],
    "thumbs": [
-    null,
-    null
+    "assets/shots/f-droid-0.webp",
+    "assets/shots/f-droid-1.webp"
    ]
   },
   {
@@ -3450,9 +3450,9 @@
     "android"
    ],
    "thumbs": [
-    null,
-    null,
-    null
+    "assets/shots/fairemail-0.webp",
+    "assets/shots/fairemail-1.webp",
+    "assets/shots/fairemail-2.webp"
    ]
   },
   {
@@ -3524,8 +3524,8 @@
    ],
    "licenseSource": "https://raw.githubusercontent.com/rhinstaller/anaconda/master/COPYING",
    "thumbs": [
-    null,
-    null
+    "assets/shots/fedora-0.webp",
+    "assets/shots/fedora-1.webp"
    ]
   },
   {
@@ -3640,9 +3640,9 @@
     "server"
    ],
    "thumbs": [
-    null,
-    null,
-    null
+    "assets/shots/firefly-iii-0.webp",
+    "assets/shots/firefly-iii-1.webp",
+    "assets/shots/firefly-iii-2.webp"
    ]
   },
   {
@@ -3680,8 +3680,8 @@
    ],
    "licenseSource": "https://raw.githubusercontent.com/mozilla/gecko-dev/master/toolkit/content/license.html",
    "thumbs": [
-    null,
-    null
+    "assets/shots/firefox-0.webp",
+    "assets/shots/firefox-1.webp"
    ]
   },
   {
@@ -3783,8 +3783,8 @@
     "linux"
    ],
    "thumbs": [
-    null,
-    null
+    "assets/shots/fluent-reader-0.webp",
+    "assets/shots/fluent-reader-1.webp"
    ]
   },
   {
@@ -4021,9 +4021,9 @@
     "android"
    ],
    "thumbs": [
-    null,
-    null,
-    null
+    "assets/shots/fossify-calendar-0.webp",
+    "assets/shots/fossify-calendar-1.webp",
+    "assets/shots/fossify-calendar-2.webp"
    ]
   },
   {
@@ -4059,8 +4059,8 @@
     "android"
    ],
    "thumbs": [
-    null,
-    null
+    "assets/shots/fossify-gallery-0.webp",
+    "assets/shots/fossify-gallery-1.webp"
    ]
   },
   {
@@ -4239,7 +4239,7 @@
    ],
    "licenseSource": "https://dev.funkwhale.audio/funkwhale/funkwhale/-/raw/develop/LICENSE",
    "thumbs": [
-    null
+    "assets/shots/funkwhale-0.webp"
    ]
   },
   {
@@ -4348,8 +4348,8 @@
     "server"
    ],
    "thumbs": [
-    null,
-    null
+    "assets/shots/gathio-0.webp",
+    "assets/shots/gathio-1.webp"
    ]
   },
   {
@@ -4383,7 +4383,7 @@
     "linux"
    ],
    "thumbs": [
-    null
+    "assets/shots/gemini-cli-0.webp"
    ]
   },
   {
@@ -4443,7 +4443,7 @@
     "server"
    ],
    "thumbs": [
-    null
+    "assets/shots/ghost-0.webp"
    ]
   },
   {
@@ -4478,7 +4478,7 @@
     "server"
    ],
    "thumbs": [
-    null
+    "assets/shots/ghostfolio-0.webp"
    ]
   },
   {
@@ -4516,9 +4516,9 @@
    ],
    "licenseSource": "https://gitlab.gnome.org/GNOME/gimp/-/raw/master/app/main.c",
    "thumbs": [
-    null,
-    null,
-    null
+    "assets/shots/gimp-0.webp",
+    "assets/shots/gimp-1.webp",
+    "assets/shots/gimp-2.webp"
    ]
   },
   {
@@ -4649,7 +4649,7 @@
    ],
    "licenseSource": "https://gitlab.gnome.org/GNOME/gnumeric/-/raw/master/COPYING",
    "thumbs": [
-    null
+    "assets/shots/gnumeric-0.webp"
    ]
   },
   {
@@ -4746,7 +4746,7 @@
     "linux"
    ],
    "thumbs": [
-    null
+    "assets/shots/goose-0.webp"
    ]
   },
   {
@@ -4810,8 +4810,8 @@
    ],
    "licenseSource": "https://raw.githubusercontent.com/GrapheneOS/hardened_malloc/main/LICENSE",
    "thumbs": [
-    null,
-    null
+    "assets/shots/grapheneos-0.webp",
+    "assets/shots/grapheneos-1.webp"
    ]
   },
   {
@@ -4918,7 +4918,7 @@
     "server"
    ],
    "thumbs": [
-    null
+    "assets/shots/grist-0.webp"
    ]
   },
   {
@@ -5020,7 +5020,7 @@
     "server"
    ],
    "thumbs": [
-    null
+    "assets/shots/hedgedoc-0.webp"
    ]
   },
   {
@@ -5052,8 +5052,8 @@
     "android"
    ],
    "thumbs": [
-    null,
-    null
+    "assets/shots/heliboard-0.webp",
+    "assets/shots/heliboard-1.webp"
    ]
   },
   {
@@ -5086,8 +5086,8 @@
     "linux"
    ],
    "thumbs": [
-    null,
-    null
+    "assets/shots/hermes-agent-0.webp",
+    "assets/shots/hermes-agent-1.webp"
    ]
   },
   {
@@ -5156,9 +5156,9 @@
    ],
    "licenseSource": "https://raw.githubusercontent.com/highlight/highlight/main/LICENSE",
    "thumbs": [
-    null,
-    null,
-    null
+    "assets/shots/highlight-0.webp",
+    "assets/shots/highlight-1.webp",
+    "assets/shots/highlight-2.webp"
    ]
   },
   {
@@ -5192,7 +5192,7 @@
     "server"
    ],
    "thumbs": [
-    null
+    "assets/shots/home-assistant-0.webp"
    ]
   },
   {
@@ -5521,9 +5521,9 @@
    ],
    "licenseSource": "https://gitlab.com/inkscape/inkscape/-/raw/master/COPYING",
    "thumbs": [
-    null,
-    null,
-    null
+    "assets/shots/inkscape-0.webp",
+    "assets/shots/inkscape-1.webp",
+    "assets/shots/inkscape-2.webp"
    ]
   },
   {
@@ -5663,8 +5663,8 @@
     "ios"
    ],
    "thumbs": [
-    null,
-    null
+    "assets/shots/jami-0.webp",
+    "assets/shots/jami-1.webp"
    ]
   },
   {
@@ -5699,9 +5699,9 @@
     "linux"
    ],
    "thumbs": [
-    null,
-    null,
-    null
+    "assets/shots/jan-0.webp",
+    "assets/shots/jan-1.webp",
+    "assets/shots/jan-2.webp"
    ]
   },
   {
@@ -5767,7 +5767,7 @@
     "server"
    ],
    "thumbs": [
-    null
+    "assets/shots/jellyfin-0.webp"
    ]
   },
   {
@@ -5935,7 +5935,7 @@
     "server"
    ],
    "thumbs": [
-    null
+    "assets/shots/kanboard-0.webp"
    ]
   },
   {
@@ -5971,9 +5971,9 @@
    ],
    "licenseSource": "https://invent.kde.org/multimedia/kdenlive/-/raw/master/src/mainwindow.cpp",
    "thumbs": [
-    null,
-    null,
-    null
+    "assets/shots/kdenlive-0.webp",
+    "assets/shots/kdenlive-1.webp",
+    "assets/shots/kdenlive-2.webp"
    ]
   },
   {
@@ -6004,7 +6004,7 @@
     "android"
    ],
    "thumbs": [
-    null
+    "assets/shots/keepassdx-0.webp"
    ]
   },
   {
@@ -6041,9 +6041,9 @@
    ],
    "licenseSource": "https://raw.githubusercontent.com/keepassxreboot/keepassxc/develop/COPYING",
    "thumbs": [
-    null,
-    null,
-    null
+    "assets/shots/keepassxc-0.webp",
+    "assets/shots/keepassxc-1.webp",
+    "assets/shots/keepassxc-2.webp"
    ]
   },
   {
@@ -6078,8 +6078,8 @@
     "server"
    ],
    "thumbs": [
-    null,
-    null
+    "assets/shots/keila-0.webp",
+    "assets/shots/keila-1.webp"
    ]
   },
   {
@@ -6209,7 +6209,7 @@
     "linux"
    ],
    "thumbs": [
-    null
+    "assets/shots/kilo-code-0.webp"
    ]
   },
   {
@@ -6314,8 +6314,8 @@
     "android"
    ],
    "thumbs": [
-    null,
-    null
+    "assets/shots/koreader-0.webp",
+    "assets/shots/koreader-1.webp"
    ]
   },
   {
@@ -6351,9 +6351,9 @@
    ],
    "licenseSource": "https://invent.kde.org/graphics/krita/-/raw/master/README.md",
    "thumbs": [
-    null,
-    null,
-    null
+    "assets/shots/krita-0.webp",
+    "assets/shots/krita-1.webp",
+    "assets/shots/krita-2.webp"
    ]
   },
   {
@@ -6535,7 +6535,7 @@
     "server"
    ],
    "thumbs": [
-    null
+    "assets/shots/lago-0.webp"
    ]
   },
   {
@@ -6703,8 +6703,8 @@
     "server"
    ],
    "thumbs": [
-    null,
-    null
+    "assets/shots/librechat-0.webp",
+    "assets/shots/librechat-1.webp"
    ]
   },
   {
@@ -6773,7 +6773,7 @@
    ],
    "licenseSource": "https://www.libreoffice.org/about-us/licenses/",
    "thumbs": [
-    null
+    "assets/shots/libreoffice-calc-0.webp"
    ]
   },
   {
@@ -6807,7 +6807,7 @@
    ],
    "licenseSource": "https://www.libreoffice.org/about-us/licenses/",
    "thumbs": [
-    null
+    "assets/shots/libreoffice-impress-0.webp"
    ]
   },
   {
@@ -6841,7 +6841,7 @@
    ],
    "licenseSource": "https://www.libreoffice.org/about-us/licenses/",
    "thumbs": [
-    null
+    "assets/shots/libreoffice-writer-0.webp"
    ]
   },
   {
@@ -6977,7 +6977,7 @@
    ],
    "licenseSource": "https://codeberg.org/librewolf/source/raw/branch/main/LICENSE",
    "thumbs": [
-    null
+    "assets/shots/librewolf-0.webp"
    ]
   },
   {
@@ -7043,7 +7043,7 @@
     "server"
    ],
    "thumbs": [
-    null
+    "assets/shots/limesurvey-0.webp"
    ]
   },
   {
@@ -7075,7 +7075,7 @@
    ],
    "licenseSource": "https://raw.githubusercontent.com/LineageOS/android_vendor_lineage/lineage-23.0/LICENSE",
    "thumbs": [
-    null
+    "assets/shots/lineageos-0.webp"
    ]
   },
   {
@@ -7108,8 +7108,8 @@
    ],
    "licenseSource": "https://raw.githubusercontent.com/linuxmint/mintupdate/master/debian/copyright",
    "thumbs": [
-    null,
-    null
+    "assets/shots/linux-mint-0.webp",
+    "assets/shots/linux-mint-1.webp"
    ]
   },
   {
@@ -7143,7 +7143,7 @@
     "server"
    ],
    "thumbs": [
-    null
+    "assets/shots/listmonk-0.webp"
    ]
   },
   {
@@ -7248,7 +7248,7 @@
     "linux"
    ],
    "thumbs": [
-    null
+    "assets/shots/lmms-0.webp"
    ]
   },
   {
@@ -7427,7 +7427,7 @@
     "linux"
    ],
    "thumbs": [
-    null
+    "assets/shots/losslesscut-0.webp"
    ]
   },
   {
@@ -7494,7 +7494,7 @@
     "linux"
    ],
    "thumbs": [
-    null
+    "assets/shots/mailspring-0.webp"
    ]
   },
   {
@@ -7555,8 +7555,8 @@
     "server"
    ],
    "thumbs": [
-    null,
-    null
+    "assets/shots/mastodon-0.webp",
+    "assets/shots/mastodon-1.webp"
    ]
   },
   {
@@ -7694,7 +7694,7 @@
     "server"
    ],
    "thumbs": [
-    null
+    "assets/shots/mbin-0.webp"
    ]
   },
   {
@@ -7730,8 +7730,8 @@
    ],
    "licenseSource": "https://raw.githubusercontent.com/wikimedia/mediawiki/master/COPYING",
    "thumbs": [
-    null,
-    null
+    "assets/shots/mediawiki-0.webp",
+    "assets/shots/mediawiki-1.webp"
    ]
   },
   {
@@ -7873,7 +7873,7 @@
     "server"
    ],
    "thumbs": [
-    null
+    "assets/shots/meshcentral-0.webp"
    ]
   },
   {
@@ -8134,7 +8134,7 @@
     "linux"
    ],
    "thumbs": [
-    null
+    "assets/shots/mypaint-0.webp"
    ]
   },
   {
@@ -8166,7 +8166,7 @@
     "mac"
    ],
    "thumbs": [
-    null
+    "assets/shots/natron-0.webp"
    ]
   },
   {
@@ -8622,10 +8622,10 @@
     "server"
    ],
    "thumbs": [
-    null,
-    null,
-    null,
-    null
+    "assets/shots/nextcloud-polls-0.webp",
+    "assets/shots/nextcloud-polls-1.webp",
+    "assets/shots/nextcloud-polls-2.webp",
+    "assets/shots/nextcloud-polls-3.webp"
    ]
   },
   {
@@ -8662,7 +8662,7 @@
     "server"
    ],
    "thumbs": [
-    null
+    "assets/shots/nextcloud-talk-0.webp"
    ]
   },
   {
@@ -8922,10 +8922,10 @@
     "server"
    ],
    "thumbs": [
-    null,
-    null,
-    null,
-    null
+    "assets/shots/ntfy-0.webp",
+    "assets/shots/ntfy-1.webp",
+    "assets/shots/ntfy-2.webp",
+    "assets/shots/ntfy-3.webp"
    ]
   },
   {
@@ -8991,7 +8991,7 @@
     "linux"
    ],
    "thumbs": [
-    null
+    "assets/shots/obs-studio-0.webp"
    ]
   },
   {
@@ -9170,7 +9170,7 @@
     "linux"
    ],
    "thumbs": [
-    null
+    "assets/shots/ollama-0.webp"
    ]
   },
   {
@@ -9241,9 +9241,9 @@
     "server"
    ],
    "thumbs": [
-    null,
-    null,
-    null
+    "assets/shots/onlyoffice-docs-0.webp",
+    "assets/shots/onlyoffice-docs-1.webp",
+    "assets/shots/onlyoffice-docs-2.webp"
    ]
   },
   {
@@ -9440,7 +9440,7 @@
     "linux"
    ],
    "thumbs": [
-    null
+    "assets/shots/openclaw-0.webp"
    ]
   },
   {
@@ -9475,7 +9475,7 @@
     "linux"
    ],
    "thumbs": [
-    null
+    "assets/shots/opencode-0.webp"
    ]
   },
   {
@@ -9580,9 +9580,9 @@
     "server"
    ],
    "thumbs": [
-    null,
-    null,
-    null
+    "assets/shots/openpost-0.webp",
+    "assets/shots/openpost-1.webp",
+    "assets/shots/openpost-2.webp"
    ]
   },
   {
@@ -9651,7 +9651,7 @@
    ],
    "licenseSource": "https://raw.githubusercontent.com/openreplay/openreplay/main/LICENSE",
    "thumbs": [
-    null
+    "assets/shots/openreplay-0.webp"
    ]
   },
   {
@@ -9958,8 +9958,8 @@
     "ios"
    ],
    "thumbs": [
-    null,
-    null
+    "assets/shots/osmand-0.webp",
+    "assets/shots/osmand-1.webp"
    ]
   },
   {
@@ -10021,7 +10021,7 @@
     "server"
    ],
    "thumbs": [
-    null
+    "assets/shots/owncast-0.webp"
    ]
   },
   {
@@ -10060,7 +10060,7 @@
     "server"
    ],
    "thumbs": [
-    null
+    "assets/shots/owncloud-0.webp"
    ]
   },
   {
@@ -10232,7 +10232,7 @@
     "server"
    ],
    "thumbs": [
-    null
+    "assets/shots/passbolt-0.webp"
    ]
   },
   {
@@ -10293,7 +10293,7 @@
     "linux"
    ],
    "thumbs": [
-    null
+    "assets/shots/pdf-arranger-0.webp"
    ]
   },
   {
@@ -10530,7 +10530,7 @@
     "linux"
    ],
    "thumbs": [
-    null
+    "assets/shots/pinta-0.webp"
    ]
   },
   {
@@ -10793,8 +10793,8 @@
    ],
    "licenseSource": "https://raw.githubusercontent.com/pop-os/installer/master/COPYING",
    "thumbs": [
-    null,
-    null
+    "assets/shots/pop-os-0.webp",
+    "assets/shots/pop-os-1.webp"
    ]
   },
   {
@@ -10934,10 +10934,10 @@
     "server"
    ],
    "thumbs": [
-    null,
-    null,
-    null,
-    null
+    "assets/shots/postiz-0.webp",
+    "assets/shots/postiz-1.webp",
+    "assets/shots/postiz-2.webp",
+    "assets/shots/postiz-3.webp"
    ]
   },
   {
@@ -10971,8 +10971,8 @@
    ],
    "licenseSource": "https://gitlab.postmarketos.org/postmarketOS/pmbootstrap/-/raw/main/pmbootstrap.py",
    "thumbs": [
-    null,
-    null
+    "assets/shots/postmarketos-0.webp",
+    "assets/shots/postmarketos-1.webp"
    ]
   },
   {
@@ -11341,9 +11341,9 @@
     "linux"
    ],
    "thumbs": [
-    null,
-    null,
-    null
+    "assets/shots/rawtherapee-0.webp",
+    "assets/shots/rawtherapee-1.webp",
+    "assets/shots/rawtherapee-2.webp"
    ]
   },
   {
@@ -11495,7 +11495,7 @@
     "server"
    ],
    "thumbs": [
-    null
+    "assets/shots/rocket-chat-0.webp"
    ]
   },
   {
@@ -11527,7 +11527,7 @@
     "server"
    ],
    "thumbs": [
-    null
+    "assets/shots/roundcube-0.webp"
    ]
   },
   {
@@ -11662,8 +11662,8 @@
     "linux"
    ],
    "thumbs": [
-    null,
-    null
+    "assets/shots/scribus-0.webp",
+    "assets/shots/scribus-1.webp"
    ]
   },
   {
@@ -11700,7 +11700,7 @@
     "server"
    ],
    "thumbs": [
-    null
+    "assets/shots/seafile-0.webp"
    ]
   },
   {
@@ -11733,7 +11733,7 @@
     "server"
    ],
    "thumbs": [
-    null
+    "assets/shots/searxng-0.webp"
    ]
   },
   {
@@ -11931,7 +11931,7 @@
     "ios"
    ],
    "thumbs": [
-    null
+    "assets/shots/signal-0.webp"
    ]
   },
   {
@@ -12049,7 +12049,7 @@
     "server"
    ],
    "thumbs": [
-    null
+    "assets/shots/silverbullet-0.webp"
    ]
   },
   {
@@ -12198,9 +12198,9 @@
     "web"
    ],
    "thumbs": [
-    null,
-    null,
-    null
+    "assets/shots/slidev-0.webp",
+    "assets/shots/slidev-1.webp",
+    "assets/shots/slidev-2.webp"
    ]
   },
   {
@@ -12236,7 +12236,7 @@
     "server"
    ],
    "thumbs": [
-    null
+    "assets/shots/snikket-0.webp"
    ]
   },
   {
@@ -12848,7 +12848,7 @@
     "linux"
    ],
    "thumbs": [
-    null
+    "assets/shots/syncthing-0.webp"
    ]
   },
   {
@@ -12937,7 +12937,7 @@
     "server"
    ],
    "thumbs": [
-    null
+    "assets/shots/taiga-0.webp"
    ]
   },
   {
@@ -13073,8 +13073,8 @@
    ],
    "licenseSource": "https://raw.githubusercontent.com/mozilla/releases-comm-central/master/mail/base/content/mailWindow.js",
    "thumbs": [
-    null,
-    null
+    "assets/shots/thunderbird-0.webp",
+    "assets/shots/thunderbird-1.webp"
    ]
   },
   {
@@ -13193,10 +13193,10 @@
    ],
    "licenseSource": "https://raw.githubusercontent.com/tolgee/tolgee-platform/main/LICENSE",
    "thumbs": [
-    null,
-    null,
-    null,
-    null
+    "assets/shots/tolgee-0.webp",
+    "assets/shots/tolgee-1.webp",
+    "assets/shots/tolgee-2.webp",
+    "assets/shots/tolgee-3.webp"
    ]
   },
   {
@@ -13261,7 +13261,7 @@
    ],
    "licenseSource": "https://gitlab.torproject.org/tpo/applications/tor-browser/-/raw/tor-browser-140.5.0esr-15.0-1/toolkit/content/license.html",
    "thumbs": [
-    null
+    "assets/shots/tor-browser-0.webp"
    ]
   },
   {
@@ -13372,9 +13372,9 @@
     "web"
    ],
    "thumbs": [
-    null,
-    null,
-    null
+    "assets/shots/tuta-0.webp",
+    "assets/shots/tuta-1.webp",
+    "assets/shots/tuta-2.webp"
    ]
   },
   {
@@ -13521,8 +13521,8 @@
    ],
    "licenseSource": "https://raw.githubusercontent.com/canonical/ubuntu-desktop-provision/main/LICENSE",
    "thumbs": [
-    null,
-    null
+    "assets/shots/ubuntu-0.webp",
+    "assets/shots/ubuntu-1.webp"
    ]
   },
   {
@@ -13554,7 +13554,7 @@
    ],
    "licenseSource": "https://gitlab.com/ubports/development/core/lomiri/-/raw/main/COPYING",
    "thumbs": [
-    null
+    "assets/shots/ubuntu-touch-0.webp"
    ]
   },
   {
@@ -13655,8 +13655,8 @@
     "linux"
    ],
    "thumbs": [
-    null,
-    null
+    "assets/shots/ungoogled-chromium-0.webp",
+    "assets/shots/ungoogled-chromium-1.webp"
    ]
   },
   {
@@ -13952,8 +13952,8 @@
     "server"
    ],
    "thumbs": [
-    null,
-    null
+    "assets/shots/vikunja-0.webp",
+    "assets/shots/vikunja-1.webp"
    ]
   },
   {
@@ -14250,8 +14250,8 @@
     "server"
    ],
    "thumbs": [
-    null,
-    null
+    "assets/shots/wordpress-0.webp",
+    "assets/shots/wordpress-1.webp"
    ]
   },
   {
@@ -14600,7 +14600,7 @@
     "linux"
    ],
    "thumbs": [
-    null
+    "assets/shots/zed-0.webp"
    ]
   },
   {
@@ -14635,8 +14635,8 @@
     "linux"
    ],
    "thumbs": [
-    null,
-    null
+    "assets/shots/zen-browser-0.webp",
+    "assets/shots/zen-browser-1.webp"
    ]
   },
   {
@@ -14672,8 +14672,8 @@
     "linux"
    ],
    "thumbs": [
-    null,
-    null
+    "assets/shots/zettlr-0.webp",
+    "assets/shots/zettlr-1.webp"
    ]
   },
   {
@@ -14784,8 +14784,8 @@
     "server"
    ],
    "thumbs": [
-    null,
-    null
+    "assets/shots/zulip-0.webp",
+    "assets/shots/zulip-1.webp"
    ]
   }
  ]
