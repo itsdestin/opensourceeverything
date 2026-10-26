@@ -48,6 +48,6 @@ export default function gaps(d) {
 
   return [{
     path: 'gaps/', title: "Gaps: what open source doesn't replace yet", styles: ['pages.css'], body,
-    description: `${total} jobs where no open-source app fully replaces the closed ones yet, and ${tiers[2].groups.length} that rely on a single project. Made with r/TrueOpenSource.`,
+    description: `${total} jobs where no open-source app fully replaces the closed ones yet, and ${tiers[2].groups.length} that rely on a single project. Supported by r/TrueOpenSource.`,
   }];
 }

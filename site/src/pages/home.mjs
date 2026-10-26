@@ -75,7 +75,7 @@ export default function home(d) {
   const body = `
   <div class="surface hero3">
     <div class="hero-text">
-      <div class="eyebrow"><span class="avatar brand">${ICON.home}</span>Open Source Everything · made with r/TrueOpenSource</div>
+      <div class="eyebrow"><span class="avatar brand">${ICON.home}</span>Open Source Everything · supported by r/TrueOpenSource</div>
       <h1>Find an open-source replacement for the apps you use</h1>
       <p class="lede">Free apps anyone can inspect and improve, sorted by the job they do. We also show where nothing good exists yet.</p>
       <div class="searchwrap big" data-search>
@@ -116,7 +116,7 @@ export default function home(d) {
 
   return [{
     path: '', title: '', search: false, styles: ['pages.css', 'group.css'],
-    description: `Open-source replacements for ${closedCount} closed apps, grouped by the job they do, with where nothing good exists yet. Made with r/TrueOpenSource.`,
+    description: `Open-source replacements for ${closedCount} closed apps, grouped by the job they do, with where nothing good exists yet. Supported by r/TrueOpenSource.`,
     jsonLd: { '@context': 'https://schema.org', '@type': 'WebSite', name: 'Open Source Everything', url: 'https://itsdestin.github.io/opensourceeverything/' },
     body,
   }];

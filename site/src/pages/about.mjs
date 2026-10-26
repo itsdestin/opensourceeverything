@@ -16,7 +16,7 @@ export default function about(d) {
   </div>
   ${section('what', 'What this is', `
     <p class="body2">Open Source Everything lists open-source replacements for the closed-source apps people use every day, from Google Docs to Photoshop. It also shows where nothing good exists yet, so people who build software can see what's worth making.</p>
-    <p class="body2">It's made with the <a href="${SUBREDDIT}" rel="noopener">r/TrueOpenSource</a> community. Right now it holds ${d.groups.length} groups and ${listings} listings.</p>`)}
+    <p class="body2">It's supported by the <a href="${SUBREDDIT}" rel="noopener">r/TrueOpenSource</a> community. Right now it holds ${d.groups.length} groups and ${listings} listings.</p>`)}
   ${section('organised', 'How it\'s organised', `
     <div class="defs">
       <div class="lvl1"><h3>Categories</h3><p class="small2">Shelves for browsing, like Creative or Office &amp; productivity.</p></div>
