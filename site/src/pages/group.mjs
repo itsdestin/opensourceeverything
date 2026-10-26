@@ -38,28 +38,28 @@ export default function groupPages(d) {
       ? `${alts.length} open-source alternative${alts.length === 1 ? '' : 's'} to ${g.closed.slice(0, 3).join(', ')}: ${alts.slice(0, 4).map((x) => x.p.name).join(', ')}${alts.length > 4 ? ' and more' : ''}.`
       : `No open-source app does the job of ${g.closed.join(', ')} yet. See what's missing, or build one.`;
 
-    const compare = g.closed.length > 1 ? `<div class="field-col"><span class="label">Compared with</span>
-        <div class="dd"><button class="select" type="button" data-menu="cmpMenu" aria-haspopup="listbox" aria-expanded="false"><span data-compare-label>${esc(first)}</span>${ICON.chev}</button>
-          <div class="menu" id="cmpMenu" role="listbox">${g.closed.map((c, i) => `<button class="mi${i ? '' : ' sel'}" type="button" role="option" data-compare="${esc(c)}">${esc(c)}</button>`).join('')}</div></div></div>` : '';
+    // WHY no "Compared with" dropdown (Destin, Oct 27: "doesn't seem to do anything"): until the server adds
+    // per-app sections ("Why people leave X"), switching apps changed only a label. The closed apps are shown as
+    // chips instead; the one a visitor searched for (?compare=) is highlighted by group.js.
+    const replacesRow = g.closed.length ? `<div class="replaces-row"><span class="muted11">Replaces</span><div class="chiprow">${g.closed.map((c) => `<span class="chip" data-app="${esc(c)}">${esc(c)}</span>`).join('')}</div></div>` : '';
 
     const body = `
   <div class="surface identity">
     <div class="row">
       <div><div class="muted11"><a class="crumb" href="${url(`c/${g.category}/`)}">${esc(cat?.name ?? '')}</a></div><h1 class="h-subject">${esc(g.name)}</h1><p class="desc12" style="margin-top:4px">${esc(g.job)}.</p></div>
-      ${compare}
     </div>
     <div class="chiprow">
       <span class="chip"><b>${alts.length}</b>open alternative${alts.length === 1 ? '' : 's'}</span>
       ${alts.length ? `<span class="chip"><b>${full}</b>${full === 1 ? 'does' : 'do'} the whole job</span>` : ''}
-      ${g.closed.length ? `<span class="chip" data-also>${g.closed.length > 1 ? `Also replaces ${esc(g.closed.slice(1).join(', '))}` : `Replaces ${esc(first)}`}</span>` : ''}
     </div>
+    ${replacesRow}
   </div>
 
   <div class="cols">
     <div>
       <section class="surface sec">
         <div class="sec-head">
-          <div><h2 class="h-large">Open alternatives<span class="count">${alts.length}</span></h2><p class="desc12">Open-source apps that replace <span data-compare-name>${esc(first)}</span></p></div>
+          <div><h2 class="h-large">Open alternatives<span class="count">${alts.length}</span></h2><p class="desc12">Open-source apps that replace <span data-compare-name>${esc(g.closed.length > 2 ? g.closed.slice(0, 2).join(', ') + ' and more' : g.closed.join(' and '))}</span></p></div>
           ${alts.length > 1 ? `<div class="dd"><button class="select sm" type="button" data-menu="sortMenu" aria-haspopup="listbox" aria-expanded="false"><span data-sort-label>${SORTS[0][1]}</span>${ICON.chev}</button>
             <div class="menu" id="sortMenu" role="listbox">${SORTS.map(([k, v], i) => `<button class="mi${i ? '' : ' sel'}" type="button" role="option" data-sort="${k}">${v}</button>`).join('')}</div></div>` : ''}
         </div>

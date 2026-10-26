@@ -1,13 +1,10 @@
-// Group page: the "Compared with" dropdown (also read from ?compare=<app>) and the sort dropdown.
+// Group page: highlights the closed app a visitor searched for (?compare=<app>), and the sort dropdown.
 (function () {
   const setCompare = (app) => {
-    const opts = [...document.querySelectorAll('[data-compare]')];
-    const all = opts.map((o) => o.dataset.compare);
-    if (!all.includes(app)) return;
-    opts.forEach((o) => o.classList.toggle('sel', o.dataset.compare === app));
-    document.querySelectorAll('[data-compare-label],[data-compare-name]').forEach((el) => { el.textContent = app; });
-    const also = document.querySelector('[data-also]');
-    if (also) also.textContent = 'Also replaces ' + all.filter((a) => a !== app).join(', ');
+    const chip = [...document.querySelectorAll('[data-app]')].find((c) => c.dataset.app === app);
+    if (!chip) return;
+    chip.classList.add('hl');
+    document.querySelectorAll('[data-compare-name]').forEach((el) => { el.textContent = app; });
   };
   const sortBy = (key) => {
     const grid = document.querySelector('[data-alts]'); if (!grid) return;
@@ -24,8 +21,6 @@
     document.querySelector('[data-sort-label]').textContent = label ? label.textContent : '';
   };
   document.addEventListener('click', (e) => {
-    const c = e.target.closest('[data-compare]');
-    if (c) { setCompare(c.dataset.compare); c.closest('.menu').classList.remove('open'); window.OI?.toast?.('Comparing with ' + c.dataset.compare); }
     const s = e.target.closest('[data-sort]');
     if (s) { sortBy(s.dataset.sort); s.closest('.menu').classList.remove('open'); }
   });

@@ -32,3 +32,9 @@ a.btn { text-decoration:none; }
 
 /* Footer chips are links on the real site (buttons in the demo). */
 a.footchip { text-decoration:none; }
+
+/* The closed apps a group replaces; the one a visitor searched for is highlighted. */
+.replaces-row { display:flex; align-items:center; gap:8px; min-width:0; }
+.replaces-row .muted11 { flex:none; }
+.chip.hl { background:var(--accent); color:var(--on-accent); border-color:var(--accent); }
+.replaces-row .chiprow { flex:1; }
