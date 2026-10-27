@@ -1,0 +1,491 @@
+{
+ "title": "Redesign round 2: your picks, built",
+ "key": "ose-redesign-2",
+ "out": "redesign-2.review.html",
+ "images": "images/redesign-2.review",
+ "runs": {
+  "before": "runs-redesign-2/before",
+  "after": "runs-redesign-2/after",
+  "options": "runs-redesign-2/options"
+ },
+ "labels": {
+  "before": "Before (built version you reviewed)",
+  "after": "Now"
+ },
+ "themes": [
+  "light"
+ ],
+ "theme": "fixed",
+ "crops": {
+  "card-desktop": [
+   "ose",
+   "card-desktop",
+   "1440x900+0+0"
+  ],
+  "card-phone": [
+   "ose",
+   "card-phone",
+   "390x844+0+0"
+  ],
+  "card-explainer-desktop": [
+   "ose",
+   "card-explainer-desktop",
+   "1440x900+0+0"
+  ],
+  "project-desktop": [
+   "ose",
+   "project-desktop",
+   "1440x900+0+0"
+  ],
+  "project-family-explainer-desktop": [
+   "ose",
+   "project-family-explainer-desktop",
+   "1440x900+0+0"
+  ],
+  "project-phone": [
+   "ose",
+   "project-phone",
+   "390x844+0+0"
+  ],
+  "search-desktop": [
+   "ose",
+   "search-desktop",
+   "1440x900+0+0"
+  ],
+  "search-phone": [
+   "ose",
+   "search-phone",
+   "390x844+0+0"
+  ],
+  "gaps-desktop": [
+   "ose",
+   "gaps-desktop",
+   "1440x900+0+0"
+  ],
+  "home-requested-desktop": [
+   "ose",
+   "home-requested-desktop",
+   "1440x900+0+0"
+  ],
+  "a-tag-start-desktop": [
+   "ose",
+   "a-tag-start-desktop",
+   "1440x900+0+0"
+  ],
+  "a-tag-start-phone": [
+   "ose",
+   "a-tag-start-phone",
+   "390x1025+0+0"
+  ],
+  "a-tag-proof-desktop": [
+   "ose",
+   "a-tag-proof-desktop",
+   "1440x900+0+0"
+  ],
+  "a-tag-proof-phone": [
+   "ose",
+   "a-tag-proof-phone",
+   "390x1145+0+0"
+  ],
+  "a-tag-write-desktop": [
+   "ose",
+   "a-tag-write-desktop",
+   "1440x900+0+0"
+  ],
+  "a-tag-write-phone": [
+   "ose",
+   "a-tag-write-phone",
+   "390x1366+0+0"
+  ],
+  "b-tag-start-desktop": [
+   "ose",
+   "b-tag-start-desktop",
+   "1440x900+0+0"
+  ],
+  "b-tag-start-phone": [
+   "ose",
+   "b-tag-start-phone",
+   "390x897+0+0"
+  ],
+  "b-tag-proof-desktop": [
+   "ose",
+   "b-tag-proof-desktop",
+   "1440x900+0+0"
+  ],
+  "b-tag-proof-phone": [
+   "ose",
+   "b-tag-proof-phone",
+   "390x844+0+0"
+  ],
+  "b-tag-write-desktop": [
+   "ose",
+   "b-tag-write-desktop",
+   "1440x900+0+0"
+  ],
+  "b-tag-write-phone": [
+   "ose",
+   "b-tag-write-phone",
+   "390x1099+0+0"
+  ],
+  "c-tag-start-desktop": [
+   "ose",
+   "c-tag-start-desktop",
+   "1440x900+0+0"
+  ],
+  "c-tag-start-phone": [
+   "ose",
+   "c-tag-start-phone",
+   "390x844+0+0"
+  ],
+  "c-tag-proof-desktop": [
+   "ose",
+   "c-tag-proof-desktop",
+   "1440x900+0+0"
+  ],
+  "c-tag-proof-phone": [
+   "ose",
+   "c-tag-proof-phone",
+   "390x844+0+0"
+  ],
+  "c-tag-write-desktop": [
+   "ose",
+   "c-tag-write-desktop",
+   "1440x900+0+0"
+  ],
+  "c-tag-write-phone": [
+   "ose",
+   "c-tag-write-phone",
+   "390x1089+0+0"
+  ]
+ },
+ "steps": [
+  {
+   "id": "R-card",
+   "surface": "Group pages",
+   "path": "Web browsers, computer",
+   "crop": "card-desktop",
+   "runs": [
+    "before",
+    "after"
+   ],
+   "headline": "Cards, design a: stars first, Easy setup a normal tag, family as one plain grey line.",
+   "changed": "Stars lead the chip row; Easy setup is a normal tag with an explainer; \"Why it's here\" moved into the (i).",
+   "notice": "Each family line now reads in plain words, like \"A modified version of Firefox that keeps up with its updates\".",
+   "risk": "None worth noting.",
+   "highlight": {
+    "box": [
+     1,
+     1,
+     98,
+     98
+    ]
+   }
+  },
+  {
+   "id": "R-card-phone",
+   "surface": "Group pages",
+   "path": "Web browsers, phone",
+   "crop": "card-phone",
+   "runs": [
+    "before",
+    "after"
+   ],
+   "headline": "On phones, cards are short rows: about 4 per screen instead of 1½.",
+   "changed": "Small picture, name, one sideways chip row (stars first), one line of description.",
+   "notice": "Much faster to scroll.",
+   "risk": "None worth noting.",
+   "highlight": {
+    "box": [
+     1,
+     1,
+     98,
+     98
+    ]
+   }
+  },
+  {
+   "id": "R-explainer",
+   "surface": "Group pages",
+   "path": "Tapping Easy setup or the (i)",
+   "crop": "card-explainer-desktop",
+   "runs": [
+    "after"
+   ],
+   "new": true,
+   "headline": "Tapping a tag or the (i) explains what it means and why the project is listed there.",
+   "changed": "A small pop-up from the tag.",
+   "notice": "Nothing else on the card changes.",
+   "risk": "None worth noting.",
+   "highlight": {
+    "box": [
+     1,
+     1,
+     98,
+     98
+    ]
+   }
+  },
+  {
+   "id": "R-project",
+   "surface": "Project pages",
+   "path": "Firefox's page, computer",
+   "crop": "project-desktop",
+   "runs": [
+    "before",
+    "after"
+   ],
+   "headline": "Project page: buttons back on the right, the claim line, and a Family card with plain-words relations.",
+   "changed": "The three buttons sit at the right of the top card. \"This listing is managed by r/TrueOpenSource…\" sits under the description. Family is its own card.",
+   "notice": "The claim line disappears once a developer claims the page.",
+   "risk": "None worth noting.",
+   "highlight": {
+    "box": [
+     1,
+     1,
+     98,
+     98
+    ]
+   }
+  },
+  {
+   "id": "R-family-explainer",
+   "surface": "Project pages",
+   "path": "The (i) on a family row",
+   "crop": "project-family-explainer-desktop",
+   "runs": [
+    "after"
+   ],
+   "new": true,
+   "headline": "Each family row's (i) gives the one-sentence reason and its source.",
+   "changed": "A small pop-up.",
+   "notice": "Sources keep fork history neutral.",
+   "risk": "None worth noting.",
+   "highlight": {
+    "box": [
+     1,
+     1,
+     98,
+     98
+    ]
+   }
+  },
+  {
+   "id": "R-project-phone",
+   "surface": "Project pages",
+   "path": "Firefox's page, phone",
+   "crop": "project-phone",
+   "runs": [
+    "before",
+    "after"
+   ],
+   "headline": "On phones the Family section starts folded.",
+   "changed": "Tap Family to open it.",
+   "notice": "Shorter page.",
+   "risk": "None worth noting.",
+   "highlight": {
+    "box": [
+     1,
+     1,
+     98,
+     98
+    ]
+   }
+  },
+  {
+   "id": "R-search",
+   "surface": "Search",
+   "path": "Searching \"notes\", computer",
+   "crop": "search-desktop",
+   "runs": [
+    "before",
+    "after"
+   ],
+   "headline": "Search results: stars first, no \"Open project\" or \"Strong match\" tags, pictures lined up.",
+   "changed": "A group shows \"24 open options\"; a closed app says \"Closed app\"; every project shows stars, devices and its group.",
+   "notice": "Cleaner and easier to scan.",
+   "risk": "None worth noting.",
+   "highlight": {
+    "box": [
+     1,
+     1,
+     98,
+     98
+    ]
+   }
+  },
+  {
+   "id": "R-search-phone",
+   "surface": "Search",
+   "path": "Searching \"notes\", phone",
+   "crop": "search-phone",
+   "runs": [
+    "before",
+    "after"
+   ],
+   "headline": "The same on phones.",
+   "changed": "One sideways chip row per result.",
+   "notice": "Fewer things per result.",
+   "risk": "None worth noting.",
+   "highlight": {
+    "box": [
+     1,
+     1,
+     98,
+     98
+    ]
+   }
+  },
+  {
+   "id": "R-gaps",
+   "surface": "Gaps page",
+   "path": "Gaps → Most requested",
+   "crop": "gaps-desktop",
+   "runs": [
+    "before",
+    "after"
+   ],
+   "headline": "Most requested: the top three as cards, each named by its job, with \"Like LinkedIn\" underneath.",
+   "changed": "The confusing kind tags are gone; a request for LinkedIn counts toward Professional networking.",
+   "notice": "Names and numbers are pretend preview data.",
+   "risk": "None worth noting.",
+   "highlight": {
+    "box": [
+     1,
+     1,
+     98,
+     98
+    ]
+   }
+  },
+  {
+   "id": "R-home",
+   "surface": "Home page",
+   "path": "Home → Most requested",
+   "crop": "home-requested-desktop",
+   "runs": [
+    "before",
+    "after"
+   ],
+   "headline": "Home shows the five most requested as five equal cards.",
+   "changed": "On phones they scroll sideways.",
+   "notice": "Pretend data in the preview.",
+   "risk": "None worth noting.",
+   "highlight": {
+    "box": [
+     1,
+     1,
+     98,
+     98
+    ]
+   }
+  },
+  {
+   "id": "R-claim-start",
+   "surface": "Claim your project",
+   "path": "Claim your project, start step",
+   "headline": "\"Claim your project\": which design? (first step)",
+   "notice": "All three use the full width, plain words (no \"proof file\"), and open by saying what claiming gives you. Pick the same letter on each slide, or mix if one step looks better in another design.",
+   "variants": [
+    {
+     "id": "a",
+     "label": "Steps list + live preview",
+     "summary": "The form with a steps list on the left and \"how it will read\" beside it.",
+     "crop": "a-tag-start-desktop"
+    },
+    {
+     "id": "b",
+     "label": "Step cards across the top",
+     "summary": "Four step cards along the top, one wide card under them for the current step.",
+     "crop": "b-tag-start-desktop"
+    },
+    {
+     "id": "c",
+     "label": "One wide card",
+     "summary": "One wide card where each step opens after the last.",
+     "crop": "c-tag-start-desktop"
+    }
+   ]
+  },
+  {
+   "id": "R-claim-proof",
+   "surface": "Claim your project",
+   "path": "Claim your project, proof step",
+   "headline": "Same three designs: the \"show it's yours\" step",
+   "notice": "All three use the full width, plain words (no \"proof file\"), and open by saying what claiming gives you. Pick the same letter on each slide, or mix if one step looks better in another design.",
+   "variants": [
+    {
+     "id": "a",
+     "label": "Steps list + live preview",
+     "summary": "The form with a steps list on the left and \"how it will read\" beside it.",
+     "crop": "a-tag-proof-desktop"
+    },
+    {
+     "id": "b",
+     "label": "Step cards across the top",
+     "summary": "Four step cards along the top, one wide card under them for the current step.",
+     "crop": "b-tag-proof-desktop"
+    },
+    {
+     "id": "c",
+     "label": "One wide card",
+     "summary": "One wide card where each step opens after the last.",
+     "crop": "c-tag-proof-desktop"
+    }
+   ]
+  },
+  {
+   "id": "R-claim-write",
+   "surface": "Claim your project",
+   "path": "Claim your project, write step",
+   "headline": "Same three designs: writing your description",
+   "notice": "All three use the full width, plain words (no \"proof file\"), and open by saying what claiming gives you. Pick the same letter on each slide, or mix if one step looks better in another design.",
+   "variants": [
+    {
+     "id": "a",
+     "label": "Steps list + live preview",
+     "summary": "The form with a steps list on the left and \"how it will read\" beside it.",
+     "crop": "a-tag-write-desktop"
+    },
+    {
+     "id": "b",
+     "label": "Step cards across the top",
+     "summary": "Four step cards along the top, one wide card under them for the current step.",
+     "crop": "b-tag-write-desktop"
+    },
+    {
+     "id": "c",
+     "label": "One wide card",
+     "summary": "One wide card where each step opens after the last.",
+     "crop": "c-tag-write-desktop"
+    }
+   ]
+  },
+  {
+   "id": "R-claim-phone",
+   "surface": "Claim your project",
+   "path": "Claim your project, write step",
+   "headline": "Same three designs on a phone (writing step)",
+   "notice": "All three use the full width, plain words (no \"proof file\"), and open by saying what claiming gives you. Pick the same letter on each slide, or mix if one step looks better in another design.",
+   "variants": [
+    {
+     "id": "a",
+     "label": "Steps list + live preview",
+     "summary": "The form with a steps list on the left and \"how it will read\" beside it.",
+     "crop": "a-tag-write-phone"
+    },
+    {
+     "id": "b",
+     "label": "Step cards across the top",
+     "summary": "Four step cards along the top, one wide card under them for the current step.",
+     "crop": "b-tag-write-phone"
+    },
+    {
+     "id": "c",
+     "label": "One wide card",
+     "summary": "One wide card where each step opens after the last.",
+     "crop": "c-tag-write-phone"
+    }
+   ]
+  }
+ ]
+}
