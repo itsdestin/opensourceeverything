@@ -1,0 +1,647 @@
+{
+  "title": "Open Source Everything: what to change, and in what order",
+  "key": "ose-review-2026-10-26",
+  "out": "review-2026-10-26.questions.html",
+  "themes": ["midnight", "light"],
+  "steps": [
+    {
+      "id": "P-1",
+      "page": "Fix first: things that hurt trust today",
+      "intro": "Small fixes. Each is a few hours of my work at most. Tick the ones you want; the separate questions below are yours alone to decide."
+    },
+    {
+      "id": "Q-trust",
+      "words": true,
+      "pick": "several",
+      "surface": "Group pages and project pages",
+      "path": "Every group page, such as Documents",
+      "headline": "Which of these trust fixes should I make?",
+      "today": "Documents lists two apps that need your own server first and LibreOffice third. The labels on each card are cut off, project pages show 'what we couldn't confirm, checked by AI', and a few entries are simply wrong.",
+      "problem": "Visible mistakes and odd ordering make visitors doubt the whole list, and the launch post is bringing people to look right now.",
+      "proposal": "Six fixes. I'd do all six; the first is already built and waiting on the branch called search-scoring.",
+      "options": [
+        {
+          "id": "ordering",
+          "label": "New ordering",
+          "pros": ["Each group's best pick comes first: LibreOffice in Documents, GIMP in Photo editing.", "Projects not on GitHub stop sinking to the bottom.", "Each card says why it's where it is."],
+          "cons": ["Group pages visibly reorder overnight.", "You should look over the top three in groups you know first: about 15 minutes."],
+          "measured": "editors' first pick shown first in 79% of groups, up from 34%"
+        },
+        {
+          "id": "cards",
+          "label": "Readable card labels",
+          "pros": ["'Needs a server you run', the license and the devices stop being cut off.", "Each card opens with one plain line: install it, use it in your browser, or needs a server."],
+          "cons": ["Cards get a little taller, so slightly fewer fit on screen."]
+        },
+        {
+          "id": "ai-notes",
+          "label": "Hide AI-check notes",
+          "pros": ["'What we couldn't confirm, checked by AI' stops casting doubt on trusted picks.", "The public data files stop showing the AI reviewer's name 134 times."],
+          "cons": ["Visitors lose a peek at what wasn't confirmed; mods still see it all."]
+        },
+        {
+          "id": "data",
+          "label": "Fix wrong entries",
+          "pros": ["OpenVPN (open source) stops being listed as a closed app; duplicate names go.", "Adds OpenBB, so Bloomberg stops showing 'nothing open yet'.", "Splits Scheduling so Cal.com fully replaces Calendly, and splits the jumbled Databases group."],
+          "cons": ["One to two hours of mine, plus a skim from you or esk.", "Split groups get new web addresses; I'd keep the old ones working."]
+        },
+        {
+          "id": "count",
+          "label": "One project count",
+          "pros": ["The home page, About page and search results stop giving three different numbers (431, 453, 265)."],
+          "cons": ["None worth noting."]
+        },
+        {
+          "id": "experienced",
+          "label": "Label expert-only picks",
+          "pros": ["Arch Linux and CachyOS stop being 'fully replaces Windows' for beginners; they get an 'experienced users' label."],
+          "cons": ["Fans of those projects may object to the label."]
+        }
+      ]
+    },
+    {
+      "id": "Q-youcoded",
+      "words": true,
+      "surface": "AI chat and AI coding groups",
+      "path": "The YouCoded card in AI chat",
+      "headline": "What should YouCoded's listing say?",
+      "today": "YouCoded is marked Verified and 'fully replaces' ChatGPT, Claude and Gemini, with 11 GitHub stars, beside Jan (45,000) and Ollama (185,000). The page does say you made it.",
+      "problem": "Verified means mods checked it, and you're a mod grading your own project. Critics screenshot exactly this kind of thing.",
+      "proposal": "Pick how it should appear.",
+      "options": [
+        {
+          "id": "drop-verified",
+          "label": "Remove Verified",
+          "pros": ["Nobody can say you grade your own work.", "It stays listed and findable; esk can verify it later."],
+          "cons": ["It sits lower until people vote for it."],
+          "recommended": true
+        },
+        {
+          "id": "partly",
+          "label": "Keep, mark 'partly'",
+          "pros": ["Honest about what it covers today.", "Keeps the badge."],
+          "cons": ["Self-verification is still visible."]
+        },
+        {
+          "id": "keep",
+          "label": "Leave as is",
+          "pros": ["No change."],
+          "cons": ["The likeliest thing for a critic to point at."]
+        }
+      ]
+    },
+    {
+      "id": "Q-seeded",
+      "words": true,
+      "surface": "What's missing boards",
+      "path": "The What's missing section on every group page",
+      "headline": "What should happen to the editors' notes on the What's missing boards?",
+      "today": "Every group shows notes like 'Encrypted; simpler formatting than Word · Me too 0 · 6h ago'. They're the editors' own short notes, posted by the site's account.",
+      "problem": "They read like community posts with zero votes and matching times, so the community can look made up.",
+      "proposal": "Three ways to handle them.",
+      "options": [
+        {
+          "id": "label",
+          "label": "Label 'From the editors'",
+          "pros": ["Keeps the useful information.", "Honest about where it came from.", "Boards don't look empty at launch."],
+          "cons": ["A small label change in both the page and the server."],
+          "recommended": true
+        },
+        {
+          "id": "remove",
+          "label": "Remove until real posts",
+          "pros": ["Everything on the boards is real."],
+          "cons": ["Boards look empty at first, which can discourage the first poster."]
+        },
+        {
+          "id": "keep",
+          "label": "Leave as is",
+          "pros": ["No work."],
+          "cons": ["Risk of looking like fake activity."]
+        }
+      ]
+    },
+    {
+      "id": "P-2",
+      "page": "Helping people choose",
+      "intro": "The site lists replacements well. These help a normal person pick one."
+    },
+    {
+      "id": "Q-choose",
+      "words": true,
+      "pick": "several",
+      "surface": "Group pages and home page",
+      "path": "Every group page, and the home page",
+      "headline": "Which of these 'help me choose' changes should I make?",
+      "today": "220 of 431 projects need a server you run yourself, and only 148 are plain apps you install. The site never explains what 'your own server' means, and 'Copy prompt' is written for builders, not for people choosing.",
+      "problem": "A normal visitor can't tell which option they could actually start using today.",
+      "proposal": "Four changes. I'd do the first three now and the fourth gradually.",
+      "options": [
+        {
+          "id": "easy",
+          "label": "'Easy to start' filter",
+          "pros": ["One tap shows only apps you install, or ones with a free hosted version.", "A one-line explainer of 'your own server' wherever it appears."],
+          "cons": ["About half a day.", "Each project needs a 'has a free hosted version' fact, which I'd fill in and you'd skim."]
+        },
+        {
+          "id": "help-prompt",
+          "label": "'Help me choose' prompt",
+          "pros": ["Anyone can paste it into ChatGPT or Claude with their device, skill level and budget, and get a pick from our list."],
+          "cons": ["A second prompt box on each group, so slightly busier pages."]
+        },
+        {
+          "id": "home-line",
+          "label": "Why-switch line on home",
+          "pros": ["Says in five seconds why switching is worth it: free, private, nobody can take it away."],
+          "cons": ["Pushes the rest of the home page down a line."]
+        },
+        {
+          "id": "missing-apps",
+          "label": "Add big missing apps",
+          "pros": ["Netflix, Facebook, Snapchat, Grammarly, consumer VPNs, antivirus, AutoCAD, Zotero and Steam stop dead-ending searches.", "Some become honest gaps, which is useful for builders."],
+          "cons": ["Each needs alternatives researched and checked: an hour or two per batch."]
+        }
+      ]
+    },
+    {
+      "id": "Q-easy-default",
+      "words": true,
+      "surface": "Group pages",
+      "path": "The 'Works on' filter above every list",
+      "headline": "Should group pages show easy-to-start apps first by default?",
+      "today": "Every page shows everything, server software included, in one list.",
+      "problem": "Normal visitors make up most of the audience, and half of what they see needs a server they don't have.",
+      "proposal": "Three ways to set the default.",
+      "options": [
+        {
+          "id": "sort-first",
+          "label": "Show them first",
+          "pros": ["Normal visitors see installable apps at the top.", "Nothing is hidden; server software is just lower."],
+          "cons": ["Self-hosting fans see their favourites lower by default."],
+          "recommended": true
+        },
+        {
+          "id": "filter-on",
+          "label": "Hide the rest by default",
+          "pros": ["The cleanest list for beginners."],
+          "cons": ["Hides real options; people may think the list is short."]
+        },
+        {
+          "id": "off",
+          "label": "Keep everything mixed",
+          "pros": ["No change; one tap filters."],
+          "cons": ["Beginners still meet server software first."]
+        }
+      ]
+    },
+    {
+      "id": "P-3",
+      "page": "Search and finding things",
+      "intro": "Search already gets the right answer first 92 to 99% of the time on our tests. These cover what's left."
+    },
+    {
+      "id": "Q-search",
+      "words": true,
+      "pick": "several",
+      "surface": "Search box and gaps page",
+      "path": "The search box at the top of every page",
+      "headline": "Which of these search and discovery changes should I make?",
+      "today": "Search matches names, typos and common phrases well. It fails on plain descriptions: 'I want to stop paying for Adobe' brings up a photo-backup app and a music app.",
+      "problem": "The launch thread's main complaint was search, and the people we most want describe needs rather than naming apps.",
+      "proposal": "Five changes. The first is already built on the search-scoring branch.",
+      "options": [
+        {
+          "id": "devices",
+          "label": "Understand devices",
+          "pros": ["'Calendar for iPhone' shows iPhone apps first; 'Chromebook' now means something."],
+          "cons": ["Device lists in our data can be wrong, so it nudges results rather than hiding them."],
+          "measured": "20 of 20 device searches right, up from 16"
+        },
+        {
+          "id": "ai-search",
+          "label": "Trial AI meaning search",
+          "pros": ["Plain-language needs like 'stop paying for Adobe' find the right things.", "Answers the launch thread's main complaint."],
+          "cons": ["One to two days.", "Search text passes through Cloudflare's free AI service; the privacy page must say so.", "Ships only if it beats today's search on fresh tests."]
+        },
+        {
+          "id": "no-results",
+          "label": "Record failed searches",
+          "pros": ["Mods see what people looked for and didn't find, so we add the right things instead of guessing."],
+          "cons": ["Keeps the words people typed (no names or accounts); one line on the privacy page."]
+        },
+        {
+          "id": "related",
+          "label": "Related groups and requests",
+          "pros": ["'See also' links between related groups.", "The gaps page is ranked by how many people asked."],
+          "cons": ["Half a day."]
+        },
+        {
+          "id": "left-for",
+          "label": "'People who left X went to Y'",
+          "pros": ["A strong signal from real people once votes build up."],
+          "cons": ["Shows nothing until a group has 10 or more votes, which may take months."]
+        }
+      ]
+    },
+    {
+      "id": "P-4",
+      "page": "Suggesting and contributing",
+      "intro": "Today every Suggest button sends people to a GitHub login page, which most visitors won't get past."
+    },
+    {
+      "id": "Q-contrib",
+      "words": true,
+      "pick": "several",
+      "surface": "Suggest buttons, mod page",
+      "path": "Every 'Suggest' and 'Fix' button",
+      "headline": "Which of these contribution changes should I build?",
+      "today": "Suggestions are GitHub forms. A robot checks each one and a mod approves it, so the review side works. 'Tag my project' was planned but never built, and AI agents can't suggest anything at all.",
+      "problem": "The people the site is for give up at the GitHub login. Owners can't pitch their own project, and nobody hears back about what they suggested.",
+      "proposal": "Seven pieces. I'd do the quick fixes now, then the suggest box and Tag my project together.",
+      "options": [
+        {
+          "id": "quick",
+          "label": "Seven quick fixes",
+          "pros": ["Searching for a missing app opens the right form, not the 'new group' form.", "No required fields people can't answer.", "Brand-new accounts held for a mod; duplicates caught; a thank-you with the live link."],
+          "cons": ["A few hours."]
+        },
+        {
+          "id": "box",
+          "label": "One suggest box on the site",
+          "pros": ["No GitHub needed to start, with a duplicate check while you type.", "The site, AI agents and the subreddit bot all use the same door."],
+          "cons": ["Two to three days.", "More suggestions means more for mods to skim."]
+        },
+        {
+          "id": "want-too",
+          "label": "'I want this too' + Most requested",
+          "pros": ["Shows demand; builders see what people want most.", "Reuses the voting already built."],
+          "cons": ["Half a day after the suggest box."]
+        },
+        {
+          "id": "tag",
+          "label": "Tag my project",
+          "pros": ["Owners prove it's theirs, pitch it, and edit it later, labelled 'Owner says'.", "The main promise from the original plan."],
+          "cons": ["Two to three days.", "Pitches need mod review."]
+        },
+        {
+          "id": "status",
+          "label": "'Your suggestions' page",
+          "pros": ["People see waiting, live or turned down, and why, so they come back."],
+          "cons": ["Half a day."]
+        },
+        {
+          "id": "mod-tab",
+          "label": "Suggestions tab for mods",
+          "pros": ["Approve, merge or turn down in one place; approving puts it live with no second step."],
+          "cons": ["A day."]
+        },
+        {
+          "id": "how-to-help",
+          "label": "'How to help' links",
+          "pros": ["Each project links its plugin docs and beginner tasks, the launch thread's best idea.", "Steers builders to add to projects instead of starting over."],
+          "cons": ["The robot finds most links; mods add plugin docs by hand."]
+        }
+      ]
+    },
+    {
+      "id": "Q-anon",
+      "words": true,
+      "surface": "The suggest box",
+      "path": "Any 'Suggest' button",
+      "headline": "Should people be able to suggest without a GitHub account?",
+      "today": "Suggesting needs a GitHub account; most normal visitors don't have one.",
+      "problem": "Requiring one blocks most of the audience, while dropping it invites spam.",
+      "proposal": "Three levels of openness.",
+      "options": [
+        {
+          "id": "held",
+          "label": "Yes, held for a mod",
+          "pros": ["Anyone can suggest.", "Nothing goes live without a mod; per-visitor limits stop floods."],
+          "cons": ["More for mods to skim, though rejected ones take one click."],
+          "recommended": true
+        },
+        {
+          "id": "github-only",
+          "label": "GitHub sign-in on the site",
+          "pros": ["Signs in on our page rather than GitHub's forms, so it's less scary.", "Keeps the 14-day account rule."],
+          "cons": ["People without GitHub still can't suggest."]
+        },
+        {
+          "id": "as-is",
+          "label": "Keep GitHub forms",
+          "pros": ["No work."],
+          "cons": ["Most visitors stop at the login page."]
+        }
+      ]
+    },
+    {
+      "id": "Q-autoapprove",
+      "words": true,
+      "surface": "Suggestion review",
+      "path": "The mod's approval step",
+      "headline": "Should the safest suggestions go live without a mod?",
+      "today": "A mod approves every single suggestion, and there are two mods.",
+      "problem": "As the site grows, mod time becomes the bottleneck, and slow approvals discourage contributors.",
+      "proposal": "Auto-approve only suggestions where the license check passes, the account is over 14 days old, it isn't a duplicate, and it's an existing open-source project. Everything else still waits for a mod.",
+      "options": [
+        {
+          "id": "later",
+          "label": "Later, once trusted",
+          "pros": ["Watch what comes in for a month first, then switch it on."],
+          "cons": ["Mods do everything by hand until then."],
+          "recommended": true
+        },
+        {
+          "id": "now",
+          "label": "Yes, from the start",
+          "pros": ["Almost no mod work for routine additions."],
+          "cons": ["An occasional wrong group or poor summary goes live until someone reports it."]
+        },
+        {
+          "id": "never",
+          "label": "No, always a mod",
+          "pros": ["Every entry has had human eyes."],
+          "cons": ["Mod time grows with the site."]
+        }
+      ]
+    },
+    {
+      "id": "P-5",
+      "page": "Forks and project families",
+      "intro": "Today, forks show as unrelated rivals: Forgejo sits next to Gitea, which it split from, with nothing linking them. Searching 'OpenOffice' finds nothing."
+    },
+    {
+      "id": "Q-forks",
+      "words": true,
+      "surface": "Group pages and project pages",
+      "path": "Cards for projects like Forgejo, LibreWolf and Mbin",
+      "headline": "How far should I take forks and project families?",
+      "today": "Every project is a separate card. About 15 families already sit side by side (the Firefox browsers, Gitea and Forgejo, Nextcloud and ownCloud…), and well-known pairs like OpenOffice and VSCodium are missing.",
+      "problem": "Visitors can't tell a privacy-tweaked copy from a different product, old names find nothing, and builders aren't pointed from dead projects to the forks that continue them.",
+      "proposal": "Three stages. Each card line uses only dated, sourced facts, never 'better', because fork fights are personal.",
+      "options": [
+        {
+          "id": "phase1",
+          "label": "Family line + old names",
+          "pros": ["'Split from Gitea (2022)' on cards.", "Searching 'OpenOffice' or 'kbin' finds the live project and says why.", "About 25 pairs filled, and missing ones added."],
+          "cons": ["About a day."]
+        },
+        {
+          "id": "phase2",
+          "label": "Plus family pages",
+          "pros": ["Everything in stage 1.", "A family section on project pages, and 'development stopped, continued as…' banners.", "The robot suggests new families for mods to confirm."],
+          "cons": ["A few more days.", "A small mod queue to confirm families."],
+          "recommended": true
+        },
+        {
+          "id": "phase3",
+          "label": "Plus compare pages",
+          "pros": ["Everything in stage 2.", "Side-by-side pages like Firefox vs LibreWolf vs Zen.", "A 'rescue' page of abandoned projects with live forks."],
+          "cons": ["A week or more.", "Comparisons need upkeep as projects change."]
+        }
+      ]
+    },
+    {
+      "id": "P-6",
+      "page": "Maintainers' stance on contributions and AI",
+      "intro": "Your idea from today. 97 of our 393 GitHub projects mention AI in their contributing rules, and only about 6 to 8 truly ban it."
+    },
+    {
+      "id": "Q-stance",
+      "words": true,
+      "pick": "several",
+      "surface": "Project cards, project pages, AI prompts",
+      "path": "A new 'Contributing here' section on each project",
+      "headline": "Which parts of the maintainers' stance tracker should I build?",
+      "today": "Nothing tells a builder, or their AI agent, whether a project welcomes AI-assisted help, wants it disclosed, or accepts hand-written code only.",
+      "problem": "People show up at projects that ban AI help, which creates the maintainer burden a commenter warned about, and the subreddit's core topic goes untracked.",
+      "proposal": "Six parts. I'd start with the first three; labels stay neutral ('Hand-written only', never 'anti-AI').",
+      "options": [
+        {
+          "id": "quotes",
+          "label": "Robot quotes, mods label",
+          "pros": ["Each project shows its own rule in its own words, with a link and a date.", "A card chip such as 'AI help: say so'."],
+          "cons": ["About a day.", "Mods confirm about 97 labels once, about a click each."]
+        },
+        {
+          "id": "prompts",
+          "label": "Into AI prompts and data",
+          "pros": ["Agents skip hand-written-only projects and disclose AI use where it's required.", "No other list feeds agents this way."],
+          "cons": ["A few hours."]
+        },
+        {
+          "id": "watch",
+          "label": "Weekly change check",
+          "pros": ["When a project changes its rules, mods see old and new side by side; labels show 'last checked'."],
+          "cons": ["A few hours; a small ongoing mod queue."]
+        },
+        {
+          "id": "self-set",
+          "label": "Maintainers set it",
+          "pros": ["The strongest source: 'The maintainers say'.", "Most projects start as 'not stated', so this fills the gaps."],
+          "cons": ["Needs the Tag my project ownership check first."]
+        },
+        {
+          "id": "templates",
+          "label": "Policy templates to copy",
+          "pros": ["Ready-made AI policy files in each style that maintainers add to their own code.", "Helps the whole community; our robot then reads them."],
+          "cons": ["Half a day of careful, neutral writing."]
+        },
+        {
+          "id": "filter",
+          "label": "'Welcomes AI help' filter",
+          "pros": ["Builders find projects that want them, on the Before you build panel."],
+          "cons": ["Only useful once enough projects are labelled."]
+        }
+      ]
+    },
+    {
+      "id": "Q-reports",
+      "words": true,
+      "surface": "Contributing here section",
+      "path": "Project pages",
+      "headline": "Should contributors be able to report what actually happened, such as a pull request closed for using AI?",
+      "today": "Only written rules would be shown.",
+      "problem": "Some projects act differently from their written rules, but reports could be used to pile on a maintainer.",
+      "proposal": "Reports would need a link to a public example, wait for a mod, and show as '2 reports, see them', never as the project's policy.",
+      "options": [
+        {
+          "id": "later",
+          "label": "Not at first",
+          "pros": ["No harassment risk while the community is small.", "Revisit once written rules are labelled."],
+          "cons": ["Misses gaps between what projects say and what they do."],
+          "recommended": true
+        },
+        {
+          "id": "yes",
+          "label": "Yes, held for a mod",
+          "pros": ["Catches real-world practice."],
+          "cons": ["More mod work, and judgment calls about tone."]
+        },
+        {
+          "id": "never",
+          "label": "Never",
+          "pros": ["The site only ever reflects what maintainers say."],
+          "cons": ["Can't flag projects whose written rules are out of date."]
+        }
+      ]
+    },
+    {
+      "id": "Q-mergeshare",
+      "words": true,
+      "surface": "Contributing here section",
+      "path": "Project pages",
+      "headline": "Should project pages show how much outside help actually gets merged?",
+      "today": "Nothing shows whether a project really accepts outside help.",
+      "problem": "A project can say 'contributions welcome' and never merge any; the number shows reality, but it's noisy.",
+      "proposal": "Share of changes merged in the last 90 days that came from outside the core team. Our sample's typical project was 63%.",
+      "options": [
+        {
+          "id": "big-only",
+          "label": "Only where meaningful",
+          "pros": ["Shown only for projects with enough recent activity, worded neutrally ('most recent changes came from outside contributors')."],
+          "cons": ["Still wrong for companies whose staff look like outsiders."],
+          "recommended": true
+        },
+        {
+          "id": "yes",
+          "label": "Show it everywhere",
+          "pros": ["Most informative."],
+          "cons": ["A low number can read as criticism; noisy for small projects."]
+        },
+        {
+          "id": "no",
+          "label": "Don't show it",
+          "pros": ["Nothing that could be misread."],
+          "cons": ["Builders can't tell if help gets used."]
+        }
+      ]
+    },
+    {
+      "id": "P-7",
+      "page": "Free outside tools, and AI agents",
+      "intro": "All free, checked Oct 26. None imports another site's list; they only refresh facts about projects we already have."
+    },
+    {
+      "id": "Q-tools",
+      "words": true,
+      "pick": "several",
+      "surface": "Weekly robot and data files",
+      "path": "Behind the scenes",
+      "headline": "Which outside tools and agent features should I add?",
+      "today": "The weekly robot reads facts only from GitHub. The 27 projects hosted elsewhere get no checks, and the files AI agents read leave out devices, stars and Verified.",
+      "problem": "Facts go stale for non-GitHub projects, 'runs on' claims came from a one-time AI guess, and agents can't judge options well.",
+      "proposal": "Six additions. I'd do the first four now.",
+      "options": [
+        {
+          "id": "codeberg",
+          "label": "Codeberg and GitLab facts",
+          "pros": ["Stars, activity and license checked for projects off GitHub too."],
+          "cons": ["A few hours."]
+        },
+        {
+          "id": "github-more",
+          "label": "More from GitHub, free",
+          "pros": ["'Forked from', fork count and latest release, from the same lookups we already make.", "Feeds the forks work."],
+          "cons": ["An hour."]
+        },
+        {
+          "id": "spdx",
+          "label": "Official license list",
+          "pros": ["Catches license typos and confirms which are approved open-source licenses."],
+          "cons": ["An hour."]
+        },
+        {
+          "id": "agent-files",
+          "label": "Better files for AI agents",
+          "pros": ["Agents get devices, stars, Verified and inactive for every project, plus a version number so they notice changes.", "Search engines get a small description per project."],
+          "cons": ["A few hours."]
+        },
+        {
+          "id": "stores",
+          "label": "App-store lookups",
+          "pros": ["'Runs on' and 'how to install' come from Flathub, F-Droid and Homebrew listings, not an AI guess."],
+          "cons": ["A day; Windows needs a slower method."]
+        },
+        {
+          "id": "connector",
+          "label": "AI-tool connector",
+          "pros": ["Assistants like Claude can search the map directly as a built-in tool."],
+          "cons": ["A day or two; worth it once the data files are settled."]
+        }
+      ]
+    },
+    {
+      "id": "P-8",
+      "page": "Order and one fact only you know",
+      "intro": "After the trust fixes, which big piece comes next?"
+    },
+    {
+      "id": "Q-next",
+      "words": true,
+      "surface": "The whole site",
+      "path": "The work plan",
+      "headline": "After the trust fixes, which big piece should come first?",
+      "today": "Each of these is several days of my work; doing them one at a time keeps each reviewable.",
+      "problem": "Doing everything at once means a long wait before you see anything.",
+      "proposal": "Pick the one that matters most to you now.",
+      "options": [
+        {
+          "id": "contrib",
+          "label": "Suggest box + Tag my project",
+          "pros": ["Unblocks most visitors and owners; the launch traffic can start contributing."],
+          "cons": ["Biggest of the four."],
+          "recommended": true
+        },
+        {
+          "id": "stance",
+          "label": "Maintainers' stance",
+          "pros": ["Fresh, on-topic for the subreddit, and a good second announcement."],
+          "cons": ["Mostly 'not stated' until maintainers join."]
+        },
+        {
+          "id": "ai-search",
+          "label": "AI meaning search",
+          "pros": ["Answers the launch thread's main complaint."],
+          "cons": ["Might not beat today's search; if it doesn't, it doesn't ship."]
+        },
+        {
+          "id": "forks",
+          "label": "Forks and families",
+          "pros": ["Clears up confusing pairs; strong for builders."],
+          "cons": ["Less visible to everyday visitors."]
+        }
+      ]
+    },
+    {
+      "id": "Q-editors",
+      "words": true,
+      "surface": "Group pages",
+      "path": "The order alternatives are listed in each group",
+      "headline": "Who decided the best-first order inside each group?",
+      "today": "Each group's data lists its alternatives in an order, such as GIMP before Pinta. The new ranking trusts that order until real votes arrive.",
+      "problem": "If people chose it, it deserves the weight; if the AI pre-fill guessed it, I should lower it.",
+      "proposal": "Tell me where it came from.",
+      "options": [
+        {
+          "id": "people",
+          "label": "You and esk",
+          "pros": ["Keep its weight as built."],
+          "cons": ["None."]
+        },
+        {
+          "id": "ai",
+          "label": "The AI pre-fill",
+          "pros": ["I'll lower its weight so stars and Verified count more."],
+          "cons": ["Order leans more on popularity until votes arrive."]
+        },
+        {
+          "id": "mix",
+          "label": "A mix",
+          "pros": ["I'll keep it for the 25 groups you checked and lower it elsewhere."],
+          "cons": ["Slightly more complicated rule."]
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,1474 @@
+<!doctype html><html lang="en" data-theme="light"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Open Source Everything: what to change, and in what order</title>
+<style id="tokens">:root[data-theme="light"]{--canvas:#F2F2F2;--panel:#EAEAEA;--inset:#D7D7D7;--well:#F9F9F9;--accent:#1A1A1A;--on-accent:#F2F2F2;--fg:#1A1A1A;--fg-2:#444444;--fg-dim:#535353;--fg-muted:#5E5E5E;--fg-faint:#989898;--edge:#C0C0C0;--link:#2055CA;color-scheme:light}
+:root[data-theme="midnight"]{--canvas:#0D1117;--panel:#161B22;--inset:#21262D;--well:#0D1117;--accent:#B1BAC4;--on-accent:#0D1117;--fg:#C9D1D9;--fg-2:#A0AAB4;--fg-dim:#919AA4;--fg-muted:#858D97;--fg-faint:#4E555E;--edge:#343A41;--link:#58A6FF;color-scheme:dark}</style>
+<style>/* Review deck v2 — the approved page (docs/active/prototypes/2026-08-27-deck-mockup-g.html).
+   Theme tokens are inlined by build.py into <style id="tokens">; amber is the deck's own colour. */
+:root{--radius-sm:4px;--radius-md:8px;--radius-lg:12px;--radius-full:9999px;--yes:#2E9B57;--no:#E5484D;--other:#C99700;--mark:#FFB020;--font:'Cascadia Mono','Cascadia Code','Fira Code',monospace;--content:clamp(900px,80vw,1640px)}
+*{box-sizing:border-box} html,body{height:100%;margin:0}
+/* Themed scrollbars. A live pane taller than the stage makes the stage scroll, and the browser's
+   own bar is a bright slab of unrelated chrome sitting on the deck (Destin, 2026-09-01). */
+*{scrollbar-width:thin;scrollbar-color:var(--edge) transparent}
+::-webkit-scrollbar{width:10px;height:10px}
+::-webkit-scrollbar-track{background:transparent}
+::-webkit-scrollbar-thumb{background:var(--edge);border:2px solid transparent;background-clip:padding-box;border-radius:var(--radius-full)}
+::-webkit-scrollbar-thumb:hover{background:var(--fg-muted);border:2px solid transparent;background-clip:padding-box}
+::-webkit-scrollbar-corner{background:transparent}
+body{font:13px/1.45 var(--font);color:var(--fg);background:var(--well);display:flex;flex-direction:column;padding:18px 10px 10px}
+/* the deck is a distinct surface: inset on the darker well, framed in amber, so it never reads as the app's own chrome */
+.deck{position:relative;flex:1;min-height:0;display:flex;flex-direction:column;background:var(--canvas);border:2px solid rgba(255,176,32,.6);border-radius:14px;overflow:visible;box-shadow:0 0 0 1px rgba(0,0,0,.35),0 8px 30px rgba(0,0,0,.25)}
+body.embedded .deck{margin-bottom:62px}   /* the app's file panel floats an Edit button over this strip */
+.eyebrow{font-size:11px;text-transform:uppercase;letter-spacing:.08em;color:var(--fg-muted);font-weight:500}
+/* the chip sits ON the frame: tool name | deck title */
+.chip{position:absolute;top:-13px;left:18px;z-index:5;display:inline-flex;align-items:center;height:26px;background:var(--mark);color:#1a1100;border-radius:7px;padding:0 10px 0 9px;box-shadow:0 2px 8px rgba(0,0,0,.35)}
+.chip .k{font-size:10px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;white-space:nowrap} .chip .div{width:1px;height:14px;background:rgba(0,0,0,.35);margin:0 9px} .chip .t{font-size:12px;font-weight:500;white-space:nowrap}
+.wrap{width:min(var(--content),100%);margin:0 auto;display:flex;align-items:center;gap:14px;min-width:0}
+.top{height:clamp(56px,6vh,64px);flex:none;display:flex;padding:8px 20px 0;background:var(--panel);border-bottom:1px solid var(--edge);border-radius:12px 12px 0 0}
+/* Fix (2026-08-27): a long surface + path ran straight under the Prev/Next block and the step
+   counter — the header had no shrink and no truncation, so any wordy step corrupted the top bar. */
+/* Fix (2026-09-05): the 2026-08-27 fix above still let a long `path` run the Prev button and
+   the progress bar under the eyebrow text at 1440px. `.where` already had `min-width:0` and
+   `overflow:hidden` was already granting the eyebrow itself a shrinkable min-width (a flex
+   item with non-visible overflow gets an automatic 0 content-based minimum, no explicit
+   `min-width:0` required) — so `.where` was NEVER the one that overflowed. The actual failure
+   was in `.nav`: it also opts into `min-width:0`, with nothing to stop `.where`'s uncapped
+   demand from squeezing `.nav`'s OWN box to a literal 0px (measured: `.nav`'s left === right)
+   while its children — `.steps`, `#prev`, `#next`, none of which have their own zero-min —
+   kept their real widths and, centered on that collapsed point, spilled backward under the
+   path text. `max-width:40%` is what actually stops this: it caps how much of the row `.where`
+   may claim, so the shrink math never needs to touch `.nav` at all. Giving the eyebrow its own
+   `flex:1 1 auto;min-width:0` is a defensive second line, not the load-bearing fix — confirmed
+   by removing it alone and re-running the render test, which still passed. `.id` gets
+   `flex:none` for the opposite reason: once `.where`'s 40% box is itself under-width for a
+   90-char path, `.id` (a tiny "Home"-sized item) and the eyebrow were BOTH still flex-shrink:1
+   and so both gave up space proportional to their own size — small as `.id`'s share was, its
+   basis is so small too that it read as the surface name itself truncating to "H…", which is a
+   worse loss than the path (the thing that was actually long) giving up more of the row it was
+   already ellipsizing. */
+.top .where{flex:0 1 auto;max-width:40%;min-width:0;overflow:hidden} /* Fix (2026-09-05): the 14ch min-width FLOOR reserved 91px for a surface named "Home" (33.6px of
+   text) and, because `.where` is `overflow:hidden`, pushed the separator and the whole subtitle
+   out of the box — "Chat" rendered at 0px wide. Destin: "looks like you just added a bunch of
+   unnecessary empty blank space in the header?". The name now takes exactly the room it needs
+   (`flex:none`, so it is never squeezed to "H…" either) with a CAP instead of a floor, so a
+   genuinely long surface name still ellipsizes rather than eating the subtitle's room. */
+.top .where .id{flex:none;max-width:22ch;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.top .where .eyebrow{flex:1 1 auto;min-width:0;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+@media (max-width:1400px){.top .where .eyebrow,.top .where .sep{display:none}} @media (max-width:950px){.top .count{display:none}} @media (max-width:760px){.top .long{display:none} .top .nav .btn{padding:0 6px}}
+.where{display:flex;align-items:center;gap:10px} .where .id{font-weight:500;font-size:14px} .where .sep{color:var(--fg-faint)}
+.nav{display:flex;align-items:center;gap:8px;flex:1;justify-content:center;min-width:0}
+.steps{display:flex;gap:3px;align-items:center;flex:1;max-width:360px;min-width:90px} .steps span{flex:1;height:7px;border-radius:3px;background:var(--inset);cursor:pointer;transition:transform .15s}
+.steps span:hover{transform:scaleY(1.4)} .steps span.on{box-shadow:0 0 0 2px var(--panel),0 0 0 3px var(--fg)}
+.steps span.yes,.steps span.pick{background:var(--yes)} .steps span.no{background:var(--no)} .steps span.other{background:var(--other)} .steps span.skip{background:var(--fg-faint)}
+.count{font-size:11px;color:var(--fg-muted);font-variant-numeric:tabular-nums;white-space:nowrap}
+/* Save status (page.js showSaved): visible at every width, unlike .count — a failed save is the one
+   thing on this bar he must never miss. Quiet when saved, loud when not. */
+.saved{font-size:11px;white-space:nowrap;color:var(--fg-muted)}
+.saved[data-ok="0"]{color:#fff;background:#b3261e;padding:3px 8px;border-radius:6px;font-weight:600}
+.btn{font:inherit;font-size:12px;font-weight:500;height:32px;padding:0 14px;border-radius:var(--radius-md);border:1px solid var(--edge);background:transparent;color:var(--fg);cursor:pointer;display:inline-flex;align-items:center;gap:8px;white-space:nowrap;transition:background .15s,transform .15s,filter .15s}
+.btn.primary{background:var(--accent);color:var(--on-accent);border-color:var(--accent)} .btn.ghost{border-color:transparent;color:var(--fg-2)} .btn.sm{height:28px;padding:0 10px}
+@media (hover:hover){ .btn:hover{background:var(--inset)} .btn.primary:hover{background:var(--accent);filter:brightness(1.12);transform:translateY(-1px)} .btn.ghost:hover{background:var(--inset);color:var(--fg)} }
+.btn:disabled{opacity:.45;cursor:default;transform:none;filter:none}
+/* The status dots are gone (Destin, 2026-09-01: "i don't like the current status dot style").
+   Choosing looks the SAME everywhere now — a lettered card and an answer button are both
+   neutral until picked and both take the deck's amber when they are. The yes/no/other colours
+   still live in the progress strip at the top, which is where an at-a-glance read belongs. */
+.answers{display:contents}
+/* a choice step: one button per variant, lettered like its picture's caption */
+.ans .key{display:inline-flex;align-items:center;justify-content:center;min-width:20px;height:20px;padding:0 5px;border-radius:5px;background:var(--inset);border:1px solid var(--edge);font-size:11px;font-weight:700;letter-spacing:.04em} .ans.on .key{background:var(--mark);color:#1a1100;border-color:var(--mark)}
+.card.variant{display:flex;flex-wrap:wrap;gap:10px;align-items:flex-start;cursor:pointer} .card.variant .key{flex:none;display:inline-flex;align-items:center;justify-content:center;min-width:22px;height:22px;padding:0 6px;border-radius:5px;background:var(--panel);border:1px solid var(--edge);font-size:11px;font-weight:700}
+.card.variant .vbody{flex:1 1 180px;min-width:0;display:flex;flex-direction:column;gap:4px}  /* Fix: the letter and the Recommended badge now hold their own row when the card is narrow — before this the badge squeezed the option's words into a ~130px gutter. */ .card.variant h3{margin:0} .card.variant p{margin:0} .card.variant .r{font-size:11px;color:var(--mark)} .card.variant .cost{font-size:11px;color:var(--fg-muted)} .card.variant.on{border-color:var(--mark);box-shadow:inset 0 0 0 1px var(--mark)} .card.variant.on .key{background:var(--mark);color:#1a1100;border-color:var(--mark)}
+@media (hover:hover){.card.variant:hover{border-color:var(--fg-muted)}}
+/* An option's pros and cons. The COLOUR is on the marker only — a whole sentence in green or
+   red reads as a warning rather than as a plus or a minus, and Destin reads these as prose. */
+.card.variant ul{margin:2px 0 0;padding-left:16px;display:flex;flex-direction:column;gap:3px}
+.card.variant li{font-size:12px;color:var(--fg);line-height:1.4}
+/* The recommended option, beside its letter — the flag the "(recommended)" label used to fake. */
+/* Fix (2026-09-05): green already means "answered yes" and amber (--mark) already means "the
+   one I picked" elsewhere on this card — painting the badge from --yes made it read as one of
+   those instead of what it actually says ("this is the one I'd recommend"). A quiet chip that
+   matches the other small metadata on the card (same radius as .key) carries no colour role. */
+.card.variant .badge{flex:none;align-self:flex-start;padding:3px 7px;border-radius:5px;background:var(--panel);border:1px solid var(--edge);color:var(--fg-dim);font-size:10px;font-weight:600;text-transform:uppercase;letter-spacing:.06em;white-space:nowrap}
+/* A question's three parts: Today / The problem / Proposal, one card each, the eyebrow the
+   plain cards already use. No icon — these are the question's own words, not a verdict. */
+.card.part h3{color:var(--fg-dim)}
+.frame.pickable{cursor:pointer;border-radius:var(--radius-md);padding:4px;margin:-4px} .frame.pickable.on{outline:2px solid var(--mark);outline-offset:2px} .frame.pickable figcaption .key{margin-right:6px}
+.ans{border-color:var(--edge)}
+/* Yes and No carry their meaning in the RESTING state — a tinted border and a tinted label,
+   the same quiet-colour idiom `.card.risk` already uses for amber. Destin (2026-09-01) wanted
+   green/red back but not as a status dot, and it has to live here rather than in the chosen
+   state: amber-when-picked is now the single signal for "this is the one I picked", shared
+   with the lettered cards, and two colours competing for that job is what the dots were.
+   Mixed toward the theme's own edge/text rather than used neat, so it reads on light themes
+   too — #2E9B57 on #F2F2F2 is not enough contrast for 13px text on its own.
+   The chosen rule below is deliberately LAST: it takes the border, and leaves the label its
+   colour, so a picked answer still says which one it was. */
+.ans[data-v="yes"]{border-color:color-mix(in srgb,var(--yes) 50%,var(--edge));color:color-mix(in srgb,var(--yes) 72%,var(--fg))}
+.ans[data-v="no"]{border-color:color-mix(in srgb,var(--no) 50%,var(--edge));color:color-mix(in srgb,var(--no) 72%,var(--fg))}
+.ans.on{background:var(--inset);border-color:var(--mark);box-shadow:inset 0 0 0 1px var(--mark)}
+main{flex:1;min-height:0;display:flex;justify-content:center;padding:14px 20px 16px;overflow:auto}
+.step{position:relative;display:flex;width:min(var(--content),100%);flex-direction:column;gap:10px;min-height:0}
+.thumbs{position:absolute;left:calc(100% + 16px);top:0;display:flex;flex-direction:column;gap:10px}
+body.thumbs-inline .thumbs{position:static;flex-direction:row;justify-content:flex-end;margin-bottom:8px}
+.thumb{border:2px solid transparent;border-radius:var(--radius-md);padding:3px;background:transparent;cursor:pointer;display:flex;flex-direction:column;align-items:center;gap:3px;font:11px var(--font);color:var(--fg-dim)}
+.thumb img{height:44px;width:auto;max-width:110px;object-fit:cover;border-radius:3px;display:block} .thumb.on{border-color:var(--accent);color:var(--fg)}
+/* ── the three peer containers on one grid; the class is chosen by page.js ── */
+.content{flex:1;min-height:0;display:grid;gap:12px}
+.content.row-below{grid-template-columns:1fr;grid-template-rows:1fr auto;grid-template-areas:"stage" "decide"}
+.content.col-right{grid-template-columns:1fr minmax(320px,30%);grid-template-rows:1fr;grid-template-areas:"stage decide"}
+.content.compact{display:flex;flex-direction:column;flex:none}
+/* WORDS: no stage at all — the question and its option cards take the row (feature-flow §5) */
+.content.words{grid-template-columns:1fr;grid-template-rows:1fr;grid-template-areas:"decide"} .content.words .stage{display:none}
+.words .cards{grid-template-columns:repeat(auto-fit,minmax(260px,1fr))} .words .card.option{min-height:96px}
+/* ── PAGES: a question deck is a scrolling reading column per SET of questions (design §3.1).
+   Destin (2026-09-04): "my mindset should stay in the same place for each set of questions, and
+   only shift when moving to a new set" — so Prev/Next move PAGES, and every question on one is
+   answered without the screen changing under him. Picture decks never take this class. */
+.content.pages{display:block;overflow:auto}
+.content.pages .stage{display:none}
+/* the framed decision card is the QUESTION here, not the column, so the wrapper stops being one */
+.content.pages .decide{display:block;background:none;border:0;border-radius:0;overflow:visible;min-height:0}
+.content.pages .info{padding:0;display:block;overflow:visible}
+/* padding-bottom clears the sticky #controls bar below: its button's own clamp() plus the
+   bar's 10px top+bottom padding, so the last card can scroll clear of it instead of the bar
+   landing on top of a card's own text (Destin, 2026-09-05). */
+.pages .cards{max-width:1120px;margin:0 auto;display:flex;flex-direction:column;gap:28px;padding-bottom:clamp(54px,calc(4.4vh + 20px),72px)}
+.pages .page-head .intro{margin:4px 0 0;font-size:13px;color:var(--fg-2);line-height:1.5}
+/* One question = one card, the same panel/edge/radius idiom the single-step decision card uses. */
+.pages article.q{background:var(--panel);border:1px solid var(--edge);border-radius:var(--radius-lg);padding:14px 16px;display:flex;flex-direction:column;gap:12px}
+.pages article.q.done{border-color:color-mix(in srgb,var(--yes) 45%,var(--edge))}
+.pages article.q .qh{margin:0;font-size:15px;font-weight:500;line-height:1.35}
+/* Fix (Destin, 2026-09-06): "too hard to quickly navigate between questions and tell them
+   apart". Three things do that job now — each question says which one it is, the gap between
+   two of them is bigger than any gap inside one, and an answered question says so where the
+   number is rather than only by a border tint you have to hunt for. */
+.pages article.q .qnum{margin:0 0 -4px;display:flex;align-items:center;gap:8px;font:500 11px/1 var(--font);text-transform:uppercase;letter-spacing:.08em;color:var(--fg-faint)}
+.pages article.q .qnum .tick{display:none;color:var(--yes);letter-spacing:.06em}
+.pages article.q .qnum .tick::before{content:"✓ ";font-weight:700}
+.pages article.q.done .qnum .tick{display:inline}
+.pages article.q.done .qnum .n{color:var(--fg-muted)}
+.pages .qbody{display:flex;flex-direction:column;gap:10px}
+/* Fix (Destin, 2026-09-06): "difficult to differentiate the different explanations section
+   card from the available/selectable options". They were the SAME card — same fill, same
+   border, same radius — so nothing said which ones he could click. An explanation is now flat
+   text behind a quiet rule; only a thing he can pick keeps the raised, bordered card. */
+/* Fix (Destin, 2026-09-06): "the top options should be contained card things, not bare text on
+   the panel". They were flattened to tell them apart from the choices; the Option A/B/C headings
+   and the raised, hovering card now do that job, so an explanation is a contained card again —
+   quieter than a choice: the well fill instead of the raised one, and no hover. */
+.pages .card.part{background:var(--well);border:1px solid var(--edge);border-radius:var(--radius-md);padding:10px 12px}
+.pages .card.part h3{color:var(--fg-muted)}
+.pages .card.part p{color:var(--fg-2)}
+/* …and the pickable ones look pickable: they sit on the raised fill, and the whole card
+   answers to the pointer rather than only its border changing colour. */
+.pages .card.variant{background:var(--inset);border-color:var(--edge)}
+@media (hover:hover){.pages .card.variant:hover{background:color-mix(in srgb,var(--inset) 82%,var(--fg));border-color:var(--fg-muted)}}
+.pages .card.variant.on{background:color-mix(in srgb,var(--mark) 10%,var(--inset))}
+/* One left edge for everything he reads. The letter chip used to sit in its own gutter, so an
+   option's words started ~110px right of the paragraph above it — the "strange left/right
+   margins" (Destin). The chip now rides on the label's own line instead of indenting the card. */
+.pages .card.variant{display:block;padding:10px 12px}
+.pages .card.variant .vbody{display:block}
+/* Fix (Destin, 2026-09-06): "3 cards side-by-side horizontally" — the three explanations were
+   three screens of scrolling before the first thing he can answer. The column widens to hold
+   them; below 900px of room they stack again rather than becoming three unreadable strips. */
+.parts{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;align-items:stretch}
+@media (max-width:1000px){.parts{grid-template-columns:1fr}}
+/* Fix (Destin, 2026-09-06): "big ass clear Option A / Option B headers". The heading is the
+   thing he picks; the option's own name is the line under it and the id is a quiet trailing
+   mark, because ids are what the answers file and any contract row speak in. */
+.card.variant .ohead{display:flex;align-items:center;gap:8px;margin:0 0 6px;font:600 15px/1.2 var(--font);text-transform:none;letter-spacing:0;color:var(--fg)}
+.card.variant .ohead .oletter{flex:none}
+.card.variant .ohead .key{margin-left:auto;font-weight:500}
+.card.variant .oname{margin:0;font:500 12px/1.3 var(--font);text-transform:uppercase;letter-spacing:.07em;color:var(--fg-muted)}
+/* The pros and cons hang their markers in the card's own padding rather than a second indent:
+   the bullet text then starts on the same left edge as everything above it (Destin: "the
+   pros/cons lists all still have weird margins"). */
+.card.variant ul{margin:8px 0 0;padding:0;list-style:none}
+.card.variant li{position:relative;padding-left:14px}
+.card.variant li::before{content:"";position:absolute;left:2px;top:.55em;width:5px;height:5px;border-radius:50%}
+.card.variant ul.pros li::before{background:var(--yes)} .card.variant ul.cons li::before{background:var(--no)}
+.pages .card.variant{display:block;padding:12px 14px}
+.pages .card.variant .vbody{display:block}
+.pages .card.variant ul{margin-top:8px}
+/* Fix (Destin, 2026-09-06): "other, save/next … still have weird margins". The row now runs
+   edge to edge of the question card — the buttons size to their words, the note takes the rest,
+   and nothing carries a margin of its own. */
+.pages .qrow{display:flex;flex-wrap:wrap;align-items:stretch;gap:8px;margin:2px 0 0}
+.pages .qrow .ans{flex:0 0 auto;max-width:none;margin:0}
+.pages .qrow .note{flex:1 1 220px;margin:0}
+/* Reading text, not chrome: 14px in the column. The pros and cons follow it up a step so a list
+   does not read as a footnote to the paragraph above it. */
+.pages .card p{font-size:14px} .pages .card li{font-size:13px}
+/* The shared answer row belongs to ONE step; on a page each question carries its own, so all
+   that is left of it is the way forward — pinned to the bottom of the column as it scrolls. */
+.content.pages #controls{position:sticky;bottom:0;z-index:3;max-width:1120px;margin:0 auto;padding:10px 0;justify-content:flex-end;background:var(--canvas)}
+.content.pages #controls>#answers,.content.pages #controls>#note{display:none}
+/* CONTRACT: the rows as a table; a graded row is tinted by its verdict */
+.card.contract{overflow:auto} .card.contract table{border-collapse:collapse;width:100%;font-size:12px} .card.contract th{text-align:left;font-weight:600;color:var(--fg-dim);padding:6px 8px;border-bottom:1px solid var(--edge)} .card.contract td{padding:6px 8px;border-bottom:1px solid var(--edge);vertical-align:top}
+.card.contract .src{margin:2px 0 0;font-size:11px;color:var(--fg-muted)} .card.contract tr.pass td:last-child{color:var(--yes)} .card.contract tr.fail td:last-child{color:var(--no)}
+/* Fix (2026-09-06): fixed column shares were the wrong tool too. They were added when a
+   contract sat inside the 760px question-reading column; a contract deck is one step per
+   screen again, so the table has the deck's full width and the browser's own sizing reads
+   better than any guess — a guard path under "Checked by" was being broken into five slivers
+   by a 7.5em share (measured on the fixture, 2026-09-06). Auto layout, and nothing else: an
+   earlier `overflow-wrap:anywhere` here was just as wrong, because telling the From column it
+   may break mid-word let auto layout starve it to 63px and shred every source id into five
+   slivers (measured on the ChatGPT acceptance deck the same day). A source id is one token he
+   reads; let it ask for its width. */
+/* A FLOOR on the statement, not a share. The two reverted attempts above set fixed shares,
+   which starved whichever column they guessed wrong about. A min-width only says "never
+   thinner than this" and lets auto layout hand out the rest as before. The statement is the
+   thing being decided on and was the narrowest column on the remote-access acceptance deck:
+   105px of a 1512px window, one word per line. Measured after: 173px from shortening the
+   evidence, 253px with this — and the whole table still fits without scrolling sideways at
+   1024px, which a 30ch floor did not. */
+.card.contract th:nth-child(2),.card.contract td:nth-child(2){min-width:24ch}
+.words .cards:has(.contract){grid-template-columns:1fr}
+/* A question on a screen of its OWN (a mixed deck, not a question page): the three
+   explanations are one full-width row, exactly as they are on a question page. Before this
+   `.parts` was just another 260px grid item and the three cards inside it collapsed to about
+   90px each — one word per line. Destin saw it on 2026-09-06. */
+.words .cards .parts{grid-column:1/-1}
+.compact .stage{flex:none;overflow:visible} .compact .stage .inner{flex-direction:column;align-items:center} .compact .info{overflow:visible}
+/* COMPACT is the exception, on purpose. `.controls` is sticky to the bottom there so the
+   answer buttons stay reachable in a narrow window, and sticky needs room to move inside its
+   PARENT — wrapped in a content-height `.decide` there is none, and the bar scrolled away
+   (measured against HEAD: "ctl on screen" true before, false after). `display:contents`
+   dissolves the wrapper so the structure is exactly what it was. One card at every width a
+   review is actually done at; a reachable answer bar when the window is too narrow for it. */
+.compact .decide{display:contents}
+/* …and because the wrapper is dissolved there, the two blocks carry the card treatment
+   themselves again. Without this they are transparent and the sticky answer bar renders
+   straight over the question text. */
+.compact .info,.compact .controls{background:var(--panel);border:1px solid var(--edge);border-radius:var(--radius-lg)}
+.step.compact-step{flex:none;min-height:0}
+.stage{grid-area:stage} .decide{grid-area:decide}
+/* ONE card, not two. The question, the options and the answer controls are a single decision —
+   Destin (2026-09-01): "the two separate cards/sections for the decision rows should be a
+   single card/section." A hairline separates the question from the answer row inside it. */
+.decide{background:var(--panel);border:1px solid var(--edge);border-radius:var(--radius-lg);display:flex;flex-direction:column;min-width:0;min-height:0;overflow:auto}
+.info,.controls{background:none;border:0;border-radius:0}
+
+.info{padding:14px 16px;display:flex;flex-direction:column;gap:12px;min-width:0;overflow:auto}
+.controls{padding:clamp(10px,1.2vh,14px) 16px;display:flex;flex-wrap:wrap;align-items:center;gap:clamp(8px,0.8vw,14px)}
+/* Fix (2026-09-05): in the SIDE COLUMN (a picture DECIDE step keeps `col-right` even at choice
+   widths — see layout()'s comment on that), a long third option plus the Risk card can grow
+   `.info` well past the column's own height. `.info`'s pre-existing `overflow:auto` already
+   grants it a shrinkable min-height the same way `.nav`'s `min-width:0` does above — measured:
+   `.info` already scrolls its own overflow and `.controls` already stayed on screen for every
+   content size tried here, including far more than a real deck would ever carry, so this is
+   NOT known to fix an actively-reproducing slice — it did not go red against any fixture built
+   for it. What it buys instead is an EXPLICIT structural guarantee in place of an implicit
+   one: right now `.info` only shrinks because `overflow:auto` happens to carry that side
+   effect, which is easy for a future edit to remove without knowing why (removing `overflow:
+   auto` here for some unrelated reason would silently bring the slice back). Splitting
+   `.decide` into a two-row grid (info's content row, controls' own auto row) makes "the
+   answer row always gets its own height and info takes whatever's left" a rule you can read
+   off the CSS, not an emergent property of one property's side effect. `min-height:0` on both
+   rows is what lets a grid item actually shrink to that (grid items default to content-sized,
+   same trap as the flex min-width one above). `position:sticky` on `.controls` is redundant
+   once the row split holds, but costs nothing and matches the `.compact .controls` sticky rule
+   below it — if the row split assumption ever breaks, sticky is the fallback that still keeps
+   the buttons on screen. */
+.col-right .decide{display:grid;grid-template-rows:1fr auto;min-height:0}
+/* Fix (Destin, 2026-09-06): "other, save/next … have weird margins". In the side column the
+   answer row wraps, and each control kept its own flex basis — so Other, the note and Save
+   landed on three lines at three different widths. In a column they are one stack, one edge. */
+.col-right .controls{align-items:stretch}
+.col-right .controls .ans,.col-right .controls .note,.col-right .controls #save{flex:1 1 100%;max-width:none;margin:0}
+.col-right .info{overflow:auto;min-height:0}
+.col-right .controls{position:sticky;bottom:0;background:var(--panel)}
+/* Fix (Destin, 2026-09-06): "option B seems to get cut off by other visually?" — it was: the
+   column scrolls, and the last card ended exactly where the answer row begins with nothing to
+   say more was below. A fade sits on top of the answer row while there is more to scroll. */
+.col-right .decide.more .controls::before{content:"";position:absolute;left:0;right:0;bottom:100%;height:26px;background:linear-gradient(to bottom,transparent,var(--panel));pointer-events:none}
+.col-right .info{padding-bottom:6px}
+.compact .controls{display:grid;grid-template-columns:1fr 1fr 1fr;position:sticky;bottom:0;z-index:3;box-shadow:0 -8px 20px rgba(0,0,0,.35)} .compact .controls .ans{max-width:none} .compact .controls .note{grid-column:1/3} .compact .controls #save{grid-column:3}
+.stage{position:relative;background:var(--panel);border:1px solid var(--edge);border-radius:var(--radius-lg);overflow:auto;min-height:0;line-height:0;font-size:0}
+.stage .inner{display:flex;justify-content:center;align-items:center;gap:18px;padding:12px 14px;min-width:100%;min-height:100%}
+.content.stacked .stage .inner{flex-direction:column;align-items:center}
+.frame{display:block;margin:0}
+figcaption{font:500 11px/1 var(--font);text-transform:uppercase;letter-spacing:.08em;color:var(--fg-muted);margin-bottom:6px;text-align:left;display:flex;align-items:center;gap:6px;min-height:24px}
+.pic{position:relative;display:inline-block} .pic img{display:block;height:auto;border-radius:var(--radius-sm);cursor:none} body.no-loupe .pic img{cursor:default}
+/* CLIP steps: a recording per run — native controls so a bug can be paused and scrubbed; no loupe, no box */
+.pic video{display:block;height:auto;border-radius:var(--radius-sm);background:#000;cursor:default}
+
+/* ── live panes ─────────────────────────────────────────────────────────────────────────
+   SQUARE CORNERS, ON PURPOSE. A rounded, clipped wrapper round an iframe makes Chrome give
+   up on the cutout the app's glass surfaces use, so a wallpaper theme (Meadow Mist) blurs
+   the entire pane — verified, and tracked as an open landing-page bug. A 1px border and no
+   radius costs nothing and dodges it; if a pane ever needs rounding, round it from inside. */
+.pic iframe{display:block;border:1px solid var(--edge);background:var(--canvas)}
+/* Panes of different heights are TOP-aligned, not centred: three close-session designs at
+   280/279/267px sat on three different baselines and read as sloppy rather than as a
+   difference in the designs. */
+body[data-layout="live"] .stage .inner{align-items:flex-start;flex-wrap:wrap}
+/* A live step's stage takes only the height its panes need, and the question follows
+   directly beneath — not two thirds of the page empty with the cards at the very bottom
+   (Destin, 2026-09-01). minmax(0, auto): content-sized until the page runs out, then the
+   stage scrolls inside itself rather than pushing the cards off screen. */
+.content.row-below.live-fit{grid-template-rows:minmax(0,auto) auto;align-content:start}
+/* One screen of the app takes the whole stage rather than its declared height: the stage
+   claims the free row and the pane is measured into it (Destin, 2026-09-06 — "so I can use
+   the whole thing without scrolling"). A ROW of designs keeps `live-fit`'s content sizing. */
+.content.row-below.live-fill{grid-template-rows:minmax(200px,1fr) auto;align-content:stretch}
+/* NOT clipped (2026-09-26): .stage is rounded, and a rounded CLIPPING wrapper round the
+   app pane is exactly the Chrome glass-cutout bug the note above describes — Destin's
+   one-pane (fill) steps showed Meadow Mist as a blurred wallpaper with no messages, while
+   the same app in its own tab was fine. The pane is sized to the stage, so nothing needs
+   clipping; `visible` beats the base rule's `overflow:auto` for fill steps only.
+   The live operating hint sits above the pane, so the app screen takes the REMAINING
+   height (flex column), or the hint pushes its bottom out of the stage. */
+.live-fill .stage{overflow:visible;display:flex;flex-direction:column}
+.live-fill .stage .inner{padding:12px 14px;align-items:stretch;flex:1 1 auto;min-height:0}
+.live-fill .frame{display:flex;flex-direction:column;width:100%;height:100%;min-height:0}
+.live-fill .frame figcaption{flex:none}
+.live-fill .frame .pic{flex:1 1 auto;min-height:0;width:100%}
+.live-fill .frame .pic iframe{display:block;width:100%;height:100%}
+/* `.zoom` sets `display:inline-flex`, which OUTRANKS the `hidden` attribute's UA rule — so
+   hiding it from JS did nothing and the zoom pill sat on top of a pane's "open on its own"
+   link (2026-09-01). An explicit display always beats [hidden]; say so once, for everything. */
+[hidden]{display:none!important}
+/* The lettered chip needs air whatever the frame is. The existing rule for this is scoped to
+   `.frame.pickable`, and a live pane is deliberately NOT pickable — so its caption read
+   "aCard and row" with the letter welded to the label (seen 2026-08-31). It carries the
+   deck's own marker colour and a full stop, so "A." reads as a label rather than as the
+   first letter of the words after it. */
+figcaption .key{color:var(--mark);font-weight:700}
+/* A real button, not bare blue link text — it opens a window, so it should look like
+   something you press (Destin, 2026-09-01). `margin-left:auto` rather than a float: a float
+   escapes a one-line caption box. */
+.popout{margin-left:auto;text-transform:none;letter-spacing:0;font:500 11px/1 var(--font);
+  height:24px;padding:0 10px;display:inline-flex;align-items:center;gap:6px;flex:none;
+  border:1px solid var(--edge);border-radius:var(--radius-md);background:var(--inset);
+  color:var(--fg-2);text-decoration:none;transition:background .15s,color .15s,border-color .15s}
+.popout:hover{background:var(--panel);color:var(--fg);border-color:var(--fg-muted)}
+.live-dot{display:inline-block;width:6px;height:6px;border-radius:50%;background:var(--yes);margin-right:6px;vertical-align:middle}
+.livehint{font:11px/1.5 var(--font);color:var(--fg-muted);margin:8px 0;text-align:left}
+/* The theme row for a live step: same control, no thumbnails to put in it. */
+.thumb.label-only{padding:4px 10px;border-color:var(--edge-dim);background:var(--inset)}
+.thumb.label-only.on{border-color:var(--accent);background:var(--panel);color:var(--fg)}
+.down{max-width:520px;text-align:left;border:1px solid var(--edge);border-radius:var(--radius-md);padding:18px 20px;background:var(--panel)}
+.down h3{font:600 14px var(--font);margin:0 0 8px;color:var(--fg)}
+.down p{font:13px/1.6 var(--font);color:var(--fg-2);margin:0 0 10px}
+.down p.sub{color:var(--fg-muted);font-size:12px;margin-bottom:0}
+.down pre{font:12px/1.5 var(--mono,ui-monospace,monospace);background:var(--inset);color:var(--fg);border-radius:var(--radius-sm);padding:10px 12px;margin:0 0 12px;overflow-x:auto;white-space:pre-wrap;word-break:break-all}
+.down code{font:12px var(--mono,ui-monospace,monospace);background:var(--inset);border-radius:3px;padding:1px 4px}
+.zoom .replay{width:auto;padding:0 10px;font-size:12px;font-weight:500}
+.box{position:absolute;border:2px solid var(--mark);border-radius:5px;box-shadow:0 0 0 3px rgba(255,176,32,.28),0 0 14px rgba(0,0,0,.45);pointer-events:none}
+.zoom{position:sticky;top:10px;float:right;margin:10px 10px -42px 0;z-index:2;display:inline-flex;align-items:center;background:var(--panel);border:1px solid var(--edge);border-radius:var(--radius-full);padding:2px;gap:2px;line-height:1;box-shadow:0 2px 8px rgba(0,0,0,.25)}
+.zoom button{font:inherit;font-size:12px;font-weight:500;width:28px;height:26px;border:0;border-radius:var(--radius-full);background:transparent;color:var(--fg-2);cursor:pointer} .zoom .lvl{font-size:11px;color:var(--fg-dim);min-width:38px;text-align:center;font-variant-numeric:tabular-nums}
+.loupe{position:fixed;width:180px;height:180px;border-radius:50%;border:2px solid var(--fg);box-shadow:0 0 0 1px rgba(0,0,0,.5),0 8px 24px rgba(0,0,0,.45);background-repeat:no-repeat;pointer-events:none;display:none;z-index:9;background-color:var(--panel)}
+.loupe::before,.loupe::after{content:"";position:absolute;left:50%;top:50%;background:var(--mark);box-shadow:0 0 0 1px rgba(0,0,0,.6)} .loupe::before{width:14px;height:2px;margin:-1px 0 0 -7px} .loupe::after{width:2px;height:14px;margin:-7px 0 0 -1px}
+.what{font-size:clamp(15px,1.15vw,19px);font-weight:500;margin:0;line-height:1.35}
+.cards{display:grid;gap:10px} .row-below .cards{grid-template-columns:repeat(auto-fit,minmax(260px,1fr))} .col-right .cards{grid-template-columns:1fr} .compact .cards{grid-template-columns:1fr}
+.card{background:var(--inset);border:1px solid var(--edge);border-radius:var(--radius-md);padding:10px 12px} .card h3{margin:0 0 6px;font:500 11px/1 var(--font);text-transform:uppercase;letter-spacing:.08em;color:var(--fg-muted);display:flex;align-items:center;gap:7px}
+.card h3 svg{width:14px;height:14px;stroke:currentColor;fill:none;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round} .card p{margin:0;font-size:13px;color:var(--fg);line-height:1.45;white-space:pre-line} .card .num{margin-top:6px;font-size:11px;color:var(--fg-dim)}
+.card.risk{border-color:color-mix(in srgb, var(--mark) 45%, var(--edge))} .card.risk h3{color:var(--mark)}
+/* Fix (2026-08-27): a DECIDE step's buttons carry the option's own words, which are far longer
+   than "Yes, build it" — at three options they overran each other and the labels collided. The
+   label truncates and the letter never does, so `a` `b` `c` stay readable and match the cards. */
+/* Fix (2026-09-10): `min-width:0` let the button shrink under its own label, and because
+   the label is a bare text node the ellipsis rule below never matched it — so it was hard
+   clipped at BOTH ends by `justify-content:center`, reading ", something is missin".
+   Destin saw it on the remote-access contract deck and it was worked around per-spec.
+   `min-width:max-content` is the floor. NOT `min(max-content,280px)`: `min()` takes lengths
+   only, so an intrinsic keyword inside it makes the whole declaration invalid and it is
+   dropped silently — which is exactly what happened on the first attempt, and the buttons
+   went on truncating while the CSS looked right. `.controls` already wraps, so a window too
+   narrow for the row stacks it instead of clipping. */
+.ans{flex:1 1 140px;max-width:280px;min-width:max-content;justify-content:center;height:clamp(34px,4.4vh,52px);font-size:clamp(12px,0.95vw,15px);overflow:hidden}
+.ans>span:not(.dot):not(.key){overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+/* A pick button sizes to its own words instead of taking an equal share: yes/no are two fixed
+   labels that look right stretched, but three option names at an equal share all truncate. */
+.ans[data-v="pick"]{flex:0 1 auto;max-width:min(340px,26vw)}
+.ans .key{flex:none} .ans .dot{width:clamp(8px,0.7vw,11px);height:clamp(8px,0.7vw,11px)}
+#save{height:clamp(34px,4.4vh,52px);font-size:clamp(12px,0.95vw,15px);padding:0 clamp(14px,1.4vw,26px)}
+/* The button that opens the dev window exists only when a SERVER is answering — opened as a
+   plain file there is nothing to ask, and a button that cannot work is worse than the command.
+   `server` is only known after an async fetch, so this is CSS on the body rather than markup. */
+.opendev{display:none}
+body[data-served="1"] .opendev{display:inline-flex}
+.card.dev .devrow{display:flex;flex-wrap:wrap;gap:8px;margin-top:8px}
+.card.dev .devrow .btn{max-width:none;margin:0}
+/* The command spans the whole card row: in a 260px column it scrolled sideways inside its own
+   box and you could read about four words of it, which defeats the one thing it is for. */
+.card.dev{grid-column:1/-1}
+/* The command on a TRY-IT slide. Monospace and selectable, on the marked edge, because it is
+   the one thing on the card that has to be copied exactly rather than read. */
+.card.dev .cmd{margin:8px 0 0;padding:9px 11px;border:1px solid var(--edge);border-left:3px solid var(--mark);border-radius:var(--radius-md);background:var(--well);overflow-x:auto}
+.card.dev .cmd code{font:inherit;font-size:12px;color:var(--fg);white-space:pre;user-select:all}
+.card.dev .cmd{margin-top:10px}
+.card.dev .src{margin-top:8px}
+/* The one line that separates a several-pick from a pick-one. Spans the card row so it reads
+   as an instruction about all of them, not a caption on the first. */
+.pickhint{grid-column:1/-1;margin:0;font-size:12px;color:var(--fg-muted)}
+/* The box on a WRITE slide, where the answer IS what he types. Sized like the note it sits
+   beside but taller and wider, because it carries the answer rather than an aside; the marked
+   edge appears once there is something in it, the way a chosen option lights up. */
+.ans-write{flex:4 1 320px;font:inherit;font-size:clamp(12px,0.9vw,14px);min-height:clamp(52px,7vh,84px);padding:9px 12px;border:1px solid var(--edge);border-radius:var(--radius-md);background:var(--well);color:var(--fg);resize:vertical}
+.ans-write::placeholder{color:var(--fg-muted)}
+.ans-write:focus{outline:none;border-color:var(--fg-muted)}
+.ans-write:not(:placeholder-shown){border-color:var(--mark)}
+.pages .qrow .ans-write{flex:1 1 320px;margin:0}
+.note{flex:3 1 220px;font:inherit;font-size:clamp(12px,0.85vw,14px);height:clamp(34px,4.4vh,52px);padding:0 12px;border:1px solid var(--edge);border-radius:var(--radius-md);background:var(--well);color:var(--fg)} .note::placeholder{color:var(--fg-muted)}
+.veil{position:fixed;inset:0;background:rgba(0,0,0,.55);display:none;align-items:center;justify-content:center;z-index:30} .veil.on{display:flex}
+.dlg{width:min(520px,92vw);background:var(--panel);border:1px solid var(--edge);border-radius:var(--radius-lg);padding:20px;box-shadow:0 20px 60px rgba(0,0,0,.5)} .dlg h2{margin:0 0 10px;font-size:16px;font-weight:500} .dlg p{margin:0 0 10px;color:var(--fg-2);font-size:13px;line-height:1.5}
+.dlg .warn{display:flex;gap:8px;align-items:flex-start;background:var(--inset);border:1px solid color-mix(in srgb, var(--mark) 45%, var(--edge));border-radius:var(--radius-md);padding:10px 12px;color:var(--fg);margin:12px 0}
+.dlg .warn svg{width:16px;height:16px;flex:none;stroke:var(--mark);fill:none;stroke-width:1.8;margin-top:1px} .dlg .row{display:flex;gap:10px;justify-content:flex-end;margin-top:14px}
+#feedback{display:none;width:100%;min-height:140px;font:12px var(--font);padding:10px;border:1px solid var(--edge);border-radius:var(--radius-md);background:var(--well);color:var(--fg)}
+
+/* ── the finish screen ────────────────────────────────────────────────────────────────
+   Shown in place of the step once the server has ACCEPTED the submit. WHY it exists:
+   before it, Submit closed the dialog and dropped Destin back on the last step with a
+   greyed-out button — indistinguishable from "the click didn't work" (2026-09-03). It is
+   also the only way to read the answers back: the server exits on submit, so there is
+   nowhere else left to ask. */
+.finished{width:min(var(--content),100%);display:flex;justify-content:center;align-items:flex-start;overflow:auto}
+/* `margin:auto 0` rather than `align-items:center`: it centres the block when there is room
+   and simply scrolls when a long deck's table does not fit, instead of clipping its top. */
+.fin-wrap{width:min(720px,100%);margin:auto 0;text-align:center;padding:clamp(12px,4vh,44px) 4px 24px}
+.tick{width:56px;height:56px;margin:0 auto 16px;display:grid;place-items:center;border-radius:50%;background:color-mix(in srgb,var(--yes) 16%,var(--panel))}
+.tick svg{width:34px;height:34px;fill:none;stroke:var(--yes);stroke-width:1.9;stroke-linecap:round;stroke-linejoin:round}
+.finished h1{margin:0 0 8px;font:500 20px var(--font);color:var(--fg)}
+.finished .lede{margin:0 0 14px;font-size:14px;line-height:1.5;color:var(--fg-2)}
+.finished .fin-meta{margin:0 0 6px;font-size:11px;color:var(--fg-muted);font-variant-numeric:tabular-nums}
+.finished .fin-hint{margin:0 0 18px;font-size:12px;line-height:1.5;color:var(--fg-muted)}
+.fin-actions{display:flex;gap:10px;justify-content:center;margin-bottom:20px}
+/* The answers, read back. Same table idiom as a contract step so it reads as part of the deck. */
+.responses{width:100%;border-collapse:collapse;font-size:12px;text-align:left;border:1px solid var(--edge);border-radius:var(--radius-md);overflow:hidden;background:var(--panel)}
+.responses th{font-weight:600;color:var(--fg-dim);padding:7px 10px;border-bottom:1px solid var(--edge);background:var(--inset);white-space:nowrap}
+.responses td{padding:7px 10px;border-bottom:1px solid var(--edge);vertical-align:top;color:var(--fg-2)}
+.responses tr:last-child td{border-bottom:0}
+.responses td.n{color:var(--fg-muted);font-variant-numeric:tabular-nums;width:1%;white-space:nowrap}
+.responses td.step-cell{color:var(--fg)} .responses .src{margin:2px 0 0;font-size:11px;color:var(--fg-muted)}
+.responses td.v{white-space:nowrap;font-weight:500}
+.responses td.v[data-v="yes"],.responses td.v[data-v="pick"]{color:color-mix(in srgb,var(--yes) 78%,var(--fg))}
+.responses td.v[data-v="no"]{color:color-mix(in srgb,var(--no) 78%,var(--fg))}
+.responses td.v[data-v="other"]{color:color-mix(in srgb,var(--other) 82%,var(--fg))}
+.responses td.v[data-v="skip"]{color:var(--fg-muted);font-weight:400}
+@media (max-width:700px){.fin-actions{flex-wrap:wrap} .responses{font-size:11px} .responses th,.responses td{padding:6px 7px}}
+/* A frame whose picture could not be fetched — see the onerror in page.js for which of the
+   two reasons it prints. Bordered so it reads as a message, not as a design with no content. */
+.frame.gone .pic{display:grid;place-items:center;min-height:120px;padding:16px;border:1px dashed var(--edge);border-radius:var(--radius-md);font-size:12px;line-height:1.5;color:var(--fg-muted);text-align:center}
+
+/* WHY pre-line on card text (2026-10-15): a field listing many items (the roadmap-move deck, one line per item) ran together into one wall; a line break the author wrote now shows. Ordinary prose has none, so it is unchanged. */
+</style></head><body>
+<div class="deck">
+<div class="chip"><span class="k">Review deck</span><span class="div"></span><span class="t" id="deck-title"></span></div>
+<header class="top"><div class="wrap">
+  <div class="where"><span class="id" id="wtitle"></span><span class="sep">·</span><span class="eyebrow" id="wsub"></span></div>
+  <div class="nav"><button class="btn ghost sm" id="prev">‹ Prev</button><div class="steps" id="steps" title="Click a segment to revisit that step"></div><button class="btn ghost sm" id="next">Next ›</button></div>
+  <span class="saved" id="saved" hidden></span><span class="count" id="count"></span><button class="btn" id="done">Done<span class="long"> — Submit Feedback</span></button>
+</div></header>
+<main><div class="step on" id="step">
+  <div class="thumbs" id="thumbs"></div>
+  <div class="content" id="content">
+    <div class="stage" id="stage"><div class="zoom" id="zoom"><button id="replay" class="replay" hidden title="Replay both from the start (r)">↻ replay</button><button id="zout" title="Zoom out (−)">−</button><span class="lvl" id="lvl">100%</span><button id="zin" title="Zoom in (+)">+</button></div><p class="livehint" id="livehint" hidden></p><div class="inner" id="inner"></div></div>
+    <div class="decide" id="decide">
+      <div class="info"><p class="what" id="headline"></p><div class="cards" id="cards"></div></div>
+      <div class="controls" id="controls">
+        <span class="answers" id="answers"></span>
+        <input class="note" id="note" placeholder="Add a note (optional)">
+        <button class="btn primary" id="save">Save &amp; Next ›</button>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- The end of the deck. Shown only after the server ACCEPTS the submit — a definitive
+     "this is finished", and the only place the answers can be read back afterwards. -->
+<section class="finished" id="finished" hidden><div class="fin-wrap">
+  <div class="tick"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="m7.4 12.4 3.1 3.1 6.1-6.7"/></svg></div>
+  <h1>Feedback submitted</h1>
+  <p class="lede">The Assistant should receive your responses in just a moment.</p>
+  <p class="fin-meta" id="fin-meta"></p>
+  <p class="fin-hint">Nothing to copy or paste — go back to the conversation. Your answers are below if you want to re-read them.</p>
+  <div class="fin-actions"><button class="btn ghost" id="fin-back">‹ Back to the deck</button><button class="btn" id="fin-copy">Copy responses</button></div>
+  <table class="responses" id="responses"><thead><tr><th>#</th><th>Step</th><th>Your answer</th><th>Note</th></tr></thead><tbody></tbody></table>
+</div></section>
+</main>
+</div>
+<div class="loupe" id="loupe"></div>
+<div class="veil" id="veil"><div class="dlg"><h2>Submit your feedback?</h2><p id="dlg-text"></p>
+<div class="warn" id="skipped"><svg viewBox="0 0 24 24"><path d="M12 3 2 20h20L12 3z"/><path d="M12 9v5"/><circle cx="12" cy="17" r=".6"/></svg><span><span id="skipn"></span> Skipped steps are sent as "no answer"; Claude leaves those unchanged.</span></div>
+<textarea id="feedback" readonly></textarea>
+<div class="row"><button class="btn ghost" id="cancel">Keep reviewing</button><button class="btn" id="first">Go to first skipped</button><button class="btn" id="copy">Copy feedback</button><button class="btn primary" id="submit">Submit</button></div>
+</div></div>
+<script>const DECK={"pages": [{"id": "P-1", "title": "Fix first: things that hurt trust today", "intro": "Small fixes. Each is a few hours of my work at most. Tick the ones you want; the separate questions below are yours alone to decide.", "steps": ["Q-trust", "Q-youcoded", "Q-seeded"]}, {"id": "P-2", "title": "Helping people choose", "intro": "The site lists replacements well. These help a normal person pick one.", "steps": ["Q-choose", "Q-easy-default"]}, {"id": "P-3", "title": "Search and finding things", "intro": "Search already gets the right answer first 92 to 99% of the time on our tests. These cover what's left.", "steps": ["Q-search"]}, {"id": "P-4", "title": "Suggesting and contributing", "intro": "Today every Suggest button sends people to a GitHub login page, which most visitors won't get past.", "steps": ["Q-contrib", "Q-anon", "Q-autoapprove"]}, {"id": "P-5", "title": "Forks and project families", "intro": "Today, forks show as unrelated rivals: Forgejo sits next to Gitea, which it split from, with nothing linking them. Searching 'OpenOffice' finds nothing.", "steps": ["Q-forks"]}, {"id": "P-6", "title": "Maintainers' stance on contributions and AI", "intro": "Your idea from today. 97 of our 393 GitHub projects mention AI in their contributing rules, and only about 6 to 8 truly ban it.", "steps": ["Q-stance", "Q-reports", "Q-mergeshare"]}, {"id": "P-7", "title": "Free outside tools, and AI agents", "intro": "All free, checked Oct 26. None imports another site's list; they only refresh facts about projects we already have.", "steps": ["Q-tools"]}, {"id": "P-8", "title": "Order and one fact only you know", "intro": "After the trust fixes, which big piece comes next?", "steps": ["Q-next", "Q-editors"]}], "title": "Open Source Everything: what to change, and in what order", "key": "ose-review-2026-10-26", "runs": ["today"], "runLabels": {"today": "Today", "before": "Before", "after": "After"}, "themes": ["light", "midnight"], "themeNames": {"light": "Light", "midnight": "Midnight"}, "steps": [{"id": "Q-trust", "words": true, "surface": "Group pages and project pages", "path": "Every group page, such as Documents", "headline": "Which of these trust fixes should I make?", "changed": "", "measured": "", "notice": "", "risk": "", "yes": "", "no": "", "kind": "decide", "options": [{"id": "ordering", "label": "New ordering", "summary": "", "pros": ["Each group's best pick comes first: LibreOffice in Documents, GIMP in Photo editing.", "Projects not on GitHub stop sinking to the bottom.", "Each card says why it's where it is."], "cons": ["Group pages visibly reorder overnight.", "You should look over the top three in groups you know first: about 15 minutes."], "recommended": false, "measured": "editors' first pick shown first in 79% of groups, up from 34%", "cost": ""}, {"id": "cards", "label": "Readable card labels", "summary": "", "pros": ["'Needs a server you run', the license and the devices stop being cut off.", "Each card opens with one plain line: install it, use it in your browser, or needs a server."], "cons": ["Cards get a little taller, so slightly fewer fit on screen."], "recommended": false, "measured": "", "cost": ""}, {"id": "ai-notes", "label": "Hide AI-check notes", "summary": "", "pros": ["'What we couldn't confirm, checked by AI' stops casting doubt on trusted picks.", "The public data files stop showing the AI reviewer's name 134 times."], "cons": ["Visitors lose a peek at what wasn't confirmed; mods still see it all."], "recommended": false, "measured": "", "cost": ""}, {"id": "data", "label": "Fix wrong entries", "summary": "", "pros": ["OpenVPN (open source) stops being listed as a closed app; duplicate names go.", "Adds OpenBB, so Bloomberg stops showing 'nothing open yet'.", "Splits Scheduling so Cal.com fully replaces Calendly, and splits the jumbled Databases group."], "cons": ["One to two hours of mine, plus a skim from you or esk.", "Split groups get new web addresses; I'd keep the old ones working."], "recommended": false, "measured": "", "cost": ""}, {"id": "count", "label": "One project count", "summary": "", "pros": ["The home page, About page and search results stop giving three different numbers (431, 453, 265)."], "cons": ["None worth noting."], "recommended": false, "measured": "", "cost": ""}, {"id": "experienced", "label": "Label expert-only picks", "summary": "", "pros": ["Arch Linux and CachyOS stop being 'fully replaces Windows' for beginners; they get an 'experienced users' label."], "cons": ["Fans of those projects may object to the label."], "recommended": false, "measured": "", "cost": ""}], "today": "Documents lists two apps that need your own server first and LibreOffice third. The labels on each card are cut off, project pages show 'what we couldn't confirm, checked by AI', and a few entries are simply wrong.", "problem": "Visible mistakes and odd ordering make visitors doubt the whole list, and the launch post is bringing people to look right now.", "proposal": "Six fixes. I'd do all six; the first is already built and waiting on the branch called search-scoring.", "pick": "several"}, {"id": "Q-youcoded", "words": true, "surface": "AI chat and AI coding groups", "path": "The YouCoded card in AI chat", "headline": "What should YouCoded's listing say?", "changed": "", "measured": "", "notice": "", "risk": "", "yes": "", "no": "", "kind": "decide", "options": [{"id": "drop-verified", "label": "Remove Verified", "summary": "", "pros": ["Nobody can say you grade your own work.", "It stays listed and findable; esk can verify it later."], "cons": ["It sits lower until people vote for it."], "recommended": true, "measured": "", "cost": ""}, {"id": "partly", "label": "Keep, mark 'partly'", "summary": "", "pros": ["Honest about what it covers today.", "Keeps the badge."], "cons": ["Self-verification is still visible."], "recommended": false, "measured": "", "cost": ""}, {"id": "keep", "label": "Leave as is", "summary": "", "pros": ["No change."], "cons": ["The likeliest thing for a critic to point at."], "recommended": false, "measured": "", "cost": ""}], "today": "YouCoded is marked Verified and 'fully replaces' ChatGPT, Claude and Gemini, with 11 GitHub stars, beside Jan (45,000) and Ollama (185,000). The page does say you made it.", "problem": "Verified means mods checked it, and you're a mod grading your own project. Critics screenshot exactly this kind of thing.", "proposal": "Pick how it should appear."}, {"id": "Q-seeded", "words": true, "surface": "What's missing boards", "path": "The What's missing section on every group page", "headline": "What should happen to the editors' notes on the What's missing boards?", "changed": "", "measured": "", "notice": "", "risk": "", "yes": "", "no": "", "kind": "decide", "options": [{"id": "label", "label": "Label 'From the editors'", "summary": "", "pros": ["Keeps the useful information.", "Honest about where it came from.", "Boards don't look empty at launch."], "cons": ["A small label change in both the page and the server."], "recommended": true, "measured": "", "cost": ""}, {"id": "remove", "label": "Remove until real posts", "summary": "", "pros": ["Everything on the boards is real."], "cons": ["Boards look empty at first, which can discourage the first poster."], "recommended": false, "measured": "", "cost": ""}, {"id": "keep", "label": "Leave as is", "summary": "", "pros": ["No work."], "cons": ["Risk of looking like fake activity."], "recommended": false, "measured": "", "cost": ""}], "today": "Every group shows notes like 'Encrypted; simpler formatting than Word \u00b7 Me too 0 \u00b7 6h ago'. They're the editors' own short notes, posted by the site's account.", "problem": "They read like community posts with zero votes and matching times, so the community can look made up.", "proposal": "Three ways to handle them."}, {"id": "Q-choose", "words": true, "surface": "Group pages and home page", "path": "Every group page, and the home page", "headline": "Which of these 'help me choose' changes should I make?", "changed": "", "measured": "", "notice": "", "risk": "", "yes": "", "no": "", "kind": "decide", "options": [{"id": "easy", "label": "'Easy to start' filter", "summary": "", "pros": ["One tap shows only apps you install, or ones with a free hosted version.", "A one-line explainer of 'your own server' wherever it appears."], "cons": ["About half a day.", "Each project needs a 'has a free hosted version' fact, which I'd fill in and you'd skim."], "recommended": false, "measured": "", "cost": ""}, {"id": "help-prompt", "label": "'Help me choose' prompt", "summary": "", "pros": ["Anyone can paste it into ChatGPT or Claude with their device, skill level and budget, and get a pick from our list."], "cons": ["A second prompt box on each group, so slightly busier pages."], "recommended": false, "measured": "", "cost": ""}, {"id": "home-line", "label": "Why-switch line on home", "summary": "", "pros": ["Says in five seconds why switching is worth it: free, private, nobody can take it away."], "cons": ["Pushes the rest of the home page down a line."], "recommended": false, "measured": "", "cost": ""}, {"id": "missing-apps", "label": "Add big missing apps", "summary": "", "pros": ["Netflix, Facebook, Snapchat, Grammarly, consumer VPNs, antivirus, AutoCAD, Zotero and Steam stop dead-ending searches.", "Some become honest gaps, which is useful for builders."], "cons": ["Each needs alternatives researched and checked: an hour or two per batch."], "recommended": false, "measured": "", "cost": ""}], "today": "220 of 431 projects need a server you run yourself, and only 148 are plain apps you install. The site never explains what 'your own server' means, and 'Copy prompt' is written for builders, not for people choosing.", "problem": "A normal visitor can't tell which option they could actually start using today.", "proposal": "Four changes. I'd do the first three now and the fourth gradually.", "pick": "several"}, {"id": "Q-easy-default", "words": true, "surface": "Group pages", "path": "The 'Works on' filter above every list", "headline": "Should group pages show easy-to-start apps first by default?", "changed": "", "measured": "", "notice": "", "risk": "", "yes": "", "no": "", "kind": "decide", "options": [{"id": "sort-first", "label": "Show them first", "summary": "", "pros": ["Normal visitors see installable apps at the top.", "Nothing is hidden; server software is just lower."], "cons": ["Self-hosting fans see their favourites lower by default."], "recommended": true, "measured": "", "cost": ""}, {"id": "filter-on", "label": "Hide the rest by default", "summary": "", "pros": ["The cleanest list for beginners."], "cons": ["Hides real options; people may think the list is short."], "recommended": false, "measured": "", "cost": ""}, {"id": "off", "label": "Keep everything mixed", "summary": "", "pros": ["No change; one tap filters."], "cons": ["Beginners still meet server software first."], "recommended": false, "measured": "", "cost": ""}], "today": "Every page shows everything, server software included, in one list.", "problem": "Normal visitors make up most of the audience, and half of what they see needs a server they don't have.", "proposal": "Three ways to set the default."}, {"id": "Q-search", "words": true, "surface": "Search box and gaps page", "path": "The search box at the top of every page", "headline": "Which of these search and discovery changes should I make?", "changed": "", "measured": "", "notice": "", "risk": "", "yes": "", "no": "", "kind": "decide", "options": [{"id": "devices", "label": "Understand devices", "summary": "", "pros": ["'Calendar for iPhone' shows iPhone apps first; 'Chromebook' now means something."], "cons": ["Device lists in our data can be wrong, so it nudges results rather than hiding them."], "recommended": false, "measured": "20 of 20 device searches right, up from 16", "cost": ""}, {"id": "ai-search", "label": "Trial AI meaning search", "summary": "", "pros": ["Plain-language needs like 'stop paying for Adobe' find the right things.", "Answers the launch thread's main complaint."], "cons": ["One to two days.", "Search text passes through Cloudflare's free AI service; the privacy page must say so.", "Ships only if it beats today's search on fresh tests."], "recommended": false, "measured": "", "cost": ""}, {"id": "no-results", "label": "Record failed searches", "summary": "", "pros": ["Mods see what people looked for and didn't find, so we add the right things instead of guessing."], "cons": ["Keeps the words people typed (no names or accounts); one line on the privacy page."], "recommended": false, "measured": "", "cost": ""}, {"id": "related", "label": "Related groups and requests", "summary": "", "pros": ["'See also' links between related groups.", "The gaps page is ranked by how many people asked."], "cons": ["Half a day."], "recommended": false, "measured": "", "cost": ""}, {"id": "left-for", "label": "'People who left X went to Y'", "summary": "", "pros": ["A strong signal from real people once votes build up."], "cons": ["Shows nothing until a group has 10 or more votes, which may take months."], "recommended": false, "measured": "", "cost": ""}], "today": "Search matches names, typos and common phrases well. It fails on plain descriptions: 'I want to stop paying for Adobe' brings up a photo-backup app and a music app.", "problem": "The launch thread's main complaint was search, and the people we most want describe needs rather than naming apps.", "proposal": "Five changes. The first is already built on the search-scoring branch.", "pick": "several"}, {"id": "Q-contrib", "words": true, "surface": "Suggest buttons, mod page", "path": "Every 'Suggest' and 'Fix' button", "headline": "Which of these contribution changes should I build?", "changed": "", "measured": "", "notice": "", "risk": "", "yes": "", "no": "", "kind": "decide", "options": [{"id": "quick", "label": "Seven quick fixes", "summary": "", "pros": ["Searching for a missing app opens the right form, not the 'new group' form.", "No required fields people can't answer.", "Brand-new accounts held for a mod; duplicates caught; a thank-you with the live link."], "cons": ["A few hours."], "recommended": false, "measured": "", "cost": ""}, {"id": "box", "label": "One suggest box on the site", "summary": "", "pros": ["No GitHub needed to start, with a duplicate check while you type.", "The site, AI agents and the subreddit bot all use the same door."], "cons": ["Two to three days.", "More suggestions means more for mods to skim."], "recommended": false, "measured": "", "cost": ""}, {"id": "want-too", "label": "'I want this too' + Most requested", "summary": "", "pros": ["Shows demand; builders see what people want most.", "Reuses the voting already built."], "cons": ["Half a day after the suggest box."], "recommended": false, "measured": "", "cost": ""}, {"id": "tag", "label": "Tag my project", "summary": "", "pros": ["Owners prove it's theirs, pitch it, and edit it later, labelled 'Owner says'.", "The main promise from the original plan."], "cons": ["Two to three days.", "Pitches need mod review."], "recommended": false, "measured": "", "cost": ""}, {"id": "status", "label": "'Your suggestions' page", "summary": "", "pros": ["People see waiting, live or turned down, and why, so they come back."], "cons": ["Half a day."], "recommended": false, "measured": "", "cost": ""}, {"id": "mod-tab", "label": "Suggestions tab for mods", "summary": "", "pros": ["Approve, merge or turn down in one place; approving puts it live with no second step."], "cons": ["A day."], "recommended": false, "measured": "", "cost": ""}, {"id": "how-to-help", "label": "'How to help' links", "summary": "", "pros": ["Each project links its plugin docs and beginner tasks, the launch thread's best idea.", "Steers builders to add to projects instead of starting over."], "cons": ["The robot finds most links; mods add plugin docs by hand."], "recommended": false, "measured": "", "cost": ""}], "today": "Suggestions are GitHub forms. A robot checks each one and a mod approves it, so the review side works. 'Tag my project' was planned but never built, and AI agents can't suggest anything at all.", "problem": "The people the site is for give up at the GitHub login. Owners can't pitch their own project, and nobody hears back about what they suggested.", "proposal": "Seven pieces. I'd do the quick fixes now, then the suggest box and Tag my project together.", "pick": "several"}, {"id": "Q-anon", "words": true, "surface": "The suggest box", "path": "Any 'Suggest' button", "headline": "Should people be able to suggest without a GitHub account?", "changed": "", "measured": "", "notice": "", "risk": "", "yes": "", "no": "", "kind": "decide", "options": [{"id": "held", "label": "Yes, held for a mod", "summary": "", "pros": ["Anyone can suggest.", "Nothing goes live without a mod; per-visitor limits stop floods."], "cons": ["More for mods to skim, though rejected ones take one click."], "recommended": true, "measured": "", "cost": ""}, {"id": "github-only", "label": "GitHub sign-in on the site", "summary": "", "pros": ["Signs in on our page rather than GitHub's forms, so it's less scary.", "Keeps the 14-day account rule."], "cons": ["People without GitHub still can't suggest."], "recommended": false, "measured": "", "cost": ""}, {"id": "as-is", "label": "Keep GitHub forms", "summary": "", "pros": ["No work."], "cons": ["Most visitors stop at the login page."], "recommended": false, "measured": "", "cost": ""}], "today": "Suggesting needs a GitHub account; most normal visitors don't have one.", "problem": "Requiring one blocks most of the audience, while dropping it invites spam.", "proposal": "Three levels of openness."}, {"id": "Q-autoapprove", "words": true, "surface": "Suggestion review", "path": "The mod's approval step", "headline": "Should the safest suggestions go live without a mod?", "changed": "", "measured": "", "notice": "", "risk": "", "yes": "", "no": "", "kind": "decide", "options": [{"id": "later", "label": "Later, once trusted", "summary": "", "pros": ["Watch what comes in for a month first, then switch it on."], "cons": ["Mods do everything by hand until then."], "recommended": true, "measured": "", "cost": ""}, {"id": "now", "label": "Yes, from the start", "summary": "", "pros": ["Almost no mod work for routine additions."], "cons": ["An occasional wrong group or poor summary goes live until someone reports it."], "recommended": false, "measured": "", "cost": ""}, {"id": "never", "label": "No, always a mod", "summary": "", "pros": ["Every entry has had human eyes."], "cons": ["Mod time grows with the site."], "recommended": false, "measured": "", "cost": ""}], "today": "A mod approves every single suggestion, and there are two mods.", "problem": "As the site grows, mod time becomes the bottleneck, and slow approvals discourage contributors.", "proposal": "Auto-approve only suggestions where the license check passes, the account is over 14 days old, it isn't a duplicate, and it's an existing open-source project. Everything else still waits for a mod."}, {"id": "Q-forks", "words": true, "surface": "Group pages and project pages", "path": "Cards for projects like Forgejo, LibreWolf and Mbin", "headline": "How far should I take forks and project families?", "changed": "", "measured": "", "notice": "", "risk": "", "yes": "", "no": "", "kind": "decide", "options": [{"id": "phase1", "label": "Family line + old names", "summary": "", "pros": ["'Split from Gitea (2022)' on cards.", "Searching 'OpenOffice' or 'kbin' finds the live project and says why.", "About 25 pairs filled, and missing ones added."], "cons": ["About a day."], "recommended": false, "measured": "", "cost": ""}, {"id": "phase2", "label": "Plus family pages", "summary": "", "pros": ["Everything in stage 1.", "A family section on project pages, and 'development stopped, continued as\u2026' banners.", "The robot suggests new families for mods to confirm."], "cons": ["A few more days.", "A small mod queue to confirm families."], "recommended": true, "measured": "", "cost": ""}, {"id": "phase3", "label": "Plus compare pages", "summary": "", "pros": ["Everything in stage 2.", "Side-by-side pages like Firefox vs LibreWolf vs Zen.", "A 'rescue' page of abandoned projects with live forks."], "cons": ["A week or more.", "Comparisons need upkeep as projects change."], "recommended": false, "measured": "", "cost": ""}], "today": "Every project is a separate card. About 15 families already sit side by side (the Firefox browsers, Gitea and Forgejo, Nextcloud and ownCloud\u2026), and well-known pairs like OpenOffice and VSCodium are missing.", "problem": "Visitors can't tell a privacy-tweaked copy from a different product, old names find nothing, and builders aren't pointed from dead projects to the forks that continue them.", "proposal": "Three stages. Each card line uses only dated, sourced facts, never 'better', because fork fights are personal."}, {"id": "Q-stance", "words": true, "surface": "Project cards, project pages, AI prompts", "path": "A new 'Contributing here' section on each project", "headline": "Which parts of the maintainers' stance tracker should I build?", "changed": "", "measured": "", "notice": "", "risk": "", "yes": "", "no": "", "kind": "decide", "options": [{"id": "quotes", "label": "Robot quotes, mods label", "summary": "", "pros": ["Each project shows its own rule in its own words, with a link and a date.", "A card chip such as 'AI help: say so'."], "cons": ["About a day.", "Mods confirm about 97 labels once, about a click each."], "recommended": false, "measured": "", "cost": ""}, {"id": "prompts", "label": "Into AI prompts and data", "summary": "", "pros": ["Agents skip hand-written-only projects and disclose AI use where it's required.", "No other list feeds agents this way."], "cons": ["A few hours."], "recommended": false, "measured": "", "cost": ""}, {"id": "watch", "label": "Weekly change check", "summary": "", "pros": ["When a project changes its rules, mods see old and new side by side; labels show 'last checked'."], "cons": ["A few hours; a small ongoing mod queue."], "recommended": false, "measured": "", "cost": ""}, {"id": "self-set", "label": "Maintainers set it", "summary": "", "pros": ["The strongest source: 'The maintainers say'.", "Most projects start as 'not stated', so this fills the gaps."], "cons": ["Needs the Tag my project ownership check first."], "recommended": false, "measured": "", "cost": ""}, {"id": "templates", "label": "Policy templates to copy", "summary": "", "pros": ["Ready-made AI policy files in each style that maintainers add to their own code.", "Helps the whole community; our robot then reads them."], "cons": ["Half a day of careful, neutral writing."], "recommended": false, "measured": "", "cost": ""}, {"id": "filter", "label": "'Welcomes AI help' filter", "summary": "", "pros": ["Builders find projects that want them, on the Before you build panel."], "cons": ["Only useful once enough projects are labelled."], "recommended": false, "measured": "", "cost": ""}], "today": "Nothing tells a builder, or their AI agent, whether a project welcomes AI-assisted help, wants it disclosed, or accepts hand-written code only.", "problem": "People show up at projects that ban AI help, which creates the maintainer burden a commenter warned about, and the subreddit's core topic goes untracked.", "proposal": "Six parts. I'd start with the first three; labels stay neutral ('Hand-written only', never 'anti-AI').", "pick": "several"}, {"id": "Q-reports", "words": true, "surface": "Contributing here section", "path": "Project pages", "headline": "Should contributors be able to report what actually happened, such as a pull request closed for using AI?", "changed": "", "measured": "", "notice": "", "risk": "", "yes": "", "no": "", "kind": "decide", "options": [{"id": "later", "label": "Not at first", "summary": "", "pros": ["No harassment risk while the community is small.", "Revisit once written rules are labelled."], "cons": ["Misses gaps between what projects say and what they do."], "recommended": true, "measured": "", "cost": ""}, {"id": "yes", "label": "Yes, held for a mod", "summary": "", "pros": ["Catches real-world practice."], "cons": ["More mod work, and judgment calls about tone."], "recommended": false, "measured": "", "cost": ""}, {"id": "never", "label": "Never", "summary": "", "pros": ["The site only ever reflects what maintainers say."], "cons": ["Can't flag projects whose written rules are out of date."], "recommended": false, "measured": "", "cost": ""}], "today": "Only written rules would be shown.", "problem": "Some projects act differently from their written rules, but reports could be used to pile on a maintainer.", "proposal": "Reports would need a link to a public example, wait for a mod, and show as '2 reports, see them', never as the project's policy."}, {"id": "Q-mergeshare", "words": true, "surface": "Contributing here section", "path": "Project pages", "headline": "Should project pages show how much outside help actually gets merged?", "changed": "", "measured": "", "notice": "", "risk": "", "yes": "", "no": "", "kind": "decide", "options": [{"id": "big-only", "label": "Only where meaningful", "summary": "", "pros": ["Shown only for projects with enough recent activity, worded neutrally ('most recent changes came from outside contributors')."], "cons": ["Still wrong for companies whose staff look like outsiders."], "recommended": true, "measured": "", "cost": ""}, {"id": "yes", "label": "Show it everywhere", "summary": "", "pros": ["Most informative."], "cons": ["A low number can read as criticism; noisy for small projects."], "recommended": false, "measured": "", "cost": ""}, {"id": "no", "label": "Don't show it", "summary": "", "pros": ["Nothing that could be misread."], "cons": ["Builders can't tell if help gets used."], "recommended": false, "measured": "", "cost": ""}], "today": "Nothing shows whether a project really accepts outside help.", "problem": "A project can say 'contributions welcome' and never merge any; the number shows reality, but it's noisy.", "proposal": "Share of changes merged in the last 90 days that came from outside the core team. Our sample's typical project was 63%."}, {"id": "Q-tools", "words": true, "surface": "Weekly robot and data files", "path": "Behind the scenes", "headline": "Which outside tools and agent features should I add?", "changed": "", "measured": "", "notice": "", "risk": "", "yes": "", "no": "", "kind": "decide", "options": [{"id": "codeberg", "label": "Codeberg and GitLab facts", "summary": "", "pros": ["Stars, activity and license checked for projects off GitHub too."], "cons": ["A few hours."], "recommended": false, "measured": "", "cost": ""}, {"id": "github-more", "label": "More from GitHub, free", "summary": "", "pros": ["'Forked from', fork count and latest release, from the same lookups we already make.", "Feeds the forks work."], "cons": ["An hour."], "recommended": false, "measured": "", "cost": ""}, {"id": "spdx", "label": "Official license list", "summary": "", "pros": ["Catches license typos and confirms which are approved open-source licenses."], "cons": ["An hour."], "recommended": false, "measured": "", "cost": ""}, {"id": "agent-files", "label": "Better files for AI agents", "summary": "", "pros": ["Agents get devices, stars, Verified and inactive for every project, plus a version number so they notice changes.", "Search engines get a small description per project."], "cons": ["A few hours."], "recommended": false, "measured": "", "cost": ""}, {"id": "stores", "label": "App-store lookups", "summary": "", "pros": ["'Runs on' and 'how to install' come from Flathub, F-Droid and Homebrew listings, not an AI guess."], "cons": ["A day; Windows needs a slower method."], "recommended": false, "measured": "", "cost": ""}, {"id": "connector", "label": "AI-tool connector", "summary": "", "pros": ["Assistants like Claude can search the map directly as a built-in tool."], "cons": ["A day or two; worth it once the data files are settled."], "recommended": false, "measured": "", "cost": ""}], "today": "The weekly robot reads facts only from GitHub. The 27 projects hosted elsewhere get no checks, and the files AI agents read leave out devices, stars and Verified.", "problem": "Facts go stale for non-GitHub projects, 'runs on' claims came from a one-time AI guess, and agents can't judge options well.", "proposal": "Six additions. I'd do the first four now.", "pick": "several"}, {"id": "Q-next", "words": true, "surface": "The whole site", "path": "The work plan", "headline": "After the trust fixes, which big piece should come first?", "changed": "", "measured": "", "notice": "", "risk": "", "yes": "", "no": "", "kind": "decide", "options": [{"id": "contrib", "label": "Suggest box + Tag my project", "summary": "", "pros": ["Unblocks most visitors and owners; the launch traffic can start contributing."], "cons": ["Biggest of the four."], "recommended": true, "measured": "", "cost": ""}, {"id": "stance", "label": "Maintainers' stance", "summary": "", "pros": ["Fresh, on-topic for the subreddit, and a good second announcement."], "cons": ["Mostly 'not stated' until maintainers join."], "recommended": false, "measured": "", "cost": ""}, {"id": "ai-search", "label": "AI meaning search", "summary": "", "pros": ["Answers the launch thread's main complaint."], "cons": ["Might not beat today's search; if it doesn't, it doesn't ship."], "recommended": false, "measured": "", "cost": ""}, {"id": "forks", "label": "Forks and families", "summary": "", "pros": ["Clears up confusing pairs; strong for builders."], "cons": ["Less visible to everyday visitors."], "recommended": false, "measured": "", "cost": ""}], "today": "Each of these is several days of my work; doing them one at a time keeps each reviewable.", "problem": "Doing everything at once means a long wait before you see anything.", "proposal": "Pick the one that matters most to you now."}, {"id": "Q-editors", "words": true, "surface": "Group pages", "path": "The order alternatives are listed in each group", "headline": "Who decided the best-first order inside each group?", "changed": "", "measured": "", "notice": "", "risk": "", "yes": "", "no": "", "kind": "decide", "options": [{"id": "people", "label": "You and esk", "summary": "", "pros": ["Keep its weight as built."], "cons": ["None."], "recommended": false, "measured": "", "cost": ""}, {"id": "ai", "label": "The AI pre-fill", "summary": "", "pros": ["I'll lower its weight so stars and Verified count more."], "cons": ["Order leans more on popularity until votes arrive."], "recommended": false, "measured": "", "cost": ""}, {"id": "mix", "label": "A mix", "summary": "", "pros": ["I'll keep it for the 25 groups you checked and lower it elsewhere."], "cons": ["Slightly more complicated rule."], "recommended": false, "measured": "", "cost": ""}], "today": "Each group's data lists its alternatives in an order, such as GIMP before Pinta. The new ranking trusts that order until real votes arrive.", "problem": "If people chose it, it deserves the weight; if the AI pre-fill guessed it, I should lower it.", "proposal": "Tell me where it came from."}]};</script>
+<script>/* Review deck v2 — renders DECK (one JSON object the builder inlines) one step at a time.
+   Persistence: the serve.py endpoints when the page is served (GET/POST /answers, POST /submit),
+   localStorage + a copy box when it is opened as a plain file. */
+(function () {
+  const $ = s => document.querySelector(s), $$ = s => [...document.querySelectorAll(s)];
+  const N = DECK.steps.length, runs = DECK.runs;
+  let cur = 0, theme = DECK.themes[0], zoom = 1, loupeOn = true, server = false, stepStart = Date.now();
+  // PAGES MODE. A question deck (no pictures anywhere) is not one screen per question: it is one
+  // scrolling page per SET of questions. Destin (2026-09-04): "my mindset should stay in the same
+  // place for each set of questions, and only shift when moving to a new set." In this mode `cur`
+  // is the PAGE index, not the step index — everything that used to read DECK.steps[cur] goes
+  // through curStep(), which is deliberately empty here. Picture decks: DECK.pages is absent and
+  // every line below behaves exactly as it did.
+  const PAGES = DECK.pages || null, LAST = PAGES ? PAGES.length - 1 : N - 1;
+  const stepById = id => DECK.steps.find(x => x.id === id);
+  const pageSteps = i => (PAGES[i] ? PAGES[i].steps.map(stepById).filter(Boolean) : []);
+  const curStep = () => (PAGES ? {} : DECK.steps[cur]) || {};
+  const state = { deck: DECK.key, started: new Date().toISOString(), submitted: null, cur: 0, answers: {} };
+  const ICON = {
+    change: '<svg viewBox="0 0 24 24"><path d="M4 20h4l10-10-4-4L4 16z"/><path d="m12.5 7.5 4 4"/></svg>',
+    eye: '<svg viewBox="0 0 24 24"><path d="M2 12s3.5-6 10-6 10 6 10 6-3.5 6-10 6S2 12 2 12z"/><circle cx="12" cy="12" r="3"/></svg>',
+    warn: '<svg viewBox="0 0 24 24"><path d="M12 3 2 20h20L12 3z"/><path d="M12 9v5"/><circle cx="12" cy="17" r=".6"/></svg>' };
+  const esc = s => String(s ?? '').replace(/[&<>"]/g, c => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[c]));
+  if (window.top !== window) document.body.classList.add('embedded');
+  // What the stage shows for a step: one frame per run (before/after, or today), or — for a CHOICE
+  // step — one frame per variant, lettered. Destin (2026-08-27): variants of one thing are one
+  // question on one page, not a yes/no each.
+  // A LIVE pane is NOT pickable: a click inside it is an interaction with the candidate
+  // (hover, drag, open a menu), not an answer. Picking stays on the lettered card and the
+  // answer button. `open on its own` is the same address in a new tab — room and quiet.
+  // Which captures THIS slide shows. A slide that names its own wins; otherwise the deck's.
+  // WHY per slide (Destin, 2026-09-06): one deck can now hold a single-picture "build it?" point
+  // and a before/after "keep it?" point, so neither the frames nor the buttons can be decided once.
+  const stepRuns = st => (st && st.runs && st.runs.length ? st.runs : runs);
+  const popout = url => `<a class="popout" href="${esc(url)}" target="_blank" rel="noopener" title="Open this design alone in a new browser window">Open in New Window ↗</a>`;
+  const frames = st => st.kind === 'choice'
+    ? st.variants.map(v => ({ key: v.id, caption: `<span class="key">${esc(v.id)}.</span>${esc(v.label)}`, pickable: true }))
+    : st.kind === 'live'
+    ? st.panes.map(p => ({ key: p.id, url: p.url, pickable: false,
+        caption: (p.label ? `<span class="key">${esc(p.id)}.</span>${esc(p.label)}` : '<span class="live-dot"></span>Live') + popout(p.url) }))
+    : stepRuns(st).map(r => ({ key: r, caption: esc((st.labels || {})[r] || DECK.runLabels[r] || r), pickable: false }));
+  // CLIP step: one <video> per run instead of a still. They start PAUSED on their poster
+  // (Destin, 2026-08-28) — ↻ or `r` plays both from the start together; native controls
+  // so a bug can be paused and scrubbed; muted + looping once started.
+  // LIVE: `data-src` rather than `src`, filled in only once the probe says the app server is
+  // answering. Pointing an iframe at a dead port paints Chrome's own error page inside the
+  // pane, which looks like a broken candidate rather than a stopped server.
+  const media = (st, f) => st.kind === 'clip'
+    ? `<video src="${esc(st.clips[f.key])}"${st.posters[f.key] ? ` poster="${esc(st.posters[f.key])}"` : ''} muted loop playsinline controls preload="auto"></video>`
+    : st.kind === 'live'
+    ? `<iframe data-src="${esc(f.url)}" data-pane="${esc(f.key)}" loading="eager" title="Live pane"></iframe>`
+    : `<img src="${esc(st.images[theme][f.key])}" alt=""><span class="box"></span>`;
+  function replay() { const vs = $$('#inner video'); vs.forEach(v => { v.pause(); v.currentTime = 0; }); vs.forEach(v => v.play().catch(() => {})); }
+  let curFrames = frames(DECK.steps[0]), lastStep = null;
+
+  // ── live panes ──────────────────────────────────────────────────────────────────────
+  const MIN_PANE_H = 160;   // a pane whose script never reported is visibly empty, not a 0px line
+  // A pane's address is normally root-relative (`/app/index.html?…`) — THIS deck's own server
+  // built and serves it, so it is same-origin, and postMessage needs a real origin rather than
+  // the empty string DECK.live.base then is. `live.base` only carries a value when a spec names
+  // an EXTERNAL server (a test's stub, standing in for one this deck did not start).
+  const LIVE_ORIGIN = (DECK.live && DECK.live.base) || location.origin;
+  // One probe per entry to a live step (not one per page): a server started AFTER the deck
+  // was opened must be able to recover on the next visit. `no-cors` gives an opaque response
+  // — useless to read, but a REJECTION is unambiguous, and it is the only reliable signal
+  // here: Chrome fires an iframe `load` event on its own error page too.
+  const probeLive = () => fetch(DECK.live.base ? DECK.live.base + '/' : '/app/index.html',
+    { mode: 'no-cors', cache: 'no-store' }).then(() => true, () => false);
+  function drawLivePanes() {
+    $$('#inner iframe').forEach(f => {
+      if (!f.dataset.src) return;
+      // WHY: an offscreen renderer can finish loading AFTER its first size
+      // report; an early theme message then lands before its listener exists.
+      // Re-send at frame load, when the renderer is listening, so every pane
+      // uses the chosen theme even before the reviewer scrolls it into view.
+      f.addEventListener('load', () => {
+        if (!f.isConnected) return;
+        delete f.dataset.appliedTheme;
+        try { f.contentWindow.postMessage({ type: 'youcoded:theme', theme }, DECK.live.base); } catch (e) { /* gone */ }
+      }, { once: true });
+      f.src = f.dataset.src;
+    });
+  }
+  function drawServerDown(st) {
+    // Specific and accurate (docs/error-message-standards.md): we know exactly which address
+    // did not answer. This is also what an ARCHIVED review shows.
+    // Two different failures wear this card: an EXTERNAL server (a test's stub) that never
+    // started — Start it with: <command> — versus this deck's OWN /app/, which it just tried
+    // to build; nothing external to start, so the fix is to read the build error and reload.
+    const external = !!DECK.live.base;
+    inner.innerHTML = `<div class="down"><h3>The app server for this review is not running</h3>`
+      + `<p>Nothing answered at <code>${esc(external ? DECK.live.base : '/app/index.html')}</code>, so the `
+      + `${st.panes.length === 1 ? 'pane has' : 'panes have'} nothing to show.`
+      + (external
+        ? ` Start it with:</p><pre>${esc(DECK.live.command)}</pre>`
+        : ` The practice app failed to build.</p><p class="sub">Check the terminal that ran <code>review-cards.py serve</code> for the error, then reload this page.</p>`)
+      + `<p class="sub">Or re-run <code>review-cards.py serve &lt;spec&gt;</code>, which builds and serves it for you. A review read back later always lands here — live panes do not replay.</p></div>`;
+  }
+  // Theme WITHOUT render(): render() rebuilds #inner, which reloads every iframe and throws
+  // away a half-finished drag or an animation mid-play. The app applies the swap live through
+  // __workbenchAppearanceSync, the same path the landing page's embed uses.
+  function setLiveTheme() {
+    document.documentElement.dataset.theme = theme;
+    $$('.thumb').forEach(b => b.classList.toggle('on', b.dataset.v === theme));
+    $$('#inner iframe').forEach(f => {
+      delete f.dataset.appliedTheme;
+      try { f.contentWindow.postMessage({ type: 'youcoded:theme', theme }, LIVE_ORIGIN); } catch (e) { /* not loaded yet */ }
+    });
+  }
+  // What a pane may be wide, as a range. A width the pane MEASURED for itself beats the one
+  // the spec guessed at — the number lives in the registry in the other repo, so the deck can
+  // only ever be estimating. A FLUID pane reports a [min, max] range instead of one number.
+  const paneRangeOf = (st, i) => {
+    const f = $$('#inner iframe')[i];
+    if (f && f.dataset.minWidth && f.dataset.maxWidth) return { min: Number(f.dataset.minWidth), max: Number(f.dataset.maxWidth) };
+    const w = Number((f && f.dataset.reportedWidth) || st.width);
+    return { min: w, max: w };
+  };
+  const PANE_GAP = 18;
+  // THE FIT RULE. A pane is never wider than the stage and the row never scrolls sideways.
+  // Try every count of panes per row; a count fits when every pane's `min` fits in its share
+  // of the row. Each pane then gets its share, clamped to its range. Choose the count that
+  // gives the WIDEST panes; among equals, the most per row (fewer rows to scroll through).
+  //   - fixed panes (min = max): as many per row as fit, at their real size, then wrap;
+  //   - fluid panes (the session strip, a header row): stacked one per row at their `max`
+  //     when the stage is wide enough, at the stage's width when it is not — never three
+  //     abreast at a third of their size with both ends cut off (Destin, 2026-09-01).
+  function fitPanes(ranges, stageWidth) {
+    const n = ranges.length;
+    let best = null;
+    for (let perRow = n; perRow >= 1; perRow--) {
+      const share = Math.floor((stageWidth - PANE_GAP * (perRow - 1)) / perRow);
+      if (!ranges.every(r => r.min <= share)) continue;
+      const widths = ranges.map(r => Math.max(r.min, Math.min(r.max, share)));
+      const score = Math.min(...widths);
+      if (!best || score > best.score) best = { perRow, widths, score };
+    }
+    // Nothing fits even alone: one per row at `min`, and the stage scrolls — the honest
+    // failure, and validate() warns about a pane wider than any screen before the build.
+    return best || { perRow: 1, widths: ranges.map(r => r.min), score: 0 };
+  }
+  function layoutLive() {
+    const st = DECK.steps[cur], c = $('#content'), step = $('#step');
+    // Panes have a DECLARED width (or a range) — there is no natural image size to solve an
+    // arrangement from, so none of layout()'s scoring applies; fitPanes() decides instead.
+    // A narrow FIXED pane (a dialog) still gets the cards in a side column when it fits
+    // beside them — that hands the stage the full height of the page for a tall design.
+    const info = Math.max(320, c.clientWidth * 0.30);
+    const ranges = st.panes.map((p, i) => paneRangeOf(st, i));
+    const fixedRow = ranges.reduce((sum, r, i) => sum + r.max + (i ? PANE_GAP : 0), 0);
+    const sideColumn = !st.fill && ranges.every(r => r.min === r.max) && c.clientWidth - info - 40 >= fixedRow;
+    // FILL: one screen of the app takes the whole stage, so it can be used rather than scrolled.
+    // `live-fit` sizes the stage to its content (right for a row of fixed-size designs); a
+    // filling pane needs the opposite, so the stage takes the row and the pane takes the stage.
+    c.className = 'content ' + (sideColumn ? 'col-right' : 'row-below live-fit') + (st.fill ? ' live-fill' : '');
+    step.classList.remove('compact-step');
+    // ALWAYS inline, no width threshold. The theme row is absolutely positioned beside the
+    // step, and a live row is wide by nature — two to four panes at real size — so the side
+    // column lands outside the window and the buttons get cut in half (seen 2026-08-31).
+    // There is no width at which a side column is right here, so don't compute one.
+    document.body.classList.add('thumbs-inline');
+    // The stage's inner row: its padding (14px a side) and border come off the width.
+    const stage = $('.stage');
+    const stageWidth = (sideColumn ? c.clientWidth - info - 40 : (stage ? stage.clientWidth : c.clientWidth)) - 30;
+    const fit = fitPanes(ranges, stageWidth);
+    $$('#inner iframe').forEach((f, i) => {
+      // A FILLING pane is sized by CSS, not here: the frame is a column (caption above, pane
+      // below) and the pane takes what is left. Measuring it in JS meant subtracting the
+      // caption's height by hand, and the first version got it wrong and clipped the app's
+      // bottom strip. Clear any size a previous step left on the element.
+      if (st.fill) { f.style.width = ''; f.style.height = ''; return; }
+      const w = fit.widths[i];
+      f.style.width = w + 'px';
+      if (!f.style.height) f.style.height = (st.height || MIN_PANE_H) + 'px';
+      // A fluid pane lays its design out at the width it is given. Told by message, never by
+      // reloading (a reload restarts the animation being judged); only when it changes.
+      if (ranges[i].min !== ranges[i].max && f.dataset.askedWidth !== String(w)) {
+        f.dataset.askedWidth = String(w);
+        try { f.contentWindow.postMessage({ type: 'youcoded:pane-width', width: w }, LIVE_ORIGIN); } catch (e) { /* not loaded yet */ }
+      }
+    });
+    document.body.dataset.layout = 'live';
+    document.body.dataset.scores = '{}';
+    // layout() is the ONLY place this is ever set and deck-render.test.mjs polls it for ten
+    // seconds before giving up. A live branch that returned early without setting it would
+    // hang every test in the suite and explain nothing.
+    window.__deckReady = true;
+  }
+  // ── the cards of one step ───────────────────────────────────────────────────────────────
+  // Hoisted out of render() so the scrolling QUESTION PAGE can draw the very same cards per
+  // article — one markup, so a question reads identically whether it is on a page of its own
+  // or one of several on a scrolling page (design §3.1).
+  // An option carries its own pros and cons, and the preferred one wears a badge beside its
+  // letter — Destin (2026-09-04): one grey paragraph per option was unreadable, and
+  // "(recommended)" written into the label read as part of the option's name.
+  const bullets = (o, k) => (o[k] || []).length ? `<ul class="${k}">${o[k].map(t => `<li>${esc(t)}</li>`).join('')}</ul>` : '';
+  // Fix (2026-09-05): the chip printed the WHOLE option id, so `default-and-sunbreak` ate about
+  // 150px of the card's own gutter and squeezed the option's words. The chip is a handle, not
+  // the id: show at most KEY_MAX characters and keep the full id in its tooltip. Nothing else
+  // changes — the answers file, the printed summary and the finish screen all still carry it in
+  // full. (Chosen over a length LIMIT on ids: five committed specs already use long, readable
+  // ids, and those ids are what a session reads back out of the answers file.)
+  const KEY_MAX = 10;
+  const chip = id => `<span class="key" title="${esc(id)}">${esc(id.length > KEY_MAX ? id.slice(0, KEY_MAX - 1) + '…' : id)}</span>`;
+  // Fix (Destin, 2026-09-06): "add big ass clear 'Option A. Option B.' headers on the
+  // selectable options". The option's own id (`all-three`) was doing that job in a small chip,
+  // which named the thing without announcing that it is the thing you pick. The heading is now
+  // the position — Option A, Option B — and the id follows it quietly, because the answers file,
+  // the summary and any contract row still speak in ids.
+  const LETTERS = 'ABCDEFGH';
+  const optionCard = (o, cls, i) => `<section class="card variant${cls}" data-pick="${esc(o.id)}" title="Pick ${esc(o.id)}"><h3 class="ohead"><span class="oletter">Option ${LETTERS[i] || String(i + 1)}</span>${o.recommended ? '<span class="badge">Recommended</span>' : ''}${chip(o.id)}</h3><div class="vbody"><h4 class="oname">${esc(o.label)}</h4>${o.summary ? `<p>${esc(o.summary)}</p>` : ''}${bullets(o, 'pros')}${bullets(o, 'cons')}${o.measured ? `<p class="num">Measured: ${esc(o.measured)}</p>` : ''}${o.cost ? `<p class="cost">${esc(o.cost)}</p>` : ''}${o.risk ? `<p class="r">${esc(o.risk)}</p>` : ''}</div></section>`;
+  // The three parts of a question, one card each.
+  const partCard = (title, text) => `<section class="card part"><h3>${esc(title)}</h3><p>${esc(text)}</p></section>`;
+  // Fix (Destin, 2026-09-06): "do 3 cards side-by-side horizontally". Stacked, the three
+  // explanations were three screens of scrolling before the first thing he can answer.
+  const partCards = st => {
+    const cards = [['Today', st.today], ['The problem', st.problem], ['Proposal', st.proposal]]
+      .filter(([, t]) => t).map(([h, t]) => partCard(h, t)).join('');
+    return cards ? `<div class="parts">${cards}</div>` : '';
+  };
+  // No card at all when there is nothing to put in it: a slide showing a REAL screen of the app
+  // has no "what changed", and an empty titled box reads as a rendering fault.
+  const changedCard = st => !st.changed && !st.measured ? ''
+    : `<section class="card"><h3>${ICON.change}What changed</h3>${st.changed ? `<p>${esc(st.changed)}</p>` : ''}${st.measured ? `<p class="num">Measured: ${esc(st.measured)}</p>` : ''}</section>`;
+  const noticeCard = st => st.notice ? `<section class="card"><h3>${ICON.eye}You'll notice</h3><p>${esc(st.notice)}</p></section>` : '';
+  // "Also changes" (close-session friction, proposal 15): the other screens a shared change
+  // reaches, listed with the notice so a yes here is a yes to all of them.
+  const alsoCard = st => st.alsoChanges && st.alsoChanges.length ? `<section class="card also"><h3>${ICON.eye}Also changes</h3><ul>${st.alsoChanges.map(x => `<li>${esc(x)}</li>`).join('')}</ul></section>` : '';
+  const riskCard = st => st.risk ? `<section class="card risk"><h3>${ICON.warn}Risk</h3><p>${esc(st.risk)}</p></section>` : '';
+  // CONTRACT: the rows as one table, not a card per row — grading (a `verdict` on any row)
+  // adds a Verdict column instead of always reserving one nobody has filled in yet.
+  // A verdict's evidence is a forensic note — a command, a path, what was compared against
+  // what — and the full text belongs in the verdicts FILE, which is committed and readable.
+  // In the table it is one cell competing for width with the statement he is deciding about.
+  // Measured on the remote-access acceptance deck at 1512px: evidence took 498px and the
+  // Statement column was starved to 105px, one word per line. The column shares this table
+  // deliberately does NOT use (see page.css) cannot fix that — the content is the problem.
+  const EVIDENCE_CHARS = 150;
+  const shortEvidence = text => {
+    const one = String(text).replace(/\s+/g, ' ').trim();
+    if (one.length <= EVIDENCE_CHARS) return one;
+    // Cut on a word boundary so the tail is not half a path.
+    const cut = one.slice(0, EVIDENCE_CHARS);
+    return cut.slice(0, cut.lastIndexOf(' ') > 60 ? cut.lastIndexOf(' ') : EVIDENCE_CHARS) + '… (full note in the verdicts file)';
+  };
+  const rowsTable = st => {
+    const graded = st.rows.some(r => r.verdict);
+    return `<section class="card contract"><table><thead><tr><th>#</th><th>Statement</th><th>Checked by</th><th>Threshold</th><th>From</th>${graded ? '<th>Verdict</th>' : ''}</tr></thead><tbody>${st.rows.map(r => `<tr class="${esc(r.verdict)}"><td>${esc(r.id)}</td><td>${esc(r.statement)}${r.note ? `<p class="src">“${esc(r.note)}”</p>` : ''}</td><td>${esc(r.checkedBy)}${r.guard ? `<p class="src">${esc(r.guard)}</p>` : ''}</td><td>${esc(r.threshold || 'pass / fail')}</td><td class="src">${esc(r.source)}${r.found === 'review' ? '<p class="src"><strong>found in review</strong> — not on a deck you answered</p>' : ''}</td>${graded ? `<td>${esc(r.verdict || '—')}${r.evidence ? `<p class="src">${esc(shortEvidence(r.evidence))}</p>` : ''}</td>` : ''}</tr>`).join('')}</tbody></table></section>`;
+  };
+  // SEVERAL looks exactly like pick-one until it says so — the cards, the borders and the
+  // lettering are the same. One line above them is what tells him he may tick more than one.
+  const pickHint = st => st.pick === 'several'
+    ? '<p class="pickhint">Pick as many as you like — click one again to unpick it.</p>' : '';
+  // TRY IT IN THE REAL APP. The deck cannot hold the real app — it is a desktop program, not
+  // a page — so this card carries the exact command instead, and the slide carries the verdict.
+  // The safety line is fixed copy, not the author's: a dev window is a SEPARATE app, and the
+  // one thing nobody may be told to poke is Destin's own running copy.
+  const devCard = st => `<section class="card dev"><h3>${ICON.change}Open the app to try it</h3>`
+    + `<div class="devrow">`
+    // Served: a button, because a line to copy into a terminal is a chore he asked to be rid
+    // of (2026-09-06). Opened as a plain file there is no server to ask, so the command stays.
+    + `<button type="button" class="btn primary opendev" data-id="${esc(st.id)}">Open the dev window</button>`
+    + `<button type="button" class="btn copycmd">Copy the command</button></div>`
+    + `<pre class="cmd"><code>${esc(st.command)}</code></pre>`
+    + `<p class="src devnote">This opens a separate dev window on your desktop, alongside your own app — never your own app itself. It takes a few seconds to appear. Close it when you are done.</p></section>`;
+  // The body of one step, in the order the cards are read.
+  const cardsFor = st => st.kind === 'question' ? partCards(st) + noticeCard(st) + alsoCard(st) + riskCard(st)
+    : st.kind === 'dev' ? devCard(st) + changedCard(st) + noticeCard(st) + alsoCard(st) + riskCard(st)
+    : st.kind === 'contract' ? rowsTable(st) + noticeCard(st) + alsoCard(st) + riskCard(st)
+    : pickList(st) ? pickHint(st) + pickList(st).map((v, i) => optionCard(v, '', i)).join('') + noticeCard(st) + alsoCard(st) + riskCard(st)
+    : st.kind === 'decide' ? partCards(st) + pickHint(st) + noticeCard(st) + alsoCard(st) + st.options.map((o, i) => optionCard(o, ' option', i)).join('') + riskCard(st)
+    : changedCard(st) + noticeCard(st) + alsoCard(st) + riskCard(st);
+
+  // A one-picture slide is a BRIEF (nothing built yet): "keep / revert" would ask about work that
+  // does not exist. Decided per slide, because a deck may hold both kinds.
+  const YES = st => stepRuns(st).length === 1 ? 'Yes, build it' : 'Yes, keep it',
+    NO = st => stepRuns(st).length === 1 ? 'No, leave it' : 'No, revert it';
+  // A words step may relabel the buttons ("Holds / Fails" on an acceptance row): the deck's
+  // build/keep wording is about a picture, and a statement has none.
+  // Fix: a question (`kind === 'question'`) has no picture to keep or revert either, so its
+  // fallback is the plain "Yes" / "No" the buttons already show — not "Yes, keep it". This is
+  // now the ONLY place that decides the default; renderAnswers calls it instead of repeating
+  // its own `st.yes || 'Yes'`, so the finish-screen read-back can never disagree with the button.
+  const yesLabel = st => st.yes || (st.kind === 'question' ? 'Yes' : YES(st)),
+    noLabel = st => st.no || (st.kind === 'question' ? 'No' : NO(st));
+  // The things a step offers to pick between, or null if it is a yes/no. A LIVE step's
+  // question shape rides in `shape`, because `kind` already says where its picture comes
+  // from — so a live pick-one answers exactly like a picture pick-one.
+  const pickList = st => st.kind === 'choice' ? st.variants
+    : (st.kind === 'live' && st.shape === 'choice') ? st.panes : null;
+  // The answer row for one step, as markup. Hoisted so a question on a scrolling page gets
+  // exactly the buttons it would get on a screen of its own.
+  // WRITE: the answer IS words he types, not one of a list. Destin (2026-09-06): naming and
+  // wording decisions had to be faked as a pick-one from options invented in advance, so an
+  // answer that was not on the list was never heard. `Don't know` stays — a shrug is an answer.
+  const writeBox = st => `<textarea class="write ans-write" data-id="${esc(st.id)}" rows="2" placeholder="${esc(st.prompt || 'Type your answer…')}"></textarea>`
+    + `<button class="btn ans" data-v="other" data-dk="1"><span>Don't know</span></button>`;
+  const answerButtons = st => {
+    const picks = pickList(st);
+    if (st.answer === 'words') return writeBox(st);
+    // Fix (2026-09-10): every answer label goes in a <span>. `.ans` hides its overflow and
+    // centres its content, and the ellipsis rule beside it (page.css) targets `.ans>span` —
+    // so a label written as bare text was clipped at BOTH ends with no ellipsis, reading as
+    // one button overlapping the next. A contract deck hit it every time: its default "No,
+    // something is missing" is the longest label the builder has.
+    return st.kind === 'question'
+      ? `<button class="btn ans" data-v="yes"><span>${esc(yesLabel(st))}</span></button><button class="btn ans" data-v="no"><span>${esc(noLabel(st))}</span></button><button class="btn ans" data-v="other" data-dk="1"><span>Don't know</span></button>`
+      : picks || st.kind === 'decide'
+      ? (picks ? `<button class="btn ans" data-v="no"><span>None of these</span></button>` : '')
+        + `<button class="btn ans" data-v="other"><span>Other</span></button>`
+      : `<button class="btn ans" data-v="yes"><span>${esc(yesLabel(st))}</span></button><button class="btn ans" data-v="no"><span>${esc(noLabel(st))}</span></button><button class="btn ans" data-v="other"><span>Other</span></button>`;
+  };
+  function renderAnswers(st) {
+    // A DECIDE step's options ARE its answers, so there is no yes/no: picking one is the answer,
+    // and "Other" carries anything he wants instead. No "None of these" — with written options
+    // that button and "Other" would mean the same thing twice.
+    const picks = pickList(st);
+    // Fix: the lettered options used to appear TWICE — once as the cards, once again as
+    // buttons repeating the same letter and the same label directly beneath them. Destin
+    // (2026-09-01): "two distinct multiple-choice decision rows that kinda offer the same
+    // options." The cards are the better of the two (they carry the summary, the measurement
+    // and the risk), so they are now the only place you pick. What stays here is only what a
+    // card CANNOT say: none of them, or something else entirely.
+    // A QUESTION with no options is answered Yes / No / Don't know: a shrug is a real answer
+    // and must not have to be typed into Other. It rides as Other with `dk` so the answers
+    // file keeps three values, and both summaries print "don't know" for it.
+    $('#answers').innerHTML = answerButtons(st);
+    if (state.submitted) $$('.ans').forEach(e => e.disabled = true);   // the buttons are rebuilt per step; a submitted deck stays read-only
+  }
+  // `id` is the step being answered. On a page every question has its own answer row, so the
+  // id comes from the button that was clicked; on a one-step screen there is only one step.
+  function answer(v, pick, dk, id) {
+    if (state.submitted) return;
+    id = id || (PAGES ? '' : DECK.steps[cur].id); if (!id) return;
+    const st = stepById(id) || {};
+    // SEVERAL: the same click toggles membership instead of replacing the answer, so "A and C,
+    // not B" is a real answer rather than a sentence in the note box (Destin, 2026-09-06).
+    if (v === 'pick' && st.pick === 'several') {
+      const had = (state.answers[id] || {}).picks || [];
+      const picks = had.includes(pick) ? had.filter(x => x !== pick) : had.concat([pick]);
+      const b = { ...(state.answers[id] || {}), v: picks.length ? 'picks' : 'skip', picks };
+      delete b.pick; delete b.dk;
+      if (!picks.length) { delete b.picks; delete b.v; }
+      state.answers[id] = b; paintState(); save(); return;
+    }
+    const a = { ...(state.answers[id] || {}), v }; if (v === 'pick') a.pick = pick; else delete a.pick;
+    if (v !== 'picks') delete a.picks;
+    if (dk) a.dk = true; else delete a.dk;   // "Don't know" is Other with a flag; anything else clears it
+    state.answers[id] = a; paintState(); save();
+    const n = PAGES ? $(`#cards article.q[data-id="${CSS.escape(id)}"] .note`) : $('#note'); if (n) n.focus();
+  }
+  $('#deck-title').textContent = DECK.title; document.title = DECK.title;
+  document.body.dataset.screen = 'deck';   // 'finished' once submitted — read by deck-render.test.mjs
+  // One segment per page when the deck is pages, one per step otherwise.
+  $('#steps').innerHTML = (PAGES || DECK.steps).map(() => '<span></span>').join('');
+  // Fix: a ONE-page deck (no marker ever split it) has nothing to move BETWEEN — a Prev/Next
+  // pair and a single, always-full progress segment would just be dead controls sitting in
+  // the header. PAGES is fixed for the life of the page, so this is decided once, not per-paint.
+  if (PAGES && PAGES.length === 1) { $('#steps').hidden = true; $('#prev').hidden = true; $('#next').hidden = true; }
+  const stage = $('#stage'), inner = $('#inner'), loupe = $('#loupe');
+
+  // ── persistence ──
+  // WHY each answer carries its own time (`t`) and nothing is ever just overwritten (2026-09-25):
+  // two PC shutdowns on 2026-09-23 lost answers Destin had given. The page kept a backup in the
+  // browser but never read it back while served, a refused save (409) looked like a saved one,
+  // and a restarted server moved the deck to a new address where that backup was out of reach.
+  // Now: every save is confirmed or retried and says which on screen; a refusal folds the file's
+  // answers in and saves again; loading merges the browser's backup with the file, the newer
+  // answer winning. serve.py keeps the deck on one address (pick_port) so the backup is found.
+  const LS = 'deck:' + DECK.key;
+  const stamped = {};   // step id → that answer as last stamped, so only a changed answer gets a new time
+  function stamp() {
+    const now = Date.now();
+    for (const [id, a] of Object.entries(state.answers || {})) {
+      if (!a) continue;
+      const { t, ...rest } = a; const k = JSON.stringify(rest);
+      if (stamped[id] !== k) { if (stamped[id] !== undefined || !t) a.t = now; stamped[id] = k; }
+    }
+  }
+  // `extra`'s answers join `base`'s; where both hold one, the newer wins (a missing time is oldest).
+  function merged(base, extra) {
+    const out = { ...base, answers: { ...(base.answers || {}) } };
+    for (const [id, a] of Object.entries((extra && extra.answers) || {})) {
+      const b = out.answers[id];
+      if (a && (!b || (a.t || 0) > (b.t || 0))) out.answers[id] = a;
+    }
+    return out;
+  }
+  function showSaved(ok, why) {
+    const el = $('#saved'); if (!el || !server) return;
+    el.hidden = false; el.dataset.ok = ok ? '1' : '0';
+    el.textContent = ok ? 'Saved ✓' : 'NOT saved — retrying';
+    el.title = ok ? 'Your answers are in the file next to this deck.' : 'Could not save (' + why + '). Retrying every 2 seconds; your answers are also kept in this browser.';
+  }
+  async function load() {
+    let local = null;
+    try { local = JSON.parse(localStorage.getItem(LS) || 'null'); } catch (e) { /* no storage */ }
+    try {
+      const r = await fetch('/answers', { cache: 'no-store' });
+      if (r.ok) {
+        server = true; document.body.dataset.served = '1';
+        const disk = await r.json();
+        // The browser's copy only counts for THIS round: a submitted round, or one the file says
+        // started at another time, belongs to an earlier review of the same deck.
+        const sameRound = local && local.answers && !local.submitted && (!disk.started || !local.started || disk.started === local.started);
+        const next = sameRound ? merged(disk && disk.answers ? disk : { ...local, answers: {} }, local) : disk;
+        if (next && next.answers) Object.assign(state, next);
+        for (const [id, a] of Object.entries(state.answers || {})) if (a) { const { t, ...rest } = a; stamped[id] = JSON.stringify(rest); }
+        if (sameRound && JSON.stringify(next.answers) !== JSON.stringify((disk && disk.answers) || {})) save();   // the backup held something the file lost
+        else showSaved(true);   // what is on screen is what is in the file, so say so from the start
+        return;
+      }
+    } catch (e) { /* not served */ }
+    if (local && local.answers) Object.assign(state, local);
+  }
+  let retry = null;
+  const post = () => fetch('/answers', { method: 'POST', headers: { 'content-type': 'application/json' }, body: JSON.stringify(state) });
+  async function save() {
+    stamp();
+    try { localStorage.setItem(LS, JSON.stringify(state)); } catch (e) { /* no storage */ }
+    if (!server) return;
+    clearTimeout(retry);
+    try {
+      let r = await post();
+      if (r.status === 409) {
+        // This page is older than the file (it was open across a server restart). Fold the
+        // file's answers in — the newer of each wins — and save the union, instead of losing either.
+        const disk = await (await fetch('/answers', { cache: 'no-store' })).json();
+        Object.assign(state, merged(state, disk)); paintState();
+        r = await post();
+      }
+      if (!r.ok) throw new Error('HTTP ' + r.status);
+      showSaved(true);
+    } catch (e) {
+      showSaved(false, (e && e.message) || String(e));
+      retry = setTimeout(save, 2000);
+    }
+  }
+
+  // ── render the current step ──
+  function render() {
+    if (PAGES) { renderPage(); return; }   // a question deck draws a whole page, not one step
+    const st = DECK.steps[cur];
+    const themes = st.themes || DECK.themes;   // a real-app capture exists in one theme only — that step lists just that one
+    if (st.themes && st !== lastStep) theme = st.themes[0];   // a step with its own theme list opens on the first: that list says which themes matter here
+    else if (!themes.includes(theme)) theme = themes[0];
+    lastStep = st;
+    document.documentElement.dataset.theme = theme;   // before the pictures load, so a theme switch never flashes the old colours
+    $('#wtitle').textContent = st.surface; $('#wsub').textContent = st.path;
+    $('.top .where .sep').hidden = false;
+    // A words step has no frames: the stage is hidden by layout() and the cards fill the row.
+    curFrames = st.words ? [] : frames(st);
+    inner.innerHTML = curFrames.map(f => `<figure class="frame${f.pickable ? ' pickable' : ''}${st.kind === 'clip' ? ' clip' : ''}" data-run="${esc(f.key)}"${f.pickable ? ` title="Pick ${esc(f.key)}"` : ''}><figcaption>${f.caption}</figcaption><div class="pic">${media(st, f)}</div></figure>`).join('');
+    $$('#inner .frame .box').forEach(box => { const b = ((st.boxes || {})[theme] || {})[box.closest('.frame').dataset.run]; if (b) box.style.cssText = `left:${b[0]}%;top:${b[1]}%;width:${b[2]}%;height:${b[3]}%`; else box.style.display = 'none'; });
+    // The server EXITS on submit, so a step he never opened has no picture left to fetch. An
+    // empty frame under a caption reads as a broken deck; say which of the two it actually is.
+    $$('#inner img').forEach(i => i.onerror = () => {
+      const f = i.closest('.frame'); if (!f) return; f.classList.add('gone');
+      f.querySelector('.pic').textContent = state.submitted
+        ? 'This picture is no longer available — the review server stopped when you submitted.'
+        : 'This picture did not load (' + i.getAttribute('src') + ').';
+    });
+    $('#replay').hidden = st.kind !== 'clip';
+    // Zoom is off on a live step: it scales a still image, and a pane at anything but real
+    // size stops showing the thing it is there to show. (The magnifier needs no switch — its
+    // handler looks for `#inner img`, finds none, and hides itself.)
+    $('#zoom').hidden = st.kind === 'live' || !!st.words;
+    $('#livehint').hidden = st.kind !== 'live';
+    if (st.kind === 'live') {
+      // Once a click lands inside a pane, focus is in ITS document and this page stops seeing
+      // key presses — so say so rather than leaving arrow keys mysteriously dead. Prev/Next
+      // and every answer button still work with the mouse.
+      $('#livehint').textContent = (st.hint ? st.hint + ' ' : '')
+        + 'These panes are the running app. Click outside a pane to use ← → again.';
+      probeLive().then(up => {
+        if (DECK.steps[cur] !== st) return;   // he moved on while we were asking
+        if (up) drawLivePanes(); else drawServerDown(st);
+        layoutLive();
+      });
+    }
+    if (st.kind === 'clip') $$('#inner video').forEach(v => v.addEventListener('loadedmetadata', layout));
+    $$('#inner .frame.pickable').forEach(f => f.onclick = () => answer('pick', f.dataset.run));
+    $('#headline').textContent = st.headline;
+    $('#cards').innerHTML = cardsFor(st);
+    // Fix: this ran BEFORE #cards was filled in, so it bound handlers to the PREVIOUS step's
+    // cards and the current step's got none — a lettered card looked clickable (pointer
+    // cursor, "Pick B" tooltip) and did nothing, on every pick-one step. It matters more on a
+    // live step, where the pane deliberately isn't a pick target and the card is the big one.
+    $$('.card.variant').forEach(c => c.onclick = () => answer('pick', c.dataset.pick));
+    renderAnswers(st);
+    const last = curFrames.length ? curFrames[curFrames.length - 1].key : null;
+    // A clip is recorded in one theme; there are no per-theme variants to switch between.
+    // A words step has no picture of any theme — the theme pills would be empty.
+    $('#thumbs').innerHTML = st.words ? '' : st.kind === 'clip' ? ''
+      // A live step has no thumbnails to show — there is no picture of the other themes, only
+      // the panes themselves, one theme at a time. Same control, rendered as plain labels.
+      : st.kind === 'live' ? themes.map(t => `<button class="thumb label-only${t === theme ? ' on' : ''}" data-v="${esc(t)}" title="${esc(DECK.themeNames[t])}"><span>${esc(DECK.themeNames[t])}</span></button>`).join('')
+      : themes.map(t => `<button class="thumb${t === theme ? ' on' : ''}" data-v="${esc(t)}" title="${esc(DECK.themeNames[t])}"><img src="${esc(st.images[t][last])}" alt=""><span>${esc(DECK.themeNames[t])}</span></button>`).join('');
+    $$('.thumb').forEach(b => b.onclick = () => {
+      theme = b.dataset.v;
+      if (DECK.steps[cur].kind === 'live') { setLiveTheme(); return; }   // never render(): that reloads every pane
+      render();
+    });
+    $$('#inner img').forEach(i => i.addEventListener('load', layout));
+    layout(); paintState();
+  }
+  // ── the question page: every question of one set, on one scrolling reading column ──────────
+  function renderPage() {
+    const pg = PAGES[cur], steps = pageSteps(cur);
+    document.documentElement.dataset.theme = theme;
+    // The header describes what is on screen, and on a page that is the page — its title and
+    // its one line of intro, not a step's surface and path.
+    $('#wtitle').textContent = pg.title; $('#wsub').textContent = pg.intro;
+    // The header's "·" separates two things; with no intro there is only one, and a dangling
+    // dot after the title reads as a rendering fault.
+    $('.top .where .sep').hidden = !pg.intro;
+    lastStep = null; curFrames = []; inner.innerHTML = ''; $('#thumbs').innerHTML = '';
+    // Nothing here has a picture, so every picture control is off.
+    $('#replay').hidden = true; $('#zoom').hidden = true; $('#livehint').hidden = true;
+    $('#headline').hidden = true;   // the page's own eyebrow leads the column instead
+    // The eyebrow names the SET of questions. The implicit page (one page, no marker) is named
+    // after the deck, which the chip and the header already say twice — so it gets no third.
+    const named = pg.intro || pg.title !== DECK.title;
+    $('#cards').innerHTML = (named ? `<div class="page-head"><p class="eyebrow">${esc(pg.title)}</p>${pg.intro ? `<p class="intro">${esc(pg.intro)}</p>` : ''}</div>` : '')
+      + steps.map((st, i) => `<article class="q" data-id="${esc(st.id)}">`
+        // Fix (Destin, 2026-09-06): "too hard to quickly navigate between questions and tell
+        // them apart". A page of questions had nothing between one and the next but a 14px gap,
+        // so on a tall question you cannot see where you are. Each one now names itself.
+        + `<p class="qnum"><span class="n">Question ${i + 1} of ${steps.length}</span><span class="tick" aria-hidden="true">answered</span></p>`
+        + `<h2 class="qh">${esc(st.headline)}</h2>`
+        + `<div class="qbody">${cardsFor(st)}</div>`
+        + `<div class="qrow"><span class="answers">${answerButtons(st)}</span>`
+        + `<input class="note" data-id="${esc(st.id)}" placeholder="Add a note (optional)"></div>`
+        + `</article>`).join('');
+    // Every control carries the id of the question it belongs to, so one click handler on the
+    // column can answer any of them without knowing which article it came from.
+    $$('#cards article.q').forEach(art => art.querySelectorAll('.ans').forEach(b => b.dataset.id = art.dataset.id));
+    if (state.submitted) $$('#cards .ans,#cards .note').forEach(e => e.disabled = true);
+    layout(); paintState();
+  }
+  // Delegated, and bound once: renderPage() replaces the whole column on every page change.
+  $('#cards').addEventListener('click', e => {
+    if (!PAGES) return;
+    const b = e.target.closest('.ans');
+    if (b && !b.disabled) { answer(b.dataset.v, b.dataset.pick, b.dataset.dk === '1', b.dataset.id); return; }
+    const c = e.target.closest('.card.variant'), art = c && c.closest('article.q');
+    if (art && !state.submitted) answer('pick', c.dataset.pick, false, art.dataset.id);
+  });
+  $('#cards').addEventListener('click', e => {
+    const open = e.target.closest('.opendev');
+    if (open) { openDev(open); return; }
+    const b = e.target.closest('.copycmd'); if (!b) return;
+    const code = b.parentElement.querySelector('code');
+    navigator.clipboard.writeText(code.textContent).then(
+      () => { b.textContent = 'Copied'; setTimeout(() => { b.textContent = 'Copy the command'; }, 1500); },
+      // No clipboard (an insecure origin, a locked-down browser): select it so it can be
+      // copied by hand, rather than a button that silently does nothing.
+      () => { const r = document.createRange(); r.selectNodeContents(code); const s = getSelection(); s.removeAllRanges(); s.addRange(r); b.textContent = 'Selected — copy it'; });
+  });
+  $('#cards').addEventListener('input', e => {
+    const w = e.target.closest('.ans-write[data-id]');
+    if (w) { writeAnswer(w.dataset.id, w.value); return; }
+    const n = e.target.closest('.note[data-id]'); if (!n || !PAGES) return;
+    state.answers[n.dataset.id] = { ...(state.answers[n.dataset.id] || {}), note: n.value };
+    paintState(); clearTimeout(noteTimer); noteTimer = setTimeout(save, 300);
+  });
+  // The button that opens the dev window. It posts the STEP, never a command: the server
+  // rebuilds the line from the spec on disk, so the page cannot ask it to run anything else.
+  function openDev(btn) {
+    const card = btn.closest('.card.dev'), note = card.querySelector('.devnote');
+    btn.disabled = true; btn.textContent = 'Opening…';
+    fetch('/dev', { method: 'POST', headers: { 'content-type': 'application/json' },
+                    body: JSON.stringify({ step: btn.dataset.id }) })
+      .then(r => r.json().then(d => ({ ok: r.ok, d })))
+      .then(({ ok, d }) => {
+        if (!ok) throw new Error(d.error || 'it did not start');
+        btn.textContent = d.already ? 'Already open' : 'Opening — watch for the window';
+        note.textContent = d.already
+          ? 'The window this slide opened is still running. Find it in your taskbar; close it when you are done.'
+          : 'It takes a few seconds to appear, and it is a separate window from your own app. Close it when you are done.';
+        // Re-enabled so a window he closed can be opened again without reloading the deck.
+        setTimeout(() => { btn.disabled = false; btn.textContent = 'Open the dev window'; }, 8000);
+      })
+      .catch(err => {
+        btn.disabled = false; btn.textContent = 'Open the dev window';
+        // Never a silent no-op: say what failed and leave the command, which still works.
+        note.textContent = 'It did not start: ' + err.message + ' — the command above still works.';
+      });
+  }
+  // Typing IS the answer on a write slide. Emptying the box unanswers it, the way clicking a
+  // chosen option off does — otherwise a cleared box would still count as answered.
+  function writeAnswer(id, text) {
+    if (state.submitted) return;
+    const a = { ...(state.answers[id] || {}) };
+    if (text.trim()) { a.v = 'wrote'; a.text = text; delete a.dk; } else { delete a.v; delete a.text; }
+    state.answers[id] = a; paintState(); clearTimeout(noteTimer); noteTimer = setTimeout(save, 300);
+  }
+  // Chosen, whichever shape the answer has: one pick, or one of several.
+  const chosen = (a, id) => a.v === 'picks' ? (a.picks || []).includes(id) : (a.v === 'pick' && a.pick === id);
+  function paintPage() {
+    $$('#cards article.q').forEach(art => {
+      const a = state.answers[art.dataset.id] || {};
+      art.querySelectorAll('.ans').forEach(b => b.classList.toggle('on', b.dataset.v === a.v && (a.v !== 'pick' || b.dataset.pick === a.pick)));
+      art.querySelectorAll('.card.variant').forEach(c => c.classList.toggle('on', chosen(a, c.dataset.pick)));
+      const n = art.querySelector('.note');
+      // Never while he is typing in it: assigning `value` puts the caret back at the end.
+      if (n && document.activeElement !== n) n.value = a.note || '';
+      if (n) n.placeholder = a.v === 'other' ? 'Explain what you’d like instead…' : 'Add a note (optional)';
+      const w = art.querySelector('.ans-write');
+      if (w && document.activeElement !== w) w.value = a.text || '';
+      // An answered question takes the same green edge the mock-up used for `done`.
+      art.classList.toggle('done', !!(a.v && a.v !== 'skip'));
+    });
+    // A segment is a PAGE: solid once every question on it is answered, half-lit while some are.
+    $$('#steps span').forEach((seg, i) => {
+      const on = pageSteps(i), n = on.filter(st => { const x = state.answers[st.id]; return x && x.v && x.v !== 'skip'; }).length;
+      seg.className = (on.length && n === on.length ? 'done' : n ? 'part' : '') + (i === cur ? ' on' : '');
+    });
+    const done = Object.values(state.answers).filter(x => x.v && x.v !== 'skip').length;
+    $('#count').textContent = 'page ' + (cur + 1) + ' of ' + PAGES.length + ' · ' + done + ' of ' + N + ' answered' + (state.submitted ? ' · submitted, read-only' : '');
+    // On a page the forward button is navigation, not "save this answer" — it is never disabled
+    // for an unanswered question, because there are several of them on screen.
+    $('#save').disabled = !!state.submitted; $('#save').textContent = cur === LAST ? 'Done' : 'Next page ›';
+    $('#prev').disabled = cur === 0; $('#next').disabled = cur === LAST; $('#next').textContent = cur === LAST ? 'Last page' : 'Next ›';
+  }
+
+  function paintState() {
+    if (PAGES) { paintPage(); return; }
+    const a = state.answers[DECK.steps[cur].id] || {};
+    $$('.ans').forEach(b => b.classList.toggle('on', b.dataset.v === a.v && (a.v !== 'pick' || b.dataset.pick === a.pick)));
+    $$('.card.variant').forEach(c => c.classList.toggle('on', chosen(a, c.dataset.pick)));
+    $$('#inner .frame.pickable').forEach(f => f.classList.toggle('on', chosen(a, f.dataset.run)));
+    const note = $('#note'); note.value = a.note || ''; note.placeholder = a.v === 'other' ? 'Explain what you’d like instead…' : 'Add a note (optional)';
+    // Never while he is typing in it: assigning `value` would put the caret back at the end.
+    const w = $('#answers .ans-write'); if (w && document.activeElement !== w) w.value = a.text || '';
+    $$('#steps span').forEach((s, i) => { const x = state.answers[DECK.steps[i].id]; s.className = (x && x.v ? x.v : '') + (i === cur ? ' on' : ''); });
+    const done = Object.values(state.answers).filter(x => x.v && x.v !== 'skip').length;
+    $('#count').textContent = 'step ' + (cur + 1) + ' of ' + N + ' · ' + done + ' answered' + (state.submitted ? ' · submitted, read-only' : '');   // survives every repaint (theme clicks included)
+    // browsing a submitted deck must never re-arm Save & Next
+    $('#save').disabled = !!state.submitted || !(a.v && a.v !== 'skip');
+    $('#prev').disabled = cur === 0; $('#next').disabled = cur === N - 1; $('#next').textContent = cur === N - 1 ? 'Last step' : 'Next ›';
+  }
+
+  // ── layout: try each arrangement for real, keep the one that shows the pictures largest (spec §3.4) ──
+  const PAD = 28, CAP = 24, GAP = 18;
+  function layout() {
+    if (PAGES) {   // the reading column: a block that scrolls, nothing to size against a picture
+      // A contract step never reaches this branch: spec.pages() refuses a deck that defines or
+      // grades done, so a contract is always drawn one step per screen (`.content.words`, whose
+      // own `:has(.contract)` rule gives its table the full width). The `.pages.wide` column
+      // this used to switch on was removed with it, 2026-09-05.
+      $('#content').className = 'content pages'; $('#step').classList.remove('compact-step');
+      document.body.classList.remove('thumbs-inline');
+      document.body.dataset.layout = 'pages'; document.body.dataset.scores = '{}';
+      window.__deckReady = true; return;
+    }
+    if (DECK.steps[cur].words) {   // no picture to size: one column of cards, answer bar under it
+      $('#content').className = 'content words'; $('#step').classList.remove('compact-step');
+      document.body.dataset.layout = 'words';
+      // Fix: without this, navigating from a picture step to a words step left the PREVIOUS
+      // step's scores in the DOM — a stale table the render test (and anyone reading the DOM
+      // by hand) could mistake for this step's own layout choice. Match the live branch.
+      document.body.dataset.scores = '{}';
+      window.__deckReady = true; return;
+    }
+    if (DECK.steps[cur].kind === 'live') { layoutLive(); return; }
+    const c = $('#content'), step = $('#step'); const img = $('#inner img, #inner video'); if (!img) return;
+    const natW = img.naturalWidth || img.videoWidth, natH = img.naturalHeight || img.videoHeight; if (!natW) return;
+    const margin = (document.querySelector('main').clientWidth - step.clientWidth) / 2; document.body.classList.toggle('thumbs-inline', margin < 150);
+    const n = curFrames.length, w = natW, h = natH + CAP;
+    const opts = { A: 'row-below', B: 'col-right stacked', C: 'col-right', D: 'row-below stacked' }; const score = {};
+    step.classList.remove('compact-step');
+    for (const k in opts) {
+      // A side column needs real width; variant PICTURES need the full row (a decide step has only
+      // one picture, so it keeps the column) — except three or more TALL designs, which the row's
+      // cards below squeeze to ~180px each (close-session friction, proposal 16): beside a side
+      // column they get the stage's whole height, so the column is scored for them too.
+      if (opts[k].includes('col-right') && (c.clientWidth < 820 || (DECK.steps[cur].kind === 'choice' && !(n >= 3 && natH > natW)))) { score[k] = 0; continue; }
+      if (n === 1 && opts[k].includes('stacked')) { score[k] = 0; continue; }                 // one picture: stacking means nothing
+      if (DECK.steps[cur].kind === 'clip' && opts[k].includes('stacked')) { score[k] = 0; continue; }   // clips: side by side, or the two recordings can't be watched together
+      c.className = 'content ' + opts[k]; const SW = stage.clientWidth - PAD, SH = stage.clientHeight - PAD; const stacked = opts[k].includes('stacked');
+      score[k] = Math.min(stacked ? SW / w : (SW - GAP * (n - 1)) / n / w, stacked ? (SH - GAP * (n - 1)) / n / h : SH / h);
+    }
+    let best = 'A'; for (const k of ['B', 'C', 'D']) if (score[k] > score[best] * 1.05) best = k;   // A wins ties
+    let s;
+    // A clip pair is worth watching smaller: compact only under 30% (stills: 50%).
+    // Two or more TALL pictures likewise: compact stacks them at full size, so only the top of
+    // the first is on screen until you scroll — worse than both, shrunk, side by side (zoom
+    // brings detail back). WHY (submit-ticket friction, proposal 10): every slide of a ~740px
+    // popup shot at 1.5× scored ~40% side by side and stacked. Stacked layouts are not offered
+    // to them, for the same reason.
+    // A CHOICE likewise (close-session friction, proposal 8): its designs are only compared side
+    // by side — stacked, a composite design (folded + opened) filled the width, the second sat
+    // under the answer bar, and only one could be seen.
+    const tall = n >= 2 && (natH > natW || DECK.steps[cur].kind === 'choice');
+    if (tall) for (const k in opts) if (opts[k].includes('stacked')) score[k] = 0;
+    if (tall) { best = 'A'; for (const k of ['C']) if (score[k] > score[best] * 1.05) best = k; }
+    const floor = DECK.steps[cur].kind === 'clip' || tall ? 0.3 : 0.5;
+    if (score[best] < floor) { c.className = 'content compact'; step.classList.add('compact-step'); s = Math.min((c.clientWidth - PAD) / w, 1); }
+    else { c.className = 'content ' + opts[best]; s = Math.min(score[best], 1.5); }
+    // Three or more TALL designs open at the width that fills the row, not the height: fitted
+    // to the height they came out ~180-250px wide, readable only through the zoom (close-session
+    // friction, proposal 16). Side by side, their tops line up; the stage scrolls for the rest.
+    const wide3 = DECK.steps[cur].kind === 'choice' && n >= 3 && natH > natW && score[best] >= floor;
+    if (wide3) { const SW = stage.clientWidth - PAD; s = Math.min(Math.max(s, (SW - GAP * (n - 1)) / n / w), 1.5); }
+    document.body.dataset.fit = wide3 ? 'width' : '';
+    $$('#inner img, #inner video').forEach(i => i.style.width = ((i.naturalWidth || i.videoWidth) * s * zoom) + 'px');
+    $('#lvl').textContent = Math.round(zoom * 100) + '%';
+    // Read by the render test: the choice, and the scores it was made from (so the test checks the RULE, not a table).
+    // Fix (Destin, 2026-09-06): "option B seems to get cut off by other visually?" — the side
+    // column scrolls, and its last card ended exactly at the answer row with no sign of more.
+    // The class drives a fade over that row; re-checked whenever the column is laid out.
+    markMore();
+    document.body.dataset.layout = score[best] < floor ? 'compact' : best;
+    document.body.dataset.scores = JSON.stringify(score);
+    const b = $('#inner .frame .box'); if (b && zoom > 1) b.scrollIntoView({ block: 'center', inline: 'center' });
+    window.__deckReady = true;   // the render test waits for this — set only once a real layout has been chosen
+  }
+
+  function markMore() {
+    const info = $('#content .info'), dec = $('#content .decide');
+    if (!info || !dec) return;
+    const more = info.scrollHeight > info.clientHeight + 2 && info.scrollTop + info.clientHeight < info.scrollHeight - 2;
+    dec.classList.toggle('more', more);
+    if (!info.dataset.moreBound) { info.dataset.moreBound = '1'; info.addEventListener('scroll', markMore, { passive: true }); }
+  }
+  // ── navigation & answers ──
+  function record() {
+    const secs = Math.round((Date.now() - stepStart) / 1000);
+    if (PAGES) {
+      // Every question on the page was on screen for the same stretch of time, and there is no
+      // moment that belongs to one of them — so the elapsed seconds are split evenly across them.
+      const on = pageSteps(cur), each = on.length ? Math.round(secs / on.length) : 0;
+      on.forEach(st => {
+        const a = state.answers[st.id] || {};
+        if (!a.v) a.v = 'skip';
+        a.seconds = (a.seconds || 0) + each; a.theme = theme;
+        state.answers[st.id] = a;
+      });
+      return;
+    }
+    const id = DECK.steps[cur].id; const a = state.answers[id] || {};
+    if (!a.v) a.v = 'skip';
+    a.seconds = (a.seconds || 0) + secs; a.theme = theme; a.zoom = zoom;
+    state.answers[id] = a;
+  }
+  function go(i) {
+    // Fix: after Submit, arrow keys / progress segments must not keep POSTing answers — but
+    // they may still MOVE. A submitted deck is a read-only record he can page back through;
+    // record()/save() are what must not run, not the navigation itself.
+    if (state.submitted) { cur = Math.max(0, Math.min(LAST, i)); zoom = 1; hideFinished(); render(); return; }
+    record(); cur = Math.max(0, Math.min(LAST, i)); state.cur = cur; save(); zoom = 1; stepStart = Date.now(); render();
+  }
+  // Fix: save on EVERY answer, not only when the step changes — a tab closed on the last
+  // answered step used to lose that answer entirely. The note debounces so a sentence typed
+  // at speed is one POST, not one per keystroke.
+  let noteTimer = null;
+  $('#answers').addEventListener('click', e => { const b = e.target.closest('.ans'); if (b && !b.disabled) answer(b.dataset.v, b.dataset.pick, b.dataset.dk === '1'); });
+  $('#answers').addEventListener('input', e => { const w = e.target.closest('.ans-write[data-id]'); if (w) writeAnswer(w.dataset.id, w.value); });
+  $('#note').addEventListener('input', e => {
+    if (PAGES) return;   // on a page the note lives on the question, not in the shared row
+    const id = DECK.steps[cur].id; const a = { ...(state.answers[id] || {}), note: e.target.value };
+    state.answers[id] = a; paintState(); clearTimeout(noteTimer); noteTimer = setTimeout(save, 300);
+  });
+  $('#save').onclick = () => { if (cur === LAST) openDialog(); else go(cur + 1); };
+  // From the finish screen, Prev means "back into the deck" — the step he left, not the one
+  // before it; and there is nothing after the end, so Next is off there (see showFinished).
+  const step = d => go(document.body.dataset.screen === 'finished' ? cur : cur + d);
+  $('#next').onclick = () => step(1); $('#prev').onclick = () => step(-1);
+  $$('#steps span').forEach((s, i) => s.onclick = () => go(i));
+
+  // ── submit ──
+  function summary() {
+    const counts = { yes: 0, no: 0, other: 0, skip: 0 }; const lines = [];
+    // Mirrors serve.py's summary(): a note prints plainly, right after the answer, same words.
+    for (const st of DECK.steps) { const a = state.answers[st.id] || { v: 'skip' }; const v = a.v || 'skip'; counts[v] = (counts[v] || 0) + 1; const what = v === 'pick' ? 'pick ' + (a.pick || '?') : v === 'picks' ? 'picks ' + (a.picks || []).join(', ') : v === 'wrote' ? 'wrote "' + String(a.text || '').trim() + '"' : (v === 'no' && pickList(st) ? 'none' : (v === 'other' && a.dk ? "don't know" : v)); lines.push(st.id + ' ' + what + (a.note && a.note.trim() ? ' — "' + a.note.trim() + '"' : '')); }
+    return DECK.key + ' · ' + (state.submitted ? 'submitted ' + state.submitted.slice(0, 16).replace('T', ' ') : 'not submitted') + ' · ' + counts.yes + ' yes · ' + counts.no + ' no · ' + counts.other + ' other · ' + (counts.pick ? counts.pick + ' picked · ' : '') + counts.skip + ' skipped\n' + lines.join('\n');
+  }
+  function openDialog() {
+    record(); save();
+    // Fix: record() already banked elapsed seconds into the current step's answer; without resetting
+    // stepStart, a Done -> Keep reviewing -> Done round trip would add those seconds a second time.
+    // paintState() repaints so a step that record() just marked "skip" turns grey immediately.
+    stepStart = Date.now(); paintState();
+    const missing = DECK.steps.map((st, i) => [(state.answers[st.id] || {}).v, i]).filter(([v]) => !v || v === 'skip').map(([, i]) => i + 1);
+    $('#skipped').style.display = missing.length ? 'flex' : 'none';
+    $('#skipn').textContent = missing.length + (missing.length === 1 ? ' step has' : ' steps have') + ' no answer (step' + (missing.length > 1 ? 's ' : ' ') + missing.join(', ') + ').';
+    // The list names steps ("2 steps have no answer") because a question is what he answers;
+    // going there means opening the PAGE that question sits on.
+    const pageOf = i => PAGES ? Math.max(0, PAGES.findIndex(p => p.steps.includes(DECK.steps[i].id))) : i;
+    $('#first').style.display = missing.length ? 'inline-flex' : 'none'; $('#first').onclick = () => { $('#veil').classList.remove('on'); go(pageOf(missing[0] - 1)); };
+    $('#dlg-text').innerHTML = server
+      ? 'Your answers have been saving to a file next to this deck as you went. Submitting tells Claude you\'re finished — it picks them up in the session and replies there. <b>Nothing to copy or paste</b>: close this tab and go back to the conversation.'
+      : 'This deck is not being served, so Claude is not watching it. Copy the feedback below and paste it into the chat.';
+    $('#feedback').style.display = server ? 'none' : 'block'; $('#copy').style.display = server ? 'none' : 'inline-flex'; $('#submit').style.display = server ? 'inline-flex' : 'none';
+    $('#feedback').value = summary(); $('#veil').classList.add('on');
+  }
+  $('#done').onclick = openDialog; $('#cancel').onclick = () => $('#veil').classList.remove('on');
+  $('#submit').onclick = async () => {
+    // Fix: only a POST the server actually accepted may say "Submitted ✓". Claiming success
+    // when the server is gone sends Destin back to the conversation with nothing waiting there.
+    let ok = false, why = '';
+    try { const r = await fetch('/submit', { method: 'POST', headers: { 'content-type': 'application/json' }, body: JSON.stringify(state) }); ok = r.ok; if (!ok) why = 'HTTP ' + r.status; }
+    catch (e) { why = (e && e.message) || String(e); server = false; }   // the server is gone: a re-opened dialog must take the copy/paste branch, not repeat "saving as you went"
+    if (!ok) {
+      state.submitted = null;   // summary() then labels it "not submitted", which is the truth
+      $('#dlg-text').textContent = 'The deck could not reach its server (' + why + '). Your answers up to the last save are in the answers file; copy the feedback below and paste it into the chat.';
+      $('#feedback').value = summary(); $('#feedback').style.display = 'block'; $('#copy').style.display = 'inline-flex'; $('#submit').style.display = 'none';
+      return;   // veil stays open — there is still something for him to do here
+    }
+    state.submitted = new Date().toISOString();
+    $('#veil').classList.remove('on'); lockSubmitted(); showFinished();
+  };
+  // A submitted deck is read-only, and says so — silently ignoring clicks read as "I can't click through the pages".
+  // The header button stays LIVE and becomes the way back to the finish screen: after a submit
+  // it is the only place the answers can still be read (the server exits on submit).
+  function lockSubmitted() {
+    $('#done').innerHTML = 'Submitted ✓<span class="long"> — view responses</span>';
+    $('#done').onclick = showFinished; $('#done').disabled = false;
+    $$('.ans,#save,#note').forEach(e => e.disabled = true); paintState();
+  }
+
+  // ── the finish screen ──
+  // WHY it exists: Submit used to just close the dialog, leaving him on the last step with a
+  // greyed-out button — the same thing a click that did nothing would look like. This is the
+  // definitive end of the deck, and the read-back of what was sent.
+  const ANS_LABEL = (st, a) => {
+    const v = a.v || 'skip';
+    if (v === 'skip') return 'No answer';
+    // Fix: a words QUESTION offers `options`, not the `variants`/`panes` pickList knows about, so
+    // its answers read back on the finish screen as a bare id ("all-five-plus-new"). Look in both.
+    const label = id => { const o = (pickList(st) || st.options || []).find(x => x.id === id); return id + (o ? ' — ' + o.label : ''); };
+    if (v === 'pick') return label(a.pick);
+    if (v === 'picks') return (a.picks || []).map(label).join('; ');
+    if (v === 'wrote') return '“' + String(a.text || '').trim() + '”';
+    if (v === 'other') return a.dk ? "Don't know" : 'Something else';
+    if (v === 'no') return pickList(st) ? 'None of these' : noLabel(st);
+    return yesLabel(st);
+  };
+  function renderResponses() {
+    const counts = { yes: 0, no: 0, other: 0, pick: 0, skip: 0 };
+    const rows = DECK.steps.map((st, i) => {
+      const a = state.answers[st.id] || {}; const v = a.v || 'skip'; counts[v] = (counts[v] || 0) + 1;
+      const note = (a.note || '').trim();
+      return `<tr><td class="n">${i + 1}</td>`
+        + `<td class="step-cell">${esc(st.surface)}<p class="src">${esc(st.headline)}</p></td>`
+        + `<td class="v" data-v="${esc(v)}">${esc(ANS_LABEL(st, a))}</td>`
+        + `<td>${note ? esc(note) : '<span class="src">—</span>'}</td></tr>`;
+    }).join('');
+    $('#responses').querySelector('tbody').innerHTML = rows;
+    const when = (state.submitted || '').slice(0, 16).replace('T', ' ');
+    const parts = [counts.yes + ' yes', counts.no + ' no', counts.other + ' other'];
+    if (counts.pick) parts.splice(2, 0, counts.pick + ' picked');
+    if (counts.skip) parts.push(counts.skip + ' with no answer');
+    $('#fin-meta').textContent = N + (N === 1 ? ' step' : ' steps') + ' · ' + parts.join(' · ') + (when ? ' · submitted ' + when : '');
+  }
+  function showFinished() {
+    renderResponses(); $('#step').hidden = true; $('#finished').hidden = false; document.body.dataset.screen = 'finished';
+    // The header describes what is ON SCREEN. Left saying "Home · chat — step 3 of 3" it would
+    // be labelling a step nobody is looking at. The progress strip stays: it is the summary at
+    // a glance, and clicking a segment is still the way back into that step (a one-page deck hides the strip; `‹ Back to the deck` is its way back).
+    $('#wtitle').textContent = DECK.title; $('#wsub').textContent = 'review complete';
+    $('#count').textContent = 'all ' + N + ' steps · read-only';
+    $('#prev').disabled = false; $('#next').disabled = true;   // Prev goes back into the deck; nothing follows the end
+  }
+  function hideFinished() { $('#finished').hidden = true; $('#step').hidden = false; document.body.dataset.screen = 'deck'; }
+  $('#fin-back').onclick = () => { hideFinished(); render(); };
+  $('#fin-copy').onclick = () => {
+    // A scratch textarea, not #feedback: that one lives inside the (display:none) dialog, and
+    // execCommand's fallback cannot select text in a hidden element — it would copy nothing.
+    const t = document.createElement('textarea'); t.value = summary();
+    t.style.cssText = 'position:fixed;top:0;left:0;opacity:0'; document.body.appendChild(t); t.select();
+    (navigator.clipboard ? navigator.clipboard.writeText(t.value) : Promise.reject()).catch(() => document.execCommand('copy')).finally(() => t.remove());
+    $('#fin-copy').textContent = 'Copied';
+  };
+  $('#copy').onclick = () => { const t = $('#feedback'); t.select(); (navigator.clipboard ? navigator.clipboard.writeText(t.value) : Promise.reject()).catch(() => document.execCommand('copy')); $('#copy').textContent = 'Copied'; };
+
+  // ── loupe, zoom, keys ──
+  const K = 2.5, R = 90;
+  stage.addEventListener('mousemove', e => {
+    if (!loupeOn) { loupe.style.display = 'none'; return; }
+    const img = $$('#inner img').find(i => { const r = i.getBoundingClientRect(); return e.clientX >= r.left && e.clientX <= r.right && e.clientY >= r.top && e.clientY <= r.bottom; });
+    if (!img) { loupe.style.display = 'none'; return; }
+    const r = img.getBoundingClientRect(); const x = e.clientX - r.left, y = e.clientY - r.top;
+    loupe.style.display = 'block'; loupe.style.left = (e.clientX - R) + 'px'; loupe.style.top = (e.clientY - R) + 'px';
+    loupe.style.backgroundImage = 'url("' + img.src + '")'; loupe.style.backgroundSize = (r.width * K) + 'px ' + (r.height * K) + 'px'; loupe.style.backgroundPosition = (-x * K + R) + 'px ' + (-y * K + R) + 'px';
+  });
+  stage.addEventListener('mouseleave', () => loupe.style.display = 'none');
+  function setZoom(z) {
+    if (curStep().kind === 'live') return;   // real size is the point; there is no image to scale
+    zoom = Math.max(1, Math.min(4, Math.round(z * 10) / 10)); layout();
+  }
+  $('#zin').onclick = () => setZoom(zoom + 0.1); $('#zout').onclick = () => setZoom(zoom - 0.1); $('#replay').onclick = replay;
+  document.addEventListener('keydown', e => {
+    if (e.target.tagName === 'INPUT' || e.target.tagName === 'TEXTAREA') return;
+    if (e.key === 'ArrowRight') step(1); if (e.key === 'ArrowLeft') step(-1);   // go() decides what a submitted deck is allowed to do
+    if (e.key === '+' || e.key === '=') setZoom(zoom + 0.1); if (e.key === '-') setZoom(zoom - 0.1); if (e.key === '0') setZoom(1);
+    if (e.key === 'r' && curStep().kind === 'clip') replay();
+    if (e.key === 'l') { loupeOn = !loupeOn; if (!loupeOn) loupe.style.display = 'none'; document.body.classList.toggle('no-loupe', !loupeOn); }
+  });
+  // A pane measures its own content and says how tall it is. WHY measured rather than
+  // declared: a candidate taller than its box would otherwise be cut off with no sign, and
+  // the deck cannot know a candidate's height — it lives in the other repo.
+  window.addEventListener('message', e => {
+    // Symmetric with the route, which only accepts theme messages from a loopback origin.
+    if (!DECK.live || e.origin !== LIVE_ORIGIN) return;
+    const d = e.data;
+    if (d?.type === 'youcoded:pane-theme' && typeof d.theme === 'string') {
+      // WHY: mounting does not imply the requested palette has painted. The
+      // renderer acknowledges after ThemeProvider writes it, so preview can
+      // refuse a pane whose first screenshot still wears its URL's old theme.
+      const f = $$('#inner iframe').find(x => x.contentWindow === e.source);
+      if (f && d.theme === theme) {
+        f.dataset.appliedTheme = d.theme;
+      } else if (f && Number(f.dataset.themeRetries || 0) < 3) {
+        // WHY: an offscreen pane can acknowledge its initial default AFTER
+        // our load-time theme request; ThemeProvider's async initial restore
+        // overwrites that request. Retry on its painted-theme acknowledgement,
+        // never claim readiness from the earlier size report.
+        f.dataset.themeRetries = String(Number(f.dataset.themeRetries || 0) + 1);
+        try { f.contentWindow.postMessage({ type: 'youcoded:theme', theme }, DECK.live.base); } catch (err) { /* gone */ }
+      }
+      return;
+    }
+    if (!d || d.type !== 'youcoded:pane-height' || !(d.height > 0)) return;
+    const st = DECK.steps[cur];
+    if (st.kind !== 'live') return;
+    // contentWindow identity, not the id in the payload: it is the only thing that cannot be
+    // wrong when four panes report independently. The id is the fallback if the frame moved.
+    const panes = $$('#inner iframe');
+    const f = panes.find(x => x.contentWindow === e.source) || panes.find(x => x.dataset.pane === d.candidate);
+    if (!f) return;
+    // WHY: layout readiness predates the async app in each frame. Preview must
+    // wait for THIS mounted report before photographing a live pane, including
+    // a pane whose height is explicitly fixed by its deck.
+    const firstMount = f.dataset.mounted !== 'true';
+    // The pane's address carries the deck's FIRST theme, baked at build time — so a live step
+    // opened while the deck is on any other theme (switched on an earlier step, or ?theme= in
+    // the URL) showed Midnight panes inside a Light deck. Answering its height report is the
+    // right moment to correct that: the pane has MOUNTED and is listening. The iframe's own
+    // `load` event is not — it fires before the app's async boot installs the listener, and
+    // the message is dropped silently (tried that first, 2026-09-01).
+    try { f.contentWindow.postMessage({ type: 'youcoded:theme', theme }, LIVE_ORIGIN); } catch (err) { /* gone */ }
+    f.dataset.mounted = 'true';
+    // WHY: the first layout sent fluid width before the iframe installed its
+    // listener. Its requested-width cache must be cleared ONCE after mount, or
+    // the candidate stays at min width inside a wider allocated pane.
+    if (firstMount) delete f.dataset.askedWidth;
+    // NOT capped at the stage. It was, and a 494px design in a 380px stage lost its bottom
+    // 114px — Destin saw a permissions list sliced mid-item (2026-09-01). A pane that scrolls
+    // inside itself is worse than a stage that scrolls: the inner scrollbar reads as part of
+    // the design, and a design you cannot see all of is not a design you can judge. The stage
+    // is `overflow:auto` already, so a tall pane makes the STAGE scroll and stays whole.
+    if (!st.height) f.style.height = Math.max(MIN_PANE_H, d.height) + 'px'; // declared height wins
+    // WIDTH is not capped and not guessed. It comes from the registry in the other repo, so
+    // the pane is the only thing that knows it; a deck-level `live.paneWidth` that is too
+    // small clips the design's right-hand edge with nothing to say so (permissions-mode-control
+    // is 420 while close-prompt-body is 380 — one number cannot serve a review showing both).
+    if (d.width > 0) f.dataset.reportedWidth = d.width;
+    // A range means a FLUID pane: the deck fits it to the row (fitPanes), rather than taking
+    // the width it happened to mount at. A fixed pane keeps what it measured.
+    if (d.minWidth > 0 && d.maxWidth >= d.minWidth) { f.dataset.minWidth = d.minWidth; f.dataset.maxWidth = d.maxWidth; }
+    else if (d.width > 0) f.style.width = d.width + 'px';
+    layoutLive();
+  });
+  window.addEventListener('resize', layout);
+  load().then(() => {
+    const q = new URLSearchParams(location.search);
+    // An answers file written before this deck had pages can carry a `cur` past the last page;
+    // clamping to LAST lands on the last page instead of rendering nothing.
+    cur = q.get('step') ? Math.max(0, Math.min(LAST, +q.get('step') - 1)) : Math.max(0, Math.min(LAST, state.cur || 0));
+    if (q.get('theme') && DECK.themes.includes(q.get('theme'))) theme = q.get('theme');
+    stepStart = Date.now(); render();
+    if (state.submitted) { lockSubmitted(); showFinished(); }   // an archived deck re-opened after its submit lands on the finish screen — its answers, read back — instead of a step full of dead buttons
+  });
+})();
+</script>
+</body></html>
