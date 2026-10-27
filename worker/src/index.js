@@ -1,7 +1,8 @@
 // The Open Source Everything server (api.opensourceeverything.org): sign-in, ratings, notes, replies, mod tools.
 // Every call and rule is listed in docs/server-rules.md; site/assets/fake-api.js is the same contract in the browser.
 // The page never decides rights: each note goes out with a `can` list worked out here (rules.js).
-import { RULES, LIMITS, ageDays, oldEnough, holdsFirstPost, isMod, can, clean, isLink } from './rules.js';
+import { RULES, LIMITS, ageDays, oldEnough, holdsFirstPost, isMod, can, clean, isLink, requestKind, parseRepo, proofFor, proofHas, cleanPitch, PROOF_FILE, BUILT, suggestionKind, suggestionName } from './rules.js';
+import { openSuggestions, suggestionsBy, closingNote, suggestionView, proofFile, ghJson } from './github.js';
 import { currentUser, login, callback, devLogin, logout } from './auth.js';
 
 const json = (data, status = 200, extra = {}) => new Response(JSON.stringify(data), { status, headers: { 'Content-Type': 'application/json', 'Cache-Control': 'no-store', ...extra } });
@@ -21,9 +22,11 @@ async function names(env) {
 }
 
 // Limits on how fast anyone can act (docs/server-rules.md → Security), per account and per network address.
-const LIMIT = { vote: [60, 60e3], post: [10, 3600e3], reply: [30, 3600e3], report: [20, 3600e3] };
+// pitch/proof: sending a pitch, and asking the server to look for a proof file (so it can't be used as a free web fetcher).
+const LIMIT = { vote: [60, 60e3], post: [10, 3600e3], reply: [30, 3600e3], report: [20, 3600e3], pitch: [10, 3600e3], proof: [20, 3600e3] };
 async function slowDown(env, req, user, what) {
-  const [max, win] = LIMIT[what]; const bucket = Math.floor(Date.now() / win);
+  // WHY roomier in local testing: the test accounts are reused run after run (a developer's login must equal the project's owner).
+  const [base, win] = LIMIT[what]; const max = env.DEV_LOGIN === '1' ? base * 100 : base; const bucket = Math.floor(Date.now() / win);
   // WHY no address limit in local testing: every test account shares one address there.
   const keys = [`u:${user.id}:${what}`]; if (env.DEV_LOGIN !== '1') keys.push(`ip:${req.headers.get('CF-Connecting-IP') ?? 'unknown'}:${what}`);
   for (const key of keys) {
@@ -60,6 +63,30 @@ async function oneNote(env, id, user) {
   need(n, 404, 'This note was removed, or it never existed.');
   return n;
 }
+
+
+// ── Requests and pitches: small helpers ──
+const appSlug = (name) => name.toLowerCase().normalize('NFKD').replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, '');
+// What a request key points at, or null if it isn't open for requests. Only gaps can be requested (a group nothing open
+// fully replaces, or a closed app all of whose groups are gaps), and a "waiting suggestion" must still be open on GitHub.
+async function requestInfo(env, N, key) {
+  const kind = requestKind(key); if (!kind) return null; const v = key.slice(kind.length + 1);
+  if (kind === 'group') { const g = N.groups[v]; return g?.gap ? { kind, name: g.n, href: `g/${v}/` } : null; }
+  if (kind === 'app') {
+    const gs = Object.values(N.groups).filter((g) => g.closed.includes(v));
+    return gs.length && gs.every((g) => g.gap) ? { kind, name: v, href: `alternatives-to/${appSlug(v)}/` } : null;
+  }
+  try {
+    const i = (await openSuggestions(env)).find((x) => `issue:${x.number}` === key && ['add-closed-app', 'new-group'].includes(suggestionKind(x)));
+    return i ? { kind, name: suggestionName(i), url: i.html_url, number: i.number, type: suggestionKind(i), waiting: true } : null;
+  } catch { return null; }
+}
+const pitchView = (x, owner, N, mine = false) => ({
+  id: x.id, project: x.project, projectName: N.projects[x.project] ?? x.project, repo: x.repo, proof: x.proof, verified: !!x.verified_at, status: x.status, reason: x.reason,
+  live: x.live ? JSON.parse(x.live) : null, pending: x.pending ? JSON.parse(x.pending) : null, updated: x.updated, by: owner,
+  // The one-line file the project must contain, shown only until it is proven.
+  ...(mine && !x.verified_at && x.proof === 'file' ? { proofFile: PROOF_FILE, proofText: x.token } : {}),
+});
 
 // ── The calls ──
 async function route(req, env, url, user) {
@@ -247,6 +274,132 @@ async function route(req, env, url, user) {
     if (a === 'approve') steps.push(DB.prepare('UPDATE users SET trusted = 1 WHERE id = ?').bind(target.author_id));
     await DB.batch(steps);
     return { ok: true };
+  }
+
+  // ── "I want this too": requests for a closed app or group, ranked by votes ──
+  if (p === '/requests' && M === 'GET') {
+    const N = await names(env); const q = Object.fromEntries(url.searchParams);
+    const rows = (await env.DB.prepare('SELECT key, COUNT(*) AS votes, MAX(user_id = ?) AS mine FROM request_votes GROUP BY key').bind(user?.id ?? 0).all()).results;
+    const by = new Map(rows.map((r) => [r.key, r]));
+    const item = async (key) => {
+      const info = await requestInfo(env, N, key); if (!info) return null;
+      return { key, ...info, votes: by.get(key)?.votes ?? 0, mine: !!by.get(key)?.mine };
+    };
+    if (q.keys) return { items: (await Promise.all(q.keys.split(',').slice(0, 20).map(item))).filter(Boolean), can: { vote: oldEnough(user) } };
+    // Everything voted for, plus every suggestion still waiting on GitHub (they count even with no votes yet).
+    const keys = new Set(rows.map((r) => r.key));
+    try { for (const i of await openSuggestions(env)) if (['add-closed-app', 'new-group'].includes(suggestionKind(i))) keys.add(`issue:${i.number}`); } catch { /* GitHub busy: still show the voted ones */ }
+    const items = (await Promise.all([...keys].map(item))).filter(Boolean)
+      .sort((a, b) => b.votes - a.votes || (b.number ?? 0) - (a.number ?? 0));
+    const limit = Math.min(Math.max(Number(q.limit) || 10, 1), 30);
+    return { items: items.slice(0, limit), total: items.length, can: { vote: oldEnough(user) } };
+  }
+  if (p === '/requests/vote' && M === 'POST') {
+    signedIn(); need(oldEnough(user), 403, TOO_NEW);
+    need(requestKind(body.key), 400, 'Not something that can be requested.');
+    need(await requestInfo(env, await names(env), body.key), 400, "That isn't open for requests.");
+    await slowDown(env, req, user, 'vote');
+    await (body.on ? env.DB.prepare('INSERT OR IGNORE INTO request_votes (key, user_id, created) VALUES (?, ?, ?)').bind(body.key, user.id, Date.now()) : env.DB.prepare('DELETE FROM request_votes WHERE key = ? AND user_id = ?').bind(body.key, user.id)).run();
+    return { ok: true };
+  }
+
+  // ── Your suggestions: the person's own suggestion issues on GitHub, with where each one stands ──
+  if (p === '/me/suggestions' && M === 'GET') {
+    need(user, 401, 'Sign in first.');
+    let issues; try { issues = await suggestionsBy(env, user.login); } catch { throw new Refuse(503, "Couldn't reach GitHub just now. Try again in a minute."); }
+    let looked = 0;
+    const items = [];
+    for (const i of issues.sort((a, b) => Date.parse(b.created_at) - Date.parse(a.created_at))) {
+      const v = suggestionView(i);
+      // WHY only the newest few: each closed one costs a GitHub call to read the live link or the reason.
+      if ((v.status === 'live' || v.status === 'turned-down') && looked < 8) { looked++; try { const n = await closingNote(env, i.number, env.SITE_ORIGIN); Object.assign(v, v.status === 'live' ? { liveUrl: n.live } : { reason: n.reason }); } catch { /* shown without it */ } }
+      items.push(v);
+    }
+    return { items };
+  }
+
+  // ── Tag my project (docs/server-rules.md → "Tag my project") ──
+  if (p === '/pitches/start' && M === 'POST') {
+    signedIn(); await slowDown(env, req, user, 'pitch');
+    const r = parseRepo(body.url); need(r, 400, 'Paste the link to its code page on GitHub, GitLab or Codeberg.');
+    const N = await names(env); const project = N.codes?.[r.repo];
+    // Not on the map yet: the page sends them to the "Add a project" form instead; there is nothing to prove yet.
+    if (!project) return { listed: false, repo: r.repo, name: r.name };
+    const proof = proofFor(user, r);
+    let row = await env.DB.prepare('SELECT * FROM pitches WHERE user_id = ? AND repo = ?').bind(user.id, r.repo).first();
+    if (!row) {
+      let verified = null;
+      if (proof === 'own-account') {
+        // The public API confirms the project is really under their account (not just a similar name).
+        let info; try { info = await ghJson(env, `/repos/${r.owner}/${r.name}`, 60e3); } catch (e) { throw new Refuse(e.github === 404 ? 404 : 503, e.github === 404 ? "GitHub doesn't have a project at that link." : "Couldn't reach GitHub just now. Try again in a minute."); }
+        need(String(info.owner?.login).toLowerCase() === user.login.toLowerCase(), 403, 'That project is not under your GitHub account.');
+        verified = Date.now();
+      }
+      const token = `ose-${[...crypto.getRandomValues(new Uint8Array(12))].map((b) => b.toString(16).padStart(2, '0')).join('')}`;
+      row = await env.DB.prepare('INSERT INTO pitches (user_id, repo, project, proof, token, verified_at, created, updated) VALUES (?, ?, ?, ?, ?, ?, ?, ?) RETURNING *').bind(user.id, r.repo, project, proof, token, verified, Date.now(), Date.now()).first();
+    }
+    return { listed: true, pitch: pitchView(row, user.login, N, true) };
+  }
+  if (p === '/pitches/mine' && M === 'GET') {
+    need(user, 401, 'Sign in first.'); const N = await names(env);
+    return { items: (await env.DB.prepare('SELECT * FROM pitches WHERE user_id = ? ORDER BY updated DESC').bind(user.id).all()).results.map((x) => pitchView(x, user.login, N, true)) };
+  }
+  // Approved pitches for project cards and pages. Public: only approved text, and only while ownership still stands.
+  if (p === '/pitches/live' && M === 'GET') {
+    const ids = (url.searchParams.get('projects') ?? '').split(',').filter(Boolean).slice(0, 60);
+    const out = {};
+    for (const id of ids) {
+      const row = await env.DB.prepare('SELECT p.*, u.login AS owner FROM pitches p JOIN users u ON u.id = p.user_id WHERE p.project = ? AND p.live IS NOT NULL AND p.verified_at IS NOT NULL ORDER BY p.updated DESC LIMIT 1').bind(id).first();
+      if (row) out[id] = { by: row.owner, repo: row.repo, ...JSON.parse(row.live), updated: row.updated };
+    }
+    return out;
+  }
+  const pid = (p.match(/^\/pitches\/(\d+)/) ?? [])[1];
+  if (pid) {
+    signedIn(); const N = await names(env);
+    const row = await env.DB.prepare('SELECT * FROM pitches WHERE id = ? AND user_id = ?').bind(Number(pid), user.id).first();
+    need(row, 404, "That isn't one of your projects.");
+    const r = parseRepo(row.repo);
+    if (p === `/pitches/${pid}/verify` && M === 'POST') {
+      await slowDown(env, req, user, 'proof');
+      if (!row.verified_at) {
+        let text; try { text = await proofFile(env, r, PROOF_FILE); } catch { throw new Refuse(503, "Couldn't reach that site just now. Try again in a minute."); }
+        need(proofHas(text, row.token), 400, `We didn't find ${PROOF_FILE} with the right text in that project yet. Add it to the project's main page (the top folder), then check again.`);
+        await env.DB.prepare('UPDATE pitches SET verified_at = ?, updated = ? WHERE id = ?').bind(Date.now(), Date.now(), row.id).run();
+      }
+      return pitchView(await env.DB.prepare('SELECT * FROM pitches WHERE id = ?').bind(row.id).first(), user.login, N, true);
+    }
+    if (p === `/pitches/${pid}` && M === 'PUT') {
+      need(row.verified_at, 403, 'Prove the project is yours first.');
+      const c = cleanPitch(body, Object.keys(N.groups)); need(!c.error, 400, c.error);
+      await slowDown(env, req, user, 'pitch');
+      // WHY back to waiting on every edit: nothing a developer writes goes public until a mod has read it.
+      await env.DB.prepare("UPDATE pitches SET pending = ?, status = 'pending', reason = NULL, updated = ? WHERE id = ?").bind(JSON.stringify(c.pitch), Date.now(), row.id).run();
+      return pitchView(await env.DB.prepare('SELECT * FROM pitches WHERE id = ?').bind(row.id).first(), user.login, N, true);
+    }
+    if (p === `/pitches/${pid}` && M === 'DELETE') { await env.DB.prepare('DELETE FROM pitches WHERE id = ?').bind(row.id).run(); return { ok: true }; }
+  }
+  if (p === '/mod/pitches' && M === 'GET') {
+    need(mod, 403, 'Mods only.'); const N = await names(env);
+    const rows = (await env.DB.prepare("SELECT p.*, u.login AS owner FROM pitches p JOIN users u ON u.id = p.user_id WHERE p.pending IS NOT NULL ORDER BY p.updated").all()).results;
+    return { items: rows.map((x) => ({ ...pitchView(x, x.owner, N), owner: x.owner })) };
+  }
+  const mpid = (p.match(/^\/mod\/pitches\/(\d+)$/) ?? [])[1];
+  if (mpid && M === 'POST') {
+    need(mod, 403, 'Mods only.');
+    const row = await env.DB.prepare('SELECT * FROM pitches WHERE id = ?').bind(Number(mpid)).first();
+    need(row?.pending, 404, 'Nothing waiting there.');
+    if (body.action === 'approve') await env.DB.prepare("UPDATE pitches SET live = pending, pending = NULL, status = 'live', reason = NULL, updated = ? WHERE id = ?").bind(Date.now(), row.id).run();
+    else if (body.action === 'reject') await env.DB.prepare("UPDATE pitches SET pending = NULL, status = CASE WHEN live IS NULL THEN 'turned-down' ELSE 'live' END, reason = ?, updated = ? WHERE id = ?").bind(clean(body.reason, LIMITS.reason) || null, Date.now(), row.id).run();
+    else need(false, 400, 'Not a valid action.');
+    return { ok: true };
+  }
+  if (p === '/mod/suggestions' && M === 'GET') {
+    need(mod, 403, 'Mods only.');
+    let issues; try { issues = await openSuggestions(env); } catch { throw new Refuse(503, "Couldn't reach GitHub just now. Try again in a minute."); }
+    const votes = new Map((await env.DB.prepare("SELECT key, COUNT(*) AS n FROM request_votes WHERE key LIKE 'issue:%' GROUP BY key").all()).results.map((r) => [r.key, r.n]));
+    // Oldest first: the one that has waited longest is at the top.
+    return { items: issues.sort((a, b) => a.number - b.number).map((i) => suggestionView(i, { votes: votes.get(`issue:${i.number}`) ?? 0, verdict: (i.labels ?? []).some((l) => (l.name ?? l) === 'needs-mod') ? 'needs-mod' : (i.labels ?? []).some((l) => (l.name ?? l) === 'robot-ok') ? 'ok' : 'unchecked' })) };
   }
   throw new Refuse(404, 'Not found.');
 }

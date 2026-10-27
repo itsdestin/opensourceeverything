@@ -1,6 +1,8 @@
 # The Open Source Everything server: voting, notes and boards at api.opensourceeverything.org.
 # Rules it enforces: docs/server-rules.md. Secrets (set with `wrangler secret put`, never in this file):
 #   GITHUB_CLIENT_ID, GITHUB_CLIENT_SECRET  — the "Sign in with GitHub" registration
+#   GITHUB_READ_TOKEN (optional) — a token with no permissions, only to lift GitHub's 60-an-hour limit for reading public
+#   suggestion issues. See docs/tokens-and-secrets.md.
 name = "opensourceeverything-api"
 main = "src/index.js"
 compatibility_date = "2026-10-01"
@@ -28,6 +30,11 @@ SITE_ORIGIN = "http://localhost:4322"
 API_ORIGIN = "http://localhost:8787"
 MODS = "itsdestin,mod-sample"
 DEV_LOGIN = "1"
+# Stand-ins for GitHub and project websites so tests never touch the real ones (test/contrib.test.mjs starts them).
+GITHUB_API = "http://127.0.0.1:8799/gh"
+PROOF_RAW = "http://127.0.0.1:8799/raw"
+SUGGESTIONS_REPO = "itsdestin/opensourceeverything"
+GH_CACHE_SECONDS = "0"
 [[env.dev.d1_databases]]
 binding = "DB"
 database_name = "opensourceeverything-dev"
