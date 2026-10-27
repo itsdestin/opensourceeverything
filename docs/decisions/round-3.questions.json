@@ -1,0 +1,129 @@
+{
+  "title": "Discussion, checklists, AI labels: what to build next",
+  "key": "ose-round-3",
+  "out": "round-3.questions.html",
+  "themes": ["light", "midnight"],
+  "steps": [
+    {
+      "id": "P-1",
+      "page": "What happens to the discussion boards",
+      "intro": "With a feature checklist on every group, 12 of the 13 starting notes turn out to be checklist items. Free text is still uniquely good for switching stories, tips for moving your stuff over, news ('this changed its license'), and complaints that aren't features."
+    },
+    {
+      "id": "D-boards",
+      "words": true,
+      "surface": "What's missing boards",
+      "path": "Every group page, and the Boards tab",
+      "headline": "What should replace the free-text 'What's missing' boards?",
+      "today": "Each group has a board where signed-in people post notes and vote 'Me too'. It needs a GitHub account and has nothing in it yet but the editors' notes.",
+      "problem": "Most posts would repeat a checklist item; 123 near-empty boards make the site look abandoned; it's a second place for two mods to watch besides Reddit.",
+      "proposal": "Five ways to handle it, from most structured to most open.",
+      "options": [
+        { "id": "e", "label": "Comments only with an action", "summary": "No standalone boards. A typed comment appears only attached to something you do: a thumbs-down ('what stopped you?'), 'this checklist answer is wrong', or 'suggest a checklist item'.", "pros": ["Every comment has a clear purpose and place.", "Nothing looks empty; almost nothing to moderate.", "Short comments still stay on the site."], "cons": ["No place on the site just to ask a question or chat."], "recommended": true },
+        { "id": "a", "label": "Notes become proposals", "summary": "A note proposes a new checklist item; once a mod adds it, its votes carry over. A small discussion area stays.", "pros": ["Keeps a discussion area.", "No duplicate complaints."], "cons": ["Still a board per group to moderate and fill."] },
+        { "id": "c", "label": "Conversation on Reddit", "summary": "Each group page links to its r/TrueOpenSource thread with a comment count; the bot starts a thread the first time someone asks.", "pros": ["Grows the subreddit; Reddit does moderation tools and accounts.", "Works with E: structured input on the site, talk on Reddit."], "cons": ["People who just want to ask something leave the site; some won't bother."] },
+        { "id": "b", "label": "Switching stories", "summary": "Replace boards with short 'I switched from X to Y' reports, mostly tick boxes (what broke, what was easy).", "pros": ["The most useful free text for people deciding."], "cons": ["Needs a sign-in most switchers don't have (GitHub).", "Empty for a long time."] },
+        { "id": "keep", "label": "Keep the boards", "pros": ["Nothing to rebuild."], "cons": ["All the problems above."] }
+      ]
+    },
+    {
+      "id": "D-reddit",
+      "words": true,
+      "surface": "Group pages",
+      "path": "Under each group's list",
+      "headline": "Should every group page link to a discussion thread on r/TrueOpenSource?",
+      "today": "Group pages don't link to the subreddit.",
+      "problem": "Open conversation has to live somewhere; Reddit already has accounts, moderation and the community.",
+      "proposal": "A 'Talk about this on r/TrueOpenSource' button per group. The mod bot creates the thread the first time someone clicks it, so there are no empty threads. Showing top Reddit comments on the site waits until Reddit's rules are checked.",
+      "yes": "Yes",
+      "no": "No"
+    },
+    {
+      "id": "D-signin",
+      "words": true,
+      "surface": "Sign-in",
+      "path": "The Sign in button",
+      "headline": "Should people be able to sign in with Reddit as well as GitHub?",
+      "today": "Voting and posting need a GitHub account; most switchers don't have one.",
+      "problem": "The people with the most useful experience (everyday switchers) are the ones who can't take part.",
+      "proposal": "Add 'Sign in with Reddit' beside GitHub. Same rules: accounts younger than 14 days can't vote.",
+      "options": [
+        { "id": "reddit", "label": "Add Reddit sign-in", "pros": ["Far more people can vote, confirm checklist answers and request apps.", "Fits the subreddit partnership."], "cons": ["About half a day; a second account type to handle.", "Reddit accounts are easier to fake, so the age rule matters more."], "recommended": true },
+        { "id": "github", "label": "GitHub only", "pros": ["No change."], "cons": ["Most visitors stay read-only."] }
+      ]
+    },
+    {
+      "id": "P-2",
+      "page": "Feature checklists",
+      "intro": "A draft exists for all 123 groups (4 to 8 items each, 51 shared items like 'Phone app'). Documents: Live co-editing · Opens Word files faithfully · Comments and suggested edits · Works offline · No server needed · Phone app."
+    },
+    {
+      "id": "F-go",
+      "words": true,
+      "surface": "Group pages",
+      "path": "Every group",
+      "headline": "Fill in the checklists, testing on two groups first?",
+      "today": "The checklists are drafted but no project has answers yet (about 3,000 answers in all).",
+      "problem": "Filling all at once risks many wrong answers before we know the error rate.",
+      "proposal": "Fill Documents and Password managers first (about 60 answers), each 'yes' backed by a quoted sentence from the project's own pages, blanks where unsure. I show you those two groups; if they look right, fill the rest. Your 13 starting notes become checklist answers instead of posts.",
+      "yes": "Yes, test two first",
+      "no": "Fill all at once"
+    },
+    {
+      "id": "F-guides",
+      "words": true,
+      "surface": "Closed-app pages",
+      "path": "Alternatives to Google Docs (every closed app)",
+      "headline": "Add a short 'switch guide' to every closed-app page?",
+      "today": "A closed-app page lists alternatives but says nothing about moving over.",
+      "problem": "The biggest group of visitors is people leaving an app; what they most need is how to get their files out and what they'll lose.",
+      "proposal": "Three short parts per closed app: how to export your stuff from it, what won't come over, and which alternative opens those files (from the checklist). Drafted the same way as the checklists, about 300 apps.",
+      "yes": "Yes",
+      "no": "Not now"
+    },
+    {
+      "id": "P-3",
+      "page": "AI-contribution labels",
+      "intro": "All 398 'big' projects were read. 119 have a written rule: Non-developers welcome 44 · Traditional developers only 54 · Not accepted 20 · See policy 1. The other 279 show the empty state. Seven big projects (OpenCut, PocketBase, Documenso…) have stopped taking outside code entirely, several blaming floods of AI pull requests."
+    },
+    {
+      "id": "A-ship",
+      "words": true,
+      "surface": "Project pages",
+      "path": "The 'AI contributions' line and its pop-up",
+      "headline": "Use these 119 labels as they are, with the 17 uncertain ones checked by a mod first?",
+      "today": "No project shows its AI-contribution stance.",
+      "problem": "A wrong label either scares off welcome helpers or sends AI code to a project that refuses it.",
+      "proposal": "64 are high confidence, 38 medium, 17 low. Ship the high and medium ones; hold the 17 low ones until a mod reads them (each has its quote and reason listed). Developers who claim their page can change theirs.",
+      "options": [
+        { "id": "hold-low", "label": "Ship all but the 17", "pros": ["102 projects labelled right away.", "The shaky ones wait for human eyes."], "cons": ["About 15 minutes of mod reading."], "recommended": true },
+        { "id": "all", "label": "Ship all 119", "pros": ["No mod time."], "cons": ["A few will be wrong until someone corrects them."] },
+        { "id": "high", "label": "Only the 64 sure ones", "pros": ["Very few mistakes."], "cons": ["Half as many labels."] }
+      ]
+    },
+    {
+      "id": "A-closed",
+      "words": true,
+      "surface": "Project pages and cards",
+      "path": "Projects not taking outside code",
+      "headline": "Should projects that stopped accepting outside code say so on their card?",
+      "today": "OpenCut, PocketBase, Documenso, Activepieces, Windmill, Codex CLI and Yank Note look like any other project.",
+      "problem": "A builder could plan to contribute to a project that won't accept it.",
+      "proposal": "A quiet 'Not taking outside code' line in the card's details fold and on the project page, with their own words. It doesn't affect ranking: the software still works for users.",
+      "yes": "Yes",
+      "no": "No"
+    },
+    {
+      "id": "A-youcoded",
+      "words": true,
+      "surface": "YouCoded's listing",
+      "path": "YouCoded's project page",
+      "headline": "YouCoded has no written AI-contribution policy. Want one?",
+      "today": "YouCoded's own label would show the empty state.",
+      "problem": "A site that tracks this, run by YouCoded's maker, showing 'not stated' for YouCoded looks odd.",
+      "proposal": "I'd draft a short AI_POLICY.md for the YouCoded repo (likely 'Non-developers welcome', since it's built through conversation) for you to approve; nothing changes until you do.",
+      "yes": "Draft one",
+      "no": "Leave it"
+    }
+  ]
+}
