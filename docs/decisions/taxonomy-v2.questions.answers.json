@@ -1,0 +1,60 @@
+{
+ "deck": "ose-taxonomy-v2",
+ "started": "2026-10-27T19:09:56.882Z",
+ "submitted": "2026-10-27T20:08:38Z",
+ "cur": 0,
+ "answers": {
+  "T-structure": {
+   "note": "seems like there might be some overlap. probably fine if a project can appear in a few different categories? idk",
+   "t": 1793131717526,
+   "v": "other",
+   "seconds": 440,
+   "theme": "light"
+  },
+  "T-thin": {
+   "v": "pick",
+   "pick": "hide-thin",
+   "t": 1793131717526,
+   "seconds": 440,
+   "theme": "light"
+  },
+  "T-top": {
+   "v": "pick",
+   "pick": "areas",
+   "t": 1793131717526,
+   "seconds": 440,
+   "theme": "light"
+  },
+  "T-home": {
+   "v": "pick",
+   "pick": "everyday-first",
+   "t": 1793131717526,
+   "seconds": 440,
+   "theme": "light"
+  },
+  "T-noclosed": {
+   "v": "yes",
+   "t": 1793131717526,
+   "seconds": 440,
+   "theme": "light"
+  },
+  "T-hardware": {
+   "v": "no",
+   "t": 1793131717526,
+   "seconds": 440,
+   "theme": "light"
+  },
+  "T-agents": {
+   "v": "yes",
+   "t": 1793131717526,
+   "seconds": 440,
+   "theme": "light"
+  },
+  "T-next": {
+   "v": "yes",
+   "t": 1793131717526,
+   "seconds": 440,
+   "theme": "light"
+  }
+ }
+}
