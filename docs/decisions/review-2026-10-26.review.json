@@ -1,0 +1,413 @@
+{
+  "title": "Open Source Everything: everything built today, before and after",
+  "key": "ose-review-2026-10-26-built",
+  "out": "review-2026-10-26.review.html",
+  "images": "images/review-2026-10-26.review",
+  "runs": {
+    "before": "runs/before",
+    "after": "runs/after"
+  },
+  "labels": {
+    "before": "Live site today",
+    "after": "Built today (not live)"
+  },
+  "themes": [
+    "light"
+  ],
+  "theme": "fixed",
+  "crops": {
+    "documents": [
+      "ose",
+      "documents",
+      "1440x900+0+0"
+    ],
+    "documents-phone": [
+      "ose",
+      "documents-phone",
+      "390x844+0+0"
+    ],
+    "forgejo": [
+      "ose",
+      "forgejo",
+      "1440x900+0+0"
+    ],
+    "forgejo-lower": [
+      "ose",
+      "forgejo-lower",
+      "1440x900+0+0"
+    ],
+    "browsers": [
+      "ose",
+      "browsers",
+      "1440x900+0+0"
+    ],
+    "openoffice": [
+      "ose",
+      "openoffice",
+      "1440x900+0+0"
+    ],
+    "booking": [
+      "ose",
+      "booking",
+      "1440x900+0+0"
+    ],
+    "home": [
+      "ose",
+      "home",
+      "1440x900+0+0"
+    ],
+    "netflix": [
+      "ose",
+      "netflix",
+      "1440x900+0+0"
+    ],
+    "see-also": [
+      "ose",
+      "see-also",
+      "1440x900+0+0"
+    ],
+    "tag": [
+      "ose",
+      "tag",
+      "1440x900+0+0"
+    ],
+    "mostreq": [
+      "ose",
+      "mostreq",
+      "1440x900+0+0"
+    ]
+  },
+  "steps": [
+    {
+      "id": "S-documents",
+      "surface": "Group pages",
+      "path": "Documents (every group page works the same way)",
+      "crop": "documents",
+      "headline": "Group pages put the best pick first, and every card says how hard it is to set up and why it's there.",
+      "changed": "LibreOffice now comes first instead of two apps that need a server. Each card has an Easy setup or Advanced setup label, a 'Why it's here' line, and a 'Help me choose' box on the right. Labels no longer get cut off.",
+      "notice": "The 'Preview' strip, the thumbs-up numbers and the 'Most thumbs-up' row use pretend votes in this preview; the real site starts with none.",
+      "risk": "Apache OpenOffice is third: it installs easily and still gets fixes, but rarely new features, and its card now says so.",
+      "alsoChanges": [
+        "Every group page",
+        "Every 'Alternatives to…' page"
+      ],
+      "highlight": {
+        "box": [
+          2,
+          30,
+          72,
+          70
+        ]
+      }
+    },
+    {
+      "id": "S-phone",
+      "surface": "Group pages on a phone",
+      "path": "Documents, on a phone",
+      "crop": "documents-phone",
+      "headline": "On phones the same labels wrap onto a second line instead of being cut off.",
+      "changed": "Easy setup, devices and license all show in full on a narrow screen.",
+      "notice": "Cards are a little taller on phones.",
+      "risk": "Slightly more scrolling on long groups.",
+      "highlight": {
+        "box": [
+          0,
+          25,
+          100,
+          75
+        ]
+      }
+    },
+    {
+      "id": "S-project",
+      "surface": "Project pages",
+      "path": "Forgejo's page",
+      "crop": "forgejo",
+      "headline": "Project pages show where a project came from, and drop the 'checked by AI / couldn't confirm' notes.",
+      "changed": "A line under the name says 'Split from Gitea (2022)' with a link. The AI-check notes and 'checked by AI' line are gone for visitors (mods still have them). The Facts box gains a Setup row.",
+      "notice": "There's a new 'Is this your project? Tag your project' row near the top.",
+      "risk": "Visitors no longer see what the AI couldn't confirm; if you'd like one honest site-wide line about AI help instead, that's a question at the end.",
+      "highlight": {
+        "box": [
+          2,
+          8,
+          66,
+          40
+        ]
+      }
+    },
+    {
+      "id": "S-family",
+      "surface": "Project pages",
+      "path": "Forgejo's page, further down",
+      "crop": "forgejo-lower",
+      "headline": "Further down, a Family section shows how related projects connect, with sources, plus 'How to help' links.",
+      "changed": "Gitea, Gogs and Forgejo appear as a small tree, each with Active / Inactive, one neutral sentence and a source link. 'How to help' links the project's contributing guide and beginner tasks.",
+      "notice": "42 projects have family links so far, all sourced; a mod should skim the wording on sensitive pairs (Forgejo/Gitea, Valkey/Redis).",
+      "risk": "Fork histories can be argued over; each line sticks to dates and sources.",
+      "highlight": {
+        "box": [
+          0,
+          40,
+          75,
+          60
+        ]
+      }
+    },
+    {
+      "id": "S-browsers",
+      "surface": "Group pages",
+      "path": "Web browsers",
+      "crop": "browsers",
+      "headline": "Related browsers are no longer unrelated rivals: each card says what it's based on.",
+      "changed": "Cards say 'Copy of Firefox that keeps up with it' or 'Built on Chromium', and Firefox shows who forked it. Chromium, Floorp and Mullvad Browser were added.",
+      "notice": "Firefox comes first, then Zen, Brave and LibreWolf.",
+      "risk": "Nothing is grouped together or hidden, so the list is a bit longer.",
+      "highlight": {
+        "box": [
+          2,
+          30,
+          72,
+          70
+        ]
+      }
+    },
+    {
+      "id": "S-oldnames",
+      "surface": "Search",
+      "path": "Searching 'openoffice'",
+      "crop": "openoffice",
+      "headline": "Searching an old or related name now finds the live project and says why.",
+      "changed": "Searching 'openoffice' shows Apache OpenOffice, then LibreOffice with 'Looking for OpenOffice? LibreOffice split from it'. The same works for kbin, Perplexica, Riot, XBMC, VS Code and Simple Mobile Tools.",
+      "notice": "Before, 'openoffice' found nothing.",
+      "risk": "None worth noting.",
+      "highlight": {
+        "box": [
+          30,
+          18,
+          40,
+          50
+        ]
+      }
+    },
+    {
+      "id": "S-booking",
+      "surface": "Group pages",
+      "path": "The old Scheduling group",
+      "crop": "booking",
+      "headline": "Scheduling is split into Calendars and Booking pages, so Cal.com now fully replaces Calendly.",
+      "changed": "Calendars (Google Calendar, Outlook) and Booking pages & meeting polls (Calendly, Doodle) are separate jobs. Databases was split into six clear groups the same way. Old addresses show a 'this group was split, pick one' page.",
+      "notice": "The gaps page stops saying almost nothing open replaces Calendly.",
+      "risk": "Any votes on the old Scheduling group stay with the old name; today it has none, only the starting notes.",
+      "highlight": {
+        "box": [
+          0,
+          0,
+          75,
+          60
+        ]
+      }
+    },
+    {
+      "id": "S-netflix",
+      "surface": "Closed-app pages",
+      "path": "Alternatives to Netflix",
+      "crop": "netflix",
+      "headline": "Big missing apps now have pages: Netflix, Facebook, Pinterest, Grammarly, NordVPN, antivirus, AutoCAD, EndNote, Steam, Microsoft Office.",
+      "changed": "Each has license-checked alternatives; Snapchat is an honest gap. OpenBB now covers Bloomberg. Wrong entries (OpenVPN, Airflow listed as closed; duplicate names) are fixed.",
+      "notice": "Before, searching 'netflix' found nothing useful.",
+      "risk": "The new projects have no screenshots yet ('No screenshot yet').",
+      "highlight": {
+        "box": [
+          0,
+          0,
+          70,
+          100
+        ]
+      }
+    },
+    {
+      "id": "S-home",
+      "surface": "Home page",
+      "path": "The home page",
+      "crop": "home",
+      "headline": "The home page shows one consistent count everywhere: 467 projects, 305 closed apps, 123 jobs.",
+      "changed": "The home page, About page and search-engine blurb no longer give three different numbers.",
+      "notice": "Little else changes on the home page itself.",
+      "risk": "None worth noting.",
+      "highlight": {
+        "box": [
+          0,
+          40,
+          50,
+          12
+        ]
+      }
+    },
+    {
+      "id": "S-seealso",
+      "surface": "Group pages",
+      "path": "Photo editing, near the bottom",
+      "crop": "see-also",
+      "headline": "Each group ends with 'See also': 3 to 5 related groups, each with the reason it's related.",
+      "changed": "Photo editing links Digital painting, Illustration & vector and Video editing.",
+      "notice": "Helps people who landed on the nearly-right group.",
+      "risk": "None worth noting.",
+      "highlight": {
+        "box": [
+          0,
+          55,
+          70,
+          30
+        ]
+      }
+    },
+    {
+      "id": "S-mostreq",
+      "surface": "Gaps page",
+      "path": "Gaps → Most requested",
+      "crop": "mostreq",
+      "runs": [
+        "after"
+      ],
+      "new": true,
+      "headline": "'Most requested' ranks what people want built, with an 'I want this too' button.",
+      "changed": "Signed-in people add their vote to a gap or a waiting suggestion; the list also shows on the home page. The names and counts here are pretend preview data.",
+      "notice": "Builders see what's wanted most.",
+      "risk": "Empty until people start voting.",
+      "highlight": {
+        "box": [
+          0,
+          0,
+          100,
+          100
+        ]
+      }
+    },
+    {
+      "id": "S-tag",
+      "surface": "Tag my project",
+      "path": "Project page → 'Tag your project'",
+      "crop": "tag",
+      "runs": [
+        "after"
+      ],
+      "new": true,
+      "headline": "Developers can tag their own project and write a pitch that shows as 'From the Developer'.",
+      "changed": "Sign in with GitHub; if the project is under your account that proves it's yours, otherwise you add a tiny file. Then pick groups, answer 'What does yours do differently?', write the pitch. A mod approves it.",
+      "notice": "This is the first step; the next screens are the proof, the form and 'sent for review'.",
+      "risk": "Pitches need a mod to read them.",
+      "highlight": {
+        "box": [
+          0,
+          0,
+          100,
+          40
+        ]
+      }
+    },
+    {
+      "id": "Q-aisearch",
+      "words": true,
+      "surface": "Search",
+      "path": "The search box",
+      "headline": "Should the AI meaning search be switched on?",
+      "today": "Search matches words, typos and phrases. On 60 fresh everyday searches written blind, it gets the right answer first 62% of the time.",
+      "problem": "The AI version only lifts that by about 3 to 5 points, and each vague search would then be sent to Cloudflare's AI service.",
+      "proposal": "It's built and tested but switched off.",
+      "options": [
+        {
+          "id": "off",
+          "label": "Leave it off",
+          "pros": [
+            "Nothing leaves the visitor's device.",
+            "No extra setup on the server."
+          ],
+          "cons": [
+            "Vague searches stay hit-and-miss."
+          ],
+          "recommended": true
+        },
+        {
+          "id": "on",
+          "label": "Switch it on",
+          "pros": [
+            "A few more plain-language searches land right."
+          ],
+          "cons": [
+            "Search text goes to Cloudflare on vague searches; one line on the privacy page.",
+            "Needs a server update."
+          ]
+        }
+      ]
+    },
+    {
+      "id": "Q-seed",
+      "words": true,
+      "surface": "What's missing boards",
+      "path": "Every group page",
+      "headline": "Should I replace the old starting notes with the 13 new ones under your name?",
+      "today": "Every group shows the editors' short notes as posts with zero votes.",
+      "problem": "They look like fake community posts.",
+      "proposal": "13 clear, popular requests posted as you, such as 'Live co-editing in LibreOffice' and 'Banking apps that work without Google'. Old notes with zero votes and no replies are removed (all of them today). This changes the live database, so it waits for your yes.",
+      "yes": "Yes, replace them",
+      "no": "No, not yet"
+    },
+    {
+      "id": "Q-ailine",
+      "words": true,
+      "surface": "About page and footer",
+      "path": "Every page's footer",
+      "headline": "With the 'checked by AI' notes gone, should the site say once that listings were drafted with AI help?",
+      "today": "Nothing tells visitors AI helped write the listings now.",
+      "problem": "The launch post said the site was built with an LLM; hiding it entirely could look evasive.",
+      "proposal": "Two ways to handle it.",
+      "options": [
+        {
+          "id": "about",
+          "label": "One line on About",
+          "pros": [
+            "Honest without casting doubt on each listing."
+          ],
+          "cons": [
+            "Few people read the About page."
+          ],
+          "recommended": true
+        },
+        {
+          "id": "none",
+          "label": "Say nothing",
+          "pros": [
+            "Cleanest."
+          ],
+          "cons": [
+            "Could look like hiding it."
+          ]
+        }
+      ]
+    },
+    {
+      "id": "Q-stance",
+      "words": true,
+      "surface": "Project pages",
+      "path": "Under 'How to help'",
+      "headline": "Add one plain line about a project's AI-contribution rule, only when the project has written one?",
+      "today": "Nothing says whether a project accepts AI-assisted help.",
+      "problem": "Builders with AI tools can't tell which projects welcome them.",
+      "proposal": "A single line: 'AI-assisted contributions: welcome', '…welcome if you say you used AI', or '…not accepted'. Tapping it shows the project's own sentence and a link. Nothing at all for projects without a rule.",
+      "yes": "Build it",
+      "no": "Not now"
+    },
+    {
+      "id": "Q-defaults",
+      "words": true,
+      "surface": "Suggestions and pitches",
+      "path": "Behind the scenes",
+      "headline": "I'll keep these four defaults for contributions unless you object.",
+      "changed": "Developer pitches load as the page opens (instant after approval, but Google can't read them). A pitch stays up if the proof file is later removed. Mods approve on GitHub's page rather than a one-click button. Suggestions with no group get the robot's best guess.",
+      "notice": "All four can be changed later without affecting anyone's data.",
+      "yes": "Fine",
+      "no": "Let's talk"
+    }
+  ]
+}
