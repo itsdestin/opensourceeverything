@@ -136,6 +136,51 @@ if (existsSync(fixFile)) {
   for (const id of [...projects.keys()]) if (!listed.has(id)) projects.delete(id);
 }
 
+// ── The 194 new groups from the approved structure (prefill/taxonomy.json) ──
+// WHY created only now, after the old list import and its Opus corrections: otherwise a list project the correction pass had
+// removed (Matano) slipped into a new group by matching one of its closed apps. New groups get only the checked candidates below.
+// WHY waitForProject (Destin picked "hide the 20 thinnest"): the group exists so a project can be tagged into it later, but the
+// site hides it until it has one. Their categories are applied with the rest of the structure just before writing.
+const taxonomyFile = join(HERE, 'taxonomy.json');
+const taxonomy = existsSync(taxonomyFile) ? read(taxonomyFile) : null;
+for (const g of taxonomy?.newGroups ?? []) if (!groups.has(g.id)) {
+  groups.set(g.id, { id: g.id, name: g.name, category: g.category, job: g.job, closed: [...g.closed], source: 'taxonomy', ...(g.waitForProject ? { waitForProject: true } : {}), alternatives: [] });
+}
+
+// ── Projects for the new groups (prefill/new-group-facts.mjs, then prefill/new-group-review.mjs) ──
+// WHY only open licenses: the code site's license must be on the mod bot's open-source list, or the AI must have read an
+// open (or open-core) license in the project's own files. Anything else stays off the map ("only real open source").
+// WHY a project can join several groups (Destin, taxonomy-v2: "categories overlap"): every proposed group the review says
+// it fits ("full" or "partial") gets it, including projects the map already had.
+const newFacts = existsSync(join(OUT, 'new-group-facts.json')) ? read(join(OUT, 'new-group-facts.json')) : [];
+const newReview = new Map((existsSync(join(OUT, 'new-group-review.json')) ? read(join(OUT, 'new-group-review.json')) : []).filter((r) => r.answer).map((r) => [r.name, r.answer]));
+const newNotes = { added: 0, listings: 0, notOpen: 0, noFit: 0 };
+for (const e of newFacts) {
+  const a = newReview.get(e.name); if (!a) continue;
+  const fits = a.groups.filter((x) => x.fit !== 'no' && e.groups.includes(x.group) && groups.has(x.group));
+  if (!fits.length) { newNotes.noFit++; continue; }
+  let id = e.existing && projects.has(e.existing) ? e.existing : null;
+  if (!id) {
+    const hostOk = licenseVerdict(e.facts?.license ?? undefined) === 'open';
+    const aiOk = ['open', 'open_core'].includes(a.license.verdict) && (hostOk || (a.license.spdx && licenseVerdict(a.license.spdx) === 'open'));
+    if (!hostOk && !aiOk) { newNotes.notOpen++; continue; }
+    const code = e.code?.replace(/^https?:\/\//, '') ?? null;
+    const same = [...projects.values()].find((x) => (code && x.code?.replace(/^https?:\/\//, '').toLowerCase() === code.toLowerCase()) || key(x.name) === key(e.name));
+    id = same?.id ?? addProject({
+      id: slug(e.name), name: e.name, summary: a.summary, kind: a.kind, code, website: e.website ?? null, download: null,
+      license: hostOk ? e.facts.license : a.license.spdx, licenseClass: hostOk ? 'open' : a.license.verdict,
+      // WHY: a license the code site reports is checked; one only the AI read from the files waits for a mod.
+      licenseNeedsCheck: !hostOk, stars: e.facts?.stars ?? null, archived: false, inactive: !!e.facts?.quietForAYear,
+      unconfirmed: a.unconfirmed, source: 'taxonomy-v2', verified: false,
+    });
+    if (!same) newNotes.added++;
+  }
+  for (const x of fits) {
+    const g = groups.get(x.group);
+    if (!g.alternatives.some((y) => y.project === id)) { g.alternatives.push({ project: id, fit: x.fit, note: x.fit === 'partial' ? x.note : null }); newNotes.listings++; }
+  }
+}
+
 // ── Hand-added family projects (prefill/family-projects.json) ──
 // WHY (forks stream, review Oct 26 section 5): well-known relatives were missing (Apache OpenOffice, VSCodium, Valkey,
 // OpenTofu, Floorp...), so a fork and its original could not be shown side by side. Each is added with a license read
@@ -365,7 +410,6 @@ for (const id of [...projects.keys()]) if (!listed.has(id)) projects.delete(id);
 // WHY last, just before writing: groups arrive from several steps above (starter, lists, data-fixes, suggestions), some
 // still naming the old 11 categories. Applying the structure here re-homes all of them in one place: 27 categories inside
 // 6 areas, 41 current groups moved (same id, same address), 16 jobs widened, and 194 new groups added.
-const taxonomy = optional(join(HERE, 'taxonomy.json'));
 const areas = taxonomy?.areas ?? [];
 if (taxonomy) {
   categories.length = 0;
@@ -373,11 +417,6 @@ if (taxonomy) {
   for (const [gid, cat] of Object.entries(taxonomy.moves)) if (groups.has(gid)) groups.get(gid).category = cat;
   // WHY whole sentences in the file: a widened job replaces the old one outright, so the page reads as one plain line.
   for (const [gid, job] of Object.entries(taxonomy.widened)) if (groups.has(gid)) groups.get(gid).job = job;
-  for (const g of taxonomy.newGroups) if (!groups.has(g.id)) {
-    // WHY waitForProject (Destin picked "hide the 20 thinnest"): the group exists in the data so a project can be tagged into it,
-    // but the site hides it until it has one. Candidates are not listed here: they wait for prefill/new-groups-checked.json.
-    groups.set(g.id, { id: g.id, name: g.name, category: g.category, job: g.job, closed: [...g.closed], source: 'taxonomy', ...(g.waitForProject ? { waitForProject: true } : {}), alternatives: [] });
-  }
 }
 
 // ── Write ──
@@ -412,6 +451,7 @@ const msg = `
 - Groups with no alternative yet (gaps): ${empty.join(', ') || 'none'}.
 - By category: ${perCat}.
 - Families: ${lineageNotes.kept} lineage entries read from data/lineage.json${lineageNotes.skipped.length ? `; skipped: ${lineageNotes.skipped.join(', ')}` : ''}. Hand-added family projects: ${familyAdded.length}. Facts from code sites applied to ${hostNotes.applied} projects (${hostNotes.licenseFilled} licenses filled in).
+- New groups: ${newNotes.added} projects added, ${newNotes.listings} listings; left out: ${newNotes.notOpen} without an open license, ${newNotes.noFit} that fit none of their proposed groups. Groups still waiting for a project: ${groupList.filter((g) => g.source === 'taxonomy' && !g.alternatives.length).length}.
 `;
 writeFileSync(join(OUT, 'unplaced.json'), JSON.stringify(unplaced, null, 1));
 appendFileSync(join(OUT, 'summary.md'), msg);

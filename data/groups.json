@@ -584,6 +584,107 @@
    ]
   },
   {
+   "id": "focus-breaks",
+   "name": "Focus timers and distraction blockers",
+   "category": "office",
+   "job": "Pomodoro timers, break reminders and blocking distracting sites",
+   "closed": [
+    "Forest",
+    "Freedom",
+    "Cold Turkey",
+    "Time Out"
+   ],
+   "source": "taxonomy",
+   "alternatives": []
+  },
+  {
+   "id": "paperwork",
+   "name": "Scanning and filing paperwork",
+   "category": "office",
+   "job": "Scanning paper with a phone and keeping documents searchable",
+   "closed": [
+    "CamScanner",
+    "Adobe Scan",
+    "Microsoft Lens"
+   ],
+   "source": "taxonomy",
+   "alternatives": []
+  },
+  {
+   "id": "diagrams",
+   "name": "Diagrams and whiteboards",
+   "category": "office",
+   "job": "Drawing flowcharts, diagrams and sketches on a whiteboard",
+   "closed": [
+    "Lucidchart",
+    "Microsoft Visio",
+    "Miro"
+   ],
+   "source": "taxonomy",
+   "alternatives": []
+  },
+  {
+   "id": "habits",
+   "name": "Habit trackers",
+   "category": "office",
+   "job": "Building habits and tracking streaks",
+   "closed": [
+    "Streaks",
+    "Habitify"
+   ],
+   "source": "taxonomy",
+   "alternatives": []
+  },
+  {
+   "id": "writing",
+   "name": "Writing books and long stories",
+   "category": "office",
+   "job": "Planning and writing novels, scripts and e-books",
+   "closed": [
+    "Scrivener",
+    "Ulysses",
+    "Vellum",
+    "World Anvil"
+   ],
+   "source": "taxonomy",
+   "alternatives": []
+  },
+  {
+   "id": "markdown-editors",
+   "name": "Markdown editors",
+   "category": "office",
+   "job": "Writing plain-text documents in Markdown",
+   "closed": [
+    "Typora",
+    "iA Writer"
+   ],
+   "source": "taxonomy",
+   "alternatives": []
+  },
+  {
+   "id": "academic-writing",
+   "name": "Writing scientific papers",
+   "category": "office",
+   "job": "Writing papers and theses with LaTeX or Typst",
+   "closed": [
+    "Overleaf (paid plans)"
+   ],
+   "source": "taxonomy",
+   "alternatives": []
+  },
+  {
+   "id": "bookmarks",
+   "name": "Bookmarks and saved links",
+   "category": "office",
+   "job": "Saving and organising links and web pages to find later",
+   "closed": [
+    "Raindrop.io",
+    "Pocket (closed down)"
+   ],
+   "source": "taxonomy",
+   "alternatives": []
+  },
+  {
    "id": "calendars",
    "name": "Calendar",
    "category": "office",
@@ -689,107 +790,6 @@
      "note": "Built around BibTeX (LaTeX); fewer Word helpers"
     }
    ]
-  },
-  {
-   "id": "focus-breaks",
-   "name": "Focus timers and distraction blockers",
-   "category": "office",
-   "job": "Pomodoro timers, break reminders and blocking distracting sites",
-   "closed": [
-    "Forest",
-    "Freedom",
-    "Cold Turkey",
-    "Time Out"
-   ],
-   "source": "taxonomy",
-   "alternatives": []
-  },
-  {
-   "id": "paperwork",
-   "name": "Scanning and filing paperwork",
-   "category": "office",
-   "job": "Scanning paper with a phone and keeping documents searchable",
-   "closed": [
-    "CamScanner",
-    "Adobe Scan",
-    "Microsoft Lens"
-   ],
-   "source": "taxonomy",
-   "alternatives": []
-  },
-  {
-   "id": "diagrams",
-   "name": "Diagrams and whiteboards",
-   "category": "office",
-   "job": "Drawing flowcharts, diagrams and sketches on a whiteboard",
-   "closed": [
-    "Lucidchart",
-    "Microsoft Visio",
-    "Miro"
-   ],
-   "source": "taxonomy",
-   "alternatives": []
-  },
-  {
-   "id": "habits",
-   "name": "Habit trackers",
-   "category": "office",
-   "job": "Building habits and tracking streaks",
-   "closed": [
-    "Streaks",
-    "Habitify"
-   ],
-   "source": "taxonomy",
-   "alternatives": []
-  },
-  {
-   "id": "writing",
-   "name": "Writing books and long stories",
-   "category": "office",
-   "job": "Planning and writing novels, scripts and e-books",
-   "closed": [
-    "Scrivener",
-    "Ulysses",
-    "Vellum",
-    "World Anvil"
-   ],
-   "source": "taxonomy",
-   "alternatives": []
-  },
-  {
-   "id": "markdown-editors",
-   "name": "Markdown editors",
-   "category": "office",
-   "job": "Writing plain-text documents in Markdown",
-   "closed": [
-    "Typora",
-    "iA Writer"
-   ],
-   "source": "taxonomy",
-   "alternatives": []
-  },
-  {
-   "id": "academic-writing",
-   "name": "Writing scientific papers",
-   "category": "office",
-   "job": "Writing papers and theses with LaTeX or Typst",
-   "closed": [
-    "Overleaf (paid plans)"
-   ],
-   "source": "taxonomy",
-   "alternatives": []
-  },
-  {
-   "id": "bookmarks",
-   "name": "Bookmarks and saved links",
-   "category": "office",
-   "job": "Saving and organising links and web pages to find later",
-   "closed": [
-    "Raindrop.io",
-    "Pocket (closed down)"
-   ],
-   "source": "taxonomy",
-   "alternatives": []
   },
   {
    "id": "team-chat",
@@ -1584,46 +1584,6 @@
    ]
   },
   {
-   "id": "cad",
-   "name": "CAD & technical plans",
-   "category": "creative",
-   "job": "Designing precise plans and 3D parts for building and making things",
-   "closed": [
-    "AutoCAD",
-    "SolidWorks",
-    "Fusion 360",
-    "SketchUp"
-   ],
-   "source": "data-fixes",
-   "alternatives": [
-    {
-     "project": "freecad",
-     "fit": "full",
-     "note": "3D parts; takes time to learn"
-    },
-    {
-     "project": "librecad",
-     "fit": "partial",
-     "note": "2D drawings only"
-    },
-    {
-     "project": "qcad",
-     "fit": "partial",
-     "note": "2D drawings; some tools are paid"
-    },
-    {
-     "project": "openscad",
-     "fit": "partial",
-     "note": "You describe shapes in writing instead of drawing"
-    },
-    {
-     "project": "solvespace",
-     "fit": "partial",
-     "note": "Simple 3D parts; fewer tools than FreeCAD"
-    }
-   ]
-  },
-  {
    "id": "subtitles",
    "name": "Subtitles and dubbing",
    "category": "creative",
@@ -1675,6 +1635,46 @@
    "source": "taxonomy",
    "waitForProject": true,
    "alternatives": []
+  },
+  {
+   "id": "cad",
+   "name": "CAD & technical plans",
+   "category": "creative",
+   "job": "Designing precise plans and 3D parts for building and making things",
+   "closed": [
+    "AutoCAD",
+    "SolidWorks",
+    "Fusion 360",
+    "SketchUp"
+   ],
+   "source": "data-fixes",
+   "alternatives": [
+    {
+     "project": "freecad",
+     "fit": "full",
+     "note": "3D parts; takes time to learn"
+    },
+    {
+     "project": "librecad",
+     "fit": "partial",
+     "note": "2D drawings only"
+    },
+    {
+     "project": "qcad",
+     "fit": "partial",
+     "note": "2D drawings; some tools are paid"
+    },
+    {
+     "project": "openscad",
+     "fit": "partial",
+     "note": "You describe shapes in writing instead of drawing"
+    },
+    {
+     "project": "solvespace",
+     "fit": "partial",
+     "note": "Simple 3D parts; fewer tools than FreeCAD"
+    }
+   ]
   },
   {
    "id": "music",
@@ -1925,31 +1925,6 @@
    ]
   },
   {
-   "id": "video-streaming",
-   "name": "TV & movie streaming",
-   "category": "media",
-   "job": "Watching shows and movies from a catalog you subscribe to",
-   "closed": [
-    "Netflix",
-    "Disney+",
-    "Hulu",
-    "Prime Video"
-   ],
-   "source": "data-fixes",
-   "alternatives": [
-    {
-     "project": "jellyfin",
-     "fit": "partial",
-     "note": "Plays your own collection; has no catalog of shows to watch"
-    },
-    {
-     "project": "kodi",
-     "fit": "partial",
-     "note": "Plays your own collection; has no catalog of shows to watch"
-    }
-   ]
-  },
-  {
    "id": "media-players",
    "name": "Music and video players",
    "category": "media",
@@ -2059,36 +2034,27 @@
    "alternatives": []
   },
   {
-   "id": "game-stores",
-   "name": "Game stores & launchers",
-   "category": "games",
-   "job": "Buying, downloading and starting PC games",
+   "id": "video-streaming",
+   "name": "TV & movie streaming",
+   "category": "media",
+   "job": "Watching shows and movies from a catalog you subscribe to",
    "closed": [
-    "Steam",
-    "Epic Games Store",
-    "GOG Galaxy"
+    "Netflix",
+    "Disney+",
+    "Hulu",
+    "Prime Video"
    ],
    "source": "data-fixes",
    "alternatives": [
     {
-     "project": "heroic-games-launcher",
+     "project": "jellyfin",
      "fit": "partial",
-     "note": "Plays games you own from Epic, GOG and Amazon, and opens their stores; the stores sell the games"
+     "note": "Plays your own collection; has no catalog of shows to watch"
     },
     {
-     "project": "lutris",
+     "project": "kodi",
      "fit": "partial",
-     "note": "Linux only; plays games you own; sells none"
-    },
-    {
-     "project": "playnite",
-     "fit": "partial",
-     "note": "Windows only; one library for games you own; sells none"
-    },
-    {
-     "project": "itch-app",
-     "fit": "partial",
-     "note": "Only for games on itch.io"
+     "note": "Plays your own collection; has no catalog of shows to watch"
     }
    ]
   },
@@ -2148,6 +2114,40 @@
    "source": "taxonomy",
    "waitForProject": true,
    "alternatives": []
+  },
+  {
+   "id": "game-stores",
+   "name": "Game stores & launchers",
+   "category": "games",
+   "job": "Buying, downloading and starting PC games",
+   "closed": [
+    "Steam",
+    "Epic Games Store",
+    "GOG Galaxy"
+   ],
+   "source": "data-fixes",
+   "alternatives": [
+    {
+     "project": "heroic-games-launcher",
+     "fit": "partial",
+     "note": "Plays games you own from Epic, GOG and Amazon, and opens their stores; the stores sell the games"
+    },
+    {
+     "project": "lutris",
+     "fit": "partial",
+     "note": "Linux only; plays games you own; sells none"
+    },
+    {
+     "project": "playnite",
+     "fit": "partial",
+     "note": "Windows only; one library for games you own; sells none"
+    },
+    {
+     "project": "itch-app",
+     "fit": "partial",
+     "note": "Only for games on itch.io"
+    }
+   ]
   },
   {
    "id": "cloud-storage",
@@ -2531,33 +2531,6 @@
    ]
   },
   {
-   "id": "inspiration-boards",
-   "name": "Saving ideas & pictures to boards",
-   "category": "everyday",
-   "job": "Collecting pictures and ideas from around the web onto boards",
-   "closed": [
-    "Pinterest"
-   ],
-   "source": "data-fixes",
-   "alternatives": [
-    {
-     "project": "pinry",
-     "fit": "partial",
-     "note": "Picture boards you host yourself; no public feed of other people's ideas"
-    },
-    {
-     "project": "karakeep",
-     "fit": "partial",
-     "note": "Saves links and images privately; not a public picture feed"
-    },
-    {
-     "project": "linkwarden",
-     "fit": "partial",
-     "note": "Saves links in shareable collections; not a public picture feed"
-    }
-   ]
-  },
-  {
    "id": "health-fitness",
    "name": "Workouts and health tracking",
    "category": "everyday",
@@ -2690,6 +2663,33 @@
    "source": "taxonomy",
    "waitForProject": true,
    "alternatives": []
+  },
+  {
+   "id": "inspiration-boards",
+   "name": "Saving ideas & pictures to boards",
+   "category": "everyday",
+   "job": "Collecting pictures and ideas from around the web onto boards",
+   "closed": [
+    "Pinterest"
+   ],
+   "source": "data-fixes",
+   "alternatives": [
+    {
+     "project": "pinry",
+     "fit": "partial",
+     "note": "Picture boards you host yourself; no public feed of other people's ideas"
+    },
+    {
+     "project": "karakeep",
+     "fit": "partial",
+     "note": "Saves links and images privately; not a public picture feed"
+    },
+    {
+     "project": "linkwarden",
+     "fit": "partial",
+     "note": "Saves links in shareable collections; not a public picture feed"
+    }
+   ]
   },
   {
    "id": "browsers",
@@ -2934,56 +2934,6 @@
    ]
   },
   {
-   "id": "privacy-vpn",
-   "name": "VPN for privacy",
-   "category": "web",
-   "job": "Hiding your internet traffic, appearing to connect from another place and getting around internet blocks",
-   "closed": [
-    "NordVPN",
-    "ExpressVPN",
-    "Surfshark",
-    "CyberGhost"
-   ],
-   "source": "data-fixes",
-   "alternatives": [
-    {
-     "project": "mullvad-vpn",
-     "fit": "partial",
-     "note": "App is open; the paid service and servers are not"
-    },
-    {
-     "project": "proton-vpn",
-     "fit": "partial",
-     "note": "Apps are open; the service and servers are not"
-    },
-    {
-     "project": "outline-vpn",
-     "fit": "partial",
-     "note": "You rent and run your own server, so you get one location"
-    }
-   ]
-  },
-  {
-   "id": "antivirus",
-   "name": "Antivirus",
-   "category": "web",
-   "job": "Finding and removing viruses and other malware on your computer",
-   "closed": [
-    "Norton",
-    "McAfee",
-    "Kaspersky",
-    "Bitdefender"
-   ],
-   "source": "data-fixes",
-   "alternatives": [
-    {
-     "project": "clamav",
-     "fit": "partial",
-     "note": "Scans files on request; no always-on protection for most home users"
-    }
-   ]
-  },
-  {
    "id": "network-monitor",
    "name": "Seeing and blocking what apps connect to",
    "category": "web",
@@ -3050,6 +3000,56 @@
    "source": "taxonomy",
    "waitForProject": true,
    "alternatives": []
+  },
+  {
+   "id": "privacy-vpn",
+   "name": "VPN for privacy",
+   "category": "web",
+   "job": "Hiding your internet traffic, appearing to connect from another place and getting around internet blocks",
+   "closed": [
+    "NordVPN",
+    "ExpressVPN",
+    "Surfshark",
+    "CyberGhost"
+   ],
+   "source": "data-fixes",
+   "alternatives": [
+    {
+     "project": "mullvad-vpn",
+     "fit": "partial",
+     "note": "App is open; the paid service and servers are not"
+    },
+    {
+     "project": "proton-vpn",
+     "fit": "partial",
+     "note": "Apps are open; the service and servers are not"
+    },
+    {
+     "project": "outline-vpn",
+     "fit": "partial",
+     "note": "You rent and run your own server, so you get one location"
+    }
+   ]
+  },
+  {
+   "id": "antivirus",
+   "name": "Antivirus",
+   "category": "web",
+   "job": "Finding and removing viruses and other malware on your computer",
+   "closed": [
+    "Norton",
+    "McAfee",
+    "Kaspersky",
+    "Bitdefender"
+   ],
+   "source": "data-fixes",
+   "alternatives": [
+    {
+     "project": "clamav",
+     "fit": "partial",
+     "note": "Scans files on request; no always-on protection for most home users"
+    }
+   ]
   },
   {
    "id": "analytics",
@@ -4217,28 +4217,6 @@
    ]
   },
   {
-   "id": "vector-databases",
-   "name": "Vector databases",
-   "category": "ai-build",
-   "job": "Storing data by meaning so AI apps can find similar items",
-   "closed": [
-    "Pinecone"
-   ],
-   "source": "data-fixes",
-   "alternatives": [
-    {
-     "project": "qdrant",
-     "fit": "full",
-     "note": null
-    },
-    {
-     "project": "semi",
-     "fit": "full",
-     "note": null
-    }
-   ]
-  },
-  {
    "id": "ai-gateways",
    "name": "AI model gateways and routers",
    "category": "ai-build",
@@ -4336,6 +4314,28 @@
    "source": "taxonomy",
    "waitForProject": true,
    "alternatives": []
+  },
+  {
+   "id": "vector-databases",
+   "name": "Vector databases",
+   "category": "ai-build",
+   "job": "Storing data by meaning so AI apps can find similar items",
+   "closed": [
+    "Pinecone"
+   ],
+   "source": "data-fixes",
+   "alternatives": [
+    {
+     "project": "qdrant",
+     "fit": "full",
+     "note": null
+    },
+    {
+     "project": "semi",
+     "fit": "full",
+     "note": null
+    }
+   ]
   },
   {
    "id": "desktop-os",
@@ -5215,28 +5215,6 @@
    ]
   },
   {
-   "id": "code-editors",
-   "name": "Code editors",
-   "category": "dev",
-   "job": "Writing and editing code",
-   "closed": [
-    "Visual Studio Code"
-   ],
-   "source": "family",
-   "alternatives": [
-    {
-     "project": "vscodium",
-     "fit": "full",
-     "note": "Uses the Open VSX extension store, so some Microsoft-made extensions are not available"
-    },
-    {
-     "project": "zed",
-     "fit": "full",
-     "note": null
-    }
-   ]
-  },
-  {
    "id": "languages",
    "name": "Programming languages and compilers",
    "category": "dev",
@@ -5420,6 +5398,28 @@
    ],
    "source": "taxonomy",
    "alternatives": []
+  },
+  {
+   "id": "code-editors",
+   "name": "Code editors",
+   "category": "dev",
+   "job": "Writing and editing code",
+   "closed": [
+    "Visual Studio Code"
+   ],
+   "source": "family",
+   "alternatives": [
+    {
+     "project": "vscodium",
+     "fit": "full",
+     "note": "Uses the Open VSX extension store, so some Microsoft-made extensions are not available"
+    },
+    {
+     "project": "zed",
+     "fit": "full",
+     "note": null
+    }
+   ]
   },
   {
    "id": "code-hosting",
@@ -5724,23 +5724,6 @@
    ]
   },
   {
-   "id": "infrastructure-as-code",
-   "name": "Infrastructure as code",
-   "category": "dev-ship",
-   "job": "Setting up servers and cloud services from files",
-   "closed": [
-    "Terraform"
-   ],
-   "source": "family",
-   "alternatives": [
-    {
-     "project": "opentofu",
-     "fit": "full",
-     "note": null
-    }
-   ]
-  },
-  {
    "id": "maintainer-tools",
    "name": "Tools for open-source maintainers",
    "category": "dev-ship",
@@ -5800,6 +5783,23 @@
    "alternatives": []
   },
   {
+   "id": "infrastructure-as-code",
+   "name": "Infrastructure as code",
+   "category": "dev-ship",
+   "job": "Setting up servers and cloud services from files",
+   "closed": [
+    "Terraform"
+   ],
+   "source": "family",
+   "alternatives": [
+    {
+     "project": "opentofu",
+     "fit": "full",
+     "note": null
+    }
+   ]
+  },
+  {
    "id": "data-pipelines",
    "name": "Data pipelines",
    "category": "dev-data",
@@ -5841,6 +5841,61 @@
      "note": "You write each job in code; no ready-made connectors like Fivetran's"
     }
    ]
+  },
+  {
+   "id": "database-tools",
+   "name": "Database apps and tools",
+   "category": "dev-data",
+   "job": "Database clients, query tools, proxies and libraries",
+   "closed": [
+    "DataGrip",
+    "TablePlus",
+    "Navicat"
+   ],
+   "source": "taxonomy",
+   "alternatives": []
+  },
+  {
+   "id": "science-math",
+   "name": "Math and science tools",
+   "category": "dev-data",
+   "job": "Calculators, graphing and scientific computing",
+   "closed": [
+    "MATLAB",
+    "Mathematica",
+    "Maple"
+   ],
+   "source": "taxonomy",
+   "alternatives": []
+  },
+  {
+   "id": "data-analysis",
+   "name": "Statistics and data analysis",
+   "category": "dev-data",
+   "job": "Analysing data and running statistics",
+   "closed": [
+    "SPSS",
+    "Stata",
+    "SAS",
+    "JMP",
+    "Minitab"
+   ],
+   "source": "taxonomy",
+   "alternatives": []
+  },
+  {
+   "id": "object-storage",
+   "name": "File storage for apps (S3)",
+   "category": "dev-data",
+   "job": "Storing app files in an S3-style bucket on your own servers",
+   "closed": [
+    "Amazon S3",
+    "Backblaze B2",
+    "Cloudflare R2"
+   ],
+   "source": "taxonomy",
+   "waitForProject": true,
+   "alternatives": []
   },
   {
    "id": "key-value-stores",
@@ -6022,61 +6077,6 @@
      "note": null
     }
    ]
-  },
-  {
-   "id": "database-tools",
-   "name": "Database apps and tools",
-   "category": "dev-data",
-   "job": "Database clients, query tools, proxies and libraries",
-   "closed": [
-    "DataGrip",
-    "TablePlus",
-    "Navicat"
-   ],
-   "source": "taxonomy",
-   "alternatives": []
-  },
-  {
-   "id": "science-math",
-   "name": "Math and science tools",
-   "category": "dev-data",
-   "job": "Calculators, graphing and scientific computing",
-   "closed": [
-    "MATLAB",
-    "Mathematica",
-    "Maple"
-   ],
-   "source": "taxonomy",
-   "alternatives": []
-  },
-  {
-   "id": "data-analysis",
-   "name": "Statistics and data analysis",
-   "category": "dev-data",
-   "job": "Analysing data and running statistics",
-   "closed": [
-    "SPSS",
-    "Stata",
-    "SAS",
-    "JMP",
-    "Minitab"
-   ],
-   "source": "taxonomy",
-   "alternatives": []
-  },
-  {
-   "id": "object-storage",
-   "name": "File storage for apps (S3)",
-   "category": "dev-data",
-   "job": "Storing app files in an S3-style bucket on your own servers",
-   "closed": [
-    "Amazon S3",
-    "Backblaze B2",
-    "Cloudflare R2"
-   ],
-   "source": "taxonomy",
-   "waitForProject": true,
-   "alternatives": []
   },
   {
    "id": "internal-tools",
