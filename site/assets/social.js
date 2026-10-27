@@ -105,11 +105,30 @@
     if (e.target.closest('[data-delete-account]')) confirmBox('Delete your account?', "This removes everything you've posted here, your votes and your answers. Your GitHub account isn't touched. This can't be undone.", 'Delete everything', async () => { await api.deleteAccount(); location.href = BASE; }, true);
   });
 
+  // "Most thumbs-up from people here": the alternatives in this job with the most "yes" answers, shown only once at least
+  // 10 answers (yes or not really) exist across the job, so a couple of early votes never look like a verdict.
+  const LIKED_MIN = 10;
+  function drawLiked(boxes, all) {
+    for (const el of boxes) {
+      const rated = JSON.parse(el.dataset.alts).map(([id, name]) => ({ id, name, ...(all[`${el.dataset.group}/${id}`] ?? { up: 0, down: 0 }) }));
+      const total = rated.reduce((n, r) => n + r.up + r.down, 0);
+      const top = rated.filter((r) => r.up > 0).sort((a, b) => b.up - a.up || b.up / (b.up + b.down) - a.up / (a.up + a.down) || a.name.localeCompare(b.name)).slice(0, 3);
+      if (total < LIKED_MIN || !top.length) { el.hidden = true; continue; }
+      el.innerHTML = `<span class="muted11">Most thumbs-up from people here</span><div class="chiprow">${top.map((r) => `<a class="chip" href="${BASE}p/${esc(r.id)}/" title="${r.up} of ${r.up + r.down} say it does the job">${icon.up.replace(/14/g, '12')}${esc(r.name)}<b>${r.up}</b></a>`).join('')}</div>`;
+      el.hidden = false;
+    }
+  }
   // ── "Good replacement?" ratings, one per project per job: a chip on cards, the question on project pages ──
   async function renderRatings() {
-    const chips = $$('[data-rating]'); const rows = $$('[data-rate]'); if (!chips.length && !rows.length) return;
-    const pairs = [...new Map([...chips, ...rows].map((el) => [`${el.dataset.group}/${el.dataset.project}`, { group: el.dataset.group, project: el.dataset.project }])).values()];
-    const all = await api.ratings(pairs).catch(() => ({}));
+    const chips = $$('[data-rating]'); const rows = $$('[data-rate]'); const liked = $$('[data-liked]');
+    if (!chips.length && !rows.length && !liked.length) return;
+    // WHY the liked strips join the same request: they need the same answers the card chips do, so the page asks once.
+    const likedPairs = liked.flatMap((el) => JSON.parse(el.dataset.alts).map(([project]) => ({ group: el.dataset.group, project })));
+    const pairs = [...new Map([...chips.map((el) => ({ group: el.dataset.group, project: el.dataset.project })), ...rows.map((el) => ({ group: el.dataset.group, project: el.dataset.project })), ...likedPairs].map((x) => [`${x.group}/${x.project}`, x])).values()];
+    // The server answers at most 60 pairs per call, so ask in slices.
+    const all = {};
+    for (let i = 0; i < pairs.length; i += 60) Object.assign(all, await api.ratings(pairs.slice(i, i + 60)).catch(() => ({})));
+    drawLiked(liked, all);
     for (const el of chips) {
       const r = all[`${el.dataset.group}/${el.dataset.project}`]; const t = r ? r.up + r.down : 0;
       // WHY hidden under 5 answers: "100%" from one person would mislead.

@@ -5,7 +5,7 @@
 // only adds search and menus on top. Pages come from site/src/pages/*.mjs: each exports a default function
 // (data) => [{ path, title, description, body, styles?, scripts?, search?, jsonLd? }].
 
-import { readdirSync, mkdirSync, writeFileSync, rmSync, cpSync, readFileSync } from 'node:fs';
+import { readdirSync, mkdirSync, writeFileSync, rmSync, cpSync, readFileSync, existsSync } from 'node:fs';
 import { join, dirname } from 'node:path';
 import { fileURLToPath, pathToFileURL } from 'node:url';
 import { loadData, url, SITE_URL } from './src/lib.mjs';
@@ -37,6 +37,9 @@ for (const g of d.groups) {
     alternatives: g.alternatives.map((a) => { const p = d.projById.get(a.project); return { name: p.name, fit: a.fit, note: a.note, summary: p.summary, license: p.license, licenseClass: p.licenseClass, kind: p.kind, code: p.code, website: p.website, page: `${SITE_URL}p/${p.id}/` }; }),
   }, null, 1));
 }
+
+// ── Meaning-search vectors (fetched by the Worker only, never by the browser). Made by site/embed-items.mjs ──
+if (existsSync(join(ROOT, 'data', 'search-vectors.json'))) write(join('data', 'search-vectors.json'), readFileSync(join(ROOT, 'data', 'search-vectors.json'), 'utf8'));
 
 // ── Names for voting and boards (assets/social.js): who's in which group, in one small file ──
 write(join('data', 'names.json'), JSON.stringify({

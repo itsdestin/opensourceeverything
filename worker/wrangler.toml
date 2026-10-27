@@ -12,6 +12,11 @@ API_ORIGIN = "https://api.opensourceeverything.org"
 # GitHub usernames of r/TrueOpenSource mods, comma-separated (Destin, Oct 27: just him for now).
 MODS = "itsdestin"
 
+# Cloudflare Workers AI, used only by GET /search (src/search.js) to turn typed words into a meaning vector.
+# Free tier covers it; no key is needed because it is a binding, not an API call from outside.
+[ai]
+binding = "AI"
+
 [[d1_databases]]
 binding = "DB"
 database_name = "opensourceeverything"
@@ -28,6 +33,8 @@ SITE_ORIGIN = "http://localhost:4322"
 API_ORIGIN = "http://localhost:8787"
 MODS = "itsdestin,mod-sample"
 DEV_LOGIN = "1"
+[env.dev.ai]
+binding = "AI"
 [[env.dev.d1_databases]]
 binding = "DB"
 database_name = "opensourceeverything-dev"

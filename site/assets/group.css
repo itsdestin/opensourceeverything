@@ -76,3 +76,10 @@ a.chip.hl { color:var(--on-accent); }
 .tools { display:flex; gap:8px; align-items:center; flex-wrap:wrap; justify-content:flex-end; }
 .card[hidden] { display:none; }
 .identity > .row { display:flex; justify-content:space-between; align-items:flex-start; gap:12px; }
+
+/* "Most thumbs-up from people here" (filled by social.js once a job has 10+ answers) and "See also" */
+.liked { display:flex; align-items:center; gap:8px; flex-wrap:wrap; margin:0 0 12px; }
+.liked[hidden] { display:none; }
+.liked .chip { text-decoration:none; gap:4px; }
+.liked .chip b { color:var(--fg-muted); font-weight:600; margin-left:2px; }
+#see-also .card.listing { min-height:0; }

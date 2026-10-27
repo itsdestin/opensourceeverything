@@ -89,5 +89,13 @@
       : 'No results.';
     filters.hidden = !results.length;
     draw();
+    // Meaning search (search-ai.js): when the word match is weak, reorder by meaning once the server answers.
+    // If it is slow, down or switched off, the list above simply stays.
+    return window.OISearchAI?.improve(items, q, results).then((better) => {
+      if (!better) return;
+      results = better;
+      sub.textContent = `${results.length} ${results.length === 1 ? 'result' : 'results'}, best match first, ordered partly by what your words mean. The bars show how well each one fits; “Why” shows what it matched.`;
+      filters.hidden = !results.length; draw();
+    });
   }).catch(() => { list.innerHTML = '<div class="empty">Search couldn\'t load. Check your connection and reload the page.</div>'; });
 })();

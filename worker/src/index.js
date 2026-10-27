@@ -3,6 +3,7 @@
 // The page never decides rights: each note goes out with a `can` list worked out here (rules.js).
 import { RULES, LIMITS, ageDays, oldEnough, holdsFirstPost, isMod, can, clean, isLink } from './rules.js';
 import { currentUser, login, callback, devLogin, logout } from './auth.js';
+import { handleSearch } from './search.js';
 
 const json = (data, status = 200, extra = {}) => new Response(JSON.stringify(data), { status, headers: { 'Content-Type': 'application/json', 'Cache-Control': 'no-store', ...extra } });
 class Refuse extends Error { constructor(status, message) { super(message); this.status = status; } }
@@ -261,6 +262,8 @@ export default {
       if (url.pathname === '/auth/login') return login(url, env);
       if (url.pathname === '/auth/callback') return callback(url, env);
       if (url.pathname === '/auth/dev-login') return devLogin(url, env);
+      // Meaning search (src/search.js): read-only and signed-out, so it comes before the sign-in lookup.
+      if (url.pathname === '/search' && req.method === 'GET') return handleSearch(req, env, url, cors);
       // WHY both checks on every change: other websites can't make a signed-in visitor's browser vote or post.
       if (req.method !== 'GET') { need(origin === env.SITE_ORIGIN && req.headers.get('X-OSE') === '1', 403, 'Requests must come from the site itself.'); }
       if (url.pathname === '/auth/logout' && req.method === 'POST') { const { cookie } = await logout(req, env); return json({ ok: true }, 200, { ...cors, 'Set-Cookie': cookie }); }

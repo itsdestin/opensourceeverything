@@ -20,14 +20,14 @@
   window.OI.loadSearch = loadIndex; // the results page (search-page.js) shares the same loaded index
   const HEADINGS = { closed: 'Closed apps', group: 'Groups', project: 'Open projects' };
   const resultsUrl = (t) => `${BASE}search/?q=${encodeURIComponent(t.trim())}`;
-  function results(t) {
+  function results(t, better) {
     if (!t.trim()) return '';
     // WHY a small meter on each row (Destin, Oct 26: "more visible relevance scoring"): how well each result fits,
     // at a glance; the words are in its tooltip and on the results page.
     const row = (x) => `<a class="mi" role="option" href="${BASE}${x.u}">${esc(x.n)}<span class="mi-right"><span class="muted11">${esc(x.label)}</span>` +
       `<span class="mstr mini l${x.level}" title="${esc(x.strength)}" aria-label="${esc(x.strength)}"><span class="bars" aria-hidden="true"><i></i><i></i><i></i><i></i></span></span></span></a>`;
     // WHY sections come in the order of their best match: a job search opens on the group, a name on the app.
-    const secs = window.OISearch.search(index, t);
+    const secs = better || window.OISearch.search(index, t);
     // WHY a "see all" row: Enter opens the full list; this says so, and works for mouse and touch too.
     return secs.length
       ? secs.map((sec) => `<div class="menu-note">${HEADINGS[sec.kind]}</div>` + sec.items.map(row).join('')).join('') +
@@ -39,7 +39,15 @@
     const update = async () => {
       if (!input.value.trim()) { menu.classList.remove('open'); return; }
       await loadIndex(); menu.innerHTML = results(input.value); menu.classList.add('open');
+      // Meaning search (search-ai.js): only when the word match is weak, after a short pause in typing, and only
+      // if the box still holds the same text when the answer arrives. If the server is slow or down, nothing changes.
+      const t = input.value; clearTimeout(aiTimer);
+      if (window.OISearchAI?.serverUrl()) aiTimer = setTimeout(async () => {
+        const all = await window.OISearchAI.improve(index, t, window.OISearch.search(index, t, { all: true }));
+        if (all && input.value === t) menu.innerHTML = results(t, window.OISearchAI.sections(all));
+      }, 350);
     };
+    let aiTimer;
     input.addEventListener('input', update);
     input.addEventListener('focus', () => { loadIndex(); if (input.value.trim()) update(); });
     input.addEventListener('keydown', (e) => {

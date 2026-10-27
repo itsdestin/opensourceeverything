@@ -88,8 +88,10 @@ ${footer()}
 ${tabbar(path)}
 <div class="toast" id="toast" role="status"></div>
 <script src="${asset('assets/search-core.js')}" defer></script>
+<script src="${asset('assets/search-ai.js')}" defer></script>
 <script src="${asset('assets/site.js')}" defer></script>
 ${SOCIAL ? `<script src="${asset(DEMO ? 'assets/fake-api.js' : 'assets/api.js')}" defer></script>${DEMO ? '' : `<script>window.OI_API_URL = ${JSON.stringify(API_URL)};</script>`}` : ''}
+${SOCIAL && !DEMO && process.env.AI_SEARCH === '1' ? '<script>window.OI_AI_SEARCH = true;</script>' : ''}
 ${scripts.map((s) => `<script src="${asset('assets/' + s)}" defer></script>`).join('\n')}
 ${SOCIAL ? `<script src="${asset('assets/social.js')}" defer></script>` : ''}
 </body>
