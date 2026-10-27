@@ -74,8 +74,12 @@
     'photos maps music meet drive news books play').split(' '));
 
   // The words for each device code, and how a result names it ("Runs on iPhone").
-  const DEVICE_WORDS = { windows: 'windows pc', mac: 'mac macos apple', linux: 'linux', android: 'android',
+  const DEVICE_WORDS = { windows: 'windows pc', mac: 'mac macos apple', linux: 'linux chromebook chromeos', android: 'android chromebook chromeos',
     ios: 'ios iphone ipad apple', web: 'web browser online', server: 'server selfhosted' };
+  // WHY a separate table for what a typed word MEANS: "chromebook" runs web apps, Android apps and Linux apps, and "ipad" is
+  // an iPhone-class device here. Only unambiguous words: "web" and "browser" are also whole categories, so they are left out.
+  const DEVICE_INTENT = { windows: ['windows'], linux: ['linux'], mac: ['mac'], macos: ['mac'], macbook: ['mac'], android: ['android'],
+    iphone: ['ios'], ipad: ['ios'], ios: ['ios'], chromebook: ['web', 'android', 'linux'], chromeos: ['web', 'android', 'linux'] };
   const DEVICE_NAMES = { windows: 'Windows', mac: 'Mac', linux: 'Linux', android: 'Android', ios: 'iPhone', web: 'the web', server: 'your own server' };
 
   const norm = (s) => String(s ?? '').normalize('NFKD').replace(/[̀-ͯ]/g, '').toLowerCase()
@@ -219,12 +223,28 @@
     }
     const kept = ws.filter((w) => !FILLER.has(w));
     if (kept.length) ws = kept;
-    return { ws, ss: ws.map(stem), phrase: ws.join(' '), c: ws.join('') };
+    // WHY remember the device but keep the word in the search: "linux" still helps find Linux apps by text, and the
+    // device also reorders projects afterwards (see deviceAdjust), so a Mac-only app doesn't top "photo editor for linux".
+    const dev = new Set(); if (ws.length > 1) for (const w of ws) for (const c of DEVICE_INTENT[w] || []) dev.add(c);
+    return { ws, ss: ws.map(stem), phrase: ws.join(' '), c: ws.join(''), dev };
+  }
+
+  // WHY a nudge, not a filter: platform lists are incomplete, and an app that can run in a browser or on your own server
+  // may still be usable. Running on the named device lifts a project, not running there lowers it (it can drop out if it was a weak match), below a real
+  // name/phrase match. Only with 2+ words, so a lone "linux" still finds the Linux group and distros by name.
+  function deviceAdjust(it, q) {
+    if (!q.dev.size || it.kind !== 'project' || !it.pl.length) return 0;
+    if (it.pl.some((p) => q.dev.has(p))) return 0.12;
+    return it.pl.some((p) => p === 'web' || p === 'server') ? -0.12 : -0.3;
   }
 
   // Score one item for a parsed query. 0 means "not a result".
   const PRIOR = { group: 0.3, closed: 0.1, project: 0 };
   function score(it, q) {
+    const s0 = scoreText(it, q);
+    return s0 > 0 ? Math.max(0.05, s0 + deviceAdjust(it, q)) : s0;
+  }
+  function scoreText(it, q) {
     const short = q.c.length <= 2;
     // WHY check the name with spaces removed first: "drop box", "libre office" and "you tube" are the name,
     // just spaced differently, even though "box" alone matches nothing.
