@@ -1,0 +1,1233 @@
+{
+ "_about": "Written by prefill/help-facts.mjs from GitHub: contributing guide address and counts of open \"good first issue\" and \"help wanted\" issues. Do not edit by hand.",
+ "updated": "2026-10-27",
+ "projects": {
+  "2fas": {
+   "contributing": "https://github.com/twofas/2fas-android/blob/HEAD/CONTRIBUTING.md"
+  },
+  "abilian-nua": {
+   "contributing": "https://github.com/abilian/nua/blob/HEAD/CONTRIBUTING.md"
+  },
+  "accrescent": {
+   "contributing": "https://github.com/accrescent/accrescent/blob/HEAD/CONTRIBUTING.md"
+  },
+  "activepieces": {
+   "contributing": "https://github.com/activepieces/activepieces/blob/HEAD/CONTRIBUTING.md"
+  },
+  "actual-budget": {
+   "contributing": "https://github.com/actualbudget/actual/blob/HEAD/CONTRIBUTING.md",
+   "good": 13,
+   "wanted": 25
+  },
+  "aegis": {
+   "contributing": "https://github.com/beemdevelopment/Aegis/blob/HEAD/CONTRIBUTING.md"
+  },
+  "affine": {
+   "contributing": "https://github.com/toeverything/AFFiNE/blob/HEAD/docs/CONTRIBUTING.md",
+   "wanted": 1
+  },
+  "aider": {
+   "contributing": "https://github.com/Aider-AI/aider/blob/HEAD/CONTRIBUTING.md"
+  },
+  "aliasvault": {
+   "contributing": "https://github.com/aliasvault/aliasvault/blob/HEAD/CONTRIBUTING.md"
+  },
+  "alovoa": {
+   "wanted": 3
+  },
+  "antennapod": {
+   "contributing": "https://github.com/AntennaPod/AntennaPod/blob/HEAD/CONTRIBUTING.md",
+   "good": 2
+  },
+  "anysoftkeyboard": {
+   "contributing": "https://github.com/AnySoftKeyboard/AnySoftKeyboard/blob/HEAD/CONTRIBUTING.md"
+  },
+  "anythingllm": {
+   "contributing": "https://github.com/Mintplex-Labs/anything-llm/blob/HEAD/CONTRIBUTING.md"
+  },
+  "apache-apisix": {
+   "contributing": "https://github.com/apache/apisix/blob/HEAD/CONTRIBUTING.md",
+   "good": 13,
+   "wanted": 1
+  },
+  "apitable": {
+   "contributing": "https://github.com/apitable/apitable/blob/HEAD/CONTRIBUTING.md",
+   "good": 19
+  },
+  "appflowy": {
+   "wanted": 10
+  },
+  "apprise": {
+   "contributing": "https://github.com/caronc/apprise/blob/HEAD/CONTRIBUTING.md"
+  },
+  "appsmith": {
+   "contributing": "https://github.com/appsmithorg/appsmith/blob/HEAD/CONTRIBUTING.md",
+   "good": 4
+  },
+  "appwrite": {
+   "contributing": "https://github.com/appwrite/appwrite/blob/HEAD/CONTRIBUTING.md",
+   "wanted": 6
+  },
+  "audacity": {
+   "contributing": "https://github.com/audacity/audacity/blob/HEAD/CONTRIBUTING.md",
+   "good": 7
+  },
+  "audiobookshelf": {
+   "wanted": 5
+  },
+  "authgear": {
+   "contributing": "https://github.com/authgear/authgear-server/blob/HEAD/CONTRIBUTING.md",
+   "good": 5
+  },
+  "automatisch": {
+   "good": 1,
+   "wanted": 2
+  },
+  "bagisto": {
+   "contributing": "https://github.com/bagisto/bagisto/blob/HEAD/CONTRIBUTING.md"
+  },
+  "bazzite": {
+   "wanted": 4
+  },
+  "bitwarden": {
+   "contributing": "https://github.com/bitwarden/clients/blob/HEAD/CONTRIBUTING.md",
+   "good": 3,
+   "wanted": 3
+  },
+  "bootstrap": {
+   "wanted": 8
+  },
+  "borgbackup": {
+   "contributing": "https://github.com/borgbackup/borg/blob/HEAD/CONTRIBUTING.md",
+   "wanted": 12
+  },
+  "boxyhq": {
+   "contributing": "https://github.com/ory/polis/blob/HEAD/CONTRIBUTING.md",
+   "good": 3
+  },
+  "brave": {
+   "good": 48,
+   "wanted": 39
+  },
+  "bruin": {
+   "contributing": "https://github.com/bruin-data/bruin/blob/HEAD/CONTRIBUTING.md"
+  },
+  "budibase": {
+   "contributing": "https://github.com/Budibase/budibase/blob/HEAD/.github/CONTRIBUTING.md",
+   "good": 1
+  },
+  "buildbot": {
+   "contributing": "https://github.com/buildbot/buildbot/blob/HEAD/CONTRIBUTING.rst",
+   "good": 7,
+   "wanted": 2
+  },
+  "buzz": {
+   "contributing": "https://github.com/chidiwilliams/buzz/blob/HEAD/CONTRIBUTING.md"
+  },
+  "cal-com": {
+   "contributing": "https://github.com/calcom/cal.com/blob/HEAD/CONTRIBUTING.md"
+  },
+  "caprover": {
+   "contributing": "https://github.com/caprover/caprover/blob/HEAD/CONTRIBUTING.md"
+  },
+  "chatwoot": {
+   "contributing": "https://github.com/chatwoot/chatwoot/blob/HEAD/CONTRIBUTING.md",
+   "good": 8
+  },
+  "cline": {
+   "contributing": "https://github.com/cline/cline/blob/HEAD/CONTRIBUTING.md",
+   "good": 3,
+   "wanted": 5
+  },
+  "codex-cli": {
+   "contributing": "https://github.com/openai/codex/blob/HEAD/docs/contributing.md"
+  },
+  "collabora-online": {
+   "contributing": "https://github.com/CollaboraOnline/online/blob/HEAD/CONTRIBUTING.md",
+   "wanted": 1
+  },
+  "comfyui": {
+   "contributing": "https://github.com/Comfy-Org/ComfyUI/blob/HEAD/CONTRIBUTING.md",
+   "wanted": 1
+  },
+  "concrete": {
+   "contributing": "https://github.com/concretecms/concretecms/blob/HEAD/CONTRIBUTING.md"
+  },
+  "coolify": {
+   "contributing": "https://github.com/coollabsio/coolify/blob/HEAD/CONTRIBUTING.md"
+  },
+  "coroot": {
+   "contributing": "https://github.com/coroot/coroot/blob/HEAD/CONTRIBUTING.md"
+  },
+  "cortex": {
+   "contributing": "https://github.com/cortexlabs/cortex/blob/HEAD/CONTRIBUTING.md",
+   "good": 1
+  },
+  "cratedb": {
+   "contributing": "https://github.com/crate/crate/blob/HEAD/CONTRIBUTING.rst",
+   "good": 3
+  },
+  "crater": {
+   "wanted": 2
+  },
+  "crowd-dev": {
+   "contributing": "https://github.com/linuxfoundation/crowd.dev/blob/HEAD/CONTRIBUTING.md"
+  },
+  "cryptpad": {
+   "wanted": 7
+  },
+  "cube-js": {
+   "contributing": "https://github.com/cube-js/cube/blob/HEAD/CONTRIBUTING.md",
+   "good": 7,
+   "wanted": 177
+  },
+  "customermates": {
+   "contributing": "https://github.com/customermates/customermates/blob/HEAD/.github/CONTRIBUTING.md"
+  },
+  "darktable": {
+   "contributing": "https://github.com/darktable-org/darktable/blob/HEAD/CONTRIBUTING.md"
+  },
+  "dashpress": {
+   "contributing": "https://github.com/dashpresshq/dashpress/blob/HEAD/docs/CONTRIBUTING.md"
+  },
+  "databend": {
+   "good": 10
+  },
+  "decap-cms": {
+   "contributing": "https://github.com/decaporg/decap-cms/blob/HEAD/CONTRIBUTING.md"
+  },
+  "deepfence-threatmapper": {
+   "contributing": "https://github.com/deepfence/ThreatMapper/blob/HEAD/CONTRIBUTING.md",
+   "good": 1
+  },
+  "deepset": {
+   "contributing": "https://github.com/deepset-ai/haystack/blob/HEAD/CONTRIBUTING.md"
+  },
+  "delta-chat": {
+   "contributing": "https://github.com/deltachat/deltachat-android/blob/HEAD/CONTRIBUTING.md"
+  },
+  "discourse": {
+   "contributing": "https://github.com/discourse/discourse/blob/HEAD/CONTRIBUTING.md"
+  },
+  "documenso": {
+   "contributing": "https://github.com/documenso/documenso/blob/HEAD/CONTRIBUTING.md"
+  },
+  "dokku": {
+   "contributing": "https://github.com/dokku/dokku/blob/HEAD/CONTRIBUTING.md"
+  },
+  "dolibarr": {
+   "contributing": "https://github.com/Dolibarr/dolibarr/blob/HEAD/.github/CONTRIBUTING.md"
+  },
+  "drone": {
+   "contributing": "https://github.com/harness/harness/blob/HEAD/CONTRIBUTING.md"
+  },
+  "duplicati": {
+   "good": 1,
+   "wanted": 27
+  },
+  "dyrector-io": {
+   "contributing": "https://github.com/dyrector-io/dyrectorio/blob/HEAD/CONTRIBUTING.md"
+  },
+  "element": {
+   "contributing": "https://github.com/element-hq/element-web/blob/HEAD/CONTRIBUTING.md",
+   "good": 11,
+   "wanted": 81
+  },
+  "element-call": {
+   "contributing": "https://github.com/element-hq/element-call/blob/HEAD/CONTRIBUTING.md",
+   "good": 2,
+   "wanted": 3
+  },
+  "encore": {
+   "contributing": "https://github.com/encoredev/encore/blob/HEAD/CONTRIBUTING.md",
+   "good": 2
+  },
+  "ente-auth": {
+   "contributing": "https://github.com/ente/ente/blob/HEAD/CONTRIBUTING.md",
+   "good": 1,
+   "wanted": 2
+  },
+  "ente-photos": {
+   "contributing": "https://github.com/ente/ente/blob/HEAD/CONTRIBUTING.md",
+   "good": 1,
+   "wanted": 2
+  },
+  "erpnext": {
+   "contributing": "https://github.com/frappe/erpnext/blob/HEAD/.github/CONTRIBUTING.md",
+   "good": 3
+  },
+  "espocrm": {
+   "contributing": "https://github.com/espocrm/espocrm/blob/HEAD/.github/CONTRIBUTING.md",
+   "wanted": 3
+  },
+  "etar-calendar": {
+   "wanted": 3
+  },
+  "etherpad": {
+   "contributing": "https://github.com/ether/etherpad/blob/HEAD/CONTRIBUTING.md"
+  },
+  "evidence": {
+   "contributing": "https://github.com/evidence-dev/evidence/blob/HEAD/CONTRIBUTING.md"
+  },
+  "filestash": {
+   "contributing": "https://github.com/mickael-kerjean/filestash/blob/HEAD/CONTRIBUTING.md",
+   "wanted": 3
+  },
+  "firecamp": {
+   "contributing": "https://github.com/firecamp-dev/firecamp/blob/HEAD/CONTRIBUTING.md",
+   "good": 14
+  },
+  "flagsmith": {
+   "contributing": "https://github.com/Flagsmith/flagsmith/blob/HEAD/CONTRIBUTING.md",
+   "good": 13
+  },
+  "florisboard": {
+   "contributing": "https://github.com/florisboard/florisboard/blob/HEAD/CONTRIBUTING.md",
+   "wanted": 2
+  },
+  "fluent-reader": {
+   "wanted": 1
+  },
+  "folio-wiki": {
+   "contributing": "https://github.com/evergreen-it-dev/folio/blob/HEAD/CONTRIBUTING.md"
+  },
+  "fonoster": {
+   "contributing": "https://github.com/fonoster/fonoster/blob/HEAD/CONTRIBUTING.md"
+  },
+  "formbricks": {
+   "contributing": "https://github.com/formbricks/formbricks/blob/HEAD/CONTRIBUTING.md"
+  },
+  "formio": {
+   "wanted": 1
+  },
+  "fossify-calendar": {
+   "contributing": "https://github.com/FossifyOrg/Calendar/blob/HEAD/CONTRIBUTING.md"
+  },
+  "fossify-gallery": {
+   "contributing": "https://github.com/FossifyOrg/Gallery/blob/HEAD/CONTRIBUTING.md",
+   "wanted": 1
+  },
+  "freetube": {
+   "contributing": "https://github.com/FreeTubeApp/FreeTube/blob/HEAD/CONTRIBUTING.md",
+   "good": 8,
+   "wanted": 3
+  },
+  "freshrss": {
+   "contributing": "https://github.com/FreshRSS/FreshRSS/blob/HEAD/CONTRIBUTING.md",
+   "wanted": 85
+  },
+  "friction": {
+   "good": 2,
+   "wanted": 2
+  },
+  "friendica": {
+   "contributing": "https://github.com/friendica/friendica/blob/HEAD/CONTRIBUTING.md",
+   "wanted": 7
+  },
+  "fusio": {
+   "contributing": "https://github.com/apioo/fusio/blob/HEAD/CONTRIBUTING.md"
+  },
+  "gathio": {
+   "good": 1
+  },
+  "gemini-cli": {
+   "contributing": "https://github.com/google-gemini/gemini-cli/blob/HEAD/CONTRIBUTING.md",
+   "good": 5,
+   "wanted": 14
+  },
+  "ghost": {
+   "contributing": "https://github.com/TryGhost/Ghost/blob/HEAD/.github/CONTRIBUTING.md",
+   "good": 3,
+   "wanted": 2
+  },
+  "ghostfolio": {
+   "good": 13,
+   "wanted": 36
+  },
+  "gitea": {
+   "contributing": "https://github.com/go-gitea/gitea/blob/HEAD/CONTRIBUTING.md"
+  },
+  "gitlab": {
+   "contributing": "https://github.com/gitlabhq/gitlabhq/blob/HEAD/CONTRIBUTING.md"
+  },
+  "goatcounter": {
+   "contributing": "https://github.com/arp242/goatcounter/blob/HEAD/CONTRIBUTING.md"
+  },
+  "gogs": {
+   "contributing": "https://github.com/gogs/gogs/blob/HEAD/.github/CONTRIBUTING.md"
+  },
+  "goose": {
+   "contributing": "https://github.com/aaif-goose/goose/blob/HEAD/CONTRIBUTING.md"
+  },
+  "grafana": {
+   "contributing": "https://github.com/grafana/grafana/blob/HEAD/CONTRIBUTING.md",
+   "good": 18,
+   "wanted": 13
+  },
+  "graphite": {
+   "good": 54,
+   "wanted": 8
+  },
+  "gravitl": {
+   "contributing": "https://github.com/gravitl/netmaker/blob/HEAD/CONTRIBUTING.md"
+  },
+  "grist": {
+   "contributing": "https://github.com/gristlabs/grist-core/blob/HEAD/CONTRIBUTING.md",
+   "good": 16
+  },
+  "growthbook": {
+   "contributing": "https://github.com/growthbook/growthbook/blob/HEAD/CONTRIBUTING.md",
+   "good": 4,
+   "wanted": 1
+  },
+  "hanko": {
+   "contributing": "https://github.com/teamhanko/hanko/blob/HEAD/CONTRIBUTING.md"
+  },
+  "hedgedoc": {
+   "contributing": "https://github.com/hedgedoc/hedgedoc/blob/HEAD/CONTRIBUTING.md",
+   "good": 5
+  },
+  "heliboard": {
+   "contributing": "https://github.com/HeliBorg/HeliBoard/blob/HEAD/CONTRIBUTING.md",
+   "wanted": 6
+  },
+  "hermes-agent": {
+   "contributing": "https://github.com/NousResearch/hermes-agent/blob/HEAD/CONTRIBUTING.md"
+  },
+  "highlight": {
+   "contributing": "https://github.com/highlight/highlight/blob/HEAD/CONTRIBUTING.md",
+   "good": 4,
+   "wanted": 3
+  },
+  "home-assistant": {
+   "contributing": "https://github.com/home-assistant/core/blob/HEAD/CONTRIBUTING.md",
+   "good": 2
+  },
+  "hoppscotch": {
+   "contributing": "https://github.com/hoppscotch/hoppscotch/blob/HEAD/CONTRIBUTING.md",
+   "good": 2,
+   "wanted": 2
+  },
+  "huginn": {
+   "contributing": "https://github.com/huginn/huginn/blob/HEAD/CONTRIBUTING.md",
+   "wanted": 50
+  },
+  "hyperdx": {
+   "contributing": "https://github.com/hyperdxio/hyperdx/blob/HEAD/CONTRIBUTING.md",
+   "good": 3,
+   "wanted": 1
+  },
+  "idurar-erp-crm": {
+   "contributing": "https://github.com/idurar/idurar-erp-crm/blob/HEAD/CONTRIBUTING.md",
+   "good": 13
+  },
+  "illa": {
+   "contributing": "https://github.com/illacloud/illa-builder/blob/HEAD/CONTRIBUTING.md"
+  },
+  "immich": {
+   "contributing": "https://github.com/immich-app/immich/blob/HEAD/CONTRIBUTING.md",
+   "good": 3
+  },
+  "indico": {
+   "contributing": "https://github.com/indico/indico/blob/HEAD/CONTRIBUTING.md",
+   "wanted": 18
+  },
+  "influxdb": {
+   "contributing": "https://github.com/influxdata/influxdb/blob/HEAD/CONTRIBUTING.md",
+   "wanted": 4
+  },
+  "insomnia": {
+   "contributing": "https://github.com/Kong/insomnia/blob/HEAD/CONTRIBUTING.md"
+  },
+  "invokeai": {
+   "good": 5
+  },
+  "jan": {
+   "contributing": "https://github.com/janhq/jan/blob/HEAD/CONTRIBUTING.md"
+  },
+  "janssen": {
+   "contributing": "https://github.com/JanssenProject/jans/blob/HEAD/docs/CONTRIBUTING.md",
+   "good": 1,
+   "wanted": 1
+  },
+  "jellyfin": {
+   "good": 4
+  },
+  "jenkins": {
+   "contributing": "https://github.com/jenkinsci/jenkins/blob/HEAD/CONTRIBUTING.md",
+   "good": 13
+  },
+  "jitsi-meet": {
+   "contributing": "https://github.com/jitsi/jitsi-meet/blob/HEAD/CONTRIBUTING.md"
+  },
+  "jitsu": {
+   "contributing": "https://github.com/jitsucom/jitsu/blob/HEAD/CONTRIBUTING.md"
+  },
+  "joplin": {
+   "contributing": "https://github.com/laurent22/joplin/blob/HEAD/CONTRIBUTING"
+  },
+  "kanboard": {
+   "contributing": "https://github.com/kanboard/kanboard/blob/HEAD/CONTRIBUTING.md"
+  },
+  "keepassdx": {
+   "contributing": "https://github.com/Kunzisoft/KeePassDX/blob/HEAD/CONTRIBUTING.md",
+   "wanted": 4
+  },
+  "keepassxc": {
+   "contributing": "https://github.com/keepassxreboot/keepassxc/blob/HEAD/.github/CONTRIBUTING.md",
+   "good": 3,
+   "wanted": 16
+  },
+  "keila": {
+   "contributing": "https://github.com/pentacent/keila/blob/HEAD/CONTRIBUTING.md",
+   "good": 5
+  },
+  "kestra": {
+   "contributing": "https://github.com/kestra-io/kestra/blob/HEAD/.github/CONTRIBUTING.md",
+   "good": 166
+  },
+  "keycloak": {
+   "contributing": "https://github.com/keycloak/keycloak/blob/HEAD/CONTRIBUTING.md",
+   "good": 7,
+   "wanted": 263
+  },
+  "kilo-code": {
+   "contributing": "https://github.com/Kilo-Org/kilocode/blob/HEAD/CONTRIBUTING.md"
+  },
+  "kimai": {
+   "contributing": "https://github.com/kimai/kimai/blob/HEAD/CONTRIBUTING.md",
+   "good": 4,
+   "wanted": 11
+  },
+  "kodi": {
+   "contributing": "https://github.com/xbmc/xbmc/blob/HEAD/docs/CONTRIBUTING.md",
+   "wanted": 1
+  },
+  "kubero": {
+   "contributing": "https://github.com/kubero-dev/kubero/blob/HEAD/CONTRIBUTING.md",
+   "good": 1
+  },
+  "kubestellar-console": {
+   "contributing": "https://github.com/kubestellar/console/blob/HEAD/CONTRIBUTING.md",
+   "wanted": 9
+  },
+  "kuzzle": {
+   "contributing": "https://github.com/kuzzleio/kuzzle/blob/HEAD/CONTRIBUTING.md"
+  },
+  "lago": {
+   "contributing": "https://github.com/getlago/lago/blob/HEAD/CONTRIBUTING.md"
+  },
+  "leantime": {
+   "contributing": "https://github.com/Leantime/leantime/blob/HEAD/CONTRIBUTING.md",
+   "wanted": 8
+  },
+  "leon": {
+   "contributing": "https://github.com/leon-ai/leon/blob/HEAD/.github/CONTRIBUTING.md",
+   "good": 8,
+   "wanted": 2
+  },
+  "librechat": {
+   "contributing": "https://github.com/LibreChat-AI/LibreChat/blob/HEAD/.github/CONTRIBUTING.md"
+  },
+  "libresign": {
+   "contributing": "https://github.com/LibreSign/libresign/blob/HEAD/CONTRIBUTING.md",
+   "good": 12,
+   "wanted": 3
+  },
+  "libretranslate": {
+   "contributing": "https://github.com/LibreTranslate/LibreTranslate/blob/HEAD/CONTRIBUTING.md",
+   "good": 2
+  },
+  "lightdash": {
+   "contributing": "https://github.com/lightdash/lightdash/blob/HEAD/.github/CONTRIBUTING.md"
+  },
+  "limesurvey": {
+   "contributing": "https://github.com/LimeSurvey/LimeSurvey/blob/HEAD/CONTRIBUTING.md"
+  },
+  "listmonk": {
+   "contributing": "https://github.com/knadh/listmonk/blob/HEAD/CONTRIBUTING.md"
+  },
+  "livekit": {
+   "good": 1
+  },
+  "lmms": {
+   "good": 21
+  },
+  "localsend": {
+   "contributing": "https://github.com/localsend/localsend/blob/HEAD/CONTRIBUTING.md",
+   "wanted": 8
+  },
+  "logseq": {
+   "contributing": "https://github.com/logseq/logseq/blob/HEAD/CONTRIBUTING.md",
+   "good": 14
+  },
+  "logto": {
+   "contributing": "https://github.com/logto-io/logto/blob/HEAD/.github/CONTRIBUTING.md"
+  },
+  "losslesscut": {
+   "contributing": "https://github.com/mifi/lossless-cut/blob/HEAD/CONTRIBUTING.md",
+   "wanted": 2
+  },
+  "lowdefy": {
+   "contributing": "https://github.com/lowdefy/lowdefy/blob/HEAD/CONTRIBUTING.md"
+  },
+  "mailspring": {
+   "contributing": "https://github.com/Foundry376/Mailspring/blob/HEAD/CONTRIBUTING.md"
+  },
+  "manticore-search": {
+   "contributing": "https://github.com/manticoresoftware/manticoresearch/blob/HEAD/CONTRIBUTING.md"
+  },
+  "mastodon": {
+   "contributing": "https://github.com/mastodon/mastodon/blob/HEAD/CONTRIBUTING.md"
+  },
+  "matano": {
+   "contributing": "https://github.com/matanolabs/matano/blob/HEAD/CONTRIBUTING.md",
+   "good": 1,
+   "wanted": 1
+  },
+  "matomo": {
+   "contributing": "https://github.com/matomo-org/matomo/blob/HEAD/CONTRIBUTING.md",
+   "wanted": 93
+  },
+  "mattermost": {
+   "contributing": "https://github.com/mattermost/mattermost/blob/HEAD/CONTRIBUTING.md",
+   "good": 14,
+   "wanted": 232
+  },
+  "mbin": {
+   "contributing": "https://github.com/MbinOrg/mbin/blob/HEAD/CONTRIBUTING.md",
+   "good": 21,
+   "wanted": 2
+  },
+  "medusa": {
+   "contributing": "https://github.com/medusajs/medusa/blob/HEAD/CONTRIBUTING.md",
+   "good": 12
+  },
+  "mellisearch": {
+   "contributing": "https://github.com/meilisearch/meilisearch/blob/HEAD/CONTRIBUTING.md",
+   "good": 20,
+   "wanted": 16
+  },
+  "meshcentral": {
+   "wanted": 2
+  },
+  "metabase": {
+   "contributing": "https://github.com/metabase/metabase/blob/HEAD/docs/CONTRIBUTING.md",
+   "good": 22
+  },
+  "miniflux": {
+   "contributing": "https://github.com/miniflux/v2/blob/HEAD/CONTRIBUTING.md"
+  },
+  "misskey": {
+   "contributing": "https://github.com/misskey-dev/misskey/blob/HEAD/CONTRIBUTING.md"
+  },
+  "mumble": {
+   "good": 41,
+   "wanted": 40
+  },
+  "natron": {
+   "contributing": "https://github.com/NatronGitHub/Natron/blob/HEAD/CONTRIBUTING.md"
+  },
+  "navidrome": {
+   "contributing": "https://github.com/navidrome/navidrome/blob/HEAD/CONTRIBUTING.md",
+   "wanted": 1
+  },
+  "neo4j": {
+   "contributing": "https://github.com/neo4j/neo4j/blob/HEAD/CONTRIBUTING.md"
+  },
+  "netbird": {
+   "contributing": "https://github.com/netbirdio/netbird/blob/HEAD/CONTRIBUTING.md"
+  },
+  "netdata": {
+   "wanted": 2
+  },
+  "netnewswire": {
+   "contributing": "https://github.com/Ranchero-Software/NetNewsWire/blob/HEAD/CONTRIBUTING.md"
+  },
+  "newpipe": {
+   "contributing": "https://github.com/TeamNewPipe/NewPipe/blob/HEAD/.github/CONTRIBUTING.md",
+   "good": 48,
+   "wanted": 41
+  },
+  "newsboat": {
+   "contributing": "https://github.com/newsboat/newsboat/blob/HEAD/CONTRIBUTING.md",
+   "good": 6,
+   "wanted": 9
+  },
+  "nextcloud": {
+   "contributing": "https://github.com/nextcloud/server/blob/HEAD/.github/CONTRIBUTING.md",
+   "good": 65,
+   "wanted": 15
+  },
+  "nextcloud-calendar": {
+   "good": 5,
+   "wanted": 2
+  },
+  "nextcloud-forms": {
+   "good": 8,
+   "wanted": 1
+  },
+  "nextcloud-notes": {
+   "good": 6,
+   "wanted": 4
+  },
+  "nextcloud-polls": {
+   "wanted": 1
+  },
+  "nextcloud-talk": {
+   "good": 22,
+   "wanted": 1
+  },
+  "nhost": {
+   "contributing": "https://github.com/nhost/nhost/blob/HEAD/CONTRIBUTING.md",
+   "good": 2
+  },
+  "node-red": {
+   "contributing": "https://github.com/node-red/node-red/blob/HEAD/CONTRIBUTING.md",
+   "good": 1
+  },
+  "notesnook": {
+   "contributing": "https://github.com/streetwriters/notesnook/blob/HEAD/CONTRIBUTING.md",
+   "good": 3
+  },
+  "ntfy": {
+   "contributing": "https://github.com/binwiederhier/ntfy/blob/HEAD/docs/contributing.md"
+  },
+  "nuclei": {
+   "contributing": "https://github.com/projectdiscovery/nuclei/blob/HEAD/CONTRIBUTING.md"
+  },
+  "obs-studio": {
+   "contributing": "https://github.com/obsproject/obs-studio/blob/HEAD/CONTRIBUTING.md",
+   "good": 5
+  },
+  "obtainium": {
+   "contributing": "https://github.com/ImranR98/Obtainium/blob/HEAD/docs/CONTRIBUTING.md",
+   "good": 8,
+   "wanted": 6
+  },
+  "odoo": {
+   "contributing": "https://github.com/odoo/odoo/blob/HEAD/CONTRIBUTING.md"
+  },
+  "offpdf": {
+   "contributing": "https://github.com/McanKul/offpdf/blob/HEAD/CONTRIBUTING.md",
+   "good": 1,
+   "wanted": 13
+  },
+  "ollama": {
+   "contributing": "https://github.com/ollama/ollama/blob/HEAD/CONTRIBUTING.md",
+   "good": 3
+  },
+  "omniedge": {
+   "wanted": 1
+  },
+  "onlyoffice-docs": {
+   "good": 1,
+   "wanted": 13
+  },
+  "open-interpreter": {
+   "contributing": "https://github.com/openinterpreter/openinterpreter/blob/HEAD/docs/contributing.md"
+  },
+  "open-library": {
+   "contributing": "https://github.com/internetarchive/openlibrary/blob/HEAD/CONTRIBUTING.md",
+   "good": 13
+  },
+  "openboard": {
+   "wanted": 1
+  },
+  "openbooks": {
+   "contributing": "https://github.com/braedonsaunders/openbooks/blob/HEAD/CONTRIBUTING.md"
+  },
+  "openclaw": {
+   "contributing": "https://github.com/openclaw/openclaw/blob/HEAD/CONTRIBUTING.md",
+   "good": 1
+  },
+  "opencode": {
+   "contributing": "https://github.com/anomalyco/opencode/blob/HEAD/CONTRIBUTING.md"
+  },
+  "opencut": {
+   "wanted": 1
+  },
+  "openhands": {
+   "good": 21
+  },
+  "openpost": {
+   "contributing": "https://github.com/getopenpost/openpost/blob/HEAD/.github/CONTRIBUTING.md"
+  },
+  "openproject": {
+   "contributing": "https://github.com/opf/openproject/blob/HEAD/CONTRIBUTING.md"
+  },
+  "openreplay": {
+   "contributing": "https://github.com/openreplay/openreplay/blob/HEAD/CONTRIBUTING.md"
+  },
+  "openshot": {
+   "contributing": "https://github.com/OpenShot/openshot-qt/blob/HEAD/CONTRIBUTING.md"
+  },
+  "openstatus": {
+   "contributing": "https://github.com/openstatusHQ/openstatus/blob/HEAD/CONTRIBUTING.md",
+   "good": 2
+  },
+  "openstreetmap": {
+   "contributing": "https://github.com/openstreetmap/openstreetmap-website/blob/HEAD/CONTRIBUTING.md",
+   "wanted": 2
+  },
+  "openvidu": {
+   "contributing": "https://github.com/OpenVidu/openvidu/blob/HEAD/CONTRIBUTING.md"
+  },
+  "openwebanalytics": {
+   "contributing": "https://github.com/Open-Web-Analytics/Open-Web-Analytics/blob/HEAD/CONTRIBUTING.md"
+  },
+  "orbit": {
+   "contributing": "https://github.com/Noveum/orbit/blob/HEAD/CONTRIBUTING.md",
+   "wanted": 26
+  },
+  "organic-maps": {
+   "contributing": "https://github.com/organicmaps/organicmaps/blob/HEAD/CONTRIBUTING.md",
+   "good": 172
+  },
+  "ory": {
+   "contributing": "https://github.com/ory/kratos/blob/HEAD/CONTRIBUTING.md",
+   "good": 2,
+   "wanted": 1
+  },
+  "otomi": {
+   "contributing": "https://github.com/linode/apl-core/blob/HEAD/docs/CONTRIBUTING.md"
+  },
+  "owncast": {
+   "contributing": "https://github.com/owncast/owncast/blob/HEAD/CONTRIBUTING.md",
+   "good": 3,
+   "wanted": 1
+  },
+  "owncloud": {
+   "contributing": "https://github.com/owncloud/core/blob/HEAD/CONTRIBUTING.md"
+  },
+  "owncloud-infinite-scale": {
+   "contributing": "https://github.com/owncloud/ocis/blob/HEAD/CONTRIBUTING.md"
+  },
+  "padloc": {
+   "wanted": 2
+  },
+  "papercups": {
+   "contributing": "https://github.com/papercups-io/papercups/blob/HEAD/CONTRIBUTING.md",
+   "good": 6,
+   "wanted": 6
+  },
+  "passbolt": {
+   "contributing": "https://github.com/passbolt/passbolt_api/blob/HEAD/CONTRIBUTING.md",
+   "wanted": 2
+  },
+  "payload": {
+   "contributing": "https://github.com/payloadcms/payload/blob/HEAD/CONTRIBUTING.md"
+  },
+  "peertube": {
+   "contributing": "https://github.com/Chocobozzz/PeerTube/blob/HEAD/.github/CONTRIBUTING.md",
+   "good": 1
+  },
+  "penpot": {
+   "contributing": "https://github.com/penpot/penpot/blob/HEAD/CONTRIBUTING.md",
+   "good": 3
+  },
+  "peon": {
+   "contributing": "https://github.com/Peon-sh/Peon/blob/HEAD/CONTRIBUTING.md"
+  },
+  "photoprism": {
+   "contributing": "https://github.com/photoprism/photoprism/blob/HEAD/CONTRIBUTING.md",
+   "wanted": 39
+  },
+  "pingcap": {
+   "contributing": "https://github.com/pingcap/tidb/blob/HEAD/CONTRIBUTING.md",
+   "good": 57,
+   "wanted": 176
+  },
+  "pinta": {
+   "wanted": 5
+  },
+  "pixelfed": {
+   "contributing": "https://github.com/pixelfed/pixelfed/blob/HEAD/CONTRIBUTING.md"
+  },
+  "plane": {
+   "contributing": "https://github.com/makeplane/plane/blob/HEAD/CONTRIBUTING.md"
+  },
+  "plasmic": {
+   "contributing": "https://github.com/plasmicapp/plasmic/blob/HEAD/CONTRIBUTING.md"
+  },
+  "plausible": {
+   "contributing": "https://github.com/plausible/analytics/blob/HEAD/CONTRIBUTING.md"
+  },
+  "plume": {
+   "good": 8
+  },
+  "pocket-casts": {
+   "contributing": "https://github.com/Automattic/pocket-casts-android/blob/HEAD/CONTRIBUTING.md",
+   "good": 14
+  },
+  "pocketbase": {
+   "contributing": "https://github.com/pocketbase/pocketbase/blob/HEAD/CONTRIBUTING.md"
+  },
+  "posnic-pos": {
+   "contributing": "https://github.com/Posnic/POS/blob/HEAD/.github/CONTRIBUTING.md",
+   "good": 176,
+   "wanted": 394
+  },
+  "postal": {
+   "contributing": "https://github.com/postalserver/postal/blob/HEAD/CONTRIBUTING.md"
+  },
+  "posthog": {
+   "contributing": "https://github.com/PostHog/posthog/blob/HEAD/CONTRIBUTING.md",
+   "good": 7
+  },
+  "postiz": {
+   "contributing": "https://github.com/gitroomhq/postiz-app/blob/HEAD/CONTRIBUTING.md"
+  },
+  "preset": {
+   "contributing": "https://github.com/apache/superset/blob/HEAD/CONTRIBUTING.md",
+   "good": 1
+  },
+  "presta": {
+   "contributing": "https://github.com/PrestaShop/PrestaShop/blob/HEAD/CONTRIBUTING.md",
+   "good": 23
+  },
+  "prisme-analytics": {
+   "contributing": "https://github.com/prismelabs/analytics/blob/HEAD/CONTRIBUTING.md"
+  },
+  "psitransfer": {
+   "wanted": 1
+  },
+  "qdrant": {
+   "contributing": "https://github.com/qdrant/qdrant/blob/HEAD/docs/CONTRIBUTING.md",
+   "good": 1,
+   "wanted": 3
+  },
+  "quackback": {
+   "contributing": "https://github.com/QuackbackIO/quackback/blob/HEAD/CONTRIBUTING.md"
+  },
+  "quant-ux": {
+   "good": 1,
+   "wanted": 3
+  },
+  "questdb": {
+   "contributing": "https://github.com/questdb/questdb/blob/HEAD/CONTRIBUTING.md",
+   "good": 19,
+   "wanted": 10
+  },
+  "quickwit": {
+   "contributing": "https://github.com/quickwit-oss/quickwit/blob/HEAD/CONTRIBUTING.md",
+   "good": 26,
+   "wanted": 6
+  },
+  "quillpad": {
+   "contributing": "https://github.com/quillpad/quillpad/blob/HEAD/.github/CONTRIBUTING.md",
+   "good": 4,
+   "wanted": 4
+  },
+  "rawtherapee": {
+   "contributing": "https://github.com/RawTherapee/RawTherapee/blob/HEAD/CONTRIBUTING.md"
+  },
+  "redmine": {
+   "contributing": "https://github.com/redmine/redmine/blob/HEAD/CONTRIBUTING.md"
+  },
+  "restic": {
+   "contributing": "https://github.com/restic/restic/blob/HEAD/CONTRIBUTING.md"
+  },
+  "reveal-js": {
+   "contributing": "https://github.com/hakimel/reveal.js/blob/HEAD/.github/CONTRIBUTING.md"
+  },
+  "review-board": {
+   "contributing": "https://github.com/reviewboard/reviewboard/blob/HEAD/CONTRIBUTING"
+  },
+  "rocket-chat": {
+   "contributing": "https://github.com/RocketChat/Rocket.Chat/blob/HEAD/.github/CONTRIBUTING.md",
+   "good": 7
+  },
+  "roundcube": {
+   "wanted": 4
+  },
+  "rowy": {
+   "contributing": "https://github.com/buildship-ai/rowy/blob/HEAD/CONTRIBUTING.md",
+   "good": 7
+  },
+  "rustdesk": {
+   "contributing": "https://github.com/rustdesk/rustdesk/blob/HEAD/docs/CONTRIBUTING.md",
+   "good": 1,
+   "wanted": 10
+  },
+  "saleor": {
+   "contributing": "https://github.com/saleor/saleor/blob/HEAD/CONTRIBUTING.md",
+   "good": 8,
+   "wanted": 7
+  },
+  "scribus": {
+   "wanted": 5
+  },
+  "searxng": {
+   "contributing": "https://github.com/searxng/searxng/blob/HEAD/CONTRIBUTING.rst",
+   "good": 2,
+   "wanted": 1
+  },
+  "semi": {
+   "contributing": "https://github.com/weaviate/weaviate/blob/HEAD/CONTRIBUTING.md"
+  },
+  "shotcut": {
+   "contributing": "https://github.com/mltframework/shotcut/blob/HEAD/CONTRIBUTING.md"
+  },
+  "shuup": {
+   "wanted": 7
+  },
+  "shynet": {
+   "contributing": "https://github.com/milesmcc/shynet/blob/HEAD/CONTRIBUTING.md"
+  },
+  "signal": {
+   "contributing": "https://github.com/signalapp/Signal-Android/blob/HEAD/CONTRIBUTING.md"
+  },
+  "signoz": {
+   "contributing": "https://github.com/SigNoz/signoz/blob/HEAD/CONTRIBUTING.md",
+   "good": 7,
+   "wanted": 4
+  },
+  "silex": {
+   "contributing": "https://github.com/silexlabs/Silex/blob/HEAD/CONTRIBUTING.md",
+   "good": 9,
+   "wanted": 10
+  },
+  "silverbullet": {
+   "contributing": "https://github.com/silverbulletmd/silverbullet/blob/HEAD/CONTRIBUTING.md",
+   "good": 3,
+   "wanted": 47
+  },
+  "simplex-chat": {
+   "contributing": "https://github.com/simplex-chat/simplex-chat/blob/HEAD/docs/CONTRIBUTING.md"
+  },
+  "siyuan": {
+   "contributing": "https://github.com/siyuan-note/siyuan/blob/HEAD/.github/CONTRIBUTING.md"
+  },
+  "slidev": {
+   "contributing": "https://github.com/slidevjs/slidev/blob/HEAD/CONTRIBUTING.md",
+   "wanted": 1
+  },
+  "snikket": {
+   "good": 2
+  },
+  "solidinvoice": {
+   "contributing": "https://github.com/SolidInvoice/SolidInvoice/blob/HEAD/CONTRIBUTING.md"
+  },
+  "solidping": {
+   "contributing": "https://github.com/fclairamb/solidping/blob/HEAD/CONTRIBUTING.md"
+  },
+  "solidtime": {
+   "contributing": "https://github.com/solidtime-io/solidtime/blob/HEAD/CONTRIBUTING.md"
+  },
+  "sonic": {
+   "contributing": "https://github.com/valeriansaliou/sonic/blob/HEAD/CONTRIBUTING.md",
+   "good": 3,
+   "wanted": 8
+  },
+  "step-ci": {
+   "wanted": 10
+  },
+  "stirling-pdf": {
+   "contributing": "https://github.com/Stirling-Tools/Stirling-PDF/blob/HEAD/.github/CONTRIBUTING.md",
+   "good": 6
+  },
+  "strapi": {
+   "contributing": "https://github.com/strapi/strapi/blob/HEAD/CONTRIBUTING.md"
+  },
+  "suitecrm": {
+   "contributing": "https://github.com/SuiteCRM/SuiteCRM/blob/HEAD/.github/CONTRIBUTING.md",
+   "good": 2,
+   "wanted": 5
+  },
+  "sulu": {
+   "contributing": "https://github.com/sulu/sulu/blob/HEAD/CONTRIBUTING.md",
+   "wanted": 4
+  },
+  "supabase": {
+   "contributing": "https://github.com/supabase/supabase/blob/HEAD/CONTRIBUTING.md",
+   "good": 1,
+   "wanted": 1
+  },
+  "super-productivity": {
+   "contributing": "https://github.com/super-productivity/super-productivity/blob/HEAD/CONTRIBUTING.md",
+   "good": 6,
+   "wanted": 405
+  },
+  "supertokens": {
+   "contributing": "https://github.com/supertokens/supertokens-core/blob/HEAD/CONTRIBUTING.md",
+   "good": 1
+  },
+  "sylius": {
+   "contributing": "https://github.com/Sylius/Sylius/blob/HEAD/.github/CONTRIBUTING.md",
+   "good": 1,
+   "wanted": 2
+  },
+  "syncthing": {
+   "contributing": "https://github.com/syncthing/syncthing/blob/HEAD/CONTRIBUTING.md",
+   "good": 4
+  },
+  "tabby": {
+   "contributing": "https://github.com/TabbyML/tabby/blob/HEAD/CONTRIBUTING.md",
+   "good": 4
+  },
+  "tdengine": {
+   "wanted": 108
+  },
+  "telemetry-tracker": {
+   "contributing": "https://github.com/Telemetry-Tracker/telemetry-tracker/blob/HEAD/CONTRIBUTING.md",
+   "good": 21,
+   "wanted": 17
+  },
+  "terminusdb": {
+   "contributing": "https://github.com/terminusdb/terminusdb/blob/HEAD/docs/CONTRIBUTING.md",
+   "good": 1
+  },
+  "tina": {
+   "contributing": "https://github.com/tinacms/tinacms/blob/HEAD/CONTRIBUTING.md",
+   "good": 2,
+   "wanted": 1
+  },
+  "tinode": {
+   "contributing": "https://github.com/tinode/chat/blob/HEAD/CONTRIBUTING.md",
+   "wanted": 4
+  },
+  "tolgee": {
+   "contributing": "https://github.com/tolgee/tolgee-platform/blob/HEAD/CONTRIBUTING.md",
+   "good": 7
+  },
+  "tooljet": {
+   "contributing": "https://github.com/ToolJet/ToolJet/blob/HEAD/CONTRIBUTING.md",
+   "good": 9
+  },
+  "trilium-notes": {
+   "contributing": "https://github.com/TriliumNext/Trilium/blob/HEAD/CONTRIBUTING.md"
+  },
+  "tuta": {
+   "good": 1,
+   "wanted": 1
+  },
+  "twenty": {
+   "contributing": "https://github.com/twentyhq/twenty/blob/HEAD/.github/CONTRIBUTING.md"
+  },
+  "tymeslot": {
+   "contributing": "https://github.com/Tymeslot/tymeslot/blob/HEAD/CONTRIBUTING.md"
+  },
+  "typesense": {
+   "contributing": "https://github.com/typesense/typesense/blob/HEAD/CONTRIBUTING.md",
+   "wanted": 1
+  },
+  "ultravnc": {
+   "wanted": 14
+  },
+  "umami": {
+   "contributing": "https://github.com/umami-software/umami/blob/HEAD/CONTRIBUTING.md"
+  },
+  "ungoogled-chromium": {
+   "contributing": "https://github.com/ungoogled-software/ungoogled-chromium/blob/HEAD/docs/contributing.md",
+   "wanted": 111
+  },
+  "uptrace": {
+   "contributing": "https://github.com/uptrace/uptrace/blob/HEAD/CONTRIBUTING.md"
+  },
+  "uvdesk": {
+   "contributing": "https://github.com/uvdesk/community-skeleton/blob/HEAD/.github/CONTRIBUTING.md",
+   "wanted": 4
+  },
+  "vane-formerly-perplexica": {
+   "contributing": "https://github.com/ItzCrazyKns/Vane/blob/HEAD/CONTRIBUTING.md"
+  },
+  "vaultwarden": {
+   "wanted": 1
+  },
+  "vendure": {
+   "contributing": "https://github.com/vendurehq/vendure/blob/HEAD/CONTRIBUTING.md"
+  },
+  "victorialogs": {
+   "contributing": "https://github.com/VictoriaMetrics/VictoriaLogs/blob/HEAD/CONTRIBUTING.md"
+  },
+  "victoriametrics": {
+   "contributing": "https://github.com/VictoriaMetrics/VictoriaMetrics/blob/HEAD/CONTRIBUTING.md",
+   "good": 1,
+   "wanted": 31
+  },
+  "vikunja": {
+   "contributing": "https://github.com/go-vikunja/vikunja/blob/HEAD/CONTRIBUTING.md",
+   "wanted": 1
+  },
+  "wallabag": {
+   "contributing": "https://github.com/wallabag/wallabag/blob/HEAD/.github/CONTRIBUTING.md",
+   "good": 10
+  },
+  "webiny": {
+   "contributing": "https://github.com/webiny/webiny-js/blob/HEAD/docs/CONTRIBUTING.md"
+  },
+  "webstudio": {
+   "wanted": 1
+  },
+  "wekan": {
+   "contributing": "https://github.com/wekan/wekan/blob/HEAD/CONTRIBUTING.md"
+  },
+  "whisper-cpp": {
+   "contributing": "https://github.com/ggml-org/whisper.cpp/blob/HEAD/CONTRIBUTING.md",
+   "good": 29,
+   "wanted": 10
+  },
+  "windmill": {
+   "contributing": "https://github.com/windmill-labs/windmill/blob/HEAD/CONTRIBUTING.md"
+  },
+  "woocommerce": {
+   "contributing": "https://github.com/woocommerce/woocommerce/blob/HEAD/CONTRIBUTING.md",
+   "good": 11
+  },
+  "writefreely": {
+   "contributing": "https://github.com/writefreely/writefreely/blob/HEAD/CONTRIBUTING.md",
+   "good": 2,
+   "wanted": 6
+  },
+  "xournal": {
+   "contributing": "https://github.com/xournalpp/xournalpp/blob/HEAD/CONTRIBUTING.md",
+   "good": 13
+  },
+  "yacy": {
+   "contributing": "https://github.com/yacy/yacy_search_server/blob/HEAD/CONTRIBUTING.md",
+   "good": 3,
+   "wanted": 3
+  },
+  "yanknote": {
+   "contributing": "https://github.com/purocean/yn/blob/HEAD/CONTRIBUTING.md"
+  },
+  "youcoded": {
+   "contributing": "https://github.com/itsdestin/youcoded/blob/HEAD/CONTRIBUTING.md"
+  },
+  "yourls": {
+   "wanted": 2
+  },
+  "yugabyte": {
+   "good": 123,
+   "wanted": 41
+  },
+  "zammad": {
+   "good": 1
+  },
+  "zed": {
+   "contributing": "https://github.com/zed-industries/zed/blob/HEAD/CONTRIBUTING.md"
+  },
+  "zen-browser": {
+   "good": 12
+  },
+  "zettlr": {
+   "contributing": "https://github.com/Zettlr/Zettlr/blob/HEAD/CONTRIBUTING.md",
+   "good": 2,
+   "wanted": 3
+  },
+  "zinc-labs": {
+   "contributing": "https://github.com/zincsearch/zincsearch/blob/HEAD/CONTRIBUTING.md",
+   "wanted": 3
+  },
+  "zitadel": {
+   "contributing": "https://github.com/zitadel/zitadel/blob/HEAD/CONTRIBUTING.md",
+   "good": 43,
+   "wanted": 7
+  },
+  "zulip": {
+   "contributing": "https://github.com/zulip/zulip/blob/HEAD/CONTRIBUTING.md",
+   "wanted": 82
+  }
+ }
+}

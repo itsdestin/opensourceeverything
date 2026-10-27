@@ -10,7 +10,7 @@
   let meP = null; const getMe = (fresh) => (fresh || !meP ? (meP = api.me()) : meP); // → { user, rules }
 
   const ago = (t) => { const s = (Date.now() - t) / 1000; if (s < 60) return 'just now'; const m = s / 60, h = m / 60, d = h / 24;
-    return m < 60 ? `${Math.floor(m)} min ago` : h < 24 ? `${Math.floor(h)} h ago` : d < 30 ? `${Math.floor(d)} days ago` : new Date(t).toLocaleDateString(undefined, { month: 'short', day: 'numeric', year: 'numeric' }); };
+    return m < 60 ? `${Math.floor(m)} min ago` : h < 24 ? `${Math.floor(h)} h ago` : d < 30 ? `${Math.floor(d)} ${Math.floor(d) === 1 ? 'day' : 'days'} ago` : new Date(t).toLocaleDateString(undefined, { month: 'short', day: 'numeric', year: 'numeric' }); };
   const KIND = { missing: 'Missing feature', wish: 'Wish', talk: 'Discussion' };
   // WHY words on the vote button (review, Oct 27): a bare ▲ with a number didn't read as "vote" to newcomers.
   const VOTE_WORD = { missing: 'Me too', wish: 'I want this' };
@@ -82,6 +82,8 @@
     slot.innerHTML = `<div class="dd"><button class="avatar acct-btn" type="button" data-menu="${mid}" aria-haspopup="menu" aria-expanded="false" title="@${esc(user.login)}">${esc(user.login[0].toUpperCase())}</button>
       <div class="menu acct-menu" id="${mid}" role="menu">
         <div class="menu-note">Signed in as <b>@${esc(user.login)}</b></div>
+        <a class="mi" role="menuitem" href="${BASE}suggestions/">Your suggestions</a>
+        <a class="mi" role="menuitem" href="${BASE}tag/">Tag my project</a>
         ${user.isMod ? `<a class="mi" role="menuitem" href="${BASE}mod/">Mod tools</a>` : ''}
         ${api.demo ? '<button class="mi" type="button" data-demo-reset>Preview: start over</button>' : ''}
         <button class="mi" type="button" data-signout>Sign out</button>
@@ -380,6 +382,9 @@
   }
 
   // ── Start ──
+  // WHY shared (contrib.js): "I want this too", Tag my project, Your suggestions and the mod Suggestions tab live in their own file
+  // but use the same popups, sign-in and pickers, so they look and behave like everything else here.
+  OI.ui = { dialog, confirmBox, ask, signIn, oops, getMe, picker, loadNames, ago, fillText, remember };
   if (api.demo) document.body.insertAdjacentHTML('afterbegin', '<div class="demo-ribbon">Preview: sample posts and pretend votes, saved only in this browser</div>');
   $$('[data-account]').forEach(renderAccount);
   renderNewAccountLine();

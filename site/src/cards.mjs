@@ -33,10 +33,11 @@ export function altCard(p, alt, i, group, why) {
       <div class="inner">
         <div class="head"><h3><a class="cardlink" href="${url(`p/${p.id}/`)}">${esc(p.name)}</a></h3>
           ${acts.length ? `<div class="dd actions"><button class="btn sm secondary" type="button" data-menu="${menuId}" aria-haspopup="menu" aria-expanded="false">Actions ${ICON.chev}</button>
-            <div class="menu" id="${menuId}" role="menu">${acts.map((l) => `<a class="mi" role="menuitem" href="${esc(l.href)}" rel="noopener">${l.label}</a>`).join('')}<a class="mi" role="menuitem" href="${url(`p/${p.id}/`)}">See full details</a><a class="mi" role="menuitem" href="${esc(suggestUrl('2-fix', { project: p.name, ...(group ? { group: group.name } : {}) }))}" rel="noopener">Suggest a change</a></div></div>` : ''}</div>
+            <div class="menu" id="${menuId}" role="menu">${acts.map((l) => `<a class="mi" role="menuitem" href="${esc(l.href)}" rel="noopener">${l.label}</a>`).join('')}<a class="mi" role="menuitem" href="${url(`p/${p.id}/`)}">See full details</a>${p.help ? `<a class="mi" role="menuitem" href="${url(`p/${p.id}/#help`)}">How to help</a>` : ''}<a class="mi" role="menuitem" href="${esc(suggestUrl('2-fix', { project: p.name, ...(group ? { group: group.name } : {}) }))}" rel="noopener">Suggest a change</a></div></div>` : ''}</div>
         <div class="chiprow">${factChips(p, alt, SOCIAL && group ? `<span class="chip" data-rating data-group="${group.id}" data-project="${esc(p.id)}" hidden></span>` : '')}</div>
         <p class="blurb">${esc(p.summary)}</p>
         ${whyText ? `<p class="why" title="Why it is listed where it is. Nobody has to have voted for this; it comes from the facts on the card.">Why it's here: ${esc(whyText)}</p>` : ''}
+        ${SOCIAL ? `<div class="dev-pitch" data-dev-pitch data-mode="card" data-project="${esc(p.id)}" hidden></div>` : ''}
         <div class="foot">${esc(foot)}</div>
         ${SOCIAL && group ? `<div class="missing-count" data-missing-count data-group="${group.id}" data-project="${esc(p.id)}" hidden></div>` : ''}
       </div>

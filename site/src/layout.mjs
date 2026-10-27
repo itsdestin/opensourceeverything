@@ -75,6 +75,7 @@ export function page({ path, title, description, body, styles = [], scripts = []
 <link rel="stylesheet" href="${asset('assets/fonts.css')}">
 <link rel="stylesheet" href="${asset('assets/site.css')}">
 ${styles.map((s) => `<link rel="stylesheet" href="${asset('assets/' + s)}">`).join('\n')}
+${SOCIAL ? `<link rel="stylesheet" href="${asset('assets/contrib.css')}">` : ''}
 <link rel="stylesheet" href="${asset('assets/mobile.css')}">
 ${jsonLd ? `<script type="application/ld+json">${JSON.stringify(jsonLd)}</script>` : ''}
 <script>window.OI = { base: ${JSON.stringify(url())}, repo: ${JSON.stringify(REPO)}, chev: ${JSON.stringify(ICON.chev)} };</script>
@@ -91,7 +92,7 @@ ${tabbar(path)}
 <script src="${asset('assets/site.js')}" defer></script>
 ${SOCIAL ? `<script src="${asset(DEMO ? 'assets/fake-api.js' : 'assets/api.js')}" defer></script>${DEMO ? '' : `<script>window.OI_API_URL = ${JSON.stringify(API_URL)};</script>`}` : ''}
 ${scripts.map((s) => `<script src="${asset('assets/' + s)}" defer></script>`).join('\n')}
-${SOCIAL ? `<script src="${asset('assets/social.js')}" defer></script>` : ''}
+${SOCIAL ? `<script src="${asset('assets/social.js')}" defer></script>\n<script src="${asset('assets/contrib.js')}" defer></script>` : ''}
 </body>
 </html>`;
 }

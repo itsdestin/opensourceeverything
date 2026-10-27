@@ -5,6 +5,7 @@ import { readdirSync, readFileSync, existsSync, statSync } from 'node:fs';
 import { join, dirname } from 'node:path';
 import { fileURLToPath } from 'node:url';
 import { BASE, loadData } from './src/lib.mjs';
+import { stale } from '../prefill/sync-forms.mjs';
 
 const HERE = dirname(fileURLToPath(import.meta.url));
 const DIST = join(HERE, 'dist');
@@ -39,5 +40,7 @@ for (const f of html) if (/couldn.t confirm|checked by AI/i.test(readFileSync(f,
 // Old group addresses that were split must still answer (data/redirects.json).
 for (const old of Object.keys(d.moved)) if (!pages.has(`g/${old}/index.html`)) problems.push(`no redirect page for split group ${old}`);
 for (const slug of Object.keys(d.movedApps)) if (!pages.has(`alternatives-to/${slug}/index.html`)) problems.push(`no redirect page for moved app ${slug}`);
+// WHY (review Oct 26): the GitHub forms' group and category pick lists are written from the data; fail if they fell behind.
+for (const x of stale()) problems.push(`GitHub form ${x.file}: pick list out of date. Run: node prefill/sync-forms.mjs`);
 if (problems.length) { console.error(problems.slice(0, 50).join('\n') + (problems.length > 50 ? `\n…and ${problems.length - 50} more` : '')); process.exit(1); }
 console.log(`site check: ${html.length} pages, all links and pages present`);

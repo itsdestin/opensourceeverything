@@ -1,7 +1,7 @@
 // One page per closed app (alternatives-to/<app>/): "Open-source alternatives to Notion".
 // WHY (Destin, Oct 27): people search by the app they want to leave, not by our group names. Each page shows the
 // alternatives from every group that replaces the app (Photoshop sits in both Photo editing and Painting).
-import { esc, url, SITE_URL } from '../lib.mjs';
+import { esc, url, SITE_URL, SOCIAL } from '../lib.mjs';
 import { altCard, appSlug, appUrl, sortAlts, deviceFilter, buildBox, chooseBox } from '../cards.mjs';
 
 export default function appPages(d) {
@@ -39,6 +39,8 @@ export default function appPages(d) {
   </div>
   ${sections.map(section).join('')}
   ${all.length > 1 ? chooseBox({ closed: [name], json: `data/groups/${groups[0].id}.json`, alts: all }) : ''}
+  ${SOCIAL && !all.some((x) => x.a.fit === 'full') ? `<!-- WHY: only when nothing open fully replaces it; the server checks the same rule -->
+  <section class="surface sec"><div class="sec-head"><div><h2 class="h-large">Want an open ${esc(name)}?</h2><p class="desc12">Add yours to the count. Builders see what is asked for most.</p></div><div class="want" data-request data-key="app:${esc(name)}" hidden></div></div></section>` : ''}
   ${buildBox({ about: `an alternative to ${name}`, closed: [name], json: `data/groups/${groups[0].id}.json`, alts: all })}`;
 
     const description = all.length

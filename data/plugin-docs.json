@@ -1,0 +1,20 @@
+{
+  "_about": "Hand-edited. Where a project's own docs explain how to build a plugin, extension or add-on for it. Shown under \"How to help\" on its page. Key = project id (data/projects.json). Each address was opened and checked on 2026-10-27; add more with a pull request (see CONTRIBUTING.md).",
+  "projects": {
+    "penpot": { "label": "Write a plugin", "url": "https://help.penpot.app/plugins/" },
+    "gimp": { "label": "Write a plug-in", "url": "https://developer.gimp.org/resource/writing-a-plug-in/" },
+    "krita": { "label": "Script Krita", "url": "https://scripting.krita.org/" },
+    "inkscape": { "label": "Write an extension", "url": "https://inkscape-extensions-guide.readthedocs.io/en/latest/" },
+    "firefox": { "label": "Build an add-on", "url": "https://extensionworkshop.com/" },
+    "nextcloud": { "label": "Build an app", "url": "https://docs.nextcloud.com/server/latest/developer_manual/app_development/index.html" },
+    "jellyfin": { "label": "Plugins", "url": "https://jellyfin.org/docs/general/server/plugins/" },
+    "home-assistant": { "label": "Build an integration", "url": "https://developers.home-assistant.io/docs/creating_component_index/" },
+    "libreoffice-writer": { "label": "Browse and build extensions", "url": "https://extensions.libreoffice.org/" },
+    "logseq": { "label": "Write a plugin", "url": "https://plugins-doc.logseq.com/" },
+    "joplin": { "label": "Write a plugin", "url": "https://joplinapp.org/help/api/get_started/plugins/" },
+    "blender": { "label": "Write an add-on", "url": "https://docs.blender.org/manual/en/latest/advanced/scripting/addon_tutorial.html" },
+    "obs-studio": { "label": "Write a plugin", "url": "https://obsproject.com/docs/plugins.html" },
+    "thunderbird": { "label": "Build an add-on", "url": "https://developer.thunderbird.net/add-ons/about-add-ons" },
+    "wordpress": { "label": "Write a plugin", "url": "https://developer.wordpress.org/plugins/" }
+  }
+}

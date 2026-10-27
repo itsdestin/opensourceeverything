@@ -1,0 +1,42 @@
+/* Contributions (assets/contrib.js): requests, "From the Developer", Tag my project, mod tabs. Uses the site's own colours. */
+.want { display:flex; align-items:center; gap:8px; margin-top:10px; }
+.want:empty { display:none; }
+.sec-head .want { margin-top:0; }
+.req-row { cursor:default; align-items:center; }
+.req-rank { flex:none; width:20px; text-align:center; font-size:12px; color:var(--fg-faint); font-variant-numeric:tabular-nums; }
+.req-row .vote.big { width:84px; }
+.req-row .vote span { font-size:10px; white-space:nowrap; }
+/* The developer's pitch on a card: a label and the first two lines of what's different. */
+.dev-pitch { display:flex; flex-direction:column; align-items:flex-start; gap:4px; padding:8px; border-radius:var(--radius-md); background:color-mix(in srgb,var(--accent) 7%,transparent); border:1px solid var(--edge-card); }
+.dev-pitch[hidden] { display:none; }
+.dev-pitch .pitch-line { font-size:12px; color:var(--fg-2); display:-webkit-box; -webkit-line-clamp:2; -webkit-box-orient:vertical; overflow:hidden; }
+.pitch-differs { font-size:15px; color:var(--fg); margin:0; overflow-wrap:anywhere; }
+.pitch-part { display:flex; flex-direction:column; gap:2px; }
+.pre { white-space:pre-line; overflow-wrap:anywhere; margin:0; }
+.pitchbox { display:flex; flex-direction:column; gap:8px; margin-top:6px; }
+/* Tag my project */
+.steps { list-style:none; display:flex; gap:8px; padding:0; margin:0; flex-wrap:wrap; }
+.steps li { display:flex; align-items:center; gap:6px; font-size:12px; color:var(--fg-muted); }
+.steps li span { width:20px; height:20px; border-radius:9999px; display:grid; place-items:center; font-size:11px; border:1px solid var(--edge); background:var(--inset); }
+.steps li.on { color:var(--fg); font-weight:500; } .steps li.on span { background:var(--accent); color:var(--on-accent); border-color:var(--accent); }
+.steps li.done span { background:color-mix(in srgb,var(--accent) 20%,transparent); }
+.howto { margin:0; padding-left:20px; display:flex; flex-direction:column; gap:8px; font-size:14px; color:var(--fg-2); }
+code.copy { cursor:pointer; background:var(--inset); border:1px solid var(--edge-card); border-radius:var(--radius-sm); padding:1px 6px; font-family:var(--font-mono); font-size:12px; color:var(--fg); overflow-wrap:anywhere; }
+code.copy:hover { border-color:var(--accent); }
+.req, .opt { font-size:11px; font-weight:400; margin-left:4px; } .req { color:var(--fg); } .opt { color:var(--fg-faint); }
+.built { border:0; margin:0; padding:0; display:flex; flex-direction:column; gap:8px; min-width:0; }
+.radio { display:flex; gap:10px; align-items:flex-start; padding:8px 10px; border:1px solid var(--edge-card); border-radius:var(--radius-md); font-size:14px; cursor:pointer; }
+.radio:has(input:checked) { border-color:var(--accent); background:color-mix(in srgb,var(--accent) 8%,transparent); }
+.radio input { margin-top:3px; accent-color:var(--accent); }
+.before { padding:10px 12px; display:flex; flex-direction:column; gap:8px; } .before:empty { display:none; }
+.beforeg .label { margin-bottom:2px; }
+.tabs-bar { padding:8px 12px; } .tabs-bar[hidden] { display:none; }
+.helprow { display:flex; flex-direction:column; align-items:flex-start; gap:2px; text-align:left; height:auto; padding-top:8px; padding-bottom:8px; }
+.helprow .count { margin-left:6px; }
+.modrow .btns-row { display:flex; gap:8px; flex-wrap:wrap; }
+@media (max-width:640px) { .req-row .vote.big { width:76px; } .steps li { font-size:11px; } }
+.pitch-part .label { margin:0; }
+.pitch-part { gap:0; }
+.pitchbox .pitch-part, .surface > .pitch-part { margin-top:2px; }
+.desc12 a { color:var(--fg); }
+.steps { padding:2px 4px; }

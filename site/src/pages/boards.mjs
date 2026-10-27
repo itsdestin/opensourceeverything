@@ -27,5 +27,6 @@ export default function boardPages(d) {
   }));
   return [index, ...cats,
     { path: 'n/', title: 'Note', noIndex: true, styles: ['pages.css', 'group.css'], description: 'A note on Open Source Everything.', body: '<div data-note-page><div class="surface sec"><div class="empty">Loading…</div></div></div>' },
-    { path: 'mod/', title: 'Mod tools', noIndex: true, styles: ['pages.css', 'group.css'], description: 'Mod tools.', body: '<div data-mod><div class="surface sec"><div class="empty">Loading…</div></div></div>' }];
+    { path: 'mod/', title: 'Mod tools', noIndex: true, styles: ['pages.css', 'group.css'], description: 'Mod tools.', // WHY tabs (review Oct 26): the page holds posts waiting for approval; suggestions and developer pitches are a second tab (assets/contrib.js).
+      body: '<div class="surface tabs-bar" data-mod-tabs hidden></div><div data-mod><div class="surface sec"><div class="empty">Loading…</div></div></div><div data-mod-suggest hidden></div>' }];
 }

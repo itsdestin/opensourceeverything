@@ -50,8 +50,11 @@ for (const g of d.groups) {
 // ── Names for voting and boards (assets/social.js): who's in which group, in one small file ──
 write(join('data', 'names.json'), JSON.stringify({
   categories: Object.fromEntries(d.categories.map((c) => [c.id, c.name])),
-  groups: Object.fromEntries(d.groups.map((g) => [g.id, { n: g.name, c: g.category, closed: g.closed, alts: g.alternatives.map((a) => a.project) }])),
+  // WHY gap: "I want this too" is only for jobs nothing open fully does yet (the server checks it against this).
+  groups: Object.fromEntries(d.groups.map((g) => [g.id, { n: g.name, c: g.category, closed: g.closed, alts: g.alternatives.map((a) => a.project), gap: !g.alternatives.some((a) => a.fit === 'full') }])),
   projects: Object.fromEntries(d.projects.map((p) => [p.id, p.name])),
+  // WHY: "Tag my project" finds the listed project from the link someone pastes (github.com/owner/name, lower case).
+  codes: Object.fromEntries(d.projects.filter((p) => p.code).map((p) => [p.code.replace(/^https?:\/\/(www\.)?/i, '').replace(/\.git$|\/$/g, '').toLowerCase(), p.id])),
 }));
 
 // ── Search index: short keys keep it small (it loads the first time someone types) ──

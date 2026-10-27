@@ -51,6 +51,8 @@ export default function groupPages(d) {
         ${alts.length
           ? `<div class="grid" data-alts>${alts.map((x, i) => altCard(x.p, x.a, i, g, x.why)).join('')}</div><div class="callout info" data-nomatch hidden>None of these match. Try another device.</div>`
           : `<div class="callout info">Nothing open does this job yet. That makes it a gap: if you're building one, <a href="${esc(suggestUrl('1-add-project', { group: g.name }))}" rel="noopener">add it here</a>.</div>`}
+        ${SOCIAL && !alts.some(({ a }) => a.fit === 'full') ? `<!-- WHY (review Oct 26): "I want this too" counts demand for a job nothing open fully does; ranked under Most requested -->
+        <div class="want" data-request data-key="group:${g.id}" hidden></div>` : ''}
       </section>
       ${SOCIAL ? `<section class="surface sec" id="missing">
         <div class="sec-head"><div><h2 class="h-large">What's missing</h2><p class="desc12">What people still miss here, and wish existed. Upvote what matters to you.</p></div>
