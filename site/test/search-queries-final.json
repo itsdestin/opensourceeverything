@@ -1,0 +1,560 @@
+{
+ "_about": "Final-exam searches written without seeing the code or the other test sets (Oct 26, 2026). Scored once to report search quality; not used for tuning.",
+ "queries": [
+  {
+   "q": "Todoist alternative",
+   "want": [
+    "c:todoist",
+    "g:tasks"
+   ],
+   "kind": "phrase"
+  },
+  {
+   "q": "typeform free",
+   "want": [
+    "c:typeform",
+    "g:forms"
+   ],
+   "kind": "phrase"
+  },
+  {
+   "q": "calendly open source",
+   "want": [
+    "c:calendly",
+    "g:scheduling",
+    "p:cal-com"
+   ],
+   "kind": "phrase"
+  },
+  {
+   "q": "something instead of bitly",
+   "want": [
+    "c:bitly",
+    "g:link-shortening"
+   ],
+   "kind": "phrase"
+  },
+  {
+   "q": "lastpas alternativ",
+   "want": [
+    "c:lastpass",
+    "g:passwords"
+   ],
+   "kind": "typo"
+  },
+  {
+   "q": "Procreat",
+   "want": [
+    "c:procreate",
+    "g:painting"
+   ],
+   "kind": "typo"
+  },
+  {
+   "q": "FIGMA",
+   "want": [
+    "c:figma",
+    "g:ui-design",
+    "p:penpot"
+   ],
+   "kind": "closed app"
+  },
+  {
+   "q": "Evernote",
+   "want": [
+    "c:evernote",
+    "g:notes"
+   ],
+   "kind": "closed app"
+  },
+  {
+   "q": "mail chimp",
+   "want": [
+    "c:mailchimp",
+    "g:newsletters"
+   ],
+   "kind": "spacing"
+  },
+  {
+   "q": "teamviewr",
+   "want": [
+    "c:teamviewer",
+    "g:remote-desktop"
+   ],
+   "kind": "typo"
+  },
+  {
+   "q": "CamTasia",
+   "want": [
+    "c:camtasia",
+    "g:recording",
+    "p:obs-studio"
+   ],
+   "kind": "closed app"
+  },
+  {
+   "q": "sendgrid",
+   "want": [
+    "c:sendgrid",
+    "g:email-sending",
+    "p:postal"
+   ],
+   "kind": "closed app"
+  },
+  {
+   "q": "Zendesk",
+   "want": [
+    "c:zendesk",
+    "g:support"
+   ],
+   "kind": "closed app"
+  },
+  {
+   "q": "split wise",
+   "want": [
+    "c:splitwise",
+    "g:shared-expenses",
+    "p:spliit-app"
+   ],
+   "kind": "spacing"
+  },
+  {
+   "q": "otter.ai like",
+   "want": [
+    "c:otter-ai",
+    "g:transcription"
+   ],
+   "kind": "phrase"
+  },
+  {
+   "q": "Immich",
+   "want": [
+    "p:immich"
+   ],
+   "kind": "project"
+  },
+  {
+   "q": "vaultwarden",
+   "want": [
+    "p:vaultwarden"
+   ],
+   "kind": "project"
+  },
+  {
+   "q": "Jellyfin",
+   "want": [
+    "p:jellyfin"
+   ],
+   "kind": "project"
+  },
+  {
+   "q": "syncthing",
+   "want": [
+    "p:syncthing"
+   ],
+   "kind": "project"
+  },
+  {
+   "q": "keepassxc",
+   "want": [
+    "p:keepassxc"
+   ],
+   "kind": "project"
+  },
+  {
+   "q": "kdenlive",
+   "want": [
+    "p:kdenlive"
+   ],
+   "kind": "project"
+  },
+  {
+   "q": "OBS Studio",
+   "want": [
+    "p:obs-studio"
+   ],
+   "kind": "project"
+  },
+  {
+   "q": "nextclod",
+   "want": [
+    "p:nextcloud"
+   ],
+   "kind": "typo"
+  },
+  {
+   "q": "grafanna",
+   "want": [
+    "p:grafana"
+   ],
+   "kind": "typo"
+  },
+  {
+   "q": "mattermst",
+   "want": [
+    "p:mattermost"
+   ],
+   "kind": "typo"
+  },
+  {
+   "q": "photo editor",
+   "want": [
+    "g:photo-editing",
+    "p:gimp",
+    "p:darktable",
+    "p:rawtherapee",
+    "p:pinta",
+    "p:krita"
+   ],
+   "kind": "job"
+  },
+  {
+   "q": "note app",
+   "want": [
+    "g:notes",
+    "p:joplin",
+    "p:notally",
+    "p:standard-notes",
+    "p:logseq",
+    "p:quillpad",
+    "p:notesnook",
+    "p:nextcloud-notes",
+    "p:memos"
+   ],
+   "kind": "job"
+  },
+  {
+   "q": "team chat",
+   "want": [
+    "g:team-chat",
+    "p:zulip",
+    "p:mattermost",
+    "p:rocket-chat",
+    "p:element"
+   ],
+   "kind": "job"
+  },
+  {
+   "q": "password manager",
+   "want": [
+    "g:passwords",
+    "p:bitwarden",
+    "p:keepassxc",
+    "p:vaultwarden",
+    "p:keepassdx",
+    "p:padloc",
+    "p:passbolt",
+    "p:aliasvault"
+   ],
+   "kind": "job"
+  },
+  {
+   "q": "vpn",
+   "want": [
+    "g:vpn",
+    "p:netbird",
+    "p:gravitl",
+    "p:omniedge"
+   ],
+   "kind": "job"
+  },
+  {
+   "q": "e-reader",
+   "want": [
+    "g:books",
+    "p:koreader",
+    "p:calibre"
+   ],
+   "kind": "job"
+  },
+  {
+   "q": "rss reader",
+   "want": [
+    "g:feeds",
+    "p:freshrss",
+    "p:miniflux",
+    "p:newsboat",
+    "p:fluent-reader",
+    "p:netnewswire"
+   ],
+   "kind": "job"
+  },
+  {
+   "q": "web browser",
+   "want": [
+    "g:browsers",
+    "p:firefox",
+    "p:librewolf",
+    "p:brave",
+    "p:zen-browser",
+    "p:ungoogled-chromium",
+    "p:tor-browser"
+   ],
+   "kind": "job"
+  },
+  {
+   "q": "website analytics",
+   "want": [
+    "g:analytics",
+    "p:plausible",
+    "p:umami",
+    "p:matomo",
+    "p:goatcounter"
+   ],
+   "kind": "job"
+  },
+  {
+   "q": "pdf editor",
+   "want": [
+    "g:pdf",
+    "p:stirling-pdf",
+    "p:pdf-arranger",
+    "p:okular"
+   ],
+   "kind": "job"
+  },
+  {
+   "q": "screen recorder",
+   "want": [
+    "g:recording",
+    "p:obs-studio"
+   ],
+   "kind": "job"
+  },
+  {
+   "q": "invoicing",
+   "want": [
+    "g:invoicing",
+    "p:crater",
+    "p:solidinvoice",
+    "p:lago"
+   ],
+   "kind": "job"
+  },
+  {
+   "q": "keyboard app",
+   "want": [
+    "g:keyboards",
+    "p:florisboard",
+    "p:heliboard",
+    "p:anysoftkeyboard",
+    "p:openboard",
+    "p:simple-keyboard"
+   ],
+   "kind": "job"
+  },
+  {
+   "q": "3d modeling",
+   "want": [
+    "g:3d",
+    "p:blender"
+   ],
+   "kind": "job"
+  },
+  {
+   "q": "email client",
+   "want": [
+    "g:email",
+    "p:thunderbird",
+    "p:mailspring",
+    "p:fairemail",
+    "p:roundcube"
+   ],
+   "kind": "job"
+  },
+  {
+   "q": "host my own git server",
+   "want": [
+    "g:code-hosting",
+    "p:gitea",
+    "p:forgejo",
+    "p:gogs",
+    "p:gitlab-community-edition"
+   ],
+   "kind": "described"
+  },
+  {
+   "q": "edit podcast audio",
+   "want": [
+    "g:audio",
+    "p:audacity",
+    "p:ardour"
+   ],
+   "kind": "described"
+  },
+  {
+   "q": "turn my voice recordings into text",
+   "want": [
+    "g:transcription",
+    "p:whisper",
+    "p:whisper-cpp",
+    "p:buzz"
+   ],
+   "kind": "described"
+  },
+  {
+   "q": "run ai models on my own computer",
+   "want": [
+    "g:ai-chat",
+    "p:ollama",
+    "p:jan"
+   ],
+   "kind": "described"
+  },
+  {
+   "q": "track my spending every month",
+   "want": [
+    "g:budgeting",
+    "p:actual-budget",
+    "p:firefly-iii"
+   ],
+   "kind": "described"
+  },
+  {
+   "q": "stream my movie collection at home",
+   "want": [
+    "g:home-media",
+    "p:jellyfin",
+    "p:kodi"
+   ],
+   "kind": "described"
+  },
+  {
+   "q": "backup my laptop automaticaly",
+   "want": [
+    "g:backup",
+    "p:restic",
+    "p:borgbackup",
+    "p:duplicati"
+   ],
+   "kind": "described"
+  },
+  {
+   "q": "send a huge file to a freind",
+   "want": [
+    "g:file-transfer",
+    "p:localsend",
+    "p:psitransfer"
+   ],
+   "kind": "described"
+  },
+  {
+   "q": "get google off my phone",
+   "want": [
+    "g:phone-os",
+    "p:grapheneos",
+    "p:lineageos",
+    "p:e-os"
+   ],
+   "kind": "described"
+  },
+  {
+   "q": "put my website online without paying for hosting",
+   "want": [
+    "g:app-hosting",
+    "p:coolify",
+    "p:caprover",
+    "p:dokku"
+   ],
+   "kind": "described"
+  },
+  {
+   "q": "see how many people visit my blog",
+   "want": [
+    "g:analytics",
+    "p:plausible",
+    "p:umami",
+    "p:goatcounter"
+   ],
+   "kind": "described"
+  },
+  {
+   "q": "make short links for my business",
+   "want": [
+    "g:link-shortening",
+    "p:dub",
+    "p:kutt",
+    "p:shlink",
+    "p:yourls"
+   ],
+   "kind": "described"
+  },
+  {
+   "q": "sell stuff online with my own shop",
+   "want": [
+    "g:shop",
+    "p:woocommerce",
+    "p:medusa",
+    "p:saleor"
+   ],
+   "kind": "described"
+  },
+  {
+   "q": "control my lights and thermostat",
+   "want": [
+    "g:smart-home",
+    "p:home-assistant"
+   ],
+   "kind": "described"
+  },
+  {
+   "q": "listen to podcasts on android",
+   "want": [
+    "g:podcasts",
+    "p:antennapod"
+   ],
+   "kind": "described"
+  },
+  {
+   "q": "offline maps for hiking",
+   "want": [
+    "g:maps",
+    "p:organic-maps",
+    "p:osmand",
+    "p:comaps"
+   ],
+   "kind": "described"
+  },
+  {
+   "q": "get an alert when my server goes down",
+   "want": [
+    "g:monitoring",
+    "p:netdata",
+    "p:openstatus",
+    "p:solidping",
+    "p:grafana"
+   ],
+   "kind": "described"
+  },
+  {
+   "q": "sign contracts online",
+   "want": [
+    "g:signing",
+    "p:documenso",
+    "p:docuseal",
+    "p:libresign"
+   ],
+   "kind": "described"
+  },
+  {
+   "q": "connect my apps so stuff happens automaticly",
+   "want": [
+    "g:automation",
+    "p:node-red",
+    "p:activepieces",
+    "p:automatisch",
+    "p:huginn"
+   ],
+   "kind": "described"
+  },
+  {
+   "q": "host a livestream for my church",
+   "want": [
+    "g:live-streaming",
+    "p:owncast",
+    "p:peertube"
+   ],
+   "kind": "described"
+  }
+ ]
+}

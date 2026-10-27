@@ -10,7 +10,7 @@ import { join, dirname } from 'node:path';
 import { fileURLToPath, pathToFileURL } from 'node:url';
 import { loadData, url, SITE_URL } from './src/lib.mjs';
 import { page } from './src/layout.mjs';
-import { appSlug } from './src/cards.mjs';
+import { searchIndex } from './src/search-index.mjs';
 
 const HERE = dirname(fileURLToPath(import.meta.url));
 const ROOT = join(HERE, '..');
@@ -46,13 +46,10 @@ write(join('data', 'names.json'), JSON.stringify({
 }));
 
 // ── Search index: short keys keep it small (it loads the first time someone types) ──
-const firstGroup = (pid) => d.groupsByProject.get(pid)?.[0]?.group;
-write('search.json', JSON.stringify({
-  // WHY one entry per closed app, pointing at its own page: an app in two groups (Photoshop) appears once.
-  closed: [...new Map(d.groups.flatMap((g) => g.closed.map((c) => [appSlug(c), { n: c, g: g.name, u: `alternatives-to/${appSlug(c)}/` }]))).values()],
-  groups: d.groups.map((g) => ({ n: g.name, c: d.catById.get(g.category)?.name ?? '', u: `g/${g.id}/` })),
-  projects: d.projects.map((p) => ({ n: p.name, g: firstGroup(p.id)?.name ?? '', u: `p/${p.id}/` })),
-}));
+// WHY more than names (search-core.js): people search for what a thing does or replaces ("video editor",
+// "photoshop"), so each entry carries its group's job, the closed apps it stands in for, and a project's summary.
+// The file is built once on deploy and fetched on first keypress.
+write('search.json', JSON.stringify(searchIndex(d)));
 
 // ── For search engines and AI assistants ──
 write('robots.txt', `User-agent: *\nAllow: /\nSitemap: ${SITE_URL}sitemap.xml\n`);

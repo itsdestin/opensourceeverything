@@ -1,0 +1,1003 @@
+{
+ "_about": "Hard descriptive searches written without seeing the ranking code (Oct 26, 2026), to measure search on needs described in plain words. \"judged\": an answer an independent reviewer (no access to the code) accepted after the fact.",
+ "queries": [
+  {
+   "q": "something to keep my family photos off google",
+   "want": [
+    "g:photo-backup",
+    "p:immich",
+    "p:ente-photos",
+    "p:photoprism"
+   ],
+   "kind": "described"
+  },
+  {
+   "q": "app to split rent with roommates",
+   "want": [
+    "g:shared-expenses",
+    "p:spliit-app",
+    "c:splitwise"
+   ],
+   "kind": "described"
+  },
+  {
+   "q": "make my phone stop tracking me",
+   "want": [
+    "g:phone-os",
+    "p:grapheneos",
+    "p:lineageos",
+    "p:e-os"
+   ],
+   "kind": "described"
+  },
+  {
+   "q": "notes that work offline with no account",
+   "want": [
+    "g:notes",
+    "p:joplin",
+    "p:notally",
+    "p:logseq",
+    "p:quillpad"
+   ],
+   "kind": "described"
+  },
+  {
+   "q": "no account needed to chat with someone nearby",
+   "want": [
+    "p:briar",
+    "g:messaging"
+   ],
+   "kind": "described"
+  },
+  {
+   "q": "runs on my own server for photos",
+   "want": [
+    "g:photo-backup",
+    "p:immich",
+    "p:photoprism"
+   ],
+   "kind": "described"
+  },
+  {
+   "q": "what can I use instead of google maps for hiking?",
+   "want": [
+    "g:maps",
+    "c:google-maps",
+    "p:organic-maps",
+    "p:osmand",
+    "p:comaps"
+   ],
+   "kind": "described"
+  },
+  {
+   "q": "like notion but local",
+   "want": [
+    "g:notes",
+    "p:logseq",
+    "p:joplin",
+    "p:siyuan",
+    "p:appflowy",
+    "c:notion",
+    "p:affine"
+   ],
+   "kind": "described",
+   "judged": "p:affine"
+  },
+  {
+   "q": "discord for my company",
+   "want": [
+    "g:community-chat",
+    "g:team-chat",
+    "p:element",
+    "p:mattermost",
+    "p:zulip",
+    "p:rocket-chat",
+    "c:discord"
+   ],
+   "kind": "described"
+  },
+  {
+   "q": "a spotify I can host myself",
+   "want": [
+    "g:music",
+    "p:navidrome",
+    "p:funkwhale",
+    "c:spotify"
+   ],
+   "kind": "described"
+  },
+  {
+   "q": "end to end encrypted texting app",
+   "want": [
+    "g:messaging",
+    "p:signal",
+    "p:simplex-chat",
+    "p:delta-chat"
+   ],
+   "kind": "described"
+  },
+  {
+   "q": "free way to edit pdfs without uploading them",
+   "want": [
+    "g:pdf",
+    "p:stirling-pdf",
+    "p:pdf-arranger",
+    "p:offpdf"
+   ],
+   "kind": "described",
+   "judged": "p:offpdf"
+  },
+  {
+   "q": "sign contracts online without paying docusign",
+   "want": [
+    "g:signing",
+    "p:documenso",
+    "p:docuseal",
+    "p:libresign",
+    "c:docusign"
+   ],
+   "kind": "described"
+  },
+  {
+   "q": "somthing to track my monthly spendng",
+   "want": [
+    "g:budgeting",
+    "p:actual-budget",
+    "p:firefly-iii"
+   ],
+   "kind": "described"
+  },
+  {
+   "q": "keep track of stocks and my portfolio",
+   "want": [
+    "p:ghostfolio",
+    "g:budgeting"
+   ],
+   "kind": "described"
+  },
+  {
+   "q": "let my team see the project progress on a board",
+   "want": [
+    "g:tasks",
+    "p:plane",
+    "p:wekan",
+    "p:vikunja",
+    "p:taiga"
+   ],
+   "kind": "described"
+  },
+  {
+   "q": "private search that doesnt log what i type",
+   "want": [
+    "g:search",
+    "p:searxng"
+   ],
+   "kind": "described"
+  },
+  {
+   "q": "browser that blocks ads and trackers",
+   "want": [
+    "g:browsers",
+    "p:brave",
+    "p:librewolf",
+    "p:firefox"
+   ],
+   "kind": "described"
+  },
+  {
+   "q": "store my passwords somewhere safe I control",
+   "want": [
+    "g:passwords",
+    "p:bitwarden",
+    "p:keepassxc",
+    "p:vaultwarden"
+   ],
+   "kind": "described"
+  },
+  {
+   "q": "login codes that work without google",
+   "want": [
+    "g:2fa",
+    "p:aegis",
+    "p:ente-auth",
+    "p:2fas"
+   ],
+   "kind": "described"
+  },
+  {
+   "q": "stream my games to twitch for free",
+   "want": [
+    "g:recording",
+    "g:live-streaming",
+    "p:obs-studio",
+    "c:twitch"
+   ],
+   "kind": "described"
+  },
+  {
+   "q": "record my screen for a tutorial",
+   "want": [
+    "g:recording",
+    "p:obs-studio",
+    "c:loom"
+   ],
+   "kind": "described"
+  },
+  {
+   "q": "I want to make beats on my laptop",
+   "want": [
+    "g:audio",
+    "p:lmms",
+    "p:ardour"
+   ],
+   "kind": "described"
+  },
+  {
+   "q": "turn my meeting recordings into text",
+   "want": [
+    "g:transcription",
+    "p:whisper",
+    "p:whisper-cpp",
+    "p:buzz"
+   ],
+   "kind": "described"
+  },
+  {
+   "q": "chatgpt that runs on my own computer",
+   "want": [
+    "g:ai-chat",
+    "p:ollama",
+    "p:jan",
+    "p:anythingllm",
+    "c:chatgpt"
+   ],
+   "kind": "described"
+  },
+  {
+   "q": "ai that helps me write code locally",
+   "want": [
+    "g:ai-coding",
+    "p:aider",
+    "p:cline",
+    "p:ollama"
+   ],
+   "kind": "described"
+  },
+  {
+   "q": "make pictures from a text description on my gpu",
+   "want": [
+    "g:ai-images",
+    "p:comfyui",
+    "p:stable-diffusion-web-ui",
+    "p:invokeai"
+   ],
+   "kind": "described"
+  },
+  {
+   "q": "an assistant that can use my files and apps",
+   "want": [
+    "g:ai-agents",
+    "p:goose",
+    "p:open-interpreter",
+    "p:youcoded"
+   ],
+   "kind": "described"
+  },
+  {
+   "q": "ask questions and get answers with sources",
+   "want": [
+    "g:ai-search",
+    "p:vane-formerly-perplexica",
+    "c:perplexity"
+   ],
+   "kind": "described"
+  },
+  {
+   "q": "cut and trim video without re-encoding",
+   "want": [
+    "p:losslesscut",
+    "g:video-editing"
+   ],
+   "kind": "described"
+  },
+  {
+   "q": "make 3d animations and models",
+   "want": [
+    "g:3d",
+    "p:blender"
+   ],
+   "kind": "described"
+  },
+  {
+   "q": "paint digital art on a tablet",
+   "want": [
+    "g:painting",
+    "p:krita",
+    "p:mypaint",
+    "c:procreate"
+   ],
+   "kind": "described"
+  },
+  {
+   "q": "edit raw photos from my camera",
+   "want": [
+    "g:photo-editing",
+    "p:darktable",
+    "p:rawtherapee"
+   ],
+   "kind": "described"
+  },
+  {
+   "q": "design an app interface with my team",
+   "want": [
+    "g:ui-design",
+    "p:penpot",
+    "c:figma"
+   ],
+   "kind": "described"
+  },
+  {
+   "q": "poster and flyer maker with templates",
+   "want": [
+    "g:graphic-design",
+    "g:layout",
+    "p:penpot",
+    "p:scribus"
+   ],
+   "kind": "described"
+  },
+  {
+   "q": "make a magazine layout",
+   "want": [
+    "g:layout",
+    "p:scribus",
+    "c:adobe-indesign"
+   ],
+   "kind": "described"
+  },
+  {
+   "q": "free icons for my website",
+   "want": [
+    "g:icons",
+    "p:tabler-icons",
+    "p:bootstrap"
+   ],
+   "kind": "described"
+  },
+  {
+   "q": "which linux should a beginner try",
+   "want": [
+    "g:desktop-os",
+    "p:linux-mint",
+    "p:ubuntu",
+    "p:fedora"
+   ],
+   "kind": "described"
+  },
+  {
+   "q": "android without google apps",
+   "want": [
+    "g:phone-os",
+    "p:grapheneos",
+    "p:lineageos",
+    "p:e-os"
+   ],
+   "kind": "described"
+  },
+  {
+   "q": "where to get android apps without the play store",
+   "want": [
+    "g:app-stores",
+    "p:f-droid",
+    "p:aurora-store",
+    "p:obtainium"
+   ],
+   "kind": "described"
+  },
+  {
+   "q": "keyboard for my phone that doesnt send what I type anywhere",
+   "want": [
+    "g:keyboards",
+    "p:florisboard",
+    "p:heliboard",
+    "p:anysoftkeyboard"
+   ],
+   "kind": "described"
+  },
+  {
+   "q": "help my mom with her computer from far away",
+   "want": [
+    "g:remote-desktop",
+    "p:rustdesk",
+    "p:meshcentral",
+    "c:teamviewer"
+   ],
+   "kind": "described"
+  },
+  {
+   "q": "connect my devices securely wherever I am",
+   "want": [
+    "g:vpn",
+    "p:netbird",
+    "p:gravitl",
+    "p:omniedge",
+    "p:syncthing"
+   ],
+   "kind": "described"
+  },
+  {
+   "q": "open source rss reader that syncs",
+   "want": [
+    "g:feeds",
+    "p:freshrss",
+    "p:miniflux",
+    "p:fluent-reader",
+    "p:netnewswire"
+   ],
+   "kind": "described",
+   "judged": "p:netnewswire"
+  },
+  {
+   "q": "save articles to read later",
+   "want": [
+    "g:feeds",
+    "p:wallabag",
+    "c:pocket"
+   ],
+   "kind": "described"
+  },
+  {
+   "q": "youtube without ads and tracking",
+   "want": [
+    "g:video-sharing",
+    "p:newpipe",
+    "p:freetube",
+    "c:youtube"
+   ],
+   "kind": "described"
+  },
+  {
+   "q": "host my own video site",
+   "want": [
+    "g:video-sharing",
+    "g:live-streaming",
+    "p:peertube",
+    "p:owncast"
+   ],
+   "kind": "described"
+  },
+  {
+   "q": "twitter but nobody owns it",
+   "want": [
+    "g:microblogging",
+    "p:mastodon",
+    "p:bluesky",
+    "p:misskey",
+    "c:twitter-x"
+   ],
+   "kind": "described"
+  },
+  {
+   "q": "a reddit style community for my group",
+   "want": [
+    "g:forums",
+    "p:lemmy",
+    "p:discourse",
+    "c:reddit",
+    "p:mbin"
+   ],
+   "kind": "described",
+   "judged": "p:mbin"
+  },
+  {
+   "q": "share photos with followers no ads",
+   "want": [
+    "g:photo-sharing",
+    "p:pixelfed",
+    "c:instagram"
+   ],
+   "kind": "described"
+  },
+  {
+   "q": "start a blog and newsletter on my own domain",
+   "want": [
+    "g:blogging",
+    "g:newsletters",
+    "p:ghost",
+    "p:wordpress",
+    "p:writefreely"
+   ],
+   "kind": "described"
+  },
+  {
+   "q": "send newsletters to my mailing list cheaply",
+   "want": [
+    "g:newsletters",
+    "p:listmonk",
+    "p:keila"
+   ],
+   "kind": "described"
+  },
+  {
+   "q": "dating app that I can run myself",
+   "want": [
+    "g:dating",
+    "p:alovoa"
+   ],
+   "kind": "described"
+  },
+  {
+   "q": "organise a conference with talks and registration",
+   "want": [
+    "g:events",
+    "p:indico",
+    "c:easychair"
+   ],
+   "kind": "described"
+  },
+  {
+   "q": "schedule posts on all my social accounts",
+   "want": [
+    "g:social-scheduling",
+    "p:postiz",
+    "p:openpost",
+    "c:buffer"
+   ],
+   "kind": "described"
+  },
+  {
+   "q": "poll to find a day that works for everyone",
+   "want": [
+    "g:scheduling",
+    "p:nextcloud-polls",
+    "c:doodle"
+   ],
+   "kind": "described"
+  },
+  {
+   "q": "calendar app for android thats open",
+   "want": [
+    "g:scheduling",
+    "p:fossify-calendar",
+    "p:etar-calendar"
+   ],
+   "kind": "described"
+  },
+  {
+   "q": "create a survey for my customers",
+   "want": [
+    "g:forms",
+    "p:limesurvey",
+    "p:formbricks",
+    "p:heyform"
+   ],
+   "kind": "described"
+  },
+  {
+   "q": "airtabel but free",
+   "want": [
+    "g:database-apps",
+    "p:baserow",
+    "p:apitable",
+    "p:rowy",
+    "c:airtable"
+   ],
+   "kind": "described"
+  },
+  {
+   "q": "shared spreadsheet for the team that I host",
+   "want": [
+    "g:spreadsheets",
+    "p:grist",
+    "p:onlyoffice-docs",
+    "p:collabora-online",
+    "p:apitable"
+   ],
+   "kind": "described",
+   "judged": "p:apitable"
+  },
+  {
+   "q": "slide deck written in markdown",
+   "want": [
+    "g:slides",
+    "p:slidev",
+    "p:reveal-js"
+   ],
+   "kind": "described"
+  },
+  {
+   "q": "edit documents together in the browser",
+   "want": [
+    "g:documents",
+    "p:collabora-online",
+    "p:onlyoffice-docs",
+    "p:cryptpad",
+    "p:etherpad"
+   ],
+   "kind": "described"
+  },
+  {
+   "q": "dropbx that I run on my own hardware",
+   "want": [
+    "g:cloud-storage",
+    "p:nextcloud",
+    "p:seafile",
+    "p:owncloud",
+    "c:dropbox"
+   ],
+   "kind": "described"
+  },
+  {
+   "q": "keep files in snyc between my laptop and phone without cloud",
+   "want": [
+    "p:syncthing",
+    "g:cloud-storage"
+   ],
+   "kind": "described"
+  },
+  {
+   "q": "send a huge file to a friend quickly",
+   "want": [
+    "g:file-transfer",
+    "p:localsend",
+    "p:psitransfer",
+    "c:wetransfer"
+   ],
+   "kind": "described"
+  },
+  {
+   "q": "automatic encrypted backups of my computer",
+   "want": [
+    "g:backup",
+    "p:restic",
+    "p:borgbackup",
+    "p:duplicati"
+   ],
+   "kind": "described"
+  },
+  {
+   "q": "translate text without sending it to google",
+   "want": [
+    "g:translation",
+    "p:libretranslate",
+    "c:google-translate"
+   ],
+   "kind": "described"
+  },
+  {
+   "q": "control my lights and thermostat locally",
+   "want": [
+    "g:smart-home",
+    "p:home-assistant"
+   ],
+   "kind": "described"
+  },
+  {
+   "q": "test how fast my wifi is",
+   "want": [
+    "g:speed-test",
+    "p:librespeed",
+    "c:speedtest-net"
+   ],
+   "kind": "described"
+  },
+  {
+   "q": "a github I can run at home",
+   "want": [
+    "g:code-hosting",
+    "p:forgejo",
+    "p:gitea",
+    "p:gogs",
+    "c:github"
+   ],
+   "kind": "described"
+  },
+  {
+   "q": "see how many people visit my site without tracking them",
+   "want": [
+    "g:analytics",
+    "p:plausible",
+    "p:umami",
+    "p:matomo",
+    "p:goatcounter"
+   ],
+   "kind": "described"
+  },
+  {
+   "q": "sell stuff online with my own shop",
+   "want": [
+    "g:shop",
+    "p:woocommerce",
+    "p:medusa",
+    "p:saleor",
+    "c:shopify",
+    "p:bagisto"
+   ],
+   "kind": "described",
+   "judged": "p:bagisto"
+  },
+  {
+   "q": "answer customer questions by chat on my website",
+   "want": [
+    "g:support",
+    "p:chatwoot",
+    "p:zammad"
+   ],
+   "kind": "described"
+  },
+  {
+   "q": "connect my apps so things happen on their own",
+   "want": [
+    "g:automation",
+    "p:activepieces",
+    "p:node-red",
+    "p:huginn",
+    "p:automatisch"
+   ],
+   "kind": "described"
+  },
+  {
+   "q": "put my web app online without paying heroku",
+   "want": [
+    "g:app-hosting",
+    "p:coolify",
+    "p:dokku",
+    "p:caprover"
+   ],
+   "kind": "described"
+  },
+  {
+   "q": "test my api endpoints",
+   "want": [
+    "g:api-tools",
+    "p:hoppscotch",
+    "p:insomnia",
+    "c:postman"
+   ],
+   "kind": "described"
+  },
+  {
+   "q": "build an admin panel without much code",
+   "want": [
+    "g:internal-tools",
+    "p:appsmith",
+    "p:budibase",
+    "p:tooljet",
+    "c:retool"
+   ],
+   "kind": "described"
+  },
+  {
+   "q": "backend for my mobile app like firebase",
+   "want": [
+    "g:backend-service",
+    "g:databases",
+    "p:supabase",
+    "p:pocketbase",
+    "p:appwrite",
+    "c:firebase"
+   ],
+   "kind": "described"
+  },
+  {
+   "q": "let users sign in with google or email in my app",
+   "want": [
+    "g:login-identity",
+    "p:keycloak",
+    "p:zitadel",
+    "p:supertokens",
+    "p:hanko"
+   ],
+   "kind": "described",
+   "judged": "p:hanko"
+  },
+  {
+   "q": "automatically run tests when I push code",
+   "want": [
+    "g:ci",
+    "p:jenkins",
+    "p:drone",
+    "p:buildbot",
+    "c:circleci"
+   ],
+   "kind": "described"
+  },
+  {
+   "q": "headless cms for my website",
+   "want": [
+    "g:cms",
+    "p:strapi",
+    "p:payload",
+    "p:decap-cms"
+   ],
+   "kind": "described"
+  },
+  {
+   "q": "watch my servers and get alerted when down",
+   "want": [
+    "g:monitoring",
+    "p:grafana",
+    "p:netdata",
+    "p:openstatus",
+    "p:signoz"
+   ],
+   "kind": "described"
+  },
+  {
+   "q": "turn features on for some users only",
+   "want": [
+    "g:feature-flags",
+    "p:unleash",
+    "p:flagsmith",
+    "p:growthbook"
+   ],
+   "kind": "described"
+  },
+  {
+   "q": "send text messages and calls from my app",
+   "want": [
+    "g:voice-apis",
+    "p:fonoster",
+    "p:livekit",
+    "c:twilio"
+   ],
+   "kind": "described"
+  },
+  {
+   "q": "send password reset emails from my own server",
+   "want": [
+    "g:email-sending",
+    "p:postal"
+   ],
+   "kind": "described"
+  },
+  {
+   "q": "watch how users click through my website",
+   "want": [
+    "g:product-analytics",
+    "p:posthog",
+    "p:openreplay",
+    "p:highlight"
+   ],
+   "kind": "described"
+  },
+  {
+   "q": "send phone notifications from a script",
+   "want": [
+    "g:push-notifications",
+    "p:ntfy",
+    "p:apprise"
+   ],
+   "kind": "described"
+  },
+  {
+   "q": "translate my app into many languages with my team",
+   "want": [
+    "g:translation-management",
+    "p:tolgee",
+    "c:crowdin"
+   ],
+   "kind": "described"
+  },
+  {
+   "q": "dashboards and charts from my company data",
+   "want": [
+    "g:bi",
+    "p:metabase",
+    "p:lightdash",
+    "p:preset",
+    "c:tableau"
+   ],
+   "kind": "described"
+  },
+  {
+   "q": "accounting and inventory software for a small business",
+   "want": [
+    "g:erp",
+    "p:erpnext",
+    "p:odoo",
+    "p:dolibarr"
+   ],
+   "kind": "described"
+  },
+  {
+   "q": "send invoices to clients and get paid",
+   "want": [
+    "g:invoicing",
+    "p:crater",
+    "p:solidinvoice",
+    "c:quickbooks"
+   ],
+   "kind": "described"
+  },
+  {
+   "q": "keep track of my sales leads",
+   "want": [
+    "g:crm",
+    "p:twenty",
+    "p:espocrm",
+    "p:suitecrm",
+    "c:salesforce"
+   ],
+   "kind": "described"
+  },
+  {
+   "q": "how many hours did I work on each client",
+   "want": [
+    "g:time-tracking",
+    "p:kimai",
+    "p:solidtime",
+    "c:toggl"
+   ],
+   "kind": "described"
+  },
+  {
+   "q": "cash register app for my coffee shop",
+   "want": [
+    "g:pos",
+    "p:nexopos",
+    "p:posnic-pos",
+    "c:square-pos"
+   ],
+   "kind": "described"
+  },
+  {
+   "q": "let customers vote on what feature to build next",
+   "want": [
+    "g:feedback-boards",
+    "p:quackback",
+    "c:canny"
+   ],
+   "kind": "described"
+  },
+  {
+   "q": "scan my servers for security holes",
+   "want": [
+    "g:security-scanning",
+    "p:nuclei",
+    "p:faraday",
+    "p:deepfence-threatmapper"
+   ],
+   "kind": "described"
+  },
+  {
+   "q": "short links with click counts",
+   "want": [
+    "g:link-shortening",
+    "p:shlink",
+    "p:kutt",
+    "p:dub",
+    "p:yourls"
+   ],
+   "kind": "described"
+  },
+  {
+   "q": "gallery app for android without ads",
+   "want": [
+    "g:phone-gallery",
+    "p:fossify-gallery",
+    "p:aves"
+   ],
+   "kind": "described"
+  },
+  {
+   "q": "proof that this twitter account is really me",
+   "want": [
+    "g:identity-proofs",
+    "p:keyoxide",
+    "c:keybase"
+   ],
+   "kind": "described"
+  },
+  {
+   "q": "video chat for 20 people self hosted",
+   "want": [
+    "g:video-calls",
+    "p:jitsi-meet",
+    "p:bigbluebutton",
+    "p:galene"
+   ],
+   "kind": "described"
+  }
+ ]
+}
