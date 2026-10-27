@@ -16,7 +16,7 @@
 
   // ───────── "I want this too" ─────────
   const KIND = { group: 'A job nothing open fully does yet', app: 'Closed app with no open replacement', issue: 'Suggested, waiting for a mod' };
-  const word = (n) => `<b>▲ ${n.votes}</b><span>I want this too</span>`;
+  const word = (n) => `<b>▲ ${n.votes}</b><span>want this</span>`;
   async function vote(item, then) {
     const { user, rules } = await getMe(true);
     if (!user) { remember({ type: 'request', key: item.key }); return signIn(); }
@@ -59,7 +59,7 @@
     };
     const mine = (m) => m.members.some((x) => x.mine);
     const link = (m) => (m.url ? esc(m.url) : BASE + esc(m.href));
-    const vbtn = (m, cls = '') => `<button class="vote pillvote${cls}${mine(m) ? ' on' : ''}" type="button" aria-pressed="${mine(m)}" title="${mine(m) ? 'You want this. Press to take it back.' : 'Add your voice'}"><b>▲ ${m.votes}</b><span>${mine(m) ? 'You want this' : 'I want this too'}</span></button>`;
+    const vbtn = (m, cls = '') => `<button class="vote pillvote${cls}${mine(m) ? ' on' : ''}" type="button" aria-pressed="${mine(m)}" title="${mine(m) ? 'You want this. Press to take it back.' : 'Add your voice'}"><b>▲ ${m.votes}</b><span>${mine(m) ? 'You want this' : 'want this'}</span></button>`;
     const sub = (m) => `${m.like ? `<span class="rq-like">Like ${esc(m.like)}</span>` : ''}${m.waiting ? '<span class="pill warn"><i></i>Waiting for a mod</span>' : ''}`;
     const card = (m, i) => `<div class="rq-card req-row" data-id="${esc(m.id)}"><span class="rq-medal m${Math.min(i + 1, 4)}">${i + 1}</span>
         <a class="rt" href="${link(m)}"${m.url ? ' target="_blank" rel="noopener"' : ''}>${esc(m.title)}</a><div class="rq-sub">${sub(m)}</div>${vbtn(m, ' full')}</div>`;
@@ -279,7 +279,7 @@
         ${sug.error ? `<div class="callout warn">${esc(sug.error)}</div>` : sug.items.length ? `<div class="stack">${sug.items.map((x) => {
           const [tone, label] = VERDICT[x.verdict] ?? VERDICT.unchecked;
           return `<div class="lvl1 modrow"><div class="nr-main"><a class="rt" href="${esc(x.url)}" target="_blank" rel="noopener">${esc(x.name)}</a>
-            <div class="nr-meta"><span class="chip">${esc(SUG_KIND[x.kind] ?? 'Suggestion')}</span><span class="pill ${tone}">${tone === 'ok' ? '<i></i>' : ''}${label}</span><span class="muted11">@${esc(x.author)} · ${esc(ago(x.created))}${x.votes ? ` · ${x.votes} want this too` : ''}</span>${x.status === 'approved' ? '<span class="pill ok"><i></i>Approved, waiting to be merged</span>' : ''}</div></div>
+            <div class="nr-meta"><span class="chip">${esc(SUG_KIND[x.kind] ?? 'Suggestion')}</span><span class="pill ${tone}">${tone === 'ok' ? '<i></i>' : ''}${label}</span><span class="muted11">@${esc(x.author)} · ${esc(ago(x.created))}${x.votes ? ` · ${x.votes} want this` : ''}</span>${x.status === 'approved' ? '<span class="pill ok"><i></i>Approved, waiting to be merged</span>' : ''}</div></div>
             <a class="btn sm ${x.verdict === 'ok' ? 'primary' : 'secondary'}" href="${esc(x.url)}" target="_blank" rel="noopener">${x.verdict === 'ok' ? 'Review and approve' : 'Review'} on GitHub</a></div>`;
         }).join('')}</div>` : '<div class="callout info">No open suggestions.</div>'}</section>`;
     pane.onclick = async (e) => {
