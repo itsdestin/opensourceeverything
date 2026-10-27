@@ -1,0 +1,155 @@
+{
+ "deck": "ose-redesign-3",
+ "started": "2026-10-27T07:02:00.916Z",
+ "submitted": "2026-10-27T07:31:13Z",
+ "cur": 18,
+ "answers": {
+  "G-group": {
+   "v": "yes",
+   "t": 1793085177920,
+   "note": "",
+   "seconds": 657,
+   "theme": "light",
+   "zoom": 1
+  },
+  "G-group-phone": {
+   "note": "we should clean this up the bottom buttons. simpler options with clearer purposes. maybe clearer breadcrumbing orr sublevels to make the whole site easier to navigate on mobile? want transparent/liquid glass kinda styling for the bottom buttons and sign in at the top. also the thumbs up chips are weild, a sort field would make more sense.",
+   "t": 1793085233641,
+   "v": "yes",
+   "seconds": 175,
+   "theme": "light",
+   "zoom": 1
+  },
+  "G-explainer": {
+   "v": "yes",
+   "t": 1793085302200,
+   "seconds": 121,
+   "theme": "light",
+   "zoom": 1
+  },
+  "G-project": {
+   "v": "yes",
+   "t": 1793085376595,
+   "seconds": 107,
+   "theme": "light",
+   "zoom": 1
+  },
+  "G-family-i": {
+   "v": "yes",
+   "t": 1793085378254,
+   "note": "ok",
+   "seconds": 53,
+   "theme": "light",
+   "zoom": 1
+  },
+  "G-project-phone": {
+   "note": "should also clean up the bottom row chips on mobile view. like gaps/boards etc. ",
+   "t": 1793085378878,
+   "v": "yes",
+   "seconds": 48,
+   "theme": "light",
+   "zoom": 1
+  },
+  "G-search": {
+   "v": "yes",
+   "t": 1793085379266,
+   "seconds": 0,
+   "theme": "light",
+   "zoom": 1
+  },
+  "G-filters": {
+   "v": "yes",
+   "t": 1793085603786,
+   "note": "i think on all non-search screens, there should just be a magnifying glass search button next to sign in at the top right with (Search) and nothing else. clicking that should open the \"search\" window, with a full-width searchbar/filter chip interface. search box/chips should then move up, with results/cards appearing beneath the top search card. maybe a filter button in the righthand side of the search itself that opens a menu, or just a different arrangement of current chips. ",
+   "seconds": 225,
+   "theme": "light",
+   "zoom": 1
+  },
+  "G-search-phone": {
+   "v": "yes",
+   "t": 1793085670945,
+   "note": "put best match in the top right of each card to shrink vertical hieght of cards. title can truncate a little with .... if it cant full fit. no title wrapping",
+   "seconds": 67,
+   "theme": "light",
+   "zoom": 1
+  },
+  "G-filters-phone": {
+   "note": "shouldnt be floating i think. i think full slide up with thumbnail in top center connecting to bottom left/right corners would be better. how do people feel about top v bottom search bars on mobile devices?",
+   "t": 1793085793804,
+   "v": "other",
+   "seconds": 123,
+   "theme": "light",
+   "zoom": 1
+  },
+  "G-gaps": {
+   "v": "other",
+   "t": 1793085840557,
+   "note": "it should still be only 2 columns of smaller chips counting down vertically first before numbering the next column.",
+   "seconds": 47,
+   "theme": "light",
+   "zoom": 1
+  },
+  "G-gaps-phone": {
+   "note": "phones should just have all cards stack vertically. still keep bigger number/name/button/desc for top 3, but make stack vertically same width as other buttons. try to make 1/2/3 sit directly next to name/desct with vertical height of stacked text lines almost matching number.",
+   "t": 1793085938418,
+   "v": "other",
+   "seconds": 98,
+   "theme": "light",
+   "zoom": 1
+  },
+  "G-home": {
+   "v": "yes",
+   "t": 1793085989411,
+   "note": "change popular switches to popular alternatives",
+   "seconds": 51,
+   "theme": "light",
+   "zoom": 1
+  },
+  "G-claim-start": {
+   "note": "keep the bottom chips at the bottom of the page",
+   "t": 1793086024501,
+   "v": "yes",
+   "seconds": 35,
+   "theme": "light",
+   "zoom": 1
+  },
+  "G-claim-verified": {
+   "v": "yes",
+   "t": 1793086117147,
+   "note": "we should put a subagent on allowing owners to manage contributor preferences (corporate SWE experience, vibecoders, ai vs hand-written code, mechanism of contribution, anything else the community may find helpful in the current inlfux of new developers writing with ai code and small teams on existing projects",
+   "seconds": 93,
+   "theme": "light",
+   "zoom": 1
+  },
+  "G-claim-file": {
+   "v": "yes",
+   "t": 1793086191424,
+   "note": "we should add a follow up to do some security reviews/hardening . wouldnt want a random claiming an official linux/office page and posting bad shit. probably also filters to what gets posted (no cuss words maybe at the least)",
+   "seconds": 74,
+   "theme": "light",
+   "zoom": 1
+  },
+  "G-claim-write": {
+   "v": "yes",
+   "t": 1793086198002,
+   "seconds": 7,
+   "theme": "light",
+   "zoom": 1
+  },
+  "G-claim-phone": {
+   "v": "yes",
+   "t": 1793086222136,
+   "note": "should have ability to suggest a new group here",
+   "seconds": 24,
+   "theme": "light",
+   "zoom": 1
+  },
+  "Q-boards": {
+   "v": "yes",
+   "t": 1793086271765,
+   "seconds": 50,
+   "theme": "light",
+   "zoom": 1
+  }
+ }
+}
