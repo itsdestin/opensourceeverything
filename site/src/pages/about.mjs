@@ -18,10 +18,10 @@ export default function about(d) {
     <p class="body2">It's supported by the <a href="${SUBREDDIT}" rel="noopener">r/TrueOpenSource</a> community.</p>`)}
   ${section('organised', 'How it\'s organised', `
     <div class="defs">
-      <div class="lvl1"><h3>Categories</h3><p class="small2">Shelves for browsing, like Creative or Office &amp; productivity.</p></div>
-      <div class="lvl1"><h3>Groups</h3><p class="small2">One job each, like Photo editing or Video calls. Photoshop and Canva sit in different groups because they do different jobs, so they're never compared with each other.</p></div>
-      <div class="lvl1"><h3>Closed apps</h3><p class="small2">The apps a group replaces. One app can sit in several groups if it does several jobs.</p></div>
-      <div class="lvl1"><h3>Open alternatives</h3><p class="small2">Open-source projects that do the group's job. <b class="num">Replaces fully</b> means it does the main job; <b class="num">replaces partly</b> means it covers some of it.</p></div>
+      <div class="lvl1"><h3>Categories</h3><p class="small2">For browsing, like Creative.</p></div>
+      <div class="lvl1"><h3>Groups</h3><p class="small2">One job each, like Photo editing.</p></div>
+      <div class="lvl1"><h3>Closed apps</h3><p class="small2">The apps a group replaces.</p></div>
+      <div class="lvl1"><h3>Open alternatives</h3><p class="small2">Open-source projects that do the job, fully or partly.</p></div>
     </div>`)}
   ${section('open-source', 'What counts as open source', `
     <p class="body2">Only projects under a license the <a href="https://opensource.org/licenses" rel="noopener">Open Source Initiative</a> approves are listed. That's what lets anyone use, change and share the code.</p>

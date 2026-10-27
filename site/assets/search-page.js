@@ -43,7 +43,7 @@
       if (g) chips.push(`<span class="chip">${g.alternatives.length} open ${g.alternatives.length === 1 ? 'option' : 'options'}</span>`);
     } else {
       thumb = `<span class="letter closed">${esc(r.n[0])}</span>`;
-      summary = 'Not open source. Its page lists the open-source apps that replace it.';
+      summary = 'See open alternatives';
       chips.push('<span class="chip">Closed app</span>');
     }
     // Only reasons that mean something to a visitor: the group a project is in, and "Looking for kbin?" hints.
@@ -92,7 +92,7 @@
     details = { projects: new Map(pj.projects.map((p) => [p.id, p])), groups: new Map(gj.groups.map((g) => [g.id, g])) };
     results = window.OISearch.search(items, q, { all: true });
     sub.textContent = results.length
-      ? `${results.length} ${results.length === 1 ? 'result' : 'results'}, best match first.`
+      ? `${results.length} ${results.length === 1 ? 'result' : 'results'}`
       : 'No results.';
     filters.hidden = !results.length;
     draw();
@@ -101,7 +101,7 @@
     return window.OISearchAI?.improve(items, q, results).then((better) => {
       if (!better) return;
       results = better;
-      sub.textContent = `${results.length} ${results.length === 1 ? 'result' : 'results'}, best match first, ordered partly by what your words mean..`;
+      sub.textContent = `${results.length} ${results.length === 1 ? 'result' : 'results'}`;
       filters.hidden = !results.length; draw();
     });
   }).catch(() => { list.innerHTML = '<div class="empty">Search couldn\'t load. Check your connection and reload the page.</div>'; });

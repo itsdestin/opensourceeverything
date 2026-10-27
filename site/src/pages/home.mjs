@@ -49,7 +49,7 @@ export default function home(d) {
       <div class="inner">
         <div class="muted11">Instead of ${esc(name)}</div>
         <h3>${esc(lead.p.name)}</h3>
-        <div class="foot">${more > 0 ? `and ${more} more open ${more === 1 ? 'alternative' : 'alternatives'}` : 'the open alternative'}</div>
+        <div class="foot">${more > 0 ? `+${more} more` : 'the open alternative'}</div>
       </div></a>`;
 
   // ── Hero collage: three real screenshots, slightly fanned, so the first thing a visitor sees is real software ──
@@ -82,13 +82,11 @@ export default function home(d) {
     ${SOCIAL ? '<div class="hero-acct" data-account></div>' : ''}
     <div class="hero-text">
       <h1>Find an open-source replacement for the apps you use</h1>
-      <p class="lede">Free apps anyone can inspect and improve, sorted by the job they do.</p>
       <div class="searchwrap big" data-search>
         <div class="searchpill">${ICON.search}<input type="search" placeholder="Which app do you want to replace?" autocomplete="off" aria-label="Search for an app"></div>
         <div class="menu search-menu" role="listbox"></div>
       </div>
       <div class="pop"><span class="muted11">Try</span><div class="fchips">${TRY.map((n) => `<a class="fchip" href="${appUrl(n)}">${esc(n)}</a>`).join('')}</div></div>
-      <p class="stats-line"><b class="num">${projectCount}</b> open-source projects · <b class="num">${closedCount}</b> closed apps · <b class="num">${jobCount}</b> jobs</p>
     </div>
     ${collage.length === 3 ? `<div class="collage" aria-hidden="true">${collage.map((u, i) => `<img class="c${i}" src="${esc(u)}" alt="" referrerpolicy="no-referrer">`).join('')}</div>` : ''}
   </div>
@@ -117,7 +115,6 @@ export default function home(d) {
   <div class="surface builders">
     <div style="min-width:0;max-width:640px">
       <h2 class="h-large">Building an open alternative?</h2>
-      <p class="small2" style="margin-top:4px">See what already exists, reuse parts of it, or get your project listed so people can find it.</p>
     </div>
     <div class="btns">
       <a class="btn md secondary" href="${esc(suggestUrl('4-new-group'))}" rel="noopener">Suggest a missing job</a>

@@ -20,7 +20,7 @@ export default function licenses() {
   const body = `
   <div class="surface identity">
     <div><div class="muted11">Licenses</div><h1 class="h-subject">What the licenses mean</h1>
-      <p class="desc12" style="margin-top:4px">Every project on this map uses a license the <a href="https://opensource.org/licenses" rel="noopener">Open Source Initiative</a> approves. Here's what each one means, in plain words. This is a summary, not legal advice.</p></div>
+      <p class="desc12" style="margin-top:4px">Every project on this map uses a license the <a href="https://opensource.org/licenses" rel="noopener">Open Source Initiative</a> approves. This is a summary, not legal advice.</p></div>
     <div class="pop" style="padding-left:0"><span class="muted11">Jump to</span><div class="fchips">${LICENSES.map(([id, name]) => `<a class="fchip" href="#${id}">${esc(name.replace(/ \(.*\)$/, ''))}</a>`).join('')}<a class="fchip" href="#open-core">Open core</a></div></div>
   </div>
   <section class="surface sec">

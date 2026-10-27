@@ -36,16 +36,16 @@ export default function gaps(d) {
   const body = `
   <div class="surface identity">
     <div><div class="muted11">Gaps</div><h1 class="h-subject">What open source doesn't replace yet</h1>
-      <p class="desc12" style="margin-top:4px">${total} ${total === 1 ? 'job has' : 'jobs have'} no full open-source replacement, and ${tiers[2].groups.length} rely on a single project. Building something? Start here, and see what you can reuse first.</p></div>
+      <p class="desc12" style="margin-top:4px">${total} ${total === 1 ? 'job has' : 'jobs have'} no full open-source replacement, and ${tiers[2].groups.length} rely on a single project. </p></div>
     <div class="pop" style="padding-left:0"><span class="muted11">Jump to</span><div class="fchips">${tiers.filter((t) => t.groups.length).map((t) => `<a class="fchip" href="#${t.id}">${esc(t.name)}<span class="n">${t.groups.length}</span></a>`).join('')}</div></div>
   </div>
   ${SOCIAL ? `<section class="surface sec" id="requested">
-    <div class="sec-head"><div><h2 class="h-large">Most requested</h2><p class="desc12">What people are asking for, most wanted first. Includes suggestions still waiting for a mod.</p></div></div>
+    <div class="sec-head"><div><h2 class="h-large">Most requested</h2></div></div>
     <div data-most-requested data-limit="12"></div>
   </section>` : ''}
   ${tiers.filter((t) => t.groups.length).map((t) => `
   <section class="surface sec" id="${t.id}">
-    <div class="sec-head"><div><h2 class="h-large">${esc(t.name)}<span class="count">${t.groups.length}</span></h2><p class="desc12">${esc(t.desc)}</p></div></div>
+    <div class="sec-head"><div><h2 class="h-large">${esc(t.name)}<span class="count">${t.groups.length}</span></h2></div></div>
     <div class="row1 fill list">${t.groups.map((g) => card(g, t)).join('')}</div>
   </section>`).join('')}`;
 

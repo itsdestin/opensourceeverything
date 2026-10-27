@@ -13,10 +13,10 @@ function helpSection(p) {
   return `<section class="surface sec fold-phone" id="help">
         <div class="sec-head fold-head"><div><h2 class="h-large">How to help</h2></div></div>
         <div class="stack">
-          ${h.contributing ? row(h.contributing, 'Read the contributing guide', 'How the team likes changes sent') : ''}
-          ${h.good ? row(h.good.url, `Good first issues<span class="count">${h.good.n}</span>`, 'Small tasks picked for newcomers') : ''}
-          ${h.wanted ? row(h.wanted.url, `Help wanted<span class="count">${h.wanted.n}</span>`, 'Tasks the team asked for help with') : ''}
-          ${h.plugins ? row(h.plugins.url, esc(h.plugins.label), 'Build a plugin or extension for it') : ''}
+          ${h.contributing ? row(h.contributing, 'Read the contributing guide') : ''}
+          ${h.good ? row(h.good.url, `Good first issues<span class="count">${h.good.n}</span>`) : ''}
+          ${h.wanted ? row(h.wanted.url, `Help wanted<span class="count">${h.wanted.n}</span>`) : ''}
+          ${h.plugins ? row(h.plugins.url, esc(h.plugins.label)) : ''}
         </div>
       </section>`;
 }
@@ -44,16 +44,16 @@ export default function projectPages(d) {
   ${SOCIAL ? `<!-- WHY drawn in the browser (assets/contrib.js): a mod's approval shows at once, with no rebuild of the site. -->
       <section class="surface sec" data-dev-pitch data-mode="page" data-project="${esc(p.id)}" data-repo="${esc(codeUrl(p) ?? '')}" hidden></section>` : ''}
   ${p.screenshots?.length ? `<section class="surface sec fold-phone">
-        <div class="sec-head fold-head"><div><h2 class="h-large">Screenshots<span class="count">${p.screenshots.length}</span></h2></div></div>
+        <div class="sec-head fold-head"><div><h2 class="h-large">Screenshots${p.screenshots.length > 1 ? `<span class="count">${p.screenshots.length}</span>` : ''}</h2></div></div>
         <!-- WHY small thumbnails (Destin, Oct 27: full-size pictures were "overwhelming"); full size opens in a viewer. -->
         <div class="thumbstrip">${p.screenshots.map((u, i) => `<button class="thumb" type="button" data-shot="${esc(u)}" aria-label="Screenshot ${i + 1} of ${p.screenshots.length}, full size"><img src="${esc(shot(p, i))}" alt="" loading="lazy" referrerpolicy="no-referrer"></button>`).join('')}</div>
       </section>` : ''}
       <section class="surface sec fold-phone">
-        <div class="sec-head fold-head"><div><h2 class="h-large">Listed in<span class="count">${listed.length}</span></h2></div></div>
+        <div class="sec-head fold-head"><div><h2 class="h-large">Listed in${listed.length > 1 ? `<span class="count">${listed.length}</span>` : ''}</h2></div></div>
         <div class="stack">${listed.map(({ group, alt }) => `
           <div class="card listing">
-            <div class="head"><h3><a class="cardlink" href="${url(`g/${group.id}/`)}">${esc(group.name)}</a></h3><span class="pill ${alt.fit === 'full' ? 'ok' : 'info'}">${alt.fit === 'full' ? '<i></i>Replaces fully' : 'Replaces partly'}</span></div>
-            <p class="small2">Instead of ${esc(group.closed.join(', '))}${alt.note ? ` · ${esc(alt.note)}` : ''}</p>
+            <div class="head"><h3><a class="cardlink" href="${url(`g/${group.id}/`)}">${esc(group.name)}</a></h3><span class="pill ${alt.fit === 'full' ? 'ok' : 'info'}" title="${alt.fit === 'full' ? 'It does the main job of these apps' : 'It covers some of what these apps do'}">${alt.fit === 'full' ? '<i></i>Replaces fully' : 'Replaces partly'}</span></div>
+            ${alt.note ? `<p class="small2">${esc(alt.note)}</p>` : ''}
             ${SOCIAL ? `<div class="rate lvl2" data-rate data-group="${group.id}" data-project="${esc(p.id)}" data-question="${esc(`Does ${p.name} do the job of ${group.closed.length > 3 ? group.closed.slice(0, 3).join(', ') + ' and others' : group.closed.length > 1 ? group.closed.slice(0, -1).join(', ') + ' and ' + group.closed.at(-1) : group.closed[0] ?? 'these apps'}?`)}"></div>` : ''}
           </div>`).join('')}
         </div>

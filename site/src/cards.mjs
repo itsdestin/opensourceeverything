@@ -23,7 +23,7 @@ export const whyLine = (why = []) => [...why.filter((w) => /say it works$/.test(
 // WHY this shape: a screenshot band, then name with its (i) and Actions at the top right, ONE chip row that scrolls sideways (stars first,
 // setup an ordinary chip that explains itself), a two-line description and at most one grey line about the family. On phones it becomes a
 // short row (CSS) so a screen shows five or six projects instead of one and a half.
-const tipChip = (id, html, title) => `<button class="chip tipchip" type="button" data-tip="${id}" aria-expanded="false" aria-label="${esc(title)}">${html}<svg class="tipi" width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 11v5M12 8h.01"/></svg></button>`;
+const tipChip = (id, html, title) => `<button class="chip tipchip" type="button" data-tip="${id}" aria-expanded="false" aria-label="${esc(title)}">${html}</button>`;
 const tpl = (id, title, html) => `<template data-for="${id}" data-title="${esc(title)}">${html}</template>`;
 export function altCard(p, alt, i, group, why) {
   const fam = currentFamily();
@@ -33,7 +33,8 @@ export function altCard(p, alt, i, group, why) {
   const menuId = `act-${esc(p.id)}-${i}`;
   const grey = fam ? famGrey(p, fam) : '';
   const nodes = fam ? famNodes(p, fam) : [];
-  const whyText = whyLine(why);
+  // WHY only the facts no chip shows (Destin: the pop-up must not restate the chips): how fully it replaces the app, and people's votes.
+  const whyText = whyLine(why).split(' · ').filter((w) => /^Does (the whole|part of the) job$|say it works$/.test(w)).join(' · ');
   // Chips: stars FIRST when present (Destin), then setup as an ordinary chip that explains itself on click.
   const chips = [
     p.stars ? tipChip('stars', `${ICON.star}${fmtStars(p.stars)}`, 'About GitHub stars') : (!gh ? '<span class="chip">Not on GitHub</span>' : ''),
@@ -52,7 +53,7 @@ export function altCard(p, alt, i, group, why) {
     tpl('setup', SETUP[setupOf(p)], `<p>How hard it is to start using it. <b>Easy</b>: install it like a normal app, or use it in your browser. <b>Advanced</b>: you run it on your own server, use the command line, or it is a tool for developers.</p>`),
     tpl('active', p.inactive ? 'Quiet for a year' : 'Active', `<p>${p.inactive ? 'Nobody has changed its code in over a year. It may still work well, but help is less likely.' : 'Its code changed within the last year, so someone is still looking after it.'}</p>`),
     p.verified ? tpl('verified', 'Verified', '<p>r/TrueOpenSource mods checked it: an open-source license, still looked after, and it really does the job.</p>') : '',
-    tpl('why', 'Why it is listed here', `${whyText ? `<p>${esc(whyText.split(' · ').join(', '))}.</p>` : '<p>It is listed in this group by the editors.</p>'}<p class="tipwhy">The order comes from how fully it replaces the app, Verified, setup and, when there are enough, people's votes.</p>${famHtml}`),
+    tpl('why', 'Why it is listed here', `${whyText ? `<p>${esc(whyText.split(' · ').join(', '))}.</p>` : ''}<p class="tipwhy">Ordered by how fully it replaces the app, Verified, setup and, when there are enough, people's votes.</p>${famHtml}`),
   ].join('');
   return `<div class="card pic" data-fit="${alt.fit}" data-stars="${p.stars ?? 0}" data-name="${esc(p.name.toLowerCase())}" data-order="${i}" data-setup="${setupOf(p)}" data-platforms="${esc((p.platforms ?? []).join(' '))}">
     <div class="rvbox" data-tipscope>
@@ -60,7 +61,7 @@ export function altCard(p, alt, i, group, why) {
       <div class="rv-main">
         <div class="rv-head"><h3><a class="cardlink" href="${pageLink}">${esc(p.name)}</a></h3>
           <button class="whybtn" type="button" data-tip="why" aria-expanded="false" aria-label="Why it is listed here"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 11v5M12 8h.01"/></svg></button>
-          ${acts.length ? `<div class="dd actions"><button class="btn sm secondary" type="button" data-menu="${menuId}" aria-haspopup="menu" aria-expanded="false">Actions ${ICON.chev}</button>
+          ${acts.length ? `<div class="dd actions"><button class="btn sm secondary" type="button" data-menu="${menuId}" aria-haspopup="menu" aria-expanded="false">More ${ICON.chev}</button>
             <div class="menu" id="${menuId}" role="menu">${acts.map((l) => `<a class="mi" role="menuitem" href="${esc(l.href)}" rel="noopener">${l.label}</a>`).join('')}<a class="mi" role="menuitem" href="${pageLink}">See full details</a>${p.help ? `<a class="mi" role="menuitem" href="${url(`p/${p.id}/#help`)}">How to help</a>` : ''}<a class="mi" role="menuitem" href="${esc(suggestUrl('2-fix', { project: p.name, ...(group ? { group: group.name } : {}) }))}" rel="noopener">Suggest a change</a></div></div>` : ''}</div>
         <div class="chiprow">${chips}</div>
         <p class="blurb">${esc(p.summary)}</p>
@@ -77,8 +78,8 @@ export const sortAlts = (alts) => rankAlts(alts.map((x, idx) => ({ ...x, idx }))
 
 // The "Works on" filter above a list of alternative cards; group.js hides the cards that don't match.
 // WHY "No server needed": most of the map runs on your own server, which a newcomer can't use.
-const FILTERS = [['', 'Any device'], ['noserver', 'No server needed'], ['windows', 'Windows'], ['mac', 'Mac'], ['linux', 'Linux'], ['android', 'Android'], ['ios', 'iPhone'], ['web', 'In your browser']];
-export const deviceFilter = (id) => `<div class="dd"><button class="select sm" type="button" data-menu="${id}" aria-haspopup="listbox" aria-expanded="false"><span data-device-label>Works on: any device</span>${ICON.chev}</button>
+const FILTERS = [['', 'All devices'], ['noserver', 'No server needed'], ['windows', 'Windows'], ['mac', 'Mac'], ['linux', 'Linux'], ['android', 'Android'], ['ios', 'iPhone'], ['web', 'In your browser']];
+export const deviceFilter = (id) => `<div class="dd"><button class="select sm" type="button" data-menu="${id}" aria-haspopup="listbox" aria-expanded="false"><span data-device-label>All devices</span>${ICON.chev}</button>
   <div class="menu" id="${id}" role="listbox">${FILTERS.map(([k, v], i) => `<button class="mi${i ? '' : ' sel'}" type="button" role="option" data-device="${k}">${v}</button>`).join('')}</div></div>`;
 
 // "Before you build": a prompt to paste into any AI assistant, on group pages and closed-app pages.
@@ -104,18 +105,18 @@ function choosePrompt({ closed, job, json, alts }) {
 export function chooseBox(t) {
   return `<section class="surface sec fold-phone" id="choose">
         <h2 class="h-large fold-head">Help me choose</h2>
-        <p class="small2">Paste it into any AI assistant to pick from this list for your device and skill level.</p>
+        <p class="small2">Ask an AI to pick one for you</p>
         <div id="prompt-choose" hidden>${esc(choosePrompt(t))}</div>
-        <div class="stack"><button class="btn md primary" type="button" data-copy="prompt-choose" data-copied="Copied. Paste it into any AI assistant.">Copy prompt</button></div>
+        <div class="stack"><button class="btn md primary" type="button" data-copy="prompt-choose" data-copied="Copied.">Copy prompt</button></div>
       </section>`;
 }
 export function buildBox(t) {
   return `<section class="surface sec fold-phone" id="build">
         <h2 class="h-large fold-head">Before you build</h2>
-        <p class="small2">Paste it into any AI assistant to compare your idea with what already exists for ${esc(t.about)}.</p>
+        <p class="small2">Ask an AI if your idea already exists</p>
         <div id="prompt-short" hidden>${esc(promptText(t, false))}</div>
         <div class="stack">
-          <button class="btn md primary" type="button" data-copy="prompt-short" data-copied="Copied. Paste it into any AI assistant.">Copy prompt</button>
+          <button class="btn md primary" type="button" data-copy="prompt-short" data-copied="Copied.">Copy prompt</button>
           <a class="btn md secondary" href="${url(t.json)}" download>Download the list</a>
         </div>
       </section>`;

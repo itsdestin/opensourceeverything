@@ -34,8 +34,7 @@ export function relatedGroups(d, perPage = 5) {
       // WHY the reason is kept: the page says WHY it is a neighbour, so the link isn't a mystery.
       const reason = apps.length ? `Also replaces ${a.g.closed.find((c) => appSlug(c) === apps[0])}`
         : projects.length ? `${projects.length} ${projects.length === 1 ? 'project' : 'projects'} in both` + (projects.length <= 2 ? `: ${projects.map((p) => d.projById.get(p)?.name).filter(Boolean).join(', ')}` : '')
-        : shared.length >= 2 && jaccard >= 0.08 ? 'People search for both in similar words'
-        : sameCat ? `Also in ${d.catById.get(b.g.category)?.name ?? 'the same category'}` : '';
+        : '';
       scored.push({ g: b.g, score, reason });
     }
     scored.sort((x, y) => y.score - x.score || x.g.name.localeCompare(y.g.name));

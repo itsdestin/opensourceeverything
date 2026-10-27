@@ -107,7 +107,7 @@
     if (e.target.closest('[data-delete-account]')) confirmBox('Delete your account?', "This removes everything you've posted here, your votes and your answers. Your GitHub account isn't touched. This can't be undone.", 'Delete everything', async () => { await api.deleteAccount(); location.href = BASE; }, true);
   });
 
-  // "Most thumbs-up from people here": the alternatives in this job with the most "yes" answers, shown only once at least
+  // "Most voted": the alternatives in this job with the most "yes" answers, shown only once at least
   // 10 answers (yes or not really) exist across the job, so a couple of early votes never look like a verdict.
   const LIKED_MIN = 10;
   function drawLiked(boxes, all) {
@@ -116,7 +116,7 @@
       const total = rated.reduce((n, r) => n + r.up + r.down, 0);
       const top = rated.filter((r) => r.up > 0).sort((a, b) => b.up - a.up || b.up / (b.up + b.down) - a.up / (a.up + a.down) || a.name.localeCompare(b.name)).slice(0, 3);
       if (total < LIKED_MIN || !top.length) { el.hidden = true; continue; }
-      el.innerHTML = `<span class="muted11">Most thumbs-up from people here</span><div class="chiprow">${top.map((r) => `<a class="chip" href="${BASE}p/${esc(r.id)}/" title="${r.up} of ${r.up + r.down} say it does the job">${icon.up.replace(/14/g, '12')}${esc(r.name)}<b>${r.up}</b></a>`).join('')}</div>`;
+      el.innerHTML = `<span class="muted11">Most voted</span><div class="chiprow">${top.map((r) => `<a class="chip" href="${BASE}p/${esc(r.id)}/" title="${r.up} of ${r.up + r.down} say it does the job">${icon.up.replace(/14/g, '12')}${esc(r.name)}<b>${r.up}</b></a>`).join('')}</div>`;
       el.hidden = false;
     }
   }

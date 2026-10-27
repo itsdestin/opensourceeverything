@@ -23,8 +23,7 @@ export default function appPages(d) {
 
     const section = ({ g, alts }) => `
   <section class="surface sec">
-    <div class="sec-head"><div><h2 class="h-large">${groups.length > 1 ? esc(g.name) : 'Open alternatives'}<span class="count">${alts.length}</span></h2>
-      <p class="desc12"><a class="crumb" href="${url(`g/${g.id}/`)}">See the whole group</a></p></div></div>
+    <div class="sec-head"><div><h2 class="h-large">${groups.length > 1 ? esc(g.name) : 'Open alternatives'}${alts.length > 1 ? `<span class="count">${alts.length}</span>` : ''}</h2></div><a class="btn sm secondary" href="${url(`g/${g.id}/`)}">See the whole group</a></div>
     ${likedBox(g, alts)}
     ${alts.length
       ? `<div class="grid" data-alts>${alts.map((x) => altCard(x.p, x.a, i++, g, x.why)).join('')}</div><div class="callout info" data-nomatch hidden>None of these match. Try another device.</div>`
@@ -34,15 +33,13 @@ export default function appPages(d) {
     const body = `
   <div class="surface identity">
     <div class="row"><div><div class="muted11">Closed app</div><h1 class="h-subject">Open-source alternatives to ${esc(name)}</h1>
-      <p class="desc12" style="margin-top:4px">${all.length
-        ? `${all.length} open-source ${all.length === 1 ? 'project' : 'projects'} that replace ${esc(name)}${full ? `, ${full === all.length ? 'all' : full} of them for the whole job` : ', each for part of the job'}.`
-        : `No open-source app replaces ${esc(name)} yet.`}</p></div>${all.length > 1 ? deviceFilter('devMenu') : ''}</div>
+      ${all.length ? '' : `<p class="desc12" style="margin-top:4px">No open-source app replaces ${esc(name)} yet.</p>`}</div>${all.length > 1 ? deviceFilter('devMenu') : ''}</div>
     ${others.length ? `<div class="replaces-row"><span class="muted11">Also replaces</span><div class="chiprow">${others.map((c) => `<a class="chip" href="${appUrl(c)}">${esc(c)}</a>`).join('')}</div></div>` : ''}
   </div>
   ${sections.map(section).join('')}
   ${all.length > 1 ? chooseBox({ closed: [name], json: `data/groups/${groups[0].id}.json`, alts: all }) : ''}
   ${SOCIAL && !all.some((x) => x.a.fit === 'full') ? `<!-- WHY: only when nothing open fully replaces it; the server checks the same rule -->
-  <section class="surface sec"><div class="sec-head"><div><h2 class="h-large">Want an open ${esc(name)}?</h2><p class="desc12">Add yours to the count. Builders see what is asked for most.</p></div><div class="want" data-request data-key="app:${esc(name)}" hidden></div></div></section>` : ''}
+  <section class="surface sec"><div class="sec-head"><div><h2 class="h-large">Want an open ${esc(name)}?</h2></div><div class="want" data-request data-key="app:${esc(name)}" hidden></div></div></section>` : ''}
   ${buildBox({ about: `an alternative to ${name}`, closed: [name], json: `data/groups/${groups[0].id}.json`, alts: all })}`;
 
     const description = all.length

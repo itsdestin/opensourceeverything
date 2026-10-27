@@ -37,7 +37,7 @@
     });
     document.querySelectorAll('[data-device]').forEach((o) => o.classList.toggle('sel', o.dataset.device === key));
     const opt = document.querySelector(`[data-device="${key}"]`);
-    document.querySelectorAll('[data-device-label]').forEach((l) => { l.textContent = key ? `Works on: ${opt.textContent}` : 'Works on: any device'; });
+    document.querySelectorAll('[data-device-label]').forEach((l) => { l.textContent = key ? `Works on: ${opt.textContent}` : 'All devices'; });
   };
   document.addEventListener('click', (e) => {
     const f = e.target.closest('[data-device]');

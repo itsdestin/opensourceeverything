@@ -7,7 +7,7 @@ export default function privacy() {
   const section = (title, html) => `<section class="surface sec prose"><h2 class="h-large">${title}</h2>${html}</section>`;
   const body = `
   <div class="surface identity">
-    <div><div class="muted11">Privacy</div><h1 class="h-subject">What this site knows about you</h1>
+    <div><h1 class="h-subject">Privacy</h1>
       <p class="desc12" style="margin-top:4px">Short version: nothing. There are no accounts, no cookies, no ads and no tracking.</p></div>
   </div>
   ${section('What we collect', `

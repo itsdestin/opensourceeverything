@@ -30,7 +30,7 @@
     const res = await api.requests({ keys: slots.map((s) => s.dataset.key).join(',') }).catch(() => ({ items: [] }));
     for (const s of slots) {
       const item = res.items.find((x) => x.key === s.dataset.key); if (!item) continue;
-      const draw = () => { s.hidden = false; s.innerHTML = `<button class="btn sm ${item.mine ? 'primary' : 'secondary'}" type="button" aria-pressed="${item.mine}">${item.mine ? '✓ You want this' : 'I want this too'}${item.votes ? ` · ${item.votes}` : ''}</button>`; };
+      const draw = () => { s.hidden = false; s.innerHTML = `<button class="btn sm ${item.mine ? 'primary' : 'secondary'}" type="button" aria-pressed="${item.mine}">${item.mine ? `✓ ${item.votes} want this` : item.votes ? `${item.votes} want this` : 'I want this too'}</button>`; };
       s.onclick = (e) => { if (e.target.closest('button')) vote(item, draw); };
       draw();
     }
@@ -125,9 +125,9 @@
     const stepIdx = { start: 0, notlisted: 0, proof: 1, form: 2, sent: 3 };
     // WHY (Destin, redesign round 3: "too much text for the sake of text"): one sentence under the title, nothing else restated.
     const head = () => `<div class="surface identity"><div><div class="muted11">For developers</div><h1 class="h-subject">Claim your project</h1>
-      <p class="desc12">Write your own description for your project's page. It shows as <b>From the Developer</b>, and the note that the listing was drafted with AI goes away.</p></div></div>`;
+      <p class="desc12">Add your own description to your project's page. The AI-drafted note goes away.</p></div></div>`;
     if (!user) {
-      slot.innerHTML = `${head()}<section class="surface sec"><h2 class="h-large">Sign in with GitHub</h2><p class="small2">So only you can speak for your project. We never ask for access to your code.</p><div><button class="btn md primary" type="button" data-signin>Sign in with GitHub</button></div></section>`;
+      slot.innerHTML = `${head()}<section class="surface sec"><p class="small2">So only you can speak for your project.</p><div><button class="btn md primary" type="button" data-signin>Sign in with GitHub</button></div></section>`;
       return;
     }
     const load = async () => { st.mine = (await api.myPitches().catch(() => ({ items: [] }))).items; };
@@ -234,7 +234,7 @@
   const SUG_KIND = { 'add-project': 'Add a project', 'add-closed-app': 'Add a closed app', 'new-group': 'New group', fix: 'Fix', report: 'Report' };
   async function renderMySuggestions(slot) {
     const { user } = await getMe();
-    if (!user) { slot.innerHTML = `<section class="surface sec"><h2 class="h-large">Sign in to see your suggestions</h2><p class="small2">Suggestions are made on GitHub. Signing in here with the same GitHub account shows where each one stands.</p><div><button class="btn md primary" type="button" data-signin>Sign in with GitHub</button></div></section>`; return; }
+    if (!user) { slot.innerHTML = `<section class="surface sec"><h2 class="h-large">Sign in to see your suggestions</h2><div><button class="btn md primary" type="button" data-signin>Sign in with GitHub</button></div></section>`; return; }
     let res; try { res = await api.mySuggestions(); } catch (e) { slot.innerHTML = `<section class="surface sec"><div class="callout warn">${esc(e.message)} <button class="btn sm secondary" type="button" data-retry>Try again</button></div></section>`; $('[data-retry]', slot).onclick = () => renderMySuggestions(slot); return; }
     slot.innerHTML = res.items.length
       ? `<section class="surface sec"><h2 class="h-large">${res.items.length} ${res.items.length === 1 ? 'suggestion' : 'suggestions'}</h2><div class="stack">${res.items.map((x) => {

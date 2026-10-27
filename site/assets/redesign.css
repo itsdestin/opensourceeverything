@@ -154,3 +154,5 @@ code.copy.block { display:block; }
 .rq-minicard .pillvote { flex-direction:column; gap:0; padding:4px 8px; min-width:76px; } .rq-minicard .pillvote span { font-size:10px; }
 .rq-minicard .rq-sub .pill { white-space:normal; }
 .rq-minicard .rq-rank { width:20px; }
+/* A long chip row scrolls sideways under the edge fade; the trailing space lets the last chip clear the fade (phones clipped it). */
+.chiprow { padding-right:24px; }

@@ -13,7 +13,7 @@ const nodeName = (n) => (n.outside ? n.name : n.p.name);
 export function rvTop(p, links) {
   return `<div class="surface identity rvtop" data-tipscope>
     <div class="row"><h1 class="h-subject">${esc(p.name)}</h1></div>
-    <div class="chiprow">${factChips(p, null, '', { links: true }).replace(/<span class="chip setup (easy|advanced)"[^>]*>[^<]*<\/span>/, `<button class="chip tipchip" type="button" data-tip="setup" aria-expanded="false">${SETUP[setupOf(p)]}<svg class="tipi" width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 11v5M12 8h.01"/></svg></button>`)}</div>
+    <div class="chiprow">${factChips(p, null, '', { links: true }).replace(/<span class="chip setup (easy|advanced)"[^>]*>[^<]*<\/span>/, `<button class="chip tipchip" type="button" data-tip="setup" aria-expanded="false">${SETUP[setupOf(p)]}</button>`)}</div>
     <p class="body2">${esc(p.summary)}</p>
     <div class="rvfoot">${SOCIAL ? `<p class="claimq" data-claim-line="${esc(p.id)}" data-repo="${esc(codeUrl(p) ?? '')}" hidden></p>` : ''}${links ? `<div class="links">${links}</div>` : ''}</div>
     ${tpl('setup', SETUP[setupOf(p)], `<p>How hard it is to start using it. <b>Easy</b>: install it like a normal app, or use it in your browser. <b>Advanced</b>: you run it on your own server, use the command line, or it is a tool for developers.</p>`)}

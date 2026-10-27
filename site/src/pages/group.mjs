@@ -57,13 +57,13 @@ export default function groupPages(d) {
         <div class="want" data-request data-key="group:${g.id}" hidden></div>` : ''}
       </section>
       <section class="surface sec" id="see-also">
-        <div class="sec-head"><div><h2 class="h-large">See also</h2><p class="desc12">Other jobs people look into alongside this one.</p></div></div>
+        <div class="sec-head"><div><h2 class="h-large">See also</h2></div></div>
         <div class="grid">${related.get(g.id).map((r) => `<a class="card listing" href="${url(`g/${r.g.id}/`)}"><div class="head"><h3>${esc(r.g.name)}</h3></div>${r.reason ? `<span class="muted11">${esc(r.reason)}</span>` : ''}</a>`).join('')}</div>
       </section>
       ${SOCIAL ? `<section class="surface sec" id="missing">
-        <div class="sec-head"><div><h2 class="h-large">What's missing</h2><p class="desc12">What people still miss here, and wish existed. Upvote what matters to you.</p></div>
+        <div class="sec-head"><div><h2 class="h-large">What's missing</h2></div>
           <div class="btns-row"><a class="btn sm secondary" href="${url(`c/${g.category}/board/`)}">${esc(cat?.name ?? '')} board</a><button class="btn sm secondary" type="button" data-add-note data-category="${g.category}" data-group="${g.id}">Add a note</button></div></div>
-        <div data-notes data-group="${g.id}" data-limit="6" data-more-href="${url(`c/${g.category}/board/?group=${g.id}`)}" data-empty="Nothing noted yet. Using one of these and something's missing? Add a note."></div>
+        <div data-notes data-group="${g.id}" data-limit="6" data-more-href="${url(`c/${g.category}/board/?group=${g.id}`)}" data-empty="Nothing noted yet."></div>
       </section>` : ''}
     </div>
 
@@ -77,13 +77,6 @@ export default function groupPages(d) {
           <a class="btn md secondary" href="${esc(suggestUrl('3-add-closed-app', { group: g.name }))}" rel="noopener">Add a closed app it replaces</a>
           <a class="btn md secondary" href="${esc(suggestUrl('2-fix', { group: g.name }))}" rel="noopener">Fix something on this page</a>
         </div>
-      </section>
-      <section class="surface sec fold-phone" style="gap:8px">
-        <h2 class="h-large fold-head">About this page</h2>
-        <p class="small2"><b class="num">Replaces fully</b> means it does the main job of these apps; <b class="num">Replaces partly</b> means it covers some of it.</p>
-        <p class="small2"><b class="num">Order</b>: best match first, from how fully it replaces the app, Verified, setup and (when there are enough) people's votes.</p>
-        <p class="small2"><b class="num">Licenses</b>: every project here uses an open-source license (<a href="${url('licenses/')}">what each one means</a>). <b class="num">Open core</b> means some parts are paid or under another license.</p>
-        <a class="btn md secondary full" href="${url('about/')}">How Open Source Everything works</a>
       </section>
     </div>
   </div>`;

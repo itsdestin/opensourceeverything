@@ -6,14 +6,14 @@ import { esc, url, SOCIAL } from '../lib.mjs';
 export default function boardPages(d) {
   if (!SOCIAL) return [];
   const addBtn = (attrs, label = 'Add a note') => `<button class="btn md primary" type="button" data-add-note ${attrs}>${label}</button>`;
-  const intro = `<p class="desc12" style="margin-top:4px">Note what's missing from a project, wish for something nothing open does yet, or ask a question. Upvote what matters to you: the most wanted rise to the top, and builders see them.</p>`;
+  const intro = `<p class="desc12" style="margin-top:4px">Most upvoted first.</p>`;
   const index = {
     path: 'boards/', title: 'Boards', styles: ['pages.css', 'group.css'],
     description: "What's missing from open-source apps, and what people wish existed, voted on by the r/TrueOpenSource community.",
     body: `
-  <div class="surface identity"><div class="row"><div><div class="muted11">Boards</div><h1 class="h-subject">What people want next</h1>${intro}</div>${addBtn('')}</div></div>
+  <div class="surface identity"><div class="row"><div><div class="muted11">Boards</div><h1 class="h-subject">What people want next</h1></div>${addBtn('')}</div></div>
   <div class="cols"><div>
-    <section class="surface sec"><div class="sec-head"><div><h2 class="h-large">Most wanted</h2><p class="desc12">The most upvoted open notes and wishes, across the whole map</p></div></div>
+    <section class="surface sec"><div class="sec-head"><div><h2 class="h-large">Most wanted</h2></div></div>
       <div data-board></div></section></div>
     <div><section class="surface sec"><h2 class="h-large">Boards by category</h2><div class="stack">${d.categories.map((c) => `<a class="btn md secondary" href="${url(`c/${c.id}/board/`)}">${esc(c.name)}</a>`).join('')}</div></section></div>
   </div>`,
