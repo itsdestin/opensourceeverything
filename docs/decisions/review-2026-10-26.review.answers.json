@@ -1,0 +1,144 @@
+{
+ "deck": "ose-review-2026-10-26-built",
+ "started": "2026-10-27T03:23:37.747Z",
+ "submitted": "2026-10-27T03:50:11Z",
+ "cur": 16,
+ "answers": {
+  "S-documents": {
+   "v": "yes",
+   "t": 1793071595332,
+   "note": "we should still put stars first when present. easy should be a normal tag, and clicking it should open a description with what the tag actually means/measers",
+   "seconds": 178,
+   "theme": "light",
+   "zoom": 1
+  },
+  "S-phone": {
+   "v": "other",
+   "t": 1793071628969,
+   "note": "no these cards are WAY too big and difficult to quickly browse/scroll through now. ",
+   "seconds": 34,
+   "theme": "light",
+   "zoom": 1
+  },
+  "S-project": {
+   "note": "the three buttons should staay right aligned and where they were. this is worse. i think we can improve the ui/ux for the forks/families",
+   "t": 1793071710610,
+   "v": "other",
+   "seconds": 82,
+   "theme": "light",
+   "zoom": 1
+  },
+  "S-family": {
+   "note": "you should review the youcoded design guide. that is our design guide for this as well. this is currently poorly designed.",
+   "t": 1793071749153,
+   "v": "other",
+   "seconds": 39,
+   "theme": "light",
+   "zoom": 1
+  },
+  "S-browsers": {
+   "note": "we can improve the ui/ux",
+   "t": 1793071849182,
+   "v": "other",
+   "seconds": 100,
+   "theme": "light",
+   "zoom": 1
+  },
+  "S-oldnames": {
+   "v": "other",
+   "t": 1793072042559,
+   "note": "these cards just have too much stuff poorly laid out atp. we can greatly improve this ui/ux",
+   "seconds": 193,
+   "theme": "light",
+   "zoom": 1
+  },
+  "S-booking": {
+   "v": "yes",
+   "t": 1793072105084,
+   "seconds": 63,
+   "theme": "light",
+   "zoom": 1
+  },
+  "S-netflix": {
+   "v": "yes",
+   "t": 1793072190334,
+   "seconds": 85,
+   "theme": "light",
+   "zoom": 1
+  },
+  "S-home": {
+   "v": "yes",
+   "t": 1793072206021,
+   "seconds": 16,
+   "theme": "light",
+   "zoom": 1
+  },
+  "S-seealso": {
+   "v": "yes",
+   "t": 1793072341253,
+   "seconds": 135,
+   "theme": "light",
+   "zoom": 1
+  },
+  "S-mostreq": {
+   "note": "we can make this a lot prettier and easier to use/navigate/understand",
+   "t": 1793072360846,
+   "v": "other",
+   "seconds": 20,
+   "theme": "light",
+   "zoom": 1
+  },
+  "S-tag": {
+   "note": "we can make this prettier",
+   "t": 1793072486392,
+   "v": "other",
+   "seconds": 126,
+   "theme": "light",
+   "zoom": 1
+  },
+  "Q-aisearch": {
+   "v": "pick",
+   "pick": "off",
+   "t": 1793072538249,
+   "note": "i think we just need to improve tooling for agentic access to our database so users can get much more interesting/useful results by asking an ai in the web or their own local agent or whatever",
+   "seconds": 52,
+   "theme": "light",
+   "zoom": 1
+  },
+  "Q-seed": {
+   "v": "other",
+   "t": 1793072655748,
+   "note": "i think  we neeed to think more through and make clearer how \"this is missing in everything or most things\"/\"i want this to exist\" is distinguished from \"this specific app is missing this specific feature\". maybe re-usable feature tags for different app classes could be interesting? so like, all docs/file apps could get a tag or a yes/no ranking for whether they support live shared editing across devices? instead of each thing being re-proposed or re-worded by every user?",
+   "dk": true,
+   "seconds": 117,
+   "theme": "light",
+   "zoom": 1
+  },
+  "Q-ailine": {
+   "v": "pick",
+   "pick": "about",
+   "t": 1793072803088,
+   "note": "we should have something that temporarily says \"this listing is managed by r/trueopensource and drafted with AI assistance. project owners/developers may claim this project and update their profile/page by.....\" or something akin to that. so the label disappears once a human claims and manages a project page",
+   "seconds": 147,
+   "theme": "light",
+   "zoom": 1
+  },
+  "Q-stance": {
+   "v": "other",
+   "dk": true,
+   "t": 1793072977396,
+   "note": "want to think through what the exact offered short labels are/how they read, then also provide an expanded section/popup or something that allows users to understand the specifics of a project's contributions/other projects. i think the current 3 labels are not the most useful offerings",
+   "seconds": 174,
+   "theme": "light",
+   "zoom": 1
+  },
+  "Q-defaults": {
+   "v": "other",
+   "t": 1793073009657,
+   "note": "confused, need more detail",
+   "seconds": 32,
+   "theme": "light",
+   "zoom": 1
+  }
+ }
+}
