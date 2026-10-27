@@ -1,0 +1,572 @@
+{
+ "title": "Redesign: pick a design for each part",
+ "key": "ose-redesign-1",
+ "out": "redesign-1.choice.html",
+ "images": "images/redesign-1.choice",
+ "runs": {
+  "today": "runs-redesign/all"
+ },
+ "themes": [
+  "light"
+ ],
+ "theme": "fixed",
+ "crops": {
+  "today-card-desktop": [
+   "ose",
+   "today-card-desktop",
+   "1440x900+0+0"
+  ],
+  "a-card-desktop": [
+   "ose",
+   "a-card-desktop",
+   "1440x900+0+0"
+  ],
+  "b-card-desktop": [
+   "ose",
+   "b-card-desktop",
+   "1440x900+0+0"
+  ],
+  "c-card-desktop": [
+   "ose",
+   "c-card-desktop",
+   "1440x900+0+0"
+  ],
+  "today-card-phone": [
+   "ose",
+   "today-card-phone",
+   "390x844+0+0"
+  ],
+  "a-card-phone": [
+   "ose",
+   "a-card-phone",
+   "390x844+0+0"
+  ],
+  "b-card-phone": [
+   "ose",
+   "b-card-phone",
+   "390x844+0+0"
+  ],
+  "c-card-phone": [
+   "ose",
+   "c-card-phone",
+   "390x844+0+0"
+  ],
+  "a-card-explainer-desktop": [
+   "ose",
+   "a-card-explainer-desktop",
+   "1440x900+0+0"
+  ],
+  "b-card-explainer-desktop": [
+   "ose",
+   "b-card-explainer-desktop",
+   "1440x900+0+0"
+  ],
+  "c-card-explainer-desktop": [
+   "ose",
+   "c-card-explainer-desktop",
+   "1440x900+0+0"
+  ],
+  "today-project-desktop": [
+   "ose",
+   "today-project-desktop",
+   "1440x900+0+0"
+  ],
+  "a-project-desktop": [
+   "ose",
+   "a-project-desktop",
+   "1440x900+0+0"
+  ],
+  "b-project-desktop": [
+   "ose",
+   "b-project-desktop",
+   "1440x900+0+0"
+  ],
+  "c-project-desktop": [
+   "ose",
+   "c-project-desktop",
+   "1440x900+0+0"
+  ],
+  "today-project-phone": [
+   "ose",
+   "today-project-phone",
+   "390x844+0+0"
+  ],
+  "a-project-phone": [
+   "ose",
+   "a-project-phone",
+   "390x844+0+0"
+  ],
+  "b-project-phone": [
+   "ose",
+   "b-project-phone",
+   "390x844+0+0"
+  ],
+  "c-project-phone": [
+   "ose",
+   "c-project-phone",
+   "390x844+0+0"
+  ],
+  "today-search-desktop": [
+   "ose",
+   "today-search-desktop",
+   "1440x900+0+0"
+  ],
+  "a-search-desktop": [
+   "ose",
+   "a-search-desktop",
+   "1440x900+0+0"
+  ],
+  "b-search-desktop": [
+   "ose",
+   "b-search-desktop",
+   "1440x900+0+0"
+  ],
+  "c-search-desktop": [
+   "ose",
+   "c-search-desktop",
+   "1440x900+0+0"
+  ],
+  "today-search-phone": [
+   "ose",
+   "today-search-phone",
+   "390x844+0+0"
+  ],
+  "a-search-phone": [
+   "ose",
+   "a-search-phone",
+   "390x844+0+0"
+  ],
+  "b-search-phone": [
+   "ose",
+   "b-search-phone",
+   "390x844+0+0"
+  ],
+  "c-search-phone": [
+   "ose",
+   "c-search-phone",
+   "390x844+0+0"
+  ],
+  "today-gaps-desktop": [
+   "ose",
+   "today-gaps-desktop",
+   "1440x900+0+0"
+  ],
+  "a-gaps-desktop": [
+   "ose",
+   "a-gaps-desktop",
+   "1440x900+0+0"
+  ],
+  "b-gaps-desktop": [
+   "ose",
+   "b-gaps-desktop",
+   "1440x900+0+0"
+  ],
+  "c-gaps-desktop": [
+   "ose",
+   "c-gaps-desktop",
+   "1440x900+0+0"
+  ],
+  "today-home-requested-desktop": [
+   "ose",
+   "today-home-requested-desktop",
+   "1440x900+0+0"
+  ],
+  "a-home-requested-desktop": [
+   "ose",
+   "a-home-requested-desktop",
+   "1440x900+0+0"
+  ],
+  "b-home-requested-desktop": [
+   "ose",
+   "b-home-requested-desktop",
+   "1440x900+0+0"
+  ],
+  "c-home-requested-desktop": [
+   "ose",
+   "c-home-requested-desktop",
+   "1440x900+0+0"
+  ],
+  "today-tag-desktop": [
+   "ose",
+   "today-tag-desktop",
+   "1440x1409+0+0"
+  ],
+  "a-tag-desktop": [
+   "ose",
+   "a-tag-desktop",
+   "1440x1119+0+0"
+  ],
+  "b-tag-desktop": [
+   "ose",
+   "b-tag-desktop",
+   "1440x1119+0+0"
+  ],
+  "c-tag-desktop": [
+   "ose",
+   "c-tag-desktop",
+   "1440x1309+0+0"
+  ],
+  "a-label-project-desktop": [
+   "ose",
+   "a-label-project-desktop",
+   "1440x900+0+0"
+  ],
+  "b-label-project-desktop": [
+   "ose",
+   "b-label-project-desktop",
+   "1440x900+0+0"
+  ],
+  "c-label-project-desktop": [
+   "ose",
+   "c-label-project-desktop",
+   "1440x900+0+0"
+  ]
+ },
+ "steps": [
+  {
+   "id": "C-card",
+   "surface": "Group pages",
+   "path": "Web browsers, on a computer",
+   "headline": "Which card layout should group pages use on a computer?",
+   "variants": [
+    {
+     "id": "today",
+     "label": "Keep today's",
+     "crop": "today-card-desktop",
+     "summary": "What the combined branch looks like now, for comparison."
+    },
+    {
+     "id": "a",
+     "label": "Picture cards, 3 across",
+     "crop": "a-card-desktop",
+     "summary": "Like today but tidier: stars first, Easy setup a normal tag, family as one grey line, an (i) explains why it is listed there."
+    },
+    {
+     "id": "b",
+     "label": "Picture-left, 2 columns",
+     "crop": "b-card-desktop",
+     "summary": "Smaller picture on the left, two cards per row; family becomes a chip that opens a pop-up. Designer's pick."
+    },
+    {
+     "id": "c",
+     "label": "One column of rows",
+     "crop": "c-card-desktop",
+     "summary": "A list of wide rows, small picture, more text per line; easiest to scan top to bottom."
+    }
+   ],
+   "notice": "All three put stars first and make Easy setup a normal tag you can tap for its meaning."
+  },
+  {
+   "id": "C-card-phone",
+   "surface": "Group pages",
+   "path": "Web browsers, on a phone",
+   "headline": "Which card layout should group pages use on a phone?",
+   "variants": [
+    {
+     "id": "today",
+     "label": "Keep today's",
+     "crop": "today-card-phone",
+     "summary": "What the combined branch looks like now, for comparison."
+    },
+    {
+     "id": "a",
+     "label": "Rows with picture",
+     "crop": "a-card-phone",
+     "summary": "Short rows with a small picture and one line of description."
+    },
+    {
+     "id": "b",
+     "label": "Rows with picture, family chip",
+     "crop": "b-card-phone",
+     "summary": "Same rows; the family shows as a chip."
+    },
+    {
+     "id": "c",
+     "label": "Rows without picture",
+     "crop": "c-card-phone",
+     "summary": "Drops the picture: about 5½ projects per screen instead of 1½ today."
+    }
+   ],
+   "notice": "Chip rows no longer wrap: they scroll sideways, as the design guide says."
+  },
+  {
+   "id": "C-explainer",
+   "surface": "Group pages",
+   "path": "Tapping Easy setup or the (i) on a card",
+   "headline": "How should the explainer look when you tap a tag or the (i)?",
+   "variants": [
+    {
+     "id": "a",
+     "label": "Option a",
+     "crop": "a-card-explainer-desktop",
+     "summary": "The pop-up from layout a."
+    },
+    {
+     "id": "b",
+     "label": "Option b",
+     "crop": "b-card-explainer-desktop",
+     "summary": "The pop-up from layout b."
+    },
+    {
+     "id": "c",
+     "label": "Option c",
+     "crop": "c-card-explainer-desktop",
+     "summary": "The pop-up from layout c."
+    }
+   ]
+  },
+  {
+   "id": "C-project",
+   "surface": "Project pages",
+   "path": "Firefox's page, on a computer",
+   "headline": "Which project page top and family layout?",
+   "variants": [
+    {
+     "id": "today",
+     "label": "Keep today's",
+     "crop": "today-project-desktop",
+     "summary": "What the combined branch looks like now, for comparison."
+    },
+    {
+     "id": "a",
+     "label": "Family card",
+     "crop": "a-project-desktop",
+     "summary": "A compact Family card under the top card: a mini list with status and an (i) for why and source. Designer's pick."
+    },
+    {
+     "id": "b",
+     "label": "Family chips",
+     "crop": "b-project-desktop",
+     "summary": "Family as chips (\"4 forks\") in the chip row; a pop-up holds the list with why and source."
+    },
+    {
+     "id": "c",
+     "label": "Sideways family cards",
+     "crop": "c-project-desktop",
+     "summary": "A sideways row of small family cards, this project outlined."
+    }
+   ],
+   "notice": "All three put the three link buttons back at the right of the top card, where they were."
+  },
+  {
+   "id": "C-project-phone",
+   "surface": "Project pages",
+   "path": "Firefox's page, on a phone",
+   "headline": "Which project page layout on a phone?",
+   "variants": [
+    {
+     "id": "today",
+     "label": "Keep today's",
+     "crop": "today-project-phone",
+     "summary": "What the combined branch looks like now, for comparison."
+    },
+    {
+     "id": "a",
+     "label": "Family card",
+     "crop": "a-project-phone",
+     "summary": "The Family card folds under an arrow, open at first."
+    },
+    {
+     "id": "b",
+     "label": "Family chips",
+     "crop": "b-project-phone",
+     "summary": "Family chips with a pop-up."
+    },
+    {
+     "id": "c",
+     "label": "Sideways family cards",
+     "crop": "c-project-phone",
+     "summary": "A sideways row that folds."
+    }
+   ]
+  },
+  {
+   "id": "C-search",
+   "surface": "Search",
+   "path": "Searching \"notes\", on a computer",
+   "headline": "Which search results layout on a computer?",
+   "variants": [
+    {
+     "id": "today",
+     "label": "Keep today's",
+     "crop": "today-search-desktop",
+     "summary": "What the combined branch looks like now, for comparison."
+    },
+    {
+     "id": "a",
+     "label": "One card per result",
+     "crop": "a-search-desktop",
+     "summary": "A raised card with a picture; kind, match and devices in one sideways chip row."
+    },
+    {
+     "id": "b",
+     "label": "Plain rows in one box",
+     "crop": "b-search-desktop",
+     "summary": "Simple rows with the match strength at the right. Designer's pick on computers."
+    },
+    {
+     "id": "c",
+     "label": "Grouped by kind",
+     "crop": "c-search-desktop",
+     "summary": "Open projects first, then groups and closed apps; four each with \"Show all\"."
+    }
+   ]
+  },
+  {
+   "id": "C-search-phone",
+   "surface": "Search",
+   "path": "Searching \"notes\", on a phone",
+   "headline": "Which search results layout on a phone?",
+   "variants": [
+    {
+     "id": "today",
+     "label": "Keep today's",
+     "crop": "today-search-phone",
+     "summary": "What the combined branch looks like now, for comparison."
+    },
+    {
+     "id": "a",
+     "label": "One card per result",
+     "crop": "a-search-phone",
+     "summary": "Cards with pictures."
+    },
+    {
+     "id": "b",
+     "label": "Plain rows",
+     "crop": "b-search-phone",
+     "summary": "Simple rows."
+    },
+    {
+     "id": "c",
+     "label": "Grouped, folding",
+     "crop": "c-search-phone",
+     "summary": "Grouped by kind; groups fold, first open. Designer's pick on phones."
+    }
+   ]
+  },
+  {
+   "id": "C-requested",
+   "surface": "Gaps page",
+   "path": "Gaps → Most requested",
+   "headline": "Which Most requested layout?",
+   "variants": [
+    {
+     "id": "today",
+     "label": "Keep today's",
+     "crop": "today-gaps-desktop",
+     "summary": "What the combined branch looks like now, for comparison."
+    },
+    {
+     "id": "a",
+     "label": "Ranked rows",
+     "crop": "a-gaps-desktop",
+     "summary": "Ranked rows with the vote count as one pill at the right; two columns."
+    },
+    {
+     "id": "b",
+     "label": "Top three, then a list",
+     "crop": "b-gaps-desktop",
+     "summary": "The three most wanted as cards, then a compact list. Designer's pick."
+    },
+    {
+     "id": "c",
+     "label": "Rows with share bars",
+     "crop": "c-gaps-desktop",
+     "summary": "One box; a thin bar behind each row shows its share of the top vote."
+    }
+   ],
+   "notice": "Names and numbers are pretend preview data."
+  },
+  {
+   "id": "C-requested-home",
+   "surface": "Home page",
+   "path": "Home → Most requested",
+   "headline": "Which Most requested layout on the home page?",
+   "variants": [
+    {
+     "id": "today",
+     "label": "Keep today's",
+     "crop": "today-home-requested-desktop",
+     "summary": "What the combined branch looks like now, for comparison."
+    },
+    {
+     "id": "a",
+     "label": "Ranked rows",
+     "crop": "a-home-requested-desktop",
+     "summary": "Matches option a above."
+    },
+    {
+     "id": "b",
+     "label": "Top three, then a list",
+     "crop": "b-home-requested-desktop",
+     "summary": "Matches option b above."
+    },
+    {
+     "id": "c",
+     "label": "Rows with share bars",
+     "crop": "c-home-requested-desktop",
+     "summary": "Matches option c above."
+    }
+   ]
+  },
+  {
+   "id": "C-tag",
+   "surface": "Tag my project",
+   "path": "Tag my project → writing your pitch",
+   "headline": "Which Tag my project layout?",
+   "variants": [
+    {
+     "id": "today",
+     "label": "Keep today's",
+     "crop": "today-tag-desktop",
+     "summary": "What the combined branch looks like now, for comparison."
+    },
+    {
+     "id": "a",
+     "label": "One card per step",
+     "crop": "a-tag-desktop",
+     "summary": "One narrow card per step; optional writing folds; Send says what is still missing and who will read it."
+    },
+    {
+     "id": "b",
+     "label": "With a live preview",
+     "crop": "b-tag-desktop",
+     "summary": "The same card beside \"How it will read\", so you see the result as you write. Designer's pick."
+    },
+    {
+     "id": "c",
+     "label": "All steps folding",
+     "crop": "c-tag-desktop",
+     "summary": "All four steps as folding rows on one page, finished steps summarised."
+    }
+   ]
+  },
+  {
+   "id": "C-label",
+   "surface": "Project pages",
+   "path": "An unclaimed project's page",
+   "headline": "Where should \"Managed by r/TrueOpenSource, drafted with AI help: claim this page\" go?",
+   "variants": [
+    {
+     "id": "a",
+     "label": "Grey line in the top card",
+     "crop": "a-label-project-desktop",
+     "summary": "One quiet line in the project's top card with \"Are you the developer?\" and a Claim button; nothing on cards. Designer's pick."
+    },
+    {
+     "id": "b",
+     "label": "\"Unclaimed\" chip",
+     "crop": "b-label-project-desktop",
+     "summary": "A dashed \"Unclaimed\" chip on cards and on the page, opening the explainer."
+    },
+    {
+     "id": "c",
+     "label": "Notice box",
+     "crop": "c-label-project-desktop",
+     "summary": "A tinted notice box on the project page with Claim this page inside it."
+    }
+   ],
+   "notice": "The label disappears once a developer claims the page."
+  }
+ ]
+}
