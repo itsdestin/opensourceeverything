@@ -409,7 +409,7 @@ export default {
     const url = new URL(req.url); const origin = req.headers.get('Origin');
     // CORS: only the site itself may call this server with someone's sign-in.
     const cors = { 'Access-Control-Allow-Origin': env.SITE_ORIGIN, 'Access-Control-Allow-Credentials': 'true', Vary: 'Origin' };
-    if (req.method === 'OPTIONS') return new Response(null, { status: 204, headers: { ...cors, 'Access-Control-Allow-Methods': 'GET, POST, PATCH, DELETE', 'Access-Control-Allow-Headers': 'Content-Type, X-OSE', 'Access-Control-Max-Age': '86400' } });
+    if (req.method === 'OPTIONS') return new Response(null, { status: 204, headers: { ...cors, 'Access-Control-Allow-Methods': 'GET, POST, PUT, PATCH, DELETE', 'Access-Control-Allow-Headers': 'Content-Type, X-OSE', 'Access-Control-Max-Age': '86400' } });
     try {
       if (url.pathname === '/auth/login') return login(url, env);
       if (url.pathname === '/auth/callback') return callback(url, env);

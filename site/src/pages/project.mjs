@@ -3,6 +3,22 @@ import { esc, url, SITE_URL, KIND, factChips, hostOf, fmtStars, actions, codeUrl
 
 const HOSTS = { 'github.com': 'GitHub', 'gitlab.com': 'GitLab', 'codeberg.org': 'Codeberg' };
 
+// "How to help" (review Oct 26): where a visitor who wants to pitch in goes next. Everything here comes from the project's own
+// GitHub page (data/help.json, refreshed weekly) or from data/plugin-docs.json (hand-checked links); nothing is guessed.
+function helpSection(p) {
+  const h = p.help; if (!h) return '';
+  const row = (href, title, note) => `<a class="btn md secondary helprow" href="${esc(href)}" rel="noopener"><span>${title}</span>${note ? `<span class="muted11">${note}</span>` : ''}</a>`;
+  return `<section class="surface sec" id="help">
+        <div class="sec-head"><div><h2 class="h-large">How to help</h2><p class="desc12">Ways to pitch in on ${esc(p.name)}, from its own pages</p></div></div>
+        <div class="stack">
+          ${h.contributing ? row(h.contributing, 'Read the contributing guide', 'How the team likes changes sent') : ''}
+          ${h.good ? row(h.good.url, `Good first issues<span class="count">${h.good.n}</span>`, 'Small tasks picked for newcomers') : ''}
+          ${h.wanted ? row(h.wanted.url, `Help wanted<span class="count">${h.wanted.n}</span>`, 'Tasks the team asked for help with') : ''}
+          ${h.plugins ? row(h.plugins.url, esc(h.plugins.label), 'Build a plugin or extension for it') : ''}
+        </div>
+      </section>`;
+}
+
 export default function projectPages(d) {
   return d.projects.map((p) => {
     const listed = d.groupsByProject.get(p.id) ?? [];
@@ -24,6 +40,8 @@ export default function projectPages(d) {
 
   <div class="cols">
     <div>
+  ${SOCIAL ? `<!-- WHY drawn in the browser (assets/contrib.js): a mod's approval shows at once, with no rebuild of the site. -->
+      <section class="surface sec" data-dev-pitch data-mode="page" data-project="${esc(p.id)}" data-repo="${esc(codeUrl(p) ?? '')}" hidden></section>` : ''}
   ${p.screenshots?.length ? `<section class="surface sec">
         <div class="sec-head"><div><h2 class="h-large">Screenshots<span class="count">${p.screenshots.length}</span></h2><p class="desc12">From ${esc(p.name)}'s own page. Click one to see it full size.</p></div></div>
         <!-- WHY small thumbnails (Destin, Oct 27: full-size pictures were "overwhelming"); full size opens in a viewer. -->
@@ -46,6 +64,7 @@ export default function projectPages(d) {
       </section>` : ''}
     </div>
     <div>
+      ${helpSection(p)}
       <section class="surface sec fold-phone">
         <h2 class="h-large fold-head">Facts</h2>
         <div class="lvl1 facts">

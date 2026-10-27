@@ -5,6 +5,7 @@ import { readdirSync, readFileSync, existsSync, statSync } from 'node:fs';
 import { join, dirname } from 'node:path';
 import { fileURLToPath } from 'node:url';
 import { BASE, loadData } from './src/lib.mjs';
+import { stale } from '../prefill/sync-forms.mjs';
 
 const HERE = dirname(fileURLToPath(import.meta.url));
 const DIST = join(HERE, 'dist');
@@ -30,5 +31,7 @@ if (pages.size > 1) { // WHY: skip until the page modules exist, so the core can
   for (const g of d.groups) if (!pages.has(`g/${g.id}/index.html`)) problems.push(`no page for group ${g.id}`);
   for (const p of d.projects) if (!pages.has(`p/${p.id}/index.html`)) problems.push(`no page for project ${p.id}`);
 }
+// WHY (review Oct 26): the GitHub forms' group and category pick lists are written from the data; fail if they fell behind.
+for (const x of stale()) problems.push(`GitHub form ${x.file}: pick list out of date. Run: node prefill/sync-forms.mjs`);
 if (problems.length) { console.error(problems.slice(0, 50).join('\n') + (problems.length > 50 ? `\n…and ${problems.length - 50} more` : '')); process.exit(1); }
 console.log(`site check: ${html.length} pages, all links and pages present`);

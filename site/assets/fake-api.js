@@ -2,7 +2,7 @@
 // It obeys docs/server-rules.md exactly, so it doubles as the blueprint the real server (Cloudflare) must match:
 // same calls, same answers, same rules. Everything is kept in this browser only and starts from sample posts.
 (function () {
-  const KEY = 'ose-demo-v2';
+  const KEY = 'ose-demo-v3';
   const RULES = { minAgeDays: 14, confirmsNeeded: 3, popularVotes: 25 };
   const now = Date.now(), H = 3600e3, D = 24 * H;
   const u = (login, days = 400) => ({ login, created: now - days * D, trusted: days >= 14 });
@@ -10,8 +10,37 @@
     me: null, nextId: 100, banned: [], mods: ['itsdestin'],
     users: Object.fromEntries(['erin', 'gus', 'hana', 'ivan', 'jo', 'kim', 'lee'].map((n) => [`${n}-sample`, u(`${n}-sample`)]).concat([['newbie-sample', u('newbie-sample', 3)]])),
     ratings: {}, // "group/project" → { login: 1 | -1 }
+    // "I want this too": key → voters, plus made-up extra votes so the preview has a ranking (docs/server-rules.md → Requests)
+    reqVoters: {}, reqExtra: { 'group:music': 88, 'group:graphic-design': 64, 'app:LinkedIn': 41, 'group:pro-network': 31, 'group:search': 17, 'issue:201': 23, 'issue:203': 9, 'group:icons': 6 },
+    // The pretend GitHub: suggestion issues. state/reason/labels work like the real ones; `robot` is the robot's verdict label.
+    issues: sampleIssues(),
+    // "Tag my project": a developer's pitch per listed project (live = approved, pending = waiting for a mod)
+    pitches: samplePitches(),
     notes: sampleNotes().map((n) => ({ voters: [], extraVotes: 0, status: 'open', replies: [], reports: [], body: '', ...n })),
   });
+  const day = (n) => now - n * D;
+  function sampleIssues() {
+    const mk = (number, name, kind, author, days, extra = {}) => ({ number, name, kind, author, created: day(days), state: 'open', labels: [], ...extra });
+    const mine = (who) => [
+      mk(210 + who.length, 'Zorblax Draw', 'add-closed-app', who, 1, {}),
+      mk(220 + who.length, 'Notability', 'add-closed-app', who, 3, { labels: ['needs-mod'] }),
+      mk(230 + who.length, 'Linear', 'add-closed-app', who, 6, { labels: ['approved'] }),
+      mk(240 + who.length, 'Procreate', 'add-closed-app', who, 20, { state: 'closed', reason: 'completed', live: '/alternatives-to/procreate/' }),
+      mk(250 + who.length, 'Habit tracking', 'new-group', who, 30, { state: 'closed', reason: 'not_planned', why: 'Habit tracking is already part of the group "Task management"; add the closed apps there instead.' }),
+    ];
+    return [
+      mk(201, 'Notion Calendar', 'add-closed-app', 'erin-sample', 9, { labels: ['robot-ok'] }), mk(202, 'Cleanshot', 'add-closed-app', 'newbie-sample', 2, { labels: ['needs-mod'] }),
+      mk(203, 'Podcast hosting', 'new-group', 'gus-sample', 5, { labels: ['robot-ok'] }), mk(204, 'Add: Zorblax (project)', 'add-project', 'hana-sample', 4, { labels: ['robot-ok'] }),
+      ...mine('you-sample'), ...mine('member-sample'),
+    ];
+  }
+  function samplePitches() {
+    return [
+      { id: 1, owner: 'penpot-team-sample', project: 'penpot', repo: 'github.com/penpot/penpot', proof: 'file', token: 'ose-sample', verified: true, status: 'live', updated: day(8),
+        live: { groups: ['graphic-design'], differs: 'It works the way designers do, in a browser, and the design files are open code, so developers can build from the same source.', strengths: 'Real-time teamwork. Runs in a browser, or on your own server.', weaknesses: 'Fewer plugins than Figma. Large files can feel slow.', reusable: 'The plugin system, and the exporter that turns designs into code.', help: 'Plugin authors, and translators for the interface.', built: 'hand-built' } },
+      { id: 2, owner: 'inkscape-sample', project: 'inkscape', repo: 'gitlab.com/inkscape/inkscape', proof: 'file', token: 'ose-sample2', verified: true, status: 'pending', updated: day(0.1), pending: { groups: ['vector-graphics'], differs: 'A drawing program that saves its files in an open web format, so other programs can read them.', strengths: 'Precise drawing tools.', weaknesses: 'Less polished for page layout.', reusable: 'The path math library.', help: 'Documentation writers.', built: 'ai-assisted' }, live: null },
+    ];
+  }
   function sampleNotes() {
     return [
       { id: 1, kind: 'missing', category: 'office', group: 'documents', projects: ['libreoffice-writer', 'onlyoffice-docs'], closedApps: ['Google Docs', 'Microsoft Word'], title: 'No live co-editing: two people can\'t type in one document', body: 'Collabora and OnlyOffice can do it in a browser, but they need a server. See https://www.collaboraonline.com for one.', author: 'erin-sample', created: now - 30 * D, voters: ['gus-sample', 'hana-sample', 'ivan-sample', 'jo-sample', 'kim-sample'], extraVotes: 43, replies: [{ id: 1, author: 'gus-sample', body: 'This is the one thing that keeps my team on Google Docs.', created: now - 20 * D }] },
@@ -67,6 +96,21 @@
       fixed: n.fixed ? { by: n.fixed.by, link: n.fixed.link, confirms: n.fixed.confirms.length } : null,
       building: n.building ?? null, can: can(n, x) };
   };
+  const BUILT = { 'hand-built': 'Hand-built', 'ai-assisted': 'AI-assisted', agentic: 'Agentic engineering', 'vibe-coded': 'Vibe-coded' };
+  // Same link reading as the server (worker/src/rules.js parseRepo).
+  function parseRepo(input) {
+    let u; try { u = new URL(/^https?:\/\//i.test(String(input).trim()) ? String(input).trim() : `https://${String(input).trim()}`); } catch { return null; }
+    const host = u.hostname.replace(/^www\./, '').toLowerCase(); if (!['github.com', 'gitlab.com', 'codeberg.org'].includes(host)) return null;
+    const [owner, raw] = u.pathname.split('/').filter(Boolean); const name = (raw ?? '').replace(/\.git$/, '');
+    if (!owner || !name || !/^[\w.-]+$/.test(owner) || !/^[\w.-]+$/.test(name)) return null;
+    return { host, owner, name, repo: `${host}/${owner}/${name}`.toLowerCase() };
+  }
+  let namesP = null; const names = () => namesP || (namesP = fetch((window.OI?.base || '/') + 'data/names.json').then((r) => r.json()));
+  async function pitchView(p, mine) {
+    const N = await names();
+    return { id: p.id, project: p.project, projectName: N.projects[p.project] ?? p.project, repo: p.repo, proof: p.proof, verified: !!p.verified, status: p.status, reason: p.reason ?? null, live: p.live ?? null, pending: p.pending ?? null, updated: p.updated, by: p.owner,
+      ...(mine && !p.verified && p.proof === 'file' ? { proofFile: '.opensourceeverything', proofText: p.token } : {}) };
+  }
   const delay = (v) => new Promise((r) => setTimeout(() => r(structuredClone(v)), 120));
   const fail = (status, message) => Promise.reject(Object.assign(new Error(message), { status }));
   const find = (id) => S.notes.find((n) => n.id === +id && sees(n, me()));
@@ -90,6 +134,7 @@
       S.notes = S.notes.filter((n) => n.author !== x.login);
       for (const n of S.notes) { n.voters = n.voters.filter((v) => v !== x.login); n.replies = n.replies.filter((r) => r.author !== x.login); n.reports = n.reports.filter((r) => r.by !== x.login); if (n.fixed) n.fixed.confirms = n.fixed.confirms.filter((c) => c !== x.login); }
       for (const g of Object.values(S.ratings)) delete g[x.login];
+      S.pitches = S.pitches.filter((p) => p.owner !== x.login); for (const k of Object.keys(S.reqVoters)) S.reqVoters[k] = S.reqVoters[k].filter((v) => v !== x.login);
       delete S.users[x.login]; S.me = null; save(); return delay({ ok: true });
     },
 
@@ -202,6 +247,96 @@
     async report(id, reason) {
       const n = find(id); const x = me();
       return guard(x, ...NEED_SIGNIN) ?? guard(n && can(n, x).report, 400, "You've already reported this.") ?? (() => { n.reports.push({ by: x.login, reason: (reason ?? '').slice(0, 500) }); save(); return delay({ ok: true }); })();
+    },
+
+
+    // ── "I want this too": requests (docs/server-rules.md → Requests) ──
+    async requests(q = {}) {
+      const x = me(); const N = await names();
+      const info = (key) => {
+        const [kind, ...r] = key.split(':'); const v = r.join(':');
+        if (kind === 'group') return N.groups[v]?.gap ? { kind, name: N.groups[v].n, href: `g/${v}/` } : null;
+        if (kind === 'app') { const gs = Object.values(N.groups).filter((g) => g.closed.includes(v)); return gs.length && gs.every((g) => g.gap) ? { kind, name: v, href: `alternatives-to/${v.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, '')}/` } : null; }
+        const i = S.issues.find((y) => `issue:${y.number}` === key && y.state === 'open' && ['add-closed-app', 'new-group'].includes(y.kind));
+        return i ? { kind, name: i.name, url: `https://github.com/itsdestin/opensourceeverything/issues/${i.number}`, number: i.number, type: i.kind, waiting: true } : null;
+      };
+      const item = (key) => { const i = info(key); if (!i) return null; const vs = S.reqVoters[key] ?? []; return { key, ...i, votes: vs.length + (S.reqExtra[key] ?? 0), mine: !!x && vs.includes(x.login) }; };
+      const can = { vote: oldEnough(x) };
+      if (q.keys) return delay({ items: q.keys.split(',').map(item).filter(Boolean), can });
+      const keys = new Set([...Object.keys(S.reqExtra), ...Object.keys(S.reqVoters), ...S.issues.filter((y) => y.state === 'open' && ['add-closed-app', 'new-group'].includes(y.kind)).map((y) => `issue:${y.number}`)]);
+      const items = [...keys].map(item).filter(Boolean).sort((a, b) => b.votes - a.votes || (b.number ?? 0) - (a.number ?? 0));
+      return delay({ items: items.slice(0, Math.min(+(q.limit ?? 10), 30)), total: items.length, can });
+    },
+    async requestVote(key, on) {
+      const x = me();
+      return guard(x, ...NEED_SIGNIN) ?? guard(oldEnough(x), ...TOO_NEW()) ?? guard((await api.requests({ keys: key })).items.length, 400, "That isn't open for requests.") ?? (() => {
+        const vs = (S.reqVoters[key] ??= []).filter((v) => v !== x.login); if (on) vs.push(x.login); S.reqVoters[key] = vs; save(); return delay({ ok: true });
+      })();
+    },
+
+    // ── Your suggestions: the person's own issues on the pretend GitHub ──
+    async mySuggestions() {
+      const x = me(); if (!x) return fail(...NEED_SIGNIN);
+      const status = (i) => (i.state === 'closed' ? (i.reason === 'completed' ? 'live' : 'turned-down') : i.labels.includes('approved') ? 'approved' : i.labels.includes('needs-mod') ? 'needs-mod' : 'waiting');
+      return delay({ items: S.issues.filter((i) => i.author === x.login).sort((a, b) => b.created - a.created).map((i) => ({ number: i.number, name: i.name, kind: i.kind, url: `https://github.com/itsdestin/opensourceeverything/issues/${i.number}`, author: i.author, created: i.created, status: status(i), ...(i.live ? { liveUrl: location.origin + i.live } : {}), ...(i.why ? { reason: i.why } : {}) })) });
+    },
+    async modSuggestions() {
+      if (!isMod(me())) return fail(403, 'Mods only.');
+      return delay({ items: S.issues.filter((i) => i.state === 'open').sort((a, b) => a.number - b.number).map((i) => ({ number: i.number, name: i.name, kind: i.kind, url: `https://github.com/itsdestin/opensourceeverything/issues/${i.number}`, author: i.author, created: i.created,
+        status: i.labels.includes('approved') ? 'approved' : i.labels.includes('needs-mod') ? 'needs-mod' : 'waiting', votes: (S.reqVoters[`issue:${i.number}`] ?? []).length + (S.reqExtra[`issue:${i.number}`] ?? 0), verdict: i.labels.includes('needs-mod') ? 'needs-mod' : i.labels.includes('robot-ok') ? 'ok' : 'unchecked' })) });
+    },
+
+    // ── Tag my project ──
+    async pitchStart(link) {
+      const x = me(); if (!x) return fail(...NEED_SIGNIN);
+      const r = parseRepo(link); if (!r) return fail(400, 'Paste the link to its code page on GitHub, GitLab or Codeberg.');
+      const N = await names(); const project = N.codes?.[r.repo];
+      if (!project) return delay({ listed: false, repo: r.repo, name: r.name });
+      let p = S.pitches.find((y) => y.owner === x.login && y.repo === r.repo);
+      if (!p) {
+        // Under their own GitHub account → proven at once. Otherwise they need the one-line file.
+        const own = r.host === 'github.com' && r.owner.toLowerCase() === x.login.toLowerCase();
+        p = { id: S.nextId++, owner: x.login, project, repo: r.repo, proof: own ? 'own-account' : 'file', token: 'ose-' + Math.random().toString(16).slice(2, 14).padEnd(12, '0'), verified: own, status: 'draft', live: null, pending: null, updated: Date.now(), checks: 0 };
+        S.pitches.push(p); save();
+      }
+      return delay({ listed: true, pitch: await pitchView(p, true) });
+    },
+    async pitchVerify(id) {
+      const p = S.pitches.find((y) => y.id === +id && y.owner === me()?.login); if (!p) return fail(404, "That isn't one of your projects.");
+      // Preview only: the first check says the file isn't there yet, the second finds it, so both screens can be seen.
+      if (!p.verified) { p.checks = (p.checks ?? 0) + 1; if (p.checks < 2) return fail(400, "We didn't find .opensourceeverything with the right text in that project yet. Add it to the project's main page (the top folder), then check again."); p.verified = true; save(); }
+      return delay(await pitchView(p, true));
+    },
+    async pitchSave(id, b) {
+      const p = S.pitches.find((y) => y.id === +id && y.owner === me()?.login); if (!p) return fail(404, "That isn't one of your projects.");
+      if (!p.verified) return fail(403, 'Prove the project is yours first.');
+      const N = await names(); const groups = [...new Set(b.groups ?? [])].filter((g) => N.groups[g]);
+      const t = (k) => (b[k] ?? '').trim().slice(0, 1000);
+      if (!groups.length) return fail(400, 'Pick at least one group it belongs in.');
+      if (!(b.differs ?? '').trim()) return fail(400, 'Say what yours does differently. It is the part people read first.');
+      if (!BUILT[b.built]) return fail(400, 'Say how it was built.');
+      // WHY back to waiting on every edit: nothing a developer writes goes public until a mod has read it.
+      p.pending = { groups: groups.slice(0, 5), differs: b.differs.trim().slice(0, 600), strengths: t('strengths'), weaknesses: t('weaknesses'), reusable: t('reusable'), help: t('help'), built: b.built };
+      p.status = 'pending'; p.reason = null; p.updated = Date.now(); save(); return delay(await pitchView(p, true));
+    },
+    async pitchDelete(id) { S.pitches = S.pitches.filter((y) => !(y.id === +id && y.owner === me()?.login)); save(); return delay({ ok: true }); },
+    async myPitches() { const x = me(); if (!x) return fail(...NEED_SIGNIN); const out = []; for (const p of S.pitches.filter((y) => y.owner === x.login)) out.push(await pitchView(p, true)); return delay({ items: out }); },
+    async livePitches(ids) {
+      const out = {}; for (const id of ids) { const p = S.pitches.find((y) => y.project === id && y.live && y.verified); if (p) out[id] = { by: p.owner, repo: p.repo, ...p.live, updated: p.updated }; }
+      return delay(out);
+    },
+    async modPitches() {
+      if (!isMod(me())) return fail(403, 'Mods only.');
+      const out = []; for (const p of S.pitches.filter((y) => y.pending)) out.push({ ...(await pitchView(p, false)), owner: p.owner });
+      return delay({ items: out });
+    },
+    async modPitchAct(id, action, reason) {
+      const p = S.pitches.find((y) => y.id === +id);
+      return guard(isMod(me()), 403, 'Mods only.') ?? guard(p?.pending, 404, 'Nothing waiting there.') ?? guard(['approve', 'reject'].includes(action), 400, 'Not a valid action.') ?? (() => {
+        if (action === 'approve') { p.live = p.pending; p.pending = null; p.status = 'live'; p.reason = null; }
+        else { p.pending = null; p.status = p.live ? 'live' : 'turned-down'; p.reason = (reason ?? '').slice(0, 500) || null; }
+        p.updated = Date.now(); save(); return delay({ ok: true });
+      })();
     },
 
     // ── Mods ──

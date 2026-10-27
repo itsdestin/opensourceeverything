@@ -48,6 +48,16 @@ export function loadData(root) {
   const categories = read('categories.json').categories;
   const groups = read('groups.json').groups;
   const projects = read('projects.json').projects;
+  // WHY merged here, not stored in projects.json (review Oct 26): "How to help" comes from two other files, one written weekly by
+  // prefill/help-facts.mjs and one edited by hand (data/plugin-docs.json), so neither fights with the data the map is built from.
+  const optional = (f) => { try { return JSON.parse(readFileSync(join(root, 'data', f), 'utf8')).projects ?? {}; } catch { return {}; } };
+  const helpFacts = optional('help.json'); const pluginDocs = optional('plugin-docs.json');
+  for (const p of projects) {
+    const h = helpFacts[p.id]; const gh = codeUrl(p)?.startsWith('https://github.com/') ? codeUrl(p) : null;
+    const list = (label) => `${gh}/issues?q=${encodeURIComponent(`is:open is:issue label:"${label}"`)}`;
+    const help = { contributing: h?.contributing ?? null, good: gh && h?.good ? { n: h.good, url: list('good first issue') } : null, wanted: gh && h?.wanted ? { n: h.wanted, url: list('help wanted') } : null, plugins: pluginDocs[p.id] ?? null };
+    if (help.contributing || help.good || help.wanted || help.plugins) p.help = help;
+  }
   const projById = new Map(projects.map((p) => [p.id, p]));
   const catById = new Map(categories.map((c) => [c.id, c]));
   const groupsByProject = new Map();

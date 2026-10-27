@@ -14,6 +14,11 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
+        with:
+          # WHY (review Oct 26): pull requests pushed with the built-in token never start the Site check. A fine-grained
+          # ROBOT_PAT secret (Contents + Pull requests, this repo only) fixes it; without it everything still works.
+          # See docs/tokens-and-secrets.md.
+          token: ${{ secrets.ROBOT_PAT || github.token }}
       - uses: actions/setup-node@v4
         with:
           node-version: 24
@@ -28,12 +33,15 @@ jobs:
           node prefill/check-starter.mjs
           node prefill/github-facts.mjs
           node prefill/fetch-links.mjs
+          # WHY (review Oct 26): "How to help" links: each GitHub project's contributing guide and counts of good-first-issue / help-wanted
+          # issues. About 20 GitHub requests for the whole map; the plugin-docs links come from the hand-edited data/plugin-docs.json.
+          node prefill/help-facts.mjs
           node prefill/assemble.mjs
           node site/build.mjs && node site/check.mjs
           node .github/robot/refresh-report.mjs /tmp/projects-before.json data/projects.json
       - name: Open a pull request
         env:
-          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GH_TOKEN: ${{ secrets.ROBOT_PAT || secrets.GITHUB_TOKEN }}
         run: |
           if git diff --quiet -- data; then echo "Nothing changed."; exit 0; fi
           B="refresh-$(date +%Y-%m-%d)"

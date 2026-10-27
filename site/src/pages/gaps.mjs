@@ -1,7 +1,7 @@
 // The gaps page (gaps/): every job where open source falls short, worst first.
 // WHY its own page (Destin, Oct 27): tracking what's still missing is what no other alternatives site does,
 // so it gets a front door instead of one row on the home page.
-import { esc, url } from '../lib.mjs';
+import { esc, url, SOCIAL } from '../lib.mjs';
 import { appUrl } from '../cards.mjs';
 
 // WHY everyday categories first within each tier: most visitors and most builders care about those.
@@ -40,6 +40,10 @@ export default function gaps(d) {
       <p class="desc12" style="margin-top:4px">${total} ${total === 1 ? 'job has' : 'jobs have'} no full open-source replacement, and ${tiers[2].groups.length} rely on a single project. Building something? Start here, and see what you can reuse first.</p></div>
     <div class="pop" style="padding-left:0"><span class="muted11">Jump to</span><div class="fchips">${tiers.filter((t) => t.groups.length).map((t) => `<a class="fchip" href="#${t.id}">${esc(t.name)}<span class="n">${t.groups.length}</span></a>`).join('')}</div></div>
   </div>
+  ${SOCIAL ? `<section class="surface sec" id="requested">
+    <div class="sec-head"><div><h2 class="h-large">Most requested</h2><p class="desc12">What people are asking for, most wanted first. Includes suggestions still waiting for a mod.</p></div></div>
+    <div data-most-requested data-limit="12"></div>
+  </section>` : ''}
   ${tiers.filter((t) => t.groups.length).map((t) => `
   <section class="surface sec" id="${t.id}">
     <div class="sec-head"><div><h2 class="h-large">${esc(t.name)}<span class="count">${t.groups.length}</span></h2><p class="desc12">${esc(t.desc)}</p></div></div>

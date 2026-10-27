@@ -41,6 +41,19 @@
     setStatus: (id, status) => call('POST', `${n(id)}/status`, { status }),
     modQueue: () => call('GET', '/mod/queue'),
     modAct: (a) => call('POST', '/mod/act', a),
+    // "I want this too", Your suggestions, Tag my project, mod Suggestions (docs/server-rules.md)
+    requests: (q = {}) => call('GET', `/requests?${qs(q)}`),
+    requestVote: (key, on) => call('POST', '/requests/vote', { key, on }),
+    mySuggestions: () => call('GET', '/me/suggestions'),
+    modSuggestions: () => call('GET', '/mod/suggestions'),
+    pitchStart: (url) => call('POST', '/pitches/start', { url }),
+    pitchVerify: (id) => call('POST', `/pitches/${encodeURIComponent(id)}/verify`, {}),
+    pitchSave: (id, body) => call('PUT', `/pitches/${encodeURIComponent(id)}`, body),
+    pitchDelete: (id) => call('DELETE', `/pitches/${encodeURIComponent(id)}`),
+    myPitches: () => call('GET', '/pitches/mine'),
+    livePitches: (ids) => call('GET', `/pitches/live?${qs({ projects: ids.join(',') })}`),
+    modPitches: () => call('GET', '/mod/pitches'),
+    modPitchAct: (id, action, reason) => call('POST', `/mod/pitches/${encodeURIComponent(id)}`, { action, reason }),
   };
   window.OI = Object.assign(window.OI || {}, { api });
 })();
