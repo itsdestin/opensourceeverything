@@ -1,0 +1,225 @@
+{
+ "checked": "2026-10-27",
+ "entries": {
+  "librewolf": {
+   "differs": "Firefox with tracking blocked and stricter privacy settings by default",
+   "differsFromChild": "LibreWolf: Firefox with tracking blocked by default",
+   "source": "https://librewolf.net/docs/features/"
+  },
+  "zen-browser": {
+   "differs": "Firefox with a customizable, calmer layout and add-on themes called Mods",
+   "differsFromChild": "Zen: Firefox with a calmer, customizable layout",
+   "source": "https://zen-browser.app"
+  },
+  "tor-browser": {
+   "differs": "Firefox that hides your location by routing traffic through Tor",
+   "differsFromChild": "Tor Browser: Firefox that hides your location through Tor",
+   "source": "https://en.wikipedia.org/wiki/Tor_(network)"
+  },
+  "floorp": {
+   "differs": "Firefox with workspaces, split view and many ways to customize the look",
+   "differsFromChild": "Floorp: Firefox with workspaces and split view",
+   "source": "https://floorp.app"
+  },
+  "mullvad-browser": {
+   "differs": "Tor Browser's privacy protections without the Tor network, for use with a VPN",
+   "differsFromChild": "Mullvad Browser: Tor Browser without Tor",
+   "source": "https://github.com/mullvad/mullvad-browser"
+  },
+  "ungoogled-chromium": {
+   "differs": "Chromium with Google's web services and tracking removed",
+   "differsFromChild": "Ungoogled Chromium: Chromium without Google services",
+   "source": "https://github.com/ungoogled-software/ungoogled-chromium"
+  },
+  "brave": {
+   "differs": "Chromium-based, with a built-in ad blocker and crypto rewards",
+   "differsFromChild": "Brave: Chromium with a built-in ad blocker",
+   "source": "https://en.wikipedia.org/wiki/Brave_(web_browser)"
+  },
+  "forgejo": {
+   "differs": "Gitea's community-run fork, governed by a non-profit",
+   "differsFromChild": "Forgejo: community-run fork governed by a non-profit",
+   "source": "https://forgejo.org/compare-to-gitea/"
+  },
+  "gitea": {
+   "differs": "Gogs forked to be developed by its community, and grown into a fuller platform",
+   "differsFromChild": "Gitea: community-run fork of Gogs",
+   "source": "https://en.wikipedia.org/wiki/Gitea"
+  },
+  "nextcloud": {
+   "differs": "ownCloud's fork, started by its founder after he left the company",
+   "differsFromChild": "Nextcloud: fork started by ownCloud's founder",
+   "source": "https://en.wikipedia.org/wiki/OwnCloud"
+  },
+  "comaps": {
+   "differs": "Organic Maps run by its community instead of a single company",
+   "differsFromChild": "CoMaps: community-led fork",
+   "source": "https://codeberg.org/comaps/comaps"
+  },
+  "heliboard": {
+   "differs": "OpenBoard with more customization, kept up to date",
+   "differsFromChild": "HeliBoard: OpenBoard with more customization",
+   "source": "https://github.com/Helium314/HeliBoard"
+  },
+  "kilo-code": {
+   "differs": "AI coding agent descended from Roo Code and Cline, with its own platform",
+   "differsFromChild": "Kilo Code: fork of Roo Code, itself from Cline",
+   "source": "https://en.wikipedia.org/wiki/Kilo_Code"
+  },
+  "vaultwarden": {
+   "differs": "Lightweight server that works with Bitwarden's apps",
+   "differsFromChild": "Vaultwarden: lightweight unofficial server for Bitwarden apps",
+   "source": "https://github.com/dani-garcia/vaultwarden"
+  },
+  "mbin": {
+   "differs": "Carries on kbin, which is no longer maintained",
+   "differsFromChild": null,
+   "source": "https://github.com/MbinOrg/mbin"
+  },
+  "vane-formerly-perplexica": {
+   "differs": "Perplexica under its new name",
+   "differsFromChild": null,
+   "source": "https://github.com/ItzCrazyKns/Perplexica"
+  },
+  "keepassxc": {
+   "differs": "Actively maintained successor to KeePassX",
+   "differsFromChild": "KeePassXC: maintained successor to KeePassX",
+   "source": "https://keepassxc.org/docs/"
+  },
+  "fossify-calendar": {
+   "differs": "Continues Simple Calendar after the original was discontinued",
+   "differsFromChild": null,
+   "source": "https://github.com/FossifyOrg/.github/blob/main/profile/README.md"
+  },
+  "fossify-gallery": {
+   "differs": "Continues Simple Gallery after the original was discontinued",
+   "differsFromChild": null,
+   "source": "https://github.com/FossifyOrg/.github/blob/main/profile/README.md"
+  },
+  "simple-keyboard": {
+   "differs": "Not related to the Simple Mobile Tools keyboard of the same name",
+   "differsFromChild": null,
+   "source": "https://github.com/rkkr/simple-keyboard"
+  },
+  "bazzite": {
+   "differs": "Fedora Atomic with gaming-focused setup built in",
+   "differsFromChild": "Bazzite: Fedora Atomic set up for gaming",
+   "source": "https://bazzite.gg/"
+  },
+  "linux-mint": {
+   "differs": "Ubuntu with a more Windows-like desktop",
+   "differsFromChild": "Linux Mint: Ubuntu with a Windows-like desktop",
+   "source": "https://en.wikipedia.org/wiki/Linux_Mint"
+  },
+  "pop-os": {
+   "differs": "Ubuntu with System76's own setup and COSMIC desktop",
+   "differsFromChild": "Pop!_OS: Ubuntu by System76",
+   "source": "https://pop.system76.com"
+  },
+  "ubuntu": {
+   "differs": "Debian with scheduled releases and company backing from Canonical",
+   "differsFromChild": "Ubuntu: Debian with scheduled releases",
+   "source": "https://en.wikipedia.org/wiki/Ubuntu"
+  },
+  "cachyos": {
+   "differs": "Arch Linux with performance-tuned packages and a friendlier installer",
+   "differsFromChild": "CachyOS: Arch tuned for speed",
+   "source": "https://en.wikipedia.org/wiki/CachyOS"
+  },
+  "postmarketos": {
+   "differs": "Same project, now called Nura",
+   "differsFromChild": null,
+   "source": "https://nura.eco/"
+  },
+  "mlcraft": {
+   "differs": "Same project, now called Synmetrix",
+   "differsFromChild": null,
+   "source": "https://github.com/synmetrix/synmetrix"
+  },
+  "libreoffice-writer": {
+   "differs": "Fork of OpenOffice.org, a separate continuation from Apache OpenOffice",
+   "differsFromChild": "LibreOffice: fork of OpenOffice.org",
+   "source": "https://en.wikipedia.org/wiki/LibreOffice"
+  },
+  "libreoffice-calc": {
+   "differs": "Fork of OpenOffice.org, a separate continuation from Apache OpenOffice",
+   "differsFromChild": "LibreOffice: fork of OpenOffice.org",
+   "source": "https://en.wikipedia.org/wiki/LibreOffice"
+  },
+  "libreoffice-impress": {
+   "differs": "Fork of OpenOffice.org, a separate continuation from Apache OpenOffice",
+   "differsFromChild": "LibreOffice: fork of OpenOffice.org",
+   "source": "https://en.wikipedia.org/wiki/LibreOffice"
+  },
+  "collabora-online": {
+   "differs": "LibreOffice that runs in a web browser, for editing together",
+   "differsFromChild": "Collabora Online: LibreOffice in the browser",
+   "source": "https://en.wikipedia.org/wiki/Collabora_Online"
+  },
+  "valkey": {
+   "differs": "Redis's fork from the last open-license version, run by the Linux Foundation",
+   "differsFromChild": "Valkey: fork from Redis's last open license",
+   "source": "https://en.wikipedia.org/wiki/Valkey"
+  },
+  "opentofu": {
+   "differs": "Terraform's fork under an open license, run by the Linux Foundation",
+   "differsFromChild": null,
+   "source": "https://en.wikipedia.org/wiki/OpenTofu"
+  },
+  "vscodium": {
+   "differs": "VS Code built without Microsoft's branding and telemetry",
+   "differsFromChild": null,
+   "source": "https://github.com/VSCodium/vscodium"
+  },
+  "lineageos": {
+   "differs": "Successor to CyanogenMod, which shut down",
+   "differsFromChild": null,
+   "source": "https://en.wikipedia.org/wiki/LineageOS"
+  },
+  "e-os": {
+   "differs": "LineageOS with Google services removed and its own online services",
+   "differsFromChild": "/e/OS: LineageOS without Google, plus its own cloud",
+   "source": "https://en.wikipedia.org/wiki//e/_(operating_system)"
+  },
+  "element": {
+   "differs": "Same project, formerly named Riot",
+   "differsFromChild": null,
+   "source": "https://en.wikipedia.org/wiki/Element_(software)"
+  },
+  "openclaw": {
+   "differs": "Same project, formerly named Moltbot",
+   "differsFromChild": null,
+   "source": "https://en.wikipedia.org/wiki/OpenClaw"
+  },
+  "kodi": {
+   "differs": "Same project, formerly named XBMC",
+   "differsFromChild": null,
+   "source": "https://en.wikipedia.org/wiki/Kodi_(software)"
+  },
+  "jellyfin": {
+   "differs": "Emby's fork, started in 2018 as a community project",
+   "differsFromChild": null,
+   "source": "https://en.wikipedia.org/wiki/Jellyfin"
+  },
+  "quillpad": {
+   "differs": "Continues Quillnote so development can go on",
+   "differsFromChild": null,
+   "source": "https://github.com/quillpad/quillpad"
+  },
+  "friction": {
+   "differs": "Animation program based on enve's earlier code",
+   "differsFromChild": null,
+   "source": "https://github.com/friction2d/friction"
+  },
+  "trilium-notes": {
+   "differs": "Trilium continued by the TriliumNext community after its creator handed it over",
+   "differsFromChild": null,
+   "source": "https://github.com/TriliumNext/Trilium"
+  },
+  "gitlab-community-edition": {
+   "differs": "GitLab's free open-source edition; the paid Enterprise Edition adds more",
+   "differsFromChild": null,
+   "source": "https://about.gitlab.com/install/ce-or-ee/"
+  }
+ }
+}
