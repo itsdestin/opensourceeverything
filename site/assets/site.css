@@ -83,8 +83,12 @@ button { cursor:pointer; }
 b.num { font-weight:500; color:var(--fg); }
 
 /* ── Chips, pills, buttons ── */
-.chiprow { display:flex; gap:6px; overflow-x:auto; scrollbar-width:none; padding:4px 0; margin:-4px 0; min-width:0;
-  -webkit-mask-image:linear-gradient(to right,#000 calc(100% - 24px),transparent); mask-image:linear-gradient(to right,#000 calc(100% - 24px),transparent); }
+/* WHY the fade is set by site.js (design guide, Cards: "fading only at the edge that has more"): a row that fits shows no fade,
+   and the 8px end padding means the last chip's border is never cut once you scroll to it. */
+.chiprow { display:flex; gap:6px; overflow-x:auto; scrollbar-width:none; padding:4px 8px 4px 0; margin:-4px 0; min-width:0; }
+.chiprow.more-r { -webkit-mask-image:linear-gradient(to right,#000 calc(100% - 24px),transparent); mask-image:linear-gradient(to right,#000 calc(100% - 24px),transparent); }
+.chiprow.more-l { -webkit-mask-image:linear-gradient(to left,#000 calc(100% - 24px),transparent); mask-image:linear-gradient(to left,#000 calc(100% - 24px),transparent); }
+.chiprow.more-l.more-r { -webkit-mask-image:linear-gradient(to right,transparent,#000 24px,#000 calc(100% - 24px),transparent); mask-image:linear-gradient(to right,transparent,#000 24px,#000 calc(100% - 24px),transparent); }
 .chiprow::-webkit-scrollbar { display:none; }
 .chip { flex:none; display:inline-flex; align-items:center; gap:4px; border-radius:var(--radius-sm); padding:2px 6px;
   font-size:11px; color:var(--fg-2); background:var(--inset); border:1px solid var(--edge-dim); white-space:nowrap; }

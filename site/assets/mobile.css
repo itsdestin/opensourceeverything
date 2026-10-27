@@ -109,7 +109,8 @@
   body:has(.hero3) .page { padding-top:6px; }
 
   /* ── Less dead space ── */
-  .sec-head .desc12, .sec > .sec-head p.desc12 { display:none; }
+  /* WHY the search count is spared (Destin, round 5: "results header w number subheader"): it is the only place the count shows. */
+  .sec-head .desc12:not([data-sres-sub]), .sec > .sec-head p.desc12:not([data-sres-sub]) { display:none; }
   .identity .desc12 { margin-top:2px !important; }
   .page { gap:10px; }
   .sec { padding:12px 12px 14px; }

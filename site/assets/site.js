@@ -96,4 +96,18 @@
   };
   window.OI = window.OI || {}; window.OI.foldInit = foldInit; // contrib.js folds the sections it draws later
   document.querySelectorAll('.fold-phone').forEach(foldInit);
+
+  // ── Chip rows fade only on the side that has more to scroll to (design guide, Cards) ──
+  // WHY JS: CSS can't tell whether a row overflows. Rows drawn later (search results, social) are caught by the observer.
+  const edge = (r) => {
+    const over = r.scrollWidth - r.clientWidth;
+    r.classList.toggle('more-l', over > 1 && r.scrollLeft > 1);
+    r.classList.toggle('more-r', over > 1 && r.scrollLeft < over - 1);
+  };
+  const allRows = () => document.querySelectorAll('.chiprow').forEach(edge);
+  document.addEventListener('scroll', (e) => { if (e.target.classList?.contains('chiprow')) edge(e.target); }, true);
+  addEventListener('resize', allRows);
+  let pend = 0;
+  new MutationObserver(() => { cancelAnimationFrame(pend); pend = requestAnimationFrame(allRows); }).observe(document.body, { childList: true, subtree: true });
+  allRows();
 })();

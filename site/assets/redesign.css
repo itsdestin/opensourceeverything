@@ -340,5 +340,6 @@ body:has(.signin-card) .top .acct { display:none; }
 .page:has(.signin-card) .footer { align-self:center; }
 /* The wrapper around the sign-in card fills the free space and centres the card in it, both ways. */
 .page:has(.signin-card) [data-tag] { flex:1; justify-content:center; align-items:center; }
-@media (max-width:640px) { .card.pic .rv-head h3 { font-size:15px; } }
+/* WHY names may take two lines on phones (reviewer, round 6: "Apache OpenO…" was unreadable beside the More button). */
+@media (max-width:640px) { .card.pic .rv-head h3 { font-size:15px; white-space:normal; display:-webkit-box; -webkit-line-clamp:2; -webkit-box-orient:vertical; line-height:1.25; } }
 @media (max-width:640px) { .page:has(.signin-card) .footer { align-self:stretch; justify-content:flex-start; } }
