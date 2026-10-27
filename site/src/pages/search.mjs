@@ -6,7 +6,7 @@
 import { DEVICE } from '../lib.mjs';
 
 export default function searchPage() {
-  const kinds = [['all', 'Everything'], ['project', 'Open projects'], ['group', 'Groups'], ['closed', 'Closed apps']];
+  const kinds = [['all', 'Everything'], ['project', 'Projects'], ['group', 'Groups'], ['closed', 'Closed apps']];
   const body = `
   <div class="surface identity sres-head">
     <div><div class="muted11">Search</div><h1 class="h-subject" data-sres-title>Search results</h1>

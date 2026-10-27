@@ -1,12 +1,7 @@
-/* Redesign round (preview builds only, REDESIGN=1). Nothing here is loaded by the real site.
-   ?v=a|b|c on any page picks an option (layout.mjs sets html[data-v]); ?l=a|b|c picks where the claim label sits.
-   Rules of the YouCoded design guide these options follow: card text order (name, one chip row that never wraps, two-line
-   description), quick actions top right, actions right-aligned, quiet by default, 4/8/12/16/24 spacing, phone chip rows
-   scroll sideways and long sections fold, anything clickable looks clickable, status colours only as tints. */
-
-/* ── Which markup shows: today's by default, an option's when ?v= is set ── */
-html:not([data-v]) .rv, html[data-v="a"] .rv:not(.va), html[data-v="b"] .rv:not(.vb), html[data-v="c"] .rv:not(.vc) { display:none !important; }
-html[data-v] .today { display:none !important; }
+/* The redesign round's look (Destin's picks): the alternative card, the project top card and Family card, search rows, Most requested,
+   the claim note, and the preview options for "Claim your project". Rules of the YouCoded design guide these follow: card text order (name,
+   ONE chip row that never wraps, two-line description), quick actions top right, actions right-aligned, quiet by default, 4/8/12/16/24
+   spacing, phone chip rows scroll sideways and long sections fold, anything clickable looks clickable, status colours only as tints. */
 
 /* ── The explainer popover (YouCoded's AnchorTip) ── */
 .tip { position:absolute; z-index:90; background:var(--panel); border:1px solid var(--edge); border-radius:var(--radius-md); padding:12px;
@@ -19,18 +14,14 @@ html[data-v] .today { display:none !important; }
 .tiplist li span { color:var(--fg-dim); text-align:right; }
 .tiplist li.d1 { padding-left:12px; } .tiplist li.d2 { padding-left:24px; } .tiplist li.d3 { padding-left:36px; }
 .tip a { color:var(--fg); }
-.tip .btn { margin-top:8px; }
 
 /* ── Chips that open an explanation: a normal chip, plus a small (i), and they react when pointed at ── */
 button.chip { font:inherit; font-size:11px; cursor:pointer; }
 .tipchip .tipi { color:var(--fg-faint); }
 .tipchip:hover, .tipchip[aria-expanded="true"] { border-color:var(--accent); color:var(--fg); }
 .tipchip[aria-expanded="true"] { background:color-mix(in srgb,var(--accent) 12%,var(--inset)); }
-.claimchip { border-style:dashed; color:var(--fg-2); }
-.claimchip[hidden], .famchip { display:none; }
-html[data-v="b"] .famchip { display:inline-flex; }
 
-/* ── Surface 1: the alternative card ── */
+/* ── The alternative card: a picture band, one chip row, a two-line description, at most one grey line ── */
 .rvbox { display:flex; flex-direction:column; flex:1; min-width:0; }
 .rv-thumb { margin:4px 4px 0; aspect-ratio:16/7; overflow:hidden; display:flex; align-items:center; justify-content:center; background:var(--inset); border:1px solid var(--edge-dim);
   border-radius:calc(var(--radius-xl) - 4px) calc(var(--radius-xl) - 4px) var(--radius-sm) var(--radius-sm); }
@@ -44,66 +35,43 @@ html[data-v="b"] .famchip { display:inline-flex; }
 .rvbox .blurb { min-height:0; }
 .whybtn { width:24px; height:24px; padding:0; border:0; background:transparent; color:var(--fg-dim); border-radius:var(--radius-control); display:grid; place-items:center; flex:none; }
 .whybtn:hover, .whybtn[aria-expanded="true"] { background:var(--inset); color:var(--fg); }
-.gl { margin:0; font-size:11px; color:var(--fg-dim); white-space:nowrap; overflow:hidden; text-overflow:ellipsis; }
-html[data-v="b"] .gl { display:none; }
-/* b: a picture on the left, two columns of cards */
-html[data-v="b"] .grid[data-alts] { grid-template-columns:repeat(2,minmax(0,1fr)); }
-html[data-v="b"] .rvbox { flex-direction:row; }
-html[data-v="b"] .rv-thumb { flex:0 0 132px; aspect-ratio:auto; min-height:104px; margin:6px 0 6px 6px; border-radius:var(--radius-md); }
-html[data-v="b"] .rv-main { padding:10px 12px; }
-/* c: one column, a list of rows */
-html[data-v="c"] .grid[data-alts] { grid-template-columns:minmax(0,1fr); gap:8px; }
-html[data-v="c"] .rvbox { flex-direction:row; }
-html[data-v="c"] .rv-thumb { flex:0 0 120px; aspect-ratio:auto; min-height:72px; margin:6px 0 6px 6px; border-radius:var(--radius-md); }
-html[data-v="c"] .rv-main { padding:8px 12px; gap:6px; justify-content:center; }
-html[data-v="c"] .rvbox .blurb { -webkit-line-clamp:1; }
+.gl { margin:0; font-size:11px; color:var(--fg-dim); display:-webkit-box; -webkit-line-clamp:2; -webkit-box-orient:vertical; overflow:hidden; }
 @media (max-width:640px) {
   .card.pic .rvbox { flex-direction:row; }
   .card.pic .rv-thumb { flex:0 0 76px; width:76px; aspect-ratio:auto; min-height:76px; margin:6px 0 6px 6px; border-radius:var(--radius-md); }
   .card.pic .rv-main { padding:8px 8px 8px 10px; gap:4px; }
-  .card.pic .rv-head h3 { font-size:15px; }
   .card.pic .rvbox .blurb { -webkit-line-clamp:1; font-size:12px; }
   .card.pic .rvbox .dd.actions .btn { padding:3px 8px; }
-  html[data-v="a"] .gl, html[data-v="c"] .gl { display:none; }
-  html[data-v="b"] .grid[data-alts], html[data-v="c"] .grid[data-alts] { grid-template-columns:minmax(0,1fr); gap:8px; }
-  html[data-v="b"] .rv-thumb { flex-basis:76px; min-height:76px; }
-  html[data-v="c"] .rv-thumb { display:none; }
-  html[data-v="c"] .card.pic .rv-main { padding:8px 10px; }
+  .rvbox .gl { display:none; }
 }
 
-/* ── Surface 2: the project page's top card and its family ── */
+/* ── The project page's top card ── */
 .rvtop { gap:12px; }
 .rvtop .row { display:flex; flex-direction:row; align-items:center; justify-content:flex-start; text-align:left; }
 /* WHY (Destin: "the three buttons should stay right aligned and where they were"): the buttons ride the right edge of the card's foot, filled one last. */
 .rvfoot { display:flex; justify-content:flex-end; }
 .rvfoot .links { margin-left:auto; }
-.tiplist.wide { gap:8px; }
-.tiplist.wide li { flex-wrap:wrap; }
-.tiplist.wide li em { flex-basis:100%; font-style:normal; font-size:11px; color:var(--fg-dim); }
+.claimq { margin:0; font-size:12px; color:var(--fg-dim); } .claimq[hidden] { display:none; } .claimq a { color:var(--fg); }
+
+/* ── The Family card: a compact list, one row per project ── */
 .rfold .sec-head { margin-bottom:0; }
-/* a: a compact list, one row per project */
 .rvfamA .flist { list-style:none; margin:0; padding:4px 8px; display:flex; flex-direction:column; }
 .frow { display:flex; align-items:center; gap:8px; padding:6px 8px; min-width:0; font-size:13px; border-radius:var(--radius-md); }
 .frow .fn { flex:0 1 auto; min-width:0; overflow:hidden; text-overflow:ellipsis; white-space:nowrap; }
 .frow .fn a { color:var(--fg); }
-.frow .fr { margin-left:auto; font-size:11px; color:var(--fg-dim); white-space:nowrap; }
+.frow .fr { margin-left:auto; font-size:11px; color:var(--fg-dim); text-align:right; }
 .frow .whyspace { width:24px; flex:none; }
 .frow.d1 { margin-left:16px; } .frow.d2 { margin-left:32px; }
 .frow.d1::before, .frow.d2::before { content:""; flex:none; width:8px; height:10px; margin-top:-8px; border-left:2px solid var(--edge-card); border-bottom:2px solid var(--edge-card); border-radius:0 0 0 4px; }
 .frow.here { background:color-mix(in srgb,var(--accent) 14%,transparent); }
 .frow.extra { display:none; } .rvfamA.all .frow.extra { display:flex; }
 .rvfamA .showall { align-self:stretch; }
-/* c: a row of small cards, scrolling sideways, the page you are on marked */
-.frail { display:flex; gap:8px; overflow-x:auto; scrollbar-width:none; padding:4px; margin:-4px; -webkit-mask-image:linear-gradient(to right,#000 calc(100% - 32px),transparent); mask-image:linear-gradient(to right,#000 calc(100% - 32px),transparent); }
-.frail::-webkit-scrollbar { display:none; }
-.fcard { flex:0 0 172px; display:flex; flex-direction:column; gap:6px; padding:12px; border-radius:var(--radius-lg); background:color-mix(in srgb,var(--inset) 50%,transparent); border:1px solid var(--edge-card); box-shadow:0 3px 10px rgb(0 0 0 / .1); }
-.fcard.here { border-color:var(--accent); box-shadow:0 0 0 1px var(--accent), 0 3px 10px rgb(0 0 0 / .1); }
-.fc-name { font-size:14px; font-weight:500; } .fc-name a { color:var(--fg); }
-.fc-meta { display:flex; } .fc-rel { font-size:11px; color:var(--fg-dim); line-height:1.35; }
 @media (max-width:640px) {
   .rvfoot { justify-content:stretch; }
   .rvfoot .links { flex-direction:column-reverse; width:100%; margin:0; }
   .rvfoot .links .btn { flex:none; width:100%; }
+  .frow { flex-wrap:wrap; row-gap:2px; } .frow .fr { order:5; flex-basis:100%; text-align:left; margin-left:0; }
+  /* Family starts closed on a phone (Destin); a tap on its heading opens it. */
   .rfold .sec-head[data-fold] { cursor:pointer; flex-direction:row; align-items:center; justify-content:space-between; }
   .rfold .sec-head[data-fold]::after { content:""; flex:none; width:8px; height:8px; border-right:2px solid var(--fg-muted); border-bottom:2px solid var(--fg-muted); transform:rotate(45deg); transition:transform .15s; }
   .rfold.shut .sec-head[data-fold]::after { transform:rotate(-45deg); }
@@ -111,131 +79,102 @@ html[data-v="c"] .rvbox .blurb { -webkit-line-clamp:1; }
   .rfold.shut { padding-bottom:12px; }
 }
 
-/* ── Surface 6: the "not claimed yet" label ── */
-.claimbox[hidden], .claimline[hidden] { display:none; }
-.claimq { margin:0; display:flex; align-items:center; gap:4px; font-size:12px; color:var(--fg-dim); }
-.claimq .whybtn { margin-left:0; }
-/* c: the one tinted notice box with its button inside, at the right (guide: a notice is the tinted box; its buttons sit inside, right) */
-.claimnote { display:flex; align-items:center; justify-content:space-between; gap:12px; padding:8px 12px; border-radius:var(--radius-md); background:color-mix(in srgb,var(--accent) 10%,transparent); border:1px solid color-mix(in srgb,var(--accent) 30%,transparent); font-size:12px; color:var(--fg); }
-.claimnote .btn { flex:none; }
-@media (max-width:640px) { .claimnote { flex-direction:column; align-items:stretch; } .claimnote .btn { width:100%; } }
-
-/* ── Surface 3: search results ── */
-html[data-v] .sres-filters { flex-direction:row; flex-wrap:wrap; gap:8px 16px; }
-html[data-v] .sres-list { gap:8px; }
-.sr { display:flex; gap:12px; color:inherit; text-decoration:none; min-width:0; }
-.sr-thumb { flex:none; border-radius:var(--radius-md); overflow:hidden; background:var(--inset); border:1px solid var(--edge-card); display:flex; align-items:center; justify-content:center; color:var(--fg-dim); }
+/* ── Search results: one row design, one picture size ── */
+.sres-filters { flex-direction:row; flex-wrap:wrap; gap:8px 16px; }
+.sres-list { gap:8px; }
+.sr { display:flex; flex-direction:row; align-items:flex-start; gap:12px; padding:12px; color:inherit; text-decoration:none; min-width:0; }
+.sr-thumb { flex:none; width:96px; height:60px; border-radius:var(--radius-md); overflow:hidden; background:var(--inset); border:1px solid var(--edge-card); display:flex; align-items:center; justify-content:center; color:var(--fg-dim); }
 .sr-thumb img { width:100%; height:100%; object-fit:cover; object-position:top; }
-.sr-thumb .letter { font-size:20px; font-weight:600; color:var(--fg-muted); } .sr-thumb .letter.closed { color:var(--fg-faint); }
+.sr-thumb .letter { font-size:22px; font-weight:600; color:var(--fg-muted); } .sr-thumb .letter.closed { color:var(--fg-faint); }
 .sr-body { flex:1; min-width:0; display:flex; flex-direction:column; gap:4px; }
 .sr h3 { margin:0; font-size:15px; font-weight:600; color:var(--fg); }
 .sr-sum { margin:0; font-size:12px; color:var(--fg-2); display:-webkit-box; -webkit-line-clamp:2; -webkit-box-orient:vertical; overflow:hidden; }
-.sr-sub { font-size:11px; color:var(--fg-dim); }
-.sr-side { flex:none; align-self:center; }
-/* match strength as a chip with its four bars, same colours as the old meter */
-.chip .bars { display:inline-flex; align-items:flex-end; gap:2px; height:10px; }
-.chip .bars i { width:3px; border-radius:1px; background:color-mix(in srgb,var(--fg-faint) 45%,transparent); }
-.chip .bars i:nth-child(1) { height:4px; } .chip .bars i:nth-child(2) { height:6px; } .chip .bars i:nth-child(3) { height:8px; } .chip .bars i:nth-child(4) { height:10px; }
-.chip.str.l1 .bars i:nth-child(-n+1), .chip.str.l2 .bars i:nth-child(-n+2), .chip.str.l3 .bars i:nth-child(-n+3), .chip.str.l4 .bars i { background:var(--accent); }
-/* a: a raised card per result, picture left, name, two lines, one chip row */
-.sra { flex-direction:row; padding:12px; align-items:center; }
-.sra .sr-thumb { width:96px; aspect-ratio:16/10; }
-/* b: plain rows in one box */
-.sr-box { padding:4px; display:flex; flex-direction:column; }
-.srb, .src { padding:8px; border-radius:var(--radius-md); align-items:center; }
-.srb:hover, .src:hover { background:var(--inset); }
-.srb .sr-thumb { width:56px; height:44px; }
-.srb .sr-sum, .src .sr-sum { -webkit-line-clamp:1; }
-/* c: grouped by kind, each group a short box, "Show all" for the rest */
-.sgroup { display:flex; flex-direction:column; gap:8px; }
-.sgroup + .sgroup { margin-top:8px; }
-.src.extra { display:none; } .sgroup.all .src.extra { display:flex; }
-.sgroup .showall { align-self:stretch; }
-@media (max-width:640px) {
-  .sra .sr-thumb { width:64px; } .sra { gap:10px; padding:10px; }
-  .srb .sr-thumb { width:44px; height:36px; }
-  .sr-side .mstr { font-size:0; gap:0; } .sr-side .mstr .bars { font-size:11px; }
-  .sgroup.shut > :not(.sec-head) { display:none; }
-}
+.sr .chip.why { color:var(--fg-dim); }
+@media (max-width:640px) { .sr { gap:10px; padding:10px; } .sr-thumb { width:64px; height:48px; } }
 
-/* ── Surface 4: Most requested ── */
+/* ── Most requested: the top three as raised cards, then a short list; on the home page five equal cards ── */
 .pillvote { flex:none; width:auto; flex-direction:row; align-items:center; gap:8px; padding:6px 12px; border-radius:var(--radius-control); background:transparent; }
 .pillvote b { font-size:13px; font-weight:600; font-variant-numeric:tabular-nums; }
 .pillvote span { font-size:11px; white-space:nowrap; }
 .pillvote.full { width:100%; justify-content:center; }
+[data-most-requested] { display:flex; flex-direction:column; gap:12px; }
 .rq-list { padding:4px; display:flex; flex-direction:column; }
 .rq-list .rrow { cursor:default; }
-.rq-rank, .rqa .rq-rank { flex:none; width:24px; text-align:center; font-size:14px; font-weight:500; color:var(--fg-muted); font-variant-numeric:tabular-nums; }
+.rq-rank { flex:none; width:24px; text-align:center; font-size:14px; font-weight:500; color:var(--fg-muted); font-variant-numeric:tabular-nums; }
 .rq-more { align-self:stretch; }
-/* b: the top three as raised cards across the page */
-.rq-pod { display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:12px; }
-.rq-card { display:flex; flex-direction:column; gap:8px; padding:12px; border-radius:var(--radius-lg); background:color-mix(in srgb,var(--inset) 50%,transparent); border:1px solid var(--edge-card); box-shadow:0 3px 10px rgb(0 0 0 / .1); min-width:0; }
-.rq-card .rt { font-size:15px; font-weight:600; color:var(--fg); text-decoration:none; }
-.rq-card .chiprow { flex:1; align-items:flex-start; }
+.rq-pod, .rq-five { display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:12px; }
+.rq-five { grid-template-columns:repeat(5,minmax(0,1fr)); }
+.rq-card { display:flex; flex-direction:column; align-items:flex-start; gap:8px; padding:12px; border-radius:var(--radius-lg); background:color-mix(in srgb,var(--inset) 50%,transparent); border:1px solid var(--edge-card); box-shadow:0 3px 10px rgb(0 0 0 / .1); min-width:0; }
+.rq-card .rt { font-size:15px; font-weight:600; color:var(--fg); }
+.rq-card .rq-sub { flex:1; }
+.rq-card .pillvote.full { margin-top:auto; }
+.rq-sub { display:flex; flex-direction:column; align-items:flex-start; gap:4px; min-width:0; }
+.rq-like { font-size:11px; color:var(--fg-dim); }
 .rq-medal { width:24px; height:24px; border-radius:9999px; display:grid; place-items:center; font-size:12px; font-weight:600; background:var(--inset); border:1px solid var(--edge); color:var(--fg); }
 .rq-medal.m1 { background:color-mix(in srgb,var(--accent) 22%,var(--inset)); border-color:var(--accent); }
 .rt { text-decoration:none; } .rt:hover { text-decoration:underline; }
-/* c: one box, a bar behind each row showing its share of the top one */
-.rqc .rqcrow { position:relative; overflow:hidden; }
-.rqc .rqcrow::before { content:""; position:absolute; left:8px; bottom:3px; height:3px; width:calc(var(--share) - 6px); background:color-mix(in srgb,var(--accent) 45%,transparent); border-radius:9999px; z-index:0; }
-.rqc .rqcrow > * { position:relative; z-index:1; }
-.rq-kind { font-size:11px; color:var(--fg-dim); }
+@media (min-width:900px) { .rq-list { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); column-gap:8px; } }
 @media (max-width:640px) {
-  .rq-pod { display:flex; overflow-x:auto; scrollbar-width:none; padding:4px; margin:-4px; -webkit-mask-image:linear-gradient(to right,#000 calc(100% - 32px),transparent); mask-image:linear-gradient(to right,#000 calc(100% - 32px),transparent); }
+  .rq-pod, .rq-five { display:flex; overflow-x:auto; scrollbar-width:none; padding:4px; margin:-4px; -webkit-mask-image:linear-gradient(to right,#000 calc(100% - 32px),transparent); mask-image:linear-gradient(to right,#000 calc(100% - 32px),transparent); }
   .rq-card { flex:0 0 220px; }
   .pillvote { flex-direction:column; gap:0; padding:4px 8px; min-width:76px; } .pillvote span { font-size:10px; } .pillvote.full { flex-direction:row; gap:8px; }
   .rq-list .rrow { padding:8px 6px; }
 }
-/* Most requested, fixes: two columns on a wide screen so a name is never far from its button; cards keep their words at the left */
-html[data-v] [data-most-requested] { display:flex; flex-direction:column; gap:12px; }
-@media (min-width:900px) { html[data-v="a"] .rq-list, html[data-v="b"] .rq-list:not(.rqc) { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); column-gap:8px; } }
-.rq-card { align-items:flex-start; } .rq-card .chiprow { -webkit-mask-image:none; mask-image:none; }
-.rq-card .pillvote.full { margin-top:auto; }
 
-/* ── Surface 5: Tag my project ── */
-.tg-head { gap:12px; }
-.tg-steps { list-style:none; margin:0; padding:0; display:flex; align-items:center; gap:0; }
-.tg-steps li { display:flex; align-items:center; gap:8px; font-size:12px; color:var(--fg-muted); flex:none; }
-.tg-steps li + li::before { content:""; width:32px; height:2px; margin:0 8px; background:var(--edge-card); border-radius:2px; }
-.tg-steps li span { width:22px; height:22px; border-radius:9999px; display:grid; place-items:center; font-size:11px; font-weight:600; border:1px solid var(--edge); background:var(--inset); }
-.tg-steps li b { font-weight:500; }
-.tg-steps li.on { color:var(--fg); } .tg-steps li.on span { background:var(--accent); color:var(--on-accent); border-color:var(--accent); }
-.tg-steps li.done span { background:color-mix(in srgb,var(--accent) 22%,transparent); color:var(--fg); }
-/* One-job card: narrow, its words, fields and buttons all inside it, the buttons stacked full width with the main one on top */
-.tg-col { display:flex; flex-direction:column; gap:16px; width:100%; max-width:640px; margin:0 auto; min-width:0; }
-.tg-card { gap:12px; padding:16px; }
-.tg-card .small2, .tg-row .small2 { color:var(--fg-2); }
-.tg-btns { display:flex; flex-direction:column; gap:8px; }
-.tg-btns .btn { width:100%; }
-.tg-ok { display:flex; gap:8px; flex-wrap:wrap; }
+/* ── Claim your project (preview options a|b|c): full page width, plain words ── */
+html .tg-head { gap:12px; }
+.tg-actions { display:flex; justify-content:flex-end; gap:8px; }
+.tg-yours { margin:0; font-size:12px; color:var(--fg-2); }
 .tg-public { margin:0; font-size:12px; color:var(--fg-2); }
+.tg-foot { display:flex; align-items:flex-end; justify-content:space-between; gap:16px; flex-wrap:wrap; }
+.tg-foot .tg-actions { margin-left:auto; }
+.tg-card { gap:16px; padding:16px; }
+.tg-card .field { width:100%; }
+.tg-card .fieldhint { margin:4px 0 0; font-size:12px; color:var(--fg-dim); }
+.tg-two { display:grid; grid-template-columns:minmax(0,1fr) minmax(0,1fr); gap:16px; }
+.seg { display:flex; gap:4px; padding:3px; border-radius:var(--radius-control); background:var(--inset); border:1px solid var(--edge-card); }
+.segopt { flex:1; position:relative; }
+.segopt input { position:absolute; opacity:0; inset:0; cursor:pointer; }
+.segopt span { display:block; text-align:center; font-size:12px; padding:5px 6px; border-radius:calc(var(--radius-control) - 3px); color:var(--fg-2); white-space:nowrap; }
+.segopt input:checked + span { background:var(--accent); color:var(--on-accent); }
+.segopt input:focus-visible + span { outline:2px solid var(--accent); outline-offset:2px; }
 .tg-more summary { padding:8px 12px; }
-.tg-morebody { padding:0 12px 12px; display:flex; flex-direction:column; gap:12px; }
-.tg-next { margin:0; padding-left:18px; font-size:12px; color:var(--fg-2); display:flex; flex-direction:column; gap:4px; }
-html[data-v] .tg-card .fieldhint, html[data-v] .tg-row .fieldhint { margin:4px 0 0; font-size:12px; color:var(--fg-dim); }
-html[data-v] .tg-card .field, html[data-v] .tg-row .field { width:100%; }
-/* b: the card beside a preview of how it will read */
-.tg-grid { display:grid; grid-template-columns:minmax(0,640px) minmax(0,1fr); gap:16px; align-items:start; }
-.tg-grid .tg-col { margin:0; }
-.tg-prev { position:sticky; top:16px; }
+.tg-morebody { padding:0 12px 12px; display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:12px; }
+.tg-morebody .before { grid-column:1 / -1; }
+.tg-gives { list-style:none; margin:0; padding:0; display:flex; flex-direction:column; gap:8px; }
+.tg-gives li { display:flex; flex-direction:column; gap:2px; font-size:12px; color:var(--fg-2); } .tg-gives b { font-size:13px; color:var(--fg); font-weight:500; }
+.tg-giveswide .tg-gives { flex-direction:row; gap:24px; } .tg-giveswide .tg-gives li { flex:1; }
+/* a: the form, with the steps and a live preview beside it */
+.tg-grid { display:grid; grid-template-columns:minmax(0,1fr) 360px; gap:16px; align-items:start; }
+.tg-side { gap:16px; position:sticky; top:16px; }
+.tg-road { list-style:none; margin:0; padding:0; display:flex; flex-direction:column; gap:12px; }
+.tg-road li { display:flex; gap:12px; align-items:flex-start; color:var(--fg-muted); }
+.tg-road li span, .tg-num { flex:none; width:24px; height:24px; border-radius:9999px; display:grid; place-items:center; font-size:12px; font-weight:600; border:1px solid var(--edge); background:var(--inset); color:var(--fg); }
+.tg-road li div { display:flex; flex-direction:column; } .tg-road li b { font-weight:500; font-size:13px; } .tg-road li small { font-size:11px; color:var(--fg-dim); }
+.tg-road li.on { color:var(--fg); } .tg-road li.on span { background:var(--accent); color:var(--on-accent); border-color:var(--accent); }
+.tg-road li.done span { background:color-mix(in srgb,var(--accent) 22%,transparent); }
 .tg-sample { padding:12px; display:flex; flex-direction:column; gap:8px; }
-/* c: the four steps as rows; the open one holds the content, the finished ones say what they settled */
-.tg-row { gap:12px; padding:12px 16px; }
-.tg-row.later { opacity:.65; }
-.tg-rowhead { display:flex; align-items:center; gap:12px; }
-.tg-rowhead > div { flex:1; min-width:0; }
-.tg-num { flex:none; width:24px; height:24px; border-radius:9999px; display:grid; place-items:center; font-size:12px; font-weight:600; border:1px solid var(--edge); background:var(--inset); }
-.tg-row.open .tg-num { background:var(--accent); color:var(--on-accent); border-color:var(--accent); }
-.tg-row.done .tg-num { background:color-mix(in srgb,var(--accent) 22%,transparent); }
-.tg-body { display:flex; flex-direction:column; gap:12px; padding-left:36px; }
+/* b: four step cards across, one wide card under them */
+.tg-rail { display:grid; grid-template-columns:repeat(4,minmax(0,1fr)); gap:12px; }
+.tg-rcard { display:flex; flex-direction:column; gap:4px; padding:12px; border-radius:var(--radius-lg); background:color-mix(in srgb,var(--inset) 40%,transparent); border:1px solid var(--edge-card); color:var(--fg-muted); }
+.tg-rcard b { font-size:13px; font-weight:500; } .tg-rcard small { font-size:11px; color:var(--fg-dim); }
+.tg-rcard.on { background:var(--glass); border-color:var(--accent); color:var(--fg); box-shadow:0 0 0 1px var(--accent), 0 3px 10px rgb(0 0 0 / .1); }
+.tg-rcard.on .tg-num { background:var(--accent); color:var(--on-accent); border-color:var(--accent); }
+.tg-rcard.done .tg-num { background:color-mix(in srgb,var(--accent) 22%,transparent); }
+/* c: one card; the steps open one after another */
+.tg-sec { display:flex; flex-direction:column; gap:12px; }
+.tg-sec + .tg-sec { margin-top:4px; }
+.tg-rowhead { display:flex; align-items:center; gap:12px; } .tg-rowhead > div { flex:1; min-width:0; }
+.tg-sec.open .tg-num { background:var(--accent); color:var(--on-accent); border-color:var(--accent); }
+.tg-sec.done .tg-num { background:color-mix(in srgb,var(--accent) 22%,transparent); }
+.tg-body { display:flex; flex-direction:column; gap:16px; padding-left:36px; }
+[data-tag] { display:flex; flex-direction:column; gap:16px; }
 @media (max-width:640px) {
-  .tg-steps { overflow-x:auto; scrollbar-width:none; } .tg-steps li b { display:none; } .tg-steps li.on b { display:inline; }
-  .tg-steps li + li::before { width:16px; margin:0 4px; }
-  .tg-grid { grid-template-columns:minmax(0,1fr); } .tg-prev { position:static; }
+  .tg-grid { grid-template-columns:minmax(0,1fr); } .tg-side { position:static; }
+  .tg-two, .tg-morebody { grid-template-columns:minmax(0,1fr); }
+  .tg-giveswide .tg-gives { flex-direction:column; gap:8px; }
+  .tg-rail { display:flex; overflow-x:auto; scrollbar-width:none; padding:4px; margin:-4px; } .tg-rcard { flex:0 0 150px; }
   .tg-body { padding-left:0; }
+  .seg { overflow-x:auto; scrollbar-width:none; } .segopt { flex:none; }
+  .tg-foot { flex-direction:column; align-items:stretch; } .tg-actions { flex-direction:column-reverse; } .tg-actions .btn { width:100%; }
 }
-
-/* Tag my project, fixes: the steps sit 16px apart like every other card; the four "how was it built" choices share two columns */
-html[data-v] [data-tag] { display:flex; flex-direction:column; gap:16px; }
-@media (min-width:700px) { html[data-v] .tg-card .built, html[data-v] .tg-row .built { display:grid; grid-template-columns:1fr 1fr; gap:8px; } html[data-v] .built .label { grid-column:1 / -1; } }
-.claimq a { color:var(--fg); }

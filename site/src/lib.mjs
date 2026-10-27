@@ -13,9 +13,6 @@ export const API_URL = process.env.API_URL ?? '';
 // which uses a pretend server in the browser (assets/fake-api.js) so the screens can be tried before the real one exists.
 export const SOCIAL = !!API_URL;
 export const DEMO = API_URL === 'demo';
-// WHY a build switch (redesign round): the design options are only built into preview builds (REDESIGN=1), so the real site's pages
-// stay exactly as they are until Destin picks one.
-export const RV = process.env.REDESIGN === '1';
 export const SUBREDDIT = 'https://www.reddit.com/r/TrueOpenSource/';
 export const REPO = 'https://github.com/itsdestin/opensourceeverything';
 

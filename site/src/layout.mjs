@@ -1,5 +1,5 @@
 // The frame every page shares: <head>, the top strip (home + search) and the footer chips.
-import { esc, url, ICON, SITE_URL, SUBREDDIT, REPO, SOCIAL, DEMO, API_URL, RV } from './lib.mjs';
+import { esc, url, ICON, SITE_URL, SUBREDDIT, REPO, SOCIAL, DEMO, API_URL } from './lib.mjs';
 
 // WHY a version on every code and style file (Oct 27): Cloudflare tells browsers to keep them for 4 hours, so after an
 // update people kept running old code (Sign in did nothing). A new address per build makes browsers fetch the new files.
@@ -77,11 +77,9 @@ export function page({ path, title, description, body, styles = [], scripts = []
 ${styles.map((s) => `<link rel="stylesheet" href="${asset('assets/' + s)}">`).join('\n')}
 ${SOCIAL ? `<link rel="stylesheet" href="${asset('assets/contrib.css')}">` : ''}
 <link rel="stylesheet" href="${asset('assets/mobile.css')}">
-${RV ? `<link rel="stylesheet" href="${asset('assets/redesign.css')}">
-<script>/* WHY (redesign round): ?v=a|b|c picks a design option for every surface, ?l=a|b|c the claim-label placement. Remembered for this tab so links keep it; ?v=today clears it. */
-(function () { var q = new URLSearchParams(location.search), s = window.sessionStorage, ok = /^[abc]$/;
-  var v = q.get('v'), l = q.get('l'); try { if (v === 'today') s.removeItem('ose-v'); else if (ok.test(v)) s.setItem('ose-v', v); if (l === 'none') s.removeItem('ose-l'); else if (ok.test(l)) s.setItem('ose-l', l); v = s.getItem('ose-v'); l = s.getItem('ose-l'); } catch (e) { v = ok.test(v) ? v : null; l = ok.test(l) ? l : null; }
-  if (v) document.documentElement.dataset.v = v; if (l) document.documentElement.dataset.l = l; window.OI_V = v; window.OI_L = l; })();</script>` : ''}
+<link rel="stylesheet" href="${asset('assets/redesign.css')}">
+<script>/* WHY: ?v=a|b|c only chooses between the preview options of Tag my project (assets/contrib.js); nothing else has options any more. */
+window.OI_V = (function () { var v = new URLSearchParams(location.search).get('v'); return /^[abc]$/.test(v) ? v : null; })();</script>
 ${jsonLd ? `<script type="application/ld+json">${JSON.stringify(jsonLd)}</script>` : ''}
 <script>window.OI = { base: ${JSON.stringify(url())}, repo: ${JSON.stringify(REPO)}, chev: ${JSON.stringify(ICON.chev)} };</script>
 </head>
@@ -96,7 +94,7 @@ ${tabbar(path)}
 <script src="${asset('assets/search-core.js')}" defer></script>
 <script src="${asset('assets/search-ai.js')}" defer></script>
 <script src="${asset('assets/site.js')}" defer></script>
-${RV ? `<script src="${asset('assets/redesign.js')}" defer></script>` : ''}
+<script src="${asset('assets/redesign.js')}" defer></script>
 ${SOCIAL ? `<script src="${asset(DEMO ? 'assets/fake-api.js' : 'assets/api.js')}" defer></script>${DEMO ? '' : `<script>window.OI_API_URL = ${JSON.stringify(API_URL)};</script>`}` : ''}
 ${SOCIAL && !DEMO && process.env.AI_SEARCH === '1' ? '<script>window.OI_AI_SEARCH = true;</script>' : ''}
 ${scripts.map((s) => `<script src="${asset('assets/' + s)}" defer></script>`).join('\n')}

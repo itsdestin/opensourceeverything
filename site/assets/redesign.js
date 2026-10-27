@@ -1,4 +1,4 @@
-// Redesign round (preview builds only, REDESIGN=1): the small explainer popover the design options share.
+// The small explainer popover (YouCoded's AnchorTip) the cards and the Family card share.
 // WHY one popover (YouCoded's AnchorTip): a chip, an (i) or a family chip opens a short explanation under itself; a second click,
 // a click elsewhere or Esc closes it. On a phone it is as wide as the screen allows, like the app's popovers.
 (function () {
@@ -17,9 +17,6 @@
     pop.style.left = Math.max(8, Math.min(innerWidth - w - 8, r.left + scrollX)) + 'px';
     pop.style.top = (r.bottom + scrollY + 6) + 'px';
   };
-  // The claim label (surface 6): "not claimed yet" explainer with the button that starts Tag my project.
-  OI.claimTip = (a) => OI.tip(a, 'This page has not been claimed', `<p>${'This listing is managed by r/TrueOpenSource and drafted with AI assistance.'}</p><p>Project owners and developers may claim it and update their profile and page by tagging their project. This note disappears once a developer has claimed the page.</p><a class="btn md primary full" href="${OI.base}tag/?repo=${encodeURIComponent(a.dataset.repo || '')}">Claim this page</a>`);
-  document.addEventListener('click', (e) => { const c = e.target.closest('[data-claimtip]'); if (c) { e.preventDefault(); e.stopImmediatePropagation(); OI.claimTip(c); } }, true);
   document.addEventListener('click', (e) => {
     const t = e.target.closest('[data-tip]');
     if (t) {

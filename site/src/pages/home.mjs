@@ -107,7 +107,7 @@ export default function home(d) {
   ${SOCIAL ? `<!-- WHY here (review Oct 26): people's asks, ranked, are the clearest "what next"; filled in by assets/contrib.js -->
   <section class="surface sec">
     <div class="sec-head"><div><h2 class="h-large">Most requested</h2><p class="desc12">Apps and jobs people are asking for. Press <b>I want this too</b> to add yours.</p></div><a class="btn sm secondary" href="${url('gaps/#requested')}">See all</a></div>
-    <div data-most-requested data-limit="5"></div>
+    <div data-most-requested data-limit="5" data-layout="five"></div>
   </section>` : ''}
 
   <section class="surface sec">

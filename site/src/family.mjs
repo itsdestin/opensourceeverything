@@ -10,20 +10,21 @@ import { esc, url } from './lib.mjs';
 // Everyday words for each relation. "N" is the other project's name (already linked or escaped by the caller).
 // A hand-written `label` in the data replaces the words (e.g. "Works with Bitwarden's apps").
 const PHRASE = {
-  'fork-keeps-up': (N) => `Copy of ${N} that keeps up with it`,
-  split: (N) => `Split from ${N}`,
-  continues: (N) => `Continues ${N}`,
-  renamed: (N) => `Formerly ${N}`,
-  'built-on': (N) => `Built on ${N}`,
-  'free-edition': (N) => `Free edition of ${N}`,
+  'fork-keeps-up': (N) => `A modified version of ${N} that keeps up with its updates`,
+  split: (N, y) => `Started as a copy of ${N}${y ? ` in ${y}` : ''}, now separate`,
+  continues: (N) => `Carries on ${N} after it stopped`,
+  renamed: (N) => `Formerly called ${N}`,
+  'built-on': (N) => `Uses ${N} underneath`,
+  'free-edition': (N) => `Free version of ${N}`,
   'unrelated-same-name': (N) => `Not related to ${N} (only the name is similar)`,
 };
+// WHY plain words (Destin, redesign round 2: "'copy that keeps up' / 'built on it' don't have clear meaning to normal users"): every
+// label says what the project IS to someone who has never heard "fork".
 // The same relation inside the tree, where the parent is the row above and needs no name.
-const SHORT = { 'fork-keeps-up': 'Copy that keeps up', split: 'Split off', continues: 'Continues it', renamed: 'Renamed', 'built-on': 'Built on it', 'free-edition': 'Free edition', 'unrelated-same-name': 'Same name only' };
-// The same relation seen from the original's side. Copies and splits share "Forked by": that is the word people know.
-// "Used as a base by" (not "Built on by", which reads backwards): Collabora Online is built on LibreOffice.
-const REVERSE = { 'fork-keeps-up': 'Forked by', split: 'Forked by', continues: 'Continued by', renamed: 'Now called', 'built-on': 'Used as a base by', 'free-edition': 'Free edition' };
-const REVERSE_ORDER = ['Forked by', 'Continued by', 'Now called', 'Used as a base by', 'Free edition'];
+const SHORT = { 'fork-keeps-up': 'Modified copy, kept up to date', split: 'Started as a copy, now separate', continues: 'Carries it on', renamed: 'New name', 'built-on': 'Uses it underneath', 'free-edition': 'Free version', 'unrelated-same-name': 'Same name only' };
+// The same relation seen from the original's side, as a lead-in to a list of names.
+const REVERSE = { 'fork-keeps-up': 'Modified versions', split: 'Separate copies', continues: 'Carried on by', renamed: 'Now called', 'built-on': 'Used underneath by', 'free-edition': 'Free version' };
+const REVERSE_ORDER = ['Modified versions', 'Separate copies', 'Carried on by', 'Now called', 'Used underneath by', 'Free version'];
 
 export const shown = (p) => p?.lineage && p.lineage.confirmed === 'mod' ? p.lineage : null;
 
@@ -51,18 +52,18 @@ const linkTo = (e, d) => {
   // A project that is not on the map links to its own page when we know it (marked as an outside link).
   return href ? `<a href="${href}">${name}</a>` : e.ofUrl ? `<a href="${esc(e.ofUrl)}" rel="noopener">${name}</a>` : name;
 };
-const yearOf = (e) => (e.since ? ` (${e.since})` : '');
+const yearOf = (e) => (e.since && e.relation !== 'split' ? ` (${e.since})` : ''); // WHY not for a split: the year is already inside the sentence
 
 // "Split from <Gitea> (2022)": the project's own line, as HTML. null when it has no confirmed lineage.
 export function ownLine(p, fam) {
   const e = shown(p); if (!e) return null;
   const N = linkTo(e, fam.d);
-  return `${e.label ? esc(e.label) : PHRASE[e.relation](N)}${yearOf(e)}`;
+  return `${e.label ? esc(e.label) : PHRASE[e.relation](N, e.since)}${yearOf(e)}`;
 }
 // The same, as plain text (search results, page descriptions).
 export function ownText(p, fam) {
   const e = shown(p); if (!e) return null;
-  return `${e.label ?? PHRASE[e.relation](nameOf(e, fam.d))}${yearOf(e)}`;
+  return `${e.label ?? PHRASE[e.relation](nameOf(e, fam.d), e.since)}${yearOf(e)}`;
 }
 
 // "Forked by: <Forgejo>": what other projects say about this one, grouped. max names per group on cards.
@@ -77,13 +78,6 @@ export function reverseLines(p, fam, max = 3) {
     const names = list.slice(0, max).map((k) => `<a href="${url(`p/${k.id}/`)}">${esc(k.name)}</a>`).join(', ');
     return `${w}: ${names}${list.length > max ? ` +${list.length - max} more` : ''}`;
   });
-}
-
-// The family block on a card: own line and/or "Forked by", small. '' when the project has no family.
-export function cardFamily(p, fam) {
-  const lines = [ownLine(p, fam), ...reverseLines(p, fam, 2)].filter(Boolean);
-  // WHY at most two lines on a card: cards stay the same height class; the full story is on the project page.
-  return lines.length ? `<div class="family">${lines.slice(0, 2).join('<br>')}</div>` : '';
 }
 
 // ── Status of a project in the tree ──
@@ -110,40 +104,6 @@ export function rootOf(p, d) {
 
 // Is this project part of a family at all (has a confirmed parent, or someone confirmed it as their parent)?
 export const inFamily = (p, fam) => !!(shown(p) && shown(p).relation !== 'unrelated-same-name') || (fam.kids.get(p.id) ?? []).length > 0;
-
-// The mini tree, as HTML. `here` is the page's own project (highlighted).
-export function familySection(p, fam) {
-  const d = fam.d;
-  const notes = d.projects.filter((x) => shown(x)?.relation === 'unrelated-same-name' && (x.id === p.id || shown(x).of === p.id));
-  if (!inFamily(p, fam) && !notes.length) return '';
-  const root = rootOf(p, d);
-  const pill = (s) => `<span class="pill fam-${s.key}">${s.text}</span>`;
-  const relText = (c) => { const e = shown(c); return `${esc(e.label ?? SHORT[e.relation])}${yearOf(e)}`; };
-  const node = (c, depth = 0) => {
-    const e = shown(c);
-    const why = e ? `<span class="fam-why">${esc(e.why)} <a href="${esc(e.source)}" rel="noopener">Source</a></span>` : '';
-    const kids = (fam.kids.get(c.id) ?? []).slice().sort((a, b) => a.name.localeCompare(b.name));
-    return `<li${c.id === p.id ? ' class="here" aria-current="page"' : ''}>
-        <div class="fam-row">${c.id === p.id ? `<b>${esc(c.name)}</b>` : `<a href="${url(`p/${c.id}/`)}">${esc(c.name)}</a>`}${pill(status(c))}${depth && e ? `<span class="fam-rel">${relText(c)}</span>` : ''}</div>
-        ${depth && why ? `<div class="fam-detail">${why}</div>` : ''}
-        ${kids.length ? `<ul>${kids.map((k) => node(k, depth + 1)).join('')}</ul>` : ''}</li>`;
-  };
-  let tree = '';
-  if (!inFamily(p, fam)) { /* only a "not related" note: no tree */ }
-  else if (root.outside) {
-    // The family starts with a name that is not on the map (kbin, Perplexica, Riot): show it greyed as the origin.
-    const o = root.outside;
-    const originStatus = o.relation === 'renamed' ? { key: 'renamed', text: 'Old name' } : { key: 'outside', text: 'Not on this map' };
-    const siblings = d.projects.filter((x) => { const e = shown(x); return e && !e.of && e.ofName === o.name && rootOf(x, d).outside; });
-    tree = `<ul class="fam-tree"><li><div class="fam-row">${o.url ? `<a href="${esc(o.url)}" rel="noopener">${esc(o.name)}</a>` : esc(o.name)}${pill(originStatus)}</div>
-        <ul>${siblings.map((s) => node(s, 1)).join('')}</ul></li></ul>`;
-  } else tree = `<ul class="fam-tree">${node(root.project, 0)}</ul>`;
-  // Projects that only share a name get a plain note, so nobody mixes them up.
-  const noteHtml = notes.map((x) => { const e = shown(x); return `<p class="fam-note">${x.id === p.id ? `${esc(x.name)} is not related to ${linkTo(e, d)}` : `${esc(x.name)} is not related to ${esc(p.name)}`}. ${esc(e.why)} <a href="${esc(e.source)}" rel="noopener">Source</a></p>`; }).join('');
-  return `<section class="surface sec" id="family">
-        <div class="sec-head"><div><h2 class="h-large">Family</h2><p class="desc12">${inFamily(p, fam) ? `Where ${esc(p.name)} came from and what came from it. Each project is rated on its own: a copy is a different product.` : `Projects people sometimes mix up with ${esc(p.name)}.`}</p></div></div>
-        ${tree}${noteHtml}</section>`;
-}
 
 // "Development stopped. Continued as <X>": on a project that is archived or quiet and that another project says it continues.
 export function stoppedBanner(p, fam) {
@@ -176,33 +136,21 @@ export function redirects(d) {
   return out;
 }
 
-// ───────── Redesign round (preview builds): shorter ways to show a family ─────────
-// WHY plain short words (Destin: "we can improve the ui/ux"): a chip or one grey line says the one thing a visitor needs
-// ("Fork of Firefox", "4 forks"); the full story (why, source) sits one click away.
-const CHIP = { 'fork-keeps-up': 'Fork of', split: 'Split from', continues: 'Continues', renamed: 'Formerly', 'built-on': 'Built on', 'free-edition': 'Free edition of' };
-const plainName = (e, d) => nameOf(e, d) ?? '';
-// { own: "Fork of Firefox" | null, kids: 4 | 0 } — the two facts a chip or line can carry.
-export function famFacts(p, fam) {
-  const e = shown(p);
-  const kids = (fam.kids.get(p.id) ?? []).length;
-  const own = e && e.relation !== 'unrelated-same-name' ? (e.label ? e.label : `${CHIP[e.relation]} ${plainName(e, fam.d)}`) : null;
-  return { own, kids, e };
-}
-// One grey line for a card: own relation, else who forked it. Plain text only (HTML-escaped by the caller's esc).
+// ───────── The compact family pieces cards and the project page share ─────────
+// One grey line for a card: its own relation in plain words, else who was made from it. Plain text.
 export function famGrey(p, fam) {
-  const { own, kids } = famFacts(p, fam);
-  if (own) return `${own}${shown(p).since ? ` (${shown(p).since})` : ''}`;
-  if (!kids) return '';
-  const names = (fam.kids.get(p.id) ?? []).map((k) => k.name);
-  return `Forked by ${names.slice(0, 2).join(', ')}${names.length > 2 ? ` +${names.length - 2}` : ''}`;
+  const e = shown(p);
+  if (e && e.relation !== 'unrelated-same-name') return ownText(p, fam);
+  const by = reverseLines(p, fam, 2)[0];
+  return by ? by.replace(/<[^>]+>/g, '') : '';
 }
-// The list a family popover or mini card shows: the tree flattened, depth for indentation.
+// The list the Family card shows: the tree flattened, depth for indentation, relation in plain words.
 export function famNodes(p, fam) {
   if (!inFamily(p, fam)) return [];
   const root = rootOf(p, fam.d); const out = [];
   const add = (c, depth, parent) => {
     const e = shown(c);
-    out.push({ p: c, depth, parent, here: c.id === p.id, status: status(c), rel: depth && e ? `${e.label ?? SHORT[e.relation]}${yearOf(e)}` : '', why: depth && e ? e.why : '', source: depth && e ? e.source : '' });
+    out.push({ p: c, depth, parent, here: c.id === p.id, status: status(c), rel: depth && e ? (e.label ?? (e.relation === 'split' && e.since ? `Started as a copy in ${e.since}, now separate` : SHORT[e.relation])) + (e.relation === 'fork-keeps-up' && e.since ? ` (${e.since})` : '') : '', why: depth && e ? e.why : '', source: depth && e ? e.source : '' });
     for (const k of (fam.kids.get(c.id) ?? []).slice().sort((a, b) => a.name.localeCompare(b.name))) add(k, depth + 1, c.name);
   };
   if (root.outside) {

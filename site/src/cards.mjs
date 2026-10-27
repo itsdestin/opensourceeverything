@@ -1,8 +1,8 @@
 // Pieces more than one page draws: the alternative card (group pages and closed-app pages) and the address of a
 // closed app's own page.
 import { rankAlts } from './rank.mjs';
-import { currentFamily, cardFamily, famFacts, famGrey, famNodes, shown } from './family.mjs';
-import { esc, url, ICON, KIND, SETUP, SETUP_MEANING, setupOf, setupWhy, devicesText, factChips, hostOf, actions, suggestUrl, SOCIAL, SITE_URL, codeUrl, fmtStars, RV, shot as shotOf } from './lib.mjs';
+import { currentFamily, famGrey, famNodes } from './family.mjs';
+import { esc, url, ICON, KIND, SETUP, SETUP_MEANING, setupOf, setupWhy, devicesText, factChips, hostOf, actions, suggestUrl, SOCIAL, SITE_URL, codeUrl, fmtStars, shot as shotOf } from './lib.mjs';
 
 // WHY its own address per closed app (Destin, Oct 27): people search "alternatives to Notion", not "Notes".
 // "alternatives-to/notion/" reads well in a search result and stays stable when an app moves group.
@@ -19,32 +19,27 @@ export const whyLine = (why = []) => [...why.filter((w) => /say it works$/.test(
   .join(' · ');
 
 
-// ───────── Redesign round (preview builds only): the compact card, in three shapes ─────────
-// WHY one set of parts for all three options (Destin: stars first, "easy" a normal tag that explains itself, phone cards
-// far smaller): CSS (redesign.css) lays the same parts out as a picture card (a), a picture-left row in two columns (b)
-// or a one-column list (c). The chip order is the same in all of them, so the options are compared fairly.
+// ───────── The alternative card (Destin picked option a in the redesign round) ─────────
+// WHY this shape: a screenshot band, then name with its (i) and Actions at the top right, ONE chip row that scrolls sideways (stars first,
+// setup an ordinary chip that explains itself), a two-line description and at most one grey line about the family. On phones it becomes a
+// short row (CSS) so a screen shows five or six projects instead of one and a half.
 const tipChip = (id, html, title) => `<button class="chip tipchip" type="button" data-tip="${id}" aria-expanded="false" aria-label="${esc(title)}">${html}<svg class="tipi" width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 11v5M12 8h.01"/></svg></button>`;
 const tpl = (id, title, html) => `<template data-for="${id}" data-title="${esc(title)}">${html}</template>`;
-export function rvCard(p, alt, i, group, why) {
+export function altCard(p, alt, i, group, why) {
   const fam = currentFamily();
   const gh = hostOf(p) === 'github.com';
   const shot = shotOf(p); const acts = actions(p);
-  const menuId = `rvact-${esc(p.id)}-${i}`;
-  const easy = setupOf(p) === 'easy';
-  const facts = fam ? famFacts(p, fam) : { own: null, kids: 0 };
+  // WHY the menu id carries the group: a closed-app page can list the same project under two groups.
+  const menuId = `act-${esc(p.id)}-${i}`;
   const grey = fam ? famGrey(p, fam) : '';
   const nodes = fam ? famNodes(p, fam) : [];
   const whyText = whyLine(why);
-  // Chips, stars FIRST when present (Destin), then setup as an ordinary chip that explains itself on click.
+  // Chips: stars FIRST when present (Destin), then setup as an ordinary chip that explains itself on click.
   const chips = [
-    p.stars ? tipChip('stars', `${ICON.star}${fmtStars(p.stars)}`, 'About GitHub stars') : (!gh ? `<span class="chip">Not on GitHub</span>` : ''),
+    p.stars ? tipChip('stars', `${ICON.star}${fmtStars(p.stars)}`, 'About GitHub stars') : (!gh ? '<span class="chip">Not on GitHub</span>' : ''),
     tipChip('setup', SETUP[setupOf(p)], 'What this setup rating means'),
-    // Option B only (CSS hides it elsewhere): the family as one chip, opening a short list.
-    facts.own || facts.kids ? tipChip('family', facts.own ? esc(facts.own) : `${facts.kids} ${facts.kids === 1 ? 'fork' : 'forks'}`, 'About its family').replace('class="chip tipchip"', 'class="chip tipchip famchip"') : '',
     SOCIAL && group ? `<span class="chip" data-rating data-group="${group.id}" data-project="${esc(p.id)}" hidden></span>` : '',
     tipChip('active', p.inactive ? 'Quiet for a year' : 'Active', 'What this activity label means'),
-    // Claim label, option B: a dashed chip, filled in by contrib.js only while nobody has claimed the project.
-    SOCIAL ? `<button class="chip tipchip claimchip" type="button" data-claim-chip="${esc(p.id)}" data-repo="${esc(codeUrl(p) ?? '')}" hidden aria-expanded="false">Unclaimed</button>` : '',
     devicesText(p) ? `<span class="chip">${esc(devicesText(p))}</span>` : '',
     p.verified ? tipChip('verified', `${ICON.shield}Verified`, 'What Verified means') : '',
     `<span class="chip">${esc(p.license ?? 'License being checked')}</span>`,
@@ -58,11 +53,9 @@ export function rvCard(p, alt, i, group, why) {
     tpl('active', p.inactive ? 'Quiet for a year' : 'Active', `<p>${p.inactive ? 'Nobody has changed its code in over a year. It may still work well, but help is less likely.' : 'Its code changed within the last year, so someone is still looking after it.'}</p>`),
     p.verified ? tpl('verified', 'Verified', '<p>r/TrueOpenSource mods checked it: an open-source license, still looked after, and it really does the job.</p>') : '',
     tpl('why', 'Why it is listed here', `${whyText ? `<p>${esc(whyText.split(' · ').join(', '))}.</p>` : '<p>It is listed in this group by the editors.</p>'}<p class="tipwhy">The order comes from how fully it replaces the app, Verified, setup and, when there are enough, people's votes.</p>${famHtml}`),
-    famHtml ? tpl('family', facts.own ? 'Where it came from' : 'Its forks', famHtml) : '',
   ].join('');
-  const greyLine = grey ? `<p class="gl">${esc(grey)}</p>` : '';
-  const claimLine = SOCIAL ? `<p class="claimline" data-claim-line="${esc(p.id)}" hidden></p>` : '';
-  return `<div class="rvbox rv va vb vc" data-tipscope>
+  return `<div class="card pic" data-fit="${alt.fit}" data-stars="${p.stars ?? 0}" data-name="${esc(p.name.toLowerCase())}" data-order="${i}" data-setup="${setupOf(p)}" data-platforms="${esc((p.platforms ?? []).join(' '))}">
+    <div class="rvbox" data-tipscope>
       <div class="rv-thumb">${shot ? `<img src="${esc(shot)}" alt="${esc(p.name)} screenshot" loading="lazy" referrerpolicy="no-referrer">` : '<span class="nopic">No screenshot yet</span>'}</div>
       <div class="rv-main">
         <div class="rv-head"><h3><a class="cardlink" href="${pageLink}">${esc(p.name)}</a></h3>
@@ -71,37 +64,10 @@ export function rvCard(p, alt, i, group, why) {
             <div class="menu" id="${menuId}" role="menu">${acts.map((l) => `<a class="mi" role="menuitem" href="${esc(l.href)}" rel="noopener">${l.label}</a>`).join('')}<a class="mi" role="menuitem" href="${pageLink}">See full details</a>${p.help ? `<a class="mi" role="menuitem" href="${url(`p/${p.id}/#help`)}">How to help</a>` : ''}<a class="mi" role="menuitem" href="${esc(suggestUrl('2-fix', { project: p.name, ...(group ? { group: group.name } : {}) }))}" rel="noopener">Suggest a change</a></div></div>` : ''}</div>
         <div class="chiprow">${chips}</div>
         <p class="blurb">${esc(p.summary)}</p>
-        ${greyLine}${claimLine}
-      </div>${tips}</div>`;
-}
-
-export function altCard(p, alt, i, group, why) {
-  const whyText = whyLine(why);
-  // WHY no kind in the foot any more: the setup chip says it in plain words.
-  const foot = [hostLabel(p), alt.note].filter(Boolean).join(' · ');
-  const acts = actions(p);
-  const shot = shotOf(p);
-  // WHY this layout (Destin chose option B, Oct 27): a screenshot on every card, framed like the app's
-  // Marketplace theme previews, and one "Actions" menu instead of a row of buttons.
-  // WHY a stretched title link: the card also holds the Actions menu, and links can't sit inside links.
-  // WHY the menu id carries the group: a closed-app page can list the same project under two groups.
-  const menuId = `act-${esc(p.id)}-${i}`;
-  return `<div class="card pic" data-fit="${alt.fit}" data-stars="${p.stars ?? 0}" data-name="${esc(p.name.toLowerCase())}" data-order="${i}" data-setup="${setupOf(p)}" data-platforms="${esc((p.platforms ?? []).join(' '))}">
-      ${shot ? `<div class="preview${RV ? ' today' : ''}"><img src="${esc(shot)}" alt="${esc(p.name)} screenshot" loading="lazy" referrerpolicy="no-referrer"></div>` : `<div class="preview empty${RV ? ' today' : ''}">No screenshot yet</div>`}
-      ${RV ? rvCard(p, alt, i, group, why) : ''}
-      <div class="inner${RV ? ' today' : ''}">
-        <div class="head"><h3><a class="cardlink" href="${url(`p/${p.id}/`)}">${esc(p.name)}</a></h3>
-          ${acts.length ? `<div class="dd actions"><button class="btn sm secondary" type="button" data-menu="${menuId}" aria-haspopup="menu" aria-expanded="false">Actions ${ICON.chev}</button>
-            <div class="menu" id="${menuId}" role="menu">${acts.map((l) => `<a class="mi" role="menuitem" href="${esc(l.href)}" rel="noopener">${l.label}</a>`).join('')}<a class="mi" role="menuitem" href="${url(`p/${p.id}/`)}">See full details</a>${p.help ? `<a class="mi" role="menuitem" href="${url(`p/${p.id}/#help`)}">How to help</a>` : ''}<a class="mi" role="menuitem" href="${esc(suggestUrl('2-fix', { project: p.name, ...(group ? { group: group.name } : {}) }))}" rel="noopener">Suggest a change</a></div></div>` : ''}</div>
-        <div class="chiprow">${factChips(p, alt, SOCIAL && group ? `<span class="chip" data-rating data-group="${group.id}" data-project="${esc(p.id)}" hidden></span>` : '')}</div>
-        <p class="blurb">${esc(p.summary)}</p>
-        ${whyText ? `<p class="why" title="Why it is listed where it is. Nobody has to have voted for this; it comes from the facts on the card.">Why it's here: ${esc(whyText)}</p>` : ''}
         ${SOCIAL ? `<div class="dev-pitch" data-dev-pitch data-mode="card" data-project="${esc(p.id)}" hidden></div>` : ''}
-        ${/* WHY (forks stream): "Split from Gitea (2022)" / "Forked by: Forgejo", so a copy is not mistaken for a rival. */ currentFamily() ? cardFamily(p, currentFamily()) : ''}
-        <div class="foot">${esc(foot)}</div>
+        ${grey ? `<p class="gl">${esc(grey)}</p>` : ''}
         ${SOCIAL && group ? `<div class="missing-count" data-missing-count data-group="${group.id}" data-project="${esc(p.id)}" hidden></div>` : ''}
-      </div>
-    </div>`;
+      </div>${tips}</div></div>`;
 }
 
 // Best first: see rank.mjs for the points and why. WHY not just fit-then-stars (the old rule): stars are a weak, partly
