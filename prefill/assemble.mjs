@@ -233,7 +233,7 @@ if (existsSync(thumbsFile)) {
 // ── Setup rating (prefill/setup-ratings.json): "Easy setup" or "Advanced setup" on every project ──
 // WHY (Destin, Oct 26): the old "Runs on your own server" wording meant nothing to newcomers. The rating answers one
 // question: can an ordinary person start using this today? Default from what kind of project it is; hand-researched
-// exceptions (an official free hosted version, or an OS install) override it, each with its reason.
+// exceptions (an installable app hidden behind a server-software kind, a project that is itself a website, or an OS install) override it, each with its reason.
 const setupFile = optional(join(HERE, 'setup-ratings.json')) ?? { easy: {}, advanced: {} };
 for (const p of projects.values()) {
   const onlyServer = p.platforms?.length === 1 && p.platforms[0] === 'server';

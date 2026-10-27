@@ -1122,8 +1122,7 @@
    ],
    "licenseSource": "https://gitlab.com/bramw/baserow/-/raw/develop/LICENSE",
    "thumbs": [],
-   "setup": "easy",
-   "setupWhy": "Its makers run a hosted version at baserow.io with a free plan."
+   "setup": "advanced"
   },
   {
    "id": "bazzite",
@@ -1833,8 +1832,7 @@
     "server"
    ],
    "thumbs": [],
-   "setup": "easy",
-   "setupWhy": "Its makers run a hosted version at cal.com with a free plan."
+   "setup": "advanced"
   },
   {
    "id": "calibre",
@@ -2421,8 +2419,7 @@
     "assets/shots/cryptpad-0.webp",
     "assets/shots/cryptpad-1.webp"
    ],
-   "setup": "easy",
-   "setupWhy": "The CryptPad project runs a free public site, cryptpad.fr, so you can use it in a browser with no setup."
+   "setup": "advanced"
   },
   {
    "id": "cube-js",
@@ -2902,8 +2899,7 @@
    "thumbs": [
     "assets/shots/documenso-0.webp"
    ],
-   "setup": "easy",
-   "setupWhy": "Its makers run a hosted version at documenso.com with a free plan."
+   "setup": "advanced"
   },
   {
    "id": "docuseal",
@@ -3067,8 +3063,7 @@
    ],
    "licenseSource": "https://raw.githubusercontent.com/dubinc/dub/main/LICENSE.md",
    "thumbs": [],
-   "setup": "easy",
-   "setupWhy": "Its makers run a hosted version at dub.co with a free plan."
+   "setup": "advanced"
   },
   {
    "id": "duplicati",
@@ -4015,8 +4010,7 @@
    "thumbs": [
     "assets/shots/forgejo-0.webp"
    ],
-   "setup": "easy",
-   "setupWhy": "Codeberg.org is a free public site that runs Forgejo, so you can use it without your own server."
+   "setup": "advanced"
   },
   {
    "id": "formbricks",
@@ -4049,8 +4043,7 @@
    "thumbs": [
     "assets/shots/formbricks-0.webp"
    ],
-   "setup": "easy",
-   "setupWhy": "Its makers run a hosted version at formbricks.com with a free plan."
+   "setup": "advanced"
   },
   {
    "id": "formio",
@@ -4737,8 +4730,7 @@
    ],
    "licenseSource": "https://raw.githubusercontent.com/gitlabhq/gitlabhq/master/LICENSE",
    "thumbs": [],
-   "setup": "easy",
-   "setupWhy": "GitLab runs gitlab.com, an official hosted version with a free plan."
+   "setup": "advanced"
   },
   {
    "id": "gitlab-community-edition",
@@ -4932,8 +4924,7 @@
     "server"
    ],
    "thumbs": [],
-   "setup": "easy",
-   "setupWhy": "Its makers run Grafana Cloud, which has a free plan."
+   "setup": "advanced"
   },
   {
    "id": "grapheneos",
@@ -5079,8 +5070,7 @@
    "thumbs": [
     "assets/shots/grist-0.webp"
    ],
-   "setup": "easy",
-   "setupWhy": "Its makers run a hosted version at getgrist.com with a free plan."
+   "setup": "advanced"
   },
   {
    "id": "growthbook",
@@ -6677,8 +6667,7 @@
     "assets/shots/kutt-2.webp",
     "assets/shots/kutt-3.webp"
    ],
-   "setup": "easy",
-   "setupWhy": "Its makers run a hosted version at kutt.it that you can use for free."
+   "setup": "advanced"
   },
   {
    "id": "kuzzle",
@@ -6852,8 +6841,7 @@
     "assets/shots/lemmy-0.webp",
     "assets/shots/lemmy-1.webp"
    ],
-   "setup": "easy",
-   "setupWhy": "The Lemmy project runs a free public site, lemmy.ml, that anyone can join."
+   "setup": "advanced"
   },
   {
    "id": "leon",
@@ -7131,8 +7119,7 @@
    "thumbs": [
     "assets/shots/librespeed-0.webp"
    ],
-   "setup": "easy",
-   "setupWhy": "The project runs a public speed test site, librespeed.org, that works in a browser."
+   "setup": "advanced"
   },
   {
    "id": "libretranslate",
@@ -7800,8 +7787,7 @@
     "assets/shots/mastodon-0.webp",
     "assets/shots/mastodon-1.webp"
    ],
-   "setup": "easy",
-   "setupWhy": "The Mastodon project runs a free official server, mastodon.social, that anyone can sign up to."
+   "setup": "advanced"
   },
   {
    "id": "matano",
@@ -8266,8 +8252,7 @@
    "thumbs": [
     "assets/shots/misskey-0.webp"
    ],
-   "setup": "easy",
-   "setupWhy": "Misskey's makers run a free public site, misskey.io, that anyone can join."
+   "setup": "advanced"
   },
   {
    "id": "mlcraft",
@@ -9210,8 +9195,7 @@
     "assets/shots/ntfy-2.webp",
     "assets/shots/ntfy-3.webp"
    ],
-   "setup": "easy",
-   "setupWhy": "Its maker runs a free public server, ntfy.sh, and there are phone apps, so you don't need your own server."
+   "setup": "advanced"
   },
   {
    "id": "nuclei",
@@ -10800,8 +10784,7 @@
    ],
    "licenseSource": "https://codeberg.org/rimu/pyfedi/raw/branch/main/LICENSE",
    "thumbs": [],
-   "setup": "easy",
-   "setupWhy": "The PieFed project runs a free public site, piefed.social, that anyone can join."
+   "setup": "advanced"
   },
   {
    "id": "pingcap",
@@ -10899,8 +10882,7 @@
    "thumbs": [
     "assets/shots/pixelfed-0.webp"
    ],
-   "setup": "easy",
-   "setupWhy": "Pixelfed's creator runs a free public site, pixelfed.social, that anyone can join."
+   "setup": "advanced"
   },
   {
    "id": "plane",
@@ -10939,8 +10921,7 @@
     "assets/shots/plane-2.webp",
     "assets/shots/plane-3.webp"
    ],
-   "setup": "easy",
-   "setupWhy": "Its makers run a hosted version at plane.so with a free plan."
+   "setup": "advanced"
   },
   {
    "id": "plasmic",
@@ -11248,8 +11229,7 @@
    ],
    "licenseSource": "https://raw.githubusercontent.com/PostHog/posthog/master/LICENSE",
    "thumbs": [],
-   "setup": "easy",
-   "setupWhy": "Its makers run PostHog Cloud, which has a free plan."
+   "setup": "advanced"
   },
   {
    "id": "postiz",
@@ -12975,7 +12955,7 @@
     "assets/shots/stirling-pdf-0.webp"
    ],
    "setup": "easy",
-   "setupWhy": "It has desktop installers for Windows, Mac and Linux, and an official free hosted version at stirlingpdf.io."
+   "setupWhy": "It has desktop installers for Windows, Mac and Linux that you install like any other program."
   },
   {
    "id": "strapi",
@@ -14056,8 +14036,7 @@
    "thumbs": [
     "assets/shots/umami-0.webp"
    ],
-   "setup": "easy",
-   "setupWhy": "Its makers run Umami Cloud, which has a free plan."
+   "setup": "advanced"
   },
   {
    "id": "ungoogled-chromium",
@@ -14706,8 +14685,7 @@
     "assets/shots/wordpress-0.webp",
     "assets/shots/wordpress-1.webp"
    ],
-   "setup": "easy",
-   "setupWhy": "WordPress.com is the official hosted version and has a free plan."
+   "setup": "advanced"
   },
   {
    "id": "writefreely",
@@ -14741,8 +14719,7 @@
    "thumbs": [
     "assets/shots/writefreely-0.webp"
    ],
-   "setup": "easy",
-   "setupWhy": "Its makers run write.as, which has a free plan, so you can start writing in a browser."
+   "setup": "advanced"
   },
   {
    "id": "xournal",
@@ -15256,8 +15233,7 @@
     "assets/shots/zulip-0.webp",
     "assets/shots/zulip-1.webp"
    ],
-   "setup": "easy",
-   "setupWhy": "Zulip runs a free hosted version (Zulip Cloud Free) at zulipchat.com."
+   "setup": "advanced"
   }
  ]
 }

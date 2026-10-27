@@ -33,7 +33,7 @@ export const KIND = { app: 'App', self_hosted: 'Server software', developer_tool
 export const SETUP = { easy: 'Easy setup', advanced: 'Advanced setup' };
 // One plain sentence per rating, for the tooltip and the "About this page" box. No jargon: say what you would have to DO.
 export const SETUP_MEANING = {
-  easy: 'Easy setup: install it like a normal app, use it in your browser, or sign up for an official free hosted version.',
+  easy: 'Easy setup: install it like a normal app, use it in your browser.',
   advanced: 'Advanced setup: you have to run it on your own server or use the command line, or it is a tool for developers. Fine if you are technical, hard if not.',
 };
 const SETUP_DEFAULT_WHY = {

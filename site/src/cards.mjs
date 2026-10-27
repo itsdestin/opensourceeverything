@@ -66,7 +66,7 @@ function promptText({ closed, job, json, alts }, full) {
 }
 // "Help me choose": a prompt for visitors who want to pick one, not build one (Destin, Oct 26). The pasted list is in the
 // SAME order as the page (alts comes from sortAlts), and carries the setup rating and devices so the AI can use them.
-const SETUP_KEY = 'Setup rating: "Easy setup" means you can install it like a normal app, use it in a browser, or sign up for an official free hosted version. "Advanced setup" means you must run it on your own server or use the command line, or it is a tool for developers.';
+const SETUP_KEY = 'Setup rating: "Easy setup" means you can install it like a normal app, use it in a browser. "Advanced setup" means you must run it on your own server or use the command line, or it is a tool for developers.';
 function choosePrompt({ closed, job, json, alts }) {
   return `I want to pick an open-source replacement for ${closed.join(', ')}${job ? ` (${job.toLowerCase()})` : ''}. Below is a list from Open Source Everything (CC BY-SA 4.0), in the order its website shows it. The order is a starting point, not a verdict.\n\n` +
     alts.map(({ p, a }) => `- ${p.name}: ${p.summary} [${SETUP[setupOf(p)]}${p.setupWhy ? ` (${p.setupWhy})` : ''}; ${devicesText(p) || (p.platforms?.includes('server') ? 'runs on a server you set up' : 'devices not listed')}; replaces ${a.fit === 'full' ? 'fully' : 'partly'}; ${p.license ?? 'license being checked'}${p.verified ? '; Verified by r/TrueOpenSource mods' : ''}${p.inactive ? '; no changes in over a year' : ''}${codeUrl(p) ? `; ${codeUrl(p)}` : p.website ? `; ${p.website}` : ''}]`).join('\n') +

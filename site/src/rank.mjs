@@ -16,8 +16,8 @@
 //                        than the AI order (was +10). Still a mark, not a pin: smaller than fit.
 //   stars      0..9      Popularity is a weak hint, log-scaled (1,000 vs 10,000 matters; 90,000 vs 100,000 doesn't).
 //                        Raised from 6 now that the AI order counts for less.
-//   setup      +5 / -2   Easy setup first (Destin, Oct 26): a modest lift for "install it / use it in a browser / official
-//                        free hosted version", a tiny dip for Advanced. Never enough to beat a full-vs-partial fit gap (26).
+//   setup      +5 / -2   Easy setup first (Destin, Oct 26): a modest lift for "install it like a normal app / use it in a browser",
+//                        a tiny dip for Advanced. Never enough to beat a full-vs-partial fit gap (26).
 //   health     -24       Archived or no activity for a year: still listed, but never first when something alive fits.
 //   license    -5        Open-core: part of it is paid or under another license.
 export const WEIGHTS = { full: 40, partial: 14, verified: 14, openCore: -5, dead: -24, starsMax: 9, communityMax: 30, editorMax: 6, easy: 5, advanced: -2 };

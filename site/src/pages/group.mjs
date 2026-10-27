@@ -73,7 +73,7 @@ export default function groupPages(d) {
       <section class="surface sec fold-phone" style="gap:8px">
         <h2 class="h-large fold-head">About this page</h2>
         <p class="small2"><b class="num">Replaces fully</b> means it does the main job of these apps; <b class="num">Replaces partly</b> means it covers some of it.</p>
-        <p class="small2"><b class="num">Easy setup</b>: install it like a normal app, use it in your browser, or sign up for an official free hosted version. <b class="num">Advanced setup</b>: you have to run it on your own server or use the command line, or it is made for developers. Easy ones are lifted up, but nothing is hidden.</p>
+        <p class="small2"><b class="num">Easy setup</b>: install it like a normal app, use it in your browser. <b class="num">Advanced setup</b>: you have to run it on your own server or use the command line, or it is made for developers. Easy ones are lifted up, but nothing is hidden.</p>
         <p class="small2"><b class="num">Order</b>: best match first, from how fully it replaces the app, Verified, setup and (when there are enough) people's votes. The first order of the list was drafted by AI, so it counts for little.</p>
         <p class="small2"><b class="num">Licenses</b>: every project here uses an open-source license (<a href="${url('licenses/')}">what each one means</a>). <b class="num">Open core</b> means some parts are paid or under another license.</p>
         <p class="small2"><b class="num">GitHub stars</b> are shown for reference. They measure popularity, not whether it replaces anything.</p>
