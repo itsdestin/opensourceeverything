@@ -20,24 +20,25 @@ export default function gaps(d) {
       test: (g) => fulls(g).length === 1 },
   ].map((t) => ({ ...t, groups: d.groups.filter(t.test).sort((a, b) => catOrder(a) - catOrder(b) || a.name.localeCompare(b.name)) }));
 
+  // WHY (reviewer, round 5): the card's name links to the group, so there is no second "See the group" button; at most ONE outlined "Before you build" per card (dozens of filled buttons made the page shout);
+  // the section heading already says "Only part of the job", so cards no longer repeat that as a pill; each partial project's note sits on the project's own line.
   const card = (g, t) => {
-    // WHY list what the partial ones do: "only partial" means little until you see what each one is missing.
     const parts = g.alternatives.filter((a) => a.fit === 'partial').map((a) => ({ a, p: d.projById.get(a.project) })).filter((x) => x.p);
     const only = t.id === 'one' ? d.projById.get(fulls(g)[0].project) : null;
     return `<div class="card gcard">
-      <div class="head"><h3><a class="crumb-strong" href="${url(`g/${g.id}/`)}">${esc(g.name)}</a></h3><div class="corner" style="margin-right:0"><span class="pill warn"><i></i>${esc(t.pill)}</span></div></div>
+      <div class="head"><h3><a class="crumb-strong" href="${url(`g/${g.id}/`)}">${esc(g.name)}</a></h3></div>
       <div class="chiprow">${g.closed.map((c) => `<a class="chip" href="${appUrl(c)}">${esc(c)}</a>`).join('')}</div>
       ${only ? `<p class="small2">Only <a href="${url(`p/${only.id}/`)}">${esc(only.name)}</a> does the whole job.</p>` : ''}
       ${t.id === 'partial' && parts.length ? `<ul class="partlist">${parts.map(({ a, p }) => `<li><a href="${url(`p/${p.id}/`)}">${esc(p.name)}</a>${a.note ? `<span>${esc(a.note)}</span>` : ''}</li>`).join('')}</ul>` : ''}
-      <div class="gapbtns"><a class="btn sm secondary" href="${url(`g/${g.id}/`)}">See the group</a><a class="btn sm primary" href="${url(`g/${g.id}/#build`)}">Before you build</a></div>
+      <div class="gapbtns"><a class="btn sm secondary" href="${url(`g/${g.id}/#build`)}">Before you build</a></div>
     </div>`;
   };
 
   const total = tiers[0].groups.length + tiers[1].groups.length;
   const body = `
   <div class="surface identity">
-    <div><div class="muted11">Gaps</div><h1 class="h-subject">What open source doesn't replace yet</h1>
-      <p class="desc12" style="margin-top:4px">${total} ${total === 1 ? 'job has' : 'jobs have'} no full open-source replacement, and ${tiers[2].groups.length} rely on a single project. </p></div>
+    <div><h1 class="h-subject">What open source doesn't replace yet</h1>
+      <p class="desc12" style="margin-top:4px">Jobs with no full open-source replacement, and jobs that rely on a single project.</p></div>
     <div class="pop" style="padding-left:0"><span class="muted11">Jump to</span><div class="fchips">${tiers.filter((t) => t.groups.length).map((t) => `<a class="fchip" href="#${t.id}">${esc(t.name)}<span class="n">${t.groups.length}</span></a>`).join('')}</div></div>
   </div>
   ${SOCIAL ? `<section class="surface sec" id="requested">
@@ -47,7 +48,7 @@ export default function gaps(d) {
   ${tiers.filter((t) => t.groups.length).map((t) => `
   <section class="surface sec" id="${t.id}">
     <div class="sec-head"><div><h2 class="h-large">${esc(t.name)}<span class="count">${t.groups.length}</span></h2></div></div>
-    <div class="row1 fill list">${t.groups.map((g) => card(g, t)).join('')}</div>
+    <div class="gaplist">${t.groups.map((g) => card(g, t)).join('')}</div>
   </section>`).join('')}
   ${gapsMissing(d)}`;
 

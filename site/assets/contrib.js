@@ -358,7 +358,7 @@
       const draw = () => {
         const aiFold = slot.parentElement.querySelector('.aifold');
         if (p?.ai) {
-          const pill = aiFold?.querySelector('[data-ai-pill]'); if (pill) pill.textContent = lab(AI_OPTS, p.ai);
+          const pill = aiFold?.querySelector('[data-ai-pill]'); if (pill) { pill.textContent = lab(AI_OPTS, p.ai); pill.className = 'pill info'; }
           const ex = aiFold?.querySelector('[data-ai-extra]'); if (ex) ex.innerHTML = aiExtra(p);
         }
         // With no AI fold from our own research, the owner's answers make one (same look).

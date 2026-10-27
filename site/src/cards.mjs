@@ -101,23 +101,21 @@ function choosePrompt({ closed, job, json, alts }) {
     alts.map(({ p, a }) => `- ${p.name}: ${p.summary} [${SETUP[setupOf(p)]}${p.setupWhy ? ` (${p.setupWhy})` : ''}; ${devicesText(p) || (p.platforms?.includes('server') ? 'runs on a server you set up' : 'devices not listed')}; replaces ${a.fit === 'full' ? 'fully' : 'partly'}; ${p.license ?? 'license being checked'}${p.verified ? '; Verified by r/TrueOpenSource mods' : ''}${p.inactive ? '; no changes in over a year' : ''}${codeUrl(p) ? `; ${codeUrl(p)}` : p.website ? `; ${p.website}` : ''}]`).join('\n') +
     `\n\n${SETUP_KEY}\n\nFull details: ${SITE_URL}${json}\n\nBefore recommending anything, ask me these three questions (one at a time, in plain words): 1) Which device or devices will I use it on (Windows, Mac, Linux, Android, iPhone)? 2) How comfortable am I with technical setup: only installing apps from a store, happy to follow a step-by-step guide, or comfortable with servers and the command line? 3) What is my budget: free only, or willing to pay for hosting or support? Then recommend one to three projects from this list only, and for each say why, using how fully it replaces the app, its setup rating, and the devices it runs on. If nothing on the list fits me, say so plainly instead of stretching.`;
 }
-// WHY the two boxes share one shape (Destin: they should look alike): a heading, ONE sentence, then the buttons. The prompt text is not shown
-// (it is long and only meant to be pasted); "copy with the list included" is gone because the first prompt already links to the list.
+// WHY one filled button per view (reviewer, round 5): "Help me choose" is the filled one; "Before you build" is outlined (it is for the smaller group of people building something).
+// Each is a heading and its button(s): the heading says what it does, so there is no helper line under it.
 export function chooseBox(t) {
   return `<section class="surface sec fold-phone" id="choose">
         <h2 class="h-large fold-head">Help me choose</h2>
-        <p class="small2">Ask an AI to pick one for you</p>
         <div id="prompt-choose" hidden>${esc(choosePrompt(t))}</div>
-        <div class="stack"><button class="btn md primary" type="button" data-copy="prompt-choose" data-copied="Copied.">Copy prompt</button></div>
+        <div class="stack"><button class="btn md primary" type="button" data-copy="prompt-choose" data-copied="Copied.">Copy AI prompt</button></div>
       </section>`;
 }
 export function buildBox(t) {
   return `<section class="surface sec fold-phone" id="build">
         <h2 class="h-large fold-head">Before you build</h2>
-        <p class="small2">Ask an AI if your idea already exists</p>
         <div id="prompt-short" hidden>${esc(promptText(t, false))}</div>
         <div class="stack">
-          <button class="btn md primary" type="button" data-copy="prompt-short" data-copied="Copied.">Copy prompt</button>
+          <button class="btn md secondary" type="button" data-copy="prompt-short" data-copied="Copied.">Copy AI prompt</button>
           <a class="btn md secondary" href="${url(t.json)}" download>Download the list</a>
         </div>
       </section>`;

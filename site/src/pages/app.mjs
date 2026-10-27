@@ -31,7 +31,7 @@ export default function appPages(d) {
 
     const body = `
   <div class="surface identity">
-    <div class="row"><div><div class="muted11">Closed app</div><h1 class="h-subject">Open-source alternatives to ${esc(name)}</h1>
+    <div class="row"><div><h1 class="h-subject">Open-source alternatives to ${esc(name)}</h1>
       ${all.length ? '' : `<p class="desc12" style="margin-top:4px">No open-source app replaces ${esc(name)} yet.</p>`}</div>${all.length > 1 ? deviceFilter('devMenu') : ''}</div>
     ${others.length ? `<div class="replaces-row"><span class="muted11">Also replaces</span><div class="chiprow">${others.map((c) => `<a class="chip" href="${appUrl(c)}">${esc(c)}</a>`).join('')}</div></div>` : ''}
   </div>

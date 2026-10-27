@@ -49,12 +49,11 @@ export function cardFold(p, g) {
 
 // Group page: "Must have" multi-select + Cards / Compare switch. Only when the group has tags and at least two alternatives.
 export function groupTools(g, alts) {
-  const tags = tagsOf(g); if (!tags.length || alts.length < 2) return '';
+  const tags = tagsOf(g); if (!tags.length || alts.length < 2) return { must: '', seg: '' };
   const n = (t) => alts.filter((x) => answerOf(x.p.id, t.id)?.v === 'yes').length;
-  return `<div class="dd"><button class="select sm" type="button" data-menu="mustMenu" aria-haspopup="listbox" aria-expanded="false"><span data-must-label>Must have</span>${CHEV}</button>
+  return { must: `<div class="dd"><button class="select sm" type="button" data-menu="mustMenu" aria-haspopup="listbox" aria-expanded="false"><span data-must-label>Must have</span>${CHEV}</button>
     <div class="menu must-menu" id="mustMenu" role="listbox" aria-multiselectable="true">${tags.map((t) => `<button class="mi" type="button" role="option" aria-selected="false" data-must="${esc(t.id)}" title="${esc(t.question)}"><span class="tick"></span><span class="mname">${esc(t.name)}</span><span class="muted11">${n(t)}</span></button>`).join('')}
-      <div class="menu-sep"></div><button class="mi" type="button" data-must-clear>Clear</button></div></div>
-    <div class="seg" role="group" aria-label="View"><button type="button" class="on" data-view="cards" aria-pressed="true">Cards</button><button type="button" data-view="compare" aria-pressed="false">Compare</button></div>`;
+      <div class="menu-sep"></div><button class="mi" type="button" data-must-clear>Clear</button></div></div>`, seg: `<div class="seg" role="group" aria-label="View"><button type="button" class="on" data-view="cards" aria-pressed="true">Cards</button><button type="button" data-view="compare" aria-pressed="false">Compare</button></div>` };
 }
 const CHEV = '<svg viewBox="0 0 24 24" width="12" height="12" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg>';
 
@@ -76,8 +75,9 @@ const PILL = { yes: ['ok', 'Yes', true], partly: ['warn', 'Partly', true], no: [
 export function projectFeatures(p, listed) {
   const groups = listed.map(({ group }) => ({ group, rows: tagsOf(group).map((t) => ({ t, a: answerOf(p.id, t.id) })).filter((r) => r.a) })).filter((x) => x.rows.length);
   if (!groups.length) return '';
+  // WHY the source at the row's right (reviewer, round 5): a "Source" line under every name repeated 20 times; now it is a small link on the same line as the Pill, and a row with no note is one line.
   const row = ({ t, a }) => { const [tone, word, dot] = PILL[a.v];
-    return `<div class="frowx"><div class="fx-main"><span class="fx-name" title="${esc(t.question)}">${esc(t.name)}</span>${a.note || a.source ? `<span class="fx-note">${a.note ? esc(a.note) : ''}${a.note && a.source ? ' ' : ''}${srcLink(a)}</span>` : ''}</div><span class="pill ${tone}">${dot ? '<i></i>' : ''}${word}</span></div>`; };
+    return `<div class="frowx"><div class="fx-main"><span class="fx-name" title="${esc(t.question)}">${esc(t.name)}</span>${a.note ? `<span class="fx-note">${esc(a.note)}</span>` : ''}</div><div class="fx-end">${a.source ? `<a class="fx-src" href="${esc(a.source)}" rel="noopener" title="Where this comes from">Source</a>` : ''}<span class="pill ${tone}">${dot ? '<i></i>' : ''}${word}</span></div></div>`; };
   return `<section class="surface sec fold-phone rvfeat"><div class="sec-head fold-head"><div><h2 class="h-large">Features</h2></div></div>
     ${groups.map(({ group, rows }) => `${groups.length > 1 ? `<h3 class="label fx-group">${esc(group.name)}</h3>` : ''}<div class="fx-list">${rows.map(row).join('')}</div>`).join('')}</section>`;
 }
@@ -125,28 +125,28 @@ export const AI_LABEL = {
 const HELP = { 'welcomes-prs': 'Welcomes pull requests', 'issue-first': 'Open an issue first', 'not-accepting': 'Not accepting outside code' };
 const claimHref = (p) => url(`tag/?repo=${encodeURIComponent(codeUrl(p) ?? '')}`);
 
-// The expandable card (FoldRow look, Destin round 5): closed = "AI contributions" with the label as a Pill at the right; open = description, their own words (quote + link),
-// outside help and where to start, all inside the same box. `[data-ai-extra]` is filled in by contrib.js with the owner's contributor preferences, when they set some.
+// The expandable card (FoldRow look, Destin round 5), identical on every project (reviewer, round 5): closed = "AI contributions" with the label as a Pill at the right (or "Not stated");
+// open = description, their own words (quote + link), outside help and where to start (the contributing guide button), ALL inside the same box.
+// `[data-ai-extra]` is filled in by contrib.js with the owner's contributor preferences, when they set some.
 const AI_SHORT = { 'non-developers-welcome': 'Non-developers welcome', 'traditional-developers-only': 'Traditional developers only', 'not-accepted': 'Not accepted', 'see-policy': 'See policy' };
-function aiFold(p, a) {
-  const start = [a.contributing && `<a href="${esc(a.contributing)}" rel="noopener">Contributing guide</a>`, a.goodFirstIssues && `<a href="${esc(a.goodFirstIssues)}" rel="noopener">Beginner issues</a>`].filter(Boolean);
-  const help = a.outsideHelp ? `<p><b>${HELP[a.outsideHelp]}.</b>${a.outsideHelpNote ? ` ${esc(a.outsideHelpNote)}` : ''}</p>` : '';
-  return `<details class="foldrow lvl1 aifold"><summary><span>AI contributions</span><span class="pill info" data-ai-pill>${esc(AI_SHORT[a.label])}</span></summary><div class="foldbody">
-    <p>${esc(a.description)}</p>
-    ${a.quote ? `<blockquote class="aiq">“${esc(a.quote)}”${a.source ? ` <a href="${esc(a.source)}" rel="noopener">Read it</a>` : ''}</blockquote>` : ''}
-    ${help ? `<h4 class="aih">Outside help</h4>${help}` : ''}
-    ${start.length ? `<h4 class="aih">Where to start</h4><p class="aistart">${start.join(' · ')}</p>` : ''}
-    <div data-ai-extra></div></div></details>`;
+function aiFold(p, a, contributing) {
+  const guide = a?.contributing ?? contributing;
+  const issues = a?.goodFirstIssues;
+  const start = [guide && `<a class="btn sm secondary" href="${esc(guide)}" rel="noopener">Read the contributing guide</a>`, issues && `<a class="btn sm secondary" href="${esc(issues)}" rel="noopener">Beginner issues</a>`].filter(Boolean);
+  const help = a?.outsideHelp ? `<p><b>${HELP[a.outsideHelp]}.</b>${a.outsideHelpNote ? ` ${esc(a.outsideHelpNote)}` : ''}</p>` : '';
+  const claim = `Maintainers can set this by ${SOCIAL ? `<a href="${claimHref(p)}">claiming the listing</a>` : 'claiming the listing'}.`;
+  return `<details class="foldrow lvl1 aifold"><summary><span>AI contributions</span><span class="pill ${a?.label ? 'info' : ''}" data-ai-pill>${a?.label ? esc(AI_SHORT[a.label]) : 'Not stated'}</span></summary><div class="foldbody">
+    ${a?.label ? `<p>${esc(a.description)}</p>` : `<p>The project has not said how it feels about AI-written contributions. ${claim}</p>`}
+    ${a?.quote ? `<blockquote class="aiq">“${esc(a.quote)}”${a.source ? ` <a href="${esc(a.source)}" rel="noopener">Read it</a>` : ''}</blockquote>` : ''}
+    ${help}
+    <div data-ai-extra></div>
+    ${start.length ? `<div class="aistart">${start.join('')}</div>` : ''}</div></details>`;
 }
 
-// Project page: sits inside (or, with no other help links, makes) the "How to help" card.
-export function helpWithAi(p, helpHtml) {
+// Project page: How to help. The same shape on every project: the AI fold first, then the owner's preference rows (filled in by contrib.js), then the help links.
+export function helpWithAi(p, rowsHtml, contributing) {
   const a = AI[p.id];
-  const row = a?.label ? aiFold(p, a)
-    : `<p class="aiempty"><b>AI Contributions</b> Not stated yet. Maintainers can set this by ${SOCIAL ? `<a href="${claimHref(p)}">claiming the listing</a>` : 'claiming the listing'}.</p>`;
-  const stop = a?.outsideHelp === 'not-accepting' ? '<p class="quiet">Not accepting outside code</p>' : '';
   // data-prefs: filled in by contrib.js with the owner's "How you'd like help" answers (rows) when they have set some.
   const slot = SOCIAL ? `<div class="prefs-slot" data-prefs data-project="${esc(p.id)}" hidden></div>` : '';
-  if (helpHtml) return helpHtml.replace('id="help">', () => 'id="help" data-tipscope>').replace('<div class="stack">', () => `<div class="stack">${row}${stop}${slot}`);
-  return `<section class="surface sec fold-phone" id="help" data-tipscope><div class="sec-head fold-head"><div><h2 class="h-large">How to help</h2></div></div><div class="stack">${row}${stop}${slot}</div></section>`;
+  return `<section class="surface sec fold-phone" id="help" data-tipscope><div class="sec-head fold-head"><div><h2 class="h-large">How to help</h2></div></div><div class="stack">${aiFold(p, a, contributing)}${slot}${rowsHtml}</div></section>`;
 }

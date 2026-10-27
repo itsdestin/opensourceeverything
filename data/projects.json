@@ -8484,7 +8484,7 @@
     "why": "Created in 2010 as a fork of OpenOffice.org; Apache OpenOffice is the other continuation of that code.",
     "source": "https://en.wikipedia.org/wiki/LibreOffice",
     "confirmed": "mod",
-    "differs": "Fork of OpenOffice.org, a separate continuation from Apache OpenOffice",
+    "differs": "The spreadsheet app in LibreOffice, a fork of OpenOffice.org's Calc",
     "differsFromChild": "LibreOffice: fork of OpenOffice.org"
    }
   },
@@ -8529,7 +8529,7 @@
     "why": "Created in 2010 as a fork of OpenOffice.org; Apache OpenOffice is the other continuation of that code.",
     "source": "https://en.wikipedia.org/wiki/LibreOffice",
     "confirmed": "mod",
-    "differs": "Fork of OpenOffice.org, a separate continuation from Apache OpenOffice",
+    "differs": "The presentation app in LibreOffice, a fork of OpenOffice.org's Impress",
     "differsFromChild": "LibreOffice: fork of OpenOffice.org"
    }
   },
@@ -8578,7 +8578,7 @@
      "OpenOffice.org",
      "OpenOffice"
     ],
-    "differs": "Fork of OpenOffice.org, a separate continuation from Apache OpenOffice",
+    "differs": "The word processor in LibreOffice, a fork of OpenOffice.org's Writer",
     "differsFromChild": "LibreOffice: fork of OpenOffice.org"
    }
   },

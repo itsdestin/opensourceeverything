@@ -78,6 +78,7 @@ html[data-v="b"] .featline { display:block; }
 /* Switch guide: one first-level card, three folds. */
 .swfolds { display:flex; flex-direction:column; gap:8px; }
 .swsteps { margin:0; padding-left:20px; display:flex; flex-direction:column; gap:4px; font-size:13px; color:var(--fg-2); }
+.aistart { display:flex; gap:8px; flex-wrap:wrap; }
 .swsrc { font-size:12px; color:var(--fg-dim); align-self:flex-start; }
 .swcard { order:0; }
 
@@ -87,7 +88,9 @@ html[data-v="b"] .featline { display:block; }
 .frowx { display:flex; align-items:center; justify-content:space-between; gap:12px; padding:8px 12px; border-radius:var(--radius-lg); background:color-mix(in srgb,var(--inset) 50%,transparent); border:1px solid var(--edge-card); }
 .fx-main { display:flex; flex-direction:column; gap:2px; min-width:0; }
 .fx-name { font-size:13px; font-weight:500; color:var(--fg); }
-.fx-note { font-size:12px; color:var(--fg-dim); } .fx-note a { color:var(--fg-2); }
+.fx-note { font-size:12px; color:var(--fg-dim); }
+.fx-end { display:flex; align-items:center; gap:10px; flex:none; }
+.fx-src { font-size:12px; color:var(--fg-dim); text-decoration:underline; text-decoration-color:var(--edge-strong); text-underline-offset:2px; } .fx-src:hover { color:var(--fg); }
 html[data-v="b"] .rvfeat .fx-list { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); }
 
 /* Compare table on a phone (Destin, round 5: tighten it): narrow sticky name column that truncates, short two-line column heads, smaller cells. */

@@ -1,5 +1,6 @@
 // One page per category (c/<id>/): every group in it, as raised cards.
 import { url, esc, SOCIAL } from '../lib.mjs';
+import { crumbs } from '../redesign.mjs';
 
 export default function categories(d) {
   return d.categories.map((c) => {
@@ -20,13 +21,14 @@ export default function categories(d) {
       path: `c/${c.id}/`, title: c.name, styles: ['pages.css'],
       description: `Open-source alternatives in ${c.name}: ${gs.map((g) => g.name).join(', ')}.`,
       body: `
+  ${crumbs([['Browse', url('#categories')], [c.name]])}
   <div class="surface identity">
-    <div><div class="muted11">Category</div><h1 class="h-subject">${esc(c.name)}</h1></div>
+    <div><h1 class="h-subject">${esc(c.name)}</h1></div>
     <div class="pop" style="padding-left:0"><span class="muted11">Other categories</span><div class="fchips">${others}</div></div>
   </div>
   <section class="surface sec">
     <div class="sec-head"><div><h2 class="h-large">Groups<span class="count">${gs.length}</span></h2></div></div>
-    <div class="row1 fill list">${gs.map(card).join('')}</div>
+    <div class="gaplist">${gs.map(card).join('')}</div>
   </section>`,
     };
   });

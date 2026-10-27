@@ -39,7 +39,8 @@
     if (!api.demo) { location.href = `${api.url}/auth/login?return=${encodeURIComponent(location.href)}`; return; }
     dialog('Sign in (preview)', `<p class="small2">On the real site this opens GitHub, which asks you to share only your public username. Here, pick who to be:</p>
       <div class="stack"><button class="btn md primary" type="button" data-as="you-sample" data-days="400">An account that's a year old</button>
-      <button class="btn md secondary" type="button" data-as="new-sample" data-days="3">A brand-new account (3 days old)</button></div>`, { size: 'narrow', onOpen: (el, close) => {
+      <button class="btn md secondary" type="button" data-as="new-sample" data-days="3">A brand-new account (3 days old)</button>
+      <button class="btn md secondary" type="button" data-as="penpot-team-sample" data-days="400">Penpot's developer (owns a claimed project)</button></div>`, { size: 'narrow', onOpen: (el, close) => {
       el.addEventListener('click', async (e) => { const b = e.target.closest('[data-as]'); if (!b) return; await api.signIn(b.dataset.as, +b.dataset.days); close(); location.reload(); });
     } });
   }

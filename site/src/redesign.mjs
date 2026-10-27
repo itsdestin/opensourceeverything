@@ -31,7 +31,7 @@ export function rvFamilyA(p, fam) {
   const tips = nodes.map((n, i) => n.why ? tpl(`f${i}`, nodeName(n), `<p>${esc(n.why)}</p><p><a href="${esc(n.source)}" rel="noopener">Source</a></p>`) : '').join('');
   return `<section class="surface sec rvfamA fold-phone" id="family" data-tipscope data-more-scope>
     <div class="sec-head fold-head"><div><h2 class="h-large">Family<span class="count">${nodes.length}</span></h2></div></div>
-    <ul class="flist lvl2">${nodes.map(row).join('')}</ul>
+    <ul class="flist">${nodes.map(row).join('')}</ul>
     ${nodes.length > 5 ? `<button class="btn sm secondary showall" type="button" data-showall>Show all ${nodes.length}</button>` : ''}${tips}</section>`;
 }
 

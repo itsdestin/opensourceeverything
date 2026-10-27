@@ -51,9 +51,9 @@ export default function groupPages(d) {
       <section class="surface sec">
         <div class="sec-head">
           <div><h2 class="h-large">Open alternatives<span class="count">${alts.length}</span></h2></div>
-          ${alts.length > 1 ? `<div class="tools">${deviceFilter('devMenu')}${groupTools(g, alts)}<div class="dd"><button class="select sm" type="button" data-menu="sortMenu" aria-haspopup="listbox" aria-expanded="false"><span data-sort-label>${SORTS[0][1]}</span>${ICON.chev}</button>
-            <div class="menu" id="sortMenu" role="listbox">${SORTS.map(([k, v], i) => `<button class="mi${i ? '' : ' sel'}" type="button" role="option" data-sort="${k}"${k === 'votes' ? ' disabled title="Available once people have voted"' : ''}>${v}</button>`).join('')}</div></div></div>` : ''}
         </div>
+        ${alts.length > 1 ? `<div class="toolbar"><div class="tl">${deviceFilter('devMenu')}${groupTools(g, alts).must}<div class="dd"><button class="select sm" type="button" data-menu="sortMenu" aria-haspopup="listbox" aria-expanded="false"><span data-sort-label>${SORTS[0][1]}</span>${ICON.chev}</button>
+            <div class="menu" id="sortMenu" role="listbox">${SORTS.map(([k, v], i) => `<button class="mi${i ? '' : ' sel'}" type="button" role="option" data-sort="${k}"${k === 'votes' ? ' disabled title="Available once people have voted"' : ''}>${v}</button>`).join('')}</div></div></div>${groupTools(g, alts).seg}</div>` : ''}
         ${likedBox(g, alts)}
         ${alts.length
           ? `<div class="grid" data-alts>${alts.map((x, i) => altCard(x.p, x.a, i, g, x.why)).join('')}</div><div class="callout info" data-nomatch hidden>None of these match. Try another device.</div>${groupCompare(g, alts)}`

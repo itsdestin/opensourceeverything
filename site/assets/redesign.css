@@ -233,3 +233,56 @@ body { display:flex; flex-direction:column; }
 @media (max-width:640px) { .top .grow { display:block; } }
 /* The sign-in card on a wide screen: the line at the left and the button at the right of that same line (Buttons recipe); on a phone the button spans the card. */
 @media (min-width:641px) { .signin-card { flex-direction:row; align-items:center; justify-content:space-between; } .signin-card .btn.full { width:auto; flex:none; padding:8px 20px; } }
+
+/* ── Round 5 review fixes ── */
+/* Gaps and category cards: natural heights, one column on a phone. */
+.gaplist .card { cursor:default; }
+.gaplist .gcard:hover { transform:none; }
+.gaplist .gapbtns { margin-top:4px; }
+@media (max-width:640px) { .gaplist { grid-template-columns:minmax(0,1fr); } }
+.partlist li { align-items:baseline; gap:8px; flex-wrap:nowrap; }
+.partlist li a { flex:none; text-decoration:none; font-weight:500; } .partlist li a:hover { text-decoration:underline; }
+.partlist li span { color:var(--fg-dim); min-width:0; } .partlist li span::before { content:""; }
+/* "want this": readable size, compact buttons that sit at the right. */
+.pillvote span { font-size:12px; color:var(--fg-dim); }
+.rq-card .pillvote.full { width:auto; align-self:flex-end; margin-top:auto; }
+.rq-minicard .pillvote span { font-size:11px; }
+@media (max-width:640px) { .pillvote span { font-size:11px; } .rq-pod .pillvote.full { grid-area:b; justify-self:end; } }
+/* Project Listed in: the nested look, vote line under its bar. */
+.listrow { padding:10px 12px; display:flex; flex-direction:column; gap:8px; }
+.listrow .head { display:flex; align-items:center; justify-content:space-between; gap:8px; } .listrow .head h3 { font-size:14px; font-weight:500; margin:0; }
+.listrow .rate { margin-top:0; }
+.rate-res { flex-direction:column; align-items:flex-start; gap:4px; }
+.rate-res .meter { width:min(220px,100%); }
+.shots-few { align-self:flex-start; min-width:min(100%,280px); }
+/* Home: category cards never wrap their chips; they scroll under the edge fade. */
+.catgrid { align-items:start; }
+.catcard2 .gchips { flex-wrap:nowrap; overflow-x:auto; scrollbar-width:none; padding-right:24px; -webkit-mask-image:linear-gradient(to right,#000 calc(100% - 24px),transparent); mask-image:linear-gradient(to right,#000 calc(100% - 24px),transparent); }
+.catcard2 .gchips::-webkit-scrollbar { display:none; }
+.catcard2 .fchip { flex:none; white-space:nowrap; }
+.fchip.more { background:var(--inset); }
+/* See also: every card the same height, with or without a reason line. */
+#see-also .card.listing { min-height:64px; justify-content:center; }
+/* Tools row on a group page: filters at the left, Cards / Compare at the right, one height. */
+.toolbar { display:flex; align-items:center; justify-content:space-between; gap:8px; flex-wrap:wrap; }
+.toolbar .tl { display:flex; gap:8px; flex-wrap:wrap; align-items:center; }
+.toolbar .select.sm, .toolbar .seg button { height:30px; box-sizing:border-box; }
+.toolbar .seg { height:30px; }
+@media (max-width:640px) { .toolbar { flex-wrap:nowrap; overflow-x:auto; scrollbar-width:none; } .toolbar > * { flex:none; } .toolbar .tl { flex-wrap:nowrap; } }
+.aistart .btn { text-decoration:none; }
+/* Sign-in cards (Claim, Your suggestions): ONE narrow centred card, the top-bar Sign in hidden on that page (reviewer, round 5: two Sign in buttons and a thin banner over empty background). */
+.signin-card { gap:12px; max-width:420px; width:100%; margin:0 auto; flex-direction:column !important; align-items:stretch !important; }
+.signin-card .btn.full { width:100% !important; padding:8px 12px !important; }
+body:has(.signin-card) .top .acct { display:none; }
+.page:has(.signin-card) { justify-content:center; }
+/* Phone footer: one line of links that scrolls under the edge fade instead of wrapping. */
+@media (max-width:640px) {
+  .footer { display:flex !important; flex-wrap:nowrap; justify-content:flex-start; overflow-x:auto; scrollbar-width:none; -webkit-mask-image:linear-gradient(to right,#000 calc(100% - 28px),transparent); mask-image:linear-gradient(to right,#000 calc(100% - 28px),transparent); padding-right:28px; }
+  .footchip { flex:none; padding:6px 12px; }
+}
+/* Family: plain rows, not a box inside the card. */
+.rvfamA .flist { padding:0; }
+.srsq { display:none; }
+.top .acct .avatar, .top .acct .acct-btn { padding:0; width:32px; height:32px; font-size:12px; font-weight:600; }
+/* Search rows: every kind in the same tinted look. */
+.sres-list > .card.sr { background:color-mix(in srgb,var(--inset) 50%,transparent); box-shadow:none; }

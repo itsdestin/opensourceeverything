@@ -149,10 +149,12 @@ export function famGrey(p, fam) {
 export function famNodes(p, fam) {
   if (!inFamily(p, fam)) return [];
   const root = rootOf(p, fam.d); const out = [];
+  const seen = new Set(); // WHY: never the same sentence twice in one family (reviewer, round 5); a repeat falls back to the short relation word
   const add = (c, depth, parent) => {
     const e = shown(c);
     // WHY "how it differs" first (Destin: families are always framed by how a project differs from its upstream); the plain relation words are only the fallback.
-    const diff = depth && e ? e.differs : null;
+    let diff = depth && e ? e.differs : null;
+    if (diff && seen.has(diff)) diff = null; if (diff) seen.add(diff);
     out.push({ p: c, depth, parent, here: c.id === p.id, status: status(c), diff: diff || '', rel: depth && e ? (e.label ?? (e.relation === 'split' && e.since ? `Started as a copy in ${e.since}, now separate` : SHORT[e.relation])) + (e.relation === 'fork-keeps-up' && e.since ? ` (${e.since})` : '') : '', why: depth && e ? e.why : '', source: depth && e ? e.source : '' });
     for (const k of (fam.kids.get(c.id) ?? []).slice().sort((a, b) => a.name.localeCompare(b.name))) add(k, depth + 1, c.name);
   };

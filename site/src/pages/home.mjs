@@ -49,7 +49,7 @@ export default function home(d) {
       <div class="inner">
         <div class="muted11">Instead of ${esc(name)}</div>
         <h3>${esc(lead.p.name)}</h3>
-        <div class="foot">${more > 0 ? `+${more} more` : 'the open alternative'}</div>
+        ${more > 0 ? `<div class="foot"><span class="chip">+${more} more</span></div>` : ''}
       </div></a>`;
 
   // ── Hero collage: three real screenshots, slightly fanned, so the first thing a visitor sees is real software ──

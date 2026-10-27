@@ -35,18 +35,18 @@
       if (dv) chips.push(`<span class="chip">${esc(dv)}</span>`);
     } else if (r.kind === 'group') {
       const g = details.groups.get(id);
-      thumb = `<span class="icon">${GRID}</span>`;
+      thumb = ''; // WHY no picture (reviewer, round 5): a placeholder icon looked like a missing screenshot; groups and closed apps are plain rows
       // WHY no job sentence (Destin, Oct 27): the group's name already says it; what it replaces is the new information.
       summary = g ? `Replaces ${g.closed.slice(0, 4).join(', ')}${g.closed.length > 4 ? '…' : ''}.` : '';
       if (g) chips.push(`<span class="chip">${g.alternatives.length} open ${g.alternatives.length === 1 ? 'option' : 'options'}</span>`);
     } else {
-      thumb = `<span class="letter closed">${esc(r.n[0])}</span>`;
+      thumb = '';
       summary = 'See open alternatives';
       chips.push('<span class="chip">Closed app</span>');
     }
     // Only reasons that mean something to a visitor: the group a project is in, and "Looking for kbin?" hints.
     for (const w of r.why) if (/^In /.test(w.text) || /^Looking for/.test(w.text)) chips.push(`<span class="chip why">${esc(w.text)}</span>`);
-    return `<a class="card sr" href="${BASE}${esc(r.u)}"><div class="sr-thumb">${thumb}</div>
+    return `<a class="card sr" href="${BASE}${esc(r.u)}">${thumb ? `<div class="sr-thumb">${thumb}</div>` : ''}
       <div class="sr-body"><div class="sr-top"><h3>${esc(r.n)}</h3>${meter(r)}</div>${summary ? `<p class="sr-sum">${esc(summary)}</p>` : ''}
       <div class="chiprow">${chips.filter(Boolean).join('')}</div></div></a>`;
   }
@@ -59,9 +59,9 @@
       (!setupF || r.kind !== 'project' || ((proj(r)?.setup === 'easy') === (setupF === 'easy'))));
     // Counts at the right of every option, and the live "Show N results" button (Destin, round 5).
     const projs = results.filter((r) => r.kind === 'project');
-    for (const k of ['all', 'project', 'group', 'closed']) { const el = document.querySelector(`[data-count="${k}"]`); if (el) el.textContent = results.filter((r) => k === 'all' || r.kind === k).length; }
+    for (const k of ['project', 'group', 'closed']) { const el = document.querySelector(`[data-count="${k}"]`); if (el) el.textContent = results.filter((r) => k === 'all' || r.kind === k).length; }
     for (const d of Object.keys(DEVICE)) { const el = document.querySelector(`[data-dcount="${d}"]`); if (el) el.textContent = projs.filter((r) => r.pl.includes(d)).length; }
-    for (const k of ['', 'easy', 'advanced']) { const el = document.querySelector(`[data-scount="${k}"]`); if (el) el.textContent = k ? projs.filter((r) => (proj(r)?.setup === 'easy') === (k === 'easy')).length : results.length; }
+    for (const k of ['', 'easy', 'advanced']) { const el = document.querySelector(`[data-scount="${k}"]`); if (el) if (el) el.textContent = k ? projs.filter((r) => (proj(r)?.setup === 'easy') === (k === 'easy')).length : ''; }
     const show = document.querySelector('[data-fshow]'); if (show) show.textContent = `Show ${shown.length} ${shown.length === 1 ? 'result' : 'results'}`;
     sub.textContent = results.length ? (shown.length === results.length ? count(results.length) : `${shown.length} of ${results.length}`) : '';
     list.innerHTML = shown.length ? shown.slice(0, 60).map(row).join('') :

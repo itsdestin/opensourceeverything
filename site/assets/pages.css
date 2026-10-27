@@ -16,6 +16,8 @@ a.card:focus-visible, a.fchip:focus-visible, a.btn:focus-visible { outline:2px s
 
 /* WHY flex with growing cards, not the grid: the last line's cards stretch to fill it, so a row never ends in an empty gap. */
 .row1.fill { display:flex; flex-wrap:wrap; gap:12px; }
+/* WHY a grid with a fixed number of columns (reviewer, round 5): flex rows stretched the last row's cards very wide and every card to the tallest in its row. */
+.gaplist { display:grid; grid-template-columns:repeat(auto-fill,minmax(300px,1fr)); gap:12px; align-items:start; }
 .row1.fill > .card { flex:1 1 280px; }
 .gcard { gap:8px; }
 /* WHY wrap: a group name beside its status pill would otherwise be cut off ("Professional netwo…"). */
