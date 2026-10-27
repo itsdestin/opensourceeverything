@@ -3655,7 +3655,7 @@
    },
    "works-in-browser": {
     "v": "no",
-    "note": "|Desktop app only"
+    "note": "Desktop app only"
    }
   },
   "peertube": {
@@ -6787,7 +6787,6 @@
    },
    "one-command-install": {
     "v": "yes",
-    "note": "|",
     "source": "https://raw.githubusercontent.com/node-red/node-red/HEAD/README.md"
    },
    "managed-cloud": {
@@ -9393,7 +9392,6 @@
    },
    "works-offline": {
     "v": "yes",
-    "note": "|",
     "source": "https://raw.githubusercontent.com/laurent22/joplin/HEAD/README.md"
    },
    "live-collab": {
@@ -10866,7 +10864,7 @@
    },
    "works-offline": {
     "v": "yes",
-    "note": "|Desktop app for Windows, Mac and Linux"
+    "note": "Desktop app for Windows, Mac and Linux"
    }
   },
   "libreoffice-calc": {
@@ -10880,7 +10878,6 @@
    },
    "pivot-tables": {
     "v": "yes",
-    "note": "|",
     "source": "https://raw.githubusercontent.com/LibreOffice/help/master/source/text/scalc/guide/datapilot.xhp"
    },
    "modern-formulas": {
@@ -10890,7 +10887,7 @@
    },
    "works-offline": {
     "v": "yes",
-    "note": "|Desktop app for Windows, Mac and Linux"
+    "note": "Desktop app for Windows, Mac and Linux"
    }
   },
   "mailspring": {
@@ -10988,17 +10985,14 @@
    },
    "style-tips": {
     "v": "yes",
-    "note": "|",
     "source": "https://languagetool.org/"
    },
    "browser-extension": {
     "v": "yes",
-    "note": "|",
     "source": "https://languagetool.org/"
    },
    "ai-rewrite": {
     "v": "yes",
-    "note": "|",
     "source": "https://languagetool.org/"
    }
   },
@@ -11013,22 +11007,20 @@
    },
    "no-server-needed": {
     "v": "yes",
-    "note": "|Free hosted plan with 5 documents a month",
+    "note": "Free hosted plan with 5 documents a month",
     "source": "https://documenso.com/pricing"
    },
    "signing-order": {
     "v": "yes",
-    "note": "|",
     "source": "https://raw.githubusercontent.com/documenso/documenso/main/apps/docs/content/docs/concepts/signing-workflow.mdx"
    },
    "sign-audit-trail": {
     "v": "yes",
-    "note": "|",
     "source": "https://raw.githubusercontent.com/documenso/documenso/main/apps/docs/content/docs/concepts/signing-workflow.mdx"
    },
    "qualified-signature": {
     "v": "partly",
-    "note": " Planned | | eIDAS QES | Planned|Signs with certificates; advanced and qualified (eIDAS) levels are only planned",
+    "note": "Planned | | eIDAS QES | Planned|Signs with certificates; advanced and qualified (eIDAS) levels are only planned",
     "source": "https://raw.githubusercontent.com/documenso/documenso/main/apps/docs/content/docs/compliance/signature-levels.mdx"
    }
   },
@@ -11122,27 +11114,27 @@
    },
    "comments-suggestions": {
     "v": "yes",
-    "note": "|Comments plus tracked changes",
+    "note": "Comments plus tracked changes",
     "source": "https://github.com/ONLYOFFICE/DocumentServer"
    },
    "word-files": {
     "v": "yes",
-    "note": "|The project says it is fully compatible with Word's format",
+    "note": "The project says it is fully compatible with Word's format",
     "source": "https://github.com/ONLYOFFICE/DocumentServer"
    },
    "excel-files": {
     "v": "yes",
-    "note": "|The project says it is fully compatible with Excel's format",
+    "note": "The project says it is fully compatible with Excel's format",
     "source": "https://github.com/ONLYOFFICE/DocumentServer"
    },
    "pptx-files": {
     "v": "yes",
-    "note": "|The project says it is fully compatible with PowerPoint's format",
+    "note": "The project says it is fully compatible with PowerPoint's format",
     "source": "https://github.com/ONLYOFFICE/DocumentServer"
    },
    "pivot-tables": {
     "v": "yes",
-    "note": "|Pivot tables listed in the free edition",
+    "note": "Pivot tables listed in the free edition",
     "source": "https://github.com/ONLYOFFICE/DocumentServer"
    },
    "excel-macros": {
@@ -11152,7 +11144,7 @@
    },
    "slide-animations": {
     "v": "yes",
-    "note": "|Transitions and animations in the free edition",
+    "note": "Transitions and animations in the free edition",
     "source": "https://github.com/ONLYOFFICE/DocumentServer"
    },
    "presenter-view": {
@@ -11241,7 +11233,6 @@
    },
    "live-collab": {
     "v": "yes",
-    "note": "|",
     "source": "https://appflowy.com/"
    }
   },
@@ -11483,7 +11474,7 @@
    },
    "works-offline": {
     "v": "no",
-    "note": "|Web editor that runs from a server"
+    "note": "Web editor that runs from a server"
    }
   },
   "tuta": {
@@ -11828,7 +11819,7 @@
    },
    "no-server-needed": {
     "v": "yes",
-    "note": "|Join an existing server",
+    "note": "Join an existing server",
     "source": "https://joinmbin.org/"
    }
   },
@@ -12185,7 +12176,6 @@
    },
    "breach-alerts": {
     "v": "yes",
-    "note": "|",
     "source": "https://bitwarden.com/help/reports/"
    }
   },
@@ -12270,17 +12260,15 @@
     "source": "https://github.com/RocketChat/Rocket.Chat"
    },
    "phone-app": {
-    "v": "yes",
-    "note": "|"
+    "v": "yes"
    },
    "threads": {
     "v": "yes",
-    "note": "|",
     "source": "https://docs.rocket.chat/docs/threads"
    },
    "slack-import": {
     "v": "yes",
-    "note": "|Slack importer; Teams not confirmed",
+    "note": "Slack importer; Teams not confirmed",
     "source": "https://docs.rocket.chat/docs/import"
    }
   },
@@ -12354,7 +12342,7 @@
    },
    "security-updates": {
     "v": "yes",
-    "note": "|Ships each month's Android security patches",
+    "note": "Ships each month's Android security patches",
     "source": "https://grapheneos.org/releases"
    },
    "preinstalled": {
@@ -12378,7 +12366,7 @@
    },
    "no-server-needed": {
     "v": "yes",
-    "note": "|A public server is available",
+    "note": "A public server is available",
     "source": "https://meshcentral.com/"
    }
   },
@@ -12457,7 +12445,6 @@
    },
    "screen-share": {
     "v": "yes",
-    "note": "|",
     "source": "https://element.io/personal"
    },
    "chat-bots": {
@@ -12509,7 +12496,7 @@
    },
    "google-apps-optional": {
     "v": "yes",
-    "note": "|Google apps are an optional add-on package",
+    "note": "Google apps are an optional add-on package",
     "source": "https://wiki.lineageos.org/faq/"
    }
   },
@@ -12519,7 +12506,7 @@
    },
    "no-server-needed": {
     "v": "yes",
-    "note": "|Install the app; public servers used by default"
+    "note": "Install the app; public servers used by default"
    }
   },
   "clamav": {
@@ -12565,7 +12552,7 @@
    },
    "screen-share": {
     "v": "yes",
-    "note": "|Content (screen) sharing listed as a main feature",
+    "note": "Content (screen) sharing listed as a main feature",
     "source": "https://raw.githubusercontent.com/jitsi/jitsi-meet/HEAD/README.md"
    }
   },
@@ -12589,7 +12576,7 @@
    },
    "no-server-needed": {
     "v": "yes",
-    "note": "|Install the app and sign up"
+    "note": "Install the app and sign up"
    }
   },
   "loops": {
@@ -12620,12 +12607,10 @@
    },
    "many-phones": {
     "v": "yes",
-    "note": "|",
     "source": "https://doc.e.foundation/devices"
    },
    "easy-installer": {
     "v": "yes",
-    "note": "|",
     "source": "https://e.foundation/e-os/"
    },
    "google-apps-optional": {
@@ -12651,11 +12636,10 @@
    },
    "no-server-needed": {
     "v": "yes",
-    "note": "|Install the app"
+    "note": "Install the app"
    },
    "session-file-transfer": {
     "v": "yes",
-    "note": "|",
     "source": "https://uvnc.com/"
    }
   },
@@ -12721,7 +12705,6 @@
    },
    "federated": {
     "v": "yes",
-    "note": "|",
     "source": "https://raw.githubusercontent.com/lowercasename/gathio/HEAD/README.md"
    }
   },
@@ -12756,7 +12739,6 @@
    },
    "syncs-devices": {
     "v": "yes",
-    "note": "|",
     "source": "https://www.firefox.com/en-US/features/sync/"
    },
    "full-ad-block-extensions": {
@@ -12843,7 +12825,6 @@
    },
    "disappearing-messages": {
     "v": "yes",
-    "note": "|",
     "source": "https://signal.org/blog/disappearing-messages/"
    },
    "self-hostable": {
@@ -12997,7 +12978,6 @@
    },
    "disappearing-messages": {
     "v": "yes",
-    "note": "|",
     "source": "https://raw.githubusercontent.com/simplex-chat/simplex-chat/HEAD/README.md"
    }
   },
@@ -13016,7 +12996,7 @@
    },
    "no-server-needed": {
     "v": "yes",
-    "note": "|Join an existing server",
+    "note": "Join an existing server",
     "source": "https://join.piefed.social/"
    }
   },
@@ -13056,7 +13036,6 @@
    },
    "syncs-devices": {
     "v": "yes",
-    "note": "|",
     "source": "https://brave.com/privacy/browser/"
    },
    "no-tracking": {
@@ -13151,17 +13130,15 @@
    },
    "ad-blocking": {
     "v": "yes",
-    "note": "|",
     "source": "https://librewolf.net/docs/features/"
    },
    "full-ad-block-extensions": {
     "v": "yes",
-    "note": "|Ships with full uBlock Origin",
+    "note": "Ships with full uBlock Origin",
     "source": "https://librewolf.net/docs/faq/"
    },
    "no-tracking": {
     "v": "yes",
-    "note": "|",
     "source": "https://librewolf.net/docs/features/"
    }
   },
@@ -13183,19 +13160,17 @@
    },
    "share-with-others": {
     "v": "yes",
-    "note": "|",
     "source": "https://raw.githubusercontent.com/dani-garcia/vaultwarden/HEAD/README.md"
    },
    "no-server-needed": {
     "v": "no",
-    "note": "|You run the server yourself",
+    "note": "You run the server yourself",
     "source": "https://raw.githubusercontent.com/dani-garcia/vaultwarden/HEAD/README.md"
    }
   },
   "ubuntu": {
    "long-support": {
     "v": "yes",
-    "note": "|",
     "source": "https://ubuntu.com/download/desktop"
    }
   },

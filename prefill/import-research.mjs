@@ -39,7 +39,7 @@ for (const f of readdirSync(join(src, 'features')).filter((f) => f.endsWith('.js
       if (!draft.tags[t]) { errors.push(`features/${f}: ${p0} answers unknown tag ${t}`); continue; }
       if (!['yes', 'partly', 'no'].includes(v.v)) continue; // blank = unknown
       // WHY "site data" is dropped as a source: it is not a link a visitor can open.
-      (answers[p] ??= {})[t] = { v: v.v, ...(v.note ? { note: v.note } : {}), ...(/^https?:/.test(v.source ?? '') ? { source: v.source } : {}) };
+      (answers[p] ??= {})[t] = { v: v.v, ...(v.note?.replace(/^[|\s]+/, '') ? { note: v.note.replace(/^[|\s]+/, '') } : {}) /* WHY: some research notes start with a stray '|' from table copying */, ...(/^https?:/.test(v.source ?? '') ? { source: v.source } : {}) };
     }
   }
 }
