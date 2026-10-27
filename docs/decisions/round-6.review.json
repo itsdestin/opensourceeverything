@@ -1,0 +1,263 @@
+{
+ "title": "Round 6: your five notes from round 5, applied",
+ "key": "ose-round-6",
+ "out": "round-6.review.html",
+ "images": "images/round-6.review",
+ "runs": {
+  "after": "runs-redesign-9/after"
+ },
+ "labels": {
+  "after": "Now"
+ },
+ "themes": [
+  "light"
+ ],
+ "theme": "fixed",
+ "crops": {
+  "group-desktop": [
+   "ose",
+   "group-desktop",
+   "1440x900+0+0"
+  ],
+  "group-phone": [
+   "ose",
+   "group-phone",
+   "390x844+0+0"
+  ],
+  "group-filter-sheet-phone": [
+   "ose",
+   "group-filter-sheet-phone",
+   "390x844+0+0"
+  ],
+  "project-desktop": [
+   "ose",
+   "project-desktop",
+   "1440x900+0+0"
+  ],
+  "project-phone": [
+   "ose",
+   "project-phone",
+   "390x844+0+0"
+  ],
+  "search-desktop": [
+   "ose",
+   "search-desktop",
+   "1440x900+0+0"
+  ],
+  "search-phone": [
+   "ose",
+   "search-phone",
+   "390x844+0+0"
+  ],
+  "claim-signedout-desktop": [
+   "ose",
+   "claim-signedout-desktop",
+   "1440x900+0+0"
+  ],
+  "claim-signedout-phone": [
+   "ose",
+   "claim-signedout-phone",
+   "390x844+0+0"
+  ]
+ },
+ "steps": [
+  {
+   "id": "R6-group",
+   "surface": "Group pages",
+   "path": "Documents, computer",
+   "crop": "group-desktop",
+   "runs": [
+    "after"
+   ],
+   "new": true,
+   "headline": "Filters now sit at the right, with Cards/Compare just to their left.",
+   "changed": "Your note: \"filters right\u2026 toggle to the left of filters\".",
+   "notice": "Chip rows only fade when there's more to scroll to.",
+   "risk": "None worth noting.",
+   "highlight": {
+    "box": [
+     1,
+     1,
+     98,
+     98
+    ]
+   }
+  },
+  {
+   "id": "R6-group-phone",
+   "surface": "Group pages",
+   "path": "Documents, phone",
+   "crop": "group-phone",
+   "runs": [
+    "after"
+   ],
+   "new": true,
+   "headline": "On phones: one Filter button, and bigger cards.",
+   "changed": "Larger picture, two-line description; long names wrap instead of being cut off.",
+   "notice": "The three menus and the switch are gone from the page.",
+   "risk": "None worth noting.",
+   "highlight": {
+    "box": [
+     1,
+     1,
+     98,
+     98
+    ]
+   }
+  },
+  {
+   "id": "R6-sheet",
+   "surface": "Group pages",
+   "path": "Filter sheet, phone",
+   "crop": "group-filter-sheet-phone",
+   "runs": [
+    "after"
+   ],
+   "new": true,
+   "headline": "The Filter button opens a sheet with Cards/Compare, devices and must-haves.",
+   "changed": "Clear and \"Show 2 results\" pinned at the bottom.",
+   "notice": "Devices pick one; must-haves pick several.",
+   "risk": "None worth noting.",
+   "highlight": {
+    "box": [
+     1,
+     1,
+     98,
+     98
+    ]
+   }
+  },
+  {
+   "id": "R6-project",
+   "surface": "Project pages",
+   "path": "Firefox, computer",
+   "crop": "project-desktop",
+   "runs": [
+    "after"
+   ],
+   "new": true,
+   "headline": "Features now come before Family.",
+   "changed": "Your note: \"put features above family\".",
+   "notice": "Same order on phones.",
+   "risk": "None worth noting.",
+   "highlight": {
+    "box": [
+     1,
+     1,
+     98,
+     98
+    ]
+   }
+  },
+  {
+   "id": "R6-project-phone",
+   "surface": "Project pages",
+   "path": "Firefox, phone",
+   "crop": "project-phone",
+   "runs": [
+    "after"
+   ],
+   "new": true,
+   "headline": "On phones the folded sections follow the same order.",
+   "changed": "Features, Family, Screenshots, Listed in, How to help.",
+   "notice": "Tap a row to open it.",
+   "risk": "None worth noting.",
+   "highlight": {
+    "box": [
+     1,
+     1,
+     98,
+     98
+    ]
+   }
+  },
+  {
+   "id": "R6-search",
+   "surface": "Search",
+   "path": "Search, computer",
+   "crop": "search-desktop",
+   "runs": [
+    "after"
+   ],
+   "new": true,
+   "headline": "A \"Results\" heading with the count under it.",
+   "changed": "The count moved out of the search bar.",
+   "notice": "Groups first, then projects.",
+   "risk": "None worth noting.",
+   "highlight": {
+    "box": [
+     1,
+     1,
+     98,
+     98
+    ]
+   }
+  },
+  {
+   "id": "R6-search-phone",
+   "surface": "Search",
+   "path": "Search, phone",
+   "crop": "search-phone",
+   "runs": [
+    "after"
+   ],
+   "new": true,
+   "headline": "Same heading and count on phones.",
+   "changed": "Nothing else changed.",
+   "notice": "More results per screen.",
+   "risk": "None worth noting.",
+   "highlight": {
+    "box": [
+     1,
+     1,
+     98,
+     98
+    ]
+   }
+  },
+  {
+   "id": "R6-claim",
+   "surface": "Claim your project",
+   "path": "Signed out, computer",
+   "crop": "claim-signedout-desktop",
+   "runs": [
+    "after"
+   ],
+   "new": true,
+   "headline": "The sign-in card sits in the middle of the page.",
+   "changed": "Your note: \"center this in middle of page\".",
+   "notice": "Footer stays at the bottom.",
+   "risk": "None worth noting.",
+   "highlight": {
+    "box": [
+     1,
+     1,
+     98,
+     98
+    ]
+   }
+  },
+  {
+   "id": "R6-claim-phone",
+   "surface": "Claim your project",
+   "path": "Signed out, phone",
+   "crop": "claim-signedout-phone",
+   "runs": [
+    "after"
+   ],
+   "new": true,
+   "headline": "Centred on phones too.",
+   "changed": "One full-width Sign in button.",
+   "notice": "Footer scrolls sideways above the tab bar.",
+   "risk": "None worth noting.",
+   "highlight": {
+    "box": [
+     1,
+     1,
+     98,
+     98
+    ]
+   }
+  }
+ ]
+}
