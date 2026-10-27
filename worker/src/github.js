@@ -47,7 +47,19 @@ export const suggestionView = (i, extra = {}) => ({
   status: suggestionStatus(i), ...extra,
 });
 
+// Is this a public member of the organization? GitHub answers 204 (yes) or 404 (no, or private) with no body, so this reads only the status.
+// WHY: a public, token-free signal that the person really belongs to the organization they claim a project of.
+export async function isPublicMember(env, org, login) {
+  const base = env.GITHUB_API ?? 'https://api.github.com';
+  const r = await fetch(`${base}/orgs/${encodeURIComponent(org)}/public_members/${encodeURIComponent(login)}`, { headers: { 'User-Agent': 'opensourceeverything-api', ...(env.GITHUB_READ_TOKEN ? { Authorization: `Bearer ${env.GITHUB_READ_TOKEN}` } : {}) }, redirect: 'manual' });
+  if (r.status === 204) return true;
+  if (r.status === 404 || r.status === 302) return false;
+  throw Object.assign(new Error(`GitHub answered ${r.status}`), { github: r.status });
+}
+
 // The proof file's text from a project's own public repository; null when it isn't there.
+// WHY the care: the address is built from what a person typed. Only the three code hosts are allowed (parseRepo), a redirect is
+// followed only when it stays on the same site, and at most 4 KB is read, so this can't be turned into a way to fetch other things.
 export async function proofFile(env, r, file) {
   const raw = {
     'github.com': `https://raw.githubusercontent.com/${r.owner}/${r.name}/HEAD/${file}`,
@@ -55,9 +67,19 @@ export async function proofFile(env, r, file) {
     'gitlab.com': `https://gitlab.com/${r.owner}/${r.name}/-/raw/HEAD/${file}`,
   }[r.host];
   // WHY an override: tests point this at a stand-in; production never sets it.
-  const url = env.PROOF_RAW ? `${env.PROOF_RAW}/${r.host}/${r.owner}/${r.name}/${file}` : raw;
-  const res = await fetch(url, { headers: { 'User-Agent': 'opensourceeverything-api' }, redirect: 'follow' });
-  if (res.status === 404) return null;
+  let url = env.PROOF_RAW ? `${env.PROOF_RAW}/${r.host}/${r.owner}/${r.name}/${file}` : raw;
+  let res;
+  for (let hops = 0; hops < 4; hops++) {
+    res = await fetch(url, { headers: { 'User-Agent': 'opensourceeverything-api' }, redirect: 'manual' });
+    if (res.status < 300 || res.status >= 400) break;
+    const next = new URL(res.headers.get('Location') ?? '', url);
+    if (next.origin !== new URL(url).origin && !(next.protocol === 'https:' && /(^|\.)(github\.com|githubusercontent\.com|gitlab\.com|codeberg\.org)$/.test(next.hostname))) return null;
+    url = next.href;
+  }
+  if (res.status === 404 || (res.status >= 300 && res.status < 400)) return null;
   if (!res.ok) throw Object.assign(new Error(`${r.host} answered ${res.status}`), { github: res.status });
-  return (await res.text()).slice(0, 2000);
+  const reader = res.body.getReader(); let got = ''; const dec = new TextDecoder();
+  while (got.length < 4096) { const { done, value } = await reader.read(); if (done) break; got += dec.decode(value, { stream: true }); }
+  reader.cancel().catch(() => {});
+  return got.slice(0, 4096);
 }

@@ -39,3 +39,10 @@ test('a second suggestion for the same thing is flagged against the earlier open
   const earlier = check(first, { user: { created_at: OLD }, open: [first, second] });
   assert.doesNotMatch(earlier.comment, /same thing/); assert.deepEqual(earlier.labels.add, ['robot-ok']);
 });
+
+test('bad language or a shortened link in a suggestion is held for a mod with the reason', () => {
+  const rude = check(issue(50, 'Zorblax shit Draw', 'Digital painting'), { user: { created_at: OLD }, open: [] });
+  assert.deepEqual(rude.labels.add, ['needs-mod']); assert.match(rude.comment, /text filter flagged it \(bad language\)/);
+  const short = check(issue(51, 'Zorblax Draw bit.ly/abc', 'Digital painting'), { user: { created_at: OLD }, open: [] });
+  assert.deepEqual(short.labels.add, ['needs-mod']); assert.match(short.comment, /link in it is not allowed/);
+});
