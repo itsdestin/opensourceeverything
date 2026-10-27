@@ -332,8 +332,10 @@ body:has(.signin-card) .top .acct { display:none; }
   .card.pic .rv-head .whybtn { display:none; }
 }
 .sres-count { display:none; }
-/* Search results: heading with the count as its grey line. */
+/* Search results: "Results" at the left, the count on the same line at the right (Destin, round 6). */
 .sres-list { margin-top:4px; }
+.sec > .sec-head.sres-head { flex-direction:row; align-items:baseline; justify-content:space-between; }
+.sres-head [data-sres-sub] { margin:0; }
 /* Claim sign-in page: the card sits in the middle of the window. */
 .page:has(.signin-card) { justify-content:center; align-items:center; min-height:calc(100vh - 120px); }
 .page:has(.signin-card) .signin-card { margin:0 auto; }

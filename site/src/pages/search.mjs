@@ -28,7 +28,8 @@ export default function searchPage() {
     </div>
   </div>
   <section class="surface sec">
-    <div class="sec-head"><div><h2 class="h-large">Results</h2><p class="desc12" data-sres-sub aria-live="polite"></p></div></div>
+    <!-- WHY the count is a sibling of the heading (Destin, round 6: "put count on right side in line with results"): .sec-head spreads its children to both ends. -->
+    <div class="sec-head sres-head"><h2 class="h-large">Results</h2><p class="desc12" data-sres-sub aria-live="polite"></p></div>
     <div class="sres-list" data-sres-list><div class="empty">Loading…</div></div>
     <noscript><p class="desc12">Search needs JavaScript. Browse by <a href="./">category</a> instead.</p></noscript>
   </section>`;
