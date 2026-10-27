@@ -177,12 +177,21 @@
   },
   "evernote": {
    "app": "Evernote",
-   "export": [],
-   "exportSource": null,
-   "formats": [
-    "ENEX (.enex) or HTML"
+   "export": [
+    "In the Evernote desktop app for Mac or Windows (not the web), select the notes or a notebook.",
+    "Choose Export and pick ENEX, single-page HTML, or multi-page HTML.",
+    "Save the file."
    ],
-   "wontComeOver": [],
+   "exportSource": "https://help.evernote.com/hc/en-us/articles/209005557-Export-Notes-and-Notebooks-as-ENEX-or-HTML",
+   "formats": [
+    "ENEX (.enex)",
+    "HTML (single-page or multi-page)"
+   ],
+   "wontComeOver": [
+    "Export works for up to 100 notes at a time or whole notebooks.",
+    "PDF export shows attachments only as pictures; choose ENEX or HTML to keep attachments as real files.",
+    "Evernote re-import does not preserve notebook structure (Evernote's page)."
+   ],
    "opensIn": [
     {
      "project": "joplin",
@@ -307,14 +316,21 @@
   },
   "twitter-x": {
    "app": "Twitter / X",
-   "export": [],
-   "exportSource": null,
-   "formats": [],
+   "export": [
+    "Open Settings and privacy, then Account, then Your X data (or Download an archive of your data).",
+    "Confirm it is you with the code sent to your email or phone, then request the archive.",
+    "When X emails you, click Download while logged in and save the .zip."
+   ],
+   "exportSource": "https://help.x.com/en/managing-your-account/how-to-download-your-x-archive",
+   "formats": [
+    "ZIP of HTML and JSON files: profile, posts, Direct Messages, media, followers"
+   ],
    "wontComeOver": [
-    "Mastodon cannot import posts or media; only follows, lists, blocks and mutes in its own CSV format."
+    "Mastodon cannot import posts or media; only follows, lists, blocks and mutes in its own CSV format.",
+    "It may take a few days to prepare the archive."
    ],
    "opensIn": [],
-   "tip": "Follows can be moved if you first convert them to Mastodon's CSV format.",
+   "tip": "Follows can be moved if you first convert them to Mastodon's CSV format. Mastodon docs: https://docs.joinmastodon.org/user/moving/",
    "skip": null
   },
   "facebook": {
@@ -1066,6 +1082,1129 @@
    "opensIn": [],
    "tip": null,
    "skip": "business service"
+  },
+  "microsoft-word": {
+   "app": "Microsoft Word",
+   "export": [
+    "Open the document and go to File, then Save a Copy (or Save As).",
+    "Click Browse and pick a folder.",
+    "In the Save as type list choose OpenDocument Text, name the file and click Save."
+   ],
+   "exportSource": "https://support.microsoft.com/en-gb/office/use-word-to-open-or-save-a-document-in-the-opendocument-text-odt-format-20e5189f-86f8-4d8f-ae74-ea06b7df3b0e",
+   "formats": [
+    "Word (.docx)",
+    "OpenDocument Text (.odt)"
+   ],
+   "wontComeOver": [
+    "Some formatting may be lost when saving as .odt.",
+    "Track Changes, document protection, macros, themes and watermarks are not supported in .odt (Microsoft's differences list)."
+   ],
+   "opensIn": [
+    {
+     "project": "libreoffice-writer",
+     "note": "Opens Word files (.doc, .docx) in Writer. Word macros (VBA) must be edited to run.",
+     "source": "https://help.libreoffice.org/latest/en-US/text/shared/guide/ms_user.html",
+     "tag": "word-files"
+    }
+   ],
+   "tip": "Microsoft says to save a .docx copy first, then the .odt, so you keep your original.",
+   "skip": null
+  },
+  "microsoft-excel": {
+   "app": "Microsoft Excel",
+   "export": [
+    "Open the workbook and go to File, then Save As.",
+    "Choose where to save it, then in the Save as type list pick OpenDocument Spreadsheet (.ods) or CSV.",
+    "Name the file and click Save."
+   ],
+   "exportSource": "https://support.microsoft.com/office/6a16c862-4a36-48f9-a300-c2ca0065286e",
+   "formats": [
+    "Excel (.xlsx)",
+    "OpenDocument Spreadsheet (.ods)",
+    "CSV (active sheet only)",
+    "PDF"
+   ],
+   "wontComeOver": [
+    "Formatting might be lost when saving as .ods.",
+    "CSV and other text formats save only the active sheet and lose all formatting.",
+    "Standard .xlsx cannot store macro code; macros are in .xlsm and need rewriting in other programs."
+   ],
+   "opensIn": [
+    {
+     "project": "libreoffice-calc",
+     "note": "Opens Excel files (.xls, .xlsx) in Calc. With a few exceptions Excel macros cannot run unchanged.",
+     "source": "https://help.libreoffice.org/latest/en-US/text/shared/guide/ms_user.html",
+     "tag": "excel-files"
+    }
+   ],
+   "tip": "Reopen the .ods and compare it with your .xlsx before relying on it.",
+   "skip": null
+  },
+  "microsoft-powerpoint": {
+   "app": "Microsoft PowerPoint",
+   "export": [
+    "Go to File, then Save As.",
+    "Select Browse, choose a folder and name the file.",
+    "In the Save as type list choose OpenDocument Presentation (.odp) (it is at the end of the list), then Save."
+   ],
+   "exportSource": "https://support.microsoft.com/powerpoint/save-your-presentation-file",
+   "formats": [
+    "PowerPoint (.pptx)",
+    "OpenDocument Presentation (.odp)",
+    "PDF"
+   ],
+   "wontComeOver": [],
+   "opensIn": [
+    {
+     "project": "libreoffice-impress",
+     "note": "Opens PowerPoint files (.ppt, .pps, .pptx) in Impress.",
+     "source": "https://help.libreoffice.org/latest/en-US/text/shared/guide/ms_user.html",
+     "tag": "pptx-files"
+    }
+   ],
+   "tip": null,
+   "skip": null
+  },
+  "microsoft-onenote": {
+   "app": "Microsoft OneNote",
+   "export": [
+    "In the desktop app open the page and choose File, then Export.",
+    "Under Export Current choose what to export, then PDF, and click Export.",
+    "For a whole notebook to move into Joplin, choose Notebook and OneNote Package (.onepkg) in the Windows desktop app."
+   ],
+   "exportSource": "https://support.microsoft.com/en-us/onenote/onenote-help-and-learning/export-notes-from-onenote-as-a-pdf",
+   "formats": [
+    "PDF",
+    "OneNote Package (.onepkg)",
+    "OneNote section (.one/.onex)"
+   ],
+   "wontComeOver": [
+    "OneDrive's website cannot download a OneNote notebook as a zip: a folder holding one returns a zip with an error text file.",
+    "PDF export keeps the look but not editable notes."
+   ],
+   "opensIn": [
+    {
+     "project": "joplin",
+     "note": "Imports OneNote through File > Import > ZIP - OneNote Notebook (needs Joplin 3.5.5 or later for desktop exports). .onepkg import works only when Joplin runs on Windows.",
+     "source": "https://joplinapp.org/help/apps/import_export",
+     "tag": "notes-import"
+    }
+   ],
+   "tip": "The .onepkg and .one routes come from Joplin's import page; the Microsoft page I could read only describes PDF.",
+   "skip": null
+  },
+  "microsoft-outlook": {
+   "app": "Microsoft Outlook",
+   "export": [
+    "In classic Outlook choose File, then Open & Export, then Import/Export.",
+    "Choose Export to a file, then Outlook Data File (.pst), then pick one account (tick Include subfolders).",
+    "Browse to a folder (not a OneDrive folder), name the file and click Finish. New Outlook: Settings, then Files, then Export, then Get started."
+   ],
+   "exportSource": "https://support.microsoft.com/outlook/export-emails-contacts-and-calendar-items-to-outlook-using-a-pst-file",
+   "formats": [
+    "Outlook Data File (.pst)"
+   ],
+   "wontComeOver": [
+    "Folder properties, message rules and blocked-sender lists are not exported.",
+    "By default Outlook holds only the past 1 year of mail on your computer; set the sync slider to All first, or you export only what is cached.",
+    "Only one account can be exported at a time."
+   ],
+   "opensIn": [],
+   "tip": "Mozilla's community answers say Thunderbird has no built-in .pst import (it reads from an installed Outlook), so a converter is needed; I found no official page for it.",
+   "skip": null
+  },
+  "microsoft-teams": {
+   "app": "Microsoft Teams",
+   "export": [
+    "For personal-use Teams, sign in to teams.live.com/dataexport with your Microsoft account.",
+    "Choose Chat history, Media, or both, then select Submit request and Continue.",
+    "When it is ready, select Download."
+   ],
+   "exportSource": "https://support.microsoft.com/en-us/teams/free/settings/export-or-delete-your-data-in-microsoft-teams-free",
+   "formats": [
+    "A .tar file holding messages.json and your files",
+    "Contacts as CSV",
+    "Shared calendar events as JSON"
+   ],
+   "wontComeOver": [
+    "Chats arrive as a data file (messages.json), not as a conversation you can open in another chat app.",
+    "If you were removed from a community you cannot export its data.",
+    "These steps are for personal-use Teams; I found no official export steps for work or school accounts."
+   ],
+   "opensIn": [],
+   "tip": null,
+   "skip": null
+  },
+  "microsoft-onedrive": {
+   "app": "Microsoft OneDrive",
+   "export": [
+    "Open OneDrive on the web and open the folder.",
+    "Select everything (Ctrl+A) or select nothing to take the whole folder, then click Download.",
+    "Save the .zip file when your browser asks."
+   ],
+   "exportSource": "https://support.microsoft.com/en-us/onedrive/download-files-and-folders-from-onedrive-or-sharepoint",
+   "formats": [
+    "Your original files in a .zip"
+   ],
+   "wontComeOver": [
+    "OneNote notebooks cannot be downloaded this way.",
+    "Limits: 250 GB per file, 10,000 files per download.",
+    "Files protected by sensitivity labels over 4 MB are left out of the zip."
+   ],
+   "opensIn": [],
+   "tip": null,
+   "skip": null
+  },
+  "adobe-photoshop": {
+   "app": "Adobe Photoshop",
+   "export": [
+    "Open the file and choose File, then Save a Copy (or Save As).",
+    "In the format list choose Photoshop (PSD) to keep layers, effects and masks. TIFF can also keep layers.",
+    "For files over 2 GB use Large Document Format (PSB)."
+   ],
+   "exportSource": "https://helpx.adobe.com/photoshop/using/saving-images.html",
+   "formats": [
+    "Photoshop (.psd, .psb)",
+    "TIFF",
+    "PNG",
+    "JPEG"
+   ],
+   "wontComeOver": [
+    "Saving as PNG flattens layers and edits into one layer.",
+    "PSD files cap at 2 GB; PSD has no public spec, so other programs never read it 100% (Krita's manual)."
+   ],
+   "opensIn": [
+    {
+     "project": "krita",
+     "note": "Opens and saves PSD: raster layers, blend modes, layer styles, groups, text and transparency masks. Transform masks are not loaded or saved; Krita 5.3 asks whether to load text as text or as a paint layer.",
+     "source": "https://docs.krita.org/en/general_concepts/file_formats/file_psd.html",
+     "tag": "psd-files"
+    }
+   ],
+   "tip": "Krita's manual itself suggests .ora or .tiff over PSD when you can.",
+   "skip": null
+  },
+  "adobe-lightroom": {
+   "app": "Adobe Lightroom",
+   "export": [
+    "In Lightroom Classic select your photos and choose File, then Export.",
+    "Under file type pick Original to get each photo in its captured format (the Lightroom desktop app also offers JPG, TIF, DNG and Original).",
+    "Edits to raw files are stored in XMP sidecar files; turn on Automatically Write Changes Into XMP in Lightroom Classic so they exist."
+   ],
+   "exportSource": "https://helpx.adobe.com/lu_en/lightroom-classic/desktop/export-photos/export-files-disk-or-cd.html",
+   "formats": [
+    "Original files",
+    "JPEG, TIFF, DNG",
+    "XMP sidecar files for raw photos"
+   ],
+   "wontComeOver": [
+    "Raw files keep their edits in a separate XMP sidecar; JPEG, TIFF, PSD and DNG get it written inside the file.",
+    "Edits carry over only partly: other programs read some data and need further adjustment."
+   ],
+   "opensIn": [
+    {
+     "project": "darktable",
+     "note": "Reads Lightroom's .xmp sidecars on import: tags, color labels, ratings and GPS load; edits migrate only partly and often need adjusting. Use Add to library, not Copy & import, or the sidecar is ignored.",
+     "source": "https://docs.darktable.org/usermanual/development/en/overview/sidecar-files/sidecar-import/"
+    }
+   ],
+   "tip": "Adobe's sidecar page: https://helpx.adobe.com/lightroom-classic/desktop/organize-photos-in-lightroom-classic/create-xmp-acr-files.html",
+   "skip": null
+  },
+  "adobe-premiere-pro": {
+   "app": "Adobe Premiere Pro",
+   "export": [
+    "Save the project and make sure all media is linked.",
+    "Use the File menu's export options to export the project or sequence as Final Cut Pro XML.",
+    "Check the translation log file afterwards for conversion issues."
+   ],
+   "exportSource": "https://helpx.adobe.com/premiere/desktop/render-and-export/export-files/export-a-project-as-a-final-cut-pro-xml-file.html",
+   "formats": [
+    "Final Cut Pro XML",
+    "OTIO (sequence export, recent update)"
+   ],
+   "wontComeOver": [
+    "Only a few Premiere effects and features transfer.",
+    "Audio pan, gain and level changes may not transfer accurately; complex effects and transitions may not translate exactly."
+   ],
+   "opensIn": [],
+   "tip": "I could not verify from an editor's own docs that Kdenlive, Shotcut or OpenShot open this XML, so no alternative is listed.",
+   "skip": null
+  },
+  "adobe-illustrator": {
+   "app": "Adobe Illustrator",
+   "export": [
+    "Choose File, then Save As, and pick SVG for a file other programs can edit.",
+    "Or save the .ai file with Create PDF Compatible File ticked, so programs that read the PDF layer can open it.",
+    "Multi-artboard files: only the active artboard is saved to SVG."
+   ],
+   "exportSource": "https://helpx.adobe.com/illustrator/using/saving-artwork.html",
+   "formats": [
+    "Illustrator (.ai)",
+    "SVG / SVGZ",
+    "PDF"
+   ],
+   "wontComeOver": [
+    "You cannot save each artboard as its own SVG.",
+    "Effects placed after an SVG effect turn the output into a raster object.",
+    "Illustrator-only data (layers, path effects, mesh gradients) sits in a stream Inkscape does not read; gradient meshes are approximated."
+   ],
+   "opensIn": [
+    {
+     "project": "inkscape",
+     "note": "Opens modern .ai files through its PDF importer; transparency modes do not work and gradient meshes are approximated. Older (PostScript) .ai files need picking the file type in File > Open.",
+     "source": "https://wiki.inkscape.org/wiki/Inkscape_for_Adobe_Illustrator_users",
+     "tag": "ai-files"
+    }
+   ],
+   "tip": null,
+   "skip": null
+  },
+  "adobe-indesign": {
+   "app": "Adobe InDesign",
+   "export": [
+    "Open the document and choose File, then Export.",
+    "Pick InDesign Markup (IDML) from the format menu and save."
+   ],
+   "exportSource": "https://helpx.adobe.com/indesign/desktop/troubleshoot/file-and-output-issues/damaged-file-errors.html",
+   "formats": [
+    "InDesign Markup (.idml)",
+    "PDF"
+   ],
+   "wontComeOver": [
+    "Not every InDesign object type is imported by Scribus (the importer's own description)."
+   ],
+   "opensIn": [
+    {
+     "project": "scribus",
+     "note": "Imports InDesign IDML and IDMS (since 1.5.0). It converts InDesign objects into Scribus page items; not every object type is supported.",
+     "source": "https://w.scribus.net/wiki/index.php/1.5.0_Release",
+     "tag": "indesign-files"
+    }
+   ],
+   "tip": "Check fonts, images and page layout after import. Opensource.com's 2018 test found simple files fine and a book layout lost some styling (secondhand; not verified here).",
+   "skip": null
+  },
+  "adobe-acrobat": {
+   "app": "Adobe Acrobat",
+   "export": [
+    "Your documents are already PDF files, so they open in any PDF app as they are.",
+    "For editable copies, choose Convert in the top bar, pick Word, Excel or PowerPoint, then Convert and save.",
+    "To take only part, select text, right-click and choose Export Selection As."
+   ],
+   "exportSource": "https://helpx.adobe.com/acrobat/using/exporting-pdfs-file-formats.html",
+   "formats": [
+    "PDF",
+    "DOCX, DOC, XLSX, RTF, XML, HTML, CSV (converted copies)"
+   ],
+   "wontComeOver": [
+    "Converting PDF to Word or Excel in Acrobat requires a paid Export PDF subscription when done from Reader."
+   ],
+   "opensIn": [],
+   "tip": null,
+   "skip": null
+  },
+  "canva": {
+   "app": "Canva",
+   "export": [
+    "Open the design and click Share, then Download.",
+    "Pick a file type: PDF, PNG, SVG, or PPTX (presentations only).",
+    "Click Download."
+   ],
+   "exportSource": "https://www.canva.com/en_gb/help/download-file-types/",
+   "formats": [
+    "PDF (Standard or Print)",
+    "PNG",
+    "SVG",
+    "PPTX (presentations only)"
+   ],
+   "wontComeOver": [
+    "PPTX can look different in PowerPoint; fonts may need installing.",
+    "Transparent PNG and SVG need a paid Canva plan.",
+    "A flattened PDF cannot be edited easily."
+   ],
+   "opensIn": [
+    {
+     "project": "penpot",
+     "note": "Penpot's data model notes it can import SVG files, rebuilding elements as shapes with a best-effort guess for files not made in Penpot.",
+     "source": "https://help.penpot.app/technical-guide/developer/data-model/"
+    }
+   ],
+   "tip": "SVG is the choice that stays editable as shapes.",
+   "skip": null
+  },
+  "whatsapp": {
+   "app": "WhatsApp",
+   "export": [
+    "Open the chat, then More options, More, Export chat.",
+    "Choose Without media or Include media.",
+    "Pick where to send it (email or another app). It arrives as a .txt file."
+   ],
+   "exportSource": "https://faq.whatsapp.com/1180414079177245/",
+   "formats": [
+    "Text file (.txt) with optional recent media"
+   ],
+   "wontComeOver": [
+    "An exported chat is a text file and cannot be re-imported to restore the chat.",
+    "With media, only the latest 10,000 messages are sent; without media, 40,000.",
+    "Export is not a backup; WhatsApp's backup is separate."
+   ],
+   "opensIn": [],
+   "tip": "None of the listed alternatives' docs that I could check say they import WhatsApp chats.",
+   "skip": null
+  },
+  "discord": {
+   "app": "Discord",
+   "export": [
+    "Open User Settings and go to the Privacy section to request your data.",
+    "Choose the categories you want (desktop or browser only; mobile requests everything).",
+    "Wait for the email with a download link, then download the ZIP."
+   ],
+   "exportSource": "https://support.discord.com/hc/en-us/articles/360004957991-Your-Discord-Data-Package",
+   "formats": [
+    "ZIP of JSON files"
+   ],
+   "wontComeOver": [
+    "It can take up to 30 days.",
+    "Files are JSON and open in a basic text editor, not in another chat app.",
+    "Your account must be email-verified, and the request is cancelled if you disable or delete the account before the link arrives."
+   ],
+   "opensIn": [],
+   "tip": null,
+   "skip": null
+  },
+  "dropbox": {
+   "app": "Dropbox",
+   "export": [
+    "Log in at dropbox.com and tick the files or folders you want.",
+    "Click Download. Folders arrive as .zip files.",
+    "For a big library, use the Dropbox desktop app to sync a full copy to your computer."
+   ],
+   "exportSource": "https://help.dropbox.com/sync/download-entire-folders",
+   "formats": [
+    "Your original files; folders as .zip"
+   ],
+   "wontComeOver": [
+    "A folder over 250 GB or with 10,000+ files cannot be downloaded from the website."
+   ],
+   "opensIn": [],
+   "tip": null,
+   "skip": null
+  },
+  "icloud-photos": {
+   "app": "iCloud Photos",
+   "export": [
+    "Go to iCloud.com/photos on a computer and select up to 1,000 items.",
+    "Click Download and choose Unmodified Originals, Highest Resolution, or Most Compatible.",
+    "On iPhone or iPad you can use Export Unmodified Originals in Photos."
+   ],
+   "exportSource": "https://support.apple.com/en-us/111762",
+   "formats": [
+    "Unmodified originals",
+    "Highest resolution",
+    "Most compatible"
+   ],
+   "wontComeOver": [
+    "You cannot export iCloud photos while Advanced Data Protection is on.",
+    "Selection is capped at 1,000 items per download."
+   ],
+   "opensIn": [],
+   "tip": "Apple also has a request page at privacy.apple.com for a full data copy (Apple Support 118257 and 102283).",
+   "skip": null
+  },
+  "icloud-drive": {
+   "app": "iCloud Drive",
+   "export": [
+    "Go to iCloud.com and open iCloud Drive.",
+    "Select the file and click Download. It lands in your downloads folder."
+   ],
+   "exportSource": "https://support.apple.com/en-us/108306",
+   "formats": [
+    "Your original files"
+   ],
+   "wontComeOver": [
+    "You cannot export while Advanced Data Protection is on (Apple's iCloud data pages)."
+   ],
+   "opensIn": [],
+   "tip": null,
+   "skip": null
+  },
+  "todoist": {
+   "app": "Todoist",
+   "export": [
+    "Open a project, click the three-dots icon at the top right, choose Manage data, then Export as CSV.",
+    "For everything at once, go to Settings, then Backups, and download a backup (a ZIP with one CSV per active project)."
+   ],
+   "exportSource": "https://www.todoist.com/help/articles/import-or-export-a-project-as-a-csv-file-in-todoist-YC8YvN",
+   "formats": [
+    "CSV",
+    "Backup ZIP of CSV files"
+   ],
+   "wontComeOver": [
+    "Completed tasks are left out of project CSV exports and backups; archived projects are skipped in backups.",
+    "Todoist's own CSV import is limited to 300 tasks per project."
+   ],
+   "opensIn": [
+    {
+     "project": "vikunja",
+     "note": "Has a Todoist migrator (Settings, Import from other services), but your Vikunja must be reachable from the internet and you create a Todoist developer app to link them.",
+     "source": "https://vikunja.io/docs/setup-todoist-migration",
+     "tag": "tasks-import"
+    }
+   ],
+   "tip": null,
+   "skip": null
+  },
+  "zoom": {
+   "app": "Zoom",
+   "export": [
+    "Cloud recordings: open Recordings in the Zoom web portal and download the files.",
+    "Meeting chat saved to the cloud: after processing, download the TXT chat file from the Recordings page.",
+    "Account owners can download Chat History reports as CSV or HTML (Reports, User activity reports, Chat history)."
+   ],
+   "exportSource": "https://support.zoom.com/hc/en/article?id=zm_kb&sysparm_article=KB0067312",
+   "formats": [
+    "Recording and chat TXT",
+    "Chat history CSV or HTML (admins)"
+   ],
+   "wontComeOver": [
+    "Cloud chat only holds messages sent to everyone; private messages are not saved there.",
+    "Chat History downloads are deleted after 30 days.",
+    "I found no single Zoom page for a full account export."
+   ],
+   "opensIn": [],
+   "tip": null,
+   "skip": null
+  },
+  "google-maps": {
+   "app": "Google Maps",
+   "export": [
+    "Go to takeout.google.com and tick Saved (your lists of places).",
+    "Choose a destination, frequency and file type, then create the export.",
+    "Wait for the email with the link."
+   ],
+   "exportSource": "https://support.google.com/maps/answer/7280933",
+   "formats": [],
+   "wontComeOver": [
+    "Google's Maps page does not say what file format the saved places arrive in."
+   ],
+   "opensIn": [
+    {
+     "project": "organic-maps",
+     "note": "Imports bookmarks and tracks in KML, KMZ, KMB, GPX and GeoJSON, including from third-party apps. Open the file with the app, or import a whole folder from the bookmarks screen.",
+     "source": "https://organicmaps.app/faq/bookmarks/how-to-import/"
+    }
+   ],
+   "tip": "Check what format Takeout gives you; Organic Maps only reads the formats listed.",
+   "skip": null
+  },
+  "google-keep": {
+   "app": "Google Keep",
+   "export": [
+    "Go to takeout.google.com and select only Keep.",
+    "Create the export and download it from the email link."
+   ],
+   "exportSource": "https://support.google.com/keep/answer/10017039",
+   "formats": [],
+   "wontComeOver": [
+    "Deleted notes are not in the export.",
+    "Work or school accounts may have some data unavailable."
+   ],
+   "opensIn": [],
+   "tip": "Includes text, attachments, colour, pinned or archived status, collaborators and labels, per Google. Joplin's import page does not list Keep.",
+   "skip": null
+  },
+  "google-meet": {
+   "app": "Google Meet",
+   "export": [
+    "Recordings and transcripts are saved in the organizer's Google Drive, in a Google Meet folder.",
+    "Select the file in Drive, then More, then Download.",
+    "Chat is saved as a separate .SBV file in the same place."
+   ],
+   "exportSource": "https://support.google.com/meet/answer/9308681",
+   "formats": [
+    "Video recording",
+    "Transcript",
+    "Chat (.SBV)"
+   ],
+   "wontComeOver": [
+    "Transcripts hold only spoken words, not chat messages.",
+    "Only the organizer's Drive receives them."
+   ],
+   "opensIn": [],
+   "tip": null,
+   "skip": null
+  },
+  "google-forms": {
+   "app": "Google Forms",
+   "export": [
+    "Open the form and go to the Responses tab.",
+    "Click More, then Download responses (.csv)."
+   ],
+   "exportSource": "https://support.google.com/docs/answer/139706",
+   "formats": [
+    "CSV"
+   ],
+   "wontComeOver": [
+    "The page describes exporting responses, not the form's questions.",
+    "With over 10,000 responses the CSV may not be sorted by time."
+   ],
+   "opensIn": [],
+   "tip": null,
+   "skip": null
+  },
+  "reddit": {
+   "app": "Reddit",
+   "export": [
+    "In a browser go to reddit.com/settings/data-request and log in.",
+    "Follow the instructions and submit the form.",
+    "Reddit sends a download link to your inbox (or verified email), up to 30 days later."
+   ],
+   "exportSource": "https://support.reddithelp.com/hc/en-us/articles/360043048352-How-do-I-request-a-copy-of-my-Reddit-data-and-information",
+   "formats": [
+    "CSV files (posts.csv, comments.csv, messages.csv, subscribed_subreddits.csv and more)"
+   ],
+   "wontComeOver": [
+    "Your posts and comments leave as spreadsheets; none of the listed alternatives' docs I checked say they import them."
+   ],
+   "opensIn": [],
+   "tip": "Posts, comments and votes can also be viewed in your account at any time, per Reddit.",
+   "skip": null
+  },
+  "youtube": {
+   "app": "YouTube",
+   "export": [
+    "Go to takeout.google.com and sign in. Keep only YouTube ticked.",
+    "Choose how to receive it and a file type, then Create export.",
+    "Download from the email link when it is ready."
+   ],
+   "exportSource": "https://support.google.com/accounts/answer/3024190",
+   "formats": [],
+   "wontComeOver": [
+    "Takeout does not download other people's videos.",
+    "The download link expires after about 7 days."
+   ],
+   "opensIn": [],
+   "tip": "The Google Takeout help page does not say which YouTube formats arrive; I did not find an alternative's page that imports them.",
+   "skip": null
+  },
+  "netflix": {
+   "app": "Netflix",
+   "export": [
+    "Go to netflix.com/account/getmyinfo and follow the instructions to request your personal information.",
+    "For viewing history only: on the Viewing activity page for a profile, use the download option at the bottom for a CSV."
+   ],
+   "exportSource": "https://help.netflix.com/en/node/100624",
+   "formats": [
+    "CSV (viewing activity)"
+   ],
+   "wontComeOver": [
+    "The full request can take up to 30 days.",
+    "Profile users who added their own email must email privacy@netflix.com, and the account owner is notified."
+   ],
+   "opensIn": [],
+   "tip": null,
+   "skip": null
+  },
+  "goodreads": {
+   "app": "Goodreads",
+   "export": [
+    "On the Goodreads website (not the mobile app) open My Books.",
+    "Under Tools choose Import and export, then Export Library.",
+    "When it finishes, click the dated link to download the .csv."
+   ],
+   "exportSource": "https://help.goodreads.com/s/article/000001100",
+   "formats": [
+    "CSV (your library); full account data as a ZIP of JSON files"
+   ],
+   "wontComeOver": [
+    "Mobile often cannot save the export link; use the desktop site.",
+    "Goodreads' full data download is JSON, a different format from the library CSV."
+   ],
+   "opensIn": [
+    {
+     "project": "open-library",
+     "note": "The Goodreads importer reads your exported shelf file into Reading Logs, but only for titles in Open Library's catalog that have ISBNs.",
+     "source": "https://blog.openlibrary.org/2020/12/13/importing-your-goodreads-accessing-them-with-open-librarys-apis/"
+    }
+   ],
+   "tip": "That Open Library note is from a 2020 blog post; check it still works.",
+   "skip": null
+  },
+  "grammarly": {
+   "app": "Grammarly",
+   "export": [
+    "Open your privacy settings and select Submit Request next to Personal Data Report.",
+    "Wait for the email (usually a few hours), then re-enter your credentials to view it. Access lasts seven days."
+   ],
+   "exportSource": "https://support.grammarly.com/hc/en-us/articles/27530062641293-Personal-data-report",
+   "formats": [],
+   "wontComeOver": [
+    "Grammarly says documents stored in your account can be downloaded by following its Help Center steps; I did not find those steps."
+   ],
+   "opensIn": [],
+   "tip": null,
+   "skip": null
+  },
+  "mailchimp": {
+   "app": "Mailchimp",
+   "export": [
+    "Go to Audience, click Export audience, then Export CSV (Owners and Admins only). You can export a segment or tag.",
+    "For campaign numbers: Campaigns, View report, Actions, Export CSV.",
+    "For everything: Account, Settings, Manage my data."
+   ],
+   "exportSource": "https://mailchimp.com/help/view-export-contacts/",
+   "formats": [
+    "CSV; possibly a ZIP with a CSV per contact type (subscribed, unsubscribed, non-subscribed, cleaned)"
+   ],
+   "wontComeOver": [
+    "Contact exports do not include campaign performance data.",
+    "Exports stay available for 30 days.",
+    "Standard campaign reports leave out per-subscriber opens and clicks."
+   ],
+   "opensIn": [
+    {
+     "project": "keila",
+     "note": "Imports contacts from CSV (Import Contacts on the Contacts page). A Replace duplicates checkbox updates existing contacts. Custom data is stored as JSON, not CSV columns.",
+     "source": "https://www.keila.io/docs/contacts"
+    }
+   ],
+   "tip": "Import the audience CSV and keep unsubscribed and cleaned contacts out of your new list.",
+   "skip": null
+  },
+  "typeform": {
+   "app": "Typeform",
+   "export": [
+    "Open the form and go to Results, then Responses.",
+    "Tick the checkbox in the header row (or select particular responses), then click the Export icon.",
+    "Choose CSV or XLSX; it downloads and is also emailed."
+   ],
+   "exportSource": "https://help.typeform.com/hc/en-us/articles/360029253572-Export-your-responses",
+   "formats": [
+    "CSV",
+    "XLSX"
+   ],
+   "wontComeOver": [
+    "The form's questions and design are not part of a responses export.",
+    "Yes/No answers appear as 1 and 0.",
+    "Multiple-selection answers split into one column per choice.",
+    "You cannot export from the mobile builder."
+   ],
+   "opensIn": [],
+   "tip": null,
+   "skip": null
+  },
+  "calendly": {
+   "app": "Calendly",
+   "export": [
+    "Go to the Meetings page and filter the meetings you want.",
+    "Click Export at the top right.",
+    "The CSV downloads or arrives by email."
+   ],
+   "exportSource": "https://calendly.com/help/tracking-and-reporting",
+   "formats": [
+    "CSV (invitee details, event type, date, location, UTM and payment data)"
+   ],
+   "wontComeOver": [
+    "There is no direct export of the Contacts list; export past meetings instead (a Calendly community answer)."
+   ],
+   "opensIn": [],
+   "tip": null,
+   "skip": null
+  },
+  "doodle": {
+   "app": "Doodle",
+   "export": [
+    "Open the poll from your dashboard, click More, then Export (closed polls: the three dots next to it, then Export).",
+    "The Excel file lands in your Downloads folder."
+   ],
+   "exportSource": "https://help.doodle.com/en/articles/9457344-how-do-i-export-a-group-poll-to-excel",
+   "formats": [
+    "Excel (.xlsx)"
+   ],
+   "wontComeOver": [
+    "Export is a paid feature (Pro, Team or Enterprise)."
+   ],
+   "opensIn": [],
+   "tip": null,
+   "skip": null
+  },
+  "medium": {
+   "app": "Medium",
+   "export": [
+    "Go to Settings, then the Security and apps tab.",
+    "Click Download your information.",
+    "Medium emails a link to a .zip of HTML files."
+   ],
+   "exportSource": "https://help.medium.com/hc/en-us/articles/115004745787-Export-your-account-data",
+   "formats": [
+    "ZIP of HTML files (stories)"
+   ],
+   "wontComeOver": [
+    "The export includes comments you wrote on other stories, which Ghost may import as posts; check the result."
+   ],
+   "opensIn": [
+    {
+     "project": "ghost",
+     "note": "Has a Medium migrator in Ghost Admin that imports posts and subscribers (subscribers come from Medium's audience stats list export).",
+     "source": "https://docs.ghost.org/migration/medium/",
+     "tag": "blog-import"
+    }
+   ],
+   "tip": null,
+   "skip": null
+  },
+  "substack": {
+   "app": "Substack",
+   "export": [
+    "In your publication go to Settings, then Exports.",
+    "Create a new export; Substack builds a zip with posts, subscriber list and stats.",
+    "For subscribers only: Subscribers page, three-dot menu, export CSV."
+   ],
+   "exportSource": "https://support.substack.com/hc/en-us/articles/360037466012-How-do-I-export-my-posts",
+   "formats": [
+    "ZIP of posts and subscriber CSVs"
+   ],
+   "wontComeOver": [
+    "Subscriber names are not currently included in the export.",
+    "Paid subscribers need the same Stripe account connected to move billing."
+   ],
+   "opensIn": [
+    {
+     "project": "ghost",
+     "note": "Built-in Substack importer in Ghost Admin (Settings, Advanced, Import/Export): upload the content zip, then separate free and paid subscriber CSVs. Forum users report problems on messy exports.",
+     "source": "https://docs.ghost.org/migration/substack",
+     "tag": "blog-import"
+    }
+   ],
+   "tip": null,
+   "skip": null
+  },
+  "chatgpt": {
+   "app": "ChatGPT",
+   "export": [
+    "On the web go to Settings, then Data Controls, then Export.",
+    "Confirm. You get an email or SMS when it is ready.",
+    "Download the ZIP within 24 hours."
+   ],
+   "exportSource": "https://help.openai.com/en/articles/7260999-exporting-your-chatgpt-history-and-data",
+   "formats": [
+    "ZIP with chat history and account data"
+   ],
+   "wontComeOver": [
+    "The link expires 24 hours after you receive it.",
+    "Deleted chats cannot be restored from an export.",
+    "Not available for Business or Enterprise accounts."
+   ],
+   "opensIn": [],
+   "tip": null,
+   "skip": null
+  },
+  "github": {
+   "app": "GitHub",
+   "export": [
+    "Code: on the repository page click Code, copy the URL, and run git clone in a terminal (or gh repo clone OWNER/REPO).",
+    "Issues, labels, wiki, releases and milestones are copied by the new host's migration tool, not by cloning."
+   ],
+   "exportSource": "https://docs.github.com/en/repositories/creating-and-managing-repositories/cloning-a-repository",
+   "formats": [
+    "Git repository"
+   ],
+   "wontComeOver": [
+    "Cloning copies code only, not issues or the wiki.",
+    "Codeberg's guide does not say whether pull requests migrate."
+   ],
+   "opensIn": [
+    {
+     "project": "forgejo",
+     "note": "Migration tool (New Migration, choose GitHub) copies issues, labels, wiki, releases and milestones. A GitHub access token is needed for metadata or private repositories; delete the token afterwards. Steps are from Codeberg's guide, which runs Forgejo.",
+     "source": "https://docs.codeberg.org/advanced/migrating-repos/",
+     "tag": "github-import"
+    }
+   ],
+   "tip": null,
+   "skip": null
+  },
+  "dashlane": {
+   "app": "Dashlane",
+   "export": [
+    "In the Dashlane web app open My account, then Settings, then Export Data.",
+    "Choose Export to CSV and save the file. You get a zip with several CSV files."
+   ],
+   "exportSource": "https://support.dashlane.com/hc/en-us/articles/32905278138002-Export-your-Dashlane-data-to-a-CSV",
+   "formats": [
+    "CSV (several files in a zip)",
+    "Legacy JSON"
+   ],
+   "wontComeOver": [
+    "CSV files are not encrypted; delete them after importing.",
+    "Passkeys cannot be exported to CSV, and 2FA tokens cannot be exported directly to CSV.",
+    "On iPhone, iPad and Mac (26 and later) Credential Exchange can move passwords, passkeys and codes without a file; it does not work on Android."
+   ],
+   "opensIn": [
+    {
+     "project": "bitwarden",
+     "note": "Imports Dashlane CSV (or legacy JSON). Run the import once per CSV file. It does not check for duplicates, so importing twice doubles items. Attachments must be re-added by hand.",
+     "source": "https://bitwarden.com/help/import-from-dashlane/",
+     "tag": "passwords-import"
+    }
+   ],
+   "tip": null,
+   "skip": null
+  },
+  "authy": {
+   "app": "Authy",
+   "export": [
+    "Authy does not offer an export button, and its desktop apps no longer allow exporting.",
+    "Workarounds need a rooted Android phone, or an iPhone plus a computer and technical tools (Ente's migration guide).",
+    "Otherwise, set up two-step login again on each account in the new app."
+   ],
+   "exportSource": "https://ente.com/help/auth/migration/authy/",
+   "formats": [
+    "Plain text or Bitwarden-format JSON, via the workarounds"
+   ],
+   "wontComeOver": [
+    "The workarounds may not export every code; check each account before removing Authy.",
+    "Exported files contain unencrypted secrets; delete them after migrating.",
+    "This is not an Authy-supported route."
+   ],
+   "opensIn": [
+    {
+     "project": "ente-auth",
+     "note": "Imports codes from a plain-text or Bitwarden-format JSON file (menu, Data, Import codes), or by scanning QR codes.",
+     "source": "https://ente.com/help/auth/migration/authy/",
+     "tag": "twofa-import"
+    }
+   ],
+   "tip": "Authy's own help page could not be checked; the facts here come from Ente's guide and 2FAS support.",
+   "skip": null
+  },
+  "telegram": {
+   "app": "Telegram",
+   "export": [
+    "Open Telegram Desktop (the web version cannot export).",
+    "Go to Settings, then Advanced, then Export Telegram data. For one chat use its menu, then Export chat history.",
+    "Choose HTML (readable) or JSON."
+   ],
+   "exportSource": "https://core.telegram.org/import-export",
+   "formats": [
+    "HTML (export_results.html)",
+    "JSON (result.json) with media folders"
+   ],
+   "wontComeOver": [
+    "If you just logged in on Desktop, you may have to wait 24 hours or confirm from another device.",
+    "A 2024 bug report said HTML exports of some old group messages came out blank; JSON did not."
+   ],
+   "opensIn": [],
+   "tip": null,
+   "skip": null
+  },
+  "linkedin": {
+   "app": "LinkedIn",
+   "export": [
+    "On a computer click the Me icon, then Settings & Privacy, then Data Privacy.",
+    "Choose Get a copy of your data, pick the categories (or the larger archive), and request it.",
+    "Download from the email link: small requests in minutes, the full archive within 24 hours; the link works for 72 hours."
+   ],
+   "exportSource": "https://www.linkedin.com/help/linkedin/answer/a1339364/downloading-your-account-data",
+   "formats": [],
+   "wontComeOver": [
+    "Not available on mobile.",
+    "People You May Know and Who's Viewed Your Profile data are not included.",
+    "Connection email addresses may be missing if the connection hid them."
+   ],
+   "opensIn": [],
+   "tip": "Closing your account cuts off access to the data, so download first.",
+   "skip": null
+  },
+  "tiktok": {
+   "app": "TikTok",
+   "export": [
+    "In the app go to your data settings and tap Download your data.",
+    "Choose what to include and a file format, then tap Request data.",
+    "Download it within the few days it stays available (up to 4 days)."
+   ],
+   "exportSource": "https://support.tiktok.com/en/account-and-privacy/personalized-ads-and-data/requesting-your-data",
+   "formats": [],
+   "wontComeOver": [
+    "Preparation may take a few days."
+   ],
+   "opensIn": [],
+   "tip": null,
+   "skip": null
+  },
+  "pinterest": {
+   "app": "Pinterest",
+   "export": [
+    "Go to Settings, then Privacy and data, then Request your data, and tap Start request.",
+    "Within about 48 hours Pinterest emails a download link (sent through SendSafely)."
+   ],
+   "exportSource": "https://help.pinterest.com/en/article/download-your-pinterest-data",
+   "formats": [],
+   "wontComeOver": [
+    "Pinterest's page does not say what file format the data arrives in."
+   ],
+   "opensIn": [],
+   "tip": null,
+   "skip": null
+  },
+  "airtable": {
+   "app": "Airtable",
+   "export": [
+    "No file export is needed for Baserow: create a public share link to the whole base in Airtable.",
+    "In Baserow choose Add new, then Database, then the Import from Airtable tab, and paste the link."
+   ],
+   "exportSource": "https://baserow.io/user-docs/import-airtable-to-baserow",
+   "formats": [],
+   "wontComeOver": [
+    "Formula, lookup, rollup, collaborator, created-by and button fields are not imported (convert them to text or number first).",
+    "Automations, interfaces, integrations, comments and access controls must be rebuilt.",
+    "Baserow adds an 'Airtable import report' table listing what was skipped."
+   ],
+   "opensIn": [
+    {
+     "project": "baserow",
+     "note": "Built-in Airtable importer from a public share link: tables, most field types, links between tables, attachments and grid views carry over.",
+     "source": "https://baserow.io/user-docs/import-airtable-to-baserow",
+     "tag": "airtable-import"
+    }
+   ],
+   "tip": "These steps are from Baserow's page; I did not verify Airtable's own export steps.",
+   "skip": null
+  },
+  "figma": {
+   "app": "Figma",
+   "export": [
+    "Open the file, then Main menu, File, Save local copy to download a .fig file.",
+    "Or export your designs as SVG files in a zip."
+   ],
+   "exportSource": "https://help.figma.com/hc/en-us/articles/8403626871063-Save-a-local-copy-of-files",
+   "formats": [
+    "Figma Design (.fig)",
+    "SVG (zip)"
+   ],
+   "wontComeOver": [
+    "Penpot cannot open .fig files directly.",
+    "If you do not see Save local copy, the owner may have restricted copying."
+   ],
+   "opensIn": [
+    {
+     "project": "penpot",
+     "note": "No direct .fig import. Penpot's blog describes a Figma plugin that exports a zip you import through Import Penpot Files (not fully reliable), or SVG files exported from Figma that you import from the Projects menu.",
+     "source": "https://penpot.app/blog/how-to-make-the-switch-from-figma-to-penpot-2/",
+     "tag": "figma-import"
+    }
+   ],
+   "tip": "Penpot's blog calls the plugin imperfect; one community report says large files crashed Penpot.",
+   "skip": null
+  },
+  "asana": {
+   "app": "Asana",
+   "export": [
+    "No file export is needed for Plane: create a Personal Access Token in Asana.",
+    "In Plane use its Asana importer, pick the workspace and project, and map sections to states."
+   ],
+   "exportSource": "https://docs.plane.so/importers/asana",
+   "formats": [],
+   "wontComeOver": [
+    "Asana issue types become labels or title prefixes in Plane."
+   ],
+   "opensIn": [
+    {
+     "project": "plane",
+     "note": "Asana importer brings labels, users, work items, comments, attachments and parent-child links, and can re-run to sync later changes.",
+     "source": "https://docs.plane.so/importers/asana"
+    }
+   ],
+   "tip": "Steps come from Plane's docs; I did not find Asana's own export page.",
+   "skip": null
+  },
+  "jira": {
+   "app": "Jira",
+   "export": [
+    "No file export is needed for Plane: you need an API token, your email and your Jira site URL.",
+    "In Plane use its Jira importer; add a JQL filter to limit which issues come over."
+   ],
+   "exportSource": "https://docs.plane.so/importers/jira",
+   "formats": [],
+   "wontComeOver": [
+    "Jira issue types become Plane work item types only if Work Item Types is enabled first.",
+    "Sprints become cycles; epics become an ordinary work item type."
+   ],
+   "opensIn": [
+    {
+     "project": "plane",
+     "note": "Imports from Jira Cloud and Jira Server/Data Center.",
+     "source": "https://docs.plane.so/importers/jira"
+    }
+   ],
+   "tip": "Steps come from Plane's docs; I did not find Jira's own export page.",
+   "skip": null
+  },
+  "shopify": {
+   "app": "Shopify",
+   "export": [
+    "In Shopify admin go to Products and click Export.",
+    "Choose all products, the current page, selected items or filtered results.",
+    "Pick a CSV for spreadsheets or a plain CSV, and export."
+   ],
+   "exportSource": "https://help.shopify.com/en/manual/products/import-export/export-products",
+   "formats": [
+    "CSV (UTF-8)"
+   ],
+   "wontComeOver": [
+    "Shopify lists each variant on its own row; WooCommerce uses a parent product with variation rows, so the file needs restructuring.",
+    "Shopify-only columns such as Handle or Vendor may need removing."
+   ],
+   "opensIn": [
+    {
+     "project": "woocommerce",
+     "note": "Has a built-in CSV product importer (WooCommerce, Products, Import) with column mapping. WooCommerce's migration guide advises backing up first and testing with a small file.",
+     "source": "https://woocommerce.com/document/how-to-migrate-from-shopify/",
+     "tag": "shopify-import"
+    }
+   ],
+   "tip": "A user reported images did not populate after a Shopify CSV import (secondhand search result).",
+   "skip": null
+  },
+  "snapchat": {
+   "app": "Snapchat",
+   "export": [
+    "Log in at accounts.snapchat.com or open Settings, then My Data in the app.",
+    "Pick the categories and a date range (or turn the range off for everything).",
+    "Confirm your email and click Submit; download the zip from the email link or the My Data page."
+   ],
+   "exportSource": "https://help.snapchat.com/hc/en-us/articles/7012305371156-How-do-I-download-my-data-from-Snapchat",
+   "formats": [
+    "ZIP"
+   ],
+   "wontComeOver": [
+    "Snapchat aims to deliver within 7 days; large downloads take longer.",
+    "A data request cannot be cancelled."
+   ],
+   "opensIn": [],
+   "tip": null,
+   "skip": null
+  },
+  "facebook-messenger": {
+   "app": "Facebook Messenger",
+   "export": [
+    "Use Meta's Export Your Information tool and choose Messenger.",
+    "Pick HTML (easy to read) or JSON (easier to move to another service), plus categories and a date range.",
+    "Download the ZIP within 4 days of it being ready."
+   ],
+   "exportSource": "https://www.facebook.com/help/messenger-app/713635396288741",
+   "formats": [
+    "HTML",
+    "JSON"
+   ],
+   "wontComeOver": [
+    "End-to-end encrypted chats are downloaded separately, from their own Messenger help page.",
+    "The file is a ZIP with an index you open in a browser; none of the listed alternatives' docs I checked import it."
+   ],
+   "opensIn": [],
+   "tip": null,
+   "skip": null
   }
  }
 }
