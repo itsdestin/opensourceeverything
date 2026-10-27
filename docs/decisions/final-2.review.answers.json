@@ -1,0 +1,182 @@
+{
+ "deck": "ose-final-2",
+ "started": "2026-10-27T10:28:16.790Z",
+ "submitted": "2026-10-27T18:55:14Z",
+ "cur": 23,
+ "answers": {
+  "F-home": {
+   "v": "yes",
+   "t": 1793096903077,
+   "seconds": 6,
+   "theme": "light",
+   "zoom": 1
+  },
+  "F-home-phone": {
+   "v": "yes",
+   "t": 1793096910401,
+   "seconds": 7,
+   "theme": "light",
+   "zoom": 1
+  },
+  "F-category": {
+   "v": "yes",
+   "t": 1793096925004,
+   "seconds": 15,
+   "theme": "light",
+   "zoom": 1
+  },
+  "F-group": {
+   "note": "filters right. design guide. code/compare toggle to the left of filters",
+   "t": 1793096974511,
+   "v": "other",
+   "seconds": 50,
+   "theme": "light",
+   "zoom": 1
+  },
+  "F-group-phone": {
+   "v": "other",
+   "t": 1793097026461,
+   "note": "this is bad cards are so small. pills/switcher look buched up. a single filter botton with a popup or something might be better. idk",
+   "seconds": 52,
+   "theme": "light",
+   "zoom": 1
+  },
+  "F-compare-phone": {
+   "v": "yes",
+   "t": 1793097035476,
+   "seconds": 9,
+   "theme": "light",
+   "zoom": 1
+  },
+  "F-project": {
+   "v": "yes",
+   "t": 1793097114359,
+   "seconds": 79,
+   "theme": "light",
+   "zoom": 1
+  },
+  "F-firefox": {
+   "note": "put features above family",
+   "t": 1793097179535,
+   "v": "yes",
+   "seconds": 65,
+   "theme": "light",
+   "zoom": 1
+  },
+  "F-howtohelp": {
+   "v": "yes",
+   "t": 1793097242392,
+   "seconds": 63,
+   "theme": "light",
+   "zoom": 1
+  },
+  "F-pocketbase": {
+   "v": "yes",
+   "t": 1793127093792,
+   "seconds": 29851,
+   "theme": "light",
+   "zoom": 1
+  },
+  "F-project-phone": {
+   "v": "yes",
+   "t": 1793127101389,
+   "seconds": 8,
+   "theme": "light",
+   "zoom": 1
+  },
+  "F-guide": {
+   "note": "",
+   "t": 1793127138014,
+   "v": "yes",
+   "seconds": 37,
+   "theme": "light",
+   "zoom": 1
+  },
+  "F-guide-phone": {
+   "v": "yes",
+   "t": 1793127147037,
+   "seconds": 9,
+   "theme": "light",
+   "zoom": 1
+  },
+  "F-search": {
+   "note": "we should have a results header w number subheader on results card",
+   "t": 1793127193180,
+   "v": "other",
+   "seconds": 46,
+   "theme": "light",
+   "zoom": 1
+  },
+  "F-search-phone": {
+   "v": "yes",
+   "t": 1793127197772,
+   "seconds": 5,
+   "theme": "light",
+   "zoom": 1
+  },
+  "F-filters": {
+   "v": "yes",
+   "t": 1793127203984,
+   "seconds": 6,
+   "theme": "light",
+   "zoom": 1
+  },
+  "F-gaps": {
+   "v": "yes",
+   "t": 1793127212422,
+   "seconds": 8,
+   "theme": "light",
+   "zoom": 1
+  },
+  "F-gaps-phone": {
+   "v": "yes",
+   "t": 1793127220226,
+   "seconds": 8,
+   "theme": "light",
+   "zoom": 1
+  },
+  "F-claim": {
+   "note": "center this in middle of page",
+   "t": 1793127253042,
+   "v": "other",
+   "seconds": 33,
+   "theme": "light",
+   "zoom": 1
+  },
+  "F-claim-phone": {
+   "v": "yes",
+   "t": 1793127258334,
+   "seconds": 5,
+   "theme": "light",
+   "zoom": 1
+  },
+  "F-prefs-row": {
+   "v": "yes",
+   "t": 1793127279578,
+   "seconds": 21,
+   "theme": "light",
+   "zoom": 1
+  },
+  "F-prefs": {
+   "v": "yes",
+   "t": 1793127283047,
+   "seconds": 3,
+   "theme": "light",
+   "zoom": 1
+  },
+  "F-prefs-phone": {
+   "v": "yes",
+   "t": 1793127303238,
+   "seconds": 20,
+   "theme": "light",
+   "zoom": 1
+  },
+  "F-prefs-visitor": {
+   "v": "yes",
+   "t": 1793127313145,
+   "seconds": 10,
+   "theme": "light",
+   "zoom": 1
+  }
+ }
+}
