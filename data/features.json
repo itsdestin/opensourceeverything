@@ -3652,6 +3652,10 @@
     "v": "partly",
     "note": "EPS imports; Illustrator .ai not listed",
     "source": "https://gitlab.com/inkscape/inkscape/-/raw/master/README.md"
+   },
+   "works-in-browser": {
+    "v": "no",
+    "note": "|Desktop app only"
    }
   },
   "peertube": {
@@ -3671,6 +3675,16 @@
    "phone-app": {
     "v": "yes",
     "source": "https://joinpeertube.org"
+   },
+   "live-streams-hosted": {
+    "v": "yes",
+    "note": "Server owner switches live streaming on",
+    "source": "https://docs.joinpeertube.org/use/create-upload-video"
+   },
+   "auto-captions": {
+    "v": "yes",
+    "note": "Server owner switches it on",
+    "source": "https://docs.joinpeertube.org/admin/configuration"
    }
   },
   "aves": {
@@ -3714,6 +3728,11 @@
     "v": "partly",
     "note": "Android tablets only; no iPad",
     "source": "https://krita.org/en/download/"
+   },
+   "pressure-pen": {
+    "v": "yes",
+    "note": "Pressure curve and pen tilt settings",
+    "source": "https://docs.krita.org/en/reference_manual/preferences/tablet_settings.html"
    }
   },
   "kimai": {
@@ -3757,6 +3776,11 @@
    "one-command-install": {
     "v": "yes",
     "source": "https://github.com/qdrant/qdrant"
+   },
+   "no-paid-edition": {
+    "v": "yes",
+    "note": "Paid plans are for managed hosting",
+    "source": "https://raw.githubusercontent.com/qdrant/qdrant/HEAD/README.md"
    }
   },
   "friction": {
@@ -4735,6 +4759,11 @@
     "v": "partly",
     "note": "Only through paid partner hosting",
     "source": "https://github.com/navidrome/navidrome"
+   },
+   "music-discovery": {
+    "v": "partly",
+    "note": "Smart playlists and radio from your own library",
+    "source": "https://www.navidrome.org/docs/overview/"
    }
   },
   "ente-photos": {
@@ -5462,6 +5491,11 @@
    "phone-app": {
     "v": "partly",
     "note": "Android only; no iPhone app"
+   },
+   "send-to-ereader": {
+    "v": "partly",
+    "note": "Receives books wirelessly from calibre; needs setup",
+    "source": "https://raw.githubusercontent.com/koreader/koreader/master/README.md"
    }
   },
   "solvespace": {
@@ -5649,6 +5683,11 @@
     "v": "partly",
     "note": "Only through third-party plugins",
     "source": "https://www.gimp-forum.net/Thread-Open-source-GIMP-3-plugin-for-local-AI-background-removal"
+   },
+   "psd-files": {
+    "v": "partly",
+    "note": "Layers are kept; some blending modes change",
+    "source": "https://raw.githubusercontent.com/GNOME/gimp-help/master/src/dialogs/file-psd-export.xml"
    }
   },
   "nexopos": {
@@ -6745,6 +6784,16 @@
     "v": "partly",
     "note": "Visual wiring; code needed for custom logic",
     "source": "https://nodered.org/about/"
+   },
+   "one-command-install": {
+    "v": "yes",
+    "note": "|",
+    "source": "https://raw.githubusercontent.com/node-red/node-red/HEAD/README.md"
+   },
+   "managed-cloud": {
+    "v": "partly",
+    "note": "Hosting options listed, e.g. FlowFuse",
+    "source": "https://nodered.org/"
    }
   },
   "activepieces": {
@@ -6767,6 +6816,11 @@
    "one-command-install": {
     "v": "yes",
     "source": "https://www.activepieces.com/docs/install/overview"
+   },
+   "no-paid-edition": {
+    "v": "partly",
+    "note": "Enterprise features sit under a commercial license",
+    "source": "https://raw.githubusercontent.com/activepieces/activepieces/HEAD/README.md"
    }
   },
   "huginn": {
@@ -9336,6 +9390,16 @@
     "v": "partly",
     "note": "Full export to Markdown files",
     "source": "https://joplinapp.org/help/apps/import_export"
+   },
+   "works-offline": {
+    "v": "yes",
+    "note": "|",
+    "source": "https://raw.githubusercontent.com/laurent22/joplin/HEAD/README.md"
+   },
+   "live-collab": {
+    "v": "partly",
+    "note": "Shared notebooks via Joplin Cloud sync; not live co-typing",
+    "source": "https://raw.githubusercontent.com/laurent22/joplin/dev/readme/apps/share_notebook.md"
    }
   },
   "docmost": {
@@ -9753,6 +9817,16 @@
     "v": "no",
     "note": "Slides are a text file edited in your own editor",
     "source": "https://github.com/slidevjs/slidev#readme"
+   },
+   "pptx-files": {
+    "v": "partly",
+    "note": "Exports slides to PowerPoint as images; does not open PowerPoint files",
+    "source": "https://sli.dev/guide/exporting"
+   },
+   "slide-templates": {
+    "v": "partly",
+    "note": "Community themes to download; few built in",
+    "source": "https://sli.dev/resources/theme-gallery"
    }
   },
   "openproject": {
@@ -9777,6 +9851,11 @@
     "v": "partly",
     "note": "Jira migration tool listed; other tools via CSV file",
     "source": "https://www.openproject.org/docs/user-guide/"
+   },
+   "recurring-reminders": {
+    "v": "partly",
+    "note": "Has reminders and date alerts; repeating tasks not found in its docs",
+    "source": "https://raw.githubusercontent.com/opf/openproject/dev/docs/user-guide/notifications/README.md"
    }
   },
   "orbit": {
@@ -10105,6 +10184,11 @@
     "v": "partly",
     "note": "Hosted Vikunja Cloud is paid (14-day trial)",
     "source": "https://vikunja.io/features/"
+   },
+   "gantt-timeline": {
+    "v": "partly",
+    "note": "Gantt chart with dates; dependency lines not mentioned",
+    "source": "https://vikunja.io/features/"
    }
   },
   "redmine": {
@@ -10265,6 +10349,11 @@
    "phone-app": {
     "v": "yes",
     "source": "https://codeberg.org/comaps/comaps"
+   },
+   "public-transit": {
+    "v": "partly",
+    "note": "Transit layer for subway and light rail in some cities",
+    "source": "https://www.comaps.app/"
    }
   },
   "siyuan": {
@@ -10764,11 +10853,44 @@
   "libreoffice-writer": {
    "no-server-needed": {
     "v": "yes"
+   },
+   "phone-app": {
+    "v": "partly",
+    "note": "Android viewer with experimental editing; iPhone editing via Collabora's app",
+    "source": "https://www.libreoffice.org/download/android-and-ios/"
+   },
+   "comments-suggestions": {
+    "v": "yes",
+    "note": "Tracked changes you accept or reject, plus comments",
+    "source": "https://raw.githubusercontent.com/LibreOffice/help/master/source/text/shared/guide/redlining.xhp"
+   },
+   "works-offline": {
+    "v": "yes",
+    "note": "|Desktop app for Windows, Mac and Linux"
    }
   },
   "libreoffice-calc": {
    "no-server-needed": {
     "v": "yes"
+   },
+   "phone-app": {
+    "v": "partly",
+    "note": "Android viewer with experimental editing; iPhone editing via Collabora's app",
+    "source": "https://www.libreoffice.org/download/android-and-ios/"
+   },
+   "pivot-tables": {
+    "v": "yes",
+    "note": "|",
+    "source": "https://raw.githubusercontent.com/LibreOffice/help/master/source/text/scalc/guide/datapilot.xhp"
+   },
+   "modern-formulas": {
+    "v": "yes",
+    "note": "Has XLOOKUP, FILTER and LET",
+    "source": "https://raw.githubusercontent.com/LibreOffice/help/master/source/text/scalc/01/func_let.xhp"
+   },
+   "works-offline": {
+    "v": "yes",
+    "note": "|Desktop app for Windows, Mac and Linux"
    }
   },
   "mailspring": {
@@ -10863,6 +10985,21 @@
     "v": "partly",
     "note": "Local server possible; AI rules cloud-only",
     "source": "https://dev.languagetool.org/http-server"
+   },
+   "style-tips": {
+    "v": "yes",
+    "note": "|",
+    "source": "https://languagetool.org/"
+   },
+   "browser-extension": {
+    "v": "yes",
+    "note": "|",
+    "source": "https://languagetool.org/"
+   },
+   "ai-rewrite": {
+    "v": "yes",
+    "note": "|",
+    "source": "https://languagetool.org/"
    }
   },
   "documenso": {
@@ -10873,6 +11010,26 @@
    "sign-templates": {
     "v": "yes",
     "source": "https://docs.documenso.com/llms.txt"
+   },
+   "no-server-needed": {
+    "v": "yes",
+    "note": "|Free hosted plan with 5 documents a month",
+    "source": "https://documenso.com/pricing"
+   },
+   "signing-order": {
+    "v": "yes",
+    "note": "|",
+    "source": "https://raw.githubusercontent.com/documenso/documenso/main/apps/docs/content/docs/concepts/signing-workflow.mdx"
+   },
+   "sign-audit-trail": {
+    "v": "yes",
+    "note": "|",
+    "source": "https://raw.githubusercontent.com/documenso/documenso/main/apps/docs/content/docs/concepts/signing-workflow.mdx"
+   },
+   "qualified-signature": {
+    "v": "partly",
+    "note": " Planned | | eIDAS QES | Planned|Signs with certificates; advanced and qualified (eIDAS) levels are only planned",
+    "source": "https://raw.githubusercontent.com/documenso/documenso/main/apps/docs/content/docs/compliance/signature-levels.mdx"
    }
   },
   "formio": {
@@ -10962,6 +11119,51 @@
    "phone-app": {
     "v": "yes",
     "source": "https://www.onlyoffice.com/office-suite"
+   },
+   "comments-suggestions": {
+    "v": "yes",
+    "note": "|Comments plus tracked changes",
+    "source": "https://github.com/ONLYOFFICE/DocumentServer"
+   },
+   "word-files": {
+    "v": "yes",
+    "note": "|The project says it is fully compatible with Word's format",
+    "source": "https://github.com/ONLYOFFICE/DocumentServer"
+   },
+   "excel-files": {
+    "v": "yes",
+    "note": "|The project says it is fully compatible with Excel's format",
+    "source": "https://github.com/ONLYOFFICE/DocumentServer"
+   },
+   "pptx-files": {
+    "v": "yes",
+    "note": "|The project says it is fully compatible with PowerPoint's format",
+    "source": "https://github.com/ONLYOFFICE/DocumentServer"
+   },
+   "pivot-tables": {
+    "v": "yes",
+    "note": "|Pivot tables listed in the free edition",
+    "source": "https://github.com/ONLYOFFICE/DocumentServer"
+   },
+   "excel-macros": {
+    "v": "partly",
+    "note": "Has its own macros (JavaScript); Excel VBA macros are not run as-is",
+    "source": "https://github.com/ONLYOFFICE/DocumentServer"
+   },
+   "slide-animations": {
+    "v": "yes",
+    "note": "|Transitions and animations in the free edition",
+    "source": "https://github.com/ONLYOFFICE/DocumentServer"
+   },
+   "presenter-view": {
+    "v": "partly",
+    "note": "Presenter mode with notes on a second screen; timer and next slide not mentioned",
+    "source": "https://helpcenter.onlyoffice.com/docs/userguides/presentation_editor/PreviewPresentation.aspx"
+   },
+   "modern-formulas": {
+    "v": "partly",
+    "note": "Has XLOOKUP, FILTER, SORT, UNIQUE, XMATCH; no LET page found",
+    "source": "https://helpcenter.onlyoffice.com/functions/xlookup.aspx"
    }
   },
   "fairemail": {
@@ -11036,6 +11238,11 @@
     "v": "partly",
     "note": "Notion import only",
     "source": "https://appflowy.com/what-is-new"
+   },
+   "live-collab": {
+    "v": "yes",
+    "note": "|",
+    "source": "https://appflowy.com/"
    }
   },
   "silverbullet": {
@@ -11098,6 +11305,11 @@
    "pdf-edit-text": {
     "v": "yes",
     "source": "https://docs.stirlingpdf.com/Tools/"
+   },
+   "pdf-convert-office": {
+    "v": "partly",
+    "note": "Converts to and from Office formats; relies on LibreOffice, so layout fidelity varies",
+    "source": "https://raw.githubusercontent.com/Stirling-Tools/Stirling-PDF/main/app/core/src/main/java/stirling/software/SPDF/controller/api/converters/ConvertOfficeController.java"
    }
   },
   "docuseal": {
@@ -11268,6 +11480,10 @@
     "v": "yes",
     "note": "Collabora Office mobile apps",
     "source": "https://www.collaboraonline.com/collabora-online/"
+   },
+   "works-offline": {
+    "v": "no",
+    "note": "|Web editor that runs from a server"
    }
   },
   "tuta": {
@@ -11526,6 +11742,16 @@
     "v": "yes",
     "note": "topics",
     "source": "https://github.com/zulip/zulip"
+   },
+   "cross-org": {
+    "v": "partly",
+    "note": "Guest accounts only",
+    "source": "https://zulip.com/help/guest-users"
+   },
+   "e2e-encrypted": {
+    "v": "partly",
+    "note": "Only push notifications are end-to-end encrypted",
+    "source": "https://zulip.com/security/"
    }
   },
   "delta-chat": {
@@ -11550,6 +11776,11 @@
    "self-hostable": {
     "v": "yes",
     "note": "chatmail servers",
+    "source": "https://delta.chat/en/help"
+   },
+   "built-in-calls": {
+    "v": "partly",
+    "note": "One-to-one calls only",
     "source": "https://delta.chat/en/help"
    }
   },
@@ -11594,6 +11825,11 @@
    "voting": {
     "v": "yes",
     "source": "https://joinmbin.org"
+   },
+   "no-server-needed": {
+    "v": "yes",
+    "note": "|Join an existing server",
+    "source": "https://joinmbin.org/"
    }
   },
   "writefreely": {
@@ -11772,6 +12008,16 @@
     "v": "partly",
     "note": "free cloud trial",
     "source": "https://github.com/mattermost/mattermost"
+   },
+   "e2e-encrypted": {
+    "v": "no",
+    "note": "Encrypted in transit and at rest; server can read messages",
+    "source": "https://docs.mattermost.com/deployment-guide/encryption-options.html"
+   },
+   "cross-org": {
+    "v": "yes",
+    "note": "Connected workspaces; not on every plan",
+    "source": "https://docs.mattermost.com/administration-guide/onboard/connected-workspaces.html"
    }
   },
   "briar": {
@@ -11936,6 +12182,11 @@
    "syncs-devices": {
     "v": "yes",
     "source": "https://bitwarden.com/download/"
+   },
+   "breach-alerts": {
+    "v": "yes",
+    "note": "|",
+    "source": "https://bitwarden.com/help/reports/"
    }
   },
   "aegis": {
@@ -12017,6 +12268,20 @@
     "v": "partly",
     "note": "optional",
     "source": "https://github.com/RocketChat/Rocket.Chat"
+   },
+   "phone-app": {
+    "v": "yes",
+    "note": "|"
+   },
+   "threads": {
+    "v": "yes",
+    "note": "|",
+    "source": "https://docs.rocket.chat/docs/threads"
+   },
+   "slack-import": {
+    "v": "yes",
+    "note": "|Slack importer; Teams not confirmed",
+    "source": "https://docs.rocket.chat/docs/import"
    }
   },
   "snikket": {
@@ -12043,6 +12308,11 @@
     "v": "yes",
     "note": "added in version 4.5",
     "source": "https://github.com/mastodon/mastodon/releases/tag/v4.5.0"
+   },
+   "move-account": {
+    "v": "partly",
+    "note": "Followers move with you; posts stay behind",
+    "source": "https://raw.githubusercontent.com/mastodon/documentation/main/content/en/user/moving.md"
    }
   },
   "pixelfed": {
@@ -12056,6 +12326,11 @@
     "v": "yes",
     "note": "system snapshots",
     "source": "https://linuxmint.com"
+   },
+   "long-support": {
+    "v": "yes",
+    "note": "Each 22.x release line is supported until April 2029",
+    "source": "https://linuxmint.com/rel_zena_cinnamon.php"
    }
   },
   "grapheneos": {
@@ -12076,6 +12351,16 @@
     "v": "partly",
     "note": "Pixel phones only (19 models)",
     "source": "https://grapheneos.org/releases"
+   },
+   "security-updates": {
+    "v": "yes",
+    "note": "|Ships each month's Android security patches",
+    "source": "https://grapheneos.org/releases"
+   },
+   "preinstalled": {
+    "v": "partly",
+    "note": "Sold preinstalled by small companies",
+    "source": "https://grapheneos.org/faq"
    }
   },
   "meshcentral": {
@@ -12090,6 +12375,11 @@
    "unattended-access": {
     "v": "yes",
     "source": "https://github.com/Ylianst/MeshCentral"
+   },
+   "no-server-needed": {
+    "v": "yes",
+    "note": "|A public server is available",
+    "source": "https://meshcentral.com/"
    }
   },
   "tor-browser": {
@@ -12159,6 +12449,21 @@
    },
    "phone-app": {
     "v": "yes"
+   },
+   "no-server-needed": {
+    "v": "yes",
+    "note": "Free app; works with public servers like matrix.org",
+    "source": "https://element.io/personal"
+   },
+   "screen-share": {
+    "v": "yes",
+    "note": "|",
+    "source": "https://element.io/personal"
+   },
+   "chat-bots": {
+    "v": "partly",
+    "note": "Bots and widgets are add-ons",
+    "source": "https://element.io/features"
    }
   },
   "tinode": {
@@ -12179,6 +12484,11 @@
    "federated": {
     "v": "yes",
     "source": "https://github.com/misskey-dev/misskey"
+   },
+   "quote-posts": {
+    "v": "yes",
+    "note": "Renote can quote or share a note",
+    "source": "https://raw.githubusercontent.com/misskey-dev/misskey-hub/main/src/docs/features/note.md"
    }
   },
   "plume": {
@@ -12191,16 +12501,35 @@
    "security-updates": {
     "v": "yes",
     "source": "https://lineageos.org"
+   },
+   "many-phones": {
+    "v": "yes",
+    "note": "Several hundred devices on its supported list",
+    "source": "https://wiki.lineageos.org/devices/"
+   },
+   "google-apps-optional": {
+    "v": "yes",
+    "note": "|Google apps are an optional add-on package",
+    "source": "https://wiki.lineageos.org/faq/"
    }
   },
   "rustdesk": {
    "computer-app": {
     "v": "yes"
+   },
+   "no-server-needed": {
+    "v": "yes",
+    "note": "|Install the app; public servers used by default"
    }
   },
   "clamav": {
    "computer-app": {
     "v": "yes"
+   },
+   "realtime-protection": {
+    "v": "partly",
+    "note": "Only on Linux",
+    "source": "https://docs.clamav.net/manual/OnAccess.html"
    }
   },
   "mumble": {
@@ -12208,6 +12537,11 @@
     "v": "partly",
     "note": "scripts and music bots, no bot store",
     "source": "https://www.mumble.info"
+   },
+   "phone-app": {
+    "v": "partly",
+    "note": "Android app is third-party (Mumla); iPhone app unmaintained since 2017",
+    "source": "https://www.mumble.info/downloads/"
    }
   },
   "jitsi-meet": {
@@ -12228,6 +12562,11 @@
    "phone-app": {
     "v": "yes",
     "source": "https://github.com/jitsi/jitsi-meet"
+   },
+   "screen-share": {
+    "v": "yes",
+    "note": "|Content (screen) sharing listed as a main feature",
+    "source": "https://raw.githubusercontent.com/jitsi/jitsi-meet/HEAD/README.md"
    }
   },
   "bluesky": {
@@ -12242,6 +12581,15 @@
    },
    "phone-app": {
     "v": "yes"
+   },
+   "move-account": {
+    "v": "yes",
+    "note": "Account can be moved to another host",
+    "source": "https://raw.githubusercontent.com/bluesky-social/atproto-website/main/src/app/%5Blocale%5D/guides/account-migration/en.mdx"
+   },
+   "no-server-needed": {
+    "v": "yes",
+    "note": "|Install the app and sign up"
    }
   },
   "loops": {
@@ -12257,6 +12605,11 @@
   "alovoa": {
    "no-server-needed": {
     "v": "yes"
+   },
+   "phone-app": {
+    "v": "partly",
+    "note": "Android app listed; no iPhone app mentioned",
+    "source": "https://raw.githubusercontent.com/Alovoa/alovoa/HEAD/README.md"
    }
   },
   "e-os": {
@@ -12264,6 +12617,21 @@
     "v": "partly",
     "note": "Murena shop",
     "source": "https://e.foundation"
+   },
+   "many-phones": {
+    "v": "yes",
+    "note": "|",
+    "source": "https://doc.e.foundation/devices"
+   },
+   "easy-installer": {
+    "v": "yes",
+    "note": "|",
+    "source": "https://e.foundation/e-os/"
+   },
+   "google-apps-optional": {
+    "v": "partly",
+    "note": "Uses microG as a stand-in for Google services",
+    "source": "https://e.foundation/e-os/"
    }
   },
   "florisboard": {
@@ -12280,6 +12648,15 @@
   "ultravnc": {
    "phone-app": {
     "v": "no"
+   },
+   "no-server-needed": {
+    "v": "yes",
+    "note": "|Install the app"
+   },
+   "session-file-transfer": {
+    "v": "yes",
+    "note": "|",
+    "source": "https://uvnc.com/"
    }
   },
   "keepassdx": {
@@ -12341,6 +12718,11 @@
    "no-server-needed": {
     "v": "yes",
     "source": "https://github.com/lowercasename/gathio"
+   },
+   "federated": {
+    "v": "yes",
+    "note": "|",
+    "source": "https://raw.githubusercontent.com/lowercasename/gathio/HEAD/README.md"
    }
   },
   "debian": {
@@ -12371,6 +12753,21 @@
    },
    "phone-app": {
     "v": "yes"
+   },
+   "syncs-devices": {
+    "v": "yes",
+    "note": "|",
+    "source": "https://www.firefox.com/en-US/features/sync/"
+   },
+   "full-ad-block-extensions": {
+    "v": "yes",
+    "note": "uBlock Origin is listed on Firefox's add-on site",
+    "source": "https://addons.mozilla.org/api/v5/addons/addon/ublock-origin/"
+   },
+   "no-tracking": {
+    "v": "partly",
+    "note": "Sends some usage data by default",
+    "source": "https://www.mozilla.org/en-US/privacy/firefox/"
    }
   },
   "mullvad-browser": {
@@ -12438,6 +12835,21 @@
    },
    "phone-app": {
     "v": "yes"
+   },
+   "no-phone-number": {
+    "v": "partly",
+    "note": "A number is still needed to sign up; usernames hide it from others",
+    "source": "https://signal.org/blog/phone-number-privacy-usernames/"
+   },
+   "disappearing-messages": {
+    "v": "yes",
+    "note": "|",
+    "source": "https://signal.org/blog/disappearing-messages/"
+   },
+   "self-hostable": {
+    "v": "partly",
+    "note": "Server code is public but unsupported for running your own",
+    "source": "https://raw.githubusercontent.com/signalapp/Signal-Server/main/README.md"
    }
   },
   "element-call": {
@@ -12459,6 +12871,11 @@
    "voting": {
     "v": "yes",
     "source": "https://join-lemmy.org"
+   },
+   "roles-moderation": {
+    "v": "yes",
+    "note": "Site admins and community moderators",
+    "source": "https://raw.githubusercontent.com/LemmyNet/lemmy/HEAD/README.md"
    }
   },
   "newpipe": {
@@ -12577,6 +12994,11 @@
    },
    "phone-app": {
     "v": "yes"
+   },
+   "disappearing-messages": {
+    "v": "yes",
+    "note": "|",
+    "source": "https://raw.githubusercontent.com/simplex-chat/simplex-chat/HEAD/README.md"
    }
   },
   "jami": {
@@ -12594,8 +13016,8 @@
    },
    "no-server-needed": {
     "v": "yes",
-    "note": "join a server",
-    "source": "https://join.piefed.social"
+    "note": "|Join an existing server",
+    "source": "https://join.piefed.social/"
    }
   },
   "ghost": {
@@ -12631,6 +13053,26 @@
    },
    "phone-app": {
     "v": "yes"
+   },
+   "syncs-devices": {
+    "v": "yes",
+    "note": "|",
+    "source": "https://brave.com/privacy/browser/"
+   },
+   "no-tracking": {
+    "v": "partly",
+    "note": "Sends anonymous product reports until you turn them off",
+    "source": "https://brave.com/privacy/browser/"
+   },
+   "full-ad-block-extensions": {
+    "v": "yes",
+    "note": "Keeps the full uBlock Origin working",
+    "source": "https://brave.com/blog/brave-shields-manifest-v3/"
+   },
+   "chrome-extensions": {
+    "v": "yes",
+    "note": "Installs from the Chrome Web Store",
+    "source": "https://brave.com/blog/brave-shields-manifest-v3/"
    }
   },
   "yacy": {
@@ -12694,6 +13136,91 @@
    },
    "phone-app": {
     "v": "no"
+   }
+  },
+  "librewolf": {
+   "syncs-devices": {
+    "v": "yes",
+    "note": "Uses Firefox Sync, off until you turn it on",
+    "source": "https://librewolf.net/docs/faq/"
+   },
+   "phone-app": {
+    "v": "no",
+    "note": "No official phone app",
+    "source": "https://librewolf.net/docs/faq/"
+   },
+   "ad-blocking": {
+    "v": "yes",
+    "note": "|",
+    "source": "https://librewolf.net/docs/features/"
+   },
+   "full-ad-block-extensions": {
+    "v": "yes",
+    "note": "|Ships with full uBlock Origin",
+    "source": "https://librewolf.net/docs/faq/"
+   },
+   "no-tracking": {
+    "v": "yes",
+    "note": "|",
+    "source": "https://librewolf.net/docs/features/"
+   }
+  },
+  "vaultwarden": {
+   "syncs-devices": {
+    "v": "yes",
+    "note": "Syncs through the official Bitwarden apps",
+    "source": "https://raw.githubusercontent.com/dani-garcia/vaultwarden/HEAD/README.md"
+   },
+   "phone-app": {
+    "v": "yes",
+    "note": "Uses the official Bitwarden phone apps",
+    "source": "https://raw.githubusercontent.com/dani-garcia/vaultwarden/HEAD/README.md"
+   },
+   "browser-extension": {
+    "v": "yes",
+    "note": "Uses the official Bitwarden browser extensions",
+    "source": "https://raw.githubusercontent.com/dani-garcia/vaultwarden/HEAD/README.md"
+   },
+   "share-with-others": {
+    "v": "yes",
+    "note": "|",
+    "source": "https://raw.githubusercontent.com/dani-garcia/vaultwarden/HEAD/README.md"
+   },
+   "no-server-needed": {
+    "v": "no",
+    "note": "|You run the server yourself",
+    "source": "https://raw.githubusercontent.com/dani-garcia/vaultwarden/HEAD/README.md"
+   }
+  },
+  "ubuntu": {
+   "long-support": {
+    "v": "yes",
+    "note": "|",
+    "source": "https://ubuntu.com/download/desktop"
+   }
+  },
+  "deepfence-threatmapper": {
+   "no-paid-edition": {
+    "v": "partly",
+    "note": "A paid enterprise edition adds features",
+    "source": "https://raw.githubusercontent.com/deepfence/ThreatMapper/HEAD/README.md"
+   }
+  },
+  "f-droid": {
+   "app-review": {
+    "v": "yes",
+    "note": "Apps are reviewed and checked against the source before inclusion",
+    "source": "https://f-droid.org/en/docs/Inclusion_Policy/"
+   },
+   "tracker-warnings": {
+    "v": "yes",
+    "note": "Apps carry Anti-Feature labels such as tracking and ads",
+    "source": "https://f-droid.org/docs/Anti-Features/"
+   },
+   "play-apps": {
+    "v": "no",
+    "note": "Only free and open source apps",
+    "source": "https://f-droid.org/en/docs/Inclusion_Policy/"
    }
   }
  }
