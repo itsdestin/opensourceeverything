@@ -46,8 +46,7 @@ export const requestKind = (key) => (/^(group|app|issue):.{1,100}$/.test(String(
 
 // ── Tag my project ──
 export const PROOF_FILE = '.opensourceeverything';
-// The subreddit's four "how it was built" labels (trueopensource-bot/sub/rules.md rule 4).
-export const BUILT = { 'hand-built': 'Hand-built', 'ai-assisted': 'AI-assisted', agentic: 'Agentic engineering', 'vibe-coded': 'Vibe-coded' };
+// WHY no "how it was built" label any more (Destin, redesign round 3: drop the AI tags entirely): a pitch is the description, the groups and the optional notes.
 export const PITCH_LIMITS = { differs: 600, text: 1000, groups: 5 };
 const HOSTS = ['github.com', 'gitlab.com', 'codeberg.org'];
 // "https://github.com/Owner/Name/tree/main?x" → { host, owner, name, repo: "github.com/owner/name" }; null if it isn't a project page.
@@ -72,10 +71,9 @@ export function cleanPitch(body, groupIds) {
   if (!groups.length) return { error: 'Pick at least one group it belongs in.' };
   if (groups.length > PITCH_LIMITS.groups) return { error: `Pick up to ${PITCH_LIMITS.groups} groups.` };
   const differs = clean(body?.differs, PITCH_LIMITS.differs);
-  if (!differs) return { error: 'Say what yours does differently. It is the part people read first.' };
-  if (!BUILT[body?.built]) return { error: 'Say how it was built.' };
+  if (!differs) return { error: 'Write a description.' };
   const t = (k) => clean(body?.[k], PITCH_LIMITS.text);
-  return { pitch: { groups, differs, strengths: t('strengths'), weaknesses: t('weaknesses'), reusable: t('reusable'), help: t('help'), built: body.built } };
+  return { pitch: { groups, differs, strengths: t('strengths'), weaknesses: t('weaknesses'), reusable: t('reusable'), help: t('help') } };
 }
 
 // ── Your suggestions ──

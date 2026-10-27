@@ -1,7 +1,7 @@
 // The Open Source Everything server (api.opensourceeverything.org): sign-in, ratings, notes, replies, mod tools.
 // Every call and rule is listed in docs/server-rules.md; site/assets/fake-api.js is the same contract in the browser.
 // The page never decides rights: each note goes out with a `can` list worked out here (rules.js).
-import { RULES, LIMITS, ageDays, oldEnough, holdsFirstPost, isMod, can, clean, isLink, requestKind, parseRepo, proofFor, proofHas, cleanPitch, PROOF_FILE, BUILT, suggestionKind, suggestionName } from './rules.js';
+import { RULES, LIMITS, ageDays, oldEnough, holdsFirstPost, isMod, can, clean, isLink, requestKind, parseRepo, proofFor, proofHas, cleanPitch, PROOF_FILE, suggestionKind, suggestionName } from './rules.js';
 import { openSuggestions, suggestionsBy, closingNote, suggestionView, proofFile, ghJson } from './github.js';
 import { currentUser, login, callback, devLogin, logout } from './auth.js';
 import { handleSearch } from './search.js';

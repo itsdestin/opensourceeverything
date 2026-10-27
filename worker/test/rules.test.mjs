@@ -26,7 +26,6 @@ test('a suggestion\'s state comes from its labels and how it was closed', () => 
 test('a pitch needs a group, "what is different" and a how-built label; text is cut to size', () => {
   assert.ok(cleanPitch({ groups: ['x'], differs: '', built: 'hand-built' }, ['x']).error);
   assert.ok(cleanPitch({ groups: ['nope'], differs: 'a', built: 'hand-built' }, ['x']).error);
-  assert.ok(cleanPitch({ groups: ['x'], differs: 'a', built: 'wizard' }, ['x']).error);
   assert.equal(cleanPitch({ groups: ['x'], differs: 'a', built: 'agentic', strengths: 'y'.repeat(5000) }, ['x']).pitch.strengths.length, 1000);
 });
 test('request keys', () => { assert.equal(requestKind('group:signing'), 'group'); assert.equal(requestKind('issue:12'), 'issue'); assert.equal(requestKind('nope'), null); });

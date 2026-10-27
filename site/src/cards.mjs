@@ -49,7 +49,7 @@ export function altCard(p, alt, i, group, why) {
   const famHtml = nodes.length ? `<ul class="tiplist">${nodes.slice(0, 7).map((n) => `<li class="d${n.depth}">${n.outside ? esc(n.name) : n.here ? `<b>${esc(n.p.name)}</b>` : `<a href="${url(`p/${n.p.id}/`)}">${esc(n.p.name)}</a>`}<span>${esc(n.rel || n.status.text)}</span></li>`).join('')}</ul><a class="tipmore" href="${pageLink}#family">See the whole family</a>` : '';
   const tips = [
     tpl('stars', 'GitHub stars', '<p>How many people bookmarked its code on GitHub. It shows how popular it is, not how good it is or how well it replaces the app.</p>'),
-    tpl('setup', SETUP[setupOf(p)], `<p>How hard it is to start using it. <b>Easy</b>: install it like a normal app, or use it in your browser. <b>Advanced</b>: you run it on your own server, use the command line, or it is a tool for developers.</p><p class="tipwhy">${esc(p.name)}: ${esc(setupWhy(p))}</p>`),
+    tpl('setup', SETUP[setupOf(p)], `<p>How hard it is to start using it. <b>Easy</b>: install it like a normal app, or use it in your browser. <b>Advanced</b>: you run it on your own server, use the command line, or it is a tool for developers.</p>`),
     tpl('active', p.inactive ? 'Quiet for a year' : 'Active', `<p>${p.inactive ? 'Nobody has changed its code in over a year. It may still work well, but help is less likely.' : 'Its code changed within the last year, so someone is still looking after it.'}</p>`),
     p.verified ? tpl('verified', 'Verified', '<p>r/TrueOpenSource mods checked it: an open-source license, still looked after, and it really does the job.</p>') : '',
     tpl('why', 'Why it is listed here', `${whyText ? `<p>${esc(whyText.split(' · ').join(', '))}.</p>` : '<p>It is listed in this group by the editors.</p>'}<p class="tipwhy">The order comes from how fully it replaces the app, Verified, setup and, when there are enough, people's votes.</p>${famHtml}`),
@@ -99,23 +99,23 @@ function choosePrompt({ closed, job, json, alts }) {
     alts.map(({ p, a }) => `- ${p.name}: ${p.summary} [${SETUP[setupOf(p)]}${p.setupWhy ? ` (${p.setupWhy})` : ''}; ${devicesText(p) || (p.platforms?.includes('server') ? 'runs on a server you set up' : 'devices not listed')}; replaces ${a.fit === 'full' ? 'fully' : 'partly'}; ${p.license ?? 'license being checked'}${p.verified ? '; Verified by r/TrueOpenSource mods' : ''}${p.inactive ? '; no changes in over a year' : ''}${codeUrl(p) ? `; ${codeUrl(p)}` : p.website ? `; ${p.website}` : ''}]`).join('\n') +
     `\n\n${SETUP_KEY}\n\nFull details: ${SITE_URL}${json}\n\nBefore recommending anything, ask me these three questions (one at a time, in plain words): 1) Which device or devices will I use it on (Windows, Mac, Linux, Android, iPhone)? 2) How comfortable am I with technical setup: only installing apps from a store, happy to follow a step-by-step guide, or comfortable with servers and the command line? 3) What is my budget: free only, or willing to pay for hosting or support? Then recommend one to three projects from this list only, and for each say why, using how fully it replaces the app, its setup rating, and the devices it runs on. If nothing on the list fits me, say so plainly instead of stretching.`;
 }
+// WHY the two boxes share one shape (Destin: they should look alike): a heading, ONE sentence, then the buttons. The prompt text is not shown
+// (it is long and only meant to be pasted); "copy with the list included" is gone because the first prompt already links to the list.
 export function chooseBox(t) {
   return `<section class="surface sec fold-phone" id="choose">
         <h2 class="h-large fold-head">Help me choose</h2>
-        <p class="small2">Not sure which one fits you? Paste this into any AI assistant. It asks about your device, your skill level and your budget, then picks from this list.</p>
+        <p class="small2">Paste it into any AI assistant to pick from this list for your device and skill level.</p>
         <div id="prompt-choose" hidden>${esc(choosePrompt(t))}</div>
-        <div class="stack"><button class="btn md primary" type="button" data-copy="prompt-choose" data-copied="Copied, with the list. Paste it into any AI assistant.">Copy "Help me choose" prompt</button></div>
+        <div class="stack"><button class="btn md primary" type="button" data-copy="prompt-choose" data-copied="Copied. Paste it into any AI assistant.">Copy prompt</button></div>
       </section>`;
 }
 export function buildBox(t) {
   return `<section class="surface sec fold-phone" id="build">
         <h2 class="h-large fold-head">Before you build</h2>
-        <p class="small2">Planning something for ${esc(t.about)}? See what exists first, so you can reuse parts or explain what's different. Paste this into any AI assistant:</p>
-        <div class="lvl2 prompt" id="prompt-short">${esc(promptText(t, false))}</div>
-        <div id="prompt-full" hidden>${esc(promptText(t, true))}</div>
+        <p class="small2">Paste it into any AI assistant to compare your idea with what already exists for ${esc(t.about)}.</p>
+        <div id="prompt-short" hidden>${esc(promptText(t, false))}</div>
         <div class="stack">
           <button class="btn md primary" type="button" data-copy="prompt-short" data-copied="Copied. Paste it into any AI assistant.">Copy prompt</button>
-          <button class="btn md secondary" type="button" data-copy="prompt-full" data-copied="Copied, with the list. Paste it into any AI assistant.">Copy with the list included</button>
           <a class="btn md secondary" href="${url(t.json)}" download>Download the list</a>
         </div>
       </section>`;

@@ -140,6 +140,7 @@ export function redirects(d) {
 // One grey line for a card: its own relation in plain words, else who was made from it. Plain text.
 export function famGrey(p, fam) {
   const e = shown(p);
+  if (e?.differs) return e.differs; // WHY: how it differs from its upstream says more than the relation word
   if (e && e.relation !== 'unrelated-same-name') return ownText(p, fam);
   const by = reverseLines(p, fam, 2)[0];
   return by ? by.replace(/<[^>]+>/g, '') : '';
@@ -150,7 +151,9 @@ export function famNodes(p, fam) {
   const root = rootOf(p, fam.d); const out = [];
   const add = (c, depth, parent) => {
     const e = shown(c);
-    out.push({ p: c, depth, parent, here: c.id === p.id, status: status(c), rel: depth && e ? (e.label ?? (e.relation === 'split' && e.since ? `Started as a copy in ${e.since}, now separate` : SHORT[e.relation])) + (e.relation === 'fork-keeps-up' && e.since ? ` (${e.since})` : '') : '', why: depth && e ? e.why : '', source: depth && e ? e.source : '' });
+    // WHY "how it differs" first (Destin: families are always framed by how a project differs from its upstream); the plain relation words are only the fallback.
+    const diff = depth && e ? e.differs : null;
+    out.push({ p: c, depth, parent, here: c.id === p.id, status: status(c), diff: diff || '', rel: depth && e ? (e.label ?? (e.relation === 'split' && e.since ? `Started as a copy in ${e.since}, now separate` : SHORT[e.relation])) + (e.relation === 'fork-keeps-up' && e.since ? ` (${e.since})` : '') : '', why: depth && e ? e.why : '', source: depth && e ? e.source : '' });
     for (const k of (fam.kids.get(c.id) ?? []).slice().sort((a, b) => a.name.localeCompare(b.name))) add(k, depth + 1, c.name);
   };
   if (root.outside) {

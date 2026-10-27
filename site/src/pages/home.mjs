@@ -81,9 +81,8 @@ export default function home(d) {
   <div class="surface hero3">
     ${SOCIAL ? '<div class="hero-acct" data-account></div>' : ''}
     <div class="hero-text">
-      <div class="eyebrow"><span class="avatar brand">${ICON.home}</span>Open Source Everything · supported by r/TrueOpenSource</div>
       <h1>Find an open-source replacement for the apps you use</h1>
-      <p class="lede">Free apps anyone can inspect and improve, sorted by the job they do. We also show where nothing good exists yet.</p>
+      <p class="lede">Free apps anyone can inspect and improve, sorted by the job they do.</p>
       <div class="searchwrap big" data-search>
         <div class="searchpill">${ICON.search}<input type="search" placeholder="Which app do you want to replace?" autocomplete="off" aria-label="Search for an app"></div>
         <div class="menu search-menu" role="listbox"></div>
@@ -95,30 +94,30 @@ export default function home(d) {
   </div>
 
   <section class="surface sec">
-    <div class="sec-head"><div><h2 class="h-large">Popular switches</h2><p class="desc12">The apps people most often want to leave, and the best-known open replacement for each</p></div></div>
+    <div class="sec-head"><div><h2 class="h-large">Popular switches</h2></div></div>
     <div class="swgrid">${switches.map(switchCard).join('')}</div>
   </section>
 
   <section class="surface sec">
-    <div class="sec-head"><div><h2 class="h-large">Browse by category</h2><p class="desc12">Each category is a set of jobs. Pick the job you need done.</p></div></div>
+    <div class="sec-head"><div><h2 class="h-large">Browse by category</h2></div></div>
     <div class="catgrid">${cats}</div>
   </section>
 
   ${SOCIAL ? `<!-- WHY here (review Oct 26): people's asks, ranked, are the clearest "what next"; filled in by assets/contrib.js -->
   <section class="surface sec">
-    <div class="sec-head"><div><h2 class="h-large">Most requested</h2><p class="desc12">Apps and jobs people are asking for. Press <b>I want this too</b> to add yours.</p></div><a class="btn sm secondary" href="${url('gaps/#requested')}">See all</a></div>
+    <div class="sec-head"><div><h2 class="h-large">Most requested</h2></div><a class="btn sm secondary" href="${url('gaps/#requested')}">See all</a></div>
     <div data-most-requested data-limit="5" data-layout="five"></div>
   </section>` : ''}
 
   <section class="surface sec">
-    <div class="sec-head"><div><h2 class="h-large">Still missing</h2><p class="desc12">${gapTotal} jobs no open-source app fully does yet. A good place to start building.</p></div><a class="btn sm secondary" href="${url('gaps/')}">See all gaps</a></div>
+    <div class="sec-head"><div><h2 class="h-large">Still missing</h2></div><a class="btn sm secondary" href="${url('gaps/')}">See all gaps</a></div>
     <div class="gapgrid">${gaps.map(gapCard).join('')}</div>
   </section>
 
   <div class="surface builders">
     <div style="min-width:0;max-width:640px">
       <h2 class="h-large">Building an open alternative?</h2>
-      <p class="small2" style="margin-top:4px">See what already exists, reuse parts of it, or get your project listed so people can find it. The whole map is also <a href="${url('data/groups.json')}" download>free to download</a>, for people and AI assistants.</p>
+      <p class="small2" style="margin-top:4px">See what already exists, reuse parts of it, or get your project listed so people can find it.</p>
     </div>
     <div class="btns">
       <a class="btn md secondary" href="${esc(suggestUrl('4-new-group'))}" rel="noopener">Suggest a missing job</a>

@@ -6,7 +6,9 @@
    "of": "firefox",
    "why": "A fork of Firefox with privacy and security settings changed; its releases carry Firefox's version numbers.",
    "source": "https://en.wikipedia.org/wiki/LibreWolf",
-   "confirmed": "mod"
+   "confirmed": "mod",
+   "differs": "Firefox with tracking blocked and stricter privacy settings by default",
+   "differsFromChild": "LibreWolf: Firefox with tracking blocked by default"
   },
   "zen-browser": {
    "relation": "fork-keeps-up",
@@ -14,14 +16,18 @@
    "since": 2024,
    "why": "A fork of Firefox introduced in 2024, focused on privacy, customizability and design.",
    "source": "https://en.wikipedia.org/wiki/Zen_Browser",
-   "confirmed": "mod"
+   "confirmed": "mod",
+   "differs": "Firefox with a customizable, calmer layout and add-on themes called Mods",
+   "differsFromChild": "Zen: Firefox with a calmer, customizable layout"
   },
   "tor-browser": {
    "relation": "fork-keeps-up",
    "of": "firefox",
    "why": "A modified Firefox ESR (Firefox's long-support version) bundled with the Tor network software.",
    "source": "https://en.wikipedia.org/wiki/Tor_(network)",
-   "confirmed": "mod"
+   "confirmed": "mod",
+   "differs": "Firefox that hides your location by routing traffic through Tor",
+   "differsFromChild": "Tor Browser: Firefox that hides your location through Tor"
   },
   "floorp": {
    "relation": "fork-keeps-up",
@@ -29,28 +35,36 @@
    "since": 2021,
    "why": "A Japanese browser based on Firefox, focused on customizing the interface.",
    "source": "https://en.wikipedia.org/wiki/Floorp",
-   "confirmed": "mod"
+   "confirmed": "mod",
+   "differs": "Firefox with workspaces, split view and many ways to customize the look",
+   "differsFromChild": "Floorp: Firefox with workspaces and split view"
   },
   "mullvad-browser": {
    "relation": "built-on",
    "of": "tor-browser",
    "why": "Made by Mullvad VPN together with the Tor Project, which describe it as \"a Tor Browser to use without the Tor Network\".",
    "source": "https://github.com/mullvad/mullvad-browser",
-   "confirmed": "mod"
+   "confirmed": "mod",
+   "differs": "Tor Browser's privacy protections without the Tor network, for use with a VPN",
+   "differsFromChild": "Mullvad Browser: Tor Browser without Tor"
   },
   "ungoogled-chromium": {
    "relation": "fork-keeps-up",
    "of": "chromium",
    "why": "Chromium with its dependence on Google web services removed.",
    "source": "https://github.com/ungoogled-software/ungoogled-chromium",
-   "confirmed": "mod"
+   "confirmed": "mod",
+   "differs": "Chromium with Google's web services and tracking removed",
+   "differsFromChild": "Ungoogled Chromium: Chromium without Google services"
   },
   "brave": {
    "relation": "built-on",
    "of": "chromium",
    "why": "A browser based on the Chromium web browser, made by Brave Software.",
    "source": "https://en.wikipedia.org/wiki/Brave_(web_browser)",
-   "confirmed": "mod"
+   "confirmed": "mod",
+   "differs": "Chromium-based, with a built-in ad blocker and crypto rewards",
+   "differsFromChild": "Brave: Chromium with a built-in ad blocker"
   },
   "forgejo": {
    "relation": "split",
@@ -58,7 +72,9 @@
    "since": 2022,
    "why": "Started in December 2022 as a fork of Gitea, after Gitea's trademarks and operations were moved to a for-profit company.",
    "source": "https://en.wikipedia.org/wiki/Forgejo",
-   "confirmed": "mod"
+   "confirmed": "mod",
+   "differs": "Gitea's community-run fork, governed by a non-profit",
+   "differsFromChild": "Forgejo: community-run fork governed by a non-profit"
   },
   "gitea": {
    "relation": "split",
@@ -66,7 +82,9 @@
    "since": 2016,
    "why": "Started in November 2016 as a fork of Gogs, to develop it as a community-run project.",
    "source": "https://en.wikipedia.org/wiki/Gitea",
-   "confirmed": "mod"
+   "confirmed": "mod",
+   "differs": "Gogs forked to be developed by its community, and grown into a fuller platform",
+   "differsFromChild": "Gitea: community-run fork of Gogs"
   },
   "nextcloud": {
    "relation": "split",
@@ -74,7 +92,9 @@
    "since": 2016,
    "why": "Started in 2016 as a fork of ownCloud by Frank Karlitschek, ownCloud's founder and then CTO, after he left the company.",
    "source": "https://en.wikipedia.org/wiki/OwnCloud",
-   "confirmed": "mod"
+   "confirmed": "mod",
+   "differs": "ownCloud's fork, started by its founder after he left the company",
+   "differsFromChild": "Nextcloud: fork started by ownCloud's founder"
   },
   "comaps": {
    "relation": "split",
@@ -82,14 +102,18 @@
    "since": 2025,
    "why": "A community-led fork of Organic Maps, which itself began as a fork of Maps.me.",
    "source": "https://codeberg.org/comaps/comaps",
-   "confirmed": "mod"
+   "confirmed": "mod",
+   "differs": "Organic Maps run by its community instead of a single company",
+   "differsFromChild": "CoMaps: community-led fork"
   },
   "heliboard": {
    "relation": "built-on",
    "of": "openboard",
    "why": "Describes itself as \"based on AOSP / OpenBoard\".",
    "source": "https://github.com/Helium314/HeliBoard",
-   "confirmed": "mod"
+   "confirmed": "mod",
+   "differs": "OpenBoard with more customization, kept up to date",
+   "differsFromChild": "HeliBoard: OpenBoard with more customization"
   },
   "kilo-code": {
    "relation": "split",
@@ -97,7 +121,9 @@
    "since": 2025,
    "why": "Launched in March 2025 as a fork of Roo Code, which was itself derived from Cline.",
    "source": "https://en.wikipedia.org/wiki/Kilo_Code",
-   "confirmed": "mod"
+   "confirmed": "mod",
+   "differs": "AI coding agent descended from Roo Code and Cline, with its own platform",
+   "differsFromChild": "Kilo Code: fork of Roo Code, itself from Cline"
   },
   "vaultwarden": {
    "relation": "built-on",
@@ -105,7 +131,9 @@
    "why": "An unofficial rewrite of the Bitwarden server that works with Bitwarden's apps; it was called Bitwarden_RS until renamed to avoid confusion with the official server.",
    "source": "https://github.com/dani-garcia/vaultwarden",
    "label": "Works with Bitwarden's apps",
-   "confirmed": "mod"
+   "confirmed": "mod",
+   "differs": "Lightweight server that works with Bitwarden's apps",
+   "differsFromChild": "Vaultwarden: lightweight unofficial server for Bitwarden apps"
   },
   "mbin": {
    "relation": "continues",
@@ -117,7 +145,8 @@
    "oldNames": [
     "kbin"
    ],
-   "confirmed": "mod"
+   "confirmed": "mod",
+   "differs": "Carries on kbin, which is no longer maintained"
   },
   "vane-formerly-perplexica": {
    "relation": "renamed",
@@ -131,7 +160,8 @@
    "redirectFrom": [
     "perplexica"
    ],
-   "confirmed": "mod"
+   "confirmed": "mod",
+   "differs": "Perplexica under its new name"
   },
   "keepassxc": {
    "relation": "continues",
@@ -139,7 +169,9 @@
    "since": 2016,
    "why": "A community fork of KeePassX; KeePassX announced on 2021-12-09 that it is no longer developed.",
    "source": "https://keepassxc.org/docs/",
-   "confirmed": "mod"
+   "confirmed": "mod",
+   "differs": "Actively maintained successor to KeePassX",
+   "differsFromChild": "KeePassXC: maintained successor to KeePassX"
   },
   "fossify-calendar": {
    "relation": "continues",
@@ -151,7 +183,8 @@
     "Simple Mobile Tools",
     "Simple Calendar"
    ],
-   "confirmed": "mod"
+   "confirmed": "mod",
+   "differs": "Continues Simple Calendar after the original was discontinued"
   },
   "fossify-gallery": {
    "relation": "continues",
@@ -163,7 +196,8 @@
     "Simple Mobile Tools",
     "Simple Gallery"
    ],
-   "confirmed": "mod"
+   "confirmed": "mod",
+   "differs": "Continues Simple Gallery after the original was discontinued"
   },
   "simple-keyboard": {
    "relation": "unrelated-same-name",
@@ -171,42 +205,53 @@
    "why": "A separate app by a different developer; it is not a fork of the Simple Mobile Tools keyboard of the same name.",
    "source": "https://github.com/rkkr/simple-keyboard",
    "ofUrl": "https://github.com/SimpleMobileTools/Simple-Keyboard",
-   "confirmed": "mod"
+   "confirmed": "mod",
+   "differs": "Not related to the Simple Mobile Tools keyboard of the same name"
   },
   "bazzite": {
    "relation": "built-on",
    "of": "fedora",
    "why": "Built from Fedora's Atomic Desktops (Kinoite and Silverblue) through the Universal Blue project.",
    "source": "https://bazzite.gg/",
-   "confirmed": "mod"
+   "confirmed": "mod",
+   "differs": "Fedora Atomic with gaming-focused setup built in",
+   "differsFromChild": "Bazzite: Fedora Atomic set up for gaming"
   },
   "linux-mint": {
    "relation": "built-on",
    "of": "ubuntu",
    "why": "Based on Ubuntu and uses its package repositories.",
    "source": "https://en.wikipedia.org/wiki/Linux_Mint",
-   "confirmed": "mod"
+   "confirmed": "mod",
+   "differs": "Ubuntu with a more Windows-like desktop",
+   "differsFromChild": "Linux Mint: Ubuntu with a Windows-like desktop"
   },
   "pop-os": {
    "relation": "built-on",
    "of": "ubuntu",
    "why": "Based on Ubuntu; developed by System76.",
    "source": "https://en.wikipedia.org/wiki/Pop!_OS",
-   "confirmed": "mod"
+   "confirmed": "mod",
+   "differs": "Ubuntu with System76's own setup and COSMIC desktop",
+   "differsFromChild": "Pop!_OS: Ubuntu by System76"
   },
   "ubuntu": {
    "relation": "built-on",
    "of": "debian",
    "why": "A Linux distribution based on Debian.",
    "source": "https://en.wikipedia.org/wiki/Ubuntu",
-   "confirmed": "mod"
+   "confirmed": "mod",
+   "differs": "Debian with scheduled releases and company backing from Canonical",
+   "differsFromChild": "Ubuntu: Debian with scheduled releases"
   },
   "cachyos": {
    "relation": "built-on",
    "of": "arch-linux",
    "why": "A Linux distribution based on Arch Linux.",
    "source": "https://en.wikipedia.org/wiki/CachyOS",
-   "confirmed": "mod"
+   "confirmed": "mod",
+   "differs": "Arch Linux with performance-tuned packages and a friendlier installer",
+   "differsFromChild": "CachyOS: Arch tuned for speed"
   },
   "postmarketos": {
    "relation": "renamed",
@@ -217,7 +262,8 @@
    "oldNames": [
     "postmarketOS"
    ],
-   "confirmed": "suggested"
+   "confirmed": "suggested",
+   "differs": "Same project, now called Nura"
   },
   "mlcraft": {
    "relation": "renamed",
@@ -227,7 +273,8 @@
    "oldNames": [
     "MLCraft"
    ],
-   "confirmed": "suggested"
+   "confirmed": "suggested",
+   "differs": "Same project, now called Synmetrix"
   },
   "libreoffice-writer": {
    "relation": "split",
@@ -239,7 +286,9 @@
    "oldNames": [
     "OpenOffice.org",
     "OpenOffice"
-   ]
+   ],
+   "differs": "Fork of OpenOffice.org, a separate continuation from Apache OpenOffice",
+   "differsFromChild": "LibreOffice: fork of OpenOffice.org"
   },
   "libreoffice-calc": {
    "relation": "split",
@@ -247,7 +296,9 @@
    "since": 2010,
    "why": "Created in 2010 as a fork of OpenOffice.org; Apache OpenOffice is the other continuation of that code.",
    "source": "https://en.wikipedia.org/wiki/LibreOffice",
-   "confirmed": "mod"
+   "confirmed": "mod",
+   "differs": "Fork of OpenOffice.org, a separate continuation from Apache OpenOffice",
+   "differsFromChild": "LibreOffice: fork of OpenOffice.org"
   },
   "libreoffice-impress": {
    "relation": "split",
@@ -255,7 +306,9 @@
    "since": 2010,
    "why": "Created in 2010 as a fork of OpenOffice.org; Apache OpenOffice is the other continuation of that code.",
    "source": "https://en.wikipedia.org/wiki/LibreOffice",
-   "confirmed": "mod"
+   "confirmed": "mod",
+   "differs": "Fork of OpenOffice.org, a separate continuation from Apache OpenOffice",
+   "differsFromChild": "LibreOffice: fork of OpenOffice.org"
   },
   "collabora-online": {
    "relation": "built-on",
@@ -263,7 +316,9 @@
    "why": "An online office suite made by Collabora and based on LibreOffice's code.",
    "source": "https://en.wikipedia.org/wiki/Collabora_Online",
    "label": "Built on LibreOffice",
-   "confirmed": "mod"
+   "confirmed": "mod",
+   "differs": "LibreOffice that runs in a web browser, for editing together",
+   "differsFromChild": "Collabora Online: LibreOffice in the browser"
   },
   "valkey": {
    "relation": "split",
@@ -271,7 +326,9 @@
    "since": 2024,
    "why": "Forked in 2024 from the last BSD-licensed Redis (7.2.4) by Linux Foundation members, after Redis moved to a source-available license.",
    "source": "https://en.wikipedia.org/wiki/Valkey",
-   "confirmed": "mod"
+   "confirmed": "mod",
+   "differs": "Redis's fork from the last open-license version, run by the Linux Foundation",
+   "differsFromChild": "Valkey: fork from Redis's last open license"
   },
   "opentofu": {
    "relation": "split",
@@ -280,7 +337,8 @@
    "why": "Started in 2023 as a fork of Terraform under the MPL, after HashiCorp relicensed Terraform under the Business Source License.",
    "source": "https://en.wikipedia.org/wiki/OpenTofu",
    "ofUrl": "https://en.wikipedia.org/wiki/Terraform_(software)",
-   "confirmed": "mod"
+   "confirmed": "mod",
+   "differs": "Terraform's fork under an open license, run by the Linux Foundation"
   },
   "vscodium": {
    "relation": "built-on",
@@ -293,7 +351,8 @@
     "VS Code",
     "Visual Studio Code"
    ],
-   "confirmed": "mod"
+   "confirmed": "mod",
+   "differs": "VS Code built without Microsoft's branding and telemetry"
   },
   "lineageos": {
    "relation": "continues",
@@ -304,14 +363,17 @@
    "oldNames": [
     "CyanogenMod"
    ],
-   "confirmed": "mod"
+   "confirmed": "mod",
+   "differs": "Successor to CyanogenMod, which shut down"
   },
   "e-os": {
    "relation": "split",
    "of": "lineageos",
    "why": "A fork of LineageOS (formerly called Eelo) that adds its own online services.",
    "source": "https://en.wikipedia.org/wiki//e/_(operating_system)",
-   "confirmed": "mod"
+   "confirmed": "mod",
+   "differs": "LineageOS with Google services removed and its own online services",
+   "differsFromChild": "/e/OS: LineageOS without Google, plus its own cloud"
   },
   "element": {
    "relation": "renamed",
@@ -323,7 +385,8 @@
     "Riot",
     "Vector"
    ],
-   "confirmed": "mod"
+   "confirmed": "mod",
+   "differs": "Same project, formerly named Riot"
   },
   "openclaw": {
    "relation": "renamed",
@@ -335,7 +398,8 @@
     "Moltbot",
     "Clawd"
    ],
-   "confirmed": "mod"
+   "confirmed": "mod",
+   "differs": "Same project, formerly named Moltbot"
   },
   "kodi": {
    "relation": "renamed",
@@ -346,7 +410,8 @@
    "oldNames": [
     "XBMC"
    ],
-   "confirmed": "mod"
+   "confirmed": "mod",
+   "differs": "Same project, formerly named XBMC"
   },
   "jellyfin": {
    "relation": "split",
@@ -354,7 +419,8 @@
    "since": 2018,
    "why": "Started in December 2018 as a fork of Emby.",
    "source": "https://en.wikipedia.org/wiki/Jellyfin",
-   "confirmed": "mod"
+   "confirmed": "mod",
+   "differs": "Emby's fork, started in 2018 as a community project"
   },
   "quillpad": {
    "relation": "continues",
@@ -365,7 +431,8 @@
    "oldNames": [
     "Quillnote"
    ],
-   "confirmed": "mod"
+   "confirmed": "mod",
+   "differs": "Continues Quillnote so development can go on"
   },
   "friction": {
    "relation": "built-on",
@@ -373,7 +440,8 @@
    "why": "Says it is based on enve, an earlier 2D animation program.",
    "source": "https://github.com/friction2d/friction",
    "ofUrl": "https://github.com/MaurycyLiebner/enve",
-   "confirmed": "mod"
+   "confirmed": "mod",
+   "differs": "Animation program based on enve's earlier code"
   },
   "trilium-notes": {
    "relation": "continues",
@@ -381,7 +449,8 @@
    "why": "The original developer, zadam, gave the Trilium repository to the TriliumNext community project.",
    "source": "https://github.com/TriliumNext/Trilium",
    "ofUrl": "https://github.com/zadam/trilium",
-   "confirmed": "mod"
+   "confirmed": "mod",
+   "differs": "Trilium continued by the TriliumNext community after its creator handed it over"
   },
   "gitlab-community-edition": {
    "relation": "free-edition",
@@ -392,7 +461,8 @@
    "redirectFrom": [
     "gitlab"
    ],
-   "confirmed": "mod"
+   "confirmed": "mod",
+   "differs": "GitLab's free open-source edition; the paid Enterprise Edition adds more"
   }
  }
 }

@@ -10,8 +10,8 @@ const HOSTS = { 'github.com': 'GitHub', 'gitlab.com': 'GitLab', 'codeberg.org': 
 function helpSection(p) {
   const h = p.help; if (!h) return '';
   const row = (href, title, note) => `<a class="btn md secondary helprow" href="${esc(href)}" rel="noopener"><span>${title}</span>${note ? `<span class="muted11">${note}</span>` : ''}</a>`;
-  return `<section class="surface sec" id="help">
-        <div class="sec-head"><div><h2 class="h-large">How to help</h2><p class="desc12">Ways to pitch in on ${esc(p.name)}, from its own pages</p></div></div>
+  return `<section class="surface sec fold-phone" id="help">
+        <div class="sec-head fold-head"><div><h2 class="h-large">How to help</h2></div></div>
         <div class="stack">
           ${h.contributing ? row(h.contributing, 'Read the contributing guide', 'How the team likes changes sent') : ''}
           ${h.good ? row(h.good.url, `Good first issues<span class="count">${h.good.n}</span>`, 'Small tasks picked for newcomers') : ''}
@@ -43,13 +43,13 @@ export default function projectPages(d) {
   ${rvFamilyA(p, fam)}
   ${SOCIAL ? `<!-- WHY drawn in the browser (assets/contrib.js): a mod's approval shows at once, with no rebuild of the site. -->
       <section class="surface sec" data-dev-pitch data-mode="page" data-project="${esc(p.id)}" data-repo="${esc(codeUrl(p) ?? '')}" hidden></section>` : ''}
-  ${p.screenshots?.length ? `<section class="surface sec">
-        <div class="sec-head"><div><h2 class="h-large">Screenshots<span class="count">${p.screenshots.length}</span></h2><p class="desc12">From ${esc(p.name)}'s own page. Click one to see it full size.</p></div></div>
+  ${p.screenshots?.length ? `<section class="surface sec fold-phone">
+        <div class="sec-head fold-head"><div><h2 class="h-large">Screenshots<span class="count">${p.screenshots.length}</span></h2></div></div>
         <!-- WHY small thumbnails (Destin, Oct 27: full-size pictures were "overwhelming"); full size opens in a viewer. -->
         <div class="thumbstrip">${p.screenshots.map((u, i) => `<button class="thumb" type="button" data-shot="${esc(u)}" aria-label="Screenshot ${i + 1} of ${p.screenshots.length}, full size"><img src="${esc(shot(p, i))}" alt="" loading="lazy" referrerpolicy="no-referrer"></button>`).join('')}</div>
       </section>` : ''}
-      <section class="surface sec">
-        <div class="sec-head"><div><h2 class="h-large">Listed in<span class="count">${listed.length}</span></h2><p class="desc12">The jobs it does, and the closed apps it replaces</p></div></div>
+      <section class="surface sec fold-phone">
+        <div class="sec-head fold-head"><div><h2 class="h-large">Listed in<span class="count">${listed.length}</span></h2></div></div>
         <div class="stack">${listed.map(({ group, alt }) => `
           <div class="card listing">
             <div class="head"><h3><a class="cardlink" href="${url(`g/${group.id}/`)}">${esc(group.name)}</a></h3><span class="pill ${alt.fit === 'full' ? 'ok' : 'info'}">${alt.fit === 'full' ? '<i></i>Replaces fully' : 'Replaces partly'}</span></div>
@@ -58,31 +58,17 @@ export default function projectPages(d) {
           </div>`).join('')}
         </div>
       </section>
-      ${SOCIAL && listed.length ? `<section class="surface sec">
-        <div class="sec-head"><div><h2 class="h-large">What's missing</h2><p class="desc12">Things people miss in ${esc(p.name)}. Upvote what matters to you; it helps its team decide.</p></div>
+      ${SOCIAL && listed.length ? `<section class="surface sec fold-phone">
+        <div class="sec-head fold-head"><div><h2 class="h-large">What's missing</h2></div>
           <button class="btn sm secondary" type="button" data-add-note data-category="${listed[0].group.category}" data-group="${listed[0].group.id}" data-groups="${listed.map(({ group }) => group.id).join(',')}" data-project="${esc(p.id)}" data-kind="missing">Add a note</button></div>
         <div data-notes data-project="${esc(p.id)}" data-empty="Nothing noted yet."></div>
       </section>` : ''}
     </div>
     <div>
       ${helpSection(p)}
+      <!-- WHY no Facts card any more (Destin: drop what the page already shows): every line of it was already a chip in the top card. -->
       <section class="surface sec fold-phone">
-        <h2 class="h-large fold-head">Facts</h2>
-        <div class="lvl1 facts">
-          <div class="fact"><span>License</span><span>${esc(p.license ?? 'Being checked')}</span></div>
-          ${p.licenseNeedsCheck ? '<div class="fact"><span></span><span class="muted11">A mod is confirming this license</span></div>' : ''}
-          ${p.licenseClass === 'open_core' ? '<div class="fact"><span>Paid parts</span><span>Open core: some parts paid</span></div>' : ''}
-          ${devicesText(p) || p.platforms?.includes('server') ? `<div class="fact"><span>Runs on</span><span>${esc([devicesText(p), p.platforms?.includes('server') ? 'a server you run' : ''].filter(Boolean).join(' · '))}</span></div>` : ''}
-          <div class="fact"><span>Setup</span><span><b class="setup-word ${setupOf(p)}">${SETUP[setupOf(p)]}</b></span></div>
-          <div class="fact"><span></span><span class="muted11">${esc(setupWhy(p))}</span></div>
-          <div class="fact"><span>Type</span><span>${esc(KIND[p.kind] ?? 'App')}</span></div>
-          ${p.stars ? `<div class="fact"><span>Stars on GitHub</span><span>${fmtStars(p.stars)}</span></div>` : ''}
-          <div class="fact"><span>Hosted on</span><span>${esc(host)}</span></div>
-          <div class="fact"><span>Activity</span><span>${p.inactive ? 'No changes in over a year' : 'Changed within the last year'}</span></div>
-        </div>
-      </section>
-      <section class="surface sec fold-phone">
-        <div class="fold-head"><h2 class="h-large">Something wrong?</h2><p class="desc12" style="margin-top:4px">Wrong devices, a wrong description, or it isn't really open source? A mod reviews every suggestion.</p></div>
+        <div class="fold-head"><h2 class="h-large">Something wrong?</h2></div>
         <div class="stack">
           <a class="btn md secondary" href="${esc(suggestUrl('2-fix', { project: p.name }))}" rel="noopener">Suggest a fix</a>
           <a class="btn md secondary" href="${esc(suggestUrl('5-report', { project: p.name }))}" rel="noopener">Report this project</a>
@@ -96,6 +82,6 @@ export default function projectPages(d) {
       ...(p.license ? { license: p.license } : {}), ...(codeUrl(p) ? { codeRepository: codeUrl(p) } : {}), ...(p.website ? { sameAs: p.website } : {}),
       applicationCategory: listed[0]?.group.name,
     };
-    return { path: `p/${p.id}/`, title: replaces.length ? `${p.name}: open-source alternative to ${replaces.slice(0, 2).join(' and ')}` : p.name, description, body, styles: ['group.css'], scripts: p.screenshots?.length ? ['gallery.js'] : [], jsonLd };
+    return { path: `p/${p.id}/`, title: replaces.length ? `${p.name}: open-source alternative to ${replaces.slice(0, 2).join(' and ')}` : p.name, description, body, styles: ['group.css'], scripts: p.screenshots?.length ? ['gallery.js'] : [], jsonLd, search: false, back: true };
   });
 }

@@ -6,9 +6,12 @@ import { esc, url, ICON, SITE_URL, SUBREDDIT, REPO, SOCIAL, DEMO, API_URL } from
 const BUILD = Date.now().toString(36);
 const asset = (p) => `${url(p)}?v=${BUILD}`;
 
-export function topStrip({ search = true } = {}) {
+// WHY a back button on project pages (Destin, redesign round 3): you arrive from a list, so the corner goes back to it; with no earlier page
+// on this site (a link from elsewhere) it goes home. redesign.js turns the click into "back".
+const BACK = '<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m15 18-6-6 6-6"/></svg>';
+export function topStrip({ search = true, back = false } = {}) {
   return `<div class="top">
-  <a class="icon-btn" href="${url()}" title="Home" aria-label="Open Source Everything home">${ICON.home}</a>
+  ${back ? `<a class="icon-btn" data-back href="${url()}" title="Back" aria-label="Back">${BACK}</a>` : `<a class="icon-btn" href="${url()}" title="Home" aria-label="Open Source Everything home">${ICON.home}</a>`}
   <a class="top-title" href="${url()}">Open Source Everything</a>
   <div class="grow"></div>
   ${search ? `<div class="searchwrap" data-search>
@@ -44,15 +47,14 @@ export function footer() {
   <a class="footchip" href="${url('about/')}">How this works</a>
   <a class="footchip" href="${url('about/#open-source')}">What counts as open source</a>
   <a class="footchip" href="${url('licenses/')}">Licenses explained</a>
-  <a class="footchip" href="${url('credits/')}">Data license: CC BY-SA 4.0</a>
-  <a class="footchip" href="${url('credits/')}">Credits</a>
+  <a class="footchip" href="${url('credits/')}">Credits and data license</a>
   <a class="footchip" href="${url('privacy/')}">Privacy</a>
   <a class="footchip" href="${SUBREDDIT}" rel="noopener">r/TrueOpenSource</a>
   <a class="footchip" href="${REPO}" rel="noopener">This site's code</a>
 </div>`;
 }
 
-export function page({ path, title, description, body, styles = [], scripts = [], search = true, jsonLd }) {
+export function page({ path, title, description, body, styles = [], scripts = [], search = true, back = false, jsonLd }) {
   const full = title ? `${title} · Open Source Everything` : 'Open Source Everything: open-source replacements for the apps you use';
   return `<!doctype html>
 <html lang="en">
@@ -78,13 +80,11 @@ ${styles.map((s) => `<link rel="stylesheet" href="${asset('assets/' + s)}">`).jo
 ${SOCIAL ? `<link rel="stylesheet" href="${asset('assets/contrib.css')}">` : ''}
 <link rel="stylesheet" href="${asset('assets/mobile.css')}">
 <link rel="stylesheet" href="${asset('assets/redesign.css')}">
-<script>/* WHY: ?v=a|b|c only chooses between the preview options of Tag my project (assets/contrib.js); nothing else has options any more. */
-window.OI_V = (function () { var v = new URLSearchParams(location.search).get('v'); return /^[abc]$/.test(v) ? v : null; })();</script>
 ${jsonLd ? `<script type="application/ld+json">${JSON.stringify(jsonLd)}</script>` : ''}
 <script>window.OI = { base: ${JSON.stringify(url())}, repo: ${JSON.stringify(REPO)}, chev: ${JSON.stringify(ICON.chev)} };</script>
 </head>
 <body>
-${topStrip({ search })}
+${topStrip({ search, back })}
 <main class="page">
 ${body}
 ${footer()}

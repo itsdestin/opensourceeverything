@@ -93,7 +93,6 @@ test('Tag my project: a repo under your own account is proven by GitHub alone', 
   const id = s.pitch.id;
   assert.equal((await me.call('PUT', `/pitches/${id}`, pitchBody({ differs: '  ' }))).status, 400, '"What does yours do differently?" is required');
   assert.equal((await me.call('PUT', `/pitches/${id}`, pitchBody({ groups: [] }))).status, 400, 'at least one group');
-  assert.equal((await me.call('PUT', `/pitches/${id}`, pitchBody({ built: 'magic' }))).status, 400, 'one of the four labels');
   const sent = (await me.call('PUT', `/pitches/${id}`, pitchBody())).data;
   assert.equal(sent.status, 'pending');
   assert.deepEqual((await fetch(`${API}/pitches/live?projects=${projectId}`).then((r) => r.json())), {}, 'nothing public before a mod approves');

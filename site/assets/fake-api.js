@@ -295,7 +295,8 @@
       let p = S.pitches.find((y) => y.owner === x.login && y.repo === r.repo);
       if (!p) {
         // Under their own GitHub account → proven at once. Otherwise they need the one-line file.
-        const own = r.host === 'github.com' && r.owner.toLowerCase() === x.login.toLowerCase();
+        // Preview only: a sample login "mozilla-firefox-sample" owns github.com/mozilla-firefox, so the signed-in-owner case can be seen.
+        const own = r.host === 'github.com' && r.owner.toLowerCase() === x.login.toLowerCase().replace(/-sample$/, '');
         p = { id: S.nextId++, owner: x.login, project, repo: r.repo, proof: own ? 'own-account' : 'file', token: 'ose-' + Math.random().toString(16).slice(2, 14).padEnd(12, '0'), verified: own, status: 'draft', live: null, pending: null, updated: Date.now(), checks: 0 };
         S.pitches.push(p); save();
       }
@@ -313,10 +314,9 @@
       const N = await names(); const groups = [...new Set(b.groups ?? [])].filter((g) => N.groups[g]);
       const t = (k) => (b[k] ?? '').trim().slice(0, 1000);
       if (!groups.length) return fail(400, 'Pick at least one group it belongs in.');
-      if (!(b.differs ?? '').trim()) return fail(400, 'Say what yours does differently. It is the part people read first.');
-      if (!BUILT[b.built]) return fail(400, 'Say how it was built.');
+      if (!(b.differs ?? '').trim()) return fail(400, 'Write a description.');
       // WHY back to waiting on every edit: nothing a developer writes goes public until a mod has read it.
-      p.pending = { groups: groups.slice(0, 5), differs: b.differs.trim().slice(0, 600), strengths: t('strengths'), weaknesses: t('weaknesses'), reusable: t('reusable'), help: t('help'), built: b.built };
+      p.pending = { groups: groups.slice(0, 5), differs: b.differs.trim().slice(0, 600), strengths: t('strengths'), weaknesses: t('weaknesses'), reusable: t('reusable'), help: t('help') };
       p.status = 'pending'; p.reason = null; p.updated = Date.now(); save(); return delay(await pitchView(p, true));
     },
     async pitchDelete(id) { S.pitches = S.pitches.filter((y) => !(y.id === +id && y.owner === me()?.login)); save(); return delay({ ok: true }); },

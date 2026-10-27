@@ -36,10 +36,6 @@ export default function groupPages(d) {
     <div class="row">
       <div><div class="muted11"><a class="crumb" href="${url(`c/${g.category}/`)}">${esc(cat?.name ?? '')}</a></div><h1 class="h-subject">${esc(g.name)}</h1><p class="desc12" style="margin-top:4px">${esc(g.job)}.</p></div>
     </div>
-    <div class="chiprow">
-      <span class="chip"><b>${alts.length}</b>open alternative${alts.length === 1 ? '' : 's'}</span>
-      ${alts.length ? `<span class="chip"><b>${full}</b>${full === 1 ? 'does' : 'do'} the whole job</span>` : ''}
-    </div>
     ${replacesRow}
   </div>
 
@@ -47,7 +43,7 @@ export default function groupPages(d) {
     <div>
       <section class="surface sec">
         <div class="sec-head">
-          <div><h2 class="h-large">Open alternatives<span class="count">${alts.length}</span></h2><p class="desc12">Open-source apps that replace <span data-compare-name>${esc(g.closed.length > 2 ? g.closed.slice(0, 2).join(', ') + ' and more' : g.closed.join(' and '))}</span></p></div>
+          <div><h2 class="h-large">Open alternatives<span class="count">${alts.length}</span></h2></div>
           ${alts.length > 1 ? `<div class="tools">${deviceFilter('devMenu')}<div class="dd"><button class="select sm" type="button" data-menu="sortMenu" aria-haspopup="listbox" aria-expanded="false"><span data-sort-label>${SORTS[0][1]}</span>${ICON.chev}</button>
             <div class="menu" id="sortMenu" role="listbox">${SORTS.map(([k, v], i) => `<button class="mi${i ? '' : ' sel'}" type="button" role="option" data-sort="${k}">${v}</button>`).join('')}</div></div></div>` : ''}
         </div>
@@ -73,7 +69,7 @@ export default function groupPages(d) {
       ${alts.length > 1 ? chooseBox({ closed: g.closed, job: g.job, json: `data/groups/${g.id}.json`, alts }) : ''}
       ${buildBox({ about: midSentence(g.name), closed: g.closed, job: g.job, json: `data/groups/${g.id}.json`, alts })}
       <section class="surface sec fold-phone">
-        <div class="fold-head"><h2 class="h-large">Fix the list itself</h2><p class="desc12" style="margin-top:4px">A project or closed app missing from this list, or a mistake on it? These open a short form on GitHub, and a mod reviews it. To say what a project can't do, use What's missing.</p></div>
+        <div class="fold-head"><h2 class="h-large">Fix the list itself</h2></div>
         <div class="stack">
           <a class="btn md secondary" href="${esc(suggestUrl('1-add-project', { group: g.name }))}" rel="noopener">Add a project here</a>
           <a class="btn md secondary" href="${esc(suggestUrl('3-add-closed-app', { group: g.name }))}" rel="noopener">Add a closed app it replaces</a>
@@ -83,11 +79,8 @@ export default function groupPages(d) {
       <section class="surface sec fold-phone" style="gap:8px">
         <h2 class="h-large fold-head">About this page</h2>
         <p class="small2"><b class="num">Replaces fully</b> means it does the main job of these apps; <b class="num">Replaces partly</b> means it covers some of it.</p>
-        <p class="small2"><b class="num">Easy setup</b>: install it like a normal app, use it in your browser. <b class="num">Advanced setup</b>: you have to run it on your own server or use the command line, or it is made for developers. Easy ones are lifted up, but nothing is hidden.</p>
-        <p class="small2"><b class="num">Order</b>: best match first, from how fully it replaces the app, Verified, setup and (when there are enough) people's votes. The first order of the list was drafted by AI, so it counts for little.</p>
+        <p class="small2"><b class="num">Order</b>: best match first, from how fully it replaces the app, Verified, setup and (when there are enough) people's votes.</p>
         <p class="small2"><b class="num">Licenses</b>: every project here uses an open-source license (<a href="${url('licenses/')}">what each one means</a>). <b class="num">Open core</b> means some parts are paid or under another license.</p>
-        <p class="small2"><b class="num">GitHub stars</b> are shown for reference. They measure popularity, not whether it replaces anything.</p>
-        <p class="small2"><b class="num">Verified</b> means r/TrueOpenSource mods checked it: open-source license, maintained, and it really does the job.</p>
         <a class="btn md secondary full" href="${url('about/')}">How Open Source Everything works</a>
       </section>
     </div>

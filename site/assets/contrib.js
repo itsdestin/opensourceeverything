@@ -8,12 +8,6 @@
   const BASE = OI.base || '/'; const esc = OI.esc; const toast = OI.toast;
   const $ = (s, el = document) => el.querySelector(s); const $$ = (s, el = document) => [...el.querySelectorAll(s)];
   const { getMe, signIn, oops, loadNames, dialog, picker, ago } = ui;
-  const BUILT = {
-    'hand-built': ['Hand-built', 'Written mostly by people.'],
-    'ai-assisted': ['AI-assisted', 'Written by people, with AI help.'],
-    agentic: ['Agentic engineering', 'AI wrote most of the code, with a person directing, reviewing and testing it, and real development history behind it.'],
-    'vibe-coded': ['Vibe-coded', 'A quick, exploratory build that has not been carefully reviewed yet.'],
-  };
   const PITCH_PARTS = [['strengths', 'What it does best'], ['weaknesses', "What it doesn't do well yet"], ['reusable', 'What other builders could reuse'], ['help', 'Where help is wanted']];
 
   // Signing in must not lose what you clicked: remembered for this tab, finished when you're back (like social.js).
@@ -69,13 +63,13 @@
     const sub = (m) => `${m.like ? `<span class="rq-like">Like ${esc(m.like)}</span>` : ''}${m.waiting ? '<span class="pill warn"><i></i>Waiting for a mod</span>' : ''}`;
     const card = (m, i) => `<div class="rq-card req-row" data-id="${esc(m.id)}"><span class="rq-medal m${Math.min(i + 1, 4)}">${i + 1}</span>
         <a class="rt" href="${link(m)}"${m.url ? ' target="_blank" rel="noopener"' : ''}>${esc(m.title)}</a><div class="rq-sub">${sub(m)}</div>${vbtn(m, ' full')}</div>`;
-    const lrow = (m, i) => `<div class="rrow req-row rqa" data-id="${esc(m.id)}"><span class="rq-rank" aria-hidden="true">${i + 1}</span>
+    const lrow = (m, i) => `<div class="req-row rq-minicard" data-id="${esc(m.id)}"><span class="rq-rank" aria-hidden="true">${i + 1}</span>
         <div class="nr-main"><a class="rt" href="${link(m)}"${m.url ? ' target="_blank" rel="noopener"' : ''}>${esc(m.title)}</a><div class="rq-sub">${sub(m)}</div></div>${vbtn(m)}</div>`;
     const draw = () => {
       const all = rows(); const more = res.total > all.length && slot.dataset.more ? `<a class="btn sm secondary rq-more" href="${esc(BASE + slot.dataset.more)}">See all ${res.total}</a>` : '';
       // Home: five equal cards. Gaps page: the top three as cards, the rest as a short list.
       if (slot.dataset.layout === 'five') { slot.innerHTML = `<div class="rq-five">${all.map(card).join('')}</div>${more}`; return; }
-      slot.innerHTML = `<div class="rq-pod">${all.slice(0, 3).map(card).join('')}</div>${all.length > 3 ? `<div class="rq-list lvl1">${all.slice(3).map((m, i) => lrow(m, i + 3)).join('')}</div>` : ''}${more}`;
+      slot.innerHTML = `<div class="rq-pod">${all.slice(0, 3).map(card).join('')}</div>${all.length > 3 ? `<div class="rq-mini">${all.slice(3).map((m, i) => lrow(m, i + 3)).join('')}</div>` : ''}${more}`;
     };
     const lastRows = () => rows();
     slot.onclick = (e) => {
@@ -115,9 +109,10 @@
         const tag = `${BASE}tag/?repo=${encodeURIComponent(s.dataset.repo ?? '')}`;
         s.hidden = false;
         s.innerHTML = p
-          ? `<div class="sec-head"><div><h2 class="h-large">From the Developer</h2><p class="desc12">Written by @${esc(p.by)}, who has shown this project is theirs. A mod read it first. Updated ${esc(when(p.updated))}.</p></div>${mine ? `<a class="btn sm secondary" href="${tag}">Edit</a>` : ''}</div>
-             <div class="chiprow"><span class="chip">${esc(BUILT[p.built]?.[0] ?? '')}</span></div>${pitchBody(p)}`
+          ? `<div class="sec-head fold-head"><div><h2 class="h-large">From the Developer</h2><p class="desc12">@${esc(p.by)} · ${esc(when(p.updated))}</p></div>${mine ? `<a class="btn sm secondary" href="${tag}">Edit</a>` : ''}</div>
+             ${pitchBody(p)}`
           : `<div class="sec-head"><div><h2 class="h-large">Is this your project?</h2><p class="desc12">Tag it to tell people what it does differently, what's reusable and where you'd like help.</p></div><a class="btn sm secondary" href="${tag}">Tag my project</a></div>`;
+        if (p) { s.classList.add('fold-phone'); OI.foldInit?.(s); }
       }
     }
   }
@@ -127,64 +122,54 @@
     const N = await loadNames(); const { user } = await getMe();
     const q = new URLSearchParams(location.search);
     const st = { stage: 'start', pitch: null, link: q.get('repo') ?? '', mine: [], error: '' };
-    const STEPS = ['Your project', 'Prove it is yours', 'Where it belongs', 'Your pitch'];
     const stepIdx = { start: 0, notlisted: 0, proof: 1, form: 2, sent: 3 };
-    const steps = () => `<ol class="steps" aria-label="Steps">${STEPS.map((t, i) => `<li${i === stepIdx[st.stage] ? ' aria-current="step" class="on"' : i < stepIdx[st.stage] ? ' class="done"' : ''}><span>${i < stepIdx[st.stage] ? '✓' : i + 1}</span>${t}</li>`).join('')}</ol>`;
-    const head = (extra = '') => `<div class="surface identity"><div class="row"><div><div class="muted11">For developers</div><h1 class="h-subject">Tag my project</h1>
-      <p class="desc12" style="margin-top:4px">Tell people what your project does differently. After a mod reads it, it shows on your project's page as <b>From the Developer</b>.</p></div></div>${extra}</div>`;
-
+    // WHY (Destin, redesign round 3: "too much text for the sake of text"): one sentence under the title, nothing else restated.
+    const head = () => `<div class="surface identity"><div><div class="muted11">For developers</div><h1 class="h-subject">Claim your project</h1>
+      <p class="desc12">Write your own description for your project's page. It shows as <b>From the Developer</b>, and the note that the listing was drafted with AI goes away.</p></div></div>`;
     if (!user) {
-      slot.innerHTML = `${head()}<section class="surface sec"><h2 class="h-large">Sign in first</h2><p class="small2">Signing in with GitHub shows us who you are, so only you can speak for your project. We never ask for access to your code.</p><div><button class="btn md primary" type="button" data-signin>Sign in with GitHub</button></div></section>`;
+      slot.innerHTML = `${head()}<section class="surface sec"><h2 class="h-large">Sign in with GitHub</h2><p class="small2">So only you can speak for your project. We never ask for access to your code.</p><div><button class="btn md primary" type="button" data-signin>Sign in with GitHub</button></div></section>`;
       return;
     }
     const load = async () => { st.mine = (await api.myPitches().catch(() => ({ items: [] }))).items; };
     const statusPill = (x) => ({ pending: '<span class="pill warn"><i></i>A mod is reading it</span>', live: '<span class="pill ok"><i></i>Shown on the site</span>', 'turned-down': '<span class="pill warn">Turned down</span>', draft: '<span class="pill info">Not sent yet</span>' }[x.status] ?? '');
 
+    // ───────── The steps: one wide card, each step its own card inside it, done ones summarised (Destin's pick c, round 3) ─────────
+    // WHY the ownership step is its own card even when automatic: a signed-in owner sees it say "Verified" and nothing to do; everyone else sees the one thing to do.
+    const err = () => (st.error ? `<div class="callout warn">${esc(st.error)}</div>` : '');
+    const actions = (...b) => `<div class="tg-actions">${b.join('')}</div>`;
+    const step = (n, title, state, summary, body) => `<div class="lvl1 tg-step ${state}"><div class="tg-rowhead"><span class="tg-num">${state === 'done' ? '✓' : n}</span><div><h2 class="h-large">${title}</h2>${summary ? `<p class="desc12">${summary}</p>` : ''}</div></div>${body ? `<div class="tg-body">${body}</div>` : ''}</div>`;
+    const bodyLink = () => `<div><label class="label" for="tagLink">Link to its code</label><input class="field" id="tagLink" placeholder="https://github.com/you/your-project" value="${esc(st.link)}"></div>
+      ${err()}
+      ${st.stage === 'notlisted' ? `<div class="callout info"><b>It isn't on the map yet.</b> Add it first (a short form on GitHub that a mod approves), then come back.
+        <div style="margin-top:8px"><a class="btn sm primary" target="_blank" rel="noopener" href="${esc(`${OI.repo}/issues/new?template=1-add-project.yml&code=${encodeURIComponent(st.link)}&name=${encodeURIComponent(st.name ?? '')}&relation=${encodeURIComponent("Yes, I'm on its team")}`)}">Add my project</a></div></div>` : ''}
+      ${actions('<button class="btn md primary" type="button" data-go>Continue</button>')}`;
+    const bodyFile = () => { const p = st.pitch; return `<p class="small2">It isn't under your GitHub account. Add a file named <code class="copy" data-copy="${esc(p.proofFile)}">${esc(p.proofFile)}</code> to its main folder, containing:</p>
+      <code class="copy block" data-copy="${esc(p.proofText)}">${esc(p.proofText)}</code>
+      ${err()}
+      ${actions('<button class="btn md secondary" type="button" data-back>Back</button>', '<button class="btn md primary" type="button" data-verify>Check</button>')}`; };
+    const bodyWrite = () => { const p = st.pitch;
+      return `${p.reason ? `<div class="callout warn"><b>A mod asked for a change:</b> ${esc(p.reason)}</div>` : ''}
+      ${p.status === 'pending' ? '<div class="callout info">A mod is reading what you sent. Editing it now replaces what they see.</div>' : p.live ? '<div class="callout info">Your approved description stays up while a mod reads any changes.</div>' : ''}
+      <div><label class="label" for="tgDiff">Description</label><textarea class="field" id="tgDiff" rows="3" maxlength="600"></textarea></div>
+      <div><span class="label" id="tgL">Groups</span><div class="pick" id="tagGroups"></div></div>
+      <details class="fold lvl1 tg-more"><summary><span>More</span><span class="muted11">optional</span></summary>
+        <div class="tg-morebody">${PITCH_PARTS.map(([k, l]) => `<div><label class="label" for="tg_${k}">${l}</label><textarea class="field" id="tg_${k}" rows="2" maxlength="1000"></textarea></div>`).join('')}<div id="before" class="lvl1 before"></div></div></details>
+      ${err()}
+      <div class="tg-foot"><p class="fieldhint" data-need></p>${actions('<button class="btn md secondary" type="button" data-cancel>Cancel</button>', '<button class="btn md primary" type="button" data-send disabled>Send to a mod</button>')}</div>`; };
+    const bodySent = () => `<p class="small2">A mod will read it, then it shows on <a href="${BASE}p/${esc(st.pitch.project)}/">${esc(st.pitch.projectName)}</a>.</p>${actions('<button class="btn md primary" type="button" data-done>Done</button>')}`;
+    const mineBlock = () => (st.mine.length && !['form', 'proof'].includes(st.stage)
+      ? `<section class="surface sec"><h2 class="h-large">Your claimed projects<span class="count">${st.mine.length}</span></h2><div class="stack">${st.mine.map((x) => `<div class="lvl1 modrow" data-id="${x.id}"><div class="nr-main"><a class="rt" href="${BASE}p/${esc(x.project)}/">${esc(x.projectName)}</a><div class="nr-meta">${statusPill(x)}${x.verified ? '' : '<span class="pill warn"><i></i>Not verified</span>'}</div></div>
+        <div class="btns-row"><button class="btn sm secondary" type="button" data-edit>${x.verified ? 'Edit' : 'Finish'}</button><button class="btn sm secondary" type="button" data-remove>Remove</button></div></div>`).join('')}</div></section>` : '');
     function draw() {
-      if (window.OI_V) return drawV();
-      let html = '';
-      if (st.stage === 'start' || st.stage === 'notlisted') {
-        html += `${steps()}<section class="surface sec"><h2 class="h-large">Paste your project's link</h2>
-          <p class="small2">The page where its code lives, on GitHub, GitLab or Codeberg.</p>
-          <div><label class="label" for="tagLink">Link to its code</label><input class="field" id="tagLink" placeholder="https://github.com/you/your-project" value="${esc(st.link)}"></div>
-          ${st.error ? `<div class="callout warn">${esc(st.error)}</div>` : ''}
-          ${st.stage === 'notlisted' ? `<div class="callout info"><b>It isn't on the map yet.</b> Add it first (it takes a short form on GitHub; a mod approves it). Then come back here and tag it.
-            <div style="margin-top:8px"><a class="btn sm primary" target="_blank" rel="noopener" href="${esc(`${OI.repo}/issues/new?template=1-add-project.yml&code=${encodeURIComponent(st.link)}&name=${encodeURIComponent(st.name ?? '')}&relation=${encodeURIComponent("Yes, I'm on its team")}`)}">Add my project</a></div></div>` : ''}
-          <div class="dlg-btns"><button class="btn md primary" type="button" data-go>Continue</button></div></section>`;
+      const i = stepIdx[st.stage]; const p = st.pitch;
+      const cards = [step(1, 'Project', i === 0 ? 'open' : 'done', i === 0 ? '' : esc(p?.repo ?? st.link), i === 0 ? bodyLink() : '')];
+      if (i >= 1) {
+        const own = p.verified && p.proof === 'own-account';
+        cards.push(step(2, 'Ownership', i === 1 ? 'open' : 'done', i === 1 ? '' : own ? `Verified. It's under your GitHub account, @${esc(user.login)}.` : 'Verified.', i === 1 ? bodyFile() : ''));
       }
-      if (st.stage === 'proof') {
-        const p = st.pitch;
-        html += `${steps()}<section class="surface sec"><h2 class="h-large">Show it's yours</h2>
-          <p class="small2"><b>${esc(p.projectName)}</b> (${esc(p.repo)}) isn't under your own GitHub account, so add one small file to it. Only someone who controls the project can do that.</p>
-          <ol class="howto"><li>In the project's main folder, make a file named <code class="copy" data-copy="${esc(p.proofFile)}">${esc(p.proofFile)}</code></li>
-            <li>Put exactly this one line in it: <code class="copy" data-copy="${esc(p.proofText)}">${esc(p.proofText)}</code></li><li>Save it to the main branch, then check below.</li></ol>
-          ${st.error ? `<div class="callout warn">${esc(st.error)}</div>` : ''}
-          <div class="dlg-btns"><button class="btn md secondary" type="button" data-back>Back</button><button class="btn md primary" type="button" data-verify>Check for the file</button></div>
-          <p class="fieldhint">You can remove the file once your pitch is approved.</p></section>`;
-      }
-      if (st.stage === 'form') {
-        const p = st.pitch; const cur = p.pending ?? p.live ?? {};
-        html += `${steps()}<section class="surface sec"><div class="sec-head"><div><h2 class="h-large">${esc(p.projectName)}</h2><p class="desc12">${p.proof === 'own-account' ? 'Verified: this project is under your GitHub account.' : 'Verified: your proof file was found.'}</p></div>${statusPill(p)}</div>
-          ${p.reason ? `<div class="callout warn"><b>A mod asked for a change:</b> ${esc(p.reason)}</div>` : ''}
-          ${p.status === 'pending' ? '<div class="callout info">A mod is reading what you sent. Editing it now replaces what they see.</div>' : p.live ? '<div class="callout info">Your approved pitch stays on the site while a mod reads any changes you make.</div>' : ''}
-          <div><span class="label" id="tgL">Which groups does it belong in?</span><div class="pick" id="tagGroups"></div></div>
-          <div id="before" class="lvl1 before"></div>
-          <div><label class="label" for="tgDiff">What does yours do differently? <span class="req">required</span></label><textarea class="field" id="tgDiff" rows="3" maxlength="600" placeholder="Compared with the projects above, in a sentence or two."></textarea></div>
-          ${PITCH_PARTS.map(([k, l]) => `<div><label class="label" for="tg_${k}">${l} <span class="opt">optional</span></label><textarea class="field" id="tg_${k}" rows="2" maxlength="1000"></textarea></div>`).join('')}
-          <fieldset class="built"><legend class="label">How was it built? <span class="req">required</span></legend>${Object.entries(BUILT).map(([k, [n, d]]) => `<label class="radio"><input type="radio" name="built" value="${k}"><span><b>${n}</b><br><span class="small2">${d}</span></span></label>`).join('')}</fieldset>
-          ${st.error ? `<div class="callout warn">${esc(st.error)}</div>` : ''}
-          <div class="dlg-btns"><button class="btn md secondary" type="button" data-cancel>Cancel</button><button class="btn md primary" type="button" data-send>Send to a mod</button></div></section>`;
-      }
-      if (st.stage === 'sent') {
-        html += `${steps()}<section class="surface sec"><h2 class="h-large">Sent. Thank you.</h2><p class="small2">A mod will read it. Once approved it shows on <a href="${BASE}p/${esc(st.pitch.project)}/">${esc(st.pitch.projectName)}</a> as <b>From the Developer</b>. You can edit it any time; changes are read again, and the version already live stays up until then.</p>
-          <div class="dlg-btns"><button class="btn md primary" type="button" data-done>Done</button></div></section>`;
-      }
-      if (st.mine.length && (st.stage === 'start' || st.stage === 'notlisted' || st.stage === 'sent')) {
-        html += `<section class="surface sec"><h2 class="h-large">Your tagged projects<span class="count">${st.mine.length}</span></h2><div class="stack">${st.mine.map((x) => `<div class="lvl1 modrow" data-id="${x.id}"><div class="nr-main"><a class="rt" href="${BASE}p/${esc(x.project)}/">${esc(x.projectName)}</a><div class="nr-meta">${statusPill(x)}${x.verified ? '' : '<span class="pill warn"><i></i>Not proven yet</span>'}</div></div>
-          <div class="btns-row"><button class="btn sm secondary" type="button" data-edit>${x.verified ? 'Edit' : 'Finish'}</button><button class="btn sm secondary" type="button" data-remove>Remove</button></div></div>`).join('')}</div></section>`;
-      }
-      slot.innerHTML = head() + html;
-      if (st.stage === 'form') setupForm();
+      if (i >= 2) cards.push(step(3, 'Description', i === 2 ? 'open' : 'done', i === 3 ? 'Sent' : '', i === 2 ? bodyWrite() : ''));
+      slot.innerHTML = head() + `<section class="surface sec tg-card">${cards.join('')}${i === 3 ? step(4, 'Sent', 'open', '', bodySent()) : ''}</section>` + mineBlock();
+      if (i === 2) { setupForm(); wireForm(); }
     }
 
     function setupForm() {
@@ -194,97 +179,23 @@
       const pk = picker($('#tagGroups', slot), opts, { selected: cur.groups ?? mineGroups, none: 'Pick one or more groups', labelledBy: 'tgL', onChange: before });
       function before() {
         const gs = pk.value();
-        // "Before you build": what already exists in the chosen groups, so the answer below can say what's different.
+        // What already exists in the chosen groups, so the description can say what is different (inside "More").
         $('#before', slot).innerHTML = gs.length ? gs.map((g) => {
           const G = N.groups[g]; const others = G.alts.filter((a) => a !== p.project).map((a) => N.projects[a] ?? a);
-          return `<div class="beforeg"><div class="label">Before you build · ${esc(G.n)}</div>${others.length
-            ? `<p class="small2">Already listed: ${others.slice(0, 8).map(esc).join(', ')}${others.length > 8 ? ` and ${others.length - 8} more` : ''}. <a href="${BASE}g/${g}/" target="_blank" rel="noopener">See the group</a></p>`
-            : '<p class="small2">Nothing else is listed here yet.</p>'}${G.gap ? '<p class="small2">No open project fully does this job yet, so yours may be filling a real gap.</p>' : ''}</div>`;
+          return `<div class="beforeg"><div class="label">Already in ${esc(G.n)}</div><p class="small2">${others.length ? `${others.slice(0, 8).map(esc).join(', ')}${others.length > 8 ? ` and ${others.length - 8} more` : ''}` : 'Nothing else yet.'}</p></div>`;
         }).join('') : '';
       }
       before();
       $('#tgDiff', slot).value = cur.differs ?? '';
       for (const [k] of PITCH_PARTS) $(`#tg_${k}`, slot).value = cur[k] ?? '';
-      if (cur.built) { const r = $(`input[name=built][value="${cur.built}"]`, slot); if (r) r.checked = true; }
-      st.getForm = () => ({ groups: pk.value(), differs: $('#tgDiff', slot).value, built: $('input[name=built]:checked', slot)?.value, ...Object.fromEntries(PITCH_PARTS.map(([k]) => [k, $(`#tg_${k}`, slot).value])) });
+      st.getForm = () => ({ groups: pk.value(), differs: $('#tgDiff', slot).value, ...Object.fromEntries(PITCH_PARTS.map(([k]) => [k, $(`#tg_${k}`, slot).value])) });
     }
-
-
-    // ───────── Claiming a project, round 2 (preview options a|b|c, chosen with ?v=): full page width, plain words ─────────
-    // WHY (Destin: "the form only takes up a narrow width... 'proof file' is unhelpful... should feel less cluttered"): the page opens by saying what
-    // claiming gives you; every step has one plain question; only the fields that are required show, the rest fold away. a = steps listed beside the
-    // form with a live preview, b = four step cards across the top and one wide card under them, c = one card on which the steps open one after another.
-    const V = window.OI_V;
-    const NAMES4 = ['Find your project', "Show it's yours", 'Write your description', 'Done'];
-    const SUBS = ['Paste the link to its code', 'So only you can speak for it', 'In your own words', 'A mod reads it first'];
-    const cur = () => stepIdx[st.stage];
-    const GIVES = [['Your own words', "A short description of the project, labelled <b>From the Developer</b>, shown on its page."], ['The right facts', 'You help keep what the page says about your project correct.'], ['No AI note', 'The note that the listing was drafted with AI goes away.']];
-    const headV = () => `<div class="surface identity tg-head"><div><div class="muted11">For developers</div><h1 class="h-subject">Claim your project</h1>
-      <p class="desc12">Add your own description to your project's page, labelled <b>From the Developer</b>. Claiming also lets you keep the facts right, and removes the note saying the listing was drafted with AI.</p></div></div>`;
-    const err = () => (st.error ? `<div class="callout warn">${esc(st.error)}</div>` : '');
-    const actions = (...b) => `<div class="tg-actions">${b.join('')}</div>`;
-    const innerStart = () => `<div><label class="label" for="tagLink">Link to your project's code</label><input class="field" id="tagLink" placeholder="https://github.com/you/your-project" value="${esc(st.link)}"><p class="fieldhint">On GitHub, GitLab or Codeberg. We never ask for access to your code.</p></div>
-      ${err()}
-      ${st.stage === 'notlisted' ? `<div class="callout info"><b>It isn't on the map yet.</b> Add it first (a short form on GitHub that a mod approves), then come back and claim it.
-        <div style="margin-top:8px"><a class="btn sm primary" target="_blank" rel="noopener" href="${esc(`${OI.repo}/issues/new?template=1-add-project.yml&code=${encodeURIComponent(st.link)}&name=${encodeURIComponent(st.name ?? '')}&relation=${encodeURIComponent("Yes, I'm on its team")}`)}">Add my project</a></div></div>` : ''}
-      ${actions('<button class="btn md primary" type="button" data-go>Continue</button>')}`;
-    const innerProof = () => { const p = st.pitch; return `<p class="small2"><b>${esc(p.projectName)}</b> isn't under your own GitHub account, so we can't tell it's yours yet. Add one small file to the project and we'll look for it. Only someone who controls the project can do that.</p>
-      <ol class="howto"><li>In the project's main folder, create a file named <code class="copy" data-copy="${esc(p.proofFile)}">${esc(p.proofFile)}</code></li>
-        <li>Put exactly this one line in it: <code class="copy" data-copy="${esc(p.proofText)}">${esc(p.proofText)}</code></li><li>Save it, then press Check. You can delete the file once a mod has approved your description.</li></ol>
-      ${err()}
-      ${actions('<button class="btn md secondary" type="button" data-back>Back</button>', '<button class="btn md primary" type="button" data-verify>Check</button>')}`; };
-    const BUILTD = { 'hand-built': 'Written mostly by people.', 'ai-assisted': 'Written by people, with AI help.', agentic: 'AI wrote most of the code, with a person directing, reviewing and testing it.', 'vibe-coded': 'A quick build that has not been carefully reviewed yet.' };
-    const innerForm = () => { const p = st.pitch;
-      return `${p.reason ? `<div class="callout warn"><b>A mod asked for a change:</b> ${esc(p.reason)}</div>` : ''}
-      ${p.status === 'pending' ? '<div class="callout info">A mod is reading what you sent. Editing it now replaces what they see.</div>' : p.live ? '<div class="callout info">Your approved description stays up while a mod reads any changes.</div>' : ''}
-      <p class="tg-yours">${p.proof === 'own-account' ? "It's under your GitHub account, so we can tell it's yours." : 'We found the file, so we can tell it\'s yours.'}</p>
-      <div><label class="label" for="tgDiff">What does ${esc(p.projectName)} do differently?</label><textarea class="field" id="tgDiff" rows="3" maxlength="600" placeholder="Compared with similar projects, in a sentence or two."></textarea><p class="fieldhint">The part people read first.</p></div>
-      <div class="tg-two"><div><span class="label" id="tgL">Where does it belong?</span><div class="pick" id="tagGroups"></div></div>
-        <div><span class="label">How was it built?</span><div class="seg" role="radiogroup" aria-label="How was it built?">${Object.entries(BUILT).map(([k, [n]]) => `<label class="segopt"><input type="radio" name="built" value="${k}"><span>${n}</span></label>`).join('')}</div><p class="fieldhint" data-builtdesc>Pick the one that fits.</p></div></div>
-      <details class="fold lvl1 tg-more"><summary><span>Add more</span><span class="muted11">optional</span></summary>
-        <div class="tg-morebody">${PITCH_PARTS.map(([k, l]) => `<div><label class="label" for="tg_${k}">${l}</label><textarea class="field" id="tg_${k}" rows="2" maxlength="1000"></textarea></div>`).join('')}<div id="before" class="lvl1 before"></div></div></details>
-      ${err()}
-      <div class="tg-foot"><div><p class="tg-public">Anyone can read this on ${esc(p.projectName)}'s page, once a mod has read it first.</p><p class="fieldhint" data-need></p></div>
-        ${actions('<button class="btn md secondary" type="button" data-cancel>Cancel</button>', '<button class="btn md primary" type="button" data-send disabled>Send to a mod</button>')}</div>`; };
-    const innerSent = () => `<p class="small2">A mod will read it. Once approved it shows on <a href="${BASE}p/${esc(st.pitch.project)}/">${esc(st.pitch.projectName)}</a> as <b>From the Developer</b>, and the AI-drafted note goes away. You can edit it any time; the older version stays up while changes are read.</p>
-      ${actions('<button class="btn md primary" type="button" data-done>Done</button>')}`;
-    const TITLES = ["Where is your project's code?", "Show us it's yours", null, 'Sent. Thank you.'];
-    const inner = () => ({ start: innerStart, notlisted: innerStart, proof: innerProof, form: innerForm, sent: innerSent })[st.stage]();
-    const title = () => TITLES[stepIdx[st.stage]] ?? `Describe ${esc(st.pitch.projectName)}`;
-    const roadmap = () => `<ol class="tg-road">${NAMES4.map((n, i) => `<li class="${i === cur() ? 'on' : i < cur() ? 'done' : ''}"><span>${i < cur() ? '✓' : i + 1}</span><div><b>${n}</b><small>${SUBS[i]}</small></div></li>`).join('')}</ol>`;
-    const gives = () => `<ul class="tg-gives">${GIVES.map(([h, t]) => `<li><b>${h}</b><span>${t}</span></li>`).join('')}</ul>`;
-    const preview = () => `<div class="lvl1 tg-sample" aria-label="Preview"><div class="muted11">How it will read on the page</div><div class="chiprow"><span class="chip" data-pv-built>How it was built</span></div><p class="body2" data-pv-differs>What your project does differently shows here, as you type.</p></div>`;
-    const mineBlock = () => (st.mine.length && st.stage !== 'form' && st.stage !== 'proof'
-      ? `<section class="surface sec"><h2 class="h-large">Your claimed projects<span class="count">${st.mine.length}</span></h2><div class="stack">${st.mine.map((x) => `<div class="lvl1 modrow" data-id="${x.id}"><div class="nr-main"><a class="rt" href="${BASE}p/${esc(x.project)}/">${esc(x.projectName)}</a><div class="nr-meta">${statusPill(x)}</div></div>
-        <div class="btns-row"><button class="btn sm secondary" type="button" data-edit>${x.verified ? 'Edit' : 'Finish'}</button><button class="btn sm secondary" type="button" data-remove>Remove</button></div></div>`).join('')}</div></section>` : '');
-    function drawV() {
-      let body;
-      if (V === 'a') {
-        body = `<div class="tg-grid"><section class="surface sec tg-card"><h2 class="h-large">${title()}</h2>${inner()}</section>
-          <aside class="surface sec tg-side"><h2 class="h-large">Your steps</h2>${roadmap()}${st.stage === 'form' ? preview() : `<div class="tg-gives-wrap"><h3 class="label">What you get</h3>${gives()}</div>`}</aside></div>`;
-      } else if (V === 'b') {
-        body = `<div class="tg-rail">${NAMES4.map((n, i) => `<div class="tg-rcard ${i === cur() ? 'on' : i < cur() ? 'done' : ''}"><span class="tg-num">${i < cur() ? '✓' : i + 1}</span><b>${n}</b><small>${SUBS[i]}</small></div>`).join('')}</div>
-          <section class="surface sec tg-card wide"><h2 class="h-large">${title()}</h2>${inner()}</section>`;
-      } else {
-        const rows = NAMES4.slice(0, cur() + 1).map((n, i) => {
-          const open = i === cur(); const done = i < cur();
-          const summary = done ? [st.pitch?.repo ?? st.link, 'Confirmed yours', ''][i] ?? '' : '';
-          return `<div class="tg-sec ${open ? 'open' : 'done'}"><div class="tg-rowhead"><span class="tg-num">${done ? '✓' : i + 1}</span><div><h2 class="h-large">${open ? title() : n}</h2>${summary ? `<p class="desc12">${esc(summary)}</p>` : ''}</div></div>${open ? `<div class="tg-body">${inner()}</div>` : ''}</div>`;
-        }).join('');
-        body = `<section class="surface sec tg-card wide">${rows}</section>`;
-      }
-      slot.innerHTML = headV() + (V === 'a' || st.stage !== 'start' ? '' : `<div class="surface sec tg-giveswide">${gives()}</div>`) + body + mineBlock();
-      if (st.stage === 'form') { setupForm(); wireForm(); }
-    }
-    // The Send button says why it is grey, the preview follows what is typed, and the chosen "how it was built" explains itself.
+    // The Send button says why it is grey (guide).
     function wireForm() {
       const send = $('[data-send]', slot), need = $('[data-need]', slot);
       const update = () => {
-        const f = st.getForm(); const miss = [!f.differs.trim() && 'what it does differently', !f.groups.length && 'a group', !f.built && 'how it was built'].filter(Boolean);
+        const f = st.getForm(); const miss = [!f.differs.trim() && 'a description', !f.groups.length && 'a group'].filter(Boolean);
         if (send) send.disabled = !!miss.length; if (need) need.textContent = miss.length ? `Still needed: ${miss.join(', ')}.` : '';
-        const pd = $('[data-pv-differs]', slot); if (pd) pd.textContent = f.differs.trim() || 'What your project does differently shows here, as you type.';
-        const pb = $('[data-pv-built]', slot); if (pb) pb.textContent = f.built ? BUILT[f.built][0] : 'How it was built';
-        const bd = $('[data-builtdesc]', slot); if (bd) bd.textContent = f.built ? BUILTD[f.built] : 'Pick the one that fits.';
       };
       slot.addEventListener('input', update); slot.addEventListener('change', update); $('#tagGroups', slot)?.addEventListener('click', () => setTimeout(update, 0)); update();
     }
@@ -360,7 +271,7 @@
         ${pit.error ? `<div class="callout warn">${esc(pit.error)}</div>` : pit.items.length ? `<div class="stack">${pit.items.map((x) => {
           const p = x.pending;
           return `<div class="lvl1 modrow" data-pid="${x.id}"><div class="nr-main"><a class="rt" href="${BASE}p/${esc(x.project)}/">${esc(x.projectName)}</a>
-            <div class="nr-meta"><span class="chip">@${esc(x.owner)}</span><span class="chip">${x.proof === 'own-account' ? 'Under their own account' : 'Proved with a file'}</span><span class="chip">${esc(BUILT[p.built]?.[0] ?? '')}</span>${x.live ? '<span class="pill info">Replaces the live version</span>' : '<span class="pill warn"><i></i>New</span>'}</div>
+            <div class="nr-meta"><span class="chip">@${esc(x.owner)}</span><span class="chip">${x.proof === 'own-account' ? 'Under their own account' : 'Proved with a file'}</span>${x.live ? '<span class="pill info">Replaces the live version</span>' : '<span class="pill warn"><i></i>New</span>'}</div>
             <div class="pitchbox">${pitchBody(p)}</div></div>
             <div class="btns-row"><button class="btn sm secondary" type="button" data-pact="reject">Turn down…</button><button class="btn sm primary" type="button" data-pact="approve">Approve</button></div></div>`;
         }).join('')}</div>` : '<div class="callout info">No pitches waiting.</div>'}</section>

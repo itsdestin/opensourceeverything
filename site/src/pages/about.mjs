@@ -7,8 +7,7 @@ export default function about(d) {
   const n = counts(d); // WHY: the same numbers as the home page (see lib.mjs)
   const body = `
   <div class="surface identity">
-    <div><div class="muted11">About</div><h1 class="h-subject">How Open Source Everything works</h1>
-      <p class="desc12" style="margin-top:4px">What it is, how it's sorted, and how to get something added.</p></div>
+    <div><div class="muted11">About</div><h1 class="h-subject">How Open Source Everything works</h1></div>
     <div class="fchips">
       <a class="fchip" href="#organised">How it's organised</a><a class="fchip" href="#open-source">What counts as open source</a>
       <a class="fchip" href="#listings">Where listings come from</a><a class="fchip" href="#add">Get listed</a><a class="fchip" href="#open">This site is open too</a>
@@ -16,7 +15,7 @@ export default function about(d) {
   </div>
   ${section('what', 'What this is', `
     <p class="body2">Open Source Everything lists open-source replacements for the closed-source apps people use every day, from Google Docs to Photoshop. It also shows where nothing good exists yet, so people who build software can see what's worth making.</p>
-    <p class="body2">It's supported by the <a href="${SUBREDDIT}" rel="noopener">r/TrueOpenSource</a> community. Right now it holds ${n.projects} open-source projects that replace ${n.closedApps} closed apps, sorted into ${n.groups} jobs.</p>`)}
+    <p class="body2">It's supported by the <a href="${SUBREDDIT}" rel="noopener">r/TrueOpenSource</a> community.</p>`)}
   ${section('organised', 'How it\'s organised', `
     <div class="defs">
       <div class="lvl1"><h3>Categories</h3><p class="small2">Shelves for browsing, like Creative or Office &amp; productivity.</p></div>

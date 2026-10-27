@@ -351,8 +351,9 @@ for (const [id, e] of Object.entries(optional(join(ROOT, 'data/lineage.json'))?.
   // WHY skip instead of failing: a project can leave the map (a mod removes it) without the family file being edited first.
   if (!p) { lineageNotes.skipped.push(`${id} (not on the map)`); continue; }
   if (e.of && !projects.has(e.of)) { lineageNotes.skipped.push(`${id} (parent ${e.of} not on the map)`); continue; }
-  const { of, ofName, ofUrl, relation, since, why, source, confirmed, label, oldNames, redirectFrom } = e;
-  p.lineage = Object.fromEntries(Object.entries({ of, ofName, ofUrl, relation, since, why, source, confirmed, label, oldNames, redirectFrom }).filter(([, v]) => v != null));
+  // WHY differs / differsFromChild (Destin, redesign round 3): the Family card says how each relative differs from the other, not an abstract relation.
+  const { of, ofName, ofUrl, relation, since, why, source, confirmed, label, oldNames, redirectFrom, differs, differsFromChild } = e;
+  p.lineage = Object.fromEntries(Object.entries({ of, ofName, ofUrl, relation, since, why, source, confirmed, label, oldNames, redirectFrom, differs, differsFromChild }).filter(([, v]) => v != null));
   lineageNotes.kept++;
 }
 

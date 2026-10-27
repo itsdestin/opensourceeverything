@@ -3,17 +3,22 @@
 // is for jumping to something you already know; a full list, with how well each result matches and why, is for
 // looking around. The list itself is drawn in the browser by assets/search-page.js, from the same ranking
 // (assets/search-core.js) the dropdown uses.
-import { DEVICE } from '../lib.mjs';
+import { DEVICE, ICON } from '../lib.mjs';
 
 export default function searchPage() {
   const kinds = [['all', 'Everything'], ['project', 'Projects'], ['group', 'Groups'], ['closed', 'Closed apps']];
   const body = `
   <div class="surface identity sres-head">
     <div><div class="muted11">Search</div><h1 class="h-subject" data-sres-title>Search results</h1>
-      <p class="desc12" data-sres-sub>Type what you're looking for in the search box above.</p></div>
+      <p class="desc12" data-sres-sub></p></div>
     <div class="sres-filters" data-sres-filters hidden>
-      <div class="fchips" role="group" aria-label="Show">${kinds.map(([k, label], i) => `<button type="button" class="fchip${i ? '' : ' sel'}" data-kind="${k}" aria-pressed="${i ? 'false' : 'true'}">${label}<span class="n" data-count="${k}"></span></button>`).join('')}</div>
-      <div class="fchips" role="group" aria-label="Runs on">${Object.entries(DEVICE).map(([k, label]) => `<button type="button" class="fchip" data-device="${k}" aria-pressed="false">${label}</button>`).join('')}</div>
+      <!-- WHY menus, not rows of chips (Destin: "these filter chips suck"): three short drop-downs; Works on takes several choices and stays open while you tick. -->
+      <div class="dd"><button class="select sm" type="button" data-menu="fType" aria-haspopup="listbox" aria-expanded="false"><span data-flabel="type">Type</span>${ICON.chev}</button>
+        <div class="menu left" id="fType" role="listbox">${kinds.map(([k, label], i) => `<button type="button" class="mi${i ? '' : ' sel'}" role="option" data-kind="${k}"><span>${label}</span><span class="muted11" data-count="${k}"></span></button>`).join('')}</div></div>
+      <div class="dd"><button class="select sm" type="button" data-menu="fDev" aria-haspopup="listbox" aria-expanded="false"><span data-flabel="dev">Works on</span>${ICON.chev}</button>
+        <div class="menu left" id="fDev" role="listbox" aria-multiselectable="true">${Object.entries(DEVICE).map(([k, label]) => `<button type="button" class="mi" role="option" aria-selected="false" data-device="${k}"><span>${label}</span><span class="chk" aria-hidden="true">${ICON.check}</span></button>`).join('')}<div class="menu-sep"></div><button type="button" class="mi" data-clear="dev"><span>Clear</span></button></div></div>
+      <div class="dd"><button class="select sm" type="button" data-menu="fSetup" aria-haspopup="listbox" aria-expanded="false"><span data-flabel="setup">Setup</span>${ICON.chev}</button>
+        <div class="menu left" id="fSetup" role="listbox">${[['', 'Any'], ['easy', 'Easy setup'], ['advanced', 'Advanced setup']].map(([k, label], i) => `<button type="button" class="mi${i ? '' : ' sel'}" role="option" data-setupf="${k}"><span>${label}</span></button>`).join('')}</div></div>
     </div>
   </div>
   <section class="surface sec">
