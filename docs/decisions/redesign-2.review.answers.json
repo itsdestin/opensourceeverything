@@ -1,0 +1,121 @@
+{
+ "deck": "ose-redesign-2",
+ "started": "2026-10-27T05:58:48.231Z",
+ "submitted": "2026-10-27T06:18:25Z",
+ "cur": 13,
+ "answers": {
+  "R-card": {
+   "note": "i think the styling of the help me choose/before you build cards should be a bit more similar. we should drop \"copy with the list included\". i think the hero/header card could still be cleaned up a bit, as could the top section of the actual main alternatives card. lots of duplicative information or text for the sake of text which feels ai-y. if it doesnt obviously help a user navigate a page in a way that nothing else on the page does, drop it. same standard goes for the rest of this site basically.",
+   "t": 1793080886174,
+   "v": "other",
+   "seconds": 156,
+   "theme": "light",
+   "zoom": 1
+  },
+  "R-card-phone": {
+   "v": "yes",
+   "seconds": 15,
+   "theme": "light",
+   "zoom": 1,
+   "t": 1793080899357,
+   "note": "see prev"
+  },
+  "R-explainer": {
+   "note": "drop the second line of \"firefox install it like a normal app or....\". im obviously on the firefox card at this point, and the popup just explained that easy means install like normal app, so this is again duplicative.",
+   "t": 1793080967775,
+   "v": "other",
+   "seconds": 68,
+   "theme": "light",
+   "zoom": 1
+  },
+  "R-project": {
+   "note": "put the claim line at the bottom of the card. like vertically centered with the view on github/visit website buttons. when on a specific project page, i think the search bar should be hidden. top left button/icon should be replaced with a back button. the relations in the family card are still weird and not what im looking for. ",
+   "t": 1793081190209,
+   "v": "other",
+   "seconds": 222,
+   "theme": "light",
+   "zoom": 1
+  },
+  "R-family-explainer": {
+   "v": "yes",
+   "t": 1793081241988,
+   "note": "position is a bit odd tho. these kinds of cards should always be framed in context of how they differ from the upstream/alternative",
+   "seconds": 52,
+   "theme": "light",
+   "zoom": 1
+  },
+  "R-project-phone": {
+   "note": "i think all of the cards should fold actually, except for the header.",
+   "t": 1793081303116,
+   "v": "yes",
+   "seconds": 61,
+   "theme": "light",
+   "zoom": 1
+  },
+  "R-search": {
+   "v": "other",
+   "t": 1793081382699,
+   "note": "we should scale the pictures so there isnt an extra gap/space beneath but they take the full vertical height of the card. should still maintain aspect ratio roughly. and i still want match scoring, but just not as a chip like you did. it should just sit bare on the top right of each card in line with the name",
+   "seconds": 80,
+   "theme": "light",
+   "zoom": 1
+  },
+  "R-search-phone": {
+   "v": "yes",
+   "t": 1793081430734,
+   "note": "these filter chips suckkkkk. we should have better dropdowns or multiselect menus or something to better manage and categorize chips/filters.",
+   "seconds": 48,
+   "theme": "light",
+   "zoom": 1
+  },
+  "R-gaps": {
+   "v": "yes",
+   "t": 1793081485160,
+   "note": "we should make the lesser items individual cards too, but just smaller than the top 3.",
+   "seconds": 54,
+   "theme": "light",
+   "zoom": 1
+  },
+  "R-home": {
+   "v": "yes",
+   "t": 1793081506202,
+   "seconds": 21,
+   "theme": "light",
+   "zoom": 1
+  },
+  "R-claim-start": {
+   "note": "too much text for the sake of text",
+   "t": 1793081730393,
+   "v": "pick",
+   "seconds": 168,
+   "theme": "light",
+   "zoom": 1,
+   "pick": "c"
+  },
+  "R-claim-proof": {
+   "v": "pick",
+   "seconds": 122,
+   "theme": "light",
+   "zoom": 1,
+   "t": 1793081795153,
+   "note": "what if the project is under their github username/sign in? i also think the different steps should be indivual stacked cards within the main card",
+   "pick": "c"
+  },
+  "R-claim-write": {
+   "note": "too much text for the sake of text. \"we found the file, so we can tell its yours\". \"the part people read first\". boo. where does it belong is too stupid/normie. just say what the field is. drop the AI tags entirely.",
+   "t": 1793081896825,
+   "v": "other",
+   "seconds": 102,
+   "theme": "light",
+   "zoom": 1
+  },
+  "R-claim-phone": {
+   "v": "pick",
+   "pick": "c",
+   "t": 1793081904485,
+   "seconds": 8,
+   "theme": "light",
+   "zoom": 1
+  }
+ }
+}
