@@ -155,11 +155,17 @@ for (const g of taxonomy?.newGroups ?? []) if (!groups.has(g.id)) {
 const newFacts = existsSync(join(OUT, 'new-group-facts.json')) ? read(join(OUT, 'new-group-facts.json')) : [];
 const newReview = new Map((existsSync(join(OUT, 'new-group-review.json')) ? read(join(OUT, 'new-group-review.json')) : []).filter((r) => r.answer).map((r) => [r.name, r.answer]));
 const newNotes = { added: 0, listings: 0, notOpen: 0, noFit: 0 };
+// WHY: projects the hand-researched data fixes add (Karakeep, Zotero, FreeCAD...) keep their hand-checked entry; their new-group
+// listings are added after the data fixes run (see "pendingNewListings" below), so a rebuild never creates them twice.
+const handAdded = new Set((existsSync(join(HERE, 'data-fixes.json')) ? read(join(HERE, 'data-fixes.json')).addProjects ?? [] : []).map((p) => p.id));
+const pendingNewListings = [];
 for (const e of newFacts) {
   const a = newReview.get(e.name); if (!a) continue;
   const fits = a.groups.filter((x) => x.fit !== 'no' && e.groups.includes(x.group) && groups.has(x.group));
   if (!fits.length) { newNotes.noFit++; continue; }
   let id = e.existing && projects.has(e.existing) ? e.existing : null;
+  const handId = [e.existing, slug(e.name)].find((x) => x && handAdded.has(x));
+  if (!id && handId) { for (const x of fits) pendingNewListings.push({ group: x.group, project: handId, fit: x.fit, note: x.fit === 'partial' ? x.note : null }); continue; }
   if (!id) {
     const hostOk = licenseVerdict(e.facts?.license ?? undefined) === 'open';
     const aiOk = ['open', 'open_core'].includes(a.license.verdict) && (hostOk || (a.license.spdx && licenseVerdict(a.license.spdx) === 'open'));
@@ -302,6 +308,8 @@ if (df) {
   for (const r of df.removeAlts ?? []) { const g = groups.get(r.group); need(alt(r.group, r.project), `removeAlts: ${r.group}/${r.project} not listed`); g.alternatives = g.alternatives.filter((a) => a.project !== r.project); }
   for (const r of df.addAlts ?? []) { const g = groups.get(r.group); need(g && projects.has(r.project), `addAlts: ${r.group}/${r.project}`); if (!alt(r.group, r.project)) g.alternatives.push({ project: r.project, fit: r.fit, note: r.note ?? null }); }
 }
+// New-group listings for hand-added projects (held back above until the data fixes created them).
+for (const r of pendingNewListings) if (projects.has(r.project) && groups.has(r.group) && !alt(r.group, r.project)) { groups.get(r.group).alternatives.push({ project: r.project, fit: r.fit, note: r.note }); newNotes.listings++; }
 
 // Facts from each project's own code site (prefill/fetch-host-facts.mjs: Codeberg, GitLab, KDE, GNOME, Blender, Tor...)
 // plus fork count and latest release (GitHub: prefill/out/links.json; others: the same host facts).

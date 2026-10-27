@@ -595,7 +595,28 @@
     "Time Out"
    ],
    "source": "taxonomy",
-   "alternatives": []
+   "alternatives": [
+    {
+     "project": "stretchly",
+     "fit": "partial",
+     "note": "Covers break reminders only; no site blocking or Pomodoro timer stated."
+    },
+    {
+     "project": "pomatez",
+     "fit": "partial",
+     "note": "Has timers and break reminders; no site blocking mentioned."
+    },
+    {
+     "project": "super-productivity",
+     "fit": "partial",
+     "note": "Has Pomodoro timers and break reminders, but no website or app blocking."
+    },
+    {
+     "project": "leechblock-ng",
+     "fit": "partial",
+     "note": "Blocks distracting sites on a schedule; no Pomodoro timer or break reminders described."
+    }
+   ]
   },
   {
    "id": "paperwork",
@@ -608,7 +629,28 @@
     "Microsoft Lens"
    ],
    "source": "taxonomy",
-   "alternatives": []
+   "alternatives": [
+    {
+     "project": "paperless-ngx",
+     "fit": "partial",
+     "note": "Keeps scanned documents searchable, but the README does not describe a phone scanning app."
+    },
+    {
+     "project": "papra",
+     "fit": "partial",
+     "note": "No phone scanning app yet; mobile app is only planned. Search of scanned text works."
+    },
+    {
+     "project": "naps2",
+     "fit": "partial",
+     "note": "Scans from scanners and saves PDFs, but phone scanning is not mentioned"
+    },
+    {
+     "project": "oss-document-scanner",
+     "fit": "partial",
+     "note": "Scanning is covered, but searchable text (OCR) is not confirmed in the README."
+    }
+   ]
   },
   {
    "id": "diagrams",
@@ -621,7 +663,28 @@
     "Miro"
    ],
    "source": "taxonomy",
-   "alternatives": []
+   "alternatives": [
+    {
+     "project": "draw-io",
+     "fit": "full",
+     "note": null
+    },
+    {
+     "project": "excalidraw",
+     "fit": "full",
+     "note": null
+    },
+    {
+     "project": "mermaid",
+     "fit": "partial",
+     "note": "Makes diagrams from text; no drawing canvas or whiteboard for sketching."
+    },
+    {
+     "project": "plantuml",
+     "fit": "partial",
+     "note": "Turns text into diagrams on GitHub; no free-form whiteboard drawing."
+    }
+   ]
   },
   {
    "id": "habits",
@@ -633,7 +696,18 @@
     "Habitify"
    ],
    "source": "taxonomy",
-   "alternatives": []
+   "alternatives": [
+    {
+     "project": "beaver-habit-tracker",
+     "fit": "full",
+     "note": null
+    },
+    {
+     "project": "table-habit",
+     "fit": "full",
+     "note": null
+    }
+   ]
   },
   {
    "id": "writing",
@@ -647,7 +721,23 @@
     "World Anvil"
    ],
    "source": "taxonomy",
-   "alternatives": []
+   "alternatives": [
+    {
+     "project": "novelwriter",
+     "fit": "full",
+     "note": null
+    },
+    {
+     "project": "manuskript",
+     "fit": "full",
+     "note": null
+    },
+    {
+     "project": "bibisco",
+     "fit": "full",
+     "note": null
+    }
+   ]
   },
   {
    "id": "markdown-editors",
@@ -659,7 +749,23 @@
     "iA Writer"
    ],
    "source": "taxonomy",
-   "alternatives": []
+   "alternatives": [
+    {
+     "project": "marktext",
+     "fit": "full",
+     "note": null
+    },
+    {
+     "project": "zettlr",
+     "fit": "full",
+     "note": null
+    },
+    {
+     "project": "markor",
+     "fit": "full",
+     "note": null
+    }
+   ]
   },
   {
    "id": "academic-writing",
@@ -670,7 +776,28 @@
     "Overleaf (paid plans)"
    ],
    "source": "taxonomy",
-   "alternatives": []
+   "alternatives": [
+    {
+     "project": "overleaf-community-edition",
+     "fit": "partial",
+     "note": "Covers LaTeX only; Typst is not mentioned in the material."
+    },
+    {
+     "project": "texstudio",
+     "fit": "partial",
+     "note": "Covers LaTeX papers only; Typst is not mentioned in the README."
+    },
+    {
+     "project": "typst",
+     "fit": "full",
+     "note": null
+    },
+    {
+     "project": "lyx",
+     "fit": "partial",
+     "note": "Writes LaTeX documents but does not mention Typst; needs a LaTeX install."
+    }
+   ]
   },
   {
    "id": "bookmarks",
@@ -682,7 +809,28 @@
     "Pocket (closed down)"
    ],
    "source": "taxonomy",
-   "alternatives": []
+   "alternatives": [
+    {
+     "project": "linkding",
+     "fit": "full",
+     "note": null
+    },
+    {
+     "project": "readeck",
+     "fit": "full",
+     "note": null
+    },
+    {
+     "project": "linkwarden",
+     "fit": "full",
+     "note": null
+    },
+    {
+     "project": "karakeep",
+     "fit": "full",
+     "note": null
+    }
+   ]
   },
   {
    "id": "calendars",
@@ -1594,7 +1742,23 @@
     "Kapwing"
    ],
    "source": "taxonomy",
-   "alternatives": []
+   "alternatives": [
+    {
+     "project": "aegisub",
+     "fit": "partial",
+     "note": "Subtitle making and timing; dubbing and voice-overs not stated"
+    },
+    {
+     "project": "gaupol",
+     "fit": "partial",
+     "note": "Covers making, timing and translating subtitles; no voice-over or dubbing support mentioned."
+    },
+    {
+     "project": "whisperx",
+     "fit": "partial",
+     "note": "Makes timed transcripts; no translation or voice-over, and needs coding skills."
+    }
+   ]
   },
   {
    "id": "audio-plugins",
@@ -1608,7 +1772,13 @@
     "Serum"
    ],
    "source": "taxonomy",
-   "alternatives": []
+   "alternatives": [
+    {
+     "project": "lsp-plugins",
+     "fit": "full",
+     "note": null
+    }
+   ]
   },
   {
    "id": "pixel-art",
@@ -1620,7 +1790,23 @@
     "Pyxel Edit"
    ],
    "source": "taxonomy",
-   "alternatives": []
+   "alternatives": [
+    {
+     "project": "libresprite",
+     "fit": "full",
+     "note": null
+    },
+    {
+     "project": "pixelorama",
+     "fit": "full",
+     "note": null
+    },
+    {
+     "project": "piskel",
+     "fit": "partial",
+     "note": "Covers sprites and pixel art; ASCII/text art is not mentioned in the README."
+    }
+   ]
   },
   {
    "id": "music-notation",
@@ -1934,7 +2120,38 @@
     "PowerDVD"
    ],
    "source": "taxonomy",
-   "alternatives": []
+   "alternatives": [
+    {
+     "project": "vlc",
+     "fit": "full",
+     "note": null
+    },
+    {
+     "project": "mpv",
+     "fit": "full",
+     "note": null
+    },
+    {
+     "project": "iina",
+     "fit": "full",
+     "note": null
+    },
+    {
+     "project": "mpc-hc",
+     "fit": "full",
+     "note": null
+    },
+    {
+     "project": "strawberry",
+     "fit": "partial",
+     "note": "Covers music well; video playback not described in the README."
+    },
+    {
+     "project": "fooyin",
+     "fit": "partial",
+     "note": "Covers music well; video playback is not described in the README."
+    }
+   ]
   },
   {
    "id": "watch-lists",
@@ -1948,7 +2165,28 @@
     "JustWatch"
    ],
    "source": "taxonomy",
-   "alternatives": []
+   "alternatives": [
+    {
+     "project": "yamtrack",
+     "fit": "full",
+     "note": null
+    },
+    {
+     "project": "ryot",
+     "fit": "partial",
+     "note": "Tracks movies and shows, but no help finding where to watch them."
+    },
+    {
+     "project": "watcharr",
+     "fit": "partial",
+     "note": "Tracks what you watched and status, but finding where to watch is not mentioned."
+    },
+    {
+     "project": "mediatracker",
+     "fit": "partial",
+     "note": "Tracks movies and shows; finding where to watch is not mentioned."
+    }
+   ]
   },
   {
    "id": "music-library",
@@ -1961,7 +2199,33 @@
     "Apple Music (your library)"
    ],
    "source": "taxonomy",
-   "alternatives": []
+   "alternatives": [
+    {
+     "project": "navidrome",
+     "fit": "full",
+     "note": null
+    },
+    {
+     "project": "jellyfin",
+     "fit": "full",
+     "note": null
+    },
+    {
+     "project": "funkwhale",
+     "fit": "partial",
+     "note": "Streams your library, but the README was not provided to confirm details."
+    },
+    {
+     "project": "beets",
+     "fit": "partial",
+     "note": "Organizes and plays your library, but does not stream it to all your devices by itself."
+    },
+    {
+     "project": "feishin",
+     "fit": "partial",
+     "note": "Plays your own server's library, but relies on a separate server you must run; no phone app listed."
+    }
+   ]
   },
   {
    "id": "media-downloaders",
@@ -1972,7 +2236,33 @@
     "4K Video Downloader"
    ],
    "source": "taxonomy",
-   "alternatives": []
+   "alternatives": [
+    {
+     "project": "yt-dlp",
+     "fit": "partial",
+     "note": "Command-line only, no simple window; needs typing commands."
+    },
+    {
+     "project": "gallery-dl",
+     "fit": "partial",
+     "note": "Mainly images; videos need an add-on; music not mentioned."
+    },
+    {
+     "project": "cobalt",
+     "fit": "full",
+     "note": null
+    },
+    {
+     "project": "tube-archivist",
+     "fit": "partial",
+     "note": "Downloads YouTube videos only, not music or images from other sites."
+    },
+    {
+     "project": "seal",
+     "fit": "full",
+     "note": null
+    }
+   ]
   },
   {
    "id": "iptv",
@@ -1985,7 +2275,33 @@
     "Sling TV"
    ],
    "source": "taxonomy",
-   "alternatives": []
+   "alternatives": [
+    {
+     "project": "tvheadend",
+     "fit": "partial",
+     "note": "Covers IPTV and recording, but it is a server, not a viewing app."
+    },
+    {
+     "project": "ersatztv",
+     "fit": "full",
+     "note": null
+    },
+    {
+     "project": "tunarr",
+     "fit": "full",
+     "note": null
+    },
+    {
+     "project": "threadfin",
+     "fit": "partial",
+     "note": "Feeds channels to Plex, Emby or Jellyfin; no own TV app like TiviMate."
+    },
+    {
+     "project": "hypnotix",
+     "fit": "partial",
+     "note": "Plays IPTV and live TV, but no always-on channel making or hosting."
+    }
+   ]
   },
   {
    "id": "image-viewers",
@@ -1998,7 +2314,33 @@
     "Picasa (discontinued)"
    ],
    "source": "taxonomy",
-   "alternatives": []
+   "alternatives": [
+    {
+     "project": "nomacs",
+     "fit": "partial",
+     "note": "Viewing is covered; sorting or organising photos is not described in the README."
+    },
+    {
+     "project": "qimgv",
+     "fit": "full",
+     "note": null
+    },
+    {
+     "project": "imageglass",
+     "fit": "partial",
+     "note": "Views and sorts photos well; organising and tagging library not described"
+    },
+    {
+     "project": "digikam",
+     "fit": "full",
+     "note": null
+    },
+    {
+     "project": "gwenview",
+     "fit": "full",
+     "note": null
+    }
+   ]
   },
   {
    "id": "comics",
@@ -2010,7 +2352,33 @@
     "Webtoon"
    ],
    "source": "taxonomy",
-   "alternatives": []
+   "alternatives": [
+    {
+     "project": "komga",
+     "fit": "full",
+     "note": null
+    },
+    {
+     "project": "kavita",
+     "fit": "full",
+     "note": null
+    },
+    {
+     "project": "mihon",
+     "fit": "full",
+     "note": null
+    },
+    {
+     "project": "yacreader",
+     "fit": "full",
+     "note": null
+    },
+    {
+     "project": "suwayomi",
+     "fit": "partial",
+     "note": "Covers manga reading and library; comics support and ComiXology-style store not stated."
+    }
+   ]
   },
   {
    "id": "watch-together",
@@ -2022,7 +2390,23 @@
     "Watch2Gether"
    ],
    "source": "taxonomy",
-   "alternatives": []
+   "alternatives": [
+    {
+     "project": "syncplay",
+     "fit": "partial",
+     "note": "Syncs playback and chat, but needs each person to run a media player like VLC or mpv, not a browser."
+    },
+    {
+     "project": "cytube",
+     "fit": "full",
+     "note": null
+    },
+    {
+     "project": "neko",
+     "fit": "full",
+     "note": null
+    }
+   ]
   },
   {
    "id": "media-automation",
@@ -2031,7 +2415,33 @@
    "job": "Requesting, organising and fetching shows, films and music automatically",
    "closed": [],
    "source": "taxonomy",
-   "alternatives": []
+   "alternatives": [
+    {
+     "project": "sonarr",
+     "fit": "partial",
+     "note": "Covers TV shows; README does not mention films or music."
+    },
+    {
+     "project": "radarr",
+     "fit": "partial",
+     "note": "Covers movies only; the README does not mention shows or music."
+    },
+    {
+     "project": "lidarr",
+     "fit": "partial",
+     "note": "Covers music only; README does not mention shows or films."
+    },
+    {
+     "project": "prowlarr",
+     "fit": "partial",
+     "note": "Finds releases and feeds other apps; does not itself request, organise or download shows, films or music."
+    },
+    {
+     "project": "jellyseerr",
+     "fit": "partial",
+     "note": "Handles requests and approvals; fetching is done by Sonarr and Radarr, not by Seerr itself."
+    }
+   ]
   },
   {
    "id": "video-streaming",
@@ -2065,7 +2475,28 @@
    "job": "Games you can play whose code is open",
    "closed": [],
    "source": "taxonomy",
-   "alternatives": []
+   "alternatives": [
+    {
+     "project": "supertuxkart",
+     "fit": "full",
+     "note": null
+    },
+    {
+     "project": "openttd",
+     "fit": "full",
+     "note": null
+    },
+    {
+     "project": "lichess",
+     "fit": "full",
+     "note": null
+    },
+    {
+     "project": "mindustry",
+     "fit": "full",
+     "note": null
+    }
+   ]
   },
   {
    "id": "game-mods",
@@ -2077,7 +2508,28 @@
     "Overwolf"
    ],
    "source": "taxonomy",
-   "alternatives": []
+   "alternatives": [
+    {
+     "project": "mod-organizer-2",
+     "fit": "full",
+     "note": null
+    },
+    {
+     "project": "vortex",
+     "fit": "full",
+     "note": null
+    },
+    {
+     "project": "r2modman",
+     "fit": "partial",
+     "note": "Covers game mods only; README does not mention shaders or trainers."
+    },
+    {
+     "project": "prism-launcher",
+     "fit": "partial",
+     "note": "Manages Minecraft installs; mod and shader handling not described in the README"
+    }
+   ]
   },
   {
    "id": "gaming-performance",
@@ -2090,7 +2542,33 @@
     "NVIDIA App overlay"
    ],
    "source": "taxonomy",
-   "alternatives": []
+   "alternatives": [
+    {
+     "project": "mangohud",
+     "fit": "partial",
+     "note": "Covers overlays and FPS counters; clips and tweaks not shown in README."
+    },
+    {
+     "project": "gamemode",
+     "fit": "partial",
+     "note": "Tweaks game performance but has no FPS counter, overlay or clip recording."
+    },
+    {
+     "project": "vkbasalt",
+     "fit": "partial",
+     "note": "Adds visual effects, but no FPS counter, overlay or performance tools."
+    },
+    {
+     "project": "gamescope",
+     "fit": "partial",
+     "note": "Covers scaling, frame limits and shaders; no FPS counter or clip tools described."
+    },
+    {
+     "project": "special-k",
+     "fit": "partial",
+     "note": "Covers tweaks and analysis; FPS counter, overlay and clip features not confirmed in README."
+    }
+   ]
   },
   {
    "id": "game-servers",
@@ -2103,7 +2581,33 @@
     "CubeCoders AMP"
    ],
    "source": "taxonomy",
-   "alternatives": []
+   "alternatives": [
+    {
+     "project": "pterodactyl",
+     "fit": "full",
+     "note": null
+    },
+    {
+     "project": "pelican",
+     "fit": "full",
+     "note": null
+    },
+    {
+     "project": "crafty-controller",
+     "fit": "partial",
+     "note": "Covers Minecraft only in the README; other games are not confirmed."
+    },
+    {
+     "project": "linuxgsm",
+     "fit": "full",
+     "note": null
+    },
+    {
+     "project": "pufferpanel",
+     "fit": "full",
+     "note": null
+    }
+   ]
   },
   {
    "id": "emulators",
@@ -2263,7 +2767,33 @@
     "TinyPNG"
    ],
    "source": "taxonomy",
-   "alternatives": []
+   "alternatives": [
+    {
+     "project": "handbrake",
+     "fit": "partial",
+     "note": "Covers video conversion and shrinking only; not documents, images or general files."
+    },
+    {
+     "project": "convertx",
+     "fit": "full",
+     "note": null
+    },
+    {
+     "project": "file-converter",
+     "fit": "full",
+     "note": null
+    },
+    {
+     "project": "switcheroo",
+     "fit": "partial",
+     "note": "Images and some PDFs only; no documents, video or audio"
+    },
+    {
+     "project": "squoosh",
+     "fit": "partial",
+     "note": "Handles images only; no general file conversion or other formats beyond pictures."
+    }
+   ]
   },
   {
    "id": "file-managers",
@@ -2276,7 +2806,23 @@
     "ForkLift"
    ],
    "source": "taxonomy",
-   "alternatives": []
+   "alternatives": [
+    {
+     "project": "files",
+     "fit": "full",
+     "note": null
+    },
+    {
+     "project": "yazi",
+     "fit": "partial",
+     "note": "Terminal-only; no graphical window, so less like Total Commander or ForkLift."
+    },
+    {
+     "project": "thunar",
+     "fit": "full",
+     "note": null
+    }
+   ]
   },
   {
    "id": "download-managers",
@@ -2287,7 +2833,33 @@
     "Internet Download Manager"
    ],
    "source": "taxonomy",
-   "alternatives": []
+   "alternatives": [
+    {
+     "project": "aria2",
+     "fit": "partial",
+     "note": "Command-line only; no graphical app for everyday users."
+    },
+    {
+     "project": "motrix",
+     "fit": "full",
+     "note": null
+    },
+    {
+     "project": "xtreme-download-manager",
+     "fit": "full",
+     "note": null
+    },
+    {
+     "project": "gopeed",
+     "fit": "full",
+     "note": null
+    },
+    {
+     "project": "persepolis",
+     "fit": "full",
+     "note": null
+    }
+   ]
   },
   {
    "id": "nearby-sharing",
@@ -2299,7 +2871,23 @@
     "Quick Share"
    ],
    "source": "taxonomy",
-   "alternatives": []
+   "alternatives": [
+    {
+     "project": "localsend",
+     "fit": "full",
+     "note": null
+    },
+    {
+     "project": "pairdrop",
+     "fit": "full",
+     "note": null
+    },
+    {
+     "project": "croc",
+     "fit": "partial",
+     "note": "Works between any two computers, not specifically nearby devices; no phone app."
+    }
+   ]
   },
   {
    "id": "disk-cleanup",
@@ -2313,7 +2901,28 @@
     "DaisyDisk"
    ],
    "source": "taxonomy",
-   "alternatives": []
+   "alternatives": [
+    {
+     "project": "bleachbit",
+     "fit": "partial",
+     "note": "Cleans junk well, but the README mentions no duplicate or space-map finder."
+    },
+    {
+     "project": "dupeguru",
+     "fit": "partial",
+     "note": "Finds duplicate files only; no junk cleaning or disk usage map."
+    },
+    {
+     "project": "windirstat",
+     "fit": "partial",
+     "note": "Finds large, duplicate and old files and runs cleanup tools; it does not clear junk files on its own."
+    },
+    {
+     "project": "qdirstat",
+     "fit": "partial",
+     "note": "Finds big files and runs cleanups, but no duplicate finder or junk scanner."
+    }
+   ]
   },
   {
    "id": "file-encryption",
@@ -2325,7 +2934,18 @@
     "AxCrypt"
    ],
    "source": "taxonomy",
-   "alternatives": []
+   "alternatives": [
+    {
+     "project": "cryptomator",
+     "fit": "partial",
+     "note": "Covers cloud folders and vaults; not whole drives or disks"
+    },
+    {
+     "project": "age",
+     "fit": "partial",
+     "note": "Command-line tool only; no graphical app or whole-drive encryption like BitLocker."
+    }
+   ]
   },
   {
    "id": "file-organizers",
@@ -2337,7 +2957,18 @@
     "File Juggler"
    ],
    "source": "taxonomy",
-   "alternatives": []
+   "alternatives": [
+    {
+     "project": "organize",
+     "fit": "partial",
+     "note": "Command line only; rules are written in a config file, not a visual app."
+    },
+    {
+     "project": "tagspaces",
+     "fit": "partial",
+     "note": "Manual tagging and browsing only; no automatic rule-based file moving."
+    }
+   ]
   },
   {
    "id": "archivers",
@@ -2350,7 +2981,18 @@
     "BetterZip"
    ],
    "source": "taxonomy",
-   "alternatives": []
+   "alternatives": [
+    {
+     "project": "peazip",
+     "fit": "full",
+     "note": null
+    },
+    {
+     "project": "nanazip",
+     "fit": "full",
+     "note": null
+    }
+   ]
   },
   {
    "id": "bulk-rename",
@@ -2363,7 +3005,23 @@
     "FileBot"
    ],
    "source": "taxonomy",
-   "alternatives": []
+   "alternatives": [
+    {
+     "project": "ant-renamer",
+     "fit": "full",
+     "note": null
+    },
+    {
+     "project": "f2",
+     "fit": "full",
+     "note": null
+    },
+    {
+     "project": "powertoys-powerrename",
+     "fit": "partial",
+     "note": "Renames batches of files by pattern, but the README does not describe photo or media features."
+    }
+   ]
   },
   {
    "id": "file-previews",
@@ -2374,7 +3032,23 @@
     "Seer"
    ],
    "source": "taxonomy",
-   "alternatives": []
+   "alternatives": [
+    {
+     "project": "quicklook",
+     "fit": "full",
+     "note": null
+    },
+    {
+     "project": "powertoys-powerrename",
+     "fit": "partial",
+     "note": "Peek is one of 30+ utilities; the README does not describe its preview details."
+    },
+    {
+     "project": "gnome-sushi",
+     "fit": "partial",
+     "note": "Previews files in GNOME Files only; no standalone app for other systems."
+    }
+   ]
   },
   {
    "id": "file-search",
@@ -2386,7 +3060,33 @@
     "Spotlight"
    ],
    "source": "taxonomy",
-   "alternatives": []
+   "alternatives": [
+    {
+     "project": "ripgrep",
+     "fit": "partial",
+     "note": "Searches file contents well, but it is a typed command-line tool, not a search-everything app like Everything or Spotlight."
+    },
+    {
+     "project": "fd",
+     "fit": "partial",
+     "note": "Finds files by name and runs commands on results; searching text inside files is not shown in README."
+    },
+    {
+     "project": "fzf",
+     "fit": "partial",
+     "note": "Finds files and text inside a terminal, but needs setup; no indexed system-wide search like Everything or Spotlight."
+    },
+    {
+     "project": "recoll",
+     "fit": "partial",
+     "note": "Searches indexes built with Recoll on a separate machine; not a general file search tool."
+    },
+    {
+     "project": "fsearch",
+     "fit": "partial",
+     "note": "Covers file names and text search, but the README does not confirm it searches inside all file types or on macOS."
+    }
+   ]
   },
   {
    "id": "image-hosting",
@@ -2398,7 +3098,28 @@
     "ImgBB"
    ],
    "source": "taxonomy",
-   "alternatives": []
+   "alternatives": [
+    {
+     "project": "zipline",
+     "fit": "full",
+     "note": null
+    },
+    {
+     "project": "lychee",
+     "fit": "partial",
+     "note": "Shares photos by link, but you must run your own server to do it."
+    },
+    {
+     "project": "picoshare",
+     "fit": "partial",
+     "note": "Shares images by link, but needs your own server; no image-specific features."
+    },
+    {
+     "project": "xbackbone",
+     "fit": "full",
+     "note": null
+    }
+   ]
   },
   {
    "id": "torrents",
@@ -2410,7 +3131,23 @@
     "BitTorrent"
    ],
    "source": "taxonomy",
-   "alternatives": []
+   "alternatives": [
+    {
+     "project": "transmission",
+     "fit": "full",
+     "note": null
+    },
+    {
+     "project": "deluge",
+     "fit": "full",
+     "note": null
+    },
+    {
+     "project": "fragments",
+     "fit": "full",
+     "note": null
+    }
+   ]
   },
   {
    "id": "maps",
@@ -2543,7 +3280,28 @@
     "Apple Health"
    ],
    "source": "taxonomy",
-   "alternatives": []
+   "alternatives": [
+    {
+     "project": "gadgetbridge",
+     "fit": "partial",
+     "note": "Covers only devices it supports; no workout or health features are described in the material."
+    },
+    {
+     "project": "wger",
+     "fit": "partial",
+     "note": "Covers workouts and body measurements; no runs, rides, or wearable data."
+    },
+    {
+     "project": "fittrackee",
+     "fit": "partial",
+     "note": "Covers workouts from files; health readings not mentioned"
+    },
+    {
+     "project": "goldencheetah",
+     "fit": "partial",
+     "note": "Covers workouts and fitness data well, but the README does not mention tracking runs or health readings like Whoop, Oura or Apple Health."
+    }
+   ]
   },
   {
    "id": "travel",
@@ -2556,7 +3314,23 @@
     "Polarsteps"
    ],
    "source": "taxonomy",
-   "alternatives": []
+   "alternatives": [
+    {
+     "project": "adventurelog",
+     "fit": "full",
+     "note": null
+    },
+    {
+     "project": "wanderer",
+     "fit": "partial",
+     "note": "Covers trail records and route planning, not full trip itineraries or travel logs."
+    },
+    {
+     "project": "dawarich",
+     "fit": "partial",
+     "note": "Covers trips and travel history, but no trip booking or itinerary planning is mentioned."
+    }
+   ]
   },
   {
    "id": "job-hunting",
@@ -2570,7 +3344,33 @@
     "Resume.io"
    ],
    "source": "taxonomy",
-   "alternatives": []
+   "alternatives": [
+    {
+     "project": "reactive-resume",
+     "fit": "full",
+     "note": null
+    },
+    {
+     "project": "openresume",
+     "fit": "partial",
+     "note": "Covers resume writing only; no job search or application tracking."
+    },
+    {
+     "project": "rendercv",
+     "fit": "partial",
+     "note": "Writes resumes only; no job search or application tracking."
+    },
+    {
+     "project": "jobsync",
+     "fit": "full",
+     "note": null
+    },
+    {
+     "project": "yamlresume",
+     "fit": "partial",
+     "note": "Writes resumes only; no job search or application tracking."
+    }
+   ]
   },
   {
    "id": "food-tracking",
@@ -2583,7 +3383,23 @@
     "Lose It!"
    ],
    "source": "taxonomy",
-   "alternatives": []
+   "alternatives": [
+    {
+     "project": "wger",
+     "fit": "partial",
+     "note": "Logs calories with a food database; nutrition checking is basic."
+    },
+    {
+     "project": "opennutritracker",
+     "fit": "full",
+     "note": null
+    },
+    {
+     "project": "waistline",
+     "fit": "full",
+     "note": null
+    }
+   ]
   },
   {
    "id": "learning-apps",
@@ -2596,7 +3412,18 @@
     "Brainscape"
    ],
    "source": "taxonomy",
-   "alternatives": []
+   "alternatives": [
+    {
+     "project": "anki",
+     "fit": "full",
+     "note": null
+    },
+    {
+     "project": "kolibri",
+     "fit": "partial",
+     "note": "Covers courses and quizzes, but not flashcards or a language-learning app."
+    }
+   ]
   },
   {
    "id": "recipes",
@@ -2609,7 +3436,23 @@
     "Plan to Eat"
    ],
    "source": "taxonomy",
-   "alternatives": []
+   "alternatives": [
+    {
+     "project": "mealie",
+     "fit": "full",
+     "note": null
+    },
+    {
+     "project": "kitchenowl",
+     "fit": "partial",
+     "note": "Covers recipes, lists and meal plans; no mention of store-sharing or nutrition."
+    },
+    {
+     "project": "grocy",
+     "fit": "partial",
+     "note": "Meal plans and shopping lists exist; saving recipes is not shown in the README."
+    }
+   ]
   },
   {
    "id": "location-tracking",
@@ -2622,7 +3465,18 @@
     "Google Find Hub"
    ],
    "source": "taxonomy",
-   "alternatives": []
+   "alternatives": [
+    {
+     "project": "dawarich",
+     "fit": "partial",
+     "note": "Covers sharing location with family; vehicle and device tracking is not mentioned."
+    },
+    {
+     "project": "traccar",
+     "fit": "partial",
+     "note": "Built for tracking devices and vehicles; no family sharing or phone-based location sharing described."
+    }
+   ]
   },
   {
    "id": "price-tracking",
@@ -2635,7 +3489,18 @@
     "Honey"
    ],
    "source": "taxonomy",
-   "alternatives": []
+   "alternatives": [
+    {
+     "project": "changedetection-io",
+     "fit": "partial",
+     "note": "Tracks price drops and alerts, but no price history site or shopping browser extension."
+    },
+    {
+     "project": "pricebuddy",
+     "fit": "full",
+     "note": null
+    }
+   ]
   },
   {
    "id": "family-trees",
@@ -2944,7 +3809,33 @@
     "NetLimiter"
    ],
    "source": "taxonomy",
-   "alternatives": []
+   "alternatives": [
+    {
+     "project": "opensnitch",
+     "fit": "full",
+     "note": null
+    },
+    {
+     "project": "portmaster",
+     "fit": "full",
+     "note": null
+    },
+    {
+     "project": "simplewall",
+     "fit": "partial",
+     "note": "Logs blocked and allowed packets; no live per-app view stated"
+    },
+    {
+     "project": "sniffnet",
+     "fit": "partial",
+     "note": "Monitors connections and shows programs, but has no blocking feature listed."
+    },
+    {
+     "project": "netguard",
+     "fit": "full",
+     "note": null
+    }
+   ]
   },
   {
    "id": "ad-blocking",
@@ -2957,7 +3848,28 @@
     "Circle Home"
    ],
    "source": "taxonomy",
-   "alternatives": []
+   "alternatives": [
+    {
+     "project": "ublock-origin",
+     "fit": "partial",
+     "note": "Covers browser blocking; no whole home network blocking is described."
+    },
+    {
+     "project": "pi-hole",
+     "fit": "full",
+     "note": null
+    },
+    {
+     "project": "adguard-home",
+     "fit": "partial",
+     "note": "Covers whole home network only; no in-browser or per-app blocking"
+    },
+    {
+     "project": "blocky",
+     "fit": "partial",
+     "note": "Blocks for the whole network; no browser or phone app mentioned."
+    }
+   ]
   },
   {
    "id": "alt-frontends",
@@ -2968,7 +3880,33 @@
     "Official YouTube, Reddit and Discord apps"
    ],
    "source": "taxonomy",
-   "alternatives": []
+   "alternatives": [
+    {
+     "project": "newpipe",
+     "fit": "partial",
+     "note": "Covers YouTube well; Reddit and Discord are not supported."
+    },
+    {
+     "project": "freetube",
+     "fit": "partial",
+     "note": "Covers YouTube only; no Reddit or Discord support stated."
+    },
+    {
+     "project": "invidious",
+     "fit": "partial",
+     "note": "Covers YouTube only; README does not mention Reddit or Discord."
+    },
+    {
+     "project": "redlib",
+     "fit": "partial",
+     "note": "Covers Reddit only; no YouTube or Discord support mentioned."
+    },
+    {
+     "project": "vesktop",
+     "fit": "partial",
+     "note": "Covers Discord only; no YouTube or Reddit support stated."
+    }
+   ]
   },
   {
    "id": "email-aliases",
@@ -2980,7 +3918,23 @@
     "DuckDuckGo Email Protection"
    ],
    "source": "taxonomy",
-   "alternatives": []
+   "alternatives": [
+    {
+     "project": "simplelogin",
+     "fit": "full",
+     "note": null
+    },
+    {
+     "project": "addy-io",
+     "fit": "partial",
+     "note": "The README only describes the landing page source; alias features are not shown."
+    },
+    {
+     "project": "firefox-relay",
+     "fit": "full",
+     "note": null
+    }
+   ]
   },
   {
    "id": "secret-sharing",
@@ -2989,7 +3943,28 @@
    "job": "Sending a password or secret through a link that expires",
    "closed": [],
    "source": "taxonomy",
-   "alternatives": []
+   "alternatives": [
+    {
+     "project": "password-pusher",
+     "fit": "full",
+     "note": null
+    },
+    {
+     "project": "privatebin",
+     "fit": "full",
+     "note": null
+    },
+    {
+     "project": "yopass",
+     "fit": "full",
+     "note": null
+    },
+    {
+     "project": "onetimesecret",
+     "fit": "full",
+     "note": null
+    }
+   ]
   },
   {
    "id": "metadata-cleaners",
@@ -3718,7 +4693,18 @@
     "Microsoft Teams Phone"
    ],
    "source": "taxonomy",
-   "alternatives": []
+   "alternatives": [
+    {
+     "project": "asterisk",
+     "fit": "partial",
+     "note": "Covers phone lines and extensions; call queues and a ready-made business setup need building or extra configuration."
+    },
+    {
+     "project": "freepbx",
+     "fit": "full",
+     "note": null
+    }
+   ]
   },
   {
    "id": "seo-marketing",
@@ -3731,7 +4717,28 @@
     "Screaming Frog"
    ],
    "source": "taxonomy",
-   "alternatives": []
+   "alternatives": [
+    {
+     "project": "serpbear",
+     "fit": "partial",
+     "note": "Covers keyword rank tracking; lacks site health audits and general marketing tools."
+    },
+    {
+     "project": "mautic",
+     "fit": "partial",
+     "note": "Covers marketing campaigns, not search rankings or site health checks."
+    },
+    {
+     "project": "unlighthouse",
+     "fit": "partial",
+     "note": "Checks site health and speed only; no search rankings or marketing features."
+    },
+    {
+     "project": "lighthouse",
+     "fit": "partial",
+     "note": "Checks site health and SEO basics, but not search rankings or marketing."
+    }
+   ]
   },
   {
    "id": "chatbot-builders",
@@ -3744,7 +4751,18 @@
     "Voiceflow"
    ],
    "source": "taxonomy",
-   "alternatives": []
+   "alternatives": [
+    {
+     "project": "botpress",
+     "fit": "partial",
+     "note": "Mostly developer tools; the README says the visual Studio is the main way to build bots, and it is coming soon for plugins."
+    },
+    {
+     "project": "rasa",
+     "fit": "partial",
+     "note": "Needs programming skills; no visual no-code builder for the legacy version."
+    }
+   ]
   },
   {
    "id": "crypto",
@@ -3756,7 +4774,23 @@
     "Binance"
    ],
    "source": "taxonomy",
-   "alternatives": []
+   "alternatives": [
+    {
+     "project": "electrum",
+     "fit": "partial",
+     "note": "Covers Bitcoin only; no bank-style accounts or buying from a company."
+    },
+    {
+     "project": "sparrow-wallet",
+     "fit": "full",
+     "note": null
+    },
+    {
+     "project": "cake-wallet",
+     "fit": "partial",
+     "note": "Holds and sends crypto, but does not offer exchange accounts or the same buy-and-sell service as Coinbase or Binance."
+    }
+   ]
   },
   {
    "id": "hr-hiring",
@@ -3769,7 +4803,13 @@
     "Greenhouse"
    ],
    "source": "taxonomy",
-   "alternatives": []
+   "alternatives": [
+    {
+     "project": "frappe-hr",
+     "fit": "partial",
+     "note": "Covers staff records, leave and payroll; hiring and shift scheduling not described in the README."
+    }
+   ]
   },
   {
    "id": "ai-chat",
@@ -3941,7 +4981,33 @@
     "Msty"
    ],
    "source": "taxonomy",
-   "alternatives": []
+   "alternatives": [
+    {
+     "project": "ollama",
+     "fit": "full",
+     "note": null
+    },
+    {
+     "project": "llama-cpp",
+     "fit": "partial",
+     "note": "Runs models locally, but it is a command-line and server tool, not a polished consumer app."
+    },
+    {
+     "project": "jan",
+     "fit": "full",
+     "note": null
+    },
+    {
+     "project": "localai",
+     "fit": "full",
+     "note": null
+    },
+    {
+     "project": "koboldcpp",
+     "fit": "full",
+     "note": null
+    }
+   ]
   },
   {
    "id": "browser-agents",
@@ -3954,7 +5020,33 @@
     "Perplexity Comet"
    ],
    "source": "taxonomy",
-   "alternatives": []
+   "alternatives": [
+    {
+     "project": "browser-use",
+     "fit": "partial",
+     "note": "Runs as a Python library or CLI for developers, not a ready-made consumer assistant."
+    },
+    {
+     "project": "nanobrowser",
+     "fit": "full",
+     "note": null
+    },
+    {
+     "project": "stagehand",
+     "fit": "partial",
+     "note": "Built for developers to script an AI browser agent, not a ready-made end-user assistant."
+    },
+    {
+     "project": "browseros",
+     "fit": "full",
+     "note": null
+    },
+    {
+     "project": "skyvern",
+     "fit": "full",
+     "note": null
+    }
+   ]
   },
   {
    "id": "ai-detection",
@@ -3967,7 +5059,18 @@
     "Turnitin AI detection"
    ],
    "source": "taxonomy",
-   "alternatives": []
+   "alternatives": [
+    {
+     "project": "binoculars",
+     "fit": "partial",
+     "note": "Research code for programmers; no ready consumer app, and README warns against consumer use."
+    },
+    {
+     "project": "gltr",
+     "fit": "partial",
+     "note": "Shows word predictability for research; not a ready checker for users."
+    }
+   ]
   },
   {
    "id": "voice-assistants",
@@ -3980,7 +5083,18 @@
     "Siri"
    ],
    "source": "taxonomy",
-   "alternatives": []
+   "alternatives": [
+    {
+     "project": "willow",
+     "fit": "partial",
+     "note": "README covers an inference server and community; assistant features not described in the text given."
+    },
+    {
+     "project": "leon",
+     "fit": "partial",
+     "note": "Voice features are mentioned but not clearly a main voice assistant; setup needs developer tools."
+    }
+   ]
   },
   {
    "id": "ai-audio",
@@ -3993,7 +5107,28 @@
     "Udio"
    ],
    "source": "taxonomy",
-   "alternatives": []
+   "alternatives": [
+    {
+     "project": "kokoro",
+     "fit": "partial",
+     "note": "Covers spoken voice only; no AI music, and it is a code library, not a ready app."
+    },
+    {
+     "project": "chatterbox",
+     "fit": "partial",
+     "note": "Covers speech only; no music generation described in the README."
+    },
+    {
+     "project": "coqui-tts",
+     "fit": "partial",
+     "note": "Covers AI speech only; no music generation is described in the README."
+    },
+    {
+     "project": "ace-step",
+     "fit": "partial",
+     "note": "Covers music and singing; spoken voice-overs and speech are not described."
+    }
+   ]
   },
   {
    "id": "ai-companions",
@@ -4005,7 +5140,23 @@
     "Character.AI"
    ],
    "source": "taxonomy",
-   "alternatives": []
+   "alternatives": [
+    {
+     "project": "sillytavern",
+     "fit": "partial",
+     "note": "It runs locally and connects to AI services, so you must supply your own AI."
+    },
+    {
+     "project": "open-llm-vtuber",
+     "fit": "full",
+     "note": null
+    },
+    {
+     "project": "amica",
+     "fit": "full",
+     "note": null
+    }
+   ]
   },
   {
    "id": "ai-notebooks",
@@ -4017,7 +5168,28 @@
     "Mem"
    ],
    "source": "taxonomy",
-   "alternatives": []
+   "alternatives": [
+    {
+     "project": "open-notebook",
+     "fit": "full",
+     "note": null
+    },
+    {
+     "project": "surfsense",
+     "fit": "full",
+     "note": null
+    },
+    {
+     "project": "khoj",
+     "fit": "full",
+     "note": null
+    },
+    {
+     "project": "anythingllm",
+     "fit": "full",
+     "note": null
+    }
+   ]
   },
   {
    "id": "ai-coding",
@@ -4099,7 +5271,23 @@
     "Devin"
    ],
    "source": "taxonomy",
-   "alternatives": []
+   "alternatives": [
+    {
+     "project": "claude-squad",
+     "fit": "full",
+     "note": null
+    },
+    {
+     "project": "vibe-kanban",
+     "fit": "full",
+     "note": null
+    },
+    {
+     "project": "crystal",
+     "fit": "partial",
+     "note": "README says Crystal is deprecated and points users to Nimbalyst instead."
+    }
+   ]
   },
   {
    "id": "agent-skills",
@@ -4108,7 +5296,18 @@
    "job": "Reusable skills, plugins, hooks and instruction files for coding agents",
    "closed": [],
    "source": "taxonomy",
-   "alternatives": []
+   "alternatives": [
+    {
+     "project": "superpowers",
+     "fit": "full",
+     "note": null
+    },
+    {
+     "project": "superclaude",
+     "fit": "full",
+     "note": null
+    }
+   ]
   },
   {
    "id": "agent-memory",
@@ -4120,7 +5319,33 @@
     "Claude memory"
    ],
    "source": "taxonomy",
-   "alternatives": []
+   "alternatives": [
+    {
+     "project": "mem0",
+     "fit": "partial",
+     "note": "Covers memory for agents, but the top benchmark results are for the paid cloud version."
+    },
+    {
+     "project": "letta",
+     "fit": "partial",
+     "note": "Gives agents memory, but mainly for developers; not a ready-made consumer memory app."
+    },
+    {
+     "project": "graphiti",
+     "fit": "partial",
+     "note": "A framework to build memory yourself; not a ready-made memory product."
+    },
+    {
+     "project": "basic-memory",
+     "fit": "full",
+     "note": null
+    },
+    {
+     "project": "claude-mem",
+     "fit": "full",
+     "note": null
+    }
+   ]
   },
   {
    "id": "agent-frontends",
@@ -4132,7 +5357,28 @@
     "ChatGPT Codex app"
    ],
    "source": "taxonomy",
-   "alternatives": []
+   "alternatives": [
+    {
+     "project": "opcode",
+     "fit": "partial",
+     "note": "Desktop only; no phone, web or chat app mentioned"
+    },
+    {
+     "project": "claude-code-ui",
+     "fit": "full",
+     "note": null
+    },
+    {
+     "project": "happy",
+     "fit": "full",
+     "note": null
+    },
+    {
+     "project": "opencode",
+     "fit": "partial",
+     "note": "Has a beta desktop app, but no web, phone or chat app mentioned."
+    }
+   ]
   },
   {
    "id": "mcp-servers",
@@ -4143,7 +5389,23 @@
     "Zapier MCP"
    ],
    "source": "taxonomy",
-   "alternatives": []
+   "alternatives": [
+    {
+     "project": "playwright-mcp",
+     "fit": "full",
+     "note": null
+    },
+    {
+     "project": "github-mcp-server",
+     "fit": "full",
+     "note": null
+    },
+    {
+     "project": "metamcp",
+     "fit": "partial",
+     "note": "Aggregates and hosts MCP servers; not a hosted Zapier-style service."
+    }
+   ]
   },
   {
    "id": "agent-safety",
@@ -4152,7 +5414,28 @@
    "job": "Keeping agents from doing damage: sandboxes, permission checks and secret masking",
    "closed": [],
    "source": "taxonomy",
-   "alternatives": []
+   "alternatives": [
+    {
+     "project": "e2b",
+     "fit": "partial",
+     "note": "Provides sandboxes only; no permission checks or secret masking described."
+    },
+    {
+     "project": "microsandbox",
+     "fit": "partial",
+     "note": "Sandboxing is covered; permission checks and secret masking are not clearly described."
+    },
+    {
+     "project": "container-use",
+     "fit": "partial",
+     "note": "Isolates agents in containers and logs commands; no permission checks or secret masking mentioned."
+    },
+    {
+     "project": "sandbox-runtime",
+     "fit": "partial",
+     "note": "Sandboxing is clear; secret masking is not shown in the README."
+    }
+   ]
   },
   {
    "id": "agent-usage",
@@ -4161,7 +5444,23 @@
    "job": "Seeing how much of your AI plan or token budget you've used, and spending less",
    "closed": [],
    "source": "taxonomy",
-   "alternatives": []
+   "alternatives": [
+    {
+     "project": "ccusage",
+     "fit": "full",
+     "note": null
+    },
+    {
+     "project": "claude-code-usage-monitor",
+     "fit": "full",
+     "note": null
+    },
+    {
+     "project": "ccstatusline",
+     "fit": "full",
+     "note": null
+    }
+   ]
   },
   {
    "id": "agent-context",
@@ -4174,7 +5473,23 @@
     "Greptile"
    ],
    "source": "taxonomy",
-   "alternatives": []
+   "alternatives": [
+    {
+     "project": "serena",
+     "fit": "partial",
+     "note": "Gives code maps and search to agents, but the JetBrains backend is paid."
+    },
+    {
+     "project": "repomix",
+     "fit": "partial",
+     "note": "Packs code into one file for AI; no live code map or search."
+    },
+    {
+     "project": "sourcebot",
+     "fit": "full",
+     "note": null
+    }
+   ]
   },
   {
    "id": "agent-planning",
@@ -4186,7 +5501,23 @@
     "Traycer"
    ],
    "source": "taxonomy",
-   "alternatives": []
+   "alternatives": [
+    {
+     "project": "spec-kit",
+     "fit": "full",
+     "note": null
+    },
+    {
+     "project": "bmad-method",
+     "fit": "full",
+     "note": null
+    },
+    {
+     "project": "openspec",
+     "fit": "full",
+     "note": null
+    }
+   ]
   },
   {
    "id": "ml-platforms",
@@ -4227,7 +5558,28 @@
     "Cloudflare AI Gateway"
    ],
    "source": "taxonomy",
-   "alternatives": []
+   "alternatives": [
+    {
+     "project": "litellm",
+     "fit": "full",
+     "note": null
+    },
+    {
+     "project": "bifrost",
+     "fit": "full",
+     "note": null
+    },
+    {
+     "project": "portkey-gateway",
+     "fit": "full",
+     "note": null
+    },
+    {
+     "project": "claude-code-router",
+     "fit": "partial",
+     "note": "Runs locally for you; no hosted service or team key sharing described."
+    }
+   ]
   },
   {
    "id": "ai-observability",
@@ -4239,7 +5591,28 @@
     "Datadog LLM Observability"
    ],
    "source": "taxonomy",
-   "alternatives": []
+   "alternatives": [
+    {
+     "project": "langfuse",
+     "fit": "partial",
+     "note": "Covers traces and logs. Cost tracking and run replays are not described."
+    },
+    {
+     "project": "helicone",
+     "fit": "full",
+     "note": null
+    },
+    {
+     "project": "openlit",
+     "fit": "full",
+     "note": null
+    },
+    {
+     "project": "opik",
+     "fit": "full",
+     "note": null
+    }
+   ]
   },
   {
    "id": "open-models",
@@ -4252,7 +5625,13 @@
     "Gemini"
    ],
    "source": "taxonomy",
-   "alternatives": []
+   "alternatives": [
+    {
+     "project": "olmo",
+     "fit": "partial",
+     "note": "Training code only; model weights are hosted on other sites"
+    }
+   ]
   },
   {
    "id": "rag-tools",
@@ -4264,7 +5643,28 @@
     "Vectara"
    ],
    "source": "taxonomy",
-   "alternatives": []
+   "alternatives": [
+    {
+     "project": "deepset",
+     "fit": "partial",
+     "note": "Builds pipelines for search, but no ready PDF-to-text service is confirmed."
+    },
+    {
+     "project": "docling",
+     "fit": "full",
+     "note": null
+    },
+    {
+     "project": "ragflow",
+     "fit": "full",
+     "note": null
+    },
+    {
+     "project": "marker",
+     "fit": "partial",
+     "note": "Converts documents to text and chunks, but is a command-line tool, not a search service."
+    }
+   ]
   },
   {
    "id": "agent-frameworks",
@@ -4273,7 +5673,28 @@
    "job": "Code libraries for building your own AI agents",
    "closed": [],
    "source": "taxonomy",
-   "alternatives": []
+   "alternatives": [
+    {
+     "project": "langgraph",
+     "fit": "full",
+     "note": null
+    },
+    {
+     "project": "crewai",
+     "fit": "full",
+     "note": null
+    },
+    {
+     "project": "mastra",
+     "fit": "full",
+     "note": null
+    },
+    {
+     "project": "pydantic-ai",
+     "fit": "full",
+     "note": null
+    }
+   ]
   },
   {
    "id": "voice-agents",
@@ -4286,7 +5707,23 @@
     "Bland AI"
    ],
    "source": "taxonomy",
-   "alternatives": []
+   "alternatives": [
+    {
+     "project": "pipecat",
+     "fit": "partial",
+     "note": "A framework for developers to build agents; not a ready-made phone agent app."
+    },
+    {
+     "project": "livekit-agents",
+     "fit": "partial",
+     "note": "Builds voice and phone agents for developers, but is not a ready-made end-user product."
+    },
+    {
+     "project": "vocode",
+     "fit": "partial",
+     "note": "Builds AI phone agents, but needs a programmer; no ready-made product."
+    }
+   ]
   },
   {
    "id": "ai-app-builders",
@@ -4400,7 +5837,28 @@
     "macOS"
    ],
    "source": "taxonomy",
-   "alternatives": []
+   "alternatives": [
+    {
+     "project": "linux-mint",
+     "fit": "partial",
+     "note": "The project's own description is not provided, so the fit rests on the proposed job alone."
+    },
+    {
+     "project": "elementary-os",
+     "fit": "full",
+     "note": null
+    },
+    {
+     "project": "pop-os",
+     "fit": "partial",
+     "note": "No README was provided, so ease of use for beginners is not confirmed here."
+    },
+    {
+     "project": "ubuntu",
+     "fit": "partial",
+     "note": "No README given, so ease for newcomers is not confirmed here."
+    }
+   ]
   },
   {
    "id": "distros-diy",
@@ -4409,7 +5867,23 @@
    "job": "A minimal Linux system for tinkerers who choose every piece",
    "closed": [],
    "source": "taxonomy",
-   "alternatives": []
+   "alternatives": [
+    {
+     "project": "arch-linux",
+     "fit": "partial",
+     "note": "Material given does not describe its minimal or build-your-own design."
+    },
+    {
+     "project": "void-linux",
+     "fit": "partial",
+     "note": "It is a package manager for building your own system, not a full Linux distribution."
+    },
+    {
+     "project": "omarchy",
+     "fit": "partial",
+     "note": "Ready-made setup; it is not a minimal build you assemble piece by piece."
+    }
+   ]
   },
   {
    "id": "other-os",
@@ -4418,7 +5892,13 @@
    "job": "Operating systems that are not Linux, Windows or macOS",
    "closed": [],
    "source": "taxonomy",
-   "alternatives": []
+   "alternatives": [
+    {
+     "project": "redox-os",
+     "fit": "full",
+     "note": null
+    }
+   ]
   },
   {
    "id": "server-os",
@@ -4432,7 +5912,28 @@
     "UGREEN UGOS"
    ],
    "source": "taxonomy",
-   "alternatives": []
+   "alternatives": [
+    {
+     "project": "openmediavault",
+     "fit": "full",
+     "note": null
+    },
+    {
+     "project": "casaos",
+     "fit": "partial",
+     "note": "Runs on home servers, but NAS storage management is only lightly described."
+    },
+    {
+     "project": "yunohost",
+     "fit": "partial",
+     "note": "Runs a home server; NAS storage features are not described in the README."
+    },
+    {
+     "project": "rockstor",
+     "fit": "full",
+     "note": null
+    }
+   ]
   },
   {
    "id": "distros-general",
@@ -4441,7 +5942,18 @@
    "job": "A general-purpose Linux system for everyday and work use",
    "closed": [],
    "source": "taxonomy",
-   "alternatives": []
+   "alternatives": [
+    {
+     "project": "ubuntu",
+     "fit": "partial",
+     "note": "No README given, so everyday and work use is not confirmed here."
+    },
+    {
+     "project": "debian",
+     "fit": "partial",
+     "note": "No README was provided, so everyday use is not confirmed from the material."
+    }
+   ]
   },
   {
    "id": "distros-light",
@@ -4461,7 +5973,23 @@
     "Microsoft Windows"
    ],
    "source": "taxonomy",
-   "alternatives": []
+   "alternatives": [
+    {
+     "project": "bazzite",
+     "fit": "full",
+     "note": null
+    },
+    {
+     "project": "cachyos",
+     "fit": "partial",
+     "note": "No README given; gaming focus is not confirmed from the material."
+    },
+    {
+     "project": "chimeraos",
+     "fit": "full",
+     "note": null
+    }
+   ]
   },
   {
    "id": "os-installers",
@@ -4472,7 +6000,28 @@
     "Microsoft Media Creation Tool"
    ],
    "source": "taxonomy",
-   "alternatives": []
+   "alternatives": [
+    {
+     "project": "ventoy",
+     "fit": "full",
+     "note": null
+    },
+    {
+     "project": "rufus",
+     "fit": "full",
+     "note": null
+    },
+    {
+     "project": "balenaetcher",
+     "fit": "partial",
+     "note": "Makes bootable USB sticks and SD cards, but not network install setups."
+    },
+    {
+     "project": "netboot-xyz",
+     "fit": "full",
+     "note": null
+    }
+   ]
   },
   {
    "id": "distros-privacy",
@@ -4503,7 +6052,18 @@
     "Stardock WindowBlinds"
    ],
    "source": "taxonomy",
-   "alternatives": []
+   "alternatives": [
+    {
+     "project": "waybar",
+     "fit": "partial",
+     "note": "Covers the bar only; no general themes or desktop add-ons listed."
+    },
+    {
+     "project": "quickshell",
+     "fit": "partial",
+     "note": "Lets people build their own bars and widgets, but ships no ready-made themes."
+    }
+   ]
   },
   {
    "id": "linux-desktops",
@@ -4512,7 +6072,18 @@
    "job": "The desktop you see and use on Linux: panels, windows, menus",
    "closed": [],
    "source": "taxonomy",
-   "alternatives": []
+   "alternatives": [
+    {
+     "project": "cinnamon",
+     "fit": "full",
+     "note": null
+    },
+    {
+     "project": "hyprland",
+     "fit": "full",
+     "note": null
+    }
+   ]
   },
   {
    "id": "linux-kernel",
@@ -4521,7 +6092,18 @@
    "job": "The kernel and core system parts (startup, services, libraries) every Linux system runs on",
    "closed": [],
    "source": "taxonomy",
-   "alternatives": []
+   "alternatives": [
+    {
+     "project": "systemd",
+     "fit": "partial",
+     "note": "Covers startup and services, but not the Linux kernel itself."
+    },
+    {
+     "project": "zen-kernel",
+     "fit": "full",
+     "note": null
+    }
+   ]
   },
   {
    "id": "linux-drivers",
@@ -4532,7 +6114,18 @@
     "NVIDIA proprietary driver"
    ],
    "source": "taxonomy",
-   "alternatives": []
+   "alternatives": [
+    {
+     "project": "nvidia-open-kernel-modules",
+     "fit": "partial",
+     "note": "Covers NVIDIA graphics only; no sound, fingerprint, face login or laptop drivers listed."
+    },
+    {
+     "project": "fprintd",
+     "fit": "partial",
+     "note": "Covers fingerprint login on Linux only; not graphics, sound, or other hardware."
+    }
+   ]
   },
   {
    "id": "app-compat",
@@ -4544,7 +6137,28 @@
     "Parallels Desktop"
    ],
    "source": "taxonomy",
-   "alternatives": []
+   "alternatives": [
+    {
+     "project": "bottles",
+     "fit": "partial",
+     "note": "Covers Windows apps on Linux; Mac and Android are not mentioned in the README."
+    },
+    {
+     "project": "waydroid",
+     "fit": "partial",
+     "note": "Runs Android apps only; does not run Windows apps, and it is Linux-only."
+    },
+    {
+     "project": "lutris",
+     "fit": "partial",
+     "note": "Runs games via emulators and compatibility layers; not stated for Android apps."
+    },
+    {
+     "project": "heroic-games-launcher",
+     "fit": "partial",
+     "note": "Windows games only, not general apps; no Android support mentioned"
+    }
+   ]
   },
   {
    "id": "linux-app-stores",
@@ -4556,7 +6170,23 @@
     "Mac App Store"
    ],
    "source": "taxonomy",
-   "alternatives": []
+   "alternatives": [
+    {
+     "project": "flathub",
+     "fit": "partial",
+     "note": "The website is a browsing front end; the apps are installed by other tools."
+    },
+    {
+     "project": "gnome-software",
+     "fit": "full",
+     "note": null
+    },
+    {
+     "project": "gear-lever",
+     "fit": "partial",
+     "note": "Manages AppImages only; not a store for browsing or installing apps."
+    }
+   ]
   },
   {
    "id": "filesystems",
@@ -4565,7 +6195,18 @@
    "job": "How files are stored on disks: ZFS, Btrfs, partitions",
    "closed": [],
    "source": "taxonomy",
-   "alternatives": []
+   "alternatives": [
+    {
+     "project": "openzfs",
+     "fit": "full",
+     "note": null
+    },
+    {
+     "project": "btrfs",
+     "fit": "full",
+     "note": null
+    }
+   ]
   },
   {
    "id": "phone-os",
@@ -4716,7 +6357,13 @@
     "Apple iOS"
    ],
    "source": "taxonomy",
-   "alternatives": []
+   "alternatives": [
+    {
+     "project": "ubuntu-touch",
+     "fit": "partial",
+     "note": "Phone and tablet Linux is described, but no README was provided to confirm devices or details."
+    }
+   ]
   },
   {
    "id": "android-mods",
@@ -4725,7 +6372,33 @@
    "job": "Unlocking extra control over an Android phone: root, system add-ons, call recording",
    "closed": [],
    "source": "taxonomy",
-   "alternatives": []
+   "alternatives": [
+    {
+     "project": "magisk",
+     "fit": "full",
+     "note": null
+    },
+    {
+     "project": "kernelsu",
+     "fit": "partial",
+     "note": "Covers root and system add-ons; call recording is not mentioned in the README."
+    },
+    {
+     "project": "shizuku",
+     "fit": "partial",
+     "note": "Gives apps extra system control; not a root tool or add-on for users"
+    },
+    {
+     "project": "lsposed",
+     "fit": "partial",
+     "note": "Changes system behavior via hooks; needs root, but call recording is not mentioned"
+    },
+    {
+     "project": "bcr-call-recorder",
+     "fit": "partial",
+     "note": "Needs root already; records calls, does not root the phone"
+    }
+   ]
   },
   {
    "id": "phone-pc-link",
@@ -4737,7 +6410,23 @@
     "Apple Continuity"
    ],
    "source": "taxonomy",
-   "alternatives": []
+   "alternatives": [
+    {
+     "project": "gsconnect",
+     "fit": "partial",
+     "note": "Covers notifications, texts and files. Screen viewing is not mentioned."
+    },
+    {
+     "project": "scrcpy",
+     "fit": "partial",
+     "note": "Shows and controls the phone screen; no notifications or texts shown."
+    },
+    {
+     "project": "valent",
+     "fit": "full",
+     "note": null
+    }
+   ]
   },
   {
    "id": "phone-launchers",
@@ -4765,7 +6454,28 @@
     "Roku home screen"
    ],
    "source": "taxonomy",
-   "alternatives": []
+   "alternatives": [
+    {
+     "project": "flauncher",
+     "fit": "partial",
+     "note": "Only tested on one device (Chromecast with Google TV); stability not guaranteed."
+    },
+    {
+     "project": "homestead",
+     "fit": "full",
+     "note": null
+    },
+    {
+     "project": "skippy-tv",
+     "fit": "partial",
+     "note": "Replaces TV home on Shield and Fire TV, but tested only on two boxes."
+    },
+    {
+     "project": "biscuittin",
+     "fit": "partial",
+     "note": "Runs on Linux TV boxes via Flatpak, not on Fire TV, Roku, or built-in TV systems"
+    }
+   ]
   },
   {
    "id": "tv-debloat",
@@ -4776,7 +6486,23 @@
     "Vendor TV software (Samsung, LG, TCL, Google TV, Fire OS)"
    ],
    "source": "taxonomy",
-   "alternatives": []
+   "alternatives": [
+    {
+     "project": "tv-vibehack",
+     "fit": "partial",
+     "note": "Covers Android and Google TV only; Samsung, LG and Roku need manual steps."
+    },
+    {
+     "project": "android-tv-debloat",
+     "fit": "partial",
+     "note": "Only Xiaomi TVs; needs a computer and ADB setup"
+    },
+    {
+     "project": "canta",
+     "fit": "partial",
+     "note": "Removes apps on Android phones; TV use and ad blocking not mentioned"
+    }
+   ]
   },
   {
    "id": "tv-os",
@@ -4792,7 +6518,28 @@
     "Titan OS"
    ],
    "source": "taxonomy",
-   "alternatives": []
+   "alternatives": [
+    {
+     "project": "libreelec",
+     "fit": "partial",
+     "note": "Covers replacing media box systems, not TV brand systems like Tizen or webOS."
+    },
+    {
+     "project": "coreelec",
+     "fit": "full",
+     "note": null
+    },
+    {
+     "project": "kodi",
+     "fit": "partial",
+     "note": "Runs on TV boxes and PCs, but does not replace the TV's own system."
+    },
+    {
+     "project": "rootmytv",
+     "fit": "partial",
+     "note": "Only unlocks LG webOS on old TVs; does not replace the system."
+    }
+   ]
   },
   {
    "id": "tv-apps",
@@ -4804,7 +6551,18 @@
     "Plex app"
    ],
    "source": "taxonomy",
-   "alternatives": []
+   "alternatives": [
+    {
+     "project": "smarttube",
+     "fit": "partial",
+     "note": "Covers YouTube-style viewing only; no Plex-style media server playback described."
+    },
+    {
+     "project": "jellyfin-for-android-tv",
+     "fit": "partial",
+     "note": "Plays your own media server library only; no YouTube or streaming service access."
+    }
+   ]
   },
   {
    "id": "tv-remotes",
@@ -4817,7 +6575,28 @@
     "Google TV app"
    ],
    "source": "taxonomy",
-   "alternatives": []
+   "alternatives": [
+    {
+     "project": "home-assistant",
+     "fit": "partial",
+     "note": "Covers TVs only through its add-on integrations; depends on each TV brand."
+    },
+    {
+     "project": "bscpylgtv",
+     "fit": "partial",
+     "note": "Covers power and input control by command line, not a phone remote app."
+    },
+    {
+     "project": "androidtvremote2",
+     "fit": "partial",
+     "note": "Covers remote button presses and opening apps; no power on/off or channel listed."
+    },
+    {
+     "project": "lgtv-companion",
+     "fit": "partial",
+     "note": "Works from a PC or scripts, not from a phone app."
+    }
+   ]
   },
   {
    "id": "casting",
@@ -4829,7 +6608,18 @@
     "Apple AirPlay"
    ],
    "source": "taxonomy",
-   "alternatives": []
+   "alternatives": [
+    {
+     "project": "uxplay",
+     "fit": "full",
+     "note": null
+    },
+    {
+     "project": "gnome-network-displays",
+     "fit": "partial",
+     "note": "Covers Miracast TVs only; no Chromecast or AirPlay support."
+    }
+   ]
   },
   {
    "id": "digital-signage",
@@ -4841,7 +6631,23 @@
     "Yodeck"
    ],
    "source": "taxonomy",
-   "alternatives": []
+   "alternatives": [
+    {
+     "project": "anthias",
+     "fit": "full",
+     "note": null
+    },
+    {
+     "project": "xibo",
+     "fit": "partial",
+     "note": "Open core only; some hardware compatibility is commercial-only."
+    },
+    {
+     "project": "magicmirror2",
+     "fit": "partial",
+     "note": "Built for a home mirror; no stated way to manage many screens remotely."
+    }
+   ]
   },
   {
    "id": "keyboard-tools",
@@ -4854,7 +6660,33 @@
     "Corsair iCUE"
    ],
    "source": "taxonomy",
-   "alternatives": []
+   "alternatives": [
+    {
+     "project": "qmk",
+     "fit": "partial",
+     "note": "Covers key remapping and firmware; lights and sounds not shown in material."
+    },
+    {
+     "project": "zmk",
+     "fit": "partial",
+     "note": "Covers firmware and key remapping; lights and typing sounds not stated."
+    },
+    {
+     "project": "vial",
+     "fit": "partial",
+     "note": "Covers keyboard firmware; lights and typing sounds not stated in README."
+    },
+    {
+     "project": "kanata",
+     "fit": "partial",
+     "note": "Remaps keys, but no firmware, lights or typing sounds mentioned."
+    },
+    {
+     "project": "karabiner-elements",
+     "fit": "partial",
+     "note": "Remaps keys on Mac only; no firmware, lights or sounds."
+    }
+   ]
   },
   {
    "id": "control-decks",
@@ -4866,7 +6698,28 @@
     "Loupedeck"
    ],
    "source": "taxonomy",
-   "alternatives": []
+   "alternatives": [
+    {
+     "project": "opendeck",
+     "fit": "full",
+     "note": null
+    },
+    {
+     "project": "streamcontroller",
+     "fit": "partial",
+     "note": "Works with Stream Deck models on Linux only; some other brands are experimental."
+    },
+    {
+     "project": "bitfocus-companion",
+     "fit": "partial",
+     "note": "README names no button pads; device list is only a link"
+    },
+    {
+     "project": "macro-deck",
+     "fit": "full",
+     "note": null
+    }
+   ]
   },
   {
    "id": "webcam-tools",
@@ -4880,7 +6733,23 @@
     "Iriun Webcam"
    ],
    "source": "taxonomy",
-   "alternatives": []
+   "alternatives": [
+    {
+     "project": "scrcpy",
+     "fit": "partial",
+     "note": "Phone as webcam on Linux only; no webcam effects or camera off."
+    },
+    {
+     "project": "webcamoid",
+     "fit": "partial",
+     "note": "Covers effects and phone-as-webcam; no confirmed way to fully switch the camera off."
+    },
+    {
+     "project": "backscrub",
+     "fit": "partial",
+     "note": "Background swap works on Linux only; no phone-as-webcam or camera off switch."
+    }
+   ]
   },
   {
    "id": "mouse-config",
@@ -4895,7 +6764,28 @@
     "BetterTouchTool"
    ],
    "source": "taxonomy",
-   "alternatives": []
+   "alternatives": [
+    {
+     "project": "libratbag",
+     "fit": "partial",
+     "note": "Covers buttons, DPI and lights on some gaming mice; trackpads and gestures not mentioned."
+    },
+    {
+     "project": "solaar",
+     "fit": "partial",
+     "note": "Covers button setup and device settings; DPI, lights, gestures not stated"
+    },
+    {
+     "project": "openrazer",
+     "fit": "partial",
+     "note": "Covers Razer mice and lights via drivers; needs a separate app for settings."
+    },
+    {
+     "project": "linearmouse",
+     "fit": "partial",
+     "note": "Covers pointer and scroll settings on Mac; no button, DPI, light or gesture setup shown."
+    }
+   ]
   },
   {
    "id": "pc-tuning",
@@ -4910,7 +6800,28 @@
     "MSI Afterburner"
    ],
    "source": "taxonomy",
-   "alternatives": []
+   "alternatives": [
+    {
+     "project": "openrgb",
+     "fit": "partial",
+     "note": "Covers RGB lighting only; fan speed, overclocking and battery are not described."
+    },
+    {
+     "project": "coolercontrol",
+     "fit": "partial",
+     "note": "Covers fan speed only; no lights, overclocking or battery."
+    },
+    {
+     "project": "lact",
+     "fit": "partial",
+     "note": "Covers GPU fans, overclocking and power limits only; no RGB lighting or battery control."
+    },
+    {
+     "project": "g-helper",
+     "fit": "partial",
+     "note": "Covers Asus laptops only; no support for other PC brands or Corsair, SignalRGB or MSI tools."
+    }
+   ]
   },
   {
    "id": "driver-updates",
@@ -4923,7 +6834,13 @@
     "Lenovo Vantage"
    ],
    "source": "taxonomy",
-   "alternatives": []
+   "alternatives": [
+    {
+     "project": "fwupd-lvfs",
+     "fit": "partial",
+     "note": "Hosts vendor firmware updates for Linux; does not update drivers on Windows or as a user app."
+    }
+   ]
   },
   {
    "id": "monitor-control",
@@ -4935,7 +6852,28 @@
     "BetterDisplay"
    ],
    "source": "taxonomy",
-   "alternatives": []
+   "alternatives": [
+    {
+     "project": "twinkle-tray",
+     "fit": "partial",
+     "note": "Covers brightness, contrast and input; volume and input switching not confirmed."
+    },
+    {
+     "project": "monitorcontrol",
+     "fit": "full",
+     "note": null
+    },
+    {
+     "project": "monitorian",
+     "fit": "partial",
+     "note": "Covers brightness, contrast, color and input; volume not confirmed"
+    },
+    {
+     "project": "ddcutil",
+     "fit": "partial",
+     "note": "Linux only, command line; no graphical app like DisplayFusion or BetterDisplay."
+    }
+   ]
   },
   {
    "id": "game-controllers",
@@ -4947,7 +6885,23 @@
     "reWASD"
    ],
    "source": "taxonomy",
-   "alternatives": []
+   "alternatives": [
+    {
+     "project": "antimicrox",
+     "fit": "partial",
+     "note": "Maps controller buttons to keys and mouse, but no built-in per-game profile sharing or cloud sync."
+    },
+    {
+     "project": "inputplumber",
+     "fit": "partial",
+     "note": "Remaps and combines controllers on Linux; no stated Windows or macOS support and no simple user interface"
+    },
+    {
+     "project": "joyshockmapper",
+     "fit": "partial",
+     "note": "Remaps controllers for PC games, but only some controller types; no Xbox-style pad built in."
+    }
+   ]
   },
   {
    "id": "bios-firmware",
@@ -4994,7 +6948,18 @@
     "Drivvo"
    ],
    "source": "taxonomy",
-   "alternatives": []
+   "alternatives": [
+    {
+     "project": "lubelogger",
+     "fit": "partial",
+     "note": "Covers maintenance logs and fuel tracking, but no car dashboards or driver assistance."
+    },
+    {
+     "project": "hammond",
+     "fit": "partial",
+     "note": "Fuel and expense logs only; no car dashboard or driver aids"
+    }
+   ]
   },
   {
    "id": "router-firmware",
@@ -5007,7 +6972,23 @@
     "FRITZ!OS"
    ],
    "source": "taxonomy",
-   "alternatives": []
+   "alternatives": [
+    {
+     "project": "openwrt",
+     "fit": "full",
+     "note": null
+    },
+    {
+     "project": "opnsense",
+     "fit": "partial",
+     "note": "Covers firewall and router software; the README does not describe replacing a specific vendor's router firmware or hardware support."
+    },
+    {
+     "project": "freshtomato",
+     "fit": "full",
+     "note": null
+    }
+   ]
   },
   {
    "id": "e-readers",
@@ -5103,7 +7084,28 @@
     "Cadence"
    ],
    "source": "taxonomy",
-   "alternatives": []
+   "alternatives": [
+    {
+     "project": "qucs-s",
+     "fit": "full",
+     "note": null
+    },
+    {
+     "project": "librepcb",
+     "fit": "partial",
+     "note": "Covers circuit board design; simulation of circuits is not described in the README."
+    },
+    {
+     "project": "yosys",
+     "fit": "partial",
+     "note": "Covers chip logic synthesis only, not circuit board or analog circuit design or simulation."
+    },
+    {
+     "project": "verilator",
+     "fit": "partial",
+     "note": "Simulates chip designs only; no circuit boards or schematics."
+    }
+   ]
   },
   {
    "id": "microcontrollers",
@@ -5112,7 +7114,28 @@
    "job": "Programming small boards like Arduino and ESP32",
    "closed": [],
    "source": "taxonomy",
-   "alternatives": []
+   "alternatives": [
+    {
+     "project": "arduino-ide",
+     "fit": "full",
+     "note": null
+    },
+    {
+     "project": "platformio",
+     "fit": "full",
+     "note": null
+    },
+    {
+     "project": "micropython",
+     "fit": "full",
+     "note": null
+    },
+    {
+     "project": "tasmota",
+     "fit": "partial",
+     "note": "Covers ESP8266/ESP32 firmware; Arduino boards not clearly supported."
+    }
+   ]
   },
   {
    "id": "robotics",
@@ -5121,7 +7144,23 @@
    "job": "Software that drives robots, drones and machines",
    "closed": [],
    "source": "taxonomy",
-   "alternatives": []
+   "alternatives": [
+    {
+     "project": "lerobot",
+     "fit": "full",
+     "note": null
+    },
+    {
+     "project": "ardupilot",
+     "fit": "full",
+     "note": null
+    },
+    {
+     "project": "px4",
+     "fit": "full",
+     "note": null
+    }
+   ]
   },
   {
    "id": "flight-tracking",
@@ -5134,7 +7173,28 @@
     "MarineTraffic"
    ],
    "source": "taxonomy",
-   "alternatives": []
+   "alternatives": [
+    {
+     "project": "tar1090",
+     "fit": "partial",
+     "note": "Shows planes you receive and keeps history, but needs a separate decoder. No ship support mentioned."
+    },
+    {
+     "project": "readsb",
+     "fit": "partial",
+     "note": "Decodes aircraft signals and keeps history; ships are not mentioned in the material."
+    },
+    {
+     "project": "ais-catcher",
+     "fit": "partial",
+     "note": "Ships only; it does not receive aircraft signals."
+    },
+    {
+     "project": "sdr",
+     "fit": "partial",
+     "note": "Hardware access layer only; no tracking or history features itself."
+    }
+   ]
   },
   {
    "id": "industrial-control",
@@ -5147,7 +7207,18 @@
     "Siemens TIA Portal"
    ],
    "source": "taxonomy",
-   "alternatives": []
+   "alternatives": [
+    {
+     "project": "fuxa",
+     "fit": "full",
+     "note": null
+    },
+    {
+     "project": "qmodmaster",
+     "fit": "partial",
+     "note": "Covers Modbus talking and monitoring; no PLC, SCADA or panel building"
+    }
+   ]
   },
   {
    "id": "3d-printing",
@@ -5221,7 +7292,13 @@
    "job": "New programming languages, compilers and interpreters",
    "closed": [],
    "source": "taxonomy",
-   "alternatives": []
+   "alternatives": [
+    {
+     "project": "zig",
+     "fit": "full",
+     "note": null
+    }
+   ]
   },
   {
    "id": "dev-testing",
@@ -5233,7 +7310,28 @@
     "TestRail"
    ],
    "source": "taxonomy",
-   "alternatives": []
+   "alternatives": [
+    {
+     "project": "playwright",
+     "fit": "full",
+     "note": null
+    },
+    {
+     "project": "pytest",
+     "fit": "partial",
+     "note": "Covers writing and running tests; no hosted cloud testing or test management features mentioned."
+    },
+    {
+     "project": "k6",
+     "fit": "partial",
+     "note": "Only for Kubernetes clusters; no website or browser testing."
+    },
+    {
+     "project": "maestro",
+     "fit": "full",
+     "note": null
+    }
+   ]
   },
   {
    "id": "git-tools",
@@ -5247,7 +7345,28 @@
     "Sourcetree"
    ],
    "source": "taxonomy",
-   "alternatives": []
+   "alternatives": [
+    {
+     "project": "lazygit",
+     "fit": "full",
+     "note": null
+    },
+    {
+     "project": "github-desktop",
+     "fit": "partial",
+     "note": "Covers GitHub only; no mention of other git hosts or Linux support."
+    },
+    {
+     "project": "git-extensions",
+     "fit": "full",
+     "note": null
+    },
+    {
+     "project": "gitui",
+     "fit": "full",
+     "note": null
+    }
+   ]
   },
   {
    "id": "code-understanding",
@@ -5259,7 +7378,28 @@
     "CodeSee"
    ],
    "source": "taxonomy",
-   "alternatives": []
+   "alternatives": [
+    {
+     "project": "sourcebot",
+     "fit": "partial",
+     "note": "Search and AI-made diagrams exist; no described interactive codebase tours or visual maps"
+    },
+    {
+     "project": "gource",
+     "fit": "partial",
+     "note": "Shows history and contributors over time, not how code parts connect."
+    },
+    {
+     "project": "codecharta",
+     "fit": "full",
+     "note": null
+    },
+    {
+     "project": "opengrok",
+     "fit": "partial",
+     "note": "Covers search and cross-references, but no visual maps or guided tours."
+    }
+   ]
   },
   {
    "id": "game-dev",
@@ -5272,7 +7412,33 @@
     "GameMaker"
    ],
    "source": "taxonomy",
-   "alternatives": []
+   "alternatives": [
+    {
+     "project": "godot",
+     "fit": "full",
+     "note": null
+    },
+    {
+     "project": "bevy",
+     "fit": "partial",
+     "note": "Code-based engine; no visual editor like Unity or Unreal offers."
+    },
+    {
+     "project": "raylib",
+     "fit": "partial",
+     "note": "A coding library, not a visual editor; no scene or level tools."
+    },
+    {
+     "project": "o3de",
+     "fit": "full",
+     "note": null
+    },
+    {
+     "project": "rojo",
+     "fit": "partial",
+     "note": "Helps build Roblox games only; not a general game engine like Unity."
+    }
+   ]
   },
   {
    "id": "code-review",
@@ -5284,7 +7450,28 @@
     "Greptile"
    ],
    "source": "taxonomy",
-   "alternatives": []
+   "alternatives": [
+    {
+     "project": "pr-agent",
+     "fit": "full",
+     "note": null
+    },
+    {
+     "project": "reviewdog",
+     "fit": "partial",
+     "note": "Posts linter findings as review comments, but does not explain or summarize changes."
+    },
+    {
+     "project": "gerrit",
+     "fit": "partial",
+     "note": "Reviews changes made by people; no AI summaries or automatic review bots stated."
+    },
+    {
+     "project": "review-board",
+     "fit": "partial",
+     "note": "Human review tool; no automated AI review like CodeRabbit or Greptile."
+    }
+   ]
   },
   {
    "id": "dev-docs",
@@ -5297,7 +7484,23 @@
     "Mintlify"
    ],
    "source": "taxonomy",
-   "alternatives": []
+   "alternatives": [
+    {
+     "project": "mkdocs",
+     "fit": "full",
+     "note": null
+    },
+    {
+     "project": "docusaurus",
+     "fit": "partial",
+     "note": "Builds documentation sites, but README files and badges are not covered."
+    },
+    {
+     "project": "starlight",
+     "fit": "partial",
+     "note": "Builds doc sites, but README and badge generation are not described."
+    }
+   ]
   },
   {
    "id": "terminals",
@@ -5309,7 +7512,38 @@
     "Termius"
    ],
    "source": "taxonomy",
-   "alternatives": []
+   "alternatives": [
+    {
+     "project": "wezterm",
+     "fit": "full",
+     "note": null
+    },
+    {
+     "project": "alacritty",
+     "fit": "full",
+     "note": null
+    },
+    {
+     "project": "kitty",
+     "fit": "full",
+     "note": null
+    },
+    {
+     "project": "ghostty",
+     "fit": "full",
+     "note": null
+    },
+    {
+     "project": "tmux",
+     "fit": "partial",
+     "note": "Runs terminals inside a text screen; no graphical window or Warp/Termius features."
+    },
+    {
+     "project": "zellij",
+     "fit": "partial",
+     "note": "Terminal multiplexer that runs inside a terminal; not a standalone terminal app like Warp."
+    }
+   ]
   },
   {
    "id": "dev-environments",
@@ -5322,7 +7556,23 @@
     "Local (WP Engine)"
    ],
    "source": "taxonomy",
-   "alternatives": []
+   "alternatives": [
+    {
+     "project": "ddev",
+     "fit": "full",
+     "note": null
+    },
+    {
+     "project": "lando",
+     "fit": "partial",
+     "note": "Core libraries only; the ready-made environments come from the Lando app."
+    },
+    {
+     "project": "devpod",
+     "fit": "full",
+     "note": null
+    }
+   ]
   },
   {
    "id": "dev-toolbox",
@@ -5331,7 +7581,23 @@
    "job": "Small tools: format JSON, decode tokens, convert text",
    "closed": [],
    "source": "taxonomy",
-   "alternatives": []
+   "alternatives": [
+    {
+     "project": "devtoys",
+     "fit": "full",
+     "note": null
+    },
+    {
+     "project": "cyberchef",
+     "fit": "full",
+     "note": null
+    },
+    {
+     "project": "it-tools",
+     "fit": "full",
+     "note": null
+    }
+   ]
   },
   {
    "id": "linters",
@@ -5344,7 +7610,28 @@
     "Codacy"
    ],
    "source": "taxonomy",
-   "alternatives": []
+   "alternatives": [
+    {
+     "project": "eslint",
+     "fit": "full",
+     "note": null
+    },
+    {
+     "project": "ruff",
+     "fit": "full",
+     "note": null
+    },
+    {
+     "project": "semgrep-community-edition",
+     "fit": "partial",
+     "note": "Finds bugs and style issues, but misses many cross-file problems, and no hosted dashboard."
+    },
+    {
+     "project": "biome",
+     "fit": "full",
+     "note": null
+    }
+   ]
   },
   {
    "id": "ssh-clients",
@@ -5357,7 +7644,18 @@
     "MobaXterm"
    ],
    "source": "taxonomy",
-   "alternatives": []
+   "alternatives": [
+    {
+     "project": "winscp",
+     "fit": "full",
+     "note": null
+    },
+    {
+     "project": "cyberduck",
+     "fit": "partial",
+     "note": "Covers file transfer; the README does not describe a full SSH terminal."
+    }
+   ]
   },
   {
    "id": "shells",
@@ -5366,7 +7664,38 @@
    "job": "Shells, prompts and history tools that make the command line nicer",
    "closed": [],
    "source": "taxonomy",
-   "alternatives": []
+   "alternatives": [
+    {
+     "project": "fish",
+     "fit": "full",
+     "note": null
+    },
+    {
+     "project": "nushell",
+     "fit": "full",
+     "note": null
+    },
+    {
+     "project": "oh-my-zsh",
+     "fit": "full",
+     "note": null
+    },
+    {
+     "project": "starship",
+     "fit": "partial",
+     "note": "Adds a prompt to shells; does not itself provide a shell or history tool."
+    },
+    {
+     "project": "atuin",
+     "fit": "full",
+     "note": null
+    },
+    {
+     "project": "zoxide",
+     "fit": "partial",
+     "note": "Works with shells, but it is a folder-jumping tool, not a shell or prompt itself."
+    }
+   ]
   },
   {
    "id": "package-managers",
@@ -5375,7 +7704,33 @@
    "job": "Installing code libraries and developer tools",
    "closed": [],
    "source": "taxonomy",
-   "alternatives": []
+   "alternatives": [
+    {
+     "project": "pnpm",
+     "fit": "full",
+     "note": null
+    },
+    {
+     "project": "bun",
+     "fit": "full",
+     "note": null
+    },
+    {
+     "project": "uv",
+     "fit": "full",
+     "note": null
+    },
+    {
+     "project": "homebrew",
+     "fit": "full",
+     "note": null
+    },
+    {
+     "project": "nix",
+     "fit": "full",
+     "note": null
+    }
+   ]
   },
   {
    "id": "scaffolding",
@@ -5384,7 +7739,28 @@
    "job": "Generating a new project's starting files and reusable snippets",
    "closed": [],
    "source": "taxonomy",
-   "alternatives": []
+   "alternatives": [
+    {
+     "project": "cookiecutter",
+     "fit": "full",
+     "note": null
+    },
+    {
+     "project": "yeoman",
+     "fit": "full",
+     "note": null
+    },
+    {
+     "project": "copier",
+     "fit": "full",
+     "note": null
+    },
+    {
+     "project": "plop",
+     "fit": "full",
+     "note": null
+    }
+   ]
   },
   {
    "id": "reverse-engineering",
@@ -5397,7 +7773,23 @@
     "Hopper"
    ],
    "source": "taxonomy",
-   "alternatives": []
+   "alternatives": [
+    {
+     "project": "ghidra",
+     "fit": "full",
+     "note": null
+    },
+    {
+     "project": "cutter",
+     "fit": "full",
+     "note": null
+    },
+    {
+     "project": "imhex",
+     "fit": "partial",
+     "note": "Has hex editing, disassembler and pattern tools, but no full decompiler or debugger."
+    }
+   ]
   },
   {
    "id": "code-editors",
@@ -5730,7 +8122,28 @@
    "job": "Triage bots, contributor helpers and pull-request gates for projects",
    "closed": [],
    "source": "taxonomy",
-   "alternatives": []
+   "alternatives": [
+    {
+     "project": "probot",
+     "fit": "partial",
+     "note": "A builder framework only; ready-made triage bots are not included."
+    },
+    {
+     "project": "all-contributors",
+     "fit": "partial",
+     "note": "Offers a bot for thanking contributors, but no triage or pull-request gates."
+    },
+    {
+     "project": "renovate",
+     "fit": "partial",
+     "note": "Makes dependency update PRs only; no triage or contributor tools."
+    },
+    {
+     "project": "actions-stale",
+     "fit": "full",
+     "note": null
+    }
+   ]
   },
   {
    "id": "code-security",
@@ -5743,7 +8156,33 @@
     "Socket"
    ],
    "source": "taxonomy",
-   "alternatives": []
+   "alternatives": [
+    {
+     "project": "trivy",
+     "fit": "partial",
+     "note": "Covers leaked secrets and package vulnerabilities; no code-level review or live package-behavior monitoring stated."
+    },
+    {
+     "project": "osv-scanner",
+     "fit": "partial",
+     "note": "Covers dependency vulnerabilities and licenses; leaked-secret checks not described."
+    },
+    {
+     "project": "dependency-track",
+     "fit": "partial",
+     "note": "Checks packages for known vulnerabilities; no secret-leak scanning shown."
+    },
+    {
+     "project": "gitleaks",
+     "fit": "partial",
+     "note": "Finds leaked secrets only; does not check risky packages or dependencies."
+    },
+    {
+     "project": "grype",
+     "fit": "partial",
+     "note": "Covers known package vulnerabilities; no secret-leak or code scanning stated."
+    }
+   ]
   },
   {
    "id": "webhooks",
@@ -5755,7 +8194,18 @@
     "Svix (hosted)"
    ],
    "source": "taxonomy",
-   "alternatives": []
+   "alternatives": [
+    {
+     "project": "svix",
+     "fit": "full",
+     "note": null
+    },
+    {
+     "project": "webhook",
+     "fit": "partial",
+     "note": "Receives webhooks and runs commands; no queuing, retry or replay."
+    }
+   ]
   },
   {
    "id": "containers",
@@ -5767,7 +8217,33 @@
     "Red Hat OpenShift"
    ],
    "source": "taxonomy",
-   "alternatives": []
+   "alternatives": [
+    {
+     "project": "podman",
+     "fit": "partial",
+     "note": "Only the website repo is given; container features are not described."
+    },
+    {
+     "project": "kubernetes",
+     "fit": "partial",
+     "note": "Runs and scales containers, but building container images is not its job."
+    },
+    {
+     "project": "k3s",
+     "fit": "full",
+     "note": null
+    },
+    {
+     "project": "headlamp",
+     "fit": "partial",
+     "note": "Manages apps on Kubernetes clusters; does not package apps into containers."
+    },
+    {
+     "project": "k9s",
+     "fit": "partial",
+     "note": "Helps run and watch containers on clusters, but does not package apps into containers."
+    }
+   ]
   },
   {
    "id": "secrets-management",
@@ -5853,7 +8329,28 @@
     "Navicat"
    ],
    "source": "taxonomy",
-   "alternatives": []
+   "alternatives": [
+    {
+     "project": "dbeaver-community",
+     "fit": "full",
+     "note": null
+    },
+    {
+     "project": "beekeeper-studio",
+     "fit": "full",
+     "note": null
+    },
+    {
+     "project": "pgadmin",
+     "fit": "partial",
+     "note": "Only PostgreSQL databases; no proxies or libraries"
+    },
+    {
+     "project": "sqlalchemy",
+     "fit": "partial",
+     "note": "A coding library, not a standalone app; no visual query tool."
+    }
+   ]
   },
   {
    "id": "science-math",
@@ -5866,7 +8363,23 @@
     "Maple"
    ],
    "source": "taxonomy",
-   "alternatives": []
+   "alternatives": [
+    {
+     "project": "gnu-octave",
+     "fit": "partial",
+     "note": "Math and science use not described in the material given"
+    },
+    {
+     "project": "sagemath",
+     "fit": "partial",
+     "note": "Covers math and scientific computing; graphing and calculator use are less clear from the README."
+    },
+    {
+     "project": "julia",
+     "fit": "partial",
+     "note": "Covers scientific computing for programmers; no ready-made calculator or graphing app."
+    }
+   ]
   },
   {
    "id": "data-analysis",
@@ -5881,7 +8394,23 @@
     "Minitab"
    ],
    "source": "taxonomy",
-   "alternatives": []
+   "alternatives": [
+    {
+     "project": "jasp",
+     "fit": "full",
+     "note": null
+    },
+    {
+     "project": "jamovi",
+     "fit": "full",
+     "note": null
+    },
+    {
+     "project": "pspp",
+     "fit": "full",
+     "note": null
+    }
+   ]
   },
   {
    "id": "object-storage",
@@ -6428,7 +8957,33 @@
    "job": "Code frameworks for building websites and web apps",
    "closed": [],
    "source": "taxonomy",
-   "alternatives": []
+   "alternatives": [
+    {
+     "project": "react",
+     "fit": "partial",
+     "note": "A library for interfaces; it lacks a full framework's routing and setup."
+    },
+    {
+     "project": "svelte",
+     "fit": "full",
+     "note": null
+    },
+    {
+     "project": "django",
+     "fit": "full",
+     "note": null
+    },
+    {
+     "project": "laravel",
+     "fit": "full",
+     "note": null
+    },
+    {
+     "project": "phoenix",
+     "fit": "full",
+     "note": null
+    }
+   ]
   },
   {
    "id": "web-scraping",
@@ -6442,7 +8997,28 @@
     "ScrapingBee"
    ],
    "source": "taxonomy",
-   "alternatives": []
+   "alternatives": [
+    {
+     "project": "scrapy",
+     "fit": "full",
+     "note": null
+    },
+    {
+     "project": "crawl4ai",
+     "fit": "full",
+     "note": null
+    },
+    {
+     "project": "firecrawl",
+     "fit": "full",
+     "note": null
+    },
+    {
+     "project": "colly",
+     "fit": "partial",
+     "note": "A coding framework for programmers; no ready-made hosted service or point-and-click tool."
+    }
+   ]
   },
   {
    "id": "ui-components",
@@ -6456,7 +9032,28 @@
     "Kendo UI"
    ],
    "source": "taxonomy",
-   "alternatives": []
+   "alternatives": [
+    {
+     "project": "shadcn-ui",
+     "fit": "partial",
+     "note": "Covers buttons and general pieces; tables, grids and charts are not described in the README."
+    },
+    {
+     "project": "radix-ui",
+     "fit": "partial",
+     "note": "Covers buttons and layouts; tables, grids and charts not mentioned in README."
+    },
+    {
+     "project": "chart-js",
+     "fit": "partial",
+     "note": "Covers charts only; no buttons, tables or grids."
+    },
+    {
+     "project": "apache-echarts",
+     "fit": "partial",
+     "note": "Covers charts only; no buttons, tables or grids mentioned."
+    }
+   ]
   },
   {
    "id": "app-frameworks",
@@ -6465,7 +9062,23 @@
    "job": "Code frameworks for building desktop, phone and terminal apps",
    "closed": [],
    "source": "taxonomy",
-   "alternatives": []
+   "alternatives": [
+    {
+     "project": "electron",
+     "fit": "partial",
+     "note": "Covers desktop apps only; the README does not mention phone or terminal apps."
+    },
+    {
+     "project": "tauri",
+     "fit": "full",
+     "note": null
+    },
+    {
+     "project": "wails",
+     "fit": "partial",
+     "note": "Covers desktop apps; mobile and terminal apps are not described in the README."
+    }
+   ]
   },
   {
    "id": "captcha",
@@ -6478,7 +9091,28 @@
     "Cloudflare Turnstile"
    ],
    "source": "taxonomy",
-   "alternatives": []
+   "alternatives": [
+    {
+     "project": "anubis",
+     "fit": "partial",
+     "note": "Blocks bots by checking connections, not by showing CAPTCHA puzzles; no CAPTCHA is described."
+    },
+    {
+     "project": "altcha",
+     "fit": "partial",
+     "note": "A developer library only; no ready-made visitor widget is described."
+    },
+    {
+     "project": "mcaptcha",
+     "fit": "full",
+     "note": null
+    },
+    {
+     "project": "cap",
+     "fit": "full",
+     "note": null
+    }
+   ]
   },
   {
    "id": "realtime",
@@ -6491,7 +9125,28 @@
     "PubNub"
    ],
    "source": "taxonomy",
-   "alternatives": []
+   "alternatives": [
+    {
+     "project": "socket-io",
+     "fit": "full",
+     "note": null
+    },
+    {
+     "project": "centrifugo",
+     "fit": "full",
+     "note": null
+    },
+    {
+     "project": "soketi",
+     "fit": "full",
+     "note": null
+    },
+    {
+     "project": "yjs",
+     "fit": "partial",
+     "note": "Syncs shared data between users, but does not provide a hosted push service."
+    }
+   ]
   },
   {
    "id": "encryption-libraries",
@@ -6500,7 +9155,23 @@
    "job": "Code libraries for encrypting data and messages",
    "closed": [],
    "source": "taxonomy",
-   "alternatives": []
+   "alternatives": [
+    {
+     "project": "libsodium",
+     "fit": "full",
+     "note": null
+    },
+    {
+     "project": "liboqs",
+     "fit": "partial",
+     "note": "Provides quantum-safe key exchange and signatures, not general data or message encryption."
+    },
+    {
+     "project": "libsignal",
+     "fit": "full",
+     "note": null
+    }
+   ]
   },
   {
    "id": "vpn",
@@ -6553,7 +9224,28 @@
     "Portainer Business"
    ],
    "source": "taxonomy",
-   "alternatives": []
+   "alternatives": [
+    {
+     "project": "dockge",
+     "fit": "partial",
+     "note": "Covers start, stop and updates. No backup feature is mentioned."
+    },
+    {
+     "project": "komodo",
+     "fit": "partial",
+     "note": "Covers deploying and updating apps across servers; backups and home-use focus not stated."
+    },
+    {
+     "project": "arcane",
+     "fit": "partial",
+     "note": "README only points to docs; starting, updating and backups not confirmed here"
+    },
+    {
+     "project": "diun",
+     "fit": "partial",
+     "note": "Only watches for updates; does not start, update or back up apps."
+    }
+   ]
   },
   {
    "id": "tunnels",
@@ -6566,7 +9258,33 @@
     "Tailscale Funnel"
    ],
    "source": "taxonomy",
-   "alternatives": []
+   "alternatives": [
+    {
+     "project": "pangolin",
+     "fit": "full",
+     "note": null
+    },
+    {
+     "project": "frp",
+     "fit": "full",
+     "note": null
+    },
+    {
+     "project": "zrok",
+     "fit": "full",
+     "note": null
+    },
+    {
+     "project": "bore",
+     "fit": "partial",
+     "note": "Forwards raw TCP only; no web-specific features or managed hosting."
+    },
+    {
+     "project": "rathole",
+     "fit": "partial",
+     "note": "Needs your own server with a public address; no hosted service."
+    }
+   ]
   },
   {
    "id": "virtual-machines",
@@ -6578,7 +9296,28 @@
     "Parallels Desktop"
    ],
    "source": "taxonomy",
-   "alternatives": []
+   "alternatives": [
+    {
+     "project": "virt-manager",
+     "fit": "full",
+     "note": null
+    },
+    {
+     "project": "virtualbox",
+     "fit": "full",
+     "note": null
+    },
+    {
+     "project": "utm",
+     "fit": "partial",
+     "note": "Runs on Apple devices only; no VMware vSphere server use mentioned."
+    },
+    {
+     "project": "incus",
+     "fit": "partial",
+     "note": "Runs virtual machines, but it is mainly a server-style manager, not a desktop app like VMware Workstation or Parallels."
+    }
+   ]
   },
   {
    "id": "reverse-proxies",
@@ -6589,7 +9328,33 @@
     "Cloudflare (proxy)"
    ],
    "source": "taxonomy",
-   "alternatives": []
+   "alternatives": [
+    {
+     "project": "nginx-proxy-manager",
+     "fit": "full",
+     "note": null
+    },
+    {
+     "project": "caddy",
+     "fit": "full",
+     "note": null
+    },
+    {
+     "project": "traefik",
+     "fit": "full",
+     "note": null
+    },
+    {
+     "project": "zoraxy",
+     "fit": "full",
+     "note": null
+    },
+    {
+     "project": "swag",
+     "fit": "full",
+     "note": null
+    }
+   ]
   },
   {
    "id": "email-servers",
@@ -6602,7 +9367,23 @@
     "Fastmail"
    ],
    "source": "taxonomy",
-   "alternatives": []
+   "alternatives": [
+    {
+     "project": "mailcow",
+     "fit": "full",
+     "note": null
+    },
+    {
+     "project": "mox",
+     "fit": "full",
+     "note": null
+    },
+    {
+     "project": "docker-mailserver",
+     "fit": "full",
+     "note": null
+    }
+   ]
   },
   {
    "id": "uptime-status",
@@ -6615,7 +9396,28 @@
     "Atlassian Statuspage"
    ],
    "source": "taxonomy",
-   "alternatives": []
+   "alternatives": [
+    {
+     "project": "uptime-kuma",
+     "fit": "full",
+     "note": null
+    },
+    {
+     "project": "gatus",
+     "fit": "full",
+     "note": null
+    },
+    {
+     "project": "upptime",
+     "fit": "full",
+     "note": null
+    },
+    {
+     "project": "oneuptime",
+     "fit": "full",
+     "note": null
+    }
+   ]
   },
   {
    "id": "server-panels",
@@ -6628,7 +9430,23 @@
     "RunCloud"
    ],
    "source": "taxonomy",
-   "alternatives": []
+   "alternatives": [
+    {
+     "project": "webmin",
+     "fit": "partial",
+     "note": "Manages server software and config; web hosting panel features come from Virtualmin, a separate project."
+    },
+    {
+     "project": "hestiacp",
+     "fit": "full",
+     "note": null
+    },
+    {
+     "project": "cyberpanel",
+     "fit": "full",
+     "note": null
+    }
+   ]
   },
   {
    "id": "start-pages",
@@ -6637,7 +9455,33 @@
    "job": "A start page with links and status for all your home apps",
    "closed": [],
    "source": "taxonomy",
-   "alternatives": []
+   "alternatives": [
+    {
+     "project": "homepage",
+     "fit": "full",
+     "note": null
+    },
+    {
+     "project": "homarr",
+     "fit": "full",
+     "note": null
+    },
+    {
+     "project": "dashy",
+     "fit": "full",
+     "note": null
+    },
+    {
+     "project": "glance",
+     "fit": "full",
+     "note": null
+    },
+    {
+     "project": "heimdall",
+     "fit": "partial",
+     "note": "Shows links and live stats for some apps; general status for all apps is not stated."
+    }
+   ]
   },
   {
    "id": "dns",
@@ -6650,7 +9494,28 @@
     "Dynu"
    ],
    "source": "taxonomy",
-   "alternatives": []
+   "alternatives": [
+    {
+     "project": "ddclient",
+     "fit": "partial",
+     "note": "Updates dynamic DNS only; does not run its own DNS servers."
+    },
+    {
+     "project": "ddns-updater",
+     "fit": "partial",
+     "note": "Covers dynamic DNS updates only; does not run a DNS server."
+    },
+    {
+     "project": "technitium-dns-server",
+     "fit": "full",
+     "note": null
+    },
+    {
+     "project": "coredns",
+     "fit": "partial",
+     "note": "Runs DNS servers; no mention of dynamic DNS updates for home addresses"
+    }
+   ]
   },
   {
    "id": "security-scanning",
@@ -6693,7 +9558,23 @@
     "SentinelOne"
    ],
    "source": "taxonomy",
-   "alternatives": []
+   "alternatives": [
+    {
+     "project": "crowdsec",
+     "fit": "full",
+     "note": null
+    },
+    {
+     "project": "suricata",
+     "fit": "partial",
+     "note": "Detects network attacks; no mention of watching individual computers or a hosted dashboard."
+    },
+    {
+     "project": "velociraptor",
+     "fit": "partial",
+     "note": "Collects endpoint data for investigation; no stated live attack alerting."
+    }
+   ]
   },
   {
    "id": "security-testing",
@@ -6706,7 +9587,33 @@
     "Passware"
    ],
    "source": "taxonomy",
-   "alternatives": []
+   "alternatives": [
+    {
+     "project": "metasploit-framework",
+     "fit": "partial",
+     "note": "Covers attacker-style testing, but not password recovery or Burp/Passware-style web or password tools."
+    },
+    {
+     "project": "zap",
+     "fit": "partial",
+     "note": "Covers web app testing only; no password recovery features mentioned."
+    },
+    {
+     "project": "hashcat",
+     "fit": "partial",
+     "note": "Covers password testing only; no web or network attack tools like Burp or Metasploit."
+    },
+    {
+     "project": "nuclei",
+     "fit": "partial",
+     "note": "Scans for known weaknesses; no password recovery or proxy tools."
+    },
+    {
+     "project": "mitmproxy",
+     "fit": "partial",
+     "note": "Covers intercepting web traffic; no password recovery or attack suite."
+    }
+   ]
   },
   {
    "id": "network-tools",
@@ -6719,7 +9626,28 @@
     "SolarWinds"
    ],
    "source": "taxonomy",
-   "alternatives": []
+   "alternatives": [
+    {
+     "project": "angry-ip-scanner",
+     "fit": "partial",
+     "note": "Scans devices, but no slowness diagnostics or closed-app features listed"
+    },
+    {
+     "project": "netalertx",
+     "fit": "partial",
+     "note": "Shows connected devices; does not diagnose slow networks."
+    },
+    {
+     "project": "librenms",
+     "fit": "partial",
+     "note": "Monitors and graphs devices over time; not a quick one-off scanner or phone app."
+    },
+    {
+     "project": "mtr",
+     "fit": "partial",
+     "note": "Shows routes and loss per hop, but no device scanning or ongoing network monitoring."
+    }
+   ]
   },
   {
    "id": "remote-desktop",
@@ -6768,7 +9696,28 @@
     "LaunchBar"
    ],
    "source": "taxonomy",
-   "alternatives": []
+   "alternatives": [
+    {
+     "project": "flow-launcher",
+     "fit": "full",
+     "note": null
+    },
+    {
+     "project": "ulauncher",
+     "fit": "partial",
+     "note": "Linux only; no Mac or Windows version, unlike Raycast or Alfred."
+    },
+    {
+     "project": "powertoys-powerrename",
+     "fit": "partial",
+     "note": "Command Palette is one of 30+ tools; it is not described as a standalone dock or launcher."
+    },
+    {
+     "project": "rofi",
+     "fit": "full",
+     "note": null
+    }
+   ]
   },
   {
    "id": "clipboard",
@@ -6780,7 +9729,28 @@
     "ClipboardFusion"
    ],
    "source": "taxonomy",
-   "alternatives": []
+   "alternatives": [
+    {
+     "project": "copyq",
+     "fit": "partial",
+     "note": "Keeps a clipboard history, but the README does not mention syncing between devices."
+    },
+    {
+     "project": "maccy",
+     "fit": "partial",
+     "note": "Keeps copy history on one Mac; no syncing between devices is described."
+    },
+    {
+     "project": "ditto",
+     "fit": "partial",
+     "note": "Keeps clipboard history on Windows only; the README does not mention syncing between devices."
+    },
+    {
+     "project": "clipcascade",
+     "fit": "partial",
+     "note": "Syncs copies across devices; keeping a history is not clearly described."
+    }
+   ]
   },
   {
    "id": "desktop-widgets",
@@ -6792,7 +9762,23 @@
     "Bartender"
    ],
    "source": "taxonomy",
-   "alternatives": []
+   "alternatives": [
+    {
+     "project": "rainmeter",
+     "fit": "partial",
+     "note": "Shows desktop panels, but no notch-area or closed-app music controls stated."
+    },
+    {
+     "project": "boring-notch",
+     "fit": "partial",
+     "note": "Shows music, calendar and file shelf in the notch, not general widgets."
+    },
+    {
+     "project": "u-bersicht",
+     "fit": "partial",
+     "note": "Shows on-screen info panels, but no notch or music-control apps shown."
+    }
+   ]
   },
   {
    "id": "system-monitors",
@@ -6805,7 +9791,33 @@
     "AIDA64"
    ],
    "source": "taxonomy",
-   "alternatives": []
+   "alternatives": [
+    {
+     "project": "stats",
+     "fit": "full",
+     "note": null
+    },
+    {
+     "project": "btop",
+     "fit": "partial",
+     "note": "Shows CPU, memory and battery; temperature not confirmed."
+    },
+    {
+     "project": "mission-center",
+     "fit": "partial",
+     "note": "Covers CPU, memory and battery; temperature not listed in README."
+    },
+    {
+     "project": "system-informer",
+     "fit": "partial",
+     "note": "Shows CPU and memory use; temperature and battery not mentioned."
+    },
+    {
+     "project": "beszel",
+     "fit": "partial",
+     "note": "Monitors remote servers via a web dashboard, not a personal computer's desktop."
+    }
+   ]
   },
   {
    "id": "system-tweaks",
@@ -6818,7 +9830,28 @@
     "Winaero Tweaker"
    ],
    "source": "taxonomy",
-   "alternatives": []
+   "alternatives": [
+    {
+     "project": "win11debloat",
+     "fit": "partial",
+     "note": "Covers Windows tweaks and debloat only; no Mac support and no keep-awake feature mentioned."
+    },
+    {
+     "project": "winutil",
+     "fit": "partial",
+     "note": "Covers debloat and hidden settings on Windows only; no Mac support or keep-awake feature mentioned."
+    },
+    {
+     "project": "powertoys-powerrename",
+     "fit": "partial",
+     "note": "Keeps the computer awake, but does not change hidden settings or remove bloat."
+    },
+    {
+     "project": "keepingyouawake",
+     "fit": "partial",
+     "note": "Covers only keeping the computer awake on Mac; no hidden settings, debloat or Windows support."
+    }
+   ]
   },
   {
    "id": "wallpapers",
@@ -6829,7 +9862,23 @@
     "Wallpaper Engine"
    ],
    "source": "taxonomy",
-   "alternatives": []
+   "alternatives": [
+    {
+     "project": "hidamari",
+     "fit": "full",
+     "note": null
+    },
+    {
+     "project": "linux-wallpaperengine",
+     "fit": "full",
+     "note": null
+    },
+    {
+     "project": "variety",
+     "fit": "partial",
+     "note": "Rotates still images; no animated or live wallpapers mentioned."
+    }
+   ]
   },
   {
    "id": "accessibility",
@@ -6842,7 +9891,28 @@
     "Dragon"
    ],
    "source": "taxonomy",
-   "alternatives": []
+   "alternatives": [
+    {
+     "project": "nvda",
+     "fit": "partial",
+     "note": "Covers screen reading only; on-screen keyboards, switch access and Dragon-style speech input not stated."
+    },
+    {
+     "project": "orca",
+     "fit": "partial",
+     "note": "Covers screen reading and braille; on-screen keyboard and switch access not described in the README."
+    },
+    {
+     "project": "optikey",
+     "fit": "full",
+     "note": null
+    },
+    {
+     "project": "onboard",
+     "fit": "partial",
+     "note": "On-screen keyboard only. Screen reader and switch access not stated."
+    }
+   ]
   },
   {
    "id": "screenshots",
@@ -6854,7 +9924,33 @@
     "CleanShot X"
    ],
    "source": "taxonomy",
-   "alternatives": []
+   "alternatives": [
+    {
+     "project": "sharex",
+     "fit": "full",
+     "note": null
+    },
+    {
+     "project": "flameshot",
+     "fit": "full",
+     "note": null
+    },
+    {
+     "project": "ksnip",
+     "fit": "full",
+     "note": null
+    },
+    {
+     "project": "greenshot",
+     "fit": "full",
+     "note": null
+    },
+    {
+     "project": "gink",
+     "fit": "partial",
+     "note": "Has a snapshot feature, but no sharing or dedicated editing tools for screenshots."
+    }
+   ]
   },
   {
    "id": "desktop-automation",
@@ -6866,7 +9962,28 @@
     "Power Automate Desktop"
    ],
    "source": "taxonomy",
-   "alternatives": []
+   "alternatives": [
+    {
+     "project": "hammerspoon",
+     "fit": "partial",
+     "note": "Needs writing Lua scripts; no ready-made macro recorder mentioned."
+    },
+    {
+     "project": "espanso",
+     "fit": "partial",
+     "note": "Covers text snippets and some scripts; no mouse clicks or general macros stated"
+    },
+    {
+     "project": "autokey",
+     "fit": "partial",
+     "note": "Linux only and needs X11, not Wayland; no Mac or Windows version."
+    },
+    {
+     "project": "actiona",
+     "fit": "full",
+     "note": null
+    }
+   ]
   },
   {
    "id": "system-setup",
@@ -6875,7 +9992,28 @@
    "job": "Scripts and dotfiles that set up a fresh computer your way",
    "closed": [],
    "source": "taxonomy",
-   "alternatives": []
+   "alternatives": [
+    {
+     "project": "chezmoi",
+     "fit": "partial",
+     "note": "Manages dotfiles; full fresh-machine setup scripts not stated in README"
+    },
+    {
+     "project": "gnu-stow",
+     "fit": "partial",
+     "note": "Manages dotfile links but does not itself run setup scripts or install software."
+    },
+    {
+     "project": "yadm",
+     "fit": "full",
+     "note": null
+    },
+    {
+     "project": "ansible",
+     "fit": "partial",
+     "note": "Automates setup of machines, but aimed at IT staff, not personal dotfiles."
+    }
+   ]
   },
   {
    "id": "app-installers",
@@ -6887,7 +10025,18 @@
     "Patch My PC"
    ],
    "source": "taxonomy",
-   "alternatives": []
+   "alternatives": [
+    {
+     "project": "winget",
+     "fit": "partial",
+     "note": "Installs and updates many apps via commands, but needs a terminal and no simple GUI."
+    },
+    {
+     "project": "unigetui",
+     "fit": "full",
+     "note": null
+    }
+   ]
   },
   {
    "id": "screen-text",
@@ -6899,7 +10048,28 @@
     "TextSniper"
    ],
    "source": "taxonomy",
-   "alternatives": []
+   "alternatives": [
+    {
+     "project": "powertoys-powerrename",
+     "fit": "partial",
+     "note": "README does not describe Text Extractor's OCR or screen-capture behavior."
+    },
+    {
+     "project": "normcap",
+     "fit": "full",
+     "note": null
+    },
+    {
+     "project": "textsnatcher",
+     "fit": "partial",
+     "note": "Works on images dragged in; no clear any-window screen grab stated."
+    },
+    {
+     "project": "frog",
+     "fit": "full",
+     "note": null
+    }
+   ]
   },
   {
    "id": "sound-control",
@@ -6912,7 +10082,28 @@
     "Voicemeeter"
    ],
    "source": "taxonomy",
-   "alternatives": []
+   "alternatives": [
+    {
+     "project": "easyeffects",
+     "fit": "partial",
+     "note": "Covers equalizer and effects; per-app volume not stated in README."
+    },
+    {
+     "project": "equalizer-apo",
+     "fit": "partial",
+     "note": "Covers the equalizer, but per-app volume and effects are not described in the README."
+    },
+    {
+     "project": "fxsound",
+     "fit": "partial",
+     "note": "Covers equalizer and effects; per-app volume is not mentioned in the README."
+    },
+    {
+     "project": "eqmac",
+     "fit": "partial",
+     "note": "Only the free parts are open; Pro EQ, per-app volume mixer and spatial audio are closed."
+    }
+   ]
   },
   {
    "id": "web-app-wrappers",
@@ -6924,7 +10115,18 @@
     "Coherence X"
    ],
    "source": "taxonomy",
-   "alternatives": []
+   "alternatives": [
+    {
+     "project": "pake",
+     "fit": "full",
+     "note": null
+    },
+    {
+     "project": "web-app-manager",
+     "fit": "full",
+     "note": null
+    }
+   ]
   },
   {
    "id": "window-snapping",
@@ -6937,7 +10139,28 @@
     "DisplayFusion"
    ],
    "source": "taxonomy",
-   "alternatives": []
+   "alternatives": [
+    {
+     "project": "rectangle",
+     "fit": "full",
+     "note": null
+    },
+    {
+     "project": "powertoys-powerrename",
+     "fit": "full",
+     "note": null
+    },
+    {
+     "project": "glazewm",
+     "fit": "partial",
+     "note": "Does keyboard tiling; drag-to-snap and mouse snapping not stated."
+    },
+    {
+     "project": "aerospace",
+     "fit": "partial",
+     "note": "Tiles windows by keys or drags, but no mouse snap zones or drag-to-edge."
+    }
+   ]
   }
  ]
 }
