@@ -498,7 +498,7 @@
     {
      "project": "roundcube",
      "fit": "partial",
-     "note": "Inbox screen only; needs your own mail server",
+     "note": "Inbox screen only; connects to your existing email account",
      "review": {
       "by": "claude-opus-5-5",
       "reason": "Changed fit to full because Roundcube is a complete browser-based email client with folders, search and an address book, which covers the main job of reading and sending email."
@@ -2657,7 +2657,7 @@
     {
      "project": "heroic-games-launcher",
      "fit": "partial",
-     "note": "Plays games you own from Epic, GOG and Amazon; sells none"
+     "note": "Plays games you own from Epic, GOG and Amazon, and opens their stores; the stores sell the games"
     },
     {
      "project": "lutris",
@@ -2900,11 +2900,6 @@
      "project": "firefly-iii",
      "fit": "full",
      "note": "You run it yourself"
-    },
-    {
-     "project": "ghostfolio",
-     "fit": "partial",
-     "note": null
     }
    ]
   },
@@ -3013,11 +3008,6 @@
      }
     },
     {
-     "project": "gitlab",
-     "fit": "full",
-     "note": null
-    },
-    {
      "project": "pagure",
      "fit": "full",
      "note": null
@@ -3122,7 +3112,7 @@
     {
      "project": "litekart",
      "fit": "partial",
-     "note": null
+     "note": "Storefront only; connects to a shop back end such as Shopify or Medusa"
     },
     {
      "project": "presta",
@@ -3809,15 +3799,6 @@
      }
     },
     {
-     "project": "telemetry-tracker",
-     "fit": "partial",
-     "note": null,
-     "review": {
-      "by": "claude-opus-5-5",
-      "reason": "Clarified that it covers app errors and performance with alerts but not server metrics, logs or traces, which justifies the partial fit."
-     }
-    },
-    {
      "project": "uptrace",
      "fit": "full",
      "note": null,
@@ -3973,6 +3954,11 @@
      "project": "trench",
      "fit": "partial",
      "note": null
+    },
+    {
+     "project": "telemetry-tracker",
+     "fit": "partial",
+     "note": "Also tracks errors; self-hosted or hosted"
     }
    ]
   },
@@ -4514,6 +4500,11 @@
    ],
    "source": "lists",
    "alternatives": [
+    {
+     "project": "ghostfolio",
+     "fit": "partial",
+     "note": "Tracks investments you own; not a news or research terminal like Bloomberg"
+    },
     {
      "project": "openbb",
      "fit": "partial",

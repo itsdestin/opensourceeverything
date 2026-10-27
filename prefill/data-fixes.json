@@ -26,10 +26,261 @@
   "cal-com": {
    "summary": "Cal.diy is the free community edition of Cal.com. It lets you share a page where others pick a meeting time, and connects to your calendar so you are not double-booked. You run it on your own server, and its makers advise it for personal use only. Team and company features were removed from this edition.",
    "why": "Checked against the repository's own README (Oct 26): calcom/cal.com now redirects to calcom/cal.diy (MIT, ~49k stars); the paid hosted Cal.com and its team features are separate. Wording made plain about what is missing."
+  },
+  "mellisearch": {
+   "name": "Meilisearch",
+   "why": "Misspelled: the project is Meilisearch (repo github.com/meilisearch/meilisearch, site meilisearch.com). Only the shown name is fixed; the internal id stays so existing links keep working."
+  },
+  "semi": {
+   "name": "Weaviate",
+   "why": "Weaviate is the project (repo weaviate/weaviate); SeMI was its former company name. Only the shown name is fixed; the internal id stays so existing links keep working."
+  },
+  "zinc-labs": {
+   "name": "ZincSearch",
+   "summary": "ZincSearch is a search engine that indexes text so you can find things quickly inside your own data. It is meant for developers and teams who want full text search without the complexity of Elasticsearch. Its README points people who want to search logs to OpenObserve, a separate product.",
+   "why": "The project is ZincSearch (repo zincsearch/zincsearch); Zinc Labs was the company. Its README says log search and cloud/high-availability belong to OpenObserve, a separate product, and zincsearch.com now forwards to openobserve.ai, so the docs site stays as the project link."
+  },
+  "sonic": {
+   "website": null,
+   "why": "The listed website was a crates.io package page, not a project site. Sonic has no site of its own; the code link is shown instead."
+  },
+  "pocket-casts": {
+   "website": "https://pocketcasts.com",
+   "platforms": [
+    "android",
+    "ios"
+   ],
+   "summary": "Pocket Casts is a podcast app for finding, subscribing to and listening to shows on Android and iPhone. It is made for people who listen to podcasts on their phones.",
+   "why": "Website was the support forum; pocketcasts.com is the main site. The makers (Automattic) publish an iPhone app too (github.com/Automattic/pocket-casts-ios), so it is not Android-only."
+  },
+  "quant-ux": {
+   "website": "https://quant-ux.com/",
+   "why": "Website was empty; the project runs a site at quant-ux.com (page title \"Quant-UX - Prototype, Test and Learn\")."
+  },
+  "comfyui": {
+   "platforms": [
+    "windows",
+    "mac",
+    "linux"
+   ],
+   "why": "The README says ComfyUI is available on Windows, Linux and macOS; only Windows was listed."
+  },
+  "jellyfin": {
+   "platforms": [
+    "windows",
+    "mac",
+    "linux",
+    "android",
+    "ios",
+    "web",
+    "server"
+   ],
+   "why": "jellyfin.org/downloads/clients lists official apps for Android, iOS and a desktop client, and the server also runs on Windows, Mac and Linux. The web player is built in."
+  },
+  "calibre": {
+   "platforms": [
+    "windows",
+    "mac",
+    "linux"
+   ],
+   "why": "calibre-ebook.com/download_linux exists: Calibre also runs on Linux, not just Windows and Mac."
+  },
+  "whisper": {
+   "platforms": [
+    "windows",
+    "mac",
+    "linux"
+   ],
+   "why": "Whisper is a Python package; its README gives install steps for Linux, macOS and Windows. It has no website of its own, so the code link is shown."
+  },
+  "whisper-cpp": {
+   "platforms": [
+    "windows",
+    "mac",
+    "linux",
+    "android",
+    "ios"
+   ],
+   "why": "The README lists Apple Silicon (Mac) as first class, plus Linux, Windows, iOS and Android. It has no website of its own, so the code link is shown."
+  },
+  "netdata": {
+   "platforms": [
+    "windows",
+    "mac",
+    "linux"
+   ],
+   "why": "The README lists Linux, macOS, FreeBSD and Windows; only Windows was listed."
+  },
+  "drone": {
+   "name": "Drone / Harness Open Source",
+   "summary": "Drone is a tool that builds, tests and deploys software automatically. Its makers' newer open source platform, Harness Open Source (the code linked here), adds code hosting, hosted development environments and artifact registries; the original Drone is kept on a separate branch of that code. It is for development teams who want to run these tools on their own machines or servers.",
+   "why": "The listed code is Harness Open Source, the successor platform; the Harness README (\"Where is Drone?\") says the original Drone is kept on the repo's \"drone\" branch and has its own site at drone.io. The name and text now say both."
+  },
+  "quickwit": {
+   "summary": "Quickwit is a search engine for storing and searching large amounts of logs and traces, kept on cloud storage. It is aimed at engineers and operations teams who monitor software systems. Its team announced that Quickwit joined Datadog; the code remains open source.",
+   "why": "quickwit.io shows the banner \"Quickwit joins Datadog!\". The code is still open (Apache-2.0) and updated this week, so the listing stays; the summary now says so."
+  },
+  "highlight": {
+   "summary": "Highlight is a monitoring platform that records user sessions, tracks errors and collects logs so developers can find out why bugs happen. It is aimed at software developers who run web apps. Its team has joined LaunchDarkly, and highlight.io now forwards to LaunchDarkly's site.",
+   "why": "highlight.io now forwards to launchdarkly.com, and LaunchDarkly published \"Welcome Highlight to LaunchDarkly\". The code repo is still updated, so the listing stays; the summary now says so."
+  },
+  "openblocks": {
+   "summary": "Openblocks is a tool for building internal business apps, such as dashboards and admin panels, by connecting to databases and APIs and arranging ready-made components on screen. It is aimed at software teams and companies that need custom tools for their staff or customers. The project has had no updates since October 2023; Lowcoder continues from it.",
+   "why": "The repo has had no changes since October 2023, and Lowcoder's README says it \"continues from the abandoned Openblocks project\"."
+  },
+  "heroic-games-launcher": {
+   "summary": "Heroic lets you sign in to your Epic, GOG and Amazon Games accounts and install and play the games you already own, on Windows, Mac and Linux. It also opens those stores inside the app; the games are sold by the stores, not by Heroic.",
+   "why": "The README says \"Access to Epic, GOG and Amazon Games stores directly from Heroic\", so \"sells none\" misled. Heroic itself sells nothing; it opens the stores."
+  },
+  "preset": {
+   "name": "Apache Superset",
+   "why": "The listed code and site are Apache Superset, the open project. Preset is a separate company that sells a hosted version of it, so the listing is named for the open project."
+  },
+  "crater": {
+   "kind": "self_hosted",
+   "platforms": [
+    "web",
+    "android",
+    "ios",
+    "server"
+   ],
+   "website": null,
+   "summary": "Crater is a free invoicing app you run yourself, with companion Android and iPhone apps, for making invoices and estimates and tracking expenses and payments. It is for individuals and small businesses that need to bill customers. It has had no updates since 2023, and its old website now shows a different product.",
+   "why": "Crater is a self-hosted web app (Laravel and Vue) with Android and iOS companion apps, not just phone apps (its README). craterapp.com now forwards to crater.financial, a different payments product, so the old site link is removed. The repo has had no changes since February 2023."
+  },
+  "mlcraft": {
+   "name": "Synmetrix (formerly MLCraft)",
+   "why": "The project was renamed Synmetrix; its README says \"Synmetrix (prev. MLCraft)\". Only the shown name is fixed; the internal id stays so existing links keep working."
+  },
+  "postmarketos": {
+   "name": "Nura (formerly postmarketOS)",
+   "website": "https://nura.eco",
+   "summary": "Nura, formerly called postmarketOS, is a Linux-based operating system for phones, built to keep older devices useful for many years. It is for tinkerers: on most phones, calls, the camera or mobile data do not fully work yet.",
+   "why": "postmarketos.org forwards to nura.eco, whose page says \"Nura was formerly known as postmarketOS\"."
+  },
+  "taiga": {
+   "code": "github.com/taigaio/taiga-back",
+   "website": "https://taiga.io",
+   "inactive": false,
+   "kind": "self_hosted",
+   "stars": 859,
+   "forks": 319,
+   "summary": "Taiga is a free, open-source project management tool for agile teams, with boards for planning and tracking tasks and projects. You can run it yourself or use the hosted version at taiga.io. Its code is split across several repositories; the link goes to the main one.",
+   "why": "The listed repo (kaleidos-ventures/taiga) is the \"next iteration\" rewrite, last changed in 2023. The live product at taiga.io runs from taigaio/taiga-back (changed this week, MPL-2.0) and taiga-front, so the code link, counts and activity now follow the live one. Hosted copies do not count for setup, so it is self-hosted."
+  },
+  "kanboard": {
+   "summary": "Kanboard is project management software that uses Kanban boards to track tasks and their progress. It is for teams and individuals who want to organize work visually and host it themselves. Its makers describe it as in maintenance mode, which means no big new features are planned.",
+   "why": "Its README says \"This application is in maintenance mode\", but the repo is still updated, so it is not marked inactive."
+  },
+  "openproject": {
+   "platforms": [
+    "server",
+    "android",
+    "ios"
+   ],
+   "why": "openproject.org/collaboration-software-features says there is \"a dedicated mobile app for iOS and Android\"."
+  },
+  "etherpad": {
+   "platforms": [
+    "windows",
+    "mac",
+    "linux",
+    "android",
+    "ios",
+    "web",
+    "server"
+   ],
+   "why": "etherpad.org lists a desktop and mobile app for Windows, macOS, Linux, Android and iOS."
+  },
+  "onlyoffice-docs": {
+   "platforms": [
+    "windows",
+    "mac",
+    "linux",
+    "android",
+    "ios",
+    "web",
+    "server"
+   ],
+   "why": "onlyoffice.com says free apps exist for iOS and Android."
+  },
+  "localsend": {
+   "platforms": [
+    "windows",
+    "mac",
+    "linux",
+    "android",
+    "ios"
+   ],
+   "why": "localsend.org says it is available for Windows, macOS, Linux, Android and iOS."
+  },
+  "plane": {
+   "platforms": [
+    "web",
+    "android",
+    "ios",
+    "server"
+   ],
+   "why": "plane.so/mobile offers iOS and Android apps, and Plane Cloud is a hosted web version."
+  },
+  "super-productivity": {
+   "platforms": [
+    "windows",
+    "mac",
+    "linux",
+    "android",
+    "ios",
+    "web"
+   ],
+   "why": "The README says it runs on Linux, macOS, Windows, Android, iOS and in the browser."
+  },
+  "comaps": {
+   "platforms": [
+    "mac",
+    "linux",
+    "android",
+    "ios"
+   ],
+   "why": "The README says \"Available for Android, iOS, MacOS, and Linux\" and the site links the App Store."
+  },
+  "home-assistant": {
+   "platforms": [
+    "linux",
+    "android",
+    "ios",
+    "web",
+    "server"
+   ],
+   "why": "home-assistant.io lists official Companion apps for iOS and Android."
+  },
+  "spliit-app": {
+   "platforms": [
+    "web",
+    "ios",
+    "server"
+   ],
+   "why": "spliit.app advertises \"Spliit for iPhone\", the public site works in a browser, and the README lists a Progressive Web App."
+  },
+  "affine": {
+   "platforms": [
+    "windows",
+    "mac",
+    "linux",
+    "android",
+    "ios",
+    "web"
+   ],
+   "why": "affine.pro/download lists Android as well as iOS (Google Play and App Store)."
+  },
+  "gitlab-community-edition": {
+   "website": "https://about.gitlab.com/install/ce-or-ee/",
+   "why": "Replaces the duplicate \"Gitlab\" listing (removed): github.com/gitlabhq/gitlabhq is itself described as \"GitLab CE Mirror\". Website was empty."
   }
  },
  "altPatch": {
-  "erp/odoo": { "note": "Community edition is free and open; the paid Enterprise edition adds features", "why": "Odoo is open core; see the erp note above." }
+  "erp/odoo": { "note": "Community edition is free and open; the paid Enterprise edition adds features", "why": "Odoo is open core; see the erp note above." },
+  "shop/litekart": {"note": "Storefront only; connects to a shop back end such as Shopify or Medusa", "why": "Litekart is a storefront only; it connects to a separate shop back end (Shopify, Medusa, Saleor, WooCommerce...), per its README."},
+  "email/roundcube": {"note": "Inbox screen only; connects to your existing email account", "why": "Roundcube is an IMAP client (README): it needs a web server and any email account, not its own mail server."}
  },
 
  "addProjects": [
@@ -201,7 +452,7 @@
     "why": "Zotero is the open alternative to EndNote and Mendeley (both closed); neither was on the map." },
   { "id": "game-stores", "name": "Game stores & launchers", "category": "media", "job": "Buying, downloading and starting PC games",
     "closed": ["Steam", "Epic Games Store", "GOG Galaxy"],
-    "alts": [ { "project": "heroic-games-launcher", "fit": "partial", "note": "Plays games you own from Epic, GOG and Amazon; sells none" },
+    "alts": [ { "project": "heroic-games-launcher", "fit": "partial", "note": "Plays games you own from Epic, GOG and Amazon, and opens their stores; the stores sell the games" },
               { "project": "lutris", "fit": "partial", "note": "Linux only; plays games you own; sells none" },
               { "project": "playnite", "fit": "partial", "note": "Windows only; one library for games you own; sells none" },
               { "project": "itch-app", "fit": "partial", "note": "Only for games on itch.io" } ],
@@ -213,7 +464,16 @@
     "why": "Netflix had no page. What makes Netflix useful is its catalog, which no open project can supply; the open tools only play video you already have." }
  ],
 
+ "removeProjects": [
+  { "id": "gitlab", "why": "Duplicate of GitLab Community Edition: github.com/gitlabhq/gitlabhq is described as 'GitLab CE Mirror', the same free edition. The other listing is kept; its website now points at GitLab's edition page." }
+ ],
+ "removeAlts": [
+  { "group": "monitoring", "project": "telemetry-tracker", "why": "It tracks errors and what people do in apps, not servers or uptime, so it moves to Product analytics." },
+  { "group": "budgeting", "project": "ghostfolio", "why": "Ghostfolio tracks investments (its README), not spending or budgets; moved to Investment research." }
+ ],
  "addAlts": [
+  { "group": "product-analytics", "project": "telemetry-tracker", "fit": "partial", "note": "Also tracks errors; self-hosted or hosted", "why": "Its README calls it open-source error tracking, product analytics and session telemetry." },
+  { "group": "investment-research", "project": "ghostfolio", "fit": "partial", "note": "Tracks investments you own; not a news or research terminal like Bloomberg", "why": "Ghostfolio is open source wealth tracking software (its README)." },
   { "group": "vpn", "project": "openvpn", "fit": "partial", "note": "Set up by hand; no web admin panel like Access Server's", "why": "OpenVPN Community is the open version of the product its closed sibling Access Server builds on." },
   { "group": "data-pipelines", "project": "airflow", "fit": "partial", "note": "You write each job in code; no ready-made connectors like Fivetran's", "why": "Moved here from the closed list." },
   { "group": "investment-research", "project": "openbb", "fit": "partial", "note": "Open data toolkit; the point-and-click workspace is hosted, with no live terminal, news or chat like Bloomberg's", "why": "Asked for by Destin: first open entry in a group that was a pure gap." }

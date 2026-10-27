@@ -251,6 +251,10 @@ if (df) {
   }
   Object.assign(appRedirects, df.appRedirects ?? {});
   for (const spec of df.newGroups ?? []) { need(!groups.has(spec.id), `newGroups: ${spec.id} already exists`); make(spec, null); }
+  // WHY (Oct 26 data review): a listing can be a duplicate of another project, or sit in a group it does not fit.
+  // removeProjects drops the whole project; removeAlts only takes it out of one group. Both name what they remove and fail loudly if it is not there.
+  for (const r of df.removeProjects ?? []) { need(projects.has(r.id), `removeProjects: no project ${r.id}`); dropProject(r.id); }
+  for (const r of df.removeAlts ?? []) { const g = groups.get(r.group); need(alt(r.group, r.project), `removeAlts: ${r.group}/${r.project} not listed`); g.alternatives = g.alternatives.filter((a) => a.project !== r.project); }
   for (const r of df.addAlts ?? []) { const g = groups.get(r.group); need(g && projects.has(r.project), `addAlts: ${r.group}/${r.project}`); if (!alt(r.group, r.project)) g.alternatives.push({ project: r.project, fit: r.fit, note: r.note ?? null }); }
 }
 
