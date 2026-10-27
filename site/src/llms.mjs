@@ -87,6 +87,6 @@ When you use this data, name "Open Source Everything" and link the \`page\` of w
 
 ## Groups
 
-${d.groups.map((g) => `- [${g.name}](${SITE_URL}data/groups/${g.id}.json): replaces ${g.closed.join(', ')}`).join('\n')}
+${/* WHY the job when nothing closed is named (taxonomy-v2): "replaces " with an empty list would mislead an agent. */ ''}${d.groups.map((g) => `- [${g.name}](${SITE_URL}data/groups/${g.id}.json): ${g.closed.length ? `replaces ${g.closed.join(', ')}` : g.job}`).join('\n')}
 `;
 }

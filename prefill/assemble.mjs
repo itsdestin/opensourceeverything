@@ -361,6 +361,25 @@ for (const [id, e] of Object.entries(optional(join(ROOT, 'data/lineage.json'))?.
 const listed = new Set([...groups.values()].flatMap((g) => g.alternatives.map((a) => a.project)));
 for (const id of [...projects.keys()]) if (!listed.has(id)) projects.delete(id);
 
+// ── The map's structure (prefill/taxonomy.json; Destin approved the taxonomy-v2 deck, Oct 27) ──
+// WHY last, just before writing: groups arrive from several steps above (starter, lists, data-fixes, suggestions), some
+// still naming the old 11 categories. Applying the structure here re-homes all of them in one place: 27 categories inside
+// 6 areas, 41 current groups moved (same id, same address), 16 jobs widened, and 194 new groups added.
+const taxonomy = optional(join(HERE, 'taxonomy.json'));
+const areas = taxonomy?.areas ?? [];
+if (taxonomy) {
+  categories.length = 0;
+  for (const c of taxonomy.categories) categories.push({ id: c.id, name: c.name, area: c.area });
+  for (const [gid, cat] of Object.entries(taxonomy.moves)) if (groups.has(gid)) groups.get(gid).category = cat;
+  // WHY whole sentences in the file: a widened job replaces the old one outright, so the page reads as one plain line.
+  for (const [gid, job] of Object.entries(taxonomy.widened)) if (groups.has(gid)) groups.get(gid).job = job;
+  for (const g of taxonomy.newGroups) if (!groups.has(g.id)) {
+    // WHY waitForProject (Destin picked "hide the 20 thinnest"): the group exists in the data so a project can be tagged into it,
+    // but the site hides it until it has one. Candidates are not listed here: they wait for prefill/new-groups-checked.json.
+    groups.set(g.id, { id: g.id, name: g.name, category: g.category, job: g.job, closed: [...g.closed], source: 'taxonomy', ...(g.waitForProject ? { waitForProject: true } : {}), alternatives: [] });
+  }
+}
+
 // ── Write ──
 const groupList = [...groups.values()].sort((a, b) => categories.findIndex((c) => c.id === a.category) - categories.findIndex((c) => c.id === b.category));
 const unknownCat = groupList.filter((g) => !categories.some((c) => c.id === g.category));
@@ -374,7 +393,8 @@ for (const g of groupList) {
 const projectKeys = new Set([...projects.values()].map((p) => key(p.name)));
 for (const g of groupList) for (const c of g.closed) if (projectKeys.has(key(c))) throw new Error(`"${c}" is listed as a closed app in ${g.id} and is also an open project`);
 const meta = { license: 'CC BY-SA 4.0', generated: new Date().toISOString().slice(0, 10), credits: 'See data/CREDITS.md' };
-writeFileSync(join(ROOT, 'data/categories.json'), JSON.stringify({ ...meta, categories }, null, 1));
+// WHY areas live beside categories (one file): the site and the open data both need "which area holds which category".
+writeFileSync(join(ROOT, 'data/categories.json'), JSON.stringify({ ...meta, ...(areas.length ? { areas } : {}), categories }, null, 1));
 writeFileSync(join(ROOT, 'data/groups.json'), JSON.stringify({ ...meta, groups: groupList }, null, 1));
 writeFileSync(join(ROOT, 'data/redirects.json'), JSON.stringify({ ...meta, note: 'Groups that were split: old group id → the groups that replaced it. The site keeps the old address working.', moved: redirects, apps: appRedirects }, null, 1));
 writeFileSync(join(ROOT, 'data/projects.json'), JSON.stringify({ ...meta, projects: [...projects.values()].sort((a, b) => a.name.localeCompare(b.name)) }, null, 1));

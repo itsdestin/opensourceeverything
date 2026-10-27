@@ -74,8 +74,14 @@ export function counts(d) {
 
 export function loadData(root) {
   const read = (f) => JSON.parse(readFileSync(join(root, 'data', f), 'utf8'));
-  const categories = read('categories.json').categories;
-  const groups = read('groups.json').groups;
+  const catFile = read('categories.json');
+  const categories = catFile.categories;
+  // WHY areas (taxonomy-v2, Oct 27): 6 areas hold the 27 categories. Older data without areas puts every category in one.
+  const areas = catFile.areas ?? [{ id: 'all', name: 'Everything', categories: categories.map((c) => c.id) }];
+  // WHY hide empty new groups (Destin picked "hide the 20 thinnest until a project lands in them", Oct 27): a group from the new
+  // structure with no checked project is not a gap (projects exist, they just haven't passed the checks yet), so it stays off
+  // every page, the search and the open data until it has one. Older groups with nothing open stay visible: those ARE gaps.
+  const groups = read('groups.json').groups.filter((g) => g.alternatives.length || (g.source !== 'taxonomy' && !g.waitForProject));
   const projects = read('projects.json').projects;
   // WHY merged here, not stored in projects.json (review Oct 26): "How to help" comes from two other files, one written weekly by
   // prefill/help-facts.mjs and one edited by hand (data/plugin-docs.json), so neither fights with the data the map is built from.
@@ -89,12 +95,13 @@ export function loadData(root) {
   }
   const projById = new Map(projects.map((p) => [p.id, p]));
   const catById = new Map(categories.map((c) => [c.id, c]));
+  const areaOf = new Map(areas.flatMap((a) => a.categories.map((c) => [c, a])));
   const groupsByProject = new Map();
   for (const g of groups) for (const a of g.alternatives) (groupsByProject.get(a.project) ?? groupsByProject.set(a.project, []).get(a.project)).push({ group: g, alt: a });
   // Groups that were split (data/redirects.json): old id -> new ids. Optional, so older data still builds.
   let moved = {}; let movedApps = {};
   try { { const r = read('redirects.json'); moved = r.moved ?? {}; movedApps = r.apps ?? {}; } } catch { /* none yet */ }
-  return { categories, groups, projects, projById, catById, groupsByProject, moved, movedApps };
+  return { areas, areaOf, categories, groups, projects, projById, catById, groupsByProject, moved, movedApps };
 }
 
 export const ICON = {

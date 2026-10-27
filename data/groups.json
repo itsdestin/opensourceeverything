@@ -154,7 +154,7 @@
    "id": "notes",
    "name": "Notes & wikis",
    "category": "office",
-   "job": "Notes, personal knowledge and team wikis",
+   "job": "Notes, personal knowledge, journals and team wikis",
    "closed": [
     "Notion",
     "Evernote",
@@ -691,6 +691,107 @@
    ]
   },
   {
+   "id": "focus-breaks",
+   "name": "Focus timers and distraction blockers",
+   "category": "office",
+   "job": "Pomodoro timers, break reminders and blocking distracting sites",
+   "closed": [
+    "Forest",
+    "Freedom",
+    "Cold Turkey",
+    "Time Out"
+   ],
+   "source": "taxonomy",
+   "alternatives": []
+  },
+  {
+   "id": "paperwork",
+   "name": "Scanning and filing paperwork",
+   "category": "office",
+   "job": "Scanning paper with a phone and keeping documents searchable",
+   "closed": [
+    "CamScanner",
+    "Adobe Scan",
+    "Microsoft Lens"
+   ],
+   "source": "taxonomy",
+   "alternatives": []
+  },
+  {
+   "id": "diagrams",
+   "name": "Diagrams and whiteboards",
+   "category": "office",
+   "job": "Drawing flowcharts, diagrams and sketches on a whiteboard",
+   "closed": [
+    "Lucidchart",
+    "Microsoft Visio",
+    "Miro"
+   ],
+   "source": "taxonomy",
+   "alternatives": []
+  },
+  {
+   "id": "habits",
+   "name": "Habit trackers",
+   "category": "office",
+   "job": "Building habits and tracking streaks",
+   "closed": [
+    "Streaks",
+    "Habitify"
+   ],
+   "source": "taxonomy",
+   "alternatives": []
+  },
+  {
+   "id": "writing",
+   "name": "Writing books and long stories",
+   "category": "office",
+   "job": "Planning and writing novels, scripts and e-books",
+   "closed": [
+    "Scrivener",
+    "Ulysses",
+    "Vellum",
+    "World Anvil"
+   ],
+   "source": "taxonomy",
+   "alternatives": []
+  },
+  {
+   "id": "markdown-editors",
+   "name": "Markdown editors",
+   "category": "office",
+   "job": "Writing plain-text documents in Markdown",
+   "closed": [
+    "Typora",
+    "iA Writer"
+   ],
+   "source": "taxonomy",
+   "alternatives": []
+  },
+  {
+   "id": "academic-writing",
+   "name": "Writing scientific papers",
+   "category": "office",
+   "job": "Writing papers and theses with LaTeX or Typst",
+   "closed": [
+    "Overleaf (paid plans)"
+   ],
+   "source": "taxonomy",
+   "alternatives": []
+  },
+  {
+   "id": "bookmarks",
+   "name": "Bookmarks and saved links",
+   "category": "office",
+   "job": "Saving and organising links and web pages to find later",
+   "closed": [
+    "Raindrop.io",
+    "Pocket (closed down)"
+   ],
+   "source": "taxonomy",
+   "alternatives": []
+  },
+  {
    "id": "team-chat",
    "name": "Team chat",
    "category": "social",
@@ -942,7 +1043,7 @@
    "id": "photo-sharing",
    "name": "Photo sharing",
    "category": "social",
-   "job": "Sharing photos with followers",
+   "job": "Sharing photos with followers or in event albums",
    "closed": [
     "Instagram"
    ],
@@ -1373,7 +1474,7 @@
    "id": "3d",
    "name": "3D & motion graphics",
    "category": "creative",
-   "job": "3D models, animation and visual effects",
+   "job": "3D models, animation, visual effects and live visuals",
    "closed": [
     "Autodesk Maya",
     "Cinema 4D",
@@ -1464,7 +1565,7 @@
    "id": "icons",
    "name": "Icon libraries",
    "category": "creative",
-   "job": "Free icons for designs",
+   "job": "Free icons, stock images and GIFs for designs",
    "closed": [
     "Noun Project"
    ],
@@ -1523,238 +1624,1078 @@
    ]
   },
   {
-   "id": "desktop-os",
-   "name": "Computer operating systems",
-   "category": "os",
-   "job": "What runs your laptop or desktop",
+   "id": "subtitles",
+   "name": "Subtitles and dubbing",
+   "category": "creative",
+   "job": "Making, timing and translating subtitles and voice-overs",
    "closed": [
-    "Microsoft Windows",
-    "macOS"
+    "Rev",
+    "Descript",
+    "Kapwing"
+   ],
+   "source": "taxonomy",
+   "alternatives": []
+  },
+  {
+   "id": "audio-plugins",
+   "name": "Instrument and effect plugins",
+   "category": "creative",
+   "job": "Synths, guitar amps and effects that run inside music software",
+   "closed": [
+    "Neural DSP",
+    "Guitar Rig",
+    "FabFilter",
+    "Serum"
+   ],
+   "source": "taxonomy",
+   "alternatives": []
+  },
+  {
+   "id": "pixel-art",
+   "name": "Pixel and ASCII art",
+   "category": "creative",
+   "job": "Drawing pixel art, sprites and text art",
+   "closed": [
+    "Aseprite (source-available, not open)",
+    "Pyxel Edit"
+   ],
+   "source": "taxonomy",
+   "alternatives": []
+  },
+  {
+   "id": "music-notation",
+   "name": "Sheet music and songbooks",
+   "category": "creative",
+   "job": "Writing and reading sheet music, tabs and chord sheets",
+   "closed": [
+    "Sibelius",
+    "Dorico",
+    "Guitar Pro"
+   ],
+   "source": "taxonomy",
+   "waitForProject": true,
+   "alternatives": []
+  },
+  {
+   "id": "music",
+   "name": "Music streaming",
+   "category": "media",
+   "job": "Listening to music",
+   "closed": [
+    "Spotify",
+    "Apple Music"
    ],
    "source": "starter",
    "alternatives": [
     {
-     "project": "linux-mint",
-     "fit": "full",
-     "note": "Closest to Windows"
+     "project": "navidrome",
+     "fit": "partial",
+     "note": "Plays only music files you own; no catalog"
     },
     {
-     "project": "fedora",
-     "fit": "full",
-     "note": "New versions every 6 months; fast-moving"
-    },
+     "project": "funkwhale",
+     "fit": "partial",
+     "note": "Plays only music you upload or others share; no catalog"
+    }
+   ]
+  },
+  {
+   "id": "home-media",
+   "name": "Home media server",
+   "category": "media",
+   "job": "Streaming your own films and shows",
+   "closed": [
+    "Plex",
+    "Emby"
+   ],
+   "source": "starter",
+   "alternatives": [
     {
-     "project": "ubuntu",
+     "project": "jellyfin",
      "fit": "full",
      "note": null
     },
     {
-     "project": "debian",
-     "fit": "full",
-     "note": "Very stable but older app versions; less beginner-friendly"
-    },
-    {
-     "project": "arch-linux",
-     "fit": "full",
-     "note": "For experienced users: you set up every part"
-    },
-    {
-     "project": "cachyos",
-     "fit": "full",
-     "note": "Rolling updates; best for people comfortable fixing things"
-    },
-    {
-     "project": "pop-os",
-     "fit": "full",
-     "note": "Good for newer laptops and graphics cards"
-    },
-    {
-     "project": "bazzite",
-     "fit": "full",
-     "note": "Great for gaming; updates apply safely"
+     "project": "kodi",
+     "fit": "partial",
+     "note": "Player, not a server"
     }
    ]
   },
   {
-   "id": "phone-os",
-   "name": "Phone operating systems",
-   "category": "os",
-   "job": "What runs your phone",
+   "id": "photo-backup",
+   "name": "Photo backup & library",
+   "category": "media",
+   "job": "Backing up and browsing your photos",
    "closed": [
-    "Google Android",
-    "Apple iOS"
+    "Google Photos",
+    "iCloud Photos"
    ],
    "source": "starter",
    "alternatives": [
     {
-     "project": "grapheneos",
+     "project": "immich",
      "fit": "full",
-     "note": "Pixel phones only; you install it yourself"
+     "note": null
     },
     {
-     "project": "lineageos",
+     "project": "ente-photos",
      "fit": "full",
-     "note": "You install it yourself; Google apps are an optional add-on"
+     "note": null
     },
     {
-     "project": "e-os",
+     "project": "photoprism",
      "fit": "full",
-     "note": "Some bank apps may not work; also sold pre-installed"
-    },
-    {
-     "project": "postmarketos",
-     "fit": "partial",
-     "note": "Calls, camera or mobile data may not work on most phones"
-    },
-    {
-     "project": "ubuntu-touch",
-     "fit": "partial",
-     "note": "Works on a short list of phones; few apps"
-    }
-   ]
-  },
-  {
-   "id": "app-stores",
-   "name": "App stores",
-   "category": "os",
-   "job": "Finding and installing phone apps",
-   "closed": [
-    "Google Play Store",
-    "Apple App Store"
-   ],
-   "source": "starter",
-   "alternatives": [
-    {
-     "project": "f-droid",
-     "fit": "full",
-     "note": "Open-source apps only"
-    },
-    {
-     "project": "aurora-store",
-     "fit": "partial",
-     "note": "A private way to use Google Play"
-    },
-    {
-     "project": "accrescent",
-     "fit": "partial",
-     "note": null,
-     "review": {
-      "by": "claude-opus-5-5",
-      "reason": "Changed fit to partial and noted early alpha status, because the project calls itself early alpha and offers far fewer apps than the closed stores."
-     }
-    },
-    {
-     "project": "fossdroid",
-     "fit": "partial",
-     "note": null,
-     "review": {
-      "by": "claude-opus-5-5",
-      "reason": "Clarified that this repo is self-hostable website code for browsing F-Droid apps, not an installer, and that it lacks the site's screenshot scraping and popularity data."
-     }
-    },
-    {
-     "project": "obtainium",
-     "fit": "partial",
      "note": null
     }
    ]
   },
   {
-   "id": "keyboards",
-   "name": "Phone keyboards",
-   "category": "os",
-   "job": "Typing on your phone",
+   "id": "podcasts",
+   "name": "Podcasts",
+   "category": "media",
+   "job": "Following and playing podcasts",
    "closed": [
-    "Gboard",
-    "SwiftKey"
+    "Apple Podcasts",
+    "Spotify"
    ],
    "source": "starter",
    "alternatives": [
     {
-     "project": "florisboard",
+     "project": "antennapod",
+     "fit": "full",
+     "note": null
+    },
+    {
+     "project": "pocket-casts",
+     "fit": "full",
+     "note": null
+    }
+   ]
+  },
+  {
+   "id": "books",
+   "name": "E-books & audiobooks",
+   "category": "media",
+   "job": "Reading e-books, listening to audiobooks and keeping offline libraries",
+   "closed": [
+    "Amazon Kindle",
+    "Audible",
+    "Goodreads"
+   ],
+   "source": "starter",
+   "alternatives": [
+    {
+     "project": "calibre",
      "fit": "partial",
-     "note": null,
+     "note": "Library and reader",
      "review": {
       "by": "claude-opus-5-5",
-      "reason": "Changed fit to partial and updated the description because the project page says it is in beta and lacks word suggestions and spell checking, which are core features of Gboard and SwiftKey."
+      "reason": "Changed fit to partial because Calibre manages and reads e-books but does not play audiobooks, which is part of this group's job."
      }
     },
     {
-     "project": "heliboard",
+     "project": "koreader",
+     "fit": "partial",
+     "note": "E-reader app",
+     "review": {
+      "by": "claude-opus-5-5",
+      "reason": "Changed fit to partial because it handles e-book reading but not audiobooks or book tracking, and clarified that desktop support is Linux only."
+     }
+    },
+    {
+     "project": "audiobookshelf",
      "fit": "full",
+     "note": "Your own audiobooks"
+    },
+    {
+     "project": "inventaire",
+     "fit": "partial",
      "note": null
     },
     {
-     "project": "anysoftkeyboard",
-     "fit": "full",
-     "note": null,
-     "review": {
-      "by": "claude-opus-5-5",
-      "reason": "Changed fit to full because it is a complete Android keyboard with word suggestions, autocorrect, gesture typing, voice input and emoji, which covers the main job of Gboard and SwiftKey."
-     }
-    },
-    {
-     "project": "indic-keyboard",
-     "fit": "full",
-     "note": null,
-     "review": {
-      "by": "claude-opus-5-5",
-      "reason": "Changed fit to full because it is a complete Android keyboard that types in English and 23 languages, which is the main job of Gboard and SwiftKey."
-     }
-    },
-    {
-     "project": "openboard",
-     "fit": "full",
-     "note": null
-    },
-    {
-     "project": "simple-keyboard",
+     "project": "open-library",
      "fit": "partial",
      "note": null
     }
    ]
   },
   {
-   "id": "remote-desktop",
-   "name": "Remote desktop",
-   "category": "os",
-   "job": "Control another computer remotely",
+   "id": "live-streaming",
+   "name": "Live streaming",
+   "category": "media",
+   "job": "Streaming live video to an audience",
    "closed": [
-    "TeamViewer",
-    "AnyDesk"
+    "Twitch",
+    "YouTube Live"
+   ],
+   "source": "starter",
+   "alternatives": [
+    {
+     "project": "owncast",
+     "fit": "full",
+     "note": "You run it yourself"
+    },
+    {
+     "project": "peertube",
+     "fit": "partial",
+     "note": "Live streams are part of a video site"
+    }
+   ]
+  },
+  {
+   "id": "feeds",
+   "name": "News feeds & read-it-later",
+   "category": "media",
+   "job": "Follow sites and save articles to read",
+   "closed": [
+    "Feedly",
+    "Inoreader",
+    "Google News",
+    "Pocket"
    ],
    "source": "lists",
    "alternatives": [
     {
-     "project": "meshcentral",
-     "fit": "full",
-     "note": null,
-     "review": {
-      "by": "claude-opus-5-5",
-      "reason": "Changed fit to full because MeshCentral is a complete self-hosted remote desktop tool with remote screen control, terminal and file access, covering the main job of TeamViewer and AnyDesk."
-     }
-    },
-    {
-     "project": "rustdesk",
+     "project": "fluent-reader",
      "fit": "full",
      "note": null
     },
     {
-     "project": "ultravnc",
+     "project": "freshrss",
+     "fit": "full",
+     "note": null
+    },
+    {
+     "project": "miniflux",
+     "fit": "full",
+     "note": null
+    },
+    {
+     "project": "newsboat",
      "fit": "full",
      "note": null,
      "review": {
       "by": "claude-opus-5-5",
-      "reason": "Changed fit to full because it covers the core job of viewing and controlling another Windows PC, including file transfer and no-install help-desk support through Single Click, though the computer being controlled must run Windows."
+      "reason": "Changed fit to full because Newsboat is a complete feed reader that does the main job of Feedly and Inoreader, even though it runs only in a terminal."
+     }
+    },
+    {
+     "project": "netnewswire",
+     "fit": "partial",
+     "note": null,
+     "review": {
+      "by": "claude-opus-5-5",
+      "reason": "Removed the podcasts claim, which the page doesn't support, and noted it is Apple-only; it stays partial because it is a feed reader with no read-it-later saving like Pocket."
+     }
+    },
+    {
+     "project": "wallabag",
+     "fit": "partial",
+     "note": null,
+     "review": {
+      "by": "claude-opus-5-5",
+      "reason": "Changed fit to partial because wallabag replaces read-it-later apps like Pocket but does not follow sites or feeds like Feedly or Inoreader."
      }
     }
    ]
+  },
+  {
+   "id": "phone-gallery",
+   "name": "Phone photo gallery",
+   "category": "media",
+   "job": "Browsing the photos and videos on your phone",
+   "closed": [
+    "Samsung Gallery",
+    "Xiaomi Gallery",
+    "Huawei Gallery"
+   ],
+   "source": "placement",
+   "alternatives": [
+    {
+     "project": "aves",
+     "fit": "partial",
+     "note": null
+    },
+    {
+     "project": "fossify-gallery",
+     "fit": "partial",
+     "note": null
+    }
+   ]
+  },
+  {
+   "id": "video-streaming",
+   "name": "TV & movie streaming",
+   "category": "media",
+   "job": "Watching shows and movies from a catalog you subscribe to",
+   "closed": [
+    "Netflix",
+    "Disney+",
+    "Hulu",
+    "Prime Video"
+   ],
+   "source": "data-fixes",
+   "alternatives": [
+    {
+     "project": "jellyfin",
+     "fit": "partial",
+     "note": "Plays your own collection; has no catalog of shows to watch"
+    },
+    {
+     "project": "kodi",
+     "fit": "partial",
+     "note": "Plays your own collection; has no catalog of shows to watch"
+    }
+   ]
+  },
+  {
+   "id": "media-players",
+   "name": "Music and video players",
+   "category": "media",
+   "job": "Playing music and videos stored on your device",
+   "closed": [
+    "Infuse",
+    "PowerDVD"
+   ],
+   "source": "taxonomy",
+   "alternatives": []
+  },
+  {
+   "id": "watch-lists",
+   "name": "Tracking shows and movies",
+   "category": "media",
+   "job": "Keeping track of what you watched and finding where to watch next",
+   "closed": [
+    "TV Time",
+    "Letterboxd",
+    "Trakt",
+    "JustWatch"
+   ],
+   "source": "taxonomy",
+   "alternatives": []
+  },
+  {
+   "id": "music-library",
+   "name": "Your own music library, streamed",
+   "category": "media",
+   "job": "Streaming your own music collection to every device",
+   "closed": [
+    "Plexamp",
+    "Roon",
+    "Apple Music (your library)"
+   ],
+   "source": "taxonomy",
+   "alternatives": []
+  },
+  {
+   "id": "media-downloaders",
+   "name": "Saving videos and music from websites",
+   "category": "media",
+   "job": "Downloading videos, music and images from sites to keep",
+   "closed": [
+    "4K Video Downloader"
+   ],
+   "source": "taxonomy",
+   "alternatives": []
+  },
+  {
+   "id": "iptv",
+   "name": "Live TV channels and IPTV",
+   "category": "media",
+   "job": "Watching live TV and IPTV, or making your own always-on channels",
+   "closed": [
+    "TiviMate",
+    "YouTube TV",
+    "Sling TV"
+   ],
+   "source": "taxonomy",
+   "alternatives": []
+  },
+  {
+   "id": "image-viewers",
+   "name": "Photo viewers and organisers",
+   "category": "media",
+   "job": "Looking through and sorting photos on your computer",
+   "closed": [
+    "ACDSee",
+    "IrfanView (free, closed)",
+    "Picasa (discontinued)"
+   ],
+   "source": "taxonomy",
+   "alternatives": []
+  },
+  {
+   "id": "comics",
+   "name": "Comics and manga",
+   "category": "media",
+   "job": "Reading and organising comics and manga",
+   "closed": [
+    "ComiXology",
+    "Webtoon"
+   ],
+   "source": "taxonomy",
+   "alternatives": []
+  },
+  {
+   "id": "watch-together",
+   "name": "Watching or listening together online",
+   "category": "media",
+   "job": "Watch parties and synced playback with friends",
+   "closed": [
+    "Teleparty",
+    "Watch2Gether"
+   ],
+   "source": "taxonomy",
+   "alternatives": []
+  },
+  {
+   "id": "media-automation",
+   "name": "Automatic media library tools",
+   "category": "media",
+   "job": "Requesting, organising and fetching shows, films and music automatically",
+   "closed": [],
+   "source": "taxonomy",
+   "alternatives": []
+  },
+  {
+   "id": "game-stores",
+   "name": "Game stores & launchers",
+   "category": "games",
+   "job": "Buying, downloading and starting PC games",
+   "closed": [
+    "Steam",
+    "Epic Games Store",
+    "GOG Galaxy"
+   ],
+   "source": "data-fixes",
+   "alternatives": [
+    {
+     "project": "heroic-games-launcher",
+     "fit": "partial",
+     "note": "Plays games you own from Epic, GOG and Amazon, and opens their stores; the stores sell the games"
+    },
+    {
+     "project": "lutris",
+     "fit": "partial",
+     "note": "Linux only; plays games you own; sells none"
+    },
+    {
+     "project": "playnite",
+     "fit": "partial",
+     "note": "Windows only; one library for games you own; sells none"
+    },
+    {
+     "project": "itch-app",
+     "fit": "partial",
+     "note": "Only for games on itch.io"
+    }
+   ]
+  },
+  {
+   "id": "games",
+   "name": "Open-source games",
+   "category": "games",
+   "job": "Games you can play whose code is open",
+   "closed": [],
+   "source": "taxonomy",
+   "alternatives": []
+  },
+  {
+   "id": "game-mods",
+   "name": "Game mods and mod managers",
+   "category": "games",
+   "job": "Installing and managing mods, shaders and trainers for games",
+   "closed": [
+    "CurseForge app",
+    "Overwolf"
+   ],
+   "source": "taxonomy",
+   "alternatives": []
+  },
+  {
+   "id": "gaming-performance",
+   "name": "Game overlays and performance",
+   "category": "games",
+   "job": "FPS counters, overlays, clips and tweaks that make games run better",
+   "closed": [
+    "MSI Afterburner / RivaTuner",
+    "Razer Cortex",
+    "NVIDIA App overlay"
+   ],
+   "source": "taxonomy",
+   "alternatives": []
+  },
+  {
+   "id": "game-servers",
+   "name": "Hosting game servers",
+   "category": "games",
+   "job": "Running Minecraft and other game servers for friends",
+   "closed": [
+    "Aternos",
+    "Nitrado",
+    "CubeCoders AMP"
+   ],
+   "source": "taxonomy",
+   "alternatives": []
+  },
+  {
+   "id": "emulators",
+   "name": "Emulators and retro games",
+   "category": "games",
+   "job": "Playing console games on a computer and managing ROM collections",
+   "closed": [],
+   "source": "taxonomy",
+   "waitForProject": true,
+   "alternatives": []
+  },
+  {
+   "id": "cloud-storage",
+   "name": "Cloud storage & sync",
+   "category": "files",
+   "job": "Keeping files in sync across devices",
+   "closed": [
+    "Dropbox",
+    "Google Drive",
+    "Microsoft OneDrive",
+    "iCloud Drive"
+   ],
+   "source": "starter",
+   "alternatives": [
+    {
+     "project": "nextcloud",
+     "fit": "full",
+     "note": "Needs a server or a hosting provider"
+    },
+    {
+     "project": "seafile",
+     "fit": "full",
+     "note": null
+    },
+    {
+     "project": "owncloud-infinite-scale",
+     "fit": "full",
+     "note": "Needs your own server"
+    },
+    {
+     "project": "syncthing",
+     "fit": "partial",
+     "note": "No web access or share links; devices sync directly"
+    },
+    {
+     "project": "filestash",
+     "fit": "partial",
+     "note": "Browser front-end for storage you already have",
+     "review": {
+      "by": "claude-opus-5-5",
+      "reason": "Changed fit to full because the page describes a browser file manager plus native clients that sync a folder across Mac, Windows, Linux and Android, which covers the main job of Dropbox-style apps."
+     }
+    },
+    {
+     "project": "owncloud",
+     "fit": "partial",
+     "note": "Older version; moving to Infinite Scale",
+     "review": {
+      "by": "claude-opus-5-5",
+      "reason": "Changed fit to full because ownCloud is a complete self-hosted file storage, sync and sharing server that does the main job of Dropbox or Google Drive."
+     }
+    }
+   ]
+  },
+  {
+   "id": "file-transfer",
+   "name": "Sending big files",
+   "category": "files",
+   "job": "Sending a file too big for email",
+   "closed": [
+    "WeTransfer"
+   ],
+   "source": "starter",
+   "alternatives": [
+    {
+     "project": "localsend",
+     "fit": "partial",
+     "note": "Nearby devices only"
+    },
+    {
+     "project": "psitransfer",
+     "fit": "full",
+     "note": "Needs a server"
+    }
+   ]
+  },
+  {
+   "id": "backup",
+   "name": "Backup",
+   "category": "files",
+   "job": "Backing up a computer",
+   "closed": [
+    "Backblaze",
+    "Time Machine"
+   ],
+   "source": "starter",
+   "alternatives": [
+    {
+     "project": "restic",
+     "fit": "full",
+     "note": "For technical users"
+    },
+    {
+     "project": "borgbackup",
+     "fit": "full",
+     "note": "For technical users"
+    },
+    {
+     "project": "duplicati",
+     "fit": "full",
+     "note": null
+    }
+   ]
+  },
+  {
+   "id": "file-converters",
+   "name": "Converting and shrinking files",
+   "category": "files",
+   "job": "Turning files into other formats and making them smaller",
+   "closed": [
+    "CloudConvert",
+    "Zamzar",
+    "TinyPNG"
+   ],
+   "source": "taxonomy",
+   "alternatives": []
+  },
+  {
+   "id": "file-managers",
+   "name": "File managers",
+   "category": "files",
+   "job": "Browsing, copying and organising files and folders",
+   "closed": [
+    "Total Commander",
+    "Directory Opus",
+    "ForkLift"
+   ],
+   "source": "taxonomy",
+   "alternatives": []
+  },
+  {
+   "id": "download-managers",
+   "name": "Download managers",
+   "category": "files",
+   "job": "Faster, resumable downloads of big files",
+   "closed": [
+    "Internet Download Manager"
+   ],
+   "source": "taxonomy",
+   "alternatives": []
+  },
+  {
+   "id": "nearby-sharing",
+   "name": "Sharing files with nearby devices",
+   "category": "files",
+   "job": "Sending files between your phone and computer like AirDrop",
+   "closed": [
+    "Apple AirDrop",
+    "Quick Share"
+   ],
+   "source": "taxonomy",
+   "alternatives": []
+  },
+  {
+   "id": "disk-cleanup",
+   "name": "Freeing up disk space",
+   "category": "files",
+   "job": "Finding what fills your disk, duplicates and junk, and cleaning it",
+   "closed": [
+    "CleanMyMac",
+    "CCleaner",
+    "WizTree",
+    "DaisyDisk"
+   ],
+   "source": "taxonomy",
+   "alternatives": []
+  },
+  {
+   "id": "file-encryption",
+   "name": "Encrypting files and drives",
+   "category": "files",
+   "job": "Locking files, folders or cloud copies so only you can read them",
+   "closed": [
+    "BitLocker",
+    "AxCrypt"
+   ],
+   "source": "taxonomy",
+   "alternatives": []
+  },
+  {
+   "id": "file-organizers",
+   "name": "Sorting files automatically",
+   "category": "files",
+   "job": "Moving and tidying files (like Downloads) by rules",
+   "closed": [
+    "Hazel",
+    "File Juggler"
+   ],
+   "source": "taxonomy",
+   "alternatives": []
+  },
+  {
+   "id": "archivers",
+   "name": "Zip and archive tools",
+   "category": "files",
+   "job": "Making and opening zip, rar and 7z files",
+   "closed": [
+    "WinRAR",
+    "WinZip",
+    "BetterZip"
+   ],
+   "source": "taxonomy",
+   "alternatives": []
+  },
+  {
+   "id": "bulk-rename",
+   "name": "Renaming many files at once",
+   "category": "files",
+   "job": "Renaming batches of files, photos or media by pattern",
+   "closed": [
+    "Advanced Renamer",
+    "Better Rename",
+    "FileBot"
+   ],
+   "source": "taxonomy",
+   "alternatives": []
+  },
+  {
+   "id": "file-previews",
+   "name": "Quick file previews",
+   "category": "files",
+   "job": "Previewing a file with one key press without opening it",
+   "closed": [
+    "Seer"
+   ],
+   "source": "taxonomy",
+   "alternatives": []
+  },
+  {
+   "id": "file-search",
+   "name": "Finding files and text in files",
+   "category": "files",
+   "job": "Searching your computer for files or words inside them",
+   "closed": [
+    "Everything (free, closed)",
+    "Spotlight"
+   ],
+   "source": "taxonomy",
+   "alternatives": []
+  },
+  {
+   "id": "image-hosting",
+   "name": "Image hosting",
+   "category": "files",
+   "job": "Uploading images and screenshots to share by link",
+   "closed": [
+    "Imgur",
+    "ImgBB"
+   ],
+   "source": "taxonomy",
+   "alternatives": []
+  },
+  {
+   "id": "torrents",
+   "name": "Torrent clients",
+   "category": "files",
+   "job": "Downloading and sharing files with BitTorrent",
+   "closed": [
+    "µTorrent",
+    "BitTorrent"
+   ],
+   "source": "taxonomy",
+   "alternatives": []
+  },
+  {
+   "id": "maps",
+   "name": "Maps & navigation",
+   "category": "everyday",
+   "job": "Maps, directions, places and public transport",
+   "closed": [
+    "Google Maps",
+    "Apple Maps"
+   ],
+   "source": "starter",
+   "alternatives": [
+    {
+     "project": "organic-maps",
+     "fit": "full",
+     "note": "Offline maps; no live traffic",
+     "review": {
+      "by": "claude-opus-5-5",
+      "reason": "Removed the claim that it runs on computers, since the page only lists phone app stores."
+     }
+    },
+    {
+     "project": "comaps",
+     "fit": "full",
+     "note": "Offline maps; no live traffic"
+    },
+    {
+     "project": "osmand",
+     "fit": "full",
+     "note": "Powerful but busy interface; some features paid"
+    },
+    {
+     "project": "openstreetmap",
+     "fit": "partial",
+     "note": "Web map with basic directions; no phone navigation app"
+    }
+   ]
+  },
+  {
+   "id": "translation",
+   "name": "Translation",
+   "category": "everyday",
+   "job": "Translating text",
+   "closed": [
+    "Google Translate",
+    "DeepL"
+   ],
+   "source": "starter",
+   "alternatives": [
+    {
+     "project": "libretranslate",
+     "fit": "full",
+     "note": null
+    }
+   ]
+  },
+  {
+   "id": "budgeting",
+   "name": "Budgeting & personal finance",
+   "category": "everyday",
+   "job": "Tracking spending, budgets and savings",
+   "closed": [
+    "YNAB",
+    "Monarch Money",
+    "Quicken",
+    "Empower Personal Wealth"
+   ],
+   "source": "starter",
+   "alternatives": [
+    {
+     "project": "actual-budget",
+     "fit": "full",
+     "note": null
+    },
+    {
+     "project": "firefly-iii",
+     "fit": "full",
+     "note": "You run it yourself"
+    }
+   ]
+  },
+  {
+   "id": "speed-test",
+   "name": "Internet speed test",
+   "category": "everyday",
+   "job": "Check your internet speed",
+   "closed": [
+    "Speedtest.net"
+   ],
+   "source": "lists",
+   "alternatives": [
+    {
+     "project": "librespeed",
+     "fit": "full",
+     "note": null,
+     "review": {
+      "by": "claude-opus-5-5",
+      "reason": "Changed fit to full because LibreSpeed does the main job of Speedtest.net, measuring download, upload, ping and jitter, and it has a public instance plus self-hosting."
+     }
+    }
+   ]
+  },
+  {
+   "id": "shared-expenses",
+   "name": "Shared expenses",
+   "category": "everyday",
+   "job": "Split bills with friends",
+   "closed": [
+    "Splitwise"
+   ],
+   "source": "lists",
+   "alternatives": [
+    {
+     "project": "spliit-app",
+     "fit": "full",
+     "note": null
+    }
+   ]
+  },
+  {
+   "id": "inspiration-boards",
+   "name": "Saving ideas & pictures to boards",
+   "category": "everyday",
+   "job": "Collecting pictures and ideas from around the web onto boards",
+   "closed": [
+    "Pinterest"
+   ],
+   "source": "data-fixes",
+   "alternatives": [
+    {
+     "project": "pinry",
+     "fit": "partial",
+     "note": "Picture boards you host yourself; no public feed of other people's ideas"
+    },
+    {
+     "project": "karakeep",
+     "fit": "partial",
+     "note": "Saves links and images privately; not a public picture feed"
+    },
+    {
+     "project": "linkwarden",
+     "fit": "partial",
+     "note": "Saves links in shareable collections; not a public picture feed"
+    }
+   ]
+  },
+  {
+   "id": "health-fitness",
+   "name": "Workouts and health tracking",
+   "category": "everyday",
+   "job": "Tracking workouts, runs, rides and health readings",
+   "closed": [
+    "Strava",
+    "Zwift",
+    "Whoop",
+    "Oura",
+    "Apple Health"
+   ],
+   "source": "taxonomy",
+   "alternatives": []
+  },
+  {
+   "id": "travel",
+   "name": "Trip planning and travel logs",
+   "category": "everyday",
+   "job": "Planning trips and keeping a record of where you've been",
+   "closed": [
+    "TripIt",
+    "Wanderlog",
+    "Polarsteps"
+   ],
+   "source": "taxonomy",
+   "alternatives": []
+  },
+  {
+   "id": "job-hunting",
+   "name": "Resumes and job hunting",
+   "category": "everyday",
+   "job": "Writing a resume, finding jobs and tracking applications",
+   "closed": [
+    "Teal",
+    "Huntr",
+    "Zety",
+    "Resume.io"
+   ],
+   "source": "taxonomy",
+   "alternatives": []
+  },
+  {
+   "id": "food-tracking",
+   "name": "Food and calorie tracking",
+   "category": "everyday",
+   "job": "Logging what you eat and checking nutrition",
+   "closed": [
+    "MyFitnessPal",
+    "Cronometer",
+    "Lose It!"
+   ],
+   "source": "taxonomy",
+   "alternatives": []
+  },
+  {
+   "id": "learning-apps",
+   "name": "Studying and flashcards",
+   "category": "everyday",
+   "job": "Learning with flashcards, quizzes and courses",
+   "closed": [
+    "Quizlet",
+    "Duolingo",
+    "Brainscape"
+   ],
+   "source": "taxonomy",
+   "alternatives": []
+  },
+  {
+   "id": "recipes",
+   "name": "Recipes and meal planning",
+   "category": "everyday",
+   "job": "Saving recipes, planning meals and making shopping lists",
+   "closed": [
+    "Paprika",
+    "Mealime",
+    "Plan to Eat"
+   ],
+   "source": "taxonomy",
+   "alternatives": []
+  },
+  {
+   "id": "location-tracking",
+   "name": "Location sharing and tracking",
+   "category": "everyday",
+   "job": "Sharing where you are with family, or tracking vehicles and devices",
+   "closed": [
+    "Life360",
+    "Find My",
+    "Google Find Hub"
+   ],
+   "source": "taxonomy",
+   "alternatives": []
+  },
+  {
+   "id": "price-tracking",
+   "name": "Price tracking",
+   "category": "everyday",
+   "job": "Watching prices and getting told when they drop",
+   "closed": [
+    "Keepa",
+    "CamelCamelCamel",
+    "Honey"
+   ],
+   "source": "taxonomy",
+   "alternatives": []
+  },
+  {
+   "id": "family-trees",
+   "name": "Family trees",
+   "category": "everyday",
+   "job": "Researching and drawing your family history",
+   "closed": [
+    "Ancestry",
+    "MyHeritage"
+   ],
+   "source": "taxonomy",
+   "waitForProject": true,
+   "alternatives": []
+  },
+  {
+   "id": "taxes",
+   "name": "Doing your taxes",
+   "category": "everyday",
+   "job": "Filling in and filing a personal tax return",
+   "closed": [
+    "TurboTax",
+    "H&R Block",
+    "TaxAct"
+   ],
+   "source": "taxonomy",
+   "waitForProject": true,
+   "alternatives": []
   },
   {
    "id": "browsers",
    "name": "Web browsers",
    "category": "web",
-   "job": "Browsing the web",
+   "job": "Browsing the web and managing tabs",
    "closed": [
     "Google Chrome",
     "Safari",
@@ -1953,82 +2894,10 @@
    ]
   },
   {
-   "id": "security-scanning",
-   "name": "Security scanning",
-   "category": "web",
-   "job": "Find and track security weaknesses",
-   "closed": [
-    "Plextrac",
-    "Vulcan",
-    "Tenable Nessus",
-    "Prisma Cloud"
-   ],
-   "source": "lists",
-   "alternatives": [
-    {
-     "project": "deepfence-threatmapper",
-     "fit": "partial",
-     "note": null
-    },
-    {
-     "project": "faraday",
-     "fit": "partial",
-     "note": null
-    },
-    {
-     "project": "nuclei",
-     "fit": "partial",
-     "note": null
-    }
-   ]
-  },
-  {
-   "id": "vpn",
-   "name": "VPN & private networks",
-   "category": "web",
-   "job": "Connect devices over a private network",
-   "closed": [
-    "OpenVPN Access Server",
-    "Tailscale",
-    "AWS VPC"
-   ],
-   "source": "lists",
-   "alternatives": [
-    {
-     "project": "gravitl",
-     "fit": "full",
-     "note": null,
-     "review": {
-      "by": "claude-opus-5-5",
-      "reason": "Raised fit to full because the open-source version is a complete self-hosted WireGuard VPN with mesh networks, remote access gateways and site-to-site links, the main job of Tailscale and OpenVPN."
-     }
-    },
-    {
-     "project": "netbird",
-     "fit": "full",
-     "note": null
-    },
-    {
-     "project": "omniedge",
-     "fit": "full",
-     "note": null,
-     "review": {
-      "by": "claude-opus-5-5",
-      "reason": "Raised fit to full because it is a complete Tailscale-style mesh VPN with a self-hosted mode, and removed phones since the page lists only Linux, macOS, Windows and OpenWrt."
-     }
-    },
-    {
-     "project": "openvpn",
-     "fit": "partial",
-     "note": "Set up by hand; no web admin panel like Access Server's"
-    }
-   ]
-  },
-  {
    "id": "link-shortening",
    "name": "Link shortening",
    "category": "web",
-   "job": "Make short links",
+   "job": "Making short links and link-in-bio pages",
    "closed": [
     "Bitly"
    ],
@@ -2068,7 +2937,7 @@
    "id": "privacy-vpn",
    "name": "VPN for privacy",
    "category": "web",
-   "job": "Hiding your internet traffic from your network and appearing to connect from another place",
+   "job": "Hiding your internet traffic, appearing to connect from another place and getting around internet blocks",
    "closed": [
     "NordVPN",
     "ExpressVPN",
@@ -2115,914 +2984,77 @@
    ]
   },
   {
-   "id": "ai-chat",
-   "name": "AI chat apps",
-   "category": "ai",
-   "job": "Chatting with an AI assistant",
+   "id": "network-monitor",
+   "name": "Seeing and blocking what apps connect to",
+   "category": "web",
+   "job": "Watching and blocking your apps' internet connections",
    "closed": [
-    "ChatGPT",
-    "Claude",
-    "Google Gemini"
+    "GlassWire",
+    "Little Snitch",
+    "NetLimiter"
    ],
-   "source": "starter",
-   "alternatives": [
-    {
-     "project": "jan",
-     "fit": "full",
-     "note": "Runs on your computer; needs a capable machine"
-    },
-    {
-     "project": "librechat",
-     "fit": "full",
-     "note": "You host it; bring your own AI accounts"
-    },
-    {
-     "project": "ollama",
-     "fit": "partial",
-     "note": "Runs models; chat window is basic"
-    },
-    {
-     "project": "youcoded",
-     "fit": "full",
-     "note": "Desktop and Android app; any AI model"
-    },
-    {
-     "project": "chatbox-community-edition",
-     "fit": "full",
-     "note": "Bring your own AI key or local model"
-    },
-    {
-     "project": "anythingllm",
-     "fit": "partial",
-     "note": "Aimed at chatting with your own documents"
-    },
-    {
-     "project": "leon",
-     "fit": "partial",
-     "note": "Early; for tinkerers"
-    }
-   ]
+   "source": "taxonomy",
+   "alternatives": []
   },
   {
-   "id": "ai-coding",
-   "name": "AI coding assistants",
-   "category": "ai",
-   "job": "AI help writing and changing code",
+   "id": "ad-blocking",
+   "name": "Blocking ads, trackers and unwanted sites",
+   "category": "web",
+   "job": "Blocking ads and trackers in the browser or for the whole home network",
    "closed": [
-    "GitHub Copilot",
-    "Cursor",
-    "Windsurf",
-    "Claude Code",
-    "OpenAI Codex app"
+    "AdGuard (apps)",
+    "NextDNS",
+    "Circle Home"
    ],
-   "source": "starter",
-   "alternatives": [
-    {
-     "project": "cline",
-     "fit": "full",
-     "note": "Works inside VS Code; you pay for the AI"
-    },
-    {
-     "project": "aider",
-     "fit": "full",
-     "note": "Terminal only; you pay for the AI"
-    },
-    {
-     "project": "openhands",
-     "fit": "partial",
-     "note": "Runs agents; heavier set-up"
-    },
-    {
-     "project": "codex-cli",
-     "fit": "full",
-     "note": "Terminal only; needs an OpenAI plan or key",
-     "review": {
-      "by": "claude-opus-5-5",
-      "reason": "Clarified that the tool runs locally but relies on OpenAI's online models through a ChatGPT plan or API key."
-     }
-    },
-    {
-     "project": "youcoded",
-     "fit": "full",
-     "note": "Desktop and Android app; any AI model"
-    },
-    {
-     "project": "opencode",
-     "fit": "full",
-     "note": "Terminal and desktop app; any AI model"
-    },
-    {
-     "project": "gemini-cli",
-     "fit": "full",
-     "note": "Terminal only"
-    },
-    {
-     "project": "kilo-code",
-     "fit": "full",
-     "note": "Works inside VS Code; you pay for the AI"
-    },
-    {
-     "project": "zed",
-     "fit": "partial",
-     "note": "Code editor with built-in AI; for programmers"
-    },
-    {
-     "project": "tabby",
-     "fit": "partial",
-     "note": "Self-hosted code suggestions; you run the server"
-    }
-   ]
+   "source": "taxonomy",
+   "alternatives": []
   },
   {
-   "id": "ai-agents",
-   "name": "AI agents for everyday work",
-   "category": "ai",
-   "job": "An AI assistant that works on your files and apps for you",
+   "id": "alt-frontends",
+   "name": "Private ways to use big sites",
+   "category": "web",
+   "job": "Using YouTube, Reddit or Discord through cleaner, private apps",
    "closed": [
-    "Claude Cowork",
-    "ChatGPT agent"
+    "Official YouTube, Reddit and Discord apps"
    ],
-   "source": "starter",
-   "alternatives": [
-    {
-     "project": "youcoded",
-     "fit": "full",
-     "note": "Desktop and Android app; any AI model"
-    },
-    {
-     "project": "goose",
-     "fit": "full",
-     "note": "Desktop app and terminal"
-    },
-    {
-     "project": "open-interpreter",
-     "fit": "partial",
-     "note": "Terminal only; aimed at programmers"
-    },
-    {
-     "project": "openclaw",
-     "fit": "partial",
-     "note": "Set-up needs a terminal; runs with broad access to your computer"
-    },
-    {
-     "project": "hermes-agent",
-     "fit": "partial",
-     "note": "Terminal set-up; for technical users"
-    }
-   ]
+   "source": "taxonomy",
+   "alternatives": []
   },
   {
-   "id": "ai-images",
-   "name": "AI image generation",
-   "category": "ai",
-   "job": "Making images from text",
+   "id": "email-aliases",
+   "name": "Email aliases and throwaway inboxes",
+   "category": "web",
+   "job": "Hiding your real email address behind aliases",
    "closed": [
-    "Midjourney",
-    "DALL·E"
+    "Apple Hide My Email",
+    "DuckDuckGo Email Protection"
    ],
-   "source": "starter",
-   "alternatives": [
-    {
-     "project": "comfyui",
-     "fit": "full",
-     "note": null
-    },
-    {
-     "project": "invokeai",
-     "fit": "full",
-     "note": null
-    },
-    {
-     "project": "stable-diffusion-web-ui",
-     "fit": "full",
-     "note": null
-    }
-   ]
+   "source": "taxonomy",
+   "alternatives": []
   },
   {
-   "id": "transcription",
-   "name": "Transcription",
-   "category": "ai",
-   "job": "Turning speech into text",
-   "closed": [
-    "Otter.ai",
-    "Rev"
-   ],
-   "source": "starter",
-   "alternatives": [
-    {
-     "project": "buzz",
-     "fit": "full",
-     "note": null
-    },
-    {
-     "project": "whisper-cpp",
-     "fit": "partial",
-     "note": "For developers"
-    },
-    {
-     "project": "whisper",
-     "fit": "partial",
-     "note": "For developers"
-    }
-   ]
+   "id": "secret-sharing",
+   "name": "Sharing a password by link",
+   "category": "web",
+   "job": "Sending a password or secret through a link that expires",
+   "closed": [],
+   "source": "taxonomy",
+   "alternatives": []
   },
   {
-   "id": "ai-search",
-   "name": "AI search",
-   "category": "ai",
-   "job": "Asking questions answered from the web",
-   "closed": [
-    "Perplexity"
-   ],
-   "source": "starter",
-   "alternatives": [
-    {
-     "project": "vane-formerly-perplexica",
-     "fit": "full",
-     "note": null
-    }
-   ]
-  },
-  {
-   "id": "ml-platforms",
-   "name": "Machine learning platforms",
-   "category": "ai",
-   "job": "Build and run AI models and apps",
-   "closed": [
-    "AWS SageMaker",
-    "AWS Kendra",
-    "QnA Maker"
-   ],
-   "source": "lists",
-   "alternatives": [
-    {
-     "project": "cortex",
-     "fit": "partial",
-     "note": null,
-     "review": {
-      "by": "claude-opus-5-5",
-      "reason": "Added that the project is no longer actively maintained, as its page states."
-     }
-    },
-    {
-     "project": "deepset",
-     "fit": "partial",
-     "note": null
-    }
-   ]
-  },
-  {
-   "id": "vector-databases",
-   "name": "Vector databases",
-   "category": "ai",
-   "job": "Storing data by meaning so AI apps can find similar items",
-   "closed": [
-    "Pinecone"
-   ],
-   "source": "data-fixes",
-   "alternatives": [
-    {
-     "project": "qdrant",
-     "fit": "full",
-     "note": null
-    },
-    {
-     "project": "semi",
-     "fit": "full",
-     "note": null
-    }
-   ]
-  },
-  {
-   "id": "music",
-   "name": "Music streaming",
-   "category": "media",
-   "job": "Listening to music",
-   "closed": [
-    "Spotify",
-    "Apple Music"
-   ],
-   "source": "starter",
-   "alternatives": [
-    {
-     "project": "navidrome",
-     "fit": "partial",
-     "note": "Plays only music files you own; no catalog"
-    },
-    {
-     "project": "funkwhale",
-     "fit": "partial",
-     "note": "Plays only music you upload or others share; no catalog"
-    }
-   ]
-  },
-  {
-   "id": "home-media",
-   "name": "Home media server",
-   "category": "media",
-   "job": "Streaming your own films and shows",
-   "closed": [
-    "Plex",
-    "Emby"
-   ],
-   "source": "starter",
-   "alternatives": [
-    {
-     "project": "jellyfin",
-     "fit": "full",
-     "note": null
-    },
-    {
-     "project": "kodi",
-     "fit": "partial",
-     "note": "Player, not a server"
-    }
-   ]
-  },
-  {
-   "id": "photo-backup",
-   "name": "Photo backup & library",
-   "category": "media",
-   "job": "Backing up and browsing your photos",
-   "closed": [
-    "Google Photos",
-    "iCloud Photos"
-   ],
-   "source": "starter",
-   "alternatives": [
-    {
-     "project": "immich",
-     "fit": "full",
-     "note": null
-    },
-    {
-     "project": "ente-photos",
-     "fit": "full",
-     "note": null
-    },
-    {
-     "project": "photoprism",
-     "fit": "full",
-     "note": null
-    }
-   ]
-  },
-  {
-   "id": "podcasts",
-   "name": "Podcasts",
-   "category": "media",
-   "job": "Following and playing podcasts",
-   "closed": [
-    "Apple Podcasts",
-    "Spotify"
-   ],
-   "source": "starter",
-   "alternatives": [
-    {
-     "project": "antennapod",
-     "fit": "full",
-     "note": null
-    },
-    {
-     "project": "pocket-casts",
-     "fit": "full",
-     "note": null
-    }
-   ]
-  },
-  {
-   "id": "books",
-   "name": "E-books & audiobooks",
-   "category": "media",
-   "job": "Reading e-books and listening to audiobooks",
-   "closed": [
-    "Amazon Kindle",
-    "Audible",
-    "Goodreads"
-   ],
-   "source": "starter",
-   "alternatives": [
-    {
-     "project": "calibre",
-     "fit": "partial",
-     "note": "Library and reader",
-     "review": {
-      "by": "claude-opus-5-5",
-      "reason": "Changed fit to partial because Calibre manages and reads e-books but does not play audiobooks, which is part of this group's job."
-     }
-    },
-    {
-     "project": "koreader",
-     "fit": "partial",
-     "note": "E-reader app",
-     "review": {
-      "by": "claude-opus-5-5",
-      "reason": "Changed fit to partial because it handles e-book reading but not audiobooks or book tracking, and clarified that desktop support is Linux only."
-     }
-    },
-    {
-     "project": "audiobookshelf",
-     "fit": "full",
-     "note": "Your own audiobooks"
-    },
-    {
-     "project": "inventaire",
-     "fit": "partial",
-     "note": null
-    },
-    {
-     "project": "open-library",
-     "fit": "partial",
-     "note": null
-    }
-   ]
-  },
-  {
-   "id": "live-streaming",
-   "name": "Live streaming",
-   "category": "media",
-   "job": "Streaming live video to an audience",
-   "closed": [
-    "Twitch",
-    "YouTube Live"
-   ],
-   "source": "starter",
-   "alternatives": [
-    {
-     "project": "owncast",
-     "fit": "full",
-     "note": "You run it yourself"
-    },
-    {
-     "project": "peertube",
-     "fit": "partial",
-     "note": "Live streams are part of a video site"
-    }
-   ]
-  },
-  {
-   "id": "feeds",
-   "name": "News feeds & read-it-later",
-   "category": "media",
-   "job": "Follow sites and save articles to read",
-   "closed": [
-    "Feedly",
-    "Inoreader",
-    "Google News",
-    "Pocket"
-   ],
-   "source": "lists",
-   "alternatives": [
-    {
-     "project": "fluent-reader",
-     "fit": "full",
-     "note": null
-    },
-    {
-     "project": "freshrss",
-     "fit": "full",
-     "note": null
-    },
-    {
-     "project": "miniflux",
-     "fit": "full",
-     "note": null
-    },
-    {
-     "project": "newsboat",
-     "fit": "full",
-     "note": null,
-     "review": {
-      "by": "claude-opus-5-5",
-      "reason": "Changed fit to full because Newsboat is a complete feed reader that does the main job of Feedly and Inoreader, even though it runs only in a terminal."
-     }
-    },
-    {
-     "project": "netnewswire",
-     "fit": "partial",
-     "note": null,
-     "review": {
-      "by": "claude-opus-5-5",
-      "reason": "Removed the podcasts claim, which the page doesn't support, and noted it is Apple-only; it stays partial because it is a feed reader with no read-it-later saving like Pocket."
-     }
-    },
-    {
-     "project": "wallabag",
-     "fit": "partial",
-     "note": null,
-     "review": {
-      "by": "claude-opus-5-5",
-      "reason": "Changed fit to partial because wallabag replaces read-it-later apps like Pocket but does not follow sites or feeds like Feedly or Inoreader."
-     }
-    }
-   ]
-  },
-  {
-   "id": "phone-gallery",
-   "name": "Phone photo gallery",
-   "category": "media",
-   "job": "Browsing the photos and videos on your phone",
-   "closed": [
-    "Samsung Gallery",
-    "Xiaomi Gallery",
-    "Huawei Gallery"
-   ],
-   "source": "placement",
-   "alternatives": [
-    {
-     "project": "aves",
-     "fit": "partial",
-     "note": null
-    },
-    {
-     "project": "fossify-gallery",
-     "fit": "partial",
-     "note": null
-    }
-   ]
-  },
-  {
-   "id": "game-stores",
-   "name": "Game stores & launchers",
-   "category": "media",
-   "job": "Buying, downloading and starting PC games",
-   "closed": [
-    "Steam",
-    "Epic Games Store",
-    "GOG Galaxy"
-   ],
-   "source": "data-fixes",
-   "alternatives": [
-    {
-     "project": "heroic-games-launcher",
-     "fit": "partial",
-     "note": "Plays games you own from Epic, GOG and Amazon, and opens their stores; the stores sell the games"
-    },
-    {
-     "project": "lutris",
-     "fit": "partial",
-     "note": "Linux only; plays games you own; sells none"
-    },
-    {
-     "project": "playnite",
-     "fit": "partial",
-     "note": "Windows only; one library for games you own; sells none"
-    },
-    {
-     "project": "itch-app",
-     "fit": "partial",
-     "note": "Only for games on itch.io"
-    }
-   ]
-  },
-  {
-   "id": "video-streaming",
-   "name": "TV & movie streaming",
-   "category": "media",
-   "job": "Watching shows and movies from a catalog you subscribe to",
-   "closed": [
-    "Netflix",
-    "Disney+",
-    "Hulu",
-    "Prime Video"
-   ],
-   "source": "data-fixes",
-   "alternatives": [
-    {
-     "project": "jellyfin",
-     "fit": "partial",
-     "note": "Plays your own collection; has no catalog of shows to watch"
-    },
-    {
-     "project": "kodi",
-     "fit": "partial",
-     "note": "Plays your own collection; has no catalog of shows to watch"
-    }
-   ]
-  },
-  {
-   "id": "cloud-storage",
-   "name": "Cloud storage & sync",
-   "category": "files",
-   "job": "Keeping files in sync across devices",
-   "closed": [
-    "Dropbox",
-    "Google Drive",
-    "Microsoft OneDrive",
-    "iCloud Drive"
-   ],
-   "source": "starter",
-   "alternatives": [
-    {
-     "project": "nextcloud",
-     "fit": "full",
-     "note": "Needs a server or a hosting provider"
-    },
-    {
-     "project": "seafile",
-     "fit": "full",
-     "note": null
-    },
-    {
-     "project": "owncloud-infinite-scale",
-     "fit": "full",
-     "note": "Needs your own server"
-    },
-    {
-     "project": "syncthing",
-     "fit": "partial",
-     "note": "No web access or share links; devices sync directly"
-    },
-    {
-     "project": "filestash",
-     "fit": "partial",
-     "note": "Browser front-end for storage you already have",
-     "review": {
-      "by": "claude-opus-5-5",
-      "reason": "Changed fit to full because the page describes a browser file manager plus native clients that sync a folder across Mac, Windows, Linux and Android, which covers the main job of Dropbox-style apps."
-     }
-    },
-    {
-     "project": "owncloud",
-     "fit": "partial",
-     "note": "Older version; moving to Infinite Scale",
-     "review": {
-      "by": "claude-opus-5-5",
-      "reason": "Changed fit to full because ownCloud is a complete self-hosted file storage, sync and sharing server that does the main job of Dropbox or Google Drive."
-     }
-    }
-   ]
-  },
-  {
-   "id": "file-transfer",
-   "name": "Sending big files",
-   "category": "files",
-   "job": "Sending a file too big for email",
-   "closed": [
-    "WeTransfer"
-   ],
-   "source": "starter",
-   "alternatives": [
-    {
-     "project": "localsend",
-     "fit": "partial",
-     "note": "Nearby devices only"
-    },
-    {
-     "project": "psitransfer",
-     "fit": "full",
-     "note": "Needs a server"
-    }
-   ]
-  },
-  {
-   "id": "backup",
-   "name": "Backup",
-   "category": "files",
-   "job": "Backing up a computer",
-   "closed": [
-    "Backblaze",
-    "Time Machine"
-   ],
-   "source": "starter",
-   "alternatives": [
-    {
-     "project": "restic",
-     "fit": "full",
-     "note": "For technical users"
-    },
-    {
-     "project": "borgbackup",
-     "fit": "full",
-     "note": "For technical users"
-    },
-    {
-     "project": "duplicati",
-     "fit": "full",
-     "note": null
-    }
-   ]
-  },
-  {
-   "id": "maps",
-   "name": "Maps & navigation",
-   "category": "everyday",
-   "job": "Maps, directions and places",
-   "closed": [
-    "Google Maps",
-    "Apple Maps"
-   ],
-   "source": "starter",
-   "alternatives": [
-    {
-     "project": "organic-maps",
-     "fit": "full",
-     "note": "Offline maps; no live traffic",
-     "review": {
-      "by": "claude-opus-5-5",
-      "reason": "Removed the claim that it runs on computers, since the page only lists phone app stores."
-     }
-    },
-    {
-     "project": "comaps",
-     "fit": "full",
-     "note": "Offline maps; no live traffic"
-    },
-    {
-     "project": "osmand",
-     "fit": "full",
-     "note": "Powerful but busy interface; some features paid"
-    },
-    {
-     "project": "openstreetmap",
-     "fit": "partial",
-     "note": "Web map with basic directions; no phone navigation app"
-    }
-   ]
-  },
-  {
-   "id": "translation",
-   "name": "Translation",
-   "category": "everyday",
-   "job": "Translating text",
-   "closed": [
-    "Google Translate",
-    "DeepL"
-   ],
-   "source": "starter",
-   "alternatives": [
-    {
-     "project": "libretranslate",
-     "fit": "full",
-     "note": null
-    }
-   ]
-  },
-  {
-   "id": "smart-home",
-   "name": "Smart home",
-   "category": "everyday",
-   "job": "Controlling lights and devices at home",
-   "closed": [
-    "Google Home",
-    "Amazon Alexa",
-    "SmartThings"
-   ],
-   "source": "starter",
-   "alternatives": [
-    {
-     "project": "home-assistant",
-     "fit": "full",
-     "note": null
-    }
-   ]
-  },
-  {
-   "id": "budgeting",
-   "name": "Budgeting & personal finance",
-   "category": "everyday",
-   "job": "Tracking spending, budgets and savings",
-   "closed": [
-    "YNAB",
-    "Monarch Money",
-    "Quicken",
-    "Empower Personal Wealth"
-   ],
-   "source": "starter",
-   "alternatives": [
-    {
-     "project": "actual-budget",
-     "fit": "full",
-     "note": null
-    },
-    {
-     "project": "firefly-iii",
-     "fit": "full",
-     "note": "You run it yourself"
-    }
-   ]
-  },
-  {
-   "id": "speed-test",
-   "name": "Internet speed test",
-   "category": "everyday",
-   "job": "Check your internet speed",
-   "closed": [
-    "Speedtest.net"
-   ],
-   "source": "lists",
-   "alternatives": [
-    {
-     "project": "librespeed",
-     "fit": "full",
-     "note": null,
-     "review": {
-      "by": "claude-opus-5-5",
-      "reason": "Changed fit to full because LibreSpeed does the main job of Speedtest.net, measuring download, upload, ping and jitter, and it has a public instance plus self-hosting."
-     }
-    }
-   ]
-  },
-  {
-   "id": "shared-expenses",
-   "name": "Shared expenses",
-   "category": "everyday",
-   "job": "Split bills with friends",
-   "closed": [
-    "Splitwise"
-   ],
-   "source": "lists",
-   "alternatives": [
-    {
-     "project": "spliit-app",
-     "fit": "full",
-     "note": null
-    }
-   ]
-  },
-  {
-   "id": "inspiration-boards",
-   "name": "Saving ideas & pictures to boards",
-   "category": "everyday",
-   "job": "Collecting pictures and ideas from around the web onto boards",
-   "closed": [
-    "Pinterest"
-   ],
-   "source": "data-fixes",
-   "alternatives": [
-    {
-     "project": "pinry",
-     "fit": "partial",
-     "note": "Picture boards you host yourself; no public feed of other people's ideas"
-    },
-    {
-     "project": "karakeep",
-     "fit": "partial",
-     "note": "Saves links and images privately; not a public picture feed"
-    },
-    {
-     "project": "linkwarden",
-     "fit": "partial",
-     "note": "Saves links in shareable collections; not a public picture feed"
-    }
-   ]
-  },
-  {
-   "id": "code-hosting",
-   "name": "Code hosting",
-   "category": "dev",
-   "job": "Hosting code and collaborating on it",
-   "closed": [
-    "GitHub"
-   ],
-   "source": "starter",
-   "alternatives": [
-    {
-     "project": "forgejo",
-     "fit": "full",
-     "note": null
-    },
-    {
-     "project": "gitea",
-     "fit": "full",
-     "note": null
-    },
-    {
-     "project": "gitlab-community-edition",
-     "fit": "full",
-     "note": null
-    },
-    {
-     "project": "gerrit",
-     "fit": "partial",
-     "note": null
-    },
-    {
-     "project": "gogs",
-     "fit": "full",
-     "note": null,
-     "review": {
-      "by": "claude-opus-5-5",
-      "reason": "Changed fit to full because Gogs is a complete self-hosted Git service with repositories, issues, pull requests, wikis and organizations, which covers GitHub's main job."
-     }
-    },
-    {
-     "project": "pagure",
-     "fit": "full",
-     "note": null
-    },
-    {
-     "project": "review-board",
-     "fit": "partial",
-     "note": null
-    }
-   ]
+   "id": "metadata-cleaners",
+   "name": "Removing hidden data from files",
+   "category": "web",
+   "job": "Stripping location and camera details from photos and documents",
+   "closed": [],
+   "source": "taxonomy",
+   "waitForProject": true,
+   "alternatives": []
   },
   {
    "id": "analytics",
    "name": "Website analytics",
-   "category": "dev",
+   "category": "business",
    "job": "Counting website visitors",
    "closed": [
     "Google Analytics"
@@ -3074,7 +3106,7 @@
   {
    "id": "shop",
    "name": "Online stores",
-   "category": "dev",
+   "category": "business",
    "job": "Selling things online",
    "closed": [
     "Shopify"
@@ -3147,7 +3179,7 @@
   {
    "id": "support",
    "name": "Customer support",
-   "category": "dev",
+   "category": "business",
    "job": "Answering customers by chat and email",
    "closed": [
     "Zendesk",
@@ -3188,7 +3220,7 @@
   {
    "id": "automation",
    "name": "Automation",
-   "category": "dev",
+   "category": "business",
    "job": "Connecting apps so tasks run by themselves",
    "closed": [
     "Zapier",
@@ -3217,1008 +3249,6 @@
     },
     {
      "project": "automatisch",
-     "fit": "full",
-     "note": null
-    }
-   ]
-  },
-  {
-   "id": "app-hosting",
-   "name": "App hosting & deployment",
-   "category": "dev",
-   "job": "Put your web apps online",
-   "closed": [
-    "Heroku",
-    "Fly",
-    "Render",
-    "Netlify",
-    "Vercel"
-   ],
-   "source": "lists",
-   "alternatives": [
-    {
-     "project": "abilian-hop3",
-     "fit": "full",
-     "note": null,
-     "review": {
-      "by": "claude-opus-5-5",
-      "reason": "Changed fit to full because it is a self-hosted platform-as-a-service that covers the main deployment job, and added a note that it is still early-stage."
-     }
-    },
-    {
-     "project": "abilian-nua",
-     "fit": "full",
-     "note": null,
-     "review": {
-      "by": "claude-opus-5-5",
-      "reason": "Raised fit to full because it builds, deploys, updates, backs up and logs apps like the closed platforms, and noted that the project itself says it is not production-ready."
-     }
-    },
-    {
-     "project": "coolify",
-     "fit": "full",
-     "note": null
-    },
-    {
-     "project": "caprover",
-     "fit": "full",
-     "note": null
-    },
-    {
-     "project": "dokku",
-     "fit": "full",
-     "note": null
-    },
-    {
-     "project": "dyrector-io",
-     "fit": "partial",
-     "note": null
-    },
-    {
-     "project": "kubero",
-     "fit": "full",
-     "note": null,
-     "review": {
-      "by": "claude-opus-5-5",
-      "reason": "Raised fit to full because Kubero is a complete self-hosted Heroku-style platform with git deploys, review apps, pipelines, add-ons and logs."
-     }
-    },
-    {
-     "project": "otomi",
-     "fit": "full",
-     "note": null,
-     "review": {
-      "by": "claude-opus-5-5",
-      "reason": "Upgraded fit to full because it builds, deploys and publicly exposes apps on your own infrastructure; updated the description to mention the rename and removed the 'Heroku-style' claim, which the page does not make."
-     }
-    },
-    {
-     "project": "peon",
-     "fit": "full",
-     "note": null
-    }
-   ]
-  },
-  {
-   "id": "api-tools",
-   "name": "API tools",
-   "category": "dev",
-   "job": "Build, test and manage APIs",
-   "closed": [
-    "apigee",
-    "Postman",
-    "Checkly"
-   ],
-   "source": "lists",
-   "alternatives": [
-    {
-     "project": "apache-apisix",
-     "fit": "partial",
-     "note": null
-    },
-    {
-     "project": "firecamp",
-     "fit": "full",
-     "note": null,
-     "review": {
-      "by": "claude-opus-5-5",
-      "reason": "Removed 'documenting' because API documentation is only on the project's roadmap, and named the supported API types."
-     }
-    },
-    {
-     "project": "fusio",
-     "fit": "partial",
-     "note": null
-    },
-    {
-     "project": "hoppscotch",
-     "fit": "full",
-     "note": null
-    },
-    {
-     "project": "insomnia",
-     "fit": "full",
-     "note": null,
-     "review": {
-      "by": "claude-opus-5-5",
-      "reason": "The page describes a desktop app, not a web app, and says most features require an account, so the description was corrected."
-     }
-    },
-    {
-     "project": "step-ci",
-     "fit": "partial",
-     "note": null
-    }
-   ]
-  },
-  {
-   "id": "internal-tools",
-   "name": "Internal tool builders",
-   "category": "dev",
-   "job": "Build admin panels and internal apps quickly",
-   "closed": [
-    "Retool"
-   ],
-   "source": "lists",
-   "alternatives": [
-    {
-     "project": "appsmith",
-     "fit": "full",
-     "note": null
-    },
-    {
-     "project": "budibase",
-     "fit": "full",
-     "note": null
-    },
-    {
-     "project": "dashpress",
-     "fit": "partial",
-     "note": null
-    },
-    {
-     "project": "illa",
-     "fit": "full",
-     "note": null
-    },
-    {
-     "project": "lowdefy",
-     "fit": "partial",
-     "note": null
-    },
-    {
-     "project": "openblocks",
-     "fit": "full",
-     "note": null
-    },
-    {
-     "project": "tooljet",
-     "fit": "full",
-     "note": null
-    },
-    {
-     "project": "windmill",
-     "fit": "full",
-     "note": null
-    }
-   ]
-  },
-  {
-   "id": "backend-service",
-   "name": "App backends",
-   "category": "dev",
-   "job": "Ready-made backend for your app",
-   "closed": [
-    "Firebase"
-   ],
-   "source": "lists",
-   "alternatives": [
-    {
-     "project": "appwrite",
-     "fit": "full",
-     "note": null
-    },
-    {
-     "project": "acebase",
-     "fit": "partial",
-     "note": null
-    },
-    {
-     "project": "encore",
-     "fit": "partial",
-     "note": null,
-     "review": {
-      "by": "claude-opus-5-5",
-      "reason": "Clarified that automatic cloud setup is done by Encore's hosted platform, while the open-source part covers local development and Docker self-hosting."
-     }
-    },
-    {
-     "project": "kuzzle",
-     "fit": "full",
-     "note": null,
-     "review": {
-      "by": "claude-opus-5-5",
-      "reason": "Changed fit to full because Kuzzle self-hosts the core Firebase jobs: a database with search, user logins with permissions, real-time updates and client SDKs."
-     }
-    },
-    {
-     "project": "nhost",
-     "fit": "full",
-     "note": null
-    },
-    {
-     "project": "pocketbase",
-     "fit": "full",
-     "note": null,
-     "review": {
-      "by": "claude-opus-5-5",
-      "reason": "Raised fit to full because PocketBase covers Firebase's core backend job: a realtime database, user accounts, file storage and an admin dashboard in one self-hosted program."
-     }
-    },
-    {
-     "project": "supabase",
-     "fit": "full",
-     "note": null,
-     "review": {
-      "by": "claude-opus-5-5",
-      "reason": "Raised fit to full because Supabase covers Firebase's main job of database, login, file storage, realtime and functions, and it can be self-hosted."
-     }
-    }
-   ]
-  },
-  {
-   "id": "login-identity",
-   "name": "Login & identity",
-   "category": "dev",
-   "job": "Let users sign in securely",
-   "closed": [
-    "Auth0",
-    "Okta"
-   ],
-   "source": "lists",
-   "alternatives": [
-    {
-     "project": "authgear",
-     "fit": "full",
-     "note": null
-    },
-    {
-     "project": "boxyhq",
-     "fit": "partial",
-     "note": null
-    },
-    {
-     "project": "hanko",
-     "fit": "full",
-     "note": null,
-     "review": {
-      "by": "claude-opus-5-5",
-      "reason": "Changed fit to full because Hanko is a complete self-hostable login and user management backend covering passwords, passkeys, MFA, social login and SAML SSO, which is the main job of Auth0 and Okta."
-     }
-    },
-    {
-     "project": "janssen",
-     "fit": "full",
-     "note": null,
-     "review": {
-      "by": "claude-opus-5-5",
-      "reason": "Changed fit to full because Janssen is a complete self-hosted identity server with certified OpenID Connect, passkey login, user management and custom sign-in flows, which covers the main job of Auth0 and Okta."
-     }
-    },
-    {
-     "project": "keycloak",
-     "fit": "full",
-     "note": null
-    },
-    {
-     "project": "logto",
-     "fit": "full",
-     "note": null
-    },
-    {
-     "project": "ory",
-     "fit": "partial",
-     "note": null
-    },
-    {
-     "project": "supertokens",
-     "fit": "full",
-     "note": null,
-     "review": {
-      "by": "claude-opus-5-5",
-      "reason": "Changed fit to full because SuperTokens is a complete self-hosted auth provider covering sign-up, login, social and passwordless login, sessions and roles, the main job of Auth0."
-     }
-    },
-    {
-     "project": "zitadel",
-     "fit": "full",
-     "note": null
-    }
-   ]
-  },
-  {
-   "id": "ci",
-   "name": "Automated builds & tests",
-   "category": "dev",
-   "job": "Build and test code automatically",
-   "closed": [
-    "CircleCI"
-   ],
-   "source": "lists",
-   "alternatives": [
-    {
-     "project": "buildbot",
-     "fit": "full",
-     "note": null,
-     "review": {
-      "by": "claude-opus-5-5",
-      "reason": "Changed fit to full because Buildbot is a complete self-hosted continuous integration system that does the main job of CircleCI."
-     }
-    },
-    {
-     "project": "drone",
-     "fit": "full",
-     "note": null,
-     "review": {
-      "by": "claude-opus-5-5",
-      "reason": "Changed fit to full because its self-hosted pipelines (the successor to Drone CI) build and test code automatically, which is CircleCI's main job."
-     }
-    },
-    {
-     "project": "jenkins",
-     "fit": "full",
-     "note": null,
-     "review": {
-      "by": "claude-opus-5-5",
-      "reason": "Changed fit to full because Jenkins is a complete self-hosted CI/CD server that builds, tests and deploys code like CircleCI."
-     }
-    }
-   ]
-  },
-  {
-   "id": "cms",
-   "name": "Website builders & content management",
-   "category": "dev",
-   "job": "Build websites and manage their content",
-   "closed": [
-    "Contentful",
-    "Wix",
-    "Strikingly",
-    "Webflow"
-   ],
-   "source": "lists",
-   "alternatives": [
-    {
-     "project": "concrete",
-     "fit": "full",
-     "note": null,
-     "review": {
-      "by": "claude-opus-5-5",
-      "reason": "Changed fit to full because Concrete CMS is a complete self-hosted tool for building websites and managing their content, which is the main job of this group."
-     }
-    },
-    {
-     "project": "decap-cms",
-     "fit": "partial",
-     "note": null
-    },
-    {
-     "project": "payload",
-     "fit": "partial",
-     "note": null,
-     "review": {
-      "by": "claude-opus-5-5",
-      "reason": "Changed fit to partial because Payload is a developer-oriented headless CMS that replaces Contentful, but it is not a drag-and-drop site builder like Wix, Strikingly or Webflow."
-     }
-    },
-    {
-     "project": "plasmic",
-     "fit": "full",
-     "note": null,
-     "review": {
-      "by": "claude-opus-5-5",
-      "reason": "Changed fit to full because Plasmic is a complete visual website builder that can build and host whole sites, not just parts of them, which makes it a direct Webflow-style alternative."
-     }
-    },
-    {
-     "project": "silex",
-     "fit": "full",
-     "note": null
-    },
-    {
-     "project": "sulu",
-     "fit": "full",
-     "note": null,
-     "review": {
-      "by": "claude-opus-5-5",
-      "reason": "Changed fit to full because Sulu is a complete self-hosted CMS for building websites and managing their content, which is the main job of this group."
-     }
-    },
-    {
-     "project": "strapi",
-     "fit": "partial",
-     "note": null,
-     "review": {
-      "by": "claude-opus-5-5",
-      "reason": "Changed fit to partial: Strapi replaces headless CMSs like Contentful, but it doesn't build or design the website itself the way Wix, Strikingly or Webflow do."
-     }
-    },
-    {
-     "project": "tina",
-     "fit": "partial",
-     "note": null
-    },
-    {
-     "project": "webstudio",
-     "fit": "full",
-     "note": null,
-     "review": {
-      "by": "claude-opus-5-5",
-      "reason": "Raised fit to full because Webstudio is a complete visual website builder, open source and self-hostable, that does the main job of Webflow and Wix."
-     }
-    },
-    {
-     "project": "webiny",
-     "fit": "full",
-     "note": null,
-     "review": {
-      "by": "claude-opus-5-5",
-      "reason": "Rewrote the description to mention the free edition's page builder and to drop multi-brand setups, which need the paid edition."
-     }
-    }
-   ]
-  },
-  {
-   "id": "data-pipelines",
-   "name": "Data pipelines",
-   "category": "dev",
-   "job": "Move data between tools automatically",
-   "closed": [
-    "Fivetran",
-    "Hightouch",
-    "Segment"
-   ],
-   "source": "lists",
-   "alternatives": [
-    {
-     "project": "bruin",
-     "fit": "partial",
-     "note": null
-    },
-    {
-     "project": "jitsu",
-     "fit": "full",
-     "note": null
-    },
-    {
-     "project": "kestra",
-     "fit": "full",
-     "note": null,
-     "review": {
-      "by": "claude-opus-5-5",
-      "reason": "Raised fit to full because Kestra is a complete self-hosted workflow orchestrator like Airflow, with built-in plugins for moving data between databases, storage and APIs."
-     }
-    },
-    {
-     "project": "trench",
-     "fit": "partial",
-     "note": null
-    },
-    {
-     "project": "airflow",
-     "fit": "partial",
-     "note": "You write each job in code; no ready-made connectors like Fivetran's"
-    }
-   ]
-  },
-  {
-   "id": "monitoring",
-   "name": "Server & app monitoring",
-   "category": "dev",
-   "job": "Watch servers and apps for problems",
-   "closed": [
-    "Datadog",
-    "NewRelic",
-    "Elastic Cloud"
-   ],
-   "source": "lists",
-   "alternatives": [
-    {
-     "project": "coroot",
-     "fit": "full",
-     "note": null,
-     "review": {
-      "by": "claude-opus-5-5",
-      "reason": "Changed fit to full because Coroot is a self-hosted observability platform covering metrics, logs, traces, profiling, alerting and SLOs, which is the main job of Datadog and New Relic."
-     }
-    },
-    {
-     "project": "grafana",
-     "fit": "partial",
-     "note": null
-    },
-    {
-     "project": "hyperdx",
-     "fit": "full",
-     "note": null,
-     "review": {
-      "by": "claude-opus-5-5",
-      "reason": "Changed fit to full because it is a self-hosted all-in-one stack covering logs, metrics, traces, APM, dashboards and alerts, which is the main job of Datadog and New Relic."
-     }
-    },
-    {
-     "project": "kubestellar-console",
-     "fit": "partial",
-     "note": null
-    },
-    {
-     "project": "manticore-search",
-     "fit": "partial",
-     "note": null,
-     "review": {
-      "by": "claude-opus-5-5",
-      "reason": "Removed the marketing word 'fast' and clarified that it only covers log storage and search, not full monitoring."
-     }
-    },
-    {
-     "project": "matano",
-     "fit": "partial",
-     "note": null
-    },
-    {
-     "project": "netdata",
-     "fit": "full",
-     "note": null,
-     "review": {
-      "by": "claude-opus-5-5",
-      "reason": "Raised fit to full because Netdata monitors servers and apps, collects logs, sends alerts and centralizes nodes, which covers the main job of tools like Datadog."
-     }
-    },
-    {
-     "project": "openstatus",
-     "fit": "partial",
-     "note": null
-    },
-    {
-     "project": "quickwit",
-     "fit": "partial",
-     "note": null
-    },
-    {
-     "project": "solidping",
-     "fit": "partial",
-     "note": null
-    },
-    {
-     "project": "signoz",
-     "fit": "full",
-     "note": null,
-     "review": {
-      "by": "claude-opus-5-5",
-      "reason": "Changed fit to full because the free self-hosted version covers logs, metrics, traces, dashboards and alerts, the core job of Datadog and New Relic."
-     }
-    },
-    {
-     "project": "uptrace",
-     "fit": "full",
-     "note": null,
-     "review": {
-      "by": "claude-opus-5-5",
-      "reason": "Changed fit to full because Uptrace is a self-hosted APM that covers traces, metrics, logs, dashboards and alerting, which is the main job of Datadog and New Relic."
-     }
-    },
-    {
-     "project": "victorialogs",
-     "fit": "partial",
-     "note": null
-    },
-    {
-     "project": "victoriametrics",
-     "fit": "partial",
-     "note": null
-    }
-   ]
-  },
-  {
-   "id": "feature-flags",
-   "name": "Feature flags",
-   "category": "dev",
-   "job": "Turn app features on and off safely",
-   "closed": [
-    "LaunchDarkly"
-   ],
-   "source": "lists",
-   "alternatives": [
-    {
-     "project": "flagsmith",
-     "fit": "full",
-     "note": null
-    },
-    {
-     "project": "growthbook",
-     "fit": "full",
-     "note": null
-    },
-    {
-     "project": "unleash",
-     "fit": "full",
-     "note": null
-    }
-   ]
-  },
-  {
-   "id": "voice-apis",
-   "name": "Phone & voice APIs",
-   "category": "dev",
-   "job": "Add calls and texts to apps",
-   "closed": [
-    "Twilio"
-   ],
-   "source": "lists",
-   "alternatives": [
-    {
-     "project": "fonoster",
-     "fit": "partial",
-     "note": null,
-     "review": {
-      "by": "claude-opus-5-5",
-      "reason": "Removed the SMS and video claims, which the project page does not support; it covers voice calls only, so fit stays partial."
-     }
-    },
-    {
-     "project": "livekit",
-     "fit": "partial",
-     "note": null,
-     "review": {
-      "by": "claude-opus-5-5",
-      "reason": "Changed fit to partial because LiveKit handles in-app voice and video and can connect phone calls over SIP, but it does not send or receive text messages the way Twilio does."
-     }
-    },
-    {
-     "project": "openvidu",
-     "fit": "partial",
-     "note": null
-    }
-   ]
-  },
-  {
-   "id": "saas-starters",
-   "name": "SaaS starter kits",
-   "category": "dev",
-   "job": "Start a software business from a template",
-   "closed": [
-    "ShipFast",
-    "Supastarter",
-    "SaaS Pegasus"
-   ],
-   "source": "lists",
-   "alternatives": [
-    {
-     "project": "lastsaas",
-     "fit": "full",
-     "note": null,
-     "review": {
-      "by": "claude-opus-5-5",
-      "reason": "Changed fit to full because it is a complete MIT-licensed SaaS boilerplate covering the same core job as ShipFast, Supastarter and SaaS Pegasus: authentication, teams, Stripe billing and an admin dashboard."
-     }
-    }
-   ]
-  },
-  {
-   "id": "email-sending",
-   "name": "Email sending for apps",
-   "category": "dev",
-   "job": "Sending an app's own emails, like sign-ups and password resets",
-   "closed": [
-    "Mailgun",
-    "SendGrid"
-   ],
-   "source": "placement",
-   "alternatives": [
-    {
-     "project": "postal",
-     "fit": "full",
-     "note": null
-    }
-   ]
-  },
-  {
-   "id": "product-analytics",
-   "name": "Product analytics & session replay",
-   "category": "dev",
-   "job": "Seeing how people use your app or website, step by step",
-   "closed": [
-    "Mixpanel",
-    "Amplitude",
-    "FullStory",
-    "LogRocket"
-   ],
-   "source": "placement",
-   "alternatives": [
-    {
-     "project": "highlight",
-     "fit": "partial",
-     "note": null
-    },
-    {
-     "project": "openreplay",
-     "fit": "full",
-     "note": null
-    },
-    {
-     "project": "posthog",
-     "fit": "full",
-     "note": null
-    },
-    {
-     "project": "trench",
-     "fit": "partial",
-     "note": null
-    },
-    {
-     "project": "telemetry-tracker",
-     "fit": "partial",
-     "note": "Also tracks errors; self-hosted or hosted"
-    }
-   ]
-  },
-  {
-   "id": "push-notifications",
-   "name": "Push notifications",
-   "category": "dev",
-   "job": "Sending notifications to people's phones and computers",
-   "closed": [
-    "OneSignal"
-   ],
-   "source": "placement",
-   "alternatives": [
-    {
-     "project": "apprise",
-     "fit": "partial",
-     "note": null
-    },
-    {
-     "project": "ntfy",
-     "fit": "partial",
-     "note": null
-    }
-   ]
-  },
-  {
-   "id": "translation-management",
-   "name": "Translation management",
-   "category": "dev",
-   "job": "Translating an app or website into other languages, as a team",
-   "closed": [
-    "Lokalise",
-    "Crowdin",
-    "Transifex",
-    "POEditor"
-   ],
-   "source": "placement",
-   "alternatives": [
-    {
-     "project": "tolgee",
-     "fit": "full",
-     "note": null
-    }
-   ]
-  },
-  {
-   "id": "code-editors",
-   "name": "Code editors",
-   "category": "dev",
-   "job": "Writing and editing code",
-   "closed": [
-    "Visual Studio Code"
-   ],
-   "source": "family",
-   "alternatives": [
-    {
-     "project": "vscodium",
-     "fit": "full",
-     "note": "Uses the Open VSX extension store, so some Microsoft-made extensions are not available"
-    },
-    {
-     "project": "zed",
-     "fit": "full",
-     "note": null
-    }
-   ]
-  },
-  {
-   "id": "key-value-stores",
-   "name": "Caches & key-value stores",
-   "category": "dev",
-   "job": "Keeping data an app needs quickly in memory",
-   "closed": [
-    "Amazon ElastiCache",
-    "Google Memorystore"
-   ],
-   "source": "family",
-   "alternatives": [
-    {
-     "project": "valkey",
-     "fit": "full",
-     "note": null
-    },
-    {
-     "project": "redis",
-     "fit": "full",
-     "note": "Open source again from version 8 (AGPL option); versions 7.4 to 7.x were source-available only"
-    }
-   ]
-  },
-  {
-   "id": "infrastructure-as-code",
-   "name": "Infrastructure as code",
-   "category": "dev",
-   "job": "Setting up servers and cloud services from files",
-   "closed": [
-    "Terraform"
-   ],
-   "source": "family",
-   "alternatives": [
-    {
-     "project": "opentofu",
-     "fit": "full",
-     "note": null
-    }
-   ]
-  },
-  {
-   "id": "sql-databases",
-   "name": "SQL databases",
-   "category": "dev",
-   "job": "Storing business data in tables that many users and servers can use at once",
-   "closed": [
-    "Amazon Aurora",
-    "Google Cloud Spanner"
-   ],
-   "source": "data-fixes",
-   "alternatives": [
-    {
-     "project": "postgresql",
-     "fit": "full",
-     "note": "You run it yourself or rent hosting; Aurora is a managed service"
-    },
-    {
-     "project": "mariadb",
-     "fit": "full",
-     "note": "You run it yourself or rent hosting"
-    },
-    {
-     "project": "pingcap",
-     "fit": "full",
-     "note": null
-    },
-    {
-     "project": "yugabyte",
-     "fit": "full",
-     "note": null
-    },
-    {
-     "project": "cratedb",
-     "fit": "full",
-     "note": null
-    }
-   ]
-  },
-  {
-   "id": "search-engines",
-   "name": "Site & app search",
-   "category": "dev",
-   "job": "Adding fast search to a website or app",
-   "closed": [
-    "Algolia",
-    "Elastic Cloud"
-   ],
-   "source": "data-fixes",
-   "alternatives": [
-    {
-     "project": "typesense",
-     "fit": "full",
-     "note": null
-    },
-    {
-     "project": "mellisearch",
-     "fit": "full",
-     "note": null
-    },
-    {
-     "project": "manticore-search",
-     "fit": "full",
-     "note": null
-    },
-    {
-     "project": "zinc-labs",
-     "fit": "partial",
-     "note": null
-    },
-    {
-     "project": "sonic",
-     "fit": "partial",
-     "note": null
-    },
-    {
-     "project": "quickwit",
-     "fit": "partial",
-     "note": null
-    }
-   ]
-  },
-  {
-   "id": "graph-databases",
-   "name": "Graph databases",
-   "category": "dev",
-   "job": "Storing data as connected items and following the links between them",
-   "closed": [
-    "TigerGraph",
-    "Amazon Neptune"
-   ],
-   "source": "data-fixes",
-   "alternatives": [
-    {
-     "project": "neo4j",
-     "fit": "partial",
-     "note": "Free Community edition; clustering and some features are paid"
-    },
-    {
-     "project": "terminusdb",
-     "fit": "full",
-     "note": null
-    }
-   ]
-  },
-  {
-   "id": "time-series-databases",
-   "name": "Time-series databases",
-   "category": "dev",
-   "job": "Storing readings and events over time, such as sensor data and trades",
-   "closed": [
-    "Kdb+"
-   ],
-   "source": "data-fixes",
-   "alternatives": [
-    {
-     "project": "questdb",
-     "fit": "full",
-     "note": null
-    },
-    {
-     "project": "influxdb",
-     "fit": "full",
-     "note": null
-    },
-    {
-     "project": "tdengine",
-     "fit": "full",
-     "note": null
-    },
-    {
-     "project": "cratedb",
-     "fit": "full",
-     "note": null
-    }
-   ]
-  },
-  {
-   "id": "data-warehouses",
-   "name": "Data warehouses",
-   "category": "dev",
-   "job": "Asking questions across huge amounts of company data",
-   "closed": [
-    "Snowflake"
-   ],
-   "source": "data-fixes",
-   "alternatives": [
-    {
-     "project": "clickhouse",
-     "fit": "full",
-     "note": "You run it yourself, or rent hosting from ClickHouse"
-    },
-    {
-     "project": "databend",
      "fit": "full",
      "note": null
     }
@@ -4323,6 +3353,99 @@
      "review": {
       "by": "claude-opus-5-5",
       "reason": "Changed fit to full because it collects member activity from community and product channels, matches profiles and shows contributors and their companies, which is the core job of Common Room and Orbit."
+     }
+    }
+   ]
+  },
+  {
+   "id": "cms",
+   "name": "Website builders & content management",
+   "category": "business",
+   "job": "Building websites and managing their content, including static site generators",
+   "closed": [
+    "Contentful",
+    "Wix",
+    "Strikingly",
+    "Webflow"
+   ],
+   "source": "lists",
+   "alternatives": [
+    {
+     "project": "concrete",
+     "fit": "full",
+     "note": null,
+     "review": {
+      "by": "claude-opus-5-5",
+      "reason": "Changed fit to full because Concrete CMS is a complete self-hosted tool for building websites and managing their content, which is the main job of this group."
+     }
+    },
+    {
+     "project": "decap-cms",
+     "fit": "partial",
+     "note": null
+    },
+    {
+     "project": "payload",
+     "fit": "partial",
+     "note": null,
+     "review": {
+      "by": "claude-opus-5-5",
+      "reason": "Changed fit to partial because Payload is a developer-oriented headless CMS that replaces Contentful, but it is not a drag-and-drop site builder like Wix, Strikingly or Webflow."
+     }
+    },
+    {
+     "project": "plasmic",
+     "fit": "full",
+     "note": null,
+     "review": {
+      "by": "claude-opus-5-5",
+      "reason": "Changed fit to full because Plasmic is a complete visual website builder that can build and host whole sites, not just parts of them, which makes it a direct Webflow-style alternative."
+     }
+    },
+    {
+     "project": "silex",
+     "fit": "full",
+     "note": null
+    },
+    {
+     "project": "sulu",
+     "fit": "full",
+     "note": null,
+     "review": {
+      "by": "claude-opus-5-5",
+      "reason": "Changed fit to full because Sulu is a complete self-hosted CMS for building websites and managing their content, which is the main job of this group."
+     }
+    },
+    {
+     "project": "strapi",
+     "fit": "partial",
+     "note": null,
+     "review": {
+      "by": "claude-opus-5-5",
+      "reason": "Changed fit to partial: Strapi replaces headless CMSs like Contentful, but it doesn't build or design the website itself the way Wix, Strikingly or Webflow do."
+     }
+    },
+    {
+     "project": "tina",
+     "fit": "partial",
+     "note": null
+    },
+    {
+     "project": "webstudio",
+     "fit": "full",
+     "note": null,
+     "review": {
+      "by": "claude-opus-5-5",
+      "reason": "Raised fit to full because Webstudio is a complete visual website builder, open source and self-hostable, that does the main job of Webflow and Wix."
+     }
+    },
+    {
+     "project": "webiny",
+     "fit": "full",
+     "note": null,
+     "review": {
+      "by": "claude-opus-5-5",
+      "reason": "Rewrote the description to mention the free edition's page builder and to drop multi-brand setups, which need the paid edition."
      }
     }
    ]
@@ -4494,7 +3617,7 @@
    "id": "investment-research",
    "name": "Investment research",
    "category": "business",
-   "job": "Research stocks and markets",
+   "job": "Researching stocks and markets, and tracking your investments",
    "closed": [
     "Bloomberg"
    ],
@@ -4583,6 +3706,3238 @@
      "note": null
     }
    ]
+  },
+  {
+   "id": "phone-systems",
+   "name": "Business phone systems",
+   "category": "business",
+   "job": "Running office phone lines, extensions and call queues",
+   "closed": [
+    "RingCentral",
+    "3CX",
+    "Microsoft Teams Phone"
+   ],
+   "source": "taxonomy",
+   "alternatives": []
+  },
+  {
+   "id": "seo-marketing",
+   "name": "SEO and marketing tools",
+   "category": "business",
+   "job": "Checking search rankings and site health, and running marketing",
+   "closed": [
+    "Semrush",
+    "Ahrefs",
+    "Screaming Frog"
+   ],
+   "source": "taxonomy",
+   "alternatives": []
+  },
+  {
+   "id": "chatbot-builders",
+   "name": "Chatbot builders",
+   "category": "business",
+   "job": "Building chat bots for websites, Telegram or WhatsApp",
+   "closed": [
+    "ManyChat",
+    "Chatfuel",
+    "Voiceflow"
+   ],
+   "source": "taxonomy",
+   "alternatives": []
+  },
+  {
+   "id": "crypto",
+   "name": "Crypto wallets",
+   "category": "business",
+   "job": "Holding and sending cryptocurrency",
+   "closed": [
+    "Coinbase",
+    "Binance"
+   ],
+   "source": "taxonomy",
+   "alternatives": []
+  },
+  {
+   "id": "hr-hiring",
+   "name": "Hiring and staff management",
+   "category": "business",
+   "job": "Hiring, staff records and shift scheduling",
+   "closed": [
+    "Workday",
+    "BambooHR",
+    "Greenhouse"
+   ],
+   "source": "taxonomy",
+   "alternatives": []
+  },
+  {
+   "id": "ai-chat",
+   "name": "AI chat apps",
+   "category": "ai",
+   "job": "Chatting with an AI assistant",
+   "closed": [
+    "ChatGPT",
+    "Claude",
+    "Google Gemini"
+   ],
+   "source": "starter",
+   "alternatives": [
+    {
+     "project": "jan",
+     "fit": "full",
+     "note": "Runs on your computer; needs a capable machine"
+    },
+    {
+     "project": "librechat",
+     "fit": "full",
+     "note": "You host it; bring your own AI accounts"
+    },
+    {
+     "project": "ollama",
+     "fit": "partial",
+     "note": "Runs models; chat window is basic"
+    },
+    {
+     "project": "youcoded",
+     "fit": "full",
+     "note": "Desktop and Android app; any AI model"
+    },
+    {
+     "project": "chatbox-community-edition",
+     "fit": "full",
+     "note": "Bring your own AI key or local model"
+    },
+    {
+     "project": "anythingllm",
+     "fit": "partial",
+     "note": "Aimed at chatting with your own documents"
+    },
+    {
+     "project": "leon",
+     "fit": "partial",
+     "note": "Early; for tinkerers"
+    }
+   ]
+  },
+  {
+   "id": "ai-agents",
+   "name": "AI agents for everyday work",
+   "category": "ai",
+   "job": "An AI assistant that works on your files and apps for you",
+   "closed": [
+    "Claude Cowork",
+    "ChatGPT agent"
+   ],
+   "source": "starter",
+   "alternatives": [
+    {
+     "project": "youcoded",
+     "fit": "full",
+     "note": "Desktop and Android app; any AI model"
+    },
+    {
+     "project": "goose",
+     "fit": "full",
+     "note": "Desktop app and terminal"
+    },
+    {
+     "project": "open-interpreter",
+     "fit": "partial",
+     "note": "Terminal only; aimed at programmers"
+    },
+    {
+     "project": "openclaw",
+     "fit": "partial",
+     "note": "Set-up needs a terminal; runs with broad access to your computer"
+    },
+    {
+     "project": "hermes-agent",
+     "fit": "partial",
+     "note": "Terminal set-up; for technical users"
+    }
+   ]
+  },
+  {
+   "id": "ai-images",
+   "name": "AI image generation",
+   "category": "ai",
+   "job": "Making images from text",
+   "closed": [
+    "Midjourney",
+    "DALL·E"
+   ],
+   "source": "starter",
+   "alternatives": [
+    {
+     "project": "comfyui",
+     "fit": "full",
+     "note": null
+    },
+    {
+     "project": "invokeai",
+     "fit": "full",
+     "note": null
+    },
+    {
+     "project": "stable-diffusion-web-ui",
+     "fit": "full",
+     "note": null
+    }
+   ]
+  },
+  {
+   "id": "transcription",
+   "name": "Transcription",
+   "category": "ai",
+   "job": "Turning speech into text",
+   "closed": [
+    "Otter.ai",
+    "Rev"
+   ],
+   "source": "starter",
+   "alternatives": [
+    {
+     "project": "buzz",
+     "fit": "full",
+     "note": null
+    },
+    {
+     "project": "whisper-cpp",
+     "fit": "partial",
+     "note": "For developers"
+    },
+    {
+     "project": "whisper",
+     "fit": "partial",
+     "note": "For developers"
+    }
+   ]
+  },
+  {
+   "id": "ai-search",
+   "name": "AI search",
+   "category": "ai",
+   "job": "Asking questions answered from the web",
+   "closed": [
+    "Perplexity"
+   ],
+   "source": "starter",
+   "alternatives": [
+    {
+     "project": "vane-formerly-perplexica",
+     "fit": "full",
+     "note": null
+    }
+   ]
+  },
+  {
+   "id": "local-ai",
+   "name": "Running AI on your own computer",
+   "category": "ai",
+   "job": "Downloading AI models and running them privately on your own machine",
+   "closed": [
+    "LM Studio",
+    "Msty"
+   ],
+   "source": "taxonomy",
+   "alternatives": []
+  },
+  {
+   "id": "browser-agents",
+   "name": "AI that uses your browser",
+   "category": "ai",
+   "job": "An AI assistant that clicks, reads and fills in websites for you",
+   "closed": [
+    "Claude in Chrome",
+    "ChatGPT Atlas",
+    "Perplexity Comet"
+   ],
+   "source": "taxonomy",
+   "alternatives": []
+  },
+  {
+   "id": "ai-detection",
+   "name": "Spotting AI-written text",
+   "category": "ai",
+   "job": "Checking whether text or code was written by AI",
+   "closed": [
+    "GPTZero",
+    "Originality.ai",
+    "Turnitin AI detection"
+   ],
+   "source": "taxonomy",
+   "alternatives": []
+  },
+  {
+   "id": "voice-assistants",
+   "name": "Voice assistants",
+   "category": "ai",
+   "job": "A voice assistant for your home or computer that you control",
+   "closed": [
+    "Amazon Alexa",
+    "Google Assistant",
+    "Siri"
+   ],
+   "source": "taxonomy",
+   "alternatives": []
+  },
+  {
+   "id": "ai-audio",
+   "name": "AI voices and music",
+   "category": "ai",
+   "job": "Making speech, voice-overs and music with AI",
+   "closed": [
+    "ElevenLabs",
+    "Suno",
+    "Udio"
+   ],
+   "source": "taxonomy",
+   "alternatives": []
+  },
+  {
+   "id": "ai-companions",
+   "name": "AI companions and characters",
+   "category": "ai",
+   "job": "Chatting with an AI character or companion",
+   "closed": [
+    "Replika",
+    "Character.AI"
+   ],
+   "source": "taxonomy",
+   "alternatives": []
+  },
+  {
+   "id": "ai-notebooks",
+   "name": "Ask AI about your own documents",
+   "category": "ai",
+   "job": "A notebook where AI answers questions from your own files and notes",
+   "closed": [
+    "NotebookLM",
+    "Mem"
+   ],
+   "source": "taxonomy",
+   "alternatives": []
+  },
+  {
+   "id": "ai-coding",
+   "name": "AI coding assistants",
+   "category": "coding-agents",
+   "job": "AI help writing and changing code",
+   "closed": [
+    "GitHub Copilot",
+    "Cursor",
+    "Windsurf",
+    "Claude Code",
+    "OpenAI Codex app"
+   ],
+   "source": "starter",
+   "alternatives": [
+    {
+     "project": "cline",
+     "fit": "full",
+     "note": "Works inside VS Code; you pay for the AI"
+    },
+    {
+     "project": "aider",
+     "fit": "full",
+     "note": "Terminal only; you pay for the AI"
+    },
+    {
+     "project": "openhands",
+     "fit": "partial",
+     "note": "Runs agents; heavier set-up"
+    },
+    {
+     "project": "codex-cli",
+     "fit": "full",
+     "note": "Terminal only; needs an OpenAI plan or key",
+     "review": {
+      "by": "claude-opus-5-5",
+      "reason": "Clarified that the tool runs locally but relies on OpenAI's online models through a ChatGPT plan or API key."
+     }
+    },
+    {
+     "project": "youcoded",
+     "fit": "full",
+     "note": "Desktop and Android app; any AI model"
+    },
+    {
+     "project": "opencode",
+     "fit": "full",
+     "note": "Terminal and desktop app; any AI model"
+    },
+    {
+     "project": "gemini-cli",
+     "fit": "full",
+     "note": "Terminal only"
+    },
+    {
+     "project": "kilo-code",
+     "fit": "full",
+     "note": "Works inside VS Code; you pay for the AI"
+    },
+    {
+     "project": "zed",
+     "fit": "partial",
+     "note": "Code editor with built-in AI; for programmers"
+    },
+    {
+     "project": "tabby",
+     "fit": "partial",
+     "note": "Self-hosted code suggestions; you run the server"
+    }
+   ]
+  },
+  {
+   "id": "agent-orchestration",
+   "name": "Running many agents at once",
+   "category": "coding-agents",
+   "job": "Running and watching several coding agents in parallel",
+   "closed": [
+    "Conductor",
+    "Devin"
+   ],
+   "source": "taxonomy",
+   "alternatives": []
+  },
+  {
+   "id": "agent-skills",
+   "name": "Skills, plugins and setups for agents",
+   "category": "coding-agents",
+   "job": "Reusable skills, plugins, hooks and instruction files for coding agents",
+   "closed": [],
+   "source": "taxonomy",
+   "alternatives": []
+  },
+  {
+   "id": "agent-memory",
+   "name": "Memory for AI agents",
+   "category": "coding-agents",
+   "job": "Letting an agent remember past sessions and decisions",
+   "closed": [
+    "ChatGPT memory",
+    "Claude memory"
+   ],
+   "source": "taxonomy",
+   "alternatives": []
+  },
+  {
+   "id": "agent-frontends",
+   "name": "Apps and remotes for coding agents",
+   "category": "coding-agents",
+   "job": "Desktop, web, phone and chat apps for driving a coding agent",
+   "closed": [
+    "Claude Code desktop and web",
+    "ChatGPT Codex app"
+   ],
+   "source": "taxonomy",
+   "alternatives": []
+  },
+  {
+   "id": "mcp-servers",
+   "name": "MCP connectors",
+   "category": "coding-agents",
+   "job": "Connectors (MCP servers and gateways) that let AI use other apps and data",
+   "closed": [
+    "Zapier MCP"
+   ],
+   "source": "taxonomy",
+   "alternatives": []
+  },
+  {
+   "id": "agent-safety",
+   "name": "Sandboxes and guardrails for agents",
+   "category": "coding-agents",
+   "job": "Keeping agents from doing damage: sandboxes, permission checks and secret masking",
+   "closed": [],
+   "source": "taxonomy",
+   "alternatives": []
+  },
+  {
+   "id": "agent-usage",
+   "name": "AI usage and token meters",
+   "category": "coding-agents",
+   "job": "Seeing how much of your AI plan or token budget you've used, and spending less",
+   "closed": [],
+   "source": "taxonomy",
+   "alternatives": []
+  },
+  {
+   "id": "agent-context",
+   "name": "Code maps and search for agents",
+   "category": "coding-agents",
+   "job": "Giving an agent a map of your codebase so it reads less and finds more",
+   "closed": [
+    "Sourcegraph Amp",
+    "Augment Code",
+    "Greptile"
+   ],
+   "source": "taxonomy",
+   "alternatives": []
+  },
+  {
+   "id": "agent-planning",
+   "name": "Planning work for coding agents",
+   "category": "coding-agents",
+   "job": "Turning ideas into specs and task lists an agent can follow",
+   "closed": [
+    "Kiro (spec mode)",
+    "Traycer"
+   ],
+   "source": "taxonomy",
+   "alternatives": []
+  },
+  {
+   "id": "ml-platforms",
+   "name": "Machine learning platforms",
+   "category": "ai-build",
+   "job": "Building, training and running AI models, including computer vision",
+   "closed": [
+    "AWS SageMaker",
+    "AWS Kendra",
+    "QnA Maker"
+   ],
+   "source": "lists",
+   "alternatives": [
+    {
+     "project": "cortex",
+     "fit": "partial",
+     "note": null,
+     "review": {
+      "by": "claude-opus-5-5",
+      "reason": "Added that the project is no longer actively maintained, as its page states."
+     }
+    },
+    {
+     "project": "deepset",
+     "fit": "partial",
+     "note": null
+    }
+   ]
+  },
+  {
+   "id": "vector-databases",
+   "name": "Vector databases",
+   "category": "ai-build",
+   "job": "Storing data by meaning so AI apps can find similar items",
+   "closed": [
+    "Pinecone"
+   ],
+   "source": "data-fixes",
+   "alternatives": [
+    {
+     "project": "qdrant",
+     "fit": "full",
+     "note": null
+    },
+    {
+     "project": "semi",
+     "fit": "full",
+     "note": null
+    }
+   ]
+  },
+  {
+   "id": "ai-gateways",
+   "name": "AI model gateways and routers",
+   "category": "ai-build",
+   "job": "One connection that routes requests to many AI models and tracks keys",
+   "closed": [
+    "OpenRouter",
+    "Portkey (hosted)",
+    "Cloudflare AI Gateway"
+   ],
+   "source": "taxonomy",
+   "alternatives": []
+  },
+  {
+   "id": "ai-observability",
+   "name": "Watching what AI apps do",
+   "category": "ai-build",
+   "job": "Logs, replays, costs and traces of AI app and agent runs",
+   "closed": [
+    "LangSmith",
+    "Datadog LLM Observability"
+   ],
+   "source": "taxonomy",
+   "alternatives": []
+  },
+  {
+   "id": "open-models",
+   "name": "Downloadable AI models",
+   "category": "ai-build",
+   "job": "AI models whose weights you can download and run yourself",
+   "closed": [
+    "GPT (OpenAI)",
+    "Claude",
+    "Gemini"
+   ],
+   "source": "taxonomy",
+   "alternatives": []
+  },
+  {
+   "id": "rag-tools",
+   "name": "Preparing documents for AI search",
+   "category": "ai-build",
+   "job": "Turning PDFs and documents into text an AI app can search",
+   "closed": [
+    "Azure AI Document Intelligence",
+    "Vectara"
+   ],
+   "source": "taxonomy",
+   "alternatives": []
+  },
+  {
+   "id": "agent-frameworks",
+   "name": "Frameworks for building agents",
+   "category": "ai-build",
+   "job": "Code libraries for building your own AI agents",
+   "closed": [],
+   "source": "taxonomy",
+   "alternatives": []
+  },
+  {
+   "id": "voice-agents",
+   "name": "AI phone and voice agents",
+   "category": "ai-build",
+   "job": "AI that answers or makes phone calls and talks in real time",
+   "closed": [
+    "Vapi",
+    "Retell AI",
+    "Bland AI"
+   ],
+   "source": "taxonomy",
+   "alternatives": []
+  },
+  {
+   "id": "ai-app-builders",
+   "name": "Making apps by describing them",
+   "category": "ai-build",
+   "job": "Describe an app and AI builds it for you",
+   "closed": [
+    "Lovable",
+    "Bolt.new",
+    "v0",
+    "Replit Agent"
+   ],
+   "source": "taxonomy",
+   "waitForProject": true,
+   "alternatives": []
+  },
+  {
+   "id": "ai-evals",
+   "name": "Testing AI apps",
+   "category": "ai-build",
+   "job": "Checking that AI apps and agents behave correctly before release",
+   "closed": [
+    "Braintrust"
+   ],
+   "source": "taxonomy",
+   "waitForProject": true,
+   "alternatives": []
+  },
+  {
+   "id": "desktop-os",
+   "name": "Computer operating systems",
+   "category": "os",
+   "job": "What runs your laptop or desktop",
+   "closed": [
+    "Microsoft Windows",
+    "macOS"
+   ],
+   "source": "starter",
+   "alternatives": [
+    {
+     "project": "linux-mint",
+     "fit": "full",
+     "note": "Closest to Windows"
+    },
+    {
+     "project": "fedora",
+     "fit": "full",
+     "note": "New versions every 6 months; fast-moving"
+    },
+    {
+     "project": "ubuntu",
+     "fit": "full",
+     "note": null
+    },
+    {
+     "project": "debian",
+     "fit": "full",
+     "note": "Very stable but older app versions; less beginner-friendly"
+    },
+    {
+     "project": "arch-linux",
+     "fit": "full",
+     "note": "For experienced users: you set up every part"
+    },
+    {
+     "project": "cachyos",
+     "fit": "full",
+     "note": "Rolling updates; best for people comfortable fixing things"
+    },
+    {
+     "project": "pop-os",
+     "fit": "full",
+     "note": "Good for newer laptops and graphics cards"
+    },
+    {
+     "project": "bazzite",
+     "fit": "full",
+     "note": "Great for gaming; updates apply safely"
+    }
+   ]
+  },
+  {
+   "id": "distros-beginner",
+   "name": "Linux for people leaving Windows or Mac",
+   "category": "os",
+   "job": "An easy Linux system for someone switching from Windows or macOS",
+   "closed": [
+    "Microsoft Windows",
+    "macOS"
+   ],
+   "source": "taxonomy",
+   "alternatives": []
+  },
+  {
+   "id": "distros-diy",
+   "name": "Linux you build your own way",
+   "category": "os",
+   "job": "A minimal Linux system for tinkerers who choose every piece",
+   "closed": [],
+   "source": "taxonomy",
+   "alternatives": []
+  },
+  {
+   "id": "other-os",
+   "name": "BSD and other operating systems",
+   "category": "os",
+   "job": "Operating systems that are not Linux, Windows or macOS",
+   "closed": [],
+   "source": "taxonomy",
+   "alternatives": []
+  },
+  {
+   "id": "server-os",
+   "name": "Home server and NAS systems",
+   "category": "os",
+   "job": "The system that runs a home server or network storage box",
+   "closed": [
+    "Synology DSM",
+    "Unraid",
+    "QNAP QTS",
+    "UGREEN UGOS"
+   ],
+   "source": "taxonomy",
+   "alternatives": []
+  },
+  {
+   "id": "distros-general",
+   "name": "All-round Linux systems",
+   "category": "os",
+   "job": "A general-purpose Linux system for everyday and work use",
+   "closed": [],
+   "source": "taxonomy",
+   "alternatives": []
+  },
+  {
+   "id": "distros-light",
+   "name": "Linux for old or slow computers",
+   "category": "os",
+   "job": "A small Linux system that runs well on old or low-power hardware",
+   "closed": [],
+   "source": "taxonomy",
+   "alternatives": []
+  },
+  {
+   "id": "distros-gaming",
+   "name": "Linux for gaming",
+   "category": "os",
+   "job": "A Linux system tuned for playing PC games",
+   "closed": [
+    "Microsoft Windows"
+   ],
+   "source": "taxonomy",
+   "alternatives": []
+  },
+  {
+   "id": "os-installers",
+   "name": "Install sticks and system images",
+   "category": "os",
+   "job": "Making a USB stick or network setup that installs an operating system",
+   "closed": [
+    "Microsoft Media Creation Tool"
+   ],
+   "source": "taxonomy",
+   "alternatives": []
+  },
+  {
+   "id": "distros-privacy",
+   "name": "Linux for privacy and security",
+   "category": "os",
+   "job": "A Linux system built to protect your privacy or isolate risky apps",
+   "closed": [],
+   "source": "taxonomy",
+   "waitForProject": true,
+   "alternatives": []
+  },
+  {
+   "id": "distros-immutable",
+   "name": "Linux that can undo bad updates",
+   "category": "os",
+   "job": "A Linux system whose core can't be broken by updates and can roll back",
+   "closed": [],
+   "source": "taxonomy",
+   "waitForProject": true,
+   "alternatives": []
+  },
+  {
+   "id": "desktop-customization",
+   "name": "Themes, extensions and desktop add-ons",
+   "category": "os-desktops",
+   "job": "Changing how a Linux desktop looks and behaves with themes, bars and extensions",
+   "closed": [
+    "Stardock WindowBlinds"
+   ],
+   "source": "taxonomy",
+   "alternatives": []
+  },
+  {
+   "id": "linux-desktops",
+   "name": "Desktop environments and window managers",
+   "category": "os-desktops",
+   "job": "The desktop you see and use on Linux: panels, windows, menus",
+   "closed": [],
+   "source": "taxonomy",
+   "alternatives": []
+  },
+  {
+   "id": "linux-kernel",
+   "name": "The Linux kernel and system core",
+   "category": "os-core",
+   "job": "The kernel and core system parts (startup, services, libraries) every Linux system runs on",
+   "closed": [],
+   "source": "taxonomy",
+   "alternatives": []
+  },
+  {
+   "id": "linux-drivers",
+   "name": "Getting hardware working on Linux",
+   "category": "os-core",
+   "job": "Drivers and fixes for graphics, sound, fingerprint and face login, and laptops on Linux",
+   "closed": [
+    "NVIDIA proprietary driver"
+   ],
+   "source": "taxonomy",
+   "alternatives": []
+  },
+  {
+   "id": "app-compat",
+   "name": "Running apps from other systems",
+   "category": "os-core",
+   "job": "Running Windows or Android apps and games on Linux or Mac",
+   "closed": [
+    "CrossOver",
+    "Parallels Desktop"
+   ],
+   "source": "taxonomy",
+   "alternatives": []
+  },
+  {
+   "id": "linux-app-stores",
+   "name": "Installing apps on Linux",
+   "category": "os-core",
+   "job": "App stores, Flatpak, AppImage and package helpers for Linux",
+   "closed": [
+    "Microsoft Store",
+    "Mac App Store"
+   ],
+   "source": "taxonomy",
+   "alternatives": []
+  },
+  {
+   "id": "filesystems",
+   "name": "Filesystems and disks",
+   "category": "os-core",
+   "job": "How files are stored on disks: ZFS, Btrfs, partitions",
+   "closed": [],
+   "source": "taxonomy",
+   "alternatives": []
+  },
+  {
+   "id": "phone-os",
+   "name": "Phone operating systems",
+   "category": "os-mobile",
+   "job": "What runs your phone",
+   "closed": [
+    "Google Android",
+    "Apple iOS"
+   ],
+   "source": "starter",
+   "alternatives": [
+    {
+     "project": "grapheneos",
+     "fit": "full",
+     "note": "Pixel phones only; you install it yourself"
+    },
+    {
+     "project": "lineageos",
+     "fit": "full",
+     "note": "You install it yourself; Google apps are an optional add-on"
+    },
+    {
+     "project": "e-os",
+     "fit": "full",
+     "note": "Some bank apps may not work; also sold pre-installed"
+    },
+    {
+     "project": "postmarketos",
+     "fit": "partial",
+     "note": "Calls, camera or mobile data may not work on most phones"
+    },
+    {
+     "project": "ubuntu-touch",
+     "fit": "partial",
+     "note": "Works on a short list of phones; few apps"
+    }
+   ]
+  },
+  {
+   "id": "app-stores",
+   "name": "App stores",
+   "category": "os-mobile",
+   "job": "Finding and installing phone apps",
+   "closed": [
+    "Google Play Store",
+    "Apple App Store"
+   ],
+   "source": "starter",
+   "alternatives": [
+    {
+     "project": "f-droid",
+     "fit": "full",
+     "note": "Open-source apps only"
+    },
+    {
+     "project": "aurora-store",
+     "fit": "partial",
+     "note": "A private way to use Google Play"
+    },
+    {
+     "project": "accrescent",
+     "fit": "partial",
+     "note": null,
+     "review": {
+      "by": "claude-opus-5-5",
+      "reason": "Changed fit to partial and noted early alpha status, because the project calls itself early alpha and offers far fewer apps than the closed stores."
+     }
+    },
+    {
+     "project": "fossdroid",
+     "fit": "partial",
+     "note": null,
+     "review": {
+      "by": "claude-opus-5-5",
+      "reason": "Clarified that this repo is self-hostable website code for browsing F-Droid apps, not an installer, and that it lacks the site's screenshot scraping and popularity data."
+     }
+    },
+    {
+     "project": "obtainium",
+     "fit": "partial",
+     "note": null
+    }
+   ]
+  },
+  {
+   "id": "keyboards",
+   "name": "Phone keyboards",
+   "category": "os-mobile",
+   "job": "Typing on your phone, and typing other languages on a computer",
+   "closed": [
+    "Gboard",
+    "SwiftKey"
+   ],
+   "source": "starter",
+   "alternatives": [
+    {
+     "project": "florisboard",
+     "fit": "partial",
+     "note": null,
+     "review": {
+      "by": "claude-opus-5-5",
+      "reason": "Changed fit to partial and updated the description because the project page says it is in beta and lacks word suggestions and spell checking, which are core features of Gboard and SwiftKey."
+     }
+    },
+    {
+     "project": "heliboard",
+     "fit": "full",
+     "note": null
+    },
+    {
+     "project": "anysoftkeyboard",
+     "fit": "full",
+     "note": null,
+     "review": {
+      "by": "claude-opus-5-5",
+      "reason": "Changed fit to full because it is a complete Android keyboard with word suggestions, autocorrect, gesture typing, voice input and emoji, which covers the main job of Gboard and SwiftKey."
+     }
+    },
+    {
+     "project": "indic-keyboard",
+     "fit": "full",
+     "note": null,
+     "review": {
+      "by": "claude-opus-5-5",
+      "reason": "Changed fit to full because it is a complete Android keyboard that types in English and 23 languages, which is the main job of Gboard and SwiftKey."
+     }
+    },
+    {
+     "project": "openboard",
+     "fit": "full",
+     "note": null
+    },
+    {
+     "project": "simple-keyboard",
+     "fit": "partial",
+     "note": null
+    }
+   ]
+  },
+  {
+   "id": "mobile-linux",
+   "name": "Linux on phones and tablets",
+   "category": "os-mobile",
+   "job": "Running real Linux on a phone or tablet",
+   "closed": [
+    "Google Android",
+    "Apple iOS"
+   ],
+   "source": "taxonomy",
+   "alternatives": []
+  },
+  {
+   "id": "android-mods",
+   "name": "Rooting and changing Android",
+   "category": "os-mobile",
+   "job": "Unlocking extra control over an Android phone: root, system add-ons, call recording",
+   "closed": [],
+   "source": "taxonomy",
+   "alternatives": []
+  },
+  {
+   "id": "phone-pc-link",
+   "name": "Using your phone with your computer",
+   "category": "os-mobile",
+   "job": "Seeing phone notifications, texts and screen on your computer",
+   "closed": [
+    "Microsoft Phone Link",
+    "Apple Continuity"
+   ],
+   "source": "taxonomy",
+   "alternatives": []
+  },
+  {
+   "id": "phone-launchers",
+   "name": "Phone home screens",
+   "category": "os-mobile",
+   "job": "Replacing the home screen and app drawer on Android",
+   "closed": [
+    "Nova Launcher",
+    "Niagara Launcher"
+   ],
+   "source": "taxonomy",
+   "waitForProject": true,
+   "alternatives": []
+  },
+  {
+   "id": "tv-launchers",
+   "name": "TV home screens",
+   "category": "hw-tv",
+   "job": "Replacing the ad-filled home screen on a smart TV or streaming stick",
+   "closed": [
+    "Google TV home screen",
+    "Fire TV home screen",
+    "LG webOS home",
+    "Samsung Tizen home",
+    "Roku home screen"
+   ],
+   "source": "taxonomy",
+   "alternatives": []
+  },
+  {
+   "id": "tv-debloat",
+   "name": "Removing ads and bloat from your TV",
+   "category": "hw-tv",
+   "job": "Turning off ads, tracking and preinstalled apps on a smart TV",
+   "closed": [
+    "Vendor TV software (Samsung, LG, TCL, Google TV, Fire OS)"
+   ],
+   "source": "taxonomy",
+   "alternatives": []
+  },
+  {
+   "id": "tv-os",
+   "name": "Replacing or unlocking your TV's system",
+   "category": "hw-tv",
+   "job": "Swapping or rooting the TV or media box system, or turning a PC into a TV box",
+   "closed": [
+    "Samsung Tizen",
+    "LG webOS",
+    "Google TV",
+    "Fire OS",
+    "Roku OS",
+    "Titan OS"
+   ],
+   "source": "taxonomy",
+   "alternatives": []
+  },
+  {
+   "id": "tv-apps",
+   "name": "Better apps for your TV",
+   "category": "hw-tv",
+   "job": "Ad-free or more capable apps to watch things on a TV",
+   "closed": [
+    "Official YouTube TV app",
+    "Plex app"
+   ],
+   "source": "taxonomy",
+   "alternatives": []
+  },
+  {
+   "id": "tv-remotes",
+   "name": "Controlling your TV from a phone or computer",
+   "category": "hw-tv",
+   "job": "Turning a TV on, off or to a show from another device or script",
+   "closed": [
+    "LG ThinQ",
+    "Samsung SmartThings",
+    "Google TV app"
+   ],
+   "source": "taxonomy",
+   "alternatives": []
+  },
+  {
+   "id": "casting",
+   "name": "Sending video from your phone to a TV",
+   "category": "hw-tv",
+   "job": "Playing what's on your phone or laptop on the TV",
+   "closed": [
+    "Google Cast (Chromecast)",
+    "Apple AirPlay"
+   ],
+   "source": "taxonomy",
+   "alternatives": []
+  },
+  {
+   "id": "digital-signage",
+   "name": "Dashboards on a spare TV or screen",
+   "category": "hw-tv",
+   "job": "Showing a calendar, dashboard or notices on a TV or old screen",
+   "closed": [
+    "ScreenCloud",
+    "Yodeck"
+   ],
+   "source": "taxonomy",
+   "alternatives": []
+  },
+  {
+   "id": "keyboard-tools",
+   "name": "Keyboard firmware, remapping and sounds",
+   "category": "hw-pc",
+   "job": "Setting up keyboards: custom firmware, remapping keys, lights and typing sounds",
+   "closed": [
+    "Razer Synapse",
+    "Logitech G Hub",
+    "Corsair iCUE"
+   ],
+   "source": "taxonomy",
+   "alternatives": []
+  },
+  {
+   "id": "control-decks",
+   "name": "Stream Deck and button pads",
+   "category": "hw-pc",
+   "job": "Programmable button pads (or an old phone) that run actions on your computer",
+   "closed": [
+    "Elgato Stream Deck software",
+    "Loupedeck"
+   ],
+   "source": "taxonomy",
+   "alternatives": []
+  },
+  {
+   "id": "webcam-tools",
+   "name": "Webcam effects and phone as webcam",
+   "category": "hw-pc",
+   "job": "Making a webcam look better, using a phone as one, or switching it off for real",
+   "closed": [
+    "Snap Camera",
+    "NVIDIA Broadcast",
+    "Camo",
+    "Iriun Webcam"
+   ],
+   "source": "taxonomy",
+   "alternatives": []
+  },
+  {
+   "id": "mouse-config",
+   "name": "Mouse and trackpad settings",
+   "category": "hw-pc",
+   "job": "Setting buttons, DPI, lights and gestures on mice and trackpads",
+   "closed": [
+    "Logitech G Hub",
+    "Logi Options+",
+    "Razer Synapse",
+    "Corsair iCUE",
+    "BetterTouchTool"
+   ],
+   "source": "taxonomy",
+   "alternatives": []
+  },
+  {
+   "id": "pc-tuning",
+   "name": "Fans, lights and power on your PC",
+   "category": "hw-pc",
+   "job": "Controlling fan speed, RGB lighting, overclocking and battery life",
+   "closed": [
+    "ASUS Armoury Crate",
+    "MSI Center",
+    "Corsair iCUE",
+    "SignalRGB",
+    "MSI Afterburner"
+   ],
+   "source": "taxonomy",
+   "alternatives": []
+  },
+  {
+   "id": "driver-updates",
+   "name": "Driver and firmware updates",
+   "category": "hw-pc",
+   "job": "Keeping drivers, firmware and BIOS up to date without vendor bloat",
+   "closed": [
+    "Driver Booster",
+    "Dell SupportAssist",
+    "Lenovo Vantage"
+   ],
+   "source": "taxonomy",
+   "alternatives": []
+  },
+  {
+   "id": "monitor-control",
+   "name": "Monitor brightness and settings",
+   "category": "hw-pc",
+   "job": "Changing monitor brightness, volume and input from your computer",
+   "closed": [
+    "DisplayFusion",
+    "BetterDisplay"
+   ],
+   "source": "taxonomy",
+   "alternatives": []
+  },
+  {
+   "id": "game-controllers",
+   "name": "Game controller tools",
+   "category": "hw-pc",
+   "job": "Making any controller work with any game or computer",
+   "closed": [
+    "Steam Input",
+    "reWASD"
+   ],
+   "source": "taxonomy",
+   "alternatives": []
+  },
+  {
+   "id": "bios-firmware",
+   "name": "Computer startup firmware (BIOS)",
+   "category": "hw-pc",
+   "job": "The firmware that starts your computer before the operating system",
+   "closed": [
+    "AMI Aptio",
+    "Phoenix BIOS",
+    "Insyde H2O"
+   ],
+   "source": "taxonomy",
+   "waitForProject": true,
+   "alternatives": []
+  },
+  {
+   "id": "smart-home",
+   "name": "Smart home",
+   "category": "hw-gadgets",
+   "job": "Controlling lights and devices at home",
+   "closed": [
+    "Google Home",
+    "Amazon Alexa",
+    "SmartThings"
+   ],
+   "source": "starter",
+   "alternatives": [
+    {
+     "project": "home-assistant",
+     "fit": "full",
+     "note": null
+    }
+   ]
+  },
+  {
+   "id": "cars",
+   "name": "Car apps, upkeep and driver assist",
+   "category": "hw-gadgets",
+   "job": "Car dashboards, maintenance logs and driver-assistance software",
+   "closed": [
+    "Android Auto",
+    "Apple CarPlay",
+    "Fuelly",
+    "Drivvo"
+   ],
+   "source": "taxonomy",
+   "alternatives": []
+  },
+  {
+   "id": "router-firmware",
+   "name": "Router and firewall software",
+   "category": "hw-gadgets",
+   "job": "Replacing a router's software or running your own firewall",
+   "closed": [
+    "Vendor router firmware",
+    "Ubiquiti UniFi OS",
+    "FRITZ!OS"
+   ],
+   "source": "taxonomy",
+   "alternatives": []
+  },
+  {
+   "id": "e-readers",
+   "name": "E-reader software",
+   "category": "hw-gadgets",
+   "job": "Reading apps and firmware for Kindle, Kobo and other e-readers",
+   "closed": [
+    "Amazon Kindle firmware",
+    "Kobo firmware"
+   ],
+   "source": "taxonomy",
+   "waitForProject": true,
+   "alternatives": []
+  },
+  {
+   "id": "game-handhelds",
+   "name": "Handheld gaming PCs",
+   "category": "hw-gadgets",
+   "job": "Software for Steam Deck-style handhelds",
+   "closed": [
+    "ASUS Armoury Crate SE",
+    "Lenovo Legion Space"
+   ],
+   "source": "taxonomy",
+   "waitForProject": true,
+   "alternatives": []
+  },
+  {
+   "id": "headphones",
+   "name": "Earbud and headphone apps",
+   "category": "hw-gadgets",
+   "job": "Full features for earbuds and headphones without the maker's app",
+   "closed": [
+    "Apple AirPods (iPhone only)",
+    "Samsung Galaxy Wearable",
+    "Sony Headphones Connect"
+   ],
+   "source": "taxonomy",
+   "waitForProject": true,
+   "alternatives": []
+  },
+  {
+   "id": "security-cameras",
+   "name": "Home security cameras",
+   "category": "hw-gadgets",
+   "job": "Recording and watching home cameras without a subscription",
+   "closed": [
+    "Ring",
+    "Google Nest",
+    "Arlo",
+    "Wyze"
+   ],
+   "source": "taxonomy",
+   "waitForProject": true,
+   "alternatives": []
+  },
+  {
+   "id": "security-keys",
+   "name": "Security keys",
+   "category": "hw-gadgets",
+   "job": "Hardware keys for passwordless and two-step sign-in",
+   "closed": [
+    "YubiKey firmware",
+    "Google Titan Key"
+   ],
+   "source": "taxonomy",
+   "waitForProject": true,
+   "alternatives": []
+  },
+  {
+   "id": "smartwatches",
+   "name": "Smartwatches and fitness bands",
+   "category": "hw-gadgets",
+   "job": "Apps and firmware for watches without the maker's cloud",
+   "closed": [
+    "Garmin Connect",
+    "Wear OS",
+    "Fitbit app"
+   ],
+   "source": "taxonomy",
+   "waitForProject": true,
+   "alternatives": []
+  },
+  {
+   "id": "electronics",
+   "name": "Circuits, boards and chips",
+   "category": "hw-makers",
+   "job": "Designing and simulating circuits, circuit boards and chips",
+   "closed": [
+    "Altium Designer",
+    "Proteus",
+    "NI Multisim",
+    "Cadence"
+   ],
+   "source": "taxonomy",
+   "alternatives": []
+  },
+  {
+   "id": "microcontrollers",
+   "name": "Microcontrollers and IoT projects",
+   "category": "hw-makers",
+   "job": "Programming small boards like Arduino and ESP32",
+   "closed": [],
+   "source": "taxonomy",
+   "alternatives": []
+  },
+  {
+   "id": "robotics",
+   "name": "Robots and drones",
+   "category": "hw-makers",
+   "job": "Software that drives robots, drones and machines",
+   "closed": [],
+   "source": "taxonomy",
+   "alternatives": []
+  },
+  {
+   "id": "flight-tracking",
+   "name": "Tracking planes and ships yourself",
+   "category": "hw-makers",
+   "job": "Receiving aircraft and ship signals with a cheap radio and keeping your own history",
+   "closed": [
+    "Flightradar24",
+    "FlightAware",
+    "MarineTraffic"
+   ],
+   "source": "taxonomy",
+   "alternatives": []
+  },
+  {
+   "id": "industrial-control",
+   "name": "Factory and machine control",
+   "category": "hw-makers",
+   "job": "Talking to industrial machines and building control panels (Modbus, PLC, SCADA)",
+   "closed": [
+    "Modbus Poll",
+    "Ignition",
+    "Siemens TIA Portal"
+   ],
+   "source": "taxonomy",
+   "alternatives": []
+  },
+  {
+   "id": "3d-printing",
+   "name": "3D printing",
+   "category": "hw-makers",
+   "job": "Slicing, running and organising 3D prints",
+   "closed": [
+    "Simplify3D",
+    "Bambu Cloud"
+   ],
+   "source": "taxonomy",
+   "waitForProject": true,
+   "alternatives": []
+  },
+  {
+   "id": "api-tools",
+   "name": "API tools",
+   "category": "dev",
+   "job": "Building, testing and debugging APIs and web traffic",
+   "closed": [
+    "apigee",
+    "Postman",
+    "Checkly"
+   ],
+   "source": "lists",
+   "alternatives": [
+    {
+     "project": "apache-apisix",
+     "fit": "partial",
+     "note": null
+    },
+    {
+     "project": "firecamp",
+     "fit": "full",
+     "note": null,
+     "review": {
+      "by": "claude-opus-5-5",
+      "reason": "Removed 'documenting' because API documentation is only on the project's roadmap, and named the supported API types."
+     }
+    },
+    {
+     "project": "fusio",
+     "fit": "partial",
+     "note": null
+    },
+    {
+     "project": "hoppscotch",
+     "fit": "full",
+     "note": null
+    },
+    {
+     "project": "insomnia",
+     "fit": "full",
+     "note": null,
+     "review": {
+      "by": "claude-opus-5-5",
+      "reason": "The page describes a desktop app, not a web app, and says most features require an account, so the description was corrected."
+     }
+    },
+    {
+     "project": "step-ci",
+     "fit": "partial",
+     "note": null
+    }
+   ]
+  },
+  {
+   "id": "code-editors",
+   "name": "Code editors",
+   "category": "dev",
+   "job": "Writing and editing code",
+   "closed": [
+    "Visual Studio Code"
+   ],
+   "source": "family",
+   "alternatives": [
+    {
+     "project": "vscodium",
+     "fit": "full",
+     "note": "Uses the Open VSX extension store, so some Microsoft-made extensions are not available"
+    },
+    {
+     "project": "zed",
+     "fit": "full",
+     "note": null
+    }
+   ]
+  },
+  {
+   "id": "languages",
+   "name": "Programming languages and compilers",
+   "category": "dev",
+   "job": "New programming languages, compilers and interpreters",
+   "closed": [],
+   "source": "taxonomy",
+   "alternatives": []
+  },
+  {
+   "id": "dev-testing",
+   "name": "Testing tools",
+   "category": "dev",
+   "job": "Writing and running tests for apps and websites",
+   "closed": [
+    "BrowserStack",
+    "TestRail"
+   ],
+   "source": "taxonomy",
+   "alternatives": []
+  },
+  {
+   "id": "git-tools",
+   "name": "Git apps and helpers",
+   "category": "dev",
+   "job": "Apps that make git easier to see and use",
+   "closed": [
+    "GitKraken",
+    "Tower",
+    "Fork",
+    "Sourcetree"
+   ],
+   "source": "taxonomy",
+   "alternatives": []
+  },
+  {
+   "id": "code-understanding",
+   "name": "Seeing and exploring a codebase",
+   "category": "dev",
+   "job": "Visual maps and tours of how a codebase fits together",
+   "closed": [
+    "Sourcegraph (enterprise)",
+    "CodeSee"
+   ],
+   "source": "taxonomy",
+   "alternatives": []
+  },
+  {
+   "id": "game-dev",
+   "name": "Game engines and game-making tools",
+   "category": "dev",
+   "job": "Building games and game-world tools",
+   "closed": [
+    "Unity",
+    "Unreal Engine (source-available)",
+    "GameMaker"
+   ],
+   "source": "taxonomy",
+   "alternatives": []
+  },
+  {
+   "id": "code-review",
+   "name": "Code review helpers",
+   "category": "dev",
+   "job": "Making pull requests easier to review and understand",
+   "closed": [
+    "CodeRabbit",
+    "Greptile"
+   ],
+   "source": "taxonomy",
+   "alternatives": []
+  },
+  {
+   "id": "dev-docs",
+   "name": "Docs and README tools",
+   "category": "dev",
+   "job": "Writing project documentation sites, badges and READMEs",
+   "closed": [
+    "GitBook",
+    "ReadMe",
+    "Mintlify"
+   ],
+   "source": "taxonomy",
+   "alternatives": []
+  },
+  {
+   "id": "terminals",
+   "name": "Terminals",
+   "category": "dev",
+   "job": "The window where you type commands",
+   "closed": [
+    "Warp",
+    "Termius"
+   ],
+   "source": "taxonomy",
+   "alternatives": []
+  },
+  {
+   "id": "dev-environments",
+   "name": "Ready-made coding environments",
+   "category": "dev",
+   "job": "A local or cloud setup with everything needed to run code",
+   "closed": [
+    "GitHub Codespaces",
+    "MAMP Pro",
+    "Local (WP Engine)"
+   ],
+   "source": "taxonomy",
+   "alternatives": []
+  },
+  {
+   "id": "dev-toolbox",
+   "name": "Everyday developer helpers",
+   "category": "dev",
+   "job": "Small tools: format JSON, decode tokens, convert text",
+   "closed": [],
+   "source": "taxonomy",
+   "alternatives": []
+  },
+  {
+   "id": "linters",
+   "name": "Code checkers",
+   "category": "dev",
+   "job": "Finding bugs and style problems in code automatically",
+   "closed": [
+    "SonarQube Cloud",
+    "DeepSource",
+    "Codacy"
+   ],
+   "source": "taxonomy",
+   "alternatives": []
+  },
+  {
+   "id": "ssh-clients",
+   "name": "SSH and file transfer to servers",
+   "category": "dev",
+   "job": "Connecting to servers and moving files to them",
+   "closed": [
+    "Termius",
+    "Transmit",
+    "MobaXterm"
+   ],
+   "source": "taxonomy",
+   "alternatives": []
+  },
+  {
+   "id": "shells",
+   "name": "Shells and command-line add-ons",
+   "category": "dev",
+   "job": "Shells, prompts and history tools that make the command line nicer",
+   "closed": [],
+   "source": "taxonomy",
+   "alternatives": []
+  },
+  {
+   "id": "package-managers",
+   "name": "Package managers",
+   "category": "dev",
+   "job": "Installing code libraries and developer tools",
+   "closed": [],
+   "source": "taxonomy",
+   "alternatives": []
+  },
+  {
+   "id": "scaffolding",
+   "name": "Project starters and code snippets",
+   "category": "dev",
+   "job": "Generating a new project's starting files and reusable snippets",
+   "closed": [],
+   "source": "taxonomy",
+   "alternatives": []
+  },
+  {
+   "id": "reverse-engineering",
+   "name": "Reverse engineering",
+   "category": "dev",
+   "job": "Taking apart programs and firmware to see how they work",
+   "closed": [
+    "IDA Pro",
+    "Binary Ninja",
+    "Hopper"
+   ],
+   "source": "taxonomy",
+   "alternatives": []
+  },
+  {
+   "id": "code-hosting",
+   "name": "Code hosting",
+   "category": "dev-ship",
+   "job": "Hosting code and collaborating on it",
+   "closed": [
+    "GitHub"
+   ],
+   "source": "starter",
+   "alternatives": [
+    {
+     "project": "forgejo",
+     "fit": "full",
+     "note": null
+    },
+    {
+     "project": "gitea",
+     "fit": "full",
+     "note": null
+    },
+    {
+     "project": "gitlab-community-edition",
+     "fit": "full",
+     "note": null
+    },
+    {
+     "project": "gerrit",
+     "fit": "partial",
+     "note": null
+    },
+    {
+     "project": "gogs",
+     "fit": "full",
+     "note": null,
+     "review": {
+      "by": "claude-opus-5-5",
+      "reason": "Changed fit to full because Gogs is a complete self-hosted Git service with repositories, issues, pull requests, wikis and organizations, which covers GitHub's main job."
+     }
+    },
+    {
+     "project": "pagure",
+     "fit": "full",
+     "note": null
+    },
+    {
+     "project": "review-board",
+     "fit": "partial",
+     "note": null
+    }
+   ]
+  },
+  {
+   "id": "app-hosting",
+   "name": "App hosting & deployment",
+   "category": "dev-ship",
+   "job": "Put your web apps online",
+   "closed": [
+    "Heroku",
+    "Fly",
+    "Render",
+    "Netlify",
+    "Vercel"
+   ],
+   "source": "lists",
+   "alternatives": [
+    {
+     "project": "abilian-hop3",
+     "fit": "full",
+     "note": null,
+     "review": {
+      "by": "claude-opus-5-5",
+      "reason": "Changed fit to full because it is a self-hosted platform-as-a-service that covers the main deployment job, and added a note that it is still early-stage."
+     }
+    },
+    {
+     "project": "abilian-nua",
+     "fit": "full",
+     "note": null,
+     "review": {
+      "by": "claude-opus-5-5",
+      "reason": "Raised fit to full because it builds, deploys, updates, backs up and logs apps like the closed platforms, and noted that the project itself says it is not production-ready."
+     }
+    },
+    {
+     "project": "coolify",
+     "fit": "full",
+     "note": null
+    },
+    {
+     "project": "caprover",
+     "fit": "full",
+     "note": null
+    },
+    {
+     "project": "dokku",
+     "fit": "full",
+     "note": null
+    },
+    {
+     "project": "dyrector-io",
+     "fit": "partial",
+     "note": null
+    },
+    {
+     "project": "kubero",
+     "fit": "full",
+     "note": null,
+     "review": {
+      "by": "claude-opus-5-5",
+      "reason": "Raised fit to full because Kubero is a complete self-hosted Heroku-style platform with git deploys, review apps, pipelines, add-ons and logs."
+     }
+    },
+    {
+     "project": "otomi",
+     "fit": "full",
+     "note": null,
+     "review": {
+      "by": "claude-opus-5-5",
+      "reason": "Upgraded fit to full because it builds, deploys and publicly exposes apps on your own infrastructure; updated the description to mention the rename and removed the 'Heroku-style' claim, which the page does not make."
+     }
+    },
+    {
+     "project": "peon",
+     "fit": "full",
+     "note": null
+    }
+   ]
+  },
+  {
+   "id": "ci",
+   "name": "Automated builds & tests",
+   "category": "dev-ship",
+   "job": "Building and testing code automatically, with build caches",
+   "closed": [
+    "CircleCI"
+   ],
+   "source": "lists",
+   "alternatives": [
+    {
+     "project": "buildbot",
+     "fit": "full",
+     "note": null,
+     "review": {
+      "by": "claude-opus-5-5",
+      "reason": "Changed fit to full because Buildbot is a complete self-hosted continuous integration system that does the main job of CircleCI."
+     }
+    },
+    {
+     "project": "drone",
+     "fit": "full",
+     "note": null,
+     "review": {
+      "by": "claude-opus-5-5",
+      "reason": "Changed fit to full because its self-hosted pipelines (the successor to Drone CI) build and test code automatically, which is CircleCI's main job."
+     }
+    },
+    {
+     "project": "jenkins",
+     "fit": "full",
+     "note": null,
+     "review": {
+      "by": "claude-opus-5-5",
+      "reason": "Changed fit to full because Jenkins is a complete self-hosted CI/CD server that builds, tests and deploys code like CircleCI."
+     }
+    }
+   ]
+  },
+  {
+   "id": "monitoring",
+   "name": "Server & app monitoring",
+   "category": "dev-ship",
+   "job": "Watch servers and apps for problems",
+   "closed": [
+    "Datadog",
+    "NewRelic",
+    "Elastic Cloud"
+   ],
+   "source": "lists",
+   "alternatives": [
+    {
+     "project": "coroot",
+     "fit": "full",
+     "note": null,
+     "review": {
+      "by": "claude-opus-5-5",
+      "reason": "Changed fit to full because Coroot is a self-hosted observability platform covering metrics, logs, traces, profiling, alerting and SLOs, which is the main job of Datadog and New Relic."
+     }
+    },
+    {
+     "project": "grafana",
+     "fit": "partial",
+     "note": null
+    },
+    {
+     "project": "hyperdx",
+     "fit": "full",
+     "note": null,
+     "review": {
+      "by": "claude-opus-5-5",
+      "reason": "Changed fit to full because it is a self-hosted all-in-one stack covering logs, metrics, traces, APM, dashboards and alerts, which is the main job of Datadog and New Relic."
+     }
+    },
+    {
+     "project": "kubestellar-console",
+     "fit": "partial",
+     "note": null
+    },
+    {
+     "project": "manticore-search",
+     "fit": "partial",
+     "note": null,
+     "review": {
+      "by": "claude-opus-5-5",
+      "reason": "Removed the marketing word 'fast' and clarified that it only covers log storage and search, not full monitoring."
+     }
+    },
+    {
+     "project": "matano",
+     "fit": "partial",
+     "note": null
+    },
+    {
+     "project": "netdata",
+     "fit": "full",
+     "note": null,
+     "review": {
+      "by": "claude-opus-5-5",
+      "reason": "Raised fit to full because Netdata monitors servers and apps, collects logs, sends alerts and centralizes nodes, which covers the main job of tools like Datadog."
+     }
+    },
+    {
+     "project": "openstatus",
+     "fit": "partial",
+     "note": null
+    },
+    {
+     "project": "quickwit",
+     "fit": "partial",
+     "note": null
+    },
+    {
+     "project": "solidping",
+     "fit": "partial",
+     "note": null
+    },
+    {
+     "project": "signoz",
+     "fit": "full",
+     "note": null,
+     "review": {
+      "by": "claude-opus-5-5",
+      "reason": "Changed fit to full because the free self-hosted version covers logs, metrics, traces, dashboards and alerts, the core job of Datadog and New Relic."
+     }
+    },
+    {
+     "project": "uptrace",
+     "fit": "full",
+     "note": null,
+     "review": {
+      "by": "claude-opus-5-5",
+      "reason": "Changed fit to full because Uptrace is a self-hosted APM that covers traces, metrics, logs, dashboards and alerting, which is the main job of Datadog and New Relic."
+     }
+    },
+    {
+     "project": "victorialogs",
+     "fit": "partial",
+     "note": null
+    },
+    {
+     "project": "victoriametrics",
+     "fit": "partial",
+     "note": null
+    }
+   ]
+  },
+  {
+   "id": "feature-flags",
+   "name": "Feature flags",
+   "category": "dev-ship",
+   "job": "Turn app features on and off safely",
+   "closed": [
+    "LaunchDarkly"
+   ],
+   "source": "lists",
+   "alternatives": [
+    {
+     "project": "flagsmith",
+     "fit": "full",
+     "note": null
+    },
+    {
+     "project": "growthbook",
+     "fit": "full",
+     "note": null
+    },
+    {
+     "project": "unleash",
+     "fit": "full",
+     "note": null
+    }
+   ]
+  },
+  {
+   "id": "infrastructure-as-code",
+   "name": "Infrastructure as code",
+   "category": "dev-ship",
+   "job": "Setting up servers and cloud services from files",
+   "closed": [
+    "Terraform"
+   ],
+   "source": "family",
+   "alternatives": [
+    {
+     "project": "opentofu",
+     "fit": "full",
+     "note": null
+    }
+   ]
+  },
+  {
+   "id": "maintainer-tools",
+   "name": "Tools for open-source maintainers",
+   "category": "dev-ship",
+   "job": "Triage bots, contributor helpers and pull-request gates for projects",
+   "closed": [],
+   "source": "taxonomy",
+   "alternatives": []
+  },
+  {
+   "id": "code-security",
+   "name": "Dependency and code security checks",
+   "category": "dev-ship",
+   "job": "Catching risky packages and leaked secrets before they ship",
+   "closed": [
+    "Snyk",
+    "GitHub Advanced Security",
+    "Socket"
+   ],
+   "source": "taxonomy",
+   "alternatives": []
+  },
+  {
+   "id": "webhooks",
+   "name": "Sending and receiving webhooks",
+   "category": "dev-ship",
+   "job": "Delivering webhooks reliably between apps",
+   "closed": [
+    "Hookdeck",
+    "Svix (hosted)"
+   ],
+   "source": "taxonomy",
+   "alternatives": []
+  },
+  {
+   "id": "containers",
+   "name": "Containers and Kubernetes",
+   "category": "dev-ship",
+   "job": "Packaging apps in containers and running them on clusters",
+   "closed": [
+    "Docker Desktop (paid tiers)",
+    "Red Hat OpenShift"
+   ],
+   "source": "taxonomy",
+   "alternatives": []
+  },
+  {
+   "id": "secrets-management",
+   "name": "Secrets for apps and teams",
+   "category": "dev-ship",
+   "job": "Storing API keys and passwords that apps and teams share",
+   "closed": [
+    "Doppler",
+    "HashiCorp Vault Enterprise"
+   ],
+   "source": "taxonomy",
+   "waitForProject": true,
+   "alternatives": []
+  },
+  {
+   "id": "data-pipelines",
+   "name": "Data pipelines",
+   "category": "dev-data",
+   "job": "Moving data between tools and running scheduled jobs",
+   "closed": [
+    "Fivetran",
+    "Hightouch",
+    "Segment"
+   ],
+   "source": "lists",
+   "alternatives": [
+    {
+     "project": "bruin",
+     "fit": "partial",
+     "note": null
+    },
+    {
+     "project": "jitsu",
+     "fit": "full",
+     "note": null
+    },
+    {
+     "project": "kestra",
+     "fit": "full",
+     "note": null,
+     "review": {
+      "by": "claude-opus-5-5",
+      "reason": "Raised fit to full because Kestra is a complete self-hosted workflow orchestrator like Airflow, with built-in plugins for moving data between databases, storage and APIs."
+     }
+    },
+    {
+     "project": "trench",
+     "fit": "partial",
+     "note": null
+    },
+    {
+     "project": "airflow",
+     "fit": "partial",
+     "note": "You write each job in code; no ready-made connectors like Fivetran's"
+    }
+   ]
+  },
+  {
+   "id": "key-value-stores",
+   "name": "Caches & key-value stores",
+   "category": "dev-data",
+   "job": "Keeping data an app needs quickly in memory",
+   "closed": [
+    "Amazon ElastiCache",
+    "Google Memorystore"
+   ],
+   "source": "family",
+   "alternatives": [
+    {
+     "project": "valkey",
+     "fit": "full",
+     "note": null
+    },
+    {
+     "project": "redis",
+     "fit": "full",
+     "note": "Open source again from version 8 (AGPL option); versions 7.4 to 7.x were source-available only"
+    }
+   ]
+  },
+  {
+   "id": "sql-databases",
+   "name": "SQL databases",
+   "category": "dev-data",
+   "job": "Storing business data in tables that many users and servers can use at once",
+   "closed": [
+    "Amazon Aurora",
+    "Google Cloud Spanner"
+   ],
+   "source": "data-fixes",
+   "alternatives": [
+    {
+     "project": "postgresql",
+     "fit": "full",
+     "note": "You run it yourself or rent hosting; Aurora is a managed service"
+    },
+    {
+     "project": "mariadb",
+     "fit": "full",
+     "note": "You run it yourself or rent hosting"
+    },
+    {
+     "project": "pingcap",
+     "fit": "full",
+     "note": null
+    },
+    {
+     "project": "yugabyte",
+     "fit": "full",
+     "note": null
+    },
+    {
+     "project": "cratedb",
+     "fit": "full",
+     "note": null
+    }
+   ]
+  },
+  {
+   "id": "search-engines",
+   "name": "Site & app search",
+   "category": "dev-data",
+   "job": "Adding fast search to a website or app",
+   "closed": [
+    "Algolia",
+    "Elastic Cloud"
+   ],
+   "source": "data-fixes",
+   "alternatives": [
+    {
+     "project": "typesense",
+     "fit": "full",
+     "note": null
+    },
+    {
+     "project": "mellisearch",
+     "fit": "full",
+     "note": null
+    },
+    {
+     "project": "manticore-search",
+     "fit": "full",
+     "note": null
+    },
+    {
+     "project": "zinc-labs",
+     "fit": "partial",
+     "note": null
+    },
+    {
+     "project": "sonic",
+     "fit": "partial",
+     "note": null
+    },
+    {
+     "project": "quickwit",
+     "fit": "partial",
+     "note": null
+    }
+   ]
+  },
+  {
+   "id": "graph-databases",
+   "name": "Graph databases",
+   "category": "dev-data",
+   "job": "Storing data as connected items and following the links between them",
+   "closed": [
+    "TigerGraph",
+    "Amazon Neptune"
+   ],
+   "source": "data-fixes",
+   "alternatives": [
+    {
+     "project": "neo4j",
+     "fit": "partial",
+     "note": "Free Community edition; clustering and some features are paid"
+    },
+    {
+     "project": "terminusdb",
+     "fit": "full",
+     "note": null
+    }
+   ]
+  },
+  {
+   "id": "time-series-databases",
+   "name": "Time-series databases",
+   "category": "dev-data",
+   "job": "Storing readings and events over time, such as sensor data and trades",
+   "closed": [
+    "Kdb+"
+   ],
+   "source": "data-fixes",
+   "alternatives": [
+    {
+     "project": "questdb",
+     "fit": "full",
+     "note": null
+    },
+    {
+     "project": "influxdb",
+     "fit": "full",
+     "note": null
+    },
+    {
+     "project": "tdengine",
+     "fit": "full",
+     "note": null
+    },
+    {
+     "project": "cratedb",
+     "fit": "full",
+     "note": null
+    }
+   ]
+  },
+  {
+   "id": "data-warehouses",
+   "name": "Data warehouses",
+   "category": "dev-data",
+   "job": "Asking questions across huge amounts of company data",
+   "closed": [
+    "Snowflake"
+   ],
+   "source": "data-fixes",
+   "alternatives": [
+    {
+     "project": "clickhouse",
+     "fit": "full",
+     "note": "You run it yourself, or rent hosting from ClickHouse"
+    },
+    {
+     "project": "databend",
+     "fit": "full",
+     "note": null
+    }
+   ]
+  },
+  {
+   "id": "database-tools",
+   "name": "Database apps and tools",
+   "category": "dev-data",
+   "job": "Database clients, query tools, proxies and libraries",
+   "closed": [
+    "DataGrip",
+    "TablePlus",
+    "Navicat"
+   ],
+   "source": "taxonomy",
+   "alternatives": []
+  },
+  {
+   "id": "science-math",
+   "name": "Math and science tools",
+   "category": "dev-data",
+   "job": "Calculators, graphing and scientific computing",
+   "closed": [
+    "MATLAB",
+    "Mathematica",
+    "Maple"
+   ],
+   "source": "taxonomy",
+   "alternatives": []
+  },
+  {
+   "id": "data-analysis",
+   "name": "Statistics and data analysis",
+   "category": "dev-data",
+   "job": "Analysing data and running statistics",
+   "closed": [
+    "SPSS",
+    "Stata",
+    "SAS",
+    "JMP",
+    "Minitab"
+   ],
+   "source": "taxonomy",
+   "alternatives": []
+  },
+  {
+   "id": "object-storage",
+   "name": "File storage for apps (S3)",
+   "category": "dev-data",
+   "job": "Storing app files in an S3-style bucket on your own servers",
+   "closed": [
+    "Amazon S3",
+    "Backblaze B2",
+    "Cloudflare R2"
+   ],
+   "source": "taxonomy",
+   "waitForProject": true,
+   "alternatives": []
+  },
+  {
+   "id": "internal-tools",
+   "name": "Internal tool builders",
+   "category": "dev-blocks",
+   "job": "Build admin panels and internal apps quickly",
+   "closed": [
+    "Retool"
+   ],
+   "source": "lists",
+   "alternatives": [
+    {
+     "project": "appsmith",
+     "fit": "full",
+     "note": null
+    },
+    {
+     "project": "budibase",
+     "fit": "full",
+     "note": null
+    },
+    {
+     "project": "dashpress",
+     "fit": "partial",
+     "note": null
+    },
+    {
+     "project": "illa",
+     "fit": "full",
+     "note": null
+    },
+    {
+     "project": "lowdefy",
+     "fit": "partial",
+     "note": null
+    },
+    {
+     "project": "openblocks",
+     "fit": "full",
+     "note": null
+    },
+    {
+     "project": "tooljet",
+     "fit": "full",
+     "note": null
+    },
+    {
+     "project": "windmill",
+     "fit": "full",
+     "note": null
+    }
+   ]
+  },
+  {
+   "id": "backend-service",
+   "name": "App backends",
+   "category": "dev-blocks",
+   "job": "Ready-made backend for your app",
+   "closed": [
+    "Firebase"
+   ],
+   "source": "lists",
+   "alternatives": [
+    {
+     "project": "appwrite",
+     "fit": "full",
+     "note": null
+    },
+    {
+     "project": "acebase",
+     "fit": "partial",
+     "note": null
+    },
+    {
+     "project": "encore",
+     "fit": "partial",
+     "note": null,
+     "review": {
+      "by": "claude-opus-5-5",
+      "reason": "Clarified that automatic cloud setup is done by Encore's hosted platform, while the open-source part covers local development and Docker self-hosting."
+     }
+    },
+    {
+     "project": "kuzzle",
+     "fit": "full",
+     "note": null,
+     "review": {
+      "by": "claude-opus-5-5",
+      "reason": "Changed fit to full because Kuzzle self-hosts the core Firebase jobs: a database with search, user logins with permissions, real-time updates and client SDKs."
+     }
+    },
+    {
+     "project": "nhost",
+     "fit": "full",
+     "note": null
+    },
+    {
+     "project": "pocketbase",
+     "fit": "full",
+     "note": null,
+     "review": {
+      "by": "claude-opus-5-5",
+      "reason": "Raised fit to full because PocketBase covers Firebase's core backend job: a realtime database, user accounts, file storage and an admin dashboard in one self-hosted program."
+     }
+    },
+    {
+     "project": "supabase",
+     "fit": "full",
+     "note": null,
+     "review": {
+      "by": "claude-opus-5-5",
+      "reason": "Raised fit to full because Supabase covers Firebase's main job of database, login, file storage, realtime and functions, and it can be self-hosted."
+     }
+    }
+   ]
+  },
+  {
+   "id": "login-identity",
+   "name": "Login & identity",
+   "category": "dev-blocks",
+   "job": "Let users sign in securely",
+   "closed": [
+    "Auth0",
+    "Okta"
+   ],
+   "source": "lists",
+   "alternatives": [
+    {
+     "project": "authgear",
+     "fit": "full",
+     "note": null
+    },
+    {
+     "project": "boxyhq",
+     "fit": "partial",
+     "note": null
+    },
+    {
+     "project": "hanko",
+     "fit": "full",
+     "note": null,
+     "review": {
+      "by": "claude-opus-5-5",
+      "reason": "Changed fit to full because Hanko is a complete self-hostable login and user management backend covering passwords, passkeys, MFA, social login and SAML SSO, which is the main job of Auth0 and Okta."
+     }
+    },
+    {
+     "project": "janssen",
+     "fit": "full",
+     "note": null,
+     "review": {
+      "by": "claude-opus-5-5",
+      "reason": "Changed fit to full because Janssen is a complete self-hosted identity server with certified OpenID Connect, passkey login, user management and custom sign-in flows, which covers the main job of Auth0 and Okta."
+     }
+    },
+    {
+     "project": "keycloak",
+     "fit": "full",
+     "note": null
+    },
+    {
+     "project": "logto",
+     "fit": "full",
+     "note": null
+    },
+    {
+     "project": "ory",
+     "fit": "partial",
+     "note": null
+    },
+    {
+     "project": "supertokens",
+     "fit": "full",
+     "note": null,
+     "review": {
+      "by": "claude-opus-5-5",
+      "reason": "Changed fit to full because SuperTokens is a complete self-hosted auth provider covering sign-up, login, social and passwordless login, sessions and roles, the main job of Auth0."
+     }
+    },
+    {
+     "project": "zitadel",
+     "fit": "full",
+     "note": null
+    }
+   ]
+  },
+  {
+   "id": "voice-apis",
+   "name": "Phone & voice APIs",
+   "category": "dev-blocks",
+   "job": "Add calls and texts to apps",
+   "closed": [
+    "Twilio"
+   ],
+   "source": "lists",
+   "alternatives": [
+    {
+     "project": "fonoster",
+     "fit": "partial",
+     "note": null,
+     "review": {
+      "by": "claude-opus-5-5",
+      "reason": "Removed the SMS and video claims, which the project page does not support; it covers voice calls only, so fit stays partial."
+     }
+    },
+    {
+     "project": "livekit",
+     "fit": "partial",
+     "note": null,
+     "review": {
+      "by": "claude-opus-5-5",
+      "reason": "Changed fit to partial because LiveKit handles in-app voice and video and can connect phone calls over SIP, but it does not send or receive text messages the way Twilio does."
+     }
+    },
+    {
+     "project": "openvidu",
+     "fit": "partial",
+     "note": null
+    }
+   ]
+  },
+  {
+   "id": "saas-starters",
+   "name": "SaaS starter kits",
+   "category": "dev-blocks",
+   "job": "Start a software business from a template",
+   "closed": [
+    "ShipFast",
+    "Supastarter",
+    "SaaS Pegasus"
+   ],
+   "source": "lists",
+   "alternatives": [
+    {
+     "project": "lastsaas",
+     "fit": "full",
+     "note": null,
+     "review": {
+      "by": "claude-opus-5-5",
+      "reason": "Changed fit to full because it is a complete MIT-licensed SaaS boilerplate covering the same core job as ShipFast, Supastarter and SaaS Pegasus: authentication, teams, Stripe billing and an admin dashboard."
+     }
+    }
+   ]
+  },
+  {
+   "id": "email-sending",
+   "name": "Email sending for apps",
+   "category": "dev-blocks",
+   "job": "Sending an app's own emails, like sign-ups and password resets",
+   "closed": [
+    "Mailgun",
+    "SendGrid"
+   ],
+   "source": "placement",
+   "alternatives": [
+    {
+     "project": "postal",
+     "fit": "full",
+     "note": null
+    }
+   ]
+  },
+  {
+   "id": "product-analytics",
+   "name": "Product analytics & session replay",
+   "category": "dev-blocks",
+   "job": "Seeing how people use your app or website, step by step",
+   "closed": [
+    "Mixpanel",
+    "Amplitude",
+    "FullStory",
+    "LogRocket"
+   ],
+   "source": "placement",
+   "alternatives": [
+    {
+     "project": "highlight",
+     "fit": "partial",
+     "note": null
+    },
+    {
+     "project": "openreplay",
+     "fit": "full",
+     "note": null
+    },
+    {
+     "project": "posthog",
+     "fit": "full",
+     "note": null
+    },
+    {
+     "project": "trench",
+     "fit": "partial",
+     "note": null
+    },
+    {
+     "project": "telemetry-tracker",
+     "fit": "partial",
+     "note": "Also tracks errors; self-hosted or hosted"
+    }
+   ]
+  },
+  {
+   "id": "push-notifications",
+   "name": "Push notifications",
+   "category": "dev-blocks",
+   "job": "Sending notifications to people's phones and computers",
+   "closed": [
+    "OneSignal"
+   ],
+   "source": "placement",
+   "alternatives": [
+    {
+     "project": "apprise",
+     "fit": "partial",
+     "note": null
+    },
+    {
+     "project": "ntfy",
+     "fit": "partial",
+     "note": null
+    }
+   ]
+  },
+  {
+   "id": "translation-management",
+   "name": "Translation management",
+   "category": "dev-blocks",
+   "job": "Translating an app or website into other languages, as a team",
+   "closed": [
+    "Lokalise",
+    "Crowdin",
+    "Transifex",
+    "POEditor"
+   ],
+   "source": "placement",
+   "alternatives": [
+    {
+     "project": "tolgee",
+     "fit": "full",
+     "note": null
+    }
+   ]
+  },
+  {
+   "id": "web-frameworks",
+   "name": "Web frameworks",
+   "category": "dev-blocks",
+   "job": "Code frameworks for building websites and web apps",
+   "closed": [],
+   "source": "taxonomy",
+   "alternatives": []
+  },
+  {
+   "id": "web-scraping",
+   "name": "Web scraping",
+   "category": "dev-blocks",
+   "job": "Collecting data from websites automatically",
+   "closed": [
+    "Apify",
+    "Bright Data",
+    "SerpApi",
+    "ScrapingBee"
+   ],
+   "source": "taxonomy",
+   "alternatives": []
+  },
+  {
+   "id": "ui-components",
+   "name": "UI components and charts",
+   "category": "dev-blocks",
+   "job": "Ready-made buttons, tables, grids and charts for apps",
+   "closed": [
+    "Handsontable",
+    "AG Grid Enterprise",
+    "Highcharts",
+    "Kendo UI"
+   ],
+   "source": "taxonomy",
+   "alternatives": []
+  },
+  {
+   "id": "app-frameworks",
+   "name": "Desktop and mobile app frameworks",
+   "category": "dev-blocks",
+   "job": "Code frameworks for building desktop, phone and terminal apps",
+   "closed": [],
+   "source": "taxonomy",
+   "alternatives": []
+  },
+  {
+   "id": "captcha",
+   "name": "Bot protection and CAPTCHAs",
+   "category": "dev-blocks",
+   "job": "Keeping bots and AI crawlers off a website",
+   "closed": [
+    "Google reCAPTCHA",
+    "hCaptcha",
+    "Cloudflare Turnstile"
+   ],
+   "source": "taxonomy",
+   "alternatives": []
+  },
+  {
+   "id": "realtime",
+   "name": "Live updates and sync",
+   "category": "dev-blocks",
+   "job": "Pushing live updates and syncing state between users",
+   "closed": [
+    "Pusher",
+    "Ably",
+    "PubNub"
+   ],
+   "source": "taxonomy",
+   "alternatives": []
+  },
+  {
+   "id": "encryption-libraries",
+   "name": "Encryption libraries",
+   "category": "dev-blocks",
+   "job": "Code libraries for encrypting data and messages",
+   "closed": [],
+   "source": "taxonomy",
+   "alternatives": []
+  },
+  {
+   "id": "vpn",
+   "name": "VPN & private networks",
+   "category": "selfhost",
+   "job": "Connect devices over a private network",
+   "closed": [
+    "OpenVPN Access Server",
+    "Tailscale",
+    "AWS VPC"
+   ],
+   "source": "lists",
+   "alternatives": [
+    {
+     "project": "gravitl",
+     "fit": "full",
+     "note": null,
+     "review": {
+      "by": "claude-opus-5-5",
+      "reason": "Raised fit to full because the open-source version is a complete self-hosted WireGuard VPN with mesh networks, remote access gateways and site-to-site links, the main job of Tailscale and OpenVPN."
+     }
+    },
+    {
+     "project": "netbird",
+     "fit": "full",
+     "note": null
+    },
+    {
+     "project": "omniedge",
+     "fit": "full",
+     "note": null,
+     "review": {
+      "by": "claude-opus-5-5",
+      "reason": "Raised fit to full because it is a complete Tailscale-style mesh VPN with a self-hosted mode, and removed phones since the page lists only Linux, macOS, Windows and OpenWrt."
+     }
+    },
+    {
+     "project": "openvpn",
+     "fit": "partial",
+     "note": "Set up by hand; no web admin panel like Access Server's"
+    }
+   ]
+  },
+  {
+   "id": "docker-management",
+   "name": "Managing containers at home",
+   "category": "selfhost",
+   "job": "Starting, updating and backing up the apps on a home server",
+   "closed": [
+    "Portainer Business"
+   ],
+   "source": "taxonomy",
+   "alternatives": []
+  },
+  {
+   "id": "tunnels",
+   "name": "Reaching home apps from outside",
+   "category": "selfhost",
+   "job": "Getting to home-server apps without opening router ports",
+   "closed": [
+    "ngrok",
+    "Cloudflare Tunnel",
+    "Tailscale Funnel"
+   ],
+   "source": "taxonomy",
+   "alternatives": []
+  },
+  {
+   "id": "virtual-machines",
+   "name": "Virtual machines",
+   "category": "selfhost",
+   "job": "Running other operating systems inside your computer or server",
+   "closed": [
+    "VMware Workstation / vSphere",
+    "Parallels Desktop"
+   ],
+   "source": "taxonomy",
+   "alternatives": []
+  },
+  {
+   "id": "reverse-proxies",
+   "name": "Reverse proxies and HTTPS",
+   "category": "selfhost",
+   "job": "Putting home-server apps behind one address with HTTPS certificates",
+   "closed": [
+    "Cloudflare (proxy)"
+   ],
+   "source": "taxonomy",
+   "alternatives": []
+  },
+  {
+   "id": "email-servers",
+   "name": "Running your own email server",
+   "category": "selfhost",
+   "job": "Hosting email for your own domain",
+   "closed": [
+    "Google Workspace Gmail",
+    "Microsoft 365 Exchange",
+    "Fastmail"
+   ],
+   "source": "taxonomy",
+   "alternatives": []
+  },
+  {
+   "id": "uptime-status",
+   "name": "Uptime checks and status pages",
+   "category": "selfhost",
+   "job": "Getting alerted when a site or service goes down",
+   "closed": [
+    "UptimeRobot",
+    "Pingdom",
+    "Atlassian Statuspage"
+   ],
+   "source": "taxonomy",
+   "alternatives": []
+  },
+  {
+   "id": "server-panels",
+   "name": "Server control panels",
+   "category": "selfhost",
+   "job": "Managing a web server, sites and email from a web panel",
+   "closed": [
+    "cPanel",
+    "Plesk",
+    "RunCloud"
+   ],
+   "source": "taxonomy",
+   "alternatives": []
+  },
+  {
+   "id": "start-pages",
+   "name": "Home server dashboards",
+   "category": "selfhost",
+   "job": "A start page with links and status for all your home apps",
+   "closed": [],
+   "source": "taxonomy",
+   "alternatives": []
+  },
+  {
+   "id": "dns",
+   "name": "Dynamic DNS and DNS servers",
+   "category": "selfhost",
+   "job": "Keeping a domain pointed at a changing home address, or running your own DNS",
+   "closed": [
+    "No-IP",
+    "Dyn",
+    "Dynu"
+   ],
+   "source": "taxonomy",
+   "alternatives": []
+  },
+  {
+   "id": "security-scanning",
+   "name": "Security scanning",
+   "category": "security",
+   "job": "Find and track security weaknesses",
+   "closed": [
+    "Plextrac",
+    "Vulcan",
+    "Tenable Nessus",
+    "Prisma Cloud"
+   ],
+   "source": "lists",
+   "alternatives": [
+    {
+     "project": "deepfence-threatmapper",
+     "fit": "partial",
+     "note": null
+    },
+    {
+     "project": "faraday",
+     "fit": "partial",
+     "note": null
+    },
+    {
+     "project": "nuclei",
+     "fit": "partial",
+     "note": null
+    }
+   ]
+  },
+  {
+   "id": "security-monitoring",
+   "name": "Intrusion detection and security monitoring",
+   "category": "security",
+   "job": "Spotting attacks and suspicious activity on servers and computers",
+   "closed": [
+    "Splunk",
+    "CrowdStrike Falcon",
+    "SentinelOne"
+   ],
+   "source": "taxonomy",
+   "alternatives": []
+  },
+  {
+   "id": "security-testing",
+   "name": "Security testing and password recovery",
+   "category": "security",
+   "job": "Testing your own systems the way an attacker would",
+   "closed": [
+    "Burp Suite Pro",
+    "Metasploit Pro",
+    "Passware"
+   ],
+   "source": "taxonomy",
+   "alternatives": []
+  },
+  {
+   "id": "network-tools",
+   "name": "Network scanners and diagnostics",
+   "category": "security",
+   "job": "Seeing what's on your network and why it's slow",
+   "closed": [
+    "Fing",
+    "PRTG",
+    "SolarWinds"
+   ],
+   "source": "taxonomy",
+   "alternatives": []
+  },
+  {
+   "id": "remote-desktop",
+   "name": "Remote desktop",
+   "category": "utilities",
+   "job": "Control another computer remotely",
+   "closed": [
+    "TeamViewer",
+    "AnyDesk"
+   ],
+   "source": "lists",
+   "alternatives": [
+    {
+     "project": "meshcentral",
+     "fit": "full",
+     "note": null,
+     "review": {
+      "by": "claude-opus-5-5",
+      "reason": "Changed fit to full because MeshCentral is a complete self-hosted remote desktop tool with remote screen control, terminal and file access, covering the main job of TeamViewer and AnyDesk."
+     }
+    },
+    {
+     "project": "rustdesk",
+     "fit": "full",
+     "note": null
+    },
+    {
+     "project": "ultravnc",
+     "fit": "full",
+     "note": null,
+     "review": {
+      "by": "claude-opus-5-5",
+      "reason": "Changed fit to full because it covers the core job of viewing and controlling another Windows PC, including file transfer and no-install help-desk support through Single Click, though the computer being controlled must run Windows."
+     }
+    }
+   ]
+  },
+  {
+   "id": "launchers",
+   "name": "App launchers and docks",
+   "category": "utilities",
+   "job": "Opening apps and commands quickly from the keyboard or a dock",
+   "closed": [
+    "Raycast",
+    "Alfred",
+    "LaunchBar"
+   ],
+   "source": "taxonomy",
+   "alternatives": []
+  },
+  {
+   "id": "clipboard",
+   "name": "Clipboard managers",
+   "category": "utilities",
+   "job": "Keeping a history of what you copied and syncing it between devices",
+   "closed": [
+    "Paste",
+    "ClipboardFusion"
+   ],
+   "source": "taxonomy",
+   "alternatives": []
+  },
+  {
+   "id": "desktop-widgets",
+   "name": "Desktop widgets and notch apps",
+   "category": "utilities",
+   "job": "Small panels that show music, status and info on screen",
+   "closed": [
+    "NotchNook",
+    "Bartender"
+   ],
+   "source": "taxonomy",
+   "alternatives": []
+  },
+  {
+   "id": "system-monitors",
+   "name": "System and hardware monitors",
+   "category": "utilities",
+   "job": "Seeing CPU, memory, temperature and battery at a glance",
+   "closed": [
+    "iStat Menus",
+    "HWiNFO",
+    "AIDA64"
+   ],
+   "source": "taxonomy",
+   "alternatives": []
+  },
+  {
+   "id": "system-tweaks",
+   "name": "Windows and Mac tweaks and debloat",
+   "category": "utilities",
+   "job": "Changing hidden settings, removing bloat and keeping the computer awake",
+   "closed": [
+    "O&O ShutUp10++ (free, closed)",
+    "Amphetamine",
+    "Winaero Tweaker"
+   ],
+   "source": "taxonomy",
+   "alternatives": []
+  },
+  {
+   "id": "wallpapers",
+   "name": "Live wallpapers and screensavers",
+   "category": "utilities",
+   "job": "Animated or rotating wallpapers and screensavers",
+   "closed": [
+    "Wallpaper Engine"
+   ],
+   "source": "taxonomy",
+   "alternatives": []
+  },
+  {
+   "id": "accessibility",
+   "name": "Accessibility tools",
+   "category": "utilities",
+   "job": "Screen readers, on-screen keyboards and switch access",
+   "closed": [
+    "JAWS",
+    "ZoomText",
+    "Dragon"
+   ],
+   "source": "taxonomy",
+   "alternatives": []
+  },
+  {
+   "id": "screenshots",
+   "name": "Screenshots and screen annotation",
+   "category": "utilities",
+   "job": "Capturing, marking up and sharing screenshots",
+   "closed": [
+    "Snagit",
+    "CleanShot X"
+   ],
+   "source": "taxonomy",
+   "alternatives": []
+  },
+  {
+   "id": "desktop-automation",
+   "name": "Desktop automation and macros",
+   "category": "utilities",
+   "job": "Automating clicks, keys and text snippets on your computer",
+   "closed": [
+    "Keyboard Maestro",
+    "Power Automate Desktop"
+   ],
+   "source": "taxonomy",
+   "alternatives": []
+  },
+  {
+   "id": "system-setup",
+   "name": "Setting up a new computer automatically",
+   "category": "utilities",
+   "job": "Scripts and dotfiles that set up a fresh computer your way",
+   "closed": [],
+   "source": "taxonomy",
+   "alternatives": []
+  },
+  {
+   "id": "app-installers",
+   "name": "Installing many apps at once",
+   "category": "utilities",
+   "job": "Installing and updating lots of apps in one go",
+   "closed": [
+    "Ninite",
+    "Patch My PC"
+   ],
+   "source": "taxonomy",
+   "alternatives": []
+  },
+  {
+   "id": "screen-text",
+   "name": "Copying text from the screen",
+   "category": "utilities",
+   "job": "Grabbing text from any image or window (on-screen OCR)",
+   "closed": [
+    "Google Lens",
+    "TextSniper"
+   ],
+   "source": "taxonomy",
+   "alternatives": []
+  },
+  {
+   "id": "sound-control",
+   "name": "Equalizers and per-app sound",
+   "category": "utilities",
+   "job": "Changing how your computer sounds: equalizer, per-app volume, effects",
+   "closed": [
+    "SoundSource",
+    "Boom 3D",
+    "Voicemeeter"
+   ],
+   "source": "taxonomy",
+   "alternatives": []
+  },
+  {
+   "id": "web-app-wrappers",
+   "name": "Turning websites into apps",
+   "category": "utilities",
+   "job": "Making a website open in its own app window",
+   "closed": [
+    "WebCatalog",
+    "Coherence X"
+   ],
+   "source": "taxonomy",
+   "alternatives": []
+  },
+  {
+   "id": "window-snapping",
+   "name": "Window snapping and tiling",
+   "category": "utilities",
+   "job": "Arranging windows neatly with keys or drags",
+   "closed": [
+    "Magnet",
+    "BetterSnapTool",
+    "DisplayFusion"
+   ],
+   "source": "taxonomy",
+   "alternatives": []
   }
  ]
 }

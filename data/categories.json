@@ -2,50 +2,206 @@
  "license": "CC BY-SA 4.0",
  "generated": "2026-10-27",
  "credits": "See data/CREDITS.md",
+ "areas": [
+  {
+   "id": "everyday",
+   "name": "Apps for everyday life",
+   "categories": [
+    "office",
+    "social",
+    "creative",
+    "media",
+    "games",
+    "files",
+    "everyday",
+    "web",
+    "business"
+   ]
+  },
+  {
+   "id": "ai-area",
+   "name": "AI",
+   "categories": [
+    "ai",
+    "coding-agents",
+    "ai-build"
+   ]
+  },
+  {
+   "id": "os-area",
+   "name": "Operating systems",
+   "categories": [
+    "os",
+    "os-desktops",
+    "os-core",
+    "os-mobile"
+   ]
+  },
+  {
+   "id": "hardware",
+   "name": "Hardware & devices",
+   "categories": [
+    "hw-tv",
+    "hw-pc",
+    "hw-gadgets",
+    "hw-makers"
+   ]
+  },
+  {
+   "id": "developer",
+   "name": "Developer tools",
+   "categories": [
+    "dev",
+    "dev-ship",
+    "dev-data",
+    "dev-blocks"
+   ]
+  },
+  {
+   "id": "system",
+   "name": "Self-hosting & system tools",
+   "categories": [
+    "selfhost",
+    "security",
+    "utilities"
+   ]
+  }
+ ],
  "categories": [
   {
    "id": "office",
-   "name": "Office & productivity"
+   "name": "Office & productivity",
+   "area": "everyday"
   },
   {
    "id": "social",
-   "name": "Communication & social"
+   "name": "Communication & social",
+   "area": "everyday"
   },
   {
    "id": "creative",
-   "name": "Creative"
-  },
-  {
-   "id": "os",
-   "name": "Operating systems & phones"
-  },
-  {
-   "id": "web",
-   "name": "Browsers, search & security"
-  },
-  {
-   "id": "ai",
-   "name": "AI tools"
+   "name": "Creative",
+   "area": "everyday"
   },
   {
    "id": "media",
-   "name": "Media & entertainment"
+   "name": "Music, video & reading",
+   "area": "everyday"
+  },
+  {
+   "id": "games",
+   "name": "Games & gaming",
+   "area": "everyday"
   },
   {
    "id": "files",
-   "name": "Files & cloud"
+   "name": "Files & cloud",
+   "area": "everyday"
   },
   {
    "id": "everyday",
-   "name": "Everyday"
+   "name": "Everyday life",
+   "area": "everyday"
   },
   {
-   "id": "dev",
-   "name": "Developer & business"
+   "id": "web",
+   "name": "Browsers, privacy & security",
+   "area": "everyday"
   },
   {
    "id": "business",
-   "name": "Business & finance"
+   "name": "Business & finance",
+   "area": "everyday"
+  },
+  {
+   "id": "ai",
+   "name": "AI apps",
+   "area": "ai-area"
+  },
+  {
+   "id": "coding-agents",
+   "name": "Coding agents & their tools",
+   "area": "ai-area"
+  },
+  {
+   "id": "ai-build",
+   "name": "Building with AI",
+   "area": "ai-area"
+  },
+  {
+   "id": "os",
+   "name": "Computer systems & Linux distributions",
+   "area": "os-area"
+  },
+  {
+   "id": "os-desktops",
+   "name": "Desktops & customization",
+   "area": "os-area"
+  },
+  {
+   "id": "os-core",
+   "name": "Under the hood: kernel, drivers, compatibility",
+   "area": "os-area"
+  },
+  {
+   "id": "os-mobile",
+   "name": "Phones & tablets",
+   "area": "os-area"
+  },
+  {
+   "id": "hw-tv",
+   "name": "TVs & streaming boxes",
+   "area": "hardware"
+  },
+  {
+   "id": "hw-pc",
+   "name": "Computer accessories & parts",
+   "area": "hardware"
+  },
+  {
+   "id": "hw-gadgets",
+   "name": "Home, network & personal gadgets",
+   "area": "hardware"
+  },
+  {
+   "id": "hw-makers",
+   "name": "Making things: 3D printing, electronics, radio",
+   "area": "hardware"
+  },
+  {
+   "id": "dev",
+   "name": "Writing code",
+   "area": "developer"
+  },
+  {
+   "id": "dev-ship",
+   "name": "Hosting, shipping & running code",
+   "area": "developer"
+  },
+  {
+   "id": "dev-data",
+   "name": "Databases, data & science",
+   "area": "developer"
+  },
+  {
+   "id": "dev-blocks",
+   "name": "Building blocks for apps",
+   "area": "developer"
+  },
+  {
+   "id": "selfhost",
+   "name": "Home servers & self-hosting",
+   "area": "system"
+  },
+  {
+   "id": "security",
+   "name": "IT security",
+   "area": "system"
+  },
+  {
+   "id": "utilities",
+   "name": "Computer utilities",
+   "area": "system"
   }
  ]
 }

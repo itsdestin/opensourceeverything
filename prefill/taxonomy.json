@@ -1,0 +1,6190 @@
+{
+ "_why": "The map's structure (Destin approved, taxonomy-v2 deck, Oct 27): 6 areas -> 27 categories -> groups. Read by prefill/assemble.mjs. Copied from docs/research/taxonomy-v2.json without its working notes (post counts, evidence), per the rule that nothing reads docs/research directly.",
+ "areas": [
+  {
+   "id": "everyday",
+   "name": "Apps for everyday life",
+   "categories": [
+    "office",
+    "social",
+    "creative",
+    "media",
+    "games",
+    "files",
+    "everyday",
+    "web",
+    "business"
+   ]
+  },
+  {
+   "id": "ai-area",
+   "name": "AI",
+   "categories": [
+    "ai",
+    "coding-agents",
+    "ai-build"
+   ]
+  },
+  {
+   "id": "os-area",
+   "name": "Operating systems",
+   "categories": [
+    "os",
+    "os-desktops",
+    "os-core",
+    "os-mobile"
+   ]
+  },
+  {
+   "id": "hardware",
+   "name": "Hardware & devices",
+   "categories": [
+    "hw-tv",
+    "hw-pc",
+    "hw-gadgets",
+    "hw-makers"
+   ]
+  },
+  {
+   "id": "developer",
+   "name": "Developer tools",
+   "categories": [
+    "dev",
+    "dev-ship",
+    "dev-data",
+    "dev-blocks"
+   ]
+  },
+  {
+   "id": "system",
+   "name": "Self-hosting & system tools",
+   "categories": [
+    "selfhost",
+    "security",
+    "utilities"
+   ]
+  }
+ ],
+ "categories": [
+  {
+   "id": "office",
+   "name": "Office & productivity",
+   "area": "everyday"
+  },
+  {
+   "id": "social",
+   "name": "Communication & social",
+   "area": "everyday"
+  },
+  {
+   "id": "creative",
+   "name": "Creative",
+   "area": "everyday"
+  },
+  {
+   "id": "media",
+   "name": "Music, video & reading",
+   "area": "everyday"
+  },
+  {
+   "id": "games",
+   "name": "Games & gaming",
+   "area": "everyday"
+  },
+  {
+   "id": "files",
+   "name": "Files & cloud",
+   "area": "everyday"
+  },
+  {
+   "id": "everyday",
+   "name": "Everyday life",
+   "area": "everyday"
+  },
+  {
+   "id": "web",
+   "name": "Browsers, privacy & security",
+   "area": "everyday"
+  },
+  {
+   "id": "business",
+   "name": "Business & finance",
+   "area": "everyday"
+  },
+  {
+   "id": "ai",
+   "name": "AI apps",
+   "area": "ai-area"
+  },
+  {
+   "id": "coding-agents",
+   "name": "Coding agents & their tools",
+   "area": "ai-area"
+  },
+  {
+   "id": "ai-build",
+   "name": "Building with AI",
+   "area": "ai-area"
+  },
+  {
+   "id": "os",
+   "name": "Computer systems & Linux distributions",
+   "area": "os-area"
+  },
+  {
+   "id": "os-desktops",
+   "name": "Desktops & customization",
+   "area": "os-area"
+  },
+  {
+   "id": "os-core",
+   "name": "Under the hood: kernel, drivers, compatibility",
+   "area": "os-area"
+  },
+  {
+   "id": "os-mobile",
+   "name": "Phones & tablets",
+   "area": "os-area"
+  },
+  {
+   "id": "hw-tv",
+   "name": "TVs & streaming boxes",
+   "area": "hardware"
+  },
+  {
+   "id": "hw-pc",
+   "name": "Computer accessories & parts",
+   "area": "hardware"
+  },
+  {
+   "id": "hw-gadgets",
+   "name": "Home, network & personal gadgets",
+   "area": "hardware"
+  },
+  {
+   "id": "hw-makers",
+   "name": "Making things: 3D printing, electronics, radio",
+   "area": "hardware"
+  },
+  {
+   "id": "dev",
+   "name": "Writing code",
+   "area": "developer"
+  },
+  {
+   "id": "dev-ship",
+   "name": "Hosting, shipping & running code",
+   "area": "developer"
+  },
+  {
+   "id": "dev-data",
+   "name": "Databases, data & science",
+   "area": "developer"
+  },
+  {
+   "id": "dev-blocks",
+   "name": "Building blocks for apps",
+   "area": "developer"
+  },
+  {
+   "id": "selfhost",
+   "name": "Home servers & self-hosting",
+   "area": "system"
+  },
+  {
+   "id": "security",
+   "name": "IT security",
+   "area": "system"
+  },
+  {
+   "id": "utilities",
+   "name": "Computer utilities",
+   "area": "system"
+  }
+ ],
+ "moves": {
+  "notes": "office",
+  "tasks": "office",
+  "pdf": "office",
+  "email": "office",
+  "documents": "office",
+  "signing": "office",
+  "spreadsheets": "office",
+  "calendars": "office",
+  "database-apps": "office",
+  "slides": "office",
+  "booking-pages": "office",
+  "forms": "office",
+  "writing-assistant": "office",
+  "reference-managers": "office",
+  "messaging": "social",
+  "community-chat": "social",
+  "forums": "social",
+  "events": "social",
+  "photo-sharing": "social",
+  "pro-network": "social",
+  "social-scheduling": "social",
+  "social-network": "social",
+  "video-calls": "social",
+  "blogging": "social",
+  "dating": "social",
+  "microblogging": "social",
+  "stories": "social",
+  "team-chat": "social",
+  "video-sharing": "social",
+  "video-editing": "creative",
+  "audio": "creative",
+  "3d": "creative",
+  "cad": "creative",
+  "recording": "creative",
+  "layout": "creative",
+  "painting": "creative",
+  "photo-editing": "creative",
+  "icons": "creative",
+  "ui-design": "creative",
+  "graphic-design": "creative",
+  "illustration": "creative",
+  "photo-backup": "media",
+  "home-media": "media",
+  "music": "media",
+  "books": "media",
+  "podcasts": "media",
+  "feeds": "media",
+  "video-streaming": "media",
+  "live-streaming": "media",
+  "phone-gallery": "media",
+  "game-stores": "games",
+  "backup": "files",
+  "cloud-storage": "files",
+  "file-transfer": "files",
+  "maps": "everyday",
+  "budgeting": "everyday",
+  "translation": "everyday",
+  "inspiration-boards": "everyday",
+  "shared-expenses": "everyday",
+  "speed-test": "everyday",
+  "browsers": "web",
+  "privacy-vpn": "web",
+  "link-shortening": "web",
+  "passwords": "web",
+  "2fa": "web",
+  "antivirus": "web",
+  "identity-proofs": "web",
+  "search": "web",
+  "investment-research": "business",
+  "cms": "business",
+  "invoicing": "business",
+  "automation": "business",
+  "crm": "business",
+  "erp": "business",
+  "shop": "business",
+  "time-tracking": "business",
+  "bi": "business",
+  "feedback-boards": "business",
+  "pos": "business",
+  "support": "business",
+  "analytics": "business",
+  "customer-insights": "business",
+  "newsletters": "business",
+  "ai-agents": "ai",
+  "transcription": "ai",
+  "ai-chat": "ai",
+  "ai-images": "ai",
+  "ai-search": "ai",
+  "ai-coding": "coding-agents",
+  "ml-platforms": "ai-build",
+  "vector-databases": "ai-build",
+  "desktop-os": "os",
+  "keyboards": "os-mobile",
+  "app-stores": "os-mobile",
+  "phone-os": "os-mobile",
+  "smart-home": "hw-gadgets",
+  "code-editors": "dev",
+  "api-tools": "dev",
+  "app-hosting": "dev-ship",
+  "ci": "dev-ship",
+  "code-hosting": "dev-ship",
+  "monitoring": "dev-ship",
+  "feature-flags": "dev-ship",
+  "infrastructure-as-code": "dev-ship",
+  "data-pipelines": "dev-data",
+  "data-warehouses": "dev-data",
+  "graph-databases": "dev-data",
+  "key-value-stores": "dev-data",
+  "search-engines": "dev-data",
+  "sql-databases": "dev-data",
+  "time-series-databases": "dev-data",
+  "login-identity": "dev-blocks",
+  "backend-service": "dev-blocks",
+  "internal-tools": "dev-blocks",
+  "email-sending": "dev-blocks",
+  "translation-management": "dev-blocks",
+  "voice-apis": "dev-blocks",
+  "product-analytics": "dev-blocks",
+  "push-notifications": "dev-blocks",
+  "saas-starters": "dev-blocks",
+  "vpn": "selfhost",
+  "security-scanning": "security",
+  "remote-desktop": "utilities"
+ },
+ "widened": {
+  "notes": "Notes, personal knowledge, journals and team wikis",
+  "photo-sharing": "Sharing photos with followers or in event albums",
+  "3d": "3D models, animation, visual effects and live visuals",
+  "icons": "Free icons, stock images and GIFs for designs",
+  "books": "Reading e-books, listening to audiobooks and keeping offline libraries",
+  "maps": "Maps, directions, places and public transport",
+  "browsers": "Browsing the web and managing tabs",
+  "privacy-vpn": "Hiding your internet traffic, appearing to connect from another place and getting around internet blocks",
+  "link-shortening": "Making short links and link-in-bio pages",
+  "investment-research": "Researching stocks and markets, and tracking your investments",
+  "cms": "Building websites and managing their content, including static site generators",
+  "ml-platforms": "Building, training and running AI models, including computer vision",
+  "keyboards": "Typing on your phone, and typing other languages on a computer",
+  "api-tools": "Building, testing and debugging APIs and web traffic",
+  "ci": "Building and testing code automatically, with build caches",
+  "data-pipelines": "Moving data between tools and running scheduled jobs"
+ },
+ "newGroups": [
+  {
+   "id": "focus-breaks",
+   "name": "Focus timers and distraction blockers",
+   "category": "office",
+   "job": "Pomodoro timers, break reminders and blocking distracting sites",
+   "closed": [
+    "Forest",
+    "Freedom",
+    "Cold Turkey",
+    "Time Out"
+   ],
+   "candidates": [
+    {
+     "name": "Stretchly",
+     "url": "https://hovancik.net/stretchly"
+    },
+    {
+     "name": "Pomatez",
+     "url": "https://github.com/zidoro/pomatez"
+    },
+    {
+     "name": "Super Productivity",
+     "url": "https://super-productivity.com"
+    },
+    {
+     "name": "LeechBlock NG",
+     "url": "https://www.proginosko.com/leechblock"
+    },
+    {
+     "name": "Safe Eyes",
+     "url": "https://slgobinath.github.io/SafeEyes"
+    }
+   ]
+  },
+  {
+   "id": "paperwork",
+   "name": "Scanning and filing paperwork",
+   "category": "office",
+   "job": "Scanning paper with a phone and keeping documents searchable",
+   "closed": [
+    "CamScanner",
+    "Adobe Scan",
+    "Microsoft Lens"
+   ],
+   "candidates": [
+    {
+     "name": "Paperless-ngx",
+     "url": "https://docs.paperless-ngx.com"
+    },
+    {
+     "name": "Papra",
+     "url": "https://papra.app"
+    },
+    {
+     "name": "NAPS2",
+     "url": "https://www.naps2.com"
+    },
+    {
+     "name": "OSS Document Scanner",
+     "url": "https://github.com/Akylas/OSS-DocumentScanner"
+    }
+   ]
+  },
+  {
+   "id": "diagrams",
+   "name": "Diagrams and whiteboards",
+   "category": "office",
+   "job": "Drawing flowcharts, diagrams and sketches on a whiteboard",
+   "closed": [
+    "Lucidchart",
+    "Microsoft Visio",
+    "Miro"
+   ],
+   "candidates": [
+    {
+     "name": "draw.io",
+     "url": "https://www.drawio.com"
+    },
+    {
+     "name": "Excalidraw",
+     "url": "https://excalidraw.com"
+    },
+    {
+     "name": "Mermaid",
+     "url": "https://mermaid.js.org"
+    },
+    {
+     "name": "PlantUML",
+     "url": "https://plantuml.com"
+    }
+   ]
+  },
+  {
+   "id": "habits",
+   "name": "Habit trackers",
+   "category": "office",
+   "job": "Building habits and tracking streaks",
+   "closed": [
+    "Streaks",
+    "Habitify"
+   ],
+   "candidates": [
+    {
+     "name": "Loop Habit Tracker",
+     "url": "https://loophabits.org"
+    },
+    {
+     "name": "Beaver Habit Tracker",
+     "url": "https://github.com/daya0576/beaverhabits"
+    },
+    {
+     "name": "Habitica",
+     "url": "https://habitica.com"
+    },
+    {
+     "name": "Table Habit",
+     "url": "https://github.com/FriesI23/mhabit"
+    }
+   ]
+  },
+  {
+   "id": "writing",
+   "name": "Writing books and long stories",
+   "category": "office",
+   "job": "Planning and writing novels, scripts and e-books",
+   "closed": [
+    "Scrivener",
+    "Ulysses",
+    "Vellum",
+    "World Anvil"
+   ],
+   "candidates": [
+    {
+     "name": "novelWriter",
+     "url": "https://novelwriter.io"
+    },
+    {
+     "name": "Manuskript",
+     "url": "https://www.theologeek.ch/manuskript"
+    },
+    {
+     "name": "Sigil",
+     "url": "https://sigil-ebook.com"
+    },
+    {
+     "name": "bibisco",
+     "url": "https://bibisco.com"
+    }
+   ]
+  },
+  {
+   "id": "markdown-editors",
+   "name": "Markdown editors",
+   "category": "office",
+   "job": "Writing plain-text documents in Markdown",
+   "closed": [
+    "Typora",
+    "iA Writer"
+   ],
+   "candidates": [
+    {
+     "name": "MarkText",
+     "url": "https://github.com/marktext/marktext"
+    },
+    {
+     "name": "Zettlr",
+     "url": "https://www.zettlr.com"
+    },
+    {
+     "name": "ghostwriter",
+     "url": "https://ghostwriter.kde.org"
+    },
+    {
+     "name": "Markor",
+     "url": "https://github.com/gsantner/markor"
+    }
+   ]
+  },
+  {
+   "id": "academic-writing",
+   "name": "Writing scientific papers",
+   "category": "office",
+   "job": "Writing papers and theses with LaTeX or Typst",
+   "closed": [
+    "Overleaf (paid plans)"
+   ],
+   "candidates": [
+    {
+     "name": "Overleaf Community Edition",
+     "url": "https://github.com/overleaf/overleaf"
+    },
+    {
+     "name": "TeXstudio",
+     "url": "https://www.texstudio.org"
+    },
+    {
+     "name": "Typst",
+     "url": "https://typst.app"
+    },
+    {
+     "name": "LyX",
+     "url": "https://www.lyx.org"
+    }
+   ]
+  },
+  {
+   "id": "bookmarks",
+   "name": "Bookmarks and saved links",
+   "category": "office",
+   "job": "Saving and organising links and web pages to find later",
+   "closed": [
+    "Raindrop.io",
+    "Pocket (closed down)"
+   ],
+   "candidates": [
+    {
+     "name": "Linkwarden",
+     "url": "https://linkwarden.app"
+    },
+    {
+     "name": "Karakeep",
+     "url": "https://karakeep.app"
+    },
+    {
+     "name": "linkding",
+     "url": "https://github.com/sissbruecker/linkding"
+    },
+    {
+     "name": "Readeck",
+     "url": "https://readeck.org"
+    }
+   ]
+  },
+  {
+   "id": "subtitles",
+   "name": "Subtitles and dubbing",
+   "category": "creative",
+   "job": "Making, timing and translating subtitles and voice-overs",
+   "closed": [
+    "Rev",
+    "Descript",
+    "Kapwing"
+   ],
+   "candidates": [
+    {
+     "name": "Subtitle Edit",
+     "url": "https://www.nikse.dk/subtitleedit"
+    },
+    {
+     "name": "Aegisub",
+     "url": "https://aegisub.org"
+    },
+    {
+     "name": "Gaupol",
+     "url": "https://github.com/otsaloma/gaupol"
+    },
+    {
+     "name": "WhisperX",
+     "url": "https://github.com/m-bain/whisperX"
+    }
+   ]
+  },
+  {
+   "id": "audio-plugins",
+   "name": "Instrument and effect plugins",
+   "category": "creative",
+   "job": "Synths, guitar amps and effects that run inside music software",
+   "closed": [
+    "Neural DSP",
+    "Guitar Rig",
+    "FabFilter",
+    "Serum"
+   ],
+   "candidates": [
+    {
+     "name": "Surge XT",
+     "url": "https://surge-synthesizer.github.io"
+    },
+    {
+     "name": "Vital",
+     "url": "https://vital.audio"
+    },
+    {
+     "name": "Guitarix",
+     "url": "https://guitarix.org"
+    },
+    {
+     "name": "Neural Amp Modeler",
+     "url": "https://www.neuralampmodeler.com"
+    },
+    {
+     "name": "LSP Plugins",
+     "url": "https://lsp-plug.in"
+    }
+   ]
+  },
+  {
+   "id": "pixel-art",
+   "name": "Pixel and ASCII art",
+   "category": "creative",
+   "job": "Drawing pixel art, sprites and text art",
+   "closed": [
+    "Aseprite (source-available, not open)",
+    "Pyxel Edit"
+   ],
+   "candidates": [
+    {
+     "name": "LibreSprite",
+     "url": "https://libresprite.github.io"
+    },
+    {
+     "name": "Pixelorama",
+     "url": "https://github.com/Orama-Interactive/Pixelorama"
+    },
+    {
+     "name": "Piskel",
+     "url": "https://www.piskelapp.com"
+    },
+    {
+     "name": "GrafX2",
+     "url": "http://grafx2.chez.com"
+    }
+   ]
+  },
+  {
+   "id": "music-notation",
+   "name": "Sheet music and songbooks",
+   "category": "creative",
+   "job": "Writing and reading sheet music, tabs and chord sheets",
+   "closed": [
+    "Sibelius",
+    "Dorico",
+    "Guitar Pro"
+   ],
+   "waitForProject": true,
+   "candidates": [
+    {
+     "name": "MuseScore",
+     "url": "https://musescore.org"
+    },
+    {
+     "name": "LilyPond",
+     "url": "https://lilypond.org"
+    },
+    {
+     "name": "Frescobaldi",
+     "url": "https://frescobaldi.org"
+    },
+    {
+     "name": "TuxGuitar",
+     "url": "https://www.tuxguitar.app"
+    }
+   ]
+  },
+  {
+   "id": "media-players",
+   "name": "Music and video players",
+   "category": "media",
+   "job": "Playing music and videos stored on your device",
+   "closed": [
+    "Infuse",
+    "PowerDVD"
+   ],
+   "candidates": [
+    {
+     "name": "VLC",
+     "url": "https://www.videolan.org/vlc"
+    },
+    {
+     "name": "mpv",
+     "url": "https://mpv.io"
+    },
+    {
+     "name": "IINA",
+     "url": "https://iina.io"
+    },
+    {
+     "name": "MPC-HC",
+     "url": "https://github.com/clsid2/mpc-hc"
+    },
+    {
+     "name": "Strawberry",
+     "url": "https://www.strawberrymusicplayer.org"
+    },
+    {
+     "name": "fooyin",
+     "url": "https://github.com/fooyin/fooyin"
+    }
+   ]
+  },
+  {
+   "id": "watch-lists",
+   "name": "Tracking shows and movies",
+   "category": "media",
+   "job": "Keeping track of what you watched and finding where to watch next",
+   "closed": [
+    "TV Time",
+    "Letterboxd",
+    "Trakt",
+    "JustWatch"
+   ],
+   "candidates": [
+    {
+     "name": "Yamtrack",
+     "url": "https://github.com/FuzzyGrim/Yamtrack"
+    },
+    {
+     "name": "Ryot",
+     "url": "https://ryot.io"
+    },
+    {
+     "name": "Watcharr",
+     "url": "https://github.com/sbondCo/Watcharr"
+    },
+    {
+     "name": "MediaTracker",
+     "url": "https://github.com/bonukai/MediaTracker"
+    }
+   ]
+  },
+  {
+   "id": "music-library",
+   "name": "Your own music library, streamed",
+   "category": "media",
+   "job": "Streaming your own music collection to every device",
+   "closed": [
+    "Plexamp",
+    "Roon",
+    "Apple Music (your library)"
+   ],
+   "candidates": [
+    {
+     "name": "Navidrome",
+     "url": "https://www.navidrome.org"
+    },
+    {
+     "name": "Jellyfin",
+     "url": "https://jellyfin.org"
+    },
+    {
+     "name": "Funkwhale",
+     "url": "https://www.funkwhale.audio"
+    },
+    {
+     "name": "Lyrion Music Server",
+     "url": "https://lyrion.org"
+    },
+    {
+     "name": "beets",
+     "url": "https://beets.io"
+    },
+    {
+     "name": "Feishin",
+     "url": "https://github.com/jeffvli/feishin"
+    }
+   ]
+  },
+  {
+   "id": "media-downloaders",
+   "name": "Saving videos and music from websites",
+   "category": "media",
+   "job": "Downloading videos, music and images from sites to keep",
+   "closed": [
+    "4K Video Downloader"
+   ],
+   "candidates": [
+    {
+     "name": "yt-dlp",
+     "url": "https://github.com/yt-dlp/yt-dlp"
+    },
+    {
+     "name": "gallery-dl",
+     "url": "https://github.com/mikf/gallery-dl"
+    },
+    {
+     "name": "cobalt",
+     "url": "https://cobalt.tools"
+    },
+    {
+     "name": "Tube Archivist",
+     "url": "https://www.tubearchivist.com"
+    },
+    {
+     "name": "Seal",
+     "url": "https://github.com/JunkFood02/Seal"
+    }
+   ]
+  },
+  {
+   "id": "iptv",
+   "name": "Live TV channels and IPTV",
+   "category": "media",
+   "job": "Watching live TV and IPTV, or making your own always-on channels",
+   "closed": [
+    "TiviMate",
+    "YouTube TV",
+    "Sling TV"
+   ],
+   "candidates": [
+    {
+     "name": "Tvheadend",
+     "url": "https://tvheadend.org"
+    },
+    {
+     "name": "ErsatzTV",
+     "url": "https://ersatztv.org"
+    },
+    {
+     "name": "Tunarr",
+     "url": "https://tunarr.com"
+    },
+    {
+     "name": "Threadfin",
+     "url": "https://github.com/Threadfin/Threadfin"
+    },
+    {
+     "name": "Hypnotix",
+     "url": "https://github.com/linuxmint/hypnotix"
+    }
+   ]
+  },
+  {
+   "id": "image-viewers",
+   "name": "Photo viewers and organisers",
+   "category": "media",
+   "job": "Looking through and sorting photos on your computer",
+   "closed": [
+    "ACDSee",
+    "IrfanView (free, closed)",
+    "Picasa (discontinued)"
+   ],
+   "candidates": [
+    {
+     "name": "nomacs",
+     "url": "https://nomacs.org"
+    },
+    {
+     "name": "qimgv",
+     "url": "https://github.com/easymodo/qimgv"
+    },
+    {
+     "name": "ImageGlass",
+     "url": "https://imageglass.org"
+    },
+    {
+     "name": "digiKam",
+     "url": "https://www.digikam.org"
+    },
+    {
+     "name": "Gwenview",
+     "url": "https://apps.kde.org/gwenview"
+    }
+   ]
+  },
+  {
+   "id": "comics",
+   "name": "Comics and manga",
+   "category": "media",
+   "job": "Reading and organising comics and manga",
+   "closed": [
+    "ComiXology",
+    "Webtoon"
+   ],
+   "candidates": [
+    {
+     "name": "Komga",
+     "url": "https://komga.org"
+    },
+    {
+     "name": "Kavita",
+     "url": "https://www.kavitareader.com"
+    },
+    {
+     "name": "Mihon",
+     "url": "https://mihon.app"
+    },
+    {
+     "name": "YACReader",
+     "url": "https://www.yacreader.com"
+    },
+    {
+     "name": "Suwayomi",
+     "url": "https://github.com/Suwayomi/Suwayomi-Server"
+    }
+   ]
+  },
+  {
+   "id": "watch-together",
+   "name": "Watching or listening together online",
+   "category": "media",
+   "job": "Watch parties and synced playback with friends",
+   "closed": [
+    "Teleparty",
+    "Watch2Gether"
+   ],
+   "candidates": [
+    {
+     "name": "Syncplay",
+     "url": "https://syncplay.pl"
+    },
+    {
+     "name": "CyTube",
+     "url": "https://github.com/calzoneman/sync"
+    },
+    {
+     "name": "Neko",
+     "url": "https://github.com/m1k1o/neko"
+    },
+    {
+     "name": "Jellyfin SyncPlay",
+     "url": "https://jellyfin.org"
+    }
+   ]
+  },
+  {
+   "id": "media-automation",
+   "name": "Automatic media library tools",
+   "category": "media",
+   "job": "Requesting, organising and fetching shows, films and music automatically",
+   "closed": [],
+   "candidates": [
+    {
+     "name": "Sonarr",
+     "url": "https://sonarr.tv"
+    },
+    {
+     "name": "Radarr",
+     "url": "https://radarr.video"
+    },
+    {
+     "name": "Lidarr",
+     "url": "https://lidarr.audio"
+    },
+    {
+     "name": "Prowlarr",
+     "url": "https://prowlarr.com"
+    },
+    {
+     "name": "Jellyseerr",
+     "url": "https://github.com/Fallenbagel/jellyseerr"
+    }
+   ]
+  },
+  {
+   "id": "games",
+   "name": "Open-source games",
+   "category": "games",
+   "job": "Games you can play whose code is open",
+   "closed": [],
+   "candidates": [
+    {
+     "name": "0 A.D.",
+     "url": "https://play0ad.com"
+    },
+    {
+     "name": "SuperTuxKart",
+     "url": "https://supertuxkart.net"
+    },
+    {
+     "name": "Luanti",
+     "url": "https://www.luanti.org"
+    },
+    {
+     "name": "OpenTTD",
+     "url": "https://www.openttd.org"
+    },
+    {
+     "name": "Lichess",
+     "url": "https://lichess.org"
+    },
+    {
+     "name": "Mindustry",
+     "url": "https://github.com/Anuken/Mindustry"
+    }
+   ]
+  },
+  {
+   "id": "game-mods",
+   "name": "Game mods and mod managers",
+   "category": "games",
+   "job": "Installing and managing mods, shaders and trainers for games",
+   "closed": [
+    "CurseForge app",
+    "Overwolf"
+   ],
+   "candidates": [
+    {
+     "name": "Mod Organizer 2",
+     "url": "https://github.com/ModOrganizer2/modorganizer"
+    },
+    {
+     "name": "Vortex",
+     "url": "https://github.com/Nexus-Mods/Vortex"
+    },
+    {
+     "name": "r2modman",
+     "url": "https://github.com/ebkr/r2modmanPlus"
+    },
+    {
+     "name": "Prism Launcher",
+     "url": "https://prismlauncher.org"
+    },
+    {
+     "name": "ReShade",
+     "url": "https://reshade.me"
+    }
+   ]
+  },
+  {
+   "id": "gaming-performance",
+   "name": "Game overlays and performance",
+   "category": "games",
+   "job": "FPS counters, overlays, clips and tweaks that make games run better",
+   "closed": [
+    "MSI Afterburner / RivaTuner",
+    "Razer Cortex",
+    "NVIDIA App overlay"
+   ],
+   "candidates": [
+    {
+     "name": "MangoHud",
+     "url": "https://github.com/flightlessmango/MangoHud"
+    },
+    {
+     "name": "GameMode",
+     "url": "https://github.com/FeralInteractive/gamemode"
+    },
+    {
+     "name": "vkBasalt",
+     "url": "https://github.com/DadSchoorse/vkBasalt"
+    },
+    {
+     "name": "Gamescope",
+     "url": "https://github.com/ValveSoftware/gamescope"
+    },
+    {
+     "name": "Special K",
+     "url": "https://github.com/SpecialKO/SpecialK"
+    }
+   ]
+  },
+  {
+   "id": "game-servers",
+   "name": "Hosting game servers",
+   "category": "games",
+   "job": "Running Minecraft and other game servers for friends",
+   "closed": [
+    "Aternos",
+    "Nitrado",
+    "CubeCoders AMP"
+   ],
+   "candidates": [
+    {
+     "name": "Pterodactyl",
+     "url": "https://pterodactyl.io"
+    },
+    {
+     "name": "Pelican",
+     "url": "https://pelican.dev"
+    },
+    {
+     "name": "Crafty Controller",
+     "url": "https://craftycontrol.com"
+    },
+    {
+     "name": "LinuxGSM",
+     "url": "https://linuxgsm.com"
+    },
+    {
+     "name": "PufferPanel",
+     "url": "https://www.pufferpanel.com"
+    }
+   ]
+  },
+  {
+   "id": "emulators",
+   "name": "Emulators and retro games",
+   "category": "games",
+   "job": "Playing console games on a computer and managing ROM collections",
+   "closed": [],
+   "waitForProject": true,
+   "candidates": [
+    {
+     "name": "RetroArch",
+     "url": "https://www.retroarch.com"
+    },
+    {
+     "name": "Dolphin",
+     "url": "https://dolphin-emu.org"
+    },
+    {
+     "name": "PCSX2",
+     "url": "https://pcsx2.net"
+    },
+    {
+     "name": "PPSSPP",
+     "url": "https://www.ppsspp.org"
+    },
+    {
+     "name": "RomM",
+     "url": "https://romm.app"
+    }
+   ]
+  },
+  {
+   "id": "file-converters",
+   "name": "Converting and shrinking files",
+   "category": "files",
+   "job": "Turning files into other formats and making them smaller",
+   "closed": [
+    "CloudConvert",
+    "Zamzar",
+    "TinyPNG"
+   ],
+   "candidates": [
+    {
+     "name": "HandBrake",
+     "url": "https://handbrake.fr"
+    },
+    {
+     "name": "FFmpeg",
+     "url": "https://ffmpeg.org"
+    },
+    {
+     "name": "ConvertX",
+     "url": "https://github.com/C4illin/ConvertX"
+    },
+    {
+     "name": "File Converter",
+     "url": "https://file-converter.io"
+    },
+    {
+     "name": "Switcheroo",
+     "url": "https://gitlab.com/adhami3310/Switcheroo"
+    },
+    {
+     "name": "Squoosh",
+     "url": "https://squoosh.app"
+    }
+   ]
+  },
+  {
+   "id": "file-managers",
+   "name": "File managers",
+   "category": "files",
+   "job": "Browsing, copying and organising files and folders",
+   "closed": [
+    "Total Commander",
+    "Directory Opus",
+    "ForkLift"
+   ],
+   "candidates": [
+    {
+     "name": "Dolphin",
+     "url": "https://apps.kde.org/dolphin"
+    },
+    {
+     "name": "Double Commander",
+     "url": "https://doublecmd.sourceforge.io"
+    },
+    {
+     "name": "Files",
+     "url": "https://files.community"
+    },
+    {
+     "name": "yazi",
+     "url": "https://yazi-rs.github.io"
+    },
+    {
+     "name": "Thunar",
+     "url": "https://docs.xfce.org/xfce/thunar/start"
+    }
+   ]
+  },
+  {
+   "id": "download-managers",
+   "name": "Download managers",
+   "category": "files",
+   "job": "Faster, resumable downloads of big files",
+   "closed": [
+    "Internet Download Manager"
+   ],
+   "candidates": [
+    {
+     "name": "aria2",
+     "url": "https://aria2.github.io"
+    },
+    {
+     "name": "Motrix",
+     "url": "https://motrix.app"
+    },
+    {
+     "name": "Xtreme Download Manager",
+     "url": "https://github.com/subhra74/xdm"
+    },
+    {
+     "name": "Gopeed",
+     "url": "https://gopeed.com"
+    },
+    {
+     "name": "Persepolis",
+     "url": "https://persepolisdm.github.io"
+    }
+   ]
+  },
+  {
+   "id": "nearby-sharing",
+   "name": "Sharing files with nearby devices",
+   "category": "files",
+   "job": "Sending files between your phone and computer like AirDrop",
+   "closed": [
+    "Apple AirDrop",
+    "Quick Share"
+   ],
+   "candidates": [
+    {
+     "name": "LocalSend",
+     "url": "https://localsend.org"
+    },
+    {
+     "name": "PairDrop",
+     "url": "https://pairdrop.net"
+    },
+    {
+     "name": "KDE Connect",
+     "url": "https://kdeconnect.kde.org"
+    },
+    {
+     "name": "Warp",
+     "url": "https://apps.gnome.org/Warp"
+    },
+    {
+     "name": "croc",
+     "url": "https://github.com/schollz/croc"
+    }
+   ]
+  },
+  {
+   "id": "disk-cleanup",
+   "name": "Freeing up disk space",
+   "category": "files",
+   "job": "Finding what fills your disk, duplicates and junk, and cleaning it",
+   "closed": [
+    "CleanMyMac",
+    "CCleaner",
+    "WizTree",
+    "DaisyDisk"
+   ],
+   "candidates": [
+    {
+     "name": "BleachBit",
+     "url": "https://www.bleachbit.org"
+    },
+    {
+     "name": "Czkawka",
+     "url": "https://github.com/qarmin/czkawka"
+    },
+    {
+     "name": "dupeGuru",
+     "url": "https://dupeguru.voltaicideas.net"
+    },
+    {
+     "name": "WinDirStat",
+     "url": "https://windirstat.net"
+    },
+    {
+     "name": "QDirStat",
+     "url": "https://github.com/shundhammer/qdirstat"
+    }
+   ]
+  },
+  {
+   "id": "file-encryption",
+   "name": "Encrypting files and drives",
+   "category": "files",
+   "job": "Locking files, folders or cloud copies so only you can read them",
+   "closed": [
+    "BitLocker",
+    "AxCrypt"
+   ],
+   "candidates": [
+    {
+     "name": "VeraCrypt",
+     "url": "https://www.veracrypt.fr"
+    },
+    {
+     "name": "Cryptomator",
+     "url": "https://cryptomator.org"
+    },
+    {
+     "name": "Picocrypt",
+     "url": "https://github.com/Picocrypt/Picocrypt"
+    },
+    {
+     "name": "age",
+     "url": "https://age-encryption.org"
+    }
+   ]
+  },
+  {
+   "id": "file-organizers",
+   "name": "Sorting files automatically",
+   "category": "files",
+   "job": "Moving and tidying files (like Downloads) by rules",
+   "closed": [
+    "Hazel",
+    "File Juggler"
+   ],
+   "candidates": [
+    {
+     "name": "organize",
+     "url": "https://github.com/tfeldmann/organize"
+    },
+    {
+     "name": "DropIt",
+     "url": "https://www.dropitproject.com"
+    },
+    {
+     "name": "TagSpaces",
+     "url": "https://www.tagspaces.org"
+    }
+   ]
+  },
+  {
+   "id": "archivers",
+   "name": "Zip and archive tools",
+   "category": "files",
+   "job": "Making and opening zip, rar and 7z files",
+   "closed": [
+    "WinRAR",
+    "WinZip",
+    "BetterZip"
+   ],
+   "candidates": [
+    {
+     "name": "7-Zip",
+     "url": "https://7-zip.org"
+    },
+    {
+     "name": "PeaZip",
+     "url": "https://peazip.github.io"
+    },
+    {
+     "name": "NanaZip",
+     "url": "https://github.com/M2Team/NanaZip"
+    },
+    {
+     "name": "Keka",
+     "url": "https://github.com/aonez/Keka"
+    }
+   ]
+  },
+  {
+   "id": "bulk-rename",
+   "name": "Renaming many files at once",
+   "category": "files",
+   "job": "Renaming batches of files, photos or media by pattern",
+   "closed": [
+    "Advanced Renamer",
+    "Better Rename",
+    "FileBot"
+   ],
+   "candidates": [
+    {
+     "name": "Ant Renamer",
+     "url": "https://www.antp.be/software/renamer"
+    },
+    {
+     "name": "KRename",
+     "url": "https://apps.kde.org/krename"
+    },
+    {
+     "name": "F2",
+     "url": "https://github.com/ayoisaiah/f2"
+    },
+    {
+     "name": "PowerToys PowerRename",
+     "url": "https://github.com/microsoft/PowerToys"
+    }
+   ]
+  },
+  {
+   "id": "file-previews",
+   "name": "Quick file previews",
+   "category": "files",
+   "job": "Previewing a file with one key press without opening it",
+   "closed": [
+    "Seer"
+   ],
+   "candidates": [
+    {
+     "name": "QuickLook",
+     "url": "https://github.com/QL-Win/QuickLook"
+    },
+    {
+     "name": "PowerToys Peek",
+     "url": "https://github.com/microsoft/PowerToys"
+    },
+    {
+     "name": "GNOME Sushi",
+     "url": "https://gitlab.gnome.org/GNOME/sushi"
+    }
+   ]
+  },
+  {
+   "id": "file-search",
+   "name": "Finding files and text in files",
+   "category": "files",
+   "job": "Searching your computer for files or words inside them",
+   "closed": [
+    "Everything (free, closed)",
+    "Spotlight"
+   ],
+   "candidates": [
+    {
+     "name": "ripgrep",
+     "url": "https://github.com/BurntSushi/ripgrep"
+    },
+    {
+     "name": "fd",
+     "url": "https://github.com/sharkdp/fd"
+    },
+    {
+     "name": "fzf",
+     "url": "https://github.com/junegunn/fzf"
+    },
+    {
+     "name": "Recoll",
+     "url": "https://www.recoll.org"
+    },
+    {
+     "name": "FSearch",
+     "url": "https://github.com/cboxdoerfer/fsearch"
+    }
+   ]
+  },
+  {
+   "id": "image-hosting",
+   "name": "Image hosting",
+   "category": "files",
+   "job": "Uploading images and screenshots to share by link",
+   "closed": [
+    "Imgur",
+    "ImgBB"
+   ],
+   "candidates": [
+    {
+     "name": "Zipline",
+     "url": "https://github.com/diced/zipline"
+    },
+    {
+     "name": "Lychee",
+     "url": "https://lycheeorg.dev"
+    },
+    {
+     "name": "PicoShare",
+     "url": "https://github.com/mtlynch/picoshare"
+    },
+    {
+     "name": "XBackBone",
+     "url": "https://github.com/sergix44/XBackBone"
+    }
+   ]
+  },
+  {
+   "id": "torrents",
+   "name": "Torrent clients",
+   "category": "files",
+   "job": "Downloading and sharing files with BitTorrent",
+   "closed": [
+    "\u00b5Torrent",
+    "BitTorrent"
+   ],
+   "candidates": [
+    {
+     "name": "qBittorrent",
+     "url": "https://www.qbittorrent.org"
+    },
+    {
+     "name": "Transmission",
+     "url": "https://transmissionbt.com"
+    },
+    {
+     "name": "Deluge",
+     "url": "https://deluge-torrent.org"
+    },
+    {
+     "name": "Fragments",
+     "url": "https://apps.gnome.org/Fragments"
+    }
+   ]
+  },
+  {
+   "id": "health-fitness",
+   "name": "Workouts and health tracking",
+   "category": "everyday",
+   "job": "Tracking workouts, runs, rides and health readings",
+   "closed": [
+    "Strava",
+    "Zwift",
+    "Whoop",
+    "Oura",
+    "Apple Health"
+   ],
+   "candidates": [
+    {
+     "name": "Gadgetbridge",
+     "url": "https://gadgetbridge.org"
+    },
+    {
+     "name": "wger",
+     "url": "https://wger.de"
+    },
+    {
+     "name": "OpenTracks",
+     "url": "https://opentracks.de"
+    },
+    {
+     "name": "FitTrackee",
+     "url": "https://docs.fittrackee.org"
+    },
+    {
+     "name": "GoldenCheetah",
+     "url": "https://www.goldencheetah.org"
+    },
+    {
+     "name": "Nightscout",
+     "url": "https://nightscout.github.io"
+    }
+   ]
+  },
+  {
+   "id": "travel",
+   "name": "Trip planning and travel logs",
+   "category": "everyday",
+   "job": "Planning trips and keeping a record of where you've been",
+   "closed": [
+    "TripIt",
+    "Wanderlog",
+    "Polarsteps"
+   ],
+   "candidates": [
+    {
+     "name": "AdventureLog",
+     "url": "https://adventurelog.app"
+    },
+    {
+     "name": "Wanderer",
+     "url": "https://wanderer.to"
+    },
+    {
+     "name": "Dawarich",
+     "url": "https://dawarich.app"
+    }
+   ]
+  },
+  {
+   "id": "job-hunting",
+   "name": "Resumes and job hunting",
+   "category": "everyday",
+   "job": "Writing a resume, finding jobs and tracking applications",
+   "closed": [
+    "Teal",
+    "Huntr",
+    "Zety",
+    "Resume.io"
+   ],
+   "candidates": [
+    {
+     "name": "Reactive Resume",
+     "url": "https://rxresu.me"
+    },
+    {
+     "name": "OpenResume",
+     "url": "https://www.open-resume.com"
+    },
+    {
+     "name": "RenderCV",
+     "url": "https://rendercv.com"
+    },
+    {
+     "name": "JobSync",
+     "url": "https://github.com/Gsync/jobsync"
+    },
+    {
+     "name": "YAMLResume",
+     "url": "https://yamlresume.dev"
+    }
+   ]
+  },
+  {
+   "id": "food-tracking",
+   "name": "Food and calorie tracking",
+   "category": "everyday",
+   "job": "Logging what you eat and checking nutrition",
+   "closed": [
+    "MyFitnessPal",
+    "Cronometer",
+    "Lose It!"
+   ],
+   "candidates": [
+    {
+     "name": "OpenNutriTracker",
+     "url": "https://github.com/simonoppowa/OpenNutriTracker"
+    },
+    {
+     "name": "Waistline",
+     "url": "https://github.com/davidhealey/waistline"
+    },
+    {
+     "name": "Open Food Facts",
+     "url": "https://world.openfoodfacts.org"
+    },
+    {
+     "name": "wger",
+     "url": "https://wger.de"
+    }
+   ]
+  },
+  {
+   "id": "learning-apps",
+   "name": "Studying and flashcards",
+   "category": "everyday",
+   "job": "Learning with flashcards, quizzes and courses",
+   "closed": [
+    "Quizlet",
+    "Duolingo",
+    "Brainscape"
+   ],
+   "candidates": [
+    {
+     "name": "Anki",
+     "url": "https://apps.ankiweb.net"
+    },
+    {
+     "name": "Mnemosyne",
+     "url": "https://mnemosyne-proj.org"
+    },
+    {
+     "name": "LibreLingo",
+     "url": "https://librelingo.app"
+    },
+    {
+     "name": "Kolibri",
+     "url": "https://learningequality.org/kolibri"
+    }
+   ]
+  },
+  {
+   "id": "recipes",
+   "name": "Recipes and meal planning",
+   "category": "everyday",
+   "job": "Saving recipes, planning meals and making shopping lists",
+   "closed": [
+    "Paprika",
+    "Mealime",
+    "Plan to Eat"
+   ],
+   "candidates": [
+    {
+     "name": "Mealie",
+     "url": "https://mealie.io"
+    },
+    {
+     "name": "Tandoor Recipes",
+     "url": "https://tandoor.dev"
+    },
+    {
+     "name": "KitchenOwl",
+     "url": "https://kitchenowl.org"
+    },
+    {
+     "name": "Grocy",
+     "url": "https://grocy.info"
+    }
+   ]
+  },
+  {
+   "id": "location-tracking",
+   "name": "Location sharing and tracking",
+   "category": "everyday",
+   "job": "Sharing where you are with family, or tracking vehicles and devices",
+   "closed": [
+    "Life360",
+    "Find My",
+    "Google Find Hub"
+   ],
+   "candidates": [
+    {
+     "name": "Traccar",
+     "url": "https://www.traccar.org"
+    },
+    {
+     "name": "OwnTracks",
+     "url": "https://owntracks.org"
+    },
+    {
+     "name": "Dawarich",
+     "url": "https://dawarich.app"
+    }
+   ]
+  },
+  {
+   "id": "price-tracking",
+   "name": "Price tracking",
+   "category": "everyday",
+   "job": "Watching prices and getting told when they drop",
+   "closed": [
+    "Keepa",
+    "CamelCamelCamel",
+    "Honey"
+   ],
+   "candidates": [
+    {
+     "name": "changedetection.io",
+     "url": "https://changedetection.io"
+    },
+    {
+     "name": "PriceBuddy",
+     "url": "https://github.com/jez500/pricebuddy"
+    },
+    {
+     "name": "Discount Bandit",
+     "url": "https://github.com/Cybrarist/Discount-Bandit"
+    }
+   ]
+  },
+  {
+   "id": "family-trees",
+   "name": "Family trees",
+   "category": "everyday",
+   "job": "Researching and drawing your family history",
+   "closed": [
+    "Ancestry",
+    "MyHeritage"
+   ],
+   "waitForProject": true,
+   "candidates": [
+    {
+     "name": "Gramps",
+     "url": "https://gramps-project.org"
+    },
+    {
+     "name": "Gramps Web",
+     "url": "https://www.grampsweb.org"
+    },
+    {
+     "name": "webtrees",
+     "url": "https://webtrees.net"
+    },
+    {
+     "name": "GeneWeb",
+     "url": "https://github.com/geneweb/geneweb"
+    }
+   ]
+  },
+  {
+   "id": "taxes",
+   "name": "Doing your taxes",
+   "category": "everyday",
+   "job": "Filling in and filing a personal tax return",
+   "closed": [
+    "TurboTax",
+    "H&R Block",
+    "TaxAct"
+   ],
+   "waitForProject": true,
+   "candidates": [
+    {
+     "name": "OpenTaxSolver",
+     "url": "https://opentaxsolver.sourceforge.net"
+    },
+    {
+     "name": "UsTaxes",
+     "url": "https://github.com/ustaxes/UsTaxes"
+    },
+    {
+     "name": "IRS Direct File (code)",
+     "url": "https://github.com/IRS-Public/direct-file"
+    }
+   ]
+  },
+  {
+   "id": "network-monitor",
+   "name": "Seeing and blocking what apps connect to",
+   "category": "web",
+   "job": "Watching and blocking your apps' internet connections",
+   "closed": [
+    "GlassWire",
+    "Little Snitch",
+    "NetLimiter"
+   ],
+   "candidates": [
+    {
+     "name": "OpenSnitch",
+     "url": "https://github.com/evilsocket/opensnitch"
+    },
+    {
+     "name": "Portmaster",
+     "url": "https://safing.io"
+    },
+    {
+     "name": "simplewall",
+     "url": "https://github.com/henrypp/simplewall"
+    },
+    {
+     "name": "Sniffnet",
+     "url": "https://sniffnet.net"
+    },
+    {
+     "name": "NetGuard",
+     "url": "https://netguard.me"
+    }
+   ]
+  },
+  {
+   "id": "ad-blocking",
+   "name": "Blocking ads, trackers and unwanted sites",
+   "category": "web",
+   "job": "Blocking ads and trackers in the browser or for the whole home network",
+   "closed": [
+    "AdGuard (apps)",
+    "NextDNS",
+    "Circle Home"
+   ],
+   "candidates": [
+    {
+     "name": "uBlock Origin",
+     "url": "https://github.com/gorhill/uBlock"
+    },
+    {
+     "name": "Pi-hole",
+     "url": "https://pi-hole.net"
+    },
+    {
+     "name": "AdGuard Home",
+     "url": "https://github.com/AdguardTeam/AdGuardHome"
+    },
+    {
+     "name": "Blocky",
+     "url": "https://github.com/0xERR0R/blocky"
+    },
+    {
+     "name": "SponsorBlock",
+     "url": "https://sponsor.ajay.app"
+    }
+   ]
+  },
+  {
+   "id": "alt-frontends",
+   "name": "Private ways to use big sites",
+   "category": "web",
+   "job": "Using YouTube, Reddit or Discord through cleaner, private apps",
+   "closed": [
+    "Official YouTube, Reddit and Discord apps"
+   ],
+   "candidates": [
+    {
+     "name": "NewPipe",
+     "url": "https://newpipe.net"
+    },
+    {
+     "name": "FreeTube",
+     "url": "https://freetubeapp.io"
+    },
+    {
+     "name": "Invidious",
+     "url": "https://invidious.io"
+    },
+    {
+     "name": "Redlib",
+     "url": "https://github.com/redlib-org/redlib"
+    },
+    {
+     "name": "Vesktop",
+     "url": "https://github.com/Vencord/Vesktop"
+    }
+   ]
+  },
+  {
+   "id": "email-aliases",
+   "name": "Email aliases and throwaway inboxes",
+   "category": "web",
+   "job": "Hiding your real email address behind aliases",
+   "closed": [
+    "Apple Hide My Email",
+    "DuckDuckGo Email Protection"
+   ],
+   "candidates": [
+    {
+     "name": "SimpleLogin",
+     "url": "https://simplelogin.io"
+    },
+    {
+     "name": "addy.io",
+     "url": "https://addy.io"
+    },
+    {
+     "name": "Firefox Relay",
+     "url": "https://github.com/mozilla/fx-private-relay"
+    }
+   ]
+  },
+  {
+   "id": "secret-sharing",
+   "name": "Sharing a password by link",
+   "category": "web",
+   "job": "Sending a password or secret through a link that expires",
+   "closed": [],
+   "candidates": [
+    {
+     "name": "Password Pusher",
+     "url": "https://pwpush.com"
+    },
+    {
+     "name": "PrivateBin",
+     "url": "https://privatebin.info"
+    },
+    {
+     "name": "Yopass",
+     "url": "https://yopass.se"
+    },
+    {
+     "name": "OneTimeSecret",
+     "url": "https://onetimesecret.com"
+    }
+   ]
+  },
+  {
+   "id": "metadata-cleaners",
+   "name": "Removing hidden data from files",
+   "category": "web",
+   "job": "Stripping location and camera details from photos and documents",
+   "closed": [],
+   "waitForProject": true,
+   "candidates": [
+    {
+     "name": "mat2",
+     "url": "https://0xacab.org/jvoisin/mat2"
+    },
+    {
+     "name": "Metadata Cleaner",
+     "url": "https://metadatacleaner.romainvigier.fr"
+    },
+    {
+     "name": "ExifCleaner",
+     "url": "https://exifcleaner.com"
+    },
+    {
+     "name": "ExifTool",
+     "url": "https://exiftool.org"
+    }
+   ]
+  },
+  {
+   "id": "phone-systems",
+   "name": "Business phone systems",
+   "category": "business",
+   "job": "Running office phone lines, extensions and call queues",
+   "closed": [
+    "RingCentral",
+    "3CX",
+    "Microsoft Teams Phone"
+   ],
+   "candidates": [
+    {
+     "name": "Asterisk",
+     "url": "https://www.asterisk.org"
+    },
+    {
+     "name": "FreePBX",
+     "url": "https://www.freepbx.org"
+    },
+    {
+     "name": "FreeSWITCH",
+     "url": "https://signalwire.com/freeswitch"
+    },
+    {
+     "name": "Wazo",
+     "url": "https://wazo.io"
+    }
+   ]
+  },
+  {
+   "id": "seo-marketing",
+   "name": "SEO and marketing tools",
+   "category": "business",
+   "job": "Checking search rankings and site health, and running marketing",
+   "closed": [
+    "Semrush",
+    "Ahrefs",
+    "Screaming Frog"
+   ],
+   "candidates": [
+    {
+     "name": "SerpBear",
+     "url": "https://github.com/towfiqi/serpbear"
+    },
+    {
+     "name": "Mautic",
+     "url": "https://www.mautic.org"
+    },
+    {
+     "name": "Unlighthouse",
+     "url": "https://unlighthouse.dev"
+    },
+    {
+     "name": "Lighthouse",
+     "url": "https://github.com/GoogleChrome/lighthouse"
+    }
+   ]
+  },
+  {
+   "id": "chatbot-builders",
+   "name": "Chatbot builders",
+   "category": "business",
+   "job": "Building chat bots for websites, Telegram or WhatsApp",
+   "closed": [
+    "ManyChat",
+    "Chatfuel",
+    "Voiceflow"
+   ],
+   "candidates": [
+    {
+     "name": "Typebot",
+     "url": "https://typebot.io"
+    },
+    {
+     "name": "Botpress",
+     "url": "https://github.com/botpress/botpress"
+    },
+    {
+     "name": "Rasa",
+     "url": "https://rasa.com"
+    },
+    {
+     "name": "Flowise",
+     "url": "https://flowiseai.com"
+    }
+   ]
+  },
+  {
+   "id": "crypto",
+   "name": "Crypto wallets",
+   "category": "business",
+   "job": "Holding and sending cryptocurrency",
+   "closed": [
+    "Coinbase",
+    "Binance"
+   ],
+   "candidates": [
+    {
+     "name": "Electrum",
+     "url": "https://electrum.org"
+    },
+    {
+     "name": "Sparrow Wallet",
+     "url": "https://sparrowwallet.com"
+    },
+    {
+     "name": "Bitcoin Core",
+     "url": "https://bitcoincore.org"
+    },
+    {
+     "name": "Cake Wallet",
+     "url": "https://cakewallet.com"
+    }
+   ]
+  },
+  {
+   "id": "hr-hiring",
+   "name": "Hiring and staff management",
+   "category": "business",
+   "job": "Hiring, staff records and shift scheduling",
+   "closed": [
+    "Workday",
+    "BambooHR",
+    "Greenhouse"
+   ],
+   "candidates": [
+    {
+     "name": "OrangeHRM",
+     "url": "https://www.orangehrm.com"
+    },
+    {
+     "name": "Frappe HR",
+     "url": "https://frappe.io/hr"
+    },
+    {
+     "name": "OpenCATS",
+     "url": "https://www.opencats.org"
+    }
+   ]
+  },
+  {
+   "id": "local-ai",
+   "name": "Running AI on your own computer",
+   "category": "ai",
+   "job": "Downloading AI models and running them privately on your own machine",
+   "closed": [
+    "LM Studio",
+    "Msty"
+   ],
+   "candidates": [
+    {
+     "name": "Ollama",
+     "url": "https://ollama.com"
+    },
+    {
+     "name": "llama.cpp",
+     "url": "https://github.com/ggml-org/llama.cpp"
+    },
+    {
+     "name": "Jan",
+     "url": "https://jan.ai"
+    },
+    {
+     "name": "LocalAI",
+     "url": "https://localai.io"
+    },
+    {
+     "name": "vLLM",
+     "url": "https://docs.vllm.ai"
+    },
+    {
+     "name": "KoboldCpp",
+     "url": "https://github.com/LostRuins/koboldcpp"
+    }
+   ]
+  },
+  {
+   "id": "browser-agents",
+   "name": "AI that uses your browser",
+   "category": "ai",
+   "job": "An AI assistant that clicks, reads and fills in websites for you",
+   "closed": [
+    "Claude in Chrome",
+    "ChatGPT Atlas",
+    "Perplexity Comet"
+   ],
+   "candidates": [
+    {
+     "name": "Browser Use",
+     "url": "https://browser-use.com"
+    },
+    {
+     "name": "Nanobrowser",
+     "url": "https://nanobrowser.ai"
+    },
+    {
+     "name": "Stagehand",
+     "url": "https://www.stagehand.dev"
+    },
+    {
+     "name": "BrowserOS",
+     "url": "https://www.browseros.com"
+    },
+    {
+     "name": "Skyvern",
+     "url": "https://www.skyvern.com"
+    }
+   ]
+  },
+  {
+   "id": "ai-detection",
+   "name": "Spotting AI-written text",
+   "category": "ai",
+   "job": "Checking whether text or code was written by AI",
+   "closed": [
+    "GPTZero",
+    "Originality.ai",
+    "Turnitin AI detection"
+   ],
+   "candidates": [
+    {
+     "name": "Binoculars",
+     "url": "https://github.com/ahans30/Binoculars"
+    },
+    {
+     "name": "GLTR",
+     "url": "https://github.com/HendrikStrobelt/detecting-fake-text"
+    },
+    {
+     "name": "Ghostbuster",
+     "url": "https://github.com/vivek3141/ghostbuster"
+    }
+   ]
+  },
+  {
+   "id": "voice-assistants",
+   "name": "Voice assistants",
+   "category": "ai",
+   "job": "A voice assistant for your home or computer that you control",
+   "closed": [
+    "Amazon Alexa",
+    "Google Assistant",
+    "Siri"
+   ],
+   "candidates": [
+    {
+     "name": "Home Assistant Assist",
+     "url": "https://www.home-assistant.io/voice_control"
+    },
+    {
+     "name": "OpenVoiceOS",
+     "url": "https://openvoiceos.org"
+    },
+    {
+     "name": "Rhasspy",
+     "url": "https://rhasspy.readthedocs.io"
+    },
+    {
+     "name": "Willow",
+     "url": "https://heywillow.io"
+    },
+    {
+     "name": "Leon",
+     "url": "https://getleon.ai"
+    }
+   ]
+  },
+  {
+   "id": "ai-audio",
+   "name": "AI voices and music",
+   "category": "ai",
+   "job": "Making speech, voice-overs and music with AI",
+   "closed": [
+    "ElevenLabs",
+    "Suno",
+    "Udio"
+   ],
+   "candidates": [
+    {
+     "name": "Piper",
+     "url": "https://github.com/rhasspy/piper"
+    },
+    {
+     "name": "Kokoro",
+     "url": "https://github.com/hexgrad/kokoro"
+    },
+    {
+     "name": "Chatterbox",
+     "url": "https://github.com/resemble-ai/chatterbox"
+    },
+    {
+     "name": "Coqui TTS",
+     "url": "https://github.com/coqui-ai/TTS"
+    },
+    {
+     "name": "ACE-Step",
+     "url": "https://github.com/ace-step/ACE-Step"
+    }
+   ]
+  },
+  {
+   "id": "ai-companions",
+   "name": "AI companions and characters",
+   "category": "ai",
+   "job": "Chatting with an AI character or companion",
+   "closed": [
+    "Replika",
+    "Character.AI"
+   ],
+   "candidates": [
+    {
+     "name": "SillyTavern",
+     "url": "https://sillytavern.app"
+    },
+    {
+     "name": "Open-LLM-VTuber",
+     "url": "https://github.com/Open-LLM-VTuber/Open-LLM-VTuber"
+    },
+    {
+     "name": "Amica",
+     "url": "https://heyamica.com"
+    }
+   ]
+  },
+  {
+   "id": "ai-notebooks",
+   "name": "Ask AI about your own documents",
+   "category": "ai",
+   "job": "A notebook where AI answers questions from your own files and notes",
+   "closed": [
+    "NotebookLM",
+    "Mem"
+   ],
+   "candidates": [
+    {
+     "name": "Open Notebook",
+     "url": "https://github.com/lfnovo/open-notebook"
+    },
+    {
+     "name": "SurfSense",
+     "url": "https://github.com/MODSetter/SurfSense"
+    },
+    {
+     "name": "Khoj",
+     "url": "https://khoj.dev"
+    },
+    {
+     "name": "AnythingLLM",
+     "url": "https://anythingllm.com"
+    }
+   ]
+  },
+  {
+   "id": "agent-orchestration",
+   "name": "Running many agents at once",
+   "category": "coding-agents",
+   "job": "Running and watching several coding agents in parallel",
+   "closed": [
+    "Conductor",
+    "Devin"
+   ],
+   "candidates": [
+    {
+     "name": "Claude Squad",
+     "url": "https://github.com/smtg-ai/claude-squad"
+    },
+    {
+     "name": "Vibe Kanban",
+     "url": "https://www.vibekanban.com"
+    },
+    {
+     "name": "Crystal",
+     "url": "https://github.com/stravu/crystal"
+    }
+   ]
+  },
+  {
+   "id": "agent-skills",
+   "name": "Skills, plugins and setups for agents",
+   "category": "coding-agents",
+   "job": "Reusable skills, plugins, hooks and instruction files for coding agents",
+   "closed": [],
+   "candidates": [
+    {
+     "name": "Anthropic Skills",
+     "url": "https://github.com/anthropics/skills"
+    },
+    {
+     "name": "Superpowers",
+     "url": "https://github.com/obra/superpowers"
+    },
+    {
+     "name": "awesome-claude-code",
+     "url": "https://github.com/hesreallyhim/awesome-claude-code"
+    },
+    {
+     "name": "SuperClaude",
+     "url": "https://github.com/SuperClaude-Org/SuperClaude_Framework"
+    }
+   ]
+  },
+  {
+   "id": "agent-memory",
+   "name": "Memory for AI agents",
+   "category": "coding-agents",
+   "job": "Letting an agent remember past sessions and decisions",
+   "closed": [
+    "ChatGPT memory",
+    "Claude memory"
+   ],
+   "candidates": [
+    {
+     "name": "Mem0",
+     "url": "https://mem0.ai"
+    },
+    {
+     "name": "Letta",
+     "url": "https://www.letta.com"
+    },
+    {
+     "name": "Graphiti",
+     "url": "https://github.com/getzep/graphiti"
+    },
+    {
+     "name": "Basic Memory",
+     "url": "https://basicmemory.com"
+    },
+    {
+     "name": "claude-mem",
+     "url": "https://github.com/thedotmack/claude-mem"
+    }
+   ]
+  },
+  {
+   "id": "agent-frontends",
+   "name": "Apps and remotes for coding agents",
+   "category": "coding-agents",
+   "job": "Desktop, web, phone and chat apps for driving a coding agent",
+   "closed": [
+    "Claude Code desktop and web",
+    "ChatGPT Codex app"
+   ],
+   "candidates": [
+    {
+     "name": "opcode",
+     "url": "https://opcode.sh"
+    },
+    {
+     "name": "Claude Code UI",
+     "url": "https://github.com/siteboon/claudecodeui"
+    },
+    {
+     "name": "Happy",
+     "url": "https://happy.engineering"
+    },
+    {
+     "name": "OpenCode",
+     "url": "https://opencode.ai"
+    }
+   ]
+  },
+  {
+   "id": "mcp-servers",
+   "name": "MCP connectors",
+   "category": "coding-agents",
+   "job": "Connectors (MCP servers and gateways) that let AI use other apps and data",
+   "closed": [
+    "Zapier MCP"
+   ],
+   "candidates": [
+    {
+     "name": "MCP reference servers",
+     "url": "https://github.com/modelcontextprotocol/servers"
+    },
+    {
+     "name": "Playwright MCP",
+     "url": "https://github.com/microsoft/playwright-mcp"
+    },
+    {
+     "name": "GitHub MCP Server",
+     "url": "https://github.com/github/github-mcp-server"
+    },
+    {
+     "name": "MetaMCP",
+     "url": "https://github.com/metatool-ai/metamcp"
+    }
+   ]
+  },
+  {
+   "id": "agent-safety",
+   "name": "Sandboxes and guardrails for agents",
+   "category": "coding-agents",
+   "job": "Keeping agents from doing damage: sandboxes, permission checks and secret masking",
+   "closed": [],
+   "candidates": [
+    {
+     "name": "E2B",
+     "url": "https://e2b.dev"
+    },
+    {
+     "name": "microsandbox",
+     "url": "https://github.com/microsandbox/microsandbox"
+    },
+    {
+     "name": "container-use",
+     "url": "https://github.com/dagger/container-use"
+    },
+    {
+     "name": "sandbox-runtime",
+     "url": "https://github.com/anthropic-experimental/sandbox-runtime"
+    }
+   ]
+  },
+  {
+   "id": "agent-usage",
+   "name": "AI usage and token meters",
+   "category": "coding-agents",
+   "job": "Seeing how much of your AI plan or token budget you've used, and spending less",
+   "closed": [],
+   "candidates": [
+    {
+     "name": "ccusage",
+     "url": "https://github.com/ryoppippi/ccusage"
+    },
+    {
+     "name": "Claude Code Usage Monitor",
+     "url": "https://github.com/Maciek-roboblog/Claude-Code-Usage-Monitor"
+    },
+    {
+     "name": "ccstatusline",
+     "url": "https://github.com/sirmalloc/ccstatusline"
+    }
+   ]
+  },
+  {
+   "id": "agent-context",
+   "name": "Code maps and search for agents",
+   "category": "coding-agents",
+   "job": "Giving an agent a map of your codebase so it reads less and finds more",
+   "closed": [
+    "Sourcegraph Amp",
+    "Augment Code",
+    "Greptile"
+   ],
+   "candidates": [
+    {
+     "name": "Serena",
+     "url": "https://github.com/oraios/serena"
+    },
+    {
+     "name": "Repomix",
+     "url": "https://repomix.com"
+    },
+    {
+     "name": "Sourcebot",
+     "url": "https://www.sourcebot.dev"
+    }
+   ]
+  },
+  {
+   "id": "agent-planning",
+   "name": "Planning work for coding agents",
+   "category": "coding-agents",
+   "job": "Turning ideas into specs and task lists an agent can follow",
+   "closed": [
+    "Kiro (spec mode)",
+    "Traycer"
+   ],
+   "candidates": [
+    {
+     "name": "Spec Kit",
+     "url": "https://github.com/github/spec-kit"
+    },
+    {
+     "name": "Task Master",
+     "url": "https://www.task-master.dev"
+    },
+    {
+     "name": "BMAD Method",
+     "url": "https://github.com/bmad-code-org/BMAD-METHOD"
+    },
+    {
+     "name": "OpenSpec",
+     "url": "https://github.com/Fission-AI/OpenSpec"
+    }
+   ]
+  },
+  {
+   "id": "ai-gateways",
+   "name": "AI model gateways and routers",
+   "category": "ai-build",
+   "job": "One connection that routes requests to many AI models and tracks keys",
+   "closed": [
+    "OpenRouter",
+    "Portkey (hosted)",
+    "Cloudflare AI Gateway"
+   ],
+   "candidates": [
+    {
+     "name": "LiteLLM",
+     "url": "https://www.litellm.ai"
+    },
+    {
+     "name": "Bifrost",
+     "url": "https://github.com/maximhq/bifrost"
+    },
+    {
+     "name": "Portkey Gateway",
+     "url": "https://github.com/Portkey-AI/gateway"
+    },
+    {
+     "name": "claude-code-router",
+     "url": "https://github.com/musistudio/claude-code-router"
+    }
+   ]
+  },
+  {
+   "id": "ai-observability",
+   "name": "Watching what AI apps do",
+   "category": "ai-build",
+   "job": "Logs, replays, costs and traces of AI app and agent runs",
+   "closed": [
+    "LangSmith",
+    "Datadog LLM Observability"
+   ],
+   "candidates": [
+    {
+     "name": "Langfuse",
+     "url": "https://langfuse.com"
+    },
+    {
+     "name": "Helicone",
+     "url": "https://www.helicone.ai"
+    },
+    {
+     "name": "Arize Phoenix",
+     "url": "https://phoenix.arize.com"
+    },
+    {
+     "name": "OpenLIT",
+     "url": "https://openlit.io"
+    },
+    {
+     "name": "Opik",
+     "url": "https://github.com/comet-ml/opik"
+    }
+   ]
+  },
+  {
+   "id": "open-models",
+   "name": "Downloadable AI models",
+   "category": "ai-build",
+   "job": "AI models whose weights you can download and run yourself",
+   "closed": [
+    "GPT (OpenAI)",
+    "Claude",
+    "Gemini"
+   ],
+   "candidates": [
+    {
+     "name": "OLMo",
+     "url": "https://allenai.org/olmo"
+    },
+    {
+     "name": "Qwen",
+     "url": "https://qwen.ai"
+    },
+    {
+     "name": "Mistral open models",
+     "url": "https://mistral.ai"
+    },
+    {
+     "name": "DeepSeek",
+     "url": "https://github.com/deepseek-ai"
+    }
+   ]
+  },
+  {
+   "id": "rag-tools",
+   "name": "Preparing documents for AI search",
+   "category": "ai-build",
+   "job": "Turning PDFs and documents into text an AI app can search",
+   "closed": [
+    "Azure AI Document Intelligence",
+    "Vectara"
+   ],
+   "candidates": [
+    {
+     "name": "LlamaIndex",
+     "url": "https://www.llamaindex.ai"
+    },
+    {
+     "name": "Haystack",
+     "url": "https://haystack.deepset.ai"
+    },
+    {
+     "name": "Docling",
+     "url": "https://github.com/docling-project/docling"
+    },
+    {
+     "name": "RAGFlow",
+     "url": "https://ragflow.io"
+    },
+    {
+     "name": "Marker",
+     "url": "https://github.com/datalab-to/marker"
+    }
+   ]
+  },
+  {
+   "id": "agent-frameworks",
+   "name": "Frameworks for building agents",
+   "category": "ai-build",
+   "job": "Code libraries for building your own AI agents",
+   "closed": [],
+   "candidates": [
+    {
+     "name": "LangGraph",
+     "url": "https://github.com/langchain-ai/langgraph"
+    },
+    {
+     "name": "CrewAI",
+     "url": "https://www.crewai.com"
+    },
+    {
+     "name": "Mastra",
+     "url": "https://mastra.ai"
+    },
+    {
+     "name": "Pydantic AI",
+     "url": "https://ai.pydantic.dev"
+    },
+    {
+     "name": "AutoGen",
+     "url": "https://github.com/microsoft/autogen"
+    }
+   ]
+  },
+  {
+   "id": "voice-agents",
+   "name": "AI phone and voice agents",
+   "category": "ai-build",
+   "job": "AI that answers or makes phone calls and talks in real time",
+   "closed": [
+    "Vapi",
+    "Retell AI",
+    "Bland AI"
+   ],
+   "candidates": [
+    {
+     "name": "Pipecat",
+     "url": "https://www.pipecat.ai"
+    },
+    {
+     "name": "LiveKit Agents",
+     "url": "https://github.com/livekit/agents"
+    },
+    {
+     "name": "Vocode",
+     "url": "https://github.com/vocodedev/vocode-core"
+    },
+    {
+     "name": "TEN Framework",
+     "url": "https://github.com/TEN-framework/ten-framework"
+    }
+   ]
+  },
+  {
+   "id": "ai-app-builders",
+   "name": "Making apps by describing them",
+   "category": "ai-build",
+   "job": "Describe an app and AI builds it for you",
+   "closed": [
+    "Lovable",
+    "Bolt.new",
+    "v0",
+    "Replit Agent"
+   ],
+   "waitForProject": true,
+   "candidates": [
+    {
+     "name": "bolt.diy",
+     "url": "https://github.com/stackblitz-labs/bolt.diy"
+    },
+    {
+     "name": "Dyad",
+     "url": "https://www.dyad.sh"
+    },
+    {
+     "name": "Onlook",
+     "url": "https://onlook.com"
+    },
+    {
+     "name": "Open Lovable",
+     "url": "https://github.com/firecrawl/open-lovable"
+    }
+   ]
+  },
+  {
+   "id": "ai-evals",
+   "name": "Testing AI apps",
+   "category": "ai-build",
+   "job": "Checking that AI apps and agents behave correctly before release",
+   "closed": [
+    "Braintrust"
+   ],
+   "waitForProject": true,
+   "candidates": [
+    {
+     "name": "promptfoo",
+     "url": "https://www.promptfoo.dev"
+    },
+    {
+     "name": "DeepEval",
+     "url": "https://deepeval.com"
+    },
+    {
+     "name": "Inspect",
+     "url": "https://inspect.aisi.org.uk"
+    },
+    {
+     "name": "OpenAI Evals",
+     "url": "https://github.com/openai/evals"
+    }
+   ]
+  },
+  {
+   "id": "distros-beginner",
+   "name": "Linux for people leaving Windows or Mac",
+   "category": "os",
+   "job": "An easy Linux system for someone switching from Windows or macOS",
+   "closed": [
+    "Microsoft Windows",
+    "macOS"
+   ],
+   "candidates": [
+    {
+     "name": "Linux Mint",
+     "url": "https://linuxmint.com"
+    },
+    {
+     "name": "Zorin OS",
+     "url": "https://zorin.com/os"
+    },
+    {
+     "name": "elementary OS",
+     "url": "https://elementary.io"
+    },
+    {
+     "name": "Pop!_OS",
+     "url": "https://system76.com/pop"
+    },
+    {
+     "name": "Ubuntu",
+     "url": "https://ubuntu.com"
+    }
+   ]
+  },
+  {
+   "id": "distros-diy",
+   "name": "Linux you build your own way",
+   "category": "os",
+   "job": "A minimal Linux system for tinkerers who choose every piece",
+   "closed": [],
+   "candidates": [
+    {
+     "name": "Arch Linux",
+     "url": "https://archlinux.org"
+    },
+    {
+     "name": "Gentoo",
+     "url": "https://www.gentoo.org"
+    },
+    {
+     "name": "Void Linux",
+     "url": "https://voidlinux.org"
+    },
+    {
+     "name": "Slackware",
+     "url": "http://www.slackware.com"
+    },
+    {
+     "name": "EndeavourOS",
+     "url": "https://endeavouros.com"
+    },
+    {
+     "name": "Omarchy",
+     "url": "https://omarchy.org"
+    }
+   ]
+  },
+  {
+   "id": "other-os",
+   "name": "BSD and other operating systems",
+   "category": "os",
+   "job": "Operating systems that are not Linux, Windows or macOS",
+   "closed": [],
+   "candidates": [
+    {
+     "name": "FreeBSD",
+     "url": "https://www.freebsd.org"
+    },
+    {
+     "name": "OpenBSD",
+     "url": "https://www.openbsd.org"
+    },
+    {
+     "name": "Haiku",
+     "url": "https://www.haiku-os.org"
+    },
+    {
+     "name": "ReactOS",
+     "url": "https://reactos.org"
+    },
+    {
+     "name": "Redox OS",
+     "url": "https://www.redox-os.org"
+    }
+   ]
+  },
+  {
+   "id": "server-os",
+   "name": "Home server and NAS systems",
+   "category": "os",
+   "job": "The system that runs a home server or network storage box",
+   "closed": [
+    "Synology DSM",
+    "Unraid",
+    "QNAP QTS",
+    "UGREEN UGOS"
+   ],
+   "candidates": [
+    {
+     "name": "TrueNAS Community Edition",
+     "url": "https://www.truenas.com"
+    },
+    {
+     "name": "OpenMediaVault",
+     "url": "https://www.openmediavault.org"
+    },
+    {
+     "name": "CasaOS",
+     "url": "https://github.com/IceWhaleTech/CasaOS"
+    },
+    {
+     "name": "YunoHost",
+     "url": "https://yunohost.org"
+    },
+    {
+     "name": "Rockstor",
+     "url": "https://rockstor.com"
+    }
+   ]
+  },
+  {
+   "id": "distros-general",
+   "name": "All-round Linux systems",
+   "category": "os",
+   "job": "A general-purpose Linux system for everyday and work use",
+   "closed": [],
+   "candidates": [
+    {
+     "name": "Debian",
+     "url": "https://www.debian.org"
+    },
+    {
+     "name": "Fedora Workstation",
+     "url": "https://fedoraproject.org/workstation"
+    },
+    {
+     "name": "openSUSE Tumbleweed",
+     "url": "https://get.opensuse.org/tumbleweed"
+    },
+    {
+     "name": "Ubuntu",
+     "url": "https://ubuntu.com"
+    }
+   ]
+  },
+  {
+   "id": "distros-light",
+   "name": "Linux for old or slow computers",
+   "category": "os",
+   "job": "A small Linux system that runs well on old or low-power hardware",
+   "closed": [],
+   "candidates": [
+    {
+     "name": "antiX",
+     "url": "https://antixlinux.com"
+    },
+    {
+     "name": "Puppy Linux",
+     "url": "https://puppylinux-woof-ce.github.io"
+    },
+    {
+     "name": "Lubuntu",
+     "url": "https://lubuntu.me"
+    },
+    {
+     "name": "Bodhi Linux",
+     "url": "https://www.bodhilinux.com"
+    },
+    {
+     "name": "Alpine Linux",
+     "url": "https://alpinelinux.org"
+    }
+   ]
+  },
+  {
+   "id": "distros-gaming",
+   "name": "Linux for gaming",
+   "category": "os",
+   "job": "A Linux system tuned for playing PC games",
+   "closed": [
+    "Microsoft Windows"
+   ],
+   "candidates": [
+    {
+     "name": "Bazzite",
+     "url": "https://bazzite.gg"
+    },
+    {
+     "name": "CachyOS",
+     "url": "https://cachyos.org"
+    },
+    {
+     "name": "Nobara",
+     "url": "https://nobaraproject.org"
+    },
+    {
+     "name": "ChimeraOS",
+     "url": "https://chimeraos.org"
+    },
+    {
+     "name": "SteamOS",
+     "url": "https://store.steampowered.com/steamos"
+    }
+   ]
+  },
+  {
+   "id": "os-installers",
+   "name": "Install sticks and system images",
+   "category": "os",
+   "job": "Making a USB stick or network setup that installs an operating system",
+   "closed": [
+    "Microsoft Media Creation Tool"
+   ],
+   "candidates": [
+    {
+     "name": "Ventoy",
+     "url": "https://www.ventoy.net"
+    },
+    {
+     "name": "Rufus",
+     "url": "https://rufus.ie"
+    },
+    {
+     "name": "balenaEtcher",
+     "url": "https://etcher.balena.io"
+    },
+    {
+     "name": "netboot.xyz",
+     "url": "https://netboot.xyz"
+    },
+    {
+     "name": "FOG Project",
+     "url": "https://fogproject.org"
+    }
+   ]
+  },
+  {
+   "id": "distros-privacy",
+   "name": "Linux for privacy and security",
+   "category": "os",
+   "job": "A Linux system built to protect your privacy or isolate risky apps",
+   "closed": [],
+   "waitForProject": true,
+   "candidates": [
+    {
+     "name": "Tails",
+     "url": "https://tails.net"
+    },
+    {
+     "name": "Qubes OS",
+     "url": "https://www.qubes-os.org"
+    },
+    {
+     "name": "Whonix",
+     "url": "https://www.whonix.org"
+    },
+    {
+     "name": "Kicksecure",
+     "url": "https://www.kicksecure.com"
+    }
+   ]
+  },
+  {
+   "id": "distros-immutable",
+   "name": "Linux that can undo bad updates",
+   "category": "os",
+   "job": "A Linux system whose core can't be broken by updates and can roll back",
+   "closed": [],
+   "waitForProject": true,
+   "candidates": [
+    {
+     "name": "Fedora Silverblue",
+     "url": "https://fedoraproject.org/atomic-desktops/silverblue"
+    },
+    {
+     "name": "NixOS",
+     "url": "https://nixos.org"
+    },
+    {
+     "name": "openSUSE Aeon",
+     "url": "https://aeondesktop.github.io"
+    },
+    {
+     "name": "Vanilla OS",
+     "url": "https://vanillaos.org"
+    },
+    {
+     "name": "Bluefin",
+     "url": "https://projectbluefin.io"
+    }
+   ]
+  },
+  {
+   "id": "desktop-customization",
+   "name": "Themes, extensions and desktop add-ons",
+   "category": "os-desktops",
+   "job": "Changing how a Linux desktop looks and behaves with themes, bars and extensions",
+   "closed": [
+    "Stardock WindowBlinds"
+   ],
+   "candidates": [
+    {
+     "name": "GNOME Extensions",
+     "url": "https://extensions.gnome.org"
+    },
+    {
+     "name": "KDE Store",
+     "url": "https://store.kde.org"
+    },
+    {
+     "name": "Waybar",
+     "url": "https://github.com/Alexays/Waybar"
+    },
+    {
+     "name": "fastfetch",
+     "url": "https://github.com/fastfetch-cli/fastfetch"
+    },
+    {
+     "name": "Quickshell",
+     "url": "https://quickshell.org"
+    }
+   ]
+  },
+  {
+   "id": "linux-desktops",
+   "name": "Desktop environments and window managers",
+   "category": "os-desktops",
+   "job": "The desktop you see and use on Linux: panels, windows, menus",
+   "closed": [],
+   "candidates": [
+    {
+     "name": "KDE Plasma",
+     "url": "https://kde.org/plasma-desktop"
+    },
+    {
+     "name": "GNOME",
+     "url": "https://www.gnome.org"
+    },
+    {
+     "name": "Cinnamon",
+     "url": "https://github.com/linuxmint/cinnamon"
+    },
+    {
+     "name": "Xfce",
+     "url": "https://www.xfce.org"
+    },
+    {
+     "name": "Hyprland",
+     "url": "https://hyprland.org"
+    },
+    {
+     "name": "COSMIC",
+     "url": "https://system76.com/cosmic"
+    }
+   ]
+  },
+  {
+   "id": "linux-kernel",
+   "name": "The Linux kernel and system core",
+   "category": "os-core",
+   "job": "The kernel and core system parts (startup, services, libraries) every Linux system runs on",
+   "closed": [],
+   "candidates": [
+    {
+     "name": "Linux kernel",
+     "url": "https://kernel.org"
+    },
+    {
+     "name": "systemd",
+     "url": "https://systemd.io"
+    },
+    {
+     "name": "XanMod kernel",
+     "url": "https://xanmod.org"
+    },
+    {
+     "name": "Zen kernel",
+     "url": "https://github.com/zen-kernel/zen-kernel"
+    },
+    {
+     "name": "musl libc",
+     "url": "https://musl.libc.org"
+    }
+   ]
+  },
+  {
+   "id": "linux-drivers",
+   "name": "Getting hardware working on Linux",
+   "category": "os-core",
+   "job": "Drivers and fixes for graphics, sound, fingerprint and face login, and laptops on Linux",
+   "closed": [
+    "NVIDIA proprietary driver"
+   ],
+   "candidates": [
+    {
+     "name": "Mesa",
+     "url": "https://mesa3d.org"
+    },
+    {
+     "name": "NVIDIA open kernel modules",
+     "url": "https://github.com/NVIDIA/open-gpu-kernel-modules"
+    },
+    {
+     "name": "fprintd",
+     "url": "https://fprint.freedesktop.org"
+    },
+    {
+     "name": "Howdy",
+     "url": "https://github.com/boltgolt/howdy"
+    },
+    {
+     "name": "t2linux",
+     "url": "https://t2linux.org"
+    }
+   ]
+  },
+  {
+   "id": "app-compat",
+   "name": "Running apps from other systems",
+   "category": "os-core",
+   "job": "Running Windows or Android apps and games on Linux or Mac",
+   "closed": [
+    "CrossOver",
+    "Parallels Desktop"
+   ],
+   "candidates": [
+    {
+     "name": "Wine",
+     "url": "https://www.winehq.org"
+    },
+    {
+     "name": "Proton",
+     "url": "https://github.com/ValveSoftware/Proton"
+    },
+    {
+     "name": "Bottles",
+     "url": "https://usebottles.com"
+    },
+    {
+     "name": "Lutris",
+     "url": "https://lutris.net"
+    },
+    {
+     "name": "Heroic Games Launcher",
+     "url": "https://heroicgameslauncher.com"
+    },
+    {
+     "name": "Waydroid",
+     "url": "https://waydro.id"
+    }
+   ]
+  },
+  {
+   "id": "linux-app-stores",
+   "name": "Installing apps on Linux",
+   "category": "os-core",
+   "job": "App stores, Flatpak, AppImage and package helpers for Linux",
+   "closed": [
+    "Microsoft Store",
+    "Mac App Store"
+   ],
+   "candidates": [
+    {
+     "name": "Flathub",
+     "url": "https://flathub.org"
+    },
+    {
+     "name": "GNOME Software",
+     "url": "https://apps.gnome.org/Software"
+    },
+    {
+     "name": "KDE Discover",
+     "url": "https://apps.kde.org/discover"
+    },
+    {
+     "name": "Gear Lever",
+     "url": "https://github.com/mijorus/gearlever"
+    },
+    {
+     "name": "paru",
+     "url": "https://github.com/Morganamilo/paru"
+    }
+   ]
+  },
+  {
+   "id": "filesystems",
+   "name": "Filesystems and disks",
+   "category": "os-core",
+   "job": "How files are stored on disks: ZFS, Btrfs, partitions",
+   "closed": [],
+   "candidates": [
+    {
+     "name": "OpenZFS",
+     "url": "https://openzfs.org"
+    },
+    {
+     "name": "Btrfs",
+     "url": "https://btrfs.readthedocs.io"
+    },
+    {
+     "name": "bcachefs",
+     "url": "https://bcachefs.org"
+    },
+    {
+     "name": "GParted",
+     "url": "https://gparted.org"
+    }
+   ]
+  },
+  {
+   "id": "mobile-linux",
+   "name": "Linux on phones and tablets",
+   "category": "os-mobile",
+   "job": "Running real Linux on a phone or tablet",
+   "closed": [
+    "Google Android",
+    "Apple iOS"
+   ],
+   "candidates": [
+    {
+     "name": "postmarketOS",
+     "url": "https://postmarketos.org"
+    },
+    {
+     "name": "Ubuntu Touch",
+     "url": "https://ubports.com"
+    },
+    {
+     "name": "Mobian",
+     "url": "https://mobian-project.org"
+    },
+    {
+     "name": "Droidian",
+     "url": "https://droidian.org"
+    },
+    {
+     "name": "Termux",
+     "url": "https://termux.dev"
+    }
+   ]
+  },
+  {
+   "id": "android-mods",
+   "name": "Rooting and changing Android",
+   "category": "os-mobile",
+   "job": "Unlocking extra control over an Android phone: root, system add-ons, call recording",
+   "closed": [],
+   "candidates": [
+    {
+     "name": "Magisk",
+     "url": "https://github.com/topjohnwu/Magisk"
+    },
+    {
+     "name": "KernelSU",
+     "url": "https://kernelsu.org"
+    },
+    {
+     "name": "Shizuku",
+     "url": "https://shizuku.rikka.app"
+    },
+    {
+     "name": "LSPosed",
+     "url": "https://github.com/LSPosed/LSPosed"
+    },
+    {
+     "name": "BCR call recorder",
+     "url": "https://github.com/chenxiaolong/BCR"
+    }
+   ]
+  },
+  {
+   "id": "phone-pc-link",
+   "name": "Using your phone with your computer",
+   "category": "os-mobile",
+   "job": "Seeing phone notifications, texts and screen on your computer",
+   "closed": [
+    "Microsoft Phone Link",
+    "Apple Continuity"
+   ],
+   "candidates": [
+    {
+     "name": "KDE Connect",
+     "url": "https://kdeconnect.kde.org"
+    },
+    {
+     "name": "GSConnect",
+     "url": "https://github.com/GSConnect/gnome-shell-extension-gsconnect"
+    },
+    {
+     "name": "scrcpy",
+     "url": "https://github.com/Genymobile/scrcpy"
+    },
+    {
+     "name": "Valent",
+     "url": "https://valent.andyholmes.ca"
+    }
+   ]
+  },
+  {
+   "id": "phone-launchers",
+   "name": "Phone home screens",
+   "category": "os-mobile",
+   "job": "Replacing the home screen and app drawer on Android",
+   "closed": [
+    "Nova Launcher",
+    "Niagara Launcher"
+   ],
+   "waitForProject": true,
+   "candidates": [
+    {
+     "name": "Lawnchair",
+     "url": "https://lawnchair.app"
+    },
+    {
+     "name": "KISS Launcher",
+     "url": "https://kisslauncher.com"
+    },
+    {
+     "name": "Neo Launcher",
+     "url": "https://github.com/NeoApplications/Neo-Launcher"
+    },
+    {
+     "name": "Olauncher",
+     "url": "https://github.com/tanujnotes/Olauncher"
+    },
+    {
+     "name": "Kvaesitso",
+     "url": "https://kvaesitso.mm20.de"
+    }
+   ]
+  },
+  {
+   "id": "tv-launchers",
+   "name": "TV home screens",
+   "category": "hw-tv",
+   "job": "Replacing the ad-filled home screen on a smart TV or streaming stick",
+   "closed": [
+    "Google TV home screen",
+    "Fire TV home screen",
+    "LG webOS home",
+    "Samsung Tizen home",
+    "Roku home screen"
+   ],
+   "candidates": [
+    {
+     "name": "FLauncher",
+     "url": "https://gitlab.com/flauncher/flauncher"
+    },
+    {
+     "name": "Homestead",
+     "url": "https://github.com/Sarg338/Homestead"
+    },
+    {
+     "name": "skippy-tv",
+     "url": "https://github.com/cascodigital/skippy-tv"
+    },
+    {
+     "name": "BiscuitTin",
+     "url": "https://github.com/jamesread/biscuittin"
+    }
+   ]
+  },
+  {
+   "id": "tv-debloat",
+   "name": "Removing ads and bloat from your TV",
+   "category": "hw-tv",
+   "job": "Turning off ads, tracking and preinstalled apps on a smart TV",
+   "closed": [
+    "Vendor TV software (Samsung, LG, TCL, Google TV, Fire OS)"
+   ],
+   "candidates": [
+    {
+     "name": "tv-vibehack",
+     "url": "https://github.com/Gathin23/tv-vibehack"
+    },
+    {
+     "name": "android-tv-debloat",
+     "url": "https://github.com/AlphadogRSA/android-tv-debloat"
+    },
+    {
+     "name": "Universal Android Debloater (Next Generation)",
+     "url": "https://github.com/Universal-Debloater-Alliance/universal-android-debloater-next-generation"
+    },
+    {
+     "name": "Canta",
+     "url": "https://github.com/samolego/Canta"
+    }
+   ]
+  },
+  {
+   "id": "tv-os",
+   "name": "Replacing or unlocking your TV's system",
+   "category": "hw-tv",
+   "job": "Swapping or rooting the TV or media box system, or turning a PC into a TV box",
+   "closed": [
+    "Samsung Tizen",
+    "LG webOS",
+    "Google TV",
+    "Fire OS",
+    "Roku OS",
+    "Titan OS"
+   ],
+   "candidates": [
+    {
+     "name": "LibreELEC",
+     "url": "https://libreelec.tv"
+    },
+    {
+     "name": "CoreELEC",
+     "url": "https://coreelec.org"
+    },
+    {
+     "name": "Kodi",
+     "url": "https://kodi.tv"
+    },
+    {
+     "name": "webOS Homebrew Channel",
+     "url": "https://github.com/webosbrew/webos-homebrew-channel"
+    },
+    {
+     "name": "RootMyTV",
+     "url": "https://rootmy.tv"
+    }
+   ]
+  },
+  {
+   "id": "tv-apps",
+   "name": "Better apps for your TV",
+   "category": "hw-tv",
+   "job": "Ad-free or more capable apps to watch things on a TV",
+   "closed": [
+    "Official YouTube TV app",
+    "Plex app"
+   ],
+   "candidates": [
+    {
+     "name": "SmartTube",
+     "url": "https://github.com/yuliskov/SmartTube"
+    },
+    {
+     "name": "Jellyfin for Android TV",
+     "url": "https://github.com/jellyfin/jellyfin-androidtv"
+    },
+    {
+     "name": "Moonlight",
+     "url": "https://moonlight-stream.org"
+    },
+    {
+     "name": "Kodi",
+     "url": "https://kodi.tv"
+    }
+   ]
+  },
+  {
+   "id": "tv-remotes",
+   "name": "Controlling your TV from a phone or computer",
+   "category": "hw-tv",
+   "job": "Turning a TV on, off or to a show from another device or script",
+   "closed": [
+    "LG ThinQ",
+    "Samsung SmartThings",
+    "Google TV app"
+   ],
+   "candidates": [
+    {
+     "name": "Home Assistant",
+     "url": "https://www.home-assistant.io"
+    },
+    {
+     "name": "bscpylgtv",
+     "url": "https://github.com/chros73/bscpylgtv"
+    },
+    {
+     "name": "androidtvremote2",
+     "url": "https://github.com/tronikos/androidtvremote2"
+    },
+    {
+     "name": "LGTV Companion",
+     "url": "https://github.com/JPersson77/LGTVCompanion"
+    }
+   ]
+  },
+  {
+   "id": "casting",
+   "name": "Sending video from your phone to a TV",
+   "category": "hw-tv",
+   "job": "Playing what's on your phone or laptop on the TV",
+   "closed": [
+    "Google Cast (Chromecast)",
+    "Apple AirPlay"
+   ],
+   "candidates": [
+    {
+     "name": "UxPlay",
+     "url": "https://github.com/FDH2/UxPlay"
+    },
+    {
+     "name": "GNOME Network Displays",
+     "url": "https://gitlab.gnome.org/GNOME/gnome-network-displays"
+    },
+    {
+     "name": "Kodi",
+     "url": "https://kodi.tv"
+    },
+    {
+     "name": "Jellyfin",
+     "url": "https://jellyfin.org"
+    }
+   ]
+  },
+  {
+   "id": "digital-signage",
+   "name": "Dashboards on a spare TV or screen",
+   "category": "hw-tv",
+   "job": "Showing a calendar, dashboard or notices on a TV or old screen",
+   "closed": [
+    "ScreenCloud",
+    "Yodeck"
+   ],
+   "candidates": [
+    {
+     "name": "Anthias",
+     "url": "https://anthias.screenly.io"
+    },
+    {
+     "name": "Xibo",
+     "url": "https://xibosignage.com"
+    },
+    {
+     "name": "MagicMirror\u00b2",
+     "url": "https://magicmirror.builders"
+    }
+   ]
+  },
+  {
+   "id": "keyboard-tools",
+   "name": "Keyboard firmware, remapping and sounds",
+   "category": "hw-pc",
+   "job": "Setting up keyboards: custom firmware, remapping keys, lights and typing sounds",
+   "closed": [
+    "Razer Synapse",
+    "Logitech G Hub",
+    "Corsair iCUE"
+   ],
+   "candidates": [
+    {
+     "name": "QMK",
+     "url": "https://qmk.fm"
+    },
+    {
+     "name": "ZMK",
+     "url": "https://zmk.dev"
+    },
+    {
+     "name": "VIA",
+     "url": "https://caniusevia.com"
+    },
+    {
+     "name": "Vial",
+     "url": "https://get.vial.today"
+    },
+    {
+     "name": "Kanata",
+     "url": "https://github.com/jtroo/kanata"
+    },
+    {
+     "name": "Karabiner-Elements",
+     "url": "https://karabiner-elements.pqrs.org"
+    },
+    {
+     "name": "Mechvibes",
+     "url": "https://mechvibes.com"
+    }
+   ]
+  },
+  {
+   "id": "control-decks",
+   "name": "Stream Deck and button pads",
+   "category": "hw-pc",
+   "job": "Programmable button pads (or an old phone) that run actions on your computer",
+   "closed": [
+    "Elgato Stream Deck software",
+    "Loupedeck"
+   ],
+   "candidates": [
+    {
+     "name": "OpenDeck",
+     "url": "https://github.com/nekename/OpenDeck"
+    },
+    {
+     "name": "StreamController",
+     "url": "https://github.com/StreamController/StreamController"
+    },
+    {
+     "name": "Bitfocus Companion",
+     "url": "https://bitfocus.io/companion"
+    },
+    {
+     "name": "Macro Deck",
+     "url": "https://macro-deck.app"
+    }
+   ]
+  },
+  {
+   "id": "webcam-tools",
+   "name": "Webcam effects and phone as webcam",
+   "category": "hw-pc",
+   "job": "Making a webcam look better, using a phone as one, or switching it off for real",
+   "closed": [
+    "Snap Camera",
+    "NVIDIA Broadcast",
+    "Camo",
+    "Iriun Webcam"
+   ],
+   "candidates": [
+    {
+     "name": "OBS Studio virtual camera",
+     "url": "https://obsproject.com"
+    },
+    {
+     "name": "Webcamoid",
+     "url": "https://webcamoid.github.io"
+    },
+    {
+     "name": "scrcpy",
+     "url": "https://github.com/Genymobile/scrcpy"
+    },
+    {
+     "name": "Backscrub",
+     "url": "https://github.com/floe/backscrub"
+    }
+   ]
+  },
+  {
+   "id": "mouse-config",
+   "name": "Mouse and trackpad settings",
+   "category": "hw-pc",
+   "job": "Setting buttons, DPI, lights and gestures on mice and trackpads",
+   "closed": [
+    "Logitech G Hub",
+    "Logi Options+",
+    "Razer Synapse",
+    "Corsair iCUE",
+    "BetterTouchTool"
+   ],
+   "candidates": [
+    {
+     "name": "Piper",
+     "url": "https://github.com/libratbag/piper"
+    },
+    {
+     "name": "libratbag",
+     "url": "https://github.com/libratbag/libratbag"
+    },
+    {
+     "name": "Solaar",
+     "url": "https://pwr-solaar.github.io/Solaar"
+    },
+    {
+     "name": "OpenRazer",
+     "url": "https://openrazer.github.io"
+    },
+    {
+     "name": "LinearMouse",
+     "url": "https://linearmouse.app"
+    }
+   ]
+  },
+  {
+   "id": "pc-tuning",
+   "name": "Fans, lights and power on your PC",
+   "category": "hw-pc",
+   "job": "Controlling fan speed, RGB lighting, overclocking and battery life",
+   "closed": [
+    "ASUS Armoury Crate",
+    "MSI Center",
+    "Corsair iCUE",
+    "SignalRGB",
+    "MSI Afterburner"
+   ],
+   "candidates": [
+    {
+     "name": "OpenRGB",
+     "url": "https://openrgb.org"
+    },
+    {
+     "name": "CoolerControl",
+     "url": "https://gitlab.com/coolercontrol/coolercontrol"
+    },
+    {
+     "name": "LACT",
+     "url": "https://github.com/ilya-zlobintsev/LACT"
+    },
+    {
+     "name": "G-Helper",
+     "url": "https://github.com/seerge/g-helper"
+    },
+    {
+     "name": "TLP",
+     "url": "https://linrunner.de/tlp"
+    },
+    {
+     "name": "auto-cpufreq",
+     "url": "https://github.com/AdnanHodzic/auto-cpufreq"
+    }
+   ]
+  },
+  {
+   "id": "driver-updates",
+   "name": "Driver and firmware updates",
+   "category": "hw-pc",
+   "job": "Keeping drivers, firmware and BIOS up to date without vendor bloat",
+   "closed": [
+    "Driver Booster",
+    "Dell SupportAssist",
+    "Lenovo Vantage"
+   ],
+   "candidates": [
+    {
+     "name": "fwupd / LVFS",
+     "url": "https://fwupd.org"
+    },
+    {
+     "name": "Snappy Driver Installer Origin",
+     "url": "https://www.glenn.delahoy.com/snappy-driver-installer-origin"
+    },
+    {
+     "name": "Zadig",
+     "url": "https://zadig.akeo.ie"
+    }
+   ]
+  },
+  {
+   "id": "monitor-control",
+   "name": "Monitor brightness and settings",
+   "category": "hw-pc",
+   "job": "Changing monitor brightness, volume and input from your computer",
+   "closed": [
+    "DisplayFusion",
+    "BetterDisplay"
+   ],
+   "candidates": [
+    {
+     "name": "Twinkle Tray",
+     "url": "https://twinkletray.com"
+    },
+    {
+     "name": "MonitorControl",
+     "url": "https://github.com/MonitorControl/MonitorControl"
+    },
+    {
+     "name": "Monitorian",
+     "url": "https://github.com/emoacht/Monitorian"
+    },
+    {
+     "name": "ddcutil",
+     "url": "https://www.ddcutil.com"
+    }
+   ]
+  },
+  {
+   "id": "game-controllers",
+   "name": "Game controller tools",
+   "category": "hw-pc",
+   "job": "Making any controller work with any game or computer",
+   "closed": [
+    "Steam Input",
+    "reWASD"
+   ],
+   "candidates": [
+    {
+     "name": "AntiMicroX",
+     "url": "https://github.com/AntiMicroX/antimicrox"
+    },
+    {
+     "name": "InputPlumber",
+     "url": "https://github.com/ShadowBlip/InputPlumber"
+    },
+    {
+     "name": "x360ce",
+     "url": "https://github.com/x360ce/x360ce"
+    },
+    {
+     "name": "JoyShockMapper",
+     "url": "https://github.com/Electronicks/JoyShockMapper"
+    }
+   ]
+  },
+  {
+   "id": "bios-firmware",
+   "name": "Computer startup firmware (BIOS)",
+   "category": "hw-pc",
+   "job": "The firmware that starts your computer before the operating system",
+   "closed": [
+    "AMI Aptio",
+    "Phoenix BIOS",
+    "Insyde H2O"
+   ],
+   "waitForProject": true,
+   "candidates": [
+    {
+     "name": "coreboot",
+     "url": "https://coreboot.org"
+    },
+    {
+     "name": "Libreboot",
+     "url": "https://libreboot.org"
+    },
+    {
+     "name": "Dasharo",
+     "url": "https://dasharo.com"
+    },
+    {
+     "name": "EDK II",
+     "url": "https://github.com/tianocore/edk2"
+    }
+   ]
+  },
+  {
+   "id": "cars",
+   "name": "Car apps, upkeep and driver assist",
+   "category": "hw-gadgets",
+   "job": "Car dashboards, maintenance logs and driver-assistance software",
+   "closed": [
+    "Android Auto",
+    "Apple CarPlay",
+    "Fuelly",
+    "Drivvo"
+   ],
+   "candidates": [
+    {
+     "name": "openpilot",
+     "url": "https://github.com/commaai/openpilot"
+    },
+    {
+     "name": "LubeLogger",
+     "url": "https://lubelogger.com"
+    },
+    {
+     "name": "Hammond",
+     "url": "https://github.com/akhilrex/hammond"
+    },
+    {
+     "name": "OpenAuto",
+     "url": "https://github.com/f1xpl/openauto"
+    }
+   ]
+  },
+  {
+   "id": "router-firmware",
+   "name": "Router and firewall software",
+   "category": "hw-gadgets",
+   "job": "Replacing a router's software or running your own firewall",
+   "closed": [
+    "Vendor router firmware",
+    "Ubiquiti UniFi OS",
+    "FRITZ!OS"
+   ],
+   "candidates": [
+    {
+     "name": "OpenWrt",
+     "url": "https://openwrt.org"
+    },
+    {
+     "name": "OPNsense",
+     "url": "https://opnsense.org"
+    },
+    {
+     "name": "pfSense CE",
+     "url": "https://www.pfsense.org"
+    },
+    {
+     "name": "DD-WRT",
+     "url": "https://dd-wrt.com"
+    },
+    {
+     "name": "FreshTomato",
+     "url": "https://freshtomato.org"
+    }
+   ]
+  },
+  {
+   "id": "e-readers",
+   "name": "E-reader software",
+   "category": "hw-gadgets",
+   "job": "Reading apps and firmware for Kindle, Kobo and other e-readers",
+   "closed": [
+    "Amazon Kindle firmware",
+    "Kobo firmware"
+   ],
+   "waitForProject": true,
+   "candidates": [
+    {
+     "name": "KOReader",
+     "url": "https://koreader.rocks"
+    },
+    {
+     "name": "Plato",
+     "url": "https://github.com/baskerville/plato"
+    },
+    {
+     "name": "Calibre",
+     "url": "https://calibre-ebook.com"
+    }
+   ]
+  },
+  {
+   "id": "game-handhelds",
+   "name": "Handheld gaming PCs",
+   "category": "hw-gadgets",
+   "job": "Software for Steam Deck-style handhelds",
+   "closed": [
+    "ASUS Armoury Crate SE",
+    "Lenovo Legion Space"
+   ],
+   "waitForProject": true,
+   "candidates": [
+    {
+     "name": "Handheld Daemon",
+     "url": "https://github.com/hhd-dev/hhd"
+    },
+    {
+     "name": "Decky Loader",
+     "url": "https://github.com/SteamDeckHomebrew/decky-loader"
+    },
+    {
+     "name": "Bazzite",
+     "url": "https://bazzite.gg"
+    },
+    {
+     "name": "ROCKNIX",
+     "url": "https://rocknix.org"
+    }
+   ]
+  },
+  {
+   "id": "headphones",
+   "name": "Earbud and headphone apps",
+   "category": "hw-gadgets",
+   "job": "Full features for earbuds and headphones without the maker's app",
+   "closed": [
+    "Apple AirPods (iPhone only)",
+    "Samsung Galaxy Wearable",
+    "Sony Headphones Connect"
+   ],
+   "waitForProject": true,
+   "candidates": [
+    {
+     "name": "LibrePods",
+     "url": "https://github.com/kavishdevar/librepods"
+    },
+    {
+     "name": "OpenSCQ30",
+     "url": "https://github.com/Oppzippy/OpenSCQ30"
+    },
+    {
+     "name": "Galaxy Buds Client",
+     "url": "https://github.com/timschneeb/GalaxyBudsClient"
+    },
+    {
+     "name": "Gadgetbridge",
+     "url": "https://gadgetbridge.org"
+    }
+   ]
+  },
+  {
+   "id": "security-cameras",
+   "name": "Home security cameras",
+   "category": "hw-gadgets",
+   "job": "Recording and watching home cameras without a subscription",
+   "closed": [
+    "Ring",
+    "Google Nest",
+    "Arlo",
+    "Wyze"
+   ],
+   "waitForProject": true,
+   "candidates": [
+    {
+     "name": "Frigate",
+     "url": "https://frigate.video"
+    },
+    {
+     "name": "ZoneMinder",
+     "url": "https://zoneminder.com"
+    },
+    {
+     "name": "Shinobi",
+     "url": "https://shinobi.video"
+    },
+    {
+     "name": "Viseron",
+     "url": "https://github.com/roflcoopter/viseron"
+    }
+   ]
+  },
+  {
+   "id": "security-keys",
+   "name": "Security keys",
+   "category": "hw-gadgets",
+   "job": "Hardware keys for passwordless and two-step sign-in",
+   "closed": [
+    "YubiKey firmware",
+    "Google Titan Key"
+   ],
+   "waitForProject": true,
+   "candidates": [
+    {
+     "name": "SoloKeys",
+     "url": "https://solokeys.com"
+    },
+    {
+     "name": "Nitrokey",
+     "url": "https://www.nitrokey.com"
+    },
+    {
+     "name": "OnlyKey",
+     "url": "https://onlykey.io"
+    },
+    {
+     "name": "pico-fido",
+     "url": "https://github.com/polhenarejos/pico-fido"
+    }
+   ]
+  },
+  {
+   "id": "smartwatches",
+   "name": "Smartwatches and fitness bands",
+   "category": "hw-gadgets",
+   "job": "Apps and firmware for watches without the maker's cloud",
+   "closed": [
+    "Garmin Connect",
+    "Wear OS",
+    "Fitbit app"
+   ],
+   "waitForProject": true,
+   "candidates": [
+    {
+     "name": "Gadgetbridge",
+     "url": "https://gadgetbridge.org"
+    },
+    {
+     "name": "AsteroidOS",
+     "url": "https://asteroidos.org"
+    },
+    {
+     "name": "InfiniTime",
+     "url": "https://github.com/InfiniTimeOrg/InfiniTime"
+    },
+    {
+     "name": "Bangle.js",
+     "url": "https://banglejs.com"
+    },
+    {
+     "name": "Rebble",
+     "url": "https://rebble.io"
+    }
+   ]
+  },
+  {
+   "id": "electronics",
+   "name": "Circuits, boards and chips",
+   "category": "hw-makers",
+   "job": "Designing and simulating circuits, circuit boards and chips",
+   "closed": [
+    "Altium Designer",
+    "Proteus",
+    "NI Multisim",
+    "Cadence"
+   ],
+   "candidates": [
+    {
+     "name": "KiCad",
+     "url": "https://www.kicad.org"
+    },
+    {
+     "name": "ngspice",
+     "url": "https://ngspice.sourceforge.io"
+    },
+    {
+     "name": "Qucs-S",
+     "url": "https://ra3xdh.github.io"
+    },
+    {
+     "name": "LibrePCB",
+     "url": "https://librepcb.org"
+    },
+    {
+     "name": "Yosys",
+     "url": "https://yosyshq.net/yosys"
+    },
+    {
+     "name": "Verilator",
+     "url": "https://www.veripool.org/verilator"
+    }
+   ]
+  },
+  {
+   "id": "microcontrollers",
+   "name": "Microcontrollers and IoT projects",
+   "category": "hw-makers",
+   "job": "Programming small boards like Arduino and ESP32",
+   "closed": [],
+   "candidates": [
+    {
+     "name": "Arduino IDE",
+     "url": "https://www.arduino.cc/en/software"
+    },
+    {
+     "name": "PlatformIO",
+     "url": "https://platformio.org"
+    },
+    {
+     "name": "ESPHome",
+     "url": "https://esphome.io"
+    },
+    {
+     "name": "MicroPython",
+     "url": "https://micropython.org"
+    },
+    {
+     "name": "Tasmota",
+     "url": "https://tasmota.github.io"
+    }
+   ]
+  },
+  {
+   "id": "robotics",
+   "name": "Robots and drones",
+   "category": "hw-makers",
+   "job": "Software that drives robots, drones and machines",
+   "closed": [],
+   "candidates": [
+    {
+     "name": "ROS 2",
+     "url": "https://www.ros.org"
+    },
+    {
+     "name": "Gazebo",
+     "url": "https://gazebosim.org"
+    },
+    {
+     "name": "LeRobot",
+     "url": "https://github.com/huggingface/lerobot"
+    },
+    {
+     "name": "ArduPilot",
+     "url": "https://ardupilot.org"
+    },
+    {
+     "name": "PX4",
+     "url": "https://px4.io"
+    }
+   ]
+  },
+  {
+   "id": "flight-tracking",
+   "name": "Tracking planes and ships yourself",
+   "category": "hw-makers",
+   "job": "Receiving aircraft and ship signals with a cheap radio and keeping your own history",
+   "closed": [
+    "Flightradar24",
+    "FlightAware",
+    "MarineTraffic"
+   ],
+   "candidates": [
+    {
+     "name": "tar1090",
+     "url": "https://github.com/wiedehopf/tar1090"
+    },
+    {
+     "name": "readsb",
+     "url": "https://github.com/wiedehopf/readsb"
+    },
+    {
+     "name": "AIS-catcher",
+     "url": "https://github.com/jvde-github/AIS-catcher"
+    },
+    {
+     "name": "SDR++",
+     "url": "https://www.sdrpp.org"
+    }
+   ]
+  },
+  {
+   "id": "industrial-control",
+   "name": "Factory and machine control",
+   "category": "hw-makers",
+   "job": "Talking to industrial machines and building control panels (Modbus, PLC, SCADA)",
+   "closed": [
+    "Modbus Poll",
+    "Ignition",
+    "Siemens TIA Portal"
+   ],
+   "candidates": [
+    {
+     "name": "OpenPLC",
+     "url": "https://autonomylogic.com"
+    },
+    {
+     "name": "FUXA",
+     "url": "https://github.com/frangoteam/FUXA"
+    },
+    {
+     "name": "Node-RED",
+     "url": "https://nodered.org"
+    },
+    {
+     "name": "QModMaster",
+     "url": "https://sourceforge.net/projects/qmodmaster"
+    }
+   ]
+  },
+  {
+   "id": "3d-printing",
+   "name": "3D printing",
+   "category": "hw-makers",
+   "job": "Slicing, running and organising 3D prints",
+   "closed": [
+    "Simplify3D",
+    "Bambu Cloud"
+   ],
+   "waitForProject": true,
+   "candidates": [
+    {
+     "name": "OrcaSlicer",
+     "url": "https://github.com/SoftFever/OrcaSlicer"
+    },
+    {
+     "name": "PrusaSlicer",
+     "url": "https://www.prusa3d.com/page/prusaslicer_424"
+    },
+    {
+     "name": "UltiMaker Cura",
+     "url": "https://ultimaker.com/software/ultimaker-cura"
+    },
+    {
+     "name": "OctoPrint",
+     "url": "https://octoprint.org"
+    },
+    {
+     "name": "Klipper",
+     "url": "https://www.klipper3d.org"
+    },
+    {
+     "name": "Manyfold",
+     "url": "https://manyfold.app"
+    }
+   ]
+  },
+  {
+   "id": "languages",
+   "name": "Programming languages and compilers",
+   "category": "dev",
+   "job": "New programming languages, compilers and interpreters",
+   "closed": [],
+   "candidates": [
+    {
+     "name": "Rust",
+     "url": "https://www.rust-lang.org"
+    },
+    {
+     "name": "Zig",
+     "url": "https://ziglang.org"
+    },
+    {
+     "name": "Go",
+     "url": "https://go.dev"
+    },
+    {
+     "name": "LLVM",
+     "url": "https://llvm.org"
+    },
+    {
+     "name": "Python",
+     "url": "https://www.python.org"
+    }
+   ]
+  },
+  {
+   "id": "dev-testing",
+   "name": "Testing tools",
+   "category": "dev",
+   "job": "Writing and running tests for apps and websites",
+   "closed": [
+    "BrowserStack",
+    "TestRail"
+   ],
+   "candidates": [
+    {
+     "name": "Playwright",
+     "url": "https://playwright.dev"
+    },
+    {
+     "name": "Selenium",
+     "url": "https://www.selenium.dev"
+    },
+    {
+     "name": "pytest",
+     "url": "https://pytest.org"
+    },
+    {
+     "name": "k6",
+     "url": "https://k6.io"
+    },
+    {
+     "name": "Maestro",
+     "url": "https://maestro.dev"
+    }
+   ]
+  },
+  {
+   "id": "git-tools",
+   "name": "Git apps and helpers",
+   "category": "dev",
+   "job": "Apps that make git easier to see and use",
+   "closed": [
+    "GitKraken",
+    "Tower",
+    "Fork",
+    "Sourcetree"
+   ],
+   "candidates": [
+    {
+     "name": "lazygit",
+     "url": "https://github.com/jesseduffield/lazygit"
+    },
+    {
+     "name": "GitHub Desktop",
+     "url": "https://github.com/desktop/desktop"
+    },
+    {
+     "name": "Git Extensions",
+     "url": "https://gitextensions.github.io"
+    },
+    {
+     "name": "gitui",
+     "url": "https://github.com/gitui-org/gitui"
+    }
+   ]
+  },
+  {
+   "id": "code-understanding",
+   "name": "Seeing and exploring a codebase",
+   "category": "dev",
+   "job": "Visual maps and tours of how a codebase fits together",
+   "closed": [
+    "Sourcegraph (enterprise)",
+    "CodeSee"
+   ],
+   "candidates": [
+    {
+     "name": "Gource",
+     "url": "https://gource.io"
+    },
+    {
+     "name": "CodeCharta",
+     "url": "https://codecharta.com"
+    },
+    {
+     "name": "OpenGrok",
+     "url": "https://oracle.github.io/opengrok"
+    },
+    {
+     "name": "Sourcebot",
+     "url": "https://www.sourcebot.dev"
+    }
+   ]
+  },
+  {
+   "id": "game-dev",
+   "name": "Game engines and game-making tools",
+   "category": "dev",
+   "job": "Building games and game-world tools",
+   "closed": [
+    "Unity",
+    "Unreal Engine (source-available)",
+    "GameMaker"
+   ],
+   "candidates": [
+    {
+     "name": "Godot",
+     "url": "https://godotengine.org"
+    },
+    {
+     "name": "Bevy",
+     "url": "https://bevyengine.org"
+    },
+    {
+     "name": "raylib",
+     "url": "https://www.raylib.com"
+    },
+    {
+     "name": "O3DE",
+     "url": "https://o3de.org"
+    },
+    {
+     "name": "Rojo",
+     "url": "https://rojo.space"
+    }
+   ]
+  },
+  {
+   "id": "code-review",
+   "name": "Code review helpers",
+   "category": "dev",
+   "job": "Making pull requests easier to review and understand",
+   "closed": [
+    "CodeRabbit",
+    "Greptile"
+   ],
+   "candidates": [
+    {
+     "name": "PR-Agent",
+     "url": "https://github.com/qodo-ai/pr-agent"
+    },
+    {
+     "name": "reviewdog",
+     "url": "https://github.com/reviewdog/reviewdog"
+    },
+    {
+     "name": "Gerrit",
+     "url": "https://www.gerritcodereview.com"
+    },
+    {
+     "name": "Review Board",
+     "url": "https://www.reviewboard.org"
+    }
+   ]
+  },
+  {
+   "id": "dev-docs",
+   "name": "Docs and README tools",
+   "category": "dev",
+   "job": "Writing project documentation sites, badges and READMEs",
+   "closed": [
+    "GitBook",
+    "ReadMe",
+    "Mintlify"
+   ],
+   "candidates": [
+    {
+     "name": "MkDocs",
+     "url": "https://www.mkdocs.org"
+    },
+    {
+     "name": "Docusaurus",
+     "url": "https://docusaurus.io"
+    },
+    {
+     "name": "Starlight",
+     "url": "https://starlight.astro.build"
+    },
+    {
+     "name": "Shields.io",
+     "url": "https://shields.io"
+    }
+   ]
+  },
+  {
+   "id": "terminals",
+   "name": "Terminals",
+   "category": "dev",
+   "job": "The window where you type commands",
+   "closed": [
+    "Warp",
+    "Termius"
+   ],
+   "candidates": [
+    {
+     "name": "WezTerm",
+     "url": "https://wezterm.org"
+    },
+    {
+     "name": "Alacritty",
+     "url": "https://alacritty.org"
+    },
+    {
+     "name": "kitty",
+     "url": "https://sw.kovidgoyal.net/kitty"
+    },
+    {
+     "name": "Ghostty",
+     "url": "https://ghostty.org"
+    },
+    {
+     "name": "tmux",
+     "url": "https://github.com/tmux/tmux"
+    },
+    {
+     "name": "Zellij",
+     "url": "https://zellij.dev"
+    }
+   ]
+  },
+  {
+   "id": "dev-environments",
+   "name": "Ready-made coding environments",
+   "category": "dev",
+   "job": "A local or cloud setup with everything needed to run code",
+   "closed": [
+    "GitHub Codespaces",
+    "MAMP Pro",
+    "Local (WP Engine)"
+   ],
+   "candidates": [
+    {
+     "name": "DDEV",
+     "url": "https://ddev.com"
+    },
+    {
+     "name": "Lando",
+     "url": "https://lando.dev"
+    },
+    {
+     "name": "XAMPP",
+     "url": "https://www.apachefriends.org"
+    },
+    {
+     "name": "Coder",
+     "url": "https://coder.com"
+    },
+    {
+     "name": "DevPod",
+     "url": "https://devpod.sh"
+    }
+   ]
+  },
+  {
+   "id": "dev-toolbox",
+   "name": "Everyday developer helpers",
+   "category": "dev",
+   "job": "Small tools: format JSON, decode tokens, convert text",
+   "closed": [],
+   "candidates": [
+    {
+     "name": "DevToys",
+     "url": "https://devtoys.app"
+    },
+    {
+     "name": "CyberChef",
+     "url": "https://github.com/gchq/CyberChef"
+    },
+    {
+     "name": "IT-Tools",
+     "url": "https://github.com/CorentinTh/it-tools"
+    }
+   ]
+  },
+  {
+   "id": "linters",
+   "name": "Code checkers",
+   "category": "dev",
+   "job": "Finding bugs and style problems in code automatically",
+   "closed": [
+    "SonarQube Cloud",
+    "DeepSource",
+    "Codacy"
+   ],
+   "candidates": [
+    {
+     "name": "SonarQube Community Build",
+     "url": "https://www.sonarsource.com/open-source-editions"
+    },
+    {
+     "name": "ESLint",
+     "url": "https://eslint.org"
+    },
+    {
+     "name": "Ruff",
+     "url": "https://github.com/astral-sh/ruff"
+    },
+    {
+     "name": "Semgrep Community Edition",
+     "url": "https://semgrep.dev"
+    },
+    {
+     "name": "Biome",
+     "url": "https://biomejs.dev"
+    }
+   ]
+  },
+  {
+   "id": "ssh-clients",
+   "name": "SSH and file transfer to servers",
+   "category": "dev",
+   "job": "Connecting to servers and moving files to them",
+   "closed": [
+    "Termius",
+    "Transmit",
+    "MobaXterm"
+   ],
+   "candidates": [
+    {
+     "name": "PuTTY",
+     "url": "https://www.chiark.greenend.org.uk/~sgtatham/putty"
+    },
+    {
+     "name": "FileZilla",
+     "url": "https://filezilla-project.org"
+    },
+    {
+     "name": "WinSCP",
+     "url": "https://winscp.net"
+    },
+    {
+     "name": "Cyberduck",
+     "url": "https://cyberduck.io"
+    },
+    {
+     "name": "Tabby",
+     "url": "https://tabby.sh"
+    }
+   ]
+  },
+  {
+   "id": "shells",
+   "name": "Shells and command-line add-ons",
+   "category": "dev",
+   "job": "Shells, prompts and history tools that make the command line nicer",
+   "closed": [],
+   "candidates": [
+    {
+     "name": "fish",
+     "url": "https://fishshell.com"
+    },
+    {
+     "name": "Nushell",
+     "url": "https://www.nushell.sh"
+    },
+    {
+     "name": "Oh My Zsh",
+     "url": "https://ohmyz.sh"
+    },
+    {
+     "name": "Starship",
+     "url": "https://starship.rs"
+    },
+    {
+     "name": "Atuin",
+     "url": "https://atuin.sh"
+    },
+    {
+     "name": "zoxide",
+     "url": "https://github.com/ajeetdsouza/zoxide"
+    }
+   ]
+  },
+  {
+   "id": "package-managers",
+   "name": "Package managers",
+   "category": "dev",
+   "job": "Installing code libraries and developer tools",
+   "closed": [],
+   "candidates": [
+    {
+     "name": "pnpm",
+     "url": "https://pnpm.io"
+    },
+    {
+     "name": "Bun",
+     "url": "https://bun.sh"
+    },
+    {
+     "name": "uv",
+     "url": "https://github.com/astral-sh/uv"
+    },
+    {
+     "name": "Homebrew",
+     "url": "https://brew.sh"
+    },
+    {
+     "name": "Nix",
+     "url": "https://nixos.org"
+    }
+   ]
+  },
+  {
+   "id": "scaffolding",
+   "name": "Project starters and code snippets",
+   "category": "dev",
+   "job": "Generating a new project's starting files and reusable snippets",
+   "closed": [],
+   "candidates": [
+    {
+     "name": "Cookiecutter",
+     "url": "https://github.com/cookiecutter/cookiecutter"
+    },
+    {
+     "name": "Yeoman",
+     "url": "https://yeoman.io"
+    },
+    {
+     "name": "Copier",
+     "url": "https://github.com/copier-org/copier"
+    },
+    {
+     "name": "Plop",
+     "url": "https://plopjs.com"
+    }
+   ]
+  },
+  {
+   "id": "reverse-engineering",
+   "name": "Reverse engineering",
+   "category": "dev",
+   "job": "Taking apart programs and firmware to see how they work",
+   "closed": [
+    "IDA Pro",
+    "Binary Ninja",
+    "Hopper"
+   ],
+   "candidates": [
+    {
+     "name": "Ghidra",
+     "url": "https://ghidra-sre.org"
+    },
+    {
+     "name": "radare2",
+     "url": "https://rada.re"
+    },
+    {
+     "name": "Cutter",
+     "url": "https://cutter.re"
+    },
+    {
+     "name": "x64dbg",
+     "url": "https://x64dbg.com"
+    },
+    {
+     "name": "ImHex",
+     "url": "https://github.com/WerWolv/ImHex"
+    }
+   ]
+  },
+  {
+   "id": "maintainer-tools",
+   "name": "Tools for open-source maintainers",
+   "category": "dev-ship",
+   "job": "Triage bots, contributor helpers and pull-request gates for projects",
+   "closed": [],
+   "candidates": [
+    {
+     "name": "Probot",
+     "url": "https://probot.github.io"
+    },
+    {
+     "name": "All Contributors",
+     "url": "https://allcontributors.org"
+    },
+    {
+     "name": "Renovate",
+     "url": "https://docs.renovatebot.com"
+    },
+    {
+     "name": "actions/stale",
+     "url": "https://github.com/actions/stale"
+    }
+   ]
+  },
+  {
+   "id": "code-security",
+   "name": "Dependency and code security checks",
+   "category": "dev-ship",
+   "job": "Catching risky packages and leaked secrets before they ship",
+   "closed": [
+    "Snyk",
+    "GitHub Advanced Security",
+    "Socket"
+   ],
+   "candidates": [
+    {
+     "name": "Trivy",
+     "url": "https://trivy.dev"
+    },
+    {
+     "name": "OSV-Scanner",
+     "url": "https://github.com/google/osv-scanner"
+    },
+    {
+     "name": "Dependency-Track",
+     "url": "https://dependencytrack.org"
+    },
+    {
+     "name": "Gitleaks",
+     "url": "https://github.com/gitleaks/gitleaks"
+    },
+    {
+     "name": "Grype",
+     "url": "https://github.com/anchore/grype"
+    }
+   ]
+  },
+  {
+   "id": "webhooks",
+   "name": "Sending and receiving webhooks",
+   "category": "dev-ship",
+   "job": "Delivering webhooks reliably between apps",
+   "closed": [
+    "Hookdeck",
+    "Svix (hosted)"
+   ],
+   "candidates": [
+    {
+     "name": "Svix",
+     "url": "https://github.com/svix/svix-webhooks"
+    },
+    {
+     "name": "Convoy",
+     "url": "https://getconvoy.io"
+    },
+    {
+     "name": "Hook0",
+     "url": "https://www.hook0.com"
+    },
+    {
+     "name": "webhook",
+     "url": "https://github.com/adnanh/webhook"
+    }
+   ]
+  },
+  {
+   "id": "containers",
+   "name": "Containers and Kubernetes",
+   "category": "dev-ship",
+   "job": "Packaging apps in containers and running them on clusters",
+   "closed": [
+    "Docker Desktop (paid tiers)",
+    "Red Hat OpenShift"
+   ],
+   "candidates": [
+    {
+     "name": "Podman",
+     "url": "https://podman.io"
+    },
+    {
+     "name": "Kubernetes",
+     "url": "https://kubernetes.io"
+    },
+    {
+     "name": "k3s",
+     "url": "https://k3s.io"
+    },
+    {
+     "name": "Headlamp",
+     "url": "https://headlamp.dev"
+    },
+    {
+     "name": "K9s",
+     "url": "https://k9scli.io"
+    }
+   ]
+  },
+  {
+   "id": "secrets-management",
+   "name": "Secrets for apps and teams",
+   "category": "dev-ship",
+   "job": "Storing API keys and passwords that apps and teams share",
+   "closed": [
+    "Doppler",
+    "HashiCorp Vault Enterprise"
+   ],
+   "waitForProject": true,
+   "candidates": [
+    {
+     "name": "Infisical",
+     "url": "https://infisical.com"
+    },
+    {
+     "name": "OpenBao",
+     "url": "https://openbao.org"
+    },
+    {
+     "name": "SOPS",
+     "url": "https://getsops.io"
+    },
+    {
+     "name": "age",
+     "url": "https://age-encryption.org"
+    }
+   ]
+  },
+  {
+   "id": "database-tools",
+   "name": "Database apps and tools",
+   "category": "dev-data",
+   "job": "Database clients, query tools, proxies and libraries",
+   "closed": [
+    "DataGrip",
+    "TablePlus",
+    "Navicat"
+   ],
+   "candidates": [
+    {
+     "name": "DBeaver Community",
+     "url": "https://dbeaver.io"
+    },
+    {
+     "name": "Beekeeper Studio",
+     "url": "https://www.beekeeperstudio.io"
+    },
+    {
+     "name": "pgAdmin",
+     "url": "https://www.pgadmin.org"
+    },
+    {
+     "name": "Adminer",
+     "url": "https://www.adminer.org"
+    },
+    {
+     "name": "SQLAlchemy",
+     "url": "https://www.sqlalchemy.org"
+    }
+   ]
+  },
+  {
+   "id": "science-math",
+   "name": "Math and science tools",
+   "category": "dev-data",
+   "job": "Calculators, graphing and scientific computing",
+   "closed": [
+    "MATLAB",
+    "Mathematica",
+    "Maple"
+   ],
+   "candidates": [
+    {
+     "name": "GNU Octave",
+     "url": "https://octave.org"
+    },
+    {
+     "name": "SageMath",
+     "url": "https://www.sagemath.org"
+    },
+    {
+     "name": "Scilab",
+     "url": "https://www.scilab.org"
+    },
+    {
+     "name": "Julia",
+     "url": "https://julialang.org"
+    },
+    {
+     "name": "Qalculate!",
+     "url": "https://qalculate.github.io"
+    }
+   ]
+  },
+  {
+   "id": "data-analysis",
+   "name": "Statistics and data analysis",
+   "category": "dev-data",
+   "job": "Analysing data and running statistics",
+   "closed": [
+    "SPSS",
+    "Stata",
+    "SAS",
+    "JMP",
+    "Minitab"
+   ],
+   "candidates": [
+    {
+     "name": "R",
+     "url": "https://www.r-project.org"
+    },
+    {
+     "name": "JASP",
+     "url": "https://jasp-stats.org"
+    },
+    {
+     "name": "jamovi",
+     "url": "https://www.jamovi.org"
+    },
+    {
+     "name": "PSPP",
+     "url": "https://www.gnu.org/software/pspp"
+    },
+    {
+     "name": "Jupyter",
+     "url": "https://jupyter.org"
+    }
+   ]
+  },
+  {
+   "id": "object-storage",
+   "name": "File storage for apps (S3)",
+   "category": "dev-data",
+   "job": "Storing app files in an S3-style bucket on your own servers",
+   "closed": [
+    "Amazon S3",
+    "Backblaze B2",
+    "Cloudflare R2"
+   ],
+   "waitForProject": true,
+   "candidates": [
+    {
+     "name": "Garage",
+     "url": "https://garagehq.deuxfleurs.fr"
+    },
+    {
+     "name": "SeaweedFS",
+     "url": "https://github.com/seaweedfs/seaweedfs"
+    },
+    {
+     "name": "Ceph",
+     "url": "https://ceph.io"
+    },
+    {
+     "name": "RustFS",
+     "url": "https://rustfs.com"
+    }
+   ]
+  },
+  {
+   "id": "web-frameworks",
+   "name": "Web frameworks",
+   "category": "dev-blocks",
+   "job": "Code frameworks for building websites and web apps",
+   "closed": [],
+   "candidates": [
+    {
+     "name": "React",
+     "url": "https://react.dev"
+    },
+    {
+     "name": "Svelte",
+     "url": "https://svelte.dev"
+    },
+    {
+     "name": "Django",
+     "url": "https://www.djangoproject.com"
+    },
+    {
+     "name": "Laravel",
+     "url": "https://laravel.com"
+    },
+    {
+     "name": "Phoenix",
+     "url": "https://www.phoenixframework.org"
+    }
+   ]
+  },
+  {
+   "id": "web-scraping",
+   "name": "Web scraping",
+   "category": "dev-blocks",
+   "job": "Collecting data from websites automatically",
+   "closed": [
+    "Apify",
+    "Bright Data",
+    "SerpApi",
+    "ScrapingBee"
+   ],
+   "candidates": [
+    {
+     "name": "Scrapy",
+     "url": "https://www.scrapy.org"
+    },
+    {
+     "name": "Crawl4AI",
+     "url": "https://github.com/unclecode/crawl4ai"
+    },
+    {
+     "name": "Firecrawl",
+     "url": "https://github.com/firecrawl/firecrawl"
+    },
+    {
+     "name": "Colly",
+     "url": "https://go-colly.org"
+    }
+   ]
+  },
+  {
+   "id": "ui-components",
+   "name": "UI components and charts",
+   "category": "dev-blocks",
+   "job": "Ready-made buttons, tables, grids and charts for apps",
+   "closed": [
+    "Handsontable",
+    "AG Grid Enterprise",
+    "Highcharts",
+    "Kendo UI"
+   ],
+   "candidates": [
+    {
+     "name": "shadcn/ui",
+     "url": "https://ui.shadcn.com"
+    },
+    {
+     "name": "Radix UI",
+     "url": "https://www.radix-ui.com"
+    },
+    {
+     "name": "MUI Core",
+     "url": "https://mui.com"
+    },
+    {
+     "name": "Chart.js",
+     "url": "https://www.chartjs.org"
+    },
+    {
+     "name": "Apache ECharts",
+     "url": "https://echarts.apache.org"
+    }
+   ]
+  },
+  {
+   "id": "app-frameworks",
+   "name": "Desktop and mobile app frameworks",
+   "category": "dev-blocks",
+   "job": "Code frameworks for building desktop, phone and terminal apps",
+   "closed": [],
+   "candidates": [
+    {
+     "name": "Electron",
+     "url": "https://www.electronjs.org"
+    },
+    {
+     "name": "Tauri",
+     "url": "https://tauri.app"
+    },
+    {
+     "name": "Flutter",
+     "url": "https://flutter.dev"
+    },
+    {
+     "name": "Qt",
+     "url": "https://www.qt.io"
+    },
+    {
+     "name": "Wails",
+     "url": "https://wails.io"
+    }
+   ]
+  },
+  {
+   "id": "captcha",
+   "name": "Bot protection and CAPTCHAs",
+   "category": "dev-blocks",
+   "job": "Keeping bots and AI crawlers off a website",
+   "closed": [
+    "Google reCAPTCHA",
+    "hCaptcha",
+    "Cloudflare Turnstile"
+   ],
+   "candidates": [
+    {
+     "name": "Anubis",
+     "url": "https://github.com/TecharoHQ/anubis"
+    },
+    {
+     "name": "ALTCHA",
+     "url": "https://altcha.org"
+    },
+    {
+     "name": "mCaptcha",
+     "url": "https://mcaptcha.org"
+    },
+    {
+     "name": "Cap",
+     "url": "https://github.com/tiagozip/cap"
+    }
+   ]
+  },
+  {
+   "id": "realtime",
+   "name": "Live updates and sync",
+   "category": "dev-blocks",
+   "job": "Pushing live updates and syncing state between users",
+   "closed": [
+    "Pusher",
+    "Ably",
+    "PubNub"
+   ],
+   "candidates": [
+    {
+     "name": "Socket.IO",
+     "url": "https://socket.io"
+    },
+    {
+     "name": "Centrifugo",
+     "url": "https://centrifugal.dev"
+    },
+    {
+     "name": "Soketi",
+     "url": "https://soketi.app"
+    },
+    {
+     "name": "Yjs",
+     "url": "https://yjs.dev"
+    }
+   ]
+  },
+  {
+   "id": "encryption-libraries",
+   "name": "Encryption libraries",
+   "category": "dev-blocks",
+   "job": "Code libraries for encrypting data and messages",
+   "closed": [],
+   "candidates": [
+    {
+     "name": "libsodium",
+     "url": "https://libsodium.org"
+    },
+    {
+     "name": "OpenSSL",
+     "url": "https://www.openssl.org"
+    },
+    {
+     "name": "liboqs",
+     "url": "https://openquantumsafe.org"
+    },
+    {
+     "name": "libsignal",
+     "url": "https://github.com/signalapp/libsignal"
+    }
+   ]
+  },
+  {
+   "id": "docker-management",
+   "name": "Managing containers at home",
+   "category": "selfhost",
+   "job": "Starting, updating and backing up the apps on a home server",
+   "closed": [
+    "Portainer Business"
+   ],
+   "candidates": [
+    {
+     "name": "Portainer CE",
+     "url": "https://www.portainer.io"
+    },
+    {
+     "name": "Dockge",
+     "url": "https://github.com/louislam/dockge"
+    },
+    {
+     "name": "Komodo",
+     "url": "https://komo.do"
+    },
+    {
+     "name": "Arcane",
+     "url": "https://getarcane.app"
+    },
+    {
+     "name": "Watchtower",
+     "url": "https://github.com/containrrr/watchtower"
+    },
+    {
+     "name": "Diun",
+     "url": "https://crazymax.dev/diun"
+    }
+   ]
+  },
+  {
+   "id": "tunnels",
+   "name": "Reaching home apps from outside",
+   "category": "selfhost",
+   "job": "Getting to home-server apps without opening router ports",
+   "closed": [
+    "ngrok",
+    "Cloudflare Tunnel",
+    "Tailscale Funnel"
+   ],
+   "candidates": [
+    {
+     "name": "Pangolin",
+     "url": "https://github.com/fosrl/pangolin"
+    },
+    {
+     "name": "frp",
+     "url": "https://github.com/fatedier/frp"
+    },
+    {
+     "name": "zrok",
+     "url": "https://zrok.io"
+    },
+    {
+     "name": "bore",
+     "url": "https://github.com/ekzhang/bore"
+    },
+    {
+     "name": "rathole",
+     "url": "https://github.com/rathole-org/rathole"
+    }
+   ]
+  },
+  {
+   "id": "virtual-machines",
+   "name": "Virtual machines",
+   "category": "selfhost",
+   "job": "Running other operating systems inside your computer or server",
+   "closed": [
+    "VMware Workstation / vSphere",
+    "Parallels Desktop"
+   ],
+   "candidates": [
+    {
+     "name": "Proxmox VE",
+     "url": "https://www.proxmox.com/proxmox-virtual-environment"
+    },
+    {
+     "name": "virt-manager",
+     "url": "https://virt-manager.org"
+    },
+    {
+     "name": "VirtualBox",
+     "url": "https://www.virtualbox.org"
+    },
+    {
+     "name": "UTM",
+     "url": "https://mac.getutm.app"
+    },
+    {
+     "name": "Incus",
+     "url": "https://linuxcontainers.org/incus"
+    },
+    {
+     "name": "GNOME Boxes",
+     "url": "https://apps.gnome.org/Boxes"
+    }
+   ]
+  },
+  {
+   "id": "reverse-proxies",
+   "name": "Reverse proxies and HTTPS",
+   "category": "selfhost",
+   "job": "Putting home-server apps behind one address with HTTPS certificates",
+   "closed": [
+    "Cloudflare (proxy)"
+   ],
+   "candidates": [
+    {
+     "name": "Nginx Proxy Manager",
+     "url": "https://nginxproxymanager.com"
+    },
+    {
+     "name": "Caddy",
+     "url": "https://caddyserver.com"
+    },
+    {
+     "name": "Traefik",
+     "url": "https://traefik.io/traefik"
+    },
+    {
+     "name": "Zoraxy",
+     "url": "https://github.com/tobychui/zoraxy"
+    },
+    {
+     "name": "SWAG",
+     "url": "https://github.com/linuxserver/docker-swag"
+    }
+   ]
+  },
+  {
+   "id": "email-servers",
+   "name": "Running your own email server",
+   "category": "selfhost",
+   "job": "Hosting email for your own domain",
+   "closed": [
+    "Google Workspace Gmail",
+    "Microsoft 365 Exchange",
+    "Fastmail"
+   ],
+   "candidates": [
+    {
+     "name": "Stalwart",
+     "url": "https://stalw.art"
+    },
+    {
+     "name": "Mailcow",
+     "url": "https://mailcow.email"
+    },
+    {
+     "name": "Mail-in-a-Box",
+     "url": "https://mailinabox.email"
+    },
+    {
+     "name": "Mox",
+     "url": "https://www.xmox.nl"
+    },
+    {
+     "name": "docker-mailserver",
+     "url": "https://github.com/docker-mailserver/docker-mailserver"
+    }
+   ]
+  },
+  {
+   "id": "uptime-status",
+   "name": "Uptime checks and status pages",
+   "category": "selfhost",
+   "job": "Getting alerted when a site or service goes down",
+   "closed": [
+    "UptimeRobot",
+    "Pingdom",
+    "Atlassian Statuspage"
+   ],
+   "candidates": [
+    {
+     "name": "Uptime Kuma",
+     "url": "https://uptime.kuma.pet"
+    },
+    {
+     "name": "Gatus",
+     "url": "https://gatus.io"
+    },
+    {
+     "name": "Upptime",
+     "url": "https://upptime.js.org"
+    },
+    {
+     "name": "OneUptime",
+     "url": "https://oneuptime.com"
+    }
+   ]
+  },
+  {
+   "id": "server-panels",
+   "name": "Server control panels",
+   "category": "selfhost",
+   "job": "Managing a web server, sites and email from a web panel",
+   "closed": [
+    "cPanel",
+    "Plesk",
+    "RunCloud"
+   ],
+   "candidates": [
+    {
+     "name": "Webmin",
+     "url": "https://webmin.com"
+    },
+    {
+     "name": "Cockpit",
+     "url": "https://cockpit-project.org"
+    },
+    {
+     "name": "HestiaCP",
+     "url": "https://hestiacp.com"
+    },
+    {
+     "name": "CyberPanel",
+     "url": "https://cyberpanel.net"
+    }
+   ]
+  },
+  {
+   "id": "start-pages",
+   "name": "Home server dashboards",
+   "category": "selfhost",
+   "job": "A start page with links and status for all your home apps",
+   "closed": [],
+   "candidates": [
+    {
+     "name": "Homepage",
+     "url": "https://gethomepage.dev"
+    },
+    {
+     "name": "Homarr",
+     "url": "https://homarr.dev"
+    },
+    {
+     "name": "Dashy",
+     "url": "https://dashy.to"
+    },
+    {
+     "name": "Glance",
+     "url": "https://github.com/glanceapp/glance"
+    },
+    {
+     "name": "Heimdall",
+     "url": "https://github.com/linuxserver/Heimdall"
+    }
+   ]
+  },
+  {
+   "id": "dns",
+   "name": "Dynamic DNS and DNS servers",
+   "category": "selfhost",
+   "job": "Keeping a domain pointed at a changing home address, or running your own DNS",
+   "closed": [
+    "No-IP",
+    "Dyn",
+    "Dynu"
+   ],
+   "candidates": [
+    {
+     "name": "ddclient",
+     "url": "https://github.com/ddclient/ddclient"
+    },
+    {
+     "name": "DDNS Updater",
+     "url": "https://github.com/qdm12/ddns-updater"
+    },
+    {
+     "name": "Technitium DNS Server",
+     "url": "https://technitium.com/dns"
+    },
+    {
+     "name": "CoreDNS",
+     "url": "https://coredns.io"
+    }
+   ]
+  },
+  {
+   "id": "security-monitoring",
+   "name": "Intrusion detection and security monitoring",
+   "category": "security",
+   "job": "Spotting attacks and suspicious activity on servers and computers",
+   "closed": [
+    "Splunk",
+    "CrowdStrike Falcon",
+    "SentinelOne"
+   ],
+   "candidates": [
+    {
+     "name": "Wazuh",
+     "url": "https://wazuh.com"
+    },
+    {
+     "name": "Security Onion",
+     "url": "https://securityonionsolutions.com"
+    },
+    {
+     "name": "CrowdSec",
+     "url": "https://www.crowdsec.net"
+    },
+    {
+     "name": "Suricata",
+     "url": "https://suricata.io"
+    },
+    {
+     "name": "Velociraptor",
+     "url": "https://docs.velociraptor.app"
+    }
+   ]
+  },
+  {
+   "id": "security-testing",
+   "name": "Security testing and password recovery",
+   "category": "security",
+   "job": "Testing your own systems the way an attacker would",
+   "closed": [
+    "Burp Suite Pro",
+    "Metasploit Pro",
+    "Passware"
+   ],
+   "candidates": [
+    {
+     "name": "Metasploit Framework",
+     "url": "https://www.metasploit.com"
+    },
+    {
+     "name": "Nmap",
+     "url": "https://nmap.org"
+    },
+    {
+     "name": "ZAP",
+     "url": "https://www.zaproxy.org"
+    },
+    {
+     "name": "hashcat",
+     "url": "https://hashcat.net"
+    },
+    {
+     "name": "Nuclei",
+     "url": "https://github.com/projectdiscovery/nuclei"
+    },
+    {
+     "name": "mitmproxy",
+     "url": "https://mitmproxy.org"
+    }
+   ]
+  },
+  {
+   "id": "network-tools",
+   "name": "Network scanners and diagnostics",
+   "category": "security",
+   "job": "Seeing what's on your network and why it's slow",
+   "closed": [
+    "Fing",
+    "PRTG",
+    "SolarWinds"
+   ],
+   "candidates": [
+    {
+     "name": "Angry IP Scanner",
+     "url": "https://angryip.org"
+    },
+    {
+     "name": "NetAlertX",
+     "url": "https://github.com/jokob-sk/NetAlertX"
+    },
+    {
+     "name": "LibreNMS",
+     "url": "https://www.librenms.org"
+    },
+    {
+     "name": "NetBox",
+     "url": "https://netbox.dev"
+    },
+    {
+     "name": "mtr",
+     "url": "https://github.com/traviscross/mtr"
+    }
+   ]
+  },
+  {
+   "id": "launchers",
+   "name": "App launchers and docks",
+   "category": "utilities",
+   "job": "Opening apps and commands quickly from the keyboard or a dock",
+   "closed": [
+    "Raycast",
+    "Alfred",
+    "LaunchBar"
+   ],
+   "candidates": [
+    {
+     "name": "Flow Launcher",
+     "url": "https://www.flowlauncher.com"
+    },
+    {
+     "name": "Ulauncher",
+     "url": "https://ulauncher.io"
+    },
+    {
+     "name": "PowerToys Command Palette",
+     "url": "https://github.com/microsoft/PowerToys"
+    },
+    {
+     "name": "Albert",
+     "url": "https://albertlauncher.github.io"
+    },
+    {
+     "name": "rofi",
+     "url": "https://github.com/davatorium/rofi"
+    }
+   ]
+  },
+  {
+   "id": "clipboard",
+   "name": "Clipboard managers",
+   "category": "utilities",
+   "job": "Keeping a history of what you copied and syncing it between devices",
+   "closed": [
+    "Paste",
+    "ClipboardFusion"
+   ],
+   "candidates": [
+    {
+     "name": "CopyQ",
+     "url": "https://hluk.github.io/CopyQ"
+    },
+    {
+     "name": "Maccy",
+     "url": "https://maccy.app"
+    },
+    {
+     "name": "Ditto",
+     "url": "https://ditto-cp.sourceforge.io"
+    },
+    {
+     "name": "ClipCascade",
+     "url": "https://github.com/Sathvik-Rao/ClipCascade"
+    }
+   ]
+  },
+  {
+   "id": "desktop-widgets",
+   "name": "Desktop widgets and notch apps",
+   "category": "utilities",
+   "job": "Small panels that show music, status and info on screen",
+   "closed": [
+    "NotchNook",
+    "Bartender"
+   ],
+   "candidates": [
+    {
+     "name": "Rainmeter",
+     "url": "https://www.rainmeter.net"
+    },
+    {
+     "name": "boring.notch",
+     "url": "https://github.com/TheBoredTeam/boring.notch"
+    },
+    {
+     "name": "\u00dcbersicht",
+     "url": "https://tracesof.net/uebersicht"
+    },
+    {
+     "name": "Ice",
+     "url": "https://icemenubar.app"
+    }
+   ]
+  },
+  {
+   "id": "system-monitors",
+   "name": "System and hardware monitors",
+   "category": "utilities",
+   "job": "Seeing CPU, memory, temperature and battery at a glance",
+   "closed": [
+    "iStat Menus",
+    "HWiNFO",
+    "AIDA64"
+   ],
+   "candidates": [
+    {
+     "name": "Stats",
+     "url": "https://github.com/exelban/stats"
+    },
+    {
+     "name": "btop",
+     "url": "https://github.com/aristocratos/btop"
+    },
+    {
+     "name": "Mission Center",
+     "url": "https://missioncenter.io"
+    },
+    {
+     "name": "System Informer",
+     "url": "https://systeminformer.com"
+    },
+    {
+     "name": "Beszel",
+     "url": "https://beszel.dev"
+    }
+   ]
+  },
+  {
+   "id": "system-tweaks",
+   "name": "Windows and Mac tweaks and debloat",
+   "category": "utilities",
+   "job": "Changing hidden settings, removing bloat and keeping the computer awake",
+   "closed": [
+    "O&O ShutUp10++ (free, closed)",
+    "Amphetamine",
+    "Winaero Tweaker"
+   ],
+   "candidates": [
+    {
+     "name": "Win11Debloat",
+     "url": "https://github.com/Raphire/Win11Debloat"
+    },
+    {
+     "name": "WinUtil",
+     "url": "https://github.com/ChrisTitusTech/winutil"
+    },
+    {
+     "name": "PowerToys Awake",
+     "url": "https://github.com/microsoft/PowerToys"
+    },
+    {
+     "name": "KeepingYouAwake",
+     "url": "https://keepingyouawake.app"
+    },
+    {
+     "name": "Optimizer",
+     "url": "https://github.com/hellzerg/optimizer"
+    }
+   ]
+  },
+  {
+   "id": "wallpapers",
+   "name": "Live wallpapers and screensavers",
+   "category": "utilities",
+   "job": "Animated or rotating wallpapers and screensavers",
+   "closed": [
+    "Wallpaper Engine"
+   ],
+   "candidates": [
+    {
+     "name": "Lively Wallpaper",
+     "url": "https://www.rocksdanister.com/lively"
+    },
+    {
+     "name": "Hidamari",
+     "url": "https://github.com/jeffshee/hidamari"
+    },
+    {
+     "name": "linux-wallpaperengine",
+     "url": "https://github.com/Almamu/linux-wallpaperengine"
+    },
+    {
+     "name": "Variety",
+     "url": "https://peterlevi.com/variety"
+    }
+   ]
+  },
+  {
+   "id": "accessibility",
+   "name": "Accessibility tools",
+   "category": "utilities",
+   "job": "Screen readers, on-screen keyboards and switch access",
+   "closed": [
+    "JAWS",
+    "ZoomText",
+    "Dragon"
+   ],
+   "candidates": [
+    {
+     "name": "NVDA",
+     "url": "https://www.nvaccess.org"
+    },
+    {
+     "name": "Orca",
+     "url": "https://orca.gnome.org"
+    },
+    {
+     "name": "OptiKey",
+     "url": "https://github.com/OptiKey/OptiKey"
+    },
+    {
+     "name": "Onboard",
+     "url": "https://launchpad.net/onboard"
+    }
+   ]
+  },
+  {
+   "id": "screenshots",
+   "name": "Screenshots and screen annotation",
+   "category": "utilities",
+   "job": "Capturing, marking up and sharing screenshots",
+   "closed": [
+    "Snagit",
+    "CleanShot X"
+   ],
+   "candidates": [
+    {
+     "name": "ShareX",
+     "url": "https://getsharex.com"
+    },
+    {
+     "name": "Flameshot",
+     "url": "https://flameshot.org"
+    },
+    {
+     "name": "Ksnip",
+     "url": "https://github.com/ksnip/ksnip"
+    },
+    {
+     "name": "Greenshot",
+     "url": "https://getgreenshot.org"
+    },
+    {
+     "name": "gInk",
+     "url": "https://github.com/geovens/gInk"
+    }
+   ]
+  },
+  {
+   "id": "desktop-automation",
+   "name": "Desktop automation and macros",
+   "category": "utilities",
+   "job": "Automating clicks, keys and text snippets on your computer",
+   "closed": [
+    "Keyboard Maestro",
+    "Power Automate Desktop"
+   ],
+   "candidates": [
+    {
+     "name": "AutoHotkey",
+     "url": "https://www.autohotkey.com"
+    },
+    {
+     "name": "Hammerspoon",
+     "url": "https://www.hammerspoon.org"
+    },
+    {
+     "name": "espanso",
+     "url": "https://espanso.org"
+    },
+    {
+     "name": "AutoKey",
+     "url": "https://github.com/autokey/autokey"
+    },
+    {
+     "name": "Actiona",
+     "url": "https://github.com/Jmgr/actiona"
+    }
+   ]
+  },
+  {
+   "id": "system-setup",
+   "name": "Setting up a new computer automatically",
+   "category": "utilities",
+   "job": "Scripts and dotfiles that set up a fresh computer your way",
+   "closed": [],
+   "candidates": [
+    {
+     "name": "chezmoi",
+     "url": "https://www.chezmoi.io"
+    },
+    {
+     "name": "GNU Stow",
+     "url": "https://www.gnu.org/software/stow"
+    },
+    {
+     "name": "yadm",
+     "url": "https://yadm.io"
+    },
+    {
+     "name": "Ansible",
+     "url": "https://www.ansible.com"
+    }
+   ]
+  },
+  {
+   "id": "app-installers",
+   "name": "Installing many apps at once",
+   "category": "utilities",
+   "job": "Installing and updating lots of apps in one go",
+   "closed": [
+    "Ninite",
+    "Patch My PC"
+   ],
+   "candidates": [
+    {
+     "name": "winget",
+     "url": "https://github.com/microsoft/winget-cli"
+    },
+    {
+     "name": "UniGetUI",
+     "url": "https://github.com/marticliment/UniGetUI"
+    },
+    {
+     "name": "Scoop",
+     "url": "https://scoop.sh"
+    },
+    {
+     "name": "Homebrew",
+     "url": "https://brew.sh"
+    }
+   ]
+  },
+  {
+   "id": "screen-text",
+   "name": "Copying text from the screen",
+   "category": "utilities",
+   "job": "Grabbing text from any image or window (on-screen OCR)",
+   "closed": [
+    "Google Lens",
+    "TextSniper"
+   ],
+   "candidates": [
+    {
+     "name": "PowerToys Text Extractor",
+     "url": "https://github.com/microsoft/PowerToys"
+    },
+    {
+     "name": "NormCap",
+     "url": "https://dynobo.github.io/normcap"
+    },
+    {
+     "name": "TextSnatcher",
+     "url": "https://github.com/RajSolai/TextSnatcher"
+    },
+    {
+     "name": "Frog",
+     "url": "https://tenderowl.com/work/frog"
+    }
+   ]
+  },
+  {
+   "id": "sound-control",
+   "name": "Equalizers and per-app sound",
+   "category": "utilities",
+   "job": "Changing how your computer sounds: equalizer, per-app volume, effects",
+   "closed": [
+    "SoundSource",
+    "Boom 3D",
+    "Voicemeeter"
+   ],
+   "candidates": [
+    {
+     "name": "EasyEffects",
+     "url": "https://github.com/wwmm/easyeffects"
+    },
+    {
+     "name": "Equalizer APO",
+     "url": "https://sourceforge.net/projects/equalizerapo"
+    },
+    {
+     "name": "EarTrumpet",
+     "url": "https://github.com/File-New-Project/EarTrumpet"
+    },
+    {
+     "name": "FxSound",
+     "url": "https://www.fxsound.com"
+    },
+    {
+     "name": "eqMac",
+     "url": "https://github.com/bitgapp/eqMac"
+    }
+   ]
+  },
+  {
+   "id": "web-app-wrappers",
+   "name": "Turning websites into apps",
+   "category": "utilities",
+   "job": "Making a website open in its own app window",
+   "closed": [
+    "WebCatalog",
+    "Coherence X"
+   ],
+   "candidates": [
+    {
+     "name": "Pake",
+     "url": "https://github.com/tw93/Pake"
+    },
+    {
+     "name": "Nativefier (archived)",
+     "url": "https://github.com/nativefier/nativefier"
+    },
+    {
+     "name": "Web App Manager",
+     "url": "https://github.com/linuxmint/webapp-manager"
+    }
+   ]
+  },
+  {
+   "id": "window-snapping",
+   "name": "Window snapping and tiling",
+   "category": "utilities",
+   "job": "Arranging windows neatly with keys or drags",
+   "closed": [
+    "Magnet",
+    "BetterSnapTool",
+    "DisplayFusion"
+   ],
+   "candidates": [
+    {
+     "name": "Rectangle",
+     "url": "https://rectangleapp.com"
+    },
+    {
+     "name": "PowerToys FancyZones",
+     "url": "https://github.com/microsoft/PowerToys"
+    },
+    {
+     "name": "GlazeWM",
+     "url": "https://github.com/glzr-io/glazewm"
+    },
+    {
+     "name": "AeroSpace",
+     "url": "https://github.com/nikitabobko/AeroSpace"
+    },
+    {
+     "name": "Krohnkite",
+     "url": "https://github.com/anametologin/krohnkite"
+    }
+   ]
+  }
+ ],
+ "_widenedWhy": "Jobs widened to absorb thin ideas instead of new groups (taxonomy-v2 section 5), written as whole sentences."
+}

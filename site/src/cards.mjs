@@ -86,10 +86,13 @@ export const deviceFilter = (id) => `<div class="dd"><button class="select sm" t
 // "Before you build": a prompt to paste into any AI assistant, on group pages and closed-app pages.
 // WHY on both (Destin, Oct 27: "where'd our copyable prompts go?"): search and the home page now lead to closed-app
 // pages, so the prompt has to be there too, not only on group pages.
+// WHY (taxonomy-v2, Oct 27): some groups have no paid rival (game mods, the kernel, agent memory). Their prompts name the job instead of
+// "alternatives to <nothing>".
+const subject = (closed, job) => (closed.length ? `open-source alternatives to ${closed.join(', ')}${job ? ` (${job.toLowerCase()})` : ''}` : `open-source projects for ${(job ?? '').toLowerCase()}`);
 function promptText({ closed, job, json, alts }, full) {
   const ask = 'Compare it with my project or idea below. Tell me which projects overlap, what I could reuse instead of rewriting, and what mine does that none of them do.';
-  if (!full) return `Read the list of open-source alternatives at ${SITE_URL}${json}. ${ask}\n\nMy project or idea:\n`;
-  return `Here is a list of open-source alternatives to ${closed.join(', ')}${job ? ` (${job.toLowerCase()})` : ''}, from Open Source Everything (CC BY-SA 4.0):\n` +
+  if (!full) return `Read the list of open-source projects at ${SITE_URL}${json}. ${ask}\n\nMy project or idea:\n`;
+  return `Here is a list of ${subject(closed, job)}, from Open Source Everything (CC BY-SA 4.0):\n` +
     alts.map(({ p, a }) => `- ${p.name} (${p.license ?? 'license being checked'}${codeUrl(p) ? `, ${codeUrl(p)}` : p.website ? `, ${p.website}` : ''}; replaces ${a.fit === 'full' ? 'fully' : 'partly'}): ${p.summary}`).join('\n') +
     `\n\n${ask}\n\nMy project or idea:\n`;
 }
@@ -97,7 +100,7 @@ function promptText({ closed, job, json, alts }, full) {
 // SAME order as the page (alts comes from sortAlts), and carries the setup rating and devices so the AI can use them.
 const SETUP_KEY = 'Setup rating: "Easy setup" means you can install it like a normal app, use it in a browser. "Advanced setup" means you must run it on your own server or use the command line, or it is a tool for developers.';
 function choosePrompt({ closed, job, json, alts }) {
-  return `I want to pick an open-source replacement for ${closed.join(', ')}${job ? ` (${job.toLowerCase()})` : ''}. Below is a list from Open Source Everything (CC BY-SA 4.0), in the order its website shows it. The order is a starting point, not a verdict.\n\n` +
+  return `I want to pick ${closed.length ? `an open-source replacement for ${closed.join(', ')}${job ? ` (${job.toLowerCase()})` : ''}` : `an open-source project for ${(job ?? '').toLowerCase()}`}. Below is a list from Open Source Everything (CC BY-SA 4.0), in the order its website shows it. The order is a starting point, not a verdict.\n\n` +
     alts.map(({ p, a }) => `- ${p.name}: ${p.summary} [${SETUP[setupOf(p)]}${p.setupWhy ? ` (${p.setupWhy})` : ''}; ${devicesText(p) || (p.platforms?.includes('server') ? 'runs on a server you set up' : 'devices not listed')}; replaces ${a.fit === 'full' ? 'fully' : 'partly'}; ${p.license ?? 'license being checked'}${p.verified ? '; Verified by r/TrueOpenSource mods' : ''}${p.inactive ? '; no changes in over a year' : ''}${codeUrl(p) ? `; ${codeUrl(p)}` : p.website ? `; ${p.website}` : ''}]`).join('\n') +
     `\n\n${SETUP_KEY}\n\nFull details: ${SITE_URL}${json}\n\nBefore recommending anything, ask me these three questions (one at a time, in plain words): 1) Which device or devices will I use it on (Windows, Mac, Linux, Android, iPhone)? 2) How comfortable am I with technical setup: only installing apps from a store, happy to follow a step-by-step guide, or comfortable with servers and the command line? 3) What is my budget: free only, or willing to pay for hosting or support? Then recommend one to three projects from this list only, and for each say why, using how fully it replaces the app, its setup rating, and the devices it runs on. If nothing on the list fits me, say so plainly instead of stretching.`;
 }

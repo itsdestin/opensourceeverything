@@ -104,7 +104,9 @@ export function buildAgentData(d, generated) {
     page: SITE_URL,
     about: 'Open-source replacements for closed-source apps, grouped by the job they do, plus the jobs nothing open does yet. Alternatives are listed best first.',
     counts: { groups: d.groups.length, projects: d.projects.length, closedApps: apps.length },
-    categories: d.categories.map((c) => ({ id: c.id, name: c.name })),
+    // WHY areas here too (taxonomy-v2): an agent asked "what's in Hardware?" needs the same top level visitors see.
+    areas: d.areas.map((a) => ({ id: a.id, name: a.name, categories: a.categories })),
+    categories: d.categories.map((c) => ({ id: c.id, name: c.name, area: d.areaOf.get(c.id)?.id })),
     groups: d.groups.map(groupRow),
     projects: [...facts.values()],
     apps,

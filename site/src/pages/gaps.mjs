@@ -6,10 +6,9 @@ import { appUrl } from '../cards.mjs';
 import { gapsMissing } from '../surfaces.mjs';
 
 // WHY everyday categories first within each tier: most visitors and most builders care about those.
-const LATER = new Set(['dev', 'business']);
-
+// (taxonomy-v2: "everyday" is now an area holding the nine everyday categories; the rest come after in data order.)
 export default function gaps(d) {
-  const catOrder = (g) => (LATER.has(g.category) ? 100 : 0) + d.categories.findIndex((c) => c.id === g.category);
+  const catOrder = (g) => (d.areaOf.get(g.category)?.id === 'everyday' ? 0 : 100) + d.categories.findIndex((c) => c.id === g.category);
   const fulls = (g) => g.alternatives.filter((a) => a.fit === 'full');
   const tiers = [
     { id: 'none', name: 'Nothing open yet', desc: 'No open-source project does any of this job.', pill: 'No open alternative yet',

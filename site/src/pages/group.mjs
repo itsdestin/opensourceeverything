@@ -24,9 +24,11 @@ export default function groupPages(d) {
     const alts = sortAlts(g.alternatives.map((a) => ({ a, p: d.projById.get(a.project) })).filter((x) => x.p));
     const full = alts.filter((x) => x.a.fit === 'full').length;
     const first = g.closed[0] ?? '';
+    // WHY two wordings (Destin approved "no Replaces line when there's no paid rival", Oct 27): a job-only group is described by its job.
+    const what = g.closed.length ? `alternative${alts.length === 1 ? '' : 's'} to ${g.closed.slice(0, 3).join(', ')}` : `project${alts.length === 1 ? '' : 's'} for ${midSentence(g.name)}`;
     const description = alts.length
-      ? `${alts.length} open-source alternative${alts.length === 1 ? '' : 's'} to ${g.closed.slice(0, 3).join(', ')}: ${alts.slice(0, 4).map((x) => x.p.name).join(', ')}${alts.length > 4 ? ' and more' : ''}.`
-      : `No open-source app does the job of ${g.closed.join(', ')} yet. See what's missing, or build one.`;
+      ? `${alts.length} open-source ${what}: ${alts.slice(0, 4).map((x) => x.p.name).join(', ')}${alts.length > 4 ? ' and more' : ''}.`
+      : `No open-source app does the job of ${g.closed.join(', ') || midSentence(g.name)} yet. See what's missing, or build one.`;
 
     // WHY no "Compared with" dropdown (Destin, Oct 27: "doesn't seem to do anything"): until the server adds
     // per-app sections ("Why people leave X"), switching apps changed only a label. The closed apps are shown as
@@ -93,11 +95,12 @@ export default function groupPages(d) {
     </div>
   </div>`;
 
+    const listName = g.closed.length ? `Open-source alternatives to ${g.closed.join(', ')}` : `Open-source projects: ${g.name}`;
     const jsonLd = {
-      '@context': 'https://schema.org', '@type': 'ItemList', name: `Open-source alternatives to ${g.closed.join(', ')}`,
+      '@context': 'https://schema.org', '@type': 'ItemList', name: listName,
       itemListElement: alts.map(({ p }, i) => ({ '@type': 'ListItem', position: i + 1, item: {
         '@type': 'SoftwareApplication', name: p.name, url: `${SITE_URL}p/${p.id}/`, ...(p.license ? { license: p.license } : {}), applicationCategory: g.name } })),
     };
-    return { path: `g/${g.id}/`, title: `Open-source alternatives to ${g.closed.slice(0, 2).join(' and ') || g.name}`, description, body, styles: ['group.css', 'surfaces.css'], scripts: ['group.js', 'surfaces.js'], jsonLd };
+    return { path: `g/${g.id}/`, title: g.closed.length ? `Open-source alternatives to ${g.closed.slice(0, 2).join(' and ')}` : `${g.name}: open-source projects`, description, body, styles: ['group.css', 'surfaces.css'], scripts: ['group.js', 'surfaces.js'], jsonLd };
   });
 }

@@ -10,8 +10,9 @@ const POPULAR = ['Google Docs', 'Adobe Photoshop', 'Microsoft Windows', 'Google 
 // WHY by hand: the obvious answer isn't always the most-starred one (GIMP has no GitHub stars; it lives on GNOME's own server).
 const LEAD = { 'Adobe Photoshop': 'gimp' };
 const TRY = ['Google Docs', 'Microsoft Windows', 'Google Chrome', 'Adobe Photoshop', 'Spotify', 'Slack'];
-// WHY these last: everyday apps are why most visitors arrive; developer and business tools come after.
-const LATER = new Set(['dev', 'business']);
+// WHY everyday first (Destin picked "Everyday first, areas below" in the taxonomy-v2 deck, Oct 27): most visitors come to replace a
+// paid app, so the everyday area's categories lead; the other five areas follow as one card each.
+const EVERYDAY = 'everyday';
 // WHY icons: a category reads at a glance, like the app's Marketplace sections. Lucide-style strokes, as in YouCoded.
 const svg = (d) => `<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">${d}</svg>`;
 const CAT_ICON = {
@@ -26,10 +27,19 @@ const CAT_ICON = {
   everyday: svg('<path d="M12 21s-7-6.2-7-11a7 7 0 0 1 14 0c0 4.8-7 11-7 11z"/><circle cx="12" cy="10" r="2.5"/>'),
   dev: svg('<path d="m16 18 6-6-6-6M8 6l-6 6 6 6"/>'),
   business: svg('<rect x="3" y="7" width="18" height="13" rx="2"/><path d="M9 7V5a2 2 0 0 1 2-2h2a2 2 0 0 1 2 2v2M3 13h18"/>'),
+  games: svg('<rect x="2" y="7" width="20" height="11" rx="4"/><path d="M7 11v3M5.5 12.5h3"/><circle cx="16" cy="11.5" r="1"/><circle cx="18" cy="13.5" r="1"/>'),
+};
+// One icon per area for the "More areas" cards (same Lucide-style strokes).
+const AREA_ICON = {
+  'ai-area': CAT_ICON.ai,
+  'os-area': CAT_ICON.os,
+  hardware: svg('<rect x="4" y="4" width="16" height="16" rx="2"/><rect x="9" y="9" width="6" height="6"/><path d="M9 1v3M15 1v3M9 20v3M15 20v3M20 9h3M20 14h3M1 9h3M1 14h3"/>'),
+  developer: CAT_ICON.dev,
+  system: svg('<rect x="2" y="3" width="20" height="7" rx="2"/><rect x="2" y="14" width="20" height="7" rx="2"/><path d="M6 6.5h.01M6 17.5h.01"/>'),
 };
 
 export default function home(d) {
-  const catOrder = (g) => (LATER.has(g.category) ? 100 : 0) + d.categories.findIndex((c) => c.id === g.category);
+  const catOrder = (g) => (d.areaOf.get(g.category)?.id === EVERYDAY ? 0 : 100) + d.categories.findIndex((c) => c.id === g.category);
   const fullCount = (g) => g.alternatives.filter((a) => a.fit === 'full').length;
   // WHY lib's counts(): the same numbers as About and the page descriptions (see lib.mjs).
   const { projects: projectCount, closedApps: closedCount, groups: jobCount } = counts(d);
@@ -58,13 +68,27 @@ export default function home(d) {
 
   // ── Categories: icon, name, a summary line and its first groups; the rest is one "+ more" chip ──
   const SHOWN = 6;
-  const cats = [...d.categories].sort((a, b) => (LATER.has(a.id) ? 1 : 0) - (LATER.has(b.id) ? 1 : 0)).map((c) => {
+  const numbers = (gs) => { const n = new Set(gs.flatMap((g) => g.alternatives.map((a) => a.project))).size;
+    return `<b class="num">${gs.length}</b> ${gs.length === 1 ? 'job' : 'jobs'} · <b class="num">${n}</b> open projects`; };
+  const everyday = d.areas.find((a) => a.id === EVERYDAY) ?? d.areas[0];
+  // WHY skip empty categories: a category whose groups are all still waiting for checked projects has nothing to open.
+  const catsIn = (a) => a.categories.map((id) => d.catById.get(id)).filter((c) => c && d.groups.some((g) => g.category === c.id));
+  const cats = catsIn(everyday).map((c) => {
     const gs = d.groups.filter((g) => g.category === c.id).sort((a, b) => b.alternatives.length - a.alternatives.length);
-    const n = new Set(gs.flatMap((g) => g.alternatives.map((a) => a.project))).size;
     return `<div class="card catcard2">
         <a class="cardlink" href="${url(`c/${c.id}/`)}" aria-label="${esc(c.name)}"></a>
-        <div class="cathead"><span class="caticon">${CAT_ICON[c.id] ?? ''}</span><div><h3>${esc(c.name)}</h3><div class="desc12"><b class="num">${gs.length}</b> ${gs.length === 1 ? 'job' : 'jobs'} · <b class="num">${n}</b> open projects</div></div></div>
+        <div class="cathead"><span class="caticon">${CAT_ICON[c.id] ?? ''}</span><div><h3>${esc(c.name)}</h3><div class="desc12">${numbers(gs)}</div></div></div>
         <div class="gchips">${gs.slice(0, SHOWN).map((g) => `<a class="fchip" href="${url(`g/${g.id}/`)}">${esc(g.name)}</a>`).join('')}${gs.length > SHOWN ? `<a class="fchip more" href="${url(`c/${c.id}/`)}">+ ${gs.length - SHOWN} more</a>` : ''}</div>
+      </div>`;
+  }).join('');
+  // ── More areas: one card per area, its categories as chips (the same card shape as above, one level up) ──
+  // WHY the card has no whole-card link: an area has no page of its own; each chip opens a category. The id lets a
+  // category page's breadcrumb come back to its area's card.
+  const areaCards = d.areas.filter((a) => a !== everyday).map((a) => ({ a, cs: catsIn(a) })).filter(({ cs }) => cs.length).map(({ a, cs }) => {
+    const gs = d.groups.filter((g) => cs.some((c) => c.id === g.category));
+    return `<div class="card catcard2" id="area-${a.id}">
+        <div class="cathead"><span class="caticon">${AREA_ICON[a.id] ?? ''}</span><div><h3>${esc(a.name)}</h3><div class="desc12">${numbers(gs)}</div></div></div>
+        <div class="gchips">${cs.map((c) => `<a class="fchip" href="${url(`c/${c.id}/`)}">${esc(c.name)}</a>`).join('')}</div>
       </div>`;
   }).join('');
 
@@ -100,6 +124,11 @@ export default function home(d) {
     <div class="sec-head"><div><h2 class="h-large">Browse by category</h2></div></div>
     <div class="catgrid">${cats}</div>
   </section>
+
+  ${areaCards ? `<section class="surface sec" id="areas">
+    <div class="sec-head"><div><h2 class="h-large">More areas</h2></div></div>
+    <div class="catgrid">${areaCards}</div>
+  </section>` : ''}
 
   ${SOCIAL ? `<!-- WHY here (review Oct 26): people's asks, ranked, are the clearest "what next"; filled in by assets/contrib.js -->
   <section class="surface sec">

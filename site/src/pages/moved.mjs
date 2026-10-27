@@ -17,7 +17,7 @@ export default function moved(d) {
     const targets = newIds.map((id) => d.groups.find((g) => g.id === id)).filter(Boolean);
     const list = targets.map((g) => `
       <a class="card gcard" href="${url(`g/${g.id}/`)}"><div class="head"><h3>${esc(g.name)}</h3></div>
-        <p class="job">${esc(g.job)}.</p><div class="foot">Replaces ${esc(g.closed.join(', '))}</div></a>`).join('');
+        <p class="job">${esc(g.job)}.</p>${g.closed.length ? `<div class="foot">Replaces ${esc(g.closed.join(', '))}</div>` : '' /* WHY: no line when there's no paid rival (Destin, Oct 27) */}</a>`).join('');
     return {
       path: `g/${oldId}/`, title: 'This group was split', noIndex: true,
       description: 'This group was split into smaller groups. Pick the job you need.',
