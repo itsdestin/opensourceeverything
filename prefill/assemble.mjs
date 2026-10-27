@@ -230,6 +230,24 @@ if (existsSync(thumbsFile)) {
   for (const p of projects.values()) { const t = (p.screenshots ?? []).map((u) => th[p.id]?.find((x) => x?.from === u)?.file ?? null); p.thumbs = t.map((f) => (f ? `assets/shots/${f}` : null)); }
 }
 
+// ── Setup rating (prefill/setup-ratings.json): "Easy setup" or "Advanced setup" on every project ──
+// WHY (Destin, Oct 26): the old "Runs on your own server" wording meant nothing to newcomers. The rating answers one
+// question: can an ordinary person start using this today? Default from what kind of project it is; hand-researched
+// exceptions (an official free hosted version, or an OS install) override it, each with its reason.
+const setupFile = optional(join(HERE, 'setup-ratings.json')) ?? { easy: {}, advanced: {} };
+for (const p of projects.values()) {
+  const onlyServer = p.platforms?.length === 1 && p.platforms[0] === 'server';
+  // A "self-hosted" entry with no server in its list is a website you simply visit (OpenStreetMap), so it is easy.
+  const easyByDefault = p.kind === 'app' ? !onlyServer : p.kind === 'self_hosted' && p.platforms?.length > 0 && !p.platforms.includes('server');
+  p.setup = easyByDefault ? 'easy' : 'advanced';
+  // WHY setupWhy only for hand overrides: the everyday reason follows from the kind and is worded in site/src/lib.mjs,
+  // so the data file doesn't repeat the same sentence 400 times.
+  delete p.setupWhy;
+  const o = setupFile.easy[p.id] ? ['easy', setupFile.easy[p.id]] : setupFile.advanced[p.id] ? ['advanced', setupFile.advanced[p.id]] : null;
+  if (o) { p.setup = o[0]; p.setupWhy = o[1]; }
+}
+for (const k of ['easy', 'advanced']) for (const id of Object.keys(setupFile[k])) if (!projects.has(id)) console.warn(`setup-ratings.json: unknown project "${id}"`);
+
 // WHY: a project whose last listing was removed (by the review or a mod) has no page to belong to.
 const listed = new Set([...groups.values()].flatMap((g) => g.alternatives.map((a) => a.project)));
 for (const id of [...projects.keys()]) if (!listed.has(id)) projects.delete(id);

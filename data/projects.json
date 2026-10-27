@@ -29,7 +29,9 @@
     "android"
    ],
    "licenseSource": "https://gitlab.e.foundation/e/os/android/-/raw/a16/LICENSE",
-   "thumbs": []
+   "thumbs": [],
+   "setup": "advanced",
+   "setupWhy": "An operating system: installing it means replacing or sitting alongside your computer or phone's current system, which is more than installing an app."
   },
   {
    "id": "2fas",
@@ -64,7 +66,8 @@
    "thumbs": [
     "assets/shots/2fas-0.webp",
     "assets/shots/2fas-1.webp"
-   ]
+   ],
+   "setup": "easy"
   },
   {
    "id": "abilian-hop3",
@@ -95,7 +98,8 @@
    "platforms": [
     "server"
    ],
-   "thumbs": []
+   "thumbs": [],
+   "setup": "advanced"
   },
   {
    "id": "abilian-nua",
@@ -127,7 +131,8 @@
    "platforms": [
     "server"
    ],
-   "thumbs": []
+   "thumbs": [],
+   "setup": "advanced"
   },
   {
    "id": "accrescent",
@@ -157,7 +162,8 @@
    "platforms": [
     "android"
    ],
-   "thumbs": []
+   "thumbs": [],
+   "setup": "easy"
   },
   {
    "id": "acebase",
@@ -191,7 +197,8 @@
     "web",
     "server"
    ],
-   "thumbs": []
+   "thumbs": [],
+   "setup": "advanced"
   },
   {
    "id": "activepieces",
@@ -223,7 +230,8 @@
    ],
    "thumbs": [
     "assets/shots/activepieces-0.webp"
-   ]
+   ],
+   "setup": "advanced"
   },
   {
    "id": "actual-budget",
@@ -259,7 +267,8 @@
    ],
    "thumbs": [
     "assets/shots/actual-budget-0.webp"
-   ]
+   ],
+   "setup": "easy"
   },
   {
    "id": "aegis",
@@ -292,7 +301,8 @@
    "thumbs": [
     "assets/shots/aegis-0.webp",
     "assets/shots/aegis-1.webp"
-   ]
+   ],
+   "setup": "easy"
   },
   {
    "id": "affine",
@@ -330,7 +340,8 @@
    ],
    "thumbs": [
     "assets/shots/affine-0.webp"
-   ]
+   ],
+   "setup": "easy"
   },
   {
    "id": "aider",
@@ -364,7 +375,8 @@
    ],
    "thumbs": [
     "assets/shots/aider-0.webp"
-   ]
+   ],
+   "setup": "advanced"
   },
   {
    "id": "aliasvault",
@@ -401,7 +413,8 @@
    ],
    "thumbs": [
     "assets/shots/aliasvault-0.webp"
-   ]
+   ],
+   "setup": "easy"
   },
   {
    "id": "alovoa",
@@ -431,7 +444,8 @@
    "platforms": [
     "android"
    ],
-   "thumbs": []
+   "thumbs": [],
+   "setup": "easy"
   },
   {
    "id": "antennapod",
@@ -468,7 +482,8 @@
     "assets/shots/antennapod-1.webp",
     "assets/shots/antennapod-2.webp",
     "assets/shots/antennapod-3.webp"
-   ]
+   ],
+   "setup": "easy"
   },
   {
    "id": "anysoftkeyboard",
@@ -503,7 +518,8 @@
    "thumbs": [
     "assets/shots/anysoftkeyboard-0.webp",
     "assets/shots/anysoftkeyboard-1.webp"
-   ]
+   ],
+   "setup": "easy"
   },
   {
    "id": "anythingllm",
@@ -534,7 +550,8 @@
     "linux",
     "server"
    ],
-   "thumbs": []
+   "thumbs": [],
+   "setup": "easy"
   },
   {
    "id": "apache-apisix",
@@ -563,7 +580,8 @@
    "platforms": [
     "server"
    ],
-   "thumbs": []
+   "thumbs": [],
+   "setup": "advanced"
   },
   {
    "id": "apitable",
@@ -604,7 +622,8 @@
     "assets/shots/apitable-1.webp",
     "assets/shots/apitable-2.webp",
     "assets/shots/apitable-3.webp"
-   ]
+   ],
+   "setup": "advanced"
   },
   {
    "id": "appflowy",
@@ -642,7 +661,8 @@
    "thumbs": [
     "assets/shots/appflowy-0.webp",
     "assets/shots/appflowy-1.webp"
-   ]
+   ],
+   "setup": "easy"
   },
   {
    "id": "apprise",
@@ -673,7 +693,8 @@
     "mac",
     "linux"
    ],
-   "thumbs": []
+   "thumbs": [],
+   "setup": "advanced"
   },
   {
    "id": "appsmith",
@@ -705,7 +726,8 @@
     "web",
     "server"
    ],
-   "thumbs": []
+   "thumbs": [],
+   "setup": "advanced"
   },
   {
    "id": "appwrite",
@@ -741,7 +763,8 @@
    ],
    "thumbs": [
     "assets/shots/appwrite-0.webp"
-   ]
+   ],
+   "setup": "advanced"
   },
   {
    "id": "arch-linux",
@@ -774,7 +797,9 @@
    "licenseSource": "https://raw.githubusercontent.com/archlinux/archinstall/master/LICENSE",
    "thumbs": [
     "assets/shots/arch-linux-0.webp"
-   ]
+   ],
+   "setup": "advanced",
+   "setupWhy": "An operating system: installing it means replacing or sitting alongside your computer or phone's current system, which is more than installing an app."
   },
   {
    "id": "ardour",
@@ -809,7 +834,8 @@
    ],
    "thumbs": [
     "assets/shots/ardour-0.webp"
-   ]
+   ],
+   "setup": "easy"
   },
   {
    "id": "audacity",
@@ -843,7 +869,8 @@
    ],
    "thumbs": [
     "assets/shots/audacity-0.webp"
-   ]
+   ],
+   "setup": "easy"
   },
   {
    "id": "audiobookshelf",
@@ -879,7 +906,8 @@
    ],
    "thumbs": [
     "assets/shots/audiobookshelf-0.webp"
-   ]
+   ],
+   "setup": "advanced"
   },
   {
    "id": "aurora-store",
@@ -913,7 +941,8 @@
    "thumbs": [
     "assets/shots/aurora-store-0.webp",
     "assets/shots/aurora-store-1.webp"
-   ]
+   ],
+   "setup": "easy"
   },
   {
    "id": "authgear",
@@ -947,7 +976,8 @@
    ],
    "thumbs": [
     "assets/shots/authgear-0.webp"
-   ]
+   ],
+   "setup": "advanced"
   },
   {
    "id": "automatisch",
@@ -982,7 +1012,8 @@
    "licenseSource": "https://raw.githubusercontent.com/automatisch/automatisch/main/LICENSE",
    "thumbs": [
     "assets/shots/automatisch-0.webp"
-   ]
+   ],
+   "setup": "advanced"
   },
   {
    "id": "aves",
@@ -1022,7 +1053,8 @@
     "assets/shots/aves-1.webp",
     "assets/shots/aves-2.webp",
     "assets/shots/aves-3.webp"
-   ]
+   ],
+   "setup": "easy"
   },
   {
    "id": "bagisto",
@@ -1055,7 +1087,8 @@
    ],
    "thumbs": [
     "assets/shots/bagisto-0.webp"
-   ]
+   ],
+   "setup": "advanced"
   },
   {
    "id": "baserow",
@@ -1088,7 +1121,9 @@
     "server"
    ],
    "licenseSource": "https://gitlab.com/bramw/baserow/-/raw/develop/LICENSE",
-   "thumbs": []
+   "thumbs": [],
+   "setup": "easy",
+   "setupWhy": "Its makers run a hosted version at baserow.io with a free plan."
   },
   {
    "id": "bazzite",
@@ -1127,7 +1162,9 @@
     "assets/shots/bazzite-1.webp",
     "assets/shots/bazzite-2.webp",
     "assets/shots/bazzite-3.webp"
-   ]
+   ],
+   "setup": "advanced",
+   "setupWhy": "An operating system: installing it means replacing or sitting alongside your computer or phone's current system, which is more than installing an app."
   },
   {
    "id": "beton-inspector",
@@ -1161,7 +1198,8 @@
    ],
    "thumbs": [
     "assets/shots/beton-inspector-0.webp"
-   ]
+   ],
+   "setup": "advanced"
   },
   {
    "id": "bigbluebutton",
@@ -1193,7 +1231,8 @@
    ],
    "thumbs": [
     "assets/shots/bigbluebutton-0.webp"
-   ]
+   ],
+   "setup": "advanced"
   },
   {
    "id": "bitwarden",
@@ -1231,7 +1270,8 @@
    "licenseSource": "https://raw.githubusercontent.com/bitwarden/clients/main/LICENSE.txt",
    "thumbs": [
     "assets/shots/bitwarden-0.webp"
-   ]
+   ],
+   "setup": "easy"
   },
   {
    "id": "blender",
@@ -1269,7 +1309,8 @@
     "assets/shots/blender-0.webp",
     "assets/shots/blender-1.webp",
     "assets/shots/blender-2.webp"
-   ]
+   ],
+   "setup": "easy"
   },
   {
    "id": "bluesky",
@@ -1302,7 +1343,8 @@
    ],
    "thumbs": [
     "assets/shots/bluesky-0.webp"
-   ]
+   ],
+   "setup": "easy"
   },
   {
    "id": "bookstack",
@@ -1338,7 +1380,8 @@
    "thumbs": [
     "assets/shots/bookstack-0.webp",
     "assets/shots/bookstack-1.webp"
-   ]
+   ],
+   "setup": "advanced"
   },
   {
    "id": "bootstrap",
@@ -1368,7 +1411,8 @@
    "platforms": [
     "web"
    ],
-   "thumbs": []
+   "thumbs": [],
+   "setup": "advanced"
   },
   {
    "id": "borgbackup",
@@ -1398,7 +1442,8 @@
     "linux"
    ],
    "licenseSource": "https://raw.githubusercontent.com/borgbackup/borg/master/LICENSE",
-   "thumbs": []
+   "thumbs": [],
+   "setup": "advanced"
   },
   {
    "id": "boxyhq",
@@ -1428,7 +1473,8 @@
    "platforms": [
     "server"
    ],
-   "thumbs": []
+   "thumbs": [],
+   "setup": "advanced"
   },
   {
    "id": "brave",
@@ -1467,7 +1513,8 @@
    "thumbs": [
     "assets/shots/brave-0.webp",
     "assets/shots/brave-1.webp"
-   ]
+   ],
+   "setup": "easy"
   },
   {
    "id": "briar",
@@ -1504,7 +1551,8 @@
    "licenseSource": "https://raw.githubusercontent.com/briar/briar/master/LICENSE.txt",
    "thumbs": [
     "assets/shots/briar-0.webp"
-   ]
+   ],
+   "setup": "easy"
   },
   {
    "id": "bruin",
@@ -1537,7 +1585,8 @@
     "linux",
     "android"
    ],
-   "thumbs": []
+   "thumbs": [],
+   "setup": "advanced"
   },
   {
    "id": "btw",
@@ -1571,7 +1620,8 @@
    ],
    "thumbs": [
     "assets/shots/btw-0.webp"
-   ]
+   ],
+   "setup": "advanced"
   },
   {
    "id": "budibase",
@@ -1609,7 +1659,8 @@
    "thumbs": [
     "assets/shots/budibase-0.webp",
     "assets/shots/budibase-1.webp"
-   ]
+   ],
+   "setup": "advanced"
   },
   {
    "id": "bugzilla",
@@ -1644,7 +1695,8 @@
    ],
    "thumbs": [
     "assets/shots/bugzilla-0.webp"
-   ]
+   ],
+   "setup": "advanced"
   },
   {
    "id": "buildbot",
@@ -1675,7 +1727,8 @@
     "windows",
     "linux"
    ],
-   "thumbs": []
+   "thumbs": [],
+   "setup": "advanced"
   },
   {
    "id": "buzz",
@@ -1714,7 +1767,8 @@
     "assets/shots/buzz-0.webp",
     "assets/shots/buzz-1.webp",
     "assets/shots/buzz-2.webp"
-   ]
+   ],
+   "setup": "easy"
   },
   {
    "id": "cachyos",
@@ -1748,7 +1802,9 @@
    "thumbs": [
     "assets/shots/cachyos-0.webp",
     "assets/shots/cachyos-1.webp"
-   ]
+   ],
+   "setup": "advanced",
+   "setupWhy": "An operating system: installing it means replacing or sitting alongside your computer or phone's current system, which is more than installing an app."
   },
   {
    "id": "cal-com",
@@ -1776,7 +1832,9 @@
    "platforms": [
     "server"
    ],
-   "thumbs": []
+   "thumbs": [],
+   "setup": "easy",
+   "setupWhy": "Its makers run a hosted version at cal.com with a free plan."
   },
   {
    "id": "calibre",
@@ -1810,7 +1868,8 @@
    "thumbs": [
     "assets/shots/calibre-0.webp",
     "assets/shots/calibre-1.webp"
-   ]
+   ],
+   "setup": "easy"
   },
   {
    "id": "caprover",
@@ -1846,7 +1905,8 @@
    "licenseSource": "https://raw.githubusercontent.com/caprover/caprover/master/LICENSE",
    "thumbs": [
     "assets/shots/caprover-0.webp"
-   ]
+   ],
+   "setup": "advanced"
   },
   {
    "id": "chatbox-community-edition",
@@ -1881,7 +1941,8 @@
    "thumbs": [
     "assets/shots/chatbox-community-edition-0.webp",
     "assets/shots/chatbox-community-edition-1.webp"
-   ]
+   ],
+   "setup": "easy"
   },
   {
    "id": "chatwoot",
@@ -1916,7 +1977,8 @@
    "thumbs": [
     "assets/shots/chatwoot-0.webp",
     "assets/shots/chatwoot-1.webp"
-   ]
+   ],
+   "setup": "advanced"
   },
   {
    "id": "cline",
@@ -1953,7 +2015,8 @@
    "thumbs": [
     "assets/shots/cline-0.webp",
     "assets/shots/cline-1.webp"
-   ]
+   ],
+   "setup": "advanced"
   },
   {
    "id": "codex-cli",
@@ -1986,7 +2049,8 @@
    ],
    "thumbs": [
     "assets/shots/codex-cli-0.webp"
-   ]
+   ],
+   "setup": "advanced"
   },
   {
    "id": "collabora-online",
@@ -2022,7 +2086,8 @@
    "licenseSource": "https://raw.githubusercontent.com/CollaboraOnline/online/main/COPYING",
    "thumbs": [
     "assets/shots/collabora-online-0.webp"
-   ]
+   ],
+   "setup": "advanced"
   },
   {
    "id": "comaps",
@@ -2056,7 +2121,8 @@
    "licenseSource": "https://codeberg.org/comaps/comaps/raw/branch/main/LICENSE",
    "thumbs": [
     "assets/shots/comaps-0.webp"
-   ]
+   ],
+   "setup": "easy"
   },
   {
    "id": "comfyui",
@@ -2087,7 +2153,8 @@
    ],
    "thumbs": [
     "assets/shots/comfyui-0.webp"
-   ]
+   ],
+   "setup": "easy"
   },
   {
    "id": "concrete",
@@ -2117,7 +2184,8 @@
    "platforms": [
     "server"
    ],
-   "thumbs": []
+   "thumbs": [],
+   "setup": "advanced"
   },
   {
    "id": "coolify",
@@ -2154,7 +2222,8 @@
    ],
    "thumbs": [
     "assets/shots/coolify-0.webp"
-   ]
+   ],
+   "setup": "advanced"
   },
   {
    "id": "coroot",
@@ -2192,7 +2261,8 @@
     "assets/shots/coroot-0.webp",
     "assets/shots/coroot-1.webp",
     "assets/shots/coroot-2.webp"
-   ]
+   ],
+   "setup": "advanced"
   },
   {
    "id": "cortex",
@@ -2221,7 +2291,8 @@
    "platforms": [
     "server"
    ],
-   "thumbs": []
+   "thumbs": [],
+   "setup": "advanced"
   },
   {
    "id": "cratedb",
@@ -2250,7 +2321,8 @@
    "platforms": [
     "server"
    ],
-   "thumbs": []
+   "thumbs": [],
+   "setup": "advanced"
   },
   {
    "id": "crater",
@@ -2280,7 +2352,8 @@
     "android",
     "ios"
    ],
-   "thumbs": []
+   "thumbs": [],
+   "setup": "easy"
   },
   {
    "id": "crowd-dev",
@@ -2311,7 +2384,8 @@
    "platforms": [
     "server"
    ],
-   "thumbs": []
+   "thumbs": [],
+   "setup": "advanced"
   },
   {
    "id": "cryptpad",
@@ -2346,7 +2420,9 @@
    "thumbs": [
     "assets/shots/cryptpad-0.webp",
     "assets/shots/cryptpad-1.webp"
-   ]
+   ],
+   "setup": "easy",
+   "setupWhy": "The CryptPad project runs a free public site, cryptpad.fr, so you can use it in a browser with no setup."
   },
   {
    "id": "cube-js",
@@ -2378,7 +2454,8 @@
     "linux"
    ],
    "licenseSource": "https://raw.githubusercontent.com/cube-js/cube/master/LICENSE",
-   "thumbs": []
+   "thumbs": [],
+   "setup": "advanced"
   },
   {
    "id": "customermates",
@@ -2410,7 +2487,8 @@
     "server"
    ],
    "licenseSource": "https://raw.githubusercontent.com/customermates/customermates/main/LICENSE",
-   "thumbs": []
+   "thumbs": [],
+   "setup": "advanced"
   },
   {
    "id": "darktable",
@@ -2443,7 +2521,8 @@
    ],
    "thumbs": [
     "assets/shots/darktable-0.webp"
-   ]
+   ],
+   "setup": "easy"
   },
   {
    "id": "dashpress",
@@ -2473,7 +2552,8 @@
    "platforms": [
     "server"
    ],
-   "thumbs": []
+   "thumbs": [],
+   "setup": "advanced"
   },
   {
    "id": "databend",
@@ -2505,7 +2585,8 @@
     "linux",
     "server"
    ],
-   "thumbs": []
+   "thumbs": [],
+   "setup": "advanced"
   },
   {
    "id": "debian",
@@ -2540,7 +2621,9 @@
    "thumbs": [
     "assets/shots/debian-0.webp",
     "assets/shots/debian-1.webp"
-   ]
+   ],
+   "setup": "advanced",
+   "setupWhy": "An operating system: installing it means replacing or sitting alongside your computer or phone's current system, which is more than installing an app."
   },
   {
    "id": "decap-cms",
@@ -2569,7 +2652,8 @@
    "platforms": [
     "web"
    ],
-   "thumbs": []
+   "thumbs": [],
+   "setup": "easy"
   },
   {
    "id": "deepfence-threatmapper",
@@ -2599,7 +2683,8 @@
    "platforms": [
     "server"
    ],
-   "thumbs": []
+   "thumbs": [],
+   "setup": "advanced"
   },
   {
    "id": "deepset",
@@ -2629,7 +2714,8 @@
    "platforms": [
     "server"
    ],
-   "thumbs": []
+   "thumbs": [],
+   "setup": "advanced"
   },
   {
    "id": "delta-chat",
@@ -2665,7 +2751,8 @@
    ],
    "thumbs": [
     "assets/shots/delta-chat-0.webp"
-   ]
+   ],
+   "setup": "easy"
   },
   {
    "id": "digikam",
@@ -2704,7 +2791,8 @@
     "assets/shots/digikam-0.webp",
     "assets/shots/digikam-1.webp",
     "assets/shots/digikam-2.webp"
-   ]
+   ],
+   "setup": "easy"
   },
   {
    "id": "discourse",
@@ -2737,7 +2825,8 @@
    "thumbs": [
     "assets/shots/discourse-0.webp",
     "assets/shots/discourse-1.webp"
-   ]
+   ],
+   "setup": "advanced"
   },
   {
    "id": "docmost",
@@ -2776,7 +2865,8 @@
     "assets/shots/docmost-0.webp",
     "assets/shots/docmost-1.webp",
     "assets/shots/docmost-1.webp"
-   ]
+   ],
+   "setup": "advanced"
   },
   {
    "id": "documenso",
@@ -2811,7 +2901,9 @@
    ],
    "thumbs": [
     "assets/shots/documenso-0.webp"
-   ]
+   ],
+   "setup": "easy",
+   "setupWhy": "Its makers run a hosted version at documenso.com with a free plan."
   },
   {
    "id": "docuseal",
@@ -2845,7 +2937,8 @@
    ],
    "thumbs": [
     "assets/shots/docuseal-0.webp"
-   ]
+   ],
+   "setup": "advanced"
   },
   {
    "id": "dokku",
@@ -2877,7 +2970,8 @@
     "linux",
     "server"
    ],
-   "thumbs": []
+   "thumbs": [],
+   "setup": "advanced"
   },
   {
    "id": "dolibarr",
@@ -2910,7 +3004,8 @@
    ],
    "thumbs": [
     "assets/shots/dolibarr-0.webp"
-   ]
+   ],
+   "setup": "advanced"
   },
   {
    "id": "drone",
@@ -2940,7 +3035,8 @@
    "platforms": [
     "server"
    ],
-   "thumbs": []
+   "thumbs": [],
+   "setup": "advanced"
   },
   {
    "id": "dub",
@@ -2970,7 +3066,9 @@
     "server"
    ],
    "licenseSource": "https://raw.githubusercontent.com/dubinc/dub/main/LICENSE.md",
-   "thumbs": []
+   "thumbs": [],
+   "setup": "easy",
+   "setupWhy": "Its makers run a hosted version at dub.co with a free plan."
   },
   {
    "id": "duplicati",
@@ -2999,7 +3097,8 @@
     "mac",
     "linux"
    ],
-   "thumbs": []
+   "thumbs": [],
+   "setup": "easy"
   },
   {
    "id": "dyrector-io",
@@ -3029,7 +3128,8 @@
     "web",
     "server"
    ],
-   "thumbs": []
+   "thumbs": [],
+   "setup": "advanced"
   },
   {
    "id": "element",
@@ -3067,7 +3167,8 @@
    ],
    "thumbs": [
     "assets/shots/element-0.webp"
-   ]
+   ],
+   "setup": "easy"
   },
   {
    "id": "element-call",
@@ -3100,7 +3201,8 @@
    ],
    "thumbs": [
     "assets/shots/element-call-0.webp"
-   ]
+   ],
+   "setup": "advanced"
   },
   {
    "id": "encore",
@@ -3133,7 +3235,8 @@
     "linux",
     "server"
    ],
-   "thumbs": []
+   "thumbs": [],
+   "setup": "advanced"
   },
   {
    "id": "ente-auth",
@@ -3171,7 +3274,8 @@
    "thumbs": [
     "assets/shots/ente-auth-0.webp",
     "assets/shots/ente-auth-1.webp"
-   ]
+   ],
+   "setup": "easy"
   },
   {
    "id": "ente-photos",
@@ -3209,7 +3313,8 @@
    "thumbs": [
     "assets/shots/ente-photos-0.webp",
     "assets/shots/ente-photos-1.webp"
-   ]
+   ],
+   "setup": "easy"
   },
   {
    "id": "erpnext",
@@ -3247,7 +3352,8 @@
    "thumbs": [
     "assets/shots/erpnext-0.webp",
     "assets/shots/erpnext-1.webp"
-   ]
+   ],
+   "setup": "easy"
   },
   {
    "id": "espocrm",
@@ -3281,7 +3387,8 @@
    ],
    "thumbs": [
     "assets/shots/espocrm-0.webp"
-   ]
+   ],
+   "setup": "advanced"
   },
   {
    "id": "etar-calendar",
@@ -3313,7 +3420,8 @@
    ],
    "thumbs": [
     "assets/shots/etar-calendar-0.webp"
-   ]
+   ],
+   "setup": "easy"
   },
   {
    "id": "etherpad",
@@ -3352,7 +3460,8 @@
     "assets/shots/etherpad-1.webp",
     "assets/shots/etherpad-2.webp",
     "assets/shots/etherpad-3.webp"
-   ]
+   ],
+   "setup": "advanced"
   },
   {
    "id": "evidence",
@@ -3384,7 +3493,8 @@
     "linux",
     "server"
    ],
-   "thumbs": []
+   "thumbs": [],
+   "setup": "advanced"
   },
   {
    "id": "f-droid",
@@ -3417,7 +3527,8 @@
    "thumbs": [
     "assets/shots/f-droid-0.webp",
     "assets/shots/f-droid-1.webp"
-   ]
+   ],
+   "setup": "easy"
   },
   {
    "id": "fairemail",
@@ -3453,7 +3564,8 @@
     "assets/shots/fairemail-0.webp",
     "assets/shots/fairemail-1.webp",
     "assets/shots/fairemail-2.webp"
-   ]
+   ],
+   "setup": "easy"
   },
   {
    "id": "faraday",
@@ -3491,7 +3603,8 @@
    "thumbs": [
     "assets/shots/faraday-0.webp",
     "assets/shots/faraday-1.webp"
-   ]
+   ],
+   "setup": "advanced"
   },
   {
    "id": "fedora",
@@ -3526,7 +3639,9 @@
    "thumbs": [
     "assets/shots/fedora-0.webp",
     "assets/shots/fedora-1.webp"
-   ]
+   ],
+   "setup": "advanced",
+   "setupWhy": "An operating system: installing it means replacing or sitting alongside your computer or phone's current system, which is more than installing an app."
   },
   {
    "id": "filestash",
@@ -3568,7 +3683,8 @@
     "assets/shots/filestash-1.webp",
     "assets/shots/filestash-2.webp",
     "assets/shots/filestash-3.webp"
-   ]
+   ],
+   "setup": "easy"
   },
   {
    "id": "firecamp",
@@ -3606,7 +3722,8 @@
    ],
    "thumbs": [
     "assets/shots/firecamp-0.webp"
-   ]
+   ],
+   "setup": "advanced"
   },
   {
    "id": "firefly-iii",
@@ -3643,7 +3760,8 @@
     "assets/shots/firefly-iii-0.webp",
     "assets/shots/firefly-iii-1.webp",
     "assets/shots/firefly-iii-2.webp"
-   ]
+   ],
+   "setup": "advanced"
   },
   {
    "id": "firefox",
@@ -3682,7 +3800,8 @@
    "thumbs": [
     "assets/shots/firefox-0.webp",
     "assets/shots/firefox-1.webp"
-   ]
+   ],
+   "setup": "easy"
   },
   {
    "id": "flagsmith",
@@ -3718,7 +3837,8 @@
    "thumbs": [
     "assets/shots/flagsmith-0.webp",
     "assets/shots/flagsmith-1.webp"
-   ]
+   ],
+   "setup": "advanced"
   },
   {
    "id": "florisboard",
@@ -3748,7 +3868,8 @@
    ],
    "thumbs": [
     "assets/shots/florisboard-0.webp"
-   ]
+   ],
+   "setup": "easy"
   },
   {
    "id": "fluent-reader",
@@ -3785,7 +3906,8 @@
    "thumbs": [
     "assets/shots/fluent-reader-0.webp",
     "assets/shots/fluent-reader-1.webp"
-   ]
+   ],
+   "setup": "easy"
   },
   {
    "id": "folio-wiki",
@@ -3824,7 +3946,8 @@
     "assets/shots/folio-wiki-1.webp",
     "assets/shots/folio-wiki-2.webp",
     "assets/shots/folio-wiki-3.webp"
-   ]
+   ],
+   "setup": "advanced"
   },
   {
    "id": "fonoster",
@@ -3855,7 +3978,8 @@
    "platforms": [
     "server"
    ],
-   "thumbs": []
+   "thumbs": [],
+   "setup": "advanced"
   },
   {
    "id": "forgejo",
@@ -3890,7 +4014,9 @@
    "licenseSource": "https://codeberg.org/forgejo/forgejo/raw/branch/forgejo/README.md",
    "thumbs": [
     "assets/shots/forgejo-0.webp"
-   ]
+   ],
+   "setup": "easy",
+   "setupWhy": "Codeberg.org is a free public site that runs Forgejo, so you can use it without your own server."
   },
   {
    "id": "formbricks",
@@ -3922,7 +4048,9 @@
    ],
    "thumbs": [
     "assets/shots/formbricks-0.webp"
-   ]
+   ],
+   "setup": "easy",
+   "setupWhy": "Its makers run a hosted version at formbricks.com with a free plan."
   },
   {
    "id": "formio",
@@ -3951,7 +4079,8 @@
    "platforms": [
     "server"
    ],
-   "thumbs": []
+   "thumbs": [],
+   "setup": "advanced"
   },
   {
    "id": "fossdroid",
@@ -3988,7 +4117,8 @@
     "assets/shots/fossdroid-0.webp",
     "assets/shots/fossdroid-1.webp",
     "assets/shots/fossdroid-2.webp"
-   ]
+   ],
+   "setup": "easy"
   },
   {
    "id": "fossify-calendar",
@@ -4024,7 +4154,8 @@
     "assets/shots/fossify-calendar-0.webp",
     "assets/shots/fossify-calendar-1.webp",
     "assets/shots/fossify-calendar-2.webp"
-   ]
+   ],
+   "setup": "easy"
   },
   {
    "id": "fossify-gallery",
@@ -4061,7 +4192,8 @@
    "thumbs": [
     "assets/shots/fossify-gallery-0.webp",
     "assets/shots/fossify-gallery-1.webp"
-   ]
+   ],
+   "setup": "easy"
   },
   {
    "id": "freetube",
@@ -4097,7 +4229,8 @@
     "assets/shots/freetube-0.webp",
     "assets/shots/freetube-1.webp",
     "assets/shots/freetube-2.webp"
-   ]
+   ],
+   "setup": "easy"
   },
   {
    "id": "freshrss",
@@ -4132,7 +4265,8 @@
    ],
    "thumbs": [
     "assets/shots/freshrss-0.webp"
-   ]
+   ],
+   "setup": "advanced"
   },
   {
    "id": "friction",
@@ -4167,7 +4301,8 @@
    ],
    "thumbs": [
     "assets/shots/friction-0.webp"
-   ]
+   ],
+   "setup": "easy"
   },
   {
    "id": "friendica",
@@ -4206,7 +4341,8 @@
     "assets/shots/friendica-0.webp",
     "assets/shots/friendica-1.webp",
     "assets/shots/friendica-2.webp"
-   ]
+   ],
+   "setup": "advanced"
   },
   {
    "id": "funkwhale",
@@ -4240,7 +4376,8 @@
    "licenseSource": "https://dev.funkwhale.audio/funkwhale/funkwhale/-/raw/develop/LICENSE",
    "thumbs": [
     "assets/shots/funkwhale-0.webp"
-   ]
+   ],
+   "setup": "advanced"
   },
   {
    "id": "fusio",
@@ -4280,7 +4417,8 @@
     "assets/shots/fusio-1.webp",
     "assets/shots/fusio-2.webp",
     "assets/shots/fusio-3.webp"
-   ]
+   ],
+   "setup": "advanced"
   },
   {
    "id": "galene",
@@ -4312,7 +4450,8 @@
     "web",
     "server"
    ],
-   "thumbs": []
+   "thumbs": [],
+   "setup": "advanced"
   },
   {
    "id": "gathio",
@@ -4350,7 +4489,8 @@
    "thumbs": [
     "assets/shots/gathio-0.webp",
     "assets/shots/gathio-1.webp"
-   ]
+   ],
+   "setup": "advanced"
   },
   {
    "id": "gemini-cli",
@@ -4384,7 +4524,8 @@
    ],
    "thumbs": [
     "assets/shots/gemini-cli-0.webp"
-   ]
+   ],
+   "setup": "advanced"
   },
   {
    "id": "gerrit",
@@ -4413,7 +4554,8 @@
    "platforms": [
     "server"
    ],
-   "thumbs": []
+   "thumbs": [],
+   "setup": "advanced"
   },
   {
    "id": "ghost",
@@ -4444,7 +4586,8 @@
    ],
    "thumbs": [
     "assets/shots/ghost-0.webp"
-   ]
+   ],
+   "setup": "advanced"
   },
   {
    "id": "ghostfolio",
@@ -4479,7 +4622,8 @@
    ],
    "thumbs": [
     "assets/shots/ghostfolio-0.webp"
-   ]
+   ],
+   "setup": "advanced"
   },
   {
    "id": "gimp",
@@ -4519,7 +4663,8 @@
     "assets/shots/gimp-0.webp",
     "assets/shots/gimp-1.webp",
     "assets/shots/gimp-2.webp"
-   ]
+   ],
+   "setup": "easy"
   },
   {
    "id": "gitea",
@@ -4559,7 +4704,8 @@
     "assets/shots/gitea-1.webp",
     "assets/shots/gitea-2.webp",
     "assets/shots/gitea-3.webp"
-   ]
+   ],
+   "setup": "advanced"
   },
   {
    "id": "gitlab",
@@ -4590,7 +4736,9 @@
     "server"
    ],
    "licenseSource": "https://raw.githubusercontent.com/gitlabhq/gitlabhq/master/LICENSE",
-   "thumbs": []
+   "thumbs": [],
+   "setup": "easy",
+   "setupWhy": "GitLab runs gitlab.com, an official hosted version with a free plan."
   },
   {
    "id": "gitlab-community-edition",
@@ -4618,7 +4766,8 @@
     "linux",
     "server"
    ],
-   "thumbs": []
+   "thumbs": [],
+   "setup": "advanced"
   },
   {
    "id": "gnumeric",
@@ -4650,7 +4799,8 @@
    "licenseSource": "https://gitlab.gnome.org/GNOME/gnumeric/-/raw/master/COPYING",
    "thumbs": [
     "assets/shots/gnumeric-0.webp"
-   ]
+   ],
+   "setup": "easy"
   },
   {
    "id": "goatcounter",
@@ -4681,7 +4831,8 @@
     "server"
    ],
    "licenseSource": "https://raw.githubusercontent.com/arp242/goatcounter/main/LICENSE",
-   "thumbs": []
+   "thumbs": [],
+   "setup": "advanced"
   },
   {
    "id": "gogs",
@@ -4713,7 +4864,8 @@
     "linux",
     "server"
    ],
-   "thumbs": []
+   "thumbs": [],
+   "setup": "advanced"
   },
   {
    "id": "goose",
@@ -4747,7 +4899,8 @@
    ],
    "thumbs": [
     "assets/shots/goose-0.webp"
-   ]
+   ],
+   "setup": "easy"
   },
   {
    "id": "grafana",
@@ -4778,7 +4931,9 @@
     "linux",
     "server"
    ],
-   "thumbs": []
+   "thumbs": [],
+   "setup": "easy",
+   "setupWhy": "Its makers run Grafana Cloud, which has a free plan."
   },
   {
    "id": "grapheneos",
@@ -4812,7 +4967,9 @@
    "thumbs": [
     "assets/shots/grapheneos-0.webp",
     "assets/shots/grapheneos-1.webp"
-   ]
+   ],
+   "setup": "advanced",
+   "setupWhy": "An operating system: installing it means replacing or sitting alongside your computer or phone's current system, which is more than installing an app."
   },
   {
    "id": "graphite",
@@ -4846,7 +5003,8 @@
    "thumbs": [
     "assets/shots/graphite-0.webp",
     "assets/shots/graphite-1.webp"
-   ]
+   ],
+   "setup": "easy"
   },
   {
    "id": "gravitl",
@@ -4886,7 +5044,8 @@
    "thumbs": [
     "assets/shots/gravitl-0.webp",
     null
-   ]
+   ],
+   "setup": "advanced"
   },
   {
    "id": "grist",
@@ -4919,7 +5078,9 @@
    ],
    "thumbs": [
     "assets/shots/grist-0.webp"
-   ]
+   ],
+   "setup": "easy",
+   "setupWhy": "Its makers run a hosted version at getgrist.com with a free plan."
   },
   {
    "id": "growthbook",
@@ -4954,7 +5115,8 @@
    "licenseSource": "https://raw.githubusercontent.com/growthbook/growthbook/main/LICENSE",
    "thumbs": [
     "assets/shots/growthbook-0.webp"
-   ]
+   ],
+   "setup": "advanced"
   },
   {
    "id": "hanko",
@@ -4986,7 +5148,8 @@
     "mac",
     "linux"
    ],
-   "thumbs": []
+   "thumbs": [],
+   "setup": "advanced"
   },
   {
    "id": "hedgedoc",
@@ -5021,7 +5184,8 @@
    ],
    "thumbs": [
     "assets/shots/hedgedoc-0.webp"
-   ]
+   ],
+   "setup": "advanced"
   },
   {
    "id": "heliboard",
@@ -5054,7 +5218,8 @@
    "thumbs": [
     "assets/shots/heliboard-0.webp",
     "assets/shots/heliboard-1.webp"
-   ]
+   ],
+   "setup": "easy"
   },
   {
    "id": "hermes-agent",
@@ -5088,7 +5253,8 @@
    "thumbs": [
     "assets/shots/hermes-agent-0.webp",
     "assets/shots/hermes-agent-1.webp"
-   ]
+   ],
+   "setup": "easy"
   },
   {
    "id": "heyform",
@@ -5119,7 +5285,8 @@
    ],
    "thumbs": [
     "assets/shots/heyform-0.webp"
-   ]
+   ],
+   "setup": "advanced"
   },
   {
    "id": "highlight",
@@ -5159,7 +5326,8 @@
     "assets/shots/highlight-0.webp",
     "assets/shots/highlight-1.webp",
     "assets/shots/highlight-2.webp"
-   ]
+   ],
+   "setup": "advanced"
   },
   {
    "id": "home-assistant",
@@ -5193,7 +5361,8 @@
    ],
    "thumbs": [
     "assets/shots/home-assistant-0.webp"
-   ]
+   ],
+   "setup": "advanced"
   },
   {
    "id": "hoppscotch",
@@ -5227,7 +5396,8 @@
     "web",
     "server"
    ],
-   "thumbs": []
+   "thumbs": [],
+   "setup": "advanced"
   },
   {
    "id": "huginn",
@@ -5264,7 +5434,8 @@
     "assets/shots/huginn-1.webp",
     "assets/shots/huginn-2.webp",
     "assets/shots/huginn-3.webp"
-   ]
+   ],
+   "setup": "advanced"
   },
   {
    "id": "hyperdx",
@@ -5297,7 +5468,8 @@
    ],
    "thumbs": [
     "assets/shots/hyperdx-0.webp"
-   ]
+   ],
+   "setup": "advanced"
   },
   {
    "id": "idurar-erp-crm",
@@ -5327,7 +5499,8 @@
    "platforms": [
     "server"
    ],
-   "thumbs": []
+   "thumbs": [],
+   "setup": "advanced"
   },
   {
    "id": "illa",
@@ -5358,7 +5531,8 @@
    "platforms": [
     "server"
    ],
-   "thumbs": []
+   "thumbs": [],
+   "setup": "advanced"
   },
   {
    "id": "immich",
@@ -5391,7 +5565,8 @@
    ],
    "thumbs": [
     "assets/shots/immich-0.webp"
-   ]
+   ],
+   "setup": "advanced"
   },
   {
    "id": "indic-keyboard",
@@ -5422,7 +5597,8 @@
     "android"
    ],
    "licenseSource": "https://gitlab.com/indicproject/indic-keyboard/-/raw/master/LICENSE",
-   "thumbs": []
+   "thumbs": [],
+   "setup": "easy"
   },
   {
    "id": "indico",
@@ -5456,7 +5632,8 @@
    ],
    "thumbs": [
     "assets/shots/indico-0.webp"
-   ]
+   ],
+   "setup": "advanced"
   },
   {
    "id": "influxdb",
@@ -5486,7 +5663,8 @@
    "platforms": [
     "server"
    ],
-   "thumbs": []
+   "thumbs": [],
+   "setup": "advanced"
   },
   {
    "id": "inkscape",
@@ -5524,7 +5702,8 @@
     "assets/shots/inkscape-0.webp",
     "assets/shots/inkscape-1.webp",
     "assets/shots/inkscape-2.webp"
-   ]
+   ],
+   "setup": "easy"
   },
   {
    "id": "insomnia",
@@ -5561,7 +5740,8 @@
    "thumbs": [
     "assets/shots/insomnia-0.webp",
     "assets/shots/insomnia-1.webp"
-   ]
+   ],
+   "setup": "advanced"
   },
   {
    "id": "inventaire",
@@ -5593,7 +5773,8 @@
     "server"
    ],
    "licenseSource": "https://codeberg.org/inventaire/inventaire/raw/branch/main/README.md",
-   "thumbs": []
+   "thumbs": [],
+   "setup": "easy"
   },
   {
    "id": "invokeai",
@@ -5627,7 +5808,8 @@
    ],
    "thumbs": [
     "assets/shots/invokeai-0.webp"
-   ]
+   ],
+   "setup": "easy"
   },
   {
    "id": "jami",
@@ -5665,7 +5847,8 @@
    "thumbs": [
     "assets/shots/jami-0.webp",
     "assets/shots/jami-1.webp"
-   ]
+   ],
+   "setup": "easy"
   },
   {
    "id": "jan",
@@ -5702,7 +5885,8 @@
     "assets/shots/jan-0.webp",
     "assets/shots/jan-1.webp",
     "assets/shots/jan-2.webp"
-   ]
+   ],
+   "setup": "easy"
   },
   {
    "id": "janssen",
@@ -5734,7 +5918,8 @@
     "linux",
     "server"
    ],
-   "thumbs": []
+   "thumbs": [],
+   "setup": "advanced"
   },
   {
    "id": "jellyfin",
@@ -5768,7 +5953,8 @@
    ],
    "thumbs": [
     "assets/shots/jellyfin-0.webp"
-   ]
+   ],
+   "setup": "advanced"
   },
   {
    "id": "jenkins",
@@ -5798,7 +5984,8 @@
     "windows",
     "linux"
    ],
-   "thumbs": []
+   "thumbs": [],
+   "setup": "advanced"
   },
   {
    "id": "jitsi-meet",
@@ -5835,7 +6022,8 @@
    ],
    "thumbs": [
     "assets/shots/jitsi-meet-0.webp"
-   ]
+   ],
+   "setup": "easy"
   },
   {
    "id": "jitsu",
@@ -5864,7 +6052,8 @@
    "platforms": [
     "server"
    ],
-   "thumbs": []
+   "thumbs": [],
+   "setup": "advanced"
   },
   {
    "id": "joplin",
@@ -5902,7 +6091,8 @@
    "licenseSource": "https://raw.githubusercontent.com/laurent22/joplin/dev/LICENSE",
    "thumbs": [
     "assets/shots/joplin-0.webp"
-   ]
+   ],
+   "setup": "easy"
   },
   {
    "id": "kanboard",
@@ -5936,7 +6126,8 @@
    ],
    "thumbs": [
     "assets/shots/kanboard-0.webp"
-   ]
+   ],
+   "setup": "advanced"
   },
   {
    "id": "kdenlive",
@@ -5974,7 +6165,8 @@
     "assets/shots/kdenlive-0.webp",
     "assets/shots/kdenlive-1.webp",
     "assets/shots/kdenlive-2.webp"
-   ]
+   ],
+   "setup": "easy"
   },
   {
    "id": "keepassdx",
@@ -6005,7 +6197,8 @@
    ],
    "thumbs": [
     "assets/shots/keepassdx-0.webp"
-   ]
+   ],
+   "setup": "easy"
   },
   {
    "id": "keepassxc",
@@ -6044,7 +6237,8 @@
     "assets/shots/keepassxc-0.webp",
     "assets/shots/keepassxc-1.webp",
     "assets/shots/keepassxc-2.webp"
-   ]
+   ],
+   "setup": "easy"
   },
   {
    "id": "keila",
@@ -6080,7 +6274,8 @@
    "thumbs": [
     "assets/shots/keila-0.webp",
     "assets/shots/keila-1.webp"
-   ]
+   ],
+   "setup": "advanced"
   },
   {
    "id": "kestra",
@@ -6113,7 +6308,8 @@
    ],
    "thumbs": [
     "assets/shots/kestra-0.webp"
-   ]
+   ],
+   "setup": "advanced"
   },
   {
    "id": "keycloak",
@@ -6144,7 +6340,8 @@
    "platforms": [
     "server"
    ],
-   "thumbs": []
+   "thumbs": [],
+   "setup": "advanced"
   },
   {
    "id": "keyoxide",
@@ -6175,7 +6372,8 @@
     "server"
    ],
    "licenseSource": "https://codeberg.org/keyoxide/keyoxide-web/raw/branch/main/LICENSE",
-   "thumbs": []
+   "thumbs": [],
+   "setup": "advanced"
   },
   {
    "id": "kilo-code",
@@ -6210,7 +6408,8 @@
    ],
    "thumbs": [
     "assets/shots/kilo-code-0.webp"
-   ]
+   ],
+   "setup": "advanced"
   },
   {
    "id": "kimai",
@@ -6244,7 +6443,8 @@
    ],
    "thumbs": [
     "assets/shots/kimai-0.webp"
-   ]
+   ],
+   "setup": "advanced"
   },
   {
    "id": "kodi",
@@ -6280,7 +6480,8 @@
    "licenseSource": "https://raw.githubusercontent.com/xbmc/xbmc/master/LICENSE.md",
    "thumbs": [
     "assets/shots/kodi-0.webp"
-   ]
+   ],
+   "setup": "easy"
   },
   {
    "id": "koreader",
@@ -6316,7 +6517,8 @@
    "thumbs": [
     "assets/shots/koreader-0.webp",
     "assets/shots/koreader-1.webp"
-   ]
+   ],
+   "setup": "easy"
   },
   {
    "id": "krita",
@@ -6354,7 +6556,8 @@
     "assets/shots/krita-0.webp",
     "assets/shots/krita-1.webp",
     "assets/shots/krita-2.webp"
-   ]
+   ],
+   "setup": "easy"
   },
   {
    "id": "kubero",
@@ -6395,7 +6598,8 @@
     "assets/shots/kubero-1.webp",
     "assets/shots/kubero-2.webp",
     "assets/shots/kubero-3.webp"
-   ]
+   ],
+   "setup": "advanced"
   },
   {
    "id": "kubestellar-console",
@@ -6431,7 +6635,8 @@
    ],
    "thumbs": [
     "assets/shots/kubestellar-console-0.webp"
-   ]
+   ],
+   "setup": "easy"
   },
   {
    "id": "kutt",
@@ -6471,7 +6676,9 @@
     "assets/shots/kutt-1.webp",
     "assets/shots/kutt-2.webp",
     "assets/shots/kutt-3.webp"
-   ]
+   ],
+   "setup": "easy",
+   "setupWhy": "Its makers run a hosted version at kutt.it that you can use for free."
   },
   {
    "id": "kuzzle",
@@ -6500,7 +6707,8 @@
    "platforms": [
     "server"
    ],
-   "thumbs": []
+   "thumbs": [],
+   "setup": "advanced"
   },
   {
    "id": "lago",
@@ -6536,7 +6744,8 @@
    ],
    "thumbs": [
     "assets/shots/lago-0.webp"
-   ]
+   ],
+   "setup": "advanced"
   },
   {
    "id": "lastsaas",
@@ -6568,7 +6777,8 @@
     "mac",
     "linux"
    ],
-   "thumbs": []
+   "thumbs": [],
+   "setup": "advanced"
   },
   {
    "id": "leantime",
@@ -6607,7 +6817,8 @@
     "assets/shots/leantime-1.webp",
     "assets/shots/leantime-2.webp",
     "assets/shots/leantime-3.webp"
-   ]
+   ],
+   "setup": "advanced"
   },
   {
    "id": "lemmy",
@@ -6640,7 +6851,9 @@
    "thumbs": [
     "assets/shots/lemmy-0.webp",
     "assets/shots/lemmy-1.webp"
-   ]
+   ],
+   "setup": "easy",
+   "setupWhy": "The Lemmy project runs a free public site, lemmy.ml, that anyone can join."
   },
   {
    "id": "leon",
@@ -6672,7 +6885,8 @@
     "mac",
     "linux"
    ],
-   "thumbs": []
+   "thumbs": [],
+   "setup": "easy"
   },
   {
    "id": "librechat",
@@ -6705,7 +6919,8 @@
    "thumbs": [
     "assets/shots/librechat-0.webp",
     "assets/shots/librechat-1.webp"
-   ]
+   ],
+   "setup": "advanced"
   },
   {
    "id": "librengine",
@@ -6740,7 +6955,8 @@
    ],
    "thumbs": [
     "assets/shots/librengine-0.webp"
-   ]
+   ],
+   "setup": "advanced"
   },
   {
    "id": "libreoffice-calc",
@@ -6774,7 +6990,8 @@
    "licenseSource": "https://www.libreoffice.org/about-us/licenses/",
    "thumbs": [
     "assets/shots/libreoffice-calc-0.webp"
-   ]
+   ],
+   "setup": "easy"
   },
   {
    "id": "libreoffice-impress",
@@ -6808,7 +7025,8 @@
    "licenseSource": "https://www.libreoffice.org/about-us/licenses/",
    "thumbs": [
     "assets/shots/libreoffice-impress-0.webp"
-   ]
+   ],
+   "setup": "easy"
   },
   {
    "id": "libreoffice-writer",
@@ -6842,7 +7060,8 @@
    "licenseSource": "https://www.libreoffice.org/about-us/licenses/",
    "thumbs": [
     "assets/shots/libreoffice-writer-0.webp"
-   ]
+   ],
+   "setup": "easy"
   },
   {
    "id": "libresign",
@@ -6875,7 +7094,8 @@
    ],
    "thumbs": [
     "assets/shots/libresign-0.webp"
-   ]
+   ],
+   "setup": "advanced"
   },
   {
    "id": "librespeed",
@@ -6910,7 +7130,9 @@
    ],
    "thumbs": [
     "assets/shots/librespeed-0.webp"
-   ]
+   ],
+   "setup": "easy",
+   "setupWhy": "The project runs a public speed test site, librespeed.org, that works in a browser."
   },
   {
    "id": "libretranslate",
@@ -6943,7 +7165,8 @@
    "thumbs": [
     "assets/shots/libretranslate-0.webp",
     "assets/shots/libretranslate-1.webp"
-   ]
+   ],
+   "setup": "advanced"
   },
   {
    "id": "librewolf",
@@ -6978,7 +7201,8 @@
    "licenseSource": "https://codeberg.org/librewolf/source/raw/branch/main/LICENSE",
    "thumbs": [
     "assets/shots/librewolf-0.webp"
-   ]
+   ],
+   "setup": "easy"
   },
   {
    "id": "lightdash",
@@ -7011,7 +7235,8 @@
     "server"
    ],
    "licenseSource": "https://raw.githubusercontent.com/lightdash/lightdash/main/LICENSE",
-   "thumbs": []
+   "thumbs": [],
+   "setup": "advanced"
   },
   {
    "id": "limesurvey",
@@ -7044,7 +7269,8 @@
    ],
    "thumbs": [
     "assets/shots/limesurvey-0.webp"
-   ]
+   ],
+   "setup": "advanced"
   },
   {
    "id": "lineageos",
@@ -7076,7 +7302,9 @@
    "licenseSource": "https://raw.githubusercontent.com/LineageOS/android_vendor_lineage/lineage-23.0/LICENSE",
    "thumbs": [
     "assets/shots/lineageos-0.webp"
-   ]
+   ],
+   "setup": "advanced",
+   "setupWhy": "An operating system: installing it means replacing or sitting alongside your computer or phone's current system, which is more than installing an app."
   },
   {
    "id": "linux-mint",
@@ -7110,7 +7338,9 @@
    "thumbs": [
     "assets/shots/linux-mint-0.webp",
     "assets/shots/linux-mint-1.webp"
-   ]
+   ],
+   "setup": "advanced",
+   "setupWhy": "An operating system: installing it means replacing or sitting alongside your computer or phone's current system, which is more than installing an app."
   },
   {
    "id": "listmonk",
@@ -7144,7 +7374,8 @@
    ],
    "thumbs": [
     "assets/shots/listmonk-0.webp"
-   ]
+   ],
+   "setup": "advanced"
   },
   {
    "id": "litekart",
@@ -7184,7 +7415,8 @@
     "assets/shots/litekart-1.webp",
     "assets/shots/litekart-2.webp",
     "assets/shots/litekart-3.webp"
-   ]
+   ],
+   "setup": "advanced"
   },
   {
    "id": "livekit",
@@ -7216,7 +7448,8 @@
     "linux",
     "server"
    ],
-   "thumbs": []
+   "thumbs": [],
+   "setup": "advanced"
   },
   {
    "id": "lmms",
@@ -7249,7 +7482,8 @@
    ],
    "thumbs": [
     "assets/shots/lmms-0.webp"
-   ]
+   ],
+   "setup": "easy"
   },
   {
    "id": "localsend",
@@ -7285,7 +7519,8 @@
    "thumbs": [
     "assets/shots/localsend-0.webp",
     "assets/shots/localsend-1.webp"
-   ]
+   ],
+   "setup": "easy"
   },
   {
    "id": "logseq",
@@ -7321,7 +7556,8 @@
    ],
    "thumbs": [
     "assets/shots/logseq-0.webp"
-   ]
+   ],
+   "setup": "easy"
   },
   {
    "id": "logto",
@@ -7360,7 +7596,8 @@
     "assets/shots/logto-0.webp",
     "assets/shots/logto-1.webp",
     "assets/shots/logto-2.webp"
-   ]
+   ],
+   "setup": "advanced"
   },
   {
    "id": "loops",
@@ -7393,7 +7630,8 @@
    ],
    "thumbs": [
     "assets/shots/loops-0.webp"
-   ]
+   ],
+   "setup": "advanced"
   },
   {
    "id": "losslesscut",
@@ -7428,7 +7666,8 @@
    ],
    "thumbs": [
     "assets/shots/losslesscut-0.webp"
-   ]
+   ],
+   "setup": "easy"
   },
   {
    "id": "lowdefy",
@@ -7461,7 +7700,8 @@
    ],
    "thumbs": [
     "assets/shots/lowdefy-0.webp"
-   ]
+   ],
+   "setup": "advanced"
   },
   {
    "id": "mailspring",
@@ -7495,7 +7735,8 @@
    ],
    "thumbs": [
     "assets/shots/mailspring-0.webp"
-   ]
+   ],
+   "setup": "easy"
   },
   {
    "id": "manticore-search",
@@ -7524,7 +7765,8 @@
    "platforms": [
     "server"
    ],
-   "thumbs": []
+   "thumbs": [],
+   "setup": "advanced"
   },
   {
    "id": "mastodon",
@@ -7557,7 +7799,9 @@
    "thumbs": [
     "assets/shots/mastodon-0.webp",
     "assets/shots/mastodon-1.webp"
-   ]
+   ],
+   "setup": "easy",
+   "setupWhy": "The Mastodon project runs a free official server, mastodon.social, that anyone can sign up to."
   },
   {
    "id": "matano",
@@ -7595,7 +7839,8 @@
    "thumbs": [
     "assets/shots/matano-0.webp",
     "assets/shots/matano-1.webp"
-   ]
+   ],
+   "setup": "advanced"
   },
   {
    "id": "matomo",
@@ -7625,7 +7870,8 @@
    ],
    "thumbs": [
     "assets/shots/matomo-0.webp"
-   ]
+   ],
+   "setup": "advanced"
   },
   {
    "id": "mattermost",
@@ -7663,7 +7909,8 @@
    ],
    "thumbs": [
     "assets/shots/mattermost-0.webp"
-   ]
+   ],
+   "setup": "advanced"
   },
   {
    "id": "mbin",
@@ -7695,7 +7942,8 @@
    ],
    "thumbs": [
     "assets/shots/mbin-0.webp"
-   ]
+   ],
+   "setup": "advanced"
   },
   {
    "id": "mediawiki",
@@ -7732,7 +7980,8 @@
    "thumbs": [
     "assets/shots/mediawiki-0.webp",
     "assets/shots/mediawiki-1.webp"
-   ]
+   ],
+   "setup": "advanced"
   },
   {
    "id": "medusa",
@@ -7759,7 +8008,8 @@
    "platforms": [
     "server"
    ],
-   "thumbs": []
+   "thumbs": [],
+   "setup": "advanced"
   },
   {
    "id": "mellisearch",
@@ -7800,7 +8050,8 @@
    "thumbs": [
     "assets/shots/mellisearch-0.webp",
     "assets/shots/mellisearch-1.webp"
-   ]
+   ],
+   "setup": "advanced"
   },
   {
    "id": "memos",
@@ -7836,7 +8087,8 @@
    ],
    "thumbs": [
     "assets/shots/memos-0.webp"
-   ]
+   ],
+   "setup": "advanced"
   },
   {
    "id": "meshcentral",
@@ -7874,7 +8126,8 @@
    ],
    "thumbs": [
     "assets/shots/meshcentral-0.webp"
-   ]
+   ],
+   "setup": "advanced"
   },
   {
    "id": "metabase",
@@ -7911,7 +8164,8 @@
    "licenseSource": "https://raw.githubusercontent.com/metabase/metabase/master/LICENSE.txt",
    "thumbs": [
     "assets/shots/metabase-0.webp"
-   ]
+   ],
+   "setup": "easy"
   },
   {
    "id": "metriql",
@@ -7941,7 +8195,8 @@
    "platforms": [
     "server"
    ],
-   "thumbs": []
+   "thumbs": [],
+   "setup": "advanced"
   },
   {
    "id": "miniflux",
@@ -7978,7 +8233,8 @@
    "thumbs": [
     "assets/shots/miniflux-0.webp",
     "assets/shots/miniflux-1.webp"
-   ]
+   ],
+   "setup": "advanced"
   },
   {
    "id": "misskey",
@@ -8009,7 +8265,9 @@
    ],
    "thumbs": [
     "assets/shots/misskey-0.webp"
-   ]
+   ],
+   "setup": "easy",
+   "setupWhy": "Misskey's makers run a free public site, misskey.io, that anyone can join."
   },
   {
    "id": "mlcraft",
@@ -8040,7 +8298,8 @@
     "server"
    ],
    "licenseSource": "https://raw.githubusercontent.com/synmetrix/synmetrix/main/LICENSE",
-   "thumbs": []
+   "thumbs": [],
+   "setup": "advanced"
   },
   {
    "id": "monomap",
@@ -8069,7 +8328,8 @@
    "platforms": [
     "web"
    ],
-   "thumbs": []
+   "thumbs": [],
+   "setup": "easy"
   },
   {
    "id": "mumble",
@@ -8102,7 +8362,8 @@
    ],
    "thumbs": [
     "assets/shots/mumble-0.webp"
-   ]
+   ],
+   "setup": "easy"
   },
   {
    "id": "mypaint",
@@ -8135,7 +8396,8 @@
    ],
    "thumbs": [
     "assets/shots/mypaint-0.webp"
-   ]
+   ],
+   "setup": "easy"
   },
   {
    "id": "natron",
@@ -8167,7 +8429,8 @@
    ],
    "thumbs": [
     "assets/shots/natron-0.webp"
-   ]
+   ],
+   "setup": "easy"
   },
   {
    "id": "navidrome",
@@ -8205,7 +8468,8 @@
     "assets/shots/navidrome-1.webp",
     "assets/shots/navidrome-2.webp",
     "assets/shots/navidrome-3.webp"
-   ]
+   ],
+   "setup": "advanced"
   },
   {
    "id": "neo4j",
@@ -8238,7 +8502,8 @@
     "linux",
     "server"
    ],
-   "thumbs": []
+   "thumbs": [],
+   "setup": "advanced"
   },
   {
    "id": "netbird",
@@ -8271,7 +8536,8 @@
     "linux"
    ],
    "licenseSource": "https://raw.githubusercontent.com/netbirdio/netbird/main/LICENSE",
-   "thumbs": []
+   "thumbs": [],
+   "setup": "easy"
   },
   {
    "id": "netdata",
@@ -8306,7 +8572,8 @@
    ],
    "thumbs": [
     "assets/shots/netdata-0.webp"
-   ]
+   ],
+   "setup": "advanced"
   },
   {
    "id": "netnewswire",
@@ -8338,7 +8605,8 @@
     "mac",
     "ios"
    ],
-   "thumbs": []
+   "thumbs": [],
+   "setup": "easy"
   },
   {
    "id": "newpipe",
@@ -8375,7 +8643,8 @@
     "assets/shots/newpipe-1.webp",
     "assets/shots/newpipe-2.webp",
     "assets/shots/newpipe-3.webp"
-   ]
+   ],
+   "setup": "easy"
   },
   {
    "id": "newsboat",
@@ -8408,7 +8677,8 @@
    ],
    "thumbs": [
     "assets/shots/newsboat-0.webp"
-   ]
+   ],
+   "setup": "easy"
   },
   {
    "id": "nexopos",
@@ -8440,7 +8710,8 @@
     "web",
     "server"
    ],
-   "thumbs": []
+   "thumbs": [],
+   "setup": "easy"
   },
   {
    "id": "nextcloud",
@@ -8477,7 +8748,8 @@
    ],
    "thumbs": [
     "assets/shots/nextcloud-0.webp"
-   ]
+   ],
+   "setup": "advanced"
   },
   {
    "id": "nextcloud-calendar",
@@ -8510,7 +8782,8 @@
    ],
    "thumbs": [
     "assets/shots/nextcloud-calendar-0.webp"
-   ]
+   ],
+   "setup": "advanced"
   },
   {
    "id": "nextcloud-forms",
@@ -8547,7 +8820,8 @@
     "assets/shots/nextcloud-forms-0.webp",
     "assets/shots/nextcloud-forms-1.webp",
     "assets/shots/nextcloud-forms-2.webp"
-   ]
+   ],
+   "setup": "advanced"
   },
   {
    "id": "nextcloud-notes",
@@ -8587,7 +8861,8 @@
    ],
    "thumbs": [
     "assets/shots/nextcloud-notes-0.webp"
-   ]
+   ],
+   "setup": "advanced"
   },
   {
    "id": "nextcloud-polls",
@@ -8626,7 +8901,8 @@
     "assets/shots/nextcloud-polls-1.webp",
     "assets/shots/nextcloud-polls-2.webp",
     "assets/shots/nextcloud-polls-3.webp"
-   ]
+   ],
+   "setup": "advanced"
   },
   {
    "id": "nextcloud-talk",
@@ -8663,7 +8939,8 @@
    ],
    "thumbs": [
     "assets/shots/nextcloud-talk-0.webp"
-   ]
+   ],
+   "setup": "advanced"
   },
   {
    "id": "nhost",
@@ -8695,7 +8972,8 @@
     "mac",
     "linux"
    ],
-   "thumbs": []
+   "thumbs": [],
+   "setup": "advanced"
   },
   {
    "id": "node-red",
@@ -8730,7 +9008,8 @@
    ],
    "thumbs": [
     "assets/shots/node-red-0.webp"
-   ]
+   ],
+   "setup": "advanced"
   },
   {
    "id": "notabase",
@@ -8765,7 +9044,8 @@
    ],
    "thumbs": [
     "assets/shots/notabase-0.webp"
-   ]
+   ],
+   "setup": "easy"
   },
   {
    "id": "notally",
@@ -8804,7 +9084,8 @@
     "assets/shots/notally-0.webp",
     "assets/shots/notally-1.webp",
     "assets/shots/notally-2.webp"
-   ]
+   ],
+   "setup": "easy"
   },
   {
    "id": "notegen",
@@ -8841,7 +9122,8 @@
    ],
    "thumbs": [
     "assets/shots/notegen-0.webp"
-   ]
+   ],
+   "setup": "easy"
   },
   {
    "id": "notesnook",
@@ -8884,7 +9166,8 @@
    ],
    "thumbs": [
     "assets/shots/notesnook-0.webp"
-   ]
+   ],
+   "setup": "easy"
   },
   {
    "id": "ntfy",
@@ -8926,7 +9209,9 @@
     "assets/shots/ntfy-1.webp",
     "assets/shots/ntfy-2.webp",
     "assets/shots/ntfy-3.webp"
-   ]
+   ],
+   "setup": "easy",
+   "setupWhy": "Its maker runs a free public server, ntfy.sh, and there are phone apps, so you don't need your own server."
   },
   {
    "id": "nuclei",
@@ -8958,7 +9243,8 @@
     "mac",
     "linux"
    ],
-   "thumbs": []
+   "thumbs": [],
+   "setup": "advanced"
   },
   {
    "id": "obs-studio",
@@ -8992,7 +9278,8 @@
    ],
    "thumbs": [
     "assets/shots/obs-studio-0.webp"
-   ]
+   ],
+   "setup": "easy"
   },
   {
    "id": "obtainium",
@@ -9031,7 +9318,8 @@
     "assets/shots/obtainium-1.webp",
     "assets/shots/obtainium-2.webp",
     "assets/shots/obtainium-3.webp"
-   ]
+   ],
+   "setup": "easy"
   },
   {
    "id": "odoo",
@@ -9065,7 +9353,8 @@
     "server"
    ],
    "licenseSource": "https://raw.githubusercontent.com/odoo/odoo/20.0/LICENSE",
-   "thumbs": []
+   "thumbs": [],
+   "setup": "advanced"
   },
   {
    "id": "offpdf",
@@ -9101,7 +9390,8 @@
    ],
    "thumbs": [
     "assets/shots/offpdf-0.webp"
-   ]
+   ],
+   "setup": "easy"
   },
   {
    "id": "okular",
@@ -9136,7 +9426,8 @@
    "licenseSource": "https://invent.kde.org/graphics/okular/-/raw/master/core/document.cpp",
    "thumbs": [
     "assets/shots/okular-0.webp"
-   ]
+   ],
+   "setup": "easy"
   },
   {
    "id": "ollama",
@@ -9171,7 +9462,8 @@
    ],
    "thumbs": [
     "assets/shots/ollama-0.webp"
-   ]
+   ],
+   "setup": "easy"
   },
   {
    "id": "omniedge",
@@ -9205,7 +9497,8 @@
     "linux",
     "android"
    ],
-   "thumbs": []
+   "thumbs": [],
+   "setup": "advanced"
   },
   {
    "id": "onlyoffice-docs",
@@ -9244,7 +9537,8 @@
     "assets/shots/onlyoffice-docs-0.webp",
     "assets/shots/onlyoffice-docs-1.webp",
     "assets/shots/onlyoffice-docs-2.webp"
-   ]
+   ],
+   "setup": "advanced"
   },
   {
    "id": "open-interpreter",
@@ -9274,7 +9568,8 @@
     "mac",
     "linux"
    ],
-   "thumbs": []
+   "thumbs": [],
+   "setup": "advanced"
   },
   {
    "id": "open-library",
@@ -9304,7 +9599,9 @@
    "platforms": [
     "web"
    ],
-   "thumbs": []
+   "thumbs": [],
+   "setup": "easy",
+   "setupWhy": "It is a website: you use it at openlibrary.org in a browser."
   },
   {
    "id": "openblocks",
@@ -9338,7 +9635,8 @@
    ],
    "thumbs": [
     "assets/shots/openblocks-0.webp"
-   ]
+   ],
+   "setup": "advanced"
   },
   {
    "id": "openboard",
@@ -9368,7 +9666,8 @@
    "platforms": [
     "android"
    ],
-   "thumbs": []
+   "thumbs": [],
+   "setup": "easy"
   },
   {
    "id": "openbooks",
@@ -9408,7 +9707,8 @@
     "assets/shots/openbooks-1.webp",
     "assets/shots/openbooks-2.webp",
     "assets/shots/openbooks-3.webp"
-   ]
+   ],
+   "setup": "advanced"
   },
   {
    "id": "openclaw",
@@ -9441,7 +9741,8 @@
    ],
    "thumbs": [
     "assets/shots/openclaw-0.webp"
-   ]
+   ],
+   "setup": "easy"
   },
   {
    "id": "opencode",
@@ -9476,7 +9777,8 @@
    ],
    "thumbs": [
     "assets/shots/opencode-0.webp"
-   ]
+   ],
+   "setup": "advanced"
   },
   {
    "id": "opencut",
@@ -9507,7 +9809,8 @@
    "platforms": [
     "web"
    ],
-   "thumbs": []
+   "thumbs": [],
+   "setup": "easy"
   },
   {
    "id": "openhands",
@@ -9542,7 +9845,8 @@
    ],
    "thumbs": [
     "assets/shots/openhands-0.webp"
-   ]
+   ],
+   "setup": "advanced"
   },
   {
    "id": "openpost",
@@ -9583,7 +9887,8 @@
     "assets/shots/openpost-0.webp",
     "assets/shots/openpost-1.webp",
     "assets/shots/openpost-2.webp"
-   ]
+   ],
+   "setup": "advanced"
   },
   {
    "id": "openproject",
@@ -9615,7 +9920,8 @@
    ],
    "thumbs": [
     "assets/shots/openproject-0.webp"
-   ]
+   ],
+   "setup": "advanced"
   },
   {
    "id": "openreplay",
@@ -9652,7 +9958,8 @@
    "licenseSource": "https://raw.githubusercontent.com/openreplay/openreplay/main/LICENSE",
    "thumbs": [
     "assets/shots/openreplay-0.webp"
-   ]
+   ],
+   "setup": "advanced"
   },
   {
    "id": "openshot",
@@ -9686,7 +9993,8 @@
    ],
    "thumbs": [
     "assets/shots/openshot-0.webp"
-   ]
+   ],
+   "setup": "easy"
   },
   {
    "id": "openstatus",
@@ -9719,7 +10027,8 @@
    ],
    "thumbs": [
     "assets/shots/openstatus-0.webp"
-   ]
+   ],
+   "setup": "advanced"
   },
   {
    "id": "openstreetmap",
@@ -9749,7 +10058,9 @@
     "web",
     "server"
    ],
-   "thumbs": []
+   "thumbs": [],
+   "setup": "easy",
+   "setupWhy": "It is a website: you use it at openstreetmap.org in a browser."
   },
   {
    "id": "openvidu",
@@ -9782,7 +10093,8 @@
    ],
    "thumbs": [
     "assets/shots/openvidu-0.webp"
-   ]
+   ],
+   "setup": "advanced"
   },
   {
    "id": "openwebanalytics",
@@ -9811,7 +10123,8 @@
    "platforms": [
     "server"
    ],
-   "thumbs": []
+   "thumbs": [],
+   "setup": "advanced"
   },
   {
    "id": "orbit",
@@ -9853,7 +10166,8 @@
     "assets/shots/orbit-1.webp",
     "assets/shots/orbit-2.webp",
     "assets/shots/orbit-3.webp"
-   ]
+   ],
+   "setup": "easy"
   },
   {
    "id": "organic-maps",
@@ -9892,7 +10206,8 @@
     "assets/shots/organic-maps-1.webp",
     "assets/shots/organic-maps-2.webp",
     "assets/shots/organic-maps-3.webp"
-   ]
+   ],
+   "setup": "easy"
   },
   {
    "id": "ory",
@@ -9925,7 +10240,8 @@
     "linux",
     "server"
    ],
-   "thumbs": []
+   "thumbs": [],
+   "setup": "advanced"
   },
   {
    "id": "osmand",
@@ -9960,7 +10276,8 @@
    "thumbs": [
     "assets/shots/osmand-0.webp",
     "assets/shots/osmand-1.webp"
-   ]
+   ],
+   "setup": "easy"
   },
   {
    "id": "otomi",
@@ -9990,7 +10307,8 @@
    "platforms": [
     "server"
    ],
-   "thumbs": []
+   "thumbs": [],
+   "setup": "advanced"
   },
   {
    "id": "owncast",
@@ -10022,7 +10340,8 @@
    ],
    "thumbs": [
     "assets/shots/owncast-0.webp"
-   ]
+   ],
+   "setup": "advanced"
   },
   {
    "id": "owncloud",
@@ -10061,7 +10380,8 @@
    ],
    "thumbs": [
     "assets/shots/owncloud-0.webp"
-   ]
+   ],
+   "setup": "advanced"
   },
   {
    "id": "owncloud-infinite-scale",
@@ -10095,7 +10415,8 @@
     "web",
     "server"
    ],
-   "thumbs": []
+   "thumbs": [],
+   "setup": "advanced"
   },
   {
    "id": "padloc",
@@ -10132,7 +10453,8 @@
     "android",
     "ios"
    ],
-   "thumbs": []
+   "thumbs": [],
+   "setup": "easy"
   },
   {
    "id": "pagure",
@@ -10161,7 +10483,8 @@
    "platforms": [
     "server"
    ],
-   "thumbs": []
+   "thumbs": [],
+   "setup": "advanced"
   },
   {
    "id": "papercups",
@@ -10194,7 +10517,8 @@
    ],
    "thumbs": [
     "assets/shots/papercups-0.webp"
-   ]
+   ],
+   "setup": "advanced"
   },
   {
    "id": "passbolt",
@@ -10233,7 +10557,8 @@
    ],
    "thumbs": [
     "assets/shots/passbolt-0.webp"
-   ]
+   ],
+   "setup": "advanced"
   },
   {
    "id": "payload",
@@ -10262,7 +10587,8 @@
    "platforms": [
     "server"
    ],
-   "thumbs": []
+   "thumbs": [],
+   "setup": "advanced"
   },
   {
    "id": "pdf-arranger",
@@ -10294,7 +10620,8 @@
    ],
    "thumbs": [
     "assets/shots/pdf-arranger-0.webp"
-   ]
+   ],
+   "setup": "easy"
   },
   {
    "id": "peertube",
@@ -10333,7 +10660,8 @@
     "assets/shots/peertube-1.webp",
     "assets/shots/peertube-2.webp",
     "assets/shots/peertube-3.webp"
-   ]
+   ],
+   "setup": "advanced"
   },
   {
    "id": "penpot",
@@ -10371,7 +10699,8 @@
     "assets/shots/penpot-1.webp",
     "assets/shots/penpot-2.webp",
     "assets/shots/penpot-3.webp"
-   ]
+   ],
+   "setup": "easy"
   },
   {
    "id": "peon",
@@ -10400,7 +10729,8 @@
    "platforms": [
     "server"
    ],
-   "thumbs": []
+   "thumbs": [],
+   "setup": "advanced"
   },
   {
    "id": "photoprism",
@@ -10437,7 +10767,8 @@
     "assets/shots/photoprism-0.webp",
     "assets/shots/photoprism-1.webp",
     "assets/shots/photoprism-2.webp"
-   ]
+   ],
+   "setup": "advanced"
   },
   {
    "id": "piefed",
@@ -10467,7 +10798,9 @@
     "server"
    ],
    "licenseSource": "https://codeberg.org/rimu/pyfedi/raw/branch/main/LICENSE",
-   "thumbs": []
+   "thumbs": [],
+   "setup": "easy",
+   "setupWhy": "The PieFed project runs a free public site, piefed.social, that anyone can join."
   },
   {
    "id": "pingcap",
@@ -10498,7 +10831,8 @@
     "web",
     "server"
    ],
-   "thumbs": []
+   "thumbs": [],
+   "setup": "advanced"
   },
   {
    "id": "pinta",
@@ -10531,7 +10865,8 @@
    ],
    "thumbs": [
     "assets/shots/pinta-0.webp"
-   ]
+   ],
+   "setup": "easy"
   },
   {
    "id": "pixelfed",
@@ -10562,7 +10897,9 @@
    ],
    "thumbs": [
     "assets/shots/pixelfed-0.webp"
-   ]
+   ],
+   "setup": "easy",
+   "setupWhy": "Pixelfed's creator runs a free public site, pixelfed.social, that anyone can join."
   },
   {
    "id": "plane",
@@ -10600,7 +10937,9 @@
     "assets/shots/plane-1.webp",
     "assets/shots/plane-2.webp",
     "assets/shots/plane-3.webp"
-   ]
+   ],
+   "setup": "easy",
+   "setupWhy": "Its makers run a hosted version at plane.so with a free plan."
   },
   {
    "id": "plasmic",
@@ -10634,7 +10973,8 @@
    ],
    "thumbs": [
     "assets/shots/plasmic-0.webp"
-   ]
+   ],
+   "setup": "advanced"
   },
   {
    "id": "plausible",
@@ -10665,7 +11005,8 @@
    ],
    "thumbs": [
     "assets/shots/plausible-0.webp"
-   ]
+   ],
+   "setup": "advanced"
   },
   {
    "id": "plume",
@@ -10695,7 +11036,8 @@
    "platforms": [
     "server"
    ],
-   "thumbs": []
+   "thumbs": [],
+   "setup": "advanced"
   },
   {
    "id": "pocket-casts",
@@ -10723,7 +11065,8 @@
    "platforms": [
     "android"
    ],
-   "thumbs": []
+   "thumbs": [],
+   "setup": "easy"
   },
   {
    "id": "pocketbase",
@@ -10760,7 +11103,8 @@
    "thumbs": [
     "assets/shots/pocketbase-0.webp",
     "assets/shots/pocketbase-1.webp"
-   ]
+   ],
+   "setup": "advanced"
   },
   {
    "id": "pop-os",
@@ -10795,7 +11139,9 @@
    "thumbs": [
     "assets/shots/pop-os-0.webp",
     "assets/shots/pop-os-1.webp"
-   ]
+   ],
+   "setup": "advanced",
+   "setupWhy": "An operating system: installing it means replacing or sitting alongside your computer or phone's current system, which is more than installing an app."
   },
   {
    "id": "posnic-pos",
@@ -10832,7 +11178,8 @@
    ],
    "thumbs": [
     "assets/shots/posnic-pos-0.webp"
-   ]
+   ],
+   "setup": "easy"
   },
   {
    "id": "postal",
@@ -10862,7 +11209,8 @@
    "platforms": [
     "server"
    ],
-   "thumbs": []
+   "thumbs": [],
+   "setup": "advanced"
   },
   {
    "id": "posthog",
@@ -10898,7 +11246,9 @@
     "server"
    ],
    "licenseSource": "https://raw.githubusercontent.com/PostHog/posthog/master/LICENSE",
-   "thumbs": []
+   "thumbs": [],
+   "setup": "easy",
+   "setupWhy": "Its makers run PostHog Cloud, which has a free plan."
   },
   {
    "id": "postiz",
@@ -10938,7 +11288,8 @@
     "assets/shots/postiz-1.webp",
     "assets/shots/postiz-2.webp",
     "assets/shots/postiz-3.webp"
-   ]
+   ],
+   "setup": "advanced"
   },
   {
    "id": "postmarketos",
@@ -10973,7 +11324,9 @@
    "thumbs": [
     "assets/shots/postmarketos-0.webp",
     "assets/shots/postmarketos-1.webp"
-   ]
+   ],
+   "setup": "advanced",
+   "setupWhy": "An operating system: installing it means replacing or sitting alongside your computer or phone's current system, which is more than installing an app."
   },
   {
    "id": "preset",
@@ -11010,7 +11363,8 @@
     "assets/shots/preset-0.webp",
     "assets/shots/preset-1.webp",
     "assets/shots/preset-2.webp"
-   ]
+   ],
+   "setup": "advanced"
   },
   {
    "id": "presta",
@@ -11044,7 +11398,8 @@
    "licenseSource": "https://raw.githubusercontent.com/PrestaShop/PrestaShop/develop/LICENSE.md",
    "thumbs": [
     "assets/shots/presta-0.webp"
-   ]
+   ],
+   "setup": "advanced"
   },
   {
    "id": "prisme-analytics",
@@ -11078,7 +11433,8 @@
    ],
    "thumbs": [
     "assets/shots/prisme-analytics-0.webp"
-   ]
+   ],
+   "setup": "advanced"
   },
   {
    "id": "psitransfer",
@@ -11109,7 +11465,8 @@
    ],
    "thumbs": [
     "assets/shots/psitransfer-0.webp"
-   ]
+   ],
+   "setup": "advanced"
   },
   {
    "id": "qdrant",
@@ -11145,7 +11502,8 @@
    ],
    "thumbs": [
     "assets/shots/qdrant-0.webp"
-   ]
+   ],
+   "setup": "advanced"
   },
   {
    "id": "quackback",
@@ -11173,7 +11531,8 @@
    "platforms": [
     "server"
    ],
-   "thumbs": []
+   "thumbs": [],
+   "setup": "advanced"
   },
   {
    "id": "quant-ux",
@@ -11204,7 +11563,8 @@
     "web",
     "server"
    ],
-   "thumbs": []
+   "thumbs": [],
+   "setup": "advanced"
   },
   {
    "id": "questdb",
@@ -11239,7 +11599,8 @@
    ],
    "thumbs": [
     "assets/shots/questdb-0.webp"
-   ]
+   ],
+   "setup": "advanced"
   },
   {
    "id": "quickwit",
@@ -11270,7 +11631,8 @@
     "linux",
     "server"
    ],
-   "thumbs": []
+   "thumbs": [],
+   "setup": "advanced"
   },
   {
    "id": "quillpad",
@@ -11306,7 +11668,8 @@
    "thumbs": [
     "assets/shots/quillpad-0.webp",
     "assets/shots/quillpad-1.webp"
-   ]
+   ],
+   "setup": "easy"
   },
   {
    "id": "rawtherapee",
@@ -11344,7 +11707,8 @@
     "assets/shots/rawtherapee-0.webp",
     "assets/shots/rawtherapee-1.webp",
     "assets/shots/rawtherapee-2.webp"
-   ]
+   ],
+   "setup": "easy"
   },
   {
    "id": "redmine",
@@ -11375,7 +11739,8 @@
     "server"
    ],
    "licenseSource": "https://raw.githubusercontent.com/redmine/redmine/master/LICENSE.txt",
-   "thumbs": []
+   "thumbs": [],
+   "setup": "advanced"
   },
   {
    "id": "restic",
@@ -11401,7 +11766,8 @@
     "mac",
     "linux"
    ],
-   "thumbs": []
+   "thumbs": [],
+   "setup": "advanced"
   },
   {
    "id": "reveal-js",
@@ -11428,7 +11794,8 @@
     "web",
     "server"
    ],
-   "thumbs": []
+   "thumbs": [],
+   "setup": "advanced"
   },
   {
    "id": "review-board",
@@ -11458,7 +11825,8 @@
     "web",
     "server"
    ],
-   "thumbs": []
+   "thumbs": [],
+   "setup": "advanced"
   },
   {
    "id": "rocket-chat",
@@ -11496,7 +11864,8 @@
    ],
    "thumbs": [
     "assets/shots/rocket-chat-0.webp"
-   ]
+   ],
+   "setup": "advanced"
   },
   {
    "id": "roundcube",
@@ -11528,7 +11897,8 @@
    ],
    "thumbs": [
     "assets/shots/roundcube-0.webp"
-   ]
+   ],
+   "setup": "advanced"
   },
   {
    "id": "rowy",
@@ -11558,7 +11928,8 @@
     "web"
    ],
    "licenseSource": "https://raw.githubusercontent.com/buildship-ai/rowy/main/LICENSE",
-   "thumbs": []
+   "thumbs": [],
+   "setup": "advanced"
   },
   {
    "id": "rustdesk",
@@ -11597,7 +11968,8 @@
    "thumbs": [
     "assets/shots/rustdesk-0.webp",
     "assets/shots/rustdesk-1.webp"
-   ]
+   ],
+   "setup": "easy"
   },
   {
    "id": "saleor",
@@ -11629,7 +12001,8 @@
    ],
    "thumbs": [
     "assets/shots/saleor-0.webp"
-   ]
+   ],
+   "setup": "advanced"
   },
   {
    "id": "scribus",
@@ -11664,7 +12037,8 @@
    "thumbs": [
     "assets/shots/scribus-0.webp",
     "assets/shots/scribus-1.webp"
-   ]
+   ],
+   "setup": "easy"
   },
   {
    "id": "seafile",
@@ -11701,7 +12075,8 @@
    ],
    "thumbs": [
     "assets/shots/seafile-0.webp"
-   ]
+   ],
+   "setup": "advanced"
   },
   {
    "id": "searxng",
@@ -11734,7 +12109,8 @@
    ],
    "thumbs": [
     "assets/shots/searxng-0.webp"
-   ]
+   ],
+   "setup": "advanced"
   },
   {
    "id": "semi",
@@ -11766,7 +12142,8 @@
     "linux"
    ],
    "licenseSource": "https://raw.githubusercontent.com/weaviate/weaviate/main/LICENSE",
-   "thumbs": []
+   "thumbs": [],
+   "setup": "advanced"
   },
   {
    "id": "shlink",
@@ -11795,7 +12172,8 @@
    "platforms": [
     "server"
    ],
-   "thumbs": []
+   "thumbs": [],
+   "setup": "advanced"
   },
   {
    "id": "shotcut",
@@ -11829,7 +12207,8 @@
    ],
    "thumbs": [
     "assets/shots/shotcut-0.webp"
-   ]
+   ],
+   "setup": "easy"
   },
   {
    "id": "shuup",
@@ -11861,7 +12240,8 @@
     "server"
    ],
    "licenseSource": "https://raw.githubusercontent.com/shuup/shuup/master/LICENSE",
-   "thumbs": []
+   "thumbs": [],
+   "setup": "advanced"
   },
   {
    "id": "shynet",
@@ -11896,7 +12276,8 @@
    "thumbs": [
     "assets/shots/shynet-0.webp",
     "assets/shots/shynet-1.webp"
-   ]
+   ],
+   "setup": "advanced"
   },
   {
    "id": "signal",
@@ -11932,7 +12313,8 @@
    ],
    "thumbs": [
     "assets/shots/signal-0.webp"
-   ]
+   ],
+   "setup": "easy"
   },
   {
    "id": "signoz",
@@ -11976,7 +12358,8 @@
     "assets/shots/signoz-1.webp",
     "assets/shots/signoz-2.webp",
     "assets/shots/signoz-3.webp"
-   ]
+   ],
+   "setup": "advanced"
   },
   {
    "id": "silex",
@@ -12015,7 +12398,8 @@
    ],
    "thumbs": [
     "assets/shots/silex-0.webp"
-   ]
+   ],
+   "setup": "advanced"
   },
   {
    "id": "silverbullet",
@@ -12050,7 +12434,8 @@
    ],
    "thumbs": [
     "assets/shots/silverbullet-0.webp"
-   ]
+   ],
+   "setup": "advanced"
   },
   {
    "id": "simple-keyboard",
@@ -12084,7 +12469,8 @@
    ],
    "thumbs": [
     "assets/shots/simple-keyboard-0.webp"
-   ]
+   ],
+   "setup": "easy"
   },
   {
    "id": "simplex-chat",
@@ -12126,7 +12512,8 @@
     "assets/shots/simplex-chat-0.webp",
     "assets/shots/simplex-chat-1.webp",
     "assets/shots/simplex-chat-2.webp"
-   ]
+   ],
+   "setup": "easy"
   },
   {
    "id": "siyuan",
@@ -12166,7 +12553,8 @@
    "thumbs": [
     "assets/shots/siyuan-0.webp",
     "assets/shots/siyuan-1.webp"
-   ]
+   ],
+   "setup": "easy"
   },
   {
    "id": "slidev",
@@ -12201,7 +12589,8 @@
     "assets/shots/slidev-0.webp",
     "assets/shots/slidev-1.webp",
     "assets/shots/slidev-2.webp"
-   ]
+   ],
+   "setup": "advanced"
   },
   {
    "id": "snikket",
@@ -12237,7 +12626,8 @@
    ],
    "thumbs": [
     "assets/shots/snikket-0.webp"
-   ]
+   ],
+   "setup": "advanced"
   },
   {
    "id": "solidinvoice",
@@ -12279,7 +12669,8 @@
     "assets/shots/solidinvoice-1.webp",
     "assets/shots/solidinvoice-2.webp",
     "assets/shots/solidinvoice-3.webp"
-   ]
+   ],
+   "setup": "advanced"
   },
   {
    "id": "solidping",
@@ -12319,7 +12710,8 @@
     "assets/shots/solidping-0.webp",
     "assets/shots/solidping-1.webp",
     "assets/shots/solidping-2.webp"
-   ]
+   ],
+   "setup": "advanced"
   },
   {
    "id": "solidtime",
@@ -12352,7 +12744,8 @@
    ],
    "thumbs": [
     "assets/shots/solidtime-0.webp"
-   ]
+   ],
+   "setup": "advanced"
   },
   {
    "id": "sonic",
@@ -12382,7 +12775,8 @@
     "linux",
     "server"
    ],
-   "thumbs": []
+   "thumbs": [],
+   "setup": "advanced"
   },
   {
    "id": "spacebar",
@@ -12413,7 +12807,8 @@
    "platforms": [
     "server"
    ],
-   "thumbs": []
+   "thumbs": [],
+   "setup": "advanced"
   },
   {
    "id": "spliit-app",
@@ -12443,7 +12838,8 @@
    "platforms": [
     "server"
    ],
-   "thumbs": []
+   "thumbs": [],
+   "setup": "advanced"
   },
   {
    "id": "stable-diffusion-web-ui",
@@ -12477,7 +12873,8 @@
    ],
    "thumbs": [
     "assets/shots/stable-diffusion-web-ui-0.webp"
-   ]
+   ],
+   "setup": "easy"
   },
   {
    "id": "standard-notes",
@@ -12510,7 +12907,8 @@
     "ios",
     "web"
    ],
-   "thumbs": []
+   "thumbs": [],
+   "setup": "easy"
   },
   {
    "id": "step-ci",
@@ -12539,7 +12937,8 @@
    "platforms": [
     "server"
    ],
-   "thumbs": []
+   "thumbs": [],
+   "setup": "advanced"
   },
   {
    "id": "stirling-pdf",
@@ -12573,7 +12972,9 @@
    ],
    "thumbs": [
     "assets/shots/stirling-pdf-0.webp"
-   ]
+   ],
+   "setup": "easy",
+   "setupWhy": "It has desktop installers for Windows, Mac and Linux, and an official free hosted version at stirlingpdf.io."
   },
   {
    "id": "strapi",
@@ -12605,7 +13006,8 @@
     "server"
    ],
    "licenseSource": "https://raw.githubusercontent.com/strapi/strapi/develop/LICENSE",
-   "thumbs": []
+   "thumbs": [],
+   "setup": "advanced"
   },
   {
    "id": "suitecrm",
@@ -12634,7 +13036,8 @@
    "platforms": [
     "server"
    ],
-   "thumbs": []
+   "thumbs": [],
+   "setup": "advanced"
   },
   {
    "id": "sulu",
@@ -12667,7 +13070,8 @@
    ],
    "thumbs": [
     "assets/shots/sulu-0.webp"
-   ]
+   ],
+   "setup": "advanced"
   },
   {
    "id": "supabase",
@@ -12706,7 +13110,8 @@
    "thumbs": [
     "assets/shots/supabase-0.webp",
     "assets/shots/supabase-1.webp"
-   ]
+   ],
+   "setup": "advanced"
   },
   {
    "id": "super-productivity",
@@ -12743,7 +13148,8 @@
    ],
    "thumbs": [
     "assets/shots/super-productivity-0.webp"
-   ]
+   ],
+   "setup": "easy"
   },
   {
    "id": "supertokens",
@@ -12782,7 +13188,8 @@
    "thumbs": [
     "assets/shots/supertokens-0.webp",
     "assets/shots/supertokens-1.webp"
-   ]
+   ],
+   "setup": "advanced"
   },
   {
    "id": "sylius",
@@ -12816,7 +13223,8 @@
    ],
    "thumbs": [
     "assets/shots/sylius-0.webp"
-   ]
+   ],
+   "setup": "advanced"
   },
   {
    "id": "syncthing",
@@ -12849,7 +13257,8 @@
    ],
    "thumbs": [
     "assets/shots/syncthing-0.webp"
-   ]
+   ],
+   "setup": "easy"
   },
   {
    "id": "tabby",
@@ -12877,7 +13286,8 @@
    "platforms": [
     "server"
    ],
-   "thumbs": []
+   "thumbs": [],
+   "setup": "advanced"
   },
   {
    "id": "tabler-icons",
@@ -12904,7 +13314,8 @@
    "release": "https://github.com/tabler/tabler-icons/releases/tag/v3.49.0",
    "screenshots": [],
    "platforms": [],
-   "thumbs": []
+   "thumbs": [],
+   "setup": "advanced"
   },
   {
    "id": "taiga",
@@ -12938,7 +13349,8 @@
    ],
    "thumbs": [
     "assets/shots/taiga-0.webp"
-   ]
+   ],
+   "setup": "easy"
   },
   {
    "id": "tdengine",
@@ -12971,7 +13383,8 @@
     "linux",
     "server"
    ],
-   "thumbs": []
+   "thumbs": [],
+   "setup": "advanced"
   },
   {
    "id": "telemetry-tracker",
@@ -13007,7 +13420,8 @@
    "thumbs": [
     "assets/shots/telemetry-tracker-0.webp",
     "assets/shots/telemetry-tracker-1.webp"
-   ]
+   ],
+   "setup": "advanced"
   },
   {
    "id": "terminusdb",
@@ -13037,7 +13451,8 @@
    "platforms": [
     "linux"
    ],
-   "thumbs": []
+   "thumbs": [],
+   "setup": "advanced"
   },
   {
    "id": "thunderbird",
@@ -13075,7 +13490,8 @@
    "thumbs": [
     "assets/shots/thunderbird-0.webp",
     "assets/shots/thunderbird-1.webp"
-   ]
+   ],
+   "setup": "easy"
   },
   {
    "id": "tina",
@@ -13109,7 +13525,8 @@
    ],
    "thumbs": [
     "assets/shots/tina-0.webp"
-   ]
+   ],
+   "setup": "advanced"
   },
   {
    "id": "tinode",
@@ -13154,7 +13571,8 @@
     "assets/shots/tinode-1.webp",
     "assets/shots/tinode-2.webp",
     "assets/shots/tinode-3.webp"
-   ]
+   ],
+   "setup": "advanced"
   },
   {
    "id": "tolgee",
@@ -13197,7 +13615,8 @@
     "assets/shots/tolgee-1.webp",
     "assets/shots/tolgee-2.webp",
     "assets/shots/tolgee-3.webp"
-   ]
+   ],
+   "setup": "advanced"
   },
   {
    "id": "tooljet",
@@ -13227,7 +13646,8 @@
    "platforms": [
     "server"
    ],
-   "thumbs": []
+   "thumbs": [],
+   "setup": "advanced"
   },
   {
    "id": "tor-browser",
@@ -13262,7 +13682,8 @@
    "licenseSource": "https://gitlab.torproject.org/tpo/applications/tor-browser/-/raw/tor-browser-140.5.0esr-15.0-1/toolkit/content/license.html",
    "thumbs": [
     "assets/shots/tor-browser-0.webp"
-   ]
+   ],
+   "setup": "easy"
   },
   {
    "id": "trench",
@@ -13296,7 +13717,8 @@
    ],
    "thumbs": [
     "assets/shots/trench-0.webp"
-   ]
+   ],
+   "setup": "advanced"
   },
   {
    "id": "trilium-notes",
@@ -13332,7 +13754,8 @@
    ],
    "thumbs": [
     "assets/shots/trilium-notes-0.webp"
-   ]
+   ],
+   "setup": "easy"
   },
   {
    "id": "tuta",
@@ -13375,7 +13798,8 @@
     "assets/shots/tuta-0.webp",
     "assets/shots/tuta-1.webp",
     "assets/shots/tuta-2.webp"
-   ]
+   ],
+   "setup": "easy"
   },
   {
    "id": "twenty",
@@ -13414,7 +13838,8 @@
     "assets/shots/twenty-0.webp",
     "assets/shots/twenty-1.webp",
     "assets/shots/twenty-2.webp"
-   ]
+   ],
+   "setup": "advanced"
   },
   {
    "id": "tymeslot",
@@ -13452,7 +13877,8 @@
     "assets/shots/tymeslot-0.webp",
     "assets/shots/tymeslot-1.webp",
     "assets/shots/tymeslot-2.webp"
-   ]
+   ],
+   "setup": "advanced"
   },
   {
    "id": "typesense",
@@ -13488,7 +13914,8 @@
    ],
    "thumbs": [
     "assets/shots/typesense-0.webp"
-   ]
+   ],
+   "setup": "advanced"
   },
   {
    "id": "ubuntu",
@@ -13523,7 +13950,9 @@
    "thumbs": [
     "assets/shots/ubuntu-0.webp",
     "assets/shots/ubuntu-1.webp"
-   ]
+   ],
+   "setup": "advanced",
+   "setupWhy": "An operating system: installing it means replacing or sitting alongside your computer or phone's current system, which is more than installing an app."
   },
   {
    "id": "ubuntu-touch",
@@ -13555,7 +13984,9 @@
    "licenseSource": "https://gitlab.com/ubports/development/core/lomiri/-/raw/main/COPYING",
    "thumbs": [
     "assets/shots/ubuntu-touch-0.webp"
-   ]
+   ],
+   "setup": "advanced",
+   "setupWhy": "An operating system: installing it means replacing or sitting alongside your computer or phone's current system, which is more than installing an app."
   },
   {
    "id": "ultravnc",
@@ -13591,7 +14022,8 @@
    ],
    "thumbs": [
     "assets/shots/ultravnc-0.webp"
-   ]
+   ],
+   "setup": "easy"
   },
   {
    "id": "umami",
@@ -13622,7 +14054,9 @@
    ],
    "thumbs": [
     "assets/shots/umami-0.webp"
-   ]
+   ],
+   "setup": "easy",
+   "setupWhy": "Its makers run Umami Cloud, which has a free plan."
   },
   {
    "id": "ungoogled-chromium",
@@ -13657,7 +14091,8 @@
    "thumbs": [
     "assets/shots/ungoogled-chromium-0.webp",
     "assets/shots/ungoogled-chromium-1.webp"
-   ]
+   ],
+   "setup": "easy"
   },
   {
    "id": "unleash",
@@ -13686,7 +14121,8 @@
    "platforms": [
     "server"
    ],
-   "thumbs": []
+   "thumbs": [],
+   "setup": "advanced"
   },
   {
    "id": "uptrace",
@@ -13729,7 +14165,8 @@
     "assets/shots/uptrace-1.webp",
     "assets/shots/uptrace-2.webp",
     "assets/shots/uptrace-3.webp"
-   ]
+   ],
+   "setup": "advanced"
   },
   {
    "id": "uvdesk",
@@ -13759,7 +14196,8 @@
    "platforms": [
     "server"
    ],
-   "thumbs": []
+   "thumbs": [],
+   "setup": "advanced"
   },
   {
    "id": "vane-formerly-perplexica",
@@ -13791,7 +14229,8 @@
    ],
    "thumbs": [
     "assets/shots/vane-formerly-perplexica-0.webp"
-   ]
+   ],
+   "setup": "advanced"
   },
   {
    "id": "vaultwarden",
@@ -13819,7 +14258,8 @@
    "platforms": [
     "server"
    ],
-   "thumbs": []
+   "thumbs": [],
+   "setup": "advanced"
   },
   {
    "id": "vendure",
@@ -13850,7 +14290,8 @@
     "server"
    ],
    "licenseSource": "https://raw.githubusercontent.com/vendurehq/vendure/master/LICENSE.md",
-   "thumbs": []
+   "thumbs": [],
+   "setup": "advanced"
   },
   {
    "id": "victorialogs",
@@ -13882,7 +14323,8 @@
     "mac",
     "linux"
    ],
-   "thumbs": []
+   "thumbs": [],
+   "setup": "advanced"
   },
   {
    "id": "victoriametrics",
@@ -13916,7 +14358,8 @@
     "linux",
     "server"
    ],
-   "thumbs": []
+   "thumbs": [],
+   "setup": "advanced"
   },
   {
    "id": "vikunja",
@@ -13954,7 +14397,8 @@
    "thumbs": [
     "assets/shots/vikunja-0.webp",
     "assets/shots/vikunja-1.webp"
-   ]
+   ],
+   "setup": "advanced"
   },
   {
    "id": "wallabag",
@@ -13988,7 +14432,8 @@
    ],
    "thumbs": [
     "assets/shots/wallabag-0.webp"
-   ]
+   ],
+   "setup": "advanced"
   },
   {
    "id": "webiny",
@@ -14020,7 +14465,8 @@
     "server"
    ],
    "licenseSource": "https://raw.githubusercontent.com/webiny/webiny-js/next/LICENSE",
-   "thumbs": []
+   "thumbs": [],
+   "setup": "advanced"
   },
   {
    "id": "webstudio",
@@ -14052,7 +14498,8 @@
     "web",
     "server"
    ],
-   "thumbs": []
+   "thumbs": [],
+   "setup": "advanced"
   },
   {
    "id": "wekan",
@@ -14088,7 +14535,8 @@
    ],
    "thumbs": [
     "assets/shots/wekan-0.webp"
-   ]
+   ],
+   "setup": "advanced"
   },
   {
    "id": "whisper",
@@ -14115,7 +14563,8 @@
    "platforms": [
     "windows"
    ],
-   "thumbs": []
+   "thumbs": [],
+   "setup": "advanced"
   },
   {
    "id": "whisper-cpp",
@@ -14148,7 +14597,8 @@
    ],
    "thumbs": [
     "assets/shots/whisper-cpp-0.webp"
-   ]
+   ],
+   "setup": "advanced"
   },
   {
    "id": "windmill",
@@ -14190,7 +14640,8 @@
     "assets/shots/windmill-1.webp",
     "assets/shots/windmill-2.webp",
     "assets/shots/windmill-3.webp"
-   ]
+   ],
+   "setup": "advanced"
   },
   {
    "id": "woocommerce",
@@ -14218,7 +14669,8 @@
    "platforms": [
     "server"
    ],
-   "thumbs": []
+   "thumbs": [],
+   "setup": "advanced"
   },
   {
    "id": "wordpress",
@@ -14252,7 +14704,9 @@
    "thumbs": [
     "assets/shots/wordpress-0.webp",
     "assets/shots/wordpress-1.webp"
-   ]
+   ],
+   "setup": "easy",
+   "setupWhy": "WordPress.com is the official hosted version and has a free plan."
   },
   {
    "id": "writefreely",
@@ -14285,7 +14739,9 @@
    ],
    "thumbs": [
     "assets/shots/writefreely-0.webp"
-   ]
+   ],
+   "setup": "easy",
+   "setupWhy": "Its makers run write.as, which has a free plan, so you can start writing in a browser."
   },
   {
    "id": "xournal",
@@ -14328,7 +14784,8 @@
     "assets/shots/xournal-1.webp",
     "assets/shots/xournal-2.webp",
     "assets/shots/xournal-3.webp"
-   ]
+   ],
+   "setup": "easy"
   },
   {
    "id": "xwiki",
@@ -14357,7 +14814,8 @@
    "platforms": [
     "server"
    ],
-   "thumbs": []
+   "thumbs": [],
+   "setup": "advanced"
   },
   {
    "id": "yacy",
@@ -14393,7 +14851,8 @@
     "assets/shots/yacy-0.webp",
     "assets/shots/yacy-1.webp",
     "assets/shots/yacy-2.webp"
-   ]
+   ],
+   "setup": "advanced"
   },
   {
    "id": "yanknote",
@@ -14435,7 +14894,8 @@
     "assets/shots/yanknote-1.webp",
     "assets/shots/yanknote-2.webp",
     "assets/shots/yanknote-3.webp"
-   ]
+   ],
+   "setup": "easy"
   },
   {
    "id": "youcoded",
@@ -14476,7 +14936,8 @@
     "assets/shots/youcoded-0.webp",
     "assets/shots/youcoded-1.webp",
     "assets/shots/youcoded-2.webp"
-   ]
+   ],
+   "setup": "easy"
   },
   {
    "id": "yourls",
@@ -14505,7 +14966,8 @@
    "platforms": [
     "server"
    ],
-   "thumbs": []
+   "thumbs": [],
+   "setup": "advanced"
   },
   {
    "id": "yugabyte",
@@ -14538,7 +15000,8 @@
     "server"
    ],
    "licenseSource": "https://raw.githubusercontent.com/yugabyte/yugabyte-db/master/LICENSE.md",
-   "thumbs": []
+   "thumbs": [],
+   "setup": "advanced"
   },
   {
    "id": "zammad",
@@ -14565,7 +15028,8 @@
    "platforms": [
     "server"
    ],
-   "thumbs": []
+   "thumbs": [],
+   "setup": "advanced"
   },
   {
    "id": "zed",
@@ -14600,7 +15064,8 @@
    ],
    "thumbs": [
     "assets/shots/zed-0.webp"
-   ]
+   ],
+   "setup": "advanced"
   },
   {
    "id": "zen-browser",
@@ -14636,7 +15101,8 @@
    "thumbs": [
     "assets/shots/zen-browser-0.webp",
     "assets/shots/zen-browser-1.webp"
-   ]
+   ],
+   "setup": "easy"
   },
   {
    "id": "zettlr",
@@ -14673,7 +15139,8 @@
    "thumbs": [
     "assets/shots/zettlr-0.webp",
     "assets/shots/zettlr-1.webp"
-   ]
+   ],
+   "setup": "easy"
   },
   {
    "id": "zinc-labs",
@@ -14714,7 +15181,8 @@
     "assets/shots/zinc-labs-0.webp",
     "assets/shots/zinc-labs-1.webp",
     "assets/shots/zinc-labs-2.webp"
-   ]
+   ],
+   "setup": "advanced"
   },
   {
    "id": "zitadel",
@@ -14746,7 +15214,8 @@
     "linux",
     "server"
    ],
-   "thumbs": []
+   "thumbs": [],
+   "setup": "advanced"
   },
   {
    "id": "zulip",
@@ -14785,7 +15254,9 @@
    "thumbs": [
     "assets/shots/zulip-0.webp",
     "assets/shots/zulip-1.webp"
-   ]
+   ],
+   "setup": "easy",
+   "setupWhy": "Zulip runs a free hosted version (Zulip Cloud Free) at zulipchat.com."
   }
  ]
 }
