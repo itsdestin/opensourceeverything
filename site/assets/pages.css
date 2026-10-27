@@ -95,7 +95,7 @@ table.credits a { color:var(--fg); }
 .hero3:has(.search-menu.open) { overflow:visible; z-index:5; }
 .hero3:has(.search-menu.open) .collage { clip-path:inset(-32px -32px -32px -32px); }
 
-/* Popular switches: picture cards, four to a row. */
+/* Popular alternatives: picture cards, four to a row. */
 .swgrid { display:grid; grid-template-columns:repeat(4,minmax(0,1fr)); gap:12px; }
 .swcard .inner { gap:2px; }
 .swcard h3 { margin:0; font-size:16px; font-weight:500; }

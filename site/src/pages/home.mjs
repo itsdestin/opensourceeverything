@@ -92,7 +92,7 @@ export default function home(d) {
   </div>
 
   <section class="surface sec">
-    <div class="sec-head"><div><h2 class="h-large">Popular switches</h2></div></div>
+    <div class="sec-head"><div><h2 class="h-large">Popular alternatives</h2></div></div>
     <div class="swgrid">${switches.map(switchCard).join('')}</div>
   </section>
 

@@ -37,7 +37,7 @@
   .card.pic .dd.actions { margin:-2px -2px 0 0; }
   .card.pic .dd.actions .btn { padding:4px 8px; }
   .grid { gap:8px; }
-  /* Popular switches stay a sideways row of picture cards on the home page. */
+  /* Popular alternatives stay a sideways row of picture cards on the home page. */
   .swgrid > .card.pic { flex-direction:column; flex:0 0 200px; }
   .swgrid > .card.pic .preview { flex:none; width:auto; aspect-ratio:16/10; min-height:0; margin:4px 4px 0; }
 
