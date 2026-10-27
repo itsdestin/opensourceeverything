@@ -56,10 +56,12 @@
     ['automatic', 'automatically', 'automated', 'automate', 'scheduled'],
     ['privacy', 'private', 'encrypted', 'encryption', 'secure', 'without tracking', 'no tracking', 'not tracking',
       'doesnt track', 'without cookies', 'no cookies', 'doesnt log', 'no logs', 'without logging', 'untracked'],
+    ['personal', 'personalized', 'personalised', 'personalize', 'personalise', 'customizable', 'customize', 'customise', 'tailored'],
     ['video call', 'video calls', 'video chat', 'video meeting', 'videoconference', 'video conference'],
     ['team', 'company', 'work', 'workplace', 'coworkers', 'colleagues', 'business', 'office'],
     ['large', 'big', 'huge'],
-    ['remote', 'remote desktop', 'remote control', 'vnc'],
+    ['remote', 'remote desktop', 'remote control', 'vnc', 'remotely', 'far away', 'from anywhere', 'from far away'],
+    ['family', 'mom', 'mum', 'dad', 'parents', 'parent', 'grandma', 'grandpa', 'grandparents', 'relatives'],
     ['phone', 'mobile', 'smartphone'],
     ['self hosted', 'selfhosted', 'self host', 'server', 'host myself', 'run myself', 'host it myself', 'my own server',
       'own server', 'own hardware', 'run it myself', 'host my own', 'on my server'],
@@ -70,6 +72,11 @@
   const EVERYDAY = new Set(('make square threads pocket buffer mode outlier render fly segment clover monday keep rev orbit ' +
     'common room canny loops cursor windsurf teams word pages numbers keynote ' +
     'photos maps music meet drive news books play').split(' '));
+
+  // The words for each device code, and how a result names it ("Runs on iPhone").
+  const DEVICE_WORDS = { windows: 'windows pc', mac: 'mac macos apple', linux: 'linux', android: 'android',
+    ios: 'ios iphone ipad apple', web: 'web browser online', server: 'server selfhosted' };
+  const DEVICE_NAMES = { windows: 'Windows', mac: 'Mac', linux: 'Linux', android: 'Android', ios: 'iPhone', web: 'the web', server: 'your own server' };
 
   const norm = (s) => String(s ?? '').normalize('NFKD').replace(/[̀-ͯ]/g, '').toLowerCase()
     .replace(/&/g, ' and ').replace(/[^a-z0-9+]+/g, ' ').trim();
@@ -120,9 +127,10 @@
     const index = new Map(), list = [], stems = [];
     const id = (w) => { let i = index.get(w); if (i === undefined) { i = list.length; index.set(w, i); list.push(w); stems.push(stem(w)); } return i; };
     // One searchable text: its word ids, stems, the text with spaces removed, and with spaces kept (for word pairs).
-    const field = (text, weight) => {
+    // role: which part of the item this is, so results can say why they matched ("Runs on Linux").
+    const field = (text, weight, role = 'name') => {
       const w = words(text), s = w.map(stem);
-      return { ids: Int32Array.from(w.map(id)), sset: new Set(s), c: compact(text), t: ' ' + w.join(' ') + ' ', weight };
+      return { ids: Int32Array.from(w.map(id)), sset: new Set(s), c: compact(text), t: ' ' + w.join(' ') + ' ', weight, role };
     };
     return { list, stems, field };
   }
@@ -159,14 +167,14 @@
   function wordMatch(wt, f, allowFuzzy) {
     const table = allowFuzzy ? wt.fuzzy() : wt.ex;
     let best = 0;
-    for (let i = 0; i < f.ids.length; i++) { const v = table[f.ids[i]]; if (v > best) { best = v; if (v === 1) return 1; } }
+    for (let i = 0; i < f.ids.length; i++) { const v = table[f.ids[i]]; if (v > best) { best = v; wt.at = f.ids[i]; if (v === 1) return 1; } }
     // Spacing differences: "onenote" vs "one note", "whatsapp" vs "whats app". In names, three-letter words
     // count too ("llm" in AnythingLLM), a little lower: buried in a longer word, they're a weaker sign.
     // WHY partial: only the word still being typed is a fragment; earlier words are whole ("type" in "private
     // search that doesnt log what i type" is not the start of "Typesense").
     const q = wt.q;
-    if (wt.partial && best < 0.8 && q.length >= 4 && f.c.includes(q)) best = 0.8;
-    else if (wt.partial && best < 0.75 && q.length === 3 && f.weight >= 0.9 && f.c.includes(q)) best = 0.75;
+    if (wt.partial && best < 0.8 && q.length >= 4 && f.c.includes(q)) { best = 0.8; wt.at = -1; }
+    else if (wt.partial && best < 0.75 && q.length === 3 && f.weight >= 0.9 && f.c.includes(q)) { best = 0.75; wt.at = -1; }
     return best;
   }
 
@@ -175,20 +183,25 @@
     const vocab = makeVocab(), field = vocab.field;
     const items = [];
     for (const x of raw.closed) items.push({ kind: 'closed', n: x.n, u: x.u, label: x.g, pop: 0,
-      fields: [field(x.n, 1), field(x.g, 0.45), field(x.j, 0.35)] });
+      fields: [field(x.n, 1), field(x.g, 0.45, 'group'), field(x.j, 0.35, 'job')], groups: [x.g], jobs: [x.j] });
     // WHY the group's id as a near-name: ids are the short words people type ("2fa", "crm", "pdf", "vpn").
     for (const x of raw.groups) items.push({ kind: 'group', n: x.n, u: x.u, label: x.c, pop: 0,
-      fields: [field(x.n, 1), field(x.u.replace(/^g\/|\/$/g, '').replace(/-/g, ' '), 0.9), field((x.x || []).join(' '), 0.7), field(x.j, 0.6),
-        field((x.k || []).join(' '), 0.5), field(x.c, 0.35)], phrases: (x.k || []).map((p) => field(p, 1)) });
+      fields: [field(x.n, 1), field(x.u.replace(/^g\/|\/$/g, '').replace(/-/g, ' '), 0.9), field((x.x || []).join(' '), 0.7, 'replaces'), field(x.j, 0.6, 'job'),
+        field((x.k || []).join(' '), 0.5, 'phrases'), field(x.c, 0.35, 'category')], phrases: (x.k || []).map((p) => field(p, 1, 'phrase')),
+      closed: x.x || [], jobs: [x.j], phraseText: x.k || [], cat: x.c });
     for (const x of raw.projects) {
       const gs = (x.gi || []).map((i) => raw.groups[i]).filter(Boolean);
       // WHY a middling guess when stars are unknown: those are mostly big projects hosted off GitHub (GIMP, Krita,
       // LibreOffice), which shouldn't rank as if nobody used them.
       items.push({ kind: 'project', n: x.n, u: x.u, label: x.g, dead: !!x.dead,
         pop: Math.log10((x.st ?? 3000) + 1) / 6, ed: x.r != null ? Math.max(0, 5 - x.r) / 5 : 0,
-        fields: [field(x.n, 1), Object.assign(field(gs.flatMap((g) => g.x || []).join(' '), 0.6), { replaces: true }), Object.assign(field(gs.map((g) => g.n).join(' '), 0.5), { group: true }),
-          field(gs.map((g) => g.j).join(' '), 0.4), field((x.k || []).join(' '), 0.45), field(x.s, 0.3)],
-        phrases: (x.k || []).map((p) => field(p, 1)) });
+        // WHY devices as a field: "linux note app" should favour apps that run on Linux, and say so.
+        fields: [field(x.n, 1), Object.assign(field(gs.flatMap((g) => g.x || []).join(' '), 0.6, 'replaces'), { replaces: true }),
+          Object.assign(field(gs.map((g) => g.n).join(' '), 0.5, 'group'), { group: true }),
+          field(gs.map((g) => g.j).join(' '), 0.4, 'job'), field((x.k || []).join(' '), 0.45, 'phrases'),
+          field((x.pl || []).map((p) => DEVICE_WORDS[p] || '').join(' '), 0.6, 'device'), field(x.s, 0.3, 'summary')],
+        phrases: (x.k || []).map((p) => field(p, 1, 'phrase')),
+        closed: gs.flatMap((g) => g.x || []), groups: gs.map((g) => g.n), jobs: gs.map((g) => g.j), phraseText: x.k || [], pl: x.pl || [] });
     }
     for (const it of items) { it.nc = compact(it.n); it.nn = norm(it.n); }
     items.vocab = vocab;
@@ -302,32 +315,86 @@
   const LIMITS = { closed: 5, group: 4, project: 6 };
   const MIN = 0.3;
 
-  // Returns sections in the order to show them (the section holding the best match first), each with
-  // its best-scoring items: [{ kind, items: [{ n, u, label, score }] }].
-  function search(items, text) {
+  // How strong a match is, in words people understand. WHY fixed steps, not a percentage: a number like 73%
+  // suggests a precision the scores don't have. Steps were set by looking at where right and wrong first results
+  // fall across the 398 test searches: e.g. 90% of non-answers to short searches score under 1.25, so "Best"
+  // starts at 1.3. Longer searches spread each point over more words and score lower, so they get lower steps.
+  const TIERS = {
+    short: [[1.3, 4, 'Best match'], [1.0, 3, 'Strong match'], [0.75, 2, 'Good match'], [0, 1, 'Partial match']],
+    long: [[1.0, 4, 'Best match'], [0.8, 3, 'Strong match'], [0.6, 2, 'Good match'], [0, 1, 'Partial match']],
+    veryLong: [[0.9, 4, 'Best match'], [0.7, 3, 'Strong match'], [0.5, 2, 'Good match'], [0, 1, 'Partial match']],
+  };
+  function strength(score, nWords = 1) {
+    const t = TIERS[nWords >= 5 ? 'veryLong' : nWords >= 3 ? 'long' : 'short'].find(([min]) => score >= min);
+    return { level: t[1], strength: t[2] };
+  }
+
+  // Why an item matched, in a few short plain phrases: [{ text, kind }]. Only run for results being shown.
+  function explain(it, q) {
+    const out = new Map(); // text -> kind
+    const add = (text, kind) => { if (text && !out.has(text)) out.set(text, kind); };
+    // A written phrase that covers several of the typed words is the clearest reason, so it goes first.
+    if (it.phrases && q.ws.length > 1) {
+      let best = -1, bestHits = 1;
+      it.phrases.forEach((ph, k) => {
+        let hits = 0;
+        for (const wt of q.wt) { for (let j = 0; j < ph.ids.length; j++) if (wt.hit[ph.ids[j]]) { hits++; break; } }
+        if (hits > bestHits) { bestHits = hits; best = k; }
+      });
+      if (best >= 0) add(`“${it.phraseText[best]}”`, 'phrase');
+    }
+    const vocab = it.fields[0] && q.vocab;
+    for (let i = 0; i < q.ws.length; i++) {
+      let top = 0, f0 = null, word = null;
+      for (const f of it.fields) {
+        const m = wordMatch(q.wt[i], f, f.weight >= 0.9) * f.weight;
+        if (m > top) { top = m; f0 = f; word = q.wt[i].at >= 0 ? vocab.list[q.wt[i].at] : q.ws[i]; }
+      }
+      if (!f0) continue;
+      const has = (list) => list.find((x) => words(x).some((w) => w === word || stem(w) === stem(word) || w.startsWith(word))) || list[0];
+      if (f0.role === 'name') add('Name', 'name');
+      else if (f0.role === 'device') add(`Runs on ${it.pl.filter((p) => (DEVICE_WORDS[p] || '').split(' ').includes(word)).map((p) => DEVICE_NAMES[p]).join(', ') || DEVICE_NAMES[it.pl[0]]}`, 'device');
+      else if (f0.role === 'replaces') add(`${it.kind === 'group' ? 'Covers' : 'Replaces'} ${has(it.closed)}`, 'replaces');
+      else if (f0.role === 'group') add(`In ${has(it.groups)}`, 'group');
+      else if (f0.role === 'job') add(has(it.jobs), 'job');
+      else if (f0.role === 'phrases') add(`“${has(it.phraseText)}”`, 'phrase');
+      else if (f0.role === 'category') add(it.cat, 'group');
+      else if (f0.role === 'summary') add(`Description mentions “${word}”`, 'summary');
+    }
+    return [...out].slice(0, 3).map(([text, kind]) => ({ text, kind }));
+  }
+
+  // Search. By default returns what the dropdown shows: sections in the order to show them (the section holding the
+  // best match first), each with its best-scoring items: [{ kind, items: [{ n, u, label, score }] }].
+  // With { all: true }: every result in one ranked list, each with its strength and why it matched (results page).
+  function search(items, text, opts = {}) {
     const q = parseQuery(text);
     if (!q.c) return [];
     // Work done once per keystroke, then shared by every item: word tables, related words, word pairs.
     q.wt = q.ws.map((w, i) => wordTable(items.vocab, w, q.ss[i], i === q.ws.length - 1 || w.length >= 5));
     q.alts = q.ss.map((st, i) => [...(SYN.get(st) || []), ...((i + 1 < q.ss.length && SYN.get(st + ' ' + q.ss[i + 1])) || [])].map((a) => a.split(' ')));
     q.pairs = q.ws.slice(1).map((w, i) => ' ' + q.ws[i] + ' ' + w + ' ');
+    q.vocab = items.vocab;
     const by = { closed: [], group: [], project: [] };
     for (const it of items) {
       const s = score(it, q);
-      if (s >= MIN) by[it.kind].push({ n: it.n, u: it.u, label: it.label, score: s });
+      if (s >= MIN) by[it.kind].push({ n: it.n, u: it.u, label: it.label, kind: it.kind, score: s, it });
     }
     // WHY a cut relative to each section's best match: once a group fits well, half-matching groups ("Video
     // calls" for "video editor") are clutter. Per section, so the projects under a good group still show.
     for (const k of Object.keys(by)) {
       const top = Math.max(0, ...by[k].map((x) => x.score));
-      by[k] = by[k].filter((x) => x.score >= top * 0.45);
+      by[k] = by[k].filter((x) => x.score >= top * 0.45).sort((a, b) => b.score - a.score || a.n.localeCompare(b.n));
     }
-    const sections = Object.entries(by).map(([kind, list]) => ({
-      kind, items: list.sort((a, b) => b.score - a.score || a.n.localeCompare(b.n)).slice(0, LIMITS[kind]),
-    })).filter((sec) => sec.items.length);
+    const finish = (x) => ({ n: x.n, u: x.u, label: x.label, kind: x.kind, score: x.score, ...strength(x.score, q.ws.length) });
+    if (opts.all) {
+      return Object.values(by).flat().sort((a, b) => b.score - a.score || a.n.localeCompare(b.n))
+        .map((x) => ({ ...finish(x), why: explain(x.it, q), pl: x.it.pl || [] }));
+    }
+    const sections = Object.entries(by).map(([kind, list]) => ({ kind, items: list.slice(0, LIMITS[kind]).map(finish) })).filter((sec) => sec.items.length);
     // WHY sections follow their best match: "video editor" should open on the Video editing group, "gimp" on GIMP.
     return sections.sort((a, b) => b.items[0].score - a.items[0].score);
   }
 
-  root.OISearch = { prepare, search, parseQuery, norm, stem, dist };
+  root.OISearch = { prepare, search, parseQuery, norm, stem, dist, strength, TIERS };
 })(typeof window !== 'undefined' ? window : globalThis);

@@ -33,7 +33,7 @@ export function searchIndex(d) {
         // WHY the summary only when there are no phrases: the phrases already say what it does in searchers' words
         // (and dropping summaries keeps the file small), but a project added since the last phrase run
         // (prefill/search-keywords.mjs --only <id>) still needs something beyond its name to be found by.
-        k: KW.projects[p.id] ?? [], ...(KW.projects[p.id] ? {} : { s: p.summary }), ...(p.stars != null ? { st: p.stars } : {}), ...(p.archived || p.inactive ? { dead: 1 } : {}),
+        pl: p.platforms ?? [], k: KW.projects[p.id] ?? [], ...(KW.projects[p.id] ? {} : { s: p.summary }), ...(p.stars != null ? { st: p.stars } : {}), ...(p.archived || p.inactive ? { dead: 1 } : {}),
       };
     }),
   };

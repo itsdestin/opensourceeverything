@@ -425,3 +425,18 @@ a.chip.link:focus-visible { outline:2px solid var(--accent); outline-offset:1px;
 .note-own { justify-content:flex-end; }
 @media (max-width:640px) { .links { flex-wrap:wrap; } .notice-line { flex-direction:column; align-items:flex-start; } }
 .top-title { display:none; }
+
+/* ═══ Search: match-strength meter (dropdown and results page) ═══ */
+/* WHY signal-style bars (Destin, Oct 26: "better/more visible relevance scoring"): four rising bars read as
+   "how strong" at a glance, without suggesting a precise percentage the ranking doesn't have. */
+.mstr { display:inline-flex; align-items:center; gap:6px; font-size:11px; color:var(--fg-muted); white-space:nowrap; }
+.mstr .bars { display:inline-flex; align-items:flex-end; gap:2px; height:12px; }
+.mstr .bars i { width:3px; border-radius:1px; background:color-mix(in srgb,var(--fg-faint) 45%,transparent); }
+.mstr .bars i:nth-child(1) { height:4px; } .mstr .bars i:nth-child(2) { height:6px; } .mstr .bars i:nth-child(3) { height:9px; } .mstr .bars i:nth-child(4) { height:12px; }
+.mstr.l1 .bars i:nth-child(-n+1), .mstr.l2 .bars i:nth-child(-n+2), .mstr.l3 .bars i:nth-child(-n+3), .mstr.l4 .bars i { background:var(--accent); }
+.mstr.l4 { color:var(--accent); font-weight:500; }
+.mi-right { display:inline-flex; align-items:center; gap:10px; min-width:0; }
+/* WHY pinned to the bottom: long dropdowns scroll, and this row (what Enter does) must stay visible. */
+.mi.see-all { position:sticky; bottom:-4px; border-top:1px solid var(--edge); margin-top:4px; padding-top:8px; padding-bottom:8px;
+  color:var(--accent); font-weight:500; background:var(--panel); border-radius:0 0 var(--radius-md) var(--radius-md); }
+.fchip.sel .n { color:inherit; opacity:.75; }

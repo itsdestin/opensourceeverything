@@ -17,13 +17,22 @@
   // The ranking itself lives in search-core.js, shared with the tests (site/test/search-eval.mjs).
   let index = null, loading = null;
   const loadIndex = () => loading || (loading = fetch(BASE + 'search.json').then((r) => r.json()).then((d) => (index = window.OISearch.prepare(d))));
+  window.OI.loadSearch = loadIndex; // the results page (search-page.js) shares the same loaded index
   const HEADINGS = { closed: 'Closed apps', group: 'Groups', project: 'Open projects' };
+  const resultsUrl = (t) => `${BASE}search/?q=${encodeURIComponent(t.trim())}`;
   function results(t) {
     if (!t.trim()) return '';
-    const row = (x) => `<a class="mi" role="option" href="${BASE}${x.u}">${esc(x.n)}<span class="muted11">${esc(x.label)}</span></a>`;
+    // WHY a small meter on each row (Destin, Oct 26: "more visible relevance scoring"): how well each result fits,
+    // at a glance; the words are in its tooltip and on the results page.
+    const row = (x) => `<a class="mi" role="option" href="${BASE}${x.u}">${esc(x.n)}<span class="mi-right"><span class="muted11">${esc(x.label)}</span>` +
+      `<span class="mstr mini l${x.level}" title="${esc(x.strength)}" aria-label="${esc(x.strength)}"><span class="bars" aria-hidden="true"><i></i><i></i><i></i><i></i></span></span></span></a>`;
     // WHY sections come in the order of their best match: a job search opens on the group, a name on the app.
-    return window.OISearch.search(index, t).map((sec) => `<div class="menu-note">${HEADINGS[sec.kind]}</div>` + sec.items.map(row).join('')).join('') ||
-      `<div class="menu-note">Nothing matches "${esc(t.trim())}" yet. <a href="https://github.com/itsdestin/opensourceeverything/issues/new?template=4-new-group.yml&closed=${encodeURIComponent(t.trim())}" rel="noopener">Suggest it</a>.</div>`;
+    const secs = window.OISearch.search(index, t);
+    // WHY a "see all" row: Enter opens the full list; this says so, and works for mouse and touch too.
+    return secs.length
+      ? secs.map((sec) => `<div class="menu-note">${HEADINGS[sec.kind]}</div>` + sec.items.map(row).join('')).join('') +
+        `<a class="mi see-all" role="option" href="${resultsUrl(t)}">See all results for “${esc(t.trim())}”<span class="muted11">Enter ↵</span></a>`
+      : `<div class="menu-note">Nothing matches "${esc(t.trim())}" yet. <a href="https://github.com/itsdestin/opensourceeverything/issues/new?template=4-new-group.yml&closed=${encodeURIComponent(t.trim())}" rel="noopener">Suggest it</a>.</div>`;
   }
   document.querySelectorAll('[data-search]').forEach((wrap) => {
     const input = wrap.querySelector('input'); const menu = wrap.querySelector('.search-menu');
@@ -36,7 +45,9 @@
     input.addEventListener('keydown', (e) => {
       const items = [...menu.querySelectorAll('.mi')]; const i = items.indexOf(document.activeElement);
       if (e.key === 'ArrowDown' && items.length) { e.preventDefault(); items[0].focus(); }
-      if (e.key === 'Enter' && items.length) { e.preventDefault(); items[0].click(); }
+      // WHY Enter opens the results page, not the first item (Destin, Oct 26): the first item is only a guess;
+      // to jump to one item, arrow down to it and press Enter.
+      if (e.key === 'Enter' && input.value.trim()) { e.preventDefault(); location.href = resultsUrl(input.value); }
       void i;
     });
     menu.addEventListener('keydown', (e) => {
