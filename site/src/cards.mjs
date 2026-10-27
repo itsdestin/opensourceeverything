@@ -79,7 +79,7 @@ export const sortAlts = (alts) => rankAlts(alts.map((x, idx) => ({ ...x, idx }))
 
 // The "Works on" filter above a list of alternative cards; group.js hides the cards that don't match.
 // WHY "No server needed": most of the map runs on your own server, which a newcomer can't use.
-const FILTERS = [['', 'All devices'], ['noserver', 'No server needed'], ['windows', 'Windows'], ['mac', 'Mac'], ['linux', 'Linux'], ['android', 'Android'], ['ios', 'iPhone'], ['web', 'In your browser']];
+export const FILTERS = [['', 'All devices'], ['noserver', 'No server needed'], ['windows', 'Windows'], ['mac', 'Mac'], ['linux', 'Linux'], ['android', 'Android'], ['ios', 'iPhone'], ['web', 'In your browser']];
 export const deviceFilter = (id) => `<div class="dd"><button class="select sm" type="button" data-menu="${id}" aria-haspopup="listbox" aria-expanded="false"><span data-device-label>All devices</span>${ICON.chev}</button>
   <div class="menu" id="${id}" role="listbox">${FILTERS.map(([k, v], i) => `<button class="mi${i ? '' : ' sel'}" type="button" role="option" data-device="${k}">${v}</button>`).join('')}</div></div>`;
 

@@ -43,10 +43,26 @@
   };
   document.addEventListener('click', (e) => {
     const f = e.target.closest('[data-device]');
-    if (f) { filterBy(f.dataset.device); f.closest('.menu').classList.remove('open'); return; }
+    if (f) { filterBy(f.dataset.device); f.closest('.menu:not(.gsheet)')?.classList.remove('open'); recount(); return; }
     const s = e.target.closest('[data-sort]');
-    if (s) { sortBy(s.dataset.sort); s.closest('.menu').classList.remove('open'); }
+    if (s) { sortBy(s.dataset.sort); s.closest('.menu:not(.gsheet)')?.classList.remove('open'); recount(); }
+    if (e.target.closest('[data-must],[data-view]')) recount();
+    // The phone Filter sheet: Clear puts every control back; Show closes it.
+    if (e.target.closest('[data-gclear]')) {
+      document.querySelectorAll('.gsheet [data-device=""], .gsheet [data-sort="fit"], .gsheet [data-view="cards"]').forEach((b) => b.click());
+      document.querySelector('[data-must-clear]')?.click(); recount();
+    }
+    if (e.target.closest('[data-gshow]')) { const m = document.getElementById('gSheet'); m.classList.remove('open'); document.querySelector('[data-menu="gSheet"]')?.setAttribute('aria-expanded', 'false'); }
   });
+  // The Filter button's badge and the sheet's "Show N results", from what is on screen right now.
+  function recount() { setTimeout(() => {
+    const grid = document.querySelector('.grid[data-alts]'); if (!grid) return;
+    const n = [...grid.children].filter((c) => !c.hidden && !c.classList.contains('feat-out')).length;
+    const show = document.querySelector('[data-gshow]'); if (show) show.textContent = `Show ${n} ${n === 1 ? 'result' : 'results'}`;
+    const on = (document.querySelector('.gsheet [data-device].sel')?.dataset.device ? 1 : 0) + document.querySelectorAll('.gsheet [data-must].sel').length + (document.querySelector('.gsheet [data-sort].sel')?.dataset.sort !== 'fit' ? 1 : 0) + (document.querySelector('.gsheet [data-view="compare"].on') ? 1 : 0);
+    const b = document.querySelector('[data-gcount]'); if (b) { b.hidden = !on; b.textContent = on; }
+  }, 30); }
+  document.addEventListener('DOMContentLoaded', recount); recount();
   const q = new URLSearchParams(location.search).get('compare');
   if (q) setCompare(q);
 })();

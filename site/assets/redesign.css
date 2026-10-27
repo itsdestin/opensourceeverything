@@ -274,7 +274,7 @@ body { display:flex; flex-direction:column; }
 .signin-card { gap:12px; max-width:420px; width:100%; margin:0 auto; flex-direction:column !important; align-items:stretch !important; }
 .signin-card .btn.full { width:100% !important; padding:8px 12px !important; }
 body:has(.signin-card) .top .acct { display:none; }
-.page:has(.signin-card) { justify-content:center; }
+
 /* Phone footer: one line of links that scrolls under the edge fade instead of wrapping. */
 @media (max-width:640px) {
   .footer { display:flex !important; flex-wrap:nowrap; justify-content:flex-start; overflow-x:auto; scrollbar-width:none; -webkit-mask-image:linear-gradient(to right,#000 calc(100% - 28px),transparent); mask-image:linear-gradient(to right,#000 calc(100% - 28px),transparent); padding-right:28px; }
@@ -310,3 +310,35 @@ body:has(.signin-card) .top .acct { display:none; }
   .sec > .sec-head { flex-direction:row; align-items:center; justify-content:space-between; }
   .footer { -webkit-mask-image:linear-gradient(to right,#000 calc(100% - 40px),transparent); mask-image:linear-gradient(to right,#000 calc(100% - 40px),transparent); padding-right:40px; }
 }
+
+/* ── Round 5 slides ── */
+/* Group page heading line: heading left; one cluster at the right: [Cards | Compare] then the three menus, one height. */
+.gtools { display:flex; align-items:center; gap:8px; margin-left:auto; flex-wrap:wrap; justify-content:flex-end; }
+.gtools .select.sm, .gtools .seg, .gtools .seg button { height:30px; box-sizing:border-box; }
+.gtools .gfilter { display:none; }
+.sec > .sec-head { align-items:center; }
+.seg.wide { display:flex; width:100%; } .seg.wide button { flex:1; height:36px; }
+.gsheet .fgroup .seg { margin:0 4px; }
+.gsheet { right:0; left:auto; }
+@media (max-width:640px) {
+  .gtools > .dd:not(.gfilter), .gtools > .seg { display:none; }
+  .gtools .gfilter { display:block; }
+  .gsheet { right:0; left:0; }
+  /* Bigger, easier cards on a phone: a larger picture, room for the name, a two-line description. */
+  .card.pic .rv-thumb { flex:0 0 104px; width:104px; min-height:112px; }
+  .card.pic .rv-main { padding:10px 10px 10px 12px; gap:6px; }
+  .card.pic .rv-head h3 { font-size:16px; }
+  .card.pic .rvbox .blurb { -webkit-line-clamp:2; font-size:13px; }
+  .card.pic .rv-head .whybtn { display:none; }
+}
+.sres-count { display:none; }
+/* Search results: heading with the count as its grey line. */
+.sres-list { margin-top:4px; }
+/* Claim sign-in page: the card sits in the middle of the window. */
+.page:has(.signin-card) { justify-content:center; align-items:center; min-height:calc(100vh - 120px); }
+.page:has(.signin-card) .signin-card { margin:0 auto; }
+.page:has(.signin-card) .footer { align-self:center; }
+/* The wrapper around the sign-in card fills the free space and centres the card in it, both ways. */
+.page:has(.signin-card) [data-tag] { flex:1; justify-content:center; align-items:center; }
+@media (max-width:640px) { .card.pic .rv-head h3 { font-size:15px; } }
+@media (max-width:640px) { .page:has(.signin-card) .footer { align-self:stretch; justify-content:flex-start; } }

@@ -15,7 +15,6 @@ export default function searchPage() {
   const body = `
   <div class="surface sres-bar">
     <div class="sres-input">${ICON.search}<input type="search" data-sres-input placeholder="Search a closed app or open project…" autocomplete="off" aria-label="Search" autofocus>
-      <span class="sres-count" data-sres-sub aria-live="polite"></span>
       <div class="dd"><button class="btn sm secondary sres-filterbtn" type="button" data-menu="fMenu" aria-haspopup="dialog" aria-expanded="false" data-sres-filterbtn>Filter<span class="fcount" data-fcount hidden></span>${ICON.chev}</button>
         <div class="menu fsheet" id="fMenu" role="dialog" aria-label="Filter results" data-sres-filters>
           <span class="handle" data-handle aria-hidden="true"></span>
@@ -29,6 +28,7 @@ export default function searchPage() {
     </div>
   </div>
   <section class="surface sec">
+    <div class="sec-head"><div><h2 class="h-large">Results</h2><p class="desc12" data-sres-sub aria-live="polite"></p></div></div>
     <div class="sres-list" data-sres-list><div class="empty">Loading…</div></div>
     <noscript><p class="desc12">Search needs JavaScript. Browse by <a href="./">category</a> instead.</p></noscript>
   </section>`;

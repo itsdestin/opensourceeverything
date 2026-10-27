@@ -35,6 +35,7 @@ export default function projectPages(d) {
 
   <div class="cols">
     <div>
+  ${projectFeatures(p, listed)}
   ${rvFamilyA(p, fam)}
   ${SOCIAL ? `<!-- WHY drawn in the browser (assets/contrib.js): a mod's approval shows at once, with no rebuild of the site. -->
       <section class="surface sec" data-dev-pitch data-mode="page" data-project="${esc(p.id)}" data-repo="${esc(codeUrl(p) ?? '')}" hidden></section>` : ''}
@@ -50,7 +51,6 @@ export default function projectPages(d) {
           if (listed.length === 1) { const { group, alt } = listed[0]; return `<div class="sec-head fold-head"><div><h2 class="h-large">Listed in</h2></div>${pillOf(alt)}</div>${alt.note ? `<p class="small2">${esc(alt.note)}</p>` : ''}${rate({ group })}`; }
           return `<div class="sec-head fold-head"><div><h2 class="h-large">Listed in<span class="count">${listed.length}</span></h2></div></div><div class="stack">${listed.map(({ group, alt }) => `<div class="lvl1 listrow"><div class="head"><h3><a class="cardlink" href="${url(`g/${group.id}/`)}">${esc(group.name)}</a></h3>${pillOf(alt)}</div>${alt.note ? `<p class="small2">${esc(alt.note)}</p>` : ''}${rate({ group })}</div>`).join('')}</div>`; })()}
       </section>
-      ${projectFeatures(p, listed)}
     </div>
     <div>
       ${helpWithAi(p, helpRows(p), p.help?.contributing)}

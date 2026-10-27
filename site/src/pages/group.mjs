@@ -2,11 +2,11 @@
 // Ported from mockups/group-page.html. Votes, comments, "still missing", suggest and report need the server,
 // so they only appear once API_URL is set (see lib.mjs).
 import { esc, url, ICON, SITE_URL, API_URL, SOCIAL, SUBREDDIT, codeUrl, suggestUrl } from '../lib.mjs';
-import { altCard, appUrl, sortAlts, deviceFilter, buildBox, chooseBox } from '../cards.mjs';
+import { altCard, appUrl, sortAlts, deviceFilter, buildBox, chooseBox, FILTERS } from '../cards.mjs';
 import { relatedGroups } from '../related.mjs';
 import { likedBox } from '../liked.mjs';
 import { crumbs } from '../redesign.mjs';
-import { groupTools, groupCompare } from '../surfaces.mjs';
+import { groupTools, groupCompare, tagsOf } from '../surfaces.mjs';
 
 // WHY only the first letter, and not before a capital: "AI agents" and "PDF tools" keep their capitals mid-sentence.
 const midSentence = (name) => name.replace(/^[A-Z](?![A-Z])/, (c) => c.toLowerCase());
@@ -49,11 +49,23 @@ export default function groupPages(d) {
   <div class="cols">
     <div>
       <section class="surface sec">
+        <!-- WHY one cluster at the right of the heading line (Destin, round 5 slides): [Cards | Compare] then the three menus, flush right at one height. On a phone the cluster is ONE Filter button that opens a bottom sheet (same pattern as search). -->
         <div class="sec-head">
-          <div><h2 class="h-large">Open alternatives<span class="count">${alts.length}</span></h2></div>${alts.length > 1 ? groupTools(g, alts).seg : ''}
+          <div><h2 class="h-large">Open alternatives<span class="count">${alts.length}</span></h2></div>
+          ${alts.length > 1 ? (() => { const t = groupTools(g, alts); const tags = tagsOf(g);
+            const sortDd = `<div class="dd"><button class="select sm" type="button" data-menu="sortMenu" aria-haspopup="listbox" aria-expanded="false"><span data-sort-label>${SORTS[0][1]}</span>${ICON.chev}</button>
+              <div class="menu" id="sortMenu" role="listbox">${SORTS.map(([k, v], i) => `<button class="mi${i ? '' : ' sel'}" type="button" role="option" data-sort="${k}"${k === 'votes' ? ' disabled title="Available once people have voted"' : ''}>${v}</button>`).join('')}</div></div>`;
+            const rad = (attrs, label, on, dis) => `<button type="button" class="mi opt rad${on ? ' sel' : ''}" role="radio" aria-checked="${on}" ${attrs}${dis ? ' disabled' : ''}><span class="ctl" aria-hidden="true"></span><span class="ol">${label}</span></button>`;
+            const chk = (attrs, label) => `<button type="button" class="mi opt chk" role="checkbox" aria-checked="false" ${attrs}><span class="ctl" aria-hidden="true">${ICON.check}</span><span class="ol">${label}</span></button>`;
+            const sheet = `<div class="dd gfilter"><button class="btn sm secondary sres-filterbtn" type="button" data-menu="gSheet" aria-haspopup="dialog" aria-expanded="false">Filter<span class="fcount" data-gcount hidden></span>${ICON.chev}</button>
+              <div class="menu fsheet gsheet" id="gSheet" role="dialog" aria-label="Filter and sort"><span class="handle" aria-hidden="true"></span><div class="fscroll">
+                ${t.seg ? `<div class="fgroup"><div class="label">View</div>${t.seg.replace('class="seg"', 'class="seg wide"')}</div>` : ''}
+                <div class="fgroup" role="radiogroup" aria-label="Works on"><div class="label">Works on</div>${FILTERS.map(([k, v], i) => rad(`data-device="${k}"`, v, !i)).join('')}</div>
+                ${tags.length ? `<div class="fgroup" role="group" aria-label="Must have"><div class="label">Must have</div>${tags.map((x) => chk(`data-must="${esc(x.id)}"`, esc(x.name))).join('')}</div>` : ''}
+                <div class="fgroup" role="radiogroup" aria-label="Sort"><div class="label">Sort</div>${SORTS.map(([k, v], i) => rad(`data-sort="${k}"`, v, !i, k === 'votes')).join('')}</div>
+              </div><div class="fsfoot"><button type="button" class="btn md secondary" data-gclear>Clear</button><button type="button" class="btn md primary" data-gshow>Show results</button></div></div></div>`;
+            return `<div class="gtools">${t.seg}${deviceFilter('devMenu')}${t.must}${sortDd}${sheet}</div>`; })() : ''}
         </div>
-        ${alts.length > 1 ? `<div class="toolbar"><div class="tl">${deviceFilter('devMenu')}${groupTools(g, alts).must}<div class="dd"><button class="select sm" type="button" data-menu="sortMenu" aria-haspopup="listbox" aria-expanded="false"><span data-sort-label>${SORTS[0][1]}</span>${ICON.chev}</button>
-            <div class="menu" id="sortMenu" role="listbox">${SORTS.map(([k, v], i) => `<button class="mi${i ? '' : ' sel'}" type="button" role="option" data-sort="${k}"${k === 'votes' ? ' disabled title="Available once people have voted"' : ''}>${v}</button>`).join('')}</div></div></div></div>` : ''}
         ${likedBox(g, alts)}
         ${alts.length
           ? `<div class="grid" data-alts>${alts.map((x, i) => altCard(x.p, x.a, i, g, x.why)).join('')}</div><div class="callout info" data-nomatch hidden>None of these match. Try another device.</div>${groupCompare(g, alts)}`

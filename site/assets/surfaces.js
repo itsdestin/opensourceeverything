@@ -21,7 +21,7 @@
     if (none) none.hidden = !sel.size || cards.some(shown);
     const label = document.querySelector('[data-must-label]');
     if (label) label.textContent = sel.size ? `Must have: ${sel.size}` : 'Must have';
-    document.querySelectorAll('[data-must]').forEach((o) => o.setAttribute('aria-selected', String(sel.has(o.dataset.must))));
+    document.querySelectorAll('[data-must]').forEach((o) => { const on = sel.has(o.dataset.must); o.setAttribute('aria-selected', String(on)); o.setAttribute('aria-checked', String(on)); o.classList.toggle('sel', on); });
   };
   const setView = (v) => {
     view = v;
