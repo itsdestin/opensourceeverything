@@ -1,0 +1,753 @@
+{
+ "batch": "top3",
+ "checked": "2026-10-27",
+ "answers": {
+  "onlyoffice-docs": {
+   "comments-suggestions": {
+    "v": "yes",
+    "note": "|Comments plus tracked changes",
+    "source": "https://github.com/ONLYOFFICE/DocumentServer",
+    "quote": "Comments + + + Built-in chat + + + Review and tracking changes"
+   },
+   "word-files": {
+    "v": "yes",
+    "note": "|The project says it is fully compatible with Word's format",
+    "source": "https://github.com/ONLYOFFICE/DocumentServer",
+    "quote": "fully compatible with Office Open XML formats: .docx, .xlsx, .pptx"
+   },
+   "excel-files": {
+    "v": "yes",
+    "note": "|The project says it is fully compatible with Excel's format",
+    "source": "https://github.com/ONLYOFFICE/DocumentServer",
+    "quote": "fully compatible with Office Open XML formats: .docx, .xlsx, .pptx"
+   },
+   "pptx-files": {
+    "v": "yes",
+    "note": "|The project says it is fully compatible with PowerPoint's format",
+    "source": "https://github.com/ONLYOFFICE/DocumentServer",
+    "quote": "fully compatible with Office Open XML formats: .docx, .xlsx, .pptx"
+   },
+   "pivot-tables": {
+    "v": "yes",
+    "note": "|Pivot tables listed in the free edition",
+    "source": "https://github.com/ONLYOFFICE/DocumentServer",
+    "quote": "Table templates + + + Pivot tables + + +"
+   },
+   "excel-macros": {
+    "v": "partly",
+    "note": "Has its own macros (JavaScript); Excel VBA macros are not run as-is",
+    "source": "https://github.com/ONLYOFFICE/DocumentServer",
+    "quote": "Plugins + + + Macros + + +"
+   },
+   "slide-animations": {
+    "v": "yes",
+    "note": "|Transitions and animations in the free edition",
+    "source": "https://github.com/ONLYOFFICE/DocumentServer",
+    "quote": "Transitions + + + Animations + + +"
+   },
+   "presenter-view": {
+    "v": "partly",
+    "note": "Presenter mode with notes on a second screen; timer and next slide not mentioned",
+    "source": "https://helpcenter.onlyoffice.com/docs/userguides/presentation_editor/PreviewPresentation.aspx",
+    "quote": "Show presenter view - to start the preview in the Presenter mode that allows you to show the presentation to your audience without slide notes"
+   },
+   "modern-formulas": {
+    "v": "partly",
+    "note": "Has XLOOKUP, FILTER, SORT, UNIQUE, XMATCH; no LET page found",
+    "source": "https://helpcenter.onlyoffice.com/functions/xlookup.aspx",
+    "quote": "The XLOOKUP function is one of the lookup and reference functions"
+   }
+  },
+  "libreoffice-writer": {
+   "phone-app": {
+    "v": "partly",
+    "note": "Android viewer with experimental editing; iPhone editing via Collabora's app",
+    "source": "https://www.libreoffice.org/download/android-and-ios/",
+    "quote": "The Document Foundation offers a viewer app for LibreOffice documents, with experimental editing support, for Android devices"
+   },
+   "comments-suggestions": {
+    "v": "yes",
+    "note": "Tracked changes you accept or reject, plus comments",
+    "source": "https://raw.githubusercontent.com/LibreOffice/help/master/source/text/shared/guide/redlining.xhp",
+    "quote": "it should be accepted or rejected"
+   },
+   "works-offline": {
+    "v": "yes",
+    "note": "|Desktop app for Windows, Mac and Linux",
+    "source": "site data",
+    "quote": null
+   }
+  },
+  "libreoffice-calc": {
+   "phone-app": {
+    "v": "partly",
+    "note": "Android viewer with experimental editing; iPhone editing via Collabora's app",
+    "source": "https://www.libreoffice.org/download/android-and-ios/",
+    "quote": "The Document Foundation offers a viewer app for LibreOffice documents, with experimental editing support, for Android devices"
+   },
+   "pivot-tables": {
+    "v": "yes",
+    "note": "|",
+    "source": "https://raw.githubusercontent.com/LibreOffice/help/master/source/text/scalc/guide/datapilot.xhp",
+    "quote": "is an interactive table. Data can be arranged, rearranged or summarized according to different points of view"
+   },
+   "modern-formulas": {
+    "v": "yes",
+    "note": "Has XLOOKUP, FILTER and LET",
+    "source": "https://raw.githubusercontent.com/LibreOffice/help/master/source/text/scalc/01/func_let.xhp",
+    "quote": "Assigns names to calculation results."
+   },
+   "works-offline": {
+    "v": "yes",
+    "note": "|Desktop app for Windows, Mac and Linux",
+    "source": "site data",
+    "quote": null
+   }
+  },
+  "joplin": {
+   "works-offline": {
+    "v": "yes",
+    "note": "|",
+    "source": "https://raw.githubusercontent.com/laurent22/joplin/HEAD/README.md",
+    "quote": "Joplin is \"offline first\", which means you always have all your data on your phone or computer"
+   },
+   "live-collab": {
+    "v": "partly",
+    "note": "Shared notebooks via Joplin Cloud sync; not live co-typing",
+    "source": "https://raw.githubusercontent.com/laurent22/joplin/dev/readme/apps/share_notebook.md",
+    "quote": "any participant can view or modify notes in the shared notebook"
+   }
+  },
+  "appflowy": {
+   "live-collab": {
+    "v": "yes",
+    "note": "|",
+    "source": "https://appflowy.com/",
+    "quote": "Co-edit in real-time or comment async"
+   }
+  },
+  "stirling-pdf": {
+   "pdf-convert-office": {
+    "v": "partly",
+    "note": "Converts to and from Office formats; relies on LibreOffice, so layout fidelity varies",
+    "source": "https://raw.githubusercontent.com/Stirling-Tools/Stirling-PDF/main/app/core/src/main/java/stirling/software/SPDF/controller/api/converters/ConvertOfficeController.java",
+    "quote": "This endpoint converts a given file to a PDF using Stirling Office Convert or"
+   }
+  },
+  "openproject": {
+   "recurring-reminders": {
+    "v": "partly",
+    "note": "Has reminders and date alerts; repeating tasks not found in its docs",
+    "source": "https://raw.githubusercontent.com/opf/openproject/dev/docs/user-guide/notifications/README.md",
+    "quote": "work package reminder"
+   }
+  },
+  "vikunja": {
+   "gantt-timeline": {
+    "v": "partly",
+    "note": "Gantt chart with dates; dependency lines not mentioned",
+    "source": "https://vikunja.io/features/",
+    "quote": "The Gantt Chart is perfect to get a timely overview of all tasks currently in-progress in a project"
+   }
+  },
+  "documenso": {
+   "no-server-needed": {
+    "v": "yes",
+    "note": "|Free hosted plan with 5 documents a month",
+    "source": "https://documenso.com/pricing",
+    "quote": "Hosted by us Free $ 0 For casual signers. Free forever."
+   },
+   "signing-order": {
+    "v": "yes",
+    "note": "|",
+    "source": "https://raw.githubusercontent.com/documenso/documenso/main/apps/docs/content/docs/concepts/signing-workflow.mdx",
+    "quote": "If you enable sequential signing, only recipients in the first signing position receive notifications initially"
+   },
+   "sign-audit-trail": {
+    "v": "yes",
+    "note": "|",
+    "source": "https://raw.githubusercontent.com/documenso/documenso/main/apps/docs/content/docs/concepts/signing-workflow.mdx",
+    "quote": "An audit log is generated and can be attached to the document"
+   },
+   "qualified-signature": {
+    "v": "partly",
+    "note": " Planned | | eIDAS QES | Planned|Signs with certificates; advanced and qualified (eIDAS) levels are only planned",
+    "source": "https://raw.githubusercontent.com/documenso/documenso/main/apps/docs/content/docs/compliance/signature-levels.mdx",
+    "quote": "eIDAS AES "
+   }
+  },
+  "librewolf": {
+   "syncs-devices": {
+    "v": "yes",
+    "note": "Uses Firefox Sync, off until you turn it on",
+    "source": "https://librewolf.net/docs/faq/",
+    "quote": "Can I use Firefox Sync with LibreWolf? Is it safe to do so? # Yes, you can enable it"
+   },
+   "phone-app": {
+    "v": "no",
+    "note": "No official phone app",
+    "source": "https://librewolf.net/docs/faq/",
+    "quote": "Will you provide an Android version of LibreWolf? # At the moment nobody is working on it"
+   },
+   "ad-blocking": {
+    "v": "yes",
+    "note": "|",
+    "source": "https://librewolf.net/docs/features/",
+    "quote": "Include uBlockOrigin with custom default filter lists, and Tracking Protection in strict mode, to block trackers and ads"
+   },
+   "full-ad-block-extensions": {
+    "v": "yes",
+    "note": "|Ships with full uBlock Origin",
+    "source": "https://librewolf.net/docs/faq/",
+    "quote": "Yes, in fact we include uBlock Origin in the browser"
+   },
+   "no-tracking": {
+    "v": "yes",
+    "note": "|",
+    "source": "https://librewolf.net/docs/features/",
+    "quote": "Completely disable telemetry, including crash report, normandy, studies and personalized recommendations"
+   }
+  },
+  "firefox": {
+   "syncs-devices": {
+    "v": "yes",
+    "note": "|",
+    "source": "https://www.firefox.com/en-US/features/sync/",
+    "quote": "you can pick up where you left off when you switch from your desktop computer to your mobile phone"
+   },
+   "full-ad-block-extensions": {
+    "v": "yes",
+    "note": "uBlock Origin is listed on Firefox's add-on site",
+    "source": "https://addons.mozilla.org/api/v5/addons/addon/ublock-origin/",
+    "quote": "Finally, an efficient wide-spectrum content blocker. Easy on CPU and memory."
+   },
+   "no-tracking": {
+    "v": "partly",
+    "note": "Sends some usage data by default",
+    "source": "https://www.mozilla.org/en-US/privacy/firefox/",
+    "quote": "Mozilla collects technical and interaction data, such as the position, size, views and clicks on New Tab content or ads"
+   }
+  },
+  "brave": {
+   "syncs-devices": {
+    "v": "yes",
+    "note": "|",
+    "source": "https://brave.com/privacy/browser/",
+    "quote": "If you enable Sync, your bookmarks, passwords and other data will be saved in an encrypted file"
+   },
+   "no-tracking": {
+    "v": "partly",
+    "note": "Sends anonymous product reports until you turn them off",
+    "source": "https://brave.com/privacy/browser/",
+    "quote": "You can deactivate Privacy-Preserving Product Analytics in Settings"
+   },
+   "full-ad-block-extensions": {
+    "v": "yes",
+    "note": "Keeps the full uBlock Origin working",
+    "source": "https://brave.com/blog/brave-shields-manifest-v3/",
+    "quote": "to support some privacy-relevant MV2 extensions—specifically AdGuard, NoScript, uBlock Origin, and uMatrix"
+   },
+   "chrome-extensions": {
+    "v": "yes",
+    "note": "Installs from the Chrome Web Store",
+    "source": "https://brave.com/blog/brave-shields-manifest-v3/",
+    "quote": "equivalent versions that are currently present on the Chrome Web Store"
+   }
+  },
+  "bitwarden": {
+   "breach-alerts": {
+    "v": "yes",
+    "note": "|",
+    "source": "https://bitwarden.com/help/reports/",
+    "quote": "You can also view the exposed, weak, and reused passwords health reports in the browser extension"
+   }
+  },
+  "vaultwarden": {
+   "syncs-devices": {
+    "v": "yes",
+    "note": "Syncs through the official Bitwarden apps",
+    "source": "https://raw.githubusercontent.com/dani-garcia/vaultwarden/HEAD/README.md",
+    "quote": "compatible with [official Bitwarden clients](https://bitwarden.com/download/)"
+   },
+   "phone-app": {
+    "v": "yes",
+    "note": "Uses the official Bitwarden phone apps",
+    "source": "https://raw.githubusercontent.com/dani-garcia/vaultwarden/HEAD/README.md",
+    "quote": "regardless of whatever clients you are using (mobile, desktop, browser...)"
+   },
+   "browser-extension": {
+    "v": "yes",
+    "note": "Uses the official Bitwarden browser extensions",
+    "source": "https://raw.githubusercontent.com/dani-garcia/vaultwarden/HEAD/README.md",
+    "quote": "regardless of whatever clients you are using (mobile, desktop, browser...)"
+   },
+   "share-with-others": {
+    "v": "yes",
+    "note": "|",
+    "source": "https://raw.githubusercontent.com/dani-garcia/vaultwarden/HEAD/README.md",
+    "quote": "[Collections](https://bitwarden.com/help/about-collections/), [Password Sharing](https://bitwarden.com/help/sharing/)"
+   },
+   "no-server-needed": {
+    "v": "no",
+    "note": "|You run the server yourself",
+    "source": "https://raw.githubusercontent.com/dani-garcia/vaultwarden/HEAD/README.md",
+    "quote": "perfect for self-hosted deployment"
+   }
+  },
+  "signal": {
+   "no-phone-number": {
+    "v": "partly",
+    "note": "A number is still needed to sign up; usernames hide it from others",
+    "source": "https://signal.org/blog/phone-number-privacy-usernames/",
+    "quote": "New default: Your phone number will no longer be visible to everyone in Signal"
+   },
+   "disappearing-messages": {
+    "v": "yes",
+    "note": "|",
+    "source": "https://signal.org/blog/disappearing-messages/",
+    "quote": "The latest Signal release for iPhone, Android, and Desktop now includes support for disappearing messages"
+   },
+   "self-hostable": {
+    "v": "partly",
+    "note": "Server code is public but unsupported for running your own",
+    "source": "https://raw.githubusercontent.com/signalapp/Signal-Server/main/README.md",
+    "quote": "We cannot provide direct technical support. Get help running this software in your own environment"
+   }
+  },
+  "simplex-chat": {
+   "disappearing-messages": {
+    "v": "yes",
+    "note": "|",
+    "source": "https://raw.githubusercontent.com/simplex-chat/simplex-chat/HEAD/README.md",
+    "quote": "Disappearing messages (with recipient opt-in per-contact)"
+   }
+  },
+  "delta-chat": {
+   "built-in-calls": {
+    "v": "partly",
+    "note": "One-to-one calls only",
+    "source": "https://delta.chat/en/help",
+    "quote": "Delta Chat supports one-to-one audio calls and video calls"
+   }
+  },
+  "element": {
+   "no-server-needed": {
+    "v": "yes",
+    "note": "Free app; works with public servers like matrix.org",
+    "source": "https://element.io/personal",
+    "quote": "Free forever Sovereign and secure by default"
+   },
+   "screen-share": {
+    "v": "yes",
+    "note": "|",
+    "source": "https://element.io/personal",
+    "quote": "Share screen Screen sharing Explain in seconds."
+   },
+   "chat-bots": {
+    "v": "partly",
+    "note": "Bots and widgets are add-ons",
+    "source": "https://element.io/features",
+    "quote": "Improve team productivity with our add-ons bridges, bots and widgets"
+   }
+  },
+  "jitsi-meet": {
+   "screen-share": {
+    "v": "yes",
+    "note": "|Content (screen) sharing listed as a main feature",
+    "source": "https://raw.githubusercontent.com/jitsi/jitsi-meet/HEAD/README.md",
+    "quote": "Content sharing * Raise hand and reactions"
+   }
+  },
+  "mastodon": {
+   "move-account": {
+    "v": "partly",
+    "note": "Followers move with you; posts stay behind",
+    "source": "https://raw.githubusercontent.com/mastodon/documentation/main/content/en/user/moving.md",
+    "quote": "Your posts will not be moved, due to technical limitations"
+   }
+  },
+  "bluesky": {
+   "move-account": {
+    "v": "yes",
+    "note": "Account can be moved to another host",
+    "source": "https://raw.githubusercontent.com/bluesky-social/atproto-website/main/src/app/%5Blocale%5D/guides/account-migration/en.mdx",
+    "quote": "title: 'Account Migration', description: 'Migrating an account to a new PDS'"
+   },
+   "no-server-needed": {
+    "v": "yes",
+    "note": "|Install the app and sign up",
+    "source": "site data",
+    "quote": null
+   }
+  },
+  "misskey": {
+   "quote-posts": {
+    "v": "yes",
+    "note": "Renote can quote or share a note",
+    "source": "https://raw.githubusercontent.com/misskey-dev/misskey-hub/main/src/docs/features/note.md",
+    "quote": "既にあるノートを引用、もしくはそのノートを新しいノートとして共有する行為"
+   }
+  },
+  "lemmy": {
+   "roles-moderation": {
+    "v": "yes",
+    "note": "Site admins and community moderators",
+    "source": "https://raw.githubusercontent.com/LemmyNet/lemmy/HEAD/README.md",
+    "quote": "appointing site-wide admins, and community moderators to keep out the trolls"
+   }
+  },
+  "peertube": {
+   "live-streams-hosted": {
+    "v": "yes",
+    "note": "Server owner switches live streaming on",
+    "source": "https://docs.joinpeertube.org/use/create-upload-video",
+    "quote": "you can create a live using PeerTube and a streaming software"
+   },
+   "auto-captions": {
+    "v": "yes",
+    "note": "Server owner switches it on",
+    "source": "https://docs.joinpeertube.org/admin/configuration",
+    "quote": "Automatically create a subtitle file of uploaded/imported VOD videos"
+   }
+  },
+  "ubuntu": {
+   "long-support": {
+    "v": "yes",
+    "note": "|",
+    "source": "https://ubuntu.com/download/desktop",
+    "quote": "LTS stands for long-term support — which means five years of free security and maintenance updates"
+   }
+  },
+  "linux-mint": {
+   "long-support": {
+    "v": "yes",
+    "note": "Each 22.x release line is supported until April 2029",
+    "source": "https://linuxmint.com/rel_zena_cinnamon.php",
+    "quote": "Long term support release (LTS), supported until April 2029"
+   }
+  },
+  "krita": {
+   "pressure-pen": {
+    "v": "yes",
+    "note": "Pressure curve and pen tilt settings",
+    "source": "https://docs.krita.org/en/reference_manual/preferences/tablet_settings.html",
+    "quote": "Pen Tilt Direction Offset This lets you adjust the reported pen tilt direction by a fixed amount"
+   }
+  },
+  "gimp": {
+   "psd-files": {
+    "v": "partly",
+    "note": "Layers are kept; some blending modes change",
+    "source": "https://raw.githubusercontent.com/GNOME/gimp-help/master/src/dialogs/file-psd-export.xml",
+    "quote": "Not all blending modes can be converted to an exact equivalent between"
+   }
+  },
+  "gathio": {
+   "federated": {
+    "v": "yes",
+    "note": "|",
+    "source": "https://raw.githubusercontent.com/lowercasename/gathio/HEAD/README.md",
+    "quote": "A simple, federated, privacy-first event hosting platform"
+   }
+  },
+  "rocket-chat": {
+   "phone-app": {
+    "v": "yes",
+    "note": "|",
+    "source": "site data",
+    "quote": null
+   },
+   "threads": {
+    "v": "yes",
+    "note": "|",
+    "source": "https://docs.rocket.chat/docs/threads",
+    "quote": "Threads help organize conversations and allow users to discuss specific topics without cluttering the main chat"
+   },
+   "slack-import": {
+    "v": "yes",
+    "note": "|Slack importer; Teams not confirmed",
+    "source": "https://docs.rocket.chat/docs/import",
+    "quote": "Use the Slack importer to migrate workspace data from Slack exports"
+   }
+  },
+  "alovoa": {
+   "phone-app": {
+    "v": "partly",
+    "note": "Android app listed; no iPhone app mentioned",
+    "source": "https://raw.githubusercontent.com/Alovoa/alovoa/HEAD/README.md",
+    "quote": "Alovoa is also available as a mobile app. Check out Android app"
+   }
+  },
+  "mbin": {
+   "no-server-needed": {
+    "v": "yes",
+    "note": "|Join an existing server",
+    "source": "https://joinmbin.org/",
+    "quote": "Join a Server Start Your Own Server"
+   }
+  },
+  "piefed": {
+   "no-server-needed": {
+    "v": "yes",
+    "note": "|Join an existing server",
+    "source": "https://join.piefed.social/",
+    "quote": "Join our server or host your own for full control"
+   }
+  },
+  "rustdesk": {
+   "no-server-needed": {
+    "v": "yes",
+    "note": "|Install the app; public servers used by default",
+    "source": "site data",
+    "quote": null
+   }
+  },
+  "meshcentral": {
+   "no-server-needed": {
+    "v": "yes",
+    "note": "|A public server is available",
+    "source": "https://meshcentral.com/",
+    "quote": "MeshCentral Public Server Login"
+   }
+  },
+  "ultravnc": {
+   "no-server-needed": {
+    "v": "yes",
+    "note": "|Install the app",
+    "source": "site data",
+    "quote": null
+   },
+   "session-file-transfer": {
+    "v": "yes",
+    "note": "|",
+    "source": "https://uvnc.com/",
+    "quote": "Chat Yes Yes Yes Yes Filetransfer Yes Yes Yes, via chat Yes, via chat"
+   }
+  },
+  "node-red": {
+   "one-command-install": {
+    "v": "yes",
+    "note": "|",
+    "source": "https://raw.githubusercontent.com/node-red/node-red/HEAD/README.md",
+    "quote": "1. `sudo npm install -g --unsafe-perm node-red` 2. `node-red` 3. Open <http://localhost:1880>"
+   },
+   "managed-cloud": {
+    "v": "partly",
+    "note": "Hosting options listed, e.g. FlowFuse",
+    "source": "https://nodered.org/",
+    "quote": "In the cloud FlowFuse Amazon Web Services Microsoft Azure"
+   }
+  },
+  "deepfence-threatmapper": {
+   "no-paid-edition": {
+    "v": "partly",
+    "note": "A paid enterprise edition adds features",
+    "source": "https://raw.githubusercontent.com/deepfence/ThreatMapper/HEAD/README.md",
+    "quote": "ThreatStryker is the enterprise version of ThreatMapper, with additional features for enterprise security teams"
+   }
+  },
+  "activepieces": {
+   "no-paid-edition": {
+    "v": "partly",
+    "note": "Enterprise features sit under a commercial license",
+    "source": "https://raw.githubusercontent.com/activepieces/activepieces/HEAD/README.md",
+    "quote": "enterprise features are released under [Commercial License]"
+   }
+  },
+  "qdrant": {
+   "no-paid-edition": {
+    "v": "yes",
+    "note": "Paid plans are for managed hosting",
+    "source": "https://raw.githubusercontent.com/qdrant/qdrant/HEAD/README.md",
+    "quote": "Looking for a managed cloud? Check [pricing](https://qdrant.tech/pricing/)."
+   }
+  },
+  "zulip": {
+   "cross-org": {
+    "v": "partly",
+    "note": "Guest accounts only",
+    "source": "https://zulip.com/help/guest-users",
+    "quote": "You can add users who should have restricted access to your organization as guests"
+   },
+   "e2e-encrypted": {
+    "v": "partly",
+    "note": "Only push notifications are end-to-end encrypted",
+    "source": "https://zulip.com/security/",
+    "quote": "End-to-end encryption (E2EE) for push notification"
+   }
+  },
+  "mattermost": {
+   "e2e-encrypted": {
+    "v": "no",
+    "note": "Encrypted in transit and at rest; server can read messages",
+    "source": "https://docs.mattermost.com/deployment-guide/encryption-options.html",
+    "quote": "Mattermost provides encryption-in-transit and encryption-at-rest capabilities"
+   },
+   "cross-org": {
+    "v": "yes",
+    "note": "Connected workspaces; not on every plan",
+    "source": "https://docs.mattermost.com/administration-guide/onboard/connected-workspaces.html",
+    "quote": "Communicate across organizations, as well as external partners and vendors using Mattermost by synchronizing messages"
+   }
+  },
+  "mumble": {
+   "phone-app": {
+    "v": "partly",
+    "note": "Android app is third-party (Mumla); iPhone app unmaintained since 2017",
+    "source": "https://www.mumble.info/downloads/",
+    "quote": "Note: The iOS app is unmaintained ; last update in 2017."
+   }
+  },
+  "collabora-online": {
+   "works-offline": {
+    "v": "no",
+    "note": "|Web editor that runs from a server",
+    "source": "site data",
+    "quote": null
+   }
+  },
+  "inkscape": {
+   "works-in-browser": {
+    "v": "no",
+    "note": "|Desktop app only",
+    "source": "site data",
+    "quote": null
+   }
+  },
+  "slidev": {
+   "pptx-files": {
+    "v": "partly",
+    "note": "Exports slides to PowerPoint as images; does not open PowerPoint files",
+    "source": "https://sli.dev/guide/exporting",
+    "quote": "capture the slides as images and download them as a PPTX or zip file"
+   },
+   "slide-templates": {
+    "v": "partly",
+    "note": "Community themes to download; few built in",
+    "source": "https://sli.dev/resources/theme-gallery",
+    "quote": "Browse awesome themes available for Slidev here"
+   }
+  },
+  "languagetool": {
+   "style-tips": {
+    "v": "yes",
+    "note": "|",
+    "source": "https://languagetool.org/",
+    "quote": "LanguageTool helps your writing be as stylish as you are by detecting overused phrases, foreign terms, redundant words, and improper word choice"
+   },
+   "browser-extension": {
+    "v": "yes",
+    "note": "|",
+    "source": "https://languagetool.org/",
+    "quote": "Chrome Firefox Edge Safari Our Browser Add-On Works Anywhere on the Web"
+   },
+   "ai-rewrite": {
+    "v": "yes",
+    "note": "|",
+    "source": "https://languagetool.org/",
+    "quote": "LanguageTool's paraphraser makes them easier to find by using artificial intelligence to rephrase your sentences to be more formal, fluent, simple or concise"
+   }
+  },
+  "comaps": {
+   "public-transit": {
+    "v": "partly",
+    "note": "Transit layer for subway and light rail in some cities",
+    "source": "https://www.comaps.app/",
+    "quote": "Use the public transport layer to plan your subway and light rail journeys in a growing list of cities"
+   }
+  },
+  "koreader": {
+   "send-to-ereader": {
+    "v": "partly",
+    "note": "Receives books wirelessly from calibre; needs setup",
+    "source": "https://raw.githubusercontent.com/koreader/koreader/master/README.md",
+    "quote": "integrated** with *calibre* (search metadata, receive ebooks wirelessly, browse library via OPDS)"
+   }
+  },
+  "navidrome": {
+   "music-discovery": {
+    "v": "partly",
+    "note": "Smart playlists and radio from your own library",
+    "source": "https://www.navidrome.org/docs/overview/",
+    "quote": "Smart /dynamic playlists (similar to iTunes)"
+   }
+  },
+  "grapheneos": {
+   "security-updates": {
+    "v": "yes",
+    "note": "|Ships each month's Android security patches",
+    "source": "https://grapheneos.org/releases",
+    "quote": "All of the Android 17 security patches from the current November 2026, December 2026, January 2027"
+   },
+   "preinstalled": {
+    "v": "partly",
+    "note": "Sold preinstalled by small companies",
+    "source": "https://grapheneos.org/faq",
+    "quote": "There are various companies selling devices with GrapheneOS"
+   }
+  },
+  "lineageos": {
+   "many-phones": {
+    "v": "yes",
+    "note": "Several hundred devices on its supported list",
+    "source": "https://wiki.lineageos.org/devices/",
+    "quote": "Devices not listed are not supported"
+   },
+   "google-apps-optional": {
+    "v": "yes",
+    "note": "|Google apps are an optional add-on package",
+    "source": "https://wiki.lineageos.org/faq/",
+    "quote": "sideload the recommended Google Apps package"
+   }
+  },
+  "e-os": {
+   "many-phones": {
+    "v": "yes",
+    "note": "|",
+    "source": "https://doc.e.foundation/devices",
+    "quote": "Number of devices officially supported by /e/OS : 287"
+   },
+   "easy-installer": {
+    "v": "yes",
+    "note": "|",
+    "source": "https://e.foundation/e-os/",
+    "quote": "The /e/OS Installer is a web application which helps users install /e/OS on supported devices in just a few clicks"
+   },
+   "google-apps-optional": {
+    "v": "partly",
+    "note": "Uses microG as a stand-in for Google services",
+    "source": "https://e.foundation/e-os/",
+    "quote": "Google Services have been replaced by microG"
+   }
+  },
+  "f-droid": {
+   "app-review": {
+    "v": "yes",
+    "note": "Apps are reviewed and checked against the source before inclusion",
+    "source": "https://f-droid.org/en/docs/Inclusion_Policy/",
+    "quote": "All applications in the repository must be Free, Libre and Open Source Software (FLOSS)"
+   },
+   "tracker-warnings": {
+    "v": "yes",
+    "note": "Apps carry Anti-Feature labels such as tracking and ads",
+    "source": "https://f-droid.org/docs/Anti-Features/",
+    "quote": "When reviewing apps to accept, F-Droid takes the user’s point of view, first and foremost"
+   },
+   "play-apps": {
+    "v": "no",
+    "note": "Only free and open source apps",
+    "source": "https://f-droid.org/en/docs/Inclusion_Policy/",
+    "quote": "All applications in the repository must be Free, Libre and Open Source Software (FLOSS)"
+   }
+  },
+  "clamav": {
+   "realtime-protection": {
+    "v": "partly",
+    "note": "Only on Linux",
+    "source": "https://docs.clamav.net/manual/OnAccess.html",
+    "quote": "On-Access is only available on Linux systems"
+   }
+  }
+ },
+ "tagIssues": []
+}
