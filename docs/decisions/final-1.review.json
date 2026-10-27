@@ -1,0 +1,709 @@
+{
+ "title": "Everything built: the full redesign plus checklists, guides and AI labels",
+ "key": "ose-final-1",
+ "out": "final-1.review.html",
+ "images": "images/final-1.review",
+ "runs": {
+  "after": "runs-final/after"
+ },
+ "labels": {
+  "after": "Now"
+ },
+ "themes": [
+  "light"
+ ],
+ "theme": "fixed",
+ "crops": {
+  "home-desktop": [
+   "ose",
+   "home-desktop",
+   "1440x900+0+0"
+  ],
+  "home-phone": [
+   "ose",
+   "home-phone",
+   "390x844+0+0"
+  ],
+  "group-desktop": [
+   "ose",
+   "group-desktop",
+   "1440x900+0+0"
+  ],
+  "group-musthave-desktop": [
+   "ose",
+   "group-musthave-desktop",
+   "1440x900+0+0"
+  ],
+  "group-compare-desktop": [
+   "ose",
+   "group-compare-desktop",
+   "1440x900+0+0"
+  ],
+  "group-compare-phone": [
+   "ose",
+   "group-compare-phone",
+   "390x844+0+0"
+  ],
+  "card-features-desktop": [
+   "ose",
+   "card-features-desktop",
+   "1440x900+0+0"
+  ],
+  "group-phone": [
+   "ose",
+   "group-phone",
+   "390x844+0+0"
+  ],
+  "project-desktop": [
+   "ose",
+   "project-desktop",
+   "1440x900+0+0"
+  ],
+  "project-phone": [
+   "ose",
+   "project-phone",
+   "390x844+0+0"
+  ],
+  "project-features-desktop": [
+   "ose",
+   "project-features-desktop",
+   "1440x900+0+0"
+  ],
+  "project-ai-desktop": [
+   "ose",
+   "project-ai-desktop",
+   "1440x900+0+0"
+  ],
+  "project-not-accepting-desktop": [
+   "ose",
+   "project-not-accepting-desktop",
+   "1440x900+0+0"
+  ],
+  "project-ai-empty-desktop": [
+   "ose",
+   "project-ai-empty-desktop",
+   "1440x900+0+0"
+  ],
+  "app-guide-desktop": [
+   "ose",
+   "app-guide-desktop",
+   "1440x900+0+0"
+  ],
+  "app-guide-phone": [
+   "ose",
+   "app-guide-phone",
+   "390x844+0+0"
+  ],
+  "search-desktop": [
+   "ose",
+   "search-desktop",
+   "1440x900+0+0"
+  ],
+  "search-phone": [
+   "ose",
+   "search-phone",
+   "390x844+0+0"
+  ],
+  "search-filters-phone": [
+   "ose",
+   "search-filters-phone",
+   "390x844+0+0"
+  ],
+  "gaps-desktop": [
+   "ose",
+   "gaps-desktop",
+   "1440x900+0+0"
+  ],
+  "gaps-phone": [
+   "ose",
+   "gaps-phone",
+   "390x844+0+0"
+  ],
+  "gaps-missing-desktop": [
+   "ose",
+   "gaps-missing-desktop",
+   "1440x900+0+0"
+  ],
+  "claim-start-desktop": [
+   "ose",
+   "claim-start-desktop",
+   "1440x900+0+0"
+  ]
+ },
+ "steps": [
+  {
+   "id": "N-home",
+   "surface": "Home page",
+   "path": "Home, computer",
+   "crop": "home-desktop",
+   "runs": [
+    "after"
+   ],
+   "new": true,
+   "headline": "Home: search button top right, \"Popular alternatives\", trimmed text.",
+   "changed": "The search box in the top bar is now just a magnifier button on every non-search page.",
+   "notice": "Less clutter at the top of every page.",
+   "risk": "None worth noting.",
+   "highlight": {
+    "box": [
+     1,
+     1,
+     98,
+     98
+    ]
+   }
+  },
+  {
+   "id": "N-home-phone",
+   "surface": "Home page",
+   "path": "Home, phone",
+   "crop": "home-phone",
+   "runs": [
+    "after"
+   ],
+   "new": true,
+   "headline": "Phones get a liquid-glass tab bar: Home · Browse · Search · Gaps.",
+   "changed": "Boards is gone from the tabs; Browse jumps to the categories.",
+   "notice": "Tabs and Sign in are translucent.",
+   "risk": "None worth noting.",
+   "highlight": {
+    "box": [
+     1,
+     1,
+     98,
+     98
+    ]
+   }
+  },
+  {
+   "id": "N-group",
+   "surface": "Group pages",
+   "path": "Documents, computer",
+   "crop": "group-desktop",
+   "runs": [
+    "after"
+   ],
+   "new": true,
+   "headline": "Group page: breadcrumb, \"Talk about this on r/TrueOpenSource\", and new Must have and Cards/Compare controls.",
+   "changed": "The boards section is gone; \"Most voted\" is now a sort option.",
+   "notice": "Each card has a Features fold.",
+   "risk": "None worth noting.",
+   "highlight": {
+    "box": [
+     1,
+     1,
+     98,
+     98
+    ]
+   }
+  },
+  {
+   "id": "N-musthave",
+   "surface": "Group pages",
+   "path": "The Must have menu",
+   "crop": "group-musthave-desktop",
+   "runs": [
+    "after"
+   ],
+   "new": true,
+   "headline": "\"Must have\" lets you tick several features; only projects that do all of them stay.",
+   "changed": "Each item shows how many projects say yes.",
+   "notice": "Unknown answers don't count as a match.",
+   "risk": "Some big projects still have unknown answers, so they drop out when filtered.",
+   "highlight": {
+    "box": [
+     1,
+     1,
+     98,
+     98
+    ]
+   }
+  },
+  {
+   "id": "N-compare",
+   "surface": "Group pages",
+   "path": "Compare view",
+   "crop": "group-compare-desktop",
+   "runs": [
+    "after"
+   ],
+   "new": true,
+   "headline": "Compare shows every project against the group's checklist side by side.",
+   "changed": "Tap a cell for its note and source.",
+   "notice": "Blank = not checked yet.",
+   "risk": "LibreOffice still has blanks (see the question at the end).",
+   "highlight": {
+    "box": [
+     1,
+     1,
+     98,
+     98
+    ]
+   }
+  },
+  {
+   "id": "N-compare-phone",
+   "surface": "Group pages",
+   "path": "Compare on a phone",
+   "crop": "group-compare-phone",
+   "runs": [
+    "after"
+   ],
+   "new": true,
+   "headline": "On phones the compare table scrolls sideways with the names fixed.",
+   "changed": "Same data.",
+   "notice": "Works one-handed.",
+   "risk": "None worth noting.",
+   "highlight": {
+    "box": [
+     1,
+     1,
+     98,
+     98
+    ]
+   }
+  },
+  {
+   "id": "N-cardfold",
+   "surface": "Group pages",
+   "path": "A card's Features fold",
+   "crop": "card-features-desktop",
+   "runs": [
+    "after"
+   ],
+   "new": true,
+   "headline": "Each card has a closed \"Features\" fold listing its checklist answers.",
+   "changed": "Out of the card's main area, as you asked.",
+   "notice": "Opens in place.",
+   "risk": "None worth noting.",
+   "highlight": {
+    "box": [
+     1,
+     1,
+     98,
+     98
+    ]
+   }
+  },
+  {
+   "id": "N-group-phone",
+   "surface": "Group pages",
+   "path": "Documents, phone",
+   "crop": "group-phone",
+   "runs": [
+    "after"
+   ],
+   "new": true,
+   "headline": "On phones the same controls sit in one row.",
+   "changed": "Cards stay compact.",
+   "notice": "Features fold under each card.",
+   "risk": "None worth noting.",
+   "highlight": {
+    "box": [
+     1,
+     1,
+     98,
+     98
+    ]
+   }
+  },
+  {
+   "id": "N-project",
+   "surface": "Project pages",
+   "path": "Firefox, computer",
+   "crop": "project-desktop",
+   "runs": [
+    "after"
+   ],
+   "new": true,
+   "headline": "Project page with breadcrumb, back button and the AI-contribution line in How to help.",
+   "changed": "Features card per group.",
+   "notice": "Claim line beside the buttons.",
+   "risk": "None worth noting.",
+   "highlight": {
+    "box": [
+     1,
+     1,
+     98,
+     98
+    ]
+   }
+  },
+  {
+   "id": "N-project-phone",
+   "surface": "Project pages",
+   "path": "Firefox, phone",
+   "crop": "project-phone",
+   "runs": [
+    "after"
+   ],
+   "new": true,
+   "headline": "On phones every section folds closed except the header.",
+   "changed": "Family, Screenshots, Listed in, Features, How to help.",
+   "notice": "A short page you open.",
+   "risk": "None worth noting.",
+   "highlight": {
+    "box": [
+     1,
+     1,
+     98,
+     98
+    ]
+   }
+  },
+  {
+   "id": "N-features",
+   "surface": "Project pages",
+   "path": "LibreOffice Writer → Features",
+   "crop": "project-features-desktop",
+   "runs": [
+    "after"
+   ],
+   "new": true,
+   "headline": "A project's Features card shows each checklist answer with its note and source.",
+   "changed": "Yes / partly / no.",
+   "notice": "Sources link to the project's own pages.",
+   "risk": "None worth noting.",
+   "highlight": {
+    "box": [
+     1,
+     1,
+     98,
+     98
+    ]
+   }
+  },
+  {
+   "id": "N-ai",
+   "surface": "Project pages",
+   "path": "Actual Budget → AI contributions",
+   "crop": "project-ai-desktop",
+   "runs": [
+    "after"
+   ],
+   "new": true,
+   "headline": "\"AI Contributions: Non-developers welcome\" opens the project's own rule, outside help and where to start.",
+   "changed": "Your exact label wording.",
+   "notice": "102 confident labels; uncertain ones dropped.",
+   "risk": "None worth noting.",
+   "highlight": {
+    "box": [
+     1,
+     1,
+     98,
+     98
+    ]
+   }
+  },
+  {
+   "id": "N-ai-closed",
+   "surface": "Project pages",
+   "path": "PocketBase → AI contributions",
+   "crop": "project-not-accepting-desktop",
+   "runs": [
+    "after"
+   ],
+   "new": true,
+   "headline": "Projects that stopped taking outside code say so plainly.",
+   "changed": "\"Not accepting outside code\" with their own words.",
+   "notice": "Saves builders a wasted trip.",
+   "risk": "None worth noting.",
+   "highlight": {
+    "box": [
+     1,
+     1,
+     98,
+     98
+    ]
+   }
+  },
+  {
+   "id": "N-ai-empty",
+   "surface": "Project pages",
+   "path": "A project with no written rule",
+   "crop": "project-ai-empty-desktop",
+   "runs": [
+    "after"
+   ],
+   "new": true,
+   "headline": "Projects with no rule say \"Not stated yet. Maintainers can set this by claiming the listing.\"",
+   "changed": "Links to Claim your project.",
+   "notice": "About 2 in 3 projects show this for now.",
+   "risk": "None worth noting.",
+   "highlight": {
+    "box": [
+     1,
+     1,
+     98,
+     98
+    ]
+   }
+  },
+  {
+   "id": "N-guide",
+   "surface": "Closed-app pages",
+   "path": "Alternatives to Google Docs",
+   "crop": "app-guide-desktop",
+   "runs": [
+    "after"
+   ],
+   "new": true,
+   "headline": "\"Switching from Google Docs\": how to get your data out, what you get, what won't come over, and what opens it.",
+   "changed": "110 apps have a guide so far.",
+   "notice": "Steps link to the vendor's own help page.",
+   "risk": "None worth noting.",
+   "highlight": {
+    "box": [
+     1,
+     1,
+     98,
+     98
+    ]
+   }
+  },
+  {
+   "id": "N-guide-phone",
+   "surface": "Closed-app pages",
+   "path": "Alternatives to Notion, phone",
+   "crop": "app-guide-phone",
+   "runs": [
+    "after"
+   ],
+   "new": true,
+   "headline": "On phones the switch guide is a fold at the top.",
+   "changed": "Tap to open.",
+   "notice": "Doesn't push the list down.",
+   "risk": "None worth noting.",
+   "highlight": {
+    "box": [
+     1,
+     1,
+     98,
+     98
+    ]
+   }
+  },
+  {
+   "id": "N-search",
+   "surface": "Search",
+   "path": "Search, computer",
+   "crop": "search-desktop",
+   "runs": [
+    "after"
+   ],
+   "new": true,
+   "headline": "Search page: one full-width bar with a Filter button inside it.",
+   "changed": "Type, Works on (several) and Setup in one menu.",
+   "notice": "Results below.",
+   "risk": "None worth noting.",
+   "highlight": {
+    "box": [
+     1,
+     1,
+     98,
+     98
+    ]
+   }
+  },
+  {
+   "id": "N-search-phone",
+   "surface": "Search",
+   "path": "Search, phone",
+   "crop": "search-phone",
+   "runs": [
+    "after"
+   ],
+   "new": true,
+   "headline": "On phones the match label sits top right and titles cut off with \"…\".",
+   "changed": "Shorter rows.",
+   "notice": "More results per screen.",
+   "risk": "None worth noting.",
+   "highlight": {
+    "box": [
+     1,
+     1,
+     98,
+     98
+    ]
+   }
+  },
+  {
+   "id": "N-filters-phone",
+   "surface": "Search",
+   "path": "Filter sheet, phone",
+   "crop": "search-filters-phone",
+   "runs": [
+    "after"
+   ],
+   "new": true,
+   "headline": "The phone filter is a full-width sheet with a handle, anchored to the edges.",
+   "changed": "Drag down to close.",
+   "notice": "Not floating.",
+   "risk": "None worth noting.",
+   "highlight": {
+    "box": [
+     1,
+     1,
+     98,
+     98
+    ]
+   }
+  },
+  {
+   "id": "N-gaps",
+   "surface": "Gaps page",
+   "path": "Gaps, computer",
+   "crop": "gaps-desktop",
+   "runs": [
+    "after"
+   ],
+   "new": true,
+   "headline": "Most requested: top three large, the rest in two columns numbered down.",
+   "changed": "Pretend preview data.",
+   "notice": "\"88 want this\" labels.",
+   "risk": "None worth noting.",
+   "highlight": {
+    "box": [
+     1,
+     1,
+     98,
+     98
+    ]
+   }
+  },
+  {
+   "id": "N-gaps-phone",
+   "surface": "Gaps page",
+   "path": "Gaps, phone",
+   "crop": "gaps-phone",
+   "runs": [
+    "after"
+   ],
+   "new": true,
+   "headline": "On phones all requests stack; the number sits beside the name.",
+   "changed": "Top three bigger.",
+   "notice": "Pretend data.",
+   "risk": "None worth noting.",
+   "highlight": {
+    "box": [
+     1,
+     1,
+     98,
+     98
+    ]
+   }
+  },
+  {
+   "id": "N-missing",
+   "surface": "Gaps page",
+   "path": "Missing everywhere",
+   "crop": "gaps-missing-desktop",
+   "runs": [
+    "after"
+   ],
+   "new": true,
+   "headline": "New: \"Missing everywhere\" and \"Only partly anywhere\", built from the checklists.",
+   "changed": "e.g. Video editing: no phone app anywhere.",
+   "notice": "Only counts checked answers.",
+   "risk": "None worth noting.",
+   "highlight": {
+    "box": [
+     1,
+     1,
+     98,
+     98
+    ]
+   }
+  },
+  {
+   "id": "N-claim",
+   "surface": "Claim your project",
+   "path": "Claim page",
+   "crop": "claim-start-desktop",
+   "runs": [
+    "after"
+   ],
+   "new": true,
+   "headline": "Claim your project: one short line and one Sign in button.",
+   "changed": "Footer stays at the bottom.",
+   "notice": "Big projects need a mod's confirmation.",
+   "risk": "None worth noting.",
+   "highlight": {
+    "box": [
+     1,
+     1,
+     98,
+     98
+    ]
+   }
+  },
+  {
+   "id": "Q-blanks",
+   "words": true,
+   "surface": "Feature checklists",
+   "path": "Compare tables and Features cards",
+   "headline": "How should the remaining blank checklist answers be filled?",
+   "today": "About 2,100 answers are filled, each backed by a quote from the project's own pages. Many big projects still have blanks (LibreOffice Writer: live co-editing and Word files) because their help sites block automated reading.",
+   "problem": "Blank cells on the best-known projects make the compare table look broken, and those projects drop out of \"Must have\" filters.",
+   "proposal": "Two ways forward.",
+   "options": [
+    {
+     "id": "knowledge",
+     "label": "Fill well-known facts",
+     "pros": [
+      "Fills the obvious ones now (LibreOffice works offline; no live co-editing on the desktop app).",
+      "Each answer still links to the project's site."
+     ],
+     "cons": [
+      "No exact quote behind those answers; a few may be wrong until corrected."
+     ],
+     "recommended": true
+    },
+    {
+     "id": "browser",
+     "label": "Read sites in a real browser",
+     "pros": [
+      "Every answer keeps a quote."
+     ],
+     "cons": [
+      "Slower; some sites (Mozilla, Fedora) still block it."
+     ]
+    },
+    {
+     "id": "leave",
+     "label": "Leave blanks",
+     "pros": [
+      "Only quoted answers."
+     ],
+     "cons": [
+      "Thin tables on the biggest projects."
+     ]
+    }
+   ]
+  },
+  {
+   "id": "Q-org",
+   "words": true,
+   "surface": "Claim your project",
+   "path": "Projects owned by a GitHub organisation",
+   "headline": "For organisation projects, is a mod checking by eye enough for now?",
+   "today": "Personal projects are proven automatically. For organisation projects the claimant must make their membership public, add a small file, and a mod confirms.",
+   "problem": "GitHub doesn't publicly say who owns an organisation, so the site can't check it alone.",
+   "proposal": "Keep the mod check for now. A fully automatic check needs a GitHub App installed on each organisation, or an extra GitHub permission from the claimant.",
+   "yes": "Mod check is fine",
+   "no": "Build the stronger check"
+  },
+  {
+   "id": "Q-prefs",
+   "words": true,
+   "surface": "Claim your project",
+   "path": "A new last step: \"How you'd like help\"",
+   "headline": "Add the contributor-preferences step to claiming?",
+   "today": "Developers can write a pitch, nothing more.",
+   "problem": "Newcomers (especially with AI tools) can't tell how a project wants help.",
+   "proposal": "Seven quick questions, about two minutes, pre-filled from their own files: AI contributions (your four labels), how to start, help wanted most (incl. co-maintainers), newcomers welcome?, how to say AI helped, anything to sign, how fast they review. Shown as one line in the card fold, rows under How to help, and a \"Contributing\" filter. Answers go live right away; only new links wait for a mod.",
+   "yes": "Build it",
+   "no": "Not now"
+  }
+ ]
+}
