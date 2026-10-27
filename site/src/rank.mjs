@@ -9,13 +9,18 @@
 //   fit        40 / 14   The question the visitor asked is "can this replace it?". Nothing else outweighs a partial fit.
 //   community  ±30       People's thumbs are the main signal once there are enough of them (v1-plan). Capped, so a
 //                        crowd can reorder neighbours but never lift a partial replacement over a full one on its own.
-//   editors    0..14     The data file lists each group best-first. It is our only judgement for a group with no
-//                        votes, so it counts most when votes are empty and fades as real votes arrive.
-//   verified   +10       Mods vouch for it (license, maintained, does the job). A mark, not a pin: smaller than fit.
-//   stars      0..6      Popularity is a weak hint, log-scaled (1,000 vs 10,000 matters; 90,000 vs 100,000 doesn't).
+//   editors    0..6      The data file lists each group best-first, BUT Destin confirmed (Oct 26) that order was written
+//                        by the AI pre-fill, not by people. So it is only a mild tie-breaker (was 0..14) and fades twice
+//                        as fast as real votes arrive (half strength at 5 votes, was 10).
+//   verified   +14       Mods vouch for it (license, maintained, does the job): a real human judgement, so it counts more
+//                        than the AI order (was +10). Still a mark, not a pin: smaller than fit.
+//   stars      0..9      Popularity is a weak hint, log-scaled (1,000 vs 10,000 matters; 90,000 vs 100,000 doesn't).
+//                        Raised from 6 now that the AI order counts for less.
+//   setup      +5 / -2   Easy setup first (Destin, Oct 26): a modest lift for "install it / use it in a browser / official
+//                        free hosted version", a tiny dip for Advanced. Never enough to beat a full-vs-partial fit gap (26).
 //   health     -24       Archived or no activity for a year: still listed, but never first when something alive fits.
 //   license    -5        Open-core: part of it is paid or under another license.
-export const WEIGHTS = { full: 40, partial: 14, verified: 10, openCore: -5, dead: -24, starsMax: 6, communityMax: 30, editorMax: 14 };
+export const WEIGHTS = { full: 40, partial: 14, verified: 14, openCore: -5, dead: -24, starsMax: 9, communityMax: 30, editorMax: 6, easy: 5, advanced: -2 };
 
 // Lower end of the 80% plausible range for "what share of people would say yes" (Wilson score, z = 1.28).
 // WHY the lower end: 2 of 2 is "probably between 34% and 100%", 90 of 100 is "between 85% and 94%"; ranking by the
@@ -49,9 +54,13 @@ export function rankAlts(entries, opts = {}) {
     let s = 0;
     s += add(a.fit === 'full' ? 'Does the whole job' : 'Does part of the job', a.fit === 'full' ? W.full : W.partial);
     s += add(votes ? `${Math.round((100 * r.up) / votes)}% of ${votes} say it works` : '', communityPoints(r.up, r.down));
-    // Editors' order fades with votes: full strength at 0 votes, half at 10, a quarter at 30.
-    s += add(e.idx != null && n > 1 ? 'Listed near the top by editors' : '', W.editorMax * (1 - e.idx / Math.max(1, n - 1)) * (10 / (10 + votes)));
-    s += add(p.verified ? 'Verified by mods' : '', W.verified);
+    // AI-written order fades with votes: full strength at 0 votes, half at 5, a quarter at 15 (it was 10 / 30 before we learned
+    // people never wrote it).
+    s += add(e.idx != null && n > 1 ? 'Listed near the top' : '', W.editorMax * (1 - e.idx / Math.max(1, n - 1)) * (5 / (5 + votes)));
+    // Setup rating (prefill/setup-ratings.json): shown first, never hidden. A bonus, not a partition, so a far better fit or
+    // a Verified mark can still beat an easier-but-weaker option, and the order stays one explainable list of points.
+    s += add(p.setup === 'easy' ? 'Easy setup' : p.setup === 'advanced' ? 'Advanced setup' : '', p.setup === 'easy' ? W.easy : p.setup === 'advanced' ? W.advanced : 0);
+    s += add(p.verified ? 'Verified' : '', W.verified);
     // Unknown stars (off GitHub: GIMP, Krita…) get a middling guess, as in search-core.js, not zero.
     s += add('', W.starsMax * Math.max(0, Math.min(1, (Math.log10((p.stars ?? 3000) + 1) - 2) / 3)));
     s += add(p.archived ? 'Archived' : p.inactive ? 'No recent activity' : '', p.archived || p.inactive ? W.dead : 0);

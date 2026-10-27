@@ -25,7 +25,8 @@ const rows = [];
 for (const g of d.groups) {
   const es = g.alternatives.map((a, idx) => ({ a, p: d.projById.get(a.project), idx })).filter((e) => e.p);
   if (es.length < 3) continue;
-  const old = sortAlts(es.map((e) => ({ ...e }))), now = rankAlts(es);
+  // WHY the old rule written out: sortAlts IS the new ranking now, so "old" is the pre-score site rule (fit, then stars).
+  const old = es.map((e) => ({ ...e })).sort((x, y) => (y.a.fit === 'full') - (x.a.fit === 'full') || (y.p.stars ?? 0) - (x.p.stars ?? 0) || x.idx - y.idx), now = rankAlts(es);
   rows.push({ g: g.id, o1: old[0].idx === 0, n1: now[0].idx === 0, o3: old.slice(0, 3).some((e) => e.idx === 0), n3: now.slice(0, 3).some((e) => e.idx === 0),
     // the editors' top 3 as a set vs ours
     ov: old.slice(0, 3).filter((e) => e.idx < 3).length, nv: now.slice(0, 3).filter((e) => e.idx < 3).length });
