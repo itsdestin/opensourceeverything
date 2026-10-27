@@ -5678,7 +5678,18 @@
    ],
    "forks": 8301,
    "thumbs": [],
-   "setup": "advanced"
+   "setup": "advanced",
+   "lineage": {
+    "ofName": "GitLab",
+    "ofUrl": "https://about.gitlab.com/",
+    "relation": "free-edition",
+    "why": "GitLab's free, open-source edition; GitLab also sells a paid Enterprise Edition.",
+    "source": "https://about.gitlab.com/install/ce-or-ee/",
+    "confirmed": "mod",
+    "redirectFrom": [
+     "gitlab"
+    ]
+   }
   },
   {
    "id": "gnumeric",

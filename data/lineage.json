@@ -382,6 +382,17 @@
    "source": "https://github.com/TriliumNext/Trilium",
    "ofUrl": "https://github.com/zadam/trilium",
    "confirmed": "mod"
+  },
+  "gitlab-community-edition": {
+   "relation": "free-edition",
+   "ofName": "GitLab",
+   "ofUrl": "https://about.gitlab.com/",
+   "why": "GitLab's free, open-source edition; GitLab also sells a paid Enterprise Edition.",
+   "source": "https://about.gitlab.com/install/ce-or-ee/",
+   "redirectFrom": [
+    "gitlab"
+   ],
+   "confirmed": "mod"
   }
  }
 }
