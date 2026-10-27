@@ -25,7 +25,6 @@ export default function gaps(d) {
     const only = t.id === 'one' ? d.projById.get(fulls(g)[0].project) : null;
     return `<div class="card gcard">
       <div class="head"><h3><a class="crumb-strong" href="${url(`g/${g.id}/`)}">${esc(g.name)}</a></h3><div class="corner" style="margin-right:0"><span class="pill warn"><i></i>${esc(t.pill)}</span></div></div>
-      <p class="job">${esc(g.job)}.</p>
       <div class="chiprow">${g.closed.map((c) => `<a class="chip" href="${appUrl(c)}">${esc(c)}</a>`).join('')}</div>
       ${only ? `<p class="small2">Only <a href="${url(`p/${only.id}/`)}">${esc(only.name)}</a> does the whole job.</p>` : ''}
       ${t.id === 'partial' && parts.length ? `<ul class="partlist">${parts.map(({ a, p }) => `<li><a href="${url(`p/${p.id}/`)}">${esc(p.name)}</a>${a.note ? `<span>${esc(a.note)}</span>` : ''}</li>`).join('')}</ul>` : ''}

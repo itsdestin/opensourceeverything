@@ -24,7 +24,7 @@ export default function appPages(d) {
     const section = ({ g, alts }) => `
   <section class="surface sec">
     <div class="sec-head"><div><h2 class="h-large">${groups.length > 1 ? esc(g.name) : 'Open alternatives'}<span class="count">${alts.length}</span></h2>
-      <p class="desc12">${esc(g.job)}. <a class="crumb" href="${url(`g/${g.id}/`)}">See the whole group</a></p></div></div>
+      <p class="desc12"><a class="crumb" href="${url(`g/${g.id}/`)}">See the whole group</a></p></div></div>
     ${likedBox(g, alts)}
     ${alts.length
       ? `<div class="grid" data-alts>${alts.map((x) => altCard(x.p, x.a, i++, g, x.why)).join('')}</div><div class="callout info" data-nomatch hidden>None of these match. Try another device.</div>`

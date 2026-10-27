@@ -38,7 +38,8 @@
     } else if (r.kind === 'group') {
       const g = details.groups.get(id);
       thumb = `<span class="icon">${GRID}</span>`;
-      summary = g ? `${g.job}. Replaces ${g.closed.slice(0, 4).join(', ')}${g.closed.length > 4 ? '…' : ''}.` : '';
+      // WHY no job sentence (Destin, Oct 27): the group's name already says it; what it replaces is the new information.
+      summary = g ? `Replaces ${g.closed.slice(0, 4).join(', ')}${g.closed.length > 4 ? '…' : ''}.` : '';
       if (g) chips.push(`<span class="chip">${g.alternatives.length} open ${g.alternatives.length === 1 ? 'option' : 'options'}</span>`);
     } else {
       thumb = `<span class="letter closed">${esc(r.n[0])}</span>`;

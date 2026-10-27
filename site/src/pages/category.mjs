@@ -13,7 +13,6 @@ export default function categories(d) {
       return `<a class="card gcard" href="${url(`g/${g.id}/`)}">
         <div class="head"><h3>${esc(g.name)}</h3>${pill ? `<div class="corner" style="margin-right:0">${pill}</div>` : ''}</div>
         <div class="chiprow"><span class="chip"><b>${g.alternatives.length}</b>open ${g.alternatives.length === 1 ? 'alternative' : 'alternatives'}</span>${full ? `<span class="chip"><b>${full}</b>${full === 1 ? 'does' : 'do'} the whole job</span>` : ''}</div>
-        <p class="job">${esc(g.job)}.</p>
         <div class="foot">Replaces ${esc(g.closed.join(', '))}</div></a>`;
     };
     const others = d.categories.filter((x) => x.id !== c.id).map((x) => `<a class="fchip" href="${url(`c/${x.id}/`)}">${esc(x.name)}</a>`).join('');

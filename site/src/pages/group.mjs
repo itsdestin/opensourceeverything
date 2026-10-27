@@ -31,10 +31,12 @@ export default function groupPages(d) {
     // chips instead; the one a visitor searched for (?compare=) is highlighted by group.js.
     const replacesRow = g.closed.length ? `<div class="replaces-row"><span class="muted11">Replaces</span><div class="chiprow">${g.closed.map((c) => `<a class="chip" data-app="${esc(c)}" href="${appUrl(c)}">${esc(c)}</a>`).join('')}</div></div>` : '';
 
+    // WHY no job line under the group name (Destin, Oct 27: "Web browsers / Browsing the web" says nothing the name and the
+    // Replaces row don't). Same for category cards, closed-app sections and See also. The AI prompts still get the job sentence.
     const body = `
   <div class="surface identity">
     <div class="row">
-      <div><div class="muted11"><a class="crumb" href="${url(`c/${g.category}/`)}">${esc(cat?.name ?? '')}</a></div><h1 class="h-subject">${esc(g.name)}</h1><p class="desc12" style="margin-top:4px">${esc(g.job)}.</p></div>
+      <div><div class="muted11"><a class="crumb" href="${url(`c/${g.category}/`)}">${esc(cat?.name ?? '')}</a></div><h1 class="h-subject">${esc(g.name)}</h1></div>
     </div>
     ${replacesRow}
   </div>
@@ -56,7 +58,7 @@ export default function groupPages(d) {
       </section>
       <section class="surface sec" id="see-also">
         <div class="sec-head"><div><h2 class="h-large">See also</h2><p class="desc12">Other jobs people look into alongside this one.</p></div></div>
-        <div class="grid">${related.get(g.id).map((r) => `<a class="card listing" href="${url(`g/${r.g.id}/`)}"><div class="head"><h3>${esc(r.g.name)}</h3></div><p class="desc12">${esc(r.g.job)}.</p>${r.reason ? `<span class="muted11">${esc(r.reason)}</span>` : ''}</a>`).join('')}</div>
+        <div class="grid">${related.get(g.id).map((r) => `<a class="card listing" href="${url(`g/${r.g.id}/`)}"><div class="head"><h3>${esc(r.g.name)}</h3></div>${r.reason ? `<span class="muted11">${esc(r.reason)}</span>` : ''}</a>`).join('')}</div>
       </section>
       ${SOCIAL ? `<section class="surface sec" id="missing">
         <div class="sec-head"><div><h2 class="h-large">What's missing</h2><p class="desc12">What people still miss here, and wish existed. Upvote what matters to you.</p></div>
