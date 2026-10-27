@@ -1,0 +1,668 @@
+{
+ "title": "Round 5: every note applied, checked against the design guide twice",
+ "key": "ose-final-2",
+ "out": "final-2.review.html",
+ "images": "images/final-2.review",
+ "runs": {
+  "after": "runs-redesign-7/after"
+ },
+ "labels": {
+  "after": "Now"
+ },
+ "themes": [
+  "light"
+ ],
+ "theme": "fixed",
+ "crops": {
+  "home-desktop": [
+   "ose",
+   "home-desktop",
+   "1440x900+0+0"
+  ],
+  "home-phone": [
+   "ose",
+   "home-phone",
+   "390x844+0+0"
+  ],
+  "category-desktop": [
+   "ose",
+   "category-desktop",
+   "1440x900+0+0"
+  ],
+  "group-desktop": [
+   "ose",
+   "group-desktop",
+   "1440x900+0+0"
+  ],
+  "group-phone": [
+   "ose",
+   "group-phone",
+   "390x844+0+0"
+  ],
+  "compare-phone": [
+   "ose",
+   "compare-phone",
+   "390x844+0+0"
+  ],
+  "project-desktop": [
+   "ose",
+   "project-desktop",
+   "1440x1000+0+0"
+  ],
+  "project-firefox-desktop": [
+   "ose",
+   "project-firefox-desktop",
+   "1440x900+0+0"
+  ],
+  "project-howtohelp-open-desktop": [
+   "ose",
+   "project-howtohelp-open-desktop",
+   "1440x900+0+0"
+  ],
+  "project-pocketbase-desktop": [
+   "ose",
+   "project-pocketbase-desktop",
+   "1440x900+0+0"
+  ],
+  "project-phone": [
+   "ose",
+   "project-phone",
+   "390x844+0+0"
+  ],
+  "app-guide-desktop": [
+   "ose",
+   "app-guide-desktop",
+   "1440x900+0+0"
+  ],
+  "app-guide-phone": [
+   "ose",
+   "app-guide-phone",
+   "390x844+0+0"
+  ],
+  "search-desktop": [
+   "ose",
+   "search-desktop",
+   "1440x900+0+0"
+  ],
+  "search-phone": [
+   "ose",
+   "search-phone",
+   "390x844+0+0"
+  ],
+  "filters-phone": [
+   "ose",
+   "filters-phone",
+   "390x844+0+0"
+  ],
+  "gaps-desktop": [
+   "ose",
+   "gaps-desktop",
+   "1440x900+0+0"
+  ],
+  "gaps-phone": [
+   "ose",
+   "gaps-phone",
+   "390x844+0+0"
+  ],
+  "claim-signedout-desktop": [
+   "ose",
+   "claim-signedout-desktop",
+   "1440x900+0+0"
+  ],
+  "claim-signedout-phone": [
+   "ose",
+   "claim-signedout-phone",
+   "390x844+0+0"
+  ],
+  "prefs-owner-row-desktop": [
+   "ose",
+   "prefs-owner-row-desktop",
+   "1440x900+0+0"
+  ],
+  "prefs-desktop": [
+   "ose",
+   "prefs-desktop",
+   "1440x1000+0+0"
+  ],
+  "prefs-phone": [
+   "ose",
+   "prefs-phone",
+   "390x844+0+0"
+  ],
+  "project-prefs-visitor-desktop": [
+   "ose",
+   "project-prefs-visitor-desktop",
+   "1440x900+0+0"
+  ]
+ },
+ "steps": [
+  {
+   "id": "F-home",
+   "surface": "Home page",
+   "path": "Home, computer",
+   "crop": "home-desktop",
+   "runs": [
+    "after"
+   ],
+   "new": true,
+   "headline": "Home: glass top controls with a Home button; category chips scroll instead of wrapping.",
+   "changed": "Top-left is now a clear Home control on every page.",
+   "notice": "Same glass look for Home, Search and Sign in.",
+   "risk": "None worth noting.",
+   "highlight": {
+    "box": [
+     1,
+     1,
+     98,
+     98
+    ]
+   }
+  },
+  {
+   "id": "F-home-phone",
+   "surface": "Home page",
+   "path": "Home, phone",
+   "crop": "home-phone",
+   "runs": [
+    "after"
+   ],
+   "new": true,
+   "headline": "Phone home with the glass tab bar.",
+   "changed": "Popular alternatives scroll sideways.",
+   "notice": "Nothing under 11px anywhere.",
+   "risk": "None worth noting.",
+   "highlight": {
+    "box": [
+     1,
+     1,
+     98,
+     98
+    ]
+   }
+  },
+  {
+   "id": "F-category",
+   "surface": "Category pages",
+   "path": "Office & productivity",
+   "crop": "category-desktop",
+   "runs": [
+    "after"
+   ],
+   "new": true,
+   "headline": "Category page with breadcrumbs; cards keep their natural height.",
+   "changed": "No \"Category\" label above the title.",
+   "notice": "Even grid.",
+   "risk": "None worth noting.",
+   "highlight": {
+    "box": [
+     1,
+     1,
+     98,
+     98
+    ]
+   }
+  },
+  {
+   "id": "F-group",
+   "surface": "Group pages",
+   "path": "Documents, computer",
+   "crop": "group-desktop",
+   "runs": [
+    "after"
+   ],
+   "new": true,
+   "headline": "Group page: filters left, Cards/Compare right; one filled button in the sidebar.",
+   "changed": "\"Help me choose\" filled, \"Before you build\" outlined; no helper lines; the card Features fold is gone.",
+   "notice": "Features live in Compare and on project pages.",
+   "risk": "None worth noting.",
+   "highlight": {
+    "box": [
+     1,
+     1,
+     98,
+     98
+    ]
+   }
+  },
+  {
+   "id": "F-group-phone",
+   "surface": "Group pages",
+   "path": "Documents, phone",
+   "crop": "group-phone",
+   "runs": [
+    "after"
+   ],
+   "new": true,
+   "headline": "On phones Cards/Compare sits on the heading line; the three menus scroll underneath.",
+   "changed": "Nothing runs off the edge.",
+   "notice": "Compact cards.",
+   "risk": "None worth noting.",
+   "highlight": {
+    "box": [
+     1,
+     1,
+     98,
+     98
+    ]
+   }
+  },
+  {
+   "id": "F-compare-phone",
+   "surface": "Group pages",
+   "path": "Compare on a phone",
+   "crop": "compare-phone",
+   "runs": [
+    "after"
+   ],
+   "new": true,
+   "headline": "The phone compare table is much tighter: about 4½ checklist columns visible.",
+   "changed": "Narrow name column; tap a heading for the full question.",
+   "notice": "Far fewer blanks after the well-known-facts pass.",
+   "risk": "None worth noting.",
+   "highlight": {
+    "box": [
+     1,
+     1,
+     98,
+     98
+    ]
+   }
+  },
+  {
+   "id": "F-project",
+   "surface": "Project pages",
+   "path": "LibreOffice Writer",
+   "crop": "project-desktop",
+   "runs": [
+    "after"
+   ],
+   "new": true,
+   "headline": "Project page: back arrow in the breadcrumb, Features as proper rows with Yes/Partly/No tags.",
+   "changed": "\"Source\" sits at the right of each row; one-line rows when there's no note.",
+   "notice": "Family lines are each different.",
+   "risk": "None worth noting.",
+   "highlight": {
+    "box": [
+     1,
+     1,
+     98,
+     98
+    ]
+   }
+  },
+  {
+   "id": "F-firefox",
+   "surface": "Project pages",
+   "path": "Firefox",
+   "crop": "project-firefox-desktop",
+   "runs": [
+    "after"
+   ],
+   "new": true,
+   "headline": "Screenshots fill the card's width in one sideways row.",
+   "changed": "No empty gap beside them.",
+   "notice": "Consistent card widths.",
+   "risk": "None worth noting.",
+   "highlight": {
+    "box": [
+     1,
+     1,
+     98,
+     98
+    ]
+   }
+  },
+  {
+   "id": "F-howtohelp",
+   "surface": "Project pages",
+   "path": "Firefox → How to help, opened",
+   "crop": "project-howtohelp-open-desktop",
+   "runs": [
+    "after"
+   ],
+   "new": true,
+   "headline": "\"AI contributions\" is now an expandable box with its label at the right; everything opens inside it.",
+   "changed": "Same on every project; \"Not stated\" when there is no rule.",
+   "notice": "No pop-up.",
+   "risk": "None worth noting.",
+   "highlight": {
+    "box": [
+     1,
+     1,
+     98,
+     98
+    ]
+   }
+  },
+  {
+   "id": "F-pocketbase",
+   "surface": "Project pages",
+   "path": "PocketBase",
+   "crop": "project-pocketbase-desktop",
+   "runs": [
+    "after"
+   ],
+   "new": true,
+   "headline": "Projects not taking outside code say so inside the same box.",
+   "changed": "Their own words and link.",
+   "notice": "Consistent with other projects.",
+   "risk": "None worth noting.",
+   "highlight": {
+    "box": [
+     1,
+     1,
+     98,
+     98
+    ]
+   }
+  },
+  {
+   "id": "F-project-phone",
+   "surface": "Project pages",
+   "path": "Firefox, phone",
+   "crop": "project-phone",
+   "runs": [
+    "after"
+   ],
+   "new": true,
+   "headline": "On phones every section folds except the header; the back arrow starts the breadcrumb.",
+   "changed": "Glass top controls.",
+   "notice": "A short page you open.",
+   "risk": "None worth noting.",
+   "highlight": {
+    "box": [
+     1,
+     1,
+     98,
+     98
+    ]
+   }
+  },
+  {
+   "id": "F-guide",
+   "surface": "Closed-app pages",
+   "path": "Alternatives to Google Docs",
+   "crop": "app-guide-desktop",
+   "runs": [
+    "after"
+   ],
+   "new": true,
+   "headline": "The switch guide sits below the alternatives, as fold rows.",
+   "changed": "\"Get your data out\" open first; \"What opens it directly\" folded.",
+   "notice": "People see the alternatives first.",
+   "risk": "None worth noting.",
+   "highlight": {
+    "box": [
+     1,
+     1,
+     98,
+     98
+    ]
+   }
+  },
+  {
+   "id": "F-guide-phone",
+   "surface": "Closed-app pages",
+   "path": "Alternatives to Notion, phone",
+   "crop": "app-guide-phone",
+   "runs": [
+    "after"
+   ],
+   "new": true,
+   "headline": "On phones the switch guide's rows start closed.",
+   "changed": "Tap to open.",
+   "notice": "Doesn't push the list down.",
+   "risk": "None worth noting.",
+   "highlight": {
+    "box": [
+     1,
+     1,
+     98,
+     98
+    ]
+   }
+  },
+  {
+   "id": "F-search",
+   "surface": "Search",
+   "path": "Search, computer",
+   "crop": "search-desktop",
+   "runs": [
+    "after"
+   ],
+   "new": true,
+   "headline": "Search: the result count sits inside the search bar; no extra row.",
+   "changed": "Groups and projects look the same; no placeholder pictures.",
+   "notice": "Match label kept at the top right.",
+   "risk": "None worth noting.",
+   "highlight": {
+    "box": [
+     1,
+     1,
+     98,
+     98
+    ]
+   }
+  },
+  {
+   "id": "F-search-phone",
+   "surface": "Search",
+   "path": "Search, phone",
+   "crop": "search-phone",
+   "runs": [
+    "after"
+   ],
+   "new": true,
+   "headline": "Phone search with tighter rows.",
+   "changed": "Titles cut off with \"…\"; match label at the top right.",
+   "notice": "More results per screen.",
+   "risk": "None worth noting.",
+   "highlight": {
+    "box": [
+     1,
+     1,
+     98,
+     98
+    ]
+   }
+  },
+  {
+   "id": "F-filters",
+   "surface": "Search",
+   "path": "Filter sheet, phone",
+   "crop": "filters-phone",
+   "runs": [
+    "after"
+   ],
+   "new": true,
+   "headline": "Phone filters: real tick boxes, counts at the right, \"Clear\" and \"Show 22 results\" pinned at the bottom.",
+   "changed": "Type and Setup pick one; Works on picks several.",
+   "notice": "Feels like a proper multi-select.",
+   "risk": "None worth noting.",
+   "highlight": {
+    "box": [
+     1,
+     1,
+     98,
+     98
+    ]
+   }
+  },
+  {
+   "id": "F-gaps",
+   "surface": "Gaps page",
+   "path": "Gaps, computer",
+   "crop": "gaps-desktop",
+   "runs": [
+    "after"
+   ],
+   "new": true,
+   "headline": "Gaps: compact \"want this\" buttons on the name line; one outlined \"Before you build\" per card.",
+   "changed": "No repeated pills or dead space.",
+   "notice": "Pretend preview votes.",
+   "risk": "None worth noting.",
+   "highlight": {
+    "box": [
+     1,
+     1,
+     98,
+     98
+    ]
+   }
+  },
+  {
+   "id": "F-gaps-phone",
+   "surface": "Gaps page",
+   "path": "Gaps, phone",
+   "crop": "gaps-phone",
+   "runs": [
+    "after"
+   ],
+   "new": true,
+   "headline": "On phones the requests stack with the number beside the name.",
+   "changed": "Compact vote buttons.",
+   "notice": "Pretend preview votes.",
+   "risk": "None worth noting.",
+   "highlight": {
+    "box": [
+     1,
+     1,
+     98,
+     98
+    ]
+   }
+  },
+  {
+   "id": "F-claim",
+   "surface": "Claim your project",
+   "path": "Signed out, computer",
+   "crop": "claim-signedout-desktop",
+   "runs": [
+    "after"
+   ],
+   "new": true,
+   "headline": "Claim page signed out: one card with one Sign in button, as the guide's sign-in card.",
+   "changed": "No second Sign in at the top on this page.",
+   "notice": "Big projects still need a mod to confirm.",
+   "risk": "None worth noting.",
+   "highlight": {
+    "box": [
+     1,
+     1,
+     98,
+     98
+    ]
+   }
+  },
+  {
+   "id": "F-claim-phone",
+   "surface": "Claim your project",
+   "path": "Signed out, phone",
+   "crop": "claim-signedout-phone",
+   "runs": [
+    "after"
+   ],
+   "new": true,
+   "headline": "Same on phones: one full-width Sign in.",
+   "changed": "Footer at the bottom.",
+   "notice": "Clean.",
+   "risk": "None worth noting.",
+   "highlight": {
+    "box": [
+     1,
+     1,
+     98,
+     98
+    ]
+   }
+  },
+  {
+   "id": "F-prefs-row",
+   "surface": "Contributor preferences",
+   "path": "Owner's view of their project",
+   "crop": "prefs-owner-row-desktop",
+   "runs": [
+    "after"
+   ],
+   "new": true,
+   "headline": "After a claim is approved, only the owner sees \"Contributor preferences\" under How to help.",
+   "changed": "Optional; changeable anytime.",
+   "notice": "Visitors never see this row.",
+   "risk": "None worth noting.",
+   "highlight": {
+    "box": [
+     1,
+     1,
+     98,
+     98
+    ]
+   }
+  },
+  {
+   "id": "F-prefs",
+   "surface": "Contributor preferences",
+   "path": "\"How you'd like help\"",
+   "crop": "prefs-desktop",
+   "runs": [
+    "after"
+   ],
+   "new": true,
+   "headline": "The preferences window: one card per question, saved as you choose, no Save button.",
+   "changed": "AI contributions, how to start, help wanted, newcomers, disclosure, sign-off, review speed.",
+   "notice": "The disclosure question hides when AI is \"Not accepted\".",
+   "risk": "None worth noting.",
+   "highlight": {
+    "box": [
+     1,
+     1,
+     98,
+     98
+    ]
+   }
+  },
+  {
+   "id": "F-prefs-phone",
+   "surface": "Contributor preferences",
+   "path": "On a phone",
+   "crop": "prefs-phone",
+   "runs": [
+    "after"
+   ],
+   "new": true,
+   "headline": "On phones it opens as a bottom sheet.",
+   "changed": "Same questions.",
+   "notice": "Scrolls.",
+   "risk": "None worth noting.",
+   "highlight": {
+    "box": [
+     1,
+     1,
+     98,
+     98
+    ]
+   }
+  },
+  {
+   "id": "F-prefs-visitor",
+   "surface": "Contributor preferences",
+   "path": "What visitors see",
+   "crop": "project-prefs-visitor-desktop",
+   "runs": [
+    "after"
+   ],
+   "new": true,
+   "headline": "Visitors see the owner's answers as rows under How to help.",
+   "changed": "e.g. Start: open an issue first · Wanted: translation, testing, co-maintainers.",
+   "notice": "Only when the owner has set them.",
+   "risk": "None worth noting.",
+   "highlight": {
+    "box": [
+     1,
+     1,
+     98,
+     98
+    ]
+   }
+  }
+ ]
+}
