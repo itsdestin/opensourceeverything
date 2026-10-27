@@ -5,6 +5,7 @@ import { esc, url, ICON, SITE_URL, API_URL, SOCIAL, codeUrl, suggestUrl } from '
 import { altCard, appUrl, sortAlts, deviceFilter, buildBox, chooseBox } from '../cards.mjs';
 import { relatedGroups } from '../related.mjs';
 import { likedBox } from '../liked.mjs';
+import { groupTools, groupCompare } from '../surfaces.mjs';
 
 // WHY only the first letter, and not before a capital: "AI agents" and "PDF tools" keep their capitals mid-sentence.
 const midSentence = (name) => name.replace(/^[A-Z](?![A-Z])/, (c) => c.toLowerCase());
@@ -46,12 +47,12 @@ export default function groupPages(d) {
       <section class="surface sec">
         <div class="sec-head">
           <div><h2 class="h-large">Open alternatives<span class="count">${alts.length}</span></h2></div>
-          ${alts.length > 1 ? `<div class="tools">${deviceFilter('devMenu')}<div class="dd"><button class="select sm" type="button" data-menu="sortMenu" aria-haspopup="listbox" aria-expanded="false"><span data-sort-label>${SORTS[0][1]}</span>${ICON.chev}</button>
+          ${alts.length > 1 ? `<div class="tools">${deviceFilter('devMenu')}${groupTools(g, alts)}<div class="dd"><button class="select sm" type="button" data-menu="sortMenu" aria-haspopup="listbox" aria-expanded="false"><span data-sort-label>${SORTS[0][1]}</span>${ICON.chev}</button>
             <div class="menu" id="sortMenu" role="listbox">${SORTS.map(([k, v], i) => `<button class="mi${i ? '' : ' sel'}" type="button" role="option" data-sort="${k}">${v}</button>`).join('')}</div></div></div>` : ''}
         </div>
         ${likedBox(g, alts)}
         ${alts.length
-          ? `<div class="grid" data-alts>${alts.map((x, i) => altCard(x.p, x.a, i, g, x.why)).join('')}</div><div class="callout info" data-nomatch hidden>None of these match. Try another device.</div>`
+          ? `<div class="grid" data-alts>${alts.map((x, i) => altCard(x.p, x.a, i, g, x.why)).join('')}</div><div class="callout info" data-nomatch hidden>None of these match. Try another device.</div>${groupCompare(g, alts)}`
           : `<div class="callout info">Nothing open does this job yet. That makes it a gap: if you're building one, <a href="${esc(suggestUrl('1-add-project', { group: g.name }))}" rel="noopener">add it here</a>.</div>`}
         ${SOCIAL && !alts.some(({ a }) => a.fit === 'full') ? `<!-- WHY (review Oct 26): "I want this too" counts demand for a job nothing open fully does; ranked under Most requested -->
         <div class="want" data-request data-key="group:${g.id}" hidden></div>` : ''}
@@ -86,6 +87,6 @@ export default function groupPages(d) {
       itemListElement: alts.map(({ p }, i) => ({ '@type': 'ListItem', position: i + 1, item: {
         '@type': 'SoftwareApplication', name: p.name, url: `${SITE_URL}p/${p.id}/`, ...(p.license ? { license: p.license } : {}), applicationCategory: g.name } })),
     };
-    return { path: `g/${g.id}/`, title: `Open-source alternatives to ${g.closed.slice(0, 2).join(' and ') || g.name}`, description, body, styles: ['group.css'], scripts: ['group.js'], jsonLd };
+    return { path: `g/${g.id}/`, title: `Open-source alternatives to ${g.closed.slice(0, 2).join(' and ') || g.name}`, description, body, styles: ['group.css', 'surfaces.css'], scripts: ['group.js', 'surfaces.js'], jsonLd };
   });
 }

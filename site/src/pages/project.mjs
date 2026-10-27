@@ -1,6 +1,7 @@
 // One page per open-source project (p/<id>/): what it is, which groups it's listed in, and its facts.
 import { familyIndex, stoppedBanner } from '../family.mjs';
 import { rvTop, rvFamilyA } from '../redesign.mjs';
+import { projectFeatures, helpWithAi } from '../surfaces.mjs';
 import { esc, url, SITE_URL, KIND, SETUP, SETUP_MEANING, setupOf, setupWhy, factChips, hostOf, fmtStars, actions, codeUrl, devicesText, suggestUrl, shot, SOCIAL } from '../lib.mjs';
 
 const HOSTS = { 'github.com': 'GitHub', 'gitlab.com': 'GitLab', 'codeberg.org': 'Codeberg' };
@@ -58,6 +59,7 @@ export default function projectPages(d) {
           </div>`).join('')}
         </div>
       </section>
+      ${projectFeatures(p, listed)}
       ${SOCIAL && listed.length ? `<section class="surface sec fold-phone">
         <div class="sec-head fold-head"><div><h2 class="h-large">What's missing</h2></div>
           <button class="btn sm secondary" type="button" data-add-note data-category="${listed[0].group.category}" data-group="${listed[0].group.id}" data-groups="${listed.map(({ group }) => group.id).join(',')}" data-project="${esc(p.id)}" data-kind="missing">Add a note</button></div>
@@ -65,7 +67,7 @@ export default function projectPages(d) {
       </section>` : ''}
     </div>
     <div>
-      ${helpSection(p)}
+      ${helpWithAi(p, helpSection(p))}
       <!-- WHY no Facts card any more (Destin: drop what the page already shows): every line of it was already a chip in the top card. -->
       <section class="surface sec fold-phone">
         <div class="fold-head"><h2 class="h-large">Something wrong?</h2></div>
@@ -82,6 +84,6 @@ export default function projectPages(d) {
       ...(p.license ? { license: p.license } : {}), ...(codeUrl(p) ? { codeRepository: codeUrl(p) } : {}), ...(p.website ? { sameAs: p.website } : {}),
       applicationCategory: listed[0]?.group.name,
     };
-    return { path: `p/${p.id}/`, title: replaces.length ? `${p.name}: open-source alternative to ${replaces.slice(0, 2).join(' and ')}` : p.name, description, body, styles: ['group.css'], scripts: p.screenshots?.length ? ['gallery.js'] : [], jsonLd, search: false, back: true };
+    return { path: `p/${p.id}/`, title: replaces.length ? `${p.name}: open-source alternative to ${replaces.slice(0, 2).join(' and ')}` : p.name, description, body, styles: ['group.css', 'surfaces.css'], scripts: [...(p.screenshots?.length ? ['gallery.js'] : []), 'surfaces.js'], jsonLd, search: false, back: true };
   });
 }

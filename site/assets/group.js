@@ -7,7 +7,7 @@
     document.querySelectorAll('[data-compare-name]').forEach((el) => { el.textContent = app; });
   };
   const sortBy = (key) => {
-    const grid = document.querySelector('[data-alts]'); if (!grid) return;
+    const grid = document.querySelector('.grid[data-alts]'); if (!grid) return; // WHY .grid: in the server build the liked strip also carries data-alts and came first, so sorting did nothing
     const cards = [...grid.children];
     const cmp = {
       fit: (a, b) => +a.dataset.order - +b.dataset.order,
