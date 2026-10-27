@@ -1,0 +1,1071 @@
+{
+ "checked": "2026-10-27",
+ "guides": {
+  "google-docs": {
+   "app": "Google Docs",
+   "export": [
+    "Open the document, click File, then Download.",
+    "Choose a file type. The file downloads to your computer."
+   ],
+   "exportSource": "https://support.google.com/docs/answer/49114",
+   "formats": [],
+   "wontComeOver": [],
+   "opensIn": [
+    {
+     "project": "libreoffice-writer",
+     "note": "Opens Word-type files (.doc, .docx) in Writer. Macros need rewriting.",
+     "source": "https://help.libreoffice.org/latest/en-US/text/shared/guide/ms_user.html",
+     "tag": "word-files"
+    }
+   ],
+   "tip": "Download as .docx (Word) if you are not sure; the Download menu lists the other file types.",
+   "skip": null
+  },
+  "google-sheets": {
+   "app": "Google Sheets",
+   "export": [
+    "Open the spreadsheet, click File, then Download.",
+    "Choose a file type. The file downloads to your computer."
+   ],
+   "exportSource": "https://support.google.com/docs/answer/49114",
+   "formats": [],
+   "wontComeOver": [],
+   "opensIn": [
+    {
+     "project": "libreoffice-calc",
+     "note": "Opens Excel files (.xls, .xlsx) in Calc. Excel macros do not run unchanged.",
+     "source": "https://help.libreoffice.org/latest/en-US/text/shared/guide/ms_user.html",
+     "tag": "excel-files"
+    }
+   ],
+   "tip": null,
+   "skip": null
+  },
+  "google-slides": {
+   "app": "Google Slides",
+   "export": [
+    "Open the presentation, click File, then Download.",
+    "Choose a file type. The file downloads to your computer."
+   ],
+   "exportSource": "https://support.google.com/docs/answer/49114",
+   "formats": [],
+   "wontComeOver": [],
+   "opensIn": [
+    {
+     "project": "libreoffice-impress",
+     "note": "Opens PowerPoint files (.ppt, .pptx) in Impress.",
+     "source": "https://help.libreoffice.org/latest/en-US/text/shared/guide/ms_user.html",
+     "tag": "pptx-files"
+    }
+   ],
+   "tip": null,
+   "skip": null
+  },
+  "google-drive": {
+   "app": "Google Drive",
+   "export": [
+    "Go to Google Takeout (takeout.google.com) and sign in. Untick what you do not want.",
+    "Choose how to receive it (email link, or saved to Drive, Dropbox, OneDrive or Box) and a file type (zip or tgz).",
+    "Click Create export. You get an email when it is ready, usually within a day."
+   ],
+   "exportSource": "https://support.google.com/accounts/answer/3024190",
+   "formats": [],
+   "wontComeOver": [
+    "Anything you change after you ask for the export is not in it.",
+    "The download link expires after about 7 days and works 5 times.",
+    "The page does not say what file format Drive files arrive in; Google Docs files are converted when you download them."
+   ],
+   "opensIn": [],
+   "tip": null,
+   "skip": null
+  },
+  "google-photos": {
+   "app": "Google Photos",
+   "export": [
+    "Go to Google Takeout (takeout.google.com) and sign in. Untick what you do not want.",
+    "Choose how to receive it (email link, or saved to Drive, Dropbox, OneDrive or Box) and a file type (zip or tgz).",
+    "Click Create export. You get an email when it is ready, usually within a day."
+   ],
+   "exportSource": "https://support.google.com/accounts/answer/3024190",
+   "formats": [
+    "Your photos and videos, plus separate JSON files holding extra data such as comments."
+   ],
+   "wontComeOver": [
+    "Anything you change after you ask for the export is not in it.",
+    "The download link expires after about 7 days and works 5 times.",
+    "Album and date information can end up in separate files from the photos."
+   ],
+   "opensIn": [
+    {
+     "project": "ente-photos",
+     "note": "Has a \"Google takeout\" import: download every zip part, then Upload > Google takeout in the desktop app. Reads the JSON files so dates and albums are kept.",
+     "source": "https://ente.com/help/photos/migration/from-google-photos/",
+     "tag": "google-photos-import"
+    }
+   ],
+   "tip": "Download every zip part before importing, and keep the originals until you have checked the new library.",
+   "skip": null
+  },
+  "google-calendar": {
+   "app": "Google Calendar",
+   "export": [
+    "On a computer (not the phone app), open calendar.google.com and go to Settings, then Import & export.",
+    "Under Export, click Export. You get a zip file of .ics files, one per calendar.",
+    "For one calendar: hover it in the left list, More, Settings and sharing, Export calendar."
+   ],
+   "exportSource": "https://support.google.com/calendar/answer/37111",
+   "formats": [
+    ".ics (iCalendar), inside a zip"
+   ],
+   "wontComeOver": [
+    "Work or school accounts may have export switched off by the administrator.",
+    "You need permission to manage a calendar to export it."
+   ],
+   "opensIn": [
+    {
+     "project": "nextcloud-calendar",
+     "note": "Imports .ics files: Calendar settings > Import Calendar, pick one or more files, choose which calendar.",
+     "source": "https://docs.nextcloud.com/server/latest/user_manual/en/groupware/calendar.html",
+     "tag": null
+    }
+   ],
+   "tip": null,
+   "skip": null
+  },
+  "gmail": {
+   "app": "Gmail",
+   "export": [
+    "Go to Google Takeout (takeout.google.com) and sign in. Untick what you do not want.",
+    "Choose how to receive it (email link, or saved to Drive, Dropbox, OneDrive or Box) and a file type (zip or tgz).",
+    "Click Create export. You get an email when it is ready, usually within a day."
+   ],
+   "exportSource": "https://support.google.com/accounts/answer/3024190",
+   "formats": [
+    "Labels are kept inside each message as a header (X-Gmail-Labels)."
+   ],
+   "wontComeOver": [
+    "Anything you change after you ask for the export is not in it.",
+    "The download link expires after about 7 days and works 5 times.",
+    "You cannot export only a date range of Gmail."
+   ],
+   "opensIn": [],
+   "tip": null,
+   "skip": null
+  },
+  "notion": {
+   "app": "Notion",
+   "export": [
+    "Click Settings in the sidebar, then under Workspace choose General.",
+    "Click Export all workspace content.",
+    "Notion emails you a download link (it can take up to 30 hours; the link lasts 7 days)."
+   ],
+   "exportSource": "https://www.notion.com/help/export-your-content",
+   "formats": [
+    "Markdown files for pages",
+    "CSV files for databases",
+    "or HTML; uploaded files included"
+   ],
+   "wontComeOver": [
+    "Only the current or default view of each database is exported, not every view.",
+    "Form views cannot be exported; export the responses from a table view.",
+    "Pages you cannot see (other people's private pages) are left out.",
+    "Callout blocks come out as HTML because Markdown has no equivalent."
+   ],
+   "opensIn": [],
+   "tip": "On Windows, long folder names can stop the zip from opening. Untick 'Create folders for subpages' or extract with 7-Zip.",
+   "skip": null
+  },
+  "evernote": {
+   "app": "Evernote",
+   "export": [],
+   "exportSource": null,
+   "formats": [
+    "ENEX (.enex) or HTML"
+   ],
+   "wontComeOver": [],
+   "opensIn": [
+    {
+     "project": "joplin",
+     "note": "Imports ENEX files and keeps notebooks. Scanned-document text is dropped unless OCR is on; some colours and fonts may not carry over.",
+     "source": "https://joplinapp.org/help/apps/import_export",
+     "tag": "notes-import"
+    }
+   ],
+   "tip": null,
+   "skip": null
+  },
+  "1password": {
+   "app": "1Password",
+   "export": [
+    "On 1Password 8 for Mac: File > Export. On Windows/Linux: the ellipsis menu > Export.",
+    "Pick your account, enter your password, then choose 1PUX (keeps everything) or CSV (logins only).",
+    "On iPhone/iPad (iOS 26+): Settings > Advanced > Start Export. Passkeys can only leave from the phone apps."
+   ],
+   "exportSource": "https://support.1password.com/export/",
+   "formats": [
+    "1PUX or CSV (older 1Password 7: 1PIF, CSV, TXT)"
+   ],
+   "wontComeOver": [
+    "CSV leaves out security questions, linked items and custom fields such as backup codes. Use 1PUX to keep them.",
+    "Passkeys exported from a computer app are not included; make new ones on each site.",
+    "The exported file is NOT encrypted."
+   ],
+   "opensIn": [
+    {
+     "project": "bitwarden",
+     "note": "Imports 1Password .1pux, .1pif and .csv files. File attachments must be re-uploaded by hand.",
+     "source": "https://bitwarden.com/help/import-from-1password/",
+     "tag": "passwords-import"
+    }
+   ],
+   "tip": "Delete the export file as soon as the import works.",
+   "skip": null
+  },
+  "lastpass": {
+   "app": "LastPass",
+   "export": [
+    "In the web vault: Advanced Options > Export. LastPass emails a confirmation you must approve.",
+    "Or in the browser extension: Account > Fix a problem yourself > Export vault items; enter your master password."
+   ],
+   "exportSource": "https://bitwarden.com/help/import-from-lastpass/",
+   "formats": [
+    "CSV"
+   ],
+   "wontComeOver": [
+    "File attachments and trash must be added again by hand.",
+    "Sends (Bitwarden's) and some item types are not imported."
+   ],
+   "opensIn": [
+    {
+     "project": "bitwarden",
+     "note": "Imports the LastPass CSV, or connects to your LastPass account directly from its extensions and desktop apps.",
+     "source": "https://bitwarden.com/help/import-from-lastpass/",
+     "tag": "passwords-import"
+    }
+   ],
+   "tip": null,
+   "skip": null
+  },
+  "slack": {
+   "app": "Slack",
+   "export": [
+    "As a Workspace Owner or Admin, open the workspace export page (see the linked Slack help page for the menu path).",
+    "Choose the date range and start the export; Slack gives you a download."
+   ],
+   "exportSource": "https://slack.com/help/articles/201658943-Export-your-workspace-data",
+   "formats": [
+    "JSON (messages), CSV (channel list)"
+   ],
+   "wontComeOver": [
+    "Free and Pro plans export public channels only; private channels and DMs need Business+ or Enterprise and approval.",
+    "Files come as links, not the files themselves.",
+    "Integrations, apps and workflows must be rebuilt."
+   ],
+   "opensIn": [
+    {
+     "project": "zulip",
+     "note": "Imports a Slack export as a new organization: messages, reactions, users, channels and custom emoji. Threads become topics. Edit history and workspace settings do not carry over.",
+     "source": "https://zulip.com/help/import-from-slack",
+     "tag": null
+    },
+    {
+     "project": "mattermost",
+     "note": "Imports a Slack export via its mmetl and mmctl tools: channels, DMs, threads, files, reactions. Custom emoji images, Canvases and integrations do not come over.",
+     "source": "https://docs.mattermost.com/administration-guide/onboard/migrate-from-slack.html",
+     "tag": "slack-import"
+    }
+   ],
+   "tip": null,
+   "skip": null
+  },
+  "trello": {
+   "app": "Trello",
+   "export": [
+    "Open the board's menu, choose Print, Export, and Share, then pick the export option.",
+    "Premium Workspaces can export all boards as CSV or JSON from Workspace Settings > Export (admins only)."
+   ],
+   "exportSource": "https://support.atlassian.com/trello/docs/exporting-data-from-trello/",
+   "formats": [
+    "JSON (any member)",
+    "CSV (Premium Workspaces)"
+   ],
+   "wontComeOver": [
+    "Board JSON holds only the 1,000 most recent actions, so older comment history is cut off.",
+    "CSV leaves out comments and archived cards.",
+    "Inbox cards cannot be exported; move them onto a board first."
+   ],
+   "opensIn": [
+    {
+     "project": "wekan",
+     "note": "Has Add Board / Import with Trello as a source; give it the Trello JSON file (a zip of several boards works too). No undo, so back up first.",
+     "source": "https://github.com/wekan/wekan/wiki/Import-from-Trello",
+     "tag": "tasks-import"
+    }
+   ],
+   "tip": null,
+   "skip": null
+  },
+  "twitter-x": {
+   "app": "Twitter / X",
+   "export": [],
+   "exportSource": null,
+   "formats": [],
+   "wontComeOver": [
+    "Mastodon cannot import posts or media; only follows, lists, blocks and mutes in its own CSV format."
+   ],
+   "opensIn": [],
+   "tip": "Follows can be moved if you first convert them to Mastodon's CSV format.",
+   "skip": null
+  },
+  "facebook": {
+   "app": "Facebook",
+   "export": [
+    "Profile picture > Settings & privacy > Settings > Meta Account > Your information and permissions.",
+    "Click Export your information > Create export, pick your profile, then Export to device.",
+    "Choose what to include, date range, format (HTML to read, JSON to move) and media quality; click Start export."
+   ],
+   "exportSource": "https://www.facebook.com/help/212802592074644",
+   "formats": [
+    "HTML (open index in a browser) or JSON, as a zip"
+   ],
+   "wontComeOver": [
+    "You have 4 days to download after the email arrives."
+   ],
+   "opensIn": [],
+   "tip": null,
+   "skip": null
+  },
+  "spotify": {
+   "app": "Spotify",
+   "export": [
+    "Use the Download your data tool on your Spotify Account Privacy page."
+   ],
+   "exportSource": "https://support.spotify.com/us/article/data-rights-and-privacy-settings/",
+   "formats": [
+    "A zip of data files with a 'Read Me First' file"
+   ],
+   "wontComeOver": [],
+   "opensIn": [],
+   "tip": null,
+   "skip": null
+  },
+  "instagram": {
+   "app": "Instagram",
+   "export": [
+    "Use Instagram's Download your information tool (the Help Center page names the steps)."
+   ],
+   "exportSource": "https://help.instagram.com/181231772500920",
+   "formats": [
+    "HTML or JSON"
+   ],
+   "wontComeOver": [],
+   "opensIn": [],
+   "tip": null,
+   "skip": null
+  },
+  "google-chrome": {
+   "app": "Google Chrome",
+   "export": [
+    "Open the Bookmark Manager, open its More menu, choose Export Bookmarks."
+   ],
+   "exportSource": "https://support.google.com/chrome/answer/96816",
+   "formats": [
+    "Bookmarks as an HTML file"
+   ],
+   "wontComeOver": [],
+   "opensIn": [],
+   "tip": null,
+   "skip": null
+  },
+  "amazon-aurora": {
+   "app": "Amazon Aurora",
+   "export": [],
+   "exportSource": null,
+   "formats": [],
+   "wontComeOver": [],
+   "opensIn": [],
+   "tip": null,
+   "skip": "business service"
+  },
+  "amazon-elasticache": {
+   "app": "Amazon ElastiCache",
+   "export": [],
+   "exportSource": null,
+   "formats": [],
+   "wontComeOver": [],
+   "opensIn": [],
+   "tip": null,
+   "skip": "business service"
+  },
+  "amazon-neptune": {
+   "app": "Amazon Neptune",
+   "export": [],
+   "exportSource": null,
+   "formats": [],
+   "wontComeOver": [],
+   "opensIn": [],
+   "tip": null,
+   "skip": "business service"
+  },
+  "aws-kendra": {
+   "app": "AWS Kendra",
+   "export": [],
+   "exportSource": null,
+   "formats": [],
+   "wontComeOver": [],
+   "opensIn": [],
+   "tip": null,
+   "skip": "business service"
+  },
+  "aws-lookout": {
+   "app": "AWS Lookout",
+   "export": [],
+   "exportSource": null,
+   "formats": [],
+   "wontComeOver": [],
+   "opensIn": [],
+   "tip": null,
+   "skip": "business service"
+  },
+  "aws-sagemaker": {
+   "app": "AWS SageMaker",
+   "export": [],
+   "exportSource": null,
+   "formats": [],
+   "wontComeOver": [],
+   "opensIn": [],
+   "tip": null,
+   "skip": "business service"
+  },
+  "aws-vpc": {
+   "app": "AWS VPC",
+   "export": [],
+   "exportSource": null,
+   "formats": [],
+   "wontComeOver": [],
+   "opensIn": [],
+   "tip": null,
+   "skip": "business service"
+  },
+  "google-cloud-spanner": {
+   "app": "Google Cloud Spanner",
+   "export": [],
+   "exportSource": null,
+   "formats": [],
+   "wontComeOver": [],
+   "opensIn": [],
+   "tip": null,
+   "skip": "business service"
+  },
+  "google-memorystore": {
+   "app": "Google Memorystore",
+   "export": [],
+   "exportSource": null,
+   "formats": [],
+   "wontComeOver": [],
+   "opensIn": [],
+   "tip": null,
+   "skip": "business service"
+  },
+  "snowflake": {
+   "app": "Snowflake",
+   "export": [],
+   "exportSource": null,
+   "formats": [],
+   "wontComeOver": [],
+   "opensIn": [],
+   "tip": null,
+   "skip": "business service"
+  },
+  "datadog": {
+   "app": "Datadog",
+   "export": [],
+   "exportSource": null,
+   "formats": [],
+   "wontComeOver": [],
+   "opensIn": [],
+   "tip": null,
+   "skip": "business service"
+  },
+  "newrelic": {
+   "app": "NewRelic",
+   "export": [],
+   "exportSource": null,
+   "formats": [],
+   "wontComeOver": [],
+   "opensIn": [],
+   "tip": null,
+   "skip": "business service"
+  },
+  "elastic-cloud": {
+   "app": "Elastic Cloud",
+   "export": [],
+   "exportSource": null,
+   "formats": [],
+   "wontComeOver": [],
+   "opensIn": [],
+   "tip": null,
+   "skip": "business service"
+  },
+  "tigergraph": {
+   "app": "TigerGraph",
+   "export": [],
+   "exportSource": null,
+   "formats": [],
+   "wontComeOver": [],
+   "opensIn": [],
+   "tip": null,
+   "skip": "business service"
+  },
+  "pinecone": {
+   "app": "Pinecone",
+   "export": [],
+   "exportSource": null,
+   "formats": [],
+   "wontComeOver": [],
+   "opensIn": [],
+   "tip": null,
+   "skip": "business service"
+  },
+  "kdb": {
+   "app": "Kdb+",
+   "export": [],
+   "exportSource": null,
+   "formats": [],
+   "wontComeOver": [],
+   "opensIn": [],
+   "tip": null,
+   "skip": "business service"
+  },
+  "apigee": {
+   "app": "apigee",
+   "export": [],
+   "exportSource": null,
+   "formats": [],
+   "wontComeOver": [],
+   "opensIn": [],
+   "tip": null,
+   "skip": "business service"
+  },
+  "terraform": {
+   "app": "Terraform",
+   "export": [],
+   "exportSource": null,
+   "formats": [],
+   "wontComeOver": [],
+   "opensIn": [],
+   "tip": null,
+   "skip": "business service"
+  },
+  "circleci": {
+   "app": "CircleCI",
+   "export": [],
+   "exportSource": null,
+   "formats": [],
+   "wontComeOver": [],
+   "opensIn": [],
+   "tip": null,
+   "skip": "business service"
+  },
+  "heroku": {
+   "app": "Heroku",
+   "export": [],
+   "exportSource": null,
+   "formats": [],
+   "wontComeOver": [],
+   "opensIn": [],
+   "tip": null,
+   "skip": "business service"
+  },
+  "fly": {
+   "app": "Fly",
+   "export": [],
+   "exportSource": null,
+   "formats": [],
+   "wontComeOver": [],
+   "opensIn": [],
+   "tip": null,
+   "skip": "business service"
+  },
+  "render": {
+   "app": "Render",
+   "export": [],
+   "exportSource": null,
+   "formats": [],
+   "wontComeOver": [],
+   "opensIn": [],
+   "tip": null,
+   "skip": "business service"
+  },
+  "netlify": {
+   "app": "Netlify",
+   "export": [],
+   "exportSource": null,
+   "formats": [],
+   "wontComeOver": [],
+   "opensIn": [],
+   "tip": null,
+   "skip": "business service"
+  },
+  "vercel": {
+   "app": "Vercel",
+   "export": [],
+   "exportSource": null,
+   "formats": [],
+   "wontComeOver": [],
+   "opensIn": [],
+   "tip": null,
+   "skip": "business service"
+  },
+  "segment": {
+   "app": "Segment",
+   "export": [],
+   "exportSource": null,
+   "formats": [],
+   "wontComeOver": [],
+   "opensIn": [],
+   "tip": null,
+   "skip": "business service"
+  },
+  "fivetran": {
+   "app": "Fivetran",
+   "export": [],
+   "exportSource": null,
+   "formats": [],
+   "wontComeOver": [],
+   "opensIn": [],
+   "tip": null,
+   "skip": "business service"
+  },
+  "hightouch": {
+   "app": "Hightouch",
+   "export": [],
+   "exportSource": null,
+   "formats": [],
+   "wontComeOver": [],
+   "opensIn": [],
+   "tip": null,
+   "skip": "business service"
+  },
+  "mode-analytics": {
+   "app": "Mode Analytics",
+   "export": [],
+   "exportSource": null,
+   "formats": [],
+   "wontComeOver": [],
+   "opensIn": [],
+   "tip": null,
+   "skip": "business service"
+  },
+  "sisu-data": {
+   "app": "Sisu Data",
+   "export": [],
+   "exportSource": null,
+   "formats": [],
+   "wontComeOver": [],
+   "opensIn": [],
+   "tip": null,
+   "skip": "business service"
+  },
+  "anodot": {
+   "app": "Anodot",
+   "export": [],
+   "exportSource": null,
+   "formats": [],
+   "wontComeOver": [],
+   "opensIn": [],
+   "tip": null,
+   "skip": "business service"
+  },
+  "launchdarkly": {
+   "app": "LaunchDarkly",
+   "export": [],
+   "exportSource": null,
+   "formats": [],
+   "wontComeOver": [],
+   "opensIn": [],
+   "tip": null,
+   "skip": "business service"
+  },
+  "logrocket": {
+   "app": "LogRocket",
+   "export": [],
+   "exportSource": null,
+   "formats": [],
+   "wontComeOver": [],
+   "opensIn": [],
+   "tip": null,
+   "skip": "business service"
+  },
+  "fullstory": {
+   "app": "FullStory",
+   "export": [],
+   "exportSource": null,
+   "formats": [],
+   "wontComeOver": [],
+   "opensIn": [],
+   "tip": null,
+   "skip": "business service"
+  },
+  "checkly": {
+   "app": "Checkly",
+   "export": [],
+   "exportSource": null,
+   "formats": [],
+   "wontComeOver": [],
+   "opensIn": [],
+   "tip": null,
+   "skip": "business service"
+  },
+  "prisma-cloud": {
+   "app": "Prisma Cloud",
+   "export": [],
+   "exportSource": null,
+   "formats": [],
+   "wontComeOver": [],
+   "opensIn": [],
+   "tip": null,
+   "skip": "business service"
+  },
+  "tenable-nessus": {
+   "app": "Tenable Nessus",
+   "export": [],
+   "exportSource": null,
+   "formats": [],
+   "wontComeOver": [],
+   "opensIn": [],
+   "tip": null,
+   "skip": "business service"
+  },
+  "okta": {
+   "app": "Okta",
+   "export": [],
+   "exportSource": null,
+   "formats": [],
+   "wontComeOver": [],
+   "opensIn": [],
+   "tip": null,
+   "skip": "business service"
+  },
+  "auth0": {
+   "app": "Auth0",
+   "export": [],
+   "exportSource": null,
+   "formats": [],
+   "wontComeOver": [],
+   "opensIn": [],
+   "tip": null,
+   "skip": "business service"
+  },
+  "plextrac": {
+   "app": "Plextrac",
+   "export": [],
+   "exportSource": null,
+   "formats": [],
+   "wontComeOver": [],
+   "opensIn": [],
+   "tip": null,
+   "skip": "business service"
+  },
+  "oracle-fusion-erp-cloud": {
+   "app": "Oracle Fusion ERP Cloud",
+   "export": [],
+   "exportSource": null,
+   "formats": [],
+   "wontComeOver": [],
+   "opensIn": [],
+   "tip": null,
+   "skip": "business service"
+  },
+  "sap": {
+   "app": "SAP",
+   "export": [],
+   "exportSource": null,
+   "formats": [],
+   "wontComeOver": [],
+   "opensIn": [],
+   "tip": null,
+   "skip": "business service"
+  },
+  "sap-business-one": {
+   "app": "SAP Business One",
+   "export": [],
+   "exportSource": null,
+   "formats": [],
+   "wontComeOver": [],
+   "opensIn": [],
+   "tip": null,
+   "skip": "business service"
+  },
+  "microsoft-dynamics": {
+   "app": "Microsoft Dynamics",
+   "export": [],
+   "exportSource": null,
+   "formats": [],
+   "wontComeOver": [],
+   "opensIn": [],
+   "tip": null,
+   "skip": "business service"
+  },
+  "salesforce": {
+   "app": "Salesforce",
+   "export": [],
+   "exportSource": null,
+   "formats": [],
+   "wontComeOver": [],
+   "opensIn": [],
+   "tip": null,
+   "skip": "business service"
+  },
+  "vulcan": {
+   "app": "Vulcan",
+   "export": [],
+   "exportSource": null,
+   "formats": [],
+   "wontComeOver": [],
+   "opensIn": [],
+   "tip": null,
+   "skip": "business service"
+  },
+  "qna-maker": {
+   "app": "QnA Maker",
+   "export": [],
+   "exportSource": null,
+   "formats": [],
+   "wontComeOver": [],
+   "opensIn": [],
+   "tip": null,
+   "skip": "business service"
+  },
+  "algolia": {
+   "app": "Algolia",
+   "export": [],
+   "exportSource": null,
+   "formats": [],
+   "wontComeOver": [],
+   "opensIn": [],
+   "tip": null,
+   "skip": "business service"
+  },
+  "contentful": {
+   "app": "Contentful",
+   "export": [],
+   "exportSource": null,
+   "formats": [],
+   "wontComeOver": [],
+   "opensIn": [],
+   "tip": null,
+   "skip": "business service"
+  },
+  "twilio": {
+   "app": "Twilio",
+   "export": [],
+   "exportSource": null,
+   "formats": [],
+   "wontComeOver": [],
+   "opensIn": [],
+   "tip": null,
+   "skip": "business service"
+  },
+  "sendgrid": {
+   "app": "SendGrid",
+   "export": [],
+   "exportSource": null,
+   "formats": [],
+   "wontComeOver": [],
+   "opensIn": [],
+   "tip": null,
+   "skip": "business service"
+  },
+  "mailgun": {
+   "app": "Mailgun",
+   "export": [],
+   "exportSource": null,
+   "formats": [],
+   "wontComeOver": [],
+   "opensIn": [],
+   "tip": null,
+   "skip": "business service"
+  },
+  "onesignal": {
+   "app": "OneSignal",
+   "export": [],
+   "exportSource": null,
+   "formats": [],
+   "wontComeOver": [],
+   "opensIn": [],
+   "tip": null,
+   "skip": "business service"
+  },
+  "stripe-billing": {
+   "app": "Stripe Billing",
+   "export": [],
+   "exportSource": null,
+   "formats": [],
+   "wontComeOver": [],
+   "opensIn": [],
+   "tip": null,
+   "skip": "business service"
+  },
+  "chargebee": {
+   "app": "Chargebee",
+   "export": [],
+   "exportSource": null,
+   "formats": [],
+   "wontComeOver": [],
+   "opensIn": [],
+   "tip": null,
+   "skip": "business service"
+  },
+  "orbit-orbit-love": {
+   "app": "Orbit (orbit.love)",
+   "export": [],
+   "exportSource": null,
+   "formats": [],
+   "wontComeOver": [],
+   "opensIn": [],
+   "tip": null,
+   "skip": "business service"
+  },
+  "commsor": {
+   "app": "Commsor",
+   "export": [],
+   "exportSource": null,
+   "formats": [],
+   "wontComeOver": [],
+   "opensIn": [],
+   "tip": null,
+   "skip": "business service"
+  },
+  "common-room": {
+   "app": "Common Room",
+   "export": [],
+   "exportSource": null,
+   "formats": [],
+   "wontComeOver": [],
+   "opensIn": [],
+   "tip": null,
+   "skip": "business service"
+  },
+  "pocus": {
+   "app": "Pocus",
+   "export": [],
+   "exportSource": null,
+   "formats": [],
+   "wontComeOver": [],
+   "opensIn": [],
+   "tip": null,
+   "skip": "business service"
+  },
+  "canny": {
+   "app": "Canny",
+   "export": [],
+   "exportSource": null,
+   "formats": [],
+   "wontComeOver": [],
+   "opensIn": [],
+   "tip": null,
+   "skip": "business service"
+  },
+  "openvpn-access-server": {
+   "app": "OpenVPN Access Server",
+   "export": [],
+   "exportSource": null,
+   "formats": [],
+   "wontComeOver": [],
+   "opensIn": [],
+   "tip": null,
+   "skip": "business service"
+  },
+  "saas-pegasus": {
+   "app": "SaaS Pegasus",
+   "export": [],
+   "exportSource": null,
+   "formats": [],
+   "wontComeOver": [],
+   "opensIn": [],
+   "tip": null,
+   "skip": "business service"
+  },
+  "shipfast": {
+   "app": "ShipFast",
+   "export": [],
+   "exportSource": null,
+   "formats": [],
+   "wontComeOver": [],
+   "opensIn": [],
+   "tip": null,
+   "skip": "business service"
+  },
+  "supastarter": {
+   "app": "Supastarter",
+   "export": [],
+   "exportSource": null,
+   "formats": [],
+   "wontComeOver": [],
+   "opensIn": [],
+   "tip": null,
+   "skip": "business service"
+  },
+  "looker": {
+   "app": "Looker",
+   "export": [],
+   "exportSource": null,
+   "formats": [],
+   "wontComeOver": [],
+   "opensIn": [],
+   "tip": null,
+   "skip": "business service"
+  },
+  "tableau": {
+   "app": "Tableau",
+   "export": [],
+   "exportSource": null,
+   "formats": [],
+   "wontComeOver": [],
+   "opensIn": [],
+   "tip": null,
+   "skip": "business service"
+  },
+  "power-bi": {
+   "app": "Power BI",
+   "export": [],
+   "exportSource": null,
+   "formats": [],
+   "wontComeOver": [],
+   "opensIn": [],
+   "tip": null,
+   "skip": "business service"
+  },
+  "mixpanel": {
+   "app": "Mixpanel",
+   "export": [],
+   "exportSource": null,
+   "formats": [],
+   "wontComeOver": [],
+   "opensIn": [],
+   "tip": null,
+   "skip": "business service"
+  },
+  "amplitude": {
+   "app": "Amplitude",
+   "export": [],
+   "exportSource": null,
+   "formats": [],
+   "wontComeOver": [],
+   "opensIn": [],
+   "tip": null,
+   "skip": "business service"
+  },
+  "bloomberg": {
+   "app": "Bloomberg",
+   "export": [],
+   "exportSource": null,
+   "formats": [],
+   "wontComeOver": [],
+   "opensIn": [],
+   "tip": null,
+   "skip": "business service"
+  }
+ }
+}
