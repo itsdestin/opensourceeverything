@@ -1,6 +1,7 @@
 // One page per open-source project (p/<id>/): what it is, which groups it's listed in, and its facts.
 import { familyIndex, ownLine, reverseLines, familySection, stoppedBanner } from '../family.mjs';
-import { esc, url, SITE_URL, KIND, SETUP, SETUP_MEANING, setupOf, setupWhy, factChips, hostOf, fmtStars, actions, codeUrl, devicesText, suggestUrl, shot, SOCIAL } from '../lib.mjs';
+import { rvTop, rvFamilyA, rvFamilyC } from '../redesign.mjs';
+import { esc, url, SITE_URL, RV, KIND, SETUP, SETUP_MEANING, setupOf, setupWhy, factChips, hostOf, fmtStars, actions, codeUrl, devicesText, suggestUrl, shot, SOCIAL } from '../lib.mjs';
 
 const HOSTS = { 'github.com': 'GitHub', 'gitlab.com': 'GitLab', 'codeberg.org': 'Codeberg' };
 
@@ -36,7 +37,9 @@ export default function projectPages(d) {
     const famLines = [ownLine(p, fam), ...reverseLines(p, fam, 6)].filter(Boolean);
     const body = `
   ${stoppedBanner(p, fam)}
-  <div class="surface identity">
+  ${RV ? ['a', 'b', 'c'].map((v) => rvTop(p, links, fam, v)).join('') : ''}
+  ${RV ? rvFamilyC(p, fam) : ''}
+  <div class="surface identity${RV ? ' today' : ''}">
     <div class="row">
       <div style="display:flex;align-items:center;gap:8px;flex-wrap:wrap"><h1 class="h-subject">${esc(p.name)}</h1></div>
     </div>
@@ -48,6 +51,7 @@ export default function projectPages(d) {
 
   <div class="cols">
     <div>
+  ${RV ? rvFamilyA(p, fam) : ''}
   ${SOCIAL ? `<!-- WHY drawn in the browser (assets/contrib.js): a mod's approval shows at once, with no rebuild of the site. -->
       <section class="surface sec" data-dev-pitch data-mode="page" data-project="${esc(p.id)}" data-repo="${esc(codeUrl(p) ?? '')}" hidden></section>` : ''}
   ${p.screenshots?.length ? `<section class="surface sec">
@@ -65,7 +69,7 @@ export default function projectPages(d) {
           </div>`).join('')}
         </div>
       </section>
-      ${familySection(p, fam)}
+      ${RV ? familySection(p, fam).replace('class="surface sec"', 'class="surface sec today"') : familySection(p, fam)}
       ${SOCIAL && listed.length ? `<section class="surface sec">
         <div class="sec-head"><div><h2 class="h-large">What's missing</h2><p class="desc12">Things people miss in ${esc(p.name)}. Upvote what matters to you; it helps its team decide.</p></div>
           <button class="btn sm secondary" type="button" data-add-note data-category="${listed[0].group.category}" data-group="${listed[0].group.id}" data-groups="${listed.map(({ group }) => group.id).join(',')}" data-project="${esc(p.id)}" data-kind="missing">Add a note</button></div>

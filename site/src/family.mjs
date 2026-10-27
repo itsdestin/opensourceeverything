@@ -95,7 +95,7 @@ export function status(p) {
 }
 
 // Walk up to the oldest listed project, or to an outside name (kbin) when that is where the family starts.
-function rootOf(p, d) {
+export function rootOf(p, d) {
   let cur = p; const seen = new Set();
   for (;;) {
     const e = shown(cur);
@@ -173,5 +173,42 @@ export function redirects(d) {
     const e = shown(p);
     for (const old of e?.redirectFrom ?? []) if (!d.projById.has(old)) out.push({ from: old, to: p });
   }
+  return out;
+}
+
+// ───────── Redesign round (preview builds): shorter ways to show a family ─────────
+// WHY plain short words (Destin: "we can improve the ui/ux"): a chip or one grey line says the one thing a visitor needs
+// ("Fork of Firefox", "4 forks"); the full story (why, source) sits one click away.
+const CHIP = { 'fork-keeps-up': 'Fork of', split: 'Split from', continues: 'Continues', renamed: 'Formerly', 'built-on': 'Built on', 'free-edition': 'Free edition of' };
+const plainName = (e, d) => nameOf(e, d) ?? '';
+// { own: "Fork of Firefox" | null, kids: 4 | 0 } — the two facts a chip or line can carry.
+export function famFacts(p, fam) {
+  const e = shown(p);
+  const kids = (fam.kids.get(p.id) ?? []).length;
+  const own = e && e.relation !== 'unrelated-same-name' ? (e.label ? e.label : `${CHIP[e.relation]} ${plainName(e, fam.d)}`) : null;
+  return { own, kids, e };
+}
+// One grey line for a card: own relation, else who forked it. Plain text only (HTML-escaped by the caller's esc).
+export function famGrey(p, fam) {
+  const { own, kids } = famFacts(p, fam);
+  if (own) return `${own}${shown(p).since ? ` (${shown(p).since})` : ''}`;
+  if (!kids) return '';
+  const names = (fam.kids.get(p.id) ?? []).map((k) => k.name);
+  return `Forked by ${names.slice(0, 2).join(', ')}${names.length > 2 ? ` +${names.length - 2}` : ''}`;
+}
+// The list a family popover or mini card shows: the tree flattened, depth for indentation.
+export function famNodes(p, fam) {
+  if (!inFamily(p, fam)) return [];
+  const root = rootOf(p, fam.d); const out = [];
+  const add = (c, depth, parent) => {
+    const e = shown(c);
+    out.push({ p: c, depth, parent, here: c.id === p.id, status: status(c), rel: depth && e ? `${e.label ?? SHORT[e.relation]}${yearOf(e)}` : '', why: depth && e ? e.why : '', source: depth && e ? e.source : '' });
+    for (const k of (fam.kids.get(c.id) ?? []).slice().sort((a, b) => a.name.localeCompare(b.name))) add(k, depth + 1, c.name);
+  };
+  if (root.outside) {
+    const o = root.outside;
+    out.push({ outside: true, name: o.name, url: o.url, depth: 0, status: o.relation === 'renamed' ? { key: 'renamed', text: 'Old name' } : { key: 'outside', text: 'Not on this map' } });
+    for (const s of fam.d.projects.filter((x) => { const e = shown(x); return e && !e.of && e.ofName === o.name && rootOf(x, fam.d).outside; })) add(s, 1, o.name);
+  } else add(root.project, 0);
   return out;
 }
