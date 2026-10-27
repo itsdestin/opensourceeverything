@@ -1,0 +1,101 @@
+{
+ "deck": "ose-redesign-1",
+ "started": "2026-10-27T05:02:23.378Z",
+ "submitted": "2026-10-27T05:29:44Z",
+ "cur": 10,
+ "answers": {
+  "C-card": {
+   "v": "pick",
+   "pick": "a",
+   "t": 1793078123671,
+   "seconds": 780,
+   "theme": "light",
+   "zoom": 1
+  },
+  "C-card-phone": {
+   "v": "pick",
+   "pick": "a",
+   "t": 1793078163296,
+   "seconds": 40,
+   "theme": "light",
+   "zoom": 1
+  },
+  "C-explainer": {
+   "v": "pick",
+   "pick": "a",
+   "t": 1793078191550,
+   "seconds": 28,
+   "theme": "light",
+   "zoom": 1
+  },
+  "C-project": {
+   "v": "pick",
+   "t": 1793078286524,
+   "note": "the copy that keeps up/built on it labels dont have clear meaning and are therefor unhelpful to normal users",
+   "pick": "a",
+   "seconds": 95,
+   "theme": "light",
+   "zoom": 1
+  },
+  "C-project-phone": {
+   "v": "pick",
+   "pick": "a",
+   "t": 1793078306942,
+   "note": "start collapsed though",
+   "seconds": 20,
+   "theme": "light",
+   "zoom": 1
+  },
+  "C-search": {
+   "v": "pick",
+   "pick": "a",
+   "t": 1793078355708,
+   "seconds": 44,
+   "theme": "light",
+   "zoom": 1
+  },
+  "C-search-phone": {
+   "v": "pick",
+   "seconds": 131,
+   "theme": "light",
+   "zoom": 1,
+   "t": 1793078482105,
+   "note": "dont really like any of these. a is best, but the group/strong match are weird and the images are positioned strangely. i've iterated multiple times that stars should be the first thing shown in the list of chips. also tf are the \"open project\" tags for? this entire site is open projects>",
+   "pick": "a"
+  },
+  "C-requested": {
+   "v": "pick",
+   "pick": "b",
+   "t": 1793078593868,
+   "note": "i think these \"job nothing open does yet\" \"closed app\" tags are weird and not super helpful or meaningul to a normal user? also feels weird generally to have \"linkedin\" on this list when everything else is moreso a specific function/category? idk",
+   "seconds": 112,
+   "theme": "light",
+   "zoom": 1
+  },
+  "C-requested-home": {
+   "note": "none of these. b is closest, but they should just be like 5 equal cards",
+   "t": 1793078639200,
+   "v": "other",
+   "seconds": 45,
+   "theme": "light",
+   "zoom": 1
+  },
+  "C-tag": {
+   "v": "other",
+   "t": 1793078778342,
+   "note": "these are all kinda bad. it's weird that the form only takes up a narrow width on the page. also a lot of the tags here are still unhelpful or lacking clear meaning like \"proof file\" this should be simplified, the purpose/utility should be clearer to people who have never used the site. should feel less cluttered.",
+   "seconds": 139,
+   "theme": "light",
+   "zoom": 1
+  },
+  "C-label": {
+   "v": "pick",
+   "pick": "a",
+   "t": 1793078983106,
+   "note": "should specify \"This listing is managed by r/TrueOpenSource and was drafted with AI assistance. If you maintain this project, claim this listing here.\"",
+   "seconds": 205,
+   "theme": "light",
+   "zoom": 1
+  }
+ }
+}
