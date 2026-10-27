@@ -222,8 +222,7 @@
   {
    "q": "power bi",
    "want": [
-    "c:power-bi",
-    "c:powerbi"
+    "c:power-bi"
    ],
    "kind": "spacing"
   },

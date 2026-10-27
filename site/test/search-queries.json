@@ -143,7 +143,7 @@
     { "q": "notes app", "want": ["g:notes"], "kind": "job" },
     { "q": "note taking", "want": ["g:notes"], "kind": "job" },
     { "q": "pdf editor", "want": ["g:pdf"], "kind": "job" },
-    { "q": "calendar", "want": ["g:scheduling"], "kind": "job" },
+    { "q": "calendar", "want": ["g:calendars"], "kind": "job" },
     { "q": "survey", "want": ["g:forms"], "kind": "job" },
     { "q": "media server", "want": ["g:home-media"], "include": ["p:jellyfin"], "kind": "job" },
     { "q": "smart home", "want": ["g:smart-home"], "include": ["p:home-assistant"], "kind": "job" },
