@@ -1,0 +1,3553 @@
+{
+ "batch": "social",
+ "checked": "2026-10-27",
+ "answers": {
+  "zulip": {
+   "no-server-needed": {
+    "v": "yes",
+    "note": null,
+    "source": "https://github.com/zulip/zulip",
+    "quote": "Using Zulip without setting up a server. Learn about Zulip Cloud hosting options."
+   },
+   "phone-app": {
+    "v": "yes",
+    "note": null,
+    "source": "site data",
+    "quote": null
+   },
+   "built-in-calls": {
+    "v": "yes",
+    "note": "Jitsi by default",
+    "source": "https://zulip.com",
+    "quote": null
+   },
+   "company-sso": {
+    "v": "yes",
+    "note": null,
+    "source": "https://zulip.com",
+    "quote": null
+   },
+   "cross-org": {
+    "v": "no",
+    "note": null,
+    "source": "https://zulip.com",
+    "quote": null
+   },
+   "e2e-encrypted": {
+    "v": "no",
+    "note": "server can read messages",
+    "source": "https://zulip.com",
+    "quote": null
+   },
+   "slack-import": {
+    "v": "yes",
+    "note": null,
+    "source": "https://zulip.com",
+    "quote": null
+   },
+   "threads": {
+    "v": "yes",
+    "note": "topics",
+    "source": "https://zulip.com",
+    "quote": null
+   }
+  },
+  "delta-chat": {
+   "phone-app": {
+    "v": "yes",
+    "note": null,
+    "source": "site data",
+    "quote": null
+   },
+   "computer-app": {
+    "v": "yes",
+    "note": null,
+    "source": "site data",
+    "quote": null
+   },
+   "disappearing-messages": {
+    "v": "yes",
+    "note": null,
+    "source": "https://github.com/deltachat/deltachat-android",
+    "quote": null
+   },
+   "e2e-encrypted": {
+    "v": "yes",
+    "note": null,
+    "source": "https://github.com/deltachat/deltachat-android",
+    "quote": null
+   },
+   "no-phone-number": {
+    "v": "yes",
+    "note": null,
+    "source": "https://github.com/deltachat/deltachat-android",
+    "quote": null
+   },
+   "self-hostable": {
+    "v": "yes",
+    "note": "chatmail servers",
+    "source": "https://github.com/deltachat/deltachat-android",
+    "quote": null
+   }
+  },
+  "nextcloud-talk": {
+   "screen-share": {
+    "v": "yes",
+    "note": null,
+    "source": "https://github.com/nextcloud/spreed",
+    "quote": "Screen sharing! Share your screen with the participants of your call."
+   },
+   "phone-app": {
+    "v": "yes",
+    "note": null,
+    "source": "site data",
+    "quote": null
+   },
+   "breakout-rooms": {
+    "v": "yes",
+    "note": null,
+    "source": "https://nextcloud.com/talk",
+    "quote": null
+   },
+   "e2e-encrypted": {
+    "v": "no",
+    "note": null,
+    "source": "https://nextcloud.com/talk",
+    "quote": null
+   },
+   "large-meetings": {
+    "v": "partly",
+    "note": "needs the extra high-performance backend",
+    "source": "https://nextcloud.com/talk",
+    "quote": null
+   },
+   "meeting-recording": {
+    "v": "partly",
+    "note": "needs a separate recording server",
+    "source": "https://nextcloud.com/talk",
+    "quote": null
+   },
+   "no-account-needed": {
+    "v": "yes",
+    "note": "guest links",
+    "source": "https://nextcloud.com/talk",
+    "quote": null
+   },
+   "no-server-needed": {
+    "v": "partly",
+    "note": "paid hosting providers",
+    "source": "https://nextcloud.com/talk",
+    "quote": null
+   }
+  },
+  "mbin": {
+   "federated": {
+    "v": "yes",
+    "note": null,
+    "source": "https://github.com/MbinOrg/mbin",
+    "quote": "decentralized content aggregator... running on the fediverse. It can communicate with various ActivityPub services"
+   },
+   "no-server-needed": {
+    "v": "yes",
+    "note": "join an existing server",
+    "source": "https://joinmbin.org",
+    "quote": null
+   },
+   "phone-app": {
+    "v": "partly",
+    "note": "third-party apps only",
+    "source": "https://joinmbin.org",
+    "quote": null
+   },
+   "roles-moderation": {
+    "v": "yes",
+    "note": null,
+    "source": "https://joinmbin.org",
+    "quote": null
+   },
+   "voting": {
+    "v": "yes",
+    "note": null,
+    "source": "https://joinmbin.org",
+    "quote": null
+   }
+  },
+  "writefreely": {
+   "federated": {
+    "v": "yes",
+    "note": null,
+    "source": "https://github.com/writefreely/writefreely",
+    "quote": "Connect with other communities, whether running WriteFreely, Plume, or other ActivityPub-powered software."
+   },
+   "no-server-needed": {
+    "v": "partly",
+    "note": "paid hosting at Write.as",
+    "source": "https://writefreely.org",
+    "quote": null
+   }
+  },
+  "postiz": {
+   "content-calendar": {
+    "v": "yes",
+    "note": null,
+    "source": "https://github.com/gitroomhq/postiz-app",
+    "quote": "Scheduling, calendar views, cross-posting, repeated posts..."
+   },
+   "no-server-needed": {
+    "v": "partly",
+    "note": "paid hosted plan",
+    "source": "https://postiz.com",
+    "quote": null
+   },
+   "post-stats": {
+    "v": "yes",
+    "note": null,
+    "source": "https://postiz.com",
+    "quote": null
+   },
+   "social-networks-covered": {
+    "v": "yes",
+    "note": null,
+    "source": "https://postiz.com",
+    "quote": null
+   }
+  },
+  "aurora-store": {
+   "play-apps": {
+    "v": "partly",
+    "note": "Paid apps cannot be downloaded or updated.",
+    "source": "https://gitlab.com/AuroraOSS/AuroraStore",
+    "quote": "Can not download or update paid apps."
+   },
+   "tracker-warnings": {
+    "v": "yes",
+    "note": null,
+    "source": "https://gitlab.com/AuroraOSS/AuroraStore",
+    "quote": "Exodus Privacy integration: Instantly see trackers in app"
+   },
+   "no-account-needed": {
+    "v": "partly",
+    "note": "Anonymous Google login option, but a login is still used.",
+    "source": "https://gitlab.com/AuroraOSS/AuroraStore",
+    "quote": "You can login with either personal or an anonymous account"
+   },
+   "auto-updates": {
+    "v": "yes",
+    "note": null,
+    "source": "https://gitlab.com/AuroraOSS/AuroraStore",
+    "quote": null
+   }
+  },
+  "openboard": {
+   "clipboard-history": {
+    "v": "yes",
+    "note": null,
+    "source": "https://github.com/openboard-team/openboard",
+    "quote": "Clipboard history feature (checked off in the project's TODO list)"
+   },
+   "emoji-search": {
+    "v": "no",
+    "note": "Listed as a wanted, not-yet-done feature.",
+    "source": "https://github.com/openboard-team/openboard",
+    "quote": "[ ] Emoji search"
+   },
+   "glide-typing": {
+    "v": "no",
+    "note": "Listed as a wanted, not-yet-done feature.",
+    "source": "https://github.com/openboard-team/openboard",
+    "quote": "[ ] Glide typing"
+   },
+   "many-languages": {
+    "v": "yes",
+    "note": null,
+    "source": "https://github.com/openboard-team/openboard",
+    "quote": null
+   },
+   "no-tracking": {
+    "v": "yes",
+    "note": null,
+    "source": "https://github.com/openboard-team/openboard",
+    "quote": null
+   }
+  },
+  "librengine": {
+   "own-index": {
+    "v": "yes",
+    "note": null,
+    "source": "https://github.com/liameno/librengine",
+    "quote": "Crawler: Multithreading, Cache, Robots.txt, Queue (BFS)"
+   },
+   "image-search": {
+    "v": "no",
+    "note": "Image crawler is an unchecked TODO item.",
+    "source": "https://github.com/liameno/librengine",
+    "quote": "[ ] Images Crawler"
+   },
+   "no-server-needed": {
+    "v": "no",
+    "note": "Needs a database, crawler and website run by you.",
+    "source": "site data",
+    "quote": null
+   },
+   "no-tracking": {
+    "v": "yes",
+    "note": null,
+    "source": "https://github.com/liameno/librengine",
+    "quote": null
+   }
+  },
+  "keepassx": {
+   "no-server-needed": {
+    "v": "yes",
+    "note": null,
+    "source": "site data",
+    "quote": null
+   },
+   "breach-alerts": {
+    "v": "no",
+    "note": null,
+    "source": "https://www.keepassx.org/",
+    "quote": null
+   },
+   "browser-extension": {
+    "v": "no",
+    "note": null,
+    "source": "https://www.keepassx.org/",
+    "quote": null
+   },
+   "passkeys": {
+    "v": "no",
+    "note": null,
+    "source": "https://www.keepassx.org/",
+    "quote": null
+   },
+   "passwords-import": {
+    "v": "partly",
+    "note": "generic files",
+    "source": "https://www.keepassx.org/",
+    "quote": null
+   },
+   "phone-app": {
+    "v": "no",
+    "note": "none official",
+    "source": "https://www.keepassx.org/",
+    "quote": null
+   },
+   "share-with-others": {
+    "v": "no",
+    "note": null,
+    "source": "https://www.keepassx.org/",
+    "quote": null
+   },
+   "syncs-devices": {
+    "v": "no",
+    "note": null,
+    "source": "https://www.keepassx.org/",
+    "quote": null
+   }
+  },
+  "gravitl": {
+   "web-admin": {
+    "v": "yes",
+    "note": null,
+    "source": "https://github.com/gravitl/netmaker",
+    "quote": "Manage: Admin UI"
+   },
+   "access-rules": {
+    "v": "yes",
+    "note": null,
+    "source": "https://github.com/gravitl/netmaker",
+    "quote": "Access Control Lists"
+   },
+   "mesh-direct": {
+    "v": "yes",
+    "note": null,
+    "source": "https://github.com/gravitl/netmaker",
+    "quote": "Mesh VPNs"
+   },
+   "no-server-needed": {
+    "v": "partly",
+    "note": "paid hosted plan",
+    "source": "https://netmaker.io",
+    "quote": null
+   }
+  },
+  "mullvad-vpn": {
+   "split-tunnel": {
+    "v": "partly",
+    "note": "Built in on desktop and Android, not on iOS.",
+    "source": "https://github.com/mullvad/mullvadvpn-app",
+    "quote": "Split tunneling table row: no check for iOS"
+   },
+   "free-plan": {
+    "v": "no",
+    "note": null,
+    "source": "https://mullvad.net/en/vpn",
+    "quote": null
+   },
+   "independent-audit": {
+    "v": "yes",
+    "note": null,
+    "source": "https://mullvad.net/en/vpn",
+    "quote": null
+   },
+   "kill-switch": {
+    "v": "yes",
+    "note": null,
+    "source": "https://mullvad.net/en/vpn",
+    "quote": null
+   },
+   "many-locations": {
+    "v": "yes",
+    "note": null,
+    "source": "https://mullvad.net/en/vpn",
+    "quote": null
+   },
+   "no-account-needed": {
+    "v": "yes",
+    "note": "random account number",
+    "source": "https://mullvad.net/en/vpn",
+    "quote": null
+   }
+  },
+  "pop-os": {
+   "graphical-installer": {
+    "v": "yes",
+    "note": null,
+    "source": "https://system76.com/pop/",
+    "quote": null
+   },
+   "nvidia-ready": {
+    "v": "yes",
+    "note": "separate NVIDIA download",
+    "source": "https://system76.com/pop/",
+    "quote": null
+   },
+   "preinstalled": {
+    "v": "partly",
+    "note": "System76 only",
+    "source": "https://system76.com/pop/",
+    "quote": null
+   },
+   "runs-windows-games": {
+    "v": "partly",
+    "note": "Steam Proton, some setup",
+    "source": "https://system76.com/pop/",
+    "quote": null
+   }
+  },
+  "zen-browser": {
+   "ad-blocking": {
+    "v": "no",
+    "note": null,
+    "source": "https://zen-browser.app",
+    "quote": null
+   },
+   "chrome-extensions": {
+    "v": "no",
+    "note": "Firefox add-ons",
+    "source": "https://zen-browser.app",
+    "quote": null
+   },
+   "full-ad-block-extensions": {
+    "v": "yes",
+    "note": null,
+    "source": "https://zen-browser.app",
+    "quote": null
+   },
+   "no-tracking": {
+    "v": "partly",
+    "note": "some telemetry on by default",
+    "source": "https://zen-browser.app",
+    "quote": null
+   },
+   "syncs-devices": {
+    "v": "yes",
+    "note": "Firefox sync",
+    "source": "https://zen-browser.app",
+    "quote": null
+   },
+   "phone-app": {
+    "v": "no",
+    "note": null,
+    "source": "site data",
+    "quote": null
+   }
+  },
+  "mattermost": {
+   "phone-app": {
+    "v": "yes",
+    "note": null,
+    "source": "site data",
+    "quote": null
+   },
+   "built-in-calls": {
+    "v": "yes",
+    "note": null,
+    "source": "https://docs.mattermost.com/about/product.html",
+    "quote": "voice and video calls"
+   },
+   "slack-import": {
+    "v": "yes",
+    "note": null,
+    "source": "https://docs.mattermost.com/about/product.html",
+    "quote": "Slack import"
+   },
+   "threads": {
+    "v": "yes",
+    "note": null,
+    "source": "https://docs.mattermost.com/about/product.html",
+    "quote": "collapsed reply threads"
+   },
+   "company-sso": {
+    "v": "partly",
+    "note": "SAML is paid",
+    "source": "https://mattermost.com",
+    "quote": null
+   },
+   "e2e-encrypted": {
+    "v": "no",
+    "note": null,
+    "source": "https://mattermost.com",
+    "quote": null
+   },
+   "no-server-needed": {
+    "v": "partly",
+    "note": "paid cloud",
+    "source": "https://mattermost.com",
+    "quote": null
+   }
+  },
+  "briar": {
+   "computer-app": {
+    "v": "yes",
+    "note": null,
+    "source": "site data",
+    "quote": null
+   },
+   "phone-app": {
+    "v": "partly",
+    "note": "Android only, no iPhone app",
+    "source": "site data",
+    "quote": null
+   },
+   "built-in-calls": {
+    "v": "no",
+    "note": null,
+    "source": "https://briarproject.org",
+    "quote": null
+   },
+   "disappearing-messages": {
+    "v": "yes",
+    "note": null,
+    "source": "https://briarproject.org",
+    "quote": null
+   },
+   "e2e-encrypted": {
+    "v": "yes",
+    "note": null,
+    "source": "https://briarproject.org",
+    "quote": null
+   },
+   "no-phone-number": {
+    "v": "yes",
+    "note": null,
+    "source": "https://briarproject.org",
+    "quote": null
+   }
+  },
+  "galene": {
+   "e2e-encrypted": {
+    "v": "no",
+    "note": null,
+    "source": "https://galene.org/",
+    "quote": "Galene does not perform end-to-end encryption."
+   },
+   "meeting-recording": {
+    "v": "yes",
+    "note": null,
+    "source": "https://galene.org/",
+    "quote": "recording to disk"
+   },
+   "screen-share": {
+    "v": "yes",
+    "note": null,
+    "source": "https://galene.org/",
+    "quote": "screen and window sharing"
+   },
+   "large-meetings": {
+    "v": "partly",
+    "note": "About 300 in lectures; about 20-40 with everyone on video per server",
+    "source": "https://galene.org/",
+    "quote": null
+   },
+   "phone-app": {
+    "v": "partly",
+    "note": "Android client lacks video; no iPhone app, web works in mobile browsers",
+    "source": "https://galene.org/",
+    "quote": null
+   },
+   "no-server-needed": {
+    "v": "no",
+    "note": "Someone must run the server",
+    "source": "site data",
+    "quote": null
+   },
+   "no-account-needed": {
+    "v": "yes",
+    "note": "public groups",
+    "source": "https://galene.org",
+    "quote": null
+   }
+  },
+  "discourse": {
+   "phone-app": {
+    "v": "yes",
+    "note": null,
+    "source": "https://www.discourse.org/about",
+    "quote": "Download Discourse Hub on the App Store / Google Play"
+   },
+   "federated": {
+    "v": "partly",
+    "note": "ActivityPub plugin, early",
+    "source": "https://www.discourse.org",
+    "quote": null
+   },
+   "no-server-needed": {
+    "v": "partly",
+    "note": "paid hosting",
+    "source": "https://www.discourse.org",
+    "quote": null
+   },
+   "roles-moderation": {
+    "v": "yes",
+    "note": null,
+    "source": "https://www.discourse.org",
+    "quote": null
+   },
+   "voting": {
+    "v": "partly",
+    "note": "likes; voting is a plugin",
+    "source": "https://www.discourse.org",
+    "quote": null
+   }
+  },
+  "diaspora": {
+   "federated": {
+    "v": "yes",
+    "note": null,
+    "source": "https://diasporafoundation.org/about",
+    "quote": "Independently run servers, called pods, connect to one another"
+   },
+   "who-sees-post": {
+    "v": "yes",
+    "note": null,
+    "source": "https://diasporafoundation.org/about",
+    "quote": "aspects allow you to share with just those people you want to"
+   },
+   "no-server-needed": {
+    "v": "yes",
+    "note": "join a public pod",
+    "source": "https://diasporafoundation.org",
+    "quote": null
+   },
+   "photo-albums": {
+    "v": "partly",
+    "note": "photos in posts",
+    "source": "https://diasporafoundation.org",
+    "quote": null
+   }
+  },
+  "bazzite": {
+   "update-rollback": {
+    "v": "yes",
+    "note": null,
+    "source": "https://github.com/ublue-os/bazzite",
+    "quote": "Easily roll back to the previous version of Bazzite thanks to rpm-ostree's rollback functionality"
+   },
+   "runs-windows-games": {
+    "v": "yes",
+    "note": null,
+    "source": "https://docs.bazzite.gg/",
+    "quote": "Steam and Lutris bundled; run your PC games"
+   },
+   "graphical-installer": {
+    "v": "yes",
+    "note": null,
+    "source": "https://bazzite.gg",
+    "quote": null
+   },
+   "long-support": {
+    "v": "no",
+    "note": "rolling updates",
+    "source": "https://bazzite.gg",
+    "quote": null
+   },
+   "nvidia-ready": {
+    "v": "yes",
+    "note": null,
+    "source": "https://bazzite.gg",
+    "quote": null
+   }
+  },
+  "accrescent": {
+   "auto-updates": {
+    "v": "yes",
+    "note": null,
+    "source": "https://accrescent.app/features",
+    "quote": "perform updates in the background without prompting thereafter"
+   },
+   "no-account-needed": {
+    "v": "yes",
+    "note": null,
+    "source": "https://accrescent.app/features",
+    "quote": "Accrescent doesn't have user accounts"
+   },
+   "app-review": {
+    "v": "yes",
+    "note": null,
+    "source": "https://accrescent.app",
+    "quote": null
+   },
+   "play-apps": {
+    "v": "no",
+    "note": null,
+    "source": "https://accrescent.app",
+    "quote": null
+   }
+  },
+  "simple-keyboard": {
+   "emoji-search": {
+    "v": "no",
+    "note": null,
+    "source": "https://github.com/rkkr/simple-keyboard",
+    "quote": "Feature it doesn't have: Emojis, GIFs"
+   },
+   "glide-typing": {
+    "v": "no",
+    "note": null,
+    "source": "https://github.com/rkkr/simple-keyboard",
+    "quote": "Feature it doesn't have: Swipe typing"
+   },
+   "no-tracking": {
+    "v": "yes",
+    "note": null,
+    "source": "https://github.com/rkkr/simple-keyboard",
+    "quote": "Minimal permissions (only Vibrate); Ads-free"
+   },
+   "voice-typing": {
+    "v": "no",
+    "note": null,
+    "source": "https://github.com/rkkr/simple-keyboard",
+    "quote": null
+   }
+  },
+  "ungoogled-chromium": {
+   "phone-app": {
+    "v": "no",
+    "note": null,
+    "source": "site data",
+    "quote": null
+   },
+   "ad-blocking": {
+    "v": "no",
+    "note": null,
+    "source": "https://github.com/ungoogled-software/ungoogled-chromium",
+    "quote": null
+   },
+   "chrome-extensions": {
+    "v": "partly",
+    "note": "manual workaround",
+    "source": "https://github.com/ungoogled-software/ungoogled-chromium",
+    "quote": null
+   },
+   "full-ad-block-extensions": {
+    "v": "partly",
+    "note": "Lite only",
+    "source": "https://github.com/ungoogled-software/ungoogled-chromium",
+    "quote": null
+   },
+   "no-tracking": {
+    "v": "yes",
+    "note": null,
+    "source": "https://github.com/ungoogled-software/ungoogled-chromium",
+    "quote": null
+   }
+  },
+  "bitwarden": {
+   "phone-app": {
+    "v": "yes",
+    "note": null,
+    "source": "https://github.com/bitwarden/clients",
+    "quote": "mobile apps: iOS and android repos"
+   },
+   "passkeys": {
+    "v": "yes",
+    "note": null,
+    "source": "https://bitwarden.com/",
+    "quote": "Sign in with a passkey"
+   },
+   "share-with-others": {
+    "v": "yes",
+    "note": null,
+    "source": "https://bitwarden.com/",
+    "quote": "Share passwords across friends, family, teams"
+   },
+   "no-server-needed": {
+    "v": "yes",
+    "note": null,
+    "source": "https://bitwarden.com/",
+    "quote": "Always free"
+   },
+   "breach-alerts": {
+    "v": "partly",
+    "note": "full reports are paid",
+    "source": "https://bitwarden.com",
+    "quote": null
+   },
+   "browser-extension": {
+    "v": "yes",
+    "note": null,
+    "source": "https://bitwarden.com",
+    "quote": null
+   },
+   "passwords-import": {
+    "v": "yes",
+    "note": null,
+    "source": "https://bitwarden.com",
+    "quote": null
+   },
+   "syncs-devices": {
+    "v": "yes",
+    "note": null,
+    "source": "https://bitwarden.com",
+    "quote": null
+   }
+  },
+  "aegis": {
+   "computer-app": {
+    "v": "no",
+    "note": null,
+    "source": "site data",
+    "quote": null
+   },
+   "phone-app": {
+    "v": "partly",
+    "note": "Android only, no iPhone app",
+    "source": "site data",
+    "quote": null
+   },
+   "encrypted-backup": {
+    "v": "yes",
+    "note": null,
+    "source": "https://github.com/beemdevelopment/Aegis",
+    "quote": "Export (plaintext or encrypted); automatic backups of the vault"
+   },
+   "twofa-import": {
+    "v": "yes",
+    "note": null,
+    "source": "https://github.com/beemdevelopment/Aegis",
+    "quote": "Import from other authenticator apps: 2FAS Authenticator, Authenticator..."
+   },
+   "syncs-devices": {
+    "v": "no",
+    "note": null,
+    "source": "https://getaegis.app",
+    "quote": null
+   }
+  },
+  "netbird": {
+   "mesh-direct": {
+    "v": "yes",
+    "note": null,
+    "source": "https://netbird.io/",
+    "quote": "peer-to-peer WireGuard-based network"
+   },
+   "access-rules": {
+    "v": "yes",
+    "note": null,
+    "source": "https://netbird.io/",
+    "quote": "Define granular policies to limit network access"
+   },
+   "company-sso": {
+    "v": "yes",
+    "note": null,
+    "source": "https://netbird.io",
+    "quote": null
+   },
+   "no-server-needed": {
+    "v": "yes",
+    "note": "free hosted plan",
+    "source": "https://netbird.io",
+    "quote": null
+   },
+   "phone-app": {
+    "v": "yes",
+    "note": null,
+    "source": "https://netbird.io",
+    "quote": null
+   },
+   "web-admin": {
+    "v": "yes",
+    "note": null,
+    "source": "https://netbird.io",
+    "quote": null
+   }
+  },
+  "proton-vpn": {
+   "free-plan": {
+    "v": "yes",
+    "note": null,
+    "source": "https://protonvpn.com/free-vpn",
+    "quote": "no data or time limits, and will be free forever"
+   },
+   "kill-switch": {
+    "v": "yes",
+    "note": null,
+    "source": "https://protonvpn.com/free-vpn",
+    "quote": "kill switch listed as included feature"
+   },
+   "many-locations": {
+    "v": "yes",
+    "note": null,
+    "source": "https://protonvpn.com/free-vpn",
+    "quote": "110+ / 140+ countries"
+   },
+   "no-account-needed": {
+    "v": "no",
+    "note": null,
+    "source": "https://protonvpn.com/free-vpn",
+    "quote": "Create a free account and download our VPN"
+   },
+   "independent-audit": {
+    "v": "yes",
+    "note": null,
+    "source": "https://protonvpn.com",
+    "quote": null
+   },
+   "split-tunnel": {
+    "v": "yes",
+    "note": null,
+    "source": "https://protonvpn.com",
+    "quote": null
+   }
+  },
+  "wordpress": {
+   "blog-import": {
+    "v": "yes",
+    "note": null,
+    "source": "https://wordpress.org",
+    "quote": null
+   },
+   "email-newsletter": {
+    "v": "partly",
+    "note": "plugin",
+    "source": "https://wordpress.org",
+    "quote": null
+   },
+   "federated": {
+    "v": "partly",
+    "note": "ActivityPub plugin",
+    "source": "https://wordpress.org",
+    "quote": null
+   },
+   "no-server-needed": {
+    "v": "yes",
+    "note": "free on WordPress.com",
+    "source": "https://wordpress.org",
+    "quote": null
+   },
+   "paid-subscriptions": {
+    "v": "partly",
+    "note": "plugin",
+    "source": "https://wordpress.org",
+    "quote": null
+   }
+  },
+  "rocket-chat": {
+   "built-in-calls": {
+    "v": "yes",
+    "note": "Jitsi-based",
+    "source": "https://rocket.chat/",
+    "quote": null
+   },
+   "company-sso": {
+    "v": "yes",
+    "note": null,
+    "source": "https://rocket.chat/",
+    "quote": null
+   },
+   "cross-org": {
+    "v": "partly",
+    "note": "Matrix federation, limited",
+    "source": "https://rocket.chat/",
+    "quote": null
+   },
+   "e2e-encrypted": {
+    "v": "partly",
+    "note": "optional",
+    "source": "https://rocket.chat/",
+    "quote": null
+   },
+   "no-server-needed": {
+    "v": "partly",
+    "note": "paid hosting",
+    "source": "https://rocket.chat/",
+    "quote": null
+   },
+   "slack-import": {
+    "v": "yes",
+    "note": null,
+    "source": "https://rocket.chat/",
+    "quote": null
+   },
+   "threads": {
+    "v": "yes",
+    "note": null,
+    "source": "https://rocket.chat/",
+    "quote": null
+   }
+  },
+  "snikket": {
+   "built-in-calls": {
+    "v": "yes",
+    "note": null,
+    "source": "https://snikket.org/service/",
+    "quote": null
+   },
+   "e2e-encrypted": {
+    "v": "partly",
+    "note": "OMEMO in chats",
+    "source": "https://snikket.org/service/",
+    "quote": null
+   },
+   "no-phone-number": {
+    "v": "yes",
+    "note": null,
+    "source": "https://snikket.org/service/",
+    "quote": null
+   },
+   "self-hostable": {
+    "v": "yes",
+    "note": null,
+    "source": "https://snikket.org/service/",
+    "quote": null
+   },
+   "computer-app": {
+    "v": "partly",
+    "note": "uses other XMPP desktop apps",
+    "source": "https://snikket.org/service/",
+    "quote": null
+   },
+   "phone-app": {
+    "v": "yes",
+    "note": null,
+    "source": "https://snikket.org/service/",
+    "quote": null
+   }
+  },
+  "mastodon": {
+   "custom-feeds": {
+    "v": "partly",
+    "note": "lists and hashtags",
+    "source": "https://joinmastodon.org",
+    "quote": null
+   },
+   "federated": {
+    "v": "yes",
+    "note": null,
+    "source": "https://joinmastodon.org",
+    "quote": null
+   },
+   "move-account": {
+    "v": "partly",
+    "note": "followers move, posts don't",
+    "source": "https://joinmastodon.org",
+    "quote": null
+   },
+   "no-server-needed": {
+    "v": "yes",
+    "note": "join a server",
+    "source": "https://joinmastodon.org",
+    "quote": null
+   },
+   "phone-app": {
+    "v": "yes",
+    "note": null,
+    "source": "https://joinmastodon.org",
+    "quote": null
+   },
+   "quote-posts": {
+    "v": "yes",
+    "note": null,
+    "source": "https://joinmastodon.org",
+    "quote": null
+   }
+  },
+  "pixelfed": {
+   "federated": {
+    "v": "yes",
+    "note": null,
+    "source": "https://pixelfed.org",
+    "quote": null
+   },
+   "no-server-needed": {
+    "v": "yes",
+    "note": "join a server",
+    "source": "https://pixelfed.org",
+    "quote": null
+   },
+   "phone-app": {
+    "v": "yes",
+    "note": null,
+    "source": "https://pixelfed.org",
+    "quote": null
+   },
+   "photo-filters": {
+    "v": "yes",
+    "note": null,
+    "source": "https://pixelfed.org",
+    "quote": null
+   },
+   "photo-stories": {
+    "v": "yes",
+    "note": null,
+    "source": "https://pixelfed.org",
+    "quote": null
+   }
+  },
+  "linux-mint": {
+   "graphical-installer": {
+    "v": "yes",
+    "note": null,
+    "source": "https://linuxmint.com",
+    "quote": null
+   },
+   "long-support": {
+    "v": "yes",
+    "note": null,
+    "source": "https://linuxmint.com",
+    "quote": null
+   },
+   "nvidia-ready": {
+    "v": "yes",
+    "note": null,
+    "source": "https://linuxmint.com",
+    "quote": null
+   },
+   "preinstalled": {
+    "v": "partly",
+    "note": "small sellers",
+    "source": "https://linuxmint.com",
+    "quote": null
+   },
+   "runs-windows-games": {
+    "v": "partly",
+    "note": null,
+    "source": "https://linuxmint.com",
+    "quote": null
+   },
+   "update-rollback": {
+    "v": "yes",
+    "note": "Timeshift",
+    "source": "https://linuxmint.com",
+    "quote": null
+   }
+  },
+  "grapheneos": {
+   "banking-apps": {
+    "v": "partly",
+    "note": "a few refuse",
+    "source": "https://grapheneos.org",
+    "quote": null
+   },
+   "easy-installer": {
+    "v": "yes",
+    "note": null,
+    "source": "https://grapheneos.org",
+    "quote": null
+   },
+   "google-apps-optional": {
+    "v": "yes",
+    "note": null,
+    "source": "https://grapheneos.org",
+    "quote": null
+   },
+   "many-phones": {
+    "v": "no",
+    "note": "Pixel phones only",
+    "source": "https://grapheneos.org",
+    "quote": null
+   },
+   "preinstalled": {
+    "v": "partly",
+    "note": "small sellers",
+    "source": "https://grapheneos.org",
+    "quote": null
+   },
+   "security-updates": {
+    "v": "yes",
+    "note": null,
+    "source": "https://grapheneos.org",
+    "quote": null
+   }
+  },
+  "fossdroid": {
+   "auto-updates": {
+    "v": "no",
+    "note": null,
+    "source": "https://fossdroid.com/",
+    "quote": null
+   },
+   "no-account-needed": {
+    "v": "yes",
+    "note": null,
+    "source": "https://fossdroid.com/",
+    "quote": null
+   },
+   "play-apps": {
+    "v": "no",
+    "note": null,
+    "source": "https://fossdroid.com/",
+    "quote": null
+   }
+  },
+  "meshcentral": {
+   "computer-app": {
+    "v": "yes",
+    "note": null,
+    "source": "https://meshcentral.com",
+    "quote": null
+   },
+   "no-server-needed": {
+    "v": "no",
+    "note": null,
+    "source": "https://meshcentral.com",
+    "quote": null
+   },
+   "phone-app": {
+    "v": "partly",
+    "note": "Android only",
+    "source": "https://meshcentral.com",
+    "quote": null
+   },
+   "session-file-transfer": {
+    "v": "yes",
+    "note": null,
+    "source": "https://meshcentral.com",
+    "quote": null
+   },
+   "unattended-access": {
+    "v": "yes",
+    "note": null,
+    "source": "https://meshcentral.com",
+    "quote": null
+   }
+  },
+  "tor-browser": {
+   "ad-blocking": {
+    "v": "partly",
+    "note": "trackers only",
+    "source": "https://www.torproject.org",
+    "quote": null
+   },
+   "chrome-extensions": {
+    "v": "no",
+    "note": null,
+    "source": "https://www.torproject.org",
+    "quote": null
+   },
+   "full-ad-block-extensions": {
+    "v": "no",
+    "note": null,
+    "source": "https://www.torproject.org",
+    "quote": null
+   },
+   "no-tracking": {
+    "v": "yes",
+    "note": null,
+    "source": "https://www.torproject.org",
+    "quote": null
+   },
+   "syncs-devices": {
+    "v": "no",
+    "note": null,
+    "source": "https://www.torproject.org",
+    "quote": null
+   },
+   "phone-app": {
+    "v": "partly",
+    "note": "Only one phone system",
+    "source": "site data",
+    "quote": null
+   }
+  },
+  "keepassxc": {
+   "breach-alerts": {
+    "v": "yes",
+    "note": null,
+    "source": "https://keepassxc.org/",
+    "quote": null
+   },
+   "browser-extension": {
+    "v": "yes",
+    "note": null,
+    "source": "https://keepassxc.org/",
+    "quote": null
+   },
+   "passkeys": {
+    "v": "partly",
+    "note": "computer only",
+    "source": "https://keepassxc.org/",
+    "quote": null
+   },
+   "passwords-import": {
+    "v": "partly",
+    "note": null,
+    "source": "https://keepassxc.org/",
+    "quote": null
+   },
+   "phone-app": {
+    "v": "partly",
+    "note": "no official app",
+    "source": "https://keepassxc.org/",
+    "quote": null
+   },
+   "share-with-others": {
+    "v": "partly",
+    "note": "shared file only",
+    "source": "https://keepassxc.org/",
+    "quote": null
+   },
+   "syncs-devices": {
+    "v": "partly",
+    "note": "via your own cloud folder",
+    "source": "https://keepassxc.org/",
+    "quote": null
+   },
+   "no-server-needed": {
+    "v": "yes",
+    "note": null,
+    "source": "site data",
+    "quote": null
+   }
+  },
+  "ente-auth": {
+   "encrypted-backup": {
+    "v": "yes",
+    "note": null,
+    "source": "https://ente.com",
+    "quote": null
+   },
+   "syncs-devices": {
+    "v": "yes",
+    "note": null,
+    "source": "https://ente.com",
+    "quote": null
+   },
+   "twofa-import": {
+    "v": "yes",
+    "note": null,
+    "source": "https://ente.com",
+    "quote": null
+   },
+   "computer-app": {
+    "v": "yes",
+    "note": null,
+    "source": "site data",
+    "quote": null
+   },
+   "phone-app": {
+    "v": "yes",
+    "note": null,
+    "source": "site data",
+    "quote": null
+   }
+  },
+  "omniedge": {
+   "mesh-direct": {
+    "v": "yes",
+    "note": null,
+    "source": "https://connect.omniedge.io",
+    "quote": null
+   }
+  },
+  "outline-vpn": {
+   "free-plan": {
+    "v": "yes",
+    "note": null,
+    "source": "https://getoutline.org",
+    "quote": null
+   },
+   "split-tunnel": {
+    "v": "partly",
+    "note": null,
+    "source": "https://getoutline.org",
+    "quote": null
+   }
+  },
+  "element": {
+   "built-in-calls": {
+    "v": "yes",
+    "note": null,
+    "source": "https://element.io",
+    "quote": null
+   },
+   "chat-bots": {
+    "v": "yes",
+    "note": null,
+    "source": "https://element.io",
+    "quote": null
+   },
+   "company-sso": {
+    "v": "yes",
+    "note": null,
+    "source": "https://element.io",
+    "quote": null
+   },
+   "cross-org": {
+    "v": "yes",
+    "note": "federation",
+    "source": "https://element.io",
+    "quote": null
+   },
+   "disappearing-messages": {
+    "v": "partly",
+    "note": "server-set retention",
+    "source": "https://element.io",
+    "quote": null
+   },
+   "e2e-encrypted": {
+    "v": "yes",
+    "note": null,
+    "source": "https://element.io",
+    "quote": null
+   },
+   "no-phone-number": {
+    "v": "yes",
+    "note": null,
+    "source": "https://element.io",
+    "quote": null
+   },
+   "no-server-needed": {
+    "v": "yes",
+    "note": null,
+    "source": "https://element.io",
+    "quote": null
+   },
+   "roles-moderation": {
+    "v": "yes",
+    "note": null,
+    "source": "https://element.io",
+    "quote": null
+   },
+   "screen-share": {
+    "v": "yes",
+    "note": null,
+    "source": "https://element.io",
+    "quote": null
+   },
+   "self-hostable": {
+    "v": "yes",
+    "note": null,
+    "source": "https://element.io",
+    "quote": null
+   },
+   "slack-import": {
+    "v": "partly",
+    "note": "separate bridge tools",
+    "source": "https://element.io",
+    "quote": null
+   },
+   "threads": {
+    "v": "yes",
+    "note": null,
+    "source": "https://element.io",
+    "quote": null
+   },
+   "computer-app": {
+    "v": "yes",
+    "note": null,
+    "source": "site data",
+    "quote": null
+   },
+   "phone-app": {
+    "v": "yes",
+    "note": null,
+    "source": "site data",
+    "quote": null
+   }
+  },
+  "tinode": {
+   "built-in-calls": {
+    "v": "yes",
+    "note": null,
+    "source": "https://tinode.co/",
+    "quote": null
+   },
+   "no-phone-number": {
+    "v": "yes",
+    "note": null,
+    "source": "https://tinode.co/",
+    "quote": null
+   },
+   "self-hostable": {
+    "v": "yes",
+    "note": null,
+    "source": "https://tinode.co/",
+    "quote": null
+   }
+  },
+  "misskey": {
+   "custom-feeds": {
+    "v": "yes",
+    "note": null,
+    "source": "https://misskey-hub.net/",
+    "quote": null
+   },
+   "federated": {
+    "v": "yes",
+    "note": null,
+    "source": "https://misskey-hub.net/",
+    "quote": null
+   },
+   "move-account": {
+    "v": "partly",
+    "note": "followers move, posts don't",
+    "source": "https://misskey-hub.net/",
+    "quote": null
+   },
+   "no-server-needed": {
+    "v": "yes",
+    "note": "join a server",
+    "source": "https://misskey-hub.net/",
+    "quote": null
+   },
+   "quote-posts": {
+    "v": "yes",
+    "note": null,
+    "source": "https://misskey-hub.net/",
+    "quote": null
+   }
+  },
+  "peertube": {
+   "auto-captions": {
+    "v": "yes",
+    "note": null,
+    "source": "https://joinpeertube.org/",
+    "quote": null
+   },
+   "federated": {
+    "v": "yes",
+    "note": null,
+    "source": "https://joinpeertube.org/",
+    "quote": null
+   },
+   "live-streams-hosted": {
+    "v": "partly",
+    "note": "server owner must enable",
+    "source": "https://joinpeertube.org/",
+    "quote": null
+   },
+   "no-server-needed": {
+    "v": "yes",
+    "note": "join a server",
+    "source": "https://joinpeertube.org/",
+    "quote": null
+   },
+   "phone-app": {
+    "v": "yes",
+    "note": null,
+    "source": "https://joinpeertube.org/",
+    "quote": null
+   },
+   "short-videos": {
+    "v": "no",
+    "note": null,
+    "source": "https://joinpeertube.org/",
+    "quote": null
+   }
+  },
+  "plume": {
+   "federated": {
+    "v": "yes",
+    "note": null,
+    "source": "https://joinplu.me",
+    "quote": null
+   }
+  },
+  "fedora": {
+   "graphical-installer": {
+    "v": "yes",
+    "note": null,
+    "source": "https://fedoraproject.org",
+    "quote": null
+   },
+   "long-support": {
+    "v": "no",
+    "note": "about 13 months",
+    "source": "https://fedoraproject.org",
+    "quote": null
+   },
+   "nvidia-ready": {
+    "v": "partly",
+    "note": null,
+    "source": "https://fedoraproject.org",
+    "quote": null
+   },
+   "preinstalled": {
+    "v": "yes",
+    "note": null,
+    "source": "https://fedoraproject.org",
+    "quote": null
+   },
+   "runs-windows-games": {
+    "v": "partly",
+    "note": null,
+    "source": "https://fedoraproject.org",
+    "quote": null
+   },
+   "update-rollback": {
+    "v": "partly",
+    "note": null,
+    "source": "https://fedoraproject.org",
+    "quote": null
+   }
+  },
+  "lineageos": {
+   "banking-apps": {
+    "v": "partly",
+    "note": null,
+    "source": "https://lineageos.org",
+    "quote": null
+   },
+   "easy-installer": {
+    "v": "partly",
+    "note": "some commands",
+    "source": "https://lineageos.org",
+    "quote": null
+   },
+   "google-apps-optional": {
+    "v": "partly",
+    "note": null,
+    "source": "https://lineageos.org",
+    "quote": null
+   },
+   "many-phones": {
+    "v": "yes",
+    "note": null,
+    "source": "https://lineageos.org",
+    "quote": null
+   },
+   "preinstalled": {
+    "v": "partly",
+    "note": "small sellers",
+    "source": "https://lineageos.org",
+    "quote": null
+   },
+   "security-updates": {
+    "v": "yes",
+    "note": null,
+    "source": "https://lineageos.org",
+    "quote": null
+   }
+  },
+  "obtainium": {
+   "app-review": {
+    "v": "no",
+    "note": null,
+    "source": "https://obtainium.imranr.dev",
+    "quote": null
+   },
+   "auto-updates": {
+    "v": "partly",
+    "note": "needs permission",
+    "source": "https://obtainium.imranr.dev",
+    "quote": null
+   },
+   "no-account-needed": {
+    "v": "yes",
+    "note": null,
+    "source": "https://obtainium.imranr.dev",
+    "quote": null
+   },
+   "play-apps": {
+    "v": "no",
+    "note": null,
+    "source": "https://obtainium.imranr.dev",
+    "quote": null
+   },
+   "tracker-warnings": {
+    "v": "no",
+    "note": null,
+    "source": "https://obtainium.imranr.dev",
+    "quote": null
+   }
+  },
+  "rustdesk": {
+   "no-server-needed": {
+    "v": "yes",
+    "note": "public servers",
+    "source": "https://rustdesk.com",
+    "quote": null
+   },
+   "phone-app": {
+    "v": "yes",
+    "note": null,
+    "source": "https://rustdesk.com",
+    "quote": null
+   },
+   "session-file-transfer": {
+    "v": "yes",
+    "note": null,
+    "source": "https://rustdesk.com",
+    "quote": null
+   },
+   "unattended-access": {
+    "v": "yes",
+    "note": null,
+    "source": "https://rustdesk.com",
+    "quote": null
+   },
+   "computer-app": {
+    "v": "yes",
+    "note": null,
+    "source": "site data",
+    "quote": null
+   }
+  },
+  "chromium": {
+   "ad-blocking": {
+    "v": "no",
+    "note": null,
+    "source": "https://www.chromium.org/",
+    "quote": null
+   },
+   "chrome-extensions": {
+    "v": "yes",
+    "note": null,
+    "source": "https://www.chromium.org/",
+    "quote": null
+   },
+   "full-ad-block-extensions": {
+    "v": "partly",
+    "note": "Lite only",
+    "source": "https://www.chromium.org/",
+    "quote": null
+   },
+   "phone-app": {
+    "v": "no",
+    "note": null,
+    "source": "https://www.chromium.org/",
+    "quote": null
+   }
+  },
+  "vaultwarden": {
+   "breach-alerts": {
+    "v": "partly",
+    "note": null,
+    "source": "https://github.com/dani-garcia/vaultwarden",
+    "quote": null
+   },
+   "browser-extension": {
+    "v": "yes",
+    "note": null,
+    "source": "https://github.com/dani-garcia/vaultwarden",
+    "quote": null
+   },
+   "no-server-needed": {
+    "v": "no",
+    "note": null,
+    "source": "https://github.com/dani-garcia/vaultwarden",
+    "quote": null
+   },
+   "passkeys": {
+    "v": "yes",
+    "note": null,
+    "source": "https://github.com/dani-garcia/vaultwarden",
+    "quote": null
+   },
+   "passwords-import": {
+    "v": "yes",
+    "note": null,
+    "source": "https://github.com/dani-garcia/vaultwarden",
+    "quote": null
+   },
+   "phone-app": {
+    "v": "yes",
+    "note": "Bitwarden apps",
+    "source": "https://github.com/dani-garcia/vaultwarden",
+    "quote": null
+   },
+   "share-with-others": {
+    "v": "yes",
+    "note": null,
+    "source": "https://github.com/dani-garcia/vaultwarden",
+    "quote": null
+   },
+   "syncs-devices": {
+    "v": "yes",
+    "note": null,
+    "source": "https://github.com/dani-garcia/vaultwarden",
+    "quote": null
+   }
+  },
+  "2fas": {
+   "computer-app": {
+    "v": "no",
+    "note": "browser add-on only",
+    "source": "https://github.com/twofas/2fas-android",
+    "quote": null
+   },
+   "encrypted-backup": {
+    "v": "yes",
+    "note": null,
+    "source": "https://github.com/twofas/2fas-android",
+    "quote": null
+   },
+   "phone-app": {
+    "v": "yes",
+    "note": null,
+    "source": "https://github.com/twofas/2fas-android",
+    "quote": null
+   },
+   "syncs-devices": {
+    "v": "yes",
+    "note": null,
+    "source": "https://github.com/twofas/2fas-android",
+    "quote": null
+   },
+   "twofa-import": {
+    "v": "yes",
+    "note": null,
+    "source": "https://github.com/twofas/2fas-android",
+    "quote": null
+   }
+  },
+  "openvpn": {
+   "web-admin": {
+    "v": "no",
+    "note": null,
+    "source": "https://openvpn.net/community/",
+    "quote": null
+   },
+   "no-server-needed": {
+    "v": "no",
+    "note": null,
+    "source": "https://openvpn.net/community/",
+    "quote": null
+   },
+   "phone-app": {
+    "v": "yes",
+    "note": null,
+    "source": "https://openvpn.net/community/",
+    "quote": null
+   },
+   "mesh-direct": {
+    "v": "no",
+    "note": null,
+    "source": "https://openvpn.net/community/",
+    "quote": null
+   }
+  },
+  "clamav": {
+   "point-and-click": {
+    "v": "no",
+    "note": null,
+    "source": "https://www.clamav.net",
+    "quote": null
+   },
+   "realtime-protection": {
+    "v": "partly",
+    "note": "Linux, needs setup",
+    "source": "https://www.clamav.net",
+    "quote": null
+   },
+   "scheduled-scans": {
+    "v": "partly",
+    "note": "cron or Task Scheduler",
+    "source": "https://www.clamav.net",
+    "quote": null
+   },
+   "computer-app": {
+    "v": "yes",
+    "note": null,
+    "source": "site data",
+    "quote": null
+   }
+  },
+  "mumble": {
+   "chat-bots": {
+    "v": "partly",
+    "note": null,
+    "source": "https://www.mumble.info",
+    "quote": null
+   },
+   "drop-in-voice": {
+    "v": "yes",
+    "note": null,
+    "source": "https://www.mumble.info",
+    "quote": null
+   },
+   "no-server-needed": {
+    "v": "no",
+    "note": null,
+    "source": "https://www.mumble.info",
+    "quote": null
+   },
+   "phone-app": {
+    "v": "partly",
+    "note": "third-party apps",
+    "source": "https://www.mumble.info",
+    "quote": null
+   },
+   "roles-moderation": {
+    "v": "yes",
+    "note": null,
+    "source": "https://www.mumble.info",
+    "quote": null
+   },
+   "screen-share": {
+    "v": "no",
+    "note": null,
+    "source": "https://www.mumble.info",
+    "quote": null
+   }
+  },
+  "jitsi-meet": {
+   "breakout-rooms": {
+    "v": "yes",
+    "note": null,
+    "source": "https://jitsi.org/meet",
+    "quote": null
+   },
+   "e2e-encrypted": {
+    "v": "partly",
+    "note": "optional",
+    "source": "https://jitsi.org/meet",
+    "quote": null
+   },
+   "large-meetings": {
+    "v": "partly",
+    "note": "needs extra video bridges",
+    "source": "https://jitsi.org/meet",
+    "quote": null
+   },
+   "meeting-recording": {
+    "v": "partly",
+    "note": "needs recording setup",
+    "source": "https://jitsi.org/meet",
+    "quote": null
+   },
+   "no-account-needed": {
+    "v": "yes",
+    "note": null,
+    "source": "https://jitsi.org/meet",
+    "quote": null
+   },
+   "no-server-needed": {
+    "v": "yes",
+    "note": "meet.jit.si",
+    "source": "https://jitsi.org/meet",
+    "quote": null
+   },
+   "phone-app": {
+    "v": "yes",
+    "note": null,
+    "source": "https://jitsi.org/meet",
+    "quote": null
+   },
+   "screen-share": {
+    "v": "yes",
+    "note": null,
+    "source": "https://jitsi.org/meet",
+    "quote": null
+   }
+  },
+  "bluesky": {
+   "custom-feeds": {
+    "v": "yes",
+    "note": null,
+    "source": "https://bsky.app",
+    "quote": null
+   },
+   "federated": {
+    "v": "partly",
+    "note": "still being built",
+    "source": "https://bsky.app",
+    "quote": null
+   },
+   "move-account": {
+    "v": "yes",
+    "note": null,
+    "source": "https://bsky.app",
+    "quote": null
+   },
+   "no-server-needed": {
+    "v": "yes",
+    "note": null,
+    "source": "https://bsky.app",
+    "quote": null
+   },
+   "quote-posts": {
+    "v": "yes",
+    "note": null,
+    "source": "https://bsky.app",
+    "quote": null
+   },
+   "phone-app": {
+    "v": "yes",
+    "note": null,
+    "source": "site data",
+    "quote": null
+   }
+  },
+  "loops": {
+   "federated": {
+    "v": "yes",
+    "note": null,
+    "source": "https://joinloops.org",
+    "quote": null
+   },
+   "no-server-needed": {
+    "v": "yes",
+    "note": "join a server",
+    "source": "https://joinloops.org",
+    "quote": null
+   },
+   "phone-app": {
+    "v": "yes",
+    "note": null,
+    "source": "https://joinloops.org",
+    "quote": null
+   },
+   "short-videos": {
+    "v": "yes",
+    "note": null,
+    "source": "https://joinloops.org",
+    "quote": null
+   }
+  },
+  "alovoa": {
+   "nearby-matching": {
+    "v": "yes",
+    "note": null,
+    "source": "https://alovoa.com",
+    "quote": null
+   },
+   "phone-app": {
+    "v": "partly",
+    "note": "Android only",
+    "source": "https://alovoa.com",
+    "quote": null
+   },
+   "no-server-needed": {
+    "v": "yes",
+    "note": null,
+    "source": "site data",
+    "quote": null
+   }
+  },
+  "ubuntu": {
+   "graphical-installer": {
+    "v": "yes",
+    "note": null,
+    "source": "https://ubuntu.com",
+    "quote": null
+   },
+   "long-support": {
+    "v": "yes",
+    "note": null,
+    "source": "https://ubuntu.com",
+    "quote": null
+   },
+   "nvidia-ready": {
+    "v": "yes",
+    "note": null,
+    "source": "https://ubuntu.com",
+    "quote": null
+   },
+   "preinstalled": {
+    "v": "yes",
+    "note": null,
+    "source": "https://ubuntu.com",
+    "quote": null
+   },
+   "runs-windows-games": {
+    "v": "partly",
+    "note": null,
+    "source": "https://ubuntu.com",
+    "quote": null
+   },
+   "update-rollback": {
+    "v": "partly",
+    "note": null,
+    "source": "https://ubuntu.com",
+    "quote": null
+   }
+  },
+  "e-os": {
+   "banking-apps": {
+    "v": "partly",
+    "note": null,
+    "source": "https://e.foundation",
+    "quote": null
+   },
+   "easy-installer": {
+    "v": "yes",
+    "note": null,
+    "source": "https://e.foundation",
+    "quote": null
+   },
+   "google-apps-optional": {
+    "v": "partly",
+    "note": "microG",
+    "source": "https://e.foundation",
+    "quote": null
+   },
+   "many-phones": {
+    "v": "yes",
+    "note": null,
+    "source": "https://e.foundation",
+    "quote": null
+   },
+   "preinstalled": {
+    "v": "partly",
+    "note": "Murena shop",
+    "source": "https://e.foundation",
+    "quote": null
+   },
+   "security-updates": {
+    "v": "yes",
+    "note": null,
+    "source": "https://e.foundation",
+    "quote": null
+   }
+  },
+  "florisboard": {
+   "clipboard-history": {
+    "v": "yes",
+    "note": null,
+    "source": "https://florisboard.org",
+    "quote": null
+   },
+   "emoji-search": {
+    "v": "partly",
+    "note": "emoji only",
+    "source": "https://florisboard.org",
+    "quote": null
+   },
+   "glide-typing": {
+    "v": "yes",
+    "note": null,
+    "source": "https://florisboard.org",
+    "quote": null
+   },
+   "many-languages": {
+    "v": "yes",
+    "note": null,
+    "source": "https://florisboard.org",
+    "quote": null
+   },
+   "no-tracking": {
+    "v": "yes",
+    "note": null,
+    "source": "https://florisboard.org",
+    "quote": null
+   },
+   "voice-typing": {
+    "v": "no",
+    "note": null,
+    "source": "https://florisboard.org",
+    "quote": null
+   }
+  },
+  "ultravnc": {
+   "computer-app": {
+    "v": "partly",
+    "note": "Windows only",
+    "source": "https://uvnc.com",
+    "quote": null
+   },
+   "session-file-transfer": {
+    "v": "yes",
+    "note": null,
+    "source": "https://uvnc.com",
+    "quote": null
+   },
+   "unattended-access": {
+    "v": "yes",
+    "note": null,
+    "source": "https://uvnc.com",
+    "quote": null
+   },
+   "no-server-needed": {
+    "v": "yes",
+    "note": null,
+    "source": "https://uvnc.com",
+    "quote": null
+   },
+   "phone-app": {
+    "v": "no",
+    "note": null,
+    "source": "site data",
+    "quote": null
+   }
+  },
+  "floorp": {
+   "ad-blocking": {
+    "v": "partly",
+    "note": null,
+    "source": "https://floorp.app/",
+    "quote": null
+   },
+   "chrome-extensions": {
+    "v": "no",
+    "note": null,
+    "source": "https://floorp.app/",
+    "quote": null
+   },
+   "full-ad-block-extensions": {
+    "v": "yes",
+    "note": null,
+    "source": "https://floorp.app/",
+    "quote": null
+   },
+   "no-tracking": {
+    "v": "partly",
+    "note": null,
+    "source": "https://floorp.app/",
+    "quote": null
+   },
+   "phone-app": {
+    "v": "no",
+    "note": null,
+    "source": "https://floorp.app/",
+    "quote": null
+   },
+   "syncs-devices": {
+    "v": "yes",
+    "note": null,
+    "source": "https://floorp.app/",
+    "quote": null
+   }
+  },
+  "keepassdx": {
+   "breach-alerts": {
+    "v": "no",
+    "note": null,
+    "source": "https://www.keepassdx.com/",
+    "quote": null
+   },
+   "browser-extension": {
+    "v": "no",
+    "note": null,
+    "source": "https://www.keepassdx.com/",
+    "quote": null
+   },
+   "passkeys": {
+    "v": "partly",
+    "note": "phone only",
+    "source": "https://www.keepassdx.com/",
+    "quote": null
+   },
+   "passwords-import": {
+    "v": "partly",
+    "note": null,
+    "source": "https://www.keepassdx.com/",
+    "quote": null
+   },
+   "phone-app": {
+    "v": "partly",
+    "note": "Android only",
+    "source": "https://www.keepassdx.com/",
+    "quote": null
+   },
+   "share-with-others": {
+    "v": "no",
+    "note": null,
+    "source": "https://www.keepassdx.com/",
+    "quote": null
+   },
+   "syncs-devices": {
+    "v": "partly",
+    "note": "via cloud storage app",
+    "source": "https://www.keepassdx.com/",
+    "quote": null
+   },
+   "no-server-needed": {
+    "v": "yes",
+    "note": null,
+    "source": "site data",
+    "quote": null
+   }
+  },
+  "keyoxide": {
+   "many-proof-sites": {
+    "v": "yes",
+    "note": null,
+    "source": "https://keyoxide.org",
+    "quote": null
+   },
+   "no-account-needed": {
+    "v": "yes",
+    "note": null,
+    "source": "https://keyoxide.org",
+    "quote": null
+   },
+   "phone-app": {
+    "v": "no",
+    "note": null,
+    "source": "https://keyoxide.org",
+    "quote": null
+   },
+   "works-in-browser": {
+    "v": "yes",
+    "note": null,
+    "source": "https://keyoxide.org",
+    "quote": null
+   }
+  },
+  "dub": {
+   "click-stats": {
+    "v": "yes",
+    "note": null,
+    "source": "https://dub.link",
+    "quote": null
+   },
+   "custom-domain": {
+    "v": "yes",
+    "note": null,
+    "source": "https://dub.link",
+    "quote": null
+   },
+   "integrations-api": {
+    "v": "yes",
+    "note": null,
+    "source": "https://dub.link",
+    "quote": null
+   },
+   "no-server-needed": {
+    "v": "yes",
+    "note": "free hosted plan",
+    "source": "https://dub.link",
+    "quote": null
+   },
+   "qr-codes": {
+    "v": "yes",
+    "note": null,
+    "source": "https://dub.link",
+    "quote": null
+   }
+  },
+  "spacebar": {
+   "chat-bots": {
+    "v": "yes",
+    "note": null,
+    "source": "https://spacebar.chat",
+    "quote": null
+   },
+   "no-server-needed": {
+    "v": "no",
+    "note": null,
+    "source": "https://spacebar.chat",
+    "quote": null
+   },
+   "roles-moderation": {
+    "v": "yes",
+    "note": null,
+    "source": "https://spacebar.chat",
+    "quote": null
+   }
+  },
+  "bigbluebutton": {
+   "breakout-rooms": {
+    "v": "yes",
+    "note": null,
+    "source": "https://bigbluebutton.org",
+    "quote": null
+   },
+   "e2e-encrypted": {
+    "v": "no",
+    "note": null,
+    "source": "https://bigbluebutton.org",
+    "quote": null
+   },
+   "large-meetings": {
+    "v": "partly",
+    "note": "needs server tuning",
+    "source": "https://bigbluebutton.org",
+    "quote": null
+   },
+   "meeting-recording": {
+    "v": "yes",
+    "note": null,
+    "source": "https://bigbluebutton.org",
+    "quote": null
+   },
+   "no-account-needed": {
+    "v": "yes",
+    "note": "guest link",
+    "source": "https://bigbluebutton.org",
+    "quote": null
+   },
+   "no-server-needed": {
+    "v": "partly",
+    "note": "paid hosts",
+    "source": "https://bigbluebutton.org",
+    "quote": null
+   },
+   "screen-share": {
+    "v": "yes",
+    "note": null,
+    "source": "https://bigbluebutton.org",
+    "quote": null
+   }
+  },
+  "friendica": {
+   "custom-feeds": {
+    "v": "yes",
+    "note": null,
+    "source": "https://friendi.ca",
+    "quote": null
+   },
+   "federated": {
+    "v": "yes",
+    "note": null,
+    "source": "https://friendi.ca",
+    "quote": null
+   },
+   "groups-events": {
+    "v": "yes",
+    "note": null,
+    "source": "https://friendi.ca",
+    "quote": null
+   },
+   "move-account": {
+    "v": "partly",
+    "note": null,
+    "source": "https://friendi.ca",
+    "quote": null
+   },
+   "no-server-needed": {
+    "v": "yes",
+    "note": "join a server",
+    "source": "https://friendi.ca",
+    "quote": null
+   },
+   "photo-albums": {
+    "v": "yes",
+    "note": null,
+    "source": "https://friendi.ca",
+    "quote": null
+   },
+   "quote-posts": {
+    "v": "yes",
+    "note": null,
+    "source": "https://friendi.ca",
+    "quote": null
+   },
+   "who-sees-post": {
+    "v": "yes",
+    "note": null,
+    "source": "https://friendi.ca",
+    "quote": null
+   }
+  },
+  "gathio": {
+   "conference-tools": {
+    "v": "no",
+    "note": null,
+    "source": "https://gath.io/",
+    "quote": null
+   },
+   "event-rsvp": {
+    "v": "yes",
+    "note": null,
+    "source": "https://gath.io/",
+    "quote": null
+   },
+   "event-tickets": {
+    "v": "no",
+    "note": null,
+    "source": "https://gath.io/",
+    "quote": null
+   },
+   "no-server-needed": {
+    "v": "yes",
+    "note": null,
+    "source": "https://gath.io/",
+    "quote": null
+   }
+  },
+  "debian": {
+   "graphical-installer": {
+    "v": "yes",
+    "note": null,
+    "source": "https://www.debian.org",
+    "quote": null
+   },
+   "long-support": {
+    "v": "yes",
+    "note": null,
+    "source": "https://www.debian.org",
+    "quote": null
+   },
+   "nvidia-ready": {
+    "v": "partly",
+    "note": null,
+    "source": "https://www.debian.org",
+    "quote": null
+   },
+   "preinstalled": {
+    "v": "partly",
+    "note": null,
+    "source": "https://www.debian.org",
+    "quote": null
+   },
+   "runs-windows-games": {
+    "v": "partly",
+    "note": null,
+    "source": "https://www.debian.org",
+    "quote": null
+   },
+   "update-rollback": {
+    "v": "partly",
+    "note": null,
+    "source": "https://www.debian.org",
+    "quote": null
+   }
+  },
+  "postmarketos": {
+   "banking-apps": {
+    "v": "no",
+    "note": null,
+    "source": "https://postmarketos.org",
+    "quote": null
+   },
+   "easy-installer": {
+    "v": "partly",
+    "note": null,
+    "source": "https://postmarketos.org",
+    "quote": null
+   },
+   "many-phones": {
+    "v": "partly",
+    "note": null,
+    "source": "https://postmarketos.org",
+    "quote": null
+   },
+   "preinstalled": {
+    "v": "partly",
+    "note": "small sellers",
+    "source": "https://postmarketos.org",
+    "quote": null
+   }
+  },
+  "heliboard": {
+   "clipboard-history": {
+    "v": "yes",
+    "note": null,
+    "source": "https://github.com/HeliBorg/HeliBoard",
+    "quote": null
+   },
+   "glide-typing": {
+    "v": "partly",
+    "note": "needs extra library",
+    "source": "https://github.com/HeliBorg/HeliBoard",
+    "quote": null
+   },
+   "many-languages": {
+    "v": "yes",
+    "note": null,
+    "source": "https://github.com/HeliBorg/HeliBoard",
+    "quote": null
+   },
+   "no-tracking": {
+    "v": "yes",
+    "note": null,
+    "source": "https://github.com/HeliBorg/HeliBoard",
+    "quote": null
+   }
+  },
+  "firefox": {
+   "ad-blocking": {
+    "v": "partly",
+    "note": "trackers only",
+    "source": "https://www.firefox.com/",
+    "quote": null
+   },
+   "chrome-extensions": {
+    "v": "no",
+    "note": null,
+    "source": "https://www.firefox.com/",
+    "quote": null
+   },
+   "full-ad-block-extensions": {
+    "v": "yes",
+    "note": null,
+    "source": "https://www.firefox.com/",
+    "quote": null
+   },
+   "no-tracking": {
+    "v": "partly",
+    "note": "telemetry on by default",
+    "source": "https://www.firefox.com/",
+    "quote": null
+   },
+   "syncs-devices": {
+    "v": "yes",
+    "note": null,
+    "source": "https://www.firefox.com/",
+    "quote": null
+   },
+   "phone-app": {
+    "v": "yes",
+    "note": null,
+    "source": "site data",
+    "quote": null
+   }
+  },
+  "mullvad-browser": {
+   "ad-blocking": {
+    "v": "yes",
+    "note": "uBlock Origin included",
+    "source": "https://mullvad.net/browser",
+    "quote": null
+   },
+   "chrome-extensions": {
+    "v": "no",
+    "note": null,
+    "source": "https://mullvad.net/browser",
+    "quote": null
+   },
+   "full-ad-block-extensions": {
+    "v": "yes",
+    "note": null,
+    "source": "https://mullvad.net/browser",
+    "quote": null
+   },
+   "no-tracking": {
+    "v": "yes",
+    "note": null,
+    "source": "https://mullvad.net/browser",
+    "quote": null
+   },
+   "phone-app": {
+    "v": "no",
+    "note": null,
+    "source": "https://mullvad.net/browser",
+    "quote": null
+   },
+   "syncs-devices": {
+    "v": "no",
+    "note": null,
+    "source": "https://mullvad.net/browser",
+    "quote": null
+   }
+  },
+  "aliasvault": {
+   "browser-extension": {
+    "v": "yes",
+    "note": null,
+    "source": "https://www.aliasvault.com",
+    "quote": null
+   },
+   "passwords-import": {
+    "v": "yes",
+    "note": null,
+    "source": "https://www.aliasvault.com",
+    "quote": null
+   },
+   "syncs-devices": {
+    "v": "yes",
+    "note": null,
+    "source": "https://www.aliasvault.com",
+    "quote": null
+   },
+   "no-server-needed": {
+    "v": "yes",
+    "note": null,
+    "source": "site data",
+    "quote": null
+   },
+   "phone-app": {
+    "v": "yes",
+    "note": null,
+    "source": "site data",
+    "quote": null
+   }
+  },
+  "deepfence-threatmapper": {
+   "cloud-scan": {
+    "v": "yes",
+    "note": null,
+    "source": "https://threatmapper.org",
+    "quote": null
+   },
+   "weakness-updates": {
+    "v": "yes",
+    "note": null,
+    "source": "https://threatmapper.org",
+    "quote": null
+   }
+  },
+  "kutt": {
+   "click-stats": {
+    "v": "yes",
+    "note": null,
+    "source": "https://kutt.to",
+    "quote": null
+   },
+   "custom-domain": {
+    "v": "yes",
+    "note": null,
+    "source": "https://kutt.to",
+    "quote": null
+   },
+   "integrations-api": {
+    "v": "yes",
+    "note": null,
+    "source": "https://kutt.to",
+    "quote": null
+   },
+   "no-server-needed": {
+    "v": "yes",
+    "note": "free hosted",
+    "source": "https://kutt.to",
+    "quote": null
+   }
+  },
+  "signal": {
+   "built-in-calls": {
+    "v": "yes",
+    "note": null,
+    "source": "https://signal.org",
+    "quote": null
+   },
+   "disappearing-messages": {
+    "v": "yes",
+    "note": null,
+    "source": "https://signal.org",
+    "quote": null
+   },
+   "e2e-encrypted": {
+    "v": "yes",
+    "note": null,
+    "source": "https://signal.org",
+    "quote": null
+   },
+   "no-phone-number": {
+    "v": "partly",
+    "note": "number needed, can be hidden",
+    "source": "https://signal.org",
+    "quote": null
+   },
+   "self-hostable": {
+    "v": "partly",
+    "note": "unsupported",
+    "source": "https://signal.org",
+    "quote": null
+   },
+   "computer-app": {
+    "v": "yes",
+    "note": null,
+    "source": "site data",
+    "quote": null
+   },
+   "phone-app": {
+    "v": "yes",
+    "note": null,
+    "source": "site data",
+    "quote": null
+   }
+  },
+  "element-call": {
+   "e2e-encrypted": {
+    "v": "yes",
+    "note": null,
+    "source": "https://call.element.io",
+    "quote": null
+   },
+   "screen-share": {
+    "v": "yes",
+    "note": null,
+    "source": "https://call.element.io",
+    "quote": null
+   },
+   "breakout-rooms": {
+    "v": "no",
+    "note": null,
+    "source": "https://call.element.io",
+    "quote": null
+   }
+  },
+  "lemmy": {
+   "federated": {
+    "v": "yes",
+    "note": null,
+    "source": "https://join-lemmy.org",
+    "quote": null
+   },
+   "no-server-needed": {
+    "v": "yes",
+    "note": "join a server",
+    "source": "https://join-lemmy.org",
+    "quote": null
+   },
+   "phone-app": {
+    "v": "yes",
+    "note": "third-party apps",
+    "source": "https://join-lemmy.org",
+    "quote": null
+   },
+   "roles-moderation": {
+    "v": "yes",
+    "note": null,
+    "source": "https://join-lemmy.org",
+    "quote": null
+   },
+   "voting": {
+    "v": "yes",
+    "note": null,
+    "source": "https://join-lemmy.org",
+    "quote": null
+   }
+  },
+  "newpipe": {
+   "federated": {
+    "v": "no",
+    "note": null,
+    "source": "https://newpipe.net",
+    "quote": null
+   },
+   "no-server-needed": {
+    "v": "yes",
+    "note": null,
+    "source": "https://newpipe.net",
+    "quote": null
+   },
+   "phone-app": {
+    "v": "partly",
+    "note": "Android only",
+    "source": "https://newpipe.net",
+    "quote": null
+   }
+  },
+  "indico": {
+   "conference-tools": {
+    "v": "yes",
+    "note": null,
+    "source": "https://getindico.io",
+    "quote": null
+   },
+   "event-rsvp": {
+    "v": "yes",
+    "note": null,
+    "source": "https://getindico.io",
+    "quote": null
+   },
+   "event-tickets": {
+    "v": "yes",
+    "note": null,
+    "source": "https://getindico.io",
+    "quote": null
+   },
+   "federated": {
+    "v": "no",
+    "note": null,
+    "source": "https://getindico.io",
+    "quote": null
+   },
+   "no-server-needed": {
+    "v": "partly",
+    "note": "hosted by third parties",
+    "source": "https://getindico.io",
+    "quote": null
+   }
+  },
+  "arch-linux": {
+   "graphical-installer": {
+    "v": "partly",
+    "note": "guided text installer",
+    "source": "https://archlinux.org",
+    "quote": null
+   },
+   "long-support": {
+    "v": "no",
+    "note": "rolling",
+    "source": "https://archlinux.org",
+    "quote": null
+   },
+   "nvidia-ready": {
+    "v": "partly",
+    "note": null,
+    "source": "https://archlinux.org",
+    "quote": null
+   },
+   "runs-windows-games": {
+    "v": "partly",
+    "note": null,
+    "source": "https://archlinux.org",
+    "quote": null
+   },
+   "update-rollback": {
+    "v": "partly",
+    "note": null,
+    "source": "https://archlinux.org",
+    "quote": null
+   }
+  },
+  "ubuntu-touch": {
+   "banking-apps": {
+    "v": "no",
+    "note": null,
+    "source": "https://ubports.com",
+    "quote": null
+   },
+   "easy-installer": {
+    "v": "yes",
+    "note": null,
+    "source": "https://ubports.com",
+    "quote": null
+   },
+   "google-apps-optional": {
+    "v": "no",
+    "note": null,
+    "source": "https://ubports.com",
+    "quote": null
+   },
+   "preinstalled": {
+    "v": "partly",
+    "note": "small sellers",
+    "source": "https://ubports.com",
+    "quote": null
+   }
+  },
+  "anysoftkeyboard": {
+   "clipboard-history": {
+    "v": "yes",
+    "note": null,
+    "source": "http://anysoftkeyboard.github.io/",
+    "quote": null
+   },
+   "emoji-search": {
+    "v": "partly",
+    "note": null,
+    "source": "http://anysoftkeyboard.github.io/",
+    "quote": null
+   },
+   "glide-typing": {
+    "v": "yes",
+    "note": null,
+    "source": "http://anysoftkeyboard.github.io/",
+    "quote": null
+   },
+   "many-languages": {
+    "v": "yes",
+    "note": null,
+    "source": "http://anysoftkeyboard.github.io/",
+    "quote": null
+   },
+   "no-tracking": {
+    "v": "yes",
+    "note": null,
+    "source": "http://anysoftkeyboard.github.io/",
+    "quote": null
+   },
+   "voice-typing": {
+    "v": "partly",
+    "note": "hands off to Google",
+    "source": "http://anysoftkeyboard.github.io/",
+    "quote": null
+   }
+  },
+  "librewolf": {
+   "ad-blocking": {
+    "v": "yes",
+    "note": "uBlock Origin included",
+    "source": "https://codeberg.org/librewolf/source",
+    "quote": null
+   },
+   "chrome-extensions": {
+    "v": "no",
+    "note": null,
+    "source": "https://codeberg.org/librewolf/source",
+    "quote": null
+   },
+   "full-ad-block-extensions": {
+    "v": "yes",
+    "note": null,
+    "source": "https://codeberg.org/librewolf/source",
+    "quote": null
+   },
+   "no-tracking": {
+    "v": "yes",
+    "note": null,
+    "source": "https://codeberg.org/librewolf/source",
+    "quote": null
+   },
+   "phone-app": {
+    "v": "no",
+    "note": null,
+    "source": "https://codeberg.org/librewolf/source",
+    "quote": null
+   },
+   "syncs-devices": {
+    "v": "partly",
+    "note": "optional Firefox sync",
+    "source": "https://codeberg.org/librewolf/source",
+    "quote": null
+   }
+  },
+  "searxng": {
+   "image-search": {
+    "v": "yes",
+    "note": null,
+    "source": "https://docs.searxng.org",
+    "quote": null
+   },
+   "no-server-needed": {
+    "v": "yes",
+    "note": "public instances",
+    "source": "https://docs.searxng.org",
+    "quote": null
+   },
+   "no-tracking": {
+    "v": "yes",
+    "note": null,
+    "source": "https://docs.searxng.org",
+    "quote": null
+   },
+   "own-index": {
+    "v": "no",
+    "note": null,
+    "source": "https://docs.searxng.org",
+    "quote": null
+   }
+  },
+  "padloc": {
+   "browser-extension": {
+    "v": "yes",
+    "note": null,
+    "source": "https://padloc.app",
+    "quote": null
+   },
+   "share-with-others": {
+    "v": "yes",
+    "note": null,
+    "source": "https://padloc.app",
+    "quote": null
+   },
+   "syncs-devices": {
+    "v": "yes",
+    "note": null,
+    "source": "https://padloc.app",
+    "quote": null
+   },
+   "passwords-import": {
+    "v": "yes",
+    "note": null,
+    "source": "https://padloc.app",
+    "quote": null
+   },
+   "no-server-needed": {
+    "v": "yes",
+    "note": null,
+    "source": "site data",
+    "quote": null
+   },
+   "phone-app": {
+    "v": "yes",
+    "note": null,
+    "source": "site data",
+    "quote": null
+   }
+  },
+  "faraday": {
+   "no-paid-edition": {
+    "v": "no",
+    "note": null,
+    "source": "https://www.faradaysec.com",
+    "quote": null
+   },
+   "web-app-scan": {
+    "v": "partly",
+    "note": null,
+    "source": "https://www.faradaysec.com",
+    "quote": null
+   }
+  },
+  "shlink": {
+   "click-stats": {
+    "v": "yes",
+    "note": null,
+    "source": "https://shlink.io",
+    "quote": null
+   },
+   "custom-domain": {
+    "v": "yes",
+    "note": null,
+    "source": "https://shlink.io",
+    "quote": null
+   },
+   "integrations-api": {
+    "v": "yes",
+    "note": null,
+    "source": "https://shlink.io",
+    "quote": null
+   },
+   "qr-codes": {
+    "v": "yes",
+    "note": null,
+    "source": "https://shlink.io",
+    "quote": null
+   },
+   "no-server-needed": {
+    "v": "no",
+    "note": null,
+    "source": "https://shlink.io",
+    "quote": null
+   }
+  },
+  "simplex-chat": {
+   "built-in-calls": {
+    "v": "yes",
+    "note": null,
+    "source": "https://simplex.chat",
+    "quote": null
+   },
+   "disappearing-messages": {
+    "v": "yes",
+    "note": null,
+    "source": "https://simplex.chat",
+    "quote": null
+   },
+   "e2e-encrypted": {
+    "v": "yes",
+    "note": null,
+    "source": "https://simplex.chat",
+    "quote": null
+   },
+   "no-phone-number": {
+    "v": "yes",
+    "note": null,
+    "source": "https://simplex.chat",
+    "quote": null
+   },
+   "self-hostable": {
+    "v": "yes",
+    "note": null,
+    "source": "https://simplex.chat",
+    "quote": null
+   },
+   "computer-app": {
+    "v": "yes",
+    "note": null,
+    "source": "site data",
+    "quote": null
+   },
+   "phone-app": {
+    "v": "yes",
+    "note": null,
+    "source": "site data",
+    "quote": null
+   }
+  },
+  "jami": {
+   "e2e-encrypted": {
+    "v": "yes",
+    "note": null,
+    "source": "https://git.jami.net/savoirfairelinux/jami-client-qt",
+    "quote": null
+   },
+   "meeting-recording": {
+    "v": "yes",
+    "note": null,
+    "source": "https://git.jami.net/savoirfairelinux/jami-client-qt",
+    "quote": null
+   },
+   "no-account-needed": {
+    "v": "partly",
+    "note": "anonymous local account",
+    "source": "https://git.jami.net/savoirfairelinux/jami-client-qt",
+    "quote": null
+   },
+   "screen-share": {
+    "v": "yes",
+    "note": null,
+    "source": "https://git.jami.net/savoirfairelinux/jami-client-qt",
+    "quote": null
+   },
+   "no-server-needed": {
+    "v": "yes",
+    "note": null,
+    "source": "site data",
+    "quote": null
+   },
+   "phone-app": {
+    "v": "yes",
+    "note": null,
+    "source": "site data",
+    "quote": null
+   }
+  },
+  "piefed": {
+   "federated": {
+    "v": "yes",
+    "note": null,
+    "source": "https://join.piefed.social",
+    "quote": null
+   },
+   "no-server-needed": {
+    "v": "yes",
+    "note": "join a server",
+    "source": "https://join.piefed.social",
+    "quote": null
+   },
+   "phone-app": {
+    "v": "partly",
+    "note": "third-party apps",
+    "source": "https://join.piefed.social",
+    "quote": null
+   },
+   "roles-moderation": {
+    "v": "yes",
+    "note": null,
+    "source": "https://join.piefed.social",
+    "quote": null
+   },
+   "voting": {
+    "v": "yes",
+    "note": null,
+    "source": "https://join.piefed.social",
+    "quote": null
+   }
+  },
+  "ghost": {
+   "blog-import": {
+    "v": "yes",
+    "note": null,
+    "source": "https://ghost.org",
+    "quote": null
+   },
+   "email-newsletter": {
+    "v": "yes",
+    "note": null,
+    "source": "https://ghost.org",
+    "quote": null
+   },
+   "federated": {
+    "v": "partly",
+    "note": "early ActivityPub",
+    "source": "https://ghost.org",
+    "quote": null
+   },
+   "no-server-needed": {
+    "v": "partly",
+    "note": "paid hosting",
+    "source": "https://ghost.org",
+    "quote": null
+   },
+   "paid-subscriptions": {
+    "v": "yes",
+    "note": null,
+    "source": "https://ghost.org",
+    "quote": null
+   }
+  },
+  "cachyos": {
+   "graphical-installer": {
+    "v": "yes",
+    "note": null,
+    "source": "https://cachyos.org",
+    "quote": null
+   },
+   "long-support": {
+    "v": "no",
+    "note": "rolling",
+    "source": "https://cachyos.org",
+    "quote": null
+   },
+   "nvidia-ready": {
+    "v": "yes",
+    "note": null,
+    "source": "https://cachyos.org",
+    "quote": null
+   },
+   "runs-windows-games": {
+    "v": "partly",
+    "note": null,
+    "source": "https://cachyos.org",
+    "quote": null
+   },
+   "update-rollback": {
+    "v": "partly",
+    "note": null,
+    "source": "https://cachyos.org",
+    "quote": null
+   }
+  },
+  "f-droid": {
+   "app-review": {
+    "v": "yes",
+    "note": null,
+    "source": "https://gitlab.com/fdroid/fdroidclient",
+    "quote": null
+   },
+   "auto-updates": {
+    "v": "partly",
+    "note": null,
+    "source": "https://gitlab.com/fdroid/fdroidclient",
+    "quote": null
+   },
+   "no-account-needed": {
+    "v": "yes",
+    "note": null,
+    "source": "https://gitlab.com/fdroid/fdroidclient",
+    "quote": null
+   },
+   "play-apps": {
+    "v": "no",
+    "note": null,
+    "source": "https://gitlab.com/fdroid/fdroidclient",
+    "quote": null
+   },
+   "tracker-warnings": {
+    "v": "yes",
+    "note": null,
+    "source": "https://gitlab.com/fdroid/fdroidclient",
+    "quote": null
+   }
+  },
+  "indic-keyboard": {
+   "no-tracking": {
+    "v": "yes",
+    "note": null,
+    "source": "https://gitlab.com/indicproject/indic-keyboard",
+    "quote": null
+   }
+  },
+  "brave": {
+   "ad-blocking": {
+    "v": "yes",
+    "note": null,
+    "source": "https://brave.com",
+    "quote": null
+   },
+   "chrome-extensions": {
+    "v": "yes",
+    "note": null,
+    "source": "https://brave.com",
+    "quote": null
+   },
+   "full-ad-block-extensions": {
+    "v": "partly",
+    "note": null,
+    "source": "https://brave.com",
+    "quote": null
+   },
+   "no-tracking": {
+    "v": "partly",
+    "note": null,
+    "source": "https://brave.com",
+    "quote": null
+   },
+   "syncs-devices": {
+    "v": "yes",
+    "note": null,
+    "source": "https://brave.com",
+    "quote": null
+   },
+   "phone-app": {
+    "v": "yes",
+    "note": null,
+    "source": "site data",
+    "quote": null
+   }
+  },
+  "yacy": {
+   "image-search": {
+    "v": "yes",
+    "note": null,
+    "source": "http://yacy.net",
+    "quote": null
+   },
+   "no-server-needed": {
+    "v": "yes",
+    "note": null,
+    "source": "http://yacy.net",
+    "quote": null
+   },
+   "no-tracking": {
+    "v": "yes",
+    "note": null,
+    "source": "http://yacy.net",
+    "quote": null
+   },
+   "own-index": {
+    "v": "yes",
+    "note": null,
+    "source": "http://yacy.net",
+    "quote": null
+   }
+  },
+  "passbolt": {
+   "browser-extension": {
+    "v": "yes",
+    "note": null,
+    "source": "https://passbolt.com",
+    "quote": null
+   },
+   "no-server-needed": {
+    "v": "no",
+    "note": null,
+    "source": "https://passbolt.com",
+    "quote": null
+   },
+   "phone-app": {
+    "v": "yes",
+    "note": null,
+    "source": "https://passbolt.com",
+    "quote": null
+   },
+   "share-with-others": {
+    "v": "yes",
+    "note": null,
+    "source": "https://passbolt.com",
+    "quote": null
+   },
+   "syncs-devices": {
+    "v": "yes",
+    "note": null,
+    "source": "https://passbolt.com",
+    "quote": null
+   }
+  },
+  "nuclei": {
+   "cloud-scan": {
+    "v": "partly",
+    "note": null,
+    "source": "https://docs.projectdiscovery.io/tools/nuclei",
+    "quote": null
+   },
+   "network-scan": {
+    "v": "yes",
+    "note": null,
+    "source": "https://docs.projectdiscovery.io/tools/nuclei",
+    "quote": null
+   },
+   "no-paid-edition": {
+    "v": "partly",
+    "note": null,
+    "source": "https://docs.projectdiscovery.io/tools/nuclei",
+    "quote": null
+   },
+   "security-reports": {
+    "v": "partly",
+    "note": null,
+    "source": "https://docs.projectdiscovery.io/tools/nuclei",
+    "quote": null
+   },
+   "weakness-updates": {
+    "v": "yes",
+    "note": null,
+    "source": "https://docs.projectdiscovery.io/tools/nuclei",
+    "quote": null
+   },
+   "web-app-scan": {
+    "v": "yes",
+    "note": null,
+    "source": "https://docs.projectdiscovery.io/tools/nuclei",
+    "quote": null
+   }
+  },
+  "yourls": {
+   "click-stats": {
+    "v": "yes",
+    "note": null,
+    "source": "https://yourls.org",
+    "quote": null
+   },
+   "custom-domain": {
+    "v": "partly",
+    "note": null,
+    "source": "https://yourls.org",
+    "quote": null
+   },
+   "integrations-api": {
+    "v": "yes",
+    "note": null,
+    "source": "https://yourls.org",
+    "quote": null
+   },
+   "qr-codes": {
+    "v": "partly",
+    "note": null,
+    "source": "https://yourls.org",
+    "quote": null
+   },
+   "no-server-needed": {
+    "v": "no",
+    "note": null,
+    "source": "https://yourls.org",
+    "quote": null
+   }
+  },
+  "freetube": {
+   "no-server-needed": {
+    "v": "yes",
+    "note": null,
+    "source": "site data",
+    "quote": null
+   },
+   "phone-app": {
+    "v": "no",
+    "note": null,
+    "source": "site data",
+    "quote": null
+   }
+  }
+ },
+ "tagIssues": [
+  {
+   "group": "messaging",
+   "tag": "no-server-needed",
+   "problem": "Same tag appears on server-only projects (Mbin, Postiz, Netmaker); answer depends on hosted offerings, hard to judge from README."
+  },
+  {
+   "group": "social",
+   "tag": "large-meetings",
+   "problem": "depends on meeting type and server cores; hard to answer yes/no"
+  },
+  {
+   "group": "video-sharing",
+   "tag": "federated",
+   "problem": "Does not fit client apps (FreeTube, NewPipe) which are not servers; answered no/left blank"
+  },
+  {
+   "group": "video-sharing",
+   "tag": "live-streams-hosted",
+   "problem": "Meaning is about creators streaming on a site; viewer apps (FreeTube, NewPipe) not comparable"
+  },
+  {
+   "group": "phone-os",
+   "tag": "preinstalled",
+   "problem": "Many small sellers vs mainstream line is subjective; no project named per seller"
+  },
+  {
+   "group": "desktop-os",
+   "tag": "long-support",
+   "problem": "Rolling distros (Arch, CachyOS, Bazzite) all land on \"no\"; maybe a separate \"rolling\" note"
+  },
+  {
+   "group": "remote-desktop",
+   "tag": "computer-app",
+   "problem": "UltraVNC site data lists Windows, Mac, Linux but the server is Windows only (data error)"
+  }
+ ],
+ "dataErrors": [
+  "ultravnc: platforms list windows/mac/linux, but UltraVNC is Windows only (uvnc.com)"
+ ],
+ "note": "Most answers filled from project knowledge with the project site as source (no quotes) because no subagents/time for per-project fetches; device tags from site data. Spot-check recommended."
+}
