@@ -1,0 +1,520 @@
+{
+ "title": "Redesign round 3: trimmed, plus Claim your project",
+ "key": "ose-redesign-3",
+ "out": "redesign-3.review.html",
+ "images": "images/redesign-3.review",
+ "runs": {
+  "before": "runs-redesign-3/before",
+  "after": "runs-redesign-3/after"
+ },
+ "labels": {
+  "before": "Round 2",
+  "after": "Now"
+ },
+ "themes": [
+  "light"
+ ],
+ "theme": "fixed",
+ "crops": {
+  "group-desktop": [
+   "ose",
+   "group-desktop",
+   "1440x900+0+0"
+  ],
+  "group-phone": [
+   "ose",
+   "group-phone",
+   "390x844+0+0"
+  ],
+  "card-explainer-desktop": [
+   "ose",
+   "card-explainer-desktop",
+   "1440x900+0+0"
+  ],
+  "project-desktop": [
+   "ose",
+   "project-desktop",
+   "1440x900+0+0"
+  ],
+  "project-family-explainer-desktop": [
+   "ose",
+   "project-family-explainer-desktop",
+   "1440x900+0+0"
+  ],
+  "project-phone": [
+   "ose",
+   "project-phone",
+   "390x844+0+0"
+  ],
+  "search-desktop": [
+   "ose",
+   "search-desktop",
+   "1440x900+0+0"
+  ],
+  "search-filters-open-desktop": [
+   "ose",
+   "search-filters-open-desktop",
+   "1440x900+0+0"
+  ],
+  "search-phone": [
+   "ose",
+   "search-phone",
+   "390x844+0+0"
+  ],
+  "search-filters-open-phone": [
+   "ose",
+   "search-filters-open-phone",
+   "390x844+0+0"
+  ],
+  "gaps-desktop": [
+   "ose",
+   "gaps-desktop",
+   "1440x900+0+0"
+  ],
+  "gaps-phone": [
+   "ose",
+   "gaps-phone",
+   "390x844+0+0"
+  ],
+  "home-desktop": [
+   "ose",
+   "home-desktop",
+   "1440x900+0+0"
+  ],
+  "claim-start-desktop": [
+   "ose",
+   "claim-start-desktop",
+   "1440x900+0+0"
+  ],
+  "claim-verified-desktop": [
+   "ose",
+   "claim-verified-desktop",
+   "1440x900+0+0"
+  ],
+  "claim-file-desktop": [
+   "ose",
+   "claim-file-desktop",
+   "1440x900+0+0"
+  ],
+  "claim-write-desktop": [
+   "ose",
+   "claim-write-desktop",
+   "1440x900+0+0"
+  ],
+  "claim-write-phone": [
+   "ose",
+   "claim-write-phone",
+   "390x965+0+0"
+  ]
+ },
+ "steps": [
+  {
+   "id": "G-group",
+   "surface": "Group pages",
+   "path": "Web browsers, computer",
+   "crop": "group-desktop",
+   "headline": "Group page trimmed: fewer repeated counts and helper lines; Help me choose and Before you build now match.",
+   "changed": "Header count chips, the list's subtitle and \"Copy with the list included\" are gone; the two side boxes share one shape.",
+   "notice": "More of the list is visible without scrolling.",
+   "risk": "None worth noting.",
+   "highlight": {
+    "box": [
+     1,
+     1,
+     98,
+     98
+    ]
+   },
+   "runs": [
+    "before",
+    "after"
+   ]
+  },
+  {
+   "id": "G-group-phone",
+   "surface": "Group pages",
+   "path": "Web browsers, phone",
+   "crop": "group-phone",
+   "headline": "The same trims on phones.",
+   "changed": "Less text above the first card.",
+   "notice": "The first projects show sooner.",
+   "risk": "None worth noting.",
+   "highlight": {
+    "box": [
+     1,
+     1,
+     98,
+     98
+    ]
+   },
+   "runs": [
+    "before",
+    "after"
+   ]
+  },
+  {
+   "id": "G-explainer",
+   "surface": "Group pages",
+   "path": "Tapping Easy setup",
+   "crop": "card-explainer-desktop",
+   "headline": "The pop-up no longer repeats a second line about the project.",
+   "changed": "Only the explanation of what the tag means.",
+   "notice": "Shorter.",
+   "risk": "None worth noting.",
+   "highlight": {
+    "box": [
+     1,
+     1,
+     98,
+     98
+    ]
+   },
+   "runs": [
+    "before",
+    "after"
+   ]
+  },
+  {
+   "id": "G-project",
+   "surface": "Project pages",
+   "path": "Firefox, computer",
+   "crop": "project-desktop",
+   "headline": "Project page: back button, no search bar, claim line beside the buttons, Family rows say how each relative differs.",
+   "changed": "The Facts card is gone (every fact was already a chip); section subtitles cut; e.g. \"LibreWolf: Firefox with tracking blocked and stricter privacy settings by default\".",
+   "notice": "Setup and other chips explain themselves when tapped.",
+   "risk": "If you liked the Facts card as a summary, it can come back.",
+   "highlight": {
+    "box": [
+     1,
+     1,
+     98,
+     98
+    ]
+   },
+   "runs": [
+    "before",
+    "after"
+   ]
+  },
+  {
+   "id": "G-family-i",
+   "surface": "Project pages",
+   "path": "The (i) on a family row",
+   "crop": "project-family-explainer-desktop",
+   "headline": "The family (i) pop-up now lines up with its button.",
+   "changed": "Why and source, anchored properly.",
+   "notice": "No more odd placement.",
+   "risk": "None worth noting.",
+   "highlight": {
+    "box": [
+     1,
+     1,
+     98,
+     98
+    ]
+   },
+   "runs": [
+    "before",
+    "after"
+   ]
+  },
+  {
+   "id": "G-project-phone",
+   "surface": "Project pages",
+   "path": "Firefox, phone",
+   "crop": "project-phone",
+   "headline": "On phones every section folds closed except the header.",
+   "changed": "Tap a section to open it.",
+   "notice": "A short page you open, not a long scroll.",
+   "risk": "None worth noting.",
+   "highlight": {
+    "box": [
+     1,
+     1,
+     98,
+     98
+    ]
+   },
+   "runs": [
+    "before",
+    "after"
+   ]
+  },
+  {
+   "id": "G-search",
+   "surface": "Search",
+   "path": "Searching \"notes\", computer",
+   "crop": "search-desktop",
+   "headline": "Search: pictures fill each row's height; the match score sits plainly at the top right; three menus replace the filter chips.",
+   "changed": "Type, Works on (pick several) and Setup menus.",
+   "notice": "Cleaner rows.",
+   "risk": "None worth noting.",
+   "highlight": {
+    "box": [
+     1,
+     1,
+     98,
+     98
+    ]
+   },
+   "runs": [
+    "before",
+    "after"
+   ]
+  },
+  {
+   "id": "G-filters",
+   "surface": "Search",
+   "path": "The filter menus, open",
+   "crop": "search-filters-open-desktop",
+   "headline": "Filters are now three dropdown menus; Works on lets you pick several.",
+   "changed": "Replaces two rows of chips.",
+   "notice": "Less clutter above the results.",
+   "risk": "None worth noting.",
+   "highlight": {
+    "box": [
+     1,
+     1,
+     98,
+     98
+    ]
+   },
+   "runs": [
+    "after"
+   ],
+   "new": true
+  },
+  {
+   "id": "G-search-phone",
+   "surface": "Search",
+   "path": "Search on a phone",
+   "crop": "search-phone",
+   "headline": "The same on phones.",
+   "changed": "Menus instead of chip rows.",
+   "notice": "More results per screen.",
+   "risk": "None worth noting.",
+   "highlight": {
+    "box": [
+     1,
+     1,
+     98,
+     98
+    ]
+   },
+   "runs": [
+    "before",
+    "after"
+   ]
+  },
+  {
+   "id": "G-filters-phone",
+   "surface": "Search",
+   "path": "Filter menus on a phone",
+   "crop": "search-filters-open-phone",
+   "headline": "On phones a filter menu opens from the bottom.",
+   "changed": "Bottom sheet.",
+   "notice": "Easy to reach with a thumb.",
+   "risk": "None worth noting.",
+   "highlight": {
+    "box": [
+     1,
+     1,
+     98,
+     98
+    ]
+   },
+   "runs": [
+    "after"
+   ],
+   "new": true
+  },
+  {
+   "id": "G-gaps",
+   "surface": "Gaps page",
+   "path": "Most requested",
+   "crop": "gaps-desktop",
+   "headline": "Most requested: the smaller items are now individual small cards too.",
+   "changed": "Top three large, the rest small cards.",
+   "notice": "Pretend preview data.",
+   "risk": "None worth noting.",
+   "highlight": {
+    "box": [
+     1,
+     1,
+     98,
+     98
+    ]
+   },
+   "runs": [
+    "before",
+    "after"
+   ]
+  },
+  {
+   "id": "G-gaps-phone",
+   "surface": "Gaps page",
+   "path": "Most requested, phone",
+   "crop": "gaps-phone",
+   "headline": "The same on phones.",
+   "changed": "Cards in a list.",
+   "notice": "Pretend preview data.",
+   "risk": "None worth noting.",
+   "highlight": {
+    "box": [
+     1,
+     1,
+     98,
+     98
+    ]
+   },
+   "runs": [
+    "before",
+    "after"
+   ]
+  },
+  {
+   "id": "G-home",
+   "surface": "Home page",
+   "path": "The home page",
+   "crop": "home-desktop",
+   "headline": "Home page trimmed: fewer subtitles and helper sentences.",
+   "changed": "The eyebrow line, the second intro sentence and four section subtitles are gone.",
+   "notice": "The search box and categories come first.",
+   "risk": "None worth noting.",
+   "highlight": {
+    "box": [
+     1,
+     1,
+     98,
+     98
+    ]
+   },
+   "runs": [
+    "after"
+   ],
+   "new": true
+  },
+  {
+   "id": "G-claim-start",
+   "surface": "Claim your project",
+   "path": "Step 1",
+   "crop": "claim-start-desktop",
+   "headline": "Claim your project, design C: one wide card with each step as its own stacked card.",
+   "changed": "Plain labels, much less text.",
+   "notice": "Steps open one after another.",
+   "risk": "None worth noting.",
+   "highlight": {
+    "box": [
+     1,
+     1,
+     98,
+     98
+    ]
+   },
+   "runs": [
+    "before",
+    "after"
+   ]
+  },
+  {
+   "id": "G-claim-verified",
+   "surface": "Claim your project",
+   "path": "Signed in as the owner",
+   "crop": "claim-verified-desktop",
+   "headline": "If your GitHub account owns the project, ownership just says Verified, with no extra step.",
+   "changed": "No file needed.",
+   "notice": "The common case is one click.",
+   "risk": "None worth noting.",
+   "highlight": {
+    "box": [
+     1,
+     1,
+     98,
+     98
+    ]
+   },
+   "runs": [
+    "after"
+   ],
+   "new": true
+  },
+  {
+   "id": "G-claim-file",
+   "surface": "Claim your project",
+   "path": "Project under an organisation",
+   "crop": "claim-file-desktop",
+   "headline": "Otherwise it asks, in one sentence, for a small file in the project.",
+   "changed": "For organisations, GitLab or Codeberg.",
+   "notice": "Only when needed.",
+   "risk": "None worth noting.",
+   "highlight": {
+    "box": [
+     1,
+     1,
+     98,
+     98
+    ]
+   },
+   "runs": [
+    "before",
+    "after"
+   ]
+  },
+  {
+   "id": "G-claim-write",
+   "surface": "Claim your project",
+   "path": "Writing the description",
+   "crop": "claim-write-desktop",
+   "headline": "The writing step: plain field names (Description, Groups), no chatter, and no AI how-it-was-built tags.",
+   "changed": "Extra fields fold under \"More\".",
+   "notice": "Much less to read.",
+   "risk": "None worth noting.",
+   "highlight": {
+    "box": [
+     1,
+     1,
+     98,
+     98
+    ]
+   },
+   "runs": [
+    "before",
+    "after"
+   ]
+  },
+  {
+   "id": "G-claim-phone",
+   "surface": "Claim your project",
+   "path": "On a phone",
+   "crop": "claim-write-phone",
+   "headline": "The same on phones.",
+   "changed": "Stacked cards.",
+   "notice": "Short.",
+   "risk": "None worth noting.",
+   "highlight": {
+    "box": [
+     1,
+     1,
+     98,
+     98
+    ]
+   },
+   "runs": [
+    "before",
+    "after"
+   ]
+  },
+  {
+   "id": "Q-boards",
+   "words": true,
+   "surface": "Group pages",
+   "path": "The \"What's missing\" section at the bottom of every group",
+   "headline": "Remove the \"What's missing\" boards, keeping comments only where they're tied to an action?",
+   "today": "Each group page ends with a \"What's missing\" board: signed-in GitHub users post notes and click \"Me too\". Right now it only holds the editors' notes.",
+   "problem": "The feature checklists now cover most of what people would post, and 123 mostly-empty boards make the site look abandoned.",
+   "proposal": "Remove the boards. Short comments only appear when tied to something you do: \"what stopped you?\" after a thumbs-down, \"this is wrong\" on a checklist answer, \"suggest a checklist item\". Open conversation goes to the r/TrueOpenSource link you approved. Visitors would see shorter group pages and no empty sections; someone with a quick question goes to Reddit.",
+   "yes": "Remove the boards",
+   "no": "Keep them"
+  }
+ ]
+}
