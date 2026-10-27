@@ -22,7 +22,6 @@ export default function categories(d) {
       body: `
   <div class="surface identity">
     <div><div class="muted11">Category</div><h1 class="h-subject">${esc(c.name)}</h1></div>
-    ${SOCIAL ? `<div><a class="btn md secondary" href="${url(`c/${c.id}/board/`)}">See the ${esc(c.name)} board</a></div>` : ''}
     <div class="pop" style="padding-left:0"><span class="muted11">Other categories</span><div class="fchips">${others}</div></div>
   </div>
   <section class="surface sec">

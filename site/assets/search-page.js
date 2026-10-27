@@ -4,14 +4,11 @@
   const list = document.querySelector('[data-sres-list]');
   if (!list) return;
   const { base: BASE, esc } = window.OI;
-  const q = new URLSearchParams(location.search).get('q')?.trim() || '';
-  const title = document.querySelector('[data-sres-title]'), sub = document.querySelector('[data-sres-sub]');
+  let q = new URLSearchParams(location.search).get('q')?.trim() || '';
+  const sub = document.querySelector('[data-sres-sub]');
   const filters = document.querySelector('[data-sres-filters]');
-  // Put the search back in the box, so it can be changed in place.
-  document.querySelectorAll('[data-search] input').forEach((i) => { i.value = q; });
-  if (!q) { list.innerHTML = '<div class="empty">Type what you\'re looking for in the search box above.</div>'; return; }
-  document.title = `${q} · Search · Open Source Everything`;
-  title.textContent = `Results for “${q}”`;
+  const input = document.querySelector('[data-sres-input]');
+  input.value = q; // the search box lives on this page now: typing here re-runs the search in place
 
   const DEVICE = { windows: 'Windows', mac: 'Mac', linux: 'Linux', android: 'Android', ios: 'iPhone', web: 'In your browser' };
   const GRID = '<svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><rect x="3" y="3" width="7" height="7" rx="1.5"/><rect x="14" y="3" width="7" height="7" rx="1.5"/><rect x="3" y="14" width="7" height="7" rx="1.5"/><rect x="14" y="14" width="7" height="7" rx="1.5"/></svg>';
@@ -67,22 +64,40 @@
       /* WHY: nothing found usually means a closed app is missing, so "Suggest it" opens the add-closed-app form with the searched name filled in (it used to open the new-group form). */ `<div class="empty">Nothing matches${devices.size ? ' with those devices' : ''}. ${devices.size ? 'Try fewer filters, or ' : ''}<a href="https://github.com/itsdestin/opensourceeverything/issues/new?template=3-add-closed-app.yml&app=${encodeURIComponent(q)}" rel="noopener">suggest what's missing</a>.</div>`;
   }
 
-  // The three menus: Type (one choice), Works on (several, stays open while you tick), Setup (one choice). Each button says what is chosen.
-  const label = (key, text, on) => { const el = filters.querySelector(`[data-flabel="${key}"]`); el.textContent = text; el.closest('.select').classList.toggle('on', on); };
-  const NAME = { project: 'Projects', group: 'Groups', closed: 'Closed apps' };
+  // The Filter menu: Type (one choice), Works on (several), Setup (one choice). It stays open while you choose; the button shows how many are on.
+  const fbtn = document.querySelector('[data-sres-filterbtn]'), fcount = document.querySelector('[data-fcount]');
+  const showCount = () => { const n = (kind !== 'all') + devices.size + !!setupF; fcount.hidden = !n; fcount.textContent = n; fbtn.classList.toggle('on', !!n); };
   filters.addEventListener('click', (e) => {
-    const b = e.target.closest('button.mi'); if (!b) return;
-    if (b.dataset.kind) {
-      kind = b.dataset.kind; filters.querySelectorAll('[data-kind]').forEach((x) => x.classList.toggle('sel', x === b)); label('type', kind === 'all' ? 'Type' : `Type: ${NAME[kind]}`, kind !== 'all'); b.closest('.menu').classList.remove('open');
-    } else if (b.dataset.setupf !== undefined) {
-      setupF = b.dataset.setupf; filters.querySelectorAll('[data-setupf]').forEach((x) => x.classList.toggle('sel', x === b)); label('setup', setupF ? `Setup: ${setupF === 'easy' ? 'Easy' : 'Advanced'}` : 'Setup', !!setupF); b.closest('.menu').classList.remove('open');
-    } else {
-      if (b.dataset.clear) devices.clear(); else { const d = b.dataset.device; devices.has(d) ? devices.delete(d) : devices.add(d); }
-      filters.querySelectorAll('[data-device]').forEach((x) => { x.classList.toggle('sel', devices.has(x.dataset.device)); x.setAttribute('aria-selected', String(devices.has(x.dataset.device))); });
-      const names = [...devices].map((d) => DEVICE[d]); label('dev', !names.length ? 'Works on' : names.length < 3 ? `Works on: ${names.join(', ')}` : `Works on: ${names.length} devices`, !!names.length);
-    }
-    draw();
+    const b = e.target.closest('button'); if (!b) return;
+    if (b.dataset.kind) { kind = b.dataset.kind; filters.querySelectorAll('[data-kind]').forEach((x) => x.classList.toggle('sel', x === b)); }
+    else if (b.dataset.setupf !== undefined) { setupF = b.dataset.setupf; filters.querySelectorAll('[data-setupf]').forEach((x) => x.classList.toggle('sel', x === b)); }
+    else if (b.dataset.clear) { kind = 'all'; setupF = ''; devices.clear(); filters.querySelectorAll('[data-kind]').forEach((x) => x.classList.toggle('sel', x.dataset.kind === 'all')); filters.querySelectorAll('[data-setupf]').forEach((x) => x.classList.toggle('sel', x.dataset.setupf === '')); }
+    else if (b.dataset.device) { const d = b.dataset.device; devices.has(d) ? devices.delete(d) : devices.add(d); }
+    filters.querySelectorAll('[data-device]').forEach((x) => { x.classList.toggle('sel', devices.has(x.dataset.device)); x.setAttribute('aria-selected', String(devices.has(x.dataset.device))); });
+    showCount(); draw();
   });
+  // Phone sheet: drag the handle down to close it.
+  const handle = filters.querySelector('[data-handle]'); let y0 = null;
+  handle.addEventListener('pointerdown', (e) => { y0 = e.clientY; handle.setPointerCapture(e.pointerId); });
+  handle.addEventListener('pointermove', (e) => { if (y0 != null) filters.style.transform = `translateY(${Math.max(0, e.clientY - y0)}px)`; });
+  handle.addEventListener('pointerup', (e) => { if (y0 != null && e.clientY - y0 > 70) { filters.classList.remove('open'); fbtn.setAttribute('aria-expanded', 'false'); } filters.style.transform = ''; y0 = null; });
+
+  // One search at a time: the details load once, then every keystroke ranks again and redraws.
+  let ctx = null, stamp = 0;
+  const count = (n) => `${n} ${n === 1 ? 'result' : 'results'}`;
+  async function run() {
+    const my = ++stamp;
+    if (!q) { results = []; sub.textContent = ''; list.innerHTML = '<div class="empty">Type what you\'re looking for.</div>'; return; }
+    document.title = `${q} · Search · Open Source Everything`;
+    results = window.OISearch.search(ctx.items, q, { all: true });
+    sub.textContent = results.length ? count(results.length) : 'No results.';
+    draw();
+    // Meaning search (search-ai.js): when the word match is weak, reorder by meaning once the server answers; if it is slow or off, the list stays.
+    const better = await window.OISearchAI?.improve(ctx.items, q, results).catch(() => null);
+    if (better && my === stamp) { results = better; sub.textContent = count(results.length); draw(); }
+  }
+  let t = null;
+  input.addEventListener('input', () => { q = input.value.trim(); clearTimeout(t); t = setTimeout(() => { try { history.replaceState(null, '', `?q=${encodeURIComponent(q)}`); } catch { /* fine */ } if (ctx) run(); }, 160); });
 
   Promise.all([
     window.OI.loadSearch(),
@@ -90,19 +105,6 @@
     fetch(BASE + 'data/groups.json').then((r) => r.json()),
   ]).then(([items, pj, gj]) => {
     details = { projects: new Map(pj.projects.map((p) => [p.id, p])), groups: new Map(gj.groups.map((g) => [g.id, g])) };
-    results = window.OISearch.search(items, q, { all: true });
-    sub.textContent = results.length
-      ? `${results.length} ${results.length === 1 ? 'result' : 'results'}`
-      : 'No results.';
-    filters.hidden = !results.length;
-    draw();
-    // Meaning search (search-ai.js): when the word match is weak, reorder by meaning once the server answers.
-    // If it is slow, down or switched off, the list above simply stays.
-    return window.OISearchAI?.improve(items, q, results).then((better) => {
-      if (!better) return;
-      results = better;
-      sub.textContent = `${results.length} ${results.length === 1 ? 'result' : 'results'}`;
-      filters.hidden = !results.length; draw();
-    });
+    ctx = { items }; return run();
   }).catch(() => { list.innerHTML = '<div class="empty">Search couldn\'t load. Check your connection and reload the page.</div>'; });
 })();

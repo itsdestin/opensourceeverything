@@ -36,7 +36,7 @@ export default function home(d) {
   const altsFor = (name) => sortAlts([...new Map(d.groups.filter((g) => g.closed.includes(name))
     .flatMap((g) => g.alternatives.map((a) => ({ a, p: d.projById.get(a.project) }))).filter((x) => x.p).map((x) => [x.p.id, x])).values()]);
 
-  // ── Popular switches: the best-known replacement with a screenshot leads each card ──
+  // ── Popular alternatives: the best-known replacement with a screenshot leads each card ──
   const switches = POPULAR.map((name) => {
     const alts = altsFor(name);
     // WHY a Verified pick first (Oct 27): the card's one name should be the one mods vouch for, e.g. Linux Mint for Windows.
@@ -96,7 +96,7 @@ export default function home(d) {
     <div class="swgrid">${switches.map(switchCard).join('')}</div>
   </section>
 
-  <section class="surface sec">
+  <section class="surface sec" id="categories">
     <div class="sec-head"><div><h2 class="h-large">Browse by category</h2></div></div>
     <div class="catgrid">${cats}</div>
   </section>
@@ -123,7 +123,7 @@ export default function home(d) {
   </div>`;
 
   return [{
-    path: '', title: '', search: false, styles: ['pages.css', 'group.css'],
+    path: '', title: '', styles: ['pages.css', 'group.css'],
     description: `${projectCount} open-source projects that replace ${closedCount} closed apps, grouped by the ${jobCount} jobs they do, with where nothing good exists yet. Supported by r/TrueOpenSource.`,
     jsonLd: { '@context': 'https://schema.org', '@type': 'WebSite', name: 'Open Source Everything', url: SITE_URL },
     body,

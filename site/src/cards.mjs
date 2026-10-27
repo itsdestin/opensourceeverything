@@ -55,7 +55,7 @@ export function altCard(p, alt, i, group, why) {
     p.verified ? tpl('verified', 'Verified', '<p>r/TrueOpenSource mods checked it: an open-source license, still looked after, and it really does the job.</p>') : '',
     tpl('why', 'Why it is listed here', `${whyText ? `<p>${esc(whyText.split(' · ').join(', '))}.</p>` : ''}<p class="tipwhy">Ordered by how fully it replaces the app, Verified, setup and, when there are enough, people's votes.</p>${famHtml}`),
   ].join('');
-  return `<div class="card pic" data-fit="${alt.fit}" data-stars="${p.stars ?? 0}" data-name="${esc(p.name.toLowerCase())}" data-order="${i}" data-setup="${setupOf(p)}" data-platforms="${esc((p.platforms ?? []).join(' '))}">
+  return `<div class="card pic" data-fit="${alt.fit}" data-project="${esc(p.id)}" data-stars="${p.stars ?? 0}" data-name="${esc(p.name.toLowerCase())}" data-order="${i}" data-setup="${setupOf(p)}" data-platforms="${esc((p.platforms ?? []).join(' '))}">
     <div class="rvbox" data-tipscope>
       <div class="rv-thumb">${shot ? `<img src="${esc(shot)}" alt="${esc(p.name)} screenshot" loading="lazy" referrerpolicy="no-referrer">` : '<span class="nopic">No screenshot yet</span>'}</div>
       <div class="rv-main">
@@ -67,7 +67,6 @@ export function altCard(p, alt, i, group, why) {
         <p class="blurb">${esc(p.summary)}</p>
         ${SOCIAL ? `<div class="dev-pitch" data-dev-pitch data-mode="card" data-project="${esc(p.id)}" hidden></div>` : ''}
         ${grey ? `<p class="gl">${esc(grey)}</p>` : ''}
-        ${SOCIAL && group ? `<div class="missing-count" data-missing-count data-group="${group.id}" data-project="${esc(p.id)}" hidden></div>` : ''}
       </div>${tips}</div></div>`;
 }
 

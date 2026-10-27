@@ -73,10 +73,19 @@ button.chip { font:inherit; font-size:11px; cursor:pointer; }
   .rvfoot .links .btn { flex:none; width:100%; }
 }
 
-/* ── Search results: one row design, the picture as tall as the row, the match score bare at the top right ── */
-.sres-filters { display:flex; flex-direction:row; flex-wrap:wrap; gap:8px; }
-.select.on { border-color:var(--accent); color:var(--fg); }
-.mi .chk { visibility:hidden; color:var(--accent); } .mi.sel .chk { visibility:visible; }
+/* ── Search: one wide card with the box and a Filter button, results beneath ── */
+.sres-bar { padding:12px; display:flex; flex-direction:column; gap:8px; position:relative; z-index:20; }
+.sres-input { display:flex; align-items:center; gap:8px; background:var(--inset); border:1px solid var(--edge); border-radius:var(--radius-control); padding:4px 4px 4px 12px; color:var(--fg-muted); }
+.sres-input:focus-within { border-color:var(--accent); }
+.sres-input > input { flex:1; min-width:0; background:transparent; border:0; outline:0; font-size:15px; color:var(--fg); padding:6px 0; }
+.sres-filterbtn.on { border-color:var(--accent); color:var(--fg); }
+.fcount { display:inline-grid; place-items:center; min-width:16px; height:16px; padding:0 4px; border-radius:9999px; background:var(--accent); color:var(--on-accent); font-size:10px; font-weight:600; }
+.fcount[hidden] { display:none; }
+.fsheet { width:300px; padding:12px; }
+.fgroup { display:flex; flex-direction:column; gap:2px; margin-bottom:8px; } .fgroup .label { margin:0 0 4px 10px; }
+.fsheet .mi .chk { visibility:hidden; color:var(--accent); } .fsheet .mi.sel .chk { visibility:visible; }
+.fclear { margin-top:4px; }
+.fsheet .handle { display:none; }
 .sres-list { gap:8px; }
 .sr { display:flex; flex-direction:row; align-items:stretch; gap:12px; padding:10px; color:inherit; text-decoration:none; min-width:0; }
 .sr-thumb { flex:none; align-self:stretch; width:128px; min-height:64px; border-radius:var(--radius-md); overflow:hidden; background:var(--inset); border:1px solid var(--edge-card); display:flex; align-items:center; justify-content:center; color:var(--fg-dim); }
@@ -84,10 +93,18 @@ button.chip { font:inherit; font-size:11px; cursor:pointer; }
 .sr-thumb .letter { font-size:22px; font-weight:600; color:var(--fg-muted); } .sr-thumb .letter.closed { color:var(--fg-faint); }
 .sr-body { flex:1; min-width:0; display:flex; flex-direction:column; gap:4px; justify-content:center; }
 .sr-top { display:flex; align-items:center; justify-content:space-between; gap:12px; }
-.sr h3 { margin:0; font-size:15px; font-weight:600; color:var(--fg); min-width:0; }
+.sr h3 { margin:0; font-size:15px; font-weight:600; color:var(--fg); min-width:0; flex:1; white-space:nowrap; overflow:hidden; text-overflow:ellipsis; }
+.sr-top .mstr { flex:none; }
 .sr-sum { margin:0; font-size:12px; color:var(--fg-2); display:-webkit-box; -webkit-line-clamp:2; -webkit-box-orient:vertical; overflow:hidden; }
 .sr .chip.why { color:var(--fg-dim); }
-@media (max-width:640px) { .sr { gap:10px; padding:8px; } .sr-thumb { width:84px; min-height:72px; } .sr-top { align-items:flex-start; flex-direction:column; gap:2px; } }
+@media (max-width:640px) {
+  .sr { gap:10px; padding:8px; } .sr-thumb { width:84px; min-height:72px; }
+  .sres-input > input { font-size:16px; }
+  /* The filter menu is a full-width sheet with its own drag handle (the generic sheet rule in mobile.css positions it). */
+  .fsheet .handle { display:block; padding:8px 0 14px; touch-action:none; cursor:grab; }
+  .fsheet .handle::before { content:""; display:block; width:40px; height:4px; border-radius:9999px; background:var(--edge-strong); margin:0 auto; }
+  .fsheet.open { transition:transform .1s; }
+}
 
 /* ── Most requested: the top three as raised cards, then a short list; on the home page five equal cards ── */
 .pillvote { flex:none; width:auto; flex-direction:row; align-items:center; gap:8px; padding:6px 12px; border-radius:var(--radius-control); background:transparent; }
@@ -103,20 +120,27 @@ button.chip { font:inherit; font-size:11px; cursor:pointer; }
 .rq-five { grid-template-columns:repeat(5,minmax(0,1fr)); }
 .rq-card { display:flex; flex-direction:column; align-items:flex-start; gap:8px; padding:12px; border-radius:var(--radius-lg); background:color-mix(in srgb,var(--inset) 50%,transparent); border:1px solid var(--edge-card); box-shadow:0 3px 10px rgb(0 0 0 / .1); min-width:0; }
 .rq-card .rt { font-size:15px; font-weight:600; color:var(--fg); }
-.rq-card .rq-sub { flex:1; }
+.rq-text { min-width:0; flex:1; display:flex; flex-direction:column; gap:4px; }
 .rq-card .pillvote.full { margin-top:auto; }
 .rq-sub { display:flex; flex-direction:column; align-items:flex-start; gap:4px; min-width:0; }
 .rq-like { font-size:11px; color:var(--fg-dim); }
 .rq-medal { width:24px; height:24px; border-radius:9999px; display:grid; place-items:center; font-size:12px; font-weight:600; background:var(--inset); border:1px solid var(--edge); color:var(--fg); }
 .rq-medal.m1 { background:color-mix(in srgb,var(--accent) 22%,var(--inset)); border-color:var(--accent); }
 .rt { text-decoration:none; } .rt:hover { text-decoration:underline; }
-/* The rest of the list: smaller cards of the same kind as the top three (Destin) */
-.rq-mini { display:grid; grid-template-columns:repeat(auto-fill,minmax(260px,1fr)); gap:8px; }
+/* The rest of the list: smaller cards of the same kind as the top three, in two columns, numbered down the first column and then the second (Destin, round 4) */
+.rq-mini { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); grid-template-rows:repeat(var(--rows,1),auto); grid-auto-flow:column; gap:8px; }
 .rq-minicard { display:flex; align-items:center; gap:10px; padding:8px 10px; border-radius:var(--radius-md); background:color-mix(in srgb,var(--inset) 50%,transparent); border:1px solid var(--edge-card); box-shadow:0 2px 6px rgb(0 0 0 / .08); min-width:0; }
 .rq-minicard .nr-main { flex:1; min-width:0; } .rq-minicard .rt { font-size:13px; font-weight:500; color:var(--fg); }
 @media (max-width:640px) {
-  .rq-pod, .rq-five { display:flex; overflow-x:auto; scrollbar-width:none; padding:4px; margin:-4px; -webkit-mask-image:linear-gradient(to right,#000 calc(100% - 32px),transparent); mask-image:linear-gradient(to right,#000 calc(100% - 32px),transparent); }
-  .rq-card { flex:0 0 220px; }
+  .rq-five { display:flex; overflow-x:auto; scrollbar-width:none; padding:4px; margin:-4px; -webkit-mask-image:linear-gradient(to right,#000 calc(100% - 32px),transparent); mask-image:linear-gradient(to right,#000 calc(100% - 32px),transparent); }
+  .rq-five .rq-card { flex:0 0 220px; }
+  /* Gaps, on a phone: every card stacks full width. In the top three the number is a block as tall as the name and its line, right beside them; the button runs under both. */
+  .rq-pod { display:flex; flex-direction:column; gap:8px; }
+  .rq-pod .rq-card { display:grid; grid-template-columns:36px minmax(0,1fr); grid-template-areas:"m t" "b b"; column-gap:10px; row-gap:8px; align-items:stretch; }
+  .rq-pod .rq-medal { grid-area:m; width:auto; height:auto; border-radius:var(--radius-md); font-size:16px; }
+  .rq-pod .rq-text { grid-area:t; justify-content:center; }
+  .rq-pod .pillvote.full { grid-area:b; }
+  .rq-mini { display:flex; flex-direction:column; }
   .pillvote { flex-direction:column; gap:0; padding:4px 8px; min-width:76px; } .pillvote span { font-size:10px; } .pillvote.full { flex-direction:row; gap:8px; }
   .rq-list .rrow { padding:8px 6px; }
 }
@@ -156,3 +180,23 @@ code.copy.block { display:block; }
 .rq-minicard .rq-rank { width:20px; }
 /* A long chip row scrolls sideways under the edge fade; the trailing space lets the last chip clear the fade (phones clipped it). */
 .chiprow { padding-right:24px; }
+
+/* ── The page frame ── */
+/* WHY (Destin, round 4: "keep the bottom chips at the bottom of the page"): the page stretches to the window's height, so the footer rests on the bottom edge when the content is short. */
+body { display:flex; flex-direction:column; }
+.page { flex:1 0 auto; width:100%; }
+.footer { margin-top:auto; }
+.top { width:100%; }
+.top-search { border:1px solid var(--edge); background:var(--glass); }
+.crumbs { display:flex; align-items:center; gap:6px; font-size:12px; color:var(--fg-dim); min-width:0; overflow-x:auto; scrollbar-width:none; white-space:nowrap; }
+.crumbs a { color:var(--fg-2); text-decoration:none; padding:2px 8px; border:1px solid var(--edge-dim); border-radius:var(--radius-control); background:var(--glass); }
+.crumbs a:hover { border-color:var(--accent); color:var(--fg); } .crumbs i { font-style:normal; color:var(--fg-faint); } .crumbs [aria-current] { color:var(--fg); }
+.identity .row .btn { flex:none; }
+@media (max-width:640px) {
+  /* Sign in and the search button: glass, like the tab bar. */
+  .top-search, .acct .btn, .acct .avatar { background:color-mix(in srgb, var(--panel) 40%, transparent); backdrop-filter:blur(16px) saturate(1.6); -webkit-backdrop-filter:blur(16px) saturate(1.6); border:1px solid color-mix(in srgb, #fff 55%, transparent); box-shadow:inset 0 1px 0 rgb(255 255 255 / .55); }
+  /* The footer: a small grid of links, not a row that runs off the screen. */
+  .footer { display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:6px; }
+  .footchip { text-align:center; padding:6px 4px; } .deskonly { display:none; }
+  .identity .row { flex-direction:column; align-items:stretch; }
+}

@@ -7,26 +7,30 @@ import { DEVICE, ICON } from '../lib.mjs';
 
 export default function searchPage() {
   const kinds = [['all', 'Everything'], ['project', 'Projects'], ['group', 'Groups'], ['closed', 'Closed apps']];
+  const item = (attrs, label, extra = '') => `<button type="button" class="mi" role="option" ${attrs}><span>${label}</span>${extra}</button>`;
+  const chk = `<span class="chk" aria-hidden="true">${ICON.check}</span>`;
+  // WHY one wide search card (Destin, round 4): the search box and a Filter button at its right, results underneath. The Filter menu holds the
+  // three filters; on a phone it is a full-width sheet that slides up from the bottom edge, with a handle.
   const body = `
-  <div class="surface identity sres-head">
-    <div><div class="muted11">Search</div><h1 class="h-subject" data-sres-title>Search results</h1>
-      <p class="desc12" data-sres-sub></p></div>
-    <div class="sres-filters" data-sres-filters hidden>
-      <!-- WHY menus, not rows of chips (Destin: "these filter chips suck"): three short drop-downs; Works on takes several choices and stays open while you tick. -->
-      <div class="dd"><button class="select sm" type="button" data-menu="fType" aria-haspopup="listbox" aria-expanded="false"><span data-flabel="type">Type</span>${ICON.chev}</button>
-        <div class="menu left" id="fType" role="listbox">${kinds.map(([k, label], i) => `<button type="button" class="mi${i ? '' : ' sel'}" role="option" data-kind="${k}"><span>${label}</span><span class="muted11" data-count="${k}"></span></button>`).join('')}</div></div>
-      <div class="dd"><button class="select sm" type="button" data-menu="fDev" aria-haspopup="listbox" aria-expanded="false"><span data-flabel="dev">Works on</span>${ICON.chev}</button>
-        <div class="menu left" id="fDev" role="listbox" aria-multiselectable="true">${Object.entries(DEVICE).map(([k, label]) => `<button type="button" class="mi" role="option" aria-selected="false" data-device="${k}"><span>${label}</span><span class="chk" aria-hidden="true">${ICON.check}</span></button>`).join('')}<div class="menu-sep"></div><button type="button" class="mi" data-clear="dev"><span>Clear</span></button></div></div>
-      <div class="dd"><button class="select sm" type="button" data-menu="fSetup" aria-haspopup="listbox" aria-expanded="false"><span data-flabel="setup">Setup</span>${ICON.chev}</button>
-        <div class="menu left" id="fSetup" role="listbox">${[['', 'Any'], ['easy', 'Easy setup'], ['advanced', 'Advanced setup']].map(([k, label], i) => `<button type="button" class="mi${i ? '' : ' sel'}" role="option" data-setupf="${k}"><span>${label}</span></button>`).join('')}</div></div>
+  <div class="surface sres-bar">
+    <div class="sres-input">${ICON.search}<input type="search" data-sres-input placeholder="Search a closed app or open project…" autocomplete="off" aria-label="Search" autofocus>
+      <div class="dd"><button class="btn sm secondary sres-filterbtn" type="button" data-menu="fMenu" aria-haspopup="dialog" aria-expanded="false" data-sres-filterbtn>Filter<span class="fcount" data-fcount hidden></span>${ICON.chev}</button>
+        <div class="menu fsheet" id="fMenu" role="dialog" aria-label="Filter results" data-sres-filters>
+          <span class="handle" data-handle aria-hidden="true"></span>
+          <div class="fgroup"><div class="label">Type</div>${kinds.map(([k, label], i) => `<button type="button" class="mi${i ? '' : ' sel'}" role="option" data-kind="${k}"><span>${label}</span><span class="muted11" data-count="${k}"></span></button>`).join('')}</div>
+          <div class="fgroup"><div class="label">Works on</div>${Object.entries(DEVICE).map(([k, label]) => item(`aria-selected="false" data-device="${k}"`, label, chk)).join('')}</div>
+          <div class="fgroup"><div class="label">Setup</div>${[['', 'Any'], ['easy', 'Easy setup'], ['advanced', 'Advanced setup']].map(([k, label], i) => `<button type="button" class="mi${i ? '' : ' sel'}" role="option" data-setupf="${k}"><span>${label}</span></button>`).join('')}</div>
+          <button type="button" class="btn md secondary full fclear" data-clear="all">Clear filters</button>
+        </div></div>
     </div>
+    <p class="muted11" data-sres-sub></p>
   </div>
   <section class="surface sec">
     <div class="sres-list" data-sres-list><div class="empty">Loading…</div></div>
     <noscript><p class="desc12">Search needs JavaScript. Browse by <a href="./">category</a> instead.</p></noscript>
   </section>`;
   return [{
-    path: 'search/', title: 'Search', noIndex: true, styles: ['pages.css'], scripts: ['search-page.js'], body,
+    path: 'search/', title: 'Search', noIndex: true, search: false, styles: ['pages.css'], scripts: ['search-page.js'], body,
     description: 'Search open-source replacements for closed apps, by name or by what you need.',
   }];
 }

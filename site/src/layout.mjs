@@ -6,6 +6,7 @@ import { esc, url, ICON, SITE_URL, SUBREDDIT, REPO, SOCIAL, DEMO, API_URL } from
 const BUILD = Date.now().toString(36);
 const asset = (p) => `${url(p)}?v=${BUILD}`;
 
+// WHY only a magnifier here (Destin, round 4): the inline search box is gone from every page except search itself; the button opens the search page.
 // WHY a back button on project pages (Destin, redesign round 3): you arrive from a list, so the corner goes back to it; with no earlier page
 // on this site (a link from elsewhere) it goes home. redesign.js turns the click into "back".
 const BACK = '<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m15 18-6-6 6-6"/></svg>';
@@ -14,10 +15,7 @@ export function topStrip({ search = true, back = false } = {}) {
   ${back ? `<a class="icon-btn" data-back href="${url()}" title="Back" aria-label="Back">${BACK}</a>` : `<a class="icon-btn" href="${url()}" title="Home" aria-label="Open Source Everything home">${ICON.home}</a>`}
   <a class="top-title" href="${url()}">Open Source Everything</a>
   <div class="grow"></div>
-  ${search ? `<div class="searchwrap" data-search>
-    <div class="searchpill">${ICON.search}<input type="search" placeholder="Search a closed app or open project…" autocomplete="off" aria-label="Search"></div>
-    <div class="menu search-menu" role="listbox"></div>
-  </div>` : ''}
+${search ? `<a class="icon-btn top-search" href="${url('search/')}" title="Search" aria-label="Search">${ICON.search.replace(/width="14" height="14"/, 'width="18" height="18"')}</a>` : ''}
   ${SOCIAL ? '<div class="acct" data-account></div>' : ''}
 </div>`;
 }
@@ -26,31 +24,32 @@ export function topStrip({ search = true, back = false } = {}) {
 const TAB_ICON = {
   home: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 10.5 12 3l9 7.5V20a1 1 0 0 1-1 1h-5v-6H9v6H4a1 1 0 0 1-1-1z"/></svg>',
   search: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>',
-  boards: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 12a8 8 0 0 1-11.8 7L4 20l1.1-4.6A8 8 0 1 1 21 12z"/></svg>',
   gaps: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3v4M12 17v4M3 12h4M17 12h4"/><circle cx="12" cy="12" r="4" stroke-dasharray="3 3"/></svg>',
 };
+// WHY four plain tabs (Destin, round 4: "simpler options with clearer purposes"): Home, Browse (the categories), Search, Gaps. Boards are gone.
+// Browse is "current" on category, group, project and closed-app pages: they are all places you reach by browsing.
+const TAB_BROWSE = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="3" width="7" height="7" rx="1.5"/><rect x="14" y="3" width="7" height="7" rx="1.5"/><rect x="3" y="14" width="7" height="7" rx="1.5"/><rect x="14" y="14" width="7" height="7" rx="1.5"/></svg>';
 export function tabbar(path) {
-  const here = (p) => (p === '' ? path === '' : path.startsWith(p)) ? ' aria-current="page"' : '';
+  const on = (yes) => (yes ? ' aria-current="page"' : '');
   return `<nav class="tabbar" aria-label="Main">
-  <a class="tab" href="${url()}"${here('')}>${TAB_ICON.home}Home</a>
-  <button class="tab" type="button" data-open-search>${TAB_ICON.search}Search</button>
-  ${SOCIAL ? `<a class="tab" href="${url('boards/')}"${here('boards/') || (path.endsWith('/board/') ? ' aria-current="page"' : '')}>${TAB_ICON.boards}Boards</a>` : ''}
-  <a class="tab" href="${url('gaps/')}"${here('gaps/')}>${TAB_ICON.gaps}Gaps</a>
+  <a class="tab" href="${url()}"${on(path === '')}>${TAB_ICON.home}Home</a>
+  <a class="tab" href="${url('#categories')}"${on(/^(c|g|p|alternatives-to)\//.test(path))}>${TAB_BROWSE}Browse</a>
+  <a class="tab" href="${url('search/')}"${on(path === 'search/')}>${TAB_ICON.search}Search</a>
+  <a class="tab" href="${url('gaps/')}"${on(path === 'gaps/')}>${TAB_ICON.gaps}Gaps</a>
 </nav>`;
 }
 
+// WHY one small footer (Destin, round 4: fewer, clearer links, nothing the phone's tab bar already has): About, Licenses, Privacy, Credits, the subreddit and the code.
+// Gaps stays on desktop only, where there is no tab bar.
 export function footer() {
-  // WHY separate chips (Destin, Oct 27): each footer link is its own glass chip, not words in one bar.
   return `<div class="footer">
-  <a class="footchip" href="${url('gaps/')}">Gaps</a>
-  ${SOCIAL ? `<a class="footchip" href="${url('boards/')}">Boards</a>` : ''}
-  <a class="footchip" href="${url('about/')}">How this works</a>
-  <a class="footchip" href="${url('about/#open-source')}">What counts as open source</a>
-  <a class="footchip" href="${url('licenses/')}">Licenses explained</a>
-  <a class="footchip" href="${url('credits/')}">Credits and data license</a>
+  <a class="footchip deskonly" href="${url('gaps/')}">Gaps</a>
+  <a class="footchip" href="${url('about/')}">About</a>
+  <a class="footchip" href="${url('licenses/')}">Licenses</a>
   <a class="footchip" href="${url('privacy/')}">Privacy</a>
+  <a class="footchip" href="${url('credits/')}">Credits &amp; data</a>
   <a class="footchip" href="${SUBREDDIT}" rel="noopener">r/TrueOpenSource</a>
-  <a class="footchip" href="${REPO}" rel="noopener">This site's code</a>
+  <a class="footchip" href="${REPO}" rel="noopener">Code</a>
 </div>`;
 }
 

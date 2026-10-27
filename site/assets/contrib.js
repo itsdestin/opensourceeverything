@@ -62,14 +62,14 @@
     const vbtn = (m, cls = '') => `<button class="vote pillvote${cls}${mine(m) ? ' on' : ''}" type="button" aria-pressed="${mine(m)}" title="${mine(m) ? 'You want this. Press to take it back.' : 'Add your voice'}"><b>▲ ${m.votes}</b><span>${mine(m) ? 'You want this' : 'want this'}</span></button>`;
     const sub = (m) => `${m.like ? `<span class="rq-like">Like ${esc(m.like)}</span>` : ''}${m.waiting ? '<span class="pill warn"><i></i>Waiting for a mod</span>' : ''}`;
     const card = (m, i) => `<div class="rq-card req-row" data-id="${esc(m.id)}"><span class="rq-medal m${Math.min(i + 1, 4)}">${i + 1}</span>
-        <a class="rt" href="${link(m)}"${m.url ? ' target="_blank" rel="noopener"' : ''}>${esc(m.title)}</a><div class="rq-sub">${sub(m)}</div>${vbtn(m, ' full')}</div>`;
+        <div class="rq-text"><a class="rt" href="${link(m)}"${m.url ? ' target="_blank" rel="noopener"' : ''}>${esc(m.title)}</a><div class="rq-sub">${sub(m)}</div></div>${vbtn(m, ' full')}</div>`;
     const lrow = (m, i) => `<div class="req-row rq-minicard" data-id="${esc(m.id)}"><span class="rq-rank" aria-hidden="true">${i + 1}</span>
         <div class="nr-main"><a class="rt" href="${link(m)}"${m.url ? ' target="_blank" rel="noopener"' : ''}>${esc(m.title)}</a><div class="rq-sub">${sub(m)}</div></div>${vbtn(m)}</div>`;
     const draw = () => {
       const all = rows(); const more = res.total > all.length && slot.dataset.more ? `<a class="btn sm secondary rq-more" href="${esc(BASE + slot.dataset.more)}">See all ${res.total}</a>` : '';
       // Home: five equal cards. Gaps page: the top three as cards, the rest as a short list.
       if (slot.dataset.layout === 'five') { slot.innerHTML = `<div class="rq-five">${all.map(card).join('')}</div>${more}`; return; }
-      slot.innerHTML = `<div class="rq-pod">${all.slice(0, 3).map(card).join('')}</div>${all.length > 3 ? `<div class="rq-mini">${all.slice(3).map((m, i) => lrow(m, i + 3)).join('')}</div>` : ''}${more}`;
+      slot.innerHTML = `<div class="rq-pod">${all.slice(0, 3).map(card).join('')}</div>${all.length > 3 ? `<div class="rq-mini" style="--rows:${Math.ceil((all.length - 3) / 2)}">${all.slice(3).map((m, i) => lrow(m, i + 3)).join('')}</div>` : ''}${more}`;
     };
     const lastRows = () => rows();
     slot.onclick = (e) => {
@@ -176,7 +176,9 @@
       const p = st.pitch; const cur = p.pending ?? p.live ?? {};
       const mineGroups = Object.keys(N.groups).filter((g) => N.groups[g].alts.includes(p.project));
       const opts = Object.entries(N.groups).sort((a, b) => a[1].n.localeCompare(b[1].n)).map(([id, g]) => [id, g.n]);
-      const pk = picker($('#tagGroups', slot), opts, { selected: cur.groups ?? mineGroups, none: 'Pick one or more groups', labelledBy: 'tgL', onChange: before });
+      const pk = picker($('#tagGroups', slot), opts, { selected: cur.groups ?? mineGroups, none: 'Pick one or more groups', labelledBy: 'tgL', onChange: before,
+        // WHY (Destin, round 4): a project that fits no listed group can ask for one, with its name already filled in.
+        action: ['Suggest a new group…', `${OI.repo}/issues/new?template=4-new-group.yml&projects=${encodeURIComponent(p.projectName)}`] });
       function before() {
         const gs = pk.value();
         // What already exists in the chosen groups, so the description can say what is different (inside "More").

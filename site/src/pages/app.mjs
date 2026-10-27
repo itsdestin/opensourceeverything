@@ -3,7 +3,6 @@
 // alternatives from every group that replaces the app (Photoshop sits in both Photo editing and Painting).
 import { esc, url, SITE_URL, SOCIAL } from '../lib.mjs';
 import { altCard, appSlug, appUrl, sortAlts, deviceFilter, buildBox, chooseBox } from '../cards.mjs';
-import { likedBox } from '../liked.mjs';
 
 export default function appPages(d) {
   // WHY keyed by address, not spelling: the imported lists spell some apps two ways ("Datadog", "DataDog");
@@ -24,7 +23,6 @@ export default function appPages(d) {
     const section = ({ g, alts }) => `
   <section class="surface sec">
     <div class="sec-head"><div><h2 class="h-large">${groups.length > 1 ? esc(g.name) : 'Open alternatives'}${alts.length > 1 ? `<span class="count">${alts.length}</span>` : ''}</h2></div><a class="btn sm secondary" href="${url(`g/${g.id}/`)}">See the whole group</a></div>
-    ${likedBox(g, alts)}
     ${alts.length
       ? `<div class="grid" data-alts>${alts.map((x) => altCard(x.p, x.a, i++, g, x.why)).join('')}</div><div class="callout info" data-nomatch hidden>None of these match. Try another device.</div>`
       : `<div class="callout info">Nothing open does this yet. It's one of the <a href="${url('gaps/')}">gaps on the map</a>: if you're building one, <a href="${url(`g/${g.id}/#build`)}">see what to reuse first</a>.</div>`}

@@ -83,21 +83,7 @@
 
   // ── Phones: the Search tab, and side sections that fold (mobile.css) ──
   const phone = matchMedia('(max-width:640px)');
-  document.addEventListener('click', (e) => {
-    if (!e.target.closest('[data-open-search]')) return;
-    // WHY two cases: the home page has its own big search box; other pages slide the search bar down from the top.
-    const hero = document.querySelector('.hero3 [data-search] input');
-    if (hero) { hero.scrollIntoView({ block: 'center', behavior: 'smooth' }); hero.focus(); return; }
-    // WHY: project pages have no search bar (Destin), so the Search tab opens the results page instead.
-    if (!document.querySelector('.top [data-search]')) { location.href = BASE + 'search/'; return; }
-    document.body.classList.add('searching');
-    const input = document.querySelector('.top [data-search] input'); input?.focus();
-  });
-  document.addEventListener('focusout', (e) => {
-    if (!document.body.classList.contains('searching') || !e.target.closest('.top')) return;
-    setTimeout(() => { if (!document.activeElement?.closest('.top')) document.body.classList.remove('searching'); }, 150);
-  });
-  document.addEventListener('keydown', (e) => { if (e.key === 'Escape') document.body.classList.remove('searching'); });
+  // (The old slide-down search bar is gone: the top bar has a magnifier that opens the search page.)
   // WHY folded on phones: the main content comes first; "Before you build", "About this page" and the like open on a tap.
   const foldInit = (sec) => {
     if (phone.matches) sec.classList.add('folded');

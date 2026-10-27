@@ -34,3 +34,6 @@ export function rvFamilyA(p, fam) {
     <ul class="flist lvl2">${nodes.map(row).join('')}</ul>
     ${nodes.length > 5 ? `<button class="btn sm secondary showall" type="button" data-showall>Show all ${nodes.length}</button>` : ''}${tips}</section>`;
 }
+
+// A compact trail under the top bar (Destin, round 4): where this page sits, so a phone visitor can step up a level. items: [[label, href], ...]; the last is plain text.
+export const crumbs = (items) => `<nav class="crumbs" aria-label="Breadcrumb">${items.map(([label, href], i) => (href ? `<a href="${href}">${esc(label)}</a>` : `<span aria-current="page">${esc(label)}</span>`) + (i < items.length - 1 ? '<i aria-hidden="true">›</i>' : '')).join('')}</nav>`;

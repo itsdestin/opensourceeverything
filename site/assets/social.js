@@ -110,14 +110,16 @@
   // "Most voted": the alternatives in this job with the most "yes" answers, shown only once at least
   // 10 answers (yes or not really) exist across the job, so a couple of early votes never look like a verdict.
   const LIKED_MIN = 10;
+  // WHY no strip any more (Destin, round 4: "a sort field would make more sense"): the same numbers now give every card a vote count and switch on "Most voted" in the sort menu.
   function drawLiked(boxes, all) {
     for (const el of boxes) {
+      el.hidden = true;
       const rated = JSON.parse(el.dataset.alts).map(([id, name]) => ({ id, name, ...(all[`${el.dataset.group}/${id}`] ?? { up: 0, down: 0 }) }));
       const total = rated.reduce((n, r) => n + r.up + r.down, 0);
-      const top = rated.filter((r) => r.up > 0).sort((a, b) => b.up - a.up || b.up / (b.up + b.down) - a.up / (a.up + a.down) || a.name.localeCompare(b.name)).slice(0, 3);
-      if (total < LIKED_MIN || !top.length) { el.hidden = true; continue; }
-      el.innerHTML = `<span class="muted11">Most voted</span><div class="chiprow">${top.map((r) => `<a class="chip" href="${BASE}p/${esc(r.id)}/" title="${r.up} of ${r.up + r.down} say it does the job">${icon.up.replace(/14/g, '12')}${esc(r.name)}<b>${r.up}</b></a>`).join('')}</div>`;
-      el.hidden = false;
+      if (total < LIKED_MIN) continue;
+      const section = el.closest('section') ?? document;
+      for (const r of rated) section.querySelectorAll(`.card[data-project="${r.id}"]`).forEach((c) => { c.dataset.votes = r.up; });
+      document.querySelectorAll('[data-sort="votes"]').forEach((o) => { o.disabled = false; o.removeAttribute('title'); });
     }
   }
   // ── "Good replacement?" ratings, one per project per job: a chip on cards, the question on project pages ──
@@ -212,15 +214,15 @@
   // ── Adding a note ──
   // A dropdown in the site's style, for one choice or several; for several, it stays open while you tick.
   let pickN = 0;
-  function picker(host, options, { single = false, selected = [], none = '', labelledBy, onChange } = {}) {
+  function picker(host, options, { single = false, selected = [], none = '', labelledBy, onChange, action } = {}) {
     const id = `pick${++pickN}`; let sel = new Set(selected);
     const label = () => { const ns = options.filter(([v]) => sel.has(v)).map(([, n]) => n); return ns.length ? (ns.length > 2 ? `${ns.slice(0, 2).join(', ')} and ${ns.length - 2} more` : ns.join(', ')) : none; };
     const draw = () => {
       host.innerHTML = `<div class="dd"><button class="select field-select${sel.size ? '' : ' empty'}" type="button" data-menu="${id}" aria-haspopup="listbox" aria-expanded="false"${labelledBy ? ` aria-labelledby="${labelledBy} ${id}b"` : ''}><span id="${id}b">${esc(label())}</span>${OI.chev}</button>
-        <div class="menu pick-menu" id="${id}" role="listbox"${single ? '' : ' aria-multiselectable="true"'}>${options.map(([v, n]) => `<button class="mi${sel.has(v) ? ' sel' : ''}" type="button" role="option" aria-selected="${sel.has(v)}" data-v="${esc(v)}">${single ? '' : `<span class="tick">${sel.has(v) ? '✓' : ''}</span>`}${esc(n)}</button>`).join('')}</div></div>`;
+        <div class="menu pick-menu" id="${id}" role="listbox"${single ? '' : ' aria-multiselectable="true"'}>${action ? `<a class="mi suggest" href="${esc(action[1])}" target="_blank" rel="noopener">${esc(action[0])}</a><div class="menu-sep"></div>` : ''}${options.map(([v, n]) => `<button class="mi${sel.has(v) ? ' sel' : ''}" type="button" role="option" aria-selected="${sel.has(v)}" data-v="${esc(v)}">${single ? '' : `<span class="tick">${sel.has(v) ? '✓' : ''}</span>`}${esc(n)}</button>`).join('')}</div></div>`;
     };
     host.onclick = (e) => {
-      const o = e.target.closest('.mi'); if (!o) return; e.stopPropagation(); const v = o.dataset.v;
+      const o = e.target.closest('.mi'); if (!o || !o.dataset.v) return; e.stopPropagation(); const v = o.dataset.v;
       if (single) { sel = new Set([v]); draw(); onChange?.(); return; }
       sel.has(v) ? sel.delete(v) : sel.add(v); draw(); $(`#${id}`, host).classList.add('open'); onChange?.();
     };

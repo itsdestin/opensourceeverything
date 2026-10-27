@@ -1,10 +1,11 @@
 // One page per group (g/<id>/): the job, the closed apps it replaces, and its open alternatives.
 // Ported from mockups/group-page.html. Votes, comments, "still missing", suggest and report need the server,
 // so they only appear once API_URL is set (see lib.mjs).
-import { esc, url, ICON, SITE_URL, API_URL, SOCIAL, codeUrl, suggestUrl } from '../lib.mjs';
+import { esc, url, ICON, SITE_URL, API_URL, SOCIAL, SUBREDDIT, codeUrl, suggestUrl } from '../lib.mjs';
 import { altCard, appUrl, sortAlts, deviceFilter, buildBox, chooseBox } from '../cards.mjs';
 import { relatedGroups } from '../related.mjs';
 import { likedBox } from '../liked.mjs';
+import { crumbs } from '../redesign.mjs';
 
 // WHY only the first letter, and not before a capital: "AI agents" and "PDF tools" keep their capitals mid-sentence.
 const midSentence = (name) => name.replace(/^[A-Z](?![A-Z])/, (c) => c.toLowerCase());
@@ -13,7 +14,7 @@ const midSentence = (name) => name.replace(/^[A-Z](?![A-Z])/, (c) => c.toLowerCa
 // WHY two orders (Destin, Oct 26: Easy setup first, nothing hidden): the default "Best match" is the ranking score, which
 // gives Easy setup a modest lift but still lets a much better fit win. "Easy setup first" is the strict version: every Easy
 // one, then every Advanced one, each in best-match order.
-const SORTS = [['fit', 'Best match'], ['setup', 'Easy setup first'], ['stars', 'Most GitHub stars'], ['name', 'A to Z']];
+const SORTS = [['fit', 'Best match'], ['setup', 'Easy setup first'], ['stars', 'Most GitHub stars'], ['votes', 'Most voted'], ['name', 'A to Z']];
 
 export default function groupPages(d) {
   const related = relatedGroups(d);
@@ -34,9 +35,12 @@ export default function groupPages(d) {
     // WHY no job line under the group name (Destin, Oct 27: "Web browsers / Browsing the web" says nothing the name and the
     // Replaces row don't). Same for category cards, closed-app sections and See also. The AI prompts still get the job sentence.
     const body = `
+  ${crumbs([[cat?.name ?? '', url(`c/${g.category}/`)], [g.name]])}
   <div class="surface identity">
     <div class="row">
-      <div><div class="muted11"><a class="crumb" href="${url(`c/${g.category}/`)}">${esc(cat?.name ?? '')}</a></div><h1 class="h-subject">${esc(g.name)}</h1></div>
+      <div><h1 class="h-subject">${esc(g.name)}</h1></div>
+      <!-- WHY a search link for now (Destin): a bot-made thread per group comes later; until then this opens the subreddit's search for the group's name. -->
+      <a class="btn sm secondary" href="${esc(`${SUBREDDIT}search?q=${encodeURIComponent(g.name)}&restrict_sr=1`)}" rel="noopener">Talk about this on r/TrueOpenSource</a>
     </div>
     ${replacesRow}
   </div>
@@ -47,7 +51,7 @@ export default function groupPages(d) {
         <div class="sec-head">
           <div><h2 class="h-large">Open alternatives<span class="count">${alts.length}</span></h2></div>
           ${alts.length > 1 ? `<div class="tools">${deviceFilter('devMenu')}<div class="dd"><button class="select sm" type="button" data-menu="sortMenu" aria-haspopup="listbox" aria-expanded="false"><span data-sort-label>${SORTS[0][1]}</span>${ICON.chev}</button>
-            <div class="menu" id="sortMenu" role="listbox">${SORTS.map(([k, v], i) => `<button class="mi${i ? '' : ' sel'}" type="button" role="option" data-sort="${k}">${v}</button>`).join('')}</div></div></div>` : ''}
+            <div class="menu" id="sortMenu" role="listbox">${SORTS.map(([k, v], i) => `<button class="mi${i ? '' : ' sel'}" type="button" role="option" data-sort="${k}"${k === 'votes' ? ' disabled title="Available once people have voted"' : ''}>${v}</button>`).join('')}</div></div></div>` : ''}
         </div>
         ${likedBox(g, alts)}
         ${alts.length
@@ -60,11 +64,6 @@ export default function groupPages(d) {
         <div class="sec-head"><div><h2 class="h-large">See also</h2></div></div>
         <div class="grid">${related.get(g.id).map((r) => `<a class="card listing" href="${url(`g/${r.g.id}/`)}"><div class="head"><h3>${esc(r.g.name)}</h3></div>${r.reason ? `<span class="muted11">${esc(r.reason)}</span>` : ''}</a>`).join('')}</div>
       </section>
-      ${SOCIAL ? `<section class="surface sec" id="missing">
-        <div class="sec-head"><div><h2 class="h-large">What's missing</h2></div>
-          <div class="btns-row"><a class="btn sm secondary" href="${url(`c/${g.category}/board/`)}">${esc(cat?.name ?? '')} board</a><button class="btn sm secondary" type="button" data-add-note data-category="${g.category}" data-group="${g.id}">Add a note</button></div></div>
-        <div data-notes data-group="${g.id}" data-limit="6" data-more-href="${url(`c/${g.category}/board/?group=${g.id}`)}" data-empty="Nothing noted yet."></div>
-      </section>` : ''}
     </div>
 
     <div>

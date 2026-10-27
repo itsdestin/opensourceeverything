@@ -14,19 +14,16 @@
   .h-subject { font-size:20px; }
   body { -webkit-tap-highlight-color:transparent; }
 
-  /* ── Bottom tab bar: Home, Search, Boards, Gaps ── */
-  /* WHY: on a phone the thumb lives at the bottom; a top bar of small targets wastes the first screen. */
-  body.searching .top { display:flex; position:fixed; inset:0 0 auto 0; z-index:65; padding:12px 16px; background:var(--glass); backdrop-filter:blur(16px); -webkit-backdrop-filter:blur(16px); border-bottom:1px solid var(--edge); }
-  body.searching .top .icon-btn { display:none; }
-  body.searching .top .acct { display:none; }
-  .tabbar { display:grid; grid-template-columns:repeat(auto-fit,minmax(0,1fr)); position:fixed; left:0; right:0; bottom:0; z-index:60;
-    padding:6px 8px calc(6px + env(safe-area-inset-bottom)); background:var(--glass); backdrop-filter:blur(20px); -webkit-backdrop-filter:blur(20px);
-    border-top:1px solid var(--edge); box-shadow:0 -4px 20px rgb(0 0 0 / .08); }
-  .tab { display:flex; flex-direction:column; align-items:center; justify-content:center; gap:2px; min-height:48px; padding:4px 0; border:0; background:transparent;
-    color:var(--fg-muted); font-size:11px; text-decoration:none; border-radius:var(--radius-md); cursor:pointer; }
-  .tab svg { width:22px; height:22px; }
-  .tab[aria-current="page"], .tab.on { color:var(--accent); }
-  .tab:active { background:var(--inset); }
+  /* ── Bottom tab bar: Home, Browse, Search, Gaps (Destin, round 4: simpler, clearer, liquid glass) ── */
+  /* WHY floating glass: a translucent pill that lets the page show through, lit at its top edge like glass; the current tab sits in its own lighter pill. */
+  .tabbar { display:grid; grid-template-columns:repeat(4,minmax(0,1fr)); gap:4px; position:fixed; left:12px; right:12px; bottom:calc(10px + env(safe-area-inset-bottom)); z-index:60;
+    padding:6px; border-radius:9999px; background:color-mix(in srgb, var(--panel) 38%, transparent); backdrop-filter:blur(22px) saturate(1.7); -webkit-backdrop-filter:blur(22px) saturate(1.7);
+    border:1px solid color-mix(in srgb, #fff 55%, transparent); box-shadow:inset 0 1px 0 rgb(255 255 255 / .6), 0 8px 28px rgb(0 0 0 / .16); }
+  .tab { display:flex; flex-direction:column; align-items:center; justify-content:center; gap:2px; min-height:46px; padding:4px 0; border:0; background:transparent;
+    color:var(--fg-2); font-size:11px; text-decoration:none; border-radius:9999px; cursor:pointer; }
+  .tab svg { width:21px; height:21px; }
+  .tab[aria-current="page"] { color:var(--accent); background:color-mix(in srgb, #fff 45%, transparent); box-shadow:inset 0 1px 0 rgb(255 255 255 / .7), 0 1px 4px rgb(0 0 0 / .08); font-weight:600; }
+  .tab:active { background:color-mix(in srgb, #fff 30%, transparent); }
   .hero-acct { display:none; }
 
   /* ── Project cards become compact rows: picture left, words right; 4–5 per screen instead of 1 ── */
@@ -50,10 +47,11 @@
   .catgrid { gap:8px; }
   .catcard2 { padding:12px; gap:10px; }
 
-  /* ── Menus become sheets that slide up from the bottom, with bigger rows ── */
-  .menu.open:not(.search-menu) { position:fixed; left:8px; right:8px; top:auto; bottom:calc(8px + env(safe-area-inset-bottom)); min-width:0;
-    max-height:70vh; overflow-y:auto; z-index:80; padding:8px; border-radius:var(--radius-xl);
-    box-shadow:0 0 0 100vmax rgb(0 0 0 / .35), 0 8px 32px rgb(0 0 0 / .3); animation:sheet-up .18s ease-out; }
+  /* ── Menus become sheets that slide up from the bottom edge (Destin, round 4: not floating): full width, joined to the screen's bottom corners, with a handle ── */
+  .menu.open:not(.search-menu) { position:fixed; left:0; right:0; bottom:0; top:auto; width:auto; min-width:0; margin:0;
+    max-height:80vh; overflow-y:auto; z-index:80; padding:6px 12px calc(12px + env(safe-area-inset-bottom)); border-radius:var(--radius-xl) var(--radius-xl) 0 0; border-bottom:0;
+    box-shadow:0 0 0 100vmax rgb(0 0 0 / .35), 0 -8px 32px rgb(0 0 0 / .25); animation:sheet-up .18s ease-out; }
+  .menu.open:not(.search-menu):not(.fsheet)::before { content:""; display:block; width:40px; height:4px; border-radius:9999px; background:var(--edge-strong); margin:2px auto 8px; }
   .menu.open:not(.search-menu) .mi { min-height:46px; font-size:15px; padding:10px 12px; }
   .menu.open .menu-note { font-size:12px; padding:8px 12px; }
   @keyframes sheet-up { from { transform:translateY(24px); opacity:.6; } to { transform:none; opacity:1; } }
@@ -109,8 +107,6 @@
   .top .searchwrap { display:none; }
   .top .icon-btn { width:28px; height:28px; }
   .top-title { display:block; flex:1; font-size:15px; font-weight:600; color:var(--fg); text-decoration:none; white-space:nowrap; overflow:hidden; text-overflow:ellipsis; }
-  body.searching .top .searchwrap { display:block; flex:1; }
-  body.searching .top .top-title { display:none; }
   body:has(.hero3) .page { padding-top:6px; }
 
   /* ── Less dead space ── */
@@ -118,8 +114,6 @@
   .identity .desc12 { margin-top:2px !important; }
   .page { gap:10px; }
   .sec { padding:12px 12px 14px; }
-  .footer { flex-wrap:nowrap; justify-content:flex-start; overflow-x:auto; scrollbar-width:none; padding:2px 0 4px; }
-  .footchip { flex:none; }
   .idfoot .muted11 { display:none; }
 
   /* ── The home page's top card: headline, search and Try chips only ── */

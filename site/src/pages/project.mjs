@@ -1,6 +1,6 @@
 // One page per open-source project (p/<id>/): what it is, which groups it's listed in, and its facts.
 import { familyIndex, stoppedBanner } from '../family.mjs';
-import { rvTop, rvFamilyA } from '../redesign.mjs';
+import { rvTop, rvFamilyA, crumbs } from '../redesign.mjs';
 import { esc, url, SITE_URL, KIND, SETUP, SETUP_MEANING, setupOf, setupWhy, factChips, hostOf, fmtStars, actions, codeUrl, devicesText, suggestUrl, shot, SOCIAL } from '../lib.mjs';
 
 const HOSTS = { 'github.com': 'GitHub', 'gitlab.com': 'GitLab', 'codeberg.org': 'Codeberg' };
@@ -35,6 +35,7 @@ export default function projectPages(d) {
     // not visitors. They stay in data/projects.json (field "unconfirmed"); the public copy of the data drops them (build.mjs).
     // WHY (forks stream): where it came from, in one plain line, and the reverse ("Forked by: Forgejo") on the original.
     const body = `
+  ${listed[0] ? crumbs([[d.catById.get(listed[0].group.category)?.name ?? '', url(`c/${listed[0].group.category}/`)], [listed[0].group.name, url(`g/${listed[0].group.id}/`)]]) : ''}
   ${stoppedBanner(p, fam)}
   ${rvTop(p, links)}
 
@@ -58,11 +59,6 @@ export default function projectPages(d) {
           </div>`).join('')}
         </div>
       </section>
-      ${SOCIAL && listed.length ? `<section class="surface sec fold-phone">
-        <div class="sec-head fold-head"><div><h2 class="h-large">What's missing</h2></div>
-          <button class="btn sm secondary" type="button" data-add-note data-category="${listed[0].group.category}" data-group="${listed[0].group.id}" data-groups="${listed.map(({ group }) => group.id).join(',')}" data-project="${esc(p.id)}" data-kind="missing">Add a note</button></div>
-        <div data-notes data-project="${esc(p.id)}" data-empty="Nothing noted yet."></div>
-      </section>` : ''}
     </div>
     <div>
       ${helpSection(p)}
@@ -82,6 +78,6 @@ export default function projectPages(d) {
       ...(p.license ? { license: p.license } : {}), ...(codeUrl(p) ? { codeRepository: codeUrl(p) } : {}), ...(p.website ? { sameAs: p.website } : {}),
       applicationCategory: listed[0]?.group.name,
     };
-    return { path: `p/${p.id}/`, title: replaces.length ? `${p.name}: open-source alternative to ${replaces.slice(0, 2).join(' and ')}` : p.name, description, body, styles: ['group.css'], scripts: p.screenshots?.length ? ['gallery.js'] : [], jsonLd, search: false, back: true };
+    return { path: `p/${p.id}/`, title: replaces.length ? `${p.name}: open-source alternative to ${replaces.slice(0, 2).join(' and ')}` : p.name, description, body, styles: ['group.css'], scripts: p.screenshots?.length ? ['gallery.js'] : [], jsonLd, back: true };
   });
 }
