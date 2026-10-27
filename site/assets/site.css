@@ -440,3 +440,16 @@ a.chip.link:focus-visible { outline:2px solid var(--accent); outline-offset:1px;
 .mi.see-all { position:sticky; bottom:-4px; border-top:1px solid var(--edge); margin-top:4px; padding-top:8px; padding-bottom:8px;
   color:var(--accent); font-weight:500; background:var(--panel); border-radius:0 0 var(--radius-md) var(--radius-md); }
 .fchip.sel .n { color:inherit; opacity:.75; }
+
+/* ── Setup rating chip, "why it's here" line, and chip rows that wrap (Destin, Oct 26) ── */
+/* WHY wrap instead of scroll-and-fade: the chips on a card (setup, stars, devices, license) are exactly what a visitor needs
+   to choose, and the old single row cut them off at the edge on phone and desktop. Only rows that hold the setup chip
+   (project cards and project pages) change; other chip rows keep their look. */
+.chiprow:has(> .chip.setup) { flex-wrap:wrap; overflow:visible; -webkit-mask-image:none; mask-image:none; padding:0; margin:0; }
+.chip.setup { font-weight:500; }
+.chip.setup.easy { color:var(--fg); background:color-mix(in srgb,var(--accent) 14%,transparent); border-color:color-mix(in srgb,var(--accent) 40%,transparent); }
+.chip.setup.advanced { color:var(--fg); border-color:var(--fg-dim); }
+.setup-word.easy { color:var(--accent); } .setup-word.advanced { color:var(--fg); }
+.card .why { margin:0; font-size:11px; color:var(--fg-dim); }
+/* WHY the foot may wrap: it holds the host and the editors' short note, which were cut off with "..." before. */
+.card .foot { white-space:normal; overflow:visible; text-overflow:clip; }

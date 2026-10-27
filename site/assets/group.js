@@ -11,6 +11,8 @@
     const cards = [...grid.children];
     const cmp = {
       fit: (a, b) => +a.dataset.order - +b.dataset.order,
+      // WHY a stable partition: Easy before Advanced, and inside each the usual best-match order. Nothing is hidden.
+      setup: (a, b) => (a.dataset.setup === 'easy' ? 0 : 1) - (b.dataset.setup === 'easy' ? 0 : 1) || +a.dataset.order - +b.dataset.order,
       stars: (a, b) => +b.dataset.stars - +a.dataset.stars || a.dataset.name.localeCompare(b.dataset.name),
       name: (a, b) => a.dataset.name.localeCompare(b.dataset.name),
     }[key];

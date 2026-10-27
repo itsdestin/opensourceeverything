@@ -24,7 +24,27 @@ export const shot = (p, n = 0) => (p.thumbs?.[n] ? url(p.thumbs[n]) : p.screensh
 export const url = (path = '') => BASE + path.replace(/^\//, '');
 export const esc = (s) => String(s ?? '').replace(/[&<>"']/g, (c) => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c]));
 export const fmtStars = (n) => (n >= 1000 ? (n / 1000).toFixed(n >= 10000 ? 0 : 1).replace(/\.0$/, '') + 'k' : String(n));
-export const KIND = { app: 'App', self_hosted: 'Runs on your own server', developer_tool: 'For developers', library: 'Code library' };
+// WHY "Server software", not "Runs on your own server" (Destin, Oct 26: the old wording meant nothing to a newcomer): the
+// plain-words judgement now lives in the setup rating below; this label only says what sort of thing it is.
+export const KIND = { app: 'App', self_hosted: 'Server software', developer_tool: 'For developers', library: 'Code library' };
+
+// The setup rating (Destin's words, Oct 26): "Easy setup" or "Advanced setup", from data/projects.json "setup", which
+// prefill/assemble.mjs fills in from the project's kind plus hand-researched exceptions (prefill/setup-ratings.json).
+export const SETUP = { easy: 'Easy setup', advanced: 'Advanced setup' };
+// One plain sentence per rating, for the tooltip and the "About this page" box. No jargon: say what you would have to DO.
+export const SETUP_MEANING = {
+  easy: 'Easy setup: install it like a normal app, use it in your browser, or sign up for an official free hosted version.',
+  advanced: 'Advanced setup: you have to run it on your own server or use the command line, or it is a tool for developers. Fine if you are technical, hard if not.',
+};
+const SETUP_DEFAULT_WHY = {
+  app: 'Install it like a normal app, or use it in your browser.',
+  self_hosted: 'You run it on your own server (a computer you set up and keep running), or from the command line.',
+  developer_tool: 'Made for developers: you use it from code or the command line.',
+  library: 'A building block for developers, not a ready-to-use app.',
+};
+export const setupOf = (p) => (p.setup === 'easy' ? 'easy' : 'advanced');
+// The reason shown for this project's rating: its hand-written one if it has one, else the plain sentence for its kind.
+export const setupWhy = (p) => p.setupWhy ?? (setupOf(p) === 'easy' && p.kind !== 'app' ? 'It is a website you open in your browser.' : SETUP_DEFAULT_WHY[p.kind] ?? SETUP_DEFAULT_WHY.app);
 // WHY both forms: API-read hosts are stored as "github.com/owner/repo"; hand-added ones (GIMP, KDE) as full https links.
 export const codeUrl = (p) => (p.code ? (/^https?:\/\//.test(p.code) ? p.code : `https://${p.code}`) : null);
 export const hostOf = (p) => (p.code ? p.code.replace(/^https?:\/\//, '').split('/')[0] : null);
@@ -82,6 +102,9 @@ export function factChips(p, alt, afterStars = '', { links = false } = {}) {
   // WHY GitHub stars first, as a bare number (Destin, Oct 27): the number people already know how to read; the star
   // says what it is. Projects hosted elsewhere (GIMP, LibreOffice) say so instead, so the first chip is never missing.
   const c = [];
+  // WHY the setup chip FIRST and never clipped (Destin, Oct 26): "can I actually start using this?" is the question that
+  // decides everything else on the card. It replaces the old "Runs on your own server" kind chip.
+  c.push(chip(SETUP[setupOf(p)], null, `${SETUP_MEANING[setupOf(p)]} ${setupWhy(p)}`).replace('class="chip"', `class="chip setup ${setupOf(p)}"`));
   if (p.stars) c.push(chip(`${ICON.star}${fmtStars(p.stars)}`, gh, `${p.stars.toLocaleString('en')} stars on GitHub`));
   else if (hostOf(p) !== 'github.com') c.push(chip('Not on GitHub', codeUrl(p) ?? p.website, 'Its code lives on its own site'));
   // WHY the rating right after stars: our own community's answer to "a good replacement?" sits beside GitHub's popularity.
@@ -89,13 +112,12 @@ export function factChips(p, alt, afterStars = '', { links = false } = {}) {
   // WHY activity next, as a plain chip (Destin, Oct 27): the card's corner is for the Actions menu.
   c.push(chip(p.inactive ? 'Quiet for a year' : 'Active', gh && `${gh}/commits`, p.inactive ? 'No changes in over a year' : 'Changed within the last year: see its latest work'));
   // WHY right after activity (Destin, Oct 27): "does it run on my computer or phone?" is a newcomer's first question.
-  // Server-only projects get no device chip; their "Runs on your own server" chip says it.
+  // Server-only projects get no device chip; their "Advanced setup" chip says it.
   const dl = p.download ?? (p.release && p.kind === 'app' ? p.release : null) ?? p.website;
   if (devicesText(p)) c.push(chip(esc(devicesText(p)), dl, 'Where to get it'));
   if (p.verified) c.push(chip(`${ICON.shield}Verified`, url('about/#verified'), 'r/TrueOpenSource mods vouch for it'));
   c.push(chip(esc(p.license ?? 'License being checked'), p.license && url(`licenses/#${licenseAnchor(p.license)}`), p.licenseNeedsCheck ? 'A mod is confirming this license' : 'What this license means'));
   if (p.licenseClass === 'open_core') c.push(chip('Open core', url('licenses/#open-core'), 'Open source, with some parts paid or under another license'));
   if (alt?.fit === 'partial') c.push(chip('Replaces partly', null, alt.note || 'Covers part of the job'));
-  if (KIND[p.kind]) c.push(chip(esc(KIND[p.kind])));
   return c.join('');
 }

@@ -197,7 +197,7 @@
       const gs = (x.gi || []).map((i) => raw.groups[i]).filter(Boolean);
       // WHY a middling guess when stars are unknown: those are mostly big projects hosted off GitHub (GIMP, Krita,
       // LibreOffice), which shouldn't rank as if nobody used them.
-      items.push({ kind: 'project', n: x.n, u: x.u, label: x.g, dead: !!x.dead,
+      items.push({ kind: 'project', n: x.n, u: x.u, label: x.g, dead: !!x.dead, easy: !!x.ez, // WHY: easy-setup projects get a tiny lift (Oct 26), never enough to beat a real match
         pop: Math.log10((x.st ?? 3000) + 1) / 6, ed: x.r != null ? Math.max(0, 5 - x.r) / 5 : 0,
         // WHY devices as a field: "linux note app" should favour apps that run on Linux, and say so.
         fields: [field(x.n, 1), Object.assign(field(gs.flatMap((g) => g.x || []).join(' '), 0.6, 'replaces'), { replaces: true }),
@@ -306,7 +306,7 @@
     // relevant and small wording differences in descriptions shouldn't decide; the editors' order (best-first) does.
     // Kept below the group page itself, which is the better first stop; only an exact name match lifts it.
     if (it.kind === 'project' && groupWords === q.ws.length) {
-      return 0.8 + (it.ed || 0) * 0.4 + it.pop * 0.08 + (it.nn === q.phrase || it.nc === q.c ? 1.2 : 0) - (it.dead ? 0.1 : 0);
+      return 0.8 + (it.ed || 0) * 0.4 + it.pop * 0.08 + (it.easy ? 0.03 : 0) + (it.nn === q.phrase || it.nc === q.c ? 1.2 : 0) - (it.dead ? 0.1 : 0);
     }
     // The name itself, as a whole, is the strongest signal.
     if (it.nn === q.phrase || it.nc === q.c) s += 1.2;
@@ -327,7 +327,7 @@
     if (q.ws.length > 1 && it.kind === 'closed' && typoNamed) s = Math.max(s, 0.7);
     if (q.ws.length > 1 && replacesNamed) s += 0.25;
     // Popular, living projects edge out obscure or abandoned ones when everything else is equal.
-    s += it.pop * 0.08 + (it.ed || 0) * 0.1;
+    s += it.pop * 0.08 + (it.ed || 0) * 0.1 + (it.easy ? 0.03 : 0);
     if (it.dead) s -= 0.1;
     return s;
   }

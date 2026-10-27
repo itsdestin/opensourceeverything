@@ -1,5 +1,5 @@
 // One page per open-source project (p/<id>/): what it is, which groups it's listed in, and its facts.
-import { esc, url, SITE_URL, KIND, factChips, hostOf, fmtStars, actions, codeUrl, devicesText, suggestUrl, shot, SOCIAL } from '../lib.mjs';
+import { esc, url, SITE_URL, KIND, SETUP, SETUP_MEANING, setupOf, setupWhy, factChips, hostOf, fmtStars, actions, codeUrl, devicesText, suggestUrl, shot, SOCIAL } from '../lib.mjs';
 
 const HOSTS = { 'github.com': 'GitHub', 'gitlab.com': 'GitLab', 'codeberg.org': 'Codeberg' };
 
@@ -52,8 +52,10 @@ export default function projectPages(d) {
           <div class="fact"><span>License</span><span>${esc(p.license ?? 'Being checked')}</span></div>
           ${p.licenseNeedsCheck ? '<div class="fact"><span></span><span class="muted11">A mod is confirming this license</span></div>' : ''}
           ${p.licenseClass === 'open_core' ? '<div class="fact"><span>Paid parts</span><span>Open core: some parts paid</span></div>' : ''}
-          ${devicesText(p) || p.platforms?.includes('server') ? `<div class="fact"><span>Runs on</span><span>${esc([devicesText(p), p.platforms?.includes('server') ? 'your own server' : ''].filter(Boolean).join(' · '))}</span></div>` : ''}
-          <div class="fact"><span>Kind</span><span>${esc(KIND[p.kind] ?? 'App')}</span></div>
+          ${devicesText(p) || p.platforms?.includes('server') ? `<div class="fact"><span>Runs on</span><span>${esc([devicesText(p), p.platforms?.includes('server') ? 'a server you run' : ''].filter(Boolean).join(' · '))}</span></div>` : ''}
+          <div class="fact"><span>Setup</span><span><b class="setup-word ${setupOf(p)}">${SETUP[setupOf(p)]}</b></span></div>
+          <div class="fact"><span></span><span class="muted11">${esc(setupWhy(p))}</span></div>
+          <div class="fact"><span>Type</span><span>${esc(KIND[p.kind] ?? 'App')}</span></div>
           ${p.stars ? `<div class="fact"><span>Stars on GitHub</span><span>${fmtStars(p.stars)}</span></div>` : ''}
           <div class="fact"><span>Hosted on</span><span>${esc(host)}</span></div>
           <div class="fact"><span>Activity</span><span>${p.inactive ? 'No changes in over a year' : 'Changed within the last year'}</span></div>
