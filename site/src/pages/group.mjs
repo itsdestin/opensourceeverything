@@ -50,10 +50,10 @@ export default function groupPages(d) {
     <div>
       <section class="surface sec">
         <div class="sec-head">
-          <div><h2 class="h-large">Open alternatives<span class="count">${alts.length}</span></h2></div>
+          <div><h2 class="h-large">Open alternatives<span class="count">${alts.length}</span></h2></div>${alts.length > 1 ? groupTools(g, alts).seg : ''}
         </div>
         ${alts.length > 1 ? `<div class="toolbar"><div class="tl">${deviceFilter('devMenu')}${groupTools(g, alts).must}<div class="dd"><button class="select sm" type="button" data-menu="sortMenu" aria-haspopup="listbox" aria-expanded="false"><span data-sort-label>${SORTS[0][1]}</span>${ICON.chev}</button>
-            <div class="menu" id="sortMenu" role="listbox">${SORTS.map(([k, v], i) => `<button class="mi${i ? '' : ' sel'}" type="button" role="option" data-sort="${k}"${k === 'votes' ? ' disabled title="Available once people have voted"' : ''}>${v}</button>`).join('')}</div></div></div>${groupTools(g, alts).seg}</div>` : ''}
+            <div class="menu" id="sortMenu" role="listbox">${SORTS.map(([k, v], i) => `<button class="mi${i ? '' : ' sel'}" type="button" role="option" data-sort="${k}"${k === 'votes' ? ' disabled title="Available once people have voted"' : ''}>${v}</button>`).join('')}</div></div></div></div>` : ''}
         ${likedBox(g, alts)}
         ${alts.length
           ? `<div class="grid" data-alts>${alts.map((x, i) => altCard(x.p, x.a, i, g, x.why)).join('')}</div><div class="callout info" data-nomatch hidden>None of these match. Try another device.</div>${groupCompare(g, alts)}`
@@ -63,7 +63,7 @@ export default function groupPages(d) {
       </section>
       <section class="surface sec" id="see-also">
         <div class="sec-head"><div><h2 class="h-large">See also</h2></div></div>
-        <div class="grid">${related.get(g.id).map((r) => `<a class="card listing" href="${url(`g/${r.g.id}/`)}"><div class="head"><h3>${esc(r.g.name)}</h3></div>${r.reason ? `<span class="muted11">${esc(r.reason)}</span>` : ''}</a>`).join('')}</div>
+        <div class="grid">${related.get(g.id).map((r) => `<a class="card listing" href="${url(`g/${r.g.id}/`)}"><div class="head"><h3>${esc(r.g.name)}</h3></div><span class="muted11">${r.reason ? esc(r.reason) : '&nbsp;'}</span></a>`).join('')}</div>
       </section>
     </div>
 

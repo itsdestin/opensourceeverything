@@ -62,7 +62,7 @@
     const vbtn = (m, cls = '') => `<button class="vote pillvote${cls}${mine(m) ? ' on' : ''}" type="button" aria-pressed="${mine(m)}" title="${mine(m) ? 'You want this. Press to take it back.' : 'Add your voice'}"><b>▲ ${m.votes}</b><span>${mine(m) ? 'You want this' : 'want this'}</span></button>`;
     const sub = (m) => `${m.like ? `<span class="rq-like">Like ${esc(m.like)}</span>` : ''}${m.waiting ? '<span class="pill warn"><i></i>Waiting for a mod</span>' : ''}`;
     const card = (m, i) => `<div class="rq-card req-row" data-id="${esc(m.id)}"><span class="rq-medal m${Math.min(i + 1, 4)}">${i + 1}</span>
-        <div class="rq-text"><a class="rt" href="${link(m)}"${m.url ? ' target="_blank" rel="noopener"' : ''}>${esc(m.title)}</a><div class="rq-sub">${sub(m)}</div></div>${vbtn(m, ' full')}</div>`;
+        <div class="rq-text"><a class="rt" href="${link(m)}"${m.url ? ' target="_blank" rel="noopener"' : ''}>${esc(m.title)}</a><div class="rq-sub">${sub(m)}</div></div>${vbtn(m)}</div>`;
     const lrow = (m, i) => `<div class="req-row rq-minicard" data-id="${esc(m.id)}"><span class="rq-rank" aria-hidden="true">${i + 1}</span>
         <div class="nr-main"><a class="rt" href="${link(m)}"${m.url ? ' target="_blank" rel="noopener"' : ''}>${esc(m.title)}</a><div class="rq-sub">${sub(m)}</div></div>${vbtn(m)}</div>`;
     const draw = () => {
