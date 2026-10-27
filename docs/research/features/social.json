@@ -116,10 +116,10 @@
     "quote": "Users can invite external chat participants with an URL into public rooms on the Nextcloud server."
    },
    "no-server-needed": {
-    "v": "no",
-    "note": "Runs on a Nextcloud server you or a provider run",
-    "source": "https://nextcloud.com/talk/",
-    "quote": null
+    "v": "yes",
+    "note": "free accounts at providers",
+    "source": "https://nextcloud.com/talk",
+    "quote": "Sign up now Get free account at a provider"
    }
   },
   "mbin": {
