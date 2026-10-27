@@ -1,5 +1,6 @@
 // Pieces more than one page draws: the alternative card (group pages and closed-app pages) and the address of a
 // closed app's own page.
+import { currentFamily, cardFamily } from './family.mjs';
 import { esc, url, ICON, KIND, factChips, hostOf, actions, suggestUrl, SOCIAL, SITE_URL, codeUrl, shot as shotOf } from './lib.mjs';
 
 // WHY its own address per closed app (Destin, Oct 27): people search "alternatives to Notion", not "Notes".
@@ -26,6 +27,7 @@ export function altCard(p, alt, i, group) {
             <div class="menu" id="${menuId}" role="menu">${acts.map((l) => `<a class="mi" role="menuitem" href="${esc(l.href)}" rel="noopener">${l.label}</a>`).join('')}<a class="mi" role="menuitem" href="${url(`p/${p.id}/`)}">See full details</a><a class="mi" role="menuitem" href="${esc(suggestUrl('2-fix', { project: p.name, ...(group ? { group: group.name } : {}) }))}" rel="noopener">Suggest a change</a></div></div>` : ''}</div>
         <div class="chiprow">${factChips(p, alt, SOCIAL && group ? `<span class="chip" data-rating data-group="${group.id}" data-project="${esc(p.id)}" hidden></span>` : '')}</div>
         <p class="blurb">${esc(p.summary)}</p>
+        ${/* WHY (forks stream): "Split from Gitea (2022)" / "Forked by: Forgejo", so a copy is not mistaken for a rival. */ currentFamily() ? cardFamily(p, currentFamily()) : ''}
         <div class="foot">${esc(foot)}</div>
         ${SOCIAL && group ? `<div class="missing-count" data-missing-count data-group="${group.id}" data-project="${esc(p.id)}" hidden></div>` : ''}
       </div>

@@ -199,7 +199,11 @@
         fields: [field(x.n, 1), Object.assign(field(gs.flatMap((g) => g.x || []).join(' '), 0.6, 'replaces'), { replaces: true }),
           Object.assign(field(gs.map((g) => g.n).join(' '), 0.5, 'group'), { group: true }),
           field(gs.map((g) => g.j).join(' '), 0.4, 'job'), field((x.k || []).join(' '), 0.45, 'phrases'),
-          field((x.pl || []).map((p) => DEVICE_WORDS[p] || '').join(' '), 0.6, 'device'), field(x.s, 0.3, 'summary')],
+          field((x.pl || []).map((p) => DEVICE_WORDS[p] || '').join(' '), 0.6, 'device'), field(x.s, 0.3, 'summary'),
+          // WHY (forks stream): an old name ("kbin", "OpenOffice") finds the project that continues it; each old name is its own field so
+          // "Looking for kbin? ..." can say which one matched.
+          ...(x.o || []).map((o) => field(o, 0.85, 'old'))],
+        old: (x.o || []).map((o, i) => ({ name: o, text: (x.ot || [])[i] })),
         phrases: (x.k || []).map((p) => field(p, 1, 'phrase')),
         closed: gs.flatMap((g) => g.x || []), groups: gs.map((g) => g.n), jobs: gs.map((g) => g.j), phraseText: x.k || [], pl: x.pl || [] });
     }
@@ -352,7 +356,8 @@
       }
       if (!f0) continue;
       const has = (list) => list.find((x) => words(x).some((w) => w === word || stem(w) === stem(word) || w.startsWith(word))) || list[0];
-      if (f0.role === 'name') add('Name', 'name');
+      if (f0.role === 'old') add((it.old.find((o) => words(o.name).some((w) => w === word || stem(w) === stem(word) || w.startsWith(word))) || it.old[0]).text, 'old');
+      else if (f0.role === 'name') add('Name', 'name');
       else if (f0.role === 'device') add(`Runs on ${it.pl.filter((p) => (DEVICE_WORDS[p] || '').split(' ').includes(word)).map((p) => DEVICE_NAMES[p]).join(', ') || DEVICE_NAMES[it.pl[0]]}`, 'device');
       else if (f0.role === 'replaces') add(`${it.kind === 'group' ? 'Covers' : 'Replaces'} ${has(it.closed)}`, 'replaces');
       else if (f0.role === 'group') add(`In ${has(it.groups)}`, 'group');

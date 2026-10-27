@@ -28,6 +28,8 @@ jobs:
           node prefill/check-starter.mjs
           node prefill/github-facts.mjs
           node prefill/fetch-links.mjs
+          # Codeberg, GitLab and self-run code sites (KDE, GNOME, Blender, Tor...): stars, archived, last change, license.
+          node prefill/fetch-host-facts.mjs
           node prefill/assemble.mjs
           node site/build.mjs && node site/check.mjs
           node .github/robot/refresh-report.mjs /tmp/projects-before.json data/projects.json

@@ -11,11 +11,13 @@ import { fileURLToPath, pathToFileURL } from 'node:url';
 import { loadData, url, SITE_URL } from './src/lib.mjs';
 import { page } from './src/layout.mjs';
 import { searchIndex } from './src/search-index.mjs';
+import { familyIndex } from './src/family.mjs';
 
 const HERE = dirname(fileURLToPath(import.meta.url));
 const ROOT = join(HERE, '..');
 const DIST = join(HERE, 'dist');
 const d = loadData(ROOT);
+familyIndex(d); // families (data/lineage.json): built once so cards and pages share it
 
 rmSync(DIST, { recursive: true, force: true });
 mkdirSync(DIST, { recursive: true });

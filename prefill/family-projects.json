@@ -1,0 +1,328 @@
+{
+ "_readme": "Projects added by hand for the forks/families work (prefill/assemble.mjs reads this). Each needs a license read from its own files (licenseSource) and one or more groups.",
+ "newGroups": [
+  {
+   "id": "code-editors",
+   "name": "Code editors",
+   "category": "dev",
+   "job": "Writing and editing code",
+   "closed": [
+    "Visual Studio Code"
+   ]
+  },
+  {
+   "id": "key-value-stores",
+   "name": "Caches & key-value stores",
+   "category": "dev",
+   "job": "Keeping data an app needs quickly in memory",
+   "closed": [
+    "Amazon ElastiCache",
+    "Google Memorystore"
+   ]
+  },
+  {
+   "id": "infrastructure-as-code",
+   "name": "Infrastructure as code",
+   "category": "dev",
+   "job": "Setting up servers and cloud services from files",
+   "closed": [
+    "Terraform"
+   ]
+  }
+ ],
+ "extraAlts": [
+  {
+   "group": "code-editors",
+   "project": "zed",
+   "fit": "full",
+   "note": null
+  }
+ ],
+ "projects": [
+  {
+   "id": "chromium",
+   "name": "Chromium",
+   "summary": "Chromium is the open-source web browser project that Google Chrome, Microsoft Edge, Brave and many other browsers are built from. It is for people who want a Chrome-like browser made entirely from open code.",
+   "kind": "app",
+   "code": "github.com/chromium/chromium",
+   "website": "https://www.chromium.org/",
+   "download": null,
+   "license": "BSD-3-Clause",
+   "licenseClass": "open",
+   "licenseNeedsCheck": false,
+   "stars": null,
+   "archived": false,
+   "inactive": false,
+   "unconfirmed": [],
+   "source": "family",
+   "verified": false,
+   "platforms": [
+    "windows",
+    "mac",
+    "linux"
+   ],
+   "groups": [
+    {
+     "group": "browsers",
+     "fit": "partial",
+     "note": "The open code behind Chrome; ready-made downloads mostly come from Linux distributions or other makers"
+    }
+   ],
+   "licenseSource": "https://github.com/chromium/chromium/blob/main/LICENSE"
+  },
+  {
+   "id": "floorp",
+   "name": "Floorp",
+   "summary": "Floorp is a web browser built from Firefox's code, made in Japan, with extra ways to arrange and customize its look and layout. It is for people who like Firefox but want more control over how it looks.",
+   "kind": "app",
+   "code": "github.com/Floorp-Projects/Floorp",
+   "website": "https://floorp.app/",
+   "download": null,
+   "license": "MPL-2.0",
+   "licenseClass": "open",
+   "licenseNeedsCheck": false,
+   "stars": null,
+   "archived": false,
+   "inactive": false,
+   "unconfirmed": [],
+   "source": "family",
+   "verified": false,
+   "platforms": [
+    "windows",
+    "mac",
+    "linux"
+   ],
+   "groups": [
+    {
+     "group": "browsers",
+     "fit": "full",
+     "note": null
+    }
+   ],
+   "licenseSource": "https://github.com/Floorp-Projects/Floorp/blob/main/LICENSE"
+  },
+  {
+   "id": "mullvad-browser",
+   "name": "Mullvad Browser",
+   "summary": "Mullvad Browser is a privacy-focused web browser made by Mullvad VPN together with the Tor Project. It makes its users look alike to websites so they are harder to track, and it works without the Tor network. It is for people who want strong tracking protection.",
+   "kind": "app",
+   "code": "https://gitlab.torproject.org/tpo/applications/mullvad-browser",
+   "website": "https://mullvad.net/browser",
+   "download": null,
+   "license": "MPL-2.0",
+   "licenseClass": "open",
+   "licenseNeedsCheck": false,
+   "stars": null,
+   "archived": false,
+   "inactive": false,
+   "unconfirmed": [],
+   "source": "family",
+   "verified": false,
+   "platforms": [
+    "windows",
+    "mac",
+    "linux"
+   ],
+   "groups": [
+    {
+     "group": "browsers",
+     "fit": "partial",
+     "note": "Built to be used with a VPN; no sync or extras"
+    }
+   ],
+   "licenseSource": "https://gitlab.torproject.org/tpo/applications/mullvad-browser/-/raw/mullvad-browser-153.5.0esr-16.0-1/toolkit/content/license.html"
+  },
+  {
+   "id": "keepassx",
+   "name": "KeePassX",
+   "summary": "KeePassX is a password manager that keeps your logins in one locked file on your own computer. Its developers announced in December 2021 that it is no longer developed; KeePassXC continues it. It is listed so people who still have it can find its successor.",
+   "kind": "app",
+   "code": "github.com/keepassx/keepassx",
+   "website": "https://www.keepassx.org/",
+   "download": null,
+   "license": "GPL-2.0 or GPL-3.0",
+   "licenseClass": "open",
+   "licenseNeedsCheck": false,
+   "stars": null,
+   "archived": false,
+   "inactive": false,
+   "unconfirmed": [],
+   "source": "family",
+   "verified": false,
+   "platforms": [
+    "windows",
+    "mac",
+    "linux"
+   ],
+   "groups": [
+    {
+     "group": "passwords",
+     "fit": "full",
+     "note": "No longer developed; KeePassXC continues it"
+    }
+   ],
+   "licenseSource": "https://github.com/keepassx/keepassx/blob/master/COPYING"
+  },
+  {
+   "id": "apache-openoffice",
+   "name": "Apache OpenOffice",
+   "summary": "Apache OpenOffice is a free office suite with a word processor, spreadsheet and presentation program. It is for people who want a free alternative to Microsoft Office. It is one of two continuations of the older OpenOffice.org; LibreOffice is the other.",
+   "kind": "app",
+   "code": "github.com/apache/openoffice",
+   "website": "https://www.openoffice.org/",
+   "download": null,
+   "license": "Apache-2.0",
+   "licenseClass": "open",
+   "licenseNeedsCheck": false,
+   "stars": null,
+   "archived": false,
+   "inactive": false,
+   "unconfirmed": [],
+   "source": "family",
+   "verified": false,
+   "platforms": [
+    "windows",
+    "mac",
+    "linux"
+   ],
+   "groups": [
+    {
+     "group": "documents",
+     "fit": "full",
+     "note": "Word processor (Writer)"
+    },
+    {
+     "group": "spreadsheets",
+     "fit": "full",
+     "note": "Spreadsheet (Calc)"
+    },
+    {
+     "group": "slides",
+     "fit": "full",
+     "note": "Presentations (Impress)"
+    }
+   ],
+   "licenseSource": "https://github.com/apache/openoffice/blob/trunk/LICENSE"
+  },
+  {
+   "id": "vscodium",
+   "name": "VSCodium",
+   "summary": "VSCodium is a ready-to-install version of the code editor behind Microsoft's Visual Studio Code, built without Microsoft's branding, tracking and license terms. It is for programmers who want VS Code's editor from fully open-source downloads.",
+   "kind": "developer_tool",
+   "code": "github.com/VSCodium/vscodium",
+   "website": "https://vscodium.com/",
+   "download": null,
+   "license": "MIT",
+   "licenseClass": "open",
+   "licenseNeedsCheck": false,
+   "stars": null,
+   "archived": false,
+   "inactive": false,
+   "unconfirmed": [],
+   "source": "family",
+   "verified": false,
+   "platforms": [
+    "windows",
+    "mac",
+    "linux"
+   ],
+   "groups": [
+    {
+     "group": "code-editors",
+     "fit": "full",
+     "note": "Uses the Open VSX extension store, so some Microsoft-made extensions are not available"
+    }
+   ],
+   "licenseSource": "https://github.com/VSCodium/vscodium/blob/master/LICENSE"
+  },
+  {
+   "id": "valkey",
+   "name": "Valkey",
+   "summary": "Valkey is a fast in-memory database that websites and apps use to keep data they need quickly, such as logged-in sessions or saved pages. It continues the last open-licensed version of Redis and is run by the Linux Foundation. It is for developers and server administrators.",
+   "kind": "self_hosted",
+   "code": "github.com/valkey-io/valkey",
+   "website": "https://valkey.io/",
+   "download": null,
+   "license": "BSD-3-Clause",
+   "licenseClass": "open",
+   "licenseNeedsCheck": false,
+   "stars": null,
+   "archived": false,
+   "inactive": false,
+   "unconfirmed": [],
+   "source": "family",
+   "verified": false,
+   "platforms": [
+    "server"
+   ],
+   "groups": [
+    {
+     "group": "key-value-stores",
+     "fit": "full",
+     "note": null
+    }
+   ],
+   "licenseSource": "https://github.com/valkey-io/valkey/blob/unstable/COPYING"
+  },
+  {
+   "id": "redis",
+   "name": "Redis",
+   "summary": "Redis is a fast in-memory database that websites and apps use to keep data they need quickly, such as logged-in sessions or saved pages. It is for developers and server administrators.",
+   "kind": "self_hosted",
+   "code": "github.com/redis/redis",
+   "website": "https://redis.io/",
+   "download": null,
+   "license": "AGPL-3.0 (also offered under source-available licenses)",
+   "licenseClass": "open",
+   "licenseNeedsCheck": true,
+   "stars": null,
+   "archived": false,
+   "inactive": false,
+   "unconfirmed": [],
+   "source": "family",
+   "verified": false,
+   "platforms": [
+    "server"
+   ],
+   "groups": [
+    {
+     "group": "key-value-stores",
+     "fit": "full",
+     "note": "Open source again from version 8 (AGPL option); versions 7.4 to 7.x were source-available only"
+    }
+   ],
+   "licenseSource": "https://github.com/redis/redis/blob/unstable/LICENSE.txt"
+  },
+  {
+   "id": "opentofu",
+   "name": "OpenTofu",
+   "summary": "OpenTofu lets you describe servers and cloud services in files, then creates and updates them automatically. It is a Linux Foundation project that continues Terraform under an open-source license. It is for developers and system administrators.",
+   "kind": "developer_tool",
+   "code": "github.com/opentofu/opentofu",
+   "website": "https://opentofu.org/",
+   "download": null,
+   "license": "MPL-2.0",
+   "licenseClass": "open",
+   "licenseNeedsCheck": false,
+   "stars": null,
+   "archived": false,
+   "inactive": false,
+   "unconfirmed": [],
+   "source": "family",
+   "verified": false,
+   "platforms": [
+    "windows",
+    "mac",
+    "linux"
+   ],
+   "groups": [
+    {
+     "group": "infrastructure-as-code",
+     "fit": "full",
+     "note": null
+    }
+   ],
+   "licenseSource": "https://github.com/opentofu/opentofu/blob/main/LICENSE"
+  }
+ ]
+}

@@ -1,6 +1,6 @@
 {
  "license": "CC BY-SA 4.0",
- "generated": "2026-10-26",
+ "generated": "2026-10-27",
  "credits": "See data/CREDITS.md",
  "groups": [
   {
@@ -47,6 +47,11 @@
      "project": "etherpad",
      "fit": "partial",
      "note": "Plain shared text; no page layout"
+    },
+    {
+     "project": "apache-openoffice",
+     "fit": "full",
+     "note": "Word processor (Writer)"
     }
    ]
   },
@@ -85,6 +90,11 @@
       "by": "claude-opus-5-5",
       "reason": "Changed fit to full because Gnumeric is a complete desktop spreadsheet with formulas and charts, covering the main job of Excel, Sheets and Numbers."
      }
+    },
+    {
+     "project": "apache-openoffice",
+     "fit": "full",
+     "note": "Spreadsheet (Calc)"
     }
    ]
   },
@@ -123,6 +133,11 @@
       "by": "claude-opus-5-5",
       "reason": "Removed the subjective \"good-looking\" wording and noted that slides are written as code, since the open-source project has no visual editor."
      }
+    },
+    {
+     "project": "apache-openoffice",
+     "fit": "full",
+     "note": "Presentations (Impress)"
     }
    ]
   },
@@ -1653,6 +1668,21 @@
      "project": "tor-browser",
      "fit": "partial",
      "note": "Slower; built for anonymity, not daily use"
+    },
+    {
+     "project": "chromium",
+     "fit": "partial",
+     "note": "The open code behind Chrome; ready-made downloads mostly come from Linux distributions or other makers"
+    },
+    {
+     "project": "floorp",
+     "fit": "full",
+     "note": null
+    },
+    {
+     "project": "mullvad-browser",
+     "fit": "partial",
+     "note": "Built to be used with a VPN; no sync or extras"
     }
    ]
   },
@@ -1738,6 +1768,11 @@
       "by": "claude-opus-5-5",
       "reason": "Changed fit to full because Passbolt stores passwords and fills them through browser extensions and mobile apps, which is the main job of 1Password, LastPass and Dashlane."
      }
+    },
+    {
+     "project": "keepassx",
+     "fit": "full",
+     "note": "No longer developed; KeePassXC continues it"
     }
    ]
   },
@@ -3861,6 +3896,68 @@
    "alternatives": [
     {
      "project": "tolgee",
+     "fit": "full",
+     "note": null
+    }
+   ]
+  },
+  {
+   "id": "code-editors",
+   "name": "Code editors",
+   "category": "dev",
+   "job": "Writing and editing code",
+   "closed": [
+    "Visual Studio Code"
+   ],
+   "source": "family",
+   "alternatives": [
+    {
+     "project": "vscodium",
+     "fit": "full",
+     "note": "Uses the Open VSX extension store, so some Microsoft-made extensions are not available"
+    },
+    {
+     "project": "zed",
+     "fit": "full",
+     "note": null
+    }
+   ]
+  },
+  {
+   "id": "key-value-stores",
+   "name": "Caches & key-value stores",
+   "category": "dev",
+   "job": "Keeping data an app needs quickly in memory",
+   "closed": [
+    "Amazon ElastiCache",
+    "Google Memorystore"
+   ],
+   "source": "family",
+   "alternatives": [
+    {
+     "project": "valkey",
+     "fit": "full",
+     "note": null
+    },
+    {
+     "project": "redis",
+     "fit": "full",
+     "note": "Open source again from version 8 (AGPL option); versions 7.4 to 7.x were source-available only"
+    }
+   ]
+  },
+  {
+   "id": "infrastructure-as-code",
+   "name": "Infrastructure as code",
+   "category": "dev",
+   "job": "Setting up servers and cloud services from files",
+   "closed": [
+    "Terraform"
+   ],
+   "source": "family",
+   "alternatives": [
+    {
+     "project": "opentofu",
      "fit": "full",
      "note": null
     }
