@@ -27,7 +27,8 @@
   "gitlab": "GitLab runs gitlab.com, an official hosted version with a free plan.",
   "forgejo": "Codeberg.org is a free public site that runs Forgejo, so you can use it without your own server.",
   "openstreetmap": "It is a website: you use it at openstreetmap.org in a browser.",
-  "open-library": "It is a website: you use it at openlibrary.org in a browser."
+  "open-library": "It is a website: you use it at openlibrary.org in a browser.",
+  "onlyoffice-docs": "ONLYOFFICE makes a free desktop app (ONLYOFFICE Desktop Editors) for Windows, Mac and Linux that you install like any other program; only the shared online editor needs a server."
  },
  "advanced": {
   "linux-mint": "An operating system: installing it means replacing or sitting alongside your computer or phone's current system, which is more than installing an app.",

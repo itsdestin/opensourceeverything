@@ -1,6 +1,6 @@
 {
  "license": "CC BY-SA 4.0",
- "generated": "2026-10-26",
+ "generated": "2026-10-27",
  "credits": "See data/CREDITS.md",
  "projects": [
   {
@@ -9538,7 +9538,8 @@
     "assets/shots/onlyoffice-docs-1.webp",
     "assets/shots/onlyoffice-docs-2.webp"
    ],
-   "setup": "advanced"
+   "setup": "easy",
+   "setupWhy": "ONLYOFFICE makes a free desktop app (ONLYOFFICE Desktop Editors) for Windows, Mac and Linux that you install like any other program; only the shared online editor needs a server."
   },
   {
    "id": "open-interpreter",
