@@ -1,0 +1,154 @@
+{
+  "title": "Feature tags and AI-contribution labels",
+  "key": "ose-features-stance",
+  "out": "features-and-stance.questions.html",
+  "themes": ["light", "midnight"],
+  "steps": [
+    {
+      "id": "P-1",
+      "page": "Feature tags: one shared checklist per kind of app",
+      "intro": "Your idea: instead of everyone re-wording 'X is missing live editing', each kind of app gets a short checklist, and every project gets a yes / partly / no per item."
+    },
+    {
+      "id": "F-build",
+      "words": true,
+      "surface": "Group pages",
+      "path": "Documents (every group would get one)",
+      "headline": "Should each group get a short, reusable checklist of the features people care about?",
+      "today": "Gaps are free-text notes like 'Encrypted; simpler formatting than Word', one per project, worded differently each time.",
+      "problem": "You can't tell 'nothing open does live co-editing' from 'LibreOffice lacks live co-editing', and the same complaint gets re-written by every person.",
+      "proposal": "Documents would get about 6 items: Live co-editing · Opens Word files exactly · Comments & suggested edits · Works offline · Phone app · Free hosted option. Each project shows yes / partly / no. An item where every project says no becomes 'Missing everywhere' on the gaps page automatically. Many items are shared across groups (Phone app, Works offline, End-to-end encrypted), so they're written once.",
+      "yes": "Yes, design it",
+      "no": "No"
+    },
+    {
+      "id": "F-scale",
+      "words": true,
+      "surface": "Group pages",
+      "path": "Each project's checklist",
+      "headline": "How should each project answer a checklist item?",
+      "today": "Nothing is recorded per feature.",
+      "problem": "Too few answers hide real differences; too many become guesswork.",
+      "proposal": "Pick the scale.",
+      "options": [
+        { "id": "ypn", "label": "Yes / partly / no", "pros": ["Captures 'it sort of works' (LibreOffice opens Word files, but layouts can shift).", "Still easy to scan."], "cons": ["'Partly' needs a short note to be useful."], "recommended": true },
+        { "id": "yn", "label": "Yes / no", "pros": ["The simplest to read and fill in."], "cons": ["Forces hard calls where support is half-there."] }
+      ]
+    },
+    {
+      "id": "F-fill",
+      "words": true,
+      "surface": "Group pages",
+      "path": "Each project's checklist",
+      "headline": "Who fills in the checklists at the start?",
+      "today": "Listings were drafted with AI help and checked by mods.",
+      "problem": "About 470 projects × about 6 items is roughly 2,800 answers: too many for two mods by hand.",
+      "proposal": "Two ways to start.",
+      "options": [
+        { "id": "ai-draft", "label": "AI draft, clearly marked", "pros": ["Every project has answers on day one.", "Uses the same 'drafted with AI assistance' label as the rest of the listing, which disappears once a developer claims the page."], "cons": ["Some answers will be wrong until someone corrects them."], "recommended": true },
+        { "id": "people", "label": "Only people fill them", "pros": ["Every answer had human eyes."], "cons": ["Mostly empty for months."] }
+      ]
+    },
+    {
+      "id": "F-change",
+      "words": true,
+      "pick": "several",
+      "surface": "Group pages",
+      "path": "Each checklist answer",
+      "headline": "Who can change or correct an answer?",
+      "today": "Corrections go through GitHub forms to mods.",
+      "problem": "Answers go stale as projects add features; mods can't track them all.",
+      "proposal": "Tick every route you want.",
+      "options": [
+        { "id": "dev", "label": "The project's developer", "pros": ["They know best; it updates at once on a claimed page."], "cons": ["Developers may be generous to themselves; others can still dispute."] },
+        { "id": "users", "label": "Signed-in users confirm or dispute", "pros": ["One tap: 'Is this right? Yes / No'. Enough 'No' flags it for a mod.", "No re-wording the same complaint."], "cons": ["Needs the 14-day account rule to stop fake votes."] },
+        { "id": "mods", "label": "Mods", "pros": ["Final say on disputes."], "cons": ["Their time."] }
+      ]
+    },
+    {
+      "id": "F-show",
+      "words": true,
+      "pick": "several",
+      "surface": "Group pages, gaps page",
+      "path": "Where the checklist appears",
+      "headline": "Where should the checklist show up?",
+      "today": "Nowhere.",
+      "problem": "A checklist only helps if people can use it to choose and builders can see what's missing.",
+      "proposal": "Tick every place you want it.",
+      "options": [
+        { "id": "filter", "label": "'Must have' filter chips", "pros": ["Tap 'Live co-editing' and only projects that do it stay on the group page."], "cons": ["One more row of chips above the list."] },
+        { "id": "table", "label": "A compare table", "pros": ["Every project and every item side by side; great for choosing between three."], "cons": ["Wide; on phones it scrolls sideways or folds."] },
+        { "id": "card", "label": "On each card", "pros": ["A quiet line like 'Live co-editing · No phone app'."], "cons": ["Cards get busier, which you just asked me to avoid; I'd keep it to the explainer pop-up."] },
+        { "id": "gaps", "label": "'Missing everywhere' on gaps", "pros": ["Builders see exactly which feature no open app has, with how many people want it."], "cons": ["None worth noting."] }
+      ]
+    },
+    {
+      "id": "F-boards",
+      "words": true,
+      "surface": "What's missing boards",
+      "path": "Every group page",
+      "headline": "What happens to the free-text 'What's missing' boards?",
+      "today": "People post free-text notes and vote 'Me too'.",
+      "problem": "With checklists, most notes would repeat a checklist item.",
+      "proposal": "Three ways to fit them together.",
+      "options": [
+        { "id": "propose", "label": "Notes become proposals", "pros": ["A note proposes a NEW checklist item ('Track changes'); once a mod adds it, its votes carry over as 'I want this'.", "No duplicates; discussion still possible."], "cons": ["A bit more structure for people to understand."], "recommended": true },
+        { "id": "both", "label": "Keep both separately", "pros": ["Nothing changes for posting."], "cons": ["Two places for the same complaint."] },
+        { "id": "drop", "label": "Replace the boards", "pros": ["Simplest page."], "cons": ["No room for things that aren't a feature (pricing, community, tone)."] }
+      ]
+    },
+    {
+      "id": "P-2",
+      "page": "AI-contribution labels",
+      "intro": "Real examples from our list: CapRover welcomes AI code. Nextcloud wants it declared with an 'Assisted-by' line. Zulip wants you to fully understand and test it. goatcounter accepts none. Syncthing allows AI code but not AI-written issues."
+    },
+    {
+      "id": "S-labels",
+      "words": true,
+      "surface": "Project pages and cards",
+      "path": "A chip near 'How to help'",
+      "headline": "Which set of short labels reads most clearly?",
+      "today": "Nothing says how a project feels about AI-assisted help.",
+      "problem": "The last three labels were vague, and they couldn't show partial rules like 'code yes, issues no'.",
+      "proposal": "Each set shows only when the project has a written rule, and tapping it opens the details (next question).",
+      "options": [
+        { "id": "plain", "label": "Plain sentences", "summary": "'AI-assisted code welcome' · 'AI-assisted code: say you used AI' · 'AI-assisted code: only if you fully understand it' · 'Hand-written code only' · 'Has AI rules: see details'", "pros": ["Says exactly what's allowed.", "The last one covers partial rules without cramming them in."], "cons": ["Longer chips."], "recommended": true },
+        { "id": "short", "label": "Three short pills", "summary": "'AI-friendly' · 'AI with disclosure' · 'No AI'", "pros": ["Shortest and fastest to scan."], "cons": ["'AI-friendly' is vague; partial rules get squeezed into one of three."] },
+        { "id": "two", "label": "Two facts", "summary": "'AI code: welcome / say so / no' and 'AI issues & reports: welcome / no'", "pros": ["Shows the common 'code yes, issues no' split directly."], "cons": ["Two chips per project."] }
+      ]
+    },
+    {
+      "id": "S-details",
+      "words": true,
+      "pick": "several",
+      "surface": "Project pages",
+      "path": "The pop-up that opens from the label",
+      "headline": "What should the contribution details pop-up show?",
+      "today": "'How to help' links the contributing guide and beginner tasks.",
+      "problem": "People need the specifics before showing up: what's allowed, how to disclose, how to start.",
+      "proposal": "Tick what belongs in it. Each line is only shown when known.",
+      "options": [
+        { "id": "quote", "label": "Their own words", "pros": ["The project's exact sentence with a link, so nothing is our paraphrase."], "cons": ["None worth noting."] },
+        { "id": "how", "label": "How to disclose", "pros": ["e.g. 'add an Assisted-by line to your commit' or 'tick the AI box on the pull-request form'."], "cons": ["Only some projects say."] },
+        { "id": "scope", "label": "What it covers", "pros": ["Code / documentation / issues & bug reports / beginner tasks, each allowed or not."], "cons": ["Needs a mod to read the rule carefully."] },
+        { "id": "open", "label": "Outside help in general", "pros": ["'Welcomes pull requests' or 'open an issue first' or 'not accepting outside code'."], "cons": ["None worth noting."] },
+        { "id": "start", "label": "Where to start", "pros": ["Beginner-task and help-wanted counts, plugin docs, contributing guide (what 'How to help' has now)."], "cons": ["None worth noting."] },
+        { "id": "signoff", "label": "Legal sign-off", "pros": ["Whether they need a sign-off line or a contributor agreement, and that an AI can't sign it for you."], "cons": ["A bit technical for most visitors."] }
+      ]
+    },
+    {
+      "id": "S-who",
+      "words": true,
+      "surface": "Project pages",
+      "path": "The AI-contribution label",
+      "headline": "Who sets these labels?",
+      "today": "Our robot can find and quote the rule; it can't reliably judge what it means.",
+      "problem": "A wrong label either scares away welcome helpers or sends AI code to a project that refuses it.",
+      "proposal": "The robot quotes, then someone picks the label.",
+      "options": [
+        { "id": "mod-dev", "label": "Mods, then developers", "pros": ["Mods label the 97 projects that mention AI (about a click each); developers who claim their page can change it."], "cons": ["Mod time up front."], "recommended": true },
+        { "id": "ai-draft", "label": "AI draft, marked", "pros": ["No mod time; same 'drafted with AI' label as other listing facts."], "cons": ["Our scan showed simple matching gets this wrong often; an AI reading the full rule does better, but still errs."] }
+      ]
+    }
+  ]
+}
