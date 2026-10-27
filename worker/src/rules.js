@@ -2,6 +2,9 @@
 // WHY its own file: these checks decide everyone's rights, so they're tested on their own (test/rules.test.js)
 // and the pretend server (site/assets/fake-api.js) mirrors them line for line.
 
+import { screenAll, screenLink, flagText } from '../../site/assets/filter.js';
+export { screenAll, screenLink, flagText };
+
 export const RULES = { minAgeDays: 14, confirmsNeeded: 3, popularVotes: 25 };
 export const LIMITS = { title: 140, body: 4000, link: 500, reason: 500 };
 const DAY = 24 * 3600e3;
@@ -34,6 +37,14 @@ export function can(note, user, mods, now) {
 // What people type: trimmed, cut to size; links must be plain http(s) web addresses.
 export const clean = (s, max) => String(s ?? '').trim().slice(0, max);
 export const isLink = (s) => typeof s === 'string' && s.length <= LIMITS.link && /^https?:\/\/[^\s<>"]{3,}$/.test(s);
+// A link someone submits on its own (a "fixed" or "I'm building this" link). WHY more than isLink: these show as a clickable
+// link on a public note with no mod looking first, so shorteners, hidden passwords and look-alike sites are refused here.
+// → { link } or { error: 'what to fix' }
+export function cleanLink(s) {
+  const link = clean(s, LIMITS.link);
+  if (!isLink(link)) return { error: 'Add a link that starts with http:// or https://.' };
+  const r = screenLink(link); return r.error ? { error: r.error } : { link };
+}
 // After sign-in, only ever send people back to the site itself (never to an address someone slipped in).
 export const safeReturn = (url, siteOrigin) => {
   try { const u = new URL(url); return u.origin === siteOrigin ? u.href : `${siteOrigin}/`; } catch { return `${siteOrigin}/`; }
@@ -56,7 +67,8 @@ export function parseRepo(input) {
   if (!HOSTS.includes(host)) return null;
   const [owner, rawName] = u.pathname.split('/').filter(Boolean);
   const name = (rawName ?? '').replace(/\.git$/, '');
-  if (!owner || !name || !/^[\w.-]+$/.test(owner) || !/^[\w.-]+$/.test(name)) return null;
+  // WHY "." and ".." are refused: they would walk the proof-file address up to a different page on the same site.
+  if (!owner || !name || !/^[\w.-]+$/.test(owner) || !/^[\w.-]+$/.test(name) || /^\.+$/.test(owner) || /^\.+$/.test(name)) return null;
   return { host, owner, name, repo: `${host}/${owner}/${name}`.toLowerCase() };
 }
 // WHY this split (Destin, Oct 26): a repo under the person's own GitHub account is proof enough, because the server
@@ -64,6 +76,43 @@ export function parseRepo(input) {
 // someone who controls the project could add.
 export const proofFor = (user, r) => (r.host === 'github.com' && r.owner.toLowerCase() === user.login.toLowerCase() ? 'own-account' : 'file');
 export const proofHas = (text, token) => String(text ?? '').split(/\s+/).includes(token);
+
+// ── Claim safety (docs/server-rules.md → "Claiming a project") ──
+export const CLAIM = { highStars: 10000, tokenHours: 48, proofDays: 180, maxClaims: 10 };
+// "Verified", very popular, or on the hand-kept list (data/high-profile.json): the projects most worth impersonating.
+// `hp` is the list the site build publishes in names.json; if it is missing (an old build) EVERY project counts as high-profile, so a
+// mix-up between site and server versions makes things stricter, never looser.
+export const isHighProfile = (N, project, stars) => !Array.isArray(N?.hp) || N.hp.includes(project) || (stars ?? 0) >= CLAIM.highStars;
+// Decides, from GitHub's public answer about the repo, how a claim may be proven and what a mod must look at.
+//   user  = the signed-in account;  r = parseRepo(link);  info = GitHub's /repos answer (null off GitHub);  ctx = { project, N }
+// → { error, status } when nobody should be able to claim it, else { proof, needsConfirm, flags, org, stars, repoId }
+// WHY needsConfirm: GitHub's public pages cannot tell us whether a person OWNS or ADMINISTERS an organization's repo (that needs
+// the organization's own permission), and a file in a repo only proves the person can write to it. So a mod confirms those.
+export function claimPlan(user, r, info, ctx) {
+  const flags = [];
+  if (r.host !== 'github.com') {
+    flags.push('owner-unverified');
+    if (isHighProfile(ctx.N, ctx.project, 0)) flags.push('high-profile');
+    return { proof: 'file', needsConfirm: true, flags, org: false, stars: null, repoId: null };
+  }
+  if (!info?.owner?.login) return { error: "GitHub doesn't have a project at that link.", status: 404 };
+  // A renamed or moved repo answers under its new name: the listing is out of date, so nobody claims it until a mod fixes the listing.
+  if (String(info.full_name ?? '').toLowerCase() !== `${r.owner}/${r.name}`) return { error: 'That project has moved on GitHub. Ask a mod to update its listing first.', status: 409 };
+  const stars = info.stargazers_count ?? 0;
+  const org = info.owner.type !== 'User';
+  const mine = !org && info.owner.login.toLowerCase() === user.login.toLowerCase();
+  const proof = mine ? 'own-account' : 'file';
+  if (!mine) flags.push('owner-unverified');
+  if (info.fork) flags.push('fork');
+  if (isHighProfile(ctx.N, ctx.project, stars)) flags.push('high-profile');
+  // A repo with far fewer stars than the listing recorded is probably not the one the map means (e.g. re-created under a freed-up name).
+  const listed = ctx.N?.stars?.[ctx.project];
+  if (listed >= 50 && stars < listed / 2) flags.push('looks-different');
+  return { proof, needsConfirm: proof === 'file' || flags.some((f) => ['fork', 'high-profile', 'looks-different'].includes(f)), flags, org, stars, repoId: info.id ?? null };
+}
+// Proof text is good for CLAIM.tokenHours, and only while the claim is unproven (a used text is replaced with 'used-…' and no expiry).
+export const tokenUsable = (row, now = Date.now()) => !row.verified_at && !!row.token_expires && row.token_expires > now && !String(row.token).startsWith('used-');
+export const newToken = () => `ose-${[...crypto.getRandomValues(new Uint8Array(16))].map((b) => b.toString(16).padStart(2, '0')).join('')}`;
 
 // What a developer sends → what is stored. groupIds = the real group ids; "What does yours do differently?" is required.
 export function cleanPitch(body, groupIds) {
@@ -73,7 +122,11 @@ export function cleanPitch(body, groupIds) {
   const differs = clean(body?.differs, PITCH_LIMITS.differs);
   if (!differs) return { error: 'Write a description.' };
   const t = (k) => clean(body?.[k], PITCH_LIMITS.text);
-  return { pitch: { groups, differs, strengths: t('strengths'), weaknesses: t('weaknesses'), reusable: t('reusable'), help: t('help') } };
+  const pitch = { groups, differs, strengths: t('strengths'), weaknesses: t('weaknesses'), reusable: t('reusable'), help: t('help') };
+  // Every pitch already waits for a mod; the filter adds WHY a mod should look closely, and refuses links that can never be right.
+  const f = screenAll(pitch.differs, pitch.strengths, pitch.weaknesses, pitch.reusable, pitch.help);
+  if (f.error) return { error: f.error };
+  return { pitch, flags: f.flags };
 }
 
 // ── Your suggestions ──

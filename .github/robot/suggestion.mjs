@@ -7,6 +7,8 @@
 import { readFileSync, writeFileSync, existsSync } from 'node:fs';
 import { join, dirname } from 'node:path';
 import { fileURLToPath } from 'node:url';
+// The same content filter the website's server uses (bad language, spam, shortened or look-alike links): site/assets/filter.js.
+import { screenAll, flagText } from '../../site/assets/filter.js';
 
 const ROOT = join(dirname(fileURLToPath(import.meta.url)), '..', '..');
 const read = (f) => JSON.parse(readFileSync(join(ROOT, f), 'utf8'));
@@ -155,6 +157,10 @@ if (mode === 'check') {
   const age = await accountAge();
   // WHY hold young accounts (review Oct 26): the voting server already makes new GitHub accounts wait; suggestions get the same rule.
   if (age && age.days < MIN_AGE_DAYS) holds.push(`The account @${age.login} is only ${age.days} day${age.days === 1 ? '' : 's'} old (under ${MIN_AGE_DAYS}). A mod should look closely before approving.`);
+  // WHY a hold, not a refusal: a mod reads every suggestion anyway; the robot only says why to look closely.
+  const written = screenAll(issue.title, issue.body);
+  if (written.error) holds.push(`A link in it is not allowed: ${written.error}`);
+  if (written.flags.length) holds.push(`The text filter flagged it (${flagText(written.flags)}). A mod should read it before approving.`);
   const dups = await earlierDuplicates();
   if (dups.length) holds.push(`Another open suggestion asks for the same thing: ${dups.map((d) => `#${d.number}`).join(', ')}. A mod can merge them and close one.`);
   const bad = issues.length || holds.length || checks.some((l) => l.startsWith('- ❌'));

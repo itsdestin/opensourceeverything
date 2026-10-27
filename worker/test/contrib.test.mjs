@@ -16,12 +16,18 @@ let issues = []; // what the stand-in says the repo's suggestion issues are
 const comments = {}; // issue number → comments
 const proofs = {}; // "github.com/owner/name" → file text
 const owners = {}; // "owner/name" → real owner login
+const meta = {}; // "owner/name" → extra facts GitHub would give (type, fork, stars, id, full_name, moved...)
+const members = new Set(); // "org/login" → public members of an organization
 const stub = createServer((req, res) => {
   const u = new URL(req.url, 'http://x'); const path = u.pathname;
   const send = (code, data) => { res.writeHead(code, { 'Content-Type': 'application/json' }); res.end(typeof data === 'string' ? data : JSON.stringify(data)); };
   let m;
   if ((m = path.match(/^\/raw\/([^/]+)\/([^/]+)\/([^/]+)\//))) { const t = proofs[`${m[1]}/${m[2]}/${m[3]}`.toLowerCase()]; return t ? send(200, t) : send(404, 'no'); }
-  if ((m = path.match(/^\/gh\/repos\/([^/]+)\/([^/]+)$/))) { const o = owners[`${m[1]}/${m[2]}`.toLowerCase()]; return o ? send(200, { owner: { login: o } }) : send(404, {}); }
+  if ((m = path.match(/^\/gh\/repos\/([^/]+)\/([^/]+)$/))) {
+    const key = `${m[1]}/${m[2]}`.toLowerCase(); const o = owners[key]; const x = meta[key] ?? {};
+    return o ? send(200, { id: 5000 + key.length, full_name: `${m[1]}/${m[2]}`, owner: { login: o, type: x.type ?? 'User' }, stargazers_count: Math.min(names.stars?.[names.codes[`github.com/${key}`]] ?? 5, 9000), fork: false, ...x.repo }) : send(404, {});
+  }
+  if ((m = path.match(/^\/gh\/orgs\/([^/]+)\/public_members\/([^/]+)$/))) { res.writeHead(members.has(`${m[1]}/${m[2]}`.toLowerCase()) ? 204 : 404); return res.end(); }
   if ((m = path.match(/^\/gh\/repos\/[^/]+\/[^/]+\/issues\/(\d+)\/comments$/))) return send(200, comments[m[1]] ?? []);
   if (path.endsWith('/issues')) {
     const creator = u.searchParams.get('creator'); const state = u.searchParams.get('state');
@@ -81,9 +87,11 @@ test('Most requested includes suggestions still waiting on GitHub, and only open
 });
 
 // A listed project on GitHub, to pitch for.
-const proj = Object.entries(names.codes).find(([c]) => c.startsWith('github.com/'));
+// WHY not a high-profile one: those need a mod's extra confirmation, which has its own test below.
+const proj = Object.entries(names.codes).find(([c, id]) => c.startsWith('github.com/') && !names.hp.includes(id));
 const [repoKey, projectId] = proj; const [, owner, rname] = repoKey.split('/');
 owners[`${owner}/${rname}`] = owner;
+const missing = (extra = {}) => ({ kind: 'missing', group: 'documents', projects: ['libreoffice-writer'], closedApps: ['Google Docs'], title: `Test note ${stamp}`, body: 'See https://example.org', ...extra });
 const pitchBody = (extra = {}) => ({ groups: GROUPS.slice(0, 1), differs: 'It keeps everything on your own computer.', strengths: 'Fast', weaknesses: 'Young', reusable: 'The sync library', help: 'Translations', built: 'hand-built', ...extra });
 
 test('Tag my project: a repo under your own account is proven by GitHub alone', async () => {
@@ -106,7 +114,7 @@ test('Tag my project: pending → mod approves → public; edits go back to pend
   assert.equal((await other.call('GET', '/mod/pitches')).status, 403, 'mods only');
   assert.equal((await other.call('PUT', `/pitches/${id}`, pitchBody())).status, 404, "somebody else's project");
   assert.ok((await mod.call('GET', '/mod/pitches')).data.items.some((x) => x.id === id));
-  await mod.call('POST', `/mod/pitches/${id}`, { action: 'approve' });
+  assert.equal((await mod.call('POST', `/mod/pitches/${id}`, { action: 'approve' })).status, 200);
   let live = (await fetch(`${API}/pitches/live?projects=${projectId}`).then((r) => r.json()))[projectId];
   assert.equal(live.differs, 'It keeps everything on your own computer.'); assert.equal(live.by, owner);
   await me.call('PUT', `/pitches/${id}`, pitchBody({ differs: 'EDITED words' }));
@@ -171,3 +179,128 @@ test('Mod Suggestions tab: open suggestions with the robot verdict and request c
   assert.deepEqual(items.map((x) => [x.number, x.verdict]), [[41, 'ok'], [42, 'needs-mod'], [43, 'unchecked']]);
 });
 const anon = async (path) => { const r = await fetch(API + path); return { status: r.status }; };
+
+// ═══════════ Security hardening (docs/server-rules.md → "Claiming a project" and "What people write") ═══════════
+// Every project below is a made-up repo under a unique name, so no run can disturb another; the stand-in answers for them.
+let n = 0;
+const listed = (extra = {}) => {
+  // A listed, non-high-profile GitHub project to claim: reuse the real ids from names.json, one per test.
+  const cands = Object.entries(names.codes).filter(([c, id]) => c.startsWith('github.com/') && !names.hp.includes(id));
+  const [key, id] = cands[1 + (n++ % (cands.length - 1))]; const [, o, nm] = key.split('/');
+  // WHY a fresh owner name per call: the test database keeps accounts between runs, and an account's age is fixed when it is first made.
+  const me = extra.owner ?? `own${n}-${stamp}`; owners[`${o}/${nm}`] = me; if (extra.meta) meta[`${o}/${nm}`] = extra.meta;
+  return { key, id, o, nm, me, url: `https://github.com/${o}/${nm}` };
+};
+const claim = async (who, url) => (await who.call('POST', '/pitches/start', { url }));
+const sendPitch = (who, id, extra) => who.call('PUT', `/pitches/${id}`, pitchBody(extra));
+
+test('claim: a brand-new account cannot claim a project', async () => {
+  const p = listed(); const fresh = await person('freshclaimer', 3);
+  assert.equal((await claim(fresh, p.url)).status, 403);
+});
+
+test('claim: a repo that moved or was renamed on GitHub cannot be claimed', async () => {
+  const p = listed({ meta: { repo: { full_name: 'someone-else/renamed' } } }); const me = await person(p.me, 400, true);
+  assert.equal((await claim(me, p.url)).status, 409);
+});
+
+test('claim: a fork needs a mod to confirm before anything shows, even under your own account', async () => {
+  const p = listed({ meta: { repo: { fork: true } } }); const me = await person(p.me, 400, true); const mod = await person('mod-sample');
+  const s = (await claim(me, p.url)).data.pitch;
+  assert.equal(s.verified, true); assert.equal(s.needsConfirm, true); assert.ok(s.flags.includes('fork'));
+  await sendPitch(me, s.id, {});
+  assert.equal((await mod.call('POST', `/mod/pitches/${s.id}`, { action: 'approve' })).status, 409, 'cannot approve before the extra confirmation');
+  await mod.call('POST', `/mod/pitches/${s.id}`, { action: 'confirm-claim' });
+  assert.equal((await mod.call('POST', `/mod/pitches/${s.id}`, { action: 'approve' })).status, 200);
+  const live = (await fetch(`${API}/pitches/live?projects=${p.id}`).then((r) => r.json()))[p.id];
+  assert.equal(live.ownerCheck, 'mods', 'the page can say "confirmed by mods"');
+  await me.call('DELETE', `/pitches/${s.id}`);
+});
+
+test('claim: a high-profile project (Verified, hand-kept list, 10k+ stars) is hidden until a mod confirms, even when approved', async () => {
+  const hpKey = Object.entries(names.codes).find(([c, id]) => c.startsWith('github.com/') && names.hp.includes(id));
+  const [key, id] = hpKey; const [, o, nm] = key.split('/'); owners[`${o}/${nm}`] = o;
+  const me = await person(o, 400, true); const mod = await person('mod-sample');
+  const s = (await claim(me, `https://github.com/${o}/${nm}`)).data.pitch;
+  assert.equal(s.needsConfirm, true); assert.ok(s.flags.includes('high-profile'));
+  await sendPitch(me, s.id, {});
+  assert.equal((await mod.call('POST', `/mod/pitches/${s.id}`, { action: 'approve' })).status, 409);
+  await mod.call('POST', `/mod/pitches/${s.id}`, { action: 'confirm-claim' }); await mod.call('POST', `/mod/pitches/${s.id}`, { action: 'approve' });
+  assert.equal((await fetch(`${API}/pitches/live?projects=${id}`).then((r) => r.json()))[id].ownerCheck, 'mods');
+  await mod.call('POST', `/mod/pitches/${s.id}`, { action: 'revoke', reason: 'test' });
+  assert.deepEqual(await fetch(`${API}/pitches/live?projects=${id}`).then((r) => r.json()), {}, 'revoke takes it off the site');
+  assert.equal((await me.call('POST', `/pitches/${s.id}/verify`)).status, 403, 'a revoked claim cannot be re-proved by itself');
+  await me.call('DELETE', `/pitches/${s.id}`);
+});
+
+test('claim: an organization project needs public membership, the file, and a mod', async () => {
+  const p = listed({ owner: `org-${stamp}`, meta: { type: 'Organization' } }); const me = await person('orgmember');
+  assert.equal((await claim(me, p.url)).status, 403, 'not a public member');
+  members.add(`org-${stamp}/${me.name}`.toLowerCase());
+  const s = (await claim(me, p.url)).data.pitch;
+  assert.equal(s.proof, 'file'); assert.equal(s.needsConfirm, true); assert.ok(s.flags.includes('owner-unverified'));
+  await me.call('DELETE', `/pitches/${s.id}`);
+});
+
+test('claim: the proof text works once, only for the person it was made for', async () => {
+  const p = listed({ owner: `other-${stamp}` }); const a = await person('proofa'); const b = await person('proofb');
+  const sa = (await claim(a, p.url)).data.pitch; const sb = (await claim(b, p.url)).data.pitch;
+  assert.notEqual(sa.proofText, sb.proofText, 'each person gets their own text');
+  proofs[p.key] = sa.proofText;
+  assert.equal((await b.call('POST', `/pitches/${sb.id}/verify`)).status, 400, "somebody else's text does not prove it for you");
+  assert.equal((await a.call('POST', `/pitches/${sa.id}/verify`)).data.verified, true);
+  const after = (await a.call('GET', '/pitches/mine')).data.items.find((x) => x.id === sa.id);
+  assert.equal(after.proofText, undefined, 'the used text is gone from the page');
+  // Two claimants on one project: the second cannot go live while the first is showing.
+  proofs[p.key] = sb.proofText;
+  assert.equal((await b.call('POST', `/pitches/${sb.id}/verify`)).data.verified, true);
+  const mod = await person('mod-sample');
+  for (const [who, s] of [[a, sa], [b, sb]]) { await sendPitch(who, s.id, {}); await mod.call('POST', `/mod/pitches/${s.id}`, { action: 'confirm-claim' }); }
+  assert.equal((await mod.call('POST', `/mod/pitches/${sa.id}`, { action: 'approve' })).status, 200);
+  assert.equal((await mod.call('POST', `/mod/pitches/${sb.id}`, { action: 'approve' })).status, 409, 'one live claim per project');
+  assert.equal((await fetch(`${API}/pitches/live?projects=${p.id}`).then((r) => r.json()))[p.id].by, a.name);
+  delete proofs[p.key]; await a.call('DELETE', `/pitches/${sa.id}`); await b.call('DELETE', `/pitches/${sb.id}`);
+});
+
+test('claim: an edit re-checks ownership; a project that changed hands loses the claim', async () => {
+  const p = listed(); const me = await person(p.me, 400, true);
+  const s = (await claim(me, p.url)).data.pitch;
+  owners[`${p.o}/${p.nm}`.toLowerCase()] = 'someone-new';
+  assert.equal((await sendPitch(me, s.id, {})).status, 403);
+  assert.equal((await me.call('GET', '/pitches/mine')).data.items.find((x) => x.id === s.id).verified, false);
+  await me.call('DELETE', `/pitches/${s.id}`);
+});
+
+test('claim: links and words in a pitch: shortener refused, bad language reaches the mod with a reason', async () => {
+  const p = listed(); const me = await person(p.me, 400, true); const mod = await person('mod-sample');
+  const s = (await claim(me, p.url)).data.pitch;
+  assert.equal((await sendPitch(me, s.id, { help: 'See https://bit.ly/abc' })).status, 400);
+  assert.equal((await sendPitch(me, s.id, { differs: 'This is sh1t' })).status, 200, 'held for a mod, not refused');
+  const item = (await mod.call('GET', '/mod/pitches')).data.items.find((x) => x.id === s.id);
+  assert.match(item.flag, /bad language/);
+  await me.call('DELETE', `/pitches/${s.id}`);
+});
+
+test('what people write: bad words hold a note or reply for a mod; edits cannot sneak them in; bad links are refused', async () => {
+  const a = await person('filtera'); const b = await person('filterb'); const mod = await person('mod-sample');
+  const held = (await a.call('POST', '/notes', { kind: 'talk', group: 'documents', closedApps: [], title: 'Hello', body: 'what the f.u.c.k' })).data;
+  assert.equal(held.held, true); assert.match(held.flag, /bad language/);
+  assert.equal((await b.call('GET', `/notes/${held.id}`)).status, 404, 'others cannot see it');
+  assert.equal((await mod.call('GET', `/notes/${held.id}`)).status, 200);
+  await mod.call('POST', '/mod/act', { id: held.id, action: 'approve' });
+  assert.equal((await b.call('GET', `/notes/${held.id}`)).status, 200, 'visible once a mod approves');
+  const edited = (await a.call('PATCH', `/notes/${held.id}`, { title: 'Hello again', body: 'sh!t' })).data;
+  assert.equal(edited.held, true, 'a bad edit puts it back on hold');
+  assert.equal((await b.call('GET', `/notes/${held.id}`)).status, 404);
+  const clean = (await a.call('POST', '/notes', { kind: 'talk', group: 'documents', closedApps: [], title: 'Fine', body: 'all good' })).data;
+  assert.equal(clean.held, false);
+  const rep = (await b.call('POST', `/notes/${clean.id}/replies`, { body: 'you are a bitch' })).data; assert.equal(rep.held, true);
+  assert.equal((await a.call('POST', '/notes', { kind: 'talk', group: 'documents', closedApps: [], title: 'x', body: 'go to bit.ly/abc' })).status, 400, 'a shortened link is refused with a reason');
+  assert.equal((await a.call('POST', '/notes', { kind: 'talk', group: 'documents', closedApps: [], title: 'x', body: 'https://user:pw@example.org/' })).status, 400);
+  assert.equal((await a.call('POST', '/notes', { kind: 'talk', group: 'documents', closedApps: [], title: 'x', body: 'https://examp1e.org <img src=x onerror=alert(1)>' })).data.held, false, 'markup is stored as plain text; the page escapes it');
+  const w = (await a.call('POST', '/notes', missing({ kind: 'wish', projects: [] }))).data;
+  assert.equal((await b.call('POST', `/notes/${w.id}/building`, { link: 'https://bit.ly/x' })).status, 400);
+  assert.equal((await b.call('POST', `/notes/${w.id}/building`, { link: 'https://g1thub.com/x' })).status, 400, 'look-alike site');
+  assert.equal((await b.call('POST', `/notes/${w.id}/building`, { link: 'javascript:alert(1)' })).status, 400);
+  assert.equal((await b.call('POST', `/notes/${w.id}/building`, { link: 'https://github.com/x/y' })).status, 200);
+});

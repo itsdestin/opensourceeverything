@@ -52,6 +52,9 @@ for (const g of d.groups) {
 // ── Meaning-search vectors (fetched by the Worker only, never by the browser). Made by site/embed-items.mjs ──
 if (existsSync(join(ROOT, 'data', 'search-vectors.json'))) write(join('data', 'search-vectors.json'), readFileSync(join(ROOT, 'data', 'search-vectors.json'), 'utf8'));
 
+const HP = JSON.parse(readFileSync(join(ROOT, 'data', 'high-profile.json'), 'utf8'));
+const highProfile = (p) => p.verified || (p.stars ?? 0) >= 10000 || HP.projects.includes(p.id)
+  || HP.codePrefixes.some((c) => String(p.code ?? '').replace(/^https?:\/\/(www\.)?/i, '').toLowerCase().startsWith(c.toLowerCase()));
 // ── Names for voting and boards (assets/social.js): who's in which group, in one small file ──
 write(join('data', 'names.json'), JSON.stringify({
   categories: Object.fromEntries(d.categories.map((c) => [c.id, c.name])),
@@ -59,6 +62,10 @@ write(join('data', 'names.json'), JSON.stringify({
   groups: Object.fromEntries(d.groups.map((g) => [g.id, { n: g.name, c: g.category, closed: g.closed, alts: g.alternatives.map((a) => a.project), gap: !g.alternatives.some((a) => a.fit === 'full') }])),
   projects: Object.fromEntries(d.projects.map((p) => [p.id, p.name])),
   // WHY: "Tag my project" finds the listed project from the link someone pastes (github.com/owner/name, lower case).
+  // WHY hp / stars: claiming a high-profile project needs a mod's confirmation (docs/server-rules.md → Claiming a project). High-profile
+  // = Verified, 10,000+ stars, or on the hand-kept list data/high-profile.json. stars lets the server notice a repo that is far smaller than the one listed.
+  hp: d.projects.filter((p) => highProfile(p)).map((p) => p.id),
+  stars: Object.fromEntries(d.projects.filter((p) => p.stars).map((p) => [p.id, p.stars])),
   codes: Object.fromEntries(d.projects.filter((p) => p.code).map((p) => [p.code.replace(/^https?:\/\/(www\.)?/i, '').replace(/\.git$|\/$/g, '').toLowerCase(), p.id])),
 }));
 

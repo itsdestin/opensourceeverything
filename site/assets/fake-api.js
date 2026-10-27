@@ -2,7 +2,7 @@
 // It obeys docs/server-rules.md exactly, so it doubles as the blueprint the real server (Cloudflare) must match:
 // same calls, same answers, same rules. Everything is kept in this browser only and starts from sample posts.
 (function () {
-  const KEY = 'ose-demo-v3';
+  const KEY = 'ose-demo-v4';
   const RULES = { minAgeDays: 14, confirmsNeeded: 3, popularVotes: 25 };
   const now = Date.now(), H = 3600e3, D = 24 * H;
   const u = (login, days = 400) => ({ login, created: now - days * D, trusted: days >= 14 });
@@ -36,9 +36,9 @@
   }
   function samplePitches() {
     return [
-      { id: 1, owner: 'penpot-team-sample', project: 'penpot', repo: 'github.com/penpot/penpot', proof: 'file', token: 'ose-sample', verified: true, status: 'live', updated: day(8),
+      { id: 1, owner: 'penpot-team-sample', project: 'penpot', repo: 'github.com/penpot/penpot', proof: 'file', token: 'ose-sample', verified: true, needsConfirm: true, confirmed: true, confirmedBy: 'itsdestin', flags: ['owner-unverified'], status: 'live', updated: day(8),
         live: { groups: ['graphic-design'], differs: 'It works the way designers do, in a browser, and the design files are open code, so developers can build from the same source.', strengths: 'Real-time teamwork. Runs in a browser, or on your own server.', weaknesses: 'Fewer plugins than Figma. Large files can feel slow.', reusable: 'The plugin system, and the exporter that turns designs into code.', help: 'Plugin authors, and translators for the interface.', built: 'hand-built' } },
-      { id: 2, owner: 'inkscape-sample', project: 'inkscape', repo: 'gitlab.com/inkscape/inkscape', proof: 'file', token: 'ose-sample2', verified: true, status: 'pending', updated: day(0.1), pending: { groups: ['vector-graphics'], differs: 'A drawing program that saves its files in an open web format, so other programs can read them.', strengths: 'Precise drawing tools.', weaknesses: 'Less polished for page layout.', reusable: 'The path math library.', help: 'Documentation writers.', built: 'ai-assisted' }, live: null },
+      { id: 2, owner: 'inkscape-sample', project: 'inkscape', repo: 'gitlab.com/inkscape/inkscape', proof: 'file', token: 'ose-sample2', verified: true, needsConfirm: true, confirmed: false, flags: ['owner-unverified', 'high-profile'], status: 'pending', updated: day(0.1), pending: { groups: ['vector-graphics'], differs: 'A drawing program that saves its files in an open web format, so other programs can read them.', strengths: 'Precise drawing tools.', weaknesses: 'Less polished for page layout.', reusable: 'The path math library.', help: 'Documentation writers.', built: 'ai-assisted' }, live: null },
     ];
   }
   function sampleNotes() {
@@ -90,7 +90,7 @@
   const view = (n) => {
     const x = me();
     return { id: n.id, kind: n.kind, category: n.category, group: n.group, projects: n.projects, closedApps: n.closedApps, title: n.title, body: n.body,
-      author: n.author, created: n.created, edited: n.edited ?? null, status: n.status, held: !!n.held,
+      author: n.author, created: n.created, edited: n.edited ?? null, status: n.status, held: !!n.held, ...(n.flag && (isMod(x) || x?.login === n.author) ? { flag: n.flag } : {}),
       votes: n.voters.length + n.extraVotes, mine: !!x && n.voters.includes(x.login),
       replies: n.replies.filter((r) => sees(r, x)).length,
       fixed: n.fixed ? { by: n.fixed.by, link: n.fixed.link, confirms: n.fixed.confirms.length } : null,
@@ -109,11 +109,20 @@
   async function pitchView(p, mine) {
     const N = await names();
     return { id: p.id, project: p.project, projectName: N.projects[p.project] ?? p.project, repo: p.repo, proof: p.proof, verified: !!p.verified, status: p.status, reason: p.reason ?? null, live: p.live ?? null, pending: p.pending ?? null, updated: p.updated, by: p.owner,
+      needsConfirm: !!p.needsConfirm, confirmed: !!p.confirmed, flags: p.flags ?? [],
       ...(mine && !p.verified && p.proof === 'file' ? { proofFile: '.opensourceeverything', proofText: p.token } : {}) };
   }
   const delay = (v) => new Promise((r) => setTimeout(() => r(structuredClone(v)), 120));
   const fail = (status, message) => Promise.reject(Object.assign(new Error(message), { status }));
   const find = (id) => S.notes.find((n) => n.id === +id && sees(n, me()));
+  // The content filter is the SAME file the real server uses (assets/filter.js), so the preview and the server cannot disagree.
+  const filterP = import('./filter.js'); let F = null; filterP.then((m) => { F = m; });
+  const flagTextSync = (f) => F.flagText(f);
+  // → { error, flags } for several texts at once (docs/server-rules.md → "What people write").
+  const screen = async (...t) => (await filterP).screenAll(...t);
+  const flagWords = async (flags) => (await filterP).flagText(flags);
+  // A link someone submits on its own: http(s) only, no shorteners, hidden passwords or look-alike sites. → error text or null
+  const linkError = async (l) => { if (!/^https?:\/\/[^\s]{3,500}$/.test(l ?? '')) return 'bad'; return (await filterP).screenLink(l).error ?? null; };
   const link = (l) => (/^https?:\/\/[^\s]{3,500}$/.test(l ?? '') ? l : null);
   // Every check below mirrors one row of the rules table; a refusal says what the person can do instead.
   const guard = (ok, status, msg) => (ok ? null : fail(status, msg));
@@ -177,19 +186,22 @@
         reports: isMod(x) ? n.reports : undefined });
     },
     async addNote(n) {
-      const x = me();
-      return guard(x, ...NEED_SIGNIN) ?? guard(!banned(x), 403, 'This account can no longer post here.') ?? guard(n.title?.trim(), 400, 'Give it a short title.')
+      const x = me(); const sc = await screen(n?.title, n?.body);
+      return guard(!sc.error, 400, sc.error) ?? guard(x, ...NEED_SIGNIN) ?? guard(!banned(x), 403, 'This account can no longer post here.') ?? guard(n.title?.trim(), 400, 'Give it a short title.')
         ?? guard(n.kind !== 'missing' || n.projects?.length, 400, 'Pick the project, or projects, it applies to.') ?? (() => {
           const note = { id: S.nextId++, kind: n.kind, category: n.category, group: n.group, projects: n.projects ?? [], closedApps: n.closedApps ?? [],
             title: n.title.trim().slice(0, 140), body: (n.body ?? '').trim().slice(0, 4000), author: x.login, created: Date.now(),
-            voters: n.kind === 'talk' ? [] : [x.login], extraVotes: 0, status: 'open', replies: [], reports: [], held: heldFor(x) };
+            voters: n.kind === 'talk' ? [] : [x.login], extraVotes: 0, status: 'open', replies: [], reports: [], held: heldFor(x) || sc.flags.length > 0, flag: sc.flags.length ? flagTextSync(sc.flags) : undefined };
           S.notes.push(note); save(); return delay(view(note));
         })();
     },
     async editNote(id, { title, body }) {
-      const n = find(id); const x = me();
-      return guard(n && x?.login === n.author, 403, 'Only the person who wrote it can change it.') ?? guard(title?.trim(), 400, 'Give it a short title.') ?? (() => {
-        n.title = title.trim().slice(0, 140); n.body = (body ?? '').trim().slice(0, 4000); n.edited = Date.now(); save(); return delay(view(n));
+      const n = find(id); const x = me(); const sc = await screen(title, body);
+      return guard(n && x?.login === n.author, 403, 'Only the person who wrote it can change it.') ?? guard(title?.trim(), 400, 'Give it a short title.') ?? guard(!sc.error, 400, sc.error) ?? (() => {
+        n.title = title.trim().slice(0, 140); n.body = (body ?? '').trim().slice(0, 4000); n.edited = Date.now();
+        // An edit that trips the filter puts the note back on hold, like the server.
+        if (sc.flags.length) { n.held = true; n.flag = flagTextSync(sc.flags); }
+        save(); return delay(view(n));
       })();
     },
     async deleteNote(id) {
@@ -203,22 +215,22 @@
       })();
     },
     async reply(id, body) {
-      const n = find(id); const x = me();
-      return guard(x, ...NEED_SIGNIN) ?? guard(n && can(n, x).reply, 400, "This note can't take replies.") ?? guard(body?.trim(), 400, 'Write something first.') ?? (() => {
-        const r = { id: S.nextId++, author: x.login, body: body.trim().slice(0, 4000), created: Date.now(), held: heldFor(x) };
+      const n = find(id); const x = me(); const sc = await screen(body);
+      return guard(x, ...NEED_SIGNIN) ?? guard(n && can(n, x).reply, 400, "This note can't take replies.") ?? guard(body?.trim(), 400, 'Write something first.') ?? guard(!sc.error, 400, sc.error) ?? (() => {
+        const r = { id: S.nextId++, author: x.login, body: body.trim().slice(0, 4000), created: Date.now(), held: heldFor(x) || sc.flags.length > 0, flag: sc.flags.length ? flagTextSync(sc.flags) : undefined };
         n.replies.push(r); save(); return delay({ ok: true, held: r.held });
       })();
     },
     async editReply(id, rid, body) {
-      const r = find(id)?.replies.find((y) => y.id === +rid);
-      return guard(r && me()?.login === r.author, 403, 'Only the person who wrote it can change it.') ?? guard(body?.trim(), 400, 'Write something first.') ?? (() => { r.body = body.trim().slice(0, 4000); r.edited = Date.now(); save(); return delay({ ok: true }); })();
+      const r = find(id)?.replies.find((y) => y.id === +rid); const sc = await screen(body);
+      return guard(r && me()?.login === r.author, 403, 'Only the person who wrote it can change it.') ?? guard(body?.trim(), 400, 'Write something first.') ?? guard(!sc.error, 400, sc.error) ?? (() => { r.body = body.trim().slice(0, 4000); r.edited = Date.now(); if (sc.flags.length) { r.held = true; r.flag = flagTextSync(sc.flags); } save(); return delay({ ok: true }); })();
     },
     async deleteReply(id, rid) {
       const n = find(id); const r = n?.replies.find((y) => y.id === +rid);
       return guard(r && me()?.login === r.author, 403, 'Only the person who wrote it can delete it.') ?? (() => { n.replies = n.replies.filter((y) => y !== r); save(); return delay({ ok: true }); })();
     },
     async claimFixed(id, l) {
-      const n = find(id); const x = me();
+      const n = find(id); const x = me(); const le = await linkError(l); if (le && le !== 'bad') return fail(400, le);
       return guard(x, ...NEED_SIGNIN) ?? guard(n && can(n, x).claimFixed, 400, 'Someone has already said this is fixed; confirm it instead.') ?? guard(link(l), 400, 'Add a link that shows it, like the release notes.') ?? (() => {
         n.fixed = { by: x.login, link: l, confirms: [] }; save(); return delay(view(n));
       })();
@@ -236,7 +248,7 @@
       })();
     },
     async building(id, l) {
-      const n = find(id); const x = me();
+      const n = find(id); const x = me(); const le = await linkError(l); if (le && le !== 'bad') return fail(400, le);
       return guard(x, ...NEED_SIGNIN) ?? guard(n && can(n, x).building, 400, 'Someone already said they are building this.') ?? guard(link(l), 400, 'Add a link to the project.') ?? (() => {
         n.building = { by: x.login, link: l }; save(); return delay(view(n));
       })();
@@ -289,6 +301,7 @@
     // ── Tag my project ──
     async pitchStart(link) {
       const x = me(); if (!x) return fail(...NEED_SIGNIN);
+      if (!oldEnough(x)) return fail(403, `Your GitHub account needs to be ${RULES.minAgeDays} days old before it can claim a project.`);
       const r = parseRepo(link); if (!r) return fail(400, 'Paste the link to its code page on GitHub, GitLab or Codeberg.');
       const N = await names(); const project = N.codes?.[r.repo];
       if (!project) return delay({ listed: false, repo: r.repo, name: r.name });
@@ -297,7 +310,9 @@
         // Under their own GitHub account → proven at once. Otherwise they need the one-line file.
         // Preview only: a sample login "mozilla-firefox-sample" owns github.com/mozilla-firefox, so the signed-in-owner case can be seen.
         const own = r.host === 'github.com' && r.owner.toLowerCase() === x.login.toLowerCase().replace(/-sample$/, '');
-        p = { id: S.nextId++, owner: x.login, project, repo: r.repo, proof: own ? 'own-account' : 'file', token: 'ose-' + Math.random().toString(16).slice(2, 14).padEnd(12, '0'), verified: own, status: 'draft', live: null, pending: null, updated: Date.now(), checks: 0 };
+        p = { id: S.nextId++, owner: x.login, project, repo: r.repo, proof: own ? 'own-account' : 'file', token: 'ose-' + Math.random().toString(16).slice(2, 14).padEnd(12, '0'), verified: own,
+          // Same rule as the server: a mod must confirm the owner for anything not proven by GitHub alone, and for well-known projects (names.json "hp").
+          needsConfirm: !own || !Array.isArray(N.hp) || N.hp.includes(project), confirmed: false, flags: [...(own ? [] : ['owner-unverified']), ...(!Array.isArray(N.hp) || N.hp.includes(project) ? ['high-profile'] : [])], status: 'draft', live: null, pending: null, updated: Date.now(), checks: 0 };
         S.pitches.push(p); save();
       }
       return delay({ listed: true, pitch: await pitchView(p, true) });
@@ -313,6 +328,8 @@
       if (!p.verified) return fail(403, 'Prove the project is yours first.');
       const N = await names(); const groups = [...new Set(b.groups ?? [])].filter((g) => N.groups[g]);
       const t = (k) => (b[k] ?? '').trim().slice(0, 1000);
+      const sc = await screen(b.differs, t('strengths'), t('weaknesses'), t('reusable'), t('help')); if (sc.error) return fail(400, sc.error);
+      p.flag = sc.flags.length ? flagTextSync(sc.flags) : null;
       if (!groups.length) return fail(400, 'Pick at least one group it belongs in.');
       if (!(b.differs ?? '').trim()) return fail(400, 'Write a description.');
       // WHY back to waiting on every edit: nothing a developer writes goes public until a mod has read it.
@@ -322,21 +339,27 @@
     async pitchDelete(id) { S.pitches = S.pitches.filter((y) => !(y.id === +id && y.owner === me()?.login)); save(); return delay({ ok: true }); },
     async myPitches() { const x = me(); if (!x) return fail(...NEED_SIGNIN); const out = []; for (const p of S.pitches.filter((y) => y.owner === x.login)) out.push(await pitchView(p, true)); return delay({ items: out }); },
     async livePitches(ids) {
-      const out = {}; for (const id of ids) { const p = S.pitches.find((y) => y.project === id && y.live && y.verified); if (p) out[id] = { by: p.owner, repo: p.repo, ...p.live, updated: p.updated }; }
+      const out = {}; for (const id of ids) { const p = S.pitches.find((y) => y.project === id && y.live && y.verified && (!y.needsConfirm || y.confirmed) && !banned({ login: y.owner })); if (p) out[id] = { ...p.live, by: p.owner, repo: p.repo, ownerCheck: p.confirmed ? 'mods' : 'github', updated: p.updated }; }
       return delay(out);
     },
     async modPitches() {
       if (!isMod(me())) return fail(403, 'Mods only.');
-      const out = []; for (const p of S.pitches.filter((y) => y.pending)) out.push({ ...(await pitchView(p, false)), owner: p.owner });
+      const out = []; for (const p of S.pitches.filter((y) => y.pending || y.live)) out.push({ ...(await pitchView(p, false)), owner: p.owner, ownerDays: ageDays(S.users[p.owner] ?? { created: now - 400 * D }), stars: null, flag: p.flag ?? null, confirmedBy: p.confirmedBy ?? null, rivalClaims: S.pitches.filter((o) => o !== p && o.project === p.project && o.live && o.owner !== p.owner).length });
       return delay({ items: out });
     },
     async modPitchAct(id, action, reason) {
       const p = S.pitches.find((y) => y.id === +id);
-      return guard(isMod(me()), 403, 'Mods only.') ?? guard(p?.pending, 404, 'Nothing waiting there.') ?? guard(['approve', 'reject'].includes(action), 400, 'Not a valid action.') ?? (() => {
-        if (action === 'approve') { p.live = p.pending; p.pending = null; p.status = 'live'; p.reason = null; }
-        else { p.pending = null; p.status = p.live ? 'live' : 'turned-down'; p.reason = (reason ?? '').slice(0, 500) || null; }
-        p.updated = Date.now(); save(); return delay({ ok: true });
-      })();
+      if (!isMod(me())) return fail(403, 'Mods only.'); if (!p) return fail(404, 'That claim is gone.');
+      if (action === 'confirm-claim') { p.confirmed = true; p.confirmedBy = me().login; }
+      else if (action === 'approve') {
+        if (!p.pending) return fail(404, 'Nothing waiting there.');
+        if (p.needsConfirm && !p.confirmed) return fail(409, 'Confirm that they own or administer this project first.');
+        if (S.pitches.some((o) => o !== p && o.project === p.project && o.live && o.owner !== p.owner)) return fail(409, 'Another person already has a claim showing on this project. Revoke that one first if it is wrong.');
+        p.live = p.pending; p.pending = null; p.flag = null; p.status = 'live'; p.reason = null;
+      } else if (action === 'reject') { if (!p.pending) return fail(404, 'Nothing waiting there.'); p.pending = null; p.flag = null; p.status = p.live ? 'live' : 'turned-down'; p.reason = (reason ?? '').slice(0, 500) || null; }
+      else if (action === 'revoke') { Object.assign(p, { live: null, pending: null, flag: null, verified: false, confirmed: false, confirmedBy: null, status: 'turned-down', reason: (reason ?? '').slice(0, 500) || null, proof: 'file', needsConfirm: true }); }
+      else return fail(400, 'Not a valid action.');
+      p.updated = Date.now(); save(); return delay({ ok: true });
     },
 
     // ── Mods ──
@@ -363,11 +386,11 @@
       const n = S.notes.find((x) => x.id === +id); const r = rid && n.replies.find((y) => y.id === +rid);
       const trust = (login) => { if (S.users[login]) S.users[login].trusted = true; };
       if (r) {
-        if (action === 'approve') { r.held = false; trust(r.author); }
+        if (action === 'approve') { r.held = false; if (!r.flag) trust(r.author); r.flag = undefined; }
         if (action === 'hide') n.replies = n.replies.filter((y) => y !== r);
         if (action === 'ban') { S.banned.push(r.author); n.replies = n.replies.filter((y) => y !== r); }
       } else {
-        if (action === 'approve') { n.held = false; trust(n.author); }
+        if (action === 'approve') { n.held = false; if (!n.flag) trust(n.author); n.flag = undefined; }
         if (action === 'hide') S.notes = S.notes.filter((x) => x !== n);
         if (action === 'dismiss') n.reports = [];
         if (action === 'reject-fix') n.fixed = null;

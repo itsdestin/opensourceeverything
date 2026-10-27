@@ -1,0 +1,14 @@
+{
+  "note": "Projects that are especially worth impersonating. Claiming one of these (or any Verified project, or any project with 10,000+ GitHub stars) always needs a mod to confirm the person really owns or administers it, and the page says so. Add an id under 'projects', or a code-host prefix under 'codePrefixes' to cover a whole family (everything KDE hosts, every Linux distribution's repos). Edit this file; no code change is needed.",
+  "projects": [
+    "arch-linux", "debian", "ubuntu", "fedora", "linux-mint", "opensuse", "pop-os", "manjaro", "elementary-os", "zorin-os", "nixos", "alpine-linux", "tails",
+    "firefox", "thunderbird", "tor-browser", "chromium", "gimp", "blender", "inkscape", "krita", "kdenlive", "vlc", "obs-studio", "audacity", "handbrake",
+    "libreoffice-writer", "libreoffice-calc", "libreoffice-impress", "libreoffice-draw", "libreoffice-base", "libreoffice-math",
+    "signal", "bitwarden", "keepassxc", "nextcloud", "wordpress", "android", "grapheneos", "lineageos"
+  ],
+  "codePrefixes": [
+    "git.libreoffice.org", "invent.kde.org", "gitlab.gnome.org", "github.com/torvalds/", "github.com/libreoffice/", "github.com/mozilla", "github.com/kde/", "github.com/gnome/",
+    "github.com/debian/", "github.com/ubuntu/", "github.com/archlinux/", "github.com/fedora", "github.com/opensuse/", "github.com/nixos/", "gitlab.archlinux.org", "salsa.debian.org",
+    "projects.blender.org", "gitlab.com/inkscape/", "gitlab.com/tails/"
+  ]
+}
