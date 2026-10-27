@@ -27,7 +27,10 @@ const raw = searchIndex(loadData(ROOT));
 const items = prepare(raw);
 // WHY two sets: search-queries.json is what the ranking was tuned on; search-queries-heldout.json was written
 // separately, without seeing the ranking code, to catch tuning that only works on the first set.
-const SET = process.argv.includes('--heldout') ? 'search-queries-heldout.json' : 'search-queries.json';
+// search-queries-described.json: 100 needs described in plain words, also written without seeing the code.
+const SET = process.argv.includes('--heldout') ? 'search-queries-heldout.json'
+  : process.argv.includes('--described') ? 'search-queries-described.json'
+  : process.argv.includes('--final') ? 'search-queries-final.json' : 'search-queries.json';
 const { queries } = JSON.parse(readFileSync(join(HERE, SET), 'utf8'));
 
 // The dropdown as one list, top to bottom, as ids like "c:notion".
@@ -107,7 +110,8 @@ const nonsense = newSearch('zzzzqqqq');
 if (nonsense.length) { console.error('\nFAIL: nonsense query "zzzzqqqq" returned results'); process.exit(1); }
 
 // WHY a bar: a future change that makes ranking worse should fail loudly, not ship quietly.
-const MIN = { first: 0.9, found: 0.97, musts: 0.9 };
+// Plain-words needs are harder by nature, so their bar is a little lower.
+const MIN = SET === 'search-queries-described.json' ? { first: 0.85, found: 0.95, musts: 0.9 } : { first: 0.9, found: 0.97, musts: 0.9 };
 const s = summary(newRows);
 const fails = Object.entries(MIN).filter(([k, v]) => s[k] < v);
 if (fails.length) { console.error(`\nFAIL: below the bar: ${fails.map(([k, v]) => `${k} ${s[k].toFixed(2)} < ${v}`).join(', ')}`); process.exit(1); }
