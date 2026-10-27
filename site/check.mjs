@@ -37,6 +37,19 @@ for (const f of walk(join(DIST, 'data')).filter((f) => f.endsWith('.json'))) {
   if (/"unconfirmed"|"review"|"sourceLists"|claude-(opus|sonnet|haiku)/.test(t)) problems.push(`${rel}: contains internal AI-check fields`);
 }
 for (const f of html) if (/couldn.t confirm|checked by AI/i.test(readFileSync(f, 'utf8'))) problems.push(`${f.slice(DIST.length + 1)}: shows an AI-check note`);
+// New inputs (feature checklists, switch guides, AI-contribution labels): an unknown project, group, tag or app address fails the build.
+{
+  const opt = (f, empty) => { try { return JSON.parse(readFileSync(join(HERE, '..', 'data', f), 'utf8')); } catch { return empty; } };
+  const feat = opt('features.json', { tags: {}, groups: {}, answers: {} }); const guides = opt('switch-guides.json', { guides: {} }).guides; const ai = opt('ai-contribution.json', { projects: {} }).projects;
+  const groupIds = new Set(d.groups.map((g) => g.id));
+  const slug = (n) => n.toLowerCase().normalize('NFKD').replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, '');
+  const apps = new Set(d.groups.flatMap((g) => g.closed.map(slug)));
+  for (const [g, list] of Object.entries(feat.groups)) { if (!groupIds.has(g)) problems.push(`features: unknown group ${g}`); for (const t of list) if (!feat.tags[t]) problems.push(`features: group ${g} uses unknown tag ${t}`); }
+  for (const [p, a] of Object.entries(feat.answers)) { if (!d.projById.has(p)) problems.push(`features: unknown project ${p}`); for (const [t, v] of Object.entries(a)) { if (!feat.tags[t]) problems.push(`features: ${p} answers unknown tag ${t}`); if (!['yes', 'partly', 'no'].includes(v.v)) problems.push(`features: ${p}/${t} has answer "${v.v}"`); } }
+  for (const [s, g] of Object.entries(guides)) { if (!apps.has(s)) problems.push(`switch guide for unknown closed app ${s}`); for (const o of g.opensIn ?? []) if (!d.projById.has(o.project)) problems.push(`switch guide ${s}: unknown project ${o.project}`); }
+  const LABELS = ['non-developers-welcome', 'traditional-developers-only', 'not-accepted', 'see-policy', null];
+  for (const [p, a] of Object.entries(ai)) { if (!d.projById.has(p)) problems.push(`ai-contribution: unknown project ${p}`); if (!LABELS.includes(a.label)) problems.push(`ai-contribution: ${p} has label "${a.label}"`); if (a.label && !a.description) problems.push(`ai-contribution: ${p} has a label but no description`); }
+}
 // Old group addresses that were split must still answer (data/redirects.json).
 for (const old of Object.keys(d.moved)) if (!pages.has(`g/${old}/index.html`)) problems.push(`no redirect page for split group ${old}`);
 for (const slug of Object.keys(d.movedApps)) if (!pages.has(`alternatives-to/${slug}/index.html`)) problems.push(`no redirect page for moved app ${slug}`);

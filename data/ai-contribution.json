@@ -1,0 +1,2905 @@
+{
+ "license": "CC BY-SA 4.0",
+ "projects": {
+  "2fas": {
+   "label": null,
+   "description": null,
+   "quote": null,
+   "source": null,
+   "outsideHelp": "welcomes-prs",
+   "outsideHelpNote": null,
+   "contributing": "https://github.com/twofas/2fas-android/blob/HEAD/CONTRIBUTING.md",
+   "goodFirstIssues": null
+  },
+  "accrescent": {
+   "label": null,
+   "description": null,
+   "quote": null,
+   "source": null,
+   "outsideHelp": "welcomes-prs",
+   "outsideHelpNote": null,
+   "contributing": "https://github.com/accrescent/accrescent/blob/HEAD/CONTRIBUTING.md",
+   "goodFirstIssues": null
+  },
+  "activepieces": {
+   "label": null,
+   "description": null,
+   "quote": null,
+   "source": null,
+   "outsideHelp": "not-accepting",
+   "outsideHelpNote": "Unsolicited pull requests from outside the core team are paused and closed automatically.",
+   "contributing": "https://github.com/activepieces/activepieces/blob/HEAD/CONTRIBUTING.md",
+   "goodFirstIssues": null
+  },
+  "actual-budget": {
+   "label": "non-developers-welcome",
+   "description": "AI-generated code is OK if it passes the checks and matches project style, and you disclose significant AI use. Descriptions and replies must be human-written, and autonomous agents must mark their work \"[AI]\".",
+   "quote": "It is OK to use AI to generate code, draft tests, fix bugs, or help you navigate the codebase.",
+   "source": "https://actualbudget.org/docs/contributing/ai-usage-policy",
+   "outsideHelp": "welcomes-prs",
+   "outsideHelpNote": null,
+   "contributing": "https://github.com/actualbudget/actual/blob/HEAD/CONTRIBUTING.md",
+   "goodFirstIssues": "https://github.com/actualbudget/actual/issues?q=is%3Aissue%20is%3Aopen%20label%3A%22good%20first%20issue%22"
+  },
+  "aegis": {
+   "label": null,
+   "description": null,
+   "quote": null,
+   "source": null,
+   "outsideHelp": "welcomes-prs",
+   "outsideHelpNote": null,
+   "contributing": "https://github.com/beemdevelopment/Aegis/blob/HEAD/CONTRIBUTING.md",
+   "goodFirstIssues": null
+  },
+  "aider": {
+   "label": null,
+   "description": null,
+   "quote": null,
+   "source": null,
+   "outsideHelp": "welcomes-prs",
+   "outsideHelpNote": null,
+   "contributing": "https://github.com/Aider-AI/aider/blob/HEAD/CONTRIBUTING.md",
+   "goodFirstIssues": null
+  },
+  "airflow": {
+   "label": "traditional-developers-only",
+   "description": "AI help is fine if you follow the Apache guidelines, understand and test everything, and say in the pull request that you used AI; blindly pasted AI code gets closed.",
+   "quote": "Generally, it's fine to use Gen-AI tools to help you create Pull Requests for Apache Airflow as long as you adhere to the following guidelines:",
+   "source": "https://github.com/apache/airflow/blob/main/contributing-docs/05_pull_requests.rst",
+   "outsideHelp": "welcomes-prs",
+   "outsideHelpNote": null,
+   "contributing": "https://github.com/apache/airflow/blob/HEAD/CONTRIBUTING.rst",
+   "goodFirstIssues": "https://github.com/apache/airflow/issues?q=is%3Aissue%20is%3Aopen%20label%3A%22good%20first%20issue%22"
+  },
+  "antennapod": {
+   "label": null,
+   "description": null,
+   "quote": null,
+   "source": null,
+   "outsideHelp": "welcomes-prs",
+   "outsideHelpNote": null,
+   "contributing": "https://github.com/AntennaPod/AntennaPod/blob/HEAD/CONTRIBUTING.md",
+   "goodFirstIssues": "https://github.com/AntennaPod/AntennaPod/issues?q=is%3Aissue%20is%3Aopen%20label%3A%22Good%20first%20issue%22"
+  },
+  "anysoftkeyboard": {
+   "label": null,
+   "description": null,
+   "quote": null,
+   "source": null,
+   "outsideHelp": "welcomes-prs",
+   "outsideHelpNote": null,
+   "contributing": "https://github.com/AnySoftKeyboard/AnySoftKeyboard/blob/HEAD/CONTRIBUTING.md",
+   "goodFirstIssues": null
+  },
+  "anythingllm": {
+   "label": "traditional-developers-only",
+   "description": "AI is expected as a helper, but the work must be yours: auto-generated tests that do not test your change, or commit histories full of agent signatures, get the pull request closed.",
+   "quote": "However, we believe in **AI-augmented engineers**, not AI-replaced engineers. There is a difference between using an LLM to help you write code and having an LLM write code for you.",
+   "source": "https://github.com/Mintplex-Labs/anything-llm/blob/HEAD/CONTRIBUTING.md",
+   "outsideHelp": "welcomes-prs",
+   "outsideHelpNote": null,
+   "contributing": "https://github.com/Mintplex-Labs/anything-llm/blob/HEAD/CONTRIBUTING.md",
+   "goodFirstIssues": null
+  },
+  "apitable": {
+   "label": null,
+   "description": null,
+   "quote": null,
+   "source": null,
+   "outsideHelp": "welcomes-prs",
+   "outsideHelpNote": null,
+   "contributing": "https://github.com/apitable/apitable/blob/HEAD/CONTRIBUTING.md",
+   "goodFirstIssues": "https://github.com/apitable/apitable/issues?q=is%3Aissue%20is%3Aopen%20label%3A%22good%20first%20issue%22"
+  },
+  "appflowy": {
+   "label": null,
+   "description": null,
+   "quote": null,
+   "source": null,
+   "outsideHelp": "welcomes-prs",
+   "outsideHelpNote": null,
+   "contributing": "https://github.com/AppFlowy-IO/AppFlowy/blob/HEAD/doc/CONTRIBUTING.md",
+   "goodFirstIssues": "https://github.com/AppFlowy-IO/AppFlowy/issues?q=is%3Aissue%20is%3Aopen%20label%3A%22good%20first%20issue%20for%20devs%22"
+  },
+  "apprise": {
+   "label": null,
+   "description": null,
+   "quote": null,
+   "source": null,
+   "outsideHelp": "welcomes-prs",
+   "outsideHelpNote": null,
+   "contributing": "https://github.com/caronc/apprise/blob/HEAD/CONTRIBUTING.md",
+   "goodFirstIssues": null
+  },
+  "appsmith": {
+   "label": null,
+   "description": null,
+   "quote": null,
+   "source": null,
+   "outsideHelp": "issue-first",
+   "outsideHelpNote": null,
+   "contributing": "https://github.com/appsmithorg/appsmith/blob/HEAD/CONTRIBUTING.md",
+   "goodFirstIssues": "https://github.com/appsmithorg/appsmith/issues?q=is%3Aissue%20is%3Aopen%20label%3A%22Good%20First%20Issue%22"
+  },
+  "appwrite": {
+   "label": "non-developers-welcome",
+   "description": "AI and agents are fine as long as you review the result against the project rules (in AGENTS.md) and own the pull request. Work only on an assigned issue, or open an issue first.",
+   "quote": "Using AI does not lower the bar: you own the pull request, you must follow those standards, and you must review and oversee any agent-generated work against them.",
+   "source": "https://github.com/appwrite/appwrite/blob/HEAD/CONTRIBUTING.md",
+   "outsideHelp": "issue-first",
+   "outsideHelpNote": null,
+   "contributing": "https://github.com/appwrite/appwrite/blob/HEAD/CONTRIBUTING.md",
+   "goodFirstIssues": null
+  },
+  "audacity": {
+   "label": "traditional-developers-only",
+   "description": "AI tools are allowed for code, docs and translations, but you must understand everything you submit and answer questions about it. Do not paste reviewer feedback into an AI and post its reply.",
+   "quote": "Contributors must read, review, and understand all LLM-generated code and text, including code comments, before requesting review. They remain fully accountable for their contribution and must be able to answer questions about it.",
+   "source": "https://github.com/audacity/audacity/blob/HEAD/AI_POLICY.md",
+   "outsideHelp": "welcomes-prs",
+   "outsideHelpNote": null,
+   "contributing": "https://github.com/audacity/audacity/blob/HEAD/CONTRIBUTING.md",
+   "goodFirstIssues": "https://github.com/audacity/audacity/issues?q=is%3Aissue%20is%3Aopen%20label%3A%22good%20first%20issue%22"
+  },
+  "aurora-store": {
+   "label": "traditional-developers-only",
+   "description": "AI tools are welcome if you mention them, and you must understand, build and test your change; obvious unreviewed AI output is closed.",
+   "quote": "You are welcome to use AI tooling on your contributions. Just mention it in the merge request description.",
+   "source": "https://gitlab.com/AuroraOSS/AuroraStore#ai-usage",
+   "outsideHelp": "welcomes-prs",
+   "outsideHelpNote": null,
+   "contributing": "https://gitlab.com/AuroraOSS/AuroraStore",
+   "goodFirstIssues": null
+  },
+  "authgear": {
+   "label": null,
+   "description": null,
+   "quote": null,
+   "source": null,
+   "outsideHelp": "welcomes-prs",
+   "outsideHelpNote": null,
+   "contributing": "https://github.com/authgear/authgear-server/blob/HEAD/CONTRIBUTING.md",
+   "goodFirstIssues": "https://github.com/authgear/authgear-server/issues?q=is%3Aissue%20is%3Aopen%20label%3A%22good%20first%20issue%22"
+  },
+  "bagisto": {
+   "label": null,
+   "description": null,
+   "quote": null,
+   "source": null,
+   "outsideHelp": "welcomes-prs",
+   "outsideHelpNote": null,
+   "contributing": "https://github.com/bagisto/bagisto/blob/HEAD/CONTRIBUTING.md",
+   "goodFirstIssues": null
+  },
+  "baserow": {
+   "label": null,
+   "description": null,
+   "quote": null,
+   "source": null,
+   "outsideHelp": "welcomes-prs",
+   "outsideHelpNote": null,
+   "contributing": "https://gitlab.com/baserow/baserow/-/blob/develop/CONTRIBUTING.md",
+   "goodFirstIssues": null
+  },
+  "blender": {
+   "label": "traditional-developers-only",
+   "description": "AI help is allowed, but you must understand and review everything, write your own descriptions, and only humans can be authors. Do not solve \"good first issues\" with AI.",
+   "quote": "You must understand and manually review code, designs, bug reports, descriptions and comments you submit.",
+   "source": "https://developer.blender.org/docs/handbook/contributing/ai_contributions/",
+   "outsideHelp": "welcomes-prs",
+   "outsideHelpNote": null,
+   "contributing": "https://developer.blender.org/docs/handbook/contributing/",
+   "goodFirstIssues": null
+  },
+  "borgbackup": {
+   "label": "traditional-developers-only",
+   "description": "AI is welcome as a helper, but you must verify the code, add tests, and be able to explain, debug and maintain what you submit.",
+   "quote": "You are welcome to use AI tools, but we require that a human is always \"in the loop\".",
+   "source": "https://github.com/borgbackup/borg/blob/HEAD/CONTRIBUTING.md",
+   "outsideHelp": "welcomes-prs",
+   "outsideHelpNote": null,
+   "contributing": "https://github.com/borgbackup/borg/blob/HEAD/CONTRIBUTING.md",
+   "goodFirstIssues": null
+  },
+  "bruin": {
+   "label": null,
+   "description": null,
+   "quote": null,
+   "source": null,
+   "outsideHelp": "welcomes-prs",
+   "outsideHelpNote": null,
+   "contributing": "https://github.com/bruin-data/bruin/blob/HEAD/CONTRIBUTING.md",
+   "goodFirstIssues": null
+  },
+  "budibase": {
+   "label": null,
+   "description": null,
+   "quote": null,
+   "source": null,
+   "outsideHelp": "welcomes-prs",
+   "outsideHelpNote": null,
+   "contributing": "https://github.com/Budibase/budibase/blob/HEAD/.github/CONTRIBUTING.md",
+   "goodFirstIssues": "https://github.com/Budibase/budibase/issues?q=is%3Aissue%20is%3Aopen%20label%3A%22good%20first%20issue%22"
+  },
+  "buildbot": {
+   "label": null,
+   "description": null,
+   "quote": null,
+   "source": null,
+   "outsideHelp": "welcomes-prs",
+   "outsideHelpNote": null,
+   "contributing": "https://github.com/buildbot/buildbot/blob/HEAD/CONTRIBUTING.rst",
+   "goodFirstIssues": "https://github.com/buildbot/buildbot/issues?q=is%3Aissue%20is%3Aopen%20label%3A%22good%20first%20issue%22"
+  },
+  "buzz": {
+   "label": null,
+   "description": null,
+   "quote": null,
+   "source": null,
+   "outsideHelp": "welcomes-prs",
+   "outsideHelpNote": null,
+   "contributing": "https://github.com/chidiwilliams/buzz/blob/HEAD/CONTRIBUTING.md",
+   "goodFirstIssues": null
+  },
+  "cal-com": {
+   "label": null,
+   "description": null,
+   "quote": null,
+   "source": null,
+   "outsideHelp": "issue-first",
+   "outsideHelpNote": null,
+   "contributing": "https://github.com/calcom/cal.com/blob/HEAD/CONTRIBUTING.md",
+   "goodFirstIssues": "https://github.com/calcom/cal.com/issues?q=is%3Aissue%20is%3Aopen%20label%3A%22%E2%9C%85%20good%20first%20issue%22"
+  },
+  "caprover": {
+   "label": "non-developers-welcome",
+   "description": "AI-generated code is openly welcome, as long as it matches the style of the code around it and stays simple. Discuss changes with the maintainers first.",
+   "quote": "AI-generated code is welcome, provided it matches the style of neighboring code and stays appropriately simple.",
+   "source": "https://github.com/caprover/caprover/blob/HEAD/CONTRIBUTING.md",
+   "outsideHelp": "issue-first",
+   "outsideHelpNote": null,
+   "contributing": "https://github.com/caprover/caprover/blob/HEAD/CONTRIBUTING.md",
+   "goodFirstIssues": "https://github.com/caprover/caprover/issues?q=is%3Aissue%20is%3Aopen%20label%3A%22good-first-issue%22"
+  },
+  "chatwoot": {
+   "label": null,
+   "description": null,
+   "quote": null,
+   "source": null,
+   "outsideHelp": "welcomes-prs",
+   "outsideHelpNote": null,
+   "contributing": "https://github.com/chatwoot/chatwoot/blob/HEAD/CONTRIBUTING.md",
+   "goodFirstIssues": "https://github.com/chatwoot/chatwoot/issues?q=is%3Aissue%20is%3Aopen%20label%3A%22Good%20first%20issue%22"
+  },
+  "chromium": {
+   "label": "traditional-developers-only",
+   "description": "AI tools are allowed, but you must review and understand every change you send; people who send changes they do not understand can lose their access.",
+   "quote": "Authors **must** self-review and understand all code and documentation updates (with or without AI tooling) before sending them for review to ensure the correctness, design, security properties, and style meet the standards of the project.",
+   "source": "https://github.com/chromium/chromium/blob/main/agents/ai_policy.md",
+   "outsideHelp": "welcomes-prs",
+   "outsideHelpNote": null,
+   "contributing": "https://github.com/chromium/chromium/blob/HEAD/docs/contributing.md",
+   "goodFirstIssues": null
+  },
+  "clickhouse": {
+   "label": "traditional-developers-only",
+   "description": "Strongly pro-AI and no disclosure needed, but you are responsible for generated code exactly as if you typed it, and should read it and understand the codebase. Low-effort pull requests get closed.",
+   "quote": "When sending generated code, you take the responsibility in the same way as for the code you have manually typed. Take efforts to read and review the code before sending - otherwise it is disrespectful to maintainers.",
+   "source": "https://github.com/ClickHouse/ClickHouse/blob/HEAD/AI_POLICY.md",
+   "outsideHelp": "welcomes-prs",
+   "outsideHelpNote": null,
+   "contributing": "https://github.com/ClickHouse/ClickHouse/blob/HEAD/CONTRIBUTING.md",
+   "goodFirstIssues": "https://github.com/ClickHouse/ClickHouse/issues?q=is%3Aissue%20is%3Aopen%20label%3A%22easy%20task%22"
+  },
+  "cline": {
+   "label": null,
+   "description": null,
+   "quote": null,
+   "source": null,
+   "outsideHelp": "issue-first",
+   "outsideHelpNote": null,
+   "contributing": "https://github.com/cline/cline/blob/HEAD/CONTRIBUTING.md",
+   "goodFirstIssues": "https://github.com/cline/cline/issues?q=is%3Aissue%20is%3Aopen%20label%3A%22Good%20First%20Issue%22"
+  },
+  "codex-cli": {
+   "label": null,
+   "description": null,
+   "quote": null,
+   "source": null,
+   "outsideHelp": "not-accepting",
+   "outsideHelpNote": "No outside code; they want detailed bug reports and analysis in issues instead.",
+   "contributing": "https://github.com/openai/codex/blob/HEAD/docs/contributing.md",
+   "goodFirstIssues": null
+  },
+  "comaps": {
+   "label": "traditional-developers-only",
+   "description": "AI may help, but agent-mode or vibe-coded contributions are not allowed and you must understand your code; all messages must be human-written, and AI use must be disclosed.",
+   "quote": "It is not allowed to use AI in an autonomous-looking way to contribute in CoMaps (i.e. solely using 'agent mode' or 'vibe coding').",
+   "source": "https://codeberg.org/comaps/Governance/src/branch/main/AI_USAGE.md",
+   "outsideHelp": "welcomes-prs",
+   "outsideHelpNote": null,
+   "contributing": "https://codeberg.org/comaps/comaps/src/branch/main/docs/CONTRIBUTING.md",
+   "goodFirstIssues": null
+  },
+  "comfyui": {
+   "label": null,
+   "description": null,
+   "quote": null,
+   "source": null,
+   "outsideHelp": "welcomes-prs",
+   "outsideHelpNote": null,
+   "contributing": "https://github.com/Comfy-Org/ComfyUI/blob/HEAD/CONTRIBUTING.md",
+   "goodFirstIssues": null
+  },
+  "concrete": {
+   "label": "non-developers-welcome",
+   "description": "AI-assisted code and issues are welcome if they are concise and carefully reviewed; keep pull-request descriptions short.",
+   "quote": "Concrete CMS welcomes the responsible use of AI-assisted tools to help contributors write code, document issues, and accelerate development.",
+   "source": "https://github.com/concretecms/concretecms/blob/HEAD/CONTRIBUTING.md",
+   "outsideHelp": "welcomes-prs",
+   "outsideHelpNote": null,
+   "contributing": "https://github.com/concretecms/concretecms/blob/HEAD/CONTRIBUTING.md",
+   "goodFirstIssues": null
+  },
+  "coolify": {
+   "label": "traditional-developers-only",
+   "description": "AI is allowed if you fully understand your change, and you must say you used it. The \"Changes\" and \"Why\" parts of the pull request must be written by you, and AI-written bug reports may be closed.",
+   "quote": "AI usage is allowed. However, contributors must fully understand what their changes do and why.",
+   "source": "https://github.com/coollabsio/coolify/blob/HEAD/CONTRIBUTING.md",
+   "outsideHelp": "issue-first",
+   "outsideHelpNote": null,
+   "contributing": "https://github.com/coollabsio/coolify/blob/HEAD/CONTRIBUTING.md",
+   "goodFirstIssues": null
+  },
+  "coroot": {
+   "label": null,
+   "description": null,
+   "quote": null,
+   "source": null,
+   "outsideHelp": "welcomes-prs",
+   "outsideHelpNote": null,
+   "contributing": "https://github.com/coroot/coroot/blob/HEAD/CONTRIBUTING.md",
+   "goodFirstIssues": null
+  },
+  "cortex": {
+   "label": null,
+   "description": null,
+   "quote": null,
+   "source": null,
+   "outsideHelp": "welcomes-prs",
+   "outsideHelpNote": null,
+   "contributing": "https://github.com/cortexlabs/cortex/blob/HEAD/CONTRIBUTING.md",
+   "goodFirstIssues": "https://github.com/cortexlabs/cortex/issues?q=is%3Aissue%20is%3Aopen%20label%3A%22good%20first%20issue%22"
+  },
+  "cube-js": {
+   "label": null,
+   "description": null,
+   "quote": null,
+   "source": null,
+   "outsideHelp": "welcomes-prs",
+   "outsideHelpNote": null,
+   "contributing": "https://github.com/cube-js/cube/blob/HEAD/CONTRIBUTING.md",
+   "goodFirstIssues": "https://github.com/cube-js/cube/issues?q=is%3Aissue%20is%3Aopen%20label%3A%22good%20first%20issue%22"
+  },
+  "darktable": {
+   "label": "non-developers-welcome",
+   "description": "Pull requests written with an AI agent are expected and accepted; the form asks for a short note on which agent was used and what you checked yourself. The project gives agents its rules in AGENTS.md.",
+   "quote": "Only fill this in if the pull request was written with the help of an AI coding agent. Keep it short and direct, developers cannot afford reading pages of text for nothing. One or two lines: which agent was used, what it changed, and what you verified yourself.",
+   "source": "https://github.com/darktable-org/darktable/blob/HEAD/.github/pull_request_template.md",
+   "outsideHelp": "welcomes-prs",
+   "outsideHelpNote": null,
+   "contributing": "https://github.com/darktable-org/darktable/blob/HEAD/CONTRIBUTING.md",
+   "goodFirstIssues": "https://github.com/darktable-org/darktable/issues?q=is%3Aissue%20is%3Aopen%20label%3A%22difficulty%3A%20good%20first%20contribution%22"
+  },
+  "databend": {
+   "label": "traditional-developers-only",
+   "description": "AI and agent-opened pull requests are welcome, but a named human must have read every line and be able to explain each change.",
+   "quote": "3. **Understanding is mandatory.** If you cannot explain the change in your own words, it is not ready to submit.",
+   "source": "https://github.com/databendlabs/databend/blob/HEAD/AI_POLICY.md",
+   "outsideHelp": null,
+   "outsideHelpNote": null,
+   "contributing": null,
+   "goodFirstIssues": "https://github.com/databendlabs/databend/issues?q=is%3Aissue%20is%3Aopen%20label%3A%22good%20first%20issue%22"
+  },
+  "debian": {
+   "label": "traditional-developers-only",
+   "description": "Since an August 2026 vote, AI is allowed if you understand, review and test its output and stay fully responsible; disclosure is encouraged but not required.",
+   "quote": "Debian neither endorses nor prohibits the use of generative AI tools in the development, maintenance, or documentation of software, packaging, documentation, and other media published within the Debian Project.",
+   "source": "https://www.debian.org/vote/2026/vote_002",
+   "outsideHelp": "welcomes-prs",
+   "outsideHelpNote": null,
+   "contributing": "https://www.debian.org/devel/join/",
+   "goodFirstIssues": null
+  },
+  "decap-cms": {
+   "label": null,
+   "description": null,
+   "quote": null,
+   "source": null,
+   "outsideHelp": "welcomes-prs",
+   "outsideHelpNote": null,
+   "contributing": "https://github.com/decaporg/decap-cms/blob/HEAD/CONTRIBUTING.md",
+   "goodFirstIssues": null
+  },
+  "deepfence-threatmapper": {
+   "label": null,
+   "description": null,
+   "quote": null,
+   "source": null,
+   "outsideHelp": "welcomes-prs",
+   "outsideHelpNote": null,
+   "contributing": "https://github.com/deepfence/ThreatMapper/blob/HEAD/CONTRIBUTING.md",
+   "goodFirstIssues": "https://github.com/deepfence/ThreatMapper/issues?q=is%3Aissue%20is%3Aopen%20label%3A%22good%20first%20issue%22"
+  },
+  "deepset": {
+   "label": "traditional-developers-only",
+   "description": "AI assistants and agents are allowed, but you must review and understand the code and run the tests. A fully AI-generated pull request needs a one-line note saying so.",
+   "quote": "- **Review and understand** all generated code before submitting. You are responsible for the contribution.",
+   "source": "https://github.com/deepset-ai/haystack/blob/HEAD/CONTRIBUTING.md",
+   "outsideHelp": "welcomes-prs",
+   "outsideHelpNote": null,
+   "contributing": "https://github.com/deepset-ai/haystack/blob/HEAD/CONTRIBUTING.md",
+   "goodFirstIssues": null
+  },
+  "delta-chat": {
+   "label": null,
+   "description": null,
+   "quote": null,
+   "source": null,
+   "outsideHelp": "welcomes-prs",
+   "outsideHelpNote": null,
+   "contributing": "https://github.com/deltachat/deltachat-android/blob/HEAD/CONTRIBUTING.md",
+   "goodFirstIssues": null
+  },
+  "diaspora": {
+   "label": null,
+   "description": null,
+   "quote": null,
+   "source": null,
+   "outsideHelp": "welcomes-prs",
+   "outsideHelpNote": null,
+   "contributing": "https://github.com/diaspora/diaspora/blob/HEAD/CONTRIBUTING.md",
+   "goodFirstIssues": null
+  },
+  "digikam": {
+   "label": null,
+   "description": null,
+   "quote": null,
+   "source": null,
+   "outsideHelp": "welcomes-prs",
+   "outsideHelpNote": null,
+   "contributing": "https://invent.kde.org/graphics/digikam",
+   "goodFirstIssues": null
+  },
+  "discourse": {
+   "label": null,
+   "description": null,
+   "quote": null,
+   "source": null,
+   "outsideHelp": "welcomes-prs",
+   "outsideHelpNote": null,
+   "contributing": "https://github.com/discourse/discourse/blob/HEAD/CONTRIBUTING.md",
+   "goodFirstIssues": null
+  },
+  "documenso": {
+   "label": "traditional-developers-only",
+   "description": "AI-generated code must be understood line by line by whoever submits it. In practice the project is not taking outside pull requests right now.",
+   "quote": "All AI-generated code must be thoroughly reviewed by the contributor before submitting a PR. You are responsible for understanding and validating every line of code you submit.",
+   "source": "https://github.com/documenso/documenso/blob/HEAD/CONTRIBUTING.md",
+   "outsideHelp": "not-accepting",
+   "outsideHelpNote": "No longer merging outside pull requests except from a few invited contributors.",
+   "contributing": "https://github.com/documenso/documenso/blob/HEAD/CONTRIBUTING.md",
+   "goodFirstIssues": null
+  },
+  "dokku": {
+   "label": null,
+   "description": null,
+   "quote": null,
+   "source": null,
+   "outsideHelp": "welcomes-prs",
+   "outsideHelpNote": null,
+   "contributing": "https://github.com/dokku/dokku/blob/HEAD/CONTRIBUTING.md",
+   "goodFirstIssues": null
+  },
+  "drone": {
+   "label": null,
+   "description": null,
+   "quote": null,
+   "source": null,
+   "outsideHelp": "welcomes-prs",
+   "outsideHelpNote": null,
+   "contributing": "https://github.com/harness/harness/blob/HEAD/CONTRIBUTING.md",
+   "goodFirstIssues": null
+  },
+  "element": {
+   "label": "traditional-developers-only",
+   "description": "AI help with code is allowed if you tick the box, but the pull-request description must be written by you, because you must understand and be able to explain the change. AI-written descriptions get the pull request closed.",
+   "quote": "The PR description must be written by a human and mustn't be generated by AI tools. This is to ensure that the PR authors have a clear understanding of the change and can explain it to reviewers.",
+   "source": "https://github.com/element-hq/element-web/blob/HEAD/CONTRIBUTING.md",
+   "outsideHelp": "welcomes-prs",
+   "outsideHelpNote": null,
+   "contributing": "https://github.com/element-hq/element-web/blob/HEAD/CONTRIBUTING.md",
+   "goodFirstIssues": "https://github.com/element-hq/element-web/issues?q=is%3Aissue%20is%3Aopen%20label%3A%22good%20first%20issue%22"
+  },
+  "encore": {
+   "label": null,
+   "description": null,
+   "quote": null,
+   "source": null,
+   "outsideHelp": "welcomes-prs",
+   "outsideHelpNote": null,
+   "contributing": "https://github.com/encoredev/encore/blob/HEAD/CONTRIBUTING.md",
+   "goodFirstIssues": "https://github.com/encoredev/encore/issues?q=is%3Aissue%20is%3Aopen%20label%3A%22good%20first%20issue%22"
+  },
+  "ente-auth": {
+   "label": "non-developers-welcome",
+   "description": "AI-generated code is fine; what they value is the testing you do. Talk to them before any change to how the app looks or works.",
+   "quote": "On agents: LLM-generated code is not a problem in itself, but writing code is not the bottleneck; verifying it is. What makes your contribution valuable is the testing and judgement that you add.",
+   "source": "https://github.com/ente/ente/blob/HEAD/CONTRIBUTING.md",
+   "outsideHelp": "welcomes-prs",
+   "outsideHelpNote": null,
+   "contributing": "https://github.com/ente/ente/blob/HEAD/CONTRIBUTING.md",
+   "goodFirstIssues": "https://github.com/ente/ente/issues?q=is%3Aissue%20is%3Aopen%20label%3A%22good%20first%20issue%22"
+  },
+  "ente-photos": {
+   "label": "non-developers-welcome",
+   "description": "AI-generated code is fine; what they value is the testing you do. Talk to them before any change to how the app looks or works.",
+   "quote": "On agents: LLM-generated code is not a problem in itself, but writing code is not the bottleneck; verifying it is. What makes your contribution valuable is the testing and judgement that you add.",
+   "source": "https://github.com/ente/ente/blob/HEAD/CONTRIBUTING.md",
+   "outsideHelp": "welcomes-prs",
+   "outsideHelpNote": null,
+   "contributing": "https://github.com/ente/ente/blob/HEAD/CONTRIBUTING.md",
+   "goodFirstIssues": "https://github.com/ente/ente/issues?q=is%3Aissue%20is%3Aopen%20label%3A%22good%20first%20issue%22"
+  },
+  "erpnext": {
+   "label": null,
+   "description": null,
+   "quote": null,
+   "source": null,
+   "outsideHelp": "welcomes-prs",
+   "outsideHelpNote": null,
+   "contributing": "https://github.com/frappe/erpnext/blob/HEAD/.github/CONTRIBUTING.md",
+   "goodFirstIssues": "https://github.com/frappe/erpnext/issues?q=is%3Aissue%20is%3Aopen%20label%3A%22good%20first%20issue%22"
+  },
+  "espocrm": {
+   "label": null,
+   "description": null,
+   "quote": null,
+   "source": null,
+   "outsideHelp": "welcomes-prs",
+   "outsideHelpNote": null,
+   "contributing": "https://github.com/espocrm/espocrm/blob/HEAD/.github/CONTRIBUTING.md",
+   "goodFirstIssues": null
+  },
+  "etherpad": {
+   "label": "non-developers-welcome",
+   "description": "AI and agent contributions are fine if they follow the normal rules. If you change anything people see, you must click through it yourself in a browser first.",
+   "quote": "**We have decided that LLM/Agent/AI contributions are fine as long as they are within the instructions set out by this document.**",
+   "source": "https://github.com/ether/etherpad/blob/HEAD/CONTRIBUTING.md",
+   "outsideHelp": "welcomes-prs",
+   "outsideHelpNote": null,
+   "contributing": "https://github.com/ether/etherpad/blob/HEAD/CONTRIBUTING.md",
+   "goodFirstIssues": null
+  },
+  "evidence": {
+   "label": null,
+   "description": null,
+   "quote": null,
+   "source": null,
+   "outsideHelp": "welcomes-prs",
+   "outsideHelpNote": null,
+   "contributing": "https://github.com/evidence-dev/evidence/blob/HEAD/CONTRIBUTING.md",
+   "goodFirstIssues": null
+  },
+  "f-droid": {
+   "label": "not-accepted",
+   "description": "For now, the app's guide asks you not to use AI for contributions at all, especially for merge-request text, while an official policy is written.",
+   "quote": "Until this is ready, please do not use AI/LLM for your contribution.",
+   "source": "https://gitlab.com/fdroid/fdroidclient/-/blob/master/CONTRIBUTING.md",
+   "outsideHelp": "issue-first",
+   "outsideHelpNote": null,
+   "contributing": "https://gitlab.com/fdroid/fdroidclient/-/blob/master/CONTRIBUTING.md",
+   "goodFirstIssues": null
+  },
+  "fedora": {
+   "label": "traditional-developers-only",
+   "description": "AI help is allowed if you take full responsibility; you must disclose when a significant part comes straight from a tool, ideally with an \"Assisted-by:\" line.",
+   "quote": "You MAY use AI assistance for contributing to Fedora, as long as you follow the principles described below.",
+   "source": "https://docs.fedoraproject.org/en-US/council/policy/ai-contribution-policy/",
+   "outsideHelp": "welcomes-prs",
+   "outsideHelpNote": null,
+   "contributing": "https://docs.fedoraproject.org/en-US/package-maintainers/",
+   "goodFirstIssues": null
+  },
+  "filestash": {
+   "label": null,
+   "description": null,
+   "quote": null,
+   "source": null,
+   "outsideHelp": "issue-first",
+   "outsideHelpNote": null,
+   "contributing": "https://github.com/mickael-kerjean/filestash/blob/HEAD/CONTRIBUTING.md",
+   "goodFirstIssues": null
+  },
+  "firecamp": {
+   "label": null,
+   "description": null,
+   "quote": null,
+   "source": null,
+   "outsideHelp": "welcomes-prs",
+   "outsideHelpNote": null,
+   "contributing": "https://github.com/firecamp-dev/firecamp/blob/HEAD/CONTRIBUTING.md",
+   "goodFirstIssues": "https://github.com/firecamp-dev/firecamp/issues?q=is%3Aissue%20is%3Aopen%20label%3A%22good%20first%20issue%22"
+  },
+  "firefly-iii": {
+   "label": "not-accepted",
+   "description": "No AI contributions: you must write your own code, and no AI-written text in issues or pull requests (grammar or translation help is fine).",
+   "quote": "Contributing to Firefly III requires human judgment, contextual understanding, and familiarity with Firefly III's structure and goals. It is not suitable for automatic processing by AI tools.",
+   "source": "https://docs.firefly-iii.org/explanation/contributing/",
+   "outsideHelp": "issue-first",
+   "outsideHelpNote": null,
+   "contributing": "https://github.com/firefly-iii/firefly-iii/blob/HEAD/.github/contributing.md",
+   "goodFirstIssues": null
+  },
+  "firefox": {
+   "label": "traditional-developers-only",
+   "description": "AI is allowed, but you must understand and be able to explain every change and keep patches small. Using AI to knock out many beginner bugs is discouraged.",
+   "quote": "AI-assisted contributions must meet the same standards of correctness, security, and maintainability as any other patch.",
+   "source": "https://firefox-source-docs.mozilla.org/contributing/ai-coding.html",
+   "outsideHelp": "welcomes-prs",
+   "outsideHelpNote": null,
+   "contributing": "https://firefox-source-docs.mozilla.org/contributing/index.html",
+   "goodFirstIssues": null
+  },
+  "flagsmith": {
+   "label": null,
+   "description": null,
+   "quote": null,
+   "source": null,
+   "outsideHelp": "welcomes-prs",
+   "outsideHelpNote": null,
+   "contributing": "https://github.com/Flagsmith/flagsmith/blob/HEAD/CONTRIBUTING.md",
+   "goodFirstIssues": "https://github.com/Flagsmith/flagsmith/issues?q=is%3Aissue%20is%3Aopen%20label%3A%22good%20first%20issue%22"
+  },
+  "floorp": {
+   "label": null,
+   "description": null,
+   "quote": null,
+   "source": null,
+   "outsideHelp": "welcomes-prs",
+   "outsideHelpNote": null,
+   "contributing": "https://github.com/Floorp-Projects/Floorp/blob/HEAD/.github/CONTRIBUTING.md",
+   "goodFirstIssues": null
+  },
+  "florisboard": {
+   "label": "not-accepted",
+   "description": "Code must be written by you: no AI-generated code at all, and no autonomous agents. AI may only be used like a search engine for research.",
+   "quote": "5. All code submitted must have been written by yourself. At no point in time should code have been generated by AI, either via direct prompts or agentic edits.",
+   "source": "https://github.com/florisboard/florisboard/blob/HEAD/AI_POLICY.md",
+   "outsideHelp": "welcomes-prs",
+   "outsideHelpNote": null,
+   "contributing": "https://github.com/florisboard/florisboard/blob/HEAD/CONTRIBUTING.md",
+   "goodFirstIssues": null
+  },
+  "fonoster": {
+   "label": null,
+   "description": null,
+   "quote": null,
+   "source": null,
+   "outsideHelp": "welcomes-prs",
+   "outsideHelpNote": null,
+   "contributing": "https://github.com/fonoster/fonoster/blob/HEAD/CONTRIBUTING.md",
+   "goodFirstIssues": null
+  },
+  "forgejo": {
+   "label": "not-accepted",
+   "description": "No code or documentation partly or fully written by AI, no AI-written messages, and no AI reviews.",
+   "quote": "Forgejo does not accept any works (code, documentation, ...) that are partially or fully authored by coding agents or similar software based on large language models (LLM), diffusion models, or similar technology (often called \"AI\").",
+   "source": "https://codeberg.org/forgejo/forgejo/src/branch/forgejo/CONTRIBUTING.md",
+   "outsideHelp": "welcomes-prs",
+   "outsideHelpNote": null,
+   "contributing": "https://forgejo.org/docs/next/contributor/",
+   "goodFirstIssues": null
+  },
+  "formbricks": {
+   "label": "non-developers-welcome",
+   "description": "The pull-request form is written for AI agents and asks which AI model was used, so agent-written pull requests are expected. Never paste agent chat links.",
+   "quote": "> **AI model used** — `<model>`, reasoning effort `<level>`.",
+   "source": "https://github.com/formbricks/formbricks/blob/HEAD/.github/pull_request_template.md",
+   "outsideHelp": "welcomes-prs",
+   "outsideHelpNote": null,
+   "contributing": "https://github.com/formbricks/formbricks/blob/HEAD/CONTRIBUTING.md",
+   "goodFirstIssues": null
+  },
+  "fossify-calendar": {
+   "label": null,
+   "description": null,
+   "quote": null,
+   "source": null,
+   "outsideHelp": "welcomes-prs",
+   "outsideHelpNote": null,
+   "contributing": "https://github.com/FossifyOrg/Calendar/blob/HEAD/CONTRIBUTING.md",
+   "goodFirstIssues": null
+  },
+  "fossify-gallery": {
+   "label": null,
+   "description": null,
+   "quote": null,
+   "source": null,
+   "outsideHelp": "welcomes-prs",
+   "outsideHelpNote": null,
+   "contributing": "https://github.com/FossifyOrg/Gallery/blob/HEAD/CONTRIBUTING.md",
+   "goodFirstIssues": null
+  },
+  "freecad": {
+   "label": "traditional-developers-only",
+   "description": "AI may help, but you must fully understand, review and test what you submit, disclose it, and write all descriptions and replies yourself. New contributors are discouraged from using AI to write code, and their pull requests get extra scrutiny.",
+   "quote": "In particular, we will not accept pull requests with clearly AI-generated code, commit messages, PR descriptions, and responses to reviewer feedback.",
+   "source": "https://github.com/FreeCAD/FreeCAD/blob/HEAD/AI_POLICY.md",
+   "outsideHelp": "welcomes-prs",
+   "outsideHelpNote": null,
+   "contributing": "https://github.com/FreeCAD/FreeCAD/blob/HEAD/CONTRIBUTING.md",
+   "goodFirstIssues": "https://github.com/FreeCAD/FreeCAD/issues?q=is%3Aissue%20is%3Aopen%20label%3A%22Good%20first%20issue%22"
+  },
+  "freetube": {
+   "label": "not-accepted",
+   "description": "Pull requests written mainly by AI are closed, and repeat offenders are banned.",
+   "quote": "Do not open pull requests that are primarily written by AI. It's a waste of our team's time. Repeat offenders will be banned.",
+   "source": "https://github.com/FreeTubeApp/FreeTube/blob/HEAD/CONTRIBUTING.md",
+   "outsideHelp": "welcomes-prs",
+   "outsideHelpNote": null,
+   "contributing": "https://github.com/FreeTubeApp/FreeTube/blob/HEAD/CONTRIBUTING.md",
+   "goodFirstIssues": "https://github.com/FreeTubeApp/FreeTube/issues?q=is%3Aissue%20is%3Aopen%20label%3A%22good%20first%20issue%22"
+  },
+  "friendica": {
+   "label": null,
+   "description": null,
+   "quote": null,
+   "source": null,
+   "outsideHelp": "welcomes-prs",
+   "outsideHelpNote": null,
+   "contributing": "https://github.com/friendica/friendica/blob/HEAD/CONTRIBUTING.md",
+   "goodFirstIssues": null
+  },
+  "gemini-cli": {
+   "label": null,
+   "description": null,
+   "quote": null,
+   "source": null,
+   "outsideHelp": "issue-first",
+   "outsideHelpNote": null,
+   "contributing": "https://github.com/google-gemini/gemini-cli/blob/HEAD/CONTRIBUTING.md",
+   "goodFirstIssues": "https://github.com/google-gemini/gemini-cli/issues?q=is%3Aissue%20is%3Aopen%20label%3A%22good%20first%20issue%22"
+  },
+  "ghost": {
+   "label": null,
+   "description": null,
+   "quote": null,
+   "source": null,
+   "outsideHelp": "welcomes-prs",
+   "outsideHelpNote": null,
+   "contributing": "https://github.com/TryGhost/Ghost/blob/HEAD/.github/CONTRIBUTING.md",
+   "goodFirstIssues": "https://github.com/TryGhost/Ghost/issues?q=is%3Aissue%20is%3Aopen%20label%3A%22good%20first%20issue%22"
+  },
+  "ghostfolio": {
+   "label": null,
+   "description": null,
+   "quote": null,
+   "source": null,
+   "outsideHelp": "welcomes-prs",
+   "outsideHelpNote": null,
+   "contributing": "https://github.com/ghostfolio/ghostfolio/blob/HEAD/DEVELOPMENT.md",
+   "goodFirstIssues": "https://github.com/ghostfolio/ghostfolio/issues?q=is%3Aissue%20is%3Aopen%20label%3A%22good%20first%20issue%22"
+  },
+  "gimp": {
+   "label": "not-accepted",
+   "description": "No AI-generated content of any kind (code, text or images) in any GIMP repository; merge requests must tick a \"no AI content\" box.",
+   "quote": "WARNING: no genAI-generated contents is allowed in any repository managed by the GIMP project (neither code nor text, images…). GIMP is a project for humans by humans.",
+   "source": "https://gitlab.gnome.org/GNOME/gimp/-/blob/master/README",
+   "outsideHelp": "welcomes-prs",
+   "outsideHelpNote": null,
+   "contributing": "https://developer.gimp.org/core/submit-patch/",
+   "goodFirstIssues": null
+  },
+  "gitea": {
+   "label": "traditional-developers-only",
+   "description": "AI help is welcome if you disclose it, test the change yourself, and understand it well enough to explain and revise it. Do not use AI to answer reviewers' questions.",
+   "quote": "3. Only use AI to assist in contributions that you understand well enough to explain, defend, and revise yourself during review.",
+   "source": "https://github.com/go-gitea/gitea/blob/HEAD/CONTRIBUTING.md",
+   "outsideHelp": "welcomes-prs",
+   "outsideHelpNote": null,
+   "contributing": "https://github.com/go-gitea/gitea/blob/HEAD/CONTRIBUTING.md",
+   "goodFirstIssues": null
+  },
+  "gitlab-community-edition": {
+   "label": "non-developers-welcome",
+   "description": "AI-generated code and docs are welcome if you check the output and the tool's terms, and disclose that the contribution contains AI-generated content.",
+   "quote": "You can make AI-generated contributions to GitLab, including documentation and code, provided you follow these guidelines.",
+   "source": "https://about.gitlab.com/community/contribute/dco-cla/",
+   "outsideHelp": "welcomes-prs",
+   "outsideHelpNote": null,
+   "contributing": "https://docs.gitlab.com/development/contributing/",
+   "goodFirstIssues": null
+  },
+  "gnumeric": {
+   "label": null,
+   "description": null,
+   "quote": null,
+   "source": null,
+   "outsideHelp": "welcomes-prs",
+   "outsideHelpNote": null,
+   "contributing": "https://gitlab.gnome.org/GNOME/gnumeric",
+   "goodFirstIssues": null
+  },
+  "goatcounter": {
+   "label": "not-accepted",
+   "description": "No AI-generated code, pull requests, issues, commit messages or comments.",
+   "quote": "This project does not accept AI-generated contributions.",
+   "source": "https://github.com/arp242/goatcounter/blob/HEAD/CONTRIBUTING.md",
+   "outsideHelp": "welcomes-prs",
+   "outsideHelpNote": null,
+   "contributing": "https://github.com/arp242/goatcounter/blob/HEAD/CONTRIBUTING.md",
+   "goodFirstIssues": null
+  },
+  "gogs": {
+   "label": null,
+   "description": null,
+   "quote": null,
+   "source": null,
+   "outsideHelp": "welcomes-prs",
+   "outsideHelpNote": null,
+   "contributing": "https://github.com/gogs/gogs/blob/HEAD/.github/CONTRIBUTING.md",
+   "goodFirstIssues": "https://github.com/gogs/gogs/issues?q=is%3Aissue%20is%3Aopen%20label%3A%22%F0%9F%91%8B%20good%20first%20issue%22"
+  },
+  "goose": {
+   "label": "non-developers-welcome",
+   "description": "Use AI any way you like, no disclosure needed; just review the result yourself before asking for review. Obvious unreviewed \"vibe coded\" pull requests are closed.",
+   "quote": "Our general thinking is, use AI any way you want, but until the robot revolution comes, you are responsible for the final code.",
+   "source": "https://github.com/aaif-goose/goose/blob/HEAD/CONTRIBUTING.md",
+   "outsideHelp": "welcomes-prs",
+   "outsideHelpNote": null,
+   "contributing": "https://github.com/aaif-goose/goose/blob/HEAD/CONTRIBUTING.md",
+   "goodFirstIssues": null
+  },
+  "grafana": {
+   "label": "traditional-developers-only",
+   "description": "AI is welcome for planning, drafting and tests, but you must read, understand and be able to explain everything you submit. Keep no more than 3 pull requests open at once.",
+   "quote": "- ❌ Submit code that you have not read, do not understand, or cannot explain.",
+   "source": "https://github.com/grafana/grafana/blob/HEAD/AI_POLICY.md",
+   "outsideHelp": "welcomes-prs",
+   "outsideHelpNote": null,
+   "contributing": "https://github.com/grafana/grafana/blob/HEAD/CONTRIBUTING.md",
+   "goodFirstIssues": "https://github.com/grafana/grafana/issues?q=is%3Aissue%20is%3Aopen%20label%3A%22good%20first%20issue%22"
+  },
+  "graphite": {
+   "label": "not-accepted",
+   "description": "Agent-written and vibe-coded pull requests are banned; only autocomplete and short snippets (under 40 lines) that you review line by line are allowed, with disclosure.",
+   "quote": "AI slop, \"vibe-coded\", or agent-written PRs are strictly forbidden and may be treated as malicious spam attacks against the project, resulting in a ban.",
+   "source": "https://graphite.art/volunteer/guide/starting-a-task/ai-contribution-policy",
+   "outsideHelp": "welcomes-prs",
+   "outsideHelpNote": null,
+   "contributing": "https://graphite.art/volunteer/guide/",
+   "goodFirstIssues": "https://github.com/GraphiteEditor/Graphite/issues?q=is%3Aissue%20is%3Aopen%20label%3A%22Good%20First%20Issue%22"
+  },
+  "gravitl": {
+   "label": null,
+   "description": null,
+   "quote": null,
+   "source": null,
+   "outsideHelp": "welcomes-prs",
+   "outsideHelpNote": null,
+   "contributing": "https://github.com/gravitl/netmaker/blob/HEAD/CONTRIBUTING.md",
+   "goodFirstIssues": null
+  },
+  "grist": {
+   "label": null,
+   "description": null,
+   "quote": null,
+   "source": null,
+   "outsideHelp": "welcomes-prs",
+   "outsideHelpNote": null,
+   "contributing": "https://github.com/gristlabs/grist-core/blob/HEAD/CONTRIBUTING.md",
+   "goodFirstIssues": "https://github.com/gristlabs/grist-core/issues?q=is%3Aissue%20is%3Aopen%20label%3A%22good%20first%20issue%22"
+  },
+  "growthbook": {
+   "label": null,
+   "description": null,
+   "quote": null,
+   "source": null,
+   "outsideHelp": "welcomes-prs",
+   "outsideHelpNote": null,
+   "contributing": "https://github.com/growthbook/growthbook/blob/HEAD/CONTRIBUTING.md",
+   "goodFirstIssues": "https://github.com/growthbook/growthbook/issues?q=is%3Aissue%20is%3Aopen%20label%3A%22good%20first%20issue%22"
+  },
+  "hanko": {
+   "label": null,
+   "description": null,
+   "quote": null,
+   "source": null,
+   "outsideHelp": "welcomes-prs",
+   "outsideHelpNote": null,
+   "contributing": "https://github.com/teamhanko/hanko/blob/HEAD/CONTRIBUTING.md",
+   "goodFirstIssues": null
+  },
+  "harper": {
+   "label": "non-developers-welcome",
+   "description": "The pull-request form asks how much AI was used, with options up to \"an agent did it on its own\", and gives no rule against any of them.",
+   "quote": "- [ ] I am an agent or I got an agent to do the work autonomously.",
+   "source": "https://github.com/automattic/harper/blob/HEAD/.github/pull_request_template.md",
+   "outsideHelp": "welcomes-prs",
+   "outsideHelpNote": null,
+   "contributing": "https://github.com/automattic/harper/blob/HEAD/CONTRIBUTING.md",
+   "goodFirstIssues": "https://github.com/automattic/harper/issues?q=is%3Aissue%20is%3Aopen%20label%3A%22good%20first%20issue%22"
+  },
+  "hedgedoc": {
+   "label": null,
+   "description": null,
+   "quote": null,
+   "source": null,
+   "outsideHelp": "welcomes-prs",
+   "outsideHelpNote": null,
+   "contributing": "https://github.com/hedgedoc/hedgedoc/blob/HEAD/CONTRIBUTING.md",
+   "goodFirstIssues": "https://github.com/hedgedoc/hedgedoc/issues?q=is%3Aissue%20is%3Aopen%20label%3A%22good%20first%20issue%22"
+  },
+  "heliboard": {
+   "label": "traditional-developers-only",
+   "description": "The project asks you not to use AI; AI-generated pull requests and issues are banned. Light AI help is tolerated if disclosed and you understand and can explain the code.",
+   "quote": "3. Understand your contributions. AI assistance is acceptable and must be disclosed, but you still should be able to understand and explain the code yourself.",
+   "source": "https://github.com/HeliBorg/HeliBoard/blob/HEAD/AI_USAGE.md",
+   "outsideHelp": "welcomes-prs",
+   "outsideHelpNote": null,
+   "contributing": "https://github.com/HeliBorg/HeliBoard/blob/HEAD/CONTRIBUTING.md",
+   "goodFirstIssues": null
+  },
+  "hermes-agent": {
+   "label": null,
+   "description": null,
+   "quote": null,
+   "source": null,
+   "outsideHelp": "welcomes-prs",
+   "outsideHelpNote": null,
+   "contributing": "https://github.com/NousResearch/hermes-agent/blob/HEAD/CONTRIBUTING.md",
+   "goodFirstIssues": null
+  },
+  "heroic-games-launcher": {
+   "label": "non-developers-welcome",
+   "description": "AI use is allowed but must be disclosed, including when the change was entirely generated by AI.",
+   "quote": "If you used AI in the process of creating this pull request, you **have to** disclose the extent of its use",
+   "source": "https://github.com/Heroic-Games-Launcher/HeroicGamesLauncher/blob/HEAD/.github/pull_request_template.md",
+   "outsideHelp": "welcomes-prs",
+   "outsideHelpNote": null,
+   "contributing": "https://github.com/Heroic-Games-Launcher/HeroicGamesLauncher/blob/HEAD/CONTRIBUTING.md",
+   "goodFirstIssues": "https://github.com/Heroic-Games-Launcher/HeroicGamesLauncher/issues?q=is%3Aissue%20is%3Aopen%20label%3A%22good%20first%20issue%22"
+  },
+  "highlight": {
+   "label": null,
+   "description": null,
+   "quote": null,
+   "source": null,
+   "outsideHelp": "welcomes-prs",
+   "outsideHelpNote": null,
+   "contributing": "https://github.com/highlight/highlight/blob/HEAD/CONTRIBUTING.md",
+   "goodFirstIssues": "https://github.com/highlight/highlight/issues?q=is%3Aissue%20is%3Aopen%20label%3A%22good%20first%20issue%22"
+  },
+  "home-assistant": {
+   "label": "traditional-developers-only",
+   "description": "AI tools are welcome as an aid, but you must fully understand and explain every change, and write the pull-request description yourself. Autonomous agents may not contribute.",
+   "quote": "In short: AI tools are welcome as an aid, but you must fully understand and be able to explain every change you submit. Contributions made by autonomous agents are not accepted.",
+   "source": "https://github.com/home-assistant/core/blob/HEAD/CONTRIBUTING.md",
+   "outsideHelp": "welcomes-prs",
+   "outsideHelpNote": null,
+   "contributing": "https://github.com/home-assistant/core/blob/HEAD/CONTRIBUTING.md",
+   "goodFirstIssues": "https://github.com/home-assistant/core/issues?q=is%3Aissue%20is%3Aopen%20label%3A%22good%20first%20issue%22"
+  },
+  "hoppscotch": {
+   "label": null,
+   "description": null,
+   "quote": null,
+   "source": null,
+   "outsideHelp": "welcomes-prs",
+   "outsideHelpNote": null,
+   "contributing": "https://github.com/hoppscotch/hoppscotch/blob/HEAD/CONTRIBUTING.md",
+   "goodFirstIssues": "https://github.com/hoppscotch/hoppscotch/issues?q=is%3Aissue%20is%3Aopen%20label%3A%22good%20first%20issue%22"
+  },
+  "huginn": {
+   "label": null,
+   "description": null,
+   "quote": null,
+   "source": null,
+   "outsideHelp": "welcomes-prs",
+   "outsideHelpNote": null,
+   "contributing": "https://github.com/huginn/huginn/blob/HEAD/CONTRIBUTING.md",
+   "goodFirstIssues": null
+  },
+  "hyperdx": {
+   "label": null,
+   "description": null,
+   "quote": null,
+   "source": null,
+   "outsideHelp": "welcomes-prs",
+   "outsideHelpNote": null,
+   "contributing": "https://github.com/hyperdxio/hyperdx/blob/HEAD/CONTRIBUTING.md",
+   "goodFirstIssues": "https://github.com/hyperdxio/hyperdx/issues?q=is%3Aissue%20is%3Aopen%20label%3A%22good%20first%20issue%22"
+  },
+  "idurar-erp-crm": {
+   "label": null,
+   "description": null,
+   "quote": null,
+   "source": null,
+   "outsideHelp": "welcomes-prs",
+   "outsideHelpNote": null,
+   "contributing": "https://github.com/idurar/idurar-erp-crm/blob/HEAD/CONTRIBUTING.md",
+   "goodFirstIssues": "https://github.com/idurar/idurar-erp-crm/issues?q=is%3Aissue%20is%3Aopen%20label%3A%22good%20first%20issue%22"
+  },
+  "illa": {
+   "label": null,
+   "description": null,
+   "quote": null,
+   "source": null,
+   "outsideHelp": "welcomes-prs",
+   "outsideHelpNote": null,
+   "contributing": "https://github.com/illacloud/illa-builder/blob/HEAD/CONTRIBUTING.md",
+   "goodFirstIssues": null
+  },
+  "immich": {
+   "label": "not-accepted",
+   "description": "Do not open pull requests written by AI, and descriptions and comments must be your own words. Using AI on \"good first issue\" tasks is forbidden and those pull requests are closed automatically.",
+   "quote": "We ask you not to open PRs generated with an LLM.",
+   "source": "https://github.com/immich-app/immich/blob/HEAD/CONTRIBUTING.md",
+   "outsideHelp": "welcomes-prs",
+   "outsideHelpNote": null,
+   "contributing": "https://github.com/immich-app/immich/blob/HEAD/CONTRIBUTING.md",
+   "goodFirstIssues": "https://github.com/immich-app/immich/issues?q=is%3Aissue%20is%3Aopen%20label%3A%22good%20first%20issue%22"
+  },
+  "indico": {
+   "label": null,
+   "description": null,
+   "quote": null,
+   "source": null,
+   "outsideHelp": "issue-first",
+   "outsideHelpNote": null,
+   "contributing": "https://github.com/indico/indico/blob/HEAD/CONTRIBUTING.md",
+   "goodFirstIssues": "https://github.com/indico/indico/issues?q=is%3Aissue%20is%3Aopen%20label%3A%22good-first-issue%22"
+  },
+  "influxdb": {
+   "label": null,
+   "description": null,
+   "quote": null,
+   "source": null,
+   "outsideHelp": "welcomes-prs",
+   "outsideHelpNote": null,
+   "contributing": "https://github.com/influxdata/influxdb/blob/HEAD/CONTRIBUTING.md",
+   "goodFirstIssues": "https://github.com/influxdata/influxdb/issues?q=is%3Aissue%20is%3Aopen%20label%3A%22good-first-issue%22"
+  },
+  "inkscape": {
+   "label": null,
+   "description": null,
+   "quote": null,
+   "source": null,
+   "outsideHelp": "welcomes-prs",
+   "outsideHelpNote": null,
+   "contributing": "https://inkscape.org/contribute/",
+   "goodFirstIssues": null
+  },
+  "insomnia": {
+   "label": null,
+   "description": null,
+   "quote": null,
+   "source": null,
+   "outsideHelp": "welcomes-prs",
+   "outsideHelpNote": null,
+   "contributing": "https://github.com/Kong/insomnia/blob/HEAD/CONTRIBUTING.md",
+   "goodFirstIssues": "https://github.com/Kong/insomnia/issues?q=is%3Aissue%20is%3Aopen%20label%3A%22E-good-first-issue%22"
+  },
+  "jabref": {
+   "label": "traditional-developers-only",
+   "description": "Fully AI-generated contributions are not accepted; AI may assist if you understand and own the code, disclose every tool, and never let AI speak for you.",
+   "quote": "This project does *not* accept fully AI-generated contributions. AI tools may be used assistively only. As a contributor, you should be able to understand and take responsibility for changes you make to the codebase.",
+   "source": "https://github.com/JabRef/jabref/blob/HEAD/CONTRIBUTING.md",
+   "outsideHelp": "welcomes-prs",
+   "outsideHelpNote": null,
+   "contributing": "https://github.com/JabRef/jabref/blob/HEAD/CONTRIBUTING.md",
+   "goodFirstIssues": "https://github.com/JabRef/jabref/issues?q=is%3Aissue%20is%3Aopen%20label%3A%22good%20first%20issue%22"
+  },
+  "jan": {
+   "label": null,
+   "description": null,
+   "quote": null,
+   "source": null,
+   "outsideHelp": "welcomes-prs",
+   "outsideHelpNote": null,
+   "contributing": "https://github.com/janhq/jan/blob/HEAD/CONTRIBUTING.md",
+   "goodFirstIssues": null
+  },
+  "jenkins": {
+   "label": null,
+   "description": null,
+   "quote": null,
+   "source": null,
+   "outsideHelp": "welcomes-prs",
+   "outsideHelpNote": null,
+   "contributing": "https://github.com/jenkinsci/jenkins/blob/HEAD/CONTRIBUTING.md",
+   "goodFirstIssues": "https://github.com/jenkinsci/jenkins/issues?q=is%3Aissue%20is%3Aopen%20label%3A%22good%20first%20issue%22"
+  },
+  "jitsi-meet": {
+   "label": null,
+   "description": null,
+   "quote": null,
+   "source": null,
+   "outsideHelp": "welcomes-prs",
+   "outsideHelpNote": null,
+   "contributing": "https://github.com/jitsi/jitsi-meet/blob/HEAD/CONTRIBUTING.md",
+   "goodFirstIssues": null
+  },
+  "jitsu": {
+   "label": null,
+   "description": null,
+   "quote": null,
+   "source": null,
+   "outsideHelp": "welcomes-prs",
+   "outsideHelpNote": null,
+   "contributing": "https://github.com/jitsucom/jitsu/blob/HEAD/CONTRIBUTING.md",
+   "goodFirstIssues": "https://github.com/jitsucom/jitsu/issues?q=is%3Aissue%20is%3Aopen%20label%3A%22%F0%9F%A7%91%E2%80%8D%F0%9F%8E%93%20Good%20first%20issue%22"
+  },
+  "joplin": {
+   "label": null,
+   "description": null,
+   "quote": null,
+   "source": null,
+   "outsideHelp": "issue-first",
+   "outsideHelpNote": null,
+   "contributing": "https://github.com/laurent22/joplin/blob/HEAD/CONTRIBUTING",
+   "goodFirstIssues": null
+  },
+  "kanboard": {
+   "label": null,
+   "description": null,
+   "quote": null,
+   "source": null,
+   "outsideHelp": "welcomes-prs",
+   "outsideHelpNote": null,
+   "contributing": "https://github.com/kanboard/kanboard/blob/HEAD/CONTRIBUTING.md",
+   "goodFirstIssues": null
+  },
+  "kdenlive": {
+   "label": null,
+   "description": null,
+   "quote": null,
+   "source": null,
+   "outsideHelp": "welcomes-prs",
+   "outsideHelpNote": null,
+   "contributing": "https://invent.kde.org/multimedia/kdenlive",
+   "goodFirstIssues": null
+  },
+  "keepassdx": {
+   "label": "see-policy",
+   "description": "AI-assisted code is allowed only from AI models trained on properly licensed data (ideally fully open-source models), and brute-force generation loops and bloated code are not wanted. Every change gets a slow, careful human review.",
+   "quote": "Any code generation tool (LLMs or other assistants) allowed must use models trained on data with proper usage rights, preferably with a fully open-source value chain.",
+   "source": "https://github.com/Kunzisoft/KeePassDX/blob/HEAD/CONTRIBUTING.md",
+   "outsideHelp": "welcomes-prs",
+   "outsideHelpNote": null,
+   "contributing": "https://github.com/Kunzisoft/KeePassDX/blob/HEAD/CONTRIBUTING.md",
+   "goodFirstIssues": null
+  },
+  "keepassxc": {
+   "label": "non-developers-welcome",
+   "description": "Vibe-coded and agent-written pull requests are accepted if you say so and name the tool; every submission gets the same careful review.",
+   "quote": "If you use Generative AI to write the vast majority of your submission (e.g., agent-based or vibe coding) then you **must document your use of AI** in your pull request.",
+   "source": "https://github.com/keepassxreboot/keepassxc/blob/HEAD/.github/CONTRIBUTING.md",
+   "outsideHelp": "welcomes-prs",
+   "outsideHelpNote": null,
+   "contributing": "https://github.com/keepassxreboot/keepassxc/blob/HEAD/.github/CONTRIBUTING.md",
+   "goodFirstIssues": "https://github.com/keepassxreboot/keepassxc/issues?q=is%3Aissue%20is%3Aopen%20label%3A%22good%20first%20issue%22"
+  },
+  "keila": {
+   "label": null,
+   "description": null,
+   "quote": null,
+   "source": null,
+   "outsideHelp": "welcomes-prs",
+   "outsideHelpNote": null,
+   "contributing": "https://github.com/pentacent/keila/blob/HEAD/CONTRIBUTING.md",
+   "goodFirstIssues": "https://github.com/pentacent/keila/issues?q=is%3Aissue%20is%3Aopen%20label%3A%22good%20first%20issue%22"
+  },
+  "kestra": {
+   "label": null,
+   "description": null,
+   "quote": null,
+   "source": null,
+   "outsideHelp": "issue-first",
+   "outsideHelpNote": null,
+   "contributing": "https://github.com/kestra-io/kestra/blob/HEAD/.github/CONTRIBUTING.md",
+   "goodFirstIssues": "https://github.com/kestra-io/kestra/issues?q=is%3Aissue%20is%3Aopen%20label%3A%22good%20first%20issue%22"
+  },
+  "keycloak": {
+   "label": "traditional-developers-only",
+   "description": "AI may help if you fully understand every change, can revise it yourself when reviewers ask, and disclose agent use.",
+   "quote": "Generative AI tools may be used to assist in writing code, tests, or documentation, provided that you fully understand every change you submit.",
+   "source": "https://github.com/keycloak/keycloak/blob/HEAD/CONTRIBUTING.md",
+   "outsideHelp": "welcomes-prs",
+   "outsideHelpNote": null,
+   "contributing": "https://github.com/keycloak/keycloak/blob/HEAD/CONTRIBUTING.md",
+   "goodFirstIssues": "https://github.com/keycloak/keycloak/issues?q=is%3Aissue%20is%3Aopen%20label%3A%22good%20first%20issue%22"
+  },
+  "kilo-code": {
+   "label": "traditional-developers-only",
+   "description": "AI and agents are allowed, but you must personally understand, test and be able to explain the change.",
+   "quote": "Before requesting review, make sure you personally understand the change, have tested it appropriately, can explain the diff, and understand how it interacts with the affected packages and the rest of the repo.",
+   "source": "https://github.com/Kilo-Org/kilocode/blob/HEAD/CONTRIBUTING.md",
+   "outsideHelp": "welcomes-prs",
+   "outsideHelpNote": null,
+   "contributing": "https://github.com/Kilo-Org/kilocode/blob/HEAD/CONTRIBUTING.md",
+   "goodFirstIssues": null
+  },
+  "kimai": {
+   "label": null,
+   "description": null,
+   "quote": null,
+   "source": null,
+   "outsideHelp": "welcomes-prs",
+   "outsideHelpNote": null,
+   "contributing": "https://github.com/kimai/kimai/blob/HEAD/CONTRIBUTING.md",
+   "goodFirstIssues": "https://github.com/kimai/kimai/issues?q=is%3Aissue%20is%3Aopen%20label%3A%22good%20first%20issue%22"
+  },
+  "krita": {
+   "label": "not-accepted",
+   "description": "Krita declared a moratorium: no AI tools when working on Krita until the team decides (it said \"until October 2026\"; no follow-up decision found).",
+   "quote": "Until we make a decision, the use of AI when working on Krita is not allowed.",
+   "source": "https://invent.kde.org/graphics/krita#ai-moratorium",
+   "outsideHelp": "welcomes-prs",
+   "outsideHelpNote": null,
+   "contributing": "https://docs.krita.org/en/untranslatable_pages/developers.html",
+   "goodFirstIssues": null
+  },
+  "lago": {
+   "label": null,
+   "description": null,
+   "quote": null,
+   "source": null,
+   "outsideHelp": "welcomes-prs",
+   "outsideHelpNote": null,
+   "contributing": "https://github.com/getlago/lago/blob/HEAD/CONTRIBUTING.md",
+   "goodFirstIssues": null
+  },
+  "leantime": {
+   "label": null,
+   "description": null,
+   "quote": null,
+   "source": null,
+   "outsideHelp": "welcomes-prs",
+   "outsideHelpNote": null,
+   "contributing": "https://github.com/Leantime/leantime/blob/HEAD/CONTRIBUTING.md",
+   "goodFirstIssues": "https://github.com/Leantime/leantime/issues?q=is%3Aissue%20is%3Aopen%20label%3A%22good-first-issue%22"
+  },
+  "leon": {
+   "label": null,
+   "description": null,
+   "quote": null,
+   "source": null,
+   "outsideHelp": "welcomes-prs",
+   "outsideHelpNote": null,
+   "contributing": "https://github.com/leon-ai/leon/blob/HEAD/.github/CONTRIBUTING.md",
+   "goodFirstIssues": "https://github.com/leon-ai/leon/issues?q=is%3Aissue%20is%3Aopen%20label%3A%22good%20first%20issue%22"
+  },
+  "librechat": {
+   "label": "non-developers-welcome",
+   "description": "AI coding agents are welcome; the only ask is that the work is tied to an issue that someone claimed in the open first.",
+   "quote": "AI coding agents are welcome here. A good part of this project is written with them, and we do not judge a pull request by whether a model helped write it.",
+   "source": "https://github.com/LibreChat-AI/LibreChat/blob/HEAD/.github/CONTRIBUTING.md",
+   "outsideHelp": "issue-first",
+   "outsideHelpNote": null,
+   "contributing": "https://github.com/LibreChat-AI/LibreChat/blob/HEAD/.github/CONTRIBUTING.md",
+   "goodFirstIssues": "https://github.com/LibreChat-AI/LibreChat/issues?q=is%3Aissue%20is%3Aopen%20label%3A%22%F0%9F%8C%B1%20good%20first%20issue%22"
+  },
+  "libresign": {
+   "label": "non-developers-welcome",
+   "description": "AI may be used for any part of a contribution; the usual quality and review bar applies and you tick a box if AI generated part of it.",
+   "quote": "AI-assisted contributions are welcome. You may use AI for any part of the contribution process, but you remain responsible for everything you submit.",
+   "source": "https://github.com/LibreSign/libresign/blob/HEAD/CONTRIBUTING.md",
+   "outsideHelp": "issue-first",
+   "outsideHelpNote": null,
+   "contributing": "https://github.com/LibreSign/libresign/blob/HEAD/CONTRIBUTING.md",
+   "goodFirstIssues": "https://github.com/LibreSign/libresign/issues?q=is%3Aissue%20is%3Aopen%20label%3A%22good%20first%20issue%22"
+  },
+  "librespeed": {
+   "label": null,
+   "description": null,
+   "quote": null,
+   "source": null,
+   "outsideHelp": "welcomes-prs",
+   "outsideHelpNote": null,
+   "contributing": "https://github.com/librespeed/speedtest/blob/HEAD/DEVELOPMENT.md",
+   "goodFirstIssues": null
+  },
+  "libretranslate": {
+   "label": null,
+   "description": null,
+   "quote": null,
+   "source": null,
+   "outsideHelp": "welcomes-prs",
+   "outsideHelpNote": null,
+   "contributing": "https://github.com/LibreTranslate/LibreTranslate/blob/HEAD/CONTRIBUTING.md",
+   "goodFirstIssues": "https://github.com/LibreTranslate/LibreTranslate/issues?q=is%3Aissue%20is%3Aopen%20label%3A%22good%20first%20issue%22"
+  },
+  "lightdash": {
+   "label": null,
+   "description": null,
+   "quote": null,
+   "source": null,
+   "outsideHelp": "issue-first",
+   "outsideHelpNote": "No unsolicited code: agree the scope with a maintainer on an issue first.",
+   "contributing": "https://github.com/lightdash/lightdash/blob/HEAD/.github/CONTRIBUTING.md",
+   "goodFirstIssues": null
+  },
+  "limesurvey": {
+   "label": null,
+   "description": null,
+   "quote": null,
+   "source": null,
+   "outsideHelp": "welcomes-prs",
+   "outsideHelpNote": null,
+   "contributing": "https://github.com/LimeSurvey/LimeSurvey/blob/HEAD/CONTRIBUTING.md",
+   "goodFirstIssues": null
+  },
+  "linkwarden": {
+   "label": "non-developers-welcome",
+   "description": "AI-assisted work is allowed; say how you used AI so reviewers can judge it.",
+   "quote": "We allow AI-assisted development, but reviewers need transparency to assess risk, maintainability, and correctness.",
+   "source": "https://github.com/linkwarden/linkwarden/blob/HEAD/.github/pull_request_template.md",
+   "outsideHelp": null,
+   "outsideHelpNote": null,
+   "contributing": null,
+   "goodFirstIssues": null
+  },
+  "listmonk": {
+   "label": null,
+   "description": null,
+   "quote": null,
+   "source": null,
+   "outsideHelp": "welcomes-prs",
+   "outsideHelpNote": null,
+   "contributing": "https://github.com/knadh/listmonk/blob/HEAD/CONTRIBUTING.md",
+   "goodFirstIssues": null
+  },
+  "localsend": {
+   "label": "traditional-developers-only",
+   "description": "AI-generated contributions are not accepted unless they are bug fixes, very small, or you can prove your expertise.",
+   "quote": "LocalSend disallows AI generated contributions unless:",
+   "source": "https://github.com/localsend/localsend/blob/main/CONTRIBUTING.md",
+   "outsideHelp": "welcomes-prs",
+   "outsideHelpNote": null,
+   "contributing": "https://github.com/localsend/localsend/blob/HEAD/CONTRIBUTING.md",
+   "goodFirstIssues": null
+  },
+  "logseq": {
+   "label": null,
+   "description": null,
+   "quote": null,
+   "source": null,
+   "outsideHelp": "welcomes-prs",
+   "outsideHelpNote": null,
+   "contributing": "https://github.com/logseq/logseq/blob/HEAD/CONTRIBUTING.md",
+   "goodFirstIssues": "https://github.com/logseq/logseq/issues?q=is%3Aissue%20is%3Aopen%20label%3A%22good%20first%20issue%22"
+  },
+  "logto": {
+   "label": null,
+   "description": null,
+   "quote": null,
+   "source": null,
+   "outsideHelp": "welcomes-prs",
+   "outsideHelpNote": null,
+   "contributing": "https://github.com/logto-io/logto/blob/HEAD/.github/CONTRIBUTING.md",
+   "goodFirstIssues": null
+  },
+  "losslesscut": {
+   "label": null,
+   "description": null,
+   "quote": null,
+   "source": null,
+   "outsideHelp": "welcomes-prs",
+   "outsideHelpNote": null,
+   "contributing": "https://github.com/mifi/lossless-cut/blob/HEAD/CONTRIBUTING.md",
+   "goodFirstIssues": null
+  },
+  "lutris": {
+   "label": "non-developers-welcome",
+   "description": "Use AI freely; every contribution gets the same scrutiny and must be useful, understandable and tested. No disclosure rule.",
+   "quote": "All contributions regardless of how they were generated are subject to the same level of scrutiny and are expected to be useful, understandable and validated.",
+   "source": "https://github.com/lutris/lutris/blob/master/CONTRIBUTING.md",
+   "outsideHelp": "welcomes-prs",
+   "outsideHelpNote": null,
+   "contributing": "https://github.com/lutris/lutris/blob/HEAD/CONTRIBUTING.md",
+   "goodFirstIssues": null
+  },
+  "mailspring": {
+   "label": null,
+   "description": null,
+   "quote": null,
+   "source": null,
+   "outsideHelp": "welcomes-prs",
+   "outsideHelpNote": null,
+   "contributing": "https://github.com/Foundry376/Mailspring/blob/HEAD/CONTRIBUTING.md",
+   "goodFirstIssues": null
+  },
+  "manticore-search": {
+   "label": null,
+   "description": null,
+   "quote": null,
+   "source": null,
+   "outsideHelp": "welcomes-prs",
+   "outsideHelpNote": null,
+   "contributing": "https://github.com/manticoresoftware/manticoresearch/blob/HEAD/CONTRIBUTING.md",
+   "goodFirstIssues": null
+  },
+  "mariadb": {
+   "label": null,
+   "description": null,
+   "quote": null,
+   "source": null,
+   "outsideHelp": "welcomes-prs",
+   "outsideHelpNote": null,
+   "contributing": "https://github.com/MariaDB/server/blob/HEAD/CONTRIBUTING.md",
+   "goodFirstIssues": null
+  },
+  "mastodon": {
+   "label": "traditional-developers-only",
+   "description": "AI help is discouraged but allowed if you disclose it and understand your change; if a maintainer thinks you do not, the pull request is closed. Agents may not open pull requests and comments must be human.",
+   "quote": "We generally *do not encourage* AI-assisted contributions; we have adopted this policy to reinforce the importance of genuine human interaction in everything we work on.",
+   "source": "https://github.com/mastodon/.github/blob/HEAD/AI_POLICY.md",
+   "outsideHelp": "welcomes-prs",
+   "outsideHelpNote": null,
+   "contributing": "https://github.com/mastodon/mastodon/blob/HEAD/CONTRIBUTING.md",
+   "goodFirstIssues": null
+  },
+  "mattermost": {
+   "label": null,
+   "description": null,
+   "quote": null,
+   "source": null,
+   "outsideHelp": "welcomes-prs",
+   "outsideHelpNote": null,
+   "contributing": "https://github.com/mattermost/mattermost/blob/HEAD/CONTRIBUTING.md",
+   "goodFirstIssues": "https://github.com/mattermost/mattermost/issues?q=is%3Aissue%20is%3Aopen%20label%3A%22Good%20First%20Issue%22"
+  },
+  "mbin": {
+   "label": null,
+   "description": null,
+   "quote": null,
+   "source": null,
+   "outsideHelp": "welcomes-prs",
+   "outsideHelpNote": null,
+   "contributing": "https://github.com/MbinOrg/mbin/blob/HEAD/CONTRIBUTING.md",
+   "goodFirstIssues": "https://github.com/MbinOrg/mbin/issues?q=is%3Aissue%20is%3Aopen%20label%3A%22good%20first%20issue%22"
+  },
+  "medusa": {
+   "label": "traditional-developers-only",
+   "description": "AI may help write code if you understand and can explain every change; descriptions and replies must be your own words. AI-sounding issues and descriptions are closed after 8 hours unless rewritten.",
+   "quote": "You may use AI tools to help write code, but you must understand and be able to explain every change. AI-authored pull requests are not accepted: the PR description and your replies to reviewers must be in your own words.",
+   "source": "https://github.com/medusajs/medusa/blob/HEAD/CONTRIBUTING.md",
+   "outsideHelp": "issue-first",
+   "outsideHelpNote": null,
+   "contributing": "https://github.com/medusajs/medusa/blob/HEAD/CONTRIBUTING.md",
+   "goodFirstIssues": "https://github.com/medusajs/medusa/issues?q=is%3Aissue%20is%3Aopen%20label%3A%22good%20first%20issue%22"
+  },
+  "mellisearch": {
+   "label": "not-accepted",
+   "description": "No AI-generated content at all from outside contributors: code, tests, docs, descriptions or comments. Pull requests must carry a signed \"no AI\" statement to be reviewed.",
+   "quote": "We will not consider any content generated by generative AI tooling (GitHub Copilot, ChatGPT, Claude Code, Cursor, etc.) in external contributions, including: code, tests, documentation, PR descriptions, PR comments, issue descriptions, and issue comments.",
+   "source": "https://github.com/meilisearch/meilisearch/blob/HEAD/CONTRIBUTING.md",
+   "outsideHelp": "welcomes-prs",
+   "outsideHelpNote": null,
+   "contributing": "https://github.com/meilisearch/meilisearch/blob/HEAD/CONTRIBUTING.md",
+   "goodFirstIssues": "https://github.com/meilisearch/meilisearch/issues?q=is%3Aissue%20is%3Aopen%20label%3A%22good%20first%20issue%22"
+  },
+  "meshcentral": {
+   "label": "traditional-developers-only",
+   "description": "AI use is allowed if you review it and can explain every line; you must test the change yourself.",
+   "quote": "I understand that I am responsible for and able to explain every line of code I submit.",
+   "source": "https://github.com/Ylianst/MeshCentral/blob/HEAD/.github/PULL_REQUEST_TEMPLATE.md",
+   "outsideHelp": null,
+   "outsideHelpNote": null,
+   "contributing": null,
+   "goodFirstIssues": null
+  },
+  "metabase": {
+   "label": null,
+   "description": null,
+   "quote": null,
+   "source": null,
+   "outsideHelp": "welcomes-prs",
+   "outsideHelpNote": null,
+   "contributing": "https://github.com/metabase/metabase/blob/HEAD/docs/CONTRIBUTING.md",
+   "goodFirstIssues": "https://github.com/metabase/metabase/issues?q=is%3Aissue%20is%3Aopen%20label%3A%22good%20first%20issue%22"
+  },
+  "miniflux": {
+   "label": null,
+   "description": null,
+   "quote": null,
+   "source": null,
+   "outsideHelp": "welcomes-prs",
+   "outsideHelpNote": null,
+   "contributing": "https://github.com/miniflux/v2/blob/HEAD/CONTRIBUTING.md",
+   "goodFirstIssues": null
+  },
+  "misskey": {
+   "label": null,
+   "description": null,
+   "quote": null,
+   "source": null,
+   "outsideHelp": "welcomes-prs",
+   "outsideHelpNote": null,
+   "contributing": "https://github.com/misskey-dev/misskey/blob/HEAD/CONTRIBUTING.md",
+   "goodFirstIssues": "https://github.com/misskey-dev/misskey/issues?q=is%3Aissue%20is%3Aopen%20label%3A%221%EF%B8%8F%E2%83%A3%20Good%20First%20Issue%22"
+  },
+  "mullvad-vpn": {
+   "label": "traditional-developers-only",
+   "description": "A human must be behind every submission and understand everything in it.",
+   "quote": "Regardless of whether AI was used to author the code, we require that a human understands everything being submitted and is available for feedback and questions.",
+   "source": "https://github.com/mullvad/mullvadvpn-app/blob/HEAD/CONTRIBUTING.md",
+   "outsideHelp": "welcomes-prs",
+   "outsideHelpNote": null,
+   "contributing": "https://github.com/mullvad/mullvadvpn-app/blob/HEAD/CONTRIBUTING.md",
+   "goodFirstIssues": null
+  },
+  "natron": {
+   "label": null,
+   "description": null,
+   "quote": null,
+   "source": null,
+   "outsideHelp": "welcomes-prs",
+   "outsideHelpNote": null,
+   "contributing": "https://github.com/NatronGitHub/Natron/blob/HEAD/CONTRIBUTING.md",
+   "goodFirstIssues": null
+  },
+  "navidrome": {
+   "label": null,
+   "description": null,
+   "quote": null,
+   "source": null,
+   "outsideHelp": "issue-first",
+   "outsideHelpNote": null,
+   "contributing": "https://github.com/navidrome/navidrome/blob/HEAD/CONTRIBUTING.md",
+   "goodFirstIssues": null
+  },
+  "neo4j": {
+   "label": null,
+   "description": null,
+   "quote": null,
+   "source": null,
+   "outsideHelp": "welcomes-prs",
+   "outsideHelpNote": null,
+   "contributing": "https://github.com/neo4j/neo4j/blob/HEAD/CONTRIBUTING.md",
+   "goodFirstIssues": null
+  },
+  "netbird": {
+   "label": "traditional-developers-only",
+   "description": "No rule for or against AI, but pull requests are closed if you cannot answer questions about your own change. Open a ticket and get agreement before any pull request.",
+   "quote": "Tooling is fine; unreviewed output is not, you are responsible for the code you sign your name to",
+   "source": "https://github.com/netbirdio/netbird/blob/HEAD/CONTRIBUTING.md",
+   "outsideHelp": "issue-first",
+   "outsideHelpNote": null,
+   "contributing": "https://github.com/netbirdio/netbird/blob/HEAD/CONTRIBUTING.md",
+   "goodFirstIssues": null
+  },
+  "netdata": {
+   "label": null,
+   "description": null,
+   "quote": null,
+   "source": null,
+   "outsideHelp": "welcomes-prs",
+   "outsideHelpNote": null,
+   "contributing": "https://github.com/netdata/.github/blob/HEAD/CONTRIBUTING.md",
+   "goodFirstIssues": null
+  },
+  "netnewswire": {
+   "label": "traditional-developers-only",
+   "description": "AI-assisted code is accepted if you say so and review it as if you wrote every line. Documentation changes are not accepted at all, and pull requests that add AI features are closed.",
+   "quote": "The author must review the code thoroughly before creating a PR, just as if they had written every line — because the author is responsible for every line.",
+   "source": "https://github.com/Ranchero-Software/NetNewsWire/blob/HEAD/CONTRIBUTING.md",
+   "outsideHelp": "welcomes-prs",
+   "outsideHelpNote": null,
+   "contributing": "https://github.com/Ranchero-Software/NetNewsWire/blob/HEAD/CONTRIBUTING.md",
+   "goodFirstIssues": null
+  },
+  "newpipe": {
+   "label": "traditional-developers-only",
+   "description": "AI-written features and large changes are generally banned unless you know the project structure and fully understand and review the code. AI may help find bugs and write docs; PR and issue forms must be filled in by you.",
+   "quote": "Using generative AI to develop new features or making larger code changes is generally prohibited.",
+   "source": "https://github.com/TeamNewPipe/NewPipe/blob/HEAD/.github/CONTRIBUTING.md",
+   "outsideHelp": "welcomes-prs",
+   "outsideHelpNote": null,
+   "contributing": "https://github.com/TeamNewPipe/NewPipe/blob/HEAD/.github/CONTRIBUTING.md",
+   "goodFirstIssues": "https://github.com/TeamNewPipe/NewPipe/issues?q=is%3Aissue%20is%3Aopen%20label%3A%22good%20first%20issue%22"
+  },
+  "newsboat": {
+   "label": null,
+   "description": null,
+   "quote": null,
+   "source": null,
+   "outsideHelp": "welcomes-prs",
+   "outsideHelpNote": null,
+   "contributing": "https://github.com/newsboat/newsboat/blob/HEAD/CONTRIBUTING.md",
+   "goodFirstIssues": "https://github.com/newsboat/newsboat/issues?q=is%3Aissue%20is%3Aopen%20label%3A%22good%20first%20issue%22"
+  },
+  "nextcloud": {
+   "label": "traditional-developers-only",
+   "description": "AI help is allowed with disclosure, but you must be able to explain and change every line and test new features yourself. No autonomous agents, and no AI on \"good first issue\" tasks.",
+   "quote": "* **Accountability:** You must be able to explain, defend, and modify every line you submit.",
+   "source": "https://github.com/nextcloud/server/blob/HEAD/.github/CONTRIBUTING.md",
+   "outsideHelp": "welcomes-prs",
+   "outsideHelpNote": null,
+   "contributing": "https://github.com/nextcloud/server/blob/HEAD/.github/CONTRIBUTING.md",
+   "goodFirstIssues": "https://github.com/nextcloud/server/issues?q=is%3Aissue%20is%3Aopen%20label%3A%22good%20first%20issue%22"
+  },
+  "nextcloud-calendar": {
+   "label": "traditional-developers-only",
+   "description": "Follows Nextcloud's AI policy: AI help is allowed with disclosure, but you must be able to explain and change every line. No autonomous agents, and no AI on beginner tasks.",
+   "quote": "This policy applies to all contributions to repositories and apps under the Nextcloud GitHub organization, by all contributors.",
+   "source": "https://github.com/nextcloud/.github/blob/HEAD/AI_POLICY.md",
+   "outsideHelp": "welcomes-prs",
+   "outsideHelpNote": null,
+   "contributing": "https://github.com/nextcloud/.github/blob/HEAD/CONTRIBUTING.md",
+   "goodFirstIssues": "https://github.com/nextcloud/calendar/issues?q=is%3Aissue%20is%3Aopen%20label%3A%22good%20first%20issue%22"
+  },
+  "nextcloud-polls": {
+   "label": null,
+   "description": null,
+   "quote": null,
+   "source": null,
+   "outsideHelp": "welcomes-prs",
+   "outsideHelpNote": null,
+   "contributing": "https://github.com/nextcloud/.github/blob/HEAD/CONTRIBUTING.md",
+   "goodFirstIssues": null
+  },
+  "nhost": {
+   "label": "non-developers-welcome",
+   "description": "AI-assisted pull requests are allowed, but write the description yourself and remove leftover AI comments. AI-generated issues are closed immediately.",
+   "quote": "Contributions with the help of AI are permitted, but you are ultimately responsible for the quality of your submission and for ensuring it follows our contributing guidelines.",
+   "source": "https://github.com/nhost/nhost/blob/HEAD/CONTRIBUTING.md",
+   "outsideHelp": "welcomes-prs",
+   "outsideHelpNote": null,
+   "contributing": "https://github.com/nhost/nhost/blob/HEAD/CONTRIBUTING.md",
+   "goodFirstIssues": "https://github.com/nhost/nhost/issues?q=is%3Aissue%20is%3Aopen%20label%3A%22good%20first%20issue%22"
+  },
+  "node-red": {
+   "label": null,
+   "description": null,
+   "quote": null,
+   "source": null,
+   "outsideHelp": "welcomes-prs",
+   "outsideHelpNote": null,
+   "contributing": "https://github.com/node-red/node-red/blob/HEAD/CONTRIBUTING.md",
+   "goodFirstIssues": "https://github.com/node-red/node-red/issues?q=is%3Aissue%20is%3Aopen%20label%3A%22good%20first%20issue%22"
+  },
+  "notesnook": {
+   "label": null,
+   "description": null,
+   "quote": null,
+   "source": null,
+   "outsideHelp": "welcomes-prs",
+   "outsideHelpNote": null,
+   "contributing": "https://github.com/streetwriters/notesnook/blob/HEAD/CONTRIBUTING.md",
+   "goodFirstIssues": "https://github.com/streetwriters/notesnook/issues?q=is%3Aissue%20is%3Aopen%20label%3A%22good%20first%20issue%22"
+  },
+  "ntfy": {
+   "label": "traditional-developers-only",
+   "description": "AI-assisted pull requests are welcome (the maintainer uses AI too), but review, understand and test the code yourself first; \"don't make me the first human to read your code\".",
+   "quote": "Before you submit a pull request, review the code, make sure you understand it, and test it yourself.",
+   "source": "https://github.com/binwiederhier/ntfy/blob/HEAD/docs/ai-policy.md",
+   "outsideHelp": "welcomes-prs",
+   "outsideHelpNote": null,
+   "contributing": "https://github.com/binwiederhier/ntfy/blob/HEAD/docs/contributing.md",
+   "goodFirstIssues": null
+  },
+  "nuclei": {
+   "label": null,
+   "description": null,
+   "quote": null,
+   "source": null,
+   "outsideHelp": "welcomes-prs",
+   "outsideHelpNote": null,
+   "contributing": "https://github.com/projectdiscovery/nuclei/blob/HEAD/CONTRIBUTING.md",
+   "goodFirstIssues": null
+  },
+  "obs-studio": {
+   "label": "not-accepted",
+   "description": "Everything submitted, including code, must be human-written; AI help is strongly discouraged and any AI use must be disclosed. Low-effort AI submissions can get you banned.",
+   "quote": "* All text and content submitted to our project, which includes code, descriptions, issues, and comments, must be **human written**.",
+   "source": "https://github.com/obsproject/obs-studio/blob/HEAD/CONTRIBUTING.md",
+   "outsideHelp": "welcomes-prs",
+   "outsideHelpNote": null,
+   "contributing": "https://github.com/obsproject/obs-studio/blob/HEAD/CONTRIBUTING.md",
+   "goodFirstIssues": "https://github.com/obsproject/obs-studio/issues?q=is%3Aissue%20is%3Aopen%20label%3A%22Good%20first%20issue%22"
+  },
+  "obtainium": {
+   "label": "traditional-developers-only",
+   "description": "AI is fine only if you can audit and understand the generated code, and it is tested.",
+   "quote": "AI use is acceptable, only if you are able to audit the code. This means that you must understand the code that is generated.",
+   "source": "https://github.com/ImranR98/Obtainium/blob/HEAD/docs/CONTRIBUTING.md",
+   "outsideHelp": "welcomes-prs",
+   "outsideHelpNote": null,
+   "contributing": "https://github.com/ImranR98/Obtainium/blob/HEAD/docs/CONTRIBUTING.md",
+   "goodFirstIssues": "https://github.com/ImranR98/Obtainium/issues?q=is%3Aissue%20is%3Aopen%20label%3A%22good%20first%20issue%22"
+  },
+  "odoo": {
+   "label": null,
+   "description": null,
+   "quote": null,
+   "source": null,
+   "outsideHelp": "welcomes-prs",
+   "outsideHelpNote": null,
+   "contributing": "https://github.com/odoo/odoo/blob/HEAD/CONTRIBUTING.md",
+   "goodFirstIssues": null
+  },
+  "offpdf": {
+   "label": null,
+   "description": null,
+   "quote": null,
+   "source": null,
+   "outsideHelp": "welcomes-prs",
+   "outsideHelpNote": null,
+   "contributing": "https://github.com/McanKul/offpdf/blob/HEAD/CONTRIBUTING.md",
+   "goodFirstIssues": "https://github.com/McanKul/offpdf/issues?q=is%3Aissue%20is%3Aopen%20label%3A%22good%20first%20issue%22"
+  },
+  "okular": {
+   "label": null,
+   "description": null,
+   "quote": null,
+   "source": null,
+   "outsideHelp": "welcomes-prs",
+   "outsideHelpNote": null,
+   "contributing": "https://invent.kde.org/graphics/okular",
+   "goodFirstIssues": null
+  },
+  "ollama": {
+   "label": null,
+   "description": null,
+   "quote": null,
+   "source": null,
+   "outsideHelp": "welcomes-prs",
+   "outsideHelpNote": null,
+   "contributing": "https://github.com/ollama/ollama/blob/HEAD/CONTRIBUTING.md",
+   "goodFirstIssues": "https://github.com/ollama/ollama/issues?q=is%3Aissue%20is%3Aopen%20label%3A%22good%20first%20issue%22"
+  },
+  "open-interpreter": {
+   "label": null,
+   "description": null,
+   "quote": null,
+   "source": null,
+   "outsideHelp": "issue-first",
+   "outsideHelpNote": null,
+   "contributing": "https://github.com/openinterpreter/openinterpreter/blob/HEAD/docs/contributing.md",
+   "goodFirstIssues": null
+  },
+  "open-library": {
+   "label": "traditional-developers-only",
+   "description": "AI is encouraged for research and understanding the code, but you must truly understand suggestions and explain them in your own words. Ask to be assigned an issue before starting.",
+   "quote": "You're encouraged to use AI tools to assist with research and understanding the codebase, but please take time to truly comprehend the suggestions and present them in your own words.",
+   "source": "https://github.com/internetarchive/openlibrary/blob/HEAD/CONTRIBUTING.md",
+   "outsideHelp": "issue-first",
+   "outsideHelpNote": null,
+   "contributing": "https://github.com/internetarchive/openlibrary/blob/HEAD/CONTRIBUTING.md",
+   "goodFirstIssues": "https://github.com/internetarchive/openlibrary/issues?q=is%3Aissue%20is%3Aopen%20label%3A%22Good%20First%20Issue%22"
+  },
+  "openclaw": {
+   "label": "non-developers-welcome",
+   "description": "AI and vibe-coded pull requests are openly welcome, with no disclosure needed; they get the same review as any other.",
+   "quote": "Built with Codex, Claude, or other AI tools? **Welcome!** No AI-assistance label or disclosure is required.",
+   "source": "https://github.com/openclaw/openclaw/blob/HEAD/CONTRIBUTING.md",
+   "outsideHelp": "welcomes-prs",
+   "outsideHelpNote": null,
+   "contributing": "https://github.com/openclaw/openclaw/blob/HEAD/CONTRIBUTING.md",
+   "goodFirstIssues": "https://github.com/openclaw/openclaw/issues?q=is%3Aissue%20is%3Aopen%20label%3A%22good%20first%20issue%22"
+  },
+  "openhands": {
+   "label": "non-developers-welcome",
+   "description": "The pull-request form has a section for AI agents to fill in, with proof the code runs end to end, and a separate section for the human. Agent-made pull requests are expected.",
+   "quote": "AI/LLM agents: Do not edit the HUMAN section.",
+   "source": "https://github.com/OpenHands/OpenHands/blob/HEAD/.github/pull_request_template.md",
+   "outsideHelp": null,
+   "outsideHelpNote": null,
+   "contributing": null,
+   "goodFirstIssues": "https://github.com/OpenHands/OpenHands/issues?q=is%3Aissue%20is%3Aopen%20label%3A%22good%20first%20issue%22"
+  },
+  "openpost": {
+   "label": null,
+   "description": null,
+   "quote": null,
+   "source": null,
+   "outsideHelp": "welcomes-prs",
+   "outsideHelpNote": null,
+   "contributing": "https://github.com/getopenpost/openpost/blob/HEAD/.github/CONTRIBUTING.md",
+   "goodFirstIssues": null
+  },
+  "openproject": {
+   "label": "non-developers-welcome",
+   "description": "The pull-request form asks you to rate how much AI drove the work, including \"AI implemented most of it and I tested it\", and gives no rule against any level.",
+   "quote": "Directed – I specified the requirements and AI implemented most of it; I validated via testing rather than a full line-by-line review.",
+   "source": "https://github.com/opf/openproject/blob/HEAD/.github/pull_request_template.md",
+   "outsideHelp": "welcomes-prs",
+   "outsideHelpNote": null,
+   "contributing": "https://github.com/opf/openproject/blob/HEAD/CONTRIBUTING.md",
+   "goodFirstIssues": null
+  },
+  "openreplay": {
+   "label": null,
+   "description": null,
+   "quote": null,
+   "source": null,
+   "outsideHelp": "welcomes-prs",
+   "outsideHelpNote": null,
+   "contributing": "https://github.com/openreplay/openreplay/blob/HEAD/CONTRIBUTING.md",
+   "goodFirstIssues": "https://github.com/openreplay/openreplay/issues?q=is%3Aissue%20is%3Aopen%20label%3A%22good-first-issue%22"
+  },
+  "openshot": {
+   "label": null,
+   "description": null,
+   "quote": null,
+   "source": null,
+   "outsideHelp": "welcomes-prs",
+   "outsideHelpNote": null,
+   "contributing": "https://github.com/OpenShot/openshot-qt/blob/HEAD/CONTRIBUTING.md",
+   "goodFirstIssues": null
+  },
+  "openstatus": {
+   "label": null,
+   "description": null,
+   "quote": null,
+   "source": null,
+   "outsideHelp": "welcomes-prs",
+   "outsideHelpNote": null,
+   "contributing": "https://github.com/openstatusHQ/openstatus/blob/HEAD/CONTRIBUTING.md",
+   "goodFirstIssues": "https://github.com/openstatusHQ/openstatus/issues?q=is%3Aissue%20is%3Aopen%20label%3A%22good%20first%20issue%22"
+  },
+  "opentofu": {
+   "label": "not-accepted",
+   "description": "The pull-request checklist asks you to confirm you did not use an AI coding assistant (alongside rules about copied code and the Terraform source).",
+   "quote": "- [ ] I have not used an AI coding assistant to create this PR.",
+   "source": "https://github.com/opentofu/opentofu/blob/HEAD/.github/pull_request_template.md",
+   "outsideHelp": "welcomes-prs",
+   "outsideHelpNote": null,
+   "contributing": "https://github.com/opentofu/opentofu/blob/HEAD/CONTRIBUTING.md",
+   "goodFirstIssues": null
+  },
+  "openvidu": {
+   "label": null,
+   "description": null,
+   "quote": null,
+   "source": null,
+   "outsideHelp": "welcomes-prs",
+   "outsideHelpNote": null,
+   "contributing": "https://github.com/OpenVidu/openvidu/blob/HEAD/CONTRIBUTING.md",
+   "goodFirstIssues": null
+  },
+  "openvpn": {
+   "label": null,
+   "description": null,
+   "quote": null,
+   "source": null,
+   "outsideHelp": "welcomes-prs",
+   "outsideHelpNote": null,
+   "contributing": "https://github.com/OpenVPN/openvpn/blob/HEAD/CONTRIBUTING.rst",
+   "goodFirstIssues": null
+  },
+  "organic-maps": {
+   "label": null,
+   "description": null,
+   "quote": null,
+   "source": null,
+   "outsideHelp": "welcomes-prs",
+   "outsideHelpNote": null,
+   "contributing": "https://github.com/organicmaps/organicmaps/blob/HEAD/CONTRIBUTING.md",
+   "goodFirstIssues": "https://github.com/organicmaps/organicmaps/issues?q=is%3Aissue%20is%3Aopen%20label%3A%22Good%20first%20issue%22"
+  },
+  "ory": {
+   "label": "non-developers-welcome",
+   "description": "AI-assisted work is accepted if you disclose it and test and check it before submitting, and it must address an already-agreed issue.",
+   "quote": "Unreviewed AI-generated code will not be accepted, and repeated submissions of this nature may result in restricted contribution privileges.",
+   "source": "https://github.com/ory/kratos/blob/HEAD/CONTRIBUTING.md",
+   "outsideHelp": "issue-first",
+   "outsideHelpNote": null,
+   "contributing": "https://github.com/ory/kratos/blob/HEAD/CONTRIBUTING.md",
+   "goodFirstIssues": "https://github.com/ory/kratos/issues?q=is%3Aissue%20is%3Aopen%20label%3A%22good%20first%20issue%22"
+  },
+  "outline-vpn": {
+   "label": null,
+   "description": null,
+   "quote": null,
+   "source": null,
+   "outsideHelp": "welcomes-prs",
+   "outsideHelpNote": null,
+   "contributing": "https://github.com/Jigsaw-Code/outline-server/blob/HEAD/CONTRIBUTING.md",
+   "goodFirstIssues": "https://github.com/Jigsaw-Code/outline-server/issues?q=is%3Aissue%20is%3Aopen%20label%3A%22good%20first%20issue%22"
+  },
+  "owncast": {
+   "label": null,
+   "description": null,
+   "quote": null,
+   "source": null,
+   "outsideHelp": "welcomes-prs",
+   "outsideHelpNote": null,
+   "contributing": "https://github.com/owncast/owncast/blob/HEAD/CONTRIBUTING.md",
+   "goodFirstIssues": "https://github.com/owncast/owncast/issues?q=is%3Aissue%20is%3Aopen%20label%3A%22good%20first%20issue%22"
+  },
+  "owncloud": {
+   "label": null,
+   "description": null,
+   "quote": null,
+   "source": null,
+   "outsideHelp": "issue-first",
+   "outsideHelpNote": null,
+   "contributing": "https://github.com/owncloud/core/blob/HEAD/CONTRIBUTING.md",
+   "goodFirstIssues": null
+  },
+  "owncloud-infinite-scale": {
+   "label": null,
+   "description": null,
+   "quote": null,
+   "source": null,
+   "outsideHelp": "issue-first",
+   "outsideHelpNote": null,
+   "contributing": "https://github.com/owncloud/ocis/blob/HEAD/CONTRIBUTING.md",
+   "goodFirstIssues": "https://github.com/owncloud/ocis/issues?q=is%3Aissue%20is%3Aopen%20label%3A%22Topic%3Agood-first-issue%22"
+  },
+  "papercups": {
+   "label": null,
+   "description": null,
+   "quote": null,
+   "source": null,
+   "outsideHelp": "welcomes-prs",
+   "outsideHelpNote": null,
+   "contributing": "https://github.com/papercups-io/papercups/blob/HEAD/CONTRIBUTING.md",
+   "goodFirstIssues": "https://github.com/papercups-io/papercups/issues?q=is%3Aissue%20is%3Aopen%20label%3A%22good%20first%20issue%22"
+  },
+  "passbolt": {
+   "label": null,
+   "description": null,
+   "quote": null,
+   "source": null,
+   "outsideHelp": "welcomes-prs",
+   "outsideHelpNote": null,
+   "contributing": "https://github.com/passbolt/passbolt_api/blob/HEAD/CONTRIBUTING.md",
+   "goodFirstIssues": null
+  },
+  "payload": {
+   "label": null,
+   "description": null,
+   "quote": null,
+   "source": null,
+   "outsideHelp": "welcomes-prs",
+   "outsideHelpNote": null,
+   "contributing": "https://github.com/payloadcms/payload/blob/HEAD/CONTRIBUTING.md",
+   "goodFirstIssues": null
+  },
+  "peertube": {
+   "label": null,
+   "description": null,
+   "quote": null,
+   "source": null,
+   "outsideHelp": "issue-first",
+   "outsideHelpNote": null,
+   "contributing": "https://github.com/Chocobozzz/PeerTube/blob/HEAD/.github/CONTRIBUTING.md",
+   "goodFirstIssues": "https://github.com/Chocobozzz/PeerTube/issues?q=is%3Aissue%20is%3Aopen%20label%3A%22good%20first%20issue%22"
+  },
+  "penpot": {
+   "label": "non-developers-welcome",
+   "description": "AI tools are supported if a human carefully reviews and checks the result; unreviewed AI code is not accepted. Open an issue to discuss before building anything new.",
+   "quote": "If AI-assisted content is used, it must be carefully reviewed and verified by a human before submission.",
+   "source": "https://github.com/penpot/penpot/blob/HEAD/CONTRIBUTING.md",
+   "outsideHelp": "issue-first",
+   "outsideHelpNote": null,
+   "contributing": "https://github.com/penpot/penpot/blob/HEAD/CONTRIBUTING.md",
+   "goodFirstIssues": "https://github.com/penpot/penpot/issues?q=is%3Aissue%20is%3Aopen%20label%3A%22good%20first%20issue%22"
+  },
+  "photoprism": {
+   "label": "traditional-developers-only",
+   "description": "AI may help with research and drafts, but fully AI-generated pull requests are not accepted; you must understand, discuss and maintain your change.",
+   "quote": "However, we do not accept fully AI-generated pull requests at this time. Every contribution must be carefully reviewed, tested, and understood by a human contributor who can discuss the implementation details and maintain the change afterward.",
+   "source": "https://github.com/photoprism/photoprism/blob/HEAD/CONTRIBUTING.md",
+   "outsideHelp": "welcomes-prs",
+   "outsideHelpNote": null,
+   "contributing": "https://github.com/photoprism/photoprism/blob/HEAD/CONTRIBUTING.md",
+   "goodFirstIssues": null
+  },
+  "piefed": {
+   "label": "not-accepted",
+   "description": "No AI-generated contributions anywhere: code, docs, issues or artwork (translation of issue text into English is allowed).",
+   "quote": "This project does not allow contributions generated by large languages models (LLMs).",
+   "source": "https://codeberg.org/rimu/pyfedi/src/branch/main/docs/project_management/contributing.md",
+   "outsideHelp": "issue-first",
+   "outsideHelpNote": null,
+   "contributing": "https://codeberg.org/rimu/pyfedi/src/branch/main/docs/project_management/contributing.md",
+   "goodFirstIssues": null
+  },
+  "pingcap": {
+   "label": null,
+   "description": null,
+   "quote": null,
+   "source": null,
+   "outsideHelp": "issue-first",
+   "outsideHelpNote": null,
+   "contributing": "https://github.com/pingcap/tidb/blob/HEAD/CONTRIBUTING.md",
+   "goodFirstIssues": "https://github.com/pingcap/tidb/issues?q=is%3Aissue%20is%3Aopen%20label%3A%22first-time-contributor%22"
+  },
+  "pixelfed": {
+   "label": null,
+   "description": null,
+   "quote": null,
+   "source": null,
+   "outsideHelp": "welcomes-prs",
+   "outsideHelpNote": null,
+   "contributing": "https://github.com/pixelfed/pixelfed/blob/HEAD/CONTRIBUTING.md",
+   "goodFirstIssues": null
+  },
+  "plane": {
+   "label": null,
+   "description": null,
+   "quote": null,
+   "source": null,
+   "outsideHelp": "welcomes-prs",
+   "outsideHelpNote": null,
+   "contributing": "https://github.com/makeplane/plane/blob/HEAD/CONTRIBUTING.md",
+   "goodFirstIssues": null
+  },
+  "plasmic": {
+   "label": null,
+   "description": null,
+   "quote": null,
+   "source": null,
+   "outsideHelp": "welcomes-prs",
+   "outsideHelpNote": null,
+   "contributing": "https://github.com/plasmicapp/plasmic/blob/HEAD/CONTRIBUTING.md",
+   "goodFirstIssues": null
+  },
+  "plausible": {
+   "label": null,
+   "description": null,
+   "quote": null,
+   "source": null,
+   "outsideHelp": "issue-first",
+   "outsideHelpNote": null,
+   "contributing": "https://github.com/plausible/analytics/blob/HEAD/CONTRIBUTING.md",
+   "goodFirstIssues": null
+  },
+  "pocket-casts": {
+   "label": null,
+   "description": null,
+   "quote": null,
+   "source": null,
+   "outsideHelp": "welcomes-prs",
+   "outsideHelpNote": null,
+   "contributing": "https://github.com/Automattic/pocket-casts-android/blob/HEAD/CONTRIBUTING.md",
+   "goodFirstIssues": "https://github.com/Automattic/pocket-casts-android/issues?q=is%3Aissue%20is%3Aopen%20label%3A%22Good%20First%20Issue%22"
+  },
+  "pocketbase": {
+   "label": "not-accepted",
+   "description": "AI contributions are not welcome, and pull requests are currently closed to everyone but existing collaborators; open an issue or discussion instead.",
+   "quote": "LLM contributions are not welcome",
+   "source": "https://github.com/pocketbase/pocketbase/blob/HEAD/CONTRIBUTING.md",
+   "outsideHelp": "not-accepting",
+   "outsideHelpNote": "Pull requests are temporarily limited to existing collaborators; open an issue or discussion instead.",
+   "contributing": "https://github.com/pocketbase/pocketbase/blob/HEAD/CONTRIBUTING.md",
+   "goodFirstIssues": null
+  },
+  "postal": {
+   "label": null,
+   "description": null,
+   "quote": null,
+   "source": null,
+   "outsideHelp": "welcomes-prs",
+   "outsideHelpNote": null,
+   "contributing": "https://github.com/postalserver/postal/blob/HEAD/CONTRIBUTING.md",
+   "goodFirstIssues": null
+  },
+  "postgresql": {
+   "label": null,
+   "description": null,
+   "quote": null,
+   "source": null,
+   "outsideHelp": "issue-first",
+   "outsideHelpNote": null,
+   "contributing": "https://github.com/postgres/postgres/blob/HEAD/.github/CONTRIBUTING.md",
+   "goodFirstIssues": null
+  },
+  "posthog": {
+   "label": "traditional-developers-only",
+   "description": "AI help is welcome with disclosure, but you must understand, test and explain the code yourself. AI-generated bug reports and unsolicited AI reviews are not wanted.",
+   "quote": "Understand your code, test it, and be ready to explain why it's correct and how it interacts with the rest of the system (without re-prompting an LLM).",
+   "source": "https://github.com/PostHog/posthog/blob/HEAD/AI_POLICY.md",
+   "outsideHelp": "welcomes-prs",
+   "outsideHelpNote": null,
+   "contributing": "https://github.com/PostHog/posthog/blob/HEAD/CONTRIBUTING.md",
+   "goodFirstIssues": "https://github.com/PostHog/posthog/issues?q=is%3Aissue%20is%3Aopen%20label%3A%22good%20first%20issue%22"
+  },
+  "postiz": {
+   "label": "not-accepted",
+   "description": "Pull requests made mainly with AI tools are not accepted, and the form asks you to confirm you did not use AI to generate the code.",
+   "quote": "To ensure the quality and maintainability of the codebase, **we do not accept Pull Requests generated primarily by AI tools** (e.g., ChatGPT, GitHub Copilot, Claude Code, etc.).",
+   "source": "https://github.com/gitroomhq/postiz-app/blob/HEAD/CONTRIBUTING.md",
+   "outsideHelp": "issue-first",
+   "outsideHelpNote": null,
+   "contributing": "https://github.com/gitroomhq/postiz-app/blob/HEAD/CONTRIBUTING.md",
+   "goodFirstIssues": null
+  },
+  "postmarketos": {
+   "label": "not-accepted",
+   "description": "Contributions fully or partly made with generative AI are not allowed (the policy page now uses the project's new name, Nura).",
+   "quote": "We forbid the use of generative AI tools in Nura.",
+   "source": "https://docs.postmarketos.org/policies-and-processes/development/ai-policy.html",
+   "outsideHelp": "welcomes-prs",
+   "outsideHelpNote": null,
+   "contributing": "https://docs.postmarketos.org/",
+   "goodFirstIssues": null
+  },
+  "presta": {
+   "label": null,
+   "description": null,
+   "quote": null,
+   "source": null,
+   "outsideHelp": "welcomes-prs",
+   "outsideHelpNote": null,
+   "contributing": "https://github.com/PrestaShop/PrestaShop/blob/HEAD/CONTRIBUTING.md",
+   "goodFirstIssues": "https://github.com/PrestaShop/PrestaShop/issues?q=is%3Aissue%20is%3Aopen%20label%3A%22Good%20first%20issue%22"
+  },
+  "proton-vpn": {
+   "label": null,
+   "description": null,
+   "quote": null,
+   "source": null,
+   "outsideHelp": "welcomes-prs",
+   "outsideHelpNote": null,
+   "contributing": "https://github.com/ProtonVPN/.github/blob/HEAD/CONTRIBUTING.md",
+   "goodFirstIssues": null
+  },
+  "qdrant": {
+   "label": "traditional-developers-only",
+   "description": "AI-generated pull requests are allowed if you understand them, answer questions yourself, write the motivation yourself and say which parts were AI-made.",
+   "quote": "We expect you to understand the changes you propose and be able to answer questions about it.",
+   "source": "https://github.com/qdrant/qdrant/blob/HEAD/docs/CONTRIBUTING.md",
+   "outsideHelp": "welcomes-prs",
+   "outsideHelpNote": null,
+   "contributing": "https://github.com/qdrant/qdrant/blob/HEAD/docs/CONTRIBUTING.md",
+   "goodFirstIssues": "https://github.com/qdrant/qdrant/issues?q=is%3Aissue%20is%3Aopen%20label%3A%22good%20first%20issue%22"
+  },
+  "quackback": {
+   "label": null,
+   "description": null,
+   "quote": null,
+   "source": null,
+   "outsideHelp": "welcomes-prs",
+   "outsideHelpNote": null,
+   "contributing": "https://github.com/QuackbackIO/quackback/blob/HEAD/CONTRIBUTING.md",
+   "goodFirstIssues": null
+  },
+  "questdb": {
+   "label": null,
+   "description": null,
+   "quote": null,
+   "source": null,
+   "outsideHelp": "welcomes-prs",
+   "outsideHelpNote": null,
+   "contributing": "https://github.com/questdb/questdb/blob/HEAD/CONTRIBUTING.md",
+   "goodFirstIssues": "https://github.com/questdb/questdb/issues?q=is%3Aissue%20is%3Aopen%20label%3A%22Good%20first%20issue%22"
+  },
+  "quickwit": {
+   "label": "traditional-developers-only",
+   "description": "AI use is encouraged, but you vouch for what you submit and should understand it; answer reviewers in your own words and name the model if an agent did most of the work.",
+   "quote": "When you open a PR or issue, you're vouching for it. Ideally that means you understand what the changes do, why they're correct, and how they fit Quickwit's architecture and conventions.",
+   "source": "https://github.com/quickwit-oss/quickwit/blob/HEAD/AI_POLICY.md",
+   "outsideHelp": "welcomes-prs",
+   "outsideHelpNote": null,
+   "contributing": "https://github.com/quickwit-oss/quickwit/blob/HEAD/CONTRIBUTING.md",
+   "goodFirstIssues": "https://github.com/quickwit-oss/quickwit/issues?q=is%3Aissue%20is%3Aopen%20label%3A%22good%20first%20issue%22"
+  },
+  "rawtherapee": {
+   "label": null,
+   "description": null,
+   "quote": null,
+   "source": null,
+   "outsideHelp": "issue-first",
+   "outsideHelpNote": null,
+   "contributing": "https://github.com/RawTherapee/RawTherapee/blob/HEAD/CONTRIBUTING.md",
+   "goodFirstIssues": null
+  },
+  "redis": {
+   "label": null,
+   "description": null,
+   "quote": null,
+   "source": null,
+   "outsideHelp": "welcomes-prs",
+   "outsideHelpNote": null,
+   "contributing": "https://github.com/redis/redis/blob/HEAD/CONTRIBUTING.md",
+   "goodFirstIssues": null
+  },
+  "redmine": {
+   "label": null,
+   "description": null,
+   "quote": null,
+   "source": null,
+   "outsideHelp": "welcomes-prs",
+   "outsideHelpNote": null,
+   "contributing": "https://github.com/redmine/redmine/blob/HEAD/CONTRIBUTING.md",
+   "goodFirstIssues": null
+  },
+  "restic": {
+   "label": null,
+   "description": null,
+   "quote": null,
+   "source": null,
+   "outsideHelp": "issue-first",
+   "outsideHelpNote": null,
+   "contributing": "https://github.com/restic/restic/blob/HEAD/CONTRIBUTING.md",
+   "goodFirstIssues": "https://github.com/restic/restic/issues?q=is%3Aissue%20is%3Aopen%20label%3A%22help%3A%20good%20first%20issue%22"
+  },
+  "reveal-js": {
+   "label": null,
+   "description": null,
+   "quote": null,
+   "source": null,
+   "outsideHelp": "welcomes-prs",
+   "outsideHelpNote": null,
+   "contributing": "https://github.com/hakimel/reveal.js/blob/HEAD/.github/CONTRIBUTING.md",
+   "goodFirstIssues": null
+  },
+  "rocket-chat": {
+   "label": null,
+   "description": null,
+   "quote": null,
+   "source": null,
+   "outsideHelp": "welcomes-prs",
+   "outsideHelpNote": null,
+   "contributing": "https://github.com/RocketChat/Rocket.Chat/blob/HEAD/.github/CONTRIBUTING.md",
+   "goodFirstIssues": "https://github.com/RocketChat/Rocket.Chat/issues?q=is%3Aissue%20is%3Aopen%20label%3A%22good%20first%20issue%22"
+  },
+  "rowy": {
+   "label": null,
+   "description": null,
+   "quote": null,
+   "source": null,
+   "outsideHelp": "welcomes-prs",
+   "outsideHelpNote": null,
+   "contributing": "https://github.com/buildship-ai/rowy/blob/HEAD/CONTRIBUTING.md",
+   "goodFirstIssues": "https://github.com/buildship-ai/rowy/issues?q=is%3Aissue%20is%3Aopen%20label%3A%22good%20first%20issue%22"
+  },
+  "rustdesk": {
+   "label": null,
+   "description": null,
+   "quote": null,
+   "source": null,
+   "outsideHelp": "welcomes-prs",
+   "outsideHelpNote": null,
+   "contributing": "https://github.com/rustdesk/rustdesk/blob/HEAD/docs/CONTRIBUTING.md",
+   "goodFirstIssues": "https://github.com/rustdesk/rustdesk/issues?q=is%3Aissue%20is%3Aopen%20label%3A%22good%20first%20issue%22"
+  },
+  "saleor": {
+   "label": "traditional-developers-only",
+   "description": "AI-written code is accepted if you personally review, understand and validate it; agents may not open pull requests, and all messages to maintainers must be written by you.",
+   "quote": "AI-assisted or AI-generated code is acceptable, provided that contributors personally review, understand, and validate the resulting changes and take full responsibility for their work.",
+   "source": "https://github.com/saleor/.github/blob/HEAD/CONTRIBUTING.md",
+   "outsideHelp": "welcomes-prs",
+   "outsideHelpNote": null,
+   "contributing": "https://github.com/saleor/saleor/blob/HEAD/CONTRIBUTING.md",
+   "goodFirstIssues": "https://github.com/saleor/saleor/issues?q=is%3Aissue%20is%3Aopen%20label%3A%22good%20first%20issue%22"
+  },
+  "searxng": {
+   "label": "not-accepted",
+   "description": "AI may only assist: your own part of a change must be larger than the AI's, you must understand all code and disclose all AI use, and issues and descriptions must be fully human-written.",
+   "quote": "AI may be used as a tool to help with developing, but the human contribution to the code changes should always be reasonably larger than the part written by AI.",
+   "source": "https://github.com/searxng/searxng/blob/master/AI_POLICY.rst",
+   "outsideHelp": "welcomes-prs",
+   "outsideHelpNote": null,
+   "contributing": "https://github.com/searxng/searxng/blob/HEAD/CONTRIBUTING.rst",
+   "goodFirstIssues": "https://github.com/searxng/searxng/issues?q=is%3Aissue%20is%3Aopen%20label%3A%22good%20first%20issue%22"
+  },
+  "shotcut": {
+   "label": null,
+   "description": null,
+   "quote": null,
+   "source": null,
+   "outsideHelp": "welcomes-prs",
+   "outsideHelpNote": null,
+   "contributing": "https://github.com/mltframework/shotcut/blob/HEAD/CONTRIBUTING.md",
+   "goodFirstIssues": null
+  },
+  "signal": {
+   "label": null,
+   "description": null,
+   "quote": null,
+   "source": null,
+   "outsideHelp": "welcomes-prs",
+   "outsideHelpNote": null,
+   "contributing": "https://github.com/signalapp/Signal-Android/blob/HEAD/CONTRIBUTING.md",
+   "goodFirstIssues": null
+  },
+  "signoz": {
+   "label": null,
+   "description": null,
+   "quote": null,
+   "source": null,
+   "outsideHelp": "welcomes-prs",
+   "outsideHelpNote": null,
+   "contributing": "https://github.com/SigNoz/signoz/blob/HEAD/CONTRIBUTING.md",
+   "goodFirstIssues": "https://github.com/SigNoz/signoz/issues?q=is%3Aissue%20is%3Aopen%20label%3A%22good%20first%20issue%22"
+  },
+  "silex": {
+   "label": "non-developers-welcome",
+   "description": "AI tools are fine and need no disclosure; the rule is that you know how to use Silex and test your change by hand in a browser like a real user (an AI agent clicking does not count), with a screenshot.",
+   "quote": "You can use AI tools, and you do not need to tell me. The rules are the same for everyone, including good first issues:",
+   "source": "https://github.com/silexlabs/Silex/blob/HEAD/CONTRIBUTING.md",
+   "outsideHelp": "issue-first",
+   "outsideHelpNote": null,
+   "contributing": "https://github.com/silexlabs/Silex/blob/HEAD/CONTRIBUTING.md",
+   "goodFirstIssues": "https://github.com/silexlabs/Silex/issues?q=is%3Aissue%20is%3Aopen%20label%3A%22good%20first%20issue%22"
+  },
+  "silverbullet": {
+   "label": null,
+   "description": null,
+   "quote": null,
+   "source": null,
+   "outsideHelp": "welcomes-prs",
+   "outsideHelpNote": null,
+   "contributing": "https://github.com/silverbulletmd/silverbullet/blob/HEAD/CONTRIBUTING.md",
+   "goodFirstIssues": "https://github.com/silverbulletmd/silverbullet/issues?q=is%3Aissue%20is%3Aopen%20label%3A%22good%20first%20issue%22"
+  },
+  "simplex-chat": {
+   "label": null,
+   "description": null,
+   "quote": null,
+   "source": null,
+   "outsideHelp": "welcomes-prs",
+   "outsideHelpNote": null,
+   "contributing": "https://github.com/simplex-chat/simplex-chat/blob/HEAD/docs/CONTRIBUTING.md",
+   "goodFirstIssues": null
+  },
+  "siyuan": {
+   "label": null,
+   "description": null,
+   "quote": null,
+   "source": null,
+   "outsideHelp": "issue-first",
+   "outsideHelpNote": null,
+   "contributing": "https://github.com/siyuan-note/siyuan/blob/HEAD/.github/CONTRIBUTING.md",
+   "goodFirstIssues": null
+  },
+  "slidev": {
+   "label": null,
+   "description": null,
+   "quote": null,
+   "source": null,
+   "outsideHelp": "welcomes-prs",
+   "outsideHelpNote": null,
+   "contributing": "https://github.com/slidevjs/slidev/blob/HEAD/CONTRIBUTING.md",
+   "goodFirstIssues": null
+  },
+  "solidinvoice": {
+   "label": null,
+   "description": null,
+   "quote": null,
+   "source": null,
+   "outsideHelp": "welcomes-prs",
+   "outsideHelpNote": null,
+   "contributing": "https://github.com/SolidInvoice/SolidInvoice/blob/HEAD/CONTRIBUTING.md",
+   "goodFirstIssues": null
+  },
+  "sonic": {
+   "label": null,
+   "description": null,
+   "quote": null,
+   "source": null,
+   "outsideHelp": "welcomes-prs",
+   "outsideHelpNote": null,
+   "contributing": "https://github.com/valeriansaliou/sonic/blob/HEAD/CONTRIBUTING.md",
+   "goodFirstIssues": "https://github.com/valeriansaliou/sonic/issues?q=is%3Aissue%20is%3Aopen%20label%3A%22good%20first%20issue%22"
+  },
+  "stirling-pdf": {
+   "label": null,
+   "description": null,
+   "quote": null,
+   "source": null,
+   "outsideHelp": "issue-first",
+   "outsideHelpNote": null,
+   "contributing": "https://github.com/Stirling-Tools/Stirling-PDF/blob/HEAD/.github/CONTRIBUTING.md",
+   "goodFirstIssues": "https://github.com/Stirling-Tools/Stirling-PDF/issues?q=is%3Aissue%20is%3Aopen%20label%3A%22good%20first%20issue%22"
+  },
+  "strapi": {
+   "label": null,
+   "description": null,
+   "quote": null,
+   "source": null,
+   "outsideHelp": "welcomes-prs",
+   "outsideHelpNote": null,
+   "contributing": "https://github.com/strapi/strapi/blob/HEAD/CONTRIBUTING.md",
+   "goodFirstIssues": null
+  },
+  "suitecrm": {
+   "label": null,
+   "description": null,
+   "quote": null,
+   "source": null,
+   "outsideHelp": "welcomes-prs",
+   "outsideHelpNote": null,
+   "contributing": "https://github.com/SuiteCRM/SuiteCRM/blob/HEAD/.github/CONTRIBUTING.md",
+   "goodFirstIssues": "https://github.com/SuiteCRM/SuiteCRM/issues?q=is%3Aissue%20is%3Aopen%20label%3A%22Good%20First%20Issue%22"
+  },
+  "supabase": {
+   "label": null,
+   "description": null,
+   "quote": null,
+   "source": null,
+   "outsideHelp": "welcomes-prs",
+   "outsideHelpNote": null,
+   "contributing": "https://github.com/supabase/supabase/blob/HEAD/CONTRIBUTING.md",
+   "goodFirstIssues": "https://github.com/supabase/supabase/issues?q=is%3Aissue%20is%3Aopen%20label%3A%22good%20first%20issue%22"
+  },
+  "super-productivity": {
+   "label": null,
+   "description": null,
+   "quote": null,
+   "source": null,
+   "outsideHelp": "welcomes-prs",
+   "outsideHelpNote": null,
+   "contributing": "https://github.com/super-productivity/super-productivity/blob/HEAD/CONTRIBUTING.md",
+   "goodFirstIssues": "https://github.com/super-productivity/super-productivity/issues?q=is%3Aissue%20is%3Aopen%20label%3A%22good%20first%20issue%22"
+  },
+  "supertokens": {
+   "label": null,
+   "description": null,
+   "quote": null,
+   "source": null,
+   "outsideHelp": "welcomes-prs",
+   "outsideHelpNote": null,
+   "contributing": "https://github.com/supertokens/supertokens-core/blob/HEAD/CONTRIBUTING.md",
+   "goodFirstIssues": "https://github.com/supertokens/supertokens-core/issues?q=is%3Aissue%20is%3Aopen%20label%3A%22good%20first%20issue%22"
+  },
+  "sylius": {
+   "label": null,
+   "description": null,
+   "quote": null,
+   "source": null,
+   "outsideHelp": "welcomes-prs",
+   "outsideHelpNote": null,
+   "contributing": "https://github.com/Sylius/Sylius/blob/HEAD/.github/CONTRIBUTING.md",
+   "goodFirstIssues": "https://github.com/Sylius/Sylius/issues?q=is%3Aissue%20is%3Aopen%20label%3A%22Good%20First%20Issue%22"
+  },
+  "syncthing": {
+   "label": "not-accepted",
+   "description": "Contributions that are wholly or mostly AI-generated are not accepted, and issues and comments must not be AI-written.",
+   "quote": ":warning: We do not accept contributions that are wholly or mostly AI generated.",
+   "source": "https://github.com/syncthing/syncthing/blob/HEAD/CONTRIBUTING.md",
+   "outsideHelp": "issue-first",
+   "outsideHelpNote": "No unsolicited pull requests from new contributors; discuss first.",
+   "contributing": "https://github.com/syncthing/syncthing/blob/HEAD/CONTRIBUTING.md",
+   "goodFirstIssues": "https://github.com/syncthing/syncthing/issues?q=is%3Aissue%20is%3Aopen%20label%3A%22good%20first%20issue%22"
+  },
+  "tabby": {
+   "label": null,
+   "description": null,
+   "quote": null,
+   "source": null,
+   "outsideHelp": "welcomes-prs",
+   "outsideHelpNote": null,
+   "contributing": "https://github.com/TabbyML/tabby/blob/HEAD/CONTRIBUTING.md",
+   "goodFirstIssues": "https://github.com/TabbyML/tabby/issues?q=is%3Aissue%20is%3Aopen%20label%3A%22good%20first%20issue%22"
+  },
+  "tdengine": {
+   "label": null,
+   "description": null,
+   "quote": null,
+   "source": null,
+   "outsideHelp": "welcomes-prs",
+   "outsideHelpNote": null,
+   "contributing": "https://github.com/taosdata/.github/blob/HEAD/CONTRIBUTING.md",
+   "goodFirstIssues": null
+  },
+  "terminusdb": {
+   "label": null,
+   "description": null,
+   "quote": null,
+   "source": null,
+   "outsideHelp": "welcomes-prs",
+   "outsideHelpNote": null,
+   "contributing": "https://github.com/terminusdb/terminusdb/blob/HEAD/docs/CONTRIBUTING.md",
+   "goodFirstIssues": "https://github.com/terminusdb/terminusdb/issues?q=is%3Aissue%20is%3Aopen%20label%3A%22good%20first%20issue%22"
+  },
+  "thunderbird": {
+   "label": "non-developers-welcome",
+   "description": "The Thunderbird for Android repository accepts AI-assisted pull requests that follow its rules and are disclosed; no policy was found for desktop Thunderbird.",
+   "quote": "AI-generated or AI-assisted contributions are acceptable only if they comply with these rules and meet the same standards as human-written contributions.",
+   "source": "https://github.com/thunderbird/thunderbird-android/blob/main/AGENTS.md",
+   "outsideHelp": "welcomes-prs",
+   "outsideHelpNote": null,
+   "contributing": "https://developer.thunderbird.net/",
+   "goodFirstIssues": null
+  },
+  "tina": {
+   "label": null,
+   "description": null,
+   "quote": null,
+   "source": null,
+   "outsideHelp": "welcomes-prs",
+   "outsideHelpNote": null,
+   "contributing": "https://github.com/tinacms/tinacms/blob/HEAD/CONTRIBUTING.md",
+   "goodFirstIssues": "https://github.com/tinacms/tinacms/issues?q=is%3Aissue%20is%3Aopen%20label%3A%22good%20first%20issue%22"
+  },
+  "tinode": {
+   "label": null,
+   "description": null,
+   "quote": null,
+   "source": null,
+   "outsideHelp": "welcomes-prs",
+   "outsideHelpNote": null,
+   "contributing": "https://github.com/tinode/chat/blob/HEAD/CONTRIBUTING.md",
+   "goodFirstIssues": null
+  },
+  "tolgee": {
+   "label": null,
+   "description": null,
+   "quote": null,
+   "source": null,
+   "outsideHelp": "welcomes-prs",
+   "outsideHelpNote": null,
+   "contributing": "https://github.com/tolgee/tolgee-platform/blob/HEAD/CONTRIBUTING.md",
+   "goodFirstIssues": "https://github.com/tolgee/tolgee-platform/issues?q=is%3Aissue%20is%3Aopen%20label%3A%22good%20first%20issue%22"
+  },
+  "tooljet": {
+   "label": null,
+   "description": null,
+   "quote": null,
+   "source": null,
+   "outsideHelp": "welcomes-prs",
+   "outsideHelpNote": null,
+   "contributing": "https://github.com/ToolJet/ToolJet/blob/HEAD/CONTRIBUTING.md",
+   "goodFirstIssues": "https://github.com/ToolJet/ToolJet/issues?q=is%3Aissue%20is%3Aopen%20label%3A%22good%20first%20issue%22"
+  },
+  "trilium-notes": {
+   "label": "traditional-developers-only",
+   "description": "AI tools are allowed if you review, test and can explain the result. For big changes, agree on the design and on AI use with a maintainer first.",
+   "quote": "You are responsible for everything you submit, whether or not you used AI tools. Review and test generated changes, and be ready to explain them.",
+   "source": "https://github.com/TriliumNext/Trilium/blob/HEAD/CONTRIBUTING.md",
+   "outsideHelp": "issue-first",
+   "outsideHelpNote": null,
+   "contributing": "https://github.com/TriliumNext/Trilium/blob/HEAD/CONTRIBUTING.md",
+   "goodFirstIssues": null
+  },
+  "twenty": {
+   "label": null,
+   "description": null,
+   "quote": null,
+   "source": null,
+   "outsideHelp": "welcomes-prs",
+   "outsideHelpNote": null,
+   "contributing": "https://github.com/twentyhq/twenty/blob/HEAD/.github/CONTRIBUTING.md",
+   "goodFirstIssues": null
+  },
+  "tymeslot": {
+   "label": null,
+   "description": null,
+   "quote": null,
+   "source": null,
+   "outsideHelp": "welcomes-prs",
+   "outsideHelpNote": null,
+   "contributing": "https://github.com/Tymeslot/tymeslot/blob/HEAD/CONTRIBUTING.md",
+   "goodFirstIssues": null
+  },
+  "typesense": {
+   "label": null,
+   "description": null,
+   "quote": null,
+   "source": null,
+   "outsideHelp": "welcomes-prs",
+   "outsideHelpNote": null,
+   "contributing": "https://github.com/typesense/typesense/blob/HEAD/CONTRIBUTING.md",
+   "goodFirstIssues": null
+  },
+  "ubuntu": {
+   "label": null,
+   "description": null,
+   "quote": null,
+   "source": null,
+   "outsideHelp": "welcomes-prs",
+   "outsideHelpNote": null,
+   "contributing": "https://ubuntu.com/community/contribute",
+   "goodFirstIssues": null
+  },
+  "umami": {
+   "label": null,
+   "description": null,
+   "quote": null,
+   "source": null,
+   "outsideHelp": "welcomes-prs",
+   "outsideHelpNote": null,
+   "contributing": "https://github.com/umami-software/umami/blob/HEAD/CONTRIBUTING.md",
+   "goodFirstIssues": null
+  },
+  "ungoogled-chromium": {
+   "label": null,
+   "description": null,
+   "quote": null,
+   "source": null,
+   "outsideHelp": "welcomes-prs",
+   "outsideHelpNote": null,
+   "contributing": "https://github.com/ungoogled-software/ungoogled-chromium/blob/HEAD/docs/contributing.md",
+   "goodFirstIssues": null
+  },
+  "uvdesk": {
+   "label": null,
+   "description": null,
+   "quote": null,
+   "source": null,
+   "outsideHelp": "welcomes-prs",
+   "outsideHelpNote": null,
+   "contributing": "https://github.com/uvdesk/community-skeleton/blob/HEAD/.github/CONTRIBUTING.md",
+   "goodFirstIssues": null
+  },
+  "valkey": {
+   "label": "non-developers-welcome",
+   "description": "No limits on AI use as long as the contribution meets the normal quality bar.",
+   "quote": "The Valkey project doesn't impose any limitations on the use of AI tooling as long as the contribution meets the quality bar of the project.",
+   "source": "https://github.com/valkey-io/valkey/blob/HEAD/CONTRIBUTING.md",
+   "outsideHelp": "welcomes-prs",
+   "outsideHelpNote": null,
+   "contributing": "https://github.com/valkey-io/valkey/blob/HEAD/CONTRIBUTING.md",
+   "goodFirstIssues": null
+  },
+  "vane-formerly-perplexica": {
+   "label": null,
+   "description": null,
+   "quote": null,
+   "source": null,
+   "outsideHelp": "welcomes-prs",
+   "outsideHelpNote": null,
+   "contributing": "https://github.com/ItzCrazyKns/Vane/blob/HEAD/CONTRIBUTING.md",
+   "goodFirstIssues": null
+  },
+  "vendure": {
+   "label": null,
+   "description": null,
+   "quote": null,
+   "source": null,
+   "outsideHelp": "welcomes-prs",
+   "outsideHelpNote": null,
+   "contributing": "https://github.com/vendurehq/vendure/blob/HEAD/CONTRIBUTING.md",
+   "goodFirstIssues": "https://github.com/vendurehq/vendure/issues?q=is%3Aissue%20is%3Aopen%20label%3A%22%F0%9F%9A%80%20good%20first%20task%22"
+  },
+  "victoriametrics": {
+   "label": "traditional-developers-only",
+   "description": "Use AI for anything and no disclosure is needed, but you must understand every change you submit and write issues, descriptions and comments in your own words.",
+   "quote": "For code and documentation changes, this means understanding the code base and every change in your pull request, and cleaning up any AI slop before sending it.",
+   "source": "https://docs.victoriametrics.com/victoriametrics/contributing/",
+   "outsideHelp": "welcomes-prs",
+   "outsideHelpNote": null,
+   "contributing": "https://github.com/VictoriaMetrics/VictoriaMetrics/blob/HEAD/CONTRIBUTING.md",
+   "goodFirstIssues": "https://github.com/VictoriaMetrics/VictoriaMetrics/issues?q=is%3Aissue%20is%3Aopen%20label%3A%22good%20first%20issue%22"
+  },
+  "vikunja": {
+   "label": "traditional-developers-only",
+   "description": "AI-written code is fine if you disclose it, understand every line, and test it yourself. Features need an issue first, and do not file AI-generated bug reports.",
+   "quote": "- **You are the author.** Understand every line you submit and be ready to answer questions about it — \"that's what the AI did\" is not an answer.",
+   "source": "https://github.com/go-vikunja/vikunja/blob/HEAD/CONTRIBUTING.md",
+   "outsideHelp": "welcomes-prs",
+   "outsideHelpNote": null,
+   "contributing": "https://github.com/go-vikunja/vikunja/blob/HEAD/CONTRIBUTING.md",
+   "goodFirstIssues": null
+  },
+  "vscodium": {
+   "label": "non-developers-welcome",
+   "description": "AI help is welcome for code and issues if you disclose it, have a human check it, and keep things short.",
+   "quote": "We welcome use of AI tools to help draft discussions, issues, or code, but please follow these rules:",
+   "source": "https://github.com/VSCodium/vscodium/blob/HEAD/CONTRIBUTING.md",
+   "outsideHelp": "welcomes-prs",
+   "outsideHelpNote": null,
+   "contributing": "https://github.com/VSCodium/vscodium/blob/HEAD/CONTRIBUTING.md",
+   "goodFirstIssues": null
+  },
+  "wallabag": {
+   "label": null,
+   "description": null,
+   "quote": null,
+   "source": null,
+   "outsideHelp": "welcomes-prs",
+   "outsideHelpNote": null,
+   "contributing": "https://github.com/wallabag/wallabag/blob/HEAD/.github/CONTRIBUTING.md",
+   "goodFirstIssues": "https://github.com/wallabag/wallabag/issues?q=is%3Aissue%20is%3Aopen%20label%3A%22good%20first%20issue%22"
+  },
+  "webiny": {
+   "label": null,
+   "description": null,
+   "quote": null,
+   "source": null,
+   "outsideHelp": "welcomes-prs",
+   "outsideHelpNote": null,
+   "contributing": "https://github.com/webiny/webiny-js/blob/HEAD/docs/CONTRIBUTING.md",
+   "goodFirstIssues": null
+  },
+  "wekan": {
+   "label": null,
+   "description": null,
+   "quote": null,
+   "source": null,
+   "outsideHelp": "welcomes-prs",
+   "outsideHelpNote": null,
+   "contributing": "https://github.com/wekan/wekan/blob/HEAD/CONTRIBUTING.md",
+   "goodFirstIssues": null
+  },
+  "whisper-cpp": {
+   "label": "not-accepted",
+   "description": "Pull requests that are fully or mostly AI-generated are not accepted; AI may only help with small corrections to code you wrote, must be disclosed, and you must be able to explain every line. AI-written posts are banned.",
+   "quote": "This project does **not** accept pull requests that are fully or predominantly AI-generated. AI tools may be utilized solely in an assistive capacity.",
+   "source": "https://github.com/ggml-org/whisper.cpp/blob/HEAD/CONTRIBUTING.md",
+   "outsideHelp": "welcomes-prs",
+   "outsideHelpNote": null,
+   "contributing": "https://github.com/ggml-org/whisper.cpp/blob/HEAD/CONTRIBUTING.md",
+   "goodFirstIssues": "https://github.com/ggml-org/whisper.cpp/issues?q=is%3Aissue%20is%3Aopen%20label%3A%22good%20first%20issue%22"
+  },
+  "windmill": {
+   "label": null,
+   "description": null,
+   "quote": null,
+   "source": null,
+   "outsideHelp": "not-accepting",
+   "outsideHelpNote": "Not seeking outside contributions; only small, easy-to-check fixes of a dozen lines or so.",
+   "contributing": "https://github.com/windmill-labs/windmill/blob/HEAD/CONTRIBUTING.md",
+   "goodFirstIssues": null
+  },
+  "woocommerce": {
+   "label": "non-developers-welcome",
+   "description": "AI tools are allowed; disclose which ones and how much they wrote, and take responsibility for the result (follows WordPress's AI guidelines).",
+   "quote": "You are free to use artificial intelligence (AI) tooling to contribute, but you must disclose what tooling you are using and to what extent a pull request has been authored by AI.",
+   "source": "https://github.com/woocommerce/woocommerce/blob/HEAD/.github/PULL_REQUEST_TEMPLATE.md",
+   "outsideHelp": "welcomes-prs",
+   "outsideHelpNote": null,
+   "contributing": "https://github.com/woocommerce/woocommerce/blob/HEAD/CONTRIBUTING.md",
+   "goodFirstIssues": "https://github.com/woocommerce/woocommerce/issues?q=is%3Aissue%20is%3Aopen%20label%3A%22Good%20First%20Issue%22"
+  },
+  "wordpress": {
+   "label": "traditional-developers-only",
+   "description": "AI tools may help with code, tests, docs and issues if you understand every line, can license it under the GPL, and disclose meaningful AI use; no bulk \"AI slop\".",
+   "quote": "AI tools can assist, but they are not contributors.",
+   "source": "https://make.wordpress.org/ai/handbook/ai-guidelines/",
+   "outsideHelp": "welcomes-prs",
+   "outsideHelpNote": null,
+   "contributing": "https://make.wordpress.org/core/handbook/",
+   "goodFirstIssues": null
+  },
+  "writefreely": {
+   "label": null,
+   "description": null,
+   "quote": null,
+   "source": null,
+   "outsideHelp": "welcomes-prs",
+   "outsideHelpNote": null,
+   "contributing": "https://github.com/writefreely/writefreely/blob/HEAD/CONTRIBUTING.md",
+   "goodFirstIssues": "https://github.com/writefreely/writefreely/issues?q=is%3Aissue%20is%3Aopen%20label%3A%22good%20first%20issue%22"
+  },
+  "xournal": {
+   "label": null,
+   "description": null,
+   "quote": null,
+   "source": null,
+   "outsideHelp": "welcomes-prs",
+   "outsideHelpNote": null,
+   "contributing": "https://github.com/xournalpp/xournalpp/blob/HEAD/CONTRIBUTING.md",
+   "goodFirstIssues": "https://github.com/xournalpp/xournalpp/issues?q=is%3Aissue%20is%3Aopen%20label%3A%22good%20first%20issue%22"
+  },
+  "yacy": {
+   "label": null,
+   "description": null,
+   "quote": null,
+   "source": null,
+   "outsideHelp": "welcomes-prs",
+   "outsideHelpNote": null,
+   "contributing": "https://github.com/yacy/yacy_search_server/blob/HEAD/CONTRIBUTING.md",
+   "goodFirstIssues": "https://github.com/yacy/yacy_search_server/issues?q=is%3Aissue%20is%3Aopen%20label%3A%22good%20first%20issue%22"
+  },
+  "yanknote": {
+   "label": null,
+   "description": null,
+   "quote": null,
+   "source": null,
+   "outsideHelp": "not-accepting",
+   "outsideHelpNote": "Outside code and pull requests are not accepted directly.",
+   "contributing": "https://github.com/purocean/yn/blob/HEAD/CONTRIBUTING.md",
+   "goodFirstIssues": null
+  },
+  "youcoded": {
+   "label": null,
+   "description": null,
+   "quote": null,
+   "source": null,
+   "outsideHelp": "welcomes-prs",
+   "outsideHelpNote": null,
+   "contributing": "https://github.com/itsdestin/youcoded/blob/HEAD/CONTRIBUTING.md",
+   "goodFirstIssues": null
+  },
+  "yourls": {
+   "label": "traditional-developers-only",
+   "description": "All AI use must be disclosed and you must fully understand the code. Pull requests must come from a real problem you hit, not from an AI scanning the code for \"improvements\".",
+   "quote": "- **The human-in-the-loop must fully understand all code.** If you can't explain without AI what your changes do and how they interact with existing code, please do not contribute to this project.",
+   "source": "https://github.com/YOURLS/.github/blob/HEAD/AI_POLICY.md",
+   "outsideHelp": "welcomes-prs",
+   "outsideHelpNote": null,
+   "contributing": "https://github.com/YOURLS/.github/blob/HEAD/CONTRIBUTING.md",
+   "goodFirstIssues": null
+  },
+  "zed": {
+   "label": "traditional-developers-only",
+   "description": "AI for coding is welcome, but you must genuinely understand what it produced; replies and descriptions must be your own, and quoted AI chat must be marked.",
+   "quote": "We welcome the use of LLMs for coding, but we hold a high bar for all contributions, and **we expect a human in the loop who genuinely understands the work an LLM produces** on their behalf.",
+   "source": "https://github.com/zed-industries/zed/blob/HEAD/CONTRIBUTING.md",
+   "outsideHelp": "welcomes-prs",
+   "outsideHelpNote": null,
+   "contributing": "https://github.com/zed-industries/zed/blob/HEAD/CONTRIBUTING.md",
+   "goodFirstIssues": "https://github.com/zed-industries/zed/issues?q=is%3Aissue%20is%3Aopen%20label%3A%22.contrib/good%20first%20issue%22"
+  },
+  "zettlr": {
+   "label": "traditional-developers-only",
+   "description": "AI is allowed if you disclose it and understand everything you contribute; the pull-request description must be written by hand, and AI may never be listed as a co-author.",
+   "quote": "We do not require you to provide perfect code; but we do require you to understand everything you wish to contribute to Zettlr and its ecosystem.",
+   "source": "https://github.com/Zettlr/Zettlr/blob/HEAD/CONTRIBUTING.md",
+   "outsideHelp": "welcomes-prs",
+   "outsideHelpNote": null,
+   "contributing": "https://github.com/Zettlr/Zettlr/blob/HEAD/CONTRIBUTING.md",
+   "goodFirstIssues": "https://github.com/Zettlr/Zettlr/issues?q=is%3Aissue%20is%3Aopen%20label%3A%22good%20first%20issue%22"
+  },
+  "zinc-labs": {
+   "label": null,
+   "description": null,
+   "quote": null,
+   "source": null,
+   "outsideHelp": "welcomes-prs",
+   "outsideHelpNote": null,
+   "contributing": "https://github.com/zincsearch/zincsearch/blob/HEAD/CONTRIBUTING.md",
+   "goodFirstIssues": null
+  },
+  "zitadel": {
+   "label": null,
+   "description": null,
+   "quote": null,
+   "source": null,
+   "outsideHelp": "welcomes-prs",
+   "outsideHelpNote": null,
+   "contributing": "https://github.com/zitadel/zitadel/blob/HEAD/CONTRIBUTING.md",
+   "goodFirstIssues": "https://github.com/zitadel/zitadel/issues?q=is%3Aissue%20is%3Aopen%20label%3A%22good%20first%20issue%22"
+  },
+  "zotero": {
+   "label": null,
+   "description": null,
+   "quote": null,
+   "source": null,
+   "outsideHelp": "welcomes-prs",
+   "outsideHelpNote": null,
+   "contributing": "https://github.com/zotero/zotero/blob/HEAD/CONTRIBUTING.md",
+   "goodFirstIssues": null
+  },
+  "zulip": {
+   "label": "traditional-developers-only",
+   "description": "Any tools including AI are fine, but you must understand and test the change and explain it yourself; do not post AI-generated messages.",
+   "quote": "**Do not submit an AI-generated PR you haven't personally understood and tested**, as this wastes maintainers' time.",
+   "source": "https://github.com/zulip/zulip/blob/HEAD/CONTRIBUTING.md",
+   "outsideHelp": "welcomes-prs",
+   "outsideHelpNote": null,
+   "contributing": "https://github.com/zulip/zulip/blob/HEAD/CONTRIBUTING.md",
+   "goodFirstIssues": null
+  }
+ }
+}

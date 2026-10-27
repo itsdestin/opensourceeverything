@@ -3,6 +3,7 @@
 // alternatives from every group that replaces the app (Photoshop sits in both Photo editing and Painting).
 import { esc, url, SITE_URL, SOCIAL } from '../lib.mjs';
 import { altCard, appSlug, appUrl, sortAlts, deviceFilter, buildBox, chooseBox } from '../cards.mjs';
+import { switchGuide } from '../surfaces.mjs';
 
 export default function appPages(d) {
   // WHY keyed by address, not spelling: the imported lists spell some apps two ways ("Datadog", "DataDog");
@@ -34,6 +35,7 @@ export default function appPages(d) {
       ${all.length ? '' : `<p class="desc12" style="margin-top:4px">No open-source app replaces ${esc(name)} yet.</p>`}</div>${all.length > 1 ? deviceFilter('devMenu') : ''}</div>
     ${others.length ? `<div class="replaces-row"><span class="muted11">Also replaces</span><div class="chiprow">${others.map((c) => `<a class="chip" href="${appUrl(c)}">${esc(c)}</a>`).join('')}</div></div>` : ''}
   </div>
+  ${switchGuide(appSlug(name), name, d)}
   ${sections.map(section).join('')}
   ${all.length > 1 ? chooseBox({ closed: [name], json: `data/groups/${groups[0].id}.json`, alts: all }) : ''}
   ${SOCIAL && !all.some((x) => x.a.fit === 'full') ? `<!-- WHY: only when nothing open fully replaces it; the server checks the same rule -->
@@ -45,7 +47,7 @@ export default function appPages(d) {
       : `No open-source app replaces ${name} yet. See what's missing, or build one.`;
     return {
       path: `alternatives-to/${appSlug(name)}/`, title: `Open-source alternatives to ${name}`, description, body,
-      styles: ['group.css'], scripts: ['group.js'],
+      styles: ['group.css', 'surfaces.css'], scripts: ['group.js', 'surfaces.js'],
       jsonLd: { '@context': 'https://schema.org', '@type': 'ItemList', name: `Open-source alternatives to ${name}`,
         itemListElement: all.map(({ p }, k) => ({ '@type': 'ListItem', position: k + 1, item: { '@type': 'SoftwareApplication', name: p.name, url: `${SITE_URL}p/${p.id}/` } })) },
     };

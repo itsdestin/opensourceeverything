@@ -2,6 +2,7 @@
 // closed app's own page.
 import { rankAlts } from './rank.mjs';
 import { currentFamily, famGrey, famNodes } from './family.mjs';
+import { cardAttrs, cardFold } from './surfaces.mjs'; // feature checklists + AI label (surfaces.mjs)
 import { esc, url, ICON, KIND, SETUP, SETUP_MEANING, setupOf, setupWhy, devicesText, factChips, hostOf, actions, suggestUrl, SOCIAL, SITE_URL, codeUrl, fmtStars, shot as shotOf } from './lib.mjs';
 
 // WHY its own address per closed app (Destin, Oct 27): people search "alternatives to Notion", not "Notes".
@@ -55,7 +56,7 @@ export function altCard(p, alt, i, group, why) {
     p.verified ? tpl('verified', 'Verified', '<p>r/TrueOpenSource mods checked it: an open-source license, still looked after, and it really does the job.</p>') : '',
     tpl('why', 'Why it is listed here', `${whyText ? `<p>${esc(whyText.split(' · ').join(', '))}.</p>` : ''}<p class="tipwhy">Ordered by how fully it replaces the app, Verified, setup and, when there are enough, people's votes.</p>${famHtml}`),
   ].join('');
-  return `<div class="card pic" data-fit="${alt.fit}" data-project="${esc(p.id)}" data-stars="${p.stars ?? 0}" data-name="${esc(p.name.toLowerCase())}" data-order="${i}" data-setup="${setupOf(p)}" data-platforms="${esc((p.platforms ?? []).join(' '))}">
+  return `<div class="card pic" data-fit="${alt.fit}" data-project="${esc(p.id)}" data-stars="${p.stars ?? 0}" data-name="${esc(p.name.toLowerCase())}" data-order="${i}"${cardAttrs(p, group)} data-setup="${setupOf(p)}" data-platforms="${esc((p.platforms ?? []).join(' '))}">
     <div class="rvbox" data-tipscope>
       <div class="rv-thumb">${shot ? `<img src="${esc(shot)}" alt="${esc(p.name)} screenshot" loading="lazy" referrerpolicy="no-referrer">` : '<span class="nopic">No screenshot yet</span>'}</div>
       <div class="rv-main">
@@ -65,6 +66,7 @@ export function altCard(p, alt, i, group, why) {
             <div class="menu" id="${menuId}" role="menu">${acts.map((l) => `<a class="mi" role="menuitem" href="${esc(l.href)}" rel="noopener">${l.label}</a>`).join('')}<a class="mi" role="menuitem" href="${pageLink}">See full details</a>${p.help ? `<a class="mi" role="menuitem" href="${url(`p/${p.id}/#help`)}">How to help</a>` : ''}<a class="mi" role="menuitem" href="${esc(suggestUrl('2-fix', { project: p.name, ...(group ? { group: group.name } : {}) }))}" rel="noopener">Suggest a change</a></div></div>` : ''}</div>
         <div class="chiprow">${chips}</div>
         <p class="blurb">${esc(p.summary)}</p>
+        ${cardFold(p, group)}
         ${SOCIAL ? `<div class="dev-pitch" data-dev-pitch data-mode="card" data-project="${esc(p.id)}" hidden></div>` : ''}
         ${grey ? `<p class="gl">${esc(grey)}</p>` : ''}
       </div>${tips}</div></div>`;

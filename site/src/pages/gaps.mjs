@@ -3,6 +3,7 @@
 // so it gets a front door instead of one row on the home page.
 import { esc, url, SOCIAL } from '../lib.mjs';
 import { appUrl } from '../cards.mjs';
+import { gapsMissing } from '../surfaces.mjs';
 
 // WHY everyday categories first within each tier: most visitors and most builders care about those.
 const LATER = new Set(['dev', 'business']);
@@ -47,10 +48,11 @@ export default function gaps(d) {
   <section class="surface sec" id="${t.id}">
     <div class="sec-head"><div><h2 class="h-large">${esc(t.name)}<span class="count">${t.groups.length}</span></h2></div></div>
     <div class="row1 fill list">${t.groups.map((g) => card(g, t)).join('')}</div>
-  </section>`).join('')}`;
+  </section>`).join('')}
+  ${gapsMissing(d)}`;
 
   return [{
-    path: 'gaps/', title: "Gaps: what open source doesn't replace yet", styles: ['pages.css'], body,
+    path: 'gaps/', title: "Gaps: what open source doesn't replace yet", styles: ['pages.css', 'surfaces.css'], body,
     description: `${total} jobs where no open-source app fully replaces the closed ones yet, and ${tiers[2].groups.length} that rely on a single project. Supported by r/TrueOpenSource.`,
   }];
 }
