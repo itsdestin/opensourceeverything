@@ -1,0 +1,61 @@
+{
+ "deck": "ose-round-3",
+ "started": "2026-10-27T05:29:51.564Z",
+ "submitted": "2026-10-27T05:36:53Z",
+ "cur": 2,
+ "answers": {
+  "D-boards": {
+   "v": "other",
+   "t": 1793079241072,
+   "note": "confused about what exists and what the proposals actually offer. pros/cons from real ux perspective are unclear",
+   "seconds": 83,
+   "theme": "light"
+  },
+  "D-reddit": {
+   "v": "yes",
+   "t": 1793079241072,
+   "note": "",
+   "seconds": 83,
+   "theme": "light"
+  },
+  "D-signin": {
+   "v": "pick",
+   "pick": "github",
+   "t": 1793079241072,
+   "seconds": 83,
+   "theme": "light"
+  },
+  "F-go": {
+   "v": "no",
+   "t": 1793079334899,
+   "seconds": 47,
+   "theme": "light"
+  },
+  "F-guides": {
+   "v": "yes",
+   "t": 1793079334899,
+   "seconds": 47,
+   "theme": "light"
+  },
+  "A-ship": {
+   "v": "pick",
+   "pick": "hold-low",
+   "t": 1793079412421,
+   "note": "just drop the shaky ones for now",
+   "seconds": 26,
+   "theme": "light"
+  },
+  "A-closed": {
+   "v": "yes",
+   "t": 1793079412421,
+   "seconds": 26,
+   "theme": "light"
+  },
+  "A-youcoded": {
+   "v": "no",
+   "t": 1793079412421,
+   "seconds": 26,
+   "theme": "light"
+  }
+ }
+}
