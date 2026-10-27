@@ -1,5 +1,6 @@
 // Pieces more than one page draws: the alternative card (group pages and closed-app pages) and the address of a
 // closed app's own page.
+import { rankAlts } from './rank.mjs';
 import { esc, url, ICON, KIND, factChips, hostOf, actions, suggestUrl, SOCIAL, SITE_URL, codeUrl, shot as shotOf } from './lib.mjs';
 
 // WHY its own address per closed app (Destin, Oct 27): people search "alternatives to Notion", not "Notes".
@@ -32,8 +33,10 @@ export function altCard(p, alt, i, group) {
     </div>`;
 }
 
-// Whole-job replacements first, then by GitHub stars as a rough popularity signal.
-export const sortAlts = (alts) => alts.sort((x, y) => (x.a.fit === y.a.fit ? 0 : x.a.fit === 'full' ? -1 : 1) || (y.p.stars ?? 0) - (x.p.stars ?? 0));
+// Best first: see rank.mjs for the points and why. WHY not just fit-then-stars (the old rule): stars are a weak, partly
+// missing signal (30 projects off GitHub had 0 stars, so GIMP-class apps sank), and the editors' best-first order in
+// the data file was thrown away. The caller's order IS the editors' order, so position is passed in as idx.
+export const sortAlts = (alts) => rankAlts(alts.map((x, idx) => ({ ...x, idx })));
 
 // The "Works on" filter above a list of alternative cards; group.js hides the cards that don't match.
 // WHY "No server needed": most of the map runs on your own server, which a newcomer can't use.
