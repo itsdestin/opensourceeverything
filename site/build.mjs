@@ -30,7 +30,16 @@ for (const f of readdirSync(join(HERE, 'src/pages')).filter((f) => f.endsWith('.
 for (const p of pages) write(p.path.endsWith('/') || p.path === '' ? join(p.path, 'index.html') : p.path, page(p));
 
 // ── Open data: the same files as data/, plus one file per group with its projects inlined (for AI assistants) ──
-for (const f of ['categories.json', 'groups.json', 'projects.json', 'CREDITS.md', 'README.md']) write(join('data', f), readFileSync(join(ROOT, 'data', f), 'utf8'));
+// WHY a public copy without internal fields (Destin, Oct 26): the AI pre-fill left notes for mods ("what we couldn't
+// confirm", "reviewed by claude-…") in the source files. They stay in data/ in the repo, but the files the site serves
+// (and llms.txt points to) leave them out. check.mjs fails the build if one slips through.
+const INTERNAL_PROJECT = ['unconfirmed', 'source', 'sourceLists'];
+const publicGroups = (groups) => groups.map((g) => ({ ...g, source: undefined, alternatives: g.alternatives.map(({ review, ...a }) => a) }));
+const publicProjects = (projects) => projects.map((p) => Object.fromEntries(Object.entries(p).filter(([k]) => !INTERNAL_PROJECT.includes(k))));
+const readJson = (f) => JSON.parse(readFileSync(join(ROOT, 'data', f), 'utf8'));
+for (const f of ['categories.json', 'CREDITS.md', 'README.md', 'redirects.json']) { try { write(join('data', f), readFileSync(join(ROOT, 'data', f), 'utf8')); } catch { /* optional */ } }
+write(join('data', 'groups.json'), JSON.stringify({ ...readJson('groups.json'), groups: publicGroups(d.groups) }, null, 1));
+write(join('data', 'projects.json'), JSON.stringify({ ...readJson('projects.json'), projects: publicProjects(d.projects) }, null, 1));
 for (const g of d.groups) {
   write(join('data', 'groups', `${g.id}.json`), JSON.stringify({
     license: 'CC BY-SA 4.0', source: `${SITE_URL}g/${g.id}/`, group: g.name, job: g.job, category: d.catById.get(g.category)?.name, replaces: g.closed,

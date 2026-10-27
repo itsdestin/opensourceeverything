@@ -548,7 +548,7 @@
   {
    "q": "poll to find a day that works for everyone",
    "want": [
-    "g:scheduling",
+    "g:booking-pages",
     "p:nextcloud-polls",
     "c:doodle"
    ],
@@ -557,7 +557,7 @@
   {
    "q": "calendar app for android thats open",
    "want": [
-    "g:scheduling",
+    "g:calendars",
     "p:fossify-calendar",
     "p:etar-calendar"
    ],
@@ -771,7 +771,6 @@
    "q": "backend for my mobile app like firebase",
    "want": [
     "g:backend-service",
-    "g:databases",
     "p:supabase",
     "p:pocketbase",
     "p:appwrite",

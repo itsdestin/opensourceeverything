@@ -195,6 +195,43 @@ if (review) {
   for (const k of review.remove ?? []) { const [g, p] = k.split('/'); const gr = groups.get(g); if (gr) gr.alternatives = gr.alternatives.filter((a) => a.project !== p); }
 }
 
+// ── Data fixes (prefill/data-fixes.json): wrong closed apps, duplicate names, groups that were split, big missing apps ──
+// WHY here, after the expert review and before mods' suggestions: a rebuild keeps these fixes, and a mod's later
+// decision (data/edits.json) still wins over them. Every entry in that file carries its own "why".
+const redirects = {}; const appRedirects = {}; // old group id -> new group ids, written to data/redirects.json so old links keep working
+const df = optional(join(HERE, 'data-fixes.json'));
+if (df) {
+  const need = (cond, msg) => { if (!cond) throw new Error(`data-fixes.json: ${msg}`); };
+  const clean = ({ why, ...rest }) => rest; // "why" is documentation, not data
+  for (const r of df.closedRemove ?? []) { const g = groups.get(r.group); need(g?.closed.includes(r.app), `closedRemove: ${r.app} not in ${r.group}`); g.closed = g.closed.filter((c) => c !== r.app); }
+  for (const r of df.closedRename ?? []) { const g = groups.get(r.group); need(g?.closed.includes(r.from), `closedRename: ${r.from} not in ${r.group}`); g.closed = g.closed.map((c) => (c === r.from ? r.to : c)); }
+  for (const r of df.closedAdd ?? []) for (const gid of [].concat(r.group)) { const g = groups.get(gid); need(g, `closedAdd: no group ${gid}`); if (!g.closed.some((c) => key(c) === key(r.app))) g.closed.push(r.app); }
+  for (const p of df.addProjects ?? []) {
+    need(!projects.has(p.id), `addProjects: ${p.id} already exists`);
+    projects.set(p.id, { archived: false, inactive: false, download: null, licenseClass: 'open', licenseNeedsCheck: false, unconfirmed: [], source: 'data-fixes', verified: false, screenshots: [], ...clean(p) });
+  }
+  for (const [id, patch] of Object.entries(df.projectPatch ?? {})) { need(projects.has(id), `projectPatch: no project ${id}`); Object.assign(projects.get(id), clean(patch)); }
+  for (const [k, patch] of Object.entries(df.altPatch ?? {})) { const [g, p] = k.split('/'); need(alt(g, p), `altPatch: ${k} not listed`); Object.assign(alt(g, p), clean(patch)); }
+  // A group's alternatives from a spec: a bare project id keeps the old fit and note; an object sets them.
+  // WHY the old "review" is dropped: it explained a fit chosen for the old, mixed-up group and no longer applies.
+  const build = (spec, from) => spec.alts.map((a) => {
+    const o = typeof a === 'string' ? { project: a } : a;
+    need(projects.has(o.project), `${spec.id}: no project ${o.project}`);
+    const old = from?.alternatives.find((x) => x.project === o.project);
+    need(old || (o.fit !== undefined), `${spec.id}: ${o.project} is not in ${from?.id} and has no fit`);
+    return { project: o.project, fit: o.fit ?? old.fit, note: o.note !== undefined ? o.note : (old?.note ?? null) };
+  });
+  const make = (spec, from) => groups.set(spec.id, { id: spec.id, name: spec.name, category: spec.category, job: spec.job, closed: [...spec.closed], source: 'data-fixes', alternatives: build(spec, from) });
+  for (const s of df.splits ?? []) {
+    const from = groups.get(s.from); need(from, `split: no group ${s.from}`);
+    for (const spec of s.into) { need(!groups.has(spec.id), `split: ${spec.id} already exists`); make(spec, from); }
+    groups.delete(s.from); redirects[s.from] = s.into.map((x) => x.id);
+  }
+  Object.assign(appRedirects, df.appRedirects ?? {});
+  for (const spec of df.newGroups ?? []) { need(!groups.has(spec.id), `newGroups: ${spec.id} already exists`); make(spec, null); }
+  for (const r of df.addAlts ?? []) { const g = groups.get(r.group); need(g && projects.has(r.project), `addAlts: ${r.group}/${r.project}`); if (!alt(r.group, r.project)) g.alternatives.push({ project: r.project, fit: r.fit, note: r.note ?? null }); }
+}
+
 // Mods' approved suggestions (data/edits.json, written by .github/robot/suggestion.mjs).
 for (const e of optional(join(ROOT, 'data/edits.json'))?.edits ?? []) {
   if (e.type === 'add-project' && groups.has(e.group)) {
@@ -256,9 +293,18 @@ for (const id of [...projects.keys()]) if (!listed.has(id)) projects.delete(id);
 const groupList = [...groups.values()].sort((a, b) => categories.findIndex((c) => c.id === a.category) - categories.findIndex((c) => c.id === b.category));
 const unknownCat = groupList.filter((g) => !categories.some((c) => c.id === g.category));
 if (unknownCat.length) throw new Error(`groups in unknown categories: ${unknownCat.map((g) => g.id).join(', ')}`);
+// WHY a hard stop (found Oct 26: "Datadog"/"DataDog", "Power BI"/"PowerBI", and Odoo/Orbit named as both a closed app
+// and an open project): a rebuild must not bring these back unnoticed.
+for (const g of groupList) {
+  const seen = new Set();
+  for (const c of g.closed) { if (seen.has(key(c))) throw new Error(`duplicate closed app "${c}" in ${g.id}`); seen.add(key(c)); }
+}
+const projectKeys = new Set([...projects.values()].map((p) => key(p.name)));
+for (const g of groupList) for (const c of g.closed) if (projectKeys.has(key(c))) throw new Error(`"${c}" is listed as a closed app in ${g.id} and is also an open project`);
 const meta = { license: 'CC BY-SA 4.0', generated: new Date().toISOString().slice(0, 10), credits: 'See data/CREDITS.md' };
 writeFileSync(join(ROOT, 'data/categories.json'), JSON.stringify({ ...meta, categories }, null, 1));
 writeFileSync(join(ROOT, 'data/groups.json'), JSON.stringify({ ...meta, groups: groupList }, null, 1));
+writeFileSync(join(ROOT, 'data/redirects.json'), JSON.stringify({ ...meta, note: 'Groups that were split: old group id → the groups that replaced it. The site keeps the old address working.', moved: redirects, apps: appRedirects }, null, 1));
 writeFileSync(join(ROOT, 'data/projects.json'), JSON.stringify({ ...meta, projects: [...projects.values()].sort((a, b) => a.name.localeCompare(b.name)) }, null, 1));
 
 const listings = groupList.reduce((s, g) => s + g.alternatives.length, 0);

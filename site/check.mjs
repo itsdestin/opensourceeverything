@@ -30,5 +30,14 @@ if (pages.size > 1) { // WHY: skip until the page modules exist, so the core can
   for (const g of d.groups) if (!pages.has(`g/${g.id}/index.html`)) problems.push(`no page for group ${g.id}`);
   for (const p of d.projects) if (!pages.has(`p/${p.id}/index.html`)) problems.push(`no page for project ${p.id}`);
 }
+// Internal AI-check notes must not reach visitors: not on pages, not in the public data files (see build.mjs).
+for (const f of walk(join(DIST, 'data')).filter((f) => f.endsWith('.json'))) {
+  const t = readFileSync(f, 'utf8'); const rel = f.slice(DIST.length + 1);
+  if (/"unconfirmed"|"review"|"sourceLists"|claude-(opus|sonnet|haiku)/.test(t)) problems.push(`${rel}: contains internal AI-check fields`);
+}
+for (const f of html) if (/couldn.t confirm|checked by AI/i.test(readFileSync(f, 'utf8'))) problems.push(`${f.slice(DIST.length + 1)}: shows an AI-check note`);
+// Old group addresses that were split must still answer (data/redirects.json).
+for (const old of Object.keys(d.moved)) if (!pages.has(`g/${old}/index.html`)) problems.push(`no redirect page for split group ${old}`);
+for (const slug of Object.keys(d.movedApps)) if (!pages.has(`alternatives-to/${slug}/index.html`)) problems.push(`no redirect page for moved app ${slug}`);
 if (problems.length) { console.error(problems.slice(0, 50).join('\n') + (problems.length > 50 ? `\n…and ${problems.length - 50} more` : '')); process.exit(1); }
 console.log(`site check: ${html.length} pages, all links and pages present`);

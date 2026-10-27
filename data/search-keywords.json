@@ -60,26 +60,6 @@
    "small business bookkeeping sheet",
    "csv editor"
   ],
-  "scheduling": [
-   "schedule meetings",
-   "book appointments online",
-   "calendly alternative",
-   "google calendar replacement",
-   "doodle poll alternative",
-   "find a time to meet",
-   "shared family calendar",
-   "private calendar",
-   "meeting booking page",
-   "appointment scheduling small business",
-   "offline calendar android",
-   "sync calendar across devices",
-   "self hosted calendar",
-   "outlook calendar replacement",
-   "plan events with friends",
-   "let clients book time",
-   "calendar without google",
-   "vote on meeting dates"
-  ],
   "messaging": [
    "private messaging",
    "encrypted chat",
@@ -118,7 +98,9 @@
    "shared notes with team",
    "office suite for small business",
    "write without microsoft account",
-   "offline document editor"
+   "offline document editor",
+   "microsoft office alternative",
+   "office suite"
   ],
   "tasks": [
    "to do list",
@@ -1076,7 +1058,9 @@
    "reach my pc from anywhere",
    "encrypted tunnel",
    "openvpn replacement",
-   "virtual lan over internet"
+   "virtual lan over internet",
+   "openvpn community",
+   "openvpn access server alternative"
   ],
   "photo-backup": [
    "google photos replacement",
@@ -1403,27 +1387,6 @@
    "view camera pictures",
    "simple gallery no ads",
    "manage photos and videos"
-  ],
-  "databases": [
-   "store and query data",
-   "firebase alternative",
-   "self hosted backend",
-   "backend for my app",
-   "search engine for website",
-   "algolia replacement",
-   "snowflake alternative",
-   "graph database",
-   "time series data",
-   "vector search",
-   "full text search",
-   "data warehouse",
-   "realtime database",
-   "sql database hosting",
-   "store sensor data",
-   "site search without algolia",
-   "cloud database replacement",
-   "scalable distributed database",
-   "analytics on big data"
   ],
   "internal-tools": [
    "build admin panel",
@@ -2018,6 +1981,173 @@
    "mass email tool",
    "subscriber signup forms",
    "own my email list"
+  ],
+  "calendars": [
+   "google calendar replacement",
+   "outlook calendar replacement",
+   "shared family calendar",
+   "private calendar",
+   "offline calendar android",
+   "sync calendar across devices",
+   "self hosted calendar",
+   "calendar without google",
+   "plan events with friends",
+   "calendar app"
+  ],
+  "booking-pages": [
+   "schedule meetings",
+   "book appointments online",
+   "calendly alternative",
+   "doodle poll alternative",
+   "find a time to meet",
+   "meeting booking page",
+   "appointment scheduling small business",
+   "let clients book time",
+   "vote on meeting dates",
+   "cal.com alternative"
+  ],
+  "sql-databases": [
+   "sql database",
+   "postgres",
+   "mysql alternative",
+   "aurora alternative",
+   "spanner alternative",
+   "cloud database replacement",
+   "scalable distributed database",
+   "relational database",
+   "self hosted database"
+  ],
+  "search-engines": [
+   "add search to my website",
+   "algolia replacement",
+   "site search without algolia",
+   "full text search",
+   "elasticsearch alternative",
+   "search for my app",
+   "typo tolerant search"
+  ],
+  "vector-databases": [
+   "vector search",
+   "pinecone alternative",
+   "ai embeddings database",
+   "semantic search database",
+   "store embeddings",
+   "rag database"
+  ],
+  "graph-databases": [
+   "graph database",
+   "neo4j alternative",
+   "neptune alternative",
+   "knowledge graph database",
+   "connected data"
+  ],
+  "time-series-databases": [
+   "time series data",
+   "store sensor data",
+   "metrics database",
+   "kdb alternative",
+   "iot data storage",
+   "trading data database"
+  ],
+  "data-warehouses": [
+   "snowflake alternative",
+   "data warehouse",
+   "analytics on big data",
+   "bigquery alternative",
+   "big data queries",
+   "olap database"
+  ],
+  "privacy-vpn": [
+   "nordvpn alternative",
+   "expressvpn alternative",
+   "surfshark alternative",
+   "hide my ip",
+   "private browsing vpn",
+   "vpn for privacy",
+   "change my location online",
+   "vpn app",
+   "free vpn"
+  ],
+  "social-network": [
+   "facebook alternative",
+   "leave facebook",
+   "social network without ads",
+   "share photos with family",
+   "friends and family network",
+   "facebook replacement",
+   "meta alternative"
+  ],
+  "stories": [
+   "snapchat alternative",
+   "disappearing messages photos",
+   "snap stories",
+   "snapchat replacement",
+   "photo stories filters"
+  ],
+  "inspiration-boards": [
+   "pinterest alternative",
+   "save pictures to boards",
+   "mood board",
+   "collect ideas",
+   "pinterest replacement",
+   "visual bookmarks"
+  ],
+  "writing-assistant": [
+   "grammarly alternative",
+   "grammar checker",
+   "spell check",
+   "proofreading tool",
+   "check my writing",
+   "grammarly replacement",
+   "private grammar checker"
+  ],
+  "antivirus": [
+   "antivirus",
+   "virus scanner",
+   "norton alternative",
+   "mcafee alternative",
+   "malware scanner",
+   "free antivirus",
+   "kaspersky alternative"
+  ],
+  "cad": [
+   "autocad alternative",
+   "cad software",
+   "technical plans",
+   "3d modeling parts",
+   "solidworks alternative",
+   "fusion 360 alternative",
+   "floor plans",
+   "sketchup alternative",
+   "dxf editor"
+  ],
+  "reference-managers": [
+   "endnote alternative",
+   "mendeley alternative",
+   "citation manager",
+   "bibliography",
+   "manage research papers",
+   "zotero",
+   "cite sources",
+   "reference manager"
+  ],
+  "game-stores": [
+   "steam alternative",
+   "epic games alternative",
+   "game launcher",
+   "game library",
+   "gog galaxy alternative",
+   "play my games linux",
+   "buy pc games"
+  ],
+  "video-streaming": [
+   "netflix alternative",
+   "disney plus alternative",
+   "watch movies",
+   "stream tv shows",
+   "hulu alternative",
+   "prime video alternative",
+   "streaming service replacement"
   ]
  },
  "projects": {
@@ -10075,7 +10205,7 @@
    "self hosted search",
    "index text documents",
    "fast text search",
-   "search engine for website",
+   "add search to my website",
    "log search",
    "simple search server",
    "elastic cloud replacement",

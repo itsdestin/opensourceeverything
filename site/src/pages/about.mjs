@@ -1,10 +1,10 @@
 // How this works (about/): what the site is, how it's organised, what counts as open source, where the
 // listings came from, how to get listed, and that everything about the site is open.
-import { url, esc, REPO, SUBREDDIT, suggestUrl } from '../lib.mjs';
+import { url, esc, REPO, SUBREDDIT, suggestUrl, counts } from '../lib.mjs';
 
 export default function about(d) {
   const section = (id, title, html) => `<section class="surface sec prose"${id ? ` id="${id}"` : ''}><h2 class="h-large">${title}</h2>${html}</section>`;
-  const listings = d.groups.reduce((s, g) => s + g.alternatives.length, 0);
+  const n = counts(d); // WHY: the same numbers as the home page (see lib.mjs)
   const body = `
   <div class="surface identity">
     <div><div class="muted11">About</div><h1 class="h-subject">How Open Source Everything works</h1>
@@ -16,7 +16,7 @@ export default function about(d) {
   </div>
   ${section('what', 'What this is', `
     <p class="body2">Open Source Everything lists open-source replacements for the closed-source apps people use every day, from Google Docs to Photoshop. It also shows where nothing good exists yet, so people who build software can see what's worth making.</p>
-    <p class="body2">It's supported by the <a href="${SUBREDDIT}" rel="noopener">r/TrueOpenSource</a> community. Right now it holds ${d.groups.length} groups and ${listings} listings.</p>`)}
+    <p class="body2">It's supported by the <a href="${SUBREDDIT}" rel="noopener">r/TrueOpenSource</a> community. Right now it holds ${n.projects} open-source projects that replace ${n.closedApps} closed apps, sorted into ${n.groups} jobs.</p>`)}
   ${section('organised', 'How it\'s organised', `
     <div class="defs">
       <div class="lvl1"><h3>Categories</h3><p class="small2">Shelves for browsing, like Creative or Office &amp; productivity.</p></div>

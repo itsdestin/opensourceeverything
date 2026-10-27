@@ -554,6 +554,29 @@
    "setup": "easy"
   },
   {
+   "archived": false,
+   "inactive": false,
+   "download": null,
+   "licenseClass": "open",
+   "licenseNeedsCheck": false,
+   "unconfirmed": [],
+   "source": "data-fixes",
+   "verified": false,
+   "screenshots": [],
+   "id": "airflow",
+   "name": "Apache Airflow",
+   "kind": "self_hosted",
+   "code": "github.com/apache/airflow",
+   "website": "https://airflow.apache.org",
+   "summary": "Apache Airflow lets technical teams write, schedule and watch jobs that move and prepare data, such as nightly imports. You describe each job in code and run Airflow on your own server.",
+   "license": "Apache-2.0",
+   "stars": 47286,
+   "platforms": [
+    "server"
+   ],
+   "thumbs": []
+  },
+  {
    "id": "apache-apisix",
    "name": "Apache APISIX",
    "summary": "Apache APISIX is a server program that sits in front of web services and directs, limits and secures the API traffic sent to them. It is aimed at engineering teams who run microservices or need to manage many APIs.",
@@ -1808,7 +1831,7 @@
   {
    "id": "cal-com",
    "name": "Cal.com",
-   "summary": "Cal.diy is the free community edition of Cal.com, which lets you share a page where others pick a meeting time. It is for people running their own server, and the makers advise it for personal use only.",
+   "summary": "Cal.diy is the free community edition of Cal.com. It lets you share a page where others pick a meeting time, and connects to your calendar so you are not double-booked. You run it on your own server, and its makers advise it for personal use only. Team and company features were removed from this edition.",
    "kind": "self_hosted",
    "code": "github.com/calcom/cal.com",
    "website": "https://cal.diy",
@@ -1977,6 +2000,55 @@
     "assets/shots/chatwoot-1.webp"
    ],
    "setup": "advanced"
+  },
+  {
+   "archived": false,
+   "inactive": false,
+   "download": null,
+   "licenseClass": "open",
+   "licenseNeedsCheck": false,
+   "unconfirmed": [],
+   "source": "data-fixes",
+   "verified": false,
+   "screenshots": [],
+   "id": "clamav",
+   "name": "ClamAV",
+   "kind": "app",
+   "code": "github.com/Cisco-Talos/clamav",
+   "website": "https://www.clamav.net",
+   "summary": "ClamAV is a free virus scanner that checks files and email for known malware. It is mostly used on servers and Linux computers. It has no polished windows or constant background protection on Windows and Mac.",
+   "license": "GPL-2.0",
+   "stars": 7454,
+   "platforms": [
+    "windows",
+    "mac",
+    "linux",
+    "server"
+   ],
+   "thumbs": []
+  },
+  {
+   "archived": false,
+   "inactive": false,
+   "download": null,
+   "licenseClass": "open",
+   "licenseNeedsCheck": false,
+   "unconfirmed": [],
+   "source": "data-fixes",
+   "verified": false,
+   "screenshots": [],
+   "id": "clickhouse",
+   "name": "ClickHouse",
+   "kind": "self_hosted",
+   "code": "github.com/ClickHouse/ClickHouse",
+   "website": "https://clickhouse.com",
+   "summary": "ClickHouse is a database built for asking questions about huge piles of data very quickly, such as website traffic or sales history. It runs on your own server and is often used in place of paid data warehouses.",
+   "license": "Apache-2.0",
+   "stars": 50618,
+   "platforms": [
+    "server"
+   ],
+   "thumbs": []
   },
   {
    "id": "cline",
@@ -2750,6 +2822,30 @@
     "assets/shots/delta-chat-0.webp"
    ],
    "setup": "easy"
+  },
+  {
+   "archived": false,
+   "inactive": false,
+   "download": null,
+   "licenseClass": "open",
+   "licenseNeedsCheck": false,
+   "unconfirmed": [],
+   "source": "data-fixes",
+   "verified": false,
+   "screenshots": [],
+   "id": "diaspora",
+   "name": "diaspora*",
+   "kind": "self_hosted",
+   "code": "github.com/diaspora/diaspora",
+   "website": "https://diasporafoundation.org",
+   "summary": "diaspora* is a social network like Facebook that nobody owns. You join a community server (a pod) or run your own, share posts and photos with groups of friends you choose, and still talk to people on other pods.",
+   "license": "AGPL-3.0",
+   "stars": 13655,
+   "platforms": [
+    "web",
+    "server"
+   ],
+   "thumbs": []
   },
   {
    "id": "digikam",
@@ -4189,6 +4285,31 @@
    "setup": "easy"
   },
   {
+   "archived": false,
+   "inactive": false,
+   "download": null,
+   "licenseClass": "open",
+   "licenseNeedsCheck": false,
+   "unconfirmed": [],
+   "source": "data-fixes",
+   "verified": false,
+   "screenshots": [],
+   "id": "freecad",
+   "name": "FreeCAD",
+   "kind": "app",
+   "code": "github.com/FreeCAD/FreeCAD",
+   "website": "https://www.freecad.org",
+   "summary": "FreeCAD is a free design program for making 3D models of real objects, such as parts, buildings and machines, and for creating drawings from them. It takes time to learn but is capable.",
+   "license": "LGPL-2.1",
+   "stars": 34821,
+   "platforms": [
+    "windows",
+    "mac",
+    "linux"
+   ],
+   "thumbs": []
+  },
+  {
    "id": "freetube",
    "name": "FreeTube",
    "summary": "FreeTube is a desktop app for watching YouTube videos without ads and without Google tracking through cookies and scripts. It is for people who want a more private way to use YouTube on Windows, Mac or Linux.",
@@ -5142,6 +5263,32 @@
    "setup": "advanced"
   },
   {
+   "archived": false,
+   "inactive": false,
+   "download": null,
+   "licenseClass": "open",
+   "licenseNeedsCheck": false,
+   "unconfirmed": [],
+   "source": "data-fixes",
+   "verified": false,
+   "screenshots": [],
+   "id": "harper",
+   "name": "Harper",
+   "kind": "developer_tool",
+   "code": "github.com/automattic/harper",
+   "website": "https://writewithharper.com",
+   "summary": "Harper is a fast grammar and spell checker that runs entirely on your own computer, so nothing you write is sent anywhere. It works in code editors and as a browser add-on, in English.",
+   "license": "Apache-2.0",
+   "stars": 17151,
+   "platforms": [
+    "web",
+    "windows",
+    "mac",
+    "linux"
+   ],
+   "thumbs": []
+  },
+  {
    "id": "hedgedoc",
    "name": "HedgeDoc",
    "summary": "HedgeDoc is a web app where several people can write and edit markdown notes together in real time. It is for people who want a self-hosted, shared place for notes and documents.",
@@ -5245,6 +5392,31 @@
     "assets/shots/hermes-agent-1.webp"
    ],
    "setup": "easy"
+  },
+  {
+   "archived": false,
+   "inactive": false,
+   "download": null,
+   "licenseClass": "open",
+   "licenseNeedsCheck": false,
+   "unconfirmed": [],
+   "source": "data-fixes",
+   "verified": false,
+   "screenshots": [],
+   "id": "heroic-games-launcher",
+   "name": "Heroic Games Launcher",
+   "kind": "app",
+   "code": "github.com/Heroic-Games-Launcher/HeroicGamesLauncher",
+   "website": "https://heroicgameslauncher.com",
+   "summary": "Heroic lets you sign in to your Epic, GOG and Amazon Games accounts and install and play the games you already own, on Windows, Mac and Linux. It does not sell games.",
+   "license": "GPL-3.0",
+   "stars": 12518,
+   "platforms": [
+    "windows",
+    "mac",
+    "linux"
+   ],
+   "thumbs": []
   },
   {
    "id": "heyform",
@@ -5802,6 +5974,56 @@
    "setup": "easy"
   },
   {
+   "archived": false,
+   "inactive": false,
+   "download": null,
+   "licenseClass": "open",
+   "licenseNeedsCheck": false,
+   "unconfirmed": [],
+   "source": "data-fixes",
+   "verified": false,
+   "screenshots": [],
+   "id": "itch-app",
+   "name": "itch app",
+   "kind": "app",
+   "code": "github.com/itchio/itch",
+   "website": "https://itch.io/app",
+   "summary": "The itch app is the free desktop app for itch.io, a store for independent games. It downloads and updates the games you got there. The itch.io store itself is a service run by itch, not open source.",
+   "license": "MIT",
+   "stars": 2881,
+   "platforms": [
+    "windows",
+    "mac",
+    "linux"
+   ],
+   "thumbs": []
+  },
+  {
+   "archived": false,
+   "inactive": false,
+   "download": null,
+   "licenseClass": "open",
+   "licenseNeedsCheck": false,
+   "unconfirmed": [],
+   "source": "data-fixes",
+   "verified": false,
+   "screenshots": [],
+   "id": "jabref",
+   "name": "JabRef",
+   "kind": "app",
+   "code": "github.com/JabRef/jabref",
+   "website": "https://www.jabref.org",
+   "summary": "JabRef keeps a library of the papers and books you cite, in the BibTeX format used by LaTeX writers, and helps you find, sort and cite them. It runs on your computer.",
+   "license": "MIT",
+   "stars": 4852,
+   "platforms": [
+    "windows",
+    "mac",
+    "linux"
+   ],
+   "thumbs": []
+  },
+  {
    "id": "jami",
    "name": "Jami",
    "summary": "Jami is a free app for video calls, chat and file sharing. It works without a central company server, so it suits people who want private communication.",
@@ -6118,6 +6340,32 @@
     "assets/shots/kanboard-0.webp"
    ],
    "setup": "advanced"
+  },
+  {
+   "archived": false,
+   "inactive": false,
+   "download": null,
+   "licenseClass": "open",
+   "licenseNeedsCheck": false,
+   "unconfirmed": [],
+   "source": "data-fixes",
+   "verified": false,
+   "screenshots": [],
+   "id": "karakeep",
+   "name": "Karakeep",
+   "kind": "self_hosted",
+   "code": "github.com/karakeep-app/karakeep",
+   "website": "https://karakeep.app",
+   "summary": "Karakeep is a place to save links, notes and images and find them again later, with automatic tags. It has apps for phones and a browser add-on. You run it on your own server.",
+   "license": "AGPL-3.0",
+   "stars": 30052,
+   "platforms": [
+    "web",
+    "android",
+    "ios",
+    "server"
+   ],
+   "thumbs": []
   },
   {
    "id": "kdenlive",
@@ -6737,6 +6985,29 @@
    "setup": "advanced"
   },
   {
+   "archived": false,
+   "inactive": false,
+   "download": null,
+   "licenseClass": "open",
+   "licenseNeedsCheck": false,
+   "unconfirmed": [],
+   "source": "data-fixes",
+   "verified": false,
+   "screenshots": [],
+   "id": "languagetool",
+   "name": "LanguageTool",
+   "kind": "self_hosted",
+   "code": "github.com/languagetool-org/languagetool",
+   "website": "https://languagetool.org",
+   "summary": "LanguageTool checks spelling, grammar and style in more than 30 languages. You can run the open-source checker on your own server so your writing never leaves your hands. The company's own apps and extensions add paid features.",
+   "license": "LGPL-2.1",
+   "stars": 15199,
+   "platforms": [
+    "server"
+   ],
+   "thumbs": []
+  },
+  {
    "id": "lastsaas",
    "name": "LastSaaS",
    "summary": "LastSaaS is a free starter kit for building a software-as-a-service business, with user accounts, Stripe billing, teams, and an admin dashboard already built. It is aimed at developers and founders who want to fork the code and customize it for their own product.",
@@ -6875,6 +7146,32 @@
    ],
    "thumbs": [],
    "setup": "easy"
+  },
+  {
+   "archived": false,
+   "inactive": false,
+   "download": null,
+   "licenseClass": "open",
+   "licenseNeedsCheck": false,
+   "unconfirmed": [],
+   "source": "data-fixes",
+   "verified": false,
+   "screenshots": [],
+   "id": "librecad",
+   "name": "LibreCAD",
+   "kind": "app",
+   "code": "github.com/LibreCAD/LibreCAD",
+   "website": "https://librecad.org",
+   "summary": "LibreCAD is a free program for flat, 2D technical drawings such as floor plans and part outlines. It opens and saves the common DXF drawing files. It does not do 3D.",
+   "license": "GPL-2.0",
+   "licenseSource": "https://github.com/LibreCAD/LibreCAD/blob/master/LICENSE",
+   "stars": 6514,
+   "platforms": [
+    "windows",
+    "mac",
+    "linux"
+   ],
+   "thumbs": []
   },
   {
    "id": "librechat",
@@ -7294,6 +7591,30 @@
    "setupWhy": "An operating system: installing it means replacing or sitting alongside your computer or phone's current system, which is more than installing an app."
   },
   {
+   "archived": false,
+   "inactive": false,
+   "download": null,
+   "licenseClass": "open",
+   "licenseNeedsCheck": false,
+   "unconfirmed": [],
+   "source": "data-fixes",
+   "verified": false,
+   "screenshots": [],
+   "id": "linkwarden",
+   "name": "Linkwarden",
+   "kind": "self_hosted",
+   "code": "github.com/linkwarden/linkwarden",
+   "website": "https://linkwarden.app",
+   "summary": "Linkwarden saves web pages you want to keep, with a copy of each page, and sorts them into collections you can share. It is a good fit for building a private collection of things you found online.",
+   "license": "AGPL-3.0",
+   "stars": 20227,
+   "platforms": [
+    "web",
+    "server"
+   ],
+   "thumbs": []
+  },
+  {
    "id": "linux-mint",
    "name": "Linux Mint",
    "summary": "Linux Mint is a free desktop operating system for laptops and computers, designed to work out of the box with the apps most people need. It is aimed especially at people switching from Windows or trying Linux for the first time.",
@@ -7691,6 +8012,29 @@
    "setup": "advanced"
   },
   {
+   "archived": false,
+   "inactive": false,
+   "download": null,
+   "licenseClass": "open",
+   "licenseNeedsCheck": false,
+   "unconfirmed": [],
+   "source": "data-fixes",
+   "verified": false,
+   "screenshots": [],
+   "id": "lutris",
+   "name": "Lutris",
+   "kind": "app",
+   "code": "github.com/lutris/lutris",
+   "website": "https://lutris.net",
+   "summary": "Lutris puts the games you own from different places in one library on Linux, and sets up what each needs to run, including many Windows games. It does not sell games.",
+   "license": "GPL-3.0",
+   "stars": 10333,
+   "platforms": [
+    "linux"
+   ],
+   "thumbs": []
+  },
+  {
    "id": "mailspring",
    "name": "Mailspring",
    "summary": "Mailspring is a desktop email app for Windows, Mac and Linux that lets you read and send email from one place. It is aimed at people who want a faster, lighter alternative to web-based or heavy mail clients.",
@@ -7754,6 +8098,31 @@
    ],
    "thumbs": [],
    "setup": "advanced"
+  },
+  {
+   "archived": false,
+   "inactive": false,
+   "download": null,
+   "licenseClass": "open",
+   "licenseNeedsCheck": false,
+   "unconfirmed": [],
+   "source": "data-fixes",
+   "verified": false,
+   "screenshots": [],
+   "id": "mariadb",
+   "name": "MariaDB",
+   "kind": "self_hosted",
+   "code": "github.com/MariaDB/server",
+   "website": "https://mariadb.org",
+   "summary": "MariaDB is a popular free database for storing business and website data in tables. It started as a community branch of MySQL and works as a drop-in replacement for it. You run it on your own server.",
+   "license": "GPL-2.0",
+   "stars": 8454,
+   "platforms": [
+    "windows",
+    "linux",
+    "server"
+   ],
+   "thumbs": []
   },
   {
    "id": "mastodon",
@@ -8315,6 +8684,33 @@
    ],
    "thumbs": [],
    "setup": "easy"
+  },
+  {
+   "archived": false,
+   "inactive": false,
+   "download": null,
+   "licenseClass": "open",
+   "licenseNeedsCheck": false,
+   "unconfirmed": [],
+   "source": "data-fixes",
+   "verified": false,
+   "screenshots": [],
+   "id": "mullvad-vpn",
+   "name": "Mullvad VPN",
+   "kind": "app",
+   "code": "github.com/mullvad/mullvadvpn-app",
+   "website": "https://mullvad.net/en/vpn",
+   "summary": "Mullvad's VPN app hides your internet traffic from your network and shows a different location to websites. The app's code is open and has been independently audited, but the paid VPN service and its servers are run by Mullvad and are not open source.",
+   "license": "GPL-3.0",
+   "stars": 7705,
+   "platforms": [
+    "windows",
+    "mac",
+    "linux",
+    "android",
+    "ios"
+   ],
+   "thumbs": []
   },
   {
    "id": "mumble",
@@ -9308,7 +9704,7 @@
   {
    "id": "odoo",
    "name": "Odoo",
-   "summary": "Odoo is a suite of web-based business apps covering things like sales, accounting, inventory, websites and HR. It is for companies that want to run many business tasks in one connected system.",
+   "summary": "Odoo is a suite of web-based business apps covering things like sales, accounting, inventory, websites and HR. The free Community edition is open source (LGPL-3.0); the paid Enterprise edition adds more features and is closed. It is for companies that want to run many business tasks in one connected system.",
    "kind": "self_hosted",
    "code": "github.com/odoo/odoo",
    "website": "https://www.odoo.com",
@@ -9587,6 +9983,32 @@
    "thumbs": [],
    "setup": "easy",
    "setupWhy": "It is a website: you use it at openlibrary.org in a browser."
+  },
+  {
+   "archived": false,
+   "inactive": false,
+   "download": null,
+   "licenseClass": "open",
+   "licenseNeedsCheck": false,
+   "unconfirmed": [],
+   "source": "data-fixes",
+   "verified": false,
+   "screenshots": [],
+   "id": "openbb",
+   "name": "OpenBB",
+   "kind": "developer_tool",
+   "code": "github.com/OpenBB-finance/OpenBB",
+   "website": "https://openbb.co",
+   "summary": "OpenBB is an open-source toolkit that pulls stock, economy and crypto data from many sources into one place, so you can chart and study it in code or spreadsheets. Its polished point-and-click workspace is a separate hosted product from the same company, not part of the open-source code.",
+   "license": "Apache-2.0",
+   "licenseSource": "https://github.com/OpenBB-finance/OpenBB/blob/develop/LICENSE",
+   "stars": 74760,
+   "platforms": [
+    "windows",
+    "mac",
+    "linux"
+   ],
+   "thumbs": []
   },
   {
    "id": "openblocks",
@@ -9947,6 +10369,32 @@
    "setup": "advanced"
   },
   {
+   "archived": false,
+   "inactive": false,
+   "download": null,
+   "licenseClass": "open",
+   "licenseNeedsCheck": false,
+   "unconfirmed": [],
+   "source": "data-fixes",
+   "verified": false,
+   "screenshots": [],
+   "id": "openscad",
+   "name": "OpenSCAD",
+   "kind": "app",
+   "code": "github.com/openscad/openscad",
+   "website": "https://openscad.org",
+   "summary": "OpenSCAD makes 3D models from a short written description instead of drawing with a mouse. It suits 3D printing and exact, repeatable parts.",
+   "license": "GPL-2.0",
+   "licenseSource": "https://github.com/openscad/openscad/blob/master/COPYING",
+   "stars": 10523,
+   "platforms": [
+    "windows",
+    "mac",
+    "linux"
+   ],
+   "thumbs": []
+  },
+  {
    "id": "openshot",
    "name": "OpenShot",
    "summary": "OpenShot is a free, open-source video editor for Linux, Mac and Windows for cutting, arranging and animating video clips on a multi-track timeline. It is for people who want an easy-to-use editor without paying for one.",
@@ -10080,6 +10528,33 @@
     "assets/shots/openvidu-0.webp"
    ],
    "setup": "advanced"
+  },
+  {
+   "archived": false,
+   "inactive": false,
+   "download": null,
+   "licenseClass": "open",
+   "licenseNeedsCheck": false,
+   "unconfirmed": [],
+   "source": "data-fixes",
+   "verified": false,
+   "screenshots": [],
+   "id": "openvpn",
+   "name": "OpenVPN",
+   "kind": "self_hosted",
+   "code": "github.com/OpenVPN/openvpn",
+   "website": "https://openvpn.net/community/",
+   "summary": "OpenVPN Community is the free, open-source VPN software behind many VPN services. You set up a server and connect your devices to it over an encrypted link. It works well but is set up by hand, without a friendly admin screen.",
+   "license": "GPL-2.0",
+   "licenseSource": "https://github.com/OpenVPN/openvpn/blob/master/COPYING",
+   "stars": 14731,
+   "platforms": [
+    "windows",
+    "mac",
+    "linux",
+    "server"
+   ],
+   "thumbs": []
   },
   {
    "id": "openwebanalytics",
@@ -10294,6 +10769,34 @@
    ],
    "thumbs": [],
    "setup": "advanced"
+  },
+  {
+   "archived": false,
+   "inactive": false,
+   "download": null,
+   "licenseClass": "open",
+   "licenseNeedsCheck": false,
+   "unconfirmed": [],
+   "source": "data-fixes",
+   "verified": false,
+   "screenshots": [],
+   "id": "outline-vpn",
+   "name": "Outline VPN",
+   "kind": "self_hosted",
+   "code": "github.com/Jigsaw-Code/outline-server",
+   "website": "https://getoutline.org",
+   "summary": "Outline lets you set up your own private VPN on a server you rent, then share access with friends and family through a simple app. You control the server, but you only get the one location where you rented it.",
+   "license": "Apache-2.0",
+   "stars": 6257,
+   "platforms": [
+    "windows",
+    "mac",
+    "linux",
+    "android",
+    "ios",
+    "server"
+   ],
+   "thumbs": []
   },
   {
    "id": "owncast",
@@ -10819,6 +11322,30 @@
    "setup": "advanced"
   },
   {
+   "archived": false,
+   "inactive": false,
+   "download": null,
+   "licenseClass": "open",
+   "licenseNeedsCheck": false,
+   "unconfirmed": [],
+   "source": "data-fixes",
+   "verified": false,
+   "screenshots": [],
+   "id": "pinry",
+   "name": "Pinry",
+   "kind": "self_hosted",
+   "code": "github.com/pinry/pinry",
+   "website": "https://getpinry.com",
+   "summary": "Pinry lets you save pictures from around the web onto boards and browse them as a tiled wall, like Pinterest. You run it yourself, so your collection stays private unless you share it.",
+   "license": "BSD-2-Clause",
+   "stars": 3429,
+   "platforms": [
+    "web",
+    "server"
+   ],
+   "thumbs": []
+  },
+  {
    "id": "pinta",
    "name": "Pinta",
    "summary": "Pinta is a simple paint program for drawing and making basic edits to pictures. It is aimed at people who want an easy image editor on Linux, Windows, or macOS.",
@@ -10989,6 +11516,29 @@
     "assets/shots/plausible-0.webp"
    ],
    "setup": "advanced"
+  },
+  {
+   "archived": false,
+   "inactive": false,
+   "download": null,
+   "licenseClass": "open",
+   "licenseNeedsCheck": false,
+   "unconfirmed": [],
+   "source": "data-fixes",
+   "verified": false,
+   "screenshots": [],
+   "id": "playnite",
+   "name": "Playnite",
+   "kind": "app",
+   "code": "github.com/JosefNemec/Playnite",
+   "website": "https://playnite.link",
+   "summary": "Playnite gathers your PC games from Steam, Epic, GOG and others into one library with one search. It launches and tracks them, but does not sell games.",
+   "license": "MIT",
+   "stars": 14362,
+   "platforms": [
+    "windows"
+   ],
+   "thumbs": []
   },
   {
    "id": "plume",
@@ -11193,6 +11743,33 @@
    ],
    "thumbs": [],
    "setup": "advanced"
+  },
+  {
+   "archived": false,
+   "inactive": false,
+   "download": null,
+   "licenseClass": "open",
+   "licenseNeedsCheck": false,
+   "unconfirmed": [],
+   "source": "data-fixes",
+   "verified": false,
+   "screenshots": [],
+   "id": "postgresql",
+   "name": "PostgreSQL",
+   "kind": "self_hosted",
+   "code": "github.com/postgres/postgres",
+   "website": "https://www.postgresql.org",
+   "summary": "PostgreSQL is one of the world's most trusted databases: it stores business data in tables and answers questions about it. Many cloud database services are built on it. You can run it yourself on your own computer or server.",
+   "license": "PostgreSQL",
+   "licenseSource": "https://github.com/postgres/postgres/blob/master/COPYRIGHT",
+   "stars": 22594,
+   "platforms": [
+    "windows",
+    "mac",
+    "linux",
+    "server"
+   ],
+   "thumbs": []
   },
   {
    "id": "posthog",
@@ -11418,6 +11995,33 @@
    "setup": "advanced"
   },
   {
+   "archived": false,
+   "inactive": false,
+   "download": null,
+   "licenseClass": "open",
+   "licenseNeedsCheck": false,
+   "unconfirmed": [],
+   "source": "data-fixes",
+   "verified": false,
+   "screenshots": [],
+   "id": "proton-vpn",
+   "name": "Proton VPN",
+   "kind": "app",
+   "code": "github.com/ProtonVPN/android-app",
+   "website": "https://protonvpn.com",
+   "summary": "Proton VPN hides your internet traffic and your location from websites. Its apps for phones and computers are open source and independently audited. The VPN service itself has a free plan and paid plans, and its servers are Proton's, not open source.",
+   "license": "GPL-3.0",
+   "stars": 4213,
+   "platforms": [
+    "windows",
+    "mac",
+    "linux",
+    "android",
+    "ios"
+   ],
+   "thumbs": []
+  },
+  {
    "id": "psitransfer",
    "name": "PsiTransfer",
    "summary": "PsiTransfer is a self-hosted file sharing website that lets you send large files to others without creating an account. It is for people or teams who want to run their own file transfer service instead of using a paid one.",
@@ -11448,6 +12052,32 @@
     "assets/shots/psitransfer-0.webp"
    ],
    "setup": "advanced"
+  },
+  {
+   "archived": false,
+   "inactive": false,
+   "download": null,
+   "licenseClass": "open_core",
+   "licenseNeedsCheck": false,
+   "unconfirmed": [],
+   "source": "data-fixes",
+   "verified": false,
+   "screenshots": [],
+   "id": "qcad",
+   "name": "QCAD",
+   "kind": "app",
+   "code": "github.com/qcad/qcad",
+   "website": "https://qcad.org",
+   "summary": "QCAD is a program for 2D technical drawings that feels close to classic AutoCAD. The free Community Edition is open source; extra tools such as extra file formats come in a paid Professional edition.",
+   "license": "GPL-3.0",
+   "licenseSource": "https://github.com/qcad/qcad/blob/master/LICENSE.txt",
+   "stars": 1914,
+   "platforms": [
+    "windows",
+    "mac",
+    "linux"
+   ],
+   "thumbs": []
   },
   {
    "id": "qdrant",
@@ -12727,6 +13357,31 @@
     "assets/shots/solidtime-0.webp"
    ],
    "setup": "advanced"
+  },
+  {
+   "archived": false,
+   "inactive": false,
+   "download": null,
+   "licenseClass": "open",
+   "licenseNeedsCheck": false,
+   "unconfirmed": [],
+   "source": "data-fixes",
+   "verified": false,
+   "screenshots": [],
+   "id": "solvespace",
+   "name": "SolveSpace",
+   "kind": "app",
+   "code": "github.com/solvespace/solvespace",
+   "website": "https://solvespace.com",
+   "summary": "SolveSpace is a small, fast program for designing 3D parts by sketching shapes and setting exact measurements. It is simpler than FreeCAD and good for mechanical parts.",
+   "license": "GPL-3.0",
+   "stars": 4221,
+   "platforms": [
+    "windows",
+    "mac",
+    "linux"
+   ],
+   "thumbs": []
   },
   {
    "id": "sonic",
@@ -15194,6 +15849,33 @@
    ],
    "thumbs": [],
    "setup": "advanced"
+  },
+  {
+   "archived": false,
+   "inactive": false,
+   "download": null,
+   "licenseClass": "open",
+   "licenseNeedsCheck": false,
+   "unconfirmed": [],
+   "source": "data-fixes",
+   "verified": false,
+   "screenshots": [],
+   "id": "zotero",
+   "name": "Zotero",
+   "kind": "app",
+   "code": "github.com/zotero/zotero",
+   "website": "https://www.zotero.org",
+   "summary": "Zotero collects the articles, books and web pages you use for research, keeps your notes and PDFs together, and writes citations and bibliographies in Word or LibreOffice. It has a free plan with limited cloud storage.",
+   "license": "AGPL-3.0",
+   "licenseSource": "https://github.com/zotero/zotero/blob/main/COPYING",
+   "stars": 15760,
+   "platforms": [
+    "windows",
+    "mac",
+    "linux",
+    "ios"
+   ],
+   "thumbs": []
   },
   {
    "id": "zulip",

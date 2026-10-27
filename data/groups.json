@@ -1,6 +1,6 @@
 {
  "license": "CC BY-SA 4.0",
- "generated": "2026-10-26",
+ "generated": "2026-10-27",
  "credits": "See data/CREDITS.md",
  "groups": [
   {
@@ -11,7 +11,10 @@
    "closed": [
     "Google Docs",
     "Microsoft Word",
-    "Apple Pages"
+    "Apple Pages",
+    "Microsoft Office",
+    "Microsoft 365",
+    "Google Workspace"
    ],
    "source": "starter",
    "alternatives": [
@@ -58,7 +61,10 @@
    "closed": [
     "Microsoft Excel",
     "Google Sheets",
-    "Apple Numbers"
+    "Apple Numbers",
+    "Microsoft Office",
+    "Microsoft 365",
+    "Google Workspace"
    ],
    "source": "starter",
    "alternatives": [
@@ -96,7 +102,10 @@
    "closed": [
     "Microsoft PowerPoint",
     "Google Slides",
-    "Apple Keynote"
+    "Apple Keynote",
+    "Microsoft Office",
+    "Microsoft 365",
+    "Google Workspace"
    ],
    "source": "starter",
    "alternatives": [
@@ -415,68 +424,6 @@
    ]
   },
   {
-   "id": "scheduling",
-   "name": "Calendar & scheduling",
-   "category": "office",
-   "job": "Calendars and booking meetings",
-   "closed": [
-    "Google Calendar",
-    "Calendly",
-    "Outlook Calendar",
-    "Doodle"
-   ],
-   "source": "starter",
-   "alternatives": [
-    {
-     "project": "cal-com",
-     "fit": "partial",
-     "note": "Booking pages only; you host it, no calendar app",
-     "review": {
-      "by": "claude-opus-5-5",
-      "reason": "Changed fit to partial because it replaces Calendly-style booking but is not a full calendar app, and added the project's non-production warning."
-     }
-    },
-    {
-     "project": "thunderbird",
-     "fit": "partial",
-     "note": "Desktop only; no phone calendar app",
-     "review": {
-      "by": "claude-opus-5-5",
-      "reason": "Corrected the description because the page presents the Android app as email-only, so calendars are a desktop feature."
-     }
-    },
-    {
-     "project": "nextcloud-calendar",
-     "fit": "full",
-     "note": "Needs a Nextcloud server"
-    },
-    {
-     "project": "fossify-calendar",
-     "fit": "partial",
-     "note": "Android only"
-    },
-    {
-     "project": "etar-calendar",
-     "fit": "partial",
-     "note": "Android only"
-    },
-    {
-     "project": "nextcloud-polls",
-     "fit": "partial",
-     "note": "Only for picking a date together, like Doodle"
-    },
-    {
-     "project": "tymeslot",
-     "fit": "partial",
-     "note": "Booking pages only; you host it; young project",
-     "review": {
-      "by": "claude-opus-5-5",
-      "reason": "Changed fit to partial because Tymeslot is a self-hosted booking tool like Calendly. It syncs with existing calendars but is not a calendar app itself, so it does not replace Google or Outlook Calendar."
-     }
-    }
-   ]
-  },
-  {
    "id": "pdf",
    "name": "PDF tools",
    "category": "office",
@@ -618,6 +565,113 @@
      "project": "rowy",
      "fit": "partial",
      "note": null
+    }
+   ]
+  },
+  {
+   "id": "calendars",
+   "name": "Calendar",
+   "category": "office",
+   "job": "Keeping your events and reminders in one place and synced across your devices",
+   "closed": [
+    "Google Calendar",
+    "Outlook Calendar"
+   ],
+   "source": "data-fixes",
+   "alternatives": [
+    {
+     "project": "nextcloud-calendar",
+     "fit": "full",
+     "note": "Needs a Nextcloud server"
+    },
+    {
+     "project": "thunderbird",
+     "fit": "partial",
+     "note": "Desktop only; no phone calendar app"
+    },
+    {
+     "project": "fossify-calendar",
+     "fit": "partial",
+     "note": "Android only"
+    },
+    {
+     "project": "etar-calendar",
+     "fit": "partial",
+     "note": "Android only"
+    }
+   ]
+  },
+  {
+   "id": "booking-pages",
+   "name": "Booking pages & meeting polls",
+   "category": "office",
+   "job": "Letting people book a time with you, or picking a meeting time together",
+   "closed": [
+    "Calendly",
+    "Doodle"
+   ],
+   "source": "data-fixes",
+   "alternatives": [
+    {
+     "project": "cal-com",
+     "fit": "full",
+     "note": "Booking pages you host yourself; no team features, and its makers advise it for personal use"
+    },
+    {
+     "project": "tymeslot",
+     "fit": "full",
+     "note": "Booking pages; you host it; young project"
+    },
+    {
+     "project": "nextcloud-polls",
+     "fit": "partial",
+     "note": "Only picks a date together, like Doodle; no booking page"
+    }
+   ]
+  },
+  {
+   "id": "writing-assistant",
+   "name": "Grammar & writing checker",
+   "category": "office",
+   "job": "Checking spelling, grammar and style as you write",
+   "closed": [
+    "Grammarly"
+   ],
+   "source": "data-fixes",
+   "alternatives": [
+    {
+     "project": "languagetool",
+     "fit": "full",
+     "note": "Run the checker on your own server; no AI rewriting"
+    },
+    {
+     "project": "harper",
+     "fit": "partial",
+     "note": "English only; runs on your computer; fewer style tips"
+    }
+   ]
+  },
+  {
+   "id": "reference-managers",
+   "name": "Reference managers",
+   "category": "office",
+   "job": "Collecting research papers and writing citations and bibliographies",
+   "closed": [
+    "EndNote",
+    "Mendeley",
+    "RefWorks"
+   ],
+   "source": "data-fixes",
+   "alternatives": [
+    {
+     "project": "zotero",
+     "fit": "full",
+     "note": null
+    },
+    {
+     "project": "jabref",
+     "fit": "partial",
+     "note": "Built around BibTeX (LaTeX); fewer Word helpers"
     }
    ]
   },
@@ -1054,6 +1108,39 @@
    ]
   },
   {
+   "id": "social-network",
+   "name": "Social network for friends & family",
+   "category": "social",
+   "job": "Sharing posts and photos with friends and family and keeping up with them",
+   "closed": [
+    "Facebook"
+   ],
+   "source": "data-fixes",
+   "alternatives": [
+    {
+     "project": "friendica",
+     "fit": "full",
+     "note": "Joins the wider fediverse; you pick or run a server"
+    },
+    {
+     "project": "diaspora",
+     "fit": "partial",
+     "note": "Smaller community; you pick or run a server"
+    }
+   ]
+  },
+  {
+   "id": "stories",
+   "name": "Disappearing photos & stories",
+   "category": "social",
+   "job": "Sending photos and short videos that disappear, with filters and stories",
+   "closed": [
+    "Snapchat"
+   ],
+   "source": "data-fixes",
+   "alternatives": []
+  },
+  {
    "id": "photo-editing",
    "name": "Photo editing",
    "category": "creative",
@@ -1377,6 +1464,46 @@
      "project": "tabler-icons",
      "fit": "partial",
      "note": null
+    }
+   ]
+  },
+  {
+   "id": "cad",
+   "name": "CAD & technical plans",
+   "category": "creative",
+   "job": "Designing precise plans and 3D parts for building and making things",
+   "closed": [
+    "AutoCAD",
+    "SolidWorks",
+    "Fusion 360",
+    "SketchUp"
+   ],
+   "source": "data-fixes",
+   "alternatives": [
+    {
+     "project": "freecad",
+     "fit": "full",
+     "note": "3D parts; takes time to learn"
+    },
+    {
+     "project": "librecad",
+     "fit": "partial",
+     "note": "2D drawings only"
+    },
+    {
+     "project": "qcad",
+     "fit": "partial",
+     "note": "2D drawings; some tools are paid"
+    },
+    {
+     "project": "openscad",
+     "fit": "partial",
+     "note": "You describe shapes in writing instead of drawing"
+    },
+    {
+     "project": "solvespace",
+     "fit": "partial",
+     "note": "Simple 3D parts; fewer tools than FreeCAD"
     }
    ]
   },
@@ -1828,7 +1955,6 @@
    "closed": [
     "OpenVPN Access Server",
     "Tailscale",
-    "OpenVPN",
     "AWS VPC"
    ],
    "source": "lists",
@@ -1855,6 +1981,11 @@
       "by": "claude-opus-5-5",
       "reason": "Raised fit to full because it is a complete Tailscale-style mesh VPN with a self-hosted mode, and removed phones since the page lists only Linux, macOS, Windows and OpenWrt."
      }
+    },
+    {
+     "project": "openvpn",
+     "fit": "partial",
+     "note": "Set up by hand; no web admin panel like Access Server's"
     }
    ]
   },
@@ -1895,6 +2026,56 @@
      "project": "yourls",
      "fit": "full",
      "note": null
+    }
+   ]
+  },
+  {
+   "id": "privacy-vpn",
+   "name": "VPN for privacy",
+   "category": "web",
+   "job": "Hiding your internet traffic from your network and appearing to connect from another place",
+   "closed": [
+    "NordVPN",
+    "ExpressVPN",
+    "Surfshark",
+    "CyberGhost"
+   ],
+   "source": "data-fixes",
+   "alternatives": [
+    {
+     "project": "mullvad-vpn",
+     "fit": "partial",
+     "note": "App is open; the paid service and servers are not"
+    },
+    {
+     "project": "proton-vpn",
+     "fit": "partial",
+     "note": "Apps are open; the service and servers are not"
+    },
+    {
+     "project": "outline-vpn",
+     "fit": "partial",
+     "note": "You rent and run your own server, so you get one location"
+    }
+   ]
+  },
+  {
+   "id": "antivirus",
+   "name": "Antivirus",
+   "category": "web",
+   "job": "Finding and removing viruses and other malware on your computer",
+   "closed": [
+    "Norton",
+    "McAfee",
+    "Kaspersky",
+    "Bitdefender"
+   ],
+   "source": "data-fixes",
+   "alternatives": [
+    {
+     "project": "clamav",
+     "fit": "partial",
+     "note": "Scans files on request; no always-on protection for most home users"
     }
    ]
   },
@@ -2157,6 +2338,28 @@
    ]
   },
   {
+   "id": "vector-databases",
+   "name": "Vector databases",
+   "category": "ai",
+   "job": "Storing data by meaning so AI apps can find similar items",
+   "closed": [
+    "Pinecone"
+   ],
+   "source": "data-fixes",
+   "alternatives": [
+    {
+     "project": "qdrant",
+     "fit": "full",
+     "note": null
+    },
+    {
+     "project": "semi",
+     "fit": "full",
+     "note": null
+    }
+   ]
+  },
+  {
    "id": "music",
    "name": "Music streaming",
    "category": "media",
@@ -2405,6 +2608,65 @@
    ]
   },
   {
+   "id": "game-stores",
+   "name": "Game stores & launchers",
+   "category": "media",
+   "job": "Buying, downloading and starting PC games",
+   "closed": [
+    "Steam",
+    "Epic Games Store",
+    "GOG Galaxy"
+   ],
+   "source": "data-fixes",
+   "alternatives": [
+    {
+     "project": "heroic-games-launcher",
+     "fit": "partial",
+     "note": "Plays games you own from Epic, GOG and Amazon; sells none"
+    },
+    {
+     "project": "lutris",
+     "fit": "partial",
+     "note": "Linux only; plays games you own; sells none"
+    },
+    {
+     "project": "playnite",
+     "fit": "partial",
+     "note": "Windows only; one library for games you own; sells none"
+    },
+    {
+     "project": "itch-app",
+     "fit": "partial",
+     "note": "Only for games on itch.io"
+    }
+   ]
+  },
+  {
+   "id": "video-streaming",
+   "name": "TV & movie streaming",
+   "category": "media",
+   "job": "Watching shows and movies from a catalog you subscribe to",
+   "closed": [
+    "Netflix",
+    "Disney+",
+    "Hulu",
+    "Prime Video"
+   ],
+   "source": "data-fixes",
+   "alternatives": [
+    {
+     "project": "jellyfin",
+     "fit": "partial",
+     "note": "Plays your own collection; has no catalog of shows to watch"
+    },
+    {
+     "project": "kodi",
+     "fit": "partial",
+     "note": "Plays your own collection; has no catalog of shows to watch"
+    }
+   ]
+  },
+  {
    "id": "cloud-storage",
    "name": "Cloud storage & sync",
    "category": "files",
@@ -2646,6 +2908,33 @@
      "project": "spliit-app",
      "fit": "full",
      "note": null
+    }
+   ]
+  },
+  {
+   "id": "inspiration-boards",
+   "name": "Saving ideas & pictures to boards",
+   "category": "everyday",
+   "job": "Collecting pictures and ideas from around the web onto boards",
+   "closed": [
+    "Pinterest"
+   ],
+   "source": "data-fixes",
+   "alternatives": [
+    {
+     "project": "pinry",
+     "fit": "partial",
+     "note": "Picture boards you host yourself; no public feed of other people's ideas"
+    },
+    {
+     "project": "karakeep",
+     "fit": "partial",
+     "note": "Saves links and images privately; not a public picture feed"
+    },
+    {
+     "project": "linkwarden",
+     "fit": "partial",
+     "note": "Saves links in shareable collections; not a public picture feed"
     }
    ]
   },
@@ -3090,181 +3379,6 @@
    ]
   },
   {
-   "id": "databases",
-   "name": "Databases",
-   "category": "dev",
-   "job": "Store and query data",
-   "closed": [
-    "Firebase",
-    "Kdb+",
-    "TigerGraph",
-    "Amazon Neptune",
-    "Amazon Aurora",
-    "Google Cloud Spanner",
-    "Elastic Cloud",
-    "Algolia",
-    "Snowflake"
-   ],
-   "source": "lists",
-   "alternatives": [
-    {
-     "project": "appwrite",
-     "fit": "full",
-     "note": null
-    },
-    {
-     "project": "acebase",
-     "fit": "full",
-     "note": null,
-     "review": {
-      "by": "claude-opus-5-5",
-      "reason": "Changed fit to full because AceBase is a complete self-hosted database with queries, indexes and realtime updates, which is the group's main job."
-     }
-    },
-    {
-     "project": "cratedb",
-     "fit": "full",
-     "note": null,
-     "review": {
-      "by": "claude-opus-5-5",
-      "reason": "Changed fit to full because CrateDB is a complete self-hosted distributed SQL database that does the group's main job of storing and querying data."
-     }
-    },
-    {
-     "project": "databend",
-     "fit": "full",
-     "note": null,
-     "review": {
-      "by": "claude-opus-5-5",
-      "reason": "Raised fit to full because Databend is a complete self-hostable SQL database for storing and querying data, with built-in full-text and vector search."
-     }
-    },
-    {
-     "project": "influxdb",
-     "fit": "partial",
-     "note": null
-    },
-    {
-     "project": "kuzzle",
-     "fit": "partial",
-     "note": null
-    },
-    {
-     "project": "manticore-search",
-     "fit": "partial",
-     "note": null,
-     "review": {
-      "by": "claude-opus-5-5",
-      "reason": "Removed the promotional word \"fast\" and noted Algolia, since it covers the search-engine apps in this group but not general-purpose databases."
-     }
-    },
-    {
-     "project": "mellisearch",
-     "fit": "partial",
-     "note": null,
-     "review": {
-      "by": "claude-opus-5-5",
-      "reason": "Changed fit to partial because Meilisearch is a search engine that replaces Algolia-style search, not a general-purpose database like most apps in this group."
-     }
-    },
-    {
-     "project": "neo4j",
-     "fit": "partial",
-     "note": null
-    },
-    {
-     "project": "nhost",
-     "fit": "full",
-     "note": null
-    },
-    {
-     "project": "pingcap",
-     "fit": "full",
-     "note": null,
-     "review": {
-      "by": "claude-opus-5-5",
-      "reason": "Changed fit to full because TiDB is a complete self-hostable distributed SQL database, directly comparable to Aurora and Cloud Spanner."
-     }
-    },
-    {
-     "project": "pocketbase",
-     "fit": "partial",
-     "note": null
-    },
-    {
-     "project": "qdrant",
-     "fit": "partial",
-     "note": null
-    },
-    {
-     "project": "questdb",
-     "fit": "full",
-     "note": null
-    },
-    {
-     "project": "quickwit",
-     "fit": "partial",
-     "note": null
-    },
-    {
-     "project": "semi",
-     "fit": "partial",
-     "note": null
-    },
-    {
-     "project": "sonic",
-     "fit": "partial",
-     "note": null
-    },
-    {
-     "project": "supabase",
-     "fit": "full",
-     "note": null,
-     "review": {
-      "by": "claude-opus-5-5",
-      "reason": "Changed fit to full because Supabase is a complete, self-hostable Postgres database platform that does the group's main job and directly replaces Firebase."
-     }
-    },
-    {
-     "project": "terminusdb",
-     "fit": "full",
-     "note": null,
-     "review": {
-      "by": "claude-opus-5-5",
-      "reason": "Changed fit to full because TerminusDB is a complete self-hosted graph database that stores and queries data, comparable to Amazon Neptune or TigerGraph."
-     }
-    },
-    {
-     "project": "tdengine",
-     "fit": "partial",
-     "note": null
-    },
-    {
-     "project": "typesense",
-     "fit": "partial",
-     "note": null,
-     "review": {
-      "by": "claude-opus-5-5",
-      "reason": "Changed fit to partial because Typesense replaces search services like Algolia and Elastic Cloud but not general-purpose databases like Aurora, Spanner or Firebase."
-     }
-    },
-    {
-     "project": "zinc-labs",
-     "fit": "partial",
-     "note": null
-    },
-    {
-     "project": "yugabyte",
-     "fit": "full",
-     "note": null,
-     "review": {
-      "by": "claude-opus-5-5",
-      "reason": "Changed fit to full because YugabyteDB is a complete self-hosted distributed SQL database that directly replaces Amazon Aurora and Google Cloud Spanner."
-     }
-    }
-   ]
-  },
-  {
    "id": "backend-service",
    "name": "App backends",
    "category": "dev",
@@ -3536,7 +3650,6 @@
    "job": "Move data between tools automatically",
    "closed": [
     "Fivetran",
-    "Airflow",
     "Hightouch",
     "Segment"
    ],
@@ -3565,6 +3678,11 @@
      "project": "trench",
      "fit": "partial",
      "note": null
+    },
+    {
+     "project": "airflow",
+     "fit": "partial",
+     "note": "You write each job in code; no ready-made connectors like Fivetran's"
     }
    ]
   },
@@ -3575,7 +3693,6 @@
    "job": "Watch servers and apps for problems",
    "closed": [
     "Datadog",
-    "DataDog",
     "NewRelic",
     "Elastic Cloud"
    ],
@@ -3867,6 +3984,164 @@
    ]
   },
   {
+   "id": "sql-databases",
+   "name": "SQL databases",
+   "category": "dev",
+   "job": "Storing business data in tables that many users and servers can use at once",
+   "closed": [
+    "Amazon Aurora",
+    "Google Cloud Spanner"
+   ],
+   "source": "data-fixes",
+   "alternatives": [
+    {
+     "project": "postgresql",
+     "fit": "full",
+     "note": "You run it yourself or rent hosting; Aurora is a managed service"
+    },
+    {
+     "project": "mariadb",
+     "fit": "full",
+     "note": "You run it yourself or rent hosting"
+    },
+    {
+     "project": "pingcap",
+     "fit": "full",
+     "note": null
+    },
+    {
+     "project": "yugabyte",
+     "fit": "full",
+     "note": null
+    },
+    {
+     "project": "cratedb",
+     "fit": "full",
+     "note": null
+    }
+   ]
+  },
+  {
+   "id": "search-engines",
+   "name": "Site & app search",
+   "category": "dev",
+   "job": "Adding fast search to a website or app",
+   "closed": [
+    "Algolia",
+    "Elastic Cloud"
+   ],
+   "source": "data-fixes",
+   "alternatives": [
+    {
+     "project": "typesense",
+     "fit": "full",
+     "note": null
+    },
+    {
+     "project": "mellisearch",
+     "fit": "full",
+     "note": null
+    },
+    {
+     "project": "manticore-search",
+     "fit": "full",
+     "note": null
+    },
+    {
+     "project": "zinc-labs",
+     "fit": "partial",
+     "note": null
+    },
+    {
+     "project": "sonic",
+     "fit": "partial",
+     "note": null
+    },
+    {
+     "project": "quickwit",
+     "fit": "partial",
+     "note": null
+    }
+   ]
+  },
+  {
+   "id": "graph-databases",
+   "name": "Graph databases",
+   "category": "dev",
+   "job": "Storing data as connected items and following the links between them",
+   "closed": [
+    "TigerGraph",
+    "Amazon Neptune"
+   ],
+   "source": "data-fixes",
+   "alternatives": [
+    {
+     "project": "neo4j",
+     "fit": "partial",
+     "note": "Free Community edition; clustering and some features are paid"
+    },
+    {
+     "project": "terminusdb",
+     "fit": "full",
+     "note": null
+    }
+   ]
+  },
+  {
+   "id": "time-series-databases",
+   "name": "Time-series databases",
+   "category": "dev",
+   "job": "Storing readings and events over time, such as sensor data and trades",
+   "closed": [
+    "Kdb+"
+   ],
+   "source": "data-fixes",
+   "alternatives": [
+    {
+     "project": "questdb",
+     "fit": "full",
+     "note": null
+    },
+    {
+     "project": "influxdb",
+     "fit": "full",
+     "note": null
+    },
+    {
+     "project": "tdengine",
+     "fit": "full",
+     "note": null
+    },
+    {
+     "project": "cratedb",
+     "fit": "full",
+     "note": null
+    }
+   ]
+  },
+  {
+   "id": "data-warehouses",
+   "name": "Data warehouses",
+   "category": "dev",
+   "job": "Asking questions across huge amounts of company data",
+   "closed": [
+    "Snowflake"
+   ],
+   "source": "data-fixes",
+   "alternatives": [
+    {
+     "project": "clickhouse",
+     "fit": "full",
+     "note": "You run it yourself, or rent hosting from ClickHouse"
+    },
+    {
+     "project": "databend",
+     "fit": "full",
+     "note": null
+    }
+   ]
+  },
+  {
    "id": "bi",
    "name": "Business dashboards & reports",
    "category": "business",
@@ -3875,7 +4150,6 @@
     "Tableau",
     "Looker",
     "Power BI",
-    "PowerBI",
     "Mode Analytics",
     "AWS Lookout",
     "Anodot",
@@ -3945,7 +4219,7 @@
    "closed": [
     "Pocus",
     "Common Room",
-    "Orbit",
+    "Orbit (orbit.love)",
     "Commsor"
    ],
    "source": "lists",
@@ -3978,7 +4252,7 @@
    "closed": [
     "SAP",
     "Oracle Fusion ERP Cloud",
-    "Odoo",
+    "Odoo Enterprise",
     "Microsoft Dynamics",
     "SAP Business One"
    ],
@@ -4010,7 +4284,7 @@
     {
      "project": "odoo",
      "fit": "full",
-     "note": null,
+     "note": "Community edition is free and open; the paid Enterprise edition adds features",
      "review": {
       "by": "claude-opus-5-5",
       "reason": "Changed fit to full because the open-source edition integrates sales, invoicing and accounting, inventory, manufacturing and other operations into one ERP, which is the group's main job."
@@ -4142,7 +4416,13 @@
     "Bloomberg"
    ],
    "source": "lists",
-   "alternatives": []
+   "alternatives": [
+    {
+     "project": "openbb",
+     "fit": "partial",
+     "note": "Open data toolkit; the point-and-click workspace is hosted, with no live terminal, news or chat like Bloomberg's"
+    }
+   ]
   },
   {
    "id": "pos",
