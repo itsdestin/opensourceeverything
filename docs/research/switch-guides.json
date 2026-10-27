@@ -75,7 +75,14 @@
     "The download link expires after about 7 days and works 5 times.",
     "The page does not say what file format Drive files arrive in; Google Docs files are converted when you download them."
    ],
-   "opensIn": [],
+   "opensIn": [
+    {
+     "project": "nextcloud",
+     "note": "Nextcloud has migration tools for Google and OneDrive (needs an admin-created OAuth connection); keeps folder layout for OneDrive.",
+     "source": "https://nextcloud.com/blog/easy-migration-to-nextcloud-from-insecure-and-privacy-unfriendly-platforms-now-available/",
+     "tag": null
+    }
+   ],
    "tip": null,
    "skip": null
   },
@@ -101,6 +108,12 @@
      "note": "Has a \"Google takeout\" import: download every zip part, then Upload > Google takeout in the desktop app. Reads the JSON files so dates and albums are kept.",
      "source": "https://ente.com/help/photos/migration/from-google-photos/",
      "tag": "google-photos-import"
+    },
+    {
+     "project": "immich",
+     "note": "Immich's docs recommend the community tool immich-go for importing a Google Photos Takeout.",
+     "source": "https://docs.immich.app/features/command-line-interface/",
+     "tag": null
     }
    ],
    "tip": "Download every zip part before importing, and keep the originals until you have checked the new library.",
@@ -171,7 +184,20 @@
     "Pages you cannot see (other people's private pages) are left out.",
     "Callout blocks come out as HTML because Markdown has no equivalent."
    ],
-   "opensIn": [],
+   "opensIn": [
+    {
+     "project": "appflowy",
+     "note": "Imports a Notion export zip into a new workspace. A community reply said zip import was cloud-only at one point; check your version.",
+     "source": "https://docs.appflowy.io/docs/guides/import-from-notion",
+     "tag": null
+    },
+    {
+     "project": "joplin",
+     "note": "Imports Markdown files and folders (File, Import, Markdown).",
+     "source": "https://joplinapp.org/help/apps/import_export",
+     "tag": null
+    }
+   ],
    "tip": "On Windows, long folder names can stop the zip from opening. Untick 'Create folders for subpages' or extract with 7-Zip.",
    "skip": null
   },
@@ -1251,7 +1277,14 @@
     "Limits: 250 GB per file, 10,000 files per download.",
     "Files protected by sensitivity labels over 4 MB are left out of the zip."
    ],
-   "opensIn": [],
+   "opensIn": [
+    {
+     "project": "nextcloud",
+     "note": "Nextcloud has migration tools for Google and OneDrive (needs an admin-created OAuth connection); keeps folder layout for OneDrive.",
+     "source": "https://nextcloud.com/blog/easy-migration-to-nextcloud-from-insecure-and-privacy-unfriendly-platforms-now-available/",
+     "tag": null
+    }
+   ],
    "tip": null,
    "skip": null
   },
@@ -2201,6 +2234,1257 @@
    "wontComeOver": [
     "End-to-end encrypted chats are downloaded separately, from their own Messenger help page.",
     "The file is a ZIP with an index you open in a browser; none of the listed alternatives' docs I checked import it."
+   ],
+   "opensIn": [],
+   "tip": null,
+   "skip": null
+  },
+  "google-workspace": {
+   "app": "Google Workspace",
+   "export": [],
+   "exportSource": null,
+   "formats": [],
+   "wontComeOver": [],
+   "opensIn": [],
+   "tip": "Bundle of Docs, Sheets, Slides, Gmail, Drive; see each app's own guide",
+   "skip": "suite"
+  },
+  "microsoft-365": {
+   "app": "Microsoft 365",
+   "export": [],
+   "exportSource": null,
+   "formats": [],
+   "wontComeOver": [],
+   "opensIn": [],
+   "tip": "Bundle of Word, Excel, PowerPoint, Outlook, OneDrive; see each app's own guide",
+   "skip": "suite"
+  },
+  "microsoft-office": {
+   "app": "Microsoft Office",
+   "export": [],
+   "exportSource": null,
+   "formats": [],
+   "wontComeOver": [],
+   "opensIn": [],
+   "tip": "Bundle of Word, Excel, PowerPoint, Outlook; see each app's own guide",
+   "skip": "suite"
+  },
+  "monday-com": {
+   "app": "Monday.com",
+   "export": [],
+   "exportSource": null,
+   "formats": [],
+   "wontComeOver": [],
+   "opensIn": [],
+   "tip": "Sold to businesses or run as a service, not a personal app",
+   "skip": "business service"
+  },
+  "docusign": {
+   "app": "DocuSign",
+   "export": [],
+   "exportSource": null,
+   "formats": [],
+   "wontComeOver": [],
+   "opensIn": [],
+   "tip": "Sold to businesses or run as a service, not a personal app",
+   "skip": "business service"
+  },
+  "easychair": {
+   "app": "EasyChair",
+   "export": [],
+   "exportSource": null,
+   "formats": [],
+   "wontComeOver": [],
+   "opensIn": [],
+   "tip": "Sold to businesses or run as a service, not a personal app",
+   "skip": "business service"
+  },
+  "buffer": {
+   "app": "Buffer",
+   "export": [],
+   "exportSource": null,
+   "formats": [],
+   "wontComeOver": [],
+   "opensIn": [],
+   "tip": "Sold to businesses or run as a service, not a personal app",
+   "skip": "business service"
+  },
+  "hootsuite": {
+   "app": "Hootsuite",
+   "export": [],
+   "exportSource": null,
+   "formats": [],
+   "wontComeOver": [],
+   "opensIn": [],
+   "tip": "Sold to businesses or run as a service, not a personal app",
+   "skip": "business service"
+  },
+  "google-analytics": {
+   "app": "Google Analytics",
+   "export": [],
+   "exportSource": null,
+   "formats": [],
+   "wontComeOver": [],
+   "opensIn": [],
+   "tip": "Sold to businesses or run as a service, not a personal app",
+   "skip": "business service"
+  },
+  "zendesk": {
+   "app": "Zendesk",
+   "export": [],
+   "exportSource": null,
+   "formats": [],
+   "wontComeOver": [],
+   "opensIn": [],
+   "tip": "Sold to businesses or run as a service, not a personal app",
+   "skip": "business service"
+  },
+  "intercom": {
+   "app": "Intercom",
+   "export": [],
+   "exportSource": null,
+   "formats": [],
+   "wontComeOver": [],
+   "opensIn": [],
+   "tip": "Sold to businesses or run as a service, not a personal app",
+   "skip": "business service"
+  },
+  "zapier": {
+   "app": "Zapier",
+   "export": [],
+   "exportSource": null,
+   "formats": [],
+   "wontComeOver": [],
+   "opensIn": [],
+   "tip": "Sold to businesses or run as a service, not a personal app",
+   "skip": "business service"
+  },
+  "make": {
+   "app": "Make",
+   "export": [],
+   "exportSource": null,
+   "formats": [],
+   "wontComeOver": [],
+   "opensIn": [],
+   "tip": "Sold to businesses or run as a service, not a personal app",
+   "skip": "business service"
+  },
+  "postman": {
+   "app": "Postman",
+   "export": [],
+   "exportSource": null,
+   "formats": [],
+   "wontComeOver": [],
+   "opensIn": [],
+   "tip": "Sold to businesses or run as a service, not a personal app",
+   "skip": "business service"
+  },
+  "retool": {
+   "app": "Retool",
+   "export": [],
+   "exportSource": null,
+   "formats": [],
+   "wontComeOver": [],
+   "opensIn": [],
+   "tip": "Sold to businesses or run as a service, not a personal app",
+   "skip": "business service"
+  },
+  "firebase": {
+   "app": "Firebase",
+   "export": [],
+   "exportSource": null,
+   "formats": [],
+   "wontComeOver": [],
+   "opensIn": [],
+   "tip": "Sold to businesses or run as a service, not a personal app",
+   "skip": "business service"
+  },
+  "wix": {
+   "app": "Wix",
+   "export": [],
+   "exportSource": null,
+   "formats": [],
+   "wontComeOver": [],
+   "opensIn": [],
+   "tip": "Sold to businesses or run as a service, not a personal app",
+   "skip": "business service"
+  },
+  "strikingly": {
+   "app": "Strikingly",
+   "export": [],
+   "exportSource": null,
+   "formats": [],
+   "wontComeOver": [],
+   "opensIn": [],
+   "tip": "Sold to businesses or run as a service, not a personal app",
+   "skip": "business service"
+  },
+  "webflow": {
+   "app": "Webflow",
+   "export": [],
+   "exportSource": null,
+   "formats": [],
+   "wontComeOver": [],
+   "opensIn": [],
+   "tip": "Sold to businesses or run as a service, not a personal app",
+   "skip": "business service"
+  },
+  "lokalise": {
+   "app": "Lokalise",
+   "export": [],
+   "exportSource": null,
+   "formats": [],
+   "wontComeOver": [],
+   "opensIn": [],
+   "tip": "Sold to businesses or run as a service, not a personal app",
+   "skip": "business service"
+  },
+  "crowdin": {
+   "app": "Crowdin",
+   "export": [],
+   "exportSource": null,
+   "formats": [],
+   "wontComeOver": [],
+   "opensIn": [],
+   "tip": "Sold to businesses or run as a service, not a personal app",
+   "skip": "business service"
+  },
+  "transifex": {
+   "app": "Transifex",
+   "export": [],
+   "exportSource": null,
+   "formats": [],
+   "wontComeOver": [],
+   "opensIn": [],
+   "tip": "Sold to businesses or run as a service, not a personal app",
+   "skip": "business service"
+  },
+  "poeditor": {
+   "app": "POEditor",
+   "export": [],
+   "exportSource": null,
+   "formats": [],
+   "wontComeOver": [],
+   "opensIn": [],
+   "tip": "Sold to businesses or run as a service, not a personal app",
+   "skip": "business service"
+  },
+  "outlier": {
+   "app": "Outlier",
+   "export": [],
+   "exportSource": null,
+   "formats": [],
+   "wontComeOver": [],
+   "opensIn": [],
+   "tip": "Sold to businesses or run as a service, not a personal app",
+   "skip": "business service"
+  },
+  "odoo-enterprise": {
+   "app": "Odoo Enterprise",
+   "export": [],
+   "exportSource": null,
+   "formats": [],
+   "wontComeOver": [],
+   "opensIn": [],
+   "tip": "Sold to businesses or run as a service, not a personal app",
+   "skip": "business service"
+  },
+  "freshbooks": {
+   "app": "FreshBooks",
+   "export": [],
+   "exportSource": null,
+   "formats": [],
+   "wontComeOver": [],
+   "opensIn": [],
+   "tip": "Sold to businesses or run as a service, not a personal app",
+   "skip": "business service"
+  },
+  "quickbooks": {
+   "app": "QuickBooks",
+   "export": [],
+   "exportSource": null,
+   "formats": [],
+   "wontComeOver": [],
+   "opensIn": [],
+   "tip": "Sold to businesses or run as a service, not a personal app",
+   "skip": "business service"
+  },
+  "hubspot": {
+   "app": "Hubspot",
+   "export": [],
+   "exportSource": null,
+   "formats": [],
+   "wontComeOver": [],
+   "opensIn": [],
+   "tip": "Sold to businesses or run as a service, not a personal app",
+   "skip": "business service"
+  },
+  "square-pos": {
+   "app": "Square POS",
+   "export": [],
+   "exportSource": null,
+   "formats": [],
+   "wontComeOver": [],
+   "opensIn": [],
+   "tip": "Sold to businesses or run as a service, not a personal app",
+   "skip": "business service"
+  },
+  "clover": {
+   "app": "Clover",
+   "export": [],
+   "exportSource": null,
+   "formats": [],
+   "wontComeOver": [],
+   "opensIn": [],
+   "tip": "Sold to businesses or run as a service, not a personal app",
+   "skip": "business service"
+  },
+  "brevo": {
+   "app": "Brevo",
+   "export": [],
+   "exportSource": null,
+   "formats": [],
+   "wontComeOver": [],
+   "opensIn": [],
+   "tip": "Sold to businesses or run as a service, not a personal app",
+   "skip": "business service"
+  },
+  "convertkit": {
+   "app": "ConvertKit",
+   "export": [],
+   "exportSource": null,
+   "formats": [],
+   "wontComeOver": [],
+   "opensIn": [],
+   "tip": "Sold to businesses or run as a service, not a personal app",
+   "skip": "business service"
+  },
+  "refworks": {
+   "app": "RefWorks",
+   "export": [],
+   "exportSource": null,
+   "formats": [],
+   "wontComeOver": [],
+   "opensIn": [],
+   "tip": "Sold to businesses or run as a service, not a personal app",
+   "skip": "business service"
+  },
+  "tailscale": {
+   "app": "Tailscale",
+   "export": [],
+   "exportSource": null,
+   "formats": [],
+   "wontComeOver": [],
+   "opensIn": [],
+   "tip": "Sold to businesses or run as a service, not a personal app",
+   "skip": "business service"
+  },
+  "bitly": {
+   "app": "Bitly",
+   "export": [],
+   "exportSource": null,
+   "formats": [],
+   "wontComeOver": [],
+   "opensIn": [],
+   "tip": "Sold to businesses or run as a service, not a personal app",
+   "skip": "business service"
+  },
+  "teamviewer": {
+   "app": "TeamViewer",
+   "export": [],
+   "exportSource": null,
+   "formats": [],
+   "wontComeOver": [],
+   "opensIn": [],
+   "tip": "Sold to businesses or run as a service, not a personal app",
+   "skip": "business service"
+  },
+  "anydesk": {
+   "app": "AnyDesk",
+   "export": [],
+   "exportSource": null,
+   "formats": [],
+   "wontComeOver": [],
+   "opensIn": [],
+   "tip": "Sold to businesses or run as a service, not a personal app",
+   "skip": "business service"
+  },
+  "apple-pages": {
+   "app": "Apple Pages",
+   "export": [
+    "Open the document in Pages on your Mac.",
+    "Choose File, then Export To, then pick a format (Word, PDF, EPUB, Plain Text, RTF, Images or Pages '09).",
+    "Set the format's options, click Save, choose where to put it, then click Export."
+   ],
+   "exportSource": "https://support.apple.com/guide/pages/export-to-word-pdf-or-another-file-format-tance1161f26/mac",
+   "formats": [
+    "Word",
+    "PDF",
+    "EPUB",
+    "Plain Text",
+    "RTF",
+    "Images",
+    "Pages '09"
+   ],
+   "wontComeOver": [
+    "Smart annotations do not appear in Word or EPUB exports.",
+    "Plain Text keeps body text only; text boxes, shapes, images, lines, tables and charts are dropped.",
+    "In RTF, text boxes, shapes, lines and charts become images."
+   ],
+   "opensIn": [
+    {
+     "project": "libreoffice-writer",
+     "note": "Opens the Word export (.docx) in Writer.",
+     "source": "https://help.libreoffice.org/latest/en-US/text/shared/guide/ms_user.html",
+     "tag": "word-files"
+    }
+   ],
+   "tip": "Export to Word for the best chance it opens cleanly elsewhere.",
+   "skip": null
+  },
+  "apple-numbers": {
+   "app": "Apple Numbers",
+   "export": [
+    "Open the spreadsheet and choose File, then Export To, then a format (Excel, CSV, PDF, TSV or Numbers '09).",
+    "Adjust the format's settings, click Save, pick a location, then click Export."
+   ],
+   "exportSource": "https://support.apple.com/guide/numbers/export-to-excel-or-another-file-format-tan3b922d4ad/mac",
+   "formats": [
+    "Excel",
+    "CSV",
+    "TSV",
+    "PDF",
+    "Numbers '09"
+   ],
+   "wontComeOver": [
+    "CSV and TSV keep cell values only, not formatting.",
+    "Comments appear in PDF only with the single-page fit setting."
+   ],
+   "opensIn": [
+    {
+     "project": "libreoffice-calc",
+     "note": "Opens the Excel export (.xlsx) in Calc.",
+     "source": "https://help.libreoffice.org/latest/en-US/text/shared/guide/ms_user.html",
+     "tag": "excel-files"
+    }
+   ],
+   "tip": null,
+   "skip": null
+  },
+  "apple-keynote": {
+   "app": "Apple Keynote",
+   "export": [
+    "Open the presentation and choose File, then Export To, then a format (PowerPoint, PDF, Movie, Animated GIF, Images, HTML or Keynote '09).",
+    "Set the options, click Save, pick a location, then click Export."
+   ],
+   "exportSource": "https://support.apple.com/guide/keynote/export-to-powerpoint-or-another-file-format-tana0d19882a/mac",
+   "formats": [
+    "PowerPoint (.pptx)",
+    "PDF",
+    "Movie",
+    "Animated GIF",
+    "Images",
+    "HTML",
+    "Keynote '09"
+   ],
+   "wontComeOver": [
+    "PDF export limits editing; each slide becomes a page.",
+    "Animated GIF exports only selected slides."
+   ],
+   "opensIn": [
+    {
+     "project": "libreoffice-impress",
+     "note": "Opens the PowerPoint export (.pptx) in Impress.",
+     "source": "https://help.libreoffice.org/latest/en-US/text/shared/guide/ms_user.html",
+     "tag": "pptx-files"
+    }
+   ],
+   "tip": null,
+   "skip": null
+  },
+  "obsidian": {
+   "app": "Obsidian",
+   "export": [
+    "No export step is needed: your notes already sit in a folder (your vault) on your own device.",
+    "Copy or open that folder directly in another app."
+   ],
+   "exportSource": "https://obsidian.md/help/data-storage",
+   "formats": [
+    "Markdown plain text files in folders"
+   ],
+   "wontComeOver": [],
+   "opensIn": [
+    {
+     "project": "joplin",
+     "note": "Imports a Markdown folder (File, Import, Markdown directory).",
+     "source": "https://joplinapp.org/help/apps/import_export",
+     "tag": null
+    }
+   ],
+   "tip": "Because the files are plain text, any text editor or file manager can open them.",
+   "skip": null
+  },
+  "roam-research": {
+   "app": "Roam Research",
+   "export": [
+    "Open the More actions menu (top right) and choose Export All.",
+    "Pick an export format (JSON is the one Obsidian's importer reads) and click Export All to download an archive."
+   ],
+   "exportSource": "https://help.obsidian.md/import/roam",
+   "formats": [
+    "JSON",
+    "Markdown",
+    "EDN"
+   ],
+   "wontComeOver": [
+    "Links to individual blocks are not kept in the Markdown export (page links are)."
+   ],
+   "opensIn": [],
+   "tip": "Steps come from Obsidian's Roam import page; Roam's own help page could not be read.",
+   "skip": null
+  },
+  "outlook-calendar": {
+   "app": "Outlook Calendar",
+   "export": [
+    "In classic Outlook, open Calendar and select the calendar to export.",
+    "Choose File, then Save Calendar, name the .ics file.",
+    "Optionally set the date range under More Options, then click OK and Save."
+   ],
+   "exportSource": "https://support.microsoft.com/en-us/outlook/export-an-outlook-calendar-to-google-calendar",
+   "formats": [
+    "iCalendar (.ics)"
+   ],
+   "wontComeOver": [
+    "Outlook on the web only offers a read-only ICS link to subscribe to, not a downloaded file."
+   ],
+   "opensIn": [],
+   "tip": "A very large date range can make the file slow to generate.",
+   "skip": null
+  },
+  "safari": {
+   "app": "Safari",
+   "export": [
+    "On Mac, choose File, then Export Browsing Data to File (or File, Export, Bookmarks / Passwords on older versions).",
+    "Select the data you want and click Export (Download on macOS Sequoia or earlier).",
+    "On iPhone: Settings, Apps, Safari, Export under History and Website Data, then Save to Downloads."
+   ],
+   "exportSource": "https://support.apple.com/guide/safari/ibrwebf10132/mac",
+   "formats": [
+    "Bookmarks as HTML",
+    "Passwords as CSV",
+    "iPhone export as .zip"
+   ],
+   "wontComeOver": [
+    "The passwords file is not encrypted; delete it after importing."
+   ],
+   "opensIn": [
+    {
+     "project": "firefox",
+     "note": "Firefox imports Safari bookmarks and history through its import wizard.",
+     "source": "https://support.mozilla.org/dsb/kb/importing-safari-data-firefox",
+     "tag": null
+    }
+   ],
+   "tip": "Apple advises deleting exported files once imported.",
+   "skip": null
+  },
+  "microsoft-edge": {
+   "app": "Microsoft Edge",
+   "export": [
+    "On desktop, open Edge's passwords page and choose Export passwords.",
+    "Favorites move by syncing or by Firefox's import wizard, which reads Edge directly."
+   ],
+   "exportSource": "https://support.microsoft.com/en-us/edge/export-passwords-in-microsoft-edge",
+   "formats": [
+    "Passwords as CSV"
+   ],
+   "wontComeOver": [
+    "Passwords cannot be exported from Edge on Android or iOS.",
+    "The CSV is not encrypted; delete it afterwards."
+   ],
+   "opensIn": [
+    {
+     "project": "firefox",
+     "note": "Imports Edge favorites, saved logins, passwords and history.",
+     "source": "https://support.mozilla.org/en-US/kb/import-bookmarks-and-other-data-microsoft-edge",
+     "tag": null
+    }
+   ],
+   "tip": null,
+   "skip": null
+  },
+  "surveymonkey": {
+   "app": "SurveyMonkey",
+   "export": [
+    "Open the survey's Analyze Results page and click Export.",
+    "Click New export, choose Question summaries or Individual responses, and pick a format.",
+    "Download it from Previous exports (kept 14 days)."
+   ],
+   "exportSource": "https://help.surveymonkey.com/en/surveymonkey/analyze/exports/",
+   "formats": [
+    "CSV",
+    "XLS",
+    "PDF",
+    "PPT",
+    "SPSS"
+   ],
+   "wontComeOver": [
+    "Exports need a paid plan.",
+    "Open-ended text answers are left out unless you tick that option.",
+    "Over 100,000 responses: CSV only."
+   ],
+   "opensIn": [],
+   "tip": "The download may arrive as a ZIP.",
+   "skip": null
+  },
+  "threads": {
+   "app": "Threads",
+   "export": [
+    "Open Accounts Center, then Your information and permissions, then Export your information.",
+    "Choose Threads, then export to your device or an external service.",
+    "Wait for the email with the download link."
+   ],
+   "exportSource": "https://help.instagram.com/259803026523198/",
+   "formats": [],
+   "wontComeOver": [
+    "Meta says the email link can take up to 30 days; external-service exports must be completed within 4 days."
+   ],
+   "opensIn": [],
+   "tip": null,
+   "skip": null
+  },
+  "final-cut-pro": {
+   "app": "Final Cut Pro",
+   "export": [
+    "Click in the timeline and choose File, then Export XML.",
+    "Pick a metadata view and an XML version, then save."
+   ],
+   "exportSource": "https://support.apple.com/guide/final-cut-pro/use-xml-to-transfer-projects-verdbd66ae/mac",
+   "formats": [
+    "FCPXML (.fcpxml or .fcpxmld bundle for version 1.10+)"
+   ],
+   "wontComeOver": [
+    "XML carries the edit, not the finished video; use Export File to make a video."
+   ],
+   "opensIn": [],
+   "tip": null,
+   "skip": null
+  },
+  "davinci-resolve": {
+   "app": "DaVinci Resolve",
+   "export": [
+    "For a whole project, use Export Project in the Project Manager (makes a .drp file).",
+    "For one timeline, choose File, Export, Timeline and pick AAF, XML, EDL or DRT."
+   ],
+   "exportSource": "https://forum.blackmagicdesign.com/viewtopic.php?f=21&t=215526",
+   "formats": [
+    ".drp",
+    "AAF",
+    "XML",
+    "EDL",
+    "DRT"
+   ],
+   "wontComeOver": [
+    "Effects, color grades and titles are lost in AAF/XML/EDL (the edit stays)."
+   ],
+   "opensIn": [],
+   "tip": "Source is a community forum, not Blackmagic's manual; treat as unverified by the vendor.",
+   "skip": null
+  },
+  "capcut": {
+   "app": "CapCut",
+   "export": [
+    "Finish the project and click Export (on desktop, choose resolution in the export panel).",
+    "Delete a template's ending clip first if you want no watermark."
+   ],
+   "exportSource": "https://www.capcut.com/help/export-videos-in-capcut",
+   "formats": [],
+   "wontComeOver": [
+    "CapCut's help pages cover exporting finished videos only; no project-file export is described."
+   ],
+   "opensIn": [],
+   "tip": null,
+   "skip": null
+  },
+  "garageband": {
+   "app": "GarageBand",
+   "export": [
+    "On Mac, choose Share, then Export Song to Disk.",
+    "Pick AAC, MP3, AIFF or WAVE and a quality, then save."
+   ],
+   "exportSource": "https://support.apple.com/guide/garageband/export-songs-to-disk-gbnd7cbf5ed9/10.4.4/mac/11.0",
+   "formats": [
+    "AAC",
+    "MP3",
+    "AIFF",
+    "WAVE"
+   ],
+   "wontComeOver": [
+    "Silence at the start or end is trimmed.",
+    "This saves a mixed-down song, not separate editable tracks."
+   ],
+   "opensIn": [],
+   "tip": null,
+   "skip": null
+  },
+  "procreate": {
+   "app": "Procreate",
+   "export": [
+    "Open Actions, then Share, then Share Image.",
+    "Pick a format (PSD, PDF, PNG, JPEG, TIFF or .procreate).",
+    "Use Share Layers for one file per layer."
+   ],
+   "exportSource": "https://help.procreate.com/procreate/handbook/actions/actions-share",
+   "formats": [
+    "PSD",
+    "PDF",
+    "PNG",
+    "JPEG",
+    "TIFF",
+    "Procreate"
+   ],
+   "wontComeOver": [
+    "Only PSD keeps layers for other apps; PNG is flattened."
+   ],
+   "opensIn": [
+    {
+     "project": "krita",
+     "note": "Opens PSD with layers, groups, masks and layer styles; Krita's manual says PSD support is never complete and prefers .ora or .tiff.",
+     "source": "https://docs.krita.org/en/general_concepts/file_formats/file_psd.html",
+     "tag": null
+    }
+   ],
+   "tip": null,
+   "skip": null
+  },
+  "affinity-photo": {
+   "app": "Affinity Photo",
+   "export": [
+    "Use the app's Export option and pick PSD, TIFF or PDF (the help page lists these as exportable formats; exact menu path not confirmed)."
+   ],
+   "exportSource": "https://affinity.help/photo/fr.lproj/pages/Appendix/fileformat.html",
+   "formats": [
+    "PSD",
+    "TIFF",
+    "PDF"
+   ],
+   "wontComeOver": [
+    "Per an Affinity forum user, text is rasterized in PSD export."
+   ],
+   "opensIn": [],
+   "tip": "Page is in French; TIFF or PNG are safer for moving between apps (forum advice).",
+   "skip": null
+  },
+  "google-authenticator": {
+   "app": "Google Authenticator",
+   "export": [
+    "On the old phone open the menu, choose Transfer accounts, then Export accounts.",
+    "Unlock the phone, select the accounts and tap Next. More than one QR code may appear.",
+    "Scan the QR code(s) in the new app."
+   ],
+   "exportSource": "https://support.google.com/accounts/answer/1066447",
+   "formats": [
+    "QR codes"
+   ],
+   "wontComeOver": [
+    "If you signed in with a Google Account, codes are synced instead of exported.",
+    "Menu names vary by version (some say Transfer codes)."
+   ],
+   "opensIn": [
+    {
+     "project": "aegis",
+     "note": "Aegis lists Google Authenticator among apps it imports from (scan the export QR codes). Newer Authenticator versions have had reported import failures.",
+     "source": "https://github.com/beemdevelopment/Aegis/blob/master/README.md",
+     "tag": null
+    }
+   ],
+   "tip": null,
+   "skip": null
+  },
+  "claude": {
+   "app": "Claude",
+   "export": [
+    "On the web app or Claude Desktop go to Settings, then Privacy, and click Export data.",
+    "A download link arrives by email."
+   ],
+   "exportSource": "https://support.claude.com/en/articles/9450526-export-your-claude-data",
+   "formats": [
+    "JSON (chat history)"
+   ],
+   "wontComeOver": [
+    "Export is not possible from the iOS or Android apps.",
+    "The link expires 24 hours after delivery.",
+    "Uploaded file contents are not included; files Claude created must be downloaded from the chat.",
+    "Team and Enterprise members need an owner to turn exports on."
+   ],
+   "opensIn": [],
+   "tip": "Memory can be copied out separately from Settings, Your Claude.",
+   "skip": null
+  },
+  "google-gemini": {
+   "app": "Google Gemini",
+   "export": [
+    "Go to takeout.google.com signed in to your Gemini account and clear all selections.",
+    "Tick Gemini (for Gems), and My Activity limited to Gemini Apps (for chats, media and uploads).",
+    "Choose delivery and file type (.zip or .tgz) and create the export."
+   ],
+   "exportSource": "https://support.google.com/gemini/answer/16920332?hl=en",
+   "formats": [
+    ".zip",
+    ".tgz"
+   ],
+   "wontComeOver": [
+    "Gemini in the Chat sidebar is exported separately under Gemini in Workspace.",
+    "Exporting does not delete anything from Google.",
+    "Managed work accounts follow admin retention rules."
+   ],
+   "opensIn": [],
+   "tip": "The emailed link is valid 7 days.",
+   "skip": null
+  },
+  "feedly": {
+   "app": "Feedly",
+   "export": [
+    "In the web app, open feedly.com/i/opml to download your sources as OPML."
+   ],
+   "exportSource": "https://docs.feedly.com/article/52-how-can-i-export-my-sources-and-feeds-through-opml",
+   "formats": [
+    "OPML"
+   ],
+   "wontComeOver": [
+    "Only public RSS feeds are exported; Boards, Read Later, AI Feeds and Reddit feeds are left out.",
+    "Export works only in the web app, not mobile."
+   ],
+   "opensIn": [
+    {
+     "project": "freshrss",
+     "note": "Import OPML under Subscriptions management, Import / export.",
+     "source": "https://freshrss.github.io/FreshRSS/en/users/04_Subscriptions.html",
+     "tag": null
+    }
+   ],
+   "tip": "Feedly's Dropbox integration can save Boards and Read Later items.",
+   "skip": null
+  },
+  "inoreader": {
+   "app": "Inoreader",
+   "export": [
+    "Go to Preferences, then Import/Export, then Export to download your subscriptions as OPML."
+   ],
+   "exportSource": "https://www.inoreader.com/help/basic/preferences-customization/can-i-export-my-subscriptions-and-content",
+   "formats": [
+    "OPML"
+   ],
+   "wontComeOver": [],
+   "opensIn": [
+    {
+     "project": "freshrss",
+     "note": "Import OPML under Subscriptions management, Import / export.",
+     "source": "https://freshrss.github.io/FreshRSS/en/users/04_Subscriptions.html",
+     "tag": null
+    }
+   ],
+   "tip": "Menu path comes from search summaries of older Inoreader posts.",
+   "skip": null
+  },
+  "pocket": {
+   "app": "Pocket",
+   "export": [
+    "Pocket shut down on July 8, 2025 and its export window has closed.",
+    "If you requested an export, look for it in the email tied to your Pocket or Mozilla account."
+   ],
+   "exportSource": "https://support.mozilla.org/en-US/kb/exporting-your-pocket-list",
+   "formats": [
+    "CSV or HTML (Mozilla's pages disagree)"
+   ],
+   "wontComeOver": [
+    "Export holds links, not the saved page text."
+   ],
+   "opensIn": [],
+   "tip": "Probably no longer available.",
+   "skip": null
+  },
+  "ynab": {
+   "app": "YNAB",
+   "export": [
+    "Follow YNAB's Exporting Plan Data page to download your plan, including transactions.",
+    "For reports, export Reflect reports as CSV or TSV from the web app."
+   ],
+   "exportSource": "https://support.ynab.com/en_us/how-to-export-plan-data-Sy_CouWA9",
+   "formats": [
+    "CSV",
+    "TSV"
+   ],
+   "wontComeOver": [
+    "YNAB says a full plan cannot be exported and re-imported into YNAB."
+   ],
+   "opensIn": [
+    {
+     "project": "actual-budget",
+     "note": "Imports a YNAB budget from a JSON export (File menu, Switch file, Import file, nYNAB). Expect some cleanup of overspending and duplicate categories.",
+     "source": "https://actualbudget.org/docs/migration/nynab/",
+     "tag": null
+    }
+   ],
+   "tip": "Actual's guide says the JSON export may need a YNAB personal access token.",
+   "skip": null
+  },
+  "monarch-money": {
+   "app": "Monarch Money",
+   "export": [
+    "For all accounts, go to Settings, then Data, and download transactions or account balances.",
+    "For one account, open it, choose Edit, then Download transactions or Download balance history."
+   ],
+   "exportSource": "https://help.monarchmoney.com/hc/en-us/articles/15526600975764-Download-your-transaction-history",
+   "formats": [
+    "CSV"
+   ],
+   "wontComeOver": [
+    "Exporting is web-only, not on the mobile app.",
+    "Monarch recommends 5,000 transactions or fewer per download; split big histories by date."
+   ],
+   "opensIn": [],
+   "tip": "Your history stays downloadable after you cancel.",
+   "skip": null
+  },
+  "quicken": {
+   "app": "Quicken",
+   "export": [
+    "Go to File, then File Export, then Quicken Transfer Format (QXF) or QIF file.",
+    "Choose the accounts and date range."
+   ],
+   "exportSource": "https://info.quicken.com/win/export-data-from-quicken",
+   "formats": [
+    "QXF",
+    "QIF"
+   ],
+   "wontComeOver": [
+    "QXF skips investment and business accounts; QIF has problems with investment security lots.",
+    "QFX is a bank download format that Quicken imports but does not create."
+   ],
+   "opensIn": [],
+   "tip": null,
+   "skip": null
+  },
+  "toggl": {
+   "app": "Toggl",
+   "export": [
+    "In Toggl Track open the Detailed Report and export time entries as CSV (or Settings, Data Export, Time Entries)."
+   ],
+   "exportSource": "https://support.toggl.com/en-us/article/exporting-data-z53uki/",
+   "formats": [
+    "CSV"
+   ],
+   "wontComeOver": [
+    "CSV export of the Detailed Report needs a paid plan.",
+    "Reports cover at most one year; export several CSVs for longer.",
+    "Regular users export only their own entries."
+   ],
+   "opensIn": [
+    {
+     "project": "kimai",
+     "note": "Kimai's import tool reads Toggl Track CSVs (required columns and date format must match).",
+     "source": "https://www.kimai.org/documentation/imports.html",
+     "tag": null
+    }
+   ],
+   "tip": "Set Duration format to Improved on your Toggl profile before exporting.",
+   "skip": null
+  },
+  "clockify": {
+   "app": "Clockify",
+   "export": [
+    "Open the report you want (use Detailed report with the longest date range for everything), click Export and pick a format."
+   ],
+   "exportSource": "https://clockify.me/help/reports/exporting-reports",
+   "formats": [
+    "PDF",
+    "CSV",
+    "Excel"
+   ],
+   "wontComeOver": [
+    "Free plan: PDF only, up to 31 days per report.",
+    "CSV and Excel need the Basic plan or higher."
+   ],
+   "opensIn": [
+    {
+     "project": "kimai",
+     "note": "Kimai's import tool reads Clockify CSVs (required columns and date format must match).",
+     "source": "https://www.kimai.org/documentation/imports.html",
+     "tag": null
+    }
+   ],
+   "tip": null,
+   "skip": null
+  },
+  "apple-music": {
+   "app": "Apple Music",
+   "export": [
+    "On a Mac, open the Music app and choose File, then Library, then Export Library.",
+    "This saves your playlists and library information."
+   ],
+   "exportSource": "https://support.apple.com/guide/music/save-a-copy-of-your-playlists-mus27cd5060f/mac",
+   "formats": [
+    "XML"
+   ],
+   "wontComeOver": [
+    "The XML holds information about songs and playlists, not the songs or videos themselves."
+   ],
+   "opensIn": [],
+   "tip": "Apple also offers a playlist transfer to YouTube Music via its Data and Privacy page (https://support.apple.com/en-us/120030); podcasts and audiobooks in playlists are not transferred.",
+   "skip": null
+  },
+  "twitch": {
+   "app": "Twitch",
+   "export": [
+    "Go to your privacy settings and choose Request a Copy of Your Data.",
+    "Pick the data categories and a date range, then submit.",
+    "Download the file from the same page when notified (Twitch says within 14 days)."
+   ],
+   "exportSource": "https://help.twitch.tv/s/article/requesting-your-data-from-twitch",
+   "formats": [],
+   "wontComeOver": [
+    "The report is account data (chat, logins, watch time), not your videos."
+   ],
+   "opensIn": [],
+   "tip": "If you cannot log in, use Twitch's Contact Us form. The help page is old, so menu names may differ.",
+   "skip": null
+  },
+  "loom": {
+   "app": "Loom",
+   "export": [
+    "Open the video from your Library, open its menu and choose Download."
+   ],
+   "exportSource": "https://support.atlassian.com/loom/docs/download-your-loom-video/",
+   "formats": [
+    "MP4"
+   ],
+   "wontComeOver": [
+    "Calls to action, filler-word and silence removal, chapters and captions are not in the file.",
+    "Starter Free accounts cannot download; videos over 20 GB cannot be downloaded."
+   ],
+   "opensIn": [],
+   "tip": null,
+   "skip": null
+  },
+  "steam": {
+   "app": "Steam",
+   "export": [
+    "Log in and use Steam Support's account data question form to ask for your data."
+   ],
+   "exportSource": "https://help.steampowered.com/en/wizard/HelpAccountDataQuestion",
+   "formats": [],
+   "wontComeOver": [
+    "The page does not describe a self-service download or what is included."
+   ],
+   "opensIn": [],
+   "tip": null,
+   "skip": null
+  },
+  "google-translate": {
+   "app": "Google Translate",
+   "export": [
+    "On a computer, open Google Translate and sign in.",
+    "Click the Saved tab below the text boxes, then Export to Google Sheets (top right)."
+   ],
+   "exportSource": "https://support.google.com/translate/answer/6142480?p=phrasebook_web_help&hl=en",
+   "formats": [
+    "Google Sheets"
+   ],
+   "wontComeOver": [
+    "No export option is described for the mobile app."
+   ],
+   "opensIn": [],
+   "tip": "Download the Sheet as CSV or Excel from Sheets to use it elsewhere.",
+   "skip": null
+  },
+  "mendeley": {
+   "app": "Mendeley",
+   "export": [
+    "In Mendeley Reference Manager choose File, then Export All, and pick BibTeX, EndNote XML or RIS."
+   ],
+   "exportSource": "https://www.mendeley.com/guides/mendeley-reference-manager/08-exporting-references",
+   "formats": [
+    "BibTeX",
+    "EndNote XML",
+    "RIS"
+   ],
+   "wontComeOver": [
+    "Export is not available in Mendeley Reference Manager on the web.",
+    "Only reference data is exported; PDFs and annotations are not included."
+   ],
+   "opensIn": [
+    {
+     "project": "zotero",
+     "note": "Zotero lists a dedicated Mendeley import, or imports a RIS/BibTeX file through File, Import.",
+     "source": "https://www.zotero.org/support/moving_to_zotero",
+     "tag": null
+    }
+   ],
+   "tip": null,
+   "skip": null
+  },
+  "endnote": {
+   "app": "EndNote",
+   "export": [
+    "In EndNote desktop, export your references to a file and choose an output style (RefMan RIS works with many programs).",
+    "For EndNote online, use the Format tab, Export References, with the RefMan RIS style."
+   ],
+   "exportSource": "https://docs.endnote.com/docs/endnote/2025/v1/windows/en/content/15independentbibs_export/export_biblio_apps.htm",
+   "formats": [
+    "RIS (RefMan)",
+    "EndNote XML"
+   ],
+   "wontComeOver": [
+    "Exporting creates a new file; it does not append to an existing one."
+   ],
+   "opensIn": [
+    {
+     "project": "zotero",
+     "note": "Zotero says EndNote XML is the best format to bring in; its support page covers EndNote imports.",
+     "source": "https://www.zotero.org/support/moving_to_zotero",
+     "tag": null
+    }
+   ],
+   "tip": null,
+   "skip": null
+  },
+  "meetup": {
+   "app": "Meetup",
+   "export": [
+    "As an organizer, open your event, choose Organizer tools, then Manage Attendees.",
+    "Open the dropdown and choose Attendee details to download the RSVP list as a spreadsheet.",
+    "In the iOS app, the Members page menu has Download member list."
+   ],
+   "exportSource": "https://help.meetup.com/hc/en-us/articles/39887158477965-How-do-I-download-print-my-event-attendee-list",
+   "formats": [
+    "Spreadsheet"
+   ],
+   "wontComeOver": [
+    "Only organizers, leadership team and Meetup+ members can see the full attendee list.",
+    "Attendee emails are not exportable from event pages; only Meetup Pro's Members page exports them, for members who agreed to share."
+   ],
+   "opensIn": [],
+   "tip": null,
+   "skip": null
+  },
+  "visual-studio-code": {
+   "app": "Visual Studio Code",
+   "export": [
+    "Copy your extensions folder (~/.vscode/extensions) and your User folder (settings, keybindings) into VSCodium's folders, or use the Sync Settings extension."
+   ],
+   "exportSource": "https://github.com/VSCodium/vscodium/blob/master/docs/migration.md",
+   "formats": [
+    "Plain settings files"
+   ],
+   "wontComeOver": [
+    "VSCodium uses a different extension store (Open VSX), so some Microsoft-only extensions may be missing.",
+    "Built-in Settings Sync may not work in VSCodium."
+   ],
+   "opensIn": [
+    {
+     "project": "vscodium",
+     "note": "Migration guide: copy extensions to ~/.vscode-oss/extensions and settings to its User folder.",
+     "source": "https://github.com/VSCodium/vscodium/blob/master/docs/migration.md",
+     "tag": null
+    }
+   ],
+   "tip": "The Open VSX point is general knowledge, not from the fetched page.",
+   "skip": null
+  },
+  "sketchup": {
+   "app": "SketchUp",
+   "export": [
+    "In SketchUp Pro choose File, Export, 3D Model and pick OBJ, STL, DAE (COLLADA) or FBX."
+   ],
+   "exportSource": "https://help.sketchup.com/en/sketchup/using-sketchup-data-other-modeling-programs-or-tools",
+   "formats": [
+    "OBJ",
+    "STL",
+    "DAE",
+    "FBX"
+   ],
+   "wontComeOver": [
+    "OBJ does not keep NURBS or advanced entities.",
+    "Help pages disagree on which formats need a paid plan; STL is available on the free tier and iPad."
+   ],
+   "opensIn": [],
+   "tip": null,
+   "skip": null
+  },
+  "autocad": {
+   "app": "AutoCAD",
+   "export": [
+    "Choose File, Save As, pick a DXF type from Files of type, and save.",
+    "To save only part of a drawing, use Tools, Options, DXF Options, Select objects."
+   ],
+   "exportSource": "https://help.autodesk.com/view/ACD/2024/ENU/?guid=GUID-5EA0F1DC-EA92-4ADB-9BDF-C352DF3AFC5F",
+   "formats": [
+    "DXF (ASCII or binary)",
+    "DWG"
+   ],
+   "wontComeOver": [],
+   "opensIn": [
+    {
+     "project": "freecad",
+     "note": "FreeCAD's site lists DXF and DWG among supported formats; its manual says DXF/DWG are 2D only and DWG needs a converter.",
+     "source": "https://www.freecad.org/features.php?lang=en_and_dwg_import",
+     "tag": null
+    }
+   ],
+   "tip": null,
+   "skip": null
+  },
+  "splitwise": {
+   "app": "Splitwise",
+   "export": [
+    "On the website open the group or friend, click the gear and choose Export as spreadsheet.",
+    "On mobile, scroll the header menu on the group or friend page and tap Export.",
+    "Pro subscribers: your name, Your account, Advanced features, Download JSON backup."
+   ],
+   "exportSource": "https://feedback.splitwise.com/knowledgebase/articles/88333-how-do-i-export-my-transactions-to-a-spreadsheet-o",
+   "formats": [
+    "CSV (per group or friend)",
+    "JSON (Pro only)"
+   ],
+   "wontComeOver": [
+    "There is no single CSV of all expenses; export each group and friend separately."
+   ],
+   "opensIn": [],
+   "tip": "Spliit's own README lists a Splitwise importer only as a possible future feature.",
+   "skip": null
+  },
+  "backblaze": {
+   "app": "Backblaze",
+   "export": [
+    "Sign in, pick files or folders in the restore viewer and create a restore.",
+    "Choose a zip download, save to B2, or a USB drive.",
+    "Download from My Restores when the email says it is ready."
+   ],
+   "exportSource": "https://www.backblaze.com/computer-backup/docs/download-a-zipped-restore-file-web-ui",
+   "formats": [
+    "ZIP"
+   ],
+   "wontComeOver": [
+    "The zip is kept 7 days; zips cannot exceed 500 GB.",
+    "For zips over 2 GB Backblaze recommends its Downloader app."
+   ],
+   "opensIn": [],
+   "tip": null,
+   "skip": null
+  },
+  "deepl": {
+   "app": "DeepL",
+   "export": [
+    "Open Glossary in the sidebar, select a glossary, click the three-dot menu and choose Download."
+   ],
+   "exportSource": "https://support.deepl.com/hc/en-us/articles/4405563634706-Download-a-glossary",
+   "formats": [
+    "CSV (glossaries)"
+   ],
+   "wontComeOver": [
+    "Glossary download needs a Pro Advanced, Ultimate, Team, Business or Enterprise plan.",
+    "No way to export translation history was found."
    ],
    "opensIn": [],
    "tip": null,
