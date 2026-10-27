@@ -36,6 +36,21 @@ for (const f of walk(join(DIST, 'data')).filter((f) => f.endsWith('.json'))) {
   const t = readFileSync(f, 'utf8'); const rel = f.slice(DIST.length + 1);
   if (/"unconfirmed"|"review"|"sourceLists"|claude-(opus|sonnet|haiku)/.test(t)) problems.push(`${rel}: contains internal AI-check fields`);
 }
+// The AI-agent files (catalog.json, projects/, apps/, groups/): same guard, plus the promises agents rely on.
+// WHY (agent-access): an assistant trusts these files, so each must say which format version it is, when it was made, the
+// license, and which page to cite; and the internal fields must be absent as KEYS (the pre-fill's "source": "starter" too).
+const agentFiles = walk(join(DIST, 'data')).filter((f) => /data\/(catalog\.json|(projects|apps|groups)\/[^/]+\.json)$/.test(f.replaceAll('\\', '/')));
+if (agentFiles.length < 2) problems.push('data/catalog.json and the per-project/app/group files are missing');
+for (const f of agentFiles) {
+  const rel = f.slice(DIST.length + 1); const j = JSON.parse(readFileSync(f, 'utf8'));
+  for (const k of ['schemaVersion', 'generated', 'dataLicense', 'notice']) if (j[k] == null) problems.push(`${rel}: missing ${k}`);
+  if (j.dataLicense !== 'CC BY-SA 4.0') problems.push(`${rel}: dataLicense is not CC BY-SA 4.0`);
+  if (!(j.page ?? j.source)) problems.push(`${rel}: no page to cite`);
+  const bad = (v, path = '') => (Array.isArray(v) ? v.flatMap((x, i) => bad(x, path)) : v && typeof v === 'object'
+    ? Object.entries(v).flatMap(([k, x]) => (['unconfirmed', 'review', 'sourceLists', 'screenshots', 'thumbs', 'licenseSource'].includes(k) || (k === 'source' && typeof x === 'string' && !/^https?:/.test(x)) ? [path + k] : bad(x, path + k + '.'))) : []);
+  for (const b of new Set(bad(j))) problems.push(`${rel}: internal field "${b}"`);
+}
+for (const x of ['openapi.json', 'ai/index.html', 'llms.txt']) if (!existsSync(join(DIST, x))) problems.push(`${x} missing`);
 for (const f of html) if (/couldn.t confirm|checked by AI/i.test(readFileSync(f, 'utf8'))) problems.push(`${f.slice(DIST.length + 1)}: shows an AI-check note`);
 // New inputs (feature checklists, switch guides, AI-contribution labels): an unknown project, group, tag or app address fails the build.
 {

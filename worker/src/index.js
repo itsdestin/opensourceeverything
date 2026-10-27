@@ -5,6 +5,9 @@ import { RULES, LIMITS, CLAIM, ageDays, oldEnough, holdsFirstPost, isMod, can, c
 import { openSuggestions, suggestionsBy, closingNote, suggestionView, proofFile, ghJson, isPublicMember } from './github.js';
 import { currentUser, login, callback, devLogin, logout } from './auth.js';
 import { handleSearch } from './search.js';
+import { handleMcp } from './mcp.js';
+import { handleV1 } from './v1.js';
+import { agentLimit } from './agent-limit.js';
 
 const json = (data, status = 200, extra = {}) => new Response(JSON.stringify(data), { status, headers: { 'Content-Type': 'application/json', 'Cache-Control': 'no-store', ...extra } });
 class Refuse extends Error { constructor(status, message, extra = {}) { super(message); this.status = status; this.extra = extra; } }
@@ -498,6 +501,12 @@ export default {
     const url = new URL(req.url); const origin = req.headers.get('Origin');
     // CORS: only the site itself may call this server with someone's sign-in.
     const cors = { 'Access-Control-Allow-Origin': env.SITE_ORIGIN, 'Access-Control-Allow-Credentials': 'true', Vary: 'Origin' };
+    // AI access (read-only, signed-out, open to any website): the connector at /mcp and the plain JSON API at /v1/.
+    // They come first because they use their own open CORS rules, not the site-only ones above.
+    if (url.pathname === '/mcp') return handleMcp(req, env, { limited: agentLimit });
+    if (url.pathname.startsWith('/v1/')) return handleV1(req, env, url, { limited: agentLimit });
+    // The machine-readable description of /v1/ is a static file built with the site; send anyone who asks here to it.
+    if (url.pathname === '/openapi.json') return Response.redirect(`${env.SITE_ORIGIN}/openapi.json`, 302);
     if (req.method === 'OPTIONS') return new Response(null, { status: 204, headers: { ...cors, 'Access-Control-Allow-Methods': 'GET, POST, PUT, PATCH, DELETE', 'Access-Control-Allow-Headers': 'Content-Type, X-OSE', 'Access-Control-Max-Age': '86400' } });
     try {
       if (url.pathname === '/auth/login') return login(url, env);
