@@ -1,0 +1,149 @@
+{
+ "deck": "ose-review-2026-10-26",
+ "started": "2026-10-27T02:30:39.672Z",
+ "submitted": "2026-10-27T02:44:59Z",
+ "cur": 7,
+ "answers": {
+  "Q-trust": {
+   "v": "picks",
+   "t": 1793068478785,
+   "picks": [
+    "count",
+    "data",
+    "ordering",
+    "ai-notes"
+   ],
+   "note": "unsure what the real relevance of hte server issue is? you keep bringing it up, but i don't feel like its practically all that much different from any other app? but i may also misunderstand?",
+   "seconds": 80,
+   "theme": "light"
+  },
+  "Q-youcoded": {
+   "v": "pick",
+   "pick": "keep",
+   "t": 1793068478785,
+   "seconds": 80,
+   "theme": "light"
+  },
+  "Q-seeded": {
+   "v": "other",
+   "t": 1793068478785,
+   "note": "simplify the list significantly so starting items are clear and actually things that would have obvious popular demand. no \"from the editors\" label, but maybe just put all of the starting items under my name? ",
+   "seconds": 80,
+   "theme": "light"
+  },
+  "Q-choose": {
+   "v": "picks",
+   "picks": [
+    "help-prompt",
+    "missing-apps",
+    "easy"
+   ],
+   "t": 1793068550406,
+   "note": "maybe just an \"easy setup\" or \"advanced setup\" rating instead of \"easy to start\"",
+   "seconds": 36,
+   "theme": "light"
+  },
+  "Q-easy-default": {
+   "v": "pick",
+   "pick": "sort-first",
+   "t": 1793068550406,
+   "seconds": 36,
+   "theme": "light"
+  },
+  "Q-search": {
+   "v": "picks",
+   "picks": [
+    "devices",
+    "ai-search",
+    "related",
+    "left-for"
+   ],
+   "t": 1793068586437,
+   "seconds": 36,
+   "theme": "light"
+  },
+  "Q-contrib": {
+   "v": "picks",
+   "picks": [
+    "quick",
+    "want-too",
+    "tag",
+    "how-to-help",
+    "status",
+    "mod-tab"
+   ],
+   "t": 1793068728433,
+   "note": "not \"owner says\" though, that's dumb. \"From the Developer\" is better.",
+   "seconds": 47,
+   "theme": "light"
+  },
+  "Q-anon": {
+   "v": "pick",
+   "pick": "as-is",
+   "t": 1793068728433,
+   "seconds": 47,
+   "theme": "light"
+  },
+  "Q-autoapprove": {
+   "v": "pick",
+   "pick": "later",
+   "t": 1793068728433,
+   "seconds": 47,
+   "theme": "light"
+  },
+  "Q-forks": {
+   "v": "pick",
+   "pick": "phase2",
+   "t": 1793068768867,
+   "note": "eventually plus compare pages, but that can come after",
+   "seconds": 40,
+   "theme": "light"
+  },
+  "Q-stance": {
+   "note": "i'm confused about this and if feels like your overcomplicating. i also think a lot of this as written would be extremely unclear/confusing to users. tags are not descriptive of what they actually mean.",
+   "t": 1793069097867,
+   "v": "other",
+   "seconds": 57,
+   "theme": "light"
+  },
+  "Q-reports": {
+   "v": "pick",
+   "pick": "later",
+   "t": 1793069097867,
+   "note": "confused?",
+   "seconds": 57,
+   "theme": "light"
+  },
+  "Q-mergeshare": {
+   "v": "other",
+   "t": 1793069097867,
+   "note": "i think this would also just be confusing for now?",
+   "seconds": 57,
+   "theme": "light"
+  },
+  "Q-tools": {
+   "v": "picks",
+   "picks": [
+    "codeberg",
+    "github-more"
+   ],
+   "t": 1793069010090,
+   "seconds": 73,
+   "theme": "light"
+  },
+  "Q-next": {
+   "v": "other",
+   "t": 1793069098773,
+   "note": "you can definitely parallelize this, you're making it seem far more complicated and time consuming than it actually is. the entire current version of the site was built in like 2 hours",
+   "seconds": 43,
+   "theme": "light"
+  },
+  "Q-editors": {
+   "v": "pick",
+   "pick": "ai",
+   "t": 1793069098773,
+   "seconds": 43,
+   "theme": "light"
+  }
+ }
+}
