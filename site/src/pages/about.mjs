@@ -51,7 +51,7 @@ export default function about(d) {
     <p class="body2">The site's code, its data and its design are all open. Anyone can read them, copy them, or help improve them.</p>
     <div class="btns-row">
       <a class="btn md secondary" href="${url('data/groups.json')}">The data (CC BY-SA 4.0)</a>
-      <a class="btn md secondary" href="${url('llms.txt')}">Guide for AI assistants</a>
+      <a class="btn md secondary" href="${url('ai/')}">Use it with an AI assistant</a>
       <a class="btn md primary" href="${REPO}" rel="noopener">The code on GitHub</a>
     </div>
     </div>`)}`;

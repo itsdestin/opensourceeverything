@@ -47,6 +47,7 @@ export function footer() {
   <a class="footchip" href="${url('credits/')}">Data license: CC BY-SA 4.0</a>
   <a class="footchip" href="${url('credits/')}">Credits</a>
   <a class="footchip" href="${url('privacy/')}">Privacy</a>
+  <a class="footchip" href="${url('ai/')}">For AI agents</a>
   <a class="footchip" href="${SUBREDDIT}" rel="noopener">r/TrueOpenSource</a>
   <a class="footchip" href="${REPO}" rel="noopener">This site's code</a>
 </div>`;

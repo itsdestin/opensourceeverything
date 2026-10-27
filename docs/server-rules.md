@@ -84,3 +84,16 @@ status, vote counts. All of those are decided and stored by the server.
 ### The suggestion robot (GitHub forms stay the way to suggest)
 - Labels the robot sets: `robot-ok`, `needs-mod` (a problem it found, a GitHub account under 14 days old, an earlier open suggestion asking for the same thing, or a failed apply with the reason in a comment). Mods approve with the `approved` label as before.
 - After a merge, a comment thanks the person and links to the live page.
+
+## AI access (read-only, no sign-in, no database)
+
+- `POST /mcp`: an MCP server (Streamable HTTP, stateless, spec 2025-06-18; older versions negotiated). Tools: `search`, `alternatives_to`,
+  `get_group`, `get_project`, `list_gaps`, `compare`, `how_to_contribute`. `GET`/`DELETE` answer 405 (no streams or sessions).
+- `GET /v1/search?q&device&setup&limit`, `/v1/apps/<slug>`, `/v1/groups/<id>`, `/v1/projects/<id>` (and `/contribute`), `/v1/gaps`, `/v1/compare?ids=`.
+  `/openapi.json` redirects to the site's built description.
+- Open CORS (`*`) on these routes only: public data, no cookies, no credentials. Every other route keeps the site-only rule above.
+- Answers come from a copy of `catalog.json` + `search.json` bundled at deploy (`npm run snapshot`), ranked by the site's own
+  `search-core.js`. Every answer carries `source.generated`. Redeploy after the site data changes.
+- Rate limit: 120 questions per address per minute, counted in server memory (best effort; no database writes on purpose).
+- Tools never write anything. Their descriptions tell agents to cite page URLs, respect CC BY-SA 4.0, prefer full + easy-setup
+  options for non-technical people, and say listings are AI-drafted and moderator-managed.

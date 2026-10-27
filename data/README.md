@@ -23,3 +23,11 @@ Rebuild: `node prefill/assemble.mjs` (see `prefill/out/summary.md` for how each 
   `why` (one neutral sentence), `source` (an https link that backs it), `confirmed` (`mod` shows on the site; `suggested`
   waits), and optional `label`, `oldNames` (searchable) and `redirectFrom` (old project addresses that keep working).
   The weekly robot only suggests families; a mod adds them here.
+
+## Files for AI assistants (built by the site, not stored here)
+
+`site/build.mjs` publishes complete, versioned copies under `/data/` (`catalog.json`, `projects/<id>.json`, `apps/<slug>.json`,
+`groups/<id>.json`) plus `/openapi.json` and `/llms.txt`; the Worker serves them as an MCP connector at `/mcp` and a JSON API at
+`/v1/`. Each file has `schemaVersion` (bumped only when a field is renamed, removed or changes meaning), `generated`, a CC BY-SA
+notice and the page to cite. They are built field by field from the files above, so the pre-fill's internal notes never appear.
+Code: `site/src/catalog.mjs`. Server: `worker/src/agent.js`.

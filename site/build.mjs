@@ -12,6 +12,9 @@ import { loadData, url, SITE_URL } from './src/lib.mjs';
 import { page } from './src/layout.mjs';
 import { searchIndex } from './src/search-index.mjs';
 import { familyIndex } from './src/family.mjs';
+import { buildAgentData } from './src/catalog.mjs';
+import { openApi } from './src/openapi.mjs';
+import { llmsTxt } from './src/llms.mjs';
 
 const HERE = dirname(fileURLToPath(import.meta.url));
 const ROOT = join(HERE, '..');
@@ -42,12 +45,18 @@ const readJson = (f) => JSON.parse(readFileSync(join(ROOT, 'data', f), 'utf8'));
 for (const f of ['categories.json', 'CREDITS.md', 'README.md', 'redirects.json']) { try { write(join('data', f), readFileSync(join(ROOT, 'data', f), 'utf8')); } catch { /* optional */ } }
 write(join('data', 'groups.json'), JSON.stringify({ ...readJson('groups.json'), groups: publicGroups(d.groups) }, null, 1));
 write(join('data', 'projects.json'), JSON.stringify({ ...readJson('projects.json'), projects: publicProjects(d.projects) }, null, 1));
-for (const g of d.groups) {
-  write(join('data', 'groups', `${g.id}.json`), JSON.stringify({
-    license: 'CC BY-SA 4.0', source: `${SITE_URL}g/${g.id}/`, group: g.name, job: g.job, category: d.catById.get(g.category)?.name, replaces: g.closed,
-    alternatives: g.alternatives.map((a) => { const p = d.projById.get(a.project); return { name: p.name, fit: a.fit, note: a.note, summary: p.summary, license: p.license, licenseClass: p.licenseClass, kind: p.kind, code: p.code, website: p.website, page: `${SITE_URL}p/${p.id}/` }; }),
-  }, null, 1));
-}
+// ── Complete files for AI assistants and scripts (site/src/catalog.mjs) ──
+// WHY (review Oct 26 section 6, Destin: "improve tooling for agentic access to our database"): one file with everything an
+// agent needs to answer "what can replace X for me?" (catalog.json), plus one small file per project, closed app and group,
+// each with a version number (schemaVersion), the date (generated), the CC BY-SA notice and the page to cite.
+// The per-group files used to leave out the id, stars, devices, Verified and activity; now they carry everything.
+const generated = readJson('projects.json').generated ?? new Date().toISOString().slice(0, 10);
+const agent = buildAgentData(d, generated);
+write(join('data', 'catalog.json'), JSON.stringify(agent.catalog));
+for (const [id, f] of agent.projectFiles) write(join('data', 'projects', `${id}.json`), JSON.stringify(f, null, 1));
+for (const [slug, f] of agent.appFiles) write(join('data', 'apps', `${slug}.json`), JSON.stringify(f, null, 1));
+for (const [id, f] of agent.groupFiles) write(join('data', 'groups', `${id}.json`), JSON.stringify(f, null, 1));
+write('openapi.json', JSON.stringify(openApi(), null, 1));
 
 // ── Meaning-search vectors (fetched by the Worker only, never by the browser). Made by site/embed-items.mjs ──
 if (existsSync(join(ROOT, 'data', 'search-vectors.json'))) write(join('data', 'search-vectors.json'), readFileSync(join(ROOT, 'data', 'search-vectors.json'), 'utf8'));
@@ -71,9 +80,7 @@ write('search.json', JSON.stringify(searchIndex(d)));
 // ── For search engines and AI assistants ──
 write('robots.txt', `User-agent: *\nAllow: /\nSitemap: ${SITE_URL}sitemap.xml\n`);
 write('sitemap.xml', `<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n${pages.filter((p) => !p.noIndex).map((p) => `<url><loc>${SITE_URL}${p.path}</loc></url>`).join('\n')}\n</urlset>\n`);
-write('llms.txt', `# Open Source Everything\n\n> Open-source replacements for closed-source apps, grouped by the job they do, with where no good replacement exists yet. Supported by r/TrueOpenSource. Data: CC BY-SA 4.0.\n\n` +
-  `## Data\n\n- [All groups](${SITE_URL}data/groups.json): every group, the closed apps it replaces and its alternatives (by project id)\n- [All projects](${SITE_URL}data/projects.json): every open-source project with summary, license and links\n- [Categories](${SITE_URL}data/categories.json)\n- One file per group, projects included: ${SITE_URL}data/groups/<group-id>.json\n\n` +
-  `## Groups\n\n${d.groups.map((g) => `- [${g.name}](${SITE_URL}data/groups/${g.id}.json): replaces ${g.closed.join(', ')}`).join('\n')}\n`);
+write('llms.txt', llmsTxt(d));
 
 // ── "Add to Home screen" on phones: name, colours and icon for the installed app ──
 write('manifest.webmanifest', JSON.stringify({

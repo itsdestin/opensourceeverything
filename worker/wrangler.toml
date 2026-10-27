@@ -11,6 +11,11 @@ routes = [{ pattern = "api.opensourceeverything.org", custom_domain = true }]
 [vars]
 SITE_ORIGIN = "https://opensourceeverything.org"
 API_ORIGIN = "https://api.opensourceeverything.org"
+# The AI connector (/mcp) and plain JSON API (/v1/) answer from a copy of the map bundled in at deploy time
+# (scripts/snapshot.mjs, run by `npm run deploy`), because building the search tables takes more than the free plan's
+# 10 ms per request. Redeploy after the site data changes. To read the site's current files on every cold start instead,
+# uncomment the next line (needs a paid Workers plan):
+# AGENT_DATA = "live"
 # GitHub usernames of r/TrueOpenSource mods, comma-separated (Destin, Oct 27: just him for now).
 MODS = "itsdestin"
 
