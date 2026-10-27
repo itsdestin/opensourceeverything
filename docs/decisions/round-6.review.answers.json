@@ -1,0 +1,73 @@
+{
+ "deck": "ose-round-6",
+ "started": "2026-10-27T21:51:28.908Z",
+ "submitted": "2026-10-27T21:52:53Z",
+ "cur": 8,
+ "answers": {
+  "R6-group": {
+   "v": "yes",
+   "t": 1793137901686,
+   "seconds": 13,
+   "theme": "light",
+   "zoom": 1
+  },
+  "R6-group-phone": {
+   "v": "yes",
+   "t": 1793137905399,
+   "seconds": 4,
+   "theme": "light",
+   "zoom": 1
+  },
+  "R6-sheet": {
+   "v": "yes",
+   "t": 1793137909073,
+   "seconds": 4,
+   "theme": "light",
+   "zoom": 1
+  },
+  "R6-project": {
+   "v": "yes",
+   "t": 1793137925775,
+   "seconds": 17,
+   "theme": "light",
+   "zoom": 1
+  },
+  "R6-project-phone": {
+   "v": "yes",
+   "t": 1793137935741,
+   "seconds": 10,
+   "theme": "light",
+   "zoom": 1
+  },
+  "R6-search": {
+   "v": "other",
+   "t": 1793137953096,
+   "note": "actually put count on right side in line with results",
+   "seconds": 17,
+   "theme": "light",
+   "zoom": 1
+  },
+  "R6-search-phone": {
+   "note": "same, count right side in line",
+   "t": 1793137965712,
+   "v": "other",
+   "seconds": 13,
+   "theme": "light",
+   "zoom": 1
+  },
+  "R6-claim": {
+   "v": "yes",
+   "t": 1793137969168,
+   "seconds": 3,
+   "theme": "light",
+   "zoom": 1
+  },
+  "R6-claim-phone": {
+   "v": "yes",
+   "t": 1793137972755,
+   "seconds": 4,
+   "theme": "light",
+   "zoom": 1
+  }
+ }
+}
