@@ -21,8 +21,9 @@ const PHRASE = {
 // The same relation inside the tree, where the parent is the row above and needs no name.
 const SHORT = { 'fork-keeps-up': 'Copy that keeps up', split: 'Split off', continues: 'Continues it', renamed: 'Renamed', 'built-on': 'Built on it', 'free-edition': 'Free edition', 'unrelated-same-name': 'Same name only' };
 // The same relation seen from the original's side. Copies and splits share "Forked by": that is the word people know.
-const REVERSE = { 'fork-keeps-up': 'Forked by', split: 'Forked by', continues: 'Continued by', renamed: 'Now called', 'built-on': 'Built on by', 'free-edition': 'Free edition' };
-const REVERSE_ORDER = ['Forked by', 'Continued by', 'Now called', 'Built on by', 'Free edition'];
+// "Used as a base by" (not "Built on by", which reads backwards): Collabora Online is built on LibreOffice.
+const REVERSE = { 'fork-keeps-up': 'Forked by', split: 'Forked by', continues: 'Continued by', renamed: 'Now called', 'built-on': 'Used as a base by', 'free-edition': 'Free edition' };
+const REVERSE_ORDER = ['Forked by', 'Continued by', 'Now called', 'Used as a base by', 'Free edition'];
 
 export const shown = (p) => p?.lineage && p.lineage.confirmed === 'mod' ? p.lineage : null;
 

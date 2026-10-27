@@ -189,17 +189,17 @@
     {
      "group": "documents",
      "fit": "full",
-     "note": "Word processor (Writer)"
+     "note": "Word processor (Writer); still maintained, but new features are rare (most development moved to LibreOffice)"
     },
     {
      "group": "spreadsheets",
      "fit": "full",
-     "note": "Spreadsheet (Calc)"
+     "note": "Spreadsheet (Calc); still maintained, but new features are rare (most development moved to LibreOffice)"
     },
     {
      "group": "slides",
      "fit": "full",
-     "note": "Presentations (Impress)"
+     "note": "Presentations (Impress); still maintained, but new features are rare (most development moved to LibreOffice)"
     }
    ],
    "licenseSource": "https://github.com/apache/openoffice/blob/trunk/LICENSE"
