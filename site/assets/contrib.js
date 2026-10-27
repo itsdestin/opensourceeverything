@@ -109,7 +109,7 @@
         const tag = `${BASE}tag/?repo=${encodeURIComponent(s.dataset.repo ?? '')}`;
         s.hidden = false;
         s.innerHTML = p
-          ? `<div class="sec-head fold-head"><div><h2 class="h-large">From the Developer</h2><p class="desc12">@${esc(p.by)} · ${esc(when(p.updated))}</p></div>${mine ? `<a class="btn sm secondary" href="${tag}">Edit</a>` : ''}</div>
+          ? `<div class="sec-head fold-head"><div><h2 class="h-large">From the Developer</h2><p class="desc12">@${esc(p.by)} · ${esc(when(p.updated))} · ${p.ownerCheck === 'mods' ? 'Ownership confirmed by r/TrueOpenSource mods' : 'Owner checked through GitHub'}</p></div>${mine ? `<a class="btn sm secondary" href="${tag}">Edit</a>` : ''}</div>
              ${pitchBody(p)}`
           : `<div class="sec-head"><div><h2 class="h-large">Is this your project?</h2><p class="desc12">Tag it to tell people what it does differently, what's reusable and where you'd like help.</p></div><a class="btn sm secondary" href="${tag}">Tag my project</a></div>`;
         if (p) { s.classList.add('fold-phone'); OI.foldInit?.(s); }
@@ -143,8 +143,9 @@
       ${st.stage === 'notlisted' ? `<div class="callout info"><b>It isn't on the map yet.</b> Add it first (a short form on GitHub that a mod approves), then come back.
         <div style="margin-top:8px"><a class="btn sm primary" target="_blank" rel="noopener" href="${esc(`${OI.repo}/issues/new?template=1-add-project.yml&code=${encodeURIComponent(st.link)}&name=${encodeURIComponent(st.name ?? '')}&relation=${encodeURIComponent("Yes, I'm on its team")}`)}">Add my project</a></div></div>` : ''}
       ${actions('<button class="btn md primary" type="button" data-go>Continue</button>')}`;
-    const bodyFile = () => { const p = st.pitch; return `<p class="small2">It isn't under your GitHub account. Add a file named <code class="copy" data-copy="${esc(p.proofFile)}">${esc(p.proofFile)}</code> to its main folder, containing:</p>
+    const bodyFile = () => { const p = st.pitch; return `<p class="small2">It isn't under your own GitHub account, so we need to see you can change it. Add a file named <code class="copy" data-copy="${esc(p.proofFile)}">${esc(p.proofFile)}</code> to its main folder, containing:</p>
       <code class="copy block" data-copy="${esc(p.proofText)}">${esc(p.proofText)}</code>
+      <p class="fieldhint">This text works once and expires in 48 hours. Once checked, a mod also confirms you own or run the project before anything shows.</p>
       ${err()}
       ${actions('<button class="btn md secondary" type="button" data-back>Back</button>', '<button class="btn md primary" type="button" data-verify>Check</button>')}`; };
     const bodyWrite = () => { const p = st.pitch;
@@ -156,7 +157,7 @@
         <div class="tg-morebody">${PITCH_PARTS.map(([k, l]) => `<div><label class="label" for="tg_${k}">${l}</label><textarea class="field" id="tg_${k}" rows="2" maxlength="1000"></textarea></div>`).join('')}<div id="before" class="lvl1 before"></div></div></details>
       ${err()}
       <div class="tg-foot"><p class="fieldhint" data-need></p>${actions('<button class="btn md secondary" type="button" data-cancel>Cancel</button>', '<button class="btn md primary" type="button" data-send disabled>Send to a mod</button>')}</div>`; };
-    const bodySent = () => `<p class="small2">A mod will read it, then it shows on <a href="${BASE}p/${esc(st.pitch.project)}/">${esc(st.pitch.projectName)}</a>.</p>${actions('<button class="btn md primary" type="button" data-done>Done</button>')}`;
+    const bodySent = () => `<p class="small2">${st.pitch.needsConfirm && !st.pitch.confirmed ? 'A mod will first confirm that you own or run the project (a few extra checks apply to well-known projects), then read it. ' : 'A mod will read it. '}Then it shows on <a href="${BASE}p/${esc(st.pitch.project)}/">${esc(st.pitch.projectName)}</a>.</p>${actions('<button class="btn md primary" type="button" data-done>Done</button>')}`;
     const mineBlock = () => (st.mine.length && !['form', 'proof'].includes(st.stage)
       ? `<section class="surface sec"><h2 class="h-large">Your claimed projects<span class="count">${st.mine.length}</span></h2><div class="stack">${st.mine.map((x) => `<div class="lvl1 modrow" data-id="${x.id}"><div class="nr-main"><a class="rt" href="${BASE}p/${esc(x.project)}/">${esc(x.projectName)}</a><div class="nr-meta">${statusPill(x)}${x.verified ? '' : '<span class="pill warn"><i></i>Not verified</span>'}</div></div>
         <div class="btns-row"><button class="btn sm secondary" type="button" data-edit>${x.verified ? 'Edit' : 'Finish'}</button><button class="btn sm secondary" type="button" data-remove>Remove</button></div></div>`).join('')}</div></section>` : '');
@@ -261,6 +262,7 @@
     bar.onclick = (e) => { const b = e.target.closest('[data-tab]'); if (b) show(b.dataset.tab); };
     show(location.hash === '#suggestions' ? 'suggestions' : 'posts');
   }
+  const CLAIM_FLAG = { fork: 'A copy (fork) of another project', 'high-profile': 'Well-known project', 'owner-unverified': 'Ownership only shown by a file', 'looks-different': 'Far fewer stars than listed' };
   const VERDICT = { ok: ['ok', 'Robot: nothing to flag'], 'needs-mod': ['warn', 'Robot: needs a mod'], unchecked: ['info', 'Robot: not checked yet'] };
   async function drawSuggest(pane) {
     pane.innerHTML = '<div class="surface sec"><div class="empty">Loading…</div></div>';
@@ -269,11 +271,14 @@
     pane.innerHTML = `
       <section class="surface sec"><div class="sec-head"><div><h2 class="h-large">Developer pitches<span class="count">${pit.items?.length ?? 0}</span></h2><p class="desc12">From "Tag my project". Each owner proved the project is theirs. Nothing shows until you approve it.</p></div></div>
         ${pit.error ? `<div class="callout warn">${esc(pit.error)}</div>` : pit.items.length ? `<div class="stack">${pit.items.map((x) => {
-          const p = x.pending;
+          const p = x.pending ?? x.live; const need = x.needsConfirm && !x.confirmed;
           return `<div class="lvl1 modrow" data-pid="${x.id}"><div class="nr-main"><a class="rt" href="${BASE}p/${esc(x.project)}/">${esc(x.projectName)}</a>
-            <div class="nr-meta"><span class="chip">@${esc(x.owner)}</span><span class="chip">${x.proof === 'own-account' ? 'Under their own account' : 'Proved with a file'}</span>${x.live ? '<span class="pill info">Replaces the live version</span>' : '<span class="pill warn"><i></i>New</span>'}</div>
-            <div class="pitchbox">${pitchBody(p)}</div></div>
-            <div class="btns-row"><button class="btn sm secondary" type="button" data-pact="reject">Turn down…</button><button class="btn sm primary" type="button" data-pact="approve">Approve</button></div></div>`;
+            <div class="nr-meta"><span class="chip">@${esc(x.owner)}</span><span class="chip">${x.proof === 'own-account' ? 'Under their own account' : 'Proved with a file'}</span>${x.pending ? (x.live ? '<span class="pill info">Replaces the live version</span>' : '<span class="pill warn"><i></i>New</span>') : '<span class="pill ok"><i></i>Showing now</span>'}
+              <a class="chip" href="https://${esc(x.repo)}" target="_blank" rel="noopener">${esc(x.repo)}</a>${x.stars != null ? `<span class="chip">${x.stars} stars</span>` : ''}<span class="chip">account ${x.ownerDays} days old</span>
+              ${(x.flags ?? []).map((f) => `<span class="pill warn"><i></i>${esc(CLAIM_FLAG[f] ?? f)}</span>`).join('')}${x.flag ? `<span class="pill warn"><i></i>Filter: ${esc(x.flag)}</span>` : ''}${x.rivalClaims ? '<span class="pill warn"><i></i>Another claim is already showing here</span>' : ''}${x.confirmed ? `<span class="pill ok"><i></i>Owner confirmed${x.confirmedBy ? ` by @${esc(x.confirmedBy)}` : ''}</span>` : ''}</div>
+            ${need ? '<div class="callout warn">Before this can show, check that @' + esc(x.owner) + ' really owns or administers the project (their GitHub profile, the organization page, the project\'s own website), then press <b>Confirm owner</b>.</div>' : ''}
+            <div class="pitchbox">${p ? pitchBody(p) : ''}</div></div>
+            <div class="btns-row">${x.pending ? '<button class="btn sm secondary" type="button" data-pact="reject">Turn down…</button>' : ''}<button class="btn sm secondary" type="button" data-pact="revoke">Revoke…</button>${need ? '<button class="btn sm primary" type="button" data-pact="confirm-claim">Confirm owner</button>' : ''}${x.pending ? `<button class="btn sm primary" type="button" data-pact="approve"${need ? ' disabled title="Confirm the owner first"' : ''}>Approve</button>` : ''}</div></div>`;
         }).join('')}</div>` : '<div class="callout info">No pitches waiting.</div>'}</section>
       <section class="surface sec"><div class="sec-head"><div><h2 class="h-large">Suggestions on GitHub<span class="count">${sug.items?.length ?? 0}</span></h2><p class="desc12">Open suggestions, oldest first, with the robot's verdict. To approve one, open it and add the <code>approved</code> label; the robot does the rest. A one-click Approve here needs a GitHub App key, see <a href="${esc(tokenDoc)}" target="_blank" rel="noopener">what it would need</a>.</p></div></div>
         ${sug.error ? `<div class="callout warn">${esc(sug.error)}</div>` : sug.items.length ? `<div class="stack">${sug.items.map((x) => {
@@ -285,6 +290,8 @@
     pane.onclick = async (e) => {
       const b = e.target.closest('[data-pact]'); if (!b) return; const id = b.closest('[data-pid]').dataset.pid;
       try {
+        if (b.dataset.pact === 'confirm-claim') { await api.modPitchAct(id, 'confirm-claim'); toast('Owner confirmed.'); return drawSuggest(pane); }
+        if (b.dataset.pact === 'revoke') return ui.ask('Revoke this claim', 'Why? It comes off the site now, and they have to prove ownership again.', { area: true, ok: 'Revoke' }, async (v) => { await api.modPitchAct(id, 'revoke', v); drawSuggest(pane); });
         if (b.dataset.pact === 'approve') { await api.modPitchAct(id, 'approve'); toast('Approved. It is live now.'); return drawSuggest(pane); }
         ui.ask('Turn this pitch down', 'Why? The developer will see this so they can fix it.', { area: true, ok: 'Turn down' }, async (v) => { await api.modPitchAct(id, 'reject', v); drawSuggest(pane); });
       } catch (err) { oops(err); }
