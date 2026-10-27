@@ -98,3 +98,9 @@ a.chip.hl { color:var(--on-accent); }
 .pill.fam-renamed, .pill.fam-outside { background:color-mix(in srgb,var(--accent) 8%,transparent); border-color:var(--edge-card); }
 .pill.fam-active, .pill.fam-inactive, .pill.fam-archived, .pill.fam-renamed, .pill.fam-outside { padding-left:8px; }
 .famlink { margin-left:4px; }
+/* "Most thumbs-up from people here" (filled by social.js once a job has 10+ answers) and "See also" */
+.liked { display:flex; align-items:center; gap:8px; flex-wrap:wrap; margin:0 0 12px; }
+.liked[hidden] { display:none; }
+.liked .chip { text-decoration:none; gap:4px; }
+.liked .chip b { color:var(--fg-muted); font-weight:600; margin-left:2px; }
+#see-also .card.listing { min-height:0; }

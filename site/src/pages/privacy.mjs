@@ -13,7 +13,7 @@ export default function privacy() {
   ${section('What we collect', `
     <ul class="list">
       <li><b class="num">No cookies and no tracking.</b> No analytics tools, no ads, no "like" buttons from other companies.</li>
-      <li><b class="num">Search happens in your browser.</b> What you type in the search box never leaves your device.</li>
+      <li><b class="num">Search happens in your browser.</b> What you type in the search box stays on your device, with one exception: when the site can't find a good match by the words alone, the text you typed may be sent to our server, which asks Cloudflare's AI service what it means in order to find better matches. It is used for that one answer and is not stored or linked to you. (This is off until the site turns it on.)</li>
       <li><b class="num">Fonts and pictures come from this site.</b> Nothing loads from Google or other font services. The only exception: opening a screenshot full size loads the original from the project's own page (usually GitHub).</li>
     </ul>`)}
   ${section('Who else is involved', `

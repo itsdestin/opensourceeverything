@@ -3,6 +3,8 @@
 // so they only appear once API_URL is set (see lib.mjs).
 import { esc, url, ICON, SITE_URL, API_URL, SOCIAL, codeUrl, suggestUrl } from '../lib.mjs';
 import { altCard, appUrl, sortAlts, deviceFilter, buildBox, chooseBox } from '../cards.mjs';
+import { relatedGroups } from '../related.mjs';
+import { likedBox } from '../liked.mjs';
 
 // WHY only the first letter, and not before a capital: "AI agents" and "PDF tools" keep their capitals mid-sentence.
 const midSentence = (name) => name.replace(/^[A-Z](?![A-Z])/, (c) => c.toLowerCase());
@@ -14,6 +16,7 @@ const midSentence = (name) => name.replace(/^[A-Z](?![A-Z])/, (c) => c.toLowerCa
 const SORTS = [['fit', 'Best match'], ['setup', 'Easy setup first'], ['stars', 'Most GitHub stars'], ['name', 'A to Z']];
 
 export default function groupPages(d) {
+  const related = relatedGroups(d);
   return d.groups.map((g) => {
     const cat = d.catById.get(g.category);
     const alts = sortAlts(g.alternatives.map((a) => ({ a, p: d.projById.get(a.project) })).filter((x) => x.p));
@@ -48,11 +51,16 @@ export default function groupPages(d) {
           ${alts.length > 1 ? `<div class="tools">${deviceFilter('devMenu')}<div class="dd"><button class="select sm" type="button" data-menu="sortMenu" aria-haspopup="listbox" aria-expanded="false"><span data-sort-label>${SORTS[0][1]}</span>${ICON.chev}</button>
             <div class="menu" id="sortMenu" role="listbox">${SORTS.map(([k, v], i) => `<button class="mi${i ? '' : ' sel'}" type="button" role="option" data-sort="${k}">${v}</button>`).join('')}</div></div></div>` : ''}
         </div>
+        ${likedBox(g, alts)}
         ${alts.length
           ? `<div class="grid" data-alts>${alts.map((x, i) => altCard(x.p, x.a, i, g, x.why)).join('')}</div><div class="callout info" data-nomatch hidden>None of these match. Try another device.</div>`
           : `<div class="callout info">Nothing open does this job yet. That makes it a gap: if you're building one, <a href="${esc(suggestUrl('1-add-project', { group: g.name }))}" rel="noopener">add it here</a>.</div>`}
         ${SOCIAL && !alts.some(({ a }) => a.fit === 'full') ? `<!-- WHY (review Oct 26): "I want this too" counts demand for a job nothing open fully does; ranked under Most requested -->
         <div class="want" data-request data-key="group:${g.id}" hidden></div>` : ''}
+      </section>
+      <section class="surface sec" id="see-also">
+        <div class="sec-head"><div><h2 class="h-large">See also</h2><p class="desc12">Other jobs people look into alongside this one.</p></div></div>
+        <div class="grid">${related.get(g.id).map((r) => `<a class="card listing" href="${url(`g/${r.g.id}/`)}"><div class="head"><h3>${esc(r.g.name)}</h3></div><p class="desc12">${esc(r.g.job)}.</p>${r.reason ? `<span class="muted11">${esc(r.reason)}</span>` : ''}</a>`).join('')}</div>
       </section>
       ${SOCIAL ? `<section class="surface sec" id="missing">
         <div class="sec-head"><div><h2 class="h-large">What's missing</h2><p class="desc12">What people still miss here, and wish existed. Upvote what matters to you.</p></div>
