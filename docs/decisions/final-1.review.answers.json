@@ -1,0 +1,205 @@
+{
+ "deck": "ose-final-1",
+ "started": "2026-10-27T09:10:28.266Z",
+ "submitted": "2026-10-27T09:48:58Z",
+ "cur": 25,
+ "answers": {
+  "N-home": {
+   "v": "yes",
+   "t": 1793092253320,
+   "seconds": 25,
+   "theme": "light",
+   "zoom": 1
+  },
+  "N-home-phone": {
+   "v": "yes",
+   "t": 1793092295943,
+   "seconds": 43,
+   "theme": "light",
+   "zoom": 1
+  },
+  "N-group": {
+   "note": "these should be a way to get back home or something. sign in with github button also needs glassy look",
+   "t": 1793092351070,
+   "v": "yes",
+   "seconds": 55,
+   "theme": "light",
+   "zoom": 1
+  },
+  "N-musthave": {
+   "v": "yes",
+   "t": 1793092361779,
+   "seconds": 11,
+   "theme": "light",
+   "zoom": 1
+  },
+  "N-compare": {
+   "v": "yes",
+   "t": 1793092383757,
+   "seconds": 22,
+   "theme": "light",
+   "zoom": 1
+  },
+  "N-compare-phone": {
+   "v": "yes",
+   "t": 1793092428405,
+   "note": "we could tighten this a lottt and get a lot more visible/useful phone table space",
+   "seconds": 45,
+   "theme": "light",
+   "zoom": 1
+  },
+  "N-cardfold": {
+   "v": "other",
+   "t": 1793092472625,
+   "note": "thats atrocious ux/ui bruv",
+   "seconds": 44,
+   "theme": "light",
+   "zoom": 1
+  },
+  "N-group-phone": {
+   "v": "yes",
+   "t": 1793092483862,
+   "seconds": 11,
+   "theme": "light",
+   "zoom": 1
+  },
+  "N-project": {
+   "v": "yes",
+   "t": 1793093972080,
+   "note": "back button probably beside breadcrumb?",
+   "seconds": 26,
+   "theme": "light",
+   "zoom": 1
+  },
+  "N-project-phone": {
+   "note": "back button needs glass. github/search dont look similar.",
+   "t": 1793093999156,
+   "v": "other",
+   "seconds": 27,
+   "theme": "light",
+   "zoom": 1
+  },
+  "N-features": {
+   "v": "other",
+   "t": 1793094015845,
+   "note": "ugly",
+   "seconds": 17,
+   "theme": "light",
+   "zoom": 1
+  },
+  "N-ai": {
+   "note": "we can improve this a lot. expandable card preferably",
+   "t": 1793094054322,
+   "v": "other",
+   "seconds": 38,
+   "theme": "light",
+   "zoom": 1
+  },
+  "N-ai-closed": {
+   "v": "yes",
+   "t": 1793094064649,
+   "seconds": 10,
+   "theme": "light",
+   "zoom": 1
+  },
+  "N-ai-empty": {
+   "v": "yes",
+   "t": 1793094250196,
+   "seconds": 186,
+   "theme": "light",
+   "zoom": 1
+  },
+  "N-guide": {
+   "v": "other",
+   "t": 1793094275584,
+   "seconds": 23,
+   "theme": "light",
+   "zoom": 1,
+   "note": "ugly and poorly positioned"
+  },
+  "N-guide-phone": {
+   "v": "other",
+   "seconds": 16,
+   "theme": "light",
+   "zoom": 1,
+   "t": 1793094289556,
+   "note": "fine when closed. inside prob bad."
+  },
+  "N-search": {
+   "v": "other",
+   "t": 1793094324003,
+   "note": "that whole extra bottom space for one line with the number of results? cmon?",
+   "seconds": 34,
+   "theme": "light",
+   "zoom": 1
+  },
+  "N-search-phone": {
+   "v": "other",
+   "t": 1793094327826,
+   "seconds": 4,
+   "theme": "light",
+   "zoom": 1
+  },
+  "N-filters-phone": {
+   "v": "other",
+   "t": 1793094357829,
+   "note": "doesnt feel very multiselect",
+   "seconds": 30,
+   "theme": "light",
+   "zoom": 1
+  },
+  "N-gaps": {
+   "v": "yes",
+   "t": 1793094370522,
+   "seconds": 13,
+   "theme": "light",
+   "zoom": 1
+  },
+  "N-gaps-phone": {
+   "v": "yes",
+   "t": 1793094405291,
+   "seconds": 35,
+   "theme": "light",
+   "zoom": 1
+  },
+  "N-missing": {
+   "v": "yes",
+   "t": 1793094426641,
+   "seconds": 21,
+   "theme": "light",
+   "zoom": 1
+  },
+  "N-claim": {
+   "note": "cmonnnn sign in button? really? we just throwing the design guide out the window :(",
+   "t": 1793094458475,
+   "v": "other",
+   "seconds": 32,
+   "theme": "light",
+   "zoom": 1
+  },
+  "Q-blanks": {
+   "v": "pick",
+   "pick": "knowledge",
+   "t": 1793094484579,
+   "seconds": 26,
+   "theme": "light",
+   "zoom": 1
+  },
+  "Q-org": {
+   "v": "yes",
+   "t": 1793094497282,
+   "seconds": 13,
+   "theme": "light",
+   "zoom": 1
+  },
+  "Q-prefs": {
+   "v": "other",
+   "t": 1793094537487,
+   "note": "this shouldn't be required. this should be an optional follow up after they claimed that they can change whenever",
+   "dk": true,
+   "seconds": 40,
+   "theme": "light",
+   "zoom": 1
+  }
+ }
+}
