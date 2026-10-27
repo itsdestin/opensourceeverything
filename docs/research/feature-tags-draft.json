@@ -1,0 +1,3593 @@
+{
+ "status": "draft",
+ "generated": "2026-10-26",
+ "about": "Starter feature checklists for Open Source Everything. Every tag means the same thing in every group it appears in, so each project answers it once. 'prefill' names existing data that gives a starting answer to confirm. Order inside a group = most decision-relevant first. See feature-tags-draft.md.",
+ "answers": [
+  "yes",
+  "partly",
+  "no"
+ ],
+ "stats": {
+  "tags": 435,
+  "shared": 51,
+  "groupSpecific": 384,
+  "groups": 123,
+  "avgPerGroup": 5.75,
+  "min": 4,
+  "max": 8,
+  "answersNeeded": 3008,
+  "answersIfNotDeduped": 3055,
+  "answersWithPrefill": 354
+ },
+ "tags": {
+  "ab-testing": {
+   "name": "A/B experiments",
+   "question": "Can you run experiments and see which version wins?",
+   "meaning": "Yes: with statistics; partly: splits without results; no: no.",
+   "shared": false
+  },
+  "access-rules": {
+   "name": "Access rules",
+   "question": "Can you say which people or devices may reach which others?",
+   "meaning": "Yes: per user and device; partly: basic groups; no: everyone reaches everything.",
+   "shared": false
+  },
+  "accounting": {
+   "name": "Accounting",
+   "question": "Does it include full accounting (ledger, invoices, reports)?",
+   "meaning": "Yes: built in; partly: basic; no: no.",
+   "shared": false
+  },
+  "ad-blocking": {
+   "name": "Blocks ads and trackers",
+   "question": "Does it block ads and trackers out of the box?",
+   "meaning": "Yes: built in and on; partly: built in but off, or trackers only; no: needs an extension.",
+   "shared": false
+  },
+  "admin-panel": {
+   "name": "Admin panel",
+   "question": "Is there an admin panel to manage your customers?",
+   "meaning": "Yes: built in; partly: basic; no: no.",
+   "shared": false
+  },
+  "agent-mode": {
+   "name": "Makes changes by itself",
+   "question": "Can it change many files and run commands by itself, asking when needed?",
+   "meaning": "Yes: built in; partly: one file at a time, or suggestions only; no: chat only.",
+   "shared": false
+  },
+  "ai-files": {
+   "name": "Opens Illustrator files",
+   "question": "Do Illustrator (.ai) and EPS files open and stay editable?",
+   "meaning": "Yes: editable; partly: open but some parts are lost or flattened; no: no.",
+   "shared": false
+  },
+  "ai-helpers": {
+   "name": "Built-in AI help",
+   "question": "Does it have optional AI help built in (writing, suggestions, answers)?",
+   "meaning": "Yes: built in, with a choice of AI provider; partly: through a plugin, or one fixed provider; no: none.",
+   "shared": false
+  },
+  "ai-photo-tools": {
+   "name": "AI photo tools",
+   "question": "Does it have AI tools such as one-click background removal, smart selection or generative fill?",
+   "meaning": "Yes: several built in; partly: one of them, or through a plugin; no: none.",
+   "shared": true
+  },
+  "ai-rewrite": {
+   "name": "Rewrites sentences for you",
+   "question": "Can it rewrite a whole sentence in a different tone or more simply?",
+   "meaning": "Yes: built in; partly: with your own AI key or add-on; no: no.",
+   "shared": false
+  },
+  "ai-steps": {
+   "name": "AI steps",
+   "question": "Can a workflow include AI steps, like summarising or sorting?",
+   "meaning": "Yes: built in; partly: through a connector you set up; no: no.",
+   "shared": false
+  },
+  "ai-voice-agents": {
+   "name": "AI voice agents",
+   "question": "Can you build an AI that answers calls and talks?",
+   "meaning": "Yes: built in; partly: with your own code; no: no.",
+   "shared": false
+  },
+  "airtable-import": {
+   "name": "Imports from Airtable",
+   "question": "Can you bring your bases in from Airtable?",
+   "meaning": "Yes: a direct importer; partly: by spreadsheet file only; no: no.",
+   "shared": false
+  },
+  "alerts": {
+   "name": "Alerts",
+   "question": "Can it alert you by email, phone or chat when something goes wrong?",
+   "meaning": "Yes: many channels; partly: one or two; no: no.",
+   "shared": false
+  },
+  "any-email-provider": {
+   "name": "Works with any email account",
+   "question": "Can you use it with Gmail, Outlook and other existing email accounts?",
+   "meaning": "Yes: any provider; partly: only some providers, or with extra setup; no: only its own email service.",
+   "shared": false
+  },
+  "any-provider": {
+   "name": "Choose your AI provider",
+   "question": "Can you pick which AI company or model it uses, with your own key or plan?",
+   "meaning": "Yes: many providers; partly: two or three; no: one fixed provider.",
+   "shared": true
+  },
+  "api-client": {
+   "name": "Send and test requests",
+   "question": "Can you send requests to an API and see the answers, like Postman?",
+   "meaning": "Yes: full client; partly: basic; no: no.",
+   "shared": false
+  },
+  "api-gateway": {
+   "name": "API gateway",
+   "question": "Can it sit in front of your APIs to handle keys and limits?",
+   "meaning": "Yes: built in; partly: some of it; no: no.",
+   "shared": false
+  },
+  "app-review": {
+   "name": "Apps are checked",
+   "question": "Are apps reviewed or built from source before you get them?",
+   "meaning": "Yes: every app; partly: some checks; no: no checks.",
+   "shared": false
+  },
+  "app-versioning": {
+   "name": "Version control for apps",
+   "question": "Can you keep versions of what you build in Git?",
+   "meaning": "Yes: built in; partly: export only; no: no.",
+   "shared": false
+  },
+  "asks-before-acting": {
+   "name": "Asks before risky steps",
+   "question": "Does it ask before deleting, sending or spending anything?",
+   "meaning": "Yes: by default, and you can tune it; partly: an option you must turn on; no: no.",
+   "shared": false
+  },
+  "assemblies": {
+   "name": "Assemblies of many parts",
+   "question": "Can you fit many parts together into an assembly?",
+   "meaning": "Yes: built in; partly: through an add-on; no: no.",
+   "shared": false
+  },
+  "audiobook-player": {
+   "name": "Plays audiobooks",
+   "question": "Can you listen to audiobooks, remembering where you stopped?",
+   "meaning": "Yes: built in; partly: basic playback; no: no.",
+   "shared": false
+  },
+  "auto-backup-phone": {
+   "name": "Backs up your phone automatically",
+   "question": "Does it back up the photos on your phone by itself in the background?",
+   "meaning": "Yes: automatic background backup on iPhone and Android; partly: one of them, or only while the app is open; no: manual uploads only.",
+   "shared": true
+  },
+  "auto-captions": {
+   "name": "Automatic captions",
+   "question": "Can it write captions or subtitles from speech by itself?",
+   "meaning": "Yes: built in; partly: through an add-on or separate download; no: by hand only.",
+   "shared": true
+  },
+  "auto-failover": {
+   "name": "Keeps running if a server dies",
+   "question": "If one server fails, does another take over automatically?",
+   "meaning": "Yes: built in, free; partly: with extra tools; no: no.",
+   "shared": false
+  },
+  "auto-https": {
+   "name": "Automatic HTTPS",
+   "question": "Does each app get a secure (HTTPS) address automatically?",
+   "meaning": "Yes: built in; partly: needs setup; no: no.",
+   "shared": false
+  },
+  "auto-layout": {
+   "name": "Auto layout",
+   "question": "Do layouts resize themselves when content changes (like Figma's auto layout)?",
+   "meaning": "Yes: flex and grid layout; partly: one of them; no: no.",
+   "shared": false
+  },
+  "auto-updates": {
+   "name": "Updates by itself",
+   "question": "Does it keep itself and its contents up to date automatically?",
+   "meaning": "Yes: in the background; partly: you tap to update; no: by hand.",
+   "shared": false
+  },
+  "bank-file-import": {
+   "name": "Imports bank files",
+   "question": "Can you import bank files (CSV, OFX, QIF)?",
+   "meaning": "Yes: several formats; partly: one format; no: no.",
+   "shared": false
+  },
+  "bank-sync": {
+   "name": "Connects to your bank",
+   "question": "Can it pull in your bank transactions automatically?",
+   "meaning": "Yes: built in for your country; partly: some countries, or a paid connector; no: import files by hand.",
+   "shared": false
+  },
+  "banking-apps": {
+   "name": "Banking and wallet apps work",
+   "question": "Do most banking, payment and wallet apps run on it?",
+   "meaning": "Yes: almost all; partly: most, some refuse; no: most refuse.",
+   "shared": false
+  },
+  "blog-import": {
+   "name": "Imports from Medium or Substack",
+   "question": "Can you bring your posts and subscribers in from Medium or Substack?",
+   "meaning": "Yes: posts and subscribers; partly: posts only; no: no.",
+   "shared": false
+  },
+  "book-catalog": {
+   "name": "Get new books",
+   "question": "Can you buy or borrow new books through it?",
+   "meaning": "Yes: buy or borrow; partly: free public-domain books only; no: only books you already have.",
+   "shared": false
+  },
+  "booking-payments": {
+   "name": "Payment when booking",
+   "question": "Can people pay when they book?",
+   "meaning": "Yes: built in; partly: through an add-on; no: no.",
+   "shared": false
+  },
+  "breach-alerts": {
+   "name": "Warns about weak or leaked passwords",
+   "question": "Does it warn you about weak, reused or leaked passwords?",
+   "meaning": "Yes: all three; partly: some of them; no: none.",
+   "shared": false
+  },
+  "breakout-rooms": {
+   "name": "Breakout rooms",
+   "question": "Can you split a meeting into smaller rooms and bring everyone back?",
+   "meaning": "Yes: built in; partly: by opening separate calls; no: no.",
+   "shared": false
+  },
+  "browser-extension": {
+   "name": "Browser extension",
+   "question": "Is there an add-on for Chrome and Firefox?",
+   "meaning": "Yes: both; partly: one of them, or unofficial; no: none.",
+   "shared": true
+  },
+  "brush-library": {
+   "name": "Big brush library",
+   "question": "Does it come with a large set of brushes, and can you add more?",
+   "meaning": "Yes: large built-in set plus importing; partly: a small set; no: a few basic brushes.",
+   "shared": false
+  },
+  "built-in-auth": {
+   "name": "User sign-in built in",
+   "question": "Does it come with user accounts and sign-in ready to use?",
+   "meaning": "Yes: sign-up, login and password reset built in; partly: basic login only; no: you add it yourself.",
+   "shared": true
+  },
+  "built-in-calls": {
+   "name": "Voice and video calls",
+   "question": "Can you make voice and video calls inside it?",
+   "meaning": "Yes: one-to-one and group calls; partly: one-to-one only, or voice only; no: text only.",
+   "shared": true
+  },
+  "built-in-editor": {
+   "name": "Trim and edit recordings",
+   "question": "Can you trim and edit a recording in the same app?",
+   "meaning": "Yes: a built-in editor; partly: trimming only; no: no.",
+   "shared": false
+  },
+  "buy-hardware": {
+   "name": "Ready-made box to buy",
+   "question": "Can you buy a ready-made box that runs it?",
+   "meaning": "Yes: an official box; partly: third-party kits; no: you build your own.",
+   "shared": false
+  },
+  "calendar-connect": {
+   "name": "No double bookings",
+   "question": "Does it check your calendar so people can only book free times?",
+   "meaning": "Yes: Google, Outlook and standard calendars; partly: one of them; no: no.",
+   "shared": false
+  },
+  "cam": {
+   "name": "Prepare for CNC machines",
+   "question": "Can it make toolpaths for CNC machines (CAM)?",
+   "meaning": "Yes: built in; partly: through an add-on; no: no.",
+   "shared": false
+  },
+  "camera-filters": {
+   "name": "Camera filters and lenses",
+   "question": "Can you add face filters and effects while taking the photo or video?",
+   "meaning": "Yes: live camera effects; partly: filters after taking; no: no.",
+   "shared": false
+  },
+  "car-integration": {
+   "name": "Car screens",
+   "question": "Does it work on car screens (Android Auto or CarPlay)?",
+   "meaning": "Yes: both; partly: one; no: no.",
+   "shared": false
+  },
+  "card-payments": {
+   "name": "Card payments built in",
+   "question": "Can customers pay by card (Stripe, PayPal and others) out of the box?",
+   "meaning": "Yes: several providers; partly: one provider, or through a plugin; no: no.",
+   "shared": false
+  },
+  "card-terminals": {
+   "name": "Works with card terminals",
+   "question": "Can you take card payments through a card reader?",
+   "meaning": "Yes: built in; partly: some readers; no: no.",
+   "shared": false
+  },
+  "changelog": {
+   "name": "Changelog",
+   "question": "Can you announce what shipped to the people who asked for it?",
+   "meaning": "Yes: built in with notifications; partly: a page only; no: no.",
+   "shared": false
+  },
+  "charts-screeners": {
+   "name": "Charts and screeners",
+   "question": "Can you chart prices and screen stocks by criteria?",
+   "meaning": "Yes: both; partly: one of them; no: neither.",
+   "shared": false
+  },
+  "chat-bots": {
+   "name": "Bots",
+   "question": "Can you add bots and integrations to the server?",
+   "meaning": "Yes: a bot system with ready bots; partly: a bot system, few bots; no: no.",
+   "shared": false
+  },
+  "chat-widget": {
+   "name": "Chat widget for your site",
+   "question": "Can you add a live chat box to your website?",
+   "meaning": "Yes: built in; partly: basic; no: no.",
+   "shared": false
+  },
+  "chat-with-documents": {
+   "name": "Ask about your files",
+   "question": "Can you give it your documents and ask questions about them?",
+   "meaning": "Yes: built in; partly: one file at a time; no: no.",
+   "shared": false
+  },
+  "chrome-extensions": {
+   "name": "Runs Chrome extensions",
+   "question": "Can it install extensions from the Chrome Web Store?",
+   "meaning": "Yes: directly; partly: with workarounds; no: its own extensions only.",
+   "shared": false
+  },
+  "ci-built-in": {
+   "name": "Automated builds included",
+   "question": "Does it include automated builds and tests (CI)?",
+   "meaning": "Yes: built in; partly: through a separate add-on; no: no.",
+   "shared": false
+  },
+  "click-stats": {
+   "name": "Click statistics",
+   "question": "Does it show how many people clicked, and from where?",
+   "meaning": "Yes: detailed; partly: counts only; no: none.",
+   "shared": false
+  },
+  "clipboard-history": {
+   "name": "Clipboard history",
+   "question": "Can you paste things you copied earlier?",
+   "meaning": "Yes: built in; partly: last item only; no: no.",
+   "shared": false
+  },
+  "cloud-destinations": {
+   "name": "Back up to cloud storage",
+   "question": "Can it back up to cloud storage like Backblaze, S3 or Google Drive?",
+   "meaning": "Yes: many services; partly: a few; no: local drives only.",
+   "shared": false
+  },
+  "cloud-saves": {
+   "name": "Cloud saves",
+   "question": "Do your game saves follow you to another computer?",
+   "meaning": "Yes: built in; partly: some games or stores only; no: no.",
+   "shared": false
+  },
+  "cloud-scan": {
+   "name": "Checks cloud accounts",
+   "question": "Can it check AWS, Azure or Google Cloud setups for risky settings?",
+   "meaning": "Yes: major clouds; partly: one cloud; no: no.",
+   "shared": false
+  },
+  "cmyk-print": {
+   "name": "Print colours (CMYK)",
+   "question": "Can you prepare designs in print colours (CMYK) for a print shop?",
+   "meaning": "Yes: built in; partly: only on export or through a plugin; no: screen colours only.",
+   "shared": true
+  },
+  "code-review": {
+   "name": "Line-by-line code review",
+   "question": "Can people propose changes and review them line by line?",
+   "meaning": "Yes: built in; partly: basic; no: no.",
+   "shared": false
+  },
+  "color-grading": {
+   "name": "Colour correction and grading",
+   "question": "Are there proper colour tools (curves, wheels, LUTs)?",
+   "meaning": "Yes: full set; partly: basic brightness and colour; no: none.",
+   "shared": false
+  },
+  "combines-stores": {
+   "name": "One library for all your stores",
+   "question": "Can it show your Steam, Epic and GOG games in one place?",
+   "meaning": "Yes: three or more stores; partly: one or two; no: one store only.",
+   "shared": false
+  },
+  "comic-tools": {
+   "name": "Comic tools",
+   "question": "Are there tools for comic panels and speech balloons?",
+   "meaning": "Yes: built in; partly: some; no: none.",
+   "shared": false
+  },
+  "comments-suggestions": {
+   "name": "Comments and suggested edits",
+   "question": "Can others leave comments and suggest edits you accept or reject?",
+   "meaning": "Yes: both, like Word's track changes; partly: comments only; no: neither.",
+   "shared": false
+  },
+  "commercial-free": {
+   "name": "Free for business use, no credit needed",
+   "question": "Can you use the icons in commercial work without crediting anyone?",
+   "meaning": "Yes: no credit needed; partly: credit required; no: non-commercial only.",
+   "shared": false
+  },
+  "community-models": {
+   "name": "Use many community models",
+   "question": "Can you use the many models and styles shared by others?",
+   "meaning": "Yes: easy to add; partly: possible by hand; no: fixed models only.",
+   "shared": false
+  },
+  "community-sources": {
+   "name": "Pulls in community activity",
+   "question": "Can it pull in activity from GitHub, Discord, Slack and similar?",
+   "meaning": "Yes: many sources; partly: a few; no: no.",
+   "shared": false
+  },
+  "company-sso": {
+   "name": "Company sign-in (SSO) included",
+   "question": "Can staff sign in with the company's existing accounts (SAML or OpenID) in the free version?",
+   "meaning": "Yes: included free; partly: only one method, or through an add-on; no: paid-only or missing.",
+   "shared": true
+  },
+  "components": {
+   "name": "Reusable components",
+   "question": "Can you make components that update everywhere when you change the original?",
+   "meaning": "Yes: components and shared libraries; partly: components without shared libraries; no: no.",
+   "shared": false
+  },
+  "compositing-vfx": {
+   "name": "Compositing and effects",
+   "question": "Can you combine footage and add visual effects, like After Effects or Nuke?",
+   "meaning": "Yes: node or layer compositing; partly: basic; no: no.",
+   "shared": false
+  },
+  "computer-app": {
+   "name": "Windows, Mac and Linux app",
+   "question": "Can you install it on Windows, Mac and Linux computers?",
+   "meaning": "Yes: all three; partly: one or two of them; no: no computer app (browser or phone only).",
+   "prefill": "platforms: windows + mac + linux",
+   "shared": true
+  },
+  "conditional-logic": {
+   "name": "Questions that change with the answers",
+   "question": "Can a form skip or show questions based on earlier answers?",
+   "meaning": "Yes: full branching; partly: simple show/hide; no: every question shows.",
+   "shared": false
+  },
+  "conference-tools": {
+   "name": "Talk submissions and schedules",
+   "question": "Can you collect talk or paper submissions, review them and build a schedule?",
+   "meaning": "Yes: all three; partly: some of them; no: none.",
+   "shared": false
+  },
+  "container-jobs": {
+   "name": "Each job in a clean container",
+   "question": "Does each job run in its own clean container?",
+   "meaning": "Yes: built in; partly: with plugins; no: no.",
+   "shared": false
+  },
+  "content-calendar": {
+   "name": "Content calendar",
+   "question": "Can you see scheduled posts on a calendar?",
+   "meaning": "Yes: built in; partly: a list by date; no: no.",
+   "shared": false
+  },
+  "crm-sync": {
+   "name": "Syncs with your CRM",
+   "question": "Does it sync with Salesforce, HubSpot or another CRM?",
+   "meaning": "Yes: built in; partly: one; no: no.",
+   "shared": false
+  },
+  "cross-org": {
+   "name": "Chat with other organisations",
+   "question": "Can you talk with people from other companies or servers without making them accounts?",
+   "meaning": "Yes: built in (shared channels or federation); partly: guest accounts only; no: no.",
+   "shared": false
+  },
+  "custom-domain": {
+   "name": "Your own domain",
+   "question": "Can you use your own domain for links?",
+   "meaning": "Yes: built in; partly: one domain only; no: no.",
+   "shared": false
+  },
+  "custom-feeds": {
+   "name": "Choose your own feed",
+   "question": "Can you choose or build feeds other than a time-ordered list of people you follow?",
+   "meaning": "Yes: custom or algorithmic feeds to pick from; partly: lists or filters only; no: one fixed timeline.",
+   "shared": false
+  },
+  "dashboard-sharing": {
+   "name": "Share and embed dashboards",
+   "question": "Can you share dashboards with people and embed them in other pages?",
+   "meaning": "Yes: both; partly: one of them; no: no.",
+   "shared": false
+  },
+  "data-connectors": {
+   "name": "Connects to your data",
+   "question": "Can it connect to your databases and APIs out of the box?",
+   "meaning": "Yes: most common ones; partly: a few; no: no.",
+   "shared": false
+  },
+  "db-automations": {
+   "name": "Built-in automations",
+   "question": "Can it do things by itself when data changes, like sending an email?",
+   "meaning": "Yes: built-in automations; partly: only through another tool; no: none.",
+   "shared": false
+  },
+  "db-views": {
+   "name": "Grid, board, calendar and form views",
+   "question": "Can you see the same table as a grid, a board, a calendar and a form?",
+   "meaning": "Yes: all four; partly: two or three; no: grid only.",
+   "shared": false
+  },
+  "deliverability": {
+   "name": "Gets into inboxes",
+   "question": "Does it handle the things that keep email out of spam (DKIM, bounces, complaints)?",
+   "meaning": "Yes: all of them; partly: some; no: no.",
+   "shared": false
+  },
+  "deploy-dashboard": {
+   "name": "Web dashboard",
+   "question": "Can you manage apps from a web page?",
+   "meaning": "Yes: built in; partly: limited; no: commands only.",
+   "shared": false
+  },
+  "design-tool-plugin": {
+   "name": "Plugin for design tools",
+   "question": "Is there a plugin to use the icons in Figma, Penpot or similar?",
+   "meaning": "Yes: official plugin; partly: unofficial; no: no.",
+   "shared": false
+  },
+  "dev-handoff": {
+   "name": "Code and measurements for developers",
+   "question": "Can developers inspect sizes and copy code from a design?",
+   "meaning": "Yes: built in; partly: measurements only; no: no.",
+   "shared": false
+  },
+  "device-support": {
+   "name": "Works with thousands of devices",
+   "question": "Does it work with most smart-home brands and standards (Matter, Zigbee, Z-Wave)?",
+   "meaning": "Yes: thousands of devices; partly: some brands; no: a few.",
+   "shared": false
+  },
+  "disappearing-messages": {
+   "name": "Disappearing messages",
+   "question": "Can messages delete themselves after a set time?",
+   "meaning": "Yes: built in; partly: only in some chats; no: messages stay.",
+   "shared": true
+  },
+  "doc-qa-pipelines": {
+   "name": "Question-answering over documents",
+   "question": "Can you build a search or question-answering system over your own documents?",
+   "meaning": "Yes: ready-made building blocks; partly: possible with your own code; no: no.",
+   "shared": false
+  },
+  "drafting-2d": {
+   "name": "2D technical drawings",
+   "question": "Can you make dimensioned 2D technical drawings?",
+   "meaning": "Yes: full drafting tools; partly: basic; no: no.",
+   "shared": false
+  },
+  "drop-in-voice": {
+   "name": "Drop-in voice rooms",
+   "question": "Are there voice rooms people can hop in and out of, like Discord?",
+   "meaning": "Yes: always-on rooms; partly: calls you have to start; no: none.",
+   "shared": false
+  },
+  "dwg-files": {
+   "name": "Opens AutoCAD files",
+   "question": "Can it open and save AutoCAD (DWG) files reliably?",
+   "meaning": "Yes: open and save; partly: open only, through a converter, or with losses; no: no.",
+   "shared": false
+  },
+  "e2e-encrypted": {
+   "name": "End-to-end encrypted",
+   "question": "Is your content locked so that even the people running the server can't read it?",
+   "meaning": "Yes: on by default; partly: optional, or only for some content; no: the server can read it.",
+   "shared": true
+  },
+  "easy-installer": {
+   "name": "Install from a web page",
+   "question": "Can you install it by following steps on a web page, without typing commands?",
+   "meaning": "Yes: a web or desktop installer; partly: a guided process with some commands; no: commands only.",
+   "shared": false
+  },
+  "ebook-reader": {
+   "name": "Reads e-books",
+   "question": "Can you read e-books (EPUB, PDF) in it?",
+   "meaning": "Yes: built in; partly: some formats; no: no.",
+   "shared": false
+  },
+  "email-calendar": {
+   "name": "Calendar and contacts built in",
+   "question": "Does it include a calendar and contacts next to your email?",
+   "meaning": "Yes: both; partly: one of them; no: email only.",
+   "shared": false
+  },
+  "email-designer": {
+   "name": "Drag-and-drop email designer",
+   "question": "Can you design emails by dragging blocks?",
+   "meaning": "Yes: built in; partly: templates only; no: code only.",
+   "shared": false
+  },
+  "email-newsletter": {
+   "name": "Email newsletter",
+   "question": "Can readers subscribe and get each post by email?",
+   "meaning": "Yes: built in; partly: through a plugin or another service; no: no.",
+   "shared": false
+  },
+  "email-sequences": {
+   "name": "Automated email sequences",
+   "question": "Can it send a series of emails automatically, like a welcome series?",
+   "meaning": "Yes: built in; partly: basic; no: no.",
+   "shared": false
+  },
+  "email-sync": {
+   "name": "Syncs your email",
+   "question": "Does it log emails with customers automatically?",
+   "meaning": "Yes: Gmail and Outlook; partly: one, or by forwarding; no: no.",
+   "shared": false
+  },
+  "email-tickets": {
+   "name": "Email becomes tickets",
+   "question": "Do customer emails turn into tickets the team can assign?",
+   "meaning": "Yes: built in; partly: limited; no: no.",
+   "shared": false
+  },
+  "emoji-search": {
+   "name": "Emoji search and GIFs",
+   "question": "Can you search emoji by name and send GIFs?",
+   "meaning": "Yes: both; partly: one of them; no: neither.",
+   "shared": false
+  },
+  "encrypted-backup": {
+   "name": "Encrypted backups",
+   "question": "Can you back up your codes in an encrypted file or cloud backup?",
+   "meaning": "Yes: built in; partly: unencrypted only; no: no backup.",
+   "shared": false
+  },
+  "enterprise-sso-customers": {
+   "name": "Enterprise sign-in for your customers",
+   "question": "Can your business customers sign in with their own company accounts (SAML)?",
+   "meaning": "Yes: built in, free; partly: paid-only or limited; no: no.",
+   "shared": false
+  },
+  "envelope-budgeting": {
+   "name": "Every-dollar budgeting",
+   "question": "Does it support giving every dollar a job (envelope budgeting) like YNAB?",
+   "meaning": "Yes: built in; partly: budgets per category only; no: tracking only.",
+   "shared": false
+  },
+  "event-collection": {
+   "name": "Collects website and app events",
+   "question": "Can it collect clicks and events from your website or app, like Segment?",
+   "meaning": "Yes: built in; partly: limited; no: no.",
+   "shared": false
+  },
+  "event-rsvp": {
+   "name": "RSVPs and guest list",
+   "question": "Can people say they're coming and can you see the guest list?",
+   "meaning": "Yes: both; partly: one of them; no: neither.",
+   "shared": false
+  },
+  "event-tickets": {
+   "name": "Tickets and payments",
+   "question": "Can you sell tickets or take payment?",
+   "meaning": "Yes: built in; partly: through an add-on; no: free events only.",
+   "shared": false
+  },
+  "excel-files": {
+   "name": "Opens Excel files faithfully",
+   "question": "Do Excel (.xlsx) files open with their formulas, formatting and charts intact?",
+   "meaning": "Yes: complex files work the same; partly: simple files are fine, complex ones break; no: can't open them.",
+   "shared": false
+  },
+  "excel-macros": {
+   "name": "Runs Excel macros",
+   "question": "Do spreadsheets that rely on Excel's macros (VBA) keep working?",
+   "meaning": "Yes: most macros run unchanged; partly: simple macros run, or they need rewriting; no: macros don't run.",
+   "shared": false
+  },
+  "expenses": {
+   "name": "Track expenses",
+   "question": "Can you record expenses and receipts?",
+   "meaning": "Yes: built in; partly: basic; no: no.",
+   "shared": false
+  },
+  "expiring-links": {
+   "name": "Links that expire",
+   "question": "Can download links expire after a time or number of downloads?",
+   "meaning": "Yes: built in; partly: time only; no: no.",
+   "shared": false
+  },
+  "face-recognition": {
+   "name": "Finds faces and people",
+   "question": "Does it group photos by the people in them?",
+   "meaning": "Yes: built in; partly: limited; no: no.",
+   "shared": false
+  },
+  "fbx-files": {
+   "name": "Opens files from other 3D apps",
+   "question": "Can it exchange models with Maya, 3ds Max and Cinema 4D (FBX, USD)?",
+   "meaning": "Yes: import and export; partly: one way, or with losses; no: no.",
+   "shared": false
+  },
+  "federated": {
+   "name": "Connects across servers (fediverse)",
+   "question": "Can people on different servers follow and talk to each other, like email?",
+   "meaning": "Yes: fully joined to the wider network; partly: only with the same software, or still being built; no: one closed site.",
+   "shared": true
+  },
+  "feed-discovery": {
+   "name": "Suggests sources",
+   "question": "Does it suggest sites and topics to follow, like Google News?",
+   "meaning": "Yes: built in; partly: a basic directory; no: you add each site.",
+   "shared": false
+  },
+  "field-filters": {
+   "name": "Filters by fields",
+   "question": "Can searches be narrowed by fields like date or category?",
+   "meaning": "Yes: fast built-in filters; partly: slow or limited; no: no.",
+   "shared": true
+  },
+  "figma-import": {
+   "name": "Imports Figma files",
+   "question": "Can you bring designs in from Figma?",
+   "meaning": "Yes: a direct importer; partly: through a plugin or with losses; no: no.",
+   "shared": false
+  },
+  "file-storage": {
+   "name": "File storage",
+   "question": "Does it store uploaded files and images?",
+   "meaning": "Yes: built in; partly: through an add-on; no: no.",
+   "shared": false
+  },
+  "file-upload-answers": {
+   "name": "File uploads in answers",
+   "question": "Can people attach files to their answers?",
+   "meaning": "Yes: built in; partly: limited types or sizes; no: not possible.",
+   "shared": false
+  },
+  "files-on-demand": {
+   "name": "Files without using up space",
+   "question": "Can files show on your computer but only download when you open them?",
+   "meaning": "Yes: built in; partly: on some systems only; no: everything downloads.",
+   "shared": false
+  },
+  "forge-integration": {
+   "name": "Works with GitHub, GitLab and Forgejo",
+   "question": "Does it connect to the common code-hosting sites?",
+   "meaning": "Yes: three or more; partly: one or two; no: no.",
+   "shared": false
+  },
+  "form-embed": {
+   "name": "Embed on your website",
+   "question": "Can you put the form inside your own web page?",
+   "meaning": "Yes: a copy-and-paste embed; partly: a link only, or embed with limits; no: neither.",
+   "shared": false
+  },
+  "frame-animation": {
+   "name": "Frame-by-frame animation",
+   "question": "Can you animate drawings frame by frame?",
+   "meaning": "Yes: built in with onion skin; partly: basic; no: no.",
+   "shared": false
+  },
+  "free-plan": {
+   "name": "Free plan",
+   "question": "Can you use it for free?",
+   "meaning": "Yes: a free plan with no time limit; partly: a trial only; no: paid only.",
+   "shared": false
+  },
+  "friend-stories": {
+   "name": "Stories for friends",
+   "question": "Can you post stories that friends see for a day?",
+   "meaning": "Yes: built in; partly: in testing; no: no.",
+   "shared": false
+  },
+  "full-ad-block-extensions": {
+   "name": "Full ad-blocking extensions",
+   "question": "Can it run full-strength ad blockers like uBlock Origin?",
+   "meaning": "Yes: the full version; partly: only the 'Lite' version; no: no.",
+   "shared": false
+  },
+  "full-article": {
+   "name": "Fetches full articles",
+   "question": "Does it show the whole article even when a site's feed has only a summary?",
+   "meaning": "Yes: built in; partly: per-site setup; no: no.",
+   "shared": false
+  },
+  "ga-import": {
+   "name": "Imports Google Analytics history",
+   "question": "Can you bring your old Google Analytics data over?",
+   "meaning": "Yes: built in; partly: with a separate tool; no: no.",
+   "shared": false
+  },
+  "gantt-timeline": {
+   "name": "Timeline (Gantt) view",
+   "question": "Can you see tasks on a timeline with start and end dates?",
+   "meaning": "Yes: a timeline with dependencies; partly: a simple timeline; no: none.",
+   "shared": false
+  },
+  "git-push-deploy": {
+   "name": "Deploy by pushing code",
+   "question": "Does your app go live when you push code?",
+   "meaning": "Yes: built in; partly: needs setup; no: manual.",
+   "shared": false
+  },
+  "github-import": {
+   "name": "Imports from GitHub",
+   "question": "Can you move repositories, issues and pull requests over from GitHub?",
+   "meaning": "Yes: all three; partly: code only, or some of them; no: no.",
+   "shared": false
+  },
+  "glide-typing": {
+   "name": "Swipe typing",
+   "question": "Can you type by sliding your finger across the letters?",
+   "meaning": "Yes: built in and accurate; partly: needs an extra download or is unreliable; no: no.",
+   "shared": false
+  },
+  "goals-funnels": {
+   "name": "Goals and funnels",
+   "question": "Can you see how many people finish each step of a journey, like sign-up?",
+   "meaning": "Yes: goals and step-by-step funnels; partly: simple goals only; no: neither.",
+   "shared": true
+  },
+  "google-apps-optional": {
+   "name": "Google apps if you want them",
+   "question": "Can you use Google Play apps when you choose to, without giving Google control of the phone?",
+   "meaning": "Yes: a contained, optional Google layer; partly: a stand-in (microG) that runs many apps; no: no Google apps.",
+   "shared": false
+  },
+  "google-outlook-sync": {
+   "name": "Works with Google and Outlook calendars",
+   "question": "Can it show and edit your existing Google or Outlook calendars?",
+   "meaning": "Yes: both; partly: one, or read-only; no: neither.",
+   "shared": false
+  },
+  "google-photos-import": {
+   "name": "Imports from Google Photos",
+   "question": "Can you bring your library in from Google Photos with dates and albums kept?",
+   "meaning": "Yes: built in; partly: with a separate tool, or dates or albums lost; no: no.",
+   "shared": false
+  },
+  "gpu-render": {
+   "name": "Fast graphics-card rendering",
+   "question": "Can it render using your graphics card?",
+   "meaning": "Yes: built in; partly: limited; no: no.",
+   "shared": false
+  },
+  "gradual-rollout": {
+   "name": "Roll out to a share of users",
+   "question": "Can you turn a feature on for 5% of users, then more?",
+   "meaning": "Yes: built in; partly: limited; no: on or off only.",
+   "shared": false
+  },
+  "grafana-ready": {
+   "name": "Works with Grafana",
+   "question": "Can you chart it in Grafana?",
+   "meaning": "Yes: official plugin; partly: community plugin; no: no.",
+   "shared": false
+  },
+  "graph-explorer": {
+   "name": "Visual graph explorer",
+   "question": "Can you explore the data visually as a graph?",
+   "meaning": "Yes: built in; partly: basic; no: no.",
+   "shared": false
+  },
+  "graph-query-language": {
+   "name": "Standard graph queries",
+   "question": "Does it use a standard graph query language (Cypher or GQL)?",
+   "meaning": "Yes: Cypher or GQL; partly: similar; no: its own only.",
+   "shared": false
+  },
+  "graphical-installer": {
+   "name": "Installs without commands",
+   "question": "Can you install it by clicking through a normal installer?",
+   "meaning": "Yes: a graphical installer; partly: a guided text installer; no: by typing commands.",
+   "shared": false
+  },
+  "group-libraries": {
+   "name": "Shared group libraries",
+   "question": "Can a research group share one library of sources?",
+   "meaning": "Yes: built in; partly: by sharing a file; no: no.",
+   "shared": false
+  },
+  "group-polls": {
+   "name": "Find a time together",
+   "question": "Can a group vote on dates to find one that suits everyone, like Doodle?",
+   "meaning": "Yes: built in; partly: a simple version; no: no.",
+   "shared": false
+  },
+  "groups-events": {
+   "name": "Groups and events",
+   "question": "Can you make groups and plan events with friends?",
+   "meaning": "Yes: both; partly: one of them; no: neither.",
+   "shared": false
+  },
+  "hardware-export": {
+   "name": "Fast export with your graphics card",
+   "question": "Can it use your graphics card to export video faster?",
+   "meaning": "Yes: on common graphics cards; partly: some cards or systems only; no: no.",
+   "shared": false
+  },
+  "hardware-transcoding": {
+   "name": "Plays on any device",
+   "question": "Does it convert video on the fly so any phone or TV can play it, using your graphics chip?",
+   "meaning": "Yes: built in, free; partly: software only, or paid; no: the device must play the file as is.",
+   "shared": false
+  },
+  "headless-api": {
+   "name": "Content API for apps",
+   "question": "Can apps and websites fetch the content through an API (headless)?",
+   "meaning": "Yes: built in; partly: limited; no: no.",
+   "shared": false
+  },
+  "heal-remove": {
+   "name": "Remove unwanted objects",
+   "question": "Can you paint over an object to remove it (healing or content-aware fill)?",
+   "meaning": "Yes: built in; partly: a basic clone/heal tool or a plugin; no: no.",
+   "shared": false
+  },
+  "heatmaps": {
+   "name": "Heatmaps",
+   "question": "Can you see where people click and scroll on a page?",
+   "meaning": "Yes: built in; partly: clicks only; no: no.",
+   "shared": false
+  },
+  "help-center": {
+   "name": "Help-centre articles",
+   "question": "Can you publish help articles customers can search?",
+   "meaning": "Yes: built in; partly: basic; no: no.",
+   "shared": false
+  },
+  "hidden-album": {
+   "name": "Private album",
+   "question": "Can you hide photos in a locked album?",
+   "meaning": "Yes: built in; partly: hidden but not locked; no: no.",
+   "shared": false
+  },
+  "home-automations": {
+   "name": "Automations",
+   "question": "Can things happen by themselves, like lights on at sunset?",
+   "meaning": "Yes: point-and-click automations; partly: needs code or config files; no: no.",
+   "shared": false
+  },
+  "hours-to-invoices": {
+   "name": "Reports and invoices from hours",
+   "question": "Can it turn tracked hours into reports and invoices?",
+   "meaning": "Yes: both; partly: reports only; no: no.",
+   "shared": false
+  },
+  "hybrid-search": {
+   "name": "Search by meaning and keywords",
+   "question": "Can it search by meaning (vectors) and by keywords together?",
+   "meaning": "Yes: both in one search; partly: one of them, or both but separately; no: keywords only.",
+   "shared": true
+  },
+  "icon-formats": {
+   "name": "SVG and icon fonts",
+   "question": "Are the icons available as SVG files and as an icon font?",
+   "meaning": "Yes: both; partly: one of them; no: neither.",
+   "shared": false
+  },
+  "icon-styles": {
+   "name": "Several styles",
+   "question": "Do the icons come in more than one style, such as outline and filled?",
+   "meaning": "Yes: two or more styles; partly: some icons only; no: one style.",
+   "shared": false
+  },
+  "image-search": {
+   "name": "Image and video search",
+   "question": "Can you search images and videos too?",
+   "meaning": "Yes: both; partly: one of them; no: web pages only.",
+   "shared": false
+  },
+  "image-trace": {
+   "name": "Turn pictures into vectors",
+   "question": "Can it trace a photo or drawing into editable vector shapes?",
+   "meaning": "Yes: built in; partly: basic; no: no.",
+   "shared": false
+  },
+  "in-context-editing": {
+   "name": "Translate on the live page",
+   "question": "Can translators edit text right on the live app or site?",
+   "meaning": "Yes: built in; partly: screenshots only; no: no.",
+   "shared": false
+  },
+  "incremental-backup": {
+   "name": "Only saves what changed",
+   "question": "Does each backup save only what changed, to save space and time?",
+   "meaning": "Yes: built in; partly: limited; no: full copies each time.",
+   "shared": false
+  },
+  "independent-audit": {
+   "name": "Independently audited",
+   "question": "Has an outside firm checked its no-logging claims or its apps?",
+   "meaning": "Yes: a published audit within the last three years; partly: older or partial audit; no: none.",
+   "shared": false
+  },
+  "indesign-files": {
+   "name": "Opens InDesign files",
+   "question": "Can it open InDesign files (IDML)?",
+   "meaning": "Yes: editable; partly: with losses; no: no.",
+   "shared": false
+  },
+  "inpainting": {
+   "name": "Edit part of an image",
+   "question": "Can you redraw just one part of an image (inpainting)?",
+   "meaning": "Yes: built in; partly: through an add-on; no: no.",
+   "shared": false
+  },
+  "inside-editor": {
+   "name": "Works inside your code editor",
+   "question": "Does it work inside a code editor like VS Code or JetBrains?",
+   "meaning": "Yes: plugins for two or more editors; partly: one editor; no: its own app or terminal only.",
+   "shared": false
+  },
+  "instant-share-link": {
+   "name": "Instant share link",
+   "question": "Do you get a link to share the moment a recording ends, like Loom?",
+   "meaning": "Yes: built in; partly: needs a separate upload step or plugin; no: you send the file yourself.",
+   "shared": false
+  },
+  "integrations-api": {
+   "name": "Connects to your other tools",
+   "question": "Does it offer an API or ready-made connections to other apps?",
+   "meaning": "Yes: a documented API plus ready connections; partly: basic webhooks or an API only; no: neither.",
+   "shared": true
+  },
+  "inventory": {
+   "name": "Stock and inventory",
+   "question": "Does it track stock levels?",
+   "meaning": "Yes: stock levels, movements and alerts; partly: simple counts; no: no stock tracking.",
+   "shared": true
+  },
+  "investments": {
+   "name": "Tracks investments",
+   "question": "Can it track stocks and investment accounts?",
+   "meaning": "Yes: with prices; partly: balances only; no: no.",
+   "shared": false
+  },
+  "iphone-push": {
+   "name": "Reaches iPhones",
+   "question": "Can it send notifications to iPhones?",
+   "meaning": "Yes: built in; partly: with workarounds; no: no.",
+   "shared": false
+  },
+  "job-listings": {
+   "name": "Job listings",
+   "question": "Can companies post jobs and people apply?",
+   "meaning": "Yes: built in; partly: simple posts only; no: no.",
+   "shared": false
+  },
+  "kanban-boards": {
+   "name": "Boards",
+   "question": "Can you see tasks as cards in columns (To do, Doing, Done)?",
+   "meaning": "Yes: built in; partly: a basic version or a plugin; no: lists only.",
+   "shared": false
+  },
+  "kill-switch": {
+   "name": "Kill switch",
+   "question": "Does it block your internet if the VPN drops, so nothing leaks?",
+   "meaning": "Yes: built in; partly: on some devices; no: no.",
+   "shared": false
+  },
+  "large-icon-set": {
+   "name": "Over 3,000 icons",
+   "question": "Does the set have more than 3,000 icons?",
+   "meaning": "Yes: over 3,000; partly: 1,000 to 3,000; no: fewer.",
+   "shared": false
+  },
+  "large-meetings": {
+   "name": "Smooth with 50+ people",
+   "question": "Do meetings with more than 50 people work smoothly on the usual setup?",
+   "meaning": "Yes: 50 or more without special setup; partly: possible with extra servers or tuning; no: small groups only.",
+   "shared": false
+  },
+  "live-chat": {
+   "name": "Live chat with viewers",
+   "question": "Can viewers chat during a stream?",
+   "meaning": "Yes: built in; partly: through an add-on; no: no.",
+   "shared": false
+  },
+  "live-collab": {
+   "name": "Live co-editing",
+   "question": "Can several people edit the same thing at the same time and see each other's changes?",
+   "meaning": "Yes: live, like Google Docs; partly: taking turns, refreshing, or only in a server version; no: one person at a time.",
+   "shared": true
+  },
+  "live-prices": {
+   "name": "Live market prices",
+   "question": "Does it show live market prices?",
+   "meaning": "Yes: real-time; partly: delayed, or with your own data subscription; no: no.",
+   "shared": false
+  },
+  "live-streams-hosted": {
+   "name": "Live streams",
+   "question": "Can creators stream live on the site, not only upload videos?",
+   "meaning": "Yes: built in; partly: needs extra setup by the server's owner; no: uploads only.",
+   "shared": false
+  },
+  "live-traffic": {
+   "name": "Live traffic",
+   "question": "Does it show live traffic and route around it?",
+   "meaning": "Yes: built in; partly: limited areas; no: no.",
+   "shared": false
+  },
+  "live-transcription": {
+   "name": "Live as you speak",
+   "question": "Can it write text live while someone talks?",
+   "meaning": "Yes: built in; partly: with delay or setup; no: recordings only.",
+   "shared": false
+  },
+  "live-tv": {
+   "name": "Live TV and recording",
+   "question": "Can you watch and record live TV with a tuner?",
+   "meaning": "Yes: built in; partly: with add-ons; no: no.",
+   "shared": false
+  },
+  "local-models": {
+   "name": "Runs AI on your own computer",
+   "question": "Can it use AI models that run on your own computer, with nothing sent online?",
+   "meaning": "Yes: built in; partly: possible with extra setup; no: online AI only.",
+   "shared": true
+  },
+  "local-tax": {
+   "name": "Tax rules for your country",
+   "question": "Does it support the tax and accounting rules where you are?",
+   "meaning": "Yes: many countries; partly: a few; no: you set them up yourself.",
+   "shared": false
+  },
+  "logs": {
+   "name": "Logs",
+   "question": "Does it collect and search logs?",
+   "meaning": "Yes: built in; partly: limited; no: no.",
+   "shared": false
+  },
+  "long-documents": {
+   "name": "Books and long documents",
+   "question": "Can it build a table of contents, index and page numbers for a book?",
+   "meaning": "Yes: all three; partly: some of them; no: none.",
+   "shared": false
+  },
+  "long-support": {
+   "name": "Long-term support",
+   "question": "Is each version supported with security fixes for five years or more?",
+   "meaning": "Yes: five years or more; partly: one to five years; no: under a year (or rolling).",
+   "shared": false
+  },
+  "loops-library": {
+   "name": "Built-in loops and sounds",
+   "question": "Does it come with loops and sounds to build songs from, like GarageBand?",
+   "meaning": "Yes: a large set; partly: a few; no: none.",
+   "shared": false
+  },
+  "low-latency": {
+   "name": "Low delay",
+   "question": "Is the delay between you and viewers under about five seconds?",
+   "meaning": "Yes: under five seconds; partly: five to fifteen; no: longer.",
+   "shared": false
+  },
+  "machine-translation": {
+   "name": "Machine translation",
+   "question": "Can it suggest translations automatically?",
+   "meaning": "Yes: several services; partly: one; no: no.",
+   "shared": false
+  },
+  "magic-resize": {
+   "name": "Resize for every network",
+   "question": "Can you resize one design for Instagram, a story and a poster in one step?",
+   "meaning": "Yes: one step; partly: preset sizes but manual rework; no: no.",
+   "shared": false
+  },
+  "mailchimp-import": {
+   "name": "Imports from Mailchimp",
+   "question": "Can you bring your list over from Mailchimp?",
+   "meaning": "Yes: built in; partly: by file; no: no.",
+   "shared": false
+  },
+  "managed-cloud": {
+   "name": "Hosted for you",
+   "question": "Can you pay the makers (or a well-known host) to run it for you, like the closed service?",
+   "meaning": "Yes: an official hosted service; partly: only small third-party hosts; no: you must run it yourself.",
+   "shared": true
+  },
+  "manufacturing": {
+   "name": "Manufacturing",
+   "question": "Does it plan production and bills of materials?",
+   "meaning": "Yes: built in; partly: basic; no: no.",
+   "shared": false
+  },
+  "many-destinations": {
+   "name": "Sends to many services",
+   "question": "Can one message go out by email, chat apps and phones?",
+   "meaning": "Yes: dozens of services; partly: a few; no: one.",
+   "shared": false
+  },
+  "many-languages": {
+   "name": "Many languages",
+   "question": "Does it work in more than 20 languages?",
+   "meaning": "Yes: more than 20; partly: 5 to 20; no: fewer than 5.",
+   "shared": true
+  },
+  "many-locations": {
+   "name": "Servers in many countries",
+   "question": "Can you appear to connect from many different countries?",
+   "meaning": "Yes: 30 or more; partly: a few; no: one location.",
+   "shared": false
+  },
+  "many-phones": {
+   "name": "Works on many phones",
+   "question": "Does it support many phone models?",
+   "meaning": "Yes: over 100 models; partly: 10 to 100; no: fewer than 10.",
+   "shared": false
+  },
+  "many-proof-sites": {
+   "name": "Proves many kinds of accounts",
+   "question": "Can you prove ownership of many kinds of accounts (websites, GitHub, Mastodon, etc.)?",
+   "meaning": "Yes: ten or more kinds; partly: a few; no: one or two.",
+   "shared": false
+  },
+  "many-sdks": {
+   "name": "Libraries for many languages",
+   "question": "Are there official libraries for most popular programming languages?",
+   "meaning": "Yes: five or more languages; partly: two to four; no: one or none.",
+   "shared": true
+  },
+  "map-view": {
+   "name": "Photos on a map",
+   "question": "Can you see photos on a map by where they were taken?",
+   "meaning": "Yes: built in; partly: per photo only; no: no.",
+   "shared": false
+  },
+  "market-news": {
+   "name": "Market news",
+   "question": "Does it show market news?",
+   "meaning": "Yes: built in; partly: through a connected source; no: no.",
+   "shared": false
+  },
+  "master-pages": {
+   "name": "Master pages and styles",
+   "question": "Can you set page templates and text styles once and reuse them everywhere?",
+   "meaning": "Yes: both; partly: one of them; no: neither.",
+   "shared": false
+  },
+  "mcp-tools": {
+   "name": "Connects extra tools (MCP)",
+   "question": "Can you plug in extra tools and data sources through the common MCP standard?",
+   "meaning": "Yes: built in; partly: limited or experimental; no: not supported.",
+   "shared": true
+  },
+  "meeting-invites": {
+   "name": "Send and answer invites",
+   "question": "Can you invite people to events and see who's coming?",
+   "meaning": "Yes: invites and replies; partly: replies only, or only within the same app; no: neither.",
+   "shared": false
+  },
+  "meeting-recording": {
+   "name": "Record meetings",
+   "question": "Can you record a meeting?",
+   "meaning": "Yes: built in; partly: needs extra setup or storage; no: no.",
+   "shared": false
+  },
+  "mesh-direct": {
+   "name": "Devices connect directly",
+   "question": "Do devices connect straight to each other instead of through one central server?",
+   "meaning": "Yes: direct (mesh); partly: direct when possible; no: everything through one server.",
+   "shared": false
+  },
+  "metrics": {
+   "name": "Metrics",
+   "question": "Does it collect and chart numbers like CPU use and request counts?",
+   "meaning": "Yes: built in; partly: limited; no: no.",
+   "shared": false
+  },
+  "microsoft-extensions": {
+   "name": "Microsoft's own extensions",
+   "question": "Can it run Microsoft's own extensions (C#, Remote Development, Live Share)?",
+   "meaning": "Yes: officially; partly: some, or with workarounds; no: no.",
+   "shared": false
+  },
+  "midi-instruments": {
+   "name": "Virtual instruments and MIDI",
+   "question": "Can you play and write music with virtual instruments and a MIDI keyboard?",
+   "meaning": "Yes: built-in instruments and MIDI editing; partly: MIDI with outside instruments only; no: no.",
+   "shared": false
+  },
+  "model-serving": {
+   "name": "Serves models to apps",
+   "question": "Can it run a model as a service other apps can call?",
+   "meaning": "Yes: built in; partly: with extra tools; no: no.",
+   "shared": false
+  },
+  "modelling-3d": {
+   "name": "3D modelling",
+   "question": "Can you build 3D models from scratch?",
+   "meaning": "Yes: full modelling tools; partly: basic shapes; no: no.",
+   "shared": false
+  },
+  "modern-formulas": {
+   "name": "Newer Excel formulas",
+   "question": "Does it support newer Excel formulas like XLOOKUP, FILTER and LET?",
+   "meaning": "Yes: most of them; partly: some of them; no: none.",
+   "shared": false
+  },
+  "modest-hardware": {
+   "name": "Runs on an ordinary graphics card",
+   "question": "Does it run well on a graphics card with 8 GB of memory or less?",
+   "meaning": "Yes: well; partly: slowly or with limits; no: needs a high-end card.",
+   "shared": false
+  },
+  "more-channels": {
+   "name": "WhatsApp and social channels",
+   "question": "Can you answer WhatsApp, Facebook, Instagram and similar messages in the same place?",
+   "meaning": "Yes: several; partly: one or two; no: email and chat only.",
+   "shared": false
+  },
+  "motion-graphics": {
+   "name": "Motion graphics",
+   "question": "Is it good for animated text, logos and explainer graphics?",
+   "meaning": "Yes: dedicated tools; partly: possible but slow; no: no.",
+   "shared": false
+  },
+  "move-account": {
+   "name": "Move servers, keep followers",
+   "question": "Can you move your account to another server and keep your followers?",
+   "meaning": "Yes: followers move with you; partly: followers move but posts don't; no: start again.",
+   "shared": false
+  },
+  "multi-currency": {
+   "name": "Many currencies",
+   "question": "Does it handle more than one currency?",
+   "meaning": "Yes: many currencies with conversion; partly: several currencies without conversion; no: one currency.",
+   "shared": true
+  },
+  "multi-gpu": {
+   "name": "Scales across many GPUs",
+   "question": "Can it spread training or serving across many graphics cards or machines?",
+   "meaning": "Yes: built in; partly: limited; no: one machine.",
+   "shared": false
+  },
+  "multi-language-content": {
+   "name": "Content in many languages",
+   "question": "Can you publish the same content in several languages?",
+   "meaning": "Yes: built in; partly: through a plugin; no: no.",
+   "shared": false
+  },
+  "multi-region": {
+   "name": "Spreads across regions",
+   "question": "Can one database span several regions or data centres?",
+   "meaning": "Yes: built in; partly: read copies only; no: no.",
+   "shared": false
+  },
+  "multi-store": {
+   "name": "Several shops",
+   "question": "Can you run several shops or tills from one account?",
+   "meaning": "Yes: built in; partly: paid; no: no.",
+   "shared": false
+  },
+  "multi-track": {
+   "name": "Many tracks",
+   "question": "Can you layer many video and audio tracks on a timeline?",
+   "meaning": "Yes: unlimited tracks; partly: a few; no: one track.",
+   "shared": false
+  },
+  "multitrack-recording": {
+   "name": "Record many tracks",
+   "question": "Can you record several instruments or microphones at once onto separate tracks?",
+   "meaning": "Yes: built in; partly: one track at a time; no: no.",
+   "shared": false
+  },
+  "music-catalog": {
+   "name": "Millions of songs to stream",
+   "question": "Does it come with a catalogue of music to stream, without supplying your own files?",
+   "meaning": "Yes: a large catalogue; partly: free or shared music only; no: only music you own or upload.",
+   "shared": false
+  },
+  "music-discovery": {
+   "name": "Suggests new music",
+   "question": "Does it suggest new music or make radio from a song?",
+   "meaning": "Yes: built in; partly: from your own library only; no: no.",
+   "shared": false
+  },
+  "nearby-matching": {
+   "name": "Matches people nearby",
+   "question": "Does it suggest matches near you, with filters for age and interests?",
+   "meaning": "Yes: location and filters; partly: one of them; no: no.",
+   "shared": false
+  },
+  "network-scan": {
+   "name": "Scans networks and servers",
+   "question": "Can it scan networks and servers for known weaknesses?",
+   "meaning": "Yes: built in; partly: limited; no: no.",
+   "shared": false
+  },
+  "no-account-needed": {
+   "name": "No account needed",
+   "question": "Can you use it without signing up or giving an email address?",
+   "meaning": "Yes: no sign-up at all; partly: an anonymous account number or optional sign-up; no: an account with email is required.",
+   "shared": true
+  },
+  "no-code-builder": {
+   "name": "Build without code",
+   "question": "Can someone who doesn't program build with it, by dragging and clicking?",
+   "meaning": "Yes: a full visual builder; partly: visual for simple things, code for the rest; no: code only.",
+   "shared": true
+  },
+  "no-cookie-banner": {
+   "name": "No cookie banner needed",
+   "question": "Can you use it without cookies, so most sites don't need a consent banner?",
+   "meaning": "Yes: cookie-free by design; partly: a cookie-free mode with fewer features; no: needs cookies.",
+   "shared": false
+  },
+  "no-paid-edition": {
+   "name": "Nothing locked behind a paid version",
+   "question": "Is every feature in the free, open version?",
+   "meaning": "Yes: no paid edition, or paid plans only add hosting or support; partly: a paid edition adds some features; no: important features for this job are paid-only.",
+   "shared": true
+  },
+  "no-phone-number": {
+   "name": "No phone number needed",
+   "question": "Can you sign up without giving a phone number?",
+   "meaning": "Yes: no number needed; partly: a number is needed but can be hidden from others; no: your number is your identity.",
+   "shared": false
+  },
+  "no-server-needed": {
+   "name": "No server needed",
+   "question": "Can a regular person start using it without setting up a server?",
+   "meaning": "Yes: you install an app, or sign up for a free hosted version; partly: only through paid hosting; no: someone has to run a server.",
+   "prefill": "kind + setup",
+   "shared": true
+  },
+  "no-tracking": {
+   "name": "No tracking by default",
+   "question": "Does it avoid sending usage data, ads or tracking by default?",
+   "meaning": "Yes: nothing sent unless you opt in; partly: some usage data is sent until you turn it off; no: tracking or ads you can't turn off.",
+   "shared": true
+  },
+  "noise-removal": {
+   "name": "Clean up recordings",
+   "question": "Can it remove background noise and hum?",
+   "meaning": "Yes: built in; partly: through a plugin; no: no.",
+   "shared": false
+  },
+  "non-destructive": {
+   "name": "Non-destructive editing",
+   "question": "Can you change or undo an adjustment later without damaging the photo (adjustment layers, filters you can re-open)?",
+   "meaning": "Yes: adjustments stay editable; partly: for some tools only; no: every change is baked in.",
+   "shared": false
+  },
+  "notes-import": {
+   "name": "Imports from Notion or Evernote",
+   "question": "Can you bring your notes in from Notion, Evernote or OneNote?",
+   "meaning": "Yes: a built-in importer for at least two of them; partly: one of them, or through a separate tool; no: none.",
+   "shared": false
+  },
+  "notion-databases": {
+   "name": "Databases and boards in notes",
+   "question": "Can you build tables, boards and calendars inside your notes, like Notion?",
+   "meaning": "Yes: full databases with views; partly: simple tables or boards; no: plain notes only.",
+   "shared": false
+  },
+  "nvidia-ready": {
+   "name": "NVIDIA graphics set up for you",
+   "question": "Do NVIDIA graphics drivers work out of the box?",
+   "meaning": "Yes: offered during install; partly: a few extra steps; no: manual setup.",
+   "shared": false
+  },
+  "office-in-browser": {
+   "name": "Edit documents in the browser",
+   "question": "Can you open and edit documents in the web browser?",
+   "meaning": "Yes: built in; partly: with an add-on; no: download first.",
+   "shared": false
+  },
+  "one-click-databases": {
+   "name": "One-click databases",
+   "question": "Can you add a database to an app in one click?",
+   "meaning": "Yes: built in; partly: some kinds; no: no.",
+   "shared": false
+  },
+  "one-click-timer": {
+   "name": "One-click timer",
+   "question": "Can you start a timer with one click from your browser or computer?",
+   "meaning": "Yes: browser and desktop; partly: one of them; no: type hours in.",
+   "shared": false
+  },
+  "one-command-install": {
+   "name": "Quick to run yourself",
+   "question": "Can you run your own copy from one ready-made package, such as a single Docker command?",
+   "meaning": "Yes: one package or command; partly: several pieces to set up and connect; no: a long manual setup.",
+   "shared": true
+  },
+  "online-payments": {
+   "name": "Clients pay online",
+   "question": "Can clients pay an invoice online by card?",
+   "meaning": "Yes: several providers; partly: one; no: no.",
+   "shared": false
+  },
+  "opentelemetry": {
+   "name": "Accepts OpenTelemetry",
+   "question": "Does it accept data in the common OpenTelemetry format?",
+   "meaning": "Yes: fully; partly: some data types; no: no.",
+   "shared": false
+  },
+  "over-internet": {
+   "name": "Works across the internet",
+   "question": "Can you send to someone far away, not only on the same Wi-Fi?",
+   "meaning": "Yes: anywhere; partly: needs setup; no: nearby only.",
+   "shared": false
+  },
+  "own-index": {
+   "name": "Its own index",
+   "question": "Does it crawl the web itself instead of only reusing other engines' results?",
+   "meaning": "Yes: its own index; partly: a mix; no: other engines' results only.",
+   "shared": false
+  },
+  "package-registry": {
+   "name": "Package registry",
+   "question": "Can it host packages and container images?",
+   "meaning": "Yes: several kinds; partly: one kind; no: no.",
+   "shared": false
+  },
+  "paid-subscriptions": {
+   "name": "Paid subscriptions",
+   "question": "Can readers pay you for subscriptions or members-only posts?",
+   "meaning": "Yes: built in; partly: through a plugin; no: no.",
+   "shared": false
+  },
+  "parallel-jobs": {
+   "name": "Runs jobs in parallel",
+   "question": "Can jobs run at the same time across several machines?",
+   "meaning": "Yes: built in; partly: one machine; no: no.",
+   "shared": false
+  },
+  "parametric": {
+   "name": "Change a size, the model updates",
+   "question": "Can you change a measurement and have the whole part update (parametric design)?",
+   "meaning": "Yes: full parametric history; partly: limited; no: no.",
+   "shared": false
+  },
+  "passkey-login": {
+   "name": "Passkey sign-in",
+   "question": "Can your users sign in with passkeys instead of passwords?",
+   "meaning": "Yes: built in; partly: experimental; no: no.",
+   "shared": false
+  },
+  "passkeys": {
+   "name": "Stores passkeys",
+   "question": "Can it save and use passkeys (the password replacement) for your accounts?",
+   "meaning": "Yes: on computer and phone; partly: one of them; no: no.",
+   "shared": false
+  },
+  "passwords-import": {
+   "name": "Imports from 1Password or LastPass",
+   "question": "Can you bring your passwords in from 1Password, LastPass or Dashlane?",
+   "meaning": "Yes: a direct importer for them; partly: by a generic file only; no: no.",
+   "shared": false
+  },
+  "payroll": {
+   "name": "Payroll",
+   "question": "Does it run payroll?",
+   "meaning": "Yes: built in for your country; partly: some countries, or an add-on; no: no.",
+   "shared": false
+  },
+  "pdf-annotate": {
+   "name": "Highlight and comment on PDFs",
+   "question": "Can you highlight and add comments to a PDF?",
+   "meaning": "Yes: highlights, notes and drawings; partly: one of these; no: read only.",
+   "shared": true
+  },
+  "pdf-convert-office": {
+   "name": "Convert to and from Word",
+   "question": "Can it turn a PDF into an editable Word document, and back?",
+   "meaning": "Yes: both ways with layout kept; partly: one way, or the layout breaks; no: neither.",
+   "shared": false
+  },
+  "pdf-edit-text": {
+   "name": "Edit the words on a PDF page",
+   "question": "Can you change the existing text on a PDF page, like in Acrobat?",
+   "meaning": "Yes: edit text in place keeping the font; partly: cover it and type over, or simple files only; no: no text editing.",
+   "shared": false
+  },
+  "pdf-merge-split": {
+   "name": "Merge, split and reorder pages",
+   "question": "Can you combine PDFs, split them and reorder pages?",
+   "meaning": "Yes: all three; partly: some of them; no: none.",
+   "shared": false
+  },
+  "pdf-ocr": {
+   "name": "Turn scans into searchable text",
+   "question": "Can it recognise the text in scanned pages (OCR) so you can search and copy it?",
+   "meaning": "Yes: built in; partly: through an add-on; no: no.",
+   "shared": false
+  },
+  "pdf-sign-forms": {
+   "name": "Fill in and sign PDFs",
+   "question": "Can you fill in PDF forms and add a signature?",
+   "meaning": "Yes: both; partly: one of them; no: neither.",
+   "shared": false
+  },
+  "pdf-x-export": {
+   "name": "Print-ready PDFs",
+   "question": "Can it export print-ready PDF (PDF/X) with bleed and crop marks?",
+   "meaning": "Yes: built in; partly: some of these; no: no.",
+   "shared": false
+  },
+  "pg-mysql-compatible": {
+   "name": "Works with PostgreSQL or MySQL apps",
+   "question": "Do apps written for PostgreSQL or MySQL work with it?",
+   "meaning": "Yes: fully; partly: mostly; no: no.",
+   "shared": false
+  },
+  "phone-app": {
+   "name": "Phone app",
+   "question": "Is there an app for both iPhone and Android?",
+   "meaning": "Yes: official or well-known apps on both; partly: only one of them, or only an unofficial app; no: no phone app.",
+   "prefill": "platforms: ios + android",
+   "shared": true
+  },
+  "phone-numbers": {
+   "name": "Real phone calls and texts",
+   "question": "Can your app make and receive real phone calls and text messages?",
+   "meaning": "Yes: built in; partly: through a carrier you connect; no: in-app calls only.",
+   "shared": false
+  },
+  "photo-albums": {
+   "name": "Photo albums",
+   "question": "Can you share photo albums?",
+   "meaning": "Yes: built in; partly: photos in posts only; no: no.",
+   "shared": false
+  },
+  "photo-basic-editor": {
+   "name": "Basic photo editor",
+   "question": "Can you crop, rotate and adjust photos?",
+   "meaning": "Yes: built in; partly: crop and rotate only; no: no.",
+   "shared": false
+  },
+  "photo-filters": {
+   "name": "Photo filters",
+   "question": "Can you apply filters and simple edits before posting?",
+   "meaning": "Yes: built in; partly: a few; no: no.",
+   "shared": false
+  },
+  "photo-library": {
+   "name": "Photo library",
+   "question": "Can you sort, rate and search thousands of photos in a library, like Lightroom?",
+   "meaning": "Yes: a full library; partly: a basic file browser; no: one file at a time.",
+   "shared": false
+  },
+  "photo-stories": {
+   "name": "Stories",
+   "question": "Can you post stories that disappear after a day?",
+   "meaning": "Yes: built in; partly: in testing; no: no.",
+   "shared": false
+  },
+  "picture-boards": {
+   "name": "Picture boards",
+   "question": "Can you arrange saved pictures on visual boards?",
+   "meaning": "Yes: built in; partly: lists with thumbnails; no: links only.",
+   "shared": false
+  },
+  "pipeline-as-file": {
+   "name": "Pipelines kept in your code",
+   "question": "Are build steps written in a file stored with your code?",
+   "meaning": "Yes: built in; partly: optional; no: set up in a web page only.",
+   "shared": false
+  },
+  "pivot-tables": {
+   "name": "Pivot tables",
+   "question": "Can you summarise data with pivot tables?",
+   "meaning": "Yes: full pivot tables; partly: basic grouping only; no: none.",
+   "shared": false
+  },
+  "place-details": {
+   "name": "Opening hours and place details",
+   "question": "Does it show opening hours, phone numbers and websites for places?",
+   "meaning": "Yes: for most places; partly: some places; no: no.",
+   "shared": false
+  },
+  "plain-files": {
+   "name": "Notes kept as plain files",
+   "question": "Are your notes saved as ordinary files (like Markdown) that any app can open?",
+   "meaning": "Yes: plain files you can see in a folder; partly: easy full export to plain files; no: locked in its own database.",
+   "shared": false
+  },
+  "play-apps": {
+   "name": "Has the apps from Google Play",
+   "question": "Can you get the apps that are on Google Play?",
+   "meaning": "Yes: the full Google Play catalogue; partly: some of them; no: its own catalogue only.",
+   "shared": false
+  },
+  "playback-speed": {
+   "name": "Speed up and skip silence",
+   "question": "Can you change speed and skip silences?",
+   "meaning": "Yes: both; partly: one of them; no: neither.",
+   "shared": false
+  },
+  "plugins": {
+   "name": "Add-ons and plugins",
+   "question": "Can you add features with plugins or extensions written by others?",
+   "meaning": "Yes: a plugin system with a listing of add-ons; partly: a plugin system but few add-ons; no: no plugins.",
+   "shared": true
+  },
+  "podcast-discovery": {
+   "name": "Find new podcasts",
+   "question": "Can you search and browse podcasts inside the app?",
+   "meaning": "Yes: search and recommendations; partly: search only; no: add by web address only.",
+   "shared": false
+  },
+  "point-and-click": {
+   "name": "No commands needed",
+   "question": "Can you install and use it without typing commands in a terminal?",
+   "meaning": "Yes: a normal app or web page; partly: the everyday use is point-and-click but setup needs commands; no: terminal only.",
+   "shared": true
+  },
+  "post-stats": {
+   "name": "Post stats",
+   "question": "Does it show how each post performed?",
+   "meaning": "Yes: per-post stats; partly: totals only; no: none.",
+   "shared": false
+  },
+  "postman-import": {
+   "name": "Imports from Postman",
+   "question": "Can you bring your Postman collections over?",
+   "meaning": "Yes: built in; partly: some features lost; no: no.",
+   "shared": false
+  },
+  "pptx-files": {
+   "name": "Opens PowerPoint files faithfully",
+   "question": "Do PowerPoint (.pptx) files open with their layouts and animations intact?",
+   "meaning": "Yes: complex decks look the same; partly: simple decks are fine, animations or layouts shift; no: can't open them.",
+   "shared": false
+  },
+  "preinstalled": {
+   "name": "Sold pre-installed",
+   "question": "Can you buy a computer or phone with it already installed?",
+   "meaning": "Yes: from mainstream sellers; partly: from small specialist sellers; no: you install it yourself.",
+   "shared": true
+  },
+  "presenter-view": {
+   "name": "Presenter view",
+   "question": "When presenting, can you see your notes, the next slide and a timer while the audience sees only the slide?",
+   "meaning": "Yes: all three; partly: some of them; no: none.",
+   "shared": false
+  },
+  "pressure-pen": {
+   "name": "Pen pressure and tilt",
+   "question": "Do lines respond to how hard you press and how you tilt a pen?",
+   "meaning": "Yes: pressure and tilt; partly: pressure only; no: no.",
+   "shared": false
+  },
+  "preview-deploys": {
+   "name": "Preview link for each change",
+   "question": "Does each proposed change get its own preview link?",
+   "meaning": "Yes: built in; partly: needs setup; no: no.",
+   "shared": false
+  },
+  "prototyping": {
+   "name": "Clickable prototypes",
+   "question": "Can you link screens into a clickable prototype to test?",
+   "meaning": "Yes: with transitions; partly: simple links; no: no.",
+   "shared": false
+  },
+  "provider-registry": {
+   "name": "Large provider registry",
+   "question": "Is there a registry of providers for clouds and services?",
+   "meaning": "Yes: thousands; partly: some; no: no.",
+   "shared": false
+  },
+  "proxy-editing": {
+   "name": "Smooth 4K editing",
+   "question": "Can it edit 4K video smoothly on an ordinary computer (proxy files)?",
+   "meaning": "Yes: built-in proxies; partly: manual workaround; no: no.",
+   "shared": false
+  },
+  "psd-files": {
+   "name": "Opens Photoshop files",
+   "question": "Do Photoshop (.psd) files open with their layers, text and effects intact?",
+   "meaning": "Yes: layers, text and effects survive; partly: layers survive but text or effects are flattened or changed; no: can't open them.",
+   "shared": true
+  },
+  "public-discovery": {
+   "name": "Browse other people's ideas",
+   "question": "Can you browse and follow other people's public boards?",
+   "meaning": "Yes: a public feed; partly: share links only; no: private only.",
+   "shared": false
+  },
+  "public-roadmap": {
+   "name": "Public roadmap",
+   "question": "Can customers see what's planned and in progress?",
+   "meaning": "Yes: built in; partly: basic; no: no.",
+   "shared": false
+  },
+  "public-transit": {
+   "name": "Public transport directions",
+   "question": "Can it plan trips by bus and train?",
+   "meaning": "Yes: built in; partly: maps transit lines without planning; no: no.",
+   "shared": false
+  },
+  "push-campaigns": {
+   "name": "Targeted campaigns",
+   "question": "Can you send campaigns to chosen groups of users?",
+   "meaning": "Yes: segments and scheduling; partly: basic groups; no: no.",
+   "shared": false
+  },
+  "push-pull-3d": {
+   "name": "Quick push-pull 3D",
+   "question": "Can you sketch a shape and pull it into 3D quickly, like SketchUp?",
+   "meaning": "Yes: built in; partly: possible but slower; no: no.",
+   "shared": false
+  },
+  "qr-codes": {
+   "name": "QR codes",
+   "question": "Can it make a QR code for each link?",
+   "meaning": "Yes: built in; partly: through a plugin; no: no.",
+   "shared": false
+  },
+  "qualified-signature": {
+   "name": "EU-grade digital signatures",
+   "question": "Can it make advanced or qualified electronic signatures (EU eIDAS) with digital certificates?",
+   "meaning": "Yes: qualified or advanced signatures; partly: certificate signing without eIDAS status; no: simple signatures only.",
+   "shared": false
+  },
+  "quote-posts": {
+   "name": "Quote posts",
+   "question": "Can you share someone's post with your own comment on top?",
+   "meaning": "Yes: built in; partly: a link to the post only; no: no.",
+   "shared": false
+  },
+  "raw-photos": {
+   "name": "Raw camera files",
+   "question": "Can it develop raw files straight from your camera?",
+   "meaning": "Yes: built in; partly: through a separate plugin or app; no: no.",
+   "shared": false
+  },
+  "read-later": {
+   "name": "Save articles for later",
+   "question": "Can you save any web article to read later?",
+   "meaning": "Yes: built in; partly: through another app; no: no.",
+   "shared": false
+  },
+  "reading-tracking": {
+   "name": "Track and rate what you read",
+   "question": "Can you track, rate and review books, like Goodreads?",
+   "meaning": "Yes: built in; partly: simple lists; no: no.",
+   "shared": false
+  },
+  "ready-connectors": {
+   "name": "Ready-made connections",
+   "question": "Does it come with hundreds of ready-made connections to other apps and services?",
+   "meaning": "Yes: hundreds; partly: dozens; no: a handful, or you write each one.",
+   "shared": true
+  },
+  "ready-login-pages": {
+   "name": "Ready-made sign-in pages",
+   "question": "Does it come with ready sign-in and sign-up pages you can brand?",
+   "meaning": "Yes: built in; partly: basic; no: build your own.",
+   "shared": false
+  },
+  "ready-storefront": {
+   "name": "Ready-made shop front",
+   "question": "Does it come with a shop front customers can use, not just a back end for developers?",
+   "meaning": "Yes: a ready shop front; partly: a starter you must customise in code; no: back end only.",
+   "shared": false
+  },
+  "realtime-data": {
+   "name": "Realtime updates",
+   "question": "Do apps see changes the instant data changes?",
+   "meaning": "Yes: built in; partly: limited; no: no.",
+   "shared": false
+  },
+  "realtime-protection": {
+   "name": "Always-on protection",
+   "question": "Does it check files automatically as they arrive, not only when you scan?",
+   "meaning": "Yes: on Windows and Mac; partly: on Linux only or with setup; no: on-request scans only.",
+   "shared": false
+  },
+  "receipt-hardware": {
+   "name": "Receipt printers and scanners",
+   "question": "Does it work with receipt printers and barcode scanners?",
+   "meaning": "Yes: both; partly: one of them; no: no.",
+   "shared": false
+  },
+  "receipt-photos": {
+   "name": "Receipt photos",
+   "question": "Can you attach a photo of the receipt?",
+   "meaning": "Yes: built in; partly: link only; no: no.",
+   "shared": false
+  },
+  "recurring-invoices": {
+   "name": "Repeating invoices",
+   "question": "Can invoices send themselves on a schedule?",
+   "meaning": "Yes: built in; partly: reminders only; no: no.",
+   "shared": false
+  },
+  "recurring-reminders": {
+   "name": "Repeating tasks and reminders",
+   "question": "Can tasks repeat and remind you when they're due?",
+   "meaning": "Yes: both; partly: one of them; no: neither.",
+   "shared": false
+  },
+  "recycle-bin": {
+   "name": "Recycle bin",
+   "question": "Do deleted photos go to a bin you can restore from?",
+   "meaning": "Yes: built in; partly: optional; no: deleted at once.",
+   "shared": false
+  },
+  "redis-compatible": {
+   "name": "Works with Redis apps",
+   "question": "Do apps and tools built for Redis work with it unchanged?",
+   "meaning": "Yes: fully; partly: most commands; no: no.",
+   "shared": false
+  },
+  "remote-access": {
+   "name": "Watch away from home",
+   "question": "Can you watch your library away from home without technical setup?",
+   "meaning": "Yes: built in; partly: needs network setup; no: home network only.",
+   "shared": false
+  },
+  "remote-dev": {
+   "name": "Edit code on other machines",
+   "question": "Can you edit code on a remote server or container as if it were local?",
+   "meaning": "Yes: built in; partly: through an add-on; no: no.",
+   "shared": false
+  },
+  "repo-sync": {
+   "name": "Syncs with your code",
+   "question": "Does it sync translation files with your code repository?",
+   "meaning": "Yes: built in; partly: by command only; no: no.",
+   "shared": false
+  },
+  "results-charts": {
+   "name": "Results summary and charts",
+   "question": "Does it summarise answers with charts automatically?",
+   "meaning": "Yes: built-in summary and charts; partly: a basic summary; no: raw answers only.",
+   "shared": false
+  },
+  "results-history": {
+   "name": "Results history",
+   "question": "Does it keep a history of your past results?",
+   "meaning": "Yes: built in; partly: export only; no: no.",
+   "shared": false
+  },
+  "retention-downsampling": {
+   "name": "Old data shrinks by itself",
+   "question": "Can old data be summarised or removed automatically?",
+   "meaning": "Yes: built in; partly: by hand; no: no.",
+   "shared": false
+  },
+  "reverse-etl": {
+   "name": "Sends data back to business tools",
+   "question": "Can it push data from your warehouse back into tools like your CRM?",
+   "meaning": "Yes: built in; partly: a few destinations; no: no.",
+   "shared": false
+  },
+  "rigging-animation": {
+   "name": "Character animation",
+   "question": "Can you rig and animate characters?",
+   "meaning": "Yes: rigging, keyframes and graph editor; partly: simple keyframes; no: no.",
+   "shared": false
+  },
+  "roles-moderation": {
+   "name": "Moderation tools",
+   "question": "Are there roles, bans and reports for keeping a community safe?",
+   "meaning": "Yes: roles, bans, reports and logs; partly: basic delete and ban only; no: none.",
+   "shared": true
+  },
+  "runs-windows-games": {
+   "name": "Runs Windows games",
+   "question": "Can it run Windows games on Linux?",
+   "meaning": "Yes: built in and works for most popular games; partly: works for some, or needs setup; no: no.",
+   "shared": true
+  },
+  "saas-payments": {
+   "name": "Payments and subscriptions wired up",
+   "question": "Does it come with subscriptions and payments already working?",
+   "meaning": "Yes: built in; partly: one provider, partly done; no: no.",
+   "shared": false
+  },
+  "sales-pipeline": {
+   "name": "Sales pipeline",
+   "question": "Can you see deals moving through stages on a board?",
+   "meaning": "Yes: built in; partly: list only; no: no.",
+   "shared": false
+  },
+  "saves-to-disk": {
+   "name": "Saves to disk",
+   "question": "Can it keep data safe on disk through a restart?",
+   "meaning": "Yes: built in; partly: snapshots only; no: memory only.",
+   "shared": false
+  },
+  "scales-out": {
+   "name": "Spreads across many servers",
+   "question": "Can it spread one database or service across several servers as it grows?",
+   "meaning": "Yes: built in, in the free version; partly: possible but limited or paid; no: one server only.",
+   "shared": true
+  },
+  "scenes-overlays": {
+   "name": "Scenes and overlays",
+   "question": "Can you switch between layouts and add overlays while recording or streaming?",
+   "meaning": "Yes: built in; partly: basic; no: no.",
+   "shared": false
+  },
+  "scheduled-backup": {
+   "name": "Backs up on a schedule",
+   "question": "Can backups run on a schedule by themselves?",
+   "meaning": "Yes: built in; partly: with your system's scheduler; no: no.",
+   "shared": false
+  },
+  "scheduled-checks": {
+   "name": "Scheduled checks",
+   "question": "Can it test your APIs on a schedule and alert you, like Checkly?",
+   "meaning": "Yes: built in; partly: with a separate runner; no: no.",
+   "shared": false
+  },
+  "scheduled-reports": {
+   "name": "Reports by email",
+   "question": "Can it email reports on a schedule?",
+   "meaning": "Yes: built in; partly: limited; no: no.",
+   "shared": false
+  },
+  "scheduled-scans": {
+   "name": "Scheduled scans",
+   "question": "Can it scan on a schedule by itself?",
+   "meaning": "Yes: built in; partly: with setup; no: no.",
+   "shared": false
+  },
+  "schedules-retries": {
+   "name": "Schedules and retries",
+   "question": "Can jobs run on a schedule and retry when they fail?",
+   "meaning": "Yes: both; partly: one of them; no: neither.",
+   "shared": false
+  },
+  "screen-recording": {
+   "name": "Record screen and camera",
+   "question": "Can you record your screen with your camera and microphone?",
+   "meaning": "Yes: all three together; partly: some of them; no: no.",
+   "shared": false
+  },
+  "screen-share": {
+   "name": "Screen sharing",
+   "question": "Can you share your screen with others?",
+   "meaning": "Yes: built in; partly: only on some devices; no: not possible.",
+   "shared": true
+  },
+  "search-widgets": {
+   "name": "Ready-made search box",
+   "question": "Are there ready-made search boxes and result widgets for your site?",
+   "meaning": "Yes: official widgets; partly: community ones; no: no.",
+   "shared": false
+  },
+  "security-reports": {
+   "name": "Ready-made reports",
+   "question": "Can it produce reports for clients or managers?",
+   "meaning": "Yes: templates and export; partly: raw export; no: no.",
+   "shared": false
+  },
+  "security-updates": {
+   "name": "Monthly security updates",
+   "question": "Does it ship security updates every month?",
+   "meaning": "Yes: monthly or faster; partly: every few months; no: rarely.",
+   "shared": false
+  },
+  "self-hostable": {
+   "name": "Can run on your own server",
+   "question": "Can you run your own copy on a server you control?",
+   "meaning": "Yes: documented and supported; partly: possible but unsupported or missing features; no: only the makers can run it.",
+   "shared": false
+  },
+  "sells-games": {
+   "name": "Sells games",
+   "question": "Can you buy new games through it?",
+   "meaning": "Yes: a store; partly: free or pay-what-you-want games only; no: plays games you already own.",
+   "shared": false
+  },
+  "send-api-smtp": {
+   "name": "Send by API or SMTP",
+   "question": "Can apps send email through both an API and standard SMTP?",
+   "meaning": "Yes: both; partly: one of them; no: neither.",
+   "shared": false
+  },
+  "send-to-ereader": {
+   "name": "Sends books to your e-reader",
+   "question": "Can it send or sync books to a Kindle, Kobo or other e-reader?",
+   "meaning": "Yes: built in; partly: with setup; no: no.",
+   "shared": false
+  },
+  "separate-storage": {
+   "name": "Cheap storage, separate computing",
+   "question": "Can data sit on cheap cloud storage (like S3) while computing scales separately, like Snowflake?",
+   "meaning": "Yes: built in; partly: partly; no: no.",
+   "shared": false
+  },
+  "server-functions": {
+   "name": "Server functions",
+   "question": "Can you run your own code on the server (functions)?",
+   "meaning": "Yes: built in; partly: limited languages; no: no.",
+   "shared": false
+  },
+  "session-file-transfer": {
+   "name": "Send files during a session",
+   "question": "Can you copy files between the two computers while connected?",
+   "meaning": "Yes: built in; partly: copy-paste only; no: no.",
+   "shared": false
+  },
+  "session-replay": {
+   "name": "Session replay",
+   "question": "Can you watch a replay of how someone used your site?",
+   "meaning": "Yes: built in; partly: limited; no: no.",
+   "shared": false
+  },
+  "share-links": {
+   "name": "Share links",
+   "question": "Can you send someone a link to a file or folder?",
+   "meaning": "Yes: with passwords and expiry; partly: basic links; no: no.",
+   "shared": false
+  },
+  "share-with-others": {
+   "name": "Share with family or team",
+   "question": "Can you share some items with other people who each have their own account?",
+   "meaning": "Yes: built-in sharing; partly: only by sharing one whole account or a paid plan; no: just you.",
+   "shared": true
+  },
+  "shared-albums": {
+   "name": "Shared albums",
+   "question": "Can you share albums with family, and let them add photos?",
+   "meaning": "Yes: both; partly: view-only sharing; no: no.",
+   "shared": false
+  },
+  "shared-calendars": {
+   "name": "Share calendars",
+   "question": "Can you share a calendar with family or colleagues?",
+   "meaning": "Yes: share with view or edit rights; partly: view-only links; no: personal only.",
+   "shared": false
+  },
+  "shipping-tax": {
+   "name": "Shipping and tax tools",
+   "question": "Does it calculate shipping and sales tax?",
+   "meaning": "Yes: both; partly: one of them; no: neither.",
+   "shared": false
+  },
+  "shop-themes": {
+   "name": "Ready-made shop designs",
+   "question": "Are there ready-made designs (themes) for your shop?",
+   "meaning": "Yes: many; partly: a few; no: none.",
+   "shared": false
+  },
+  "shopify-import": {
+   "name": "Imports from Shopify",
+   "question": "Can you bring products and customers over from Shopify?",
+   "meaning": "Yes: built in; partly: by file only; no: no.",
+   "shared": false
+  },
+  "short-videos": {
+   "name": "Short vertical videos",
+   "question": "Is there a feed of short vertical videos you swipe through, like TikTok?",
+   "meaning": "Yes: built in; partly: short videos but no swipe feed; no: no.",
+   "shared": false
+  },
+  "show-catalog": {
+   "name": "Shows and movies to watch",
+   "question": "Does it come with shows and films to watch, without supplying your own files?",
+   "meaning": "Yes: a catalogue; partly: free channels or add-ons; no: only your own files.",
+   "shared": false
+  },
+  "sign-audit-trail": {
+   "name": "Signing record",
+   "question": "Does it keep a tamper-proof record of who signed, when and from where?",
+   "meaning": "Yes: a certificate or audit trail attached to the document; partly: a basic log; no: none.",
+   "shared": false
+  },
+  "sign-templates": {
+   "name": "Reusable templates",
+   "question": "Can you save a document with its signature fields as a template?",
+   "meaning": "Yes: built in; partly: limited; no: start fresh each time.",
+   "shared": false
+  },
+  "signing-order": {
+   "name": "Several signers in order",
+   "question": "Can several people sign one document, in a set order?",
+   "meaning": "Yes: many signers in a set order; partly: several signers, any order; no: one signer.",
+   "shared": false
+  },
+  "signup-forms": {
+   "name": "Sign-up forms",
+   "question": "Can you put a sign-up form on your site?",
+   "meaning": "Yes: built in; partly: basic; no: no.",
+   "shared": false
+  },
+  "simplify-debts": {
+   "name": "Settles up in fewest payments",
+   "question": "Does it work out the fewest payments to settle everyone up?",
+   "meaning": "Yes: built in; partly: per-person totals only; no: no.",
+   "shared": false
+  },
+  "simulation": {
+   "name": "Strength simulation",
+   "question": "Can it simulate stresses on a part (FEM)?",
+   "meaning": "Yes: built in; partly: through an add-on; no: no.",
+   "shared": false
+  },
+  "slack-import": {
+   "name": "Imports from Slack",
+   "question": "Can you bring your history in from Slack or Teams?",
+   "meaning": "Yes: a built-in importer; partly: with a separate tool or messages only; no: no.",
+   "shared": false
+  },
+  "slide-animations": {
+   "name": "Animations and transitions",
+   "question": "Can you add animations to slides and transitions between them?",
+   "meaning": "Yes: a wide range; partly: a few basic ones; no: none.",
+   "shared": false
+  },
+  "slide-templates": {
+   "name": "Ready-made slide designs",
+   "question": "Does it come with good-looking slide designs to start from?",
+   "meaning": "Yes: a large built-in set; partly: a few basic ones; no: blank slides only.",
+   "shared": false
+  },
+  "smart-search": {
+   "name": "Search by what's in the photo",
+   "question": "Can you search for 'beach' or 'dog' and find matching photos?",
+   "meaning": "Yes: built in; partly: tags only; no: no.",
+   "shared": false
+  },
+  "snooze-send-later": {
+   "name": "Snooze and send later",
+   "question": "Can you snooze emails and schedule emails to send later?",
+   "meaning": "Yes: both; partly: one of them, or by add-on; no: neither.",
+   "shared": false
+  },
+  "social-login": {
+   "name": "Sign in with Google or Apple",
+   "question": "Can your users sign in with Google, Apple, GitHub and the like?",
+   "meaning": "Yes: many; partly: a few; no: no.",
+   "shared": false
+  },
+  "social-networks-covered": {
+   "name": "Posts to the big networks",
+   "question": "Can it post to most major networks (Instagram, Facebook, X, LinkedIn, TikTok, YouTube, Mastodon, Bluesky)?",
+   "meaning": "Yes: six or more of them; partly: three to five; no: two or fewer.",
+   "shared": false
+  },
+  "sources-cited": {
+   "name": "Shows its sources",
+   "question": "Does each answer link to the web pages it came from?",
+   "meaning": "Yes: always; partly: sometimes; no: no.",
+   "shared": false
+  },
+  "speaker-labels": {
+   "name": "Tells speakers apart",
+   "question": "Does it label who is speaking?",
+   "meaning": "Yes: built in; partly: through an add-on; no: no.",
+   "shared": false
+  },
+  "split-tunnel": {
+   "name": "Choose which apps use the VPN",
+   "question": "Can you send only some apps through the VPN?",
+   "meaning": "Yes: built in; partly: on some devices; no: no.",
+   "shared": false
+  },
+  "spotify-playlists": {
+   "name": "Imports Spotify playlists",
+   "question": "Can you bring your playlists over from Spotify or Apple Music?",
+   "meaning": "Yes: built in; partly: with a separate tool; no: no.",
+   "shared": false
+  },
+  "sql-queries": {
+   "name": "Ask in SQL",
+   "question": "Can you ask questions of the data in standard SQL?",
+   "meaning": "Yes: full SQL; partly: a SQL-like language; no: its own query style only.",
+   "shared": true
+  },
+  "state-encryption": {
+   "name": "Encrypted state files",
+   "question": "Can it encrypt the file that records your setup (state)?",
+   "meaning": "Yes: built in; partly: through the storage only; no: no.",
+   "shared": false
+  },
+  "step-sequencer": {
+   "name": "Beat maker",
+   "question": "Is there a pattern or step sequencer for making beats?",
+   "meaning": "Yes: built in; partly: basic; no: no.",
+   "shared": false
+  },
+  "stock-media": {
+   "name": "Free photos and graphics built in",
+   "question": "Can you search free photos, icons and graphics without leaving the app?",
+   "meaning": "Yes: built in; partly: through a plugin; no: no.",
+   "shared": false
+  },
+  "stream-directory": {
+   "name": "Viewers can find you",
+   "question": "Is there a directory where new viewers can discover streams?",
+   "meaning": "Yes: built in; partly: a shared directory you can opt into; no: people need your link.",
+   "shared": false
+  },
+  "stream-out": {
+   "name": "Go live on streaming sites",
+   "question": "Can you stream live to Twitch, YouTube and similar sites?",
+   "meaning": "Yes: built in; partly: with a plugin; no: no.",
+   "shared": false
+  },
+  "style-tips": {
+   "name": "Style and clarity tips",
+   "question": "Does it suggest clearer or better wording, not just fix mistakes?",
+   "meaning": "Yes: style suggestions; partly: a few rules; no: spelling and grammar only.",
+   "shared": false
+  },
+  "subtitle-export": {
+   "name": "Exports subtitles",
+   "question": "Can it save subtitle files (SRT, VTT)?",
+   "meaning": "Yes: built in; partly: one format; no: text only.",
+   "shared": false
+  },
+  "syncs-devices": {
+   "name": "Syncs across your devices",
+   "question": "Do your things stay in step on your phone and computer automatically?",
+   "meaning": "Yes: built-in sync; partly: only with a separate sync tool or a paid plan; no: one device only.",
+   "shared": true
+  },
+  "tablet-app": {
+   "name": "Tablet app",
+   "question": "Does it run as a proper app on an iPad or Android tablet?",
+   "meaning": "Yes: a full tablet app; partly: only one kind of tablet, or a cut-down version; no: no tablet app.",
+   "shared": true
+  },
+  "tasks-import": {
+   "name": "Imports from Trello, Asana or Jira",
+   "question": "Can you bring your projects in from Trello, Asana or Jira?",
+   "meaning": "Yes: a built-in importer for at least one of them; partly: only by spreadsheet file; no: none.",
+   "shared": false
+  },
+  "team-approval": {
+   "name": "Team approvals",
+   "question": "Can a teammate approve posts before they go out?",
+   "meaning": "Yes: built in; partly: shared access but no approval step; no: no.",
+   "shared": false
+  },
+  "team-booking": {
+   "name": "Team booking",
+   "question": "Can bookings be shared out across a team (round-robin) or need several people at once?",
+   "meaning": "Yes: both; partly: one of them, or only in a paid version; no: one person only.",
+   "shared": false
+  },
+  "team-permissions": {
+   "name": "Team roles and permissions",
+   "question": "Can you control who on a team sees and edits what?",
+   "meaning": "Yes: roles and per-item permissions; partly: only basic admin vs member; no: everyone sees everything.",
+   "shared": false
+  },
+  "team-timesheets": {
+   "name": "Team timesheets",
+   "question": "Can a manager see and approve the team's hours?",
+   "meaning": "Yes: with approvals; partly: view only; no: no.",
+   "shared": false
+  },
+  "teams-orgs": {
+   "name": "Teams and organisations",
+   "question": "Can your customers make teams and invite colleagues?",
+   "meaning": "Yes: built in; partly: basic; no: no.",
+   "shared": false
+  },
+  "template-library": {
+   "name": "Big template library",
+   "question": "Does it come with thousands of ready-made templates for posters, posts and slides?",
+   "meaning": "Yes: thousands; partly: dozens, or community-made only; no: none.",
+   "shared": false
+  },
+  "terraform-compatible": {
+   "name": "Runs Terraform files",
+   "question": "Do existing Terraform files and providers work unchanged?",
+   "meaning": "Yes: fully; partly: mostly; no: no.",
+   "shared": false
+  },
+  "threads": {
+   "name": "Threaded replies",
+   "question": "Can you reply in a thread so side conversations don't clutter the channel?",
+   "meaning": "Yes: built in; partly: quotes or simple replies only; no: no.",
+   "shared": false
+  },
+  "tiny-script": {
+   "name": "Light on your site",
+   "question": "Is the tracking script small (under about 5 KB) so pages stay fast?",
+   "meaning": "Yes: under 5 KB; partly: 5 to 30 KB; no: larger.",
+   "shared": false
+  },
+  "traces": {
+   "name": "Traces",
+   "question": "Can it follow one request across many services (tracing)?",
+   "meaning": "Yes: built in; partly: limited; no: no.",
+   "shared": false
+  },
+  "tracker-warnings": {
+   "name": "Warns about trackers and ads",
+   "question": "Does it warn you when an app tracks you or shows ads?",
+   "meaning": "Yes: clear labels; partly: some information; no: no.",
+   "shared": false
+  },
+  "tracking-stats": {
+   "name": "Open and click stats",
+   "question": "Does it show who opened an email and clicked its links?",
+   "meaning": "Yes: opens, clicks and bounces; partly: some of these; no: none.",
+   "shared": true
+  },
+  "translate-documents": {
+   "name": "Translate whole documents",
+   "question": "Can it translate whole files, not just typed text?",
+   "meaning": "Yes: built in; partly: some formats; no: no.",
+   "shared": false
+  },
+  "turn-by-turn": {
+   "name": "Spoken turn-by-turn directions",
+   "question": "Does it guide you with spoken directions while driving or walking?",
+   "meaning": "Yes: built in; partly: on-screen only; no: no.",
+   "shared": false
+  },
+  "tv-apps": {
+   "name": "TV apps",
+   "question": "Are there apps for smart TVs and streaming sticks (Android TV, Fire TV, Apple TV, Roku)?",
+   "meaning": "Yes: three or more of them; partly: one or two; no: none.",
+   "shared": true
+  },
+  "two-step-login": {
+   "name": "Two-step sign-in",
+   "question": "Can your users turn on two-step sign-in?",
+   "meaning": "Yes: several methods; partly: one method; no: no.",
+   "shared": false
+  },
+  "twofa-import": {
+   "name": "Imports from other code apps",
+   "question": "Can you bring codes in from Google Authenticator, Authy and others?",
+   "meaning": "Yes: from most apps; partly: from some; no: re-add each one.",
+   "shared": false
+  },
+  "typo-tolerance": {
+   "name": "Forgives typos",
+   "question": "Does search still find results when people misspell?",
+   "meaning": "Yes: built in; partly: needs setup; no: no.",
+   "shared": false
+  },
+  "unattended-access": {
+   "name": "Access when nobody's there",
+   "question": "Can you connect to a computer when nobody is in front of it?",
+   "meaning": "Yes: built in; partly: with setup; no: someone must accept each time.",
+   "shared": false
+  },
+  "unified-inbox": {
+   "name": "All accounts in one inbox",
+   "question": "Can you see several email accounts in one combined inbox?",
+   "meaning": "Yes: built in; partly: several accounts but separate inboxes; no: one account only.",
+   "shared": false
+  },
+  "update-rollback": {
+   "name": "Undo a bad update",
+   "question": "If an update breaks something, can you roll back to the previous version easily?",
+   "meaning": "Yes: built in; partly: possible with setup; no: no.",
+   "shared": false
+  },
+  "uptime-checks": {
+   "name": "Uptime checks",
+   "question": "Can it check from outside that your site is up?",
+   "meaning": "Yes: built in; partly: through an add-on; no: no.",
+   "shared": false
+  },
+  "usage-billing": {
+   "name": "Billing by usage",
+   "question": "Can it bill subscriptions by how much customers use?",
+   "meaning": "Yes: built in; partly: flat subscriptions only; no: no.",
+   "shared": false
+  },
+  "user-sso": {
+   "name": "Users sign in with your app's accounts",
+   "question": "Can your users post feedback with their existing account on your app?",
+   "meaning": "Yes: built in; partly: paid or limited; no: separate accounts.",
+   "shared": false
+  },
+  "video-generation": {
+   "name": "Makes videos",
+   "question": "Can it make short videos from text or images?",
+   "meaning": "Yes: built in; partly: through an add-on; no: images only.",
+   "shared": false
+  },
+  "video-link-auto": {
+   "name": "Adds a video call link",
+   "question": "Does each booking get a video call link automatically?",
+   "meaning": "Yes: with several video services; partly: one service; no: no.",
+   "shared": false
+  },
+  "video-rooms": {
+   "name": "Video and voice rooms",
+   "question": "Can you add video and voice rooms to your app?",
+   "meaning": "Yes: built in; partly: voice only; no: no.",
+   "shared": false
+  },
+  "video-templates": {
+   "name": "Ready-made templates and effects",
+   "question": "Does it come with ready-made templates, text styles and trendy effects like CapCut?",
+   "meaning": "Yes: a large built-in set; partly: a few, or community downloads; no: none.",
+   "shared": false
+  },
+  "voice-assistant": {
+   "name": "Voice assistant",
+   "question": "Can you control things by talking to it, like Alexa?",
+   "meaning": "Yes: built in and works well; partly: possible but rough or needs setup; no: no.",
+   "shared": false
+  },
+  "voice-chat": {
+   "name": "Talk by voice",
+   "question": "Can you talk to it and hear it answer?",
+   "meaning": "Yes: both ways; partly: one way; no: text only.",
+   "shared": false
+  },
+  "voice-typing": {
+   "name": "Voice typing",
+   "question": "Can you type by speaking?",
+   "meaning": "Yes: built in, on your phone; partly: hands off to another app; no: no.",
+   "shared": false
+  },
+  "voting": {
+   "name": "Upvotes",
+   "question": "Can people upvote posts or ideas so the popular ones rise?",
+   "meaning": "Yes: voting and sorting by votes; partly: likes but no sorting; no: no voting.",
+   "shared": true
+  },
+  "vst-plugins": {
+   "name": "Uses standard plugins (VST)",
+   "question": "Does it load standard audio plugins (VST, LV2, AU)?",
+   "meaning": "Yes: the common types; partly: one type, or limited; no: no.",
+   "shared": false
+  },
+  "weakness-updates": {
+   "name": "Keeps up with new weaknesses",
+   "question": "Is its list of known weaknesses updated automatically?",
+   "meaning": "Yes: automatic feeds; partly: manual updates; no: no.",
+   "shared": false
+  },
+  "web-admin": {
+   "name": "Web admin panel",
+   "question": "Can you manage users and devices from a web page?",
+   "meaning": "Yes: built in; partly: limited; no: config files only.",
+   "shared": false
+  },
+  "web-app-scan": {
+   "name": "Scans websites",
+   "question": "Can it test websites and web apps for weaknesses?",
+   "meaning": "Yes: built in; partly: limited; no: no.",
+   "shared": false
+  },
+  "web-push": {
+   "name": "Browser notifications",
+   "question": "Can it send notifications to web browsers?",
+   "meaning": "Yes: built in; partly: some browsers; no: no.",
+   "shared": false
+  },
+  "web-search": {
+   "name": "Searches the web",
+   "question": "Can it look things up on the web while answering?",
+   "meaning": "Yes: built in; partly: with setup or a plugin; no: no.",
+   "shared": false
+  },
+  "who-sees-post": {
+   "name": "Choose who sees each post",
+   "question": "Can you pick who sees each post (friends, family, public)?",
+   "meaning": "Yes: per-post audiences; partly: public or followers only; no: everything public.",
+   "shared": false
+  },
+  "whole-system-restore": {
+   "name": "Restore a whole computer",
+   "question": "Can you bring back a whole computer, not just files, like Time Machine?",
+   "meaning": "Yes: built in; partly: with extra steps; no: files only.",
+   "shared": false
+  },
+  "word-files": {
+   "name": "Opens Word files faithfully",
+   "question": "Do Word (.docx) files open and save without the layout shifting?",
+   "meaning": "Yes: complex files look the same; partly: simple files are fine but complex layouts, fonts or tables shift; no: can't open them.",
+   "shared": false
+  },
+  "word-plugin": {
+   "name": "Citations in Word and Google Docs",
+   "question": "Can you insert citations and a bibliography while writing in Word, LibreOffice or Google Docs?",
+   "meaning": "Yes: plugins for Word and at least one other; partly: one of them; no: none.",
+   "shared": false
+  },
+  "work-profiles": {
+   "name": "Work profiles",
+   "question": "Can you show your work history and skills on a profile?",
+   "meaning": "Yes: a structured CV-style profile; partly: free-text bio only; no: no.",
+   "shared": false
+  },
+  "works-in-browser": {
+   "name": "Works in a web browser",
+   "question": "Can you use it in a web browser with nothing to install?",
+   "meaning": "Yes: a full browser version; partly: only some features in the browser; no: you must install it.",
+   "prefill": "platforms: web",
+   "shared": true
+  },
+  "works-offline": {
+   "name": "Works offline",
+   "question": "Does it keep working without an internet connection?",
+   "meaning": "Yes: everything important works offline; partly: you can read or view but not do everything; no: it needs a connection.",
+   "shared": true
+  },
+  "works-on-files": {
+   "name": "Works on your files and apps",
+   "question": "Can it read and change your own files and use apps on your computer?",
+   "meaning": "Yes: files and apps; partly: files only; no: neither.",
+   "shared": false
+  }
+ },
+ "groups": {
+  "documents": [
+   "live-collab",
+   "word-files",
+   "comments-suggestions",
+   "works-offline",
+   "no-server-needed",
+   "phone-app"
+  ],
+  "spreadsheets": [
+   "live-collab",
+   "excel-files",
+   "modern-formulas",
+   "excel-macros",
+   "pivot-tables",
+   "no-server-needed",
+   "phone-app"
+  ],
+  "slides": [
+   "pptx-files",
+   "live-collab",
+   "presenter-view",
+   "slide-templates",
+   "slide-animations",
+   "no-server-needed"
+  ],
+  "notes": [
+   "syncs-devices",
+   "phone-app",
+   "works-offline",
+   "notion-databases",
+   "e2e-encrypted",
+   "notes-import",
+   "plain-files",
+   "live-collab"
+  ],
+  "tasks": [
+   "kanban-boards",
+   "gantt-timeline",
+   "recurring-reminders",
+   "tasks-import",
+   "phone-app",
+   "no-server-needed"
+  ],
+  "forms": [
+   "no-server-needed",
+   "conditional-logic",
+   "results-charts",
+   "file-upload-answers",
+   "form-embed",
+   "integrations-api"
+  ],
+  "pdf": [
+   "pdf-edit-text",
+   "pdf-sign-forms",
+   "pdf-merge-split",
+   "pdf-ocr",
+   "pdf-annotate",
+   "pdf-convert-office",
+   "no-server-needed"
+  ],
+  "email": [
+   "any-email-provider",
+   "phone-app",
+   "computer-app",
+   "unified-inbox",
+   "e2e-encrypted",
+   "snooze-send-later",
+   "email-calendar"
+  ],
+  "signing": [
+   "no-server-needed",
+   "sign-audit-trail",
+   "signing-order",
+   "sign-templates",
+   "qualified-signature",
+   "integrations-api"
+  ],
+  "database-apps": [
+   "no-server-needed",
+   "db-views",
+   "airtable-import",
+   "db-automations",
+   "live-collab",
+   "integrations-api"
+  ],
+  "calendars": [
+   "phone-app",
+   "syncs-devices",
+   "google-outlook-sync",
+   "shared-calendars",
+   "meeting-invites",
+   "no-server-needed"
+  ],
+  "booking-pages": [
+   "no-server-needed",
+   "calendar-connect",
+   "group-polls",
+   "video-link-auto",
+   "team-booking",
+   "booking-payments"
+  ],
+  "writing-assistant": [
+   "browser-extension",
+   "works-offline",
+   "many-languages",
+   "style-tips",
+   "ai-rewrite"
+  ],
+  "reference-managers": [
+   "browser-extension",
+   "word-plugin",
+   "pdf-annotate",
+   "syncs-devices",
+   "group-libraries"
+  ],
+  "team-chat": [
+   "no-server-needed",
+   "phone-app",
+   "threads",
+   "built-in-calls",
+   "slack-import",
+   "cross-org",
+   "e2e-encrypted",
+   "company-sso"
+  ],
+  "community-chat": [
+   "drop-in-voice",
+   "screen-share",
+   "roles-moderation",
+   "chat-bots",
+   "phone-app",
+   "no-server-needed"
+  ],
+  "messaging": [
+   "e2e-encrypted",
+   "no-phone-number",
+   "built-in-calls",
+   "phone-app",
+   "computer-app",
+   "disappearing-messages",
+   "self-hostable"
+  ],
+  "video-calls": [
+   "no-account-needed",
+   "no-server-needed",
+   "large-meetings",
+   "screen-share",
+   "meeting-recording",
+   "breakout-rooms",
+   "e2e-encrypted",
+   "phone-app"
+  ],
+  "microblogging": [
+   "no-server-needed",
+   "phone-app",
+   "federated",
+   "move-account",
+   "custom-feeds",
+   "quote-posts"
+  ],
+  "forums": [
+   "no-server-needed",
+   "federated",
+   "phone-app",
+   "voting",
+   "roles-moderation"
+  ],
+  "photo-sharing": [
+   "no-server-needed",
+   "phone-app",
+   "federated",
+   "photo-stories",
+   "photo-filters"
+  ],
+  "video-sharing": [
+   "no-server-needed",
+   "phone-app",
+   "federated",
+   "live-streams-hosted",
+   "short-videos",
+   "auto-captions"
+  ],
+  "blogging": [
+   "no-server-needed",
+   "email-newsletter",
+   "paid-subscriptions",
+   "federated",
+   "blog-import"
+  ],
+  "pro-network": [
+   "no-server-needed",
+   "work-profiles",
+   "job-listings",
+   "federated"
+  ],
+  "dating": [
+   "phone-app",
+   "no-server-needed",
+   "nearby-matching",
+   "e2e-encrypted"
+  ],
+  "events": [
+   "no-server-needed",
+   "event-rsvp",
+   "event-tickets",
+   "federated",
+   "conference-tools"
+  ],
+  "social-scheduling": [
+   "no-server-needed",
+   "social-networks-covered",
+   "content-calendar",
+   "team-approval",
+   "post-stats"
+  ],
+  "social-network": [
+   "no-server-needed",
+   "phone-app",
+   "federated",
+   "who-sees-post",
+   "groups-events",
+   "photo-albums"
+  ],
+  "stories": [
+   "phone-app",
+   "friend-stories",
+   "camera-filters",
+   "disappearing-messages",
+   "e2e-encrypted"
+  ],
+  "photo-editing": [
+   "non-destructive",
+   "psd-files",
+   "raw-photos",
+   "photo-library",
+   "heal-remove",
+   "ai-photo-tools"
+  ],
+  "painting": [
+   "tablet-app",
+   "pressure-pen",
+   "brush-library",
+   "frame-animation",
+   "comic-tools",
+   "psd-files"
+  ],
+  "illustration": [
+   "ai-files",
+   "cmyk-print",
+   "image-trace",
+   "works-in-browser"
+  ],
+  "ui-design": [
+   "live-collab",
+   "figma-import",
+   "prototyping",
+   "components",
+   "auto-layout",
+   "dev-handoff",
+   "no-server-needed"
+  ],
+  "graphic-design": [
+   "template-library",
+   "stock-media",
+   "magic-resize",
+   "ai-photo-tools",
+   "live-collab",
+   "no-server-needed"
+  ],
+  "layout": [
+   "cmyk-print",
+   "pdf-x-export",
+   "indesign-files",
+   "master-pages",
+   "long-documents"
+  ],
+  "video-editing": [
+   "multi-track",
+   "auto-captions",
+   "video-templates",
+   "color-grading",
+   "proxy-editing",
+   "hardware-export",
+   "phone-app"
+  ],
+  "3d": [
+   "modelling-3d",
+   "rigging-animation",
+   "compositing-vfx",
+   "motion-graphics",
+   "fbx-files",
+   "gpu-render"
+  ],
+  "audio": [
+   "multitrack-recording",
+   "midi-instruments",
+   "vst-plugins",
+   "noise-removal",
+   "loops-library",
+   "step-sequencer"
+  ],
+  "recording": [
+   "screen-recording",
+   "instant-share-link",
+   "built-in-editor",
+   "stream-out",
+   "scenes-overlays"
+  ],
+  "icons": [
+   "commercial-free",
+   "large-icon-set",
+   "icon-formats",
+   "icon-styles",
+   "design-tool-plugin"
+  ],
+  "cad": [
+   "dwg-files",
+   "drafting-2d",
+   "parametric",
+   "assemblies",
+   "push-pull-3d",
+   "cam",
+   "simulation"
+  ],
+  "desktop-os": [
+   "graphical-installer",
+   "preinstalled",
+   "runs-windows-games",
+   "nvidia-ready",
+   "update-rollback",
+   "long-support"
+  ],
+  "phone-os": [
+   "banking-apps",
+   "google-apps-optional",
+   "easy-installer",
+   "many-phones",
+   "preinstalled",
+   "security-updates"
+  ],
+  "app-stores": [
+   "play-apps",
+   "no-account-needed",
+   "auto-updates",
+   "app-review",
+   "tracker-warnings"
+  ],
+  "keyboards": [
+   "glide-typing",
+   "many-languages",
+   "voice-typing",
+   "emoji-search",
+   "clipboard-history",
+   "no-tracking"
+  ],
+  "remote-desktop": [
+   "no-server-needed",
+   "unattended-access",
+   "session-file-transfer",
+   "phone-app",
+   "computer-app"
+  ],
+  "browsers": [
+   "syncs-devices",
+   "phone-app",
+   "ad-blocking",
+   "full-ad-block-extensions",
+   "chrome-extensions",
+   "no-tracking"
+  ],
+  "search": [
+   "no-server-needed",
+   "no-tracking",
+   "own-index",
+   "image-search"
+  ],
+  "passwords": [
+   "no-server-needed",
+   "syncs-devices",
+   "phone-app",
+   "browser-extension",
+   "passkeys",
+   "share-with-others",
+   "passwords-import",
+   "breach-alerts"
+  ],
+  "2fa": [
+   "phone-app",
+   "syncs-devices",
+   "encrypted-backup",
+   "twofa-import",
+   "computer-app"
+  ],
+  "identity-proofs": [
+   "many-proof-sites",
+   "no-account-needed",
+   "works-in-browser",
+   "phone-app"
+  ],
+  "security-scanning": [
+   "network-scan",
+   "web-app-scan",
+   "cloud-scan",
+   "weakness-updates",
+   "security-reports",
+   "no-paid-edition"
+  ],
+  "vpn": [
+   "no-server-needed",
+   "mesh-direct",
+   "web-admin",
+   "access-rules",
+   "phone-app",
+   "company-sso"
+  ],
+  "link-shortening": [
+   "custom-domain",
+   "click-stats",
+   "qr-codes",
+   "no-server-needed",
+   "integrations-api"
+  ],
+  "privacy-vpn": [
+   "many-locations",
+   "kill-switch",
+   "independent-audit",
+   "no-account-needed",
+   "free-plan",
+   "split-tunnel"
+  ],
+  "antivirus": [
+   "realtime-protection",
+   "point-and-click",
+   "scheduled-scans",
+   "computer-app"
+  ],
+  "ai-chat": [
+   "point-and-click",
+   "local-models",
+   "any-provider",
+   "chat-with-documents",
+   "web-search",
+   "voice-chat",
+   "phone-app"
+  ],
+  "ai-coding": [
+   "agent-mode",
+   "inside-editor",
+   "any-provider",
+   "local-models",
+   "point-and-click",
+   "mcp-tools"
+  ],
+  "ai-agents": [
+   "point-and-click",
+   "works-on-files",
+   "asks-before-acting",
+   "any-provider",
+   "local-models",
+   "mcp-tools",
+   "phone-app"
+  ],
+  "ai-images": [
+   "point-and-click",
+   "inpainting",
+   "community-models",
+   "modest-hardware",
+   "video-generation"
+  ],
+  "transcription": [
+   "point-and-click",
+   "works-offline",
+   "speaker-labels",
+   "live-transcription",
+   "many-languages",
+   "subtitle-export"
+  ],
+  "ai-search": [
+   "no-server-needed",
+   "sources-cited",
+   "local-models",
+   "any-provider"
+  ],
+  "ml-platforms": [
+   "model-serving",
+   "doc-qa-pipelines",
+   "multi-gpu",
+   "managed-cloud",
+   "one-command-install",
+   "no-paid-edition"
+  ],
+  "vector-databases": [
+   "hybrid-search",
+   "field-filters",
+   "scales-out",
+   "managed-cloud",
+   "one-command-install",
+   "no-paid-edition"
+  ],
+  "music": [
+   "music-catalog",
+   "phone-app",
+   "works-offline",
+   "music-discovery",
+   "spotify-playlists",
+   "no-server-needed"
+  ],
+  "home-media": [
+   "phone-app",
+   "tv-apps",
+   "hardware-transcoding",
+   "remote-access",
+   "share-with-others",
+   "live-tv",
+   "no-paid-edition"
+  ],
+  "photo-backup": [
+   "auto-backup-phone",
+   "no-server-needed",
+   "face-recognition",
+   "smart-search",
+   "shared-albums",
+   "e2e-encrypted",
+   "google-photos-import"
+  ],
+  "podcasts": [
+   "phone-app",
+   "syncs-devices",
+   "podcast-discovery",
+   "works-offline",
+   "playback-speed"
+  ],
+  "books": [
+   "ebook-reader",
+   "audiobook-player",
+   "book-catalog",
+   "syncs-devices",
+   "send-to-ereader",
+   "reading-tracking",
+   "phone-app"
+  ],
+  "live-streaming": [
+   "no-server-needed",
+   "live-chat",
+   "stream-directory",
+   "low-latency",
+   "federated"
+  ],
+  "feeds": [
+   "no-server-needed",
+   "phone-app",
+   "syncs-devices",
+   "read-later",
+   "full-article",
+   "feed-discovery"
+  ],
+  "phone-gallery": [
+   "photo-basic-editor",
+   "map-view",
+   "hidden-album",
+   "recycle-bin"
+  ],
+  "game-stores": [
+   "sells-games",
+   "combines-stores",
+   "runs-windows-games",
+   "cloud-saves",
+   "computer-app"
+  ],
+  "video-streaming": [
+   "show-catalog",
+   "tv-apps",
+   "phone-app",
+   "works-offline"
+  ],
+  "cloud-storage": [
+   "no-server-needed",
+   "phone-app",
+   "share-links",
+   "files-on-demand",
+   "auto-backup-phone",
+   "e2e-encrypted",
+   "office-in-browser"
+  ],
+  "file-transfer": [
+   "no-server-needed",
+   "over-internet",
+   "no-account-needed",
+   "e2e-encrypted",
+   "expiring-links"
+  ],
+  "backup": [
+   "point-and-click",
+   "cloud-destinations",
+   "e2e-encrypted",
+   "incremental-backup",
+   "scheduled-backup",
+   "whole-system-restore"
+  ],
+  "maps": [
+   "works-offline",
+   "turn-by-turn",
+   "live-traffic",
+   "public-transit",
+   "place-details",
+   "car-integration",
+   "phone-app"
+  ],
+  "translation": [
+   "no-server-needed",
+   "works-offline",
+   "many-languages",
+   "translate-documents",
+   "phone-app"
+  ],
+  "smart-home": [
+   "device-support",
+   "works-offline",
+   "home-automations",
+   "voice-assistant",
+   "phone-app",
+   "buy-hardware"
+  ],
+  "budgeting": [
+   "bank-sync",
+   "envelope-budgeting",
+   "no-server-needed",
+   "phone-app",
+   "investments",
+   "bank-file-import"
+  ],
+  "speed-test": [
+   "no-server-needed",
+   "no-tracking",
+   "results-history",
+   "phone-app"
+  ],
+  "shared-expenses": [
+   "no-account-needed",
+   "phone-app",
+   "simplify-debts",
+   "multi-currency",
+   "receipt-photos"
+  ],
+  "inspiration-boards": [
+   "public-discovery",
+   "picture-boards",
+   "browser-extension",
+   "share-with-others",
+   "phone-app",
+   "no-server-needed"
+  ],
+  "code-hosting": [
+   "managed-cloud",
+   "one-command-install",
+   "github-import",
+   "code-review",
+   "ci-built-in",
+   "package-registry",
+   "no-paid-edition"
+  ],
+  "analytics": [
+   "no-cookie-banner",
+   "managed-cloud",
+   "one-command-install",
+   "goals-funnels",
+   "ga-import",
+   "tiny-script"
+  ],
+  "shop": [
+   "ready-storefront",
+   "managed-cloud",
+   "card-payments",
+   "shop-themes",
+   "shipping-tax",
+   "plugins",
+   "shopify-import"
+  ],
+  "support": [
+   "chat-widget",
+   "email-tickets",
+   "help-center",
+   "more-channels",
+   "phone-app",
+   "managed-cloud"
+  ],
+  "automation": [
+   "ready-connectors",
+   "no-code-builder",
+   "ai-steps",
+   "managed-cloud",
+   "one-command-install",
+   "no-paid-edition"
+  ],
+  "app-hosting": [
+   "git-push-deploy",
+   "deploy-dashboard",
+   "auto-https",
+   "preview-deploys",
+   "one-click-databases",
+   "scales-out"
+  ],
+  "api-tools": [
+   "api-client",
+   "postman-import",
+   "no-account-needed",
+   "api-gateway",
+   "scheduled-checks",
+   "works-in-browser"
+  ],
+  "internal-tools": [
+   "no-code-builder",
+   "data-connectors",
+   "managed-cloud",
+   "one-command-install",
+   "company-sso",
+   "app-versioning",
+   "no-paid-edition"
+  ],
+  "backend-service": [
+   "built-in-auth",
+   "realtime-data",
+   "file-storage",
+   "server-functions",
+   "managed-cloud",
+   "one-command-install"
+  ],
+  "login-identity": [
+   "social-login",
+   "passkey-login",
+   "two-step-login",
+   "enterprise-sso-customers",
+   "ready-login-pages",
+   "managed-cloud",
+   "no-paid-edition"
+  ],
+  "ci": [
+   "pipeline-as-file",
+   "container-jobs",
+   "parallel-jobs",
+   "forge-integration",
+   "managed-cloud",
+   "plugins"
+  ],
+  "cms": [
+   "no-code-builder",
+   "headless-api",
+   "managed-cloud",
+   "multi-language-content",
+   "team-permissions",
+   "plugins"
+  ],
+  "data-pipelines": [
+   "ready-connectors",
+   "event-collection",
+   "reverse-etl",
+   "schedules-retries",
+   "managed-cloud",
+   "one-command-install"
+  ],
+  "monitoring": [
+   "metrics",
+   "logs",
+   "traces",
+   "alerts",
+   "uptime-checks",
+   "opentelemetry",
+   "managed-cloud",
+   "one-command-install"
+  ],
+  "feature-flags": [
+   "gradual-rollout",
+   "ab-testing",
+   "many-sdks",
+   "managed-cloud",
+   "one-command-install",
+   "no-paid-edition"
+  ],
+  "voice-apis": [
+   "phone-numbers",
+   "video-rooms",
+   "ai-voice-agents",
+   "many-sdks",
+   "managed-cloud"
+  ],
+  "saas-starters": [
+   "saas-payments",
+   "built-in-auth",
+   "teams-orgs",
+   "admin-panel"
+  ],
+  "email-sending": [
+   "send-api-smtp",
+   "deliverability",
+   "tracking-stats",
+   "managed-cloud",
+   "one-command-install"
+  ],
+  "product-analytics": [
+   "session-replay",
+   "goals-funnels",
+   "heatmaps",
+   "managed-cloud",
+   "one-command-install",
+   "no-paid-edition"
+  ],
+  "push-notifications": [
+   "iphone-push",
+   "web-push",
+   "many-destinations",
+   "push-campaigns",
+   "no-server-needed"
+  ],
+  "translation-management": [
+   "in-context-editing",
+   "machine-translation",
+   "repo-sync",
+   "managed-cloud",
+   "one-command-install"
+  ],
+  "code-editors": [
+   "plugins",
+   "microsoft-extensions",
+   "remote-dev",
+   "ai-helpers",
+   "live-collab",
+   "no-tracking"
+  ],
+  "key-value-stores": [
+   "redis-compatible",
+   "scales-out",
+   "saves-to-disk",
+   "managed-cloud"
+  ],
+  "infrastructure-as-code": [
+   "terraform-compatible",
+   "provider-registry",
+   "state-encryption",
+   "managed-cloud"
+  ],
+  "sql-databases": [
+   "pg-mysql-compatible",
+   "scales-out",
+   "auto-failover",
+   "multi-region",
+   "managed-cloud"
+  ],
+  "search-engines": [
+   "typo-tolerance",
+   "hybrid-search",
+   "field-filters",
+   "search-widgets",
+   "scales-out",
+   "managed-cloud",
+   "one-command-install"
+  ],
+  "graph-databases": [
+   "graph-query-language",
+   "graph-explorer",
+   "scales-out",
+   "managed-cloud",
+   "no-paid-edition"
+  ],
+  "time-series-databases": [
+   "sql-queries",
+   "retention-downsampling",
+   "grafana-ready",
+   "scales-out",
+   "managed-cloud"
+  ],
+  "data-warehouses": [
+   "sql-queries",
+   "separate-storage",
+   "scales-out",
+   "managed-cloud"
+  ],
+  "bi": [
+   "no-code-builder",
+   "sql-queries",
+   "dashboard-sharing",
+   "scheduled-reports",
+   "managed-cloud",
+   "company-sso",
+   "no-paid-edition"
+  ],
+  "customer-insights": [
+   "community-sources",
+   "crm-sync",
+   "managed-cloud",
+   "one-command-install"
+  ],
+  "erp": [
+   "accounting",
+   "inventory",
+   "manufacturing",
+   "payroll",
+   "local-tax",
+   "managed-cloud",
+   "no-paid-edition"
+  ],
+  "invoicing": [
+   "recurring-invoices",
+   "online-payments",
+   "expenses",
+   "multi-currency",
+   "usage-billing",
+   "no-server-needed"
+  ],
+  "crm": [
+   "sales-pipeline",
+   "email-sync",
+   "phone-app",
+   "integrations-api",
+   "managed-cloud",
+   "no-paid-edition"
+  ],
+  "time-tracking": [
+   "one-click-timer",
+   "hours-to-invoices",
+   "team-timesheets",
+   "phone-app",
+   "no-server-needed"
+  ],
+  "investment-research": [
+   "live-prices",
+   "charts-screeners",
+   "market-news",
+   "point-and-click"
+  ],
+  "pos": [
+   "works-offline",
+   "card-terminals",
+   "inventory",
+   "receipt-hardware",
+   "tablet-app",
+   "multi-store"
+  ],
+  "newsletters": [
+   "email-designer",
+   "email-sequences",
+   "signup-forms",
+   "tracking-stats",
+   "mailchimp-import",
+   "managed-cloud"
+  ],
+  "feedback-boards": [
+   "voting",
+   "public-roadmap",
+   "changelog",
+   "user-sso",
+   "no-server-needed",
+   "integrations-api"
+  ]
+ }
+}
