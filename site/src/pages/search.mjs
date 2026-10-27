@@ -7,23 +7,26 @@ import { DEVICE, ICON } from '../lib.mjs';
 
 export default function searchPage() {
   const kinds = [['all', 'Everything'], ['project', 'Projects'], ['group', 'Groups'], ['closed', 'Closed apps']];
-  const item = (attrs, label, extra = '') => `<button type="button" class="mi" role="option" ${attrs}><span>${label}</span>${extra}</button>`;
-  const chk = `<span class="chk" aria-hidden="true">${ICON.check}</span>`;
-  // WHY one wide search card (Destin, round 4): the search box and a Filter button at its right, results underneath. The Filter menu holds the
-  // three filters; on a phone it is a full-width sheet that slides up from the bottom edge, with a handle.
+  // WHY (Destin, round 5): the result count sits INSIDE the search card, on the box's own line next to Filter, so there is no extra row for it.
+  // The filter sheet follows the guide's Checkbox look for the pick-several list (Works on) and the Radio look for the pick-one lists (Type, Setup); each option shows its count at the right,
+  // and the sheet's footer stays in view: Clear (outlined) and "Show N results" (filled).
+  const radio = (attrs, label, on, count) => `<button type="button" class="mi opt rad${on ? ' sel' : ''}" role="radio" aria-checked="${on}" ${attrs}><span class="ctl" aria-hidden="true"></span><span class="ol">${label}</span><span class="muted11 oc" ${count}></span></button>`;
+  const check = (attrs, label, count) => `<button type="button" class="mi opt chk" role="checkbox" aria-checked="false" ${attrs}><span class="ctl" aria-hidden="true">${ICON.check}</span><span class="ol">${label}</span><span class="muted11 oc" ${count}></span></button>`;
   const body = `
   <div class="surface sres-bar">
     <div class="sres-input">${ICON.search}<input type="search" data-sres-input placeholder="Search a closed app or open project…" autocomplete="off" aria-label="Search" autofocus>
+      <span class="sres-count" data-sres-sub aria-live="polite"></span>
       <div class="dd"><button class="btn sm secondary sres-filterbtn" type="button" data-menu="fMenu" aria-haspopup="dialog" aria-expanded="false" data-sres-filterbtn>Filter<span class="fcount" data-fcount hidden></span>${ICON.chev}</button>
         <div class="menu fsheet" id="fMenu" role="dialog" aria-label="Filter results" data-sres-filters>
           <span class="handle" data-handle aria-hidden="true"></span>
-          <div class="fgroup"><div class="label">Type</div>${kinds.map(([k, label], i) => `<button type="button" class="mi${i ? '' : ' sel'}" role="option" data-kind="${k}"><span>${label}</span><span class="muted11" data-count="${k}"></span></button>`).join('')}</div>
-          <div class="fgroup"><div class="label">Works on</div>${Object.entries(DEVICE).map(([k, label]) => item(`aria-selected="false" data-device="${k}"`, label, chk)).join('')}</div>
-          <div class="fgroup"><div class="label">Setup</div>${[['', 'Any'], ['easy', 'Easy setup'], ['advanced', 'Advanced setup']].map(([k, label], i) => `<button type="button" class="mi${i ? '' : ' sel'}" role="option" data-setupf="${k}"><span>${label}</span></button>`).join('')}</div>
-          <button type="button" class="btn md secondary full fclear" data-clear="all">Clear filters</button>
+          <div class="fscroll">
+            <div class="fgroup" role="radiogroup" aria-label="Type"><div class="label">Type</div>${kinds.map(([k, label], i) => radio(`data-kind="${k}"`, label, !i, `data-count="${k}"`)).join('')}</div>
+            <div class="fgroup" role="group" aria-label="Works on"><div class="label">Works on</div>${Object.entries(DEVICE).map(([k, label]) => check(`data-device="${k}"`, label, `data-dcount="${k}"`)).join('')}</div>
+            <div class="fgroup" role="radiogroup" aria-label="Setup"><div class="label">Setup</div>${[['', 'Any'], ['easy', 'Easy setup'], ['advanced', 'Advanced setup']].map(([k, label], i) => radio(`data-setupf="${k}"`, label, !i, `data-scount="${k}"`)).join('')}</div>
+          </div>
+          <div class="fsfoot"><button type="button" class="btn md secondary" data-clear="all">Clear</button><button type="button" class="btn md primary" data-fshow>Show results</button></div>
         </div></div>
     </div>
-    <p class="muted11" data-sres-sub></p>
   </div>
   <section class="surface sec">
     <div class="sres-list" data-sres-list><div class="empty">Loading…</div></div>

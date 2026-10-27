@@ -49,9 +49,10 @@
 
   /* ── Menus become sheets that slide up from the bottom edge (Destin, round 4: not floating): full width, joined to the screen's bottom corners, with a handle ── */
   .menu.open:not(.search-menu) { position:fixed; left:0; right:0; bottom:0; top:auto; width:auto; min-width:0; margin:0;
-    max-height:80vh; overflow-y:auto; z-index:80; padding:6px 12px calc(12px + env(safe-area-inset-bottom)); border-radius:var(--radius-xl) var(--radius-xl) 0 0; border-bottom:0;
+    max-height:82vh; overflow-y:auto; z-index:80; padding:6px 12px calc(12px + env(safe-area-inset-bottom)); border-radius:var(--radius-xl) var(--radius-xl) 0 0; border-bottom:0;
     box-shadow:0 0 0 100vmax rgb(0 0 0 / .35), 0 -8px 32px rgb(0 0 0 / .25); animation:sheet-up .18s ease-out; }
   .menu.open:not(.search-menu):not(.fsheet)::before { content:""; display:block; width:40px; height:4px; border-radius:9999px; background:var(--edge-strong); margin:2px auto 8px; }
+  .menu.open.fsheet { padding:6px 0 0; overflow:hidden; display:flex; }
   .menu.open:not(.search-menu) .mi { min-height:46px; font-size:15px; padding:10px 12px; }
   .menu.open .menu-note { font-size:12px; padding:8px 12px; }
   @keyframes sheet-up { from { transform:translateY(24px); opacity:.6; } to { transform:none; opacity:1; } }
@@ -105,8 +106,6 @@
   /* ── A slim app header: the site's name, and Sign in or your avatar (Destin, Oct 27: sign-in isn't a tab) ── */
   .top, body:has(.hero3) > .top { display:flex; padding:10px 16px 6px; gap:8px; }
   .top .searchwrap { display:none; }
-  .top .icon-btn { width:28px; height:28px; }
-  .top-title { display:block; flex:1; font-size:15px; font-weight:600; color:var(--fg); text-decoration:none; white-space:nowrap; overflow:hidden; text-overflow:ellipsis; }
   body:has(.hero3) .page { padding-top:6px; }
 
   /* ── Less dead space ── */

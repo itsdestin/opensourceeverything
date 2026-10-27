@@ -304,3 +304,17 @@ test('what people write: bad words hold a note or reply for a mod; edits cannot 
   assert.equal((await b.call('POST', `/notes/${w.id}/building`, { link: 'javascript:alert(1)' })).status, 400);
   assert.equal((await b.call('POST', `/notes/${w.id}/building`, { link: 'https://github.com/x/y' })).status, 200);
 });
+
+test('Contributor preferences: public only while the claim stands; only the approved owner can change them', async () => {
+  const me = await person(owner, 400, true); const mod = await person('mod-sample'); const other = await person('prefsother');
+  assert.equal((await me.call('PUT', `/prefs/${projectId}`, { start: 'issue' })).status, 403, 'not allowed before a claim is approved');
+  const id = (await me.call('POST', '/pitches/start', { url: `https://github.com/${owner}/${rname}` })).data.pitch.id;
+  await me.call('PUT', `/pitches/${id}`, pitchBody());
+  await mod.call('POST', `/mod/pitches/${id}`, { action: 'approve' });
+  assert.equal((await other.call('PUT', `/prefs/${projectId}`, { start: 'issue' })).status, 403, 'somebody else cannot');
+  const saved = (await me.call('PUT', `/prefs/${projectId}`, { ai: 'traditional-developers-only', start: 'issue', wanted: ['translation', 'testing'], review: 'weeks', note: 'Hold interface changes until v3.' })).data;
+  assert.equal(saved.start, 'issue');
+  assert.equal((await fetch(`${API}/prefs?projects=${projectId}`).then((r) => r.json()))[projectId].review, 'weeks', 'visitors see it');
+  await me.call('DELETE', `/pitches/${id}`);
+  assert.deepEqual(await fetch(`${API}/prefs?projects=${projectId}`).then((r) => r.json()), {}, 'when the claim ends, the answers stop showing');
+});

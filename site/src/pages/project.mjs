@@ -36,7 +36,7 @@ export default function projectPages(d) {
     // not visitors. They stay in data/projects.json (field "unconfirmed"); the public copy of the data drops them (build.mjs).
     // WHY (forks stream): where it came from, in one plain line, and the reverse ("Forked by: Forgejo") on the original.
     const body = `
-  ${listed[0] ? crumbs([[d.catById.get(listed[0].group.category)?.name ?? '', url(`c/${listed[0].group.category}/`)], [listed[0].group.name, url(`g/${listed[0].group.id}/`)]]) : ''}
+  ${crumbs(listed[0] ? [[d.catById.get(listed[0].group.category)?.name ?? '', url(`c/${listed[0].group.category}/`)], [listed[0].group.name, url(`g/${listed[0].group.id}/`)]] : [], { back: true, fallback: listed[0] ? url(`g/${listed[0].group.id}/`) : url() })}
   ${stoppedBanner(p, fam)}
   ${rvTop(p, links)}
 
@@ -80,6 +80,6 @@ export default function projectPages(d) {
       ...(p.license ? { license: p.license } : {}), ...(codeUrl(p) ? { codeRepository: codeUrl(p) } : {}), ...(p.website ? { sameAs: p.website } : {}),
       applicationCategory: listed[0]?.group.name,
     };
-    return { path: `p/${p.id}/`, title: replaces.length ? `${p.name}: open-source alternative to ${replaces.slice(0, 2).join(' and ')}` : p.name, description, body, styles: ['group.css', 'surfaces.css'], scripts: [...(p.screenshots?.length ? ['gallery.js'] : []), 'surfaces.js'], jsonLd, back: true };
+    return { path: `p/${p.id}/`, title: replaces.length ? `${p.name}: open-source alternative to ${replaces.slice(0, 2).join(' and ')}` : p.name, description, body, styles: ['group.css', 'surfaces.css'], scripts: [...(p.screenshots?.length ? ['gallery.js'] : []), 'surfaces.js'], jsonLd };
   });
 }

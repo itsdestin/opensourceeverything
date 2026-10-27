@@ -129,6 +129,31 @@ export function cleanPitch(body, groupIds) {
   return { pitch, flags: f.flags };
 }
 
+// ── Contributor preferences ("How you'd like help") ──
+// WHY every value is checked against a fixed list: only the free text (a note, a policy sentence) and two links are open-ended, and those go through the same filter as a pitch.
+// An answer that is not on its list is dropped, never stored. All of it is optional and changeable at any time.
+export const PREFS = {
+  ai: ['non-developers-welcome', 'traditional-developers-only', 'not-accepted', 'see-policy'], aiTicks: ['beginner', 'own-words', 'no-agents'],
+  start: ['pr', 'issue', 'forum', 'email', 'closed'], wanted: ['code', 'design', 'docs', 'translation', 'testing', 'triage', 'co-maintainers', 'funding'],
+  newcomers: ['help', 'self', 'experienced'], disclose: ['none', 'pr', 'form', 'commit'], sign: ['none', 'dco', 'cla'], review: ['days', 'weeks', 'month', 'hide'],
+};
+const prefLink = (l) => (isLink(l) || /^[^\s@<>"]{1,64}@[^\s@<>"]{1,120}$/.test(String(l ?? '')) ? String(l) : '');
+export function cleanPrefs(body) {
+  const one = (v, list) => (list.includes(v) ? v : '');
+  const many = (v, list, max = 9) => [...new Set(Array.isArray(v) ? v : [])].filter((i) => list.includes(i)).slice(0, max);
+  const c = {
+    ai: one(body?.ai, PREFS.ai), aiPolicy: clean(body?.aiPolicy, 200), aiTicks: many(body?.aiTicks, PREFS.aiTicks),
+    start: one(body?.start, PREFS.start), startLink: prefLink(body?.startLink), startSmall: !!body?.startSmall,
+    wanted: many(body?.wanted, PREFS.wanted, 3), newcomers: one(body?.newcomers, PREFS.newcomers),
+    disclose: many(body?.disclose, PREFS.disclose), sign: one(body?.sign, PREFS.sign), signLink: prefLink(body?.signLink),
+    review: one(body?.review, PREFS.review), note: clean(body?.note, 200),
+  };
+  const f = screenAll(c.aiPolicy, c.note);
+  if (f.error) return { error: f.error };
+  if (f.flags.length) return { error: 'Please keep that note plain and without links; a mod would have to read it first.' };
+  return { prefs: c };
+}
+
 // ── Your suggestions ──
 // A suggestion's state, from its GitHub issue: waiting / needs a mod / approved / live / turned down.
 // WHY from labels and close reason: the robot and the mods already record everything there; nothing new to keep in sync.

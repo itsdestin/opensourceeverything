@@ -35,8 +35,8 @@ export default function appPages(d) {
       ${all.length ? '' : `<p class="desc12" style="margin-top:4px">No open-source app replaces ${esc(name)} yet.</p>`}</div>${all.length > 1 ? deviceFilter('devMenu') : ''}</div>
     ${others.length ? `<div class="replaces-row"><span class="muted11">Also replaces</span><div class="chiprow">${others.map((c) => `<a class="chip" href="${appUrl(c)}">${esc(c)}</a>`).join('')}</div></div>` : ''}
   </div>
-  ${switchGuide(appSlug(name), name, d)}
   ${sections.map(section).join('')}
+  ${switchGuide(appSlug(name), name, d)}
   ${all.length > 1 ? chooseBox({ closed: [name], json: `data/groups/${groups[0].id}.json`, alts: all }) : ''}
   ${SOCIAL && !all.some((x) => x.a.fit === 'full') ? `<!-- WHY: only when nothing open fully replaces it; the server checks the same rule -->
   <section class="surface sec"><div class="sec-head"><div><h2 class="h-large">Want an open ${esc(name)}?</h2></div><div class="want" data-request data-key="app:${esc(name)}" hidden></div></div></section>` : ''}

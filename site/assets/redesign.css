@@ -74,18 +74,28 @@ button.chip { font:inherit; font-size:11px; cursor:pointer; }
 }
 
 /* ── Search: one wide card with the box and a Filter button, results beneath ── */
-.sres-bar { padding:12px; display:flex; flex-direction:column; gap:8px; position:relative; z-index:20; }
+.sres-bar { padding:12px; position:relative; z-index:20; }
+.sres-count { flex:none; font-size:12px; color:var(--fg-dim); white-space:nowrap; padding-right:4px; }
 .sres-input { display:flex; align-items:center; gap:8px; background:var(--inset); border:1px solid var(--edge); border-radius:var(--radius-control); padding:4px 4px 4px 12px; color:var(--fg-muted); }
 .sres-input:focus-within { border-color:var(--accent); }
 .sres-input > input { flex:1; min-width:0; background:transparent; border:0; outline:0; font-size:15px; color:var(--fg); padding:6px 0; }
 .sres-filterbtn.on { border-color:var(--accent); color:var(--fg); }
 .fcount { display:inline-grid; place-items:center; min-width:16px; height:16px; padding:0 4px; border-radius:9999px; background:var(--accent); color:var(--on-accent); font-size:10px; font-weight:600; }
 .fcount[hidden] { display:none; }
-.fsheet { width:300px; padding:12px; }
+.fsheet { width:320px; padding:0; max-height:min(560px, 78vh); display:none; flex-direction:column; overflow:hidden; right:0; left:auto; }
+.fsheet.open { display:flex; }
+.fscroll { overflow-y:auto; padding:12px 12px 4px; flex:1; }
 .fgroup { display:flex; flex-direction:column; gap:2px; margin-bottom:8px; } .fgroup .label { margin:0 0 4px 10px; }
-.fsheet .mi .chk { visibility:hidden; color:var(--accent); } .fsheet .mi.sel .chk { visibility:visible; }
-.fclear { margin-top:4px; }
-.fsheet .handle { display:none; }
+.fsheet .opt { display:flex; align-items:center; gap:10px; color:var(--fg); border:0; }
+.fsheet .opt .ol { flex:1; text-align:left; } .fsheet .opt .oc { font-variant-numeric:tabular-nums; }
+/* Checkbox (pick several) and Radio (pick one), the shape of YouCoded's Checkbox and Radio. */
+.fsheet .ctl { flex:none; width:18px; height:18px; border:1.5px solid var(--edge-strong); background:var(--inset); display:inline-grid; place-items:center; color:var(--on-accent); }
+.fsheet .chk .ctl { border-radius:5px; } .fsheet .chk .ctl svg { visibility:hidden; width:12px; height:12px; }
+.fsheet .chk.sel .ctl { background:var(--accent); border-color:var(--accent); } .fsheet .chk.sel .ctl svg { visibility:visible; }
+.fsheet .rad .ctl { border-radius:9999px; } .fsheet .rad.sel .ctl { border-color:var(--accent); background:radial-gradient(circle, var(--accent) 0 4px, var(--inset) 5px); }
+.fsheet .mi.sel { font-weight:500; background:transparent; } .fsheet .mi:hover { background:var(--inset); }
+/* The footer stays in view while the options scroll. */
+.fsfoot { display:flex; justify-content:flex-end; gap:8px; padding:10px 12px calc(10px + env(safe-area-inset-bottom)); border-top:1px solid var(--edge-dim); background:var(--panel); }
 .sres-list { gap:8px; }
 .sr { display:flex; flex-direction:row; align-items:stretch; gap:12px; padding:10px; color:inherit; text-decoration:none; min-width:0; }
 .sr-thumb { flex:none; align-self:stretch; width:128px; min-height:64px; border-radius:var(--radius-md); overflow:hidden; background:var(--inset); border:1px solid var(--edge-card); display:flex; align-items:center; justify-content:center; color:var(--fg-dim); }
@@ -101,7 +111,9 @@ button.chip { font:inherit; font-size:11px; cursor:pointer; }
   .sr { gap:10px; padding:8px; } .sr-thumb { width:84px; min-height:72px; }
   .sres-input > input { font-size:16px; }
   /* The filter menu is a full-width sheet with its own drag handle (the generic sheet rule in mobile.css positions it). */
-  .fsheet .handle { display:block; padding:8px 0 14px; touch-action:none; cursor:grab; }
+  .fsheet .handle { display:block; padding:8px 0 10px; touch-action:none; cursor:grab; }
+  .fsfoot .btn { flex:1; min-height:44px; }
+  .sres-count { font-size:11px; }
   .fsheet .handle::before { content:""; display:block; width:40px; height:4px; border-radius:9999px; background:var(--edge-strong); margin:0 auto; }
   .fsheet.open { transition:transform .1s; }
 }
@@ -187,16 +199,37 @@ body { display:flex; flex-direction:column; }
 .page { flex:1 0 auto; width:100%; }
 .footer { margin-top:auto; }
 .top { width:100%; }
-.top-search { border:1px solid var(--edge); background:var(--glass); }
 .crumbs { display:flex; align-items:center; gap:6px; font-size:12px; color:var(--fg-dim); min-width:0; overflow-x:auto; scrollbar-width:none; white-space:nowrap; }
 .crumbs a { color:var(--fg-2); text-decoration:none; padding:2px 8px; border:1px solid var(--edge-dim); border-radius:var(--radius-control); background:var(--glass); }
 .crumbs a:hover { border-color:var(--accent); color:var(--fg); } .crumbs i { font-style:normal; color:var(--fg-faint); } .crumbs [aria-current] { color:var(--fg); }
 .identity .row .btn { flex:none; }
 @media (max-width:640px) {
-  /* Sign in and the search button: glass, like the tab bar. */
-  .top-search, .acct .btn, .acct .avatar { background:color-mix(in srgb, var(--panel) 40%, transparent); backdrop-filter:blur(16px) saturate(1.6); -webkit-backdrop-filter:blur(16px) saturate(1.6); border:1px solid color-mix(in srgb, #fff 55%, transparent); box-shadow:inset 0 1px 0 rgb(255 255 255 / .55); }
   /* The footer: a small grid of links, not a row that runs off the screen. */
   .footer { display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:6px; }
   .footchip { text-align:center; padding:6px 4px; } .deskonly { display:none; }
   .identity .row { flex-direction:column; align-items:stretch; }
 }
+
+/* ── Top controls: Home, Back, Search and Sign in are one set (Destin, round 5): the same translucent glass pill, the same height ── */
+.glass, .top .acct .btn, .top .acct .avatar, .hero-acct .btn, .hero-acct .avatar {
+  display:inline-flex; align-items:center; justify-content:center; gap:8px; height:32px; min-width:32px; padding:0 10px; border-radius:9999px; flex:none;
+  color:var(--fg); font-size:12px; font-weight:600; text-decoration:none; cursor:pointer;
+  background:color-mix(in srgb, var(--panel) 42%, transparent); backdrop-filter:blur(16px) saturate(1.6); -webkit-backdrop-filter:blur(16px) saturate(1.6);
+  border:1px solid color-mix(in srgb, #fff 55%, var(--edge-dim)); box-shadow:inset 0 1px 0 rgb(255 255 255 / .55), 0 2px 8px rgb(0 0 0 / .06); }
+.glass:hover, .top .acct .btn:hover, .top .acct .avatar:hover, .hero-acct .btn:hover { background:color-mix(in srgb, var(--panel) 62%, transparent); color:var(--fg); }
+.iconbtn { padding:0; width:32px; }
+.homebtn { padding:0 14px 0 10px; }
+.top .acct .avatar { padding:0; width:32px; }
+.crumbs .glass { padding:0; margin-right:2px; border-radius:9999px; border:1px solid color-mix(in srgb, #fff 55%, var(--edge-dim)); }
+@media (max-width:640px) {
+  .homebtn { padding:0; width:32px; } .homebtn .hname { display:none; }
+  .top { padding:10px 16px 6px; }
+}
+.signin-card { gap:12px; }
+.btn.full { width:100%; }
+/* A popup on a phone is a solid sheet: text behind it must not show through. */
+@media (max-width:640px) { .scrim .dialog { background:var(--panel); } }
+/* Phone top bar: Home at the left, Search and Sign in together at the right (site.css hid the spacer on phones). */
+@media (max-width:640px) { .top .grow { display:block; } }
+/* The sign-in card on a wide screen: the line at the left and the button at the right of that same line (Buttons recipe); on a phone the button spans the card. */
+@media (min-width:641px) { .signin-card { flex-direction:row; align-items:center; justify-content:space-between; } .signin-card .btn.full { width:auto; flex:none; padding:8px 20px; } }

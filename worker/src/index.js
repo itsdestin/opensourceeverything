@@ -25,7 +25,7 @@ async function names(env) {
 // Limits on how fast anyone can act (docs/server-rules.md → Security), per account and per network address.
 // claim: starting a claim on a NEW project (6 an hour per account and per address, so nobody can sweep the map for claimable projects).
 // pitch/proof: sending a pitch, and asking the server to look for a proof file (so it can't be used as a free web fetcher).
-const LIMIT = { vote: [60, 60e3], post: [10, 3600e3], reply: [30, 3600e3], report: [20, 3600e3], pitch: [10, 3600e3], proof: [20, 3600e3], claim: [6, 3600e3] };
+const LIMIT = { vote: [60, 60e3], post: [10, 3600e3], reply: [30, 3600e3], report: [20, 3600e3], pitch: [10, 3600e3], prefs: [200, 3600e3], proof: [20, 3600e3], claim: [6, 3600e3] };
 async function slowDown(env, req, user, what) {
   // WHY roomier in local testing: the test accounts are reused run after run (a developer's login must equal the project's owner).
   const [base, win] = LIMIT[what]; const max = env.DEV_LOGIN === '1' ? base * 100 : base; const bucket = Math.floor(Date.now() / win);
@@ -368,6 +368,28 @@ async function route(req, env, url, user) {
   if (p === '/pitches/mine' && M === 'GET') {
     need(user, 401, 'Sign in first.'); const N = await names(env);
     return { items: (await env.DB.prepare('SELECT * FROM pitches WHERE user_id = ? ORDER BY updated DESC').bind(user.id).all()).results.map((x) => pitchView(x, user.login, N, true)) };
+  }
+  // Contributor preferences. Public: shown only while the owner's approved claim still stands (the same rule as the pitches above). WHY the same rule: when a claim ends, its answers go with it.
+  if (p === '/prefs' && M === 'GET') {
+    const ids = (url.searchParams.get('projects') ?? '').split(',').filter(Boolean).slice(0, 60);
+    const out = {};
+    for (const id of ids) {
+      const row = await env.DB.prepare('SELECT f.data, f.updated FROM prefs f JOIN pitches p ON p.project = f.project AND p.user_id = f.user_id JOIN users u ON u.id = p.user_id WHERE f.project = ? AND p.live IS NOT NULL AND p.verified_at IS NOT NULL AND u.banned = 0 AND (p.needs_confirm = 0 OR p.confirmed_at IS NOT NULL) LIMIT 1').bind(id).first();
+      if (row) out[id] = { ...JSON.parse(row.data), updated: row.updated };
+    }
+    return out;
+  }
+  // Only the account whose claim was approved can set them. Saved as they change (the page sends the whole set each time); no mod step, because every choice is from a fixed list.
+  const prefsFor = (p.match(/^\/prefs\/([^/]+)$/) ?? [])[1];
+  if (prefsFor && M === 'PUT') {
+    signedIn(); const project = decodeURIComponent(prefsFor);
+    const mine = await env.DB.prepare('SELECT id FROM pitches WHERE project = ? AND user_id = ? AND live IS NOT NULL AND verified_at IS NOT NULL AND (needs_confirm = 0 OR confirmed_at IS NOT NULL) LIMIT 1').bind(project, user.id).first();
+    need(mine, 403, "Only the project's approved owner can change this.");
+    const c = cleanPrefs(body); need(!c.error, 400, c.error);
+    await slowDown(env, req, user, 'prefs'); // WHY its own limit: the page saves after every change
+    const now = Date.now();
+    await env.DB.prepare('INSERT INTO prefs (project, user_id, data, updated) VALUES (?, ?, ?, ?) ON CONFLICT(project) DO UPDATE SET user_id = excluded.user_id, data = excluded.data, updated = excluded.updated').bind(project, user.id, JSON.stringify(c.prefs), now).run();
+    return { ...c.prefs, updated: now };
   }
   // Approved pitches for project cards and pages. Public: only approved text, only while ownership still stands, only for accounts
   // in good standing, and (when a mod's confirmation is required) only once a mod has confirmed. The earliest approved claim wins.

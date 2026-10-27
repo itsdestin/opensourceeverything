@@ -2,6 +2,8 @@
 // Also loaded on other pages, where it finds nothing to do.
 (function () {
   const OI = window.OI || {};
+  // Switch guide: the first fold is open on desktop and closed on a phone (Destin, round 5).
+  if (matchMedia('(max-width:640px)').matches) document.querySelectorAll('.foldrow[data-first]').forEach((d) => d.removeAttribute('open'));
   const grid = document.querySelector('.grid[data-alts]'); // WHY .grid: the liked strip also has data-alts
   const cmp = document.querySelector('[data-compare]');
   const none = document.querySelector('[data-must-none]');

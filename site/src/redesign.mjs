@@ -36,4 +36,6 @@ export function rvFamilyA(p, fam) {
 }
 
 // A compact trail under the top bar (Destin, round 4): where this page sits, so a phone visitor can step up a level. items: [[label, href], ...]; the last is plain text.
-export const crumbs = (items) => `<nav class="crumbs" aria-label="Breadcrumb">${items.map(([label, href], i) => (href ? `<a href="${href}">${esc(label)}</a>` : `<span aria-current="page">${esc(label)}</span>`) + (i < items.length - 1 ? '<i aria-hidden="true">›</i>' : '')).join('')}</nav>`;
+// back: true puts the Back arrow at the start of the row (round 5: "back button probably beside breadcrumb"); it goes back when the visitor came from this site, else it is a link to `fallback`.
+const BACK = '<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m15 18-6-6 6-6"/></svg>';
+export const crumbs = (items, { back = false, fallback = '/' } = {}) => `<nav class="crumbs" aria-label="Breadcrumb">${back ? `<a class="glass iconbtn" data-back href="${fallback}" title="Back" aria-label="Back">${BACK}</a>` : ''}${items.map(([label, href], i) => (href ? `<a href="${href}">${esc(label)}</a>` : `<span aria-current="page">${esc(label)}</span>`) + (i < items.length - 1 ? '<i aria-hidden="true">›</i>' : '')).join('')}</nav>`;

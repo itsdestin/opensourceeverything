@@ -14,6 +14,7 @@
   const GRID = '<svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><rect x="3" y="3" width="7" height="7" rx="1.5"/><rect x="14" y="3" width="7" height="7" rx="1.5"/><rect x="3" y="14" width="7" height="7" rx="1.5"/><rect x="14" y="14" width="7" height="7" rx="1.5"/></svg>';
   let kind = 'all', setupF = ''; const devices = new Set();
   let results = [], details = null;
+  const count = (n) => `${n} ${n === 1 ? 'result' : 'results'}`;
 
   // ───────── A result row (Destin picked option a in the redesign round, with fixes) ─────────
   // WHY: one picture box of ONE size at the left for every kind, the name, a two-line description and ONE chip row that scrolls sideways.
@@ -56,10 +57,13 @@
     const shown = results.filter((r) => (kind === 'all' || r.kind === kind) &&
       (!devices.size || r.kind !== 'project' || r.pl.some((p) => devices.has(p))) &&
       (!setupF || r.kind !== 'project' || ((proj(r)?.setup === 'easy') === (setupF === 'easy'))));
-    for (const k of ['all', 'project', 'group', 'closed']) {
-      const n = results.filter((r) => k === 'all' || r.kind === k).length;
-      const el = document.querySelector(`[data-count="${k}"]`); if (el) el.textContent = n;
-    }
+    // Counts at the right of every option, and the live "Show N results" button (Destin, round 5).
+    const projs = results.filter((r) => r.kind === 'project');
+    for (const k of ['all', 'project', 'group', 'closed']) { const el = document.querySelector(`[data-count="${k}"]`); if (el) el.textContent = results.filter((r) => k === 'all' || r.kind === k).length; }
+    for (const d of Object.keys(DEVICE)) { const el = document.querySelector(`[data-dcount="${d}"]`); if (el) el.textContent = projs.filter((r) => r.pl.includes(d)).length; }
+    for (const k of ['', 'easy', 'advanced']) { const el = document.querySelector(`[data-scount="${k}"]`); if (el) el.textContent = k ? projs.filter((r) => (proj(r)?.setup === 'easy') === (k === 'easy')).length : results.length; }
+    const show = document.querySelector('[data-fshow]'); if (show) show.textContent = `Show ${shown.length} ${shown.length === 1 ? 'result' : 'results'}`;
+    sub.textContent = results.length ? (shown.length === results.length ? count(results.length) : `${shown.length} of ${results.length}`) : '';
     list.innerHTML = shown.length ? shown.slice(0, 60).map(row).join('') :
       /* WHY: nothing found usually means a closed app is missing, so "Suggest it" opens the add-closed-app form with the searched name filled in (it used to open the new-group form). */ `<div class="empty">Nothing matches${devices.size ? ' with those devices' : ''}. ${devices.size ? 'Try fewer filters, or ' : ''}<a href="https://github.com/itsdestin/opensourceeverything/issues/new?template=3-add-closed-app.yml&app=${encodeURIComponent(q)}" rel="noopener">suggest what's missing</a>.</div>`;
   }
@@ -67,14 +71,20 @@
   // The Filter menu: Type (one choice), Works on (several), Setup (one choice). It stays open while you choose; the button shows how many are on.
   const fbtn = document.querySelector('[data-sres-filterbtn]'), fcount = document.querySelector('[data-fcount]');
   const showCount = () => { const n = (kind !== 'all') + devices.size + !!setupF; fcount.hidden = !n; fcount.textContent = n; fbtn.classList.toggle('on', !!n); };
+  const sync = () => {
+    filters.querySelectorAll('[data-kind]').forEach((x) => { const on = x.dataset.kind === kind; x.classList.toggle('sel', on); x.setAttribute('aria-checked', String(on)); });
+    filters.querySelectorAll('[data-setupf]').forEach((x) => { const on = x.dataset.setupf === setupF; x.classList.toggle('sel', on); x.setAttribute('aria-checked', String(on)); });
+    filters.querySelectorAll('[data-device]').forEach((x) => { const on = devices.has(x.dataset.device); x.classList.toggle('sel', on); x.setAttribute('aria-checked', String(on)); });
+    showCount();
+  };
   filters.addEventListener('click', (e) => {
     const b = e.target.closest('button'); if (!b) return;
-    if (b.dataset.kind) { kind = b.dataset.kind; filters.querySelectorAll('[data-kind]').forEach((x) => x.classList.toggle('sel', x === b)); }
-    else if (b.dataset.setupf !== undefined) { setupF = b.dataset.setupf; filters.querySelectorAll('[data-setupf]').forEach((x) => x.classList.toggle('sel', x === b)); }
-    else if (b.dataset.clear) { kind = 'all'; setupF = ''; devices.clear(); filters.querySelectorAll('[data-kind]').forEach((x) => x.classList.toggle('sel', x.dataset.kind === 'all')); filters.querySelectorAll('[data-setupf]').forEach((x) => x.classList.toggle('sel', x.dataset.setupf === '')); }
+    if (b.dataset.kind) kind = b.dataset.kind;
+    else if (b.dataset.setupf !== undefined) setupF = b.dataset.setupf;
+    else if (b.dataset.clear) { kind = 'all'; setupF = ''; devices.clear(); }
     else if (b.dataset.device) { const d = b.dataset.device; devices.has(d) ? devices.delete(d) : devices.add(d); }
-    filters.querySelectorAll('[data-device]').forEach((x) => { x.classList.toggle('sel', devices.has(x.dataset.device)); x.setAttribute('aria-selected', String(devices.has(x.dataset.device))); });
-    showCount(); draw();
+    else if (b.hasAttribute('data-fshow')) { filters.classList.remove('open'); fbtn.setAttribute('aria-expanded', 'false'); return; }
+    sync(); draw();
   });
   // Phone sheet: drag the handle down to close it.
   const handle = filters.querySelector('[data-handle]'); let y0 = null;
@@ -84,17 +94,16 @@
 
   // One search at a time: the details load once, then every keystroke ranks again and redraws.
   let ctx = null, stamp = 0;
-  const count = (n) => `${n} ${n === 1 ? 'result' : 'results'}`;
   async function run() {
     const my = ++stamp;
     if (!q) { results = []; sub.textContent = ''; list.innerHTML = '<div class="empty">Type what you\'re looking for.</div>'; return; }
     document.title = `${q} · Search · Open Source Everything`;
     results = window.OISearch.search(ctx.items, q, { all: true });
-    sub.textContent = results.length ? count(results.length) : 'No results.';
+    
     draw();
     // Meaning search (search-ai.js): when the word match is weak, reorder by meaning once the server answers; if it is slow or off, the list stays.
     const better = await window.OISearchAI?.improve(ctx.items, q, results).catch(() => null);
-    if (better && my === stamp) { results = better; sub.textContent = count(results.length); draw(); }
+    if (better && my === stamp) { results = better; draw(); }
   }
   let t = null;
   input.addEventListener('input', () => { q = input.value.trim(); clearTimeout(t); t = setTimeout(() => { try { history.replaceState(null, '', `?q=${encodeURIComponent(q)}`); } catch { /* fine */ } if (ctx) run(); }, 160); });

@@ -52,6 +52,8 @@
     pitchDelete: (id) => call('DELETE', `/pitches/${encodeURIComponent(id)}`),
     myPitches: () => call('GET', '/pitches/mine'),
     livePitches: (ids) => call('GET', `/pitches/live?${qs({ projects: ids.join(',') })}`),
+    prefs: (ids) => call('GET', `/prefs?${qs({ projects: ids.join(',') })}`),
+    prefsSave: (project, body) => call('PUT', `/prefs/${encodeURIComponent(project)}`, body),
     modPitches: () => call('GET', '/mod/pitches'),
     modPitchAct: (id, action, reason) => call('POST', `/mod/pitches/${encodeURIComponent(id)}`, { action, reason }),
   };

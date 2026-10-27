@@ -127,7 +127,9 @@
     const head = () => `<div class="surface identity"><div><div class="muted11">For developers</div><h1 class="h-subject">Claim your project</h1>
       <p class="desc12">Add your own description to your project's page. The AI-drafted note goes away.</p></div></div>`;
     if (!user) {
-      slot.innerHTML = `${head()}<section class="surface sec"><p class="small2">So only you can speak for your project.</p><div><button class="btn md primary" type="button" data-signin>Sign in with GitHub</button></div></section>`;
+      // WHY ONE card (Destin, round 5: "sign in button? really?"; guide: Account's sign-in card): the title, one line, and a full-width filled button. Nothing else on the page.
+      slot.innerHTML = `<div class="surface identity signin-card"><div><div class="muted11">For developers</div><h1 class="h-subject">Claim your project</h1>
+        <p class="desc12">Sign in with GitHub so only you can speak for your project.</p></div><button class="btn md primary full" type="button" data-signin>Sign in with GitHub</button></div>`;
       return;
     }
     const load = async () => { st.mine = (await api.myPitches().catch(() => ({ items: [] }))).items; };
@@ -237,7 +239,7 @@
   const SUG_KIND = { 'add-project': 'Add a project', 'add-closed-app': 'Add a closed app', 'new-group': 'New group', fix: 'Fix', report: 'Report' };
   async function renderMySuggestions(slot) {
     const { user } = await getMe();
-    if (!user) { slot.innerHTML = `<section class="surface sec"><h2 class="h-large">Sign in to see your suggestions</h2><div><button class="btn md primary" type="button" data-signin>Sign in with GitHub</button></div></section>`; return; }
+    if (!user) { slot.innerHTML = `<div class="surface sec signin-card"><p class="small2">Sign in with GitHub to see where each one stands.</p><button class="btn md primary full" type="button" data-signin>Sign in with GitHub</button></div>`; return; }
     let res; try { res = await api.mySuggestions(); } catch (e) { slot.innerHTML = `<section class="surface sec"><div class="callout warn">${esc(e.message)} <button class="btn sm secondary" type="button" data-retry>Try again</button></div></section>`; $('[data-retry]', slot).onclick = () => renderMySuggestions(slot); return; }
     slot.innerHTML = res.items.length
       ? `<section class="surface sec"><h2 class="h-large">${res.items.length} ${res.items.length === 1 ? 'suggestion' : 'suggestions'}</h2><div class="stack">${res.items.map((x) => {
@@ -308,7 +310,115 @@
     try { if (a.type === 'request') { await api.requestVote(a.key, true); toast('Signed in, and your request counted.'); renderRequestButtons(); $$('[data-most-requested]').forEach(renderMostRequested); } } catch (e) { toast(e.message); }
   }
 
+
+  // ───────── Contributor preferences: "How you'd like help" ─────────
+  // WHY separate from claiming (Destin, round 5: "this shouldn't be required... an optional follow-up after they claimed that they can change whenever"): after a claim is
+  // approved, the owner (and only the owner) sees one quiet row in How to help. It opens a settings-style popup: a small label over a card per question, answers saved as they
+  // change (the guide's Settings rule: no Save button), editable any time. Everyone else sees the answers as rows under How to help.
+  const AI_OPTS = [['non-developers-welcome', 'Non-developers welcome', 'AI-written changes are fine if the person sending them stands behind them.'], ['traditional-developers-only', 'Traditional developers only', 'AI help is allowed, but the person must understand and review everything.'], ['not-accepted', 'Not accepted', 'No AI-written code or text.'], ['see-policy', 'See policy', 'Our own rules are more specific. Say them below.']];
+  const AI_TICK = [['beginner', 'No AI on beginner tasks'], ['own-words', 'Write issues and pull-request descriptions yourself'], ['no-agents', 'No fully automatic agents']];
+  const START = [['pr', 'Just send a pull request'], ['issue', 'Open an issue first'], ['forum', 'Start a conversation in our forum or chat'], ['email', 'Email us'], ['closed', "We're not taking outside code right now"]];
+  const WANT = [['code', 'Code'], ['design', 'Design'], ['docs', 'Documentation'], ['translation', 'Translation'], ['testing', 'Testing'], ['triage', 'Sorting issues'], ['co-maintainers', 'Co-maintainers'], ['funding', 'Funding']];
+  const NEWB = [['help', "Yes, we'll point you to a task and answer questions", "We'll help you"], ['self', "Yes, but you'll mostly be on your own", 'Self-guided'], ['experienced', 'Not right now: experienced contributors only', 'Experienced contributors only']];
+  const DISC = [['none', 'No need to say'], ['pr', 'Mention it in the pull request'], ['form', 'Tick the box on our pull-request form'], ['commit', 'Add an "Assisted-by:" line to each commit']];
+  const SIGN = [['none', 'Nothing'], ['dco', 'A sign-off line on each commit'], ['cla', 'A contributor agreement before the first merge']];
+  const REVW = [['days', 'Within a few days'], ['weeks', 'Within a few weeks'], ['month', 'A month or more (small team)'], ['hide', "Don't show this"]];
+  const lab = (list, v) => (list.find((o) => o[0] === v) ?? [])[1] ?? '';
+  const WORDS = { start: { pr: 'Send a pull request', issue: 'Open an issue first', forum: 'Talk in their forum or chat first', email: 'Email them first', closed: 'Not taking outside code right now' }, newb: { help: "We'll help you", self: 'Newcomers welcome, self-guided', experienced: 'Experienced contributors' }, rev: { days: 'Usually within days', weeks: 'Usually within weeks', month: 'Can take a month or more' }, sign: { none: 'Nothing to sign', dco: 'Each commit needs a sign-off line from a person', cla: 'Sign their contributor agreement first' } };
+
+  // What visitors see. The AI answers go inside the AI fold (or make one), the rest are plain rows.
+  function prefRows(p, mine) {
+    const row = (name, html) => `<div class="frowx prow"><div class="fx-main"><span class="fx-name">${name}</span><span class="fx-note">${html}</span></div></div>`;
+    const out = [];
+    if (p.start) out.push(row('Start', `${esc(WORDS.start[p.start])}${p.startLink ? ` · ${/^https?:/.test(p.startLink) ? `<a href="${esc(p.startLink)}" rel="noopener">Link</a>` : `<a href="mailto:${esc(p.startLink)}">${esc(p.startLink)}</a>`}` : ''}${p.startSmall && p.start !== 'pr' && p.start !== 'closed' ? ' · small fixes can go straight to a pull request' : ''}`));
+    if (p.wanted?.length) out.push(row('Wanted', esc(p.wanted.map((w) => lab(WANT, w).toLowerCase()).join(', '))));
+    if (p.newcomers) out.push(row('Newcomers', esc(WORDS.newb[p.newcomers])));
+    if (p.review && p.review !== 'hide') out.push(row('Reviews', esc(WORDS.rev[p.review])));
+    if (p.note) out.push(`<p class="quiet">${esc(p.note)}</p>`);
+    return out.join('');
+  }
+  function aiExtra(p) {
+    const l = [];
+    if (p.ai === 'see-policy' && p.aiPolicy) l.push(esc(p.aiPolicy));
+    for (const t of p.aiTicks ?? []) l.push(esc(lab(AI_TICK, t)));
+    if (p.disclose?.length && !(p.disclose.length === 1 && p.disclose[0] === 'none')) l.push(`Say so: ${esc(p.disclose.filter((d) => d !== 'none').map((d) => lab(DISC, d).toLowerCase()).join(', '))}`);
+    if (p.sign && p.sign !== 'none') l.push(esc(WORDS.sign[p.sign]) + (p.signLink ? ` · <a href="${esc(p.signLink)}" rel="noopener">Link</a>` : ''));
+    return l.length ? `<ul class="swsteps">${l.map((x) => `<li>${x}</li>`).join('')}</ul>` : '';
+  }
+
+  async function renderPrefs() {
+    const slots = $$('[data-prefs]'); if (!slots.length || !api.prefs) return;
+    const ids = [...new Set(slots.map((x) => x.dataset.project))];
+    let all = {}; try { all = await api.prefs(ids); } catch { /* the page still works without them */ }
+    const { user } = await getMe();
+    const live = user ? await api.livePitches(ids).catch(() => ({})) : {};
+    for (const slot of slots) {
+      const id = slot.dataset.project; let p = all[id] ?? null;
+      const owner = !!user && live[id]?.by?.toLowerCase() === user.login.toLowerCase();
+      const draw = () => {
+        const aiFold = slot.parentElement.querySelector('.aifold');
+        if (p?.ai) {
+          const pill = aiFold?.querySelector('[data-ai-pill]'); if (pill) pill.textContent = lab(AI_OPTS, p.ai);
+          const ex = aiFold?.querySelector('[data-ai-extra]'); if (ex) ex.innerHTML = aiExtra(p);
+        }
+        // With no AI fold from our own research, the owner's answers make one (same look).
+        const own = p?.ai && !aiFold ? `<details class="foldrow lvl1 aifold"><summary><span>AI contributions</span><span class="pill info">${esc(lab(AI_OPTS, p.ai))}</span></summary><div class="foldbody">${aiExtra(p) || '<p>See their own words in the project.</p>'}</div></details>` : '';
+        slot.innerHTML = own + (p ? prefRows(p) : '') + (owner ? `<button class="foldrow lvl1 setrow" type="button" data-prefs-open><span><b>${p ? 'Contributor preferences' : 'Add contributor preferences'}</b><small>How you'd like help. Only you see this row.</small></span></button>` : '');
+        slot.hidden = !slot.innerHTML.trim();
+      };
+      draw();
+      slot.onclick = (e) => { if (e.target.closest('[data-prefs-open]')) openPrefs(id, p, (n) => { p = n; draw(); }); };
+    }
+  }
+
+  function openPrefs(project, cur, done) {
+    const st = { ai: '', aiPolicy: '', aiTicks: [], start: '', startLink: '', startSmall: false, wanted: [], newcomers: '', disclose: [], sign: '', signLink: '', review: '', note: '', ...(cur ?? {}) };
+    const radio = (name, list, withDesc) => `<div class="popts" role="radiogroup">${list.map(([v, t, d]) => `<label class="popt"><input type="radio" name="${name}" value="${v}"${st[name] === v ? ' checked' : ''}><span class="ctl r" aria-hidden="true"></span><span class="pt"><b>${esc(t)}</b>${withDesc && d ? `<small>${esc(d)}</small>` : ''}</span></label>`).join('')}</div>`;
+    const checks = (name, list) => `<div class="popts">${list.map(([v, t]) => `<label class="popt"><input type="checkbox" name="${name}" value="${v}"${st[name].includes(v) ? ' checked' : ''}><span class="ctl c" aria-hidden="true">✓</span><span class="pt"><b>${esc(t)}</b></span></label>`).join('')}</div>`;
+    const card = (label, body, id = '') => `<div class="pgroup"${id ? ` id="${id}"` : ''}><span class="label">${label}</span><div class="lvl1 pcard">${body}</div></div>`;
+    const field = (name, ph, shown) => `<input class="field pfield" name="${name}" placeholder="${ph}" value="${esc(st[name])}"${shown ? '' : ' hidden'}>`;
+    const html = `<div class="prefs">
+      ${card('Can people send you code written with AI help?', radio('ai', AI_OPTS, true) + `<textarea class="field pfield" name="aiPolicy" rows="2" maxlength="200" placeholder="Your rule, in a sentence"${st.ai === 'see-policy' ? '' : ' hidden'}>${esc(st.aiPolicy)}</textarea>` + checks('aiTicks', AI_TICK))}
+      ${card('What should someone do before sending you work?', radio('start', START) + field('startLink', 'Link or email', ['forum', 'email'].includes(st.start)) + `<label class="popt psmall"${['issue', 'forum'].includes(st.start) ? '' : ' hidden'}><input type="checkbox" name="startSmall"${st.startSmall ? ' checked' : ''}><span class="ctl c" aria-hidden="true">✓</span><span class="pt"><b>Small fixes like typos can go straight to a pull request</b></span></label>`)}
+      ${card('What help would you most like? Up to three.', checks('wanted', WANT))}
+      ${card('Are you set up for first-time contributors?', radio('newcomers', NEWB.map(([v, t]) => [v, t])))}
+      ${card('If AI helped, how should people say so?', checks('disclose', DISC), 'pDisc')}
+      ${card('Do contributors need to sign anything?', radio('sign', SIGN) + field('signLink', 'Link to the agreement', st.sign === 'cla'))}
+      ${card('How soon do you usually look at a new pull request?', radio('review', REVW))}
+      ${card('Anything else people should know?', `<textarea class="field pfield" name="note" rows="2" maxlength="200" placeholder="One short note, up to 200 characters"></textarea>`)}
+      <p class="muted11 psaved" data-psaved aria-live="polite">Changes save as you make them.</p></div>`;
+    const { el } = dialog("How you'd like help", html, { size: 'medium' });
+    el.querySelector('textarea[name=note]').value = st.note;
+    let timer = null;
+    const refresh = () => {
+      el.querySelector('#pDisc').hidden = st.ai === 'not-accepted';
+      el.querySelector('textarea[name=aiPolicy]').hidden = st.ai !== 'see-policy';
+      el.querySelector('input[name=startLink]').hidden = !['forum', 'email'].includes(st.start);
+      el.querySelector('.psmall').hidden = !['issue', 'forum'].includes(st.start);
+      el.querySelector('input[name=signLink]').hidden = st.sign !== 'cla';
+      const full = st.wanted.length >= 3; // WHY: the question says up to three
+      el.querySelectorAll('input[name=wanted]').forEach((i) => { i.disabled = full && !i.checked; });
+    };
+    const save = async () => {
+      const note = el.querySelector('[data-psaved]');
+      try { const n = await api.prefsSave(project, st); done(n); note.textContent = 'Saved'; } catch (e) { note.textContent = e.message || "Couldn't save. Try again."; }
+    };
+    const change = (e) => {
+      const t = e.target; if (!t.name) return;
+      if (t.type === 'radio') st[t.name] = t.value;
+      else if (t.type === 'checkbox' && t.name === 'startSmall') st.startSmall = t.checked;
+      else if (t.type === 'checkbox') st[t.name] = t.checked ? [...st[t.name], t.value] : st[t.name].filter((v) => v !== t.value);
+      else st[t.name] = t.value;
+      refresh();
+      // Text saves a moment after typing stops; choices save at once.
+      clearTimeout(timer); timer = setTimeout(save, t.type === 'radio' || t.type === 'checkbox' ? 0 : 600);
+    };
+    el.addEventListener('change', change); el.addEventListener('input', (e) => { if (e.target.matches('.pfield')) change(e); });
+    refresh();
+  }
+
   renderRequestButtons();
+  renderPrefs();
   $$('[data-most-requested]').forEach(renderMostRequested);
   renderPitches();
   $$('[data-tag]').forEach(renderTag);

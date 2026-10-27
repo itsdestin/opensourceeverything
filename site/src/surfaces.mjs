@@ -36,18 +36,15 @@ function tagRows(p, g, { sources = false } = {}) {
   }).join('');
 }
 
-// The fold section on a card (and the home of the AI line): closed by default, so the card hero stays clean (Destin).
+// WHY no fold on the card any more (Destin, round 5: "that's atrocious ux/ui"): features live in Compare, on the project page and in the Must have filter.
+// Option B, shown only with ?v=b so both can be compared: ONE quiet grey line, "Has 4 of 6 · Live co-editing ✗" (the first thing it lacks).
 export function cardFold(p, g) {
   const tags = g ? tagsOf(g) : [];
-  const answered = tags.filter((t) => answerOf(p.id, t.id)).length;
-  const a = AI[p.id];
-  const label = a?.label ? aiLine(p, a) : '';
-  const stop = a?.outsideHelp === 'not-accepting' ? '<p class="quiet">Not accepting outside code</p>' : '';
-  if (!answered && !label && !stop) return '';
+  const answered = tags.filter((t) => answerOf(p.id, t.id));
+  if (!answered.length) return '';
   const yes = tags.filter((t) => answerOf(p.id, t.id)?.v === 'yes').length;
-  return `<details class="cfold"><summary>Features${answered ? `<span class="muted11">${yes} of ${tags.length}</span>` : ''}</summary>
-    ${answered ? `<ul class="flist2">${tagRows(p, g)}</ul>` : ''}${label || stop ? `<div class="cfold-ai">${label}${stop}</div>` : ''}
-    ${a?.label ? aiTemplate(p, a) : ''}</details>`;
+  const miss = tags.filter((t) => answerOf(p.id, t.id)?.v === 'no');
+  return `<p class="featline"><b>Has ${yes} of ${tags.length}</b>${miss.length ? ` · ${esc(miss[0].name)} ✗${miss.length > 1 ? ` +${miss.length - 1}` : ''}` : ''}</p>`;
 }
 
 // Group page: "Must have" multi-select + Cards / Compare switch. Only when the group has tags and at least two alternatives.
@@ -72,13 +69,17 @@ export function groupCompare(g, alts) {
   <div class="callout info" data-must-none hidden>None of these have everything you picked.</div>`;
 }
 
-// Project page: one Features card per group the project is listed in.
+// Project page: ONE first-level card (Card levels), each tag a boxed row like a Settings row: its name at the left, Yes / Partly / No as a status Pill at the right,
+// the note under the name in 12px grey with the source as a small link in that same line. Grouped under the group's name only when the project is listed in several groups.
+// Tags nobody has checked yet are left out: a row that says nothing is not worth a row.
+const PILL = { yes: ['ok', 'Yes', true], partly: ['warn', 'Partly', true], no: ['', 'No', false] };
 export function projectFeatures(p, listed) {
-  return listed.map(({ group }) => {
-    const tags = tagsOf(group); if (!tags.some((t) => answerOf(p.id, t.id))) return '';
-    return `<section class="surface sec fold-phone"><div class="sec-head fold-head"><div><h2 class="h-large">Features${listed.length > 1 ? ` in ${esc(group.name)}` : ''}</h2></div></div>
-      <ul class="flist2 big">${tagRows(p, group, { sources: true })}</ul></section>`;
-  }).join('');
+  const groups = listed.map(({ group }) => ({ group, rows: tagsOf(group).map((t) => ({ t, a: answerOf(p.id, t.id) })).filter((r) => r.a) })).filter((x) => x.rows.length);
+  if (!groups.length) return '';
+  const row = ({ t, a }) => { const [tone, word, dot] = PILL[a.v];
+    return `<div class="frowx"><div class="fx-main"><span class="fx-name" title="${esc(t.question)}">${esc(t.name)}</span>${a.note || a.source ? `<span class="fx-note">${a.note ? esc(a.note) : ''}${a.note && a.source ? ' ' : ''}${srcLink(a)}</span>` : ''}</div><span class="pill ${tone}">${dot ? '<i></i>' : ''}${word}</span></div>`; };
+  return `<section class="surface sec fold-phone rvfeat"><div class="sec-head fold-head"><div><h2 class="h-large">Features</h2></div></div>
+    ${groups.map(({ group, rows }) => `${groups.length > 1 ? `<h3 class="label fx-group">${esc(group.name)}</h3>` : ''}<div class="fx-list">${rows.map(row).join('')}</div>`).join('')}</section>`;
 }
 
 // Gaps page: tags where every alternative that was asked says no ("Missing everywhere"), and where the best anyone says is "partly".
@@ -101,18 +102,17 @@ export function gapsMissing(d) {
 }
 
 // ───────── 2. Switch guides ─────────
+// WHY one first-level card with three FoldRows (Destin, round 5: "ugly and poorly positioned"): it sits BELOW the alternatives (people come for those first); the first row is
+// open on desktop and all are closed on a phone (surfaces.js). Steps are a numbered list, sources small links, and the projects that open the file are Chips.
+const fold = (title, body, open) => `<details class="foldrow lvl1"${open ? ' open data-first' : ''}><summary><span>${title}</span></summary><div class="foldbody">${body}</div></details>`;
 export function switchGuide(slug, name, d) {
   const g = GUIDES[slug]; if (!g) return '';
   const projs = g.opensIn.map((o) => ({ o, p: d.projById.get(o.project) })).filter((x) => x.p);
-  const block = (title, html) => `<div class="swblock"><h3>${title}</h3>${html}</div>`;
-  return `<section class="surface sec fold-phone swcard" id="switch">
-    <div class="sec-head fold-head"><div><h2 class="h-large">Switching from ${esc(name)}</h2></div></div>
-    <div class="swgrid">
-      ${g.export?.length ? block('Get your data out', `<ol>${g.export.map((s) => `<li>${esc(s)}</li>`).join('')}</ol>${g.tip ? `<p class="small2">${esc(g.tip)}</p>` : ''}${g.exportSource ? `<a class="swsrc" href="${esc(g.exportSource)}" rel="noopener">${esc(name)}'s own instructions</a>` : ''}`) : ''}
-      ${g.formats?.length ? block('What you\'ll get', `<ul>${g.formats.map((s) => `<li>${esc(s)}</li>`).join('')}</ul>`) : ''}
-      ${g.wontComeOver?.length ? block('What won\'t come over', `<ul>${g.wontComeOver.map((s) => `<li>${esc(s)}</li>`).join('')}</ul>`) : ''}
-      ${projs.length ? block('Opens it directly', `<div class="chiprow wrapchips">${projs.map(({ o, p }) => `<a class="chip link" href="${url(`p/${p.id}/`)}" title="${esc(o.note)}">${esc(p.name)}</a>`).join('')}</div>`) : ''}
-    </div></section>`;
+  const src = g.exportSource ? `<a class="swsrc" href="${esc(g.exportSource)}" rel="noopener">Source</a>` : '';
+  const out = g.export?.length ? fold('Get your data out', `<ol class="swsteps">${g.export.map((x) => `<li>${esc(x)}</li>`).join('')}</ol>${g.tip ? `<p class="small2">${esc(g.tip)}</p>` : ''}${g.formats?.length ? `<p class="small2">You get: ${g.formats.map(esc).join(', ')}.</p>` : ''}${src}`, true) : '';
+  const lost = g.wontComeOver?.length ? fold("What won't come over", `<ul class="swsteps">${g.wontComeOver.map((x) => `<li>${esc(x)}</li>`).join('')}</ul>`) : '';
+  const opens = projs.length ? fold('What opens it directly', `<div class="chiprow wrapchips">${projs.map(({ o, p }) => `<a class="chip link" href="${url(`p/${p.id}/`)}" title="${esc(o.note)}">${esc(p.name)}</a>`).join('')}</div>`) : '';
+  return `<section class="surface sec swcard" id="switch"><div class="sec-head"><div><h2 class="h-large">Switching from ${esc(name)}</h2></div></div><div class="swfolds">${out}${lost}${opens}</div></section>`;
 }
 
 // ───────── 3. AI-contribution labels ─────────
@@ -124,30 +124,29 @@ export const AI_LABEL = {
 };
 const HELP = { 'welcomes-prs': 'Welcomes pull requests', 'issue-first': 'Open an issue first', 'not-accepting': 'Not accepting outside code' };
 const claimHref = (p) => url(`tag/?repo=${encodeURIComponent(codeUrl(p) ?? '')}`);
-const aiButton = (a, cls) => `<button class="${cls}" type="button" data-tip="ai" aria-expanded="false">${esc(AI_LABEL[a.label])}</button>`;
-// On a card: the label as a small link-style button that opens the pop-up.
-const aiLine = (p, a) => aiButton(a, 'ailink');
 
-// The pop-up: the project's tuned description, its own words, outside help and where to start.
-function aiTemplate(p, a) {
+// The expandable card (FoldRow look, Destin round 5): closed = "AI contributions" with the label as a Pill at the right; open = description, their own words (quote + link),
+// outside help and where to start, all inside the same box. `[data-ai-extra]` is filled in by contrib.js with the owner's contributor preferences, when they set some.
+const AI_SHORT = { 'non-developers-welcome': 'Non-developers welcome', 'traditional-developers-only': 'Traditional developers only', 'not-accepted': 'Not accepted', 'see-policy': 'See policy' };
+function aiFold(p, a) {
   const start = [a.contributing && `<a href="${esc(a.contributing)}" rel="noopener">Contributing guide</a>`, a.goodFirstIssues && `<a href="${esc(a.goodFirstIssues)}" rel="noopener">Beginner issues</a>`].filter(Boolean);
   const help = a.outsideHelp ? `<p><b>${HELP[a.outsideHelp]}.</b>${a.outsideHelpNote ? ` ${esc(a.outsideHelpNote)}` : ''}</p>` : '';
-  return `<template data-for="ai" data-title="${esc(AI_LABEL[a.label])}">
+  return `<details class="foldrow lvl1 aifold"><summary><span>AI contributions</span><span class="pill info" data-ai-pill>${esc(AI_SHORT[a.label])}</span></summary><div class="foldbody">
     <p>${esc(a.description)}</p>
     ${a.quote ? `<blockquote class="aiq">“${esc(a.quote)}”${a.source ? ` <a href="${esc(a.source)}" rel="noopener">Read it</a>` : ''}</blockquote>` : ''}
     ${help ? `<h4 class="aih">Outside help</h4>${help}` : ''}
     ${start.length ? `<h4 class="aih">Where to start</h4><p class="aistart">${start.join(' · ')}</p>` : ''}
-    ${'' /* WHY no 'managed by r/TrueOpenSource' line here: the project page already shows it once (Destin's no-repeats rule) */}</template>`;
+    <div data-ai-extra></div></div></details>`;
 }
 
 // Project page: sits inside (or, with no other help links, makes) the "How to help" card.
 export function helpWithAi(p, helpHtml) {
   const a = AI[p.id];
-  const row = a?.label
-    ? aiButton(a, 'btn md secondary helprow')
+  const row = a?.label ? aiFold(p, a)
     : `<p class="aiempty"><b>AI Contributions</b> Not stated yet. Maintainers can set this by ${SOCIAL ? `<a href="${claimHref(p)}">claiming the listing</a>` : 'claiming the listing'}.</p>`;
   const stop = a?.outsideHelp === 'not-accepting' ? '<p class="quiet">Not accepting outside code</p>' : '';
-  const extra = row + stop + (a?.label ? aiTemplate(p, a) : '');
-  if (helpHtml) return helpHtml.replace('id="help">', () => 'id="help" data-tipscope>').replace('<div class="stack">', () => `<div class="stack">${row}${stop}`).replace(/<\/section>\s*$/, () => `${a?.label ? aiTemplate(p, a) : ''}</section>`);
-  return `<section class="surface sec fold-phone" id="help" data-tipscope><div class="sec-head fold-head"><div><h2 class="h-large">How to help</h2></div></div><div class="stack">${extra}</div></section>`;
+  // data-prefs: filled in by contrib.js with the owner's "How you'd like help" answers (rows) when they have set some.
+  const slot = SOCIAL ? `<div class="prefs-slot" data-prefs data-project="${esc(p.id)}" hidden></div>` : '';
+  if (helpHtml) return helpHtml.replace('id="help">', () => 'id="help" data-tipscope>').replace('<div class="stack">', () => `<div class="stack">${row}${stop}${slot}`);
+  return `<section class="surface sec fold-phone" id="help" data-tipscope><div class="sec-head fold-head"><div><h2 class="h-large">How to help</h2></div></div><div class="stack">${row}${stop}${slot}</div></section>`;
 }

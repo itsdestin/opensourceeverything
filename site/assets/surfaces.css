@@ -9,24 +9,6 @@
 @media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) .fm.yes { color:rgb(134 239 172); } :root:not([data-theme="light"]) .fm.partly { color:rgb(252 211 77); } }
 :root[data-theme="dark"] .fm.yes { color:rgb(134 239 172); } :root[data-theme="dark"] .fm.partly { color:rgb(252 211 77); }
 
-/* Fold section on a card (kept off the hero). */
-.cfold { position:relative; z-index:2; font-size:12px; }
-.cfold > summary { list-style:none; cursor:pointer; display:inline-flex; align-items:center; gap:6px; color:var(--fg-dim); font-weight:500; padding:2px 0; }
-.cfold > summary::-webkit-details-marker { display:none; }
-.cfold > summary::after { content:""; width:6px; height:6px; border-right:2px solid var(--fg-muted); border-bottom:2px solid var(--fg-muted); transform:rotate(45deg); margin:-3px 0 0 2px; transition:transform .15s; }
-.cfold[open] > summary::after { transform:rotate(-135deg); margin-top:2px; }
-.cfold > summary:hover { color:var(--fg); }
-.flist2 { list-style:none; margin:6px 0 0; padding:0; display:grid; grid-template-columns:1fr; gap:4px 16px; }
-.cfold .flist2 { grid-template-columns:repeat(auto-fill,minmax(210px,1fr)); }
-.flist2 li { display:flex; align-items:baseline; gap:8px; color:var(--fg-2); min-width:0; }
-.flist2 li .fm { align-self:center; }
-.flist2 li.unk { color:var(--fg-faint); }
-.flist2 .fn { font-weight:500; }
-.flist2 .fnote, .flist2 a { color:var(--fg-dim); font-size:11px; }
-.flist2.big { gap:8px; } .flist2.big li { flex-wrap:wrap; font-size:13px; }
-.cfold-ai { display:flex; flex-direction:column; gap:4px; margin-top:8px; padding-top:8px; border-top:1px solid var(--edge-dim); align-items:flex-start; }
-.ailink { font:inherit; font-size:12px; background:none; border:0; padding:0; color:var(--fg); text-decoration:underline; text-decoration-color:var(--edge-strong); text-underline-offset:3px; cursor:pointer; text-align:left; }
-.ailink:hover { text-decoration-color:var(--accent); }
 .quiet { margin:0; font-size:12px; color:var(--fg-dim); }
 
 /* View switch and Must have menu. */
@@ -69,12 +51,80 @@
 #help .stack .quiet { padding:0 2px; }
 .wrapchips { flex-wrap:wrap !important; overflow:visible !important; -webkit-mask-image:none !important; mask-image:none !important; padding:0 !important; margin:0 !important; }
 
-/* Switch guide: four short blocks, two columns on desktop. */
-.swgrid { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:16px 28px; }
-.swblock h3 { margin:0 0 6px; font-size:13px; font-weight:600; color:var(--fg); }
-.swblock ol, .swblock ul { margin:0; padding-left:18px; font-size:13px; color:var(--fg-2); display:flex; flex-direction:column; gap:3px; }
-.swblock .small2 { margin:8px 0 0; }
-.swblock .swsrc { display:inline-block; margin-top:6px; font-size:12px; color:var(--fg-dim); }
-@media (max-width:640px) { .swgrid { grid-template-columns:1fr; } .must-menu { min-width:240px; } }
 .aiempty a { color:var(--fg); text-decoration-color:var(--edge-strong); text-underline-offset:3px; }
 @media (max-width:640px) { .seg button { padding:4px 8px; } }
+
+/* Card, option B: one quiet line (shown only with ?v=b). */
+.featline { margin:0; font-size:11px; color:var(--fg-dim); display:none; }
+.featline b { font-weight:500; color:var(--fg-2); }
+html[data-v="b"] .featline { display:block; }
+
+/* FoldRow look (YouCoded components/ui/FoldRow): a boxed row, arrow at the right, content opens INSIDE the same box, and the whole box lights when pointed at. */
+.foldrow { padding:0; transition:background .12s; }
+.foldrow > summary { list-style:none; display:flex; align-items:center; justify-content:space-between; gap:8px; padding:8px 12px; cursor:pointer; font-size:13px; font-weight:500; color:var(--fg); border-radius:inherit; }
+.foldrow > summary::-webkit-details-marker { display:none; }
+.foldrow > summary::after { content:""; flex:none; margin-left:4px; width:7px; height:7px; border-right:2px solid var(--fg-muted); border-bottom:2px solid var(--fg-muted); transform:rotate(45deg); transition:transform .15s; }
+.foldrow[open] > summary::after { transform:rotate(-135deg); }
+.foldrow > summary > span:first-child { flex:1; min-width:0; }
+.foldrow:hover { background:var(--inset); }
+.foldrow > summary:focus-visible { outline:2px solid var(--accent); outline-offset:-2px; }
+.foldbody { padding:0 12px 10px; display:flex; flex-direction:column; gap:8px; font-size:13px; color:var(--fg-2); }
+.foldbody p { margin:0; }
+.foldbody .aiq { margin:0; padding:6px 10px; border-left:3px solid var(--edge-strong); color:var(--fg-2); font-style:italic; }
+.foldbody .aiq a { font-style:normal; white-space:nowrap; color:var(--fg); }
+.foldbody .aih { margin:4px 0 0; font-size:12px; font-weight:500; color:var(--fg-muted); }
+.foldbody a { color:var(--fg); }
+
+/* Switch guide: one first-level card, three folds. */
+.swfolds { display:flex; flex-direction:column; gap:8px; }
+.swsteps { margin:0; padding-left:20px; display:flex; flex-direction:column; gap:4px; font-size:13px; color:var(--fg-2); }
+.swsrc { font-size:12px; color:var(--fg-dim); align-self:flex-start; }
+.swcard { order:0; }
+
+/* Project Features: a first-level card; each tag a boxed row, name left, status Pill right, note under the name. */
+.fx-list { display:flex; flex-direction:column; gap:8px; }
+.fx-group { margin:4px 0 0; }
+.frowx { display:flex; align-items:center; justify-content:space-between; gap:12px; padding:8px 12px; border-radius:var(--radius-lg); background:color-mix(in srgb,var(--inset) 50%,transparent); border:1px solid var(--edge-card); }
+.fx-main { display:flex; flex-direction:column; gap:2px; min-width:0; }
+.fx-name { font-size:13px; font-weight:500; color:var(--fg); }
+.fx-note { font-size:12px; color:var(--fg-dim); } .fx-note a { color:var(--fg-2); }
+html[data-v="b"] .rvfeat .fx-list { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); }
+
+/* Compare table on a phone (Destin, round 5: tighten it): narrow sticky name column that truncates, short two-line column heads, smaller cells. */
+@media (max-width:640px) {
+  .cmp { font-size:12px; }
+  .cmp th, .cmp td { padding:4px 3px; }
+  .cmp thead th { min-width:54px; max-width:60px; font-size:10px; line-height:1.15; }
+  .cmp .cmph { display:-webkit-box; -webkit-line-clamp:2; -webkit-box-orient:vertical; overflow:hidden; text-decoration:none; text-align:center; width:100%; word-break:break-word; }
+  .cmp tbody th, .cmp thead th:first-child { min-width:0; width:76px; max-width:76px; padding:4px 6px; }
+  .cmp tbody th a { display:block; overflow:hidden; text-overflow:ellipsis; white-space:nowrap; font-size:12px; }
+  .cell { width:22px; height:22px; font-size:12px; }
+  .cmpwrap .cmpscroll { border-radius:var(--radius-md); }
+}
+
+/* Contributor preferences. The owner's row: a boxed Settings-style row that opens the popup (arrow at the right). Visitors see boxed rows like the Features rows. */
+.prefs-slot { display:flex; flex-direction:column; gap:8px; }
+.prefs-slot[hidden] { display:none; }
+.prow .fx-note { font-size:12px; }
+.setrow { display:flex; align-items:center; justify-content:space-between; gap:8px; width:100%; text-align:left; padding:8px 12px; cursor:pointer; font:inherit; color:var(--fg); }
+.setrow > span { display:flex; flex-direction:column; gap:2px; min-width:0; } .setrow b { font-size:13px; font-weight:500; } .setrow small { font-size:12px; color:var(--fg-dim); }
+.setrow::after { content:""; flex:none; width:7px; height:7px; border-right:2px solid var(--fg-muted); border-top:2px solid var(--fg-muted); transform:rotate(45deg); }
+.setrow:hover { background:var(--inset); }
+.prefs { display:flex; flex-direction:column; gap:16px; }
+.pgroup[hidden] { display:none; }
+.pgroup .label { margin:0 0 8px; }
+.pcard { padding:12px; display:flex; flex-direction:column; gap:8px; }
+.popts { display:flex; flex-direction:column; gap:2px; }
+.popt { display:flex; align-items:flex-start; gap:10px; padding:6px 8px; border-radius:var(--radius-md); cursor:pointer; position:relative; }
+.popt:hover { background:var(--inset); }
+.popt[hidden] { display:none; }
+.popt input { position:absolute; opacity:0; inset:0; cursor:pointer; margin:0; }
+.popt .ctl { flex:none; width:18px; height:18px; margin-top:1px; border:1.5px solid var(--edge-strong); background:var(--inset); display:inline-grid; place-items:center; font-size:12px; color:transparent; }
+.popt .ctl.r { border-radius:9999px; } .popt .ctl.c { border-radius:5px; }
+.popt input:checked + .ctl.c { background:var(--accent); border-color:var(--accent); color:var(--on-accent); }
+.popt input:checked + .ctl.r { border-color:var(--accent); background:radial-gradient(circle, var(--accent) 0 4px, var(--inset) 5px); }
+.popt input:disabled + .ctl { opacity:.45; } .popt input:disabled ~ .pt { opacity:.55; }
+.popt input:focus-visible + .ctl { outline:2px solid var(--accent); outline-offset:2px; }
+.popt .pt { display:flex; flex-direction:column; gap:1px; min-width:0; } .popt .pt b { font-size:13px; font-weight:500; color:var(--fg); } .popt .pt small { font-size:12px; color:var(--fg-dim); }
+.pfield { width:100%; } .pfield[hidden] { display:none; }
+.psaved { margin:0; text-align:right; }

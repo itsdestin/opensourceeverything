@@ -16,6 +16,8 @@
     issues: sampleIssues(),
     // "Tag my project": a developer's pitch per listed project (live = approved, pending = waiting for a mod)
     pitches: samplePitches(),
+    // Contributor preferences ("How you'd like help"), one set per claimed project; docs/server-rules.md -> Contributor preferences
+    prefs: { penpot: { ai: 'traditional-developers-only', aiTicks: ['no-agents'], start: 'issue', startLink: '', startSmall: true, wanted: ['translation', 'testing', 'co-maintainers'], newcomers: 'help', disclose: ['pr'], sign: 'dco', signLink: '', review: 'weeks', note: 'We are rewriting the interface for v3; please hold interface changes until then.', updated: now - 2 * D } },
     notes: sampleNotes().map((n) => ({ voters: [], extraVotes: 0, status: 'open', replies: [], reports: [], body: '', ...n })),
   });
   const day = (n) => now - n * D;
@@ -341,6 +343,28 @@
     async livePitches(ids) {
       const out = {}; for (const id of ids) { const p = S.pitches.find((y) => y.project === id && y.live && y.verified && (!y.needsConfirm || y.confirmed) && !banned({ login: y.owner })); if (p) out[id] = { ...p.live, by: p.owner, repo: p.repo, ownerCheck: p.confirmed ? 'mods' : 'github', updated: p.updated }; }
       return delay(out);
+    },
+
+    // ── Contributor preferences: shown to everyone as rows under How to help; set by the project's approved owner, changed any time, saved as they change ──
+    async prefs(ids) { S.prefs ??= {}; const out = {}; for (const id of ids) if (S.prefs[id]) out[id] = S.prefs[id]; return delay(out); },
+    async prefsSave(project, b) {
+      const x = me(); if (!x) return fail(...NEED_SIGNIN);
+      // Only the account whose claim was approved for this project may set them.
+      if (!S.pitches.some((y) => y.project === project && y.owner === x.login && y.live && y.verified)) return fail(403, 'Only the project\'s approved owner can change this.');
+      const one = (v, list) => (list.includes(v) ? v : '');
+      const many = (v, list, max = 9) => [...new Set(Array.isArray(v) ? v : [])].filter((i) => list.includes(i)).slice(0, max);
+      const link = (l) => (/^(https?:\/\/[^\s]{3,300}|[^\s@]{1,64}@[^\s@]{1,120})$/.test(l ?? '') ? l : '');
+      const c = {
+        ai: one(b.ai, ['non-developers-welcome', 'traditional-developers-only', 'not-accepted', 'see-policy']), aiPolicy: String(b.aiPolicy ?? '').slice(0, 200),
+        aiTicks: many(b.aiTicks, ['beginner', 'own-words', 'no-agents']),
+        start: one(b.start, ['pr', 'issue', 'forum', 'email', 'closed']), startLink: link(b.startLink), startSmall: !!b.startSmall,
+        wanted: many(b.wanted, ['code', 'design', 'docs', 'translation', 'testing', 'triage', 'co-maintainers', 'funding'], 3),
+        newcomers: one(b.newcomers, ['help', 'self', 'experienced']),
+        disclose: many(b.disclose, ['none', 'pr', 'form', 'commit']),
+        sign: one(b.sign, ['none', 'dco', 'cla']), signLink: link(b.signLink),
+        review: one(b.review, ['days', 'weeks', 'month', 'hide']), note: String(b.note ?? '').slice(0, 200), updated: Date.now(),
+      };
+      S.prefs ??= {}; S.prefs[project] = c; save(); return delay(c);
     },
     async modPitches() {
       if (!isMod(me())) return fail(403, 'Mods only.');

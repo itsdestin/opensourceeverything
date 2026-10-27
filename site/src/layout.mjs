@@ -6,16 +6,13 @@ import { esc, url, ICON, SITE_URL, SUBREDDIT, REPO, SOCIAL, DEMO, API_URL } from
 const BUILD = Date.now().toString(36);
 const asset = (p) => `${url(p)}?v=${BUILD}`;
 
-// WHY only a magnifier here (Destin, round 4): the inline search box is gone from every page except search itself; the button opens the search page.
-// WHY a back button on project pages (Destin, redesign round 3): you arrive from a list, so the corner goes back to it; with no earlier page
-// on this site (a link from elsewhere) it goes home. redesign.js turns the click into "back".
-const BACK = '<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m15 18-6-6 6-6"/></svg>';
-export function topStrip({ search = true, back = false } = {}) {
+// WHY (Destin, round 5: "there should be a way to get back home", "sign in needs the glassy look"): the top-left control is always Home (the site mark, plus the
+// name on desktop); search and Sign in share its glass look, so the three controls read as one set. The back arrow now lives in the breadcrumb row (redesign.mjs crumbs).
+export function topStrip({ search = true } = {}) {
   return `<div class="top">
-  ${back ? `<a class="icon-btn" data-back href="${url()}" title="Back" aria-label="Back">${BACK}</a>` : `<a class="icon-btn" href="${url()}" title="Home" aria-label="Open Source Everything home">${ICON.home}</a>`}
-  <a class="top-title" href="${url()}">Open Source Everything</a>
+  <a class="glass homebtn" href="${url()}" title="Home" aria-label="Open Source Everything home">${ICON.home}<span class="hname">Open Source Everything</span></a>
   <div class="grow"></div>
-${search ? `<a class="icon-btn top-search" href="${url('search/')}" title="Search" aria-label="Search">${ICON.search.replace(/width="14" height="14"/, 'width="18" height="18"')}</a>` : ''}
+${search ? `<a class="glass iconbtn top-search" href="${url('search/')}" title="Search" aria-label="Search">${ICON.search.replace(/width="14" height="14"/, 'width="16" height="16"')}</a>` : ''}
   ${SOCIAL ? '<div class="acct" data-account></div>' : ''}
 </div>`;
 }
@@ -53,7 +50,7 @@ export function footer() {
 </div>`;
 }
 
-export function page({ path, title, description, body, styles = [], scripts = [], search = true, back = false, jsonLd }) {
+export function page({ path, title, description, body, styles = [], scripts = [], search = true, jsonLd }) {
   const full = title ? `${title} · Open Source Everything` : 'Open Source Everything: open-source replacements for the apps you use';
   return `<!doctype html>
 <html lang="en">
@@ -79,11 +76,13 @@ ${styles.map((s) => `<link rel="stylesheet" href="${asset('assets/' + s)}">`).jo
 ${SOCIAL ? `<link rel="stylesheet" href="${asset('assets/contrib.css')}">` : ''}
 <link rel="stylesheet" href="${asset('assets/mobile.css')}">
 <link rel="stylesheet" href="${asset('assets/redesign.css')}">
+<script>/* WHY ?v=b: the card's quiet "Has 4 of 6" line is shown only in option B, so Destin can compare A (no line) and B; remembered for the tab. */
+(function () { try { var v = new URLSearchParams(location.search).get('v'), s = window.sessionStorage; if (v === 'b') s.setItem('ose-v', 'b'); else if (v === 'a') s.removeItem('ose-v'); if (s.getItem('ose-v') === 'b') document.documentElement.dataset.v = 'b'; } catch (e) {} })();</script>
 ${jsonLd ? `<script type="application/ld+json">${JSON.stringify(jsonLd)}</script>` : ''}
 <script>window.OI = { base: ${JSON.stringify(url())}, repo: ${JSON.stringify(REPO)}, chev: ${JSON.stringify(ICON.chev)} };</script>
 </head>
 <body>
-${topStrip({ search, back })}
+${topStrip({ search })}
 <main class="page">
 ${body}
 ${footer()}

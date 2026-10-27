@@ -102,6 +102,10 @@ One file, `site/assets/filter.js` (words in `site/assets/blocked-words.js`), is 
 - `GET /pitches/live?projects=a,b` → `{ projectId: { by, repo, …pitch, ownerCheck: github|mods, updated } }`: public, approved and (when required) mod-confirmed text only (drawn on cards and project pages by the page, so approval is live with no rebuild)
 - Mods: `GET /mod/pitches` (pending and live; with `needsConfirm`, `confirmed`, `flags`, `flag`, `stars`, `ownerDays`, `rivalClaims`), `POST /mod/pitches/:id { action: confirm-claim|approve|reject|revoke, reason }`, `GET /mod/suggestions` → `{ items: [{ number, name, kind, url, author, created, status, votes, verdict: ok|needs-mod|unchecked }] }` (verdict = the robot's `robot-ok` / `needs-mod` label)
 
+### Contributor preferences ("How you'd like help"; migration `0004_prefs.sql`, not yet run)
+- `GET /prefs?projects=a,b` → `{ projectId: { ai, aiPolicy, aiTicks, start, startLink, startSmall, wanted (up to 3), newcomers, disclose, sign, signLink, review, note, updated } }`: public, only while the owner's approved claim still stands (the same rule as `/pitches/live`).
+- `PUT /prefs/:project { …the same fields }` → the saved set. Only the account whose claim for that project is approved; every answer must be on its fixed list (`cleanPrefs` in `worker/src/rules.js`), links must be web links or email addresses, text is cut to 200 characters and goes through the content filter (anything it would hold is refused instead, so there is no mod step). The page sends the whole set after every change, so it has its own limit (200 an hour).
+
 ### The suggestion robot (GitHub forms stay the way to suggest)
 - Labels the robot sets: `robot-ok`, `needs-mod` (a problem it found, a GitHub account under 14 days old, an earlier open suggestion asking for the same thing, or a failed apply with the reason in a comment). Mods approve with the `approved` label as before.
 - After a merge, a comment thanks the person and links to the live page.
