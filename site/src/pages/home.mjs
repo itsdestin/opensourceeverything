@@ -1,7 +1,7 @@
 // The home page, in the order a newcomer needs it (Destin, Oct 27: "clearer… more polished for newcomers"):
 // 1. what this is and a big search, 2. popular switches with real screenshots, 3. every category as a tidy card,
 // 4. what's still missing, 5. the builders' card. Everything sits inside a raised card (no bare text).
-import { url, esc, ICON, suggestUrl, shot, SITE_URL, SOCIAL } from '../lib.mjs';
+import { url, esc, ICON, suggestUrl, shot, SITE_URL, SOCIAL, counts } from '../lib.mjs';
 import { appUrl, sortAlts } from '../cards.mjs';
 
 // WHY two lists: the picture cards need a replacement with a real screenshot, while the "Try" chips can name any
@@ -31,7 +31,8 @@ const CAT_ICON = {
 export default function home(d) {
   const catOrder = (g) => (LATER.has(g.category) ? 100 : 0) + d.categories.findIndex((c) => c.id === g.category);
   const fullCount = (g) => g.alternatives.filter((a) => a.fit === 'full').length;
-  const closedCount = new Set(d.groups.flatMap((g) => g.closed)).size;
+  // WHY lib's counts(): the same numbers as About and the page descriptions (see lib.mjs).
+  const { projects: projectCount, closedApps: closedCount, groups: jobCount } = counts(d);
   const altsFor = (name) => sortAlts([...new Map(d.groups.filter((g) => g.closed.includes(name))
     .flatMap((g) => g.alternatives.map((a) => ({ a, p: d.projById.get(a.project) }))).filter((x) => x.p).map((x) => [x.p.id, x])).values()]);
 
@@ -88,7 +89,7 @@ export default function home(d) {
         <div class="menu search-menu" role="listbox"></div>
       </div>
       <div class="pop"><span class="muted11">Try</span><div class="fchips">${TRY.map((n) => `<a class="fchip" href="${appUrl(n)}">${esc(n)}</a>`).join('')}</div></div>
-      <p class="stats-line"><b class="num">${d.projects.length}</b> open projects · <b class="num">${closedCount}</b> closed apps · <b class="num">${d.groups.length}</b> jobs</p>
+      <p class="stats-line"><b class="num">${projectCount}</b> open-source projects · <b class="num">${closedCount}</b> closed apps · <b class="num">${jobCount}</b> jobs</p>
     </div>
     ${collage.length === 3 ? `<div class="collage" aria-hidden="true">${collage.map((u, i) => `<img class="c${i}" src="${esc(u)}" alt="" referrerpolicy="no-referrer">`).join('')}</div>` : ''}
   </div>
@@ -121,7 +122,7 @@ export default function home(d) {
 
   return [{
     path: '', title: '', search: false, styles: ['pages.css', 'group.css'],
-    description: `Open-source replacements for ${closedCount} closed apps, grouped by the job they do, with where nothing good exists yet. Supported by r/TrueOpenSource.`,
+    description: `${projectCount} open-source projects that replace ${closedCount} closed apps, grouped by the ${jobCount} jobs they do, with where nothing good exists yet. Supported by r/TrueOpenSource.`,
     jsonLd: { '@context': 'https://schema.org', '@type': 'WebSite', name: 'Open Source Everything', url: SITE_URL },
     body,
   }];

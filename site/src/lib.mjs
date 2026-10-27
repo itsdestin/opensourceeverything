@@ -43,6 +43,15 @@ export function actions(p) {
   return l;
 }
 
+// ONE set of numbers for every place that states a size (home, About, meta descriptions, category pages).
+// WHY (found Oct 26: home said 431 projects, About "453 listings", the description 265 closed apps): each page counted
+// its own way. Closed apps are counted by address, so "Datadog" and "DataDog" are one app; projects are counted once
+// however many groups list them. "Listings" (a project once per group) is no longer shown to visitors.
+export const appKey = (name) => name.toLowerCase().normalize('NFKD').replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, '');
+export function counts(d) {
+  return { projects: d.projects.length, closedApps: new Set(d.groups.flatMap((g) => g.closed.map(appKey))).size, groups: d.groups.length };
+}
+
 export function loadData(root) {
   const read = (f) => JSON.parse(readFileSync(join(root, 'data', f), 'utf8'));
   const categories = read('categories.json').categories;
@@ -52,7 +61,10 @@ export function loadData(root) {
   const catById = new Map(categories.map((c) => [c.id, c]));
   const groupsByProject = new Map();
   for (const g of groups) for (const a of g.alternatives) (groupsByProject.get(a.project) ?? groupsByProject.set(a.project, []).get(a.project)).push({ group: g, alt: a });
-  return { categories, groups, projects, projById, catById, groupsByProject };
+  // Groups that were split (data/redirects.json): old id -> new ids. Optional, so older data still builds.
+  let moved = {}; let movedApps = {};
+  try { { const r = read('redirects.json'); moved = r.moved ?? {}; movedApps = r.apps ?? {}; } } catch { /* none yet */ }
+  return { categories, groups, projects, projById, catById, groupsByProject, moved, movedApps };
 }
 
 export const ICON = {

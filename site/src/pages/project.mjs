@@ -12,6 +12,8 @@ export default function projectPages(d) {
     const replaces = [...new Set(listed.flatMap(({ group }) => group.closed.slice(0, 3)))];
     const description = `${p.name}: ${p.summary}`.slice(0, 300);
 
+    // WHY no "What we couldn't confirm" section or "checked by AI" line (Destin, Oct 26): the AI pre-fill's notes are for mods,
+    // not visitors. They stay in data/projects.json (field "unconfirmed"); the public copy of the data drops them (build.mjs).
     const body = `
   <div class="surface identity">
     <div class="row">
@@ -19,7 +21,7 @@ export default function projectPages(d) {
     </div>
     <div class="chiprow">${factChips(p, null, '', { links: true })}</div>
     <p class="body2">${esc(p.summary)}</p>
-    <div class="idfoot"><p class="muted11">Description written from the project's own page; checked by AI.</p>${links ? `<div class="links">${links}</div>` : ''}</div>
+    <div class="idfoot">${links ? `<div class="links">${links}</div>` : ''}</div>
   </div>
 
   <div class="cols">
@@ -66,12 +68,6 @@ export default function projectPages(d) {
           <a class="btn md secondary" href="${esc(suggestUrl('5-report', { project: p.name }))}" rel="noopener">Report this project</a>
         </div>
       </section>
-      ${p.unconfirmed?.length ? `<section class="surface sec">
-        <details class="fold">
-          <summary><span class="h-large">What we couldn't confirm</span><span class="count">${p.unconfirmed.length}</span></summary>
-          <ul class="unc">${p.unconfirmed.map((u) => `<li>${esc(u)}</li>`).join('')}</ul>
-        </details>
-      </section>` : ''}
     </div>
   </div>`;
 

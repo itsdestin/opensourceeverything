@@ -23,7 +23,7 @@ export default function categories(d) {
       body: `
   <div class="surface identity">
     <div><div class="muted11">Category</div><h1 class="h-subject">${esc(c.name)}</h1>
-      <p class="desc12" style="margin-top:4px">${gs.length} ${gs.length === 1 ? 'group' : 'groups'}, ${n} open-source listings. Each group is one job; pick the one you need.</p></div>
+      <p class="desc12" style="margin-top:4px">${gs.length} ${gs.length === 1 ? 'group' : 'groups'}, ${n} open-source ${n === 1 ? 'project' : 'projects'}. Each group is one job; pick the one you need.</p></div>
     ${SOCIAL ? `<div><a class="btn md secondary" href="${url(`c/${c.id}/board/`)}">See the ${esc(c.name)} board</a></div>` : ''}
     <div class="pop" style="padding-left:0"><span class="muted11">Other categories</span><div class="fchips">${others}</div></div>
   </div>
