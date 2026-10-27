@@ -1,0 +1,115 @@
+{
+  "title": "New map structure: operating systems, hardware, and niche tools",
+  "key": "ose-taxonomy-v2",
+  "out": "taxonomy-v2.questions.html",
+  "themes": ["light", "midnight"],
+  "steps": [
+    {
+      "id": "P-1",
+      "page": "The proposal",
+      "intro": "Built from 2,785 real posts (all of r/TrueOpenSource, plus r/opensource, r/selfhosted, r/linux, r/coolgithubprojects, r/SideProject and the r/ClaudeAI TV and keyboard threads). Of the 1,880 posts about a piece of software or a device, today's map fits 28%. The new structure fits 91% (r/TrueOpenSource alone: 95%)."
+    },
+    {
+      "id": "T-structure",
+      "words": true,
+      "surface": "The whole map",
+      "path": "Home page and every category",
+      "headline": "Go ahead with this structure: 6 areas, 27 categories, 317 groups?",
+      "changed": "Apps for everyday life (9 categories, including new Games and gaming) · AI (AI apps; Coding agents and their tools; Building with AI) · Operating systems (Computer systems and Linux distributions, sorted by who they're for: leaving Windows or Mac, gaming, privacy, old computers, home server…; Desktops and customization; Under the hood: kernel, drivers, running Windows apps; Phones and tablets) · Hardware and devices (TVs and streaming boxes: home screens, removing ads, replacing the TV's system, like tv-vibehack, Homestead and skippy-tv; Computer accessories: keyboard and mouse tools vs Razer, Logitech and Corsair apps, OpenRGB, BIOS; Home, network and gadgets; Making things: 3D printing, electronics, radio) · Developer tools (Writing code; Hosting and running code; Databases and data; Building blocks for apps) · Self-hosting and system tools (Home servers; IT security; Computer utilities).",
+      "notice": "All 123 current groups keep their addresses; 41 move to a better category; 194 are new. New groups' projects are candidates until a check confirms their licenses and facts. Full write-up: docs/research/taxonomy-v2.md.",
+      "yes": "Go ahead",
+      "no": "Rethink it"
+    },
+    {
+      "id": "T-top",
+      "words": true,
+      "surface": "Home page",
+      "path": "Browse by category",
+      "headline": "How should the top level be organised?",
+      "today": "11 flat categories on the home page.",
+      "problem": "27 categories in one flat list is a wall; too few hides operating systems and hardware.",
+      "proposal": "Three ways.",
+      "options": [
+        { "id": "areas", "label": "6 areas, categories inside", "pros": ["Operating systems, Hardware and Developer tools each get a clear front door.", "Each area page stays a short list."], "cons": ["One more click to reach a category."], "recommended": true },
+        { "id": "flat", "label": "About 15 flat categories", "pros": ["One click to everything."], "cons": ["Developer and hardware topics crowd the everyday ones."] },
+        { "id": "today-plus", "label": "Today's 11 plus 4 new", "pros": ["Smallest change."], "cons": ["Operating systems and hardware stay buried."] }
+      ]
+    },
+    {
+      "id": "T-home",
+      "words": true,
+      "surface": "Home page",
+      "path": "Below the search",
+      "headline": "What should the home page show first?",
+      "today": "Popular alternatives, then all categories.",
+      "problem": "Most visitors want everyday apps; builders and Linux people want their areas fast too.",
+      "proposal": "Two ways.",
+      "options": [
+        { "id": "everyday-first", "label": "Everyday first, areas below", "pros": ["Normal visitors see what they came for.", "A second row of area tiles (AI, Operating systems, Hardware, Developer tools, Self-hosting) is one scroll away."], "cons": ["Developer areas sit lower."], "recommended": true },
+        { "id": "six-tiles", "label": "Six area tiles first", "pros": ["Everything visible at once."], "cons": ["Everyday apps become one tile among six."] }
+      ]
+    },
+    {
+      "id": "T-thin",
+      "words": true,
+      "surface": "Group pages",
+      "path": "New groups with few projects",
+      "headline": "Show all 317 groups, or hide the 20 thinnest until a project lands in them?",
+      "today": "Every group shows.",
+      "problem": "Near-empty groups look unfinished; hiding too many drops coverage.",
+      "proposal": "Hiding the 20 thinnest keeps coverage near 90%. Showing only busy groups would drop it to about 79%.",
+      "options": [
+        { "id": "hide-thin", "label": "Hide the 20 thinnest", "pros": ["Fewer empty-looking pages.", "Coverage stays near 90%."], "cons": ["A few real posts have nowhere to land until those groups fill."], "recommended": true },
+        { "id": "all", "label": "Show all 317", "pros": ["Highest coverage."], "cons": ["Some groups start with 1–2 projects."] }
+      ]
+    },
+    {
+      "id": "T-noclosed",
+      "words": true,
+      "surface": "Group pages",
+      "path": "Groups like 'API clients' or 'Coding agent memory'",
+      "headline": "Groups with no paid rival just list the open projects, with no 'Replaces' line?",
+      "today": "Every group lists closed apps it replaces.",
+      "problem": "Most developer tools, utilities and device hacks don't replace a paid product; forcing one would be made up.",
+      "proposal": "Those groups are named by the job and list open projects only. Where a closed rival exists (Postman for API clients), it still shows.",
+      "yes": "Yes",
+      "no": "No"
+    },
+    {
+      "id": "T-hardware",
+      "words": true,
+      "surface": "Hardware and devices",
+      "path": "TVs, keyboards, mice, routers",
+      "headline": "Add an honest tag on hardware groups saying the device itself stays closed?",
+      "today": "No hardware on the map.",
+      "problem": "A TV launcher is open source, but the Samsung TV it runs on isn't; the page mustn't imply otherwise.",
+      "proposal": "A short tag on those groups: 'Runs on a device you already own; the device itself stays closed.'",
+      "yes": "Add the tag",
+      "no": "No tag"
+    },
+    {
+      "id": "T-agents",
+      "words": true,
+      "surface": "AI",
+      "path": "Coding agents and their tools",
+      "headline": "Put coding-agent tools (memory, usage meters, MCP servers) under AI rather than Developer tools?",
+      "today": "AI tools is one category.",
+      "problem": "It's the busiest topic in the posts (150), and it sits between AI and developer tools.",
+      "proposal": "Under AI, as 'Coding agents and their tools', next to AI apps and Building with AI.",
+      "yes": "Under AI",
+      "no": "Under Developer tools"
+    },
+    {
+      "id": "T-next",
+      "words": true,
+      "surface": "The data",
+      "path": "194 new groups",
+      "headline": "After you approve the structure, fill the new groups the same way as before?",
+      "today": "New groups have candidate projects only, not yet checked.",
+      "problem": "Unchecked licenses would break the 'only real open source' promise.",
+      "proposal": "Builders verify each candidate's license with the checker, write plain summaries, set Easy/Advanced setup and devices, add checklists for the new groups, and I show you a deck of the new pages before anything goes live.",
+      "yes": "Yes",
+      "no": "Wait"
+    }
+  ]
+}
