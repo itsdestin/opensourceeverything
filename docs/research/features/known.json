@@ -1,0 +1,2790 @@
+{
+ "batch": "known",
+ "checked": "2026-10-27",
+ "note": "Filled from well-known facts with links to official pages; no quotes",
+ "answers": {
+  "libreoffice-writer": {
+   "live-collab": {
+    "v": "no",
+    "note": "Desktop app has no live co-editing; Collabora Online adds it",
+    "source": "https://www.libreoffice.org/discover/writer/",
+    "quote": null
+   },
+   "word-files": {
+    "v": "partly",
+    "note": "Simple files are fine; complex layouts, fonts or tables can shift",
+    "source": "https://www.libreoffice.org/discover/writer/",
+    "quote": null
+   }
+  },
+  "libreoffice-calc": {
+   "live-collab": {
+    "v": "no",
+    "note": "Desktop app has no live co-editing; Collabora Online adds it",
+    "source": "https://www.libreoffice.org/discover/calc/",
+    "quote": null
+   },
+   "excel-files": {
+    "v": "partly",
+    "note": "Simple files are fine; complex formulas, charts or formatting can break",
+    "source": "https://www.libreoffice.org/discover/calc/",
+    "quote": null
+   },
+   "excel-macros": {
+    "v": "partly",
+    "note": "Many simple VBA macros run; others need rewriting",
+    "source": "https://www.libreoffice.org/discover/calc/",
+    "quote": null
+   }
+  },
+  "libreoffice-impress": {
+   "pptx-files": {
+    "v": "partly",
+    "note": "Simple decks are fine; animations or layouts can shift",
+    "source": "https://www.libreoffice.org/discover/impress/",
+    "quote": null
+   },
+   "live-collab": {
+    "v": "no",
+    "note": "Desktop app has no live co-editing; Collabora Online adds it",
+    "source": "https://www.libreoffice.org/discover/impress/",
+    "quote": null
+   },
+   "presenter-view": {
+    "v": "yes",
+    "note": null,
+    "source": "https://www.libreoffice.org/discover/impress/",
+    "quote": null
+   },
+   "slide-templates": {
+    "v": "partly",
+    "note": "A few built-in designs; more are downloadable",
+    "source": "https://www.libreoffice.org/discover/impress/",
+    "quote": null
+   },
+   "slide-animations": {
+    "v": "yes",
+    "note": null,
+    "source": "https://www.libreoffice.org/discover/impress/",
+    "quote": null
+   }
+  },
+  "grist": {
+   "excel-macros": {
+    "v": "no",
+    "note": "Uses Python formulas instead of VBA",
+    "source": "https://support.getgrist.com/formulas/",
+    "quote": null
+   }
+  },
+  "onlyoffice-docs": {
+   "slide-templates": {
+    "v": "partly",
+    "note": "A handful of built-in themes",
+    "source": "https://www.onlyoffice.com/presentation-editor.aspx",
+    "quote": null
+   }
+  },
+  "appflowy": {
+   "works-offline": {
+    "v": "yes",
+    "note": "Local mode keeps working without internet",
+    "source": "https://appflowy.com/",
+    "quote": null
+   },
+   "e2e-encrypted": {
+    "v": "no",
+    "note": "Cloud version is not end-to-end encrypted; local mode stays on your device",
+    "source": "https://appflowy.com/",
+    "quote": null
+   }
+  },
+  "thunderbird": {
+   "snooze-send-later": {
+    "v": "partly",
+    "note": "Send Later is built in; snooze needs an add-on",
+    "source": "https://support.mozilla.org/en-US/kb/send-later",
+    "quote": null
+   },
+   "google-outlook-sync": {
+    "v": "partly",
+    "note": "Google Calendar works; Outlook needs an add-on or newer version",
+    "source": "https://www.thunderbird.net/en-US/calendar/",
+    "quote": null
+   },
+   "meeting-invites": {
+    "v": "yes",
+    "note": null,
+    "source": "https://www.thunderbird.net/en-US/calendar/",
+    "quote": null
+   }
+  },
+  "roundcube": {
+   "unified-inbox": {
+    "v": "no",
+    "note": "Core handles one account at a time; plugins can add more",
+    "source": "https://roundcube.net/about/",
+    "quote": null
+   }
+  },
+  "mailspring": {
+   "e2e-encrypted": {
+    "v": "no",
+    "note": "Email is not end-to-end encrypted by the app",
+    "source": "https://getmailspring.com/",
+    "quote": null
+   }
+  },
+  "docuseal": {
+   "signing-order": {
+    "v": "yes",
+    "note": null,
+    "source": "https://www.docuseal.com/",
+    "quote": null
+   }
+  },
+  "apitable": {
+   "airtable-import": {
+    "v": "partly",
+    "note": "Spreadsheet or CSV import only",
+    "source": "https://aitable.ai/",
+    "quote": null
+   }
+  },
+  "baserow": {
+   "live-collab": {
+    "v": "yes",
+    "note": null,
+    "source": "https://baserow.io/user-docs",
+    "quote": null
+   }
+  },
+  "cal-com": {
+   "group-polls": {
+    "v": "no",
+    "note": "Booking links, not Doodle-style date votes",
+    "source": "https://cal.com/",
+    "quote": null
+   }
+  },
+  "nextcloud-polls": {
+   "calendar-connect": {
+    "v": "partly",
+    "note": "Checks your Nextcloud calendar only",
+    "source": "https://apps.nextcloud.com/apps/polls",
+    "quote": null
+   }
+  },
+  "harper": {
+   "style-tips": {
+    "v": "partly",
+    "note": "Mostly grammar and spelling with a few style rules",
+    "source": "https://writewithharper.com/docs/rules",
+    "quote": null
+   }
+  },
+  "mattermost": {
+   "company-sso": {
+    "v": "partly",
+    "note": "Free edition has GitLab sign-in; SAML and OpenID need a paid plan",
+    "source": "https://mattermost.com/pricing/",
+    "quote": null
+   }
+  },
+  "rocket-chat": {
+   "no-server-needed": {
+    "v": "partly",
+    "note": "Hosted version is paid",
+    "source": "https://www.rocket.chat/pricing",
+    "quote": null
+   }
+  },
+  "element": {
+   "threads": {
+    "v": "yes",
+    "note": null,
+    "source": "https://element.io/features",
+    "quote": null
+   },
+   "built-in-calls": {
+    "v": "yes",
+    "note": null,
+    "source": "https://element.io/features",
+    "quote": null
+   },
+   "slack-import": {
+    "v": "partly",
+    "note": "Needs a separate bridge tool",
+    "source": "https://element.io/features",
+    "quote": null
+   },
+   "cross-org": {
+    "v": "yes",
+    "note": "Matrix federation lets other servers talk to you",
+    "source": "https://element.io/features",
+    "quote": null
+   },
+   "company-sso": {
+    "v": "yes",
+    "note": null,
+    "source": "https://element.io/features",
+    "quote": null
+   },
+   "roles-moderation": {
+    "v": "yes",
+    "note": null,
+    "source": "https://element.io/features",
+    "quote": null
+   },
+   "no-phone-number": {
+    "v": "yes",
+    "note": null,
+    "source": "https://element.io/features",
+    "quote": null
+   },
+   "self-hostable": {
+    "v": "yes",
+    "note": null,
+    "source": "https://element.io/server-suite",
+    "quote": null
+   }
+  },
+  "mumble": {
+   "drop-in-voice": {
+    "v": "yes",
+    "note": null,
+    "source": "https://www.mumble.info/",
+    "quote": null
+   },
+   "screen-share": {
+    "v": "no",
+    "note": null,
+    "source": "https://www.mumble.info/",
+    "quote": null
+   },
+   "roles-moderation": {
+    "v": "yes",
+    "note": null,
+    "source": "https://www.mumble.info/",
+    "quote": null
+   },
+   "no-server-needed": {
+    "v": "no",
+    "note": "Someone has to run a server (many hosts rent them)",
+    "source": "https://www.mumble.info/",
+    "quote": null
+   }
+  },
+  "jitsi-meet": {
+   "large-meetings": {
+    "v": "partly",
+    "note": "Large meetings need extra video servers",
+    "source": "https://jitsi.org/jitsi-meet/",
+    "quote": null
+   },
+   "meeting-recording": {
+    "v": "partly",
+    "note": "Needs the Jibri recorder or Dropbox set up",
+    "source": "https://jitsi.org/jitsi-meet/",
+    "quote": null
+   },
+   "breakout-rooms": {
+    "v": "yes",
+    "note": null,
+    "source": "https://jitsi.org/jitsi-meet/",
+    "quote": null
+   }
+  },
+  "bigbluebutton": {
+   "no-account-needed": {
+    "v": "partly",
+    "note": "Guests join by link; hosts need an account",
+    "source": "https://bigbluebutton.org/teachers/features/",
+    "quote": null
+   },
+   "no-server-needed": {
+    "v": "partly",
+    "note": "Only through paid hosting",
+    "source": "https://bigbluebutton.org/",
+    "quote": null
+   },
+   "e2e-encrypted": {
+    "v": "no",
+    "note": "Calls are encrypted in transit but the server can see them",
+    "source": "https://bigbluebutton.org/",
+    "quote": null
+   }
+  },
+  "element-call": {
+   "no-account-needed": {
+    "v": "yes",
+    "note": "Guests can join by link",
+    "source": "https://call.element.io/",
+    "quote": null
+   },
+   "no-server-needed": {
+    "v": "yes",
+    "note": null,
+    "source": "https://call.element.io/",
+    "quote": null
+   },
+   "screen-share": {
+    "v": "yes",
+    "note": null,
+    "source": "https://call.element.io/",
+    "quote": null
+   },
+   "meeting-recording": {
+    "v": "no",
+    "note": null,
+    "source": "https://call.element.io/",
+    "quote": null
+   },
+   "breakout-rooms": {
+    "v": "no",
+    "note": null,
+    "source": "https://call.element.io/",
+    "quote": null
+   }
+  },
+  "mastodon": {
+   "custom-feeds": {
+    "v": "partly",
+    "note": "Lists, hashtags and filters; no algorithmic feeds",
+    "source": "https://docs.joinmastodon.org/user/network/",
+    "quote": null
+   }
+  },
+  "misskey": {
+   "no-server-needed": {
+    "v": "yes",
+    "note": "Join a public server",
+    "source": "https://misskey-hub.net/en/instances.html",
+    "quote": null
+   },
+   "move-account": {
+    "v": "partly",
+    "note": "Followers move; posts do not",
+    "source": "https://misskey-hub.net/en/docs/for-users/",
+    "quote": null
+   },
+   "custom-feeds": {
+    "v": "yes",
+    "note": "Antennas, lists and channels",
+    "source": "https://misskey-hub.net/en/docs/for-users/",
+    "quote": null
+   }
+  },
+  "bluesky": {
+   "quote-posts": {
+    "v": "yes",
+    "note": null,
+    "source": "https://bsky.app/",
+    "quote": null
+   }
+  },
+  "friendica": {
+   "phone-app": {
+    "v": "partly",
+    "note": "Unofficial apps only",
+    "source": "https://friendi.ca/",
+    "quote": null
+   },
+   "custom-feeds": {
+    "v": "yes",
+    "note": "Channels",
+    "source": "https://friendi.ca/",
+    "quote": null
+   },
+   "quote-posts": {
+    "v": "yes",
+    "note": null,
+    "source": "https://friendi.ca/",
+    "quote": null
+   },
+   "photo-albums": {
+    "v": "yes",
+    "note": null,
+    "source": "https://friendi.ca/",
+    "quote": null
+   }
+  },
+  "lemmy": {
+   "no-server-needed": {
+    "v": "yes",
+    "note": "Sign up on a public server",
+    "source": "https://join-lemmy.org/instances",
+    "quote": null
+   }
+  },
+  "piefed": {
+   "voting": {
+    "v": "yes",
+    "note": null,
+    "source": "https://join.piefed.social/",
+    "quote": null
+   },
+   "roles-moderation": {
+    "v": "yes",
+    "note": null,
+    "source": "https://join.piefed.social/",
+    "quote": null
+   }
+  },
+  "mbin": {
+   "roles-moderation": {
+    "v": "yes",
+    "note": null,
+    "source": "https://joinmbin.org/",
+    "quote": null
+   }
+  },
+  "pixelfed": {
+   "no-server-needed": {
+    "v": "yes",
+    "note": "Sign up on a public server",
+    "source": "https://pixelfed.org/servers",
+    "quote": null
+   },
+   "phone-app": {
+    "v": "yes",
+    "note": null,
+    "source": "https://pixelfed.org/",
+    "quote": null
+   },
+   "photo-stories": {
+    "v": "yes",
+    "note": null,
+    "source": "https://pixelfed.org/",
+    "quote": null
+   },
+   "photo-filters": {
+    "v": "yes",
+    "note": null,
+    "source": "https://pixelfed.org/",
+    "quote": null
+   }
+  },
+  "peertube": {
+   "stream-directory": {
+    "v": "partly",
+    "note": "Shared search index (SepiaSearch) you can opt into",
+    "source": "https://joinpeertube.org/",
+    "quote": null
+   }
+  },
+  "ghost": {
+   "federated": {
+    "v": "partly",
+    "note": "Social web support is newer and still growing",
+    "source": "https://ghost.org/",
+    "quote": null
+   },
+   "blog-import": {
+    "v": "yes",
+    "note": "Substack importer for posts and subscribers",
+    "source": "https://ghost.org/help/",
+    "quote": null
+   }
+  },
+  "writefreely": {
+   "paid-subscriptions": {
+    "v": "no",
+    "note": null,
+    "source": "https://writefreely.org/",
+    "quote": null
+   }
+  },
+  "wordpress": {
+   "no-server-needed": {
+    "v": "yes",
+    "note": "Free hosted version at WordPress.com",
+    "source": "https://wordpress.com/",
+    "quote": null
+   },
+   "paid-subscriptions": {
+    "v": "partly",
+    "note": "Through plugins such as WooCommerce Subscriptions",
+    "source": "https://wordpress.org/plugins/",
+    "quote": null
+   },
+   "federated": {
+    "v": "partly",
+    "note": "Through the official ActivityPub plugin",
+    "source": "https://wordpress.org/plugins/activitypub/",
+    "quote": null
+   },
+   "blog-import": {
+    "v": "partly",
+    "note": "Imports posts from several platforms; subscribers not included",
+    "source": "https://wordpress.org/documentation/article/tools-import-screen/",
+    "quote": null
+   }
+  },
+  "gathio": {
+   "event-rsvp": {
+    "v": "yes",
+    "note": null,
+    "source": "https://gath.io/",
+    "quote": null
+   },
+   "event-tickets": {
+    "v": "no",
+    "note": "Free events only",
+    "source": "https://gath.io/",
+    "quote": null
+   },
+   "conference-tools": {
+    "v": "no",
+    "note": null,
+    "source": "https://gath.io/",
+    "quote": null
+   }
+  },
+  "indico": {
+   "no-server-needed": {
+    "v": "no",
+    "note": "Someone has to run a server",
+    "source": "https://getindico.io/",
+    "quote": null
+   },
+   "event-rsvp": {
+    "v": "yes",
+    "note": null,
+    "source": "https://getindico.io/",
+    "quote": null
+   },
+   "federated": {
+    "v": "no",
+    "note": null,
+    "source": "https://getindico.io/",
+    "quote": null
+   }
+  },
+  "diaspora": {
+   "phone-app": {
+    "v": "partly",
+    "note": "Unofficial apps only",
+    "source": "https://diasporafoundation.org/",
+    "quote": null
+   },
+   "photo-albums": {
+    "v": "partly",
+    "note": "Photos in posts only",
+    "source": "https://diasporafoundation.org/",
+    "quote": null
+   }
+  },
+  "rawtherapee": {
+   "psd-files": {
+    "v": "no",
+    "note": "Raw photo editor; does not open PSD layers",
+    "source": "https://rawpedia.rawtherapee.com/",
+    "quote": null
+   },
+   "ai-photo-tools": {
+    "v": "no",
+    "note": null,
+    "source": "https://rawpedia.rawtherapee.com/",
+    "quote": null
+   }
+  },
+  "mypaint": {
+   "brush-library": {
+    "v": "yes",
+    "note": null,
+    "source": "https://mypaint.app/",
+    "quote": null
+   }
+  },
+  "inkscape": {
+   "image-trace": {
+    "v": "yes",
+    "note": "Trace Bitmap",
+    "source": "https://inkscape.org/doc/tutorials/tracing/tutorial-tracing.html",
+    "quote": null
+   }
+  },
+  "penpot": {
+   "stock-media": {
+    "v": "partly",
+    "note": "Through plugins such as Unsplash",
+    "source": "https://penpot.app/penpothub/plugins",
+    "quote": null
+   },
+   "magic-resize": {
+    "v": "no",
+    "note": null,
+    "source": "https://penpot.app/",
+    "quote": null
+   },
+   "ai-photo-tools": {
+    "v": "no",
+    "note": null,
+    "source": "https://penpot.app/",
+    "quote": null
+   }
+  },
+  "kdenlive": {
+   "video-templates": {
+    "v": "partly",
+    "note": "Title templates and community downloads; no large template set",
+    "source": "https://docs.kdenlive.org/",
+    "quote": null
+   }
+  },
+  "blender": {
+   "motion-graphics": {
+    "v": "partly",
+    "note": "Possible with geometry nodes and the video editor but slower than dedicated tools",
+    "source": "https://www.blender.org/features/",
+    "quote": null
+   }
+  },
+  "natron": {
+   "rigging-animation": {
+    "v": "no",
+    "note": null,
+    "source": "https://natrongithub.github.io/",
+    "quote": null
+   }
+  },
+  "audacity": {
+   "midi-instruments": {
+    "v": "no",
+    "note": "Can import MIDI but has no virtual instruments",
+    "source": "https://www.audacityteam.org/",
+    "quote": null
+   },
+   "loops-library": {
+    "v": "no",
+    "note": null,
+    "source": "https://www.audacityteam.org/",
+    "quote": null
+   },
+   "step-sequencer": {
+    "v": "no",
+    "note": null,
+    "source": "https://www.audacityteam.org/",
+    "quote": null
+   }
+  },
+  "ardour": {
+   "noise-removal": {
+    "v": "partly",
+    "note": "Through plugins",
+    "source": "https://ardour.org/features.html",
+    "quote": null
+   }
+  },
+  "librecad": {
+   "cam": {
+    "v": "no",
+    "note": "2D drafting only",
+    "source": "https://librecad.org/",
+    "quote": null
+   }
+  },
+  "linux-mint": {
+   "graphical-installer": {
+    "v": "yes",
+    "note": null,
+    "source": "https://linuxmint.com/",
+    "quote": null
+   },
+   "runs-windows-games": {
+    "v": "partly",
+    "note": "Works through Steam Proton, with some setup",
+    "source": "https://linuxmint.com/",
+    "quote": null
+   },
+   "preinstalled": {
+    "v": "partly",
+    "note": "From small specialist sellers",
+    "source": "https://linuxmint.com/",
+    "quote": null
+   }
+  },
+  "fedora": {
+   "graphical-installer": {
+    "v": "yes",
+    "note": null,
+    "source": "https://fedoraproject.org/workstation/",
+    "quote": null
+   },
+   "preinstalled": {
+    "v": "yes",
+    "note": "Lenovo sells ThinkPads with Fedora",
+    "source": "https://fedoraproject.org/workstation/",
+    "quote": null
+   },
+   "runs-windows-games": {
+    "v": "partly",
+    "note": "Works through Steam Proton, with some setup",
+    "source": "https://fedoraproject.org/workstation/",
+    "quote": null
+   },
+   "update-rollback": {
+    "v": "partly",
+    "note": "Needs setup, or use Silverblue",
+    "source": "https://fedoraproject.org/atomic-desktops/",
+    "quote": null
+   },
+   "long-support": {
+    "v": "partly",
+    "note": "Each version is supported about 13 months",
+    "source": "https://docs.fedoraproject.org/en-US/releases/lifecycle/",
+    "quote": null
+   }
+  },
+  "ubuntu": {
+   "graphical-installer": {
+    "v": "yes",
+    "note": null,
+    "source": "https://ubuntu.com/desktop",
+    "quote": null
+   },
+   "preinstalled": {
+    "v": "yes",
+    "note": "Dell and Lenovo sell machines with Ubuntu",
+    "source": "https://ubuntu.com/certified",
+    "quote": null
+   },
+   "runs-windows-games": {
+    "v": "partly",
+    "note": "Works through Steam Proton, with some setup",
+    "source": "https://ubuntu.com/desktop",
+    "quote": null
+   },
+   "nvidia-ready": {
+    "v": "yes",
+    "note": "Offered during install",
+    "source": "https://ubuntu.com/desktop",
+    "quote": null
+   },
+   "update-rollback": {
+    "v": "partly",
+    "note": "Needs snapshot setup",
+    "source": "https://ubuntu.com/desktop",
+    "quote": null
+   }
+  },
+  "lineageos": {
+   "banking-apps": {
+    "v": "partly",
+    "note": "Many work; some refuse",
+    "source": "https://lineageos.org/",
+    "quote": null
+   }
+  },
+  "f-droid": {
+   "no-account-needed": {
+    "v": "yes",
+    "note": null,
+    "source": "https://f-droid.org/en/docs/",
+    "quote": null
+   },
+   "auto-updates": {
+    "v": "partly",
+    "note": "Background updates need extra permission; otherwise tap to update",
+    "source": "https://f-droid.org/en/docs/",
+    "quote": null
+   }
+  },
+  "aurora-store": {
+   "app-review": {
+    "v": "no",
+    "note": "Apps come straight from Google Play",
+    "source": "https://auroraoss.com/",
+    "quote": null
+   }
+  },
+  "accrescent": {
+   "play-apps": {
+    "v": "no",
+    "note": "Its own catalogue only",
+    "source": "https://accrescent.app/",
+    "quote": null
+   },
+   "app-review": {
+    "v": "yes",
+    "note": null,
+    "source": "https://accrescent.app/",
+    "quote": null
+   }
+  },
+  "florisboard": {
+   "glide-typing": {
+    "v": "yes",
+    "note": null,
+    "source": "https://florisboard.org/",
+    "quote": null
+   },
+   "many-languages": {
+    "v": "yes",
+    "note": null,
+    "source": "https://florisboard.org/",
+    "quote": null
+   },
+   "no-tracking": {
+    "v": "yes",
+    "note": null,
+    "source": "https://florisboard.org/",
+    "quote": null
+   }
+  },
+  "heliboard": {
+   "many-languages": {
+    "v": "yes",
+    "note": null,
+    "source": "https://github.com/Helium314/HeliBoard",
+    "quote": null
+   },
+   "voice-typing": {
+    "v": "partly",
+    "note": "Hands off to another app",
+    "source": "https://github.com/Helium314/HeliBoard",
+    "quote": null
+   }
+  },
+  "meshcentral": {
+   "phone-app": {
+    "v": "partly",
+    "note": "Android app only",
+    "source": "https://meshcentral.com/",
+    "quote": null
+   }
+  },
+  "rustdesk": {
+   "unattended-access": {
+    "v": "yes",
+    "note": null,
+    "source": "https://rustdesk.com/docs/en/",
+    "quote": null
+   },
+   "session-file-transfer": {
+    "v": "yes",
+    "note": null,
+    "source": "https://rustdesk.com/docs/en/",
+    "quote": null
+   },
+   "phone-app": {
+    "v": "yes",
+    "note": null,
+    "source": "https://rustdesk.com/",
+    "quote": null
+   }
+  },
+  "ultravnc": {
+   "unattended-access": {
+    "v": "yes",
+    "note": null,
+    "source": "https://uvnc.com/",
+    "quote": null
+   },
+   "computer-app": {
+    "v": "partly",
+    "note": "Windows only",
+    "source": "https://uvnc.com/",
+    "quote": null
+   }
+  },
+  "firefox": {
+   "chrome-extensions": {
+    "v": "no",
+    "note": "Uses its own add-ons site",
+    "source": "https://addons.mozilla.org/en-US/firefox/",
+    "quote": null
+   }
+  },
+  "librewolf": {
+   "chrome-extensions": {
+    "v": "no",
+    "note": "Uses Firefox add-ons",
+    "source": "https://librewolf.net/",
+    "quote": null
+   }
+  },
+  "searxng": {
+   "no-server-needed": {
+    "v": "yes",
+    "note": "Use a public instance",
+    "source": "https://searx.space/",
+    "quote": null
+   }
+  },
+  "yacy": {
+   "no-server-needed": {
+    "v": "yes",
+    "note": "Runs as an app on your computer",
+    "source": "https://yacy.net/",
+    "quote": null
+   },
+   "image-search": {
+    "v": "yes",
+    "note": null,
+    "source": "https://yacy.net/",
+    "quote": null
+   }
+  },
+  "keepassxc": {
+   "phone-app": {
+    "v": "partly",
+    "note": "No official phone app; works with compatible unofficial apps",
+    "source": "https://keepassxc.org/docs/",
+    "quote": null
+   },
+   "share-with-others": {
+    "v": "partly",
+    "note": "Share the whole database file",
+    "source": "https://keepassxc.org/docs/",
+    "quote": null
+   }
+  },
+  "vaultwarden": {
+   "passkeys": {
+    "v": "yes",
+    "note": null,
+    "source": "https://github.com/dani-garcia/vaultwarden/wiki",
+    "quote": null
+   },
+   "passwords-import": {
+    "v": "yes",
+    "note": "Through the Bitwarden apps",
+    "source": "https://bitwarden.com/help/import-data/",
+    "quote": null
+   },
+   "breach-alerts": {
+    "v": "yes",
+    "note": "Through the Bitwarden apps",
+    "source": "https://bitwarden.com/help/reports/",
+    "quote": null
+   }
+  },
+  "aegis": {
+   "syncs-devices": {
+    "v": "partly",
+    "note": "Backs up to cloud storage you choose; no live sync",
+    "source": "https://getaegis.app/",
+    "quote": null
+   }
+  },
+  "ente-auth": {
+   "syncs-devices": {
+    "v": "yes",
+    "note": null,
+    "source": "https://ente.io/auth/",
+    "quote": null
+   },
+   "twofa-import": {
+    "v": "yes",
+    "note": null,
+    "source": "https://ente.io/auth/",
+    "quote": null
+   }
+  },
+  "2fas": {
+   "phone-app": {
+    "v": "yes",
+    "note": null,
+    "source": "https://2fas.com/",
+    "quote": null
+   },
+   "encrypted-backup": {
+    "v": "yes",
+    "note": null,
+    "source": "https://2fas.com/",
+    "quote": null
+   },
+   "twofa-import": {
+    "v": "yes",
+    "note": null,
+    "source": "https://2fas.com/",
+    "quote": null
+   },
+   "computer-app": {
+    "v": "no",
+    "note": "Browser extension only",
+    "source": "https://2fas.com/browser-extension/",
+    "quote": null
+   }
+  },
+  "keyoxide": {
+   "many-proof-sites": {
+    "v": "yes",
+    "note": null,
+    "source": "https://docs.keyoxide.org/service-providers/",
+    "quote": null
+   },
+   "no-account-needed": {
+    "v": "yes",
+    "note": null,
+    "source": "https://keyoxide.org/",
+    "quote": null
+   },
+   "works-in-browser": {
+    "v": "yes",
+    "note": null,
+    "source": "https://keyoxide.org/",
+    "quote": null
+   },
+   "phone-app": {
+    "v": "no",
+    "note": null,
+    "source": "https://keyoxide.org/",
+    "quote": null
+   }
+  },
+  "deepfence-threatmapper": {
+   "cloud-scan": {
+    "v": "yes",
+    "note": null,
+    "source": "https://github.com/deepfence/ThreatMapper",
+    "quote": null
+   },
+   "web-app-scan": {
+    "v": "no",
+    "note": null,
+    "source": "https://github.com/deepfence/ThreatMapper",
+    "quote": null
+   },
+   "weakness-updates": {
+    "v": "yes",
+    "note": null,
+    "source": "https://github.com/deepfence/ThreatMapper",
+    "quote": null
+   }
+  },
+  "faraday": {
+   "no-paid-edition": {
+    "v": "no",
+    "note": "Paid editions add features",
+    "source": "https://www.faradaysec.com/",
+    "quote": null
+   }
+  },
+  "nuclei": {
+   "weakness-updates": {
+    "v": "yes",
+    "note": "Template library updates",
+    "source": "https://docs.projectdiscovery.io/tools/nuclei/overview",
+    "quote": null
+   },
+   "security-reports": {
+    "v": "partly",
+    "note": "Raw export",
+    "source": "https://docs.projectdiscovery.io/tools/nuclei/running",
+    "quote": null
+   }
+  },
+  "gravitl": {
+   "no-server-needed": {
+    "v": "partly",
+    "note": "Hosted version is paid",
+    "source": "https://netmaker.io/pricing",
+    "quote": null
+   }
+  },
+  "netbird": {
+   "no-server-needed": {
+    "v": "yes",
+    "note": "Free hosted cloud",
+    "source": "https://netbird.io/pricing",
+    "quote": null
+   },
+   "phone-app": {
+    "v": "yes",
+    "note": null,
+    "source": "https://docs.netbird.io/how-to/getting-started",
+    "quote": null
+   }
+  },
+  "dub": {
+   "custom-domain": {
+    "v": "yes",
+    "note": null,
+    "source": "https://dub.co/docs",
+    "quote": null
+   },
+   "click-stats": {
+    "v": "yes",
+    "note": null,
+    "source": "https://dub.co/docs",
+    "quote": null
+   },
+   "qr-codes": {
+    "v": "yes",
+    "note": null,
+    "source": "https://dub.co/docs",
+    "quote": null
+   },
+   "no-server-needed": {
+    "v": "yes",
+    "note": "Free hosted version",
+    "source": "https://dub.co/pricing",
+    "quote": null
+   },
+   "integrations-api": {
+    "v": "yes",
+    "note": null,
+    "source": "https://dub.co/docs/api-reference/introduction",
+    "quote": null
+   }
+  },
+  "shlink": {
+   "qr-codes": {
+    "v": "yes",
+    "note": null,
+    "source": "https://shlink.io/documentation/",
+    "quote": null
+   }
+  },
+  "mullvad-vpn": {
+   "many-locations": {
+    "v": "yes",
+    "note": null,
+    "source": "https://mullvad.net/en/servers",
+    "quote": null
+   },
+   "kill-switch": {
+    "v": "yes",
+    "note": null,
+    "source": "https://mullvad.net/en/help/",
+    "quote": null
+   }
+  },
+  "proton-vpn": {
+   "split-tunnel": {
+    "v": "partly",
+    "note": "Not on every device",
+    "source": "https://protonvpn.com/support/protonvpn-split-tunneling/",
+    "quote": null
+   }
+  },
+  "outline-vpn": {
+   "no-account-needed": {
+    "v": "yes",
+    "note": null,
+    "source": "https://getoutline.org/",
+    "quote": null
+   }
+  },
+  "clamav": {
+   "point-and-click": {
+    "v": "partly",
+    "note": "Command line; ClamTk adds a window",
+    "source": "https://docs.clamav.net/",
+    "quote": null
+   },
+   "scheduled-scans": {
+    "v": "partly",
+    "note": "Needs setup with cron or Task Scheduler",
+    "source": "https://docs.clamav.net/",
+    "quote": null
+   }
+  },
+  "librechat": {
+   "phone-app": {
+    "v": "no",
+    "note": "Web app only",
+    "source": "https://www.librechat.ai/docs",
+    "quote": null
+   }
+  },
+  "ollama": {
+   "point-and-click": {
+    "v": "yes",
+    "note": "Desktop app for Mac and Windows",
+    "source": "https://ollama.com/download",
+    "quote": null
+   }
+  },
+  "comfyui": {
+   "community-models": {
+    "v": "yes",
+    "note": null,
+    "source": "https://docs.comfy.org/",
+    "quote": null
+   }
+  },
+  "invokeai": {
+   "video-generation": {
+    "v": "no",
+    "note": "Images only",
+    "source": "https://invoke-ai.github.io/InvokeAI/",
+    "quote": null
+   }
+  },
+  "buzz": {
+   "many-languages": {
+    "v": "yes",
+    "note": "Transcribes 90+ languages",
+    "source": "https://chidiwilliams.github.io/buzz/",
+    "quote": null
+   }
+  },
+  "calibre": {
+   "book-catalog": {
+    "v": "yes",
+    "note": "Store search to buy books",
+    "source": "https://manual.calibre-ebook.com/gui.html",
+    "quote": null
+   }
+  },
+  "koreader": {
+   "audiobook-player": {
+    "v": "no",
+    "note": null,
+    "source": "https://koreader.rocks/",
+    "quote": null
+   }
+  },
+  "audiobookshelf": {
+   "reading-tracking": {
+    "v": "partly",
+    "note": "Progress and collections, no ratings or reviews",
+    "source": "https://www.audiobookshelf.org/guides/",
+    "quote": null
+   }
+  },
+  "owncast": {
+   "low-latency": {
+    "v": "partly",
+    "note": "Typically 5 to 15 seconds",
+    "source": "https://owncast.online/docs/",
+    "quote": null
+   }
+  },
+  "fluent-reader": {
+   "feed-discovery": {
+    "v": "no",
+    "note": "Add each site yourself",
+    "source": "https://hyliu.me/fluent-reader/",
+    "quote": null
+   }
+  },
+  "jellyfin": {
+   "works-offline": {
+    "v": "partly",
+    "note": "Downloads in the phone app",
+    "source": "https://jellyfin.org/docs/",
+    "quote": null
+   }
+  },
+  "seafile": {
+   "files-on-demand": {
+    "v": "partly",
+    "note": "Drive client on some systems",
+    "source": "https://www.seafile.com/en/home/",
+    "quote": null
+   }
+  },
+  "owncloud-infinite-scale": {
+   "auto-backup-phone": {
+    "v": "yes",
+    "note": null,
+    "source": "https://doc.owncloud.com/ocis/next/",
+    "quote": null
+   },
+   "e2e-encrypted": {
+    "v": "no",
+    "note": "Server can read files; add Cryptomator to protect them",
+    "source": "https://doc.owncloud.com/ocis/next/",
+    "quote": null
+   }
+  },
+  "psitransfer": {
+   "over-internet": {
+    "v": "yes",
+    "note": "When the server is reachable from the internet",
+    "source": "https://github.com/psi-4ward/psitransfer",
+    "quote": null
+   }
+  },
+  "restic": {
+   "whole-system-restore": {
+    "v": "partly",
+    "note": "Restores files; rebuilding a machine needs extra steps",
+    "source": "https://restic.readthedocs.io/en/stable/",
+    "quote": null
+   }
+  },
+  "borgbackup": {
+   "whole-system-restore": {
+    "v": "partly",
+    "note": "Restores files; rebuilding a machine needs extra steps",
+    "source": "https://borgbackup.readthedocs.io/en/stable/",
+    "quote": null
+   }
+  },
+  "organic-maps": {
+   "place-details": {
+    "v": "partly",
+    "note": "From OpenStreetMap, where volunteers added them",
+    "source": "https://organicmaps.app/",
+    "quote": null
+   }
+  },
+  "comaps": {
+   "place-details": {
+    "v": "partly",
+    "note": "From OpenStreetMap, where volunteers added them",
+    "source": "https://www.comaps.app/",
+    "quote": null
+   }
+  },
+  "osmand": {
+   "place-details": {
+    "v": "partly",
+    "note": "From OpenStreetMap, where volunteers added them",
+    "source": "https://osmand.net/docs/user/",
+    "quote": null
+   }
+  },
+  "actual-budget": {
+   "investments": {
+    "v": "partly",
+    "note": "Balances only",
+    "source": "https://actualbudget.org/docs/",
+    "quote": null
+   }
+  },
+  "karakeep": {
+   "public-discovery": {
+    "v": "partly",
+    "note": "Share links only",
+    "source": "https://docs.karakeep.app/",
+    "quote": null
+   }
+  },
+  "umami": {
+   "tiny-script": {
+    "v": "yes",
+    "note": null,
+    "source": "https://umami.is/docs/tracker-configuration",
+    "quote": null
+   }
+  },
+  "matomo": {
+   "tiny-script": {
+    "v": "partly",
+    "note": "Larger than 5 KB",
+    "source": "https://developer.matomo.org/guides/tracking-javascript-guide",
+    "quote": null
+   }
+  },
+  "woocommerce": {
+   "shopify-import": {
+    "v": "partly",
+    "note": "Through extensions or CSV",
+    "source": "https://woocommerce.com/document/product-csv-importer-exporter/",
+    "quote": null
+   }
+  },
+  "saleor": {
+   "card-payments": {
+    "v": "yes",
+    "note": null,
+    "source": "https://docs.saleor.io/",
+    "quote": null
+   },
+   "shipping-tax": {
+    "v": "yes",
+    "note": null,
+    "source": "https://docs.saleor.io/",
+    "quote": null
+   },
+   "plugins": {
+    "v": "yes",
+    "note": null,
+    "source": "https://docs.saleor.io/",
+    "quote": null
+   }
+  },
+  "chatwoot": {
+   "phone-app": {
+    "v": "yes",
+    "note": null,
+    "source": "https://www.chatwoot.com/mobile-apps",
+    "quote": null
+   }
+  },
+  "zammad": {
+   "help-center": {
+    "v": "yes",
+    "note": "Knowledge base",
+    "source": "https://zammad.com/en/product/features/knowledge-base",
+    "quote": null
+   }
+  },
+  "node-red": {
+   "ready-connectors": {
+    "v": "partly",
+    "note": "Core nodes are few; thousands of community nodes",
+    "source": "https://flows.nodered.org/",
+    "quote": null
+   },
+   "no-paid-edition": {
+    "v": "yes",
+    "note": null,
+    "source": "https://nodered.org/",
+    "quote": null
+   }
+  },
+  "huginn": {
+   "no-paid-edition": {
+    "v": "yes",
+    "note": null,
+    "source": "https://github.com/huginn/huginn",
+    "quote": null
+   },
+   "managed-cloud": {
+    "v": "no",
+    "note": null,
+    "source": "https://github.com/huginn/huginn",
+    "quote": null
+   }
+  },
+  "coolify": {
+   "scales-out": {
+    "v": "partly",
+    "note": "Multi-server support, limited",
+    "source": "https://coolify.io/docs",
+    "quote": null
+   }
+  },
+  "appsmith": {
+   "data-connectors": {
+    "v": "yes",
+    "note": null,
+    "source": "https://docs.appsmith.com/connect-data/overview",
+    "quote": null
+   },
+   "one-command-install": {
+    "v": "yes",
+    "note": null,
+    "source": "https://docs.appsmith.com/getting-started/setup/installation-guides/docker",
+    "quote": null
+   },
+   "company-sso": {
+    "v": "partly",
+    "note": "OpenID/SAML are paid",
+    "source": "https://www.appsmith.com/pricing",
+    "quote": null
+   },
+   "no-paid-edition": {
+    "v": "no",
+    "note": "Business plan adds features",
+    "source": "https://www.appsmith.com/pricing",
+    "quote": null
+   }
+  },
+  "encore": {
+   "server-functions": {
+    "v": "yes",
+    "note": null,
+    "source": "https://encore.dev/docs",
+    "quote": null
+   },
+   "realtime-data": {
+    "v": "partly",
+    "note": "Streaming APIs",
+    "source": "https://encore.dev/docs",
+    "quote": null
+   }
+  },
+  "buildbot": {
+   "pipeline-as-file": {
+    "v": "partly",
+    "note": "Python config file, kept on the server",
+    "source": "https://docs.buildbot.net/",
+    "quote": null
+   }
+  },
+  "concrete": {
+   "no-code-builder": {
+    "v": "yes",
+    "note": null,
+    "source": "https://www.concretecms.org/",
+    "quote": null
+   },
+   "multi-language-content": {
+    "v": "yes",
+    "note": null,
+    "source": "https://www.concretecms.org/",
+    "quote": null
+   }
+  },
+  "decap-cms": {
+   "team-permissions": {
+    "v": "partly",
+    "note": "Relies on repository access",
+    "source": "https://decapcms.org/docs/",
+    "quote": null
+   }
+  },
+  "payload": {
+   "managed-cloud": {
+    "v": "yes",
+    "note": null,
+    "source": "https://payloadcms.com/cloud",
+    "quote": null
+   },
+   "team-permissions": {
+    "v": "yes",
+    "note": null,
+    "source": "https://payloadcms.com/docs/access-control/overview",
+    "quote": null
+   }
+  },
+  "coroot": {
+   "alerts": {
+    "v": "yes",
+    "note": null,
+    "source": "https://docs.coroot.com/",
+    "quote": null
+   },
+   "opentelemetry": {
+    "v": "yes",
+    "note": null,
+    "source": "https://docs.coroot.com/",
+    "quote": null
+   },
+   "managed-cloud": {
+    "v": "yes",
+    "note": null,
+    "source": "https://coroot.com/pricing",
+    "quote": null
+   }
+  },
+  "unleash": {
+   "one-command-install": {
+    "v": "yes",
+    "note": null,
+    "source": "https://docs.getunleash.io/quickstart",
+    "quote": null
+   }
+  },
+  "lightdash": {
+   "no-code-builder": {
+    "v": "yes",
+    "note": null,
+    "source": "https://docs.lightdash.com/",
+    "quote": null
+   },
+   "sql-queries": {
+    "v": "yes",
+    "note": null,
+    "source": "https://docs.lightdash.com/",
+    "quote": null
+   },
+   "scheduled-reports": {
+    "v": "yes",
+    "note": null,
+    "source": "https://docs.lightdash.com/",
+    "quote": null
+   }
+  },
+  "solidinvoice": {
+   "expenses": {
+    "v": "no",
+    "note": null,
+    "source": "https://solidinvoice.co/",
+    "quote": null
+   },
+   "usage-billing": {
+    "v": "no",
+    "note": null,
+    "source": "https://solidinvoice.co/",
+    "quote": null
+   }
+  },
+  "espocrm": {
+   "email-sync": {
+    "v": "yes",
+    "note": null,
+    "source": "https://www.espocrm.com/features/",
+    "quote": null
+   }
+  },
+  "kimai": {
+   "one-click-timer": {
+    "v": "partly",
+    "note": "Browser and mobile",
+    "source": "https://www.kimai.org/documentation/",
+    "quote": null
+   },
+   "team-timesheets": {
+    "v": "partly",
+    "note": "Approvals need a paid plugin",
+    "source": "https://www.kimai.org/documentation/",
+    "quote": null
+   }
+  },
+  "ghostfolio": {
+   "live-prices": {
+    "v": "partly",
+    "note": "Delayed market data",
+    "source": "https://ghostfol.io/en/",
+    "quote": null
+   },
+   "charts-screeners": {
+    "v": "partly",
+    "note": "Portfolio charts, no screener",
+    "source": "https://ghostfol.io/en/",
+    "quote": null
+   },
+   "point-and-click": {
+    "v": "yes",
+    "note": "Hosted version available",
+    "source": "https://ghostfol.io/en/",
+    "quote": null
+   }
+  },
+  "listmonk": {
+   "mailchimp-import": {
+    "v": "partly",
+    "note": "By CSV file",
+    "source": "https://listmonk.app/docs/",
+    "quote": null
+   }
+  },
+  "cryptpad": {
+   "works-offline": {
+    "v": "no",
+    "note": "Needs a connection to the server",
+    "source": "https://docs.cryptpad.org/en/",
+    "quote": null
+   }
+  },
+  "etherpad": {
+   "works-offline": {
+    "v": "no",
+    "note": "Needs a connection to the server",
+    "source": "https://etherpad.org/",
+    "quote": null
+   },
+   "no-server-needed": {
+    "v": "yes",
+    "note": "Use a public Etherpad site",
+    "source": "https://github.com/ether/etherpad-lite/wiki/Sites-that-run-Etherpad-Lite",
+    "quote": null
+   }
+  },
+  "reveal-js": {
+   "live-collab": {
+    "v": "no",
+    "note": "Slides are an HTML file you edit yourself; Slides.com adds hosted editing",
+    "source": "https://revealjs.com/",
+    "quote": null
+   },
+   "no-server-needed": {
+    "v": "yes",
+    "note": "Open the HTML file in a browser",
+    "source": "https://revealjs.com/installation/",
+    "quote": null
+   }
+  },
+  "logseq": {
+   "works-offline": {
+    "v": "yes",
+    "note": "Notes are local files",
+    "source": "https://docs.logseq.com/",
+    "quote": null
+   },
+   "notes-import": {
+    "v": "partly",
+    "note": "Imports Roam, OPML and Markdown; not Notion or Evernote",
+    "source": "https://docs.logseq.com/",
+    "quote": null
+   }
+  },
+  "standard-notes": {
+   "plain-files": {
+    "v": "partly",
+    "note": "Encrypted; easy full export to plain text",
+    "source": "https://standardnotes.com/help",
+    "quote": null
+   }
+  },
+  "zettlr": {
+   "live-collab": {
+    "v": "no",
+    "note": "Desktop app for your own files",
+    "source": "https://docs.zettlr.com/",
+    "quote": null
+   }
+  },
+  "bookstack": {
+   "syncs-devices": {
+    "v": "yes",
+    "note": "Web app; same content on every device",
+    "source": "https://www.bookstackapp.com/",
+    "quote": null
+   },
+   "works-offline": {
+    "v": "no",
+    "note": "Needs a connection to the server",
+    "source": "https://www.bookstackapp.com/",
+    "quote": null
+   },
+   "e2e-encrypted": {
+    "v": "no",
+    "note": "The server can read your pages",
+    "source": "https://www.bookstackapp.com/",
+    "quote": null
+   },
+   "live-collab": {
+    "v": "partly",
+    "note": "Warns about clashing edits; no live typing together",
+    "source": "https://www.bookstackapp.com/",
+    "quote": null
+   }
+  },
+  "docmost": {
+   "works-offline": {
+    "v": "no",
+    "note": "Needs a connection to the server",
+    "source": "https://docmost.com/docs",
+    "quote": null
+   },
+   "e2e-encrypted": {
+    "v": "no",
+    "note": "The server can read your pages",
+    "source": "https://docmost.com/docs",
+    "quote": null
+   }
+  },
+  "hedgedoc": {
+   "syncs-devices": {
+    "v": "yes",
+    "note": "Web app",
+    "source": "https://hedgedoc.org/",
+    "quote": null
+   },
+   "e2e-encrypted": {
+    "v": "no",
+    "note": "The server can read your notes",
+    "source": "https://hedgedoc.org/",
+    "quote": null
+   }
+  },
+  "mediawiki": {
+   "syncs-devices": {
+    "v": "yes",
+    "note": "Web app",
+    "source": "https://www.mediawiki.org/wiki/MediaWiki",
+    "quote": null
+   },
+   "works-offline": {
+    "v": "no",
+    "note": "Needs a connection to the server",
+    "source": "https://www.mediawiki.org/wiki/MediaWiki",
+    "quote": null
+   },
+   "notion-databases": {
+    "v": "partly",
+    "note": "Through extensions such as Semantic MediaWiki or Cargo",
+    "source": "https://www.semantic-mediawiki.org/",
+    "quote": null
+   },
+   "e2e-encrypted": {
+    "v": "no",
+    "note": "The server can read pages",
+    "source": "https://www.mediawiki.org/wiki/MediaWiki",
+    "quote": null
+   }
+  },
+  "memos": {
+   "works-offline": {
+    "v": "no",
+    "note": "Needs a connection to the server",
+    "source": "https://usememos.com/docs",
+    "quote": null
+   },
+   "notion-databases": {
+    "v": "no",
+    "note": "Short notes only",
+    "source": "https://usememos.com/docs",
+    "quote": null
+   },
+   "e2e-encrypted": {
+    "v": "no",
+    "note": "The server can read your notes",
+    "source": "https://usememos.com/docs",
+    "quote": null
+   },
+   "live-collab": {
+    "v": "no",
+    "note": null,
+    "source": "https://usememos.com/docs",
+    "quote": null
+   }
+  },
+  "notesnook": {
+   "works-offline": {
+    "v": "yes",
+    "note": null,
+    "source": "https://help.notesnook.com/",
+    "quote": null
+   },
+   "live-collab": {
+    "v": "no",
+    "note": null,
+    "source": "https://notesnook.com/",
+    "quote": null
+   }
+  },
+  "xournal": {
+   "syncs-devices": {
+    "v": "no",
+    "note": "Files you sync yourself",
+    "source": "https://xournalpp.github.io/guide/overview/",
+    "quote": null
+   },
+   "works-offline": {
+    "v": "yes",
+    "note": "Desktop app",
+    "source": "https://xournalpp.github.io/guide/overview/",
+    "quote": null
+   },
+   "notion-databases": {
+    "v": "no",
+    "note": null,
+    "source": "https://xournalpp.github.io/guide/overview/",
+    "quote": null
+   },
+   "live-collab": {
+    "v": "no",
+    "note": null,
+    "source": "https://xournalpp.github.io/guide/overview/",
+    "quote": null
+   },
+   "pdf-ocr": {
+    "v": "no",
+    "note": null,
+    "source": "https://xournalpp.github.io/guide/overview/",
+    "quote": null
+   },
+   "pdf-convert-office": {
+    "v": "no",
+    "note": null,
+    "source": "https://xournalpp.github.io/guide/overview/",
+    "quote": null
+   }
+  },
+  "kanboard": {
+   "tasks-import": {
+    "v": "partly",
+    "note": "By CSV file",
+    "source": "https://docs.kanboard.org/",
+    "quote": null
+   }
+  },
+  "redmine": {
+   "kanban-boards": {
+    "v": "partly",
+    "note": "Through a plugin",
+    "source": "https://www.redmine.org/plugins",
+    "quote": null
+   },
+   "tasks-import": {
+    "v": "partly",
+    "note": "By CSV file",
+    "source": "https://www.redmine.org/projects/redmine/wiki/Guide",
+    "quote": null
+   }
+  },
+  "tinode": {
+   "e2e-encrypted": {
+    "v": "no",
+    "note": "Not implemented yet",
+    "source": "https://tinode.co/",
+    "quote": null
+   },
+   "phone-app": {
+    "v": "yes",
+    "note": null,
+    "source": "https://tinode.co/",
+    "quote": null
+   }
+  },
+  "discourse": {
+   "roles-moderation": {
+    "v": "yes",
+    "note": null,
+    "source": "https://www.discourse.org/features",
+    "quote": null
+   }
+  },
+  "krita": {
+   "raw-photos": {
+    "v": "no",
+    "note": null,
+    "source": "https://krita.org/en/features/",
+    "quote": null
+   },
+   "photo-library": {
+    "v": "no",
+    "note": null,
+    "source": "https://krita.org/en/features/",
+    "quote": null
+   },
+   "heal-remove": {
+    "v": "partly",
+    "note": "Clone tool; no content-aware fill",
+    "source": "https://krita.org/en/features/",
+    "quote": null
+   },
+   "ai-photo-tools": {
+    "v": "partly",
+    "note": "Through the community AI Diffusion plugin",
+    "source": "https://github.com/Acly/krita-ai-diffusion",
+    "quote": null
+   }
+  },
+  "bazzite": {
+   "graphical-installer": {
+    "v": "yes",
+    "note": null,
+    "source": "https://bazzite.gg/",
+    "quote": null
+   },
+   "long-support": {
+    "v": "no",
+    "note": "Follows Fedora's fast release cycle",
+    "source": "https://bazzite.gg/",
+    "quote": null
+   }
+  },
+  "obtainium": {
+   "no-account-needed": {
+    "v": "yes",
+    "note": null,
+    "source": "https://obtainium.imranr.dev/",
+    "quote": null
+   },
+   "app-review": {
+    "v": "no",
+    "note": "Installs straight from each developer's page",
+    "source": "https://obtainium.imranr.dev/",
+    "quote": null
+   }
+  },
+  "zen-browser": {
+   "ad-blocking": {
+    "v": "partly",
+    "note": "Tracker blocking only",
+    "source": "https://docs.zen-browser.app/",
+    "quote": null
+   },
+   "full-ad-block-extensions": {
+    "v": "yes",
+    "note": "Firefox add-ons such as uBlock Origin",
+    "source": "https://addons.mozilla.org/en-US/firefox/addon/ublock-origin/",
+    "quote": null
+   },
+   "chrome-extensions": {
+    "v": "no",
+    "note": "Uses Firefox add-ons",
+    "source": "https://docs.zen-browser.app/",
+    "quote": null
+   }
+  },
+  "floorp": {
+   "ad-blocking": {
+    "v": "partly",
+    "note": "Tracker blocking only",
+    "source": "https://floorp.app/",
+    "quote": null
+   },
+   "full-ad-block-extensions": {
+    "v": "yes",
+    "note": "Firefox add-ons such as uBlock Origin",
+    "source": "https://addons.mozilla.org/en-US/firefox/addon/ublock-origin/",
+    "quote": null
+   },
+   "chrome-extensions": {
+    "v": "no",
+    "note": "Uses Firefox add-ons",
+    "source": "https://floorp.app/",
+    "quote": null
+   }
+  },
+  "keepassdx": {
+   "syncs-devices": {
+    "v": "partly",
+    "note": "Through your own cloud storage",
+    "source": "https://www.keepassdx.com/",
+    "quote": null
+   },
+   "browser-extension": {
+    "v": "no",
+    "note": "Android autofill instead",
+    "source": "https://www.keepassdx.com/",
+    "quote": null
+   },
+   "breach-alerts": {
+    "v": "no",
+    "note": null,
+    "source": "https://www.keepassdx.com/",
+    "quote": null
+   }
+  },
+  "passbolt": {
+   "syncs-devices": {
+    "v": "yes",
+    "note": null,
+    "source": "https://www.passbolt.com/",
+    "quote": null
+   },
+   "phone-app": {
+    "v": "yes",
+    "note": null,
+    "source": "https://www.passbolt.com/",
+    "quote": null
+   },
+   "browser-extension": {
+    "v": "yes",
+    "note": null,
+    "source": "https://www.passbolt.com/",
+    "quote": null
+   }
+  },
+  "openvpn": {
+   "no-server-needed": {
+    "v": "no",
+    "note": "Someone has to run a server",
+    "source": "https://openvpn.net/community/",
+    "quote": null
+   },
+   "mesh-direct": {
+    "v": "no",
+    "note": null,
+    "source": "https://openvpn.net/community/",
+    "quote": null
+   },
+   "web-admin": {
+    "v": "no",
+    "note": "Config files only; Access Server (paid) adds a web page",
+    "source": "https://openvpn.net/access-server/",
+    "quote": null
+   },
+   "phone-app": {
+    "v": "yes",
+    "note": null,
+    "source": "https://openvpn.net/client/",
+    "quote": null
+   }
+  },
+  "yourls": {
+   "qr-codes": {
+    "v": "partly",
+    "note": "Through a plugin",
+    "source": "https://yourls.org/docs/",
+    "quote": null
+   }
+  },
+  "syncthing": {
+   "auto-backup-phone": {
+    "v": "partly",
+    "note": "Android only",
+    "source": "https://docs.syncthing.net/",
+    "quote": null
+   }
+  },
+  "filestash": {
+   "share-links": {
+    "v": "yes",
+    "note": null,
+    "source": "https://www.filestash.app/",
+    "quote": null
+   },
+   "files-on-demand": {
+    "v": "no",
+    "note": null,
+    "source": "https://www.filestash.app/",
+    "quote": null
+   },
+   "auto-backup-phone": {
+    "v": "no",
+    "note": null,
+    "source": "https://www.filestash.app/",
+    "quote": null
+   }
+  },
+  "owncloud": {
+   "files-on-demand": {
+    "v": "yes",
+    "note": "Windows virtual files",
+    "source": "https://doc.owncloud.com/",
+    "quote": null
+   },
+   "auto-backup-phone": {
+    "v": "yes",
+    "note": null,
+    "source": "https://doc.owncloud.com/",
+    "quote": null
+   }
+  },
+  "bagisto": {
+   "ready-storefront": {
+    "v": "yes",
+    "note": null,
+    "source": "https://bagisto.com/en/",
+    "quote": null
+   },
+   "shipping-tax": {
+    "v": "yes",
+    "note": null,
+    "source": "https://bagisto.com/en/",
+    "quote": null
+   }
+  },
+  "presta": {
+   "ready-storefront": {
+    "v": "yes",
+    "note": null,
+    "source": "https://www.prestashop-project.org/",
+    "quote": null
+   },
+   "shop-themes": {
+    "v": "yes",
+    "note": null,
+    "source": "https://www.prestashop-project.org/",
+    "quote": null
+   },
+   "shipping-tax": {
+    "v": "yes",
+    "note": null,
+    "source": "https://www.prestashop-project.org/",
+    "quote": null
+   },
+   "plugins": {
+    "v": "yes",
+    "note": "Modules marketplace",
+    "source": "https://www.prestashop-project.org/",
+    "quote": null
+   }
+  },
+  "sylius": {
+   "ready-storefront": {
+    "v": "yes",
+    "note": null,
+    "source": "https://sylius.com/",
+    "quote": null
+   },
+   "shipping-tax": {
+    "v": "yes",
+    "note": null,
+    "source": "https://sylius.com/",
+    "quote": null
+   }
+  },
+  "vendure": {
+   "plugins": {
+    "v": "yes",
+    "note": null,
+    "source": "https://docs.vendure.io/",
+    "quote": null
+   },
+   "shop-themes": {
+    "v": "no",
+    "note": "Headless; you build the storefront",
+    "source": "https://docs.vendure.io/",
+    "quote": null
+   }
+  },
+  "automatisch": {
+   "no-code-builder": {
+    "v": "yes",
+    "note": null,
+    "source": "https://automatisch.io/docs",
+    "quote": null
+   },
+   "managed-cloud": {
+    "v": "yes",
+    "note": null,
+    "source": "https://automatisch.io/",
+    "quote": null
+   }
+  },
+  "dokku": {
+   "deploy-dashboard": {
+    "v": "no",
+    "note": "Command line only",
+    "source": "https://dokku.com/docs/",
+    "quote": null
+   }
+  },
+  "hoppscotch": {
+   "postman-import": {
+    "v": "yes",
+    "note": null,
+    "source": "https://docs.hoppscotch.io/",
+    "quote": null
+   },
+   "no-account-needed": {
+    "v": "yes",
+    "note": null,
+    "source": "https://hoppscotch.io/",
+    "quote": null
+   },
+   "api-gateway": {
+    "v": "no",
+    "note": null,
+    "source": "https://hoppscotch.io/",
+    "quote": null
+   }
+  },
+  "insomnia": {
+   "postman-import": {
+    "v": "yes",
+    "note": null,
+    "source": "https://docs.insomnia.rest/insomnia/import-export-data",
+    "quote": null
+   }
+  },
+  "nhost": {
+   "realtime-data": {
+    "v": "yes",
+    "note": "GraphQL subscriptions",
+    "source": "https://docs.nhost.io/",
+    "quote": null
+   }
+  },
+  "pocketbase": {
+   "managed-cloud": {
+    "v": "partly",
+    "note": "Only small third-party hosts",
+    "source": "https://pocketbase.io/docs/",
+    "quote": null
+   }
+  },
+  "supabase": {
+   "one-command-install": {
+    "v": "partly",
+    "note": "Docker Compose with several services",
+    "source": "https://supabase.com/docs/guides/self-hosting/docker",
+    "quote": null
+   }
+  },
+  "keycloak": {
+   "passkey-login": {
+    "v": "yes",
+    "note": null,
+    "source": "https://www.keycloak.org/docs/latest/server_admin/",
+    "quote": null
+   },
+   "two-step-login": {
+    "v": "yes",
+    "note": null,
+    "source": "https://www.keycloak.org/docs/latest/server_admin/",
+    "quote": null
+   },
+   "no-paid-edition": {
+    "v": "yes",
+    "note": "Paid plans only add support",
+    "source": "https://www.keycloak.org/",
+    "quote": null
+   }
+  },
+  "logto": {
+   "passkey-login": {
+    "v": "yes",
+    "note": null,
+    "source": "https://docs.logto.io/",
+    "quote": null
+   },
+   "two-step-login": {
+    "v": "yes",
+    "note": null,
+    "source": "https://docs.logto.io/",
+    "quote": null
+   }
+  },
+  "strapi": {
+   "team-permissions": {
+    "v": "partly",
+    "note": "Custom roles need a paid plan",
+    "source": "https://strapi.io/pricing-self-hosted",
+    "quote": null
+   }
+  },
+  "airflow": {
+   "schedules-retries": {
+    "v": "yes",
+    "note": null,
+    "source": "https://airflow.apache.org/docs/",
+    "quote": null
+   },
+   "managed-cloud": {
+    "v": "yes",
+    "note": "Hosted by Astronomer, AWS and Google",
+    "source": "https://airflow.apache.org/ecosystem/",
+    "quote": null
+   },
+   "one-command-install": {
+    "v": "partly",
+    "note": "Docker Compose with several services",
+    "source": "https://airflow.apache.org/docs/apache-airflow/stable/howto/docker-compose/index.html",
+    "quote": null
+   }
+  },
+  "sonic": {
+   "scales-out": {
+    "v": "no",
+    "note": "Single machine",
+    "source": "https://github.com/valeriansaliou/sonic",
+    "quote": null
+   }
+  },
+  "preset": {
+   "no-paid-edition": {
+    "v": "yes",
+    "note": "Paid Preset plan adds hosting",
+    "source": "https://superset.apache.org/",
+    "quote": null
+   }
+  },
+  "odoo": {
+   "accounting": {
+    "v": "partly",
+    "note": "Community has invoicing; full accounting is in the paid edition",
+    "source": "https://www.odoo.com/app/accounting",
+    "quote": null
+   },
+   "manufacturing": {
+    "v": "yes",
+    "note": null,
+    "source": "https://www.odoo.com/app/manufacturing",
+    "quote": null
+   },
+   "payroll": {
+    "v": "partly",
+    "note": "Paid edition, or community add-ons",
+    "source": "https://www.odoo.com/app/payroll",
+    "quote": null
+   }
+  },
+  "twenty": {
+   "phone-app": {
+    "v": "no",
+    "note": "Web app",
+    "source": "https://twenty.com/",
+    "quote": null
+   }
+  },
+  "apache-openoffice": {
+   "word-files": {
+    "v": "partly",
+    "note": "Simple files are fine; complex layouts shift",
+    "source": "https://www.openoffice.org/product/writer.html",
+    "quote": null
+   },
+   "excel-files": {
+    "v": "partly",
+    "note": "Simple files are fine; complex ones break",
+    "source": "https://www.openoffice.org/product/calc.html",
+    "quote": null
+   },
+   "modern-formulas": {
+    "v": "no",
+    "note": "Lacks XLOOKUP, FILTER and LET",
+    "source": "https://www.openoffice.org/product/calc.html",
+    "quote": null
+   },
+   "excel-macros": {
+    "v": "partly",
+    "note": "Limited VBA support",
+    "source": "https://www.openoffice.org/product/calc.html",
+    "quote": null
+   },
+   "pptx-files": {
+    "v": "partly",
+    "note": "Simple decks are fine; animations shift",
+    "source": "https://www.openoffice.org/product/impress.html",
+    "quote": null
+   }
+  },
+  "gnumeric": {
+   "excel-macros": {
+    "v": "no",
+    "note": null,
+    "source": "http://www.gnumeric.org/",
+    "quote": null
+   }
+  },
+  "nextcloud-notes": {
+   "e2e-encrypted": {
+    "v": "no",
+    "note": null,
+    "source": "https://apps.nextcloud.com/apps/notes",
+    "quote": null
+   },
+   "live-collab": {
+    "v": "no",
+    "note": null,
+    "source": "https://apps.nextcloud.com/apps/notes",
+    "quote": null
+   }
+  },
+  "taiga": {
+   "gantt-timeline": {
+    "v": "no",
+    "note": null,
+    "source": "https://docs.taiga.io/",
+    "quote": null
+   },
+   "recurring-reminders": {
+    "v": "no",
+    "note": null,
+    "source": "https://docs.taiga.io/",
+    "quote": null
+   },
+   "no-server-needed": {
+    "v": "yes",
+    "note": "Free hosted version at taiga.io",
+    "source": "https://taiga.io/",
+    "quote": null
+   }
+  },
+  "bugzilla": {
+   "kanban-boards": {
+    "v": "no",
+    "note": null,
+    "source": "https://www.bugzilla.org/",
+    "quote": null
+   },
+   "gantt-timeline": {
+    "v": "no",
+    "note": null,
+    "source": "https://www.bugzilla.org/",
+    "quote": null
+   }
+  },
+  "formio": {
+   "file-upload-answers": {
+    "v": "yes",
+    "note": null,
+    "source": "https://help.form.io/userguide/forms/form-components",
+    "quote": null
+   }
+  },
+  "briar": {
+   "no-phone-number": {
+    "v": "yes",
+    "note": null,
+    "source": "https://briarproject.org/",
+    "quote": null
+   },
+   "built-in-calls": {
+    "v": "no",
+    "note": "Text messages only",
+    "source": "https://briarproject.org/",
+    "quote": null
+   },
+   "disappearing-messages": {
+    "v": "yes",
+    "note": null,
+    "source": "https://briarproject.org/",
+    "quote": null
+   }
+  },
+  "jami": {
+   "no-account-needed": {
+    "v": "partly",
+    "note": "Anonymous account number, no email or phone",
+    "source": "https://jami.net/",
+    "quote": null
+   },
+   "screen-share": {
+    "v": "yes",
+    "note": null,
+    "source": "https://jami.net/",
+    "quote": null
+   },
+   "meeting-recording": {
+    "v": "yes",
+    "note": null,
+    "source": "https://jami.net/",
+    "quote": null
+   },
+   "e2e-encrypted": {
+    "v": "yes",
+    "note": null,
+    "source": "https://jami.net/",
+    "quote": null
+   }
+  },
+  "nextcloud-talk": {
+   "large-meetings": {
+    "v": "partly",
+    "note": "Needs the High-performance backend",
+    "source": "https://nextcloud-talk.readthedocs.io/en/latest/quick-install/",
+    "quote": null
+   }
+  },
+  "digikam": {
+   "ai-photo-tools": {
+    "v": "no",
+    "note": "Has face recognition and auto-tagging, no editing AI",
+    "source": "https://www.digikam.org/",
+    "quote": null
+   }
+  },
+  "pinta": {
+   "psd-files": {
+    "v": "no",
+    "note": null,
+    "source": "https://www.pinta-project.com/",
+    "quote": null
+   },
+   "raw-photos": {
+    "v": "no",
+    "note": null,
+    "source": "https://www.pinta-project.com/",
+    "quote": null
+   },
+   "ai-photo-tools": {
+    "v": "no",
+    "note": null,
+    "source": "https://www.pinta-project.com/",
+    "quote": null
+   }
+  },
+  "solvespace": {
+   "dwg-files": {
+    "v": "partly",
+    "note": "Imports DXF and DWG; exports DXF",
+    "source": "https://solvespace.com/ref.pl",
+    "quote": null
+   }
+  },
+  "debian": {
+   "preinstalled": {
+    "v": "partly",
+    "note": "From small specialist sellers",
+    "source": "https://www.debian.org/",
+    "quote": null
+   },
+   "runs-windows-games": {
+    "v": "partly",
+    "note": "Works through Steam Proton, with some setup",
+    "source": "https://www.debian.org/",
+    "quote": null
+   },
+   "nvidia-ready": {
+    "v": "partly",
+    "note": "A few extra steps",
+    "source": "https://wiki.debian.org/NvidiaGraphicsDrivers",
+    "quote": null
+   },
+   "update-rollback": {
+    "v": "partly",
+    "note": "Possible with snapshots you set up",
+    "source": "https://www.debian.org/",
+    "quote": null
+   },
+   "long-support": {
+    "v": "yes",
+    "note": "About five years with LTS",
+    "source": "https://www.debian.org/releases/",
+    "quote": null
+   }
+  },
+  "arch-linux": {
+   "graphical-installer": {
+    "v": "partly",
+    "note": "Guided text installer (archinstall)",
+    "source": "https://wiki.archlinux.org/title/Archinstall",
+    "quote": null
+   },
+   "runs-windows-games": {
+    "v": "partly",
+    "note": "Works through Steam Proton, with some setup",
+    "source": "https://wiki.archlinux.org/title/Steam",
+    "quote": null
+   },
+   "nvidia-ready": {
+    "v": "partly",
+    "note": "A few extra steps",
+    "source": "https://wiki.archlinux.org/title/NVIDIA",
+    "quote": null
+   },
+   "update-rollback": {
+    "v": "partly",
+    "note": "Possible with snapshots you set up",
+    "source": "https://wiki.archlinux.org/title/System_maintenance",
+    "quote": null
+   },
+   "long-support": {
+    "v": "no",
+    "note": "Rolling release",
+    "source": "https://archlinux.org/",
+    "quote": null
+   }
+  },
+  "cachyos": {
+   "runs-windows-games": {
+    "v": "yes",
+    "note": "Gaming packages included",
+    "source": "https://cachyos.org/",
+    "quote": null
+   },
+   "nvidia-ready": {
+    "v": "yes",
+    "note": "Detected during install",
+    "source": "https://cachyos.org/",
+    "quote": null
+   },
+   "update-rollback": {
+    "v": "partly",
+    "note": "Needs Btrfs snapshots",
+    "source": "https://cachyos.org/",
+    "quote": null
+   }
+  },
+  "pop-os": {
+   "graphical-installer": {
+    "v": "yes",
+    "note": null,
+    "source": "https://system76.com/pop/",
+    "quote": null
+   },
+   "runs-windows-games": {
+    "v": "partly",
+    "note": "Works through Steam Proton, with some setup",
+    "source": "https://system76.com/pop/",
+    "quote": null
+   },
+   "nvidia-ready": {
+    "v": "yes",
+    "note": "Separate NVIDIA download",
+    "source": "https://system76.com/pop/download/",
+    "quote": null
+   }
+  },
+  "ubuntu-touch": {
+   "banking-apps": {
+    "v": "no",
+    "note": "Most refuse",
+    "source": "https://ubports.com/",
+    "quote": null
+   },
+   "google-apps-optional": {
+    "v": "no",
+    "note": null,
+    "source": "https://ubports.com/",
+    "quote": null
+   },
+   "easy-installer": {
+    "v": "yes",
+    "note": "UBports Installer",
+    "source": "https://devices.ubuntu-touch.io/installer/",
+    "quote": null
+   },
+   "many-phones": {
+    "v": "partly",
+    "note": "Dozens of models",
+    "source": "https://devices.ubuntu-touch.io/",
+    "quote": null
+   }
+  },
+  "openboard": {
+   "many-languages": {
+    "v": "yes",
+    "note": null,
+    "source": "https://github.com/openboard-team/openboard",
+    "quote": null
+   },
+   "no-tracking": {
+    "v": "yes",
+    "note": null,
+    "source": "https://github.com/openboard-team/openboard",
+    "quote": null
+   }
+  },
+  "tor-browser": {
+   "syncs-devices": {
+    "v": "no",
+    "note": null,
+    "source": "https://www.torproject.org/download/",
+    "quote": null
+   },
+   "chrome-extensions": {
+    "v": "no",
+    "note": null,
+    "source": "https://support.torproject.org/tbb/",
+    "quote": null
+   },
+   "no-tracking": {
+    "v": "yes",
+    "note": null,
+    "source": "https://www.torproject.org/download/",
+    "quote": null
+   }
+  },
+  "mullvad-browser": {
+   "syncs-devices": {
+    "v": "no",
+    "note": null,
+    "source": "https://mullvad.net/en/browser",
+    "quote": null
+   },
+   "phone-app": {
+    "v": "no",
+    "note": "Desktop only",
+    "source": "https://mullvad.net/en/browser",
+    "quote": null
+   },
+   "chrome-extensions": {
+    "v": "no",
+    "note": null,
+    "source": "https://mullvad.net/en/browser",
+    "quote": null
+   },
+   "no-tracking": {
+    "v": "yes",
+    "note": null,
+    "source": "https://mullvad.net/en/browser",
+    "quote": null
+   }
+  },
+  "itch-app": {
+   "cloud-saves": {
+    "v": "no",
+    "note": null,
+    "source": "https://itch.io/app",
+    "quote": null
+   }
+  },
+  "openstreetmap": {
+   "works-offline": {
+    "v": "no",
+    "note": "Website; offline use comes from other apps",
+    "source": "https://www.openstreetmap.org/about",
+    "quote": null
+   },
+   "live-traffic": {
+    "v": "no",
+    "note": null,
+    "source": "https://www.openstreetmap.org/about",
+    "quote": null
+   },
+   "car-integration": {
+    "v": "no",
+    "note": null,
+    "source": "https://www.openstreetmap.org/about",
+    "quote": null
+   },
+   "phone-app": {
+    "v": "no",
+    "note": "Website; apps are made by others",
+    "source": "https://www.openstreetmap.org/about",
+    "quote": null
+   }
+  }
+ },
+ "tagIssues": []
+}
