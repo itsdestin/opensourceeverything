@@ -12,16 +12,25 @@ const ROOT = join(dirname(fileURLToPath(import.meta.url)), '..', '..');
 const read = (f) => JSON.parse(readFileSync(join(ROOT, f), 'utf8'));
 const [mode, eventFile] = process.argv.slice(2);
 const issue = JSON.parse(readFileSync(eventFile, 'utf8')).issue;
-const labels = issue.labels.map((l) => (typeof l === 'string' ? l : l.name));
-const type = ['add-project', 'fix', 'add-closed-app', 'new-group', 'report'].find((t) => labels.includes(t));
+const TYPES = ['add-project', 'fix', 'add-closed-app', 'new-group', 'report'];
+const labelsOf = (i) => (i.labels ?? []).map((l) => (typeof l === 'string' ? l : l.name));
+const labels = labelsOf(issue);
+const type = TYPES.find((t) => labels.includes(t));
 
 // An issue form's body is "### <label>\n\n<answer>" per field; empty answers read "_No response_".
-const fields = {};
-for (const part of (issue.body ?? '').split(/^### /m).slice(1)) {
-  const [label, ...rest] = part.split('\n');
-  const v = rest.join('\n').trim();
-  fields[label.trim()] = v === '_No response_' ? '' : v;
+// WHY a function: the duplicate check reads OTHER open suggestions the same way.
+function parseFields(body) {
+  const out = {};
+  for (const part of (body ?? '').split(/^### /m).slice(1)) {
+    const [label, ...rest] = part.split('\n');
+    const v = rest.join('\n').trim();
+    out[label.trim()] = v === '_No response_' ? '' : v;
+  }
+  return out;
 }
+const fields = parseFields(issue.body);
+// WHY: the forms' "Group" pick list starts with this wording when the person doesn't know (prefill/sync-forms.mjs).
+const NO_GROUP = /^none of these fit/i;
 const field = (label) => fields[label] ?? '';
 const checked = (label) => [...field(label).matchAll(/- \[[xX]\] (.+)/g)].map((m) => m[1].trim());
 
@@ -40,9 +49,9 @@ const codeOf = (u) => u.trim().replace(/^https?:\/\/(www\.)?/, '').replace(/\.gi
 function understand() {
   const issues = []; let edit = null;
   if (type === 'add-project') {
-    const g = findGroup(field('Group'));
+    const g = NO_GROUP.test(field('Group')) ? null : findGroup(field('Group'));
     const code = codeOf(field('Link to its code'));
-    if (!g) issues.push(`No group called "${field('Group')}". A mod should pick the right one, or suggest a new group first.`);
+    if (!g) issues.push(NO_GROUP.test(field('Group')) ? 'No group was chosen. A mod will pick the right one (edit the "Group" line), or a new group is suggested first.' : `No group called "${field('Group')}". A mod should pick the right one, or suggest a new group first.`);
     if (!/^(github\.com|gitlab\.com|codeberg\.org)\/[^/]+\/[^/]+$/.test(code)) issues.push('The code link should be a GitHub, GitLab or Codeberg project page.');
     const dup = projects.find((p) => norm(p.code) === norm(code) || norm(p.name) === norm(field('Project name')));
     if (dup) issues.push(`Already listed as [${dup.name}](https://opensourceeverything.org/p/${dup.id}/). If it belongs in another group too, a mod can add it there.`);
@@ -61,8 +70,11 @@ function understand() {
     if (kind && (value === null || (Array.isArray(value) && !value.length))) issues.push(`Couldn't read the new value from "${v.slice(0, 80)}".`);
     edit = { type: 'fix', project: p?.id ?? null, group: g?.id ?? null, field: kind ?? 'other', value, proof: field('Where you saw this') || null };
   } else if (type === 'add-closed-app') {
-    const g = findGroup(field('Group')); const app = field('Closed app').trim();
-    if (!g) issues.push(`No group called "${field('Group')}".`);
+    const unsure = !field('Group') || NO_GROUP.test(field('Group'));
+    const g = unsure ? null : findGroup(field('Group')); const app = field('Closed app').trim();
+    // WHY not an error for "unsure" (review Oct 26): people searching for an app don't know our groups. A mod picks one by
+    // editing the Group line; the robot then re-checks, and only then can the suggestion be approved.
+    if (!g) issues.push(unsure ? 'No group was chosen. A mod will pick the right one: edit the "Group" line of this issue and the robot checks again.' : `No group called "${field('Group')}".`);
     const where = groups.find((x) => x.closed.some((c) => norm(c) === norm(app)));
     if (where) issues.push(`${app} is already in the group "${where.name}".`);
     edit = { type: 'add-closed-app', group: g?.id ?? null, app };
@@ -99,16 +111,63 @@ async function projectChecks(code) {
 }
 
 const { edit, issues } = understand();
+
+// ── Who sent it, and what else is waiting (review Oct 26: these two checks were missing) ──
+const MIN_AGE_DAYS = 14; // the same rule the voting server uses (docs/server-rules.md)
+const GH = process.env.GITHUB_API ?? 'https://api.github.com';
+// WHY a fixture switch: the robot is tested with files, never against the real GitHub or by posting anything.
+const FIXTURE = process.env.ROBOT_FIXTURE ? JSON.parse(readFileSync(process.env.ROBOT_FIXTURE, 'utf8')) : null;
+async function ghGet(path) {
+  const r = await fetch(`${GH}${path}`, { headers: { 'User-Agent': 'opensourceeverything-robot', Accept: 'application/vnd.github+json', ...(process.env.GITHUB_TOKEN ? { Authorization: `Bearer ${process.env.GITHUB_TOKEN}` } : {}) } });
+  if (!r.ok) throw new Error(`GitHub ${r.status} for ${path}`);
+  return r.json();
+}
+// → { days, login } or null when GitHub couldn't say (then no hold: a mod reads every suggestion anyway)
+async function accountAge() {
+  const login = issue.user?.login; if (!login) return null;
+  try {
+    const u = FIXTURE ? FIXTURE.user : await ghGet(`/users/${encodeURIComponent(login)}`);
+    return { login, days: Math.floor((Date.now() - new Date(u.created_at).getTime()) / 86400e3) };
+  } catch { return null; }
+}
+// What a suggestion is "about", so two people asking for the same thing are noticed.
+function dupKey(t, f) {
+  const pick = (l) => norm(f[l] ?? '');
+  if (t === 'add-project') return `project:${norm(codeOf(f['Link to its code'] ?? '')) || pick('Project name')}`;
+  if (t === 'add-closed-app') return `app:${pick('Closed app')}`;
+  if (t === 'new-group') return `group:${pick('Name of the job')}`;
+  if (t === 'fix') return `fix:${pick('Project')}:${pick("What's wrong?")}`;
+  if (t === 'report') return `report:${pick('Project')}`;
+  return null;
+}
+// → the OTHER open suggestions that ask for the same thing and were opened earlier (so only the later one is flagged)
+async function earlierDuplicates() {
+  const mine = dupKey(type, fields); if (!mine) return [];
+  try {
+    const open = FIXTURE ? FIXTURE.open : await ghGet(`/repos/${process.env.GITHUB_REPOSITORY}/issues?state=open&labels=suggestion&per_page=100`);
+    return open.filter((o) => !o.pull_request && o.number < issue.number && dupKey(TYPES.find((t) => labelsOf(o).includes(t)), parseFields(o.body)) === mine);
+  } catch { return []; }
+}
+
 if (mode === 'check') {
   const checks = edit?.type === 'add-project' && edit.code ? await projectChecks(edit.code).catch((e) => [`- ⚠️ Couldn't run the license check: ${String(e).slice(0, 120)}`]) : [];
-  const bad = issues.length || checks.some((l) => l.startsWith('- ❌'));
+  const holds = [];
+  const age = await accountAge();
+  // WHY hold young accounts (review Oct 26): the voting server already makes new GitHub accounts wait; suggestions get the same rule.
+  if (age && age.days < MIN_AGE_DAYS) holds.push(`The account @${age.login} is only ${age.days} day${age.days === 1 ? '' : 's'} old (under ${MIN_AGE_DAYS}). A mod should look closely before approving.`);
+  const dups = await earlierDuplicates();
+  if (dups.length) holds.push(`Another open suggestion asks for the same thing: ${dups.map((d) => `#${d.number}`).join(', ')}. A mod can merge them and close one.`);
+  const bad = issues.length || holds.length || checks.some((l) => l.startsWith('- ❌'));
   const body = `<!-- suggestion-robot -->\n**Robot check** (it re-runs when the issue is edited)\n\n` +
     (checks.length ? `${checks.join('\n')}\n\n` : '') +
-    (issues.length ? `${issues.map((i) => `- ⚠️ ${i}`).join('\n')}\n\n` : '') +
+    (issues.length || holds.length ? `${[...issues, ...holds].map((i) => `- ⚠️ ${i}`).join('\n')}\n\n` : '') +
     (bad ? 'A mod will take a look. If something above is wrong, edit the issue and the robot checks again.'
       : 'Everything the robot can check looks fine. **Mods:** add the `approved` label and the robot prepares the change.') +
     `\n\n<details><summary>What the robot understood</summary>\n\n\`\`\`json\n${JSON.stringify(edit, null, 1)}\n\`\`\`\n</details>`;
   writeFileSync('robot-comment.md', body);
+  // WHY labels as the verdict: the mod page's Suggestions tab reads them (one list call, no per-issue comment reads),
+  // and a mod sees the same thing in GitHub's issue list. The workflow applies this file.
+  writeFileSync('robot-labels.json', JSON.stringify(bad ? { add: ['needs-mod'], remove: ['robot-ok'] } : { add: ['robot-ok'], remove: ['needs-mod'] }));
   console.log(body);
 } else if (mode === 'apply') {
   // WHY refuse when the robot couldn't read it: an approved but unreadable suggestion must not write half an edit.

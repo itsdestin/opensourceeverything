@@ -4,6 +4,12 @@
 #   that closes the suggestion. A mod merges it; nothing changes on the site before that.
 # WHY a pull request, not a direct change: a mod sees exactly what changed before it goes live.
 # Only people with triage access or above (the mods) can add labels, so only they can trigger "apply".
+# Labels the robot sets (review Oct 26): robot-ok = nothing to flag; needs-mod = something a mod must look at (a new
+# account, a duplicate, a problem the robot can't read, or the change failed to apply). The mod page reads them.
+# SECRET (optional, NOT created): ROBOT_PAT, a fine-grained personal access token for this repo with Contents: write
+# and Pull requests: write. WHY: pull requests opened with the built-in token never start the "Site" check, so mods
+# saw no green tick on the robot's changes. Pushing with a real token starts it. Without the secret everything still
+# works, just without the automatic check. See docs/tokens-and-secrets.md.
 name: Suggestions
 on:
   issues:
@@ -30,6 +36,16 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: node .github/robot/suggestion.mjs check "$GITHUB_EVENT_PATH"
+      - name: Set the robot's verdict label
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          N: ${{ github.event.issue.number }}
+        run: |
+          # WHY create first: adding a label that doesn't exist yet would fail.
+          gh label create robot-ok --color 0E8A16 --description "The robot found nothing to flag" --force
+          gh label create needs-mod --color D93F0B --description "A mod needs to look at this" --force
+          for l in $(node -p "JSON.parse(require('fs').readFileSync('robot-labels.json','utf8')).add.join(' ')"); do gh issue edit "$N" --add-label "$l"; done
+          for l in $(node -p "JSON.parse(require('fs').readFileSync('robot-labels.json','utf8')).remove.join(' ')"); do gh issue edit "$N" --remove-label "$l" || true; done
       - name: Post or update the robot's comment
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
@@ -44,6 +60,9 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
+        with:
+          # WHY: see ROBOT_PAT above. Falls back to the built-in token when the secret isn't set.
+          token: ${{ secrets.ROBOT_PAT || github.token }}
       - uses: actions/setup-node@v4
         with:
           node-version: 24
@@ -54,24 +73,42 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
-          node .github/robot/suggestion.mjs apply "$GITHUB_EVENT_PATH"
+          set -o pipefail
+          # WHY keep the robot's words: if it can't apply the change, the issue gets the reason (next steps).
+          node .github/robot/suggestion.mjs apply "$GITHUB_EVENT_PATH" 2>&1 | tee apply.log
           node prefill/assemble.mjs
+          # WHY: a new group or closed app must show up in the forms' pick lists in the same pull request.
+          node prefill/sync-forms.mjs
           node site/build.mjs && node site/check.mjs
       - name: Open a pull request
         env:
-          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GH_TOKEN: ${{ secrets.ROBOT_PAT || secrets.GITHUB_TOKEN }}
           N: ${{ github.event.issue.number }}
           TITLE: ${{ github.event.issue.title }}
         run: |
           git config user.name "suggestion-robot"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git checkout -b "suggestion-$N"
-          git add data/edits.json data/groups.json data/projects.json data/categories.json
+          git add data/edits.json data/groups.json data/projects.json data/categories.json .github/ISSUE_TEMPLATE
           git commit -m "Suggestion #$N: $TITLE"
           git push -f origin "suggestion-$N"
           gh pr create --head "suggestion-$N" --title "Suggestion #$N: $TITLE" --body "Closes #$N. Approved by @${{ github.actor }}; written by the suggestion robot. Merge to put it on the site."
       - name: Tell the suggestion what happened
+        # WHY a label as well as a comment (review Oct 26): failures used to be silent unless someone read the Actions tab.
+        # The needs-mod label puts it in the mod page's Suggestions tab.
         if: failure()
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        run: gh issue comment "${{ github.event.issue.number }}" --body "The robot couldn't apply this one automatically (see the robot's check above). A mod will make the change by hand."
+          N: ${{ github.event.issue.number }}
+        run: |
+          gh label create needs-mod --color D93F0B --description "A mod needs to look at this" --force
+          gh issue edit "$N" --add-label needs-mod
+          {
+            echo "The robot couldn't apply this one automatically, so a mod needs to make the change by hand."
+            echo
+            echo "Why:"
+            echo '```'
+            head -c 1500 apply.log 2>/dev/null || echo "(see this run's log in the Actions tab)"
+            echo '```'
+          } > failure.md
+          gh issue comment "$N" --body-file failure.md

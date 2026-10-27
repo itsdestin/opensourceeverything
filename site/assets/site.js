@@ -32,7 +32,7 @@
     return secs.length
       ? secs.map((sec) => `<div class="menu-note">${HEADINGS[sec.kind]}</div>` + sec.items.map(row).join('')).join('') +
         `<a class="mi see-all" role="option" href="${resultsUrl(t)}">See all results for “${esc(t.trim())}”<span class="muted11">Enter ↵</span></a>`
-      : `<div class="menu-note">Nothing matches "${esc(t.trim())}" yet. <a href="https://github.com/itsdestin/opensourceeverything/issues/new?template=4-new-group.yml&closed=${encodeURIComponent(t.trim())}" rel="noopener">Suggest it</a>.</div>`;
+      : /* WHY: nothing found usually means a closed app is missing, so "Suggest it" opens the add-closed-app form with the searched name filled in (it used to open the new-group form). */ `<div class="menu-note">Nothing matches "${esc(t.trim())}" yet. <a href="https://github.com/itsdestin/opensourceeverything/issues/new?template=3-add-closed-app.yml&app=${encodeURIComponent(t.trim())}" rel="noopener">Suggest it</a>.</div>`;
   }
   document.querySelectorAll('[data-search]').forEach((wrap) => {
     const input = wrap.querySelector('input'); const menu = wrap.querySelector('.search-menu');

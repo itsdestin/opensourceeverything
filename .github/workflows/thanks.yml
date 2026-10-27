@@ -1,0 +1,34 @@
+# After a mod merges the robot's pull request, thank the person on their suggestion and link to where it is now live.
+# WHY (review Oct 26): people used to hear nothing; the suggestion just closed.
+# Safe: it only reads the robot's own branch name ("suggestion-<number>") and the merged data, and writes one comment.
+name: Thank the suggester
+on:
+  pull_request:
+    types: [closed]
+permissions:
+  contents: read
+  issues: write
+jobs:
+  thanks:
+    if: github.event.pull_request.merged == true && startsWith(github.event.pull_request.head.ref, 'suggestion-')
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: ${{ github.event.pull_request.merge_commit_sha }}
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 24
+      - name: Write the thank-you
+        env:
+          BRANCH: ${{ github.event.pull_request.head.ref }}
+        run: |
+          N="${BRANCH#suggestion-}"
+          case "$N" in ''|*[!0-9]*) echo "not a suggestion branch"; exit 0;; esac
+          echo "N=$N" >> "$GITHUB_ENV"
+          node .github/robot/thanks.mjs "$N" > thanks.md
+      - name: Post it
+        if: env.N != ''
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: gh issue comment "$N" --body-file thanks.md

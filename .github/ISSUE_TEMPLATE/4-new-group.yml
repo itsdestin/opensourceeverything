@@ -19,7 +19,20 @@ body:
     id: category
     attributes:
       label: Category
-      options: ["Office & productivity", "Communication & social", "Creative", "Operating systems & phones", "Browsers, search & security", "AI tools", "Media & entertainment", "Files & cloud", "Everyday", "Developer & business", "Business & finance"]
+      options:
+        # BEGIN categories (written by prefill/sync-forms.mjs from data/categories.json; do not edit by hand)
+        - "Office & productivity"
+        - "Communication & social"
+        - "Creative"
+        - "Operating systems & phones"
+        - "Browsers, search & security"
+        - "AI tools"
+        - "Media & entertainment"
+        - "Files & cloud"
+        - "Everyday"
+        - "Developer & business"
+        - "Business & finance"
+        # END categories
     validations: { required: true }
   - type: textarea
     id: projects

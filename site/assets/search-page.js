@@ -62,7 +62,7 @@
       const el = document.querySelector(`[data-count="${k}"]`); if (el) el.textContent = n;
     }
     list.innerHTML = shown.length ? shown.slice(0, 60).map(row).join('') :
-      `<div class="empty">Nothing matches${devices.size ? ' with those devices' : ''}. ${devices.size ? 'Try fewer filters, or ' : ''}<a href="https://github.com/itsdestin/opensourceeverything/issues/new?template=4-new-group.yml&closed=${encodeURIComponent(q)}" rel="noopener">suggest what's missing</a>.</div>`;
+      /* WHY: nothing found usually means a closed app is missing, so "Suggest it" opens the add-closed-app form with the searched name filled in (it used to open the new-group form). */ `<div class="empty">Nothing matches${devices.size ? ' with those devices' : ''}. ${devices.size ? 'Try fewer filters, or ' : ''}<a href="https://github.com/itsdestin/opensourceeverything/issues/new?template=3-add-closed-app.yml&app=${encodeURIComponent(q)}" rel="noopener">suggest what's missing</a>.</div>`;
   }
 
   filters.addEventListener('click', (e) => {

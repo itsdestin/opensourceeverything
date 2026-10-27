@@ -18,9 +18,121 @@ body:
   - type: input
     id: website
     attributes: { label: Its website, description: Optional }
-  - type: input
+  # WHY a pick list (review Oct 26): typed group names drifted from the real ones. Written from data/groups.json by
+  # prefill/sync-forms.mjs; site/check.mjs fails if it falls behind.
+  - type: dropdown
     id: group
-    attributes: { label: Group, description: "The job it does, as named on the site (e.g. Documents). The button on a group page fills this in." }
+    attributes:
+      label: Group
+      description: "The job it does. The button on a group page fills this in."
+      options:
+        # BEGIN groups (written by prefill/sync-forms.mjs; do not edit by hand)
+        - "None of these fit (a mod will choose)"
+        - "3D & motion graphics"
+        - "AI agents for everyday work"
+        - "AI chat apps"
+        - "AI coding assistants"
+        - "AI image generation"
+        - "AI search"
+        - "API tools"
+        - "App backends"
+        - "App hosting & deployment"
+        - "App stores"
+        - "Audio & music making"
+        - "Automated builds & tests"
+        - "Automation"
+        - "Backup"
+        - "Blogs & newsletters"
+        - "Budgeting & personal finance"
+        - "Business dashboards & reports"
+        - "Business management (ERP)"
+        - "Calendar & scheduling"
+        - "Cloud storage & sync"
+        - "Code hosting"
+        - "Community chat & voice"
+        - "Computer operating systems"
+        - "Customer & community insights"
+        - "Customer relationships (CRM)"
+        - "Customer support"
+        - "Data pipelines"
+        - "Database apps"
+        - "Databases"
+        - "Dating"
+        - "Digital painting"
+        - "Document signing"
+        - "Documents"
+        - "E-books & audiobooks"
+        - "Email"
+        - "Email sending for apps"
+        - "Events & meetups"
+        - "Feature flags"
+        - "Feedback & feature requests"
+        - "Forms & surveys"
+        - "Forums & link sharing"
+        - "Graphic design & templates"
+        - "Home media server"
+        - "Icon libraries"
+        - "Illustration & vector"
+        - "Interface design"
+        - "Internal tool builders"
+        - "Internet speed test"
+        - "Investment research"
+        - "Invoicing & billing"
+        - "Link shortening"
+        - "Live streaming"
+        - "Login & identity"
+        - "Machine learning platforms"
+        - "Maps & navigation"
+        - "Messaging"
+        - "Microblogging"
+        - "Music streaming"
+        - "News feeds & read-it-later"
+        - "Newsletters & email marketing"
+        - "Notes & wikis"
+        - "Online identity proofs"
+        - "Online stores"
+        - "Page layout"
+        - "Password managers"
+        - "PDF tools"
+        - "Phone & voice APIs"
+        - "Phone keyboards"
+        - "Phone operating systems"
+        - "Phone photo gallery"
+        - "Photo backup & library"
+        - "Photo editing"
+        - "Photo sharing"
+        - "Podcasts"
+        - "Point of sale"
+        - "Presentations"
+        - "Product analytics & session replay"
+        - "Professional networking"
+        - "Push notifications"
+        - "Remote desktop"
+        - "SaaS starter kits"
+        - "Screen recording & streaming"
+        - "Search engines"
+        - "Security scanning"
+        - "Sending big files"
+        - "Server & app monitoring"
+        - "Shared expenses"
+        - "Smart home"
+        - "Social media scheduling"
+        - "Spreadsheets"
+        - "Tasks & project boards"
+        - "Team chat"
+        - "Time tracking"
+        - "Transcription"
+        - "Translation"
+        - "Translation management"
+        - "Two-factor codes"
+        - "Video calls"
+        - "Video editing"
+        - "Video sharing"
+        - "VPN & private networks"
+        - "Web browsers"
+        - "Website analytics"
+        - "Website builders & content management"
+        # END groups
     validations: { required: true }
   - type: input
     id: replaces
@@ -28,11 +140,11 @@ body:
     validations: { required: true }
   - type: dropdown
     id: fit
-    attributes: { label: How much of the job does it do?, options: ["Replaces fully: someone could switch and do the main job", "Replaces partly: it covers some of the job"] }
+    attributes: { label: "How much of the job does it do?", options: ["Replaces fully: someone could switch and do the main job", "Replaces partly: it covers some of the job"] }
     validations: { required: true }
   - type: input
     id: missing
-    attributes: { label: What's missing compared with the closed apps?, description: "Short, e.g. \"No live co-editing\". Leave empty if nothing important." }
+    attributes: { label: "What's missing compared with the closed apps?", description: "Short, e.g. \"No live co-editing\". Leave empty if nothing important." }
   - type: textarea
     id: summary
     attributes: { label: What it is, description: "One or two plain sentences a non-developer understands: what it does and who it's for." }
@@ -51,5 +163,5 @@ body:
         - label: Your own server
   - type: dropdown
     id: relation
-    attributes: { label: Are you involved with it?, description: "Fine either way. Projects posted by their own team say so on the site.", options: ["No, I just use it or know of it", "Yes, I'm on its team"] }
+    attributes: { label: "Are you involved with it?", description: "Fine either way. Projects posted by their own team say so on the site.", options: ["No, I just use it or know of it", "Yes, I'm on its team"] }
     validations: { required: true }
