@@ -4,12 +4,14 @@ import { readFileSync, existsSync } from 'node:fs';
 import { join, dirname } from 'node:path';
 import { fileURLToPath } from 'node:url';
 import { appSlug } from './cards.mjs';
+import { familyIndex, oldNames } from './family.mjs';
 
 // WHY optional: the site still builds (with plainer search) if the keywords file is missing.
 const KW_FILE = join(dirname(fileURLToPath(import.meta.url)), '..', '..', 'data', 'search-keywords.json');
 const KW = existsSync(KW_FILE) ? JSON.parse(readFileSync(KW_FILE, 'utf8')) : { groups: {}, projects: {} };
 
 export function searchIndex(d) {
+  const fam = familyIndex(d);
   const firstGroup = (pid) => d.groupsByProject.get(pid)?.[0]?.group;
   const gIndex = new Map(d.groups.map((g, i) => [g.id, i]));
   const groupsOf = (pid) => (d.groupsByProject.get(pid) ?? []).map((x) => x.group);
@@ -22,6 +24,9 @@ export function searchIndex(d) {
     groups: d.groups.map((g) => ({ n: g.name, c: d.catById.get(g.category)?.name ?? '', j: g.job, x: g.closed, u: `g/${g.id}/`, k: KW.groups[g.id] ?? [] })),
     projects: d.projects.map((p) => {
       const gs = groupsOf(p.id);
+      // WHY old names (forks stream): people search "kbin", "Perplexica", "Simple Mobile Tools", "OpenOffice". `o` are the old
+      // names and `ot` the sentence to show with the result ("Looking for kbin? It continues as Mbin."), both from data/lineage.json.
+      const on = oldNames(p, fam);
       return {
         n: p.name, g: firstGroup(p.id)?.name ?? '', u: `p/${p.id}/`,
         // WHY group positions, not copies: the group's name, job and closed apps are already in "groups";
@@ -33,6 +38,7 @@ export function searchIndex(d) {
         // WHY the summary only when there are no phrases: the phrases already say what it does in searchers' words
         // (and dropping summaries keeps the file small), but a project added since the last phrase run
         // (prefill/search-keywords.mjs --only <id>) still needs something beyond its name to be found by.
+        ...(on.length ? { o: on.map((x) => x.old), ot: on.map((x) => x.text) } : {}),
         pl: p.platforms ?? [], ...(p.setup === 'easy' ? { ez: 1 } : {}), k: KW.projects[p.id] ?? [], ...(KW.projects[p.id] ? {} : { s: p.summary }), ...(p.stars != null ? { st: p.stars } : {}), ...(p.archived || p.inactive ? { dead: 1 } : {}),
       };
     }),

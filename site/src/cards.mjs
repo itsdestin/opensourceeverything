@@ -1,6 +1,7 @@
 // Pieces more than one page draws: the alternative card (group pages and closed-app pages) and the address of a
 // closed app's own page.
 import { rankAlts } from './rank.mjs';
+import { currentFamily, cardFamily } from './family.mjs';
 import { esc, url, ICON, KIND, SETUP, SETUP_MEANING, setupOf, setupWhy, devicesText, factChips, hostOf, actions, suggestUrl, SOCIAL, SITE_URL, codeUrl, shot as shotOf } from './lib.mjs';
 
 // WHY its own address per closed app (Destin, Oct 27): people search "alternatives to Notion", not "Notes".
@@ -38,6 +39,7 @@ export function altCard(p, alt, i, group, why) {
         <p class="blurb">${esc(p.summary)}</p>
         ${whyText ? `<p class="why" title="Why it is listed where it is. Nobody has to have voted for this; it comes from the facts on the card.">Why it's here: ${esc(whyText)}</p>` : ''}
         ${SOCIAL ? `<div class="dev-pitch" data-dev-pitch data-mode="card" data-project="${esc(p.id)}" hidden></div>` : ''}
+        ${/* WHY (forks stream): "Split from Gitea (2022)" / "Forked by: Forgejo", so a copy is not mistaken for a rival. */ currentFamily() ? cardFamily(p, currentFamily()) : ''}
         <div class="foot">${esc(foot)}</div>
         ${SOCIAL && group ? `<div class="missing-count" data-missing-count data-group="${group.id}" data-project="${esc(p.id)}" hidden></div>` : ''}
       </div>

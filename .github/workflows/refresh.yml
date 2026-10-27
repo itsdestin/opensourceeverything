@@ -36,6 +36,8 @@ jobs:
           # WHY (review Oct 26): "How to help" links: each GitHub project's contributing guide and counts of good-first-issue / help-wanted
           # issues. About 20 GitHub requests for the whole map; the plugin-docs links come from the hand-edited data/plugin-docs.json.
           node prefill/help-facts.mjs
+          # Codeberg, GitLab and self-run code sites (KDE, GNOME, Blender, Tor...): stars, archived, last change, license.
+          node prefill/fetch-host-facts.mjs
           node prefill/assemble.mjs
           node site/build.mjs && node site/check.mjs
           node .github/robot/refresh-report.mjs /tmp/projects-before.json data/projects.json

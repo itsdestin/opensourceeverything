@@ -1,4 +1,5 @@
 // One page per open-source project (p/<id>/): what it is, which groups it's listed in, and its facts.
+import { familyIndex, ownLine, reverseLines, familySection, stoppedBanner } from '../family.mjs';
 import { esc, url, SITE_URL, KIND, SETUP, SETUP_MEANING, setupOf, setupWhy, factChips, hostOf, fmtStars, actions, codeUrl, devicesText, suggestUrl, shot, SOCIAL } from '../lib.mjs';
 
 const HOSTS = { 'github.com': 'GitHub', 'gitlab.com': 'GitLab', 'codeberg.org': 'Codeberg' };
@@ -20,6 +21,7 @@ function helpSection(p) {
 }
 
 export default function projectPages(d) {
+  const fam = familyIndex(d);
   return d.projects.map((p) => {
     const listed = d.groupsByProject.get(p.id) ?? [];
     const host = HOSTS[hostOf(p)] ?? (p.code ? hostOf(p) : 'Its own website');
@@ -30,13 +32,17 @@ export default function projectPages(d) {
 
     // WHY no "What we couldn't confirm" section or "checked by AI" line (Destin, Oct 26): the AI pre-fill's notes are for mods,
     // not visitors. They stay in data/projects.json (field "unconfirmed"); the public copy of the data drops them (build.mjs).
+    // WHY (forks stream): where it came from, in one plain line, and the reverse ("Forked by: Forgejo") on the original.
+    const famLines = [ownLine(p, fam), ...reverseLines(p, fam, 6)].filter(Boolean);
     const body = `
+  ${stoppedBanner(p, fam)}
   <div class="surface identity">
     <div class="row">
       <div style="display:flex;align-items:center;gap:8px;flex-wrap:wrap"><h1 class="h-subject">${esc(p.name)}</h1></div>
     </div>
     <div class="chiprow">${factChips(p, null, '', { links: true })}</div>
     <p class="body2">${esc(p.summary)}</p>
+    ${famLines.length ? `<p class="famline">${famLines.join('<br>')} <a class="famlink" href="#family">See the family</a></p>` : ''}
     <div class="idfoot">${links ? `<div class="links">${links}</div>` : ''}</div>
   </div>
 
@@ -59,6 +65,7 @@ export default function projectPages(d) {
           </div>`).join('')}
         </div>
       </section>
+      ${familySection(p, fam)}
       ${SOCIAL && listed.length ? `<section class="surface sec">
         <div class="sec-head"><div><h2 class="h-large">What's missing</h2><p class="desc12">Things people miss in ${esc(p.name)}. Upvote what matters to you; it helps its team decide.</p></div>
           <button class="btn sm secondary" type="button" data-add-note data-category="${listed[0].group.category}" data-group="${listed[0].group.id}" data-groups="${listed.map(({ group }) => group.id).join(',')}" data-project="${esc(p.id)}" data-kind="missing">Add a note</button></div>

@@ -31,7 +31,14 @@
    "licenseSource": "https://gitlab.e.foundation/e/os/android/-/raw/a16/LICENSE",
    "thumbs": [],
    "setup": "advanced",
-   "setupWhy": "An operating system: installing it means replacing or sitting alongside your computer or phone's current system, which is more than installing an app."
+   "setupWhy": "An operating system: installing it means replacing or sitting alongside your computer or phone's current system, which is more than installing an app.",
+   "lineage": {
+    "of": "lineageos",
+    "relation": "split",
+    "why": "A fork of LineageOS (formerly called Eelo) that adds its own online services.",
+    "source": "https://en.wikipedia.org/wiki//e/_(operating_system)",
+    "confirmed": "mod"
+   }
   },
   {
    "id": "2fas",
@@ -63,6 +70,11 @@
    "platforms": [
     "android"
    ],
+   "forks": 133,
+   "latestRelease": {
+    "name": "6.1.0",
+    "date": "2026-10-19T18:21:07Z"
+   },
    "thumbs": [
     "assets/shots/2fas-0.webp",
     "assets/shots/2fas-1.webp"
@@ -98,6 +110,7 @@
    "platforms": [
     "server"
    ],
+   "forks": 3,
    "thumbs": [],
    "setup": "advanced"
   },
@@ -131,6 +144,7 @@
    "platforms": [
     "server"
    ],
+   "forks": 7,
    "thumbs": [],
    "setup": "advanced"
   },
@@ -162,6 +176,11 @@
    "platforms": [
     "android"
    ],
+   "forks": 59,
+   "latestRelease": {
+    "name": "0.28.1",
+    "date": "2025-11-10T19:08:39Z"
+   },
    "thumbs": [],
    "setup": "easy"
   },
@@ -197,6 +216,11 @@
     "web",
     "server"
    ],
+   "forks": 31,
+   "latestRelease": {
+    "name": "v1.29.13",
+    "date": "2026-06-25T16:55:42Z"
+   },
    "thumbs": [],
    "setup": "advanced"
   },
@@ -228,6 +252,11 @@
    "platforms": [
     "server"
    ],
+   "forks": 4396,
+   "latestRelease": {
+    "name": "0.92.3-hotfix.1",
+    "date": "2026-10-23T17:23:51Z"
+   },
    "thumbs": [
     "assets/shots/activepieces-0.webp"
    ],
@@ -265,6 +294,11 @@
     "web",
     "server"
    ],
+   "forks": 3211,
+   "latestRelease": {
+    "name": "v26.10.0",
+    "date": "2026-10-02T15:32:36Z"
+   },
    "thumbs": [
     "assets/shots/actual-budget-0.webp"
    ],
@@ -298,6 +332,11 @@
    "platforms": [
     "android"
    ],
+   "forks": 610,
+   "latestRelease": {
+    "name": "v3.4.3",
+    "date": "2026-09-06T10:31:12Z"
+   },
    "thumbs": [
     "assets/shots/aegis-0.webp",
     "assets/shots/aegis-1.webp"
@@ -338,6 +377,11 @@
     "web",
     "ios"
    ],
+   "forks": 5402,
+   "latestRelease": {
+    "name": "0.27.4",
+    "date": "2026-08-18T16:51:39Z"
+   },
    "thumbs": [
     "assets/shots/affine-0.webp"
    ],
@@ -373,6 +417,11 @@
     "mac",
     "linux"
    ],
+   "forks": 5107,
+   "latestRelease": {
+    "name": "Aider v0.86.0",
+    "date": "2025-08-09T17:42:19Z"
+   },
    "thumbs": [
     "assets/shots/aider-0.webp"
    ],
@@ -411,6 +460,11 @@
     "ios",
     "server"
    ],
+   "forks": 111,
+   "latestRelease": {
+    "name": "0.31.1",
+    "date": "2026-10-14T19:28:32Z"
+   },
    "thumbs": [
     "assets/shots/aliasvault-0.webp"
    ],
@@ -444,6 +498,11 @@
    "platforms": [
     "android"
    ],
+   "forks": 159,
+   "latestRelease": {
+    "name": "2.0.0",
+    "date": "2025-01-19T17:37:40Z"
+   },
    "thumbs": [],
    "setup": "easy"
   },
@@ -477,6 +536,11 @@
    "platforms": [
     "android"
    ],
+   "forks": 1840,
+   "latestRelease": {
+    "name": "3.12.3",
+    "date": "2026-10-13T06:21:52Z"
+   },
    "thumbs": [
     "assets/shots/antennapod-0.webp",
     "assets/shots/antennapod-1.webp",
@@ -515,6 +579,11 @@
    "platforms": [
     "android"
    ],
+   "forks": 952,
+   "latestRelease": {
+    "name": "v1.13-r2",
+    "date": "2026-09-08T02:35:28Z"
+   },
    "thumbs": [
     "assets/shots/anysoftkeyboard-0.webp",
     "assets/shots/anysoftkeyboard-1.webp"
@@ -542,7 +611,7 @@
    ],
    "source": "starter",
    "verified": false,
-   "release": "https://github.com/Mintplex-Labs/anything-llm/releases/tag/v1.18.0",
+   "release": "https://github.com/Mintplex-Labs/anything-llm/releases/tag/v1.19.0",
    "screenshots": [],
    "platforms": [
     "windows",
@@ -550,6 +619,11 @@
     "linux",
     "server"
    ],
+   "forks": 7595,
+   "latestRelease": {
+    "name": "AnythingLLM v1.19.0",
+    "date": "2026-10-26T16:14:51Z"
+   },
    "thumbs": [],
    "setup": "easy"
   },
@@ -574,7 +648,8 @@
    "platforms": [
     "server"
    ],
-   "thumbs": []
+   "thumbs": [],
+   "setup": "advanced"
   },
   {
    "id": "apache-apisix",
@@ -603,8 +678,41 @@
    "platforms": [
     "server"
    ],
+   "forks": 2980,
+   "latestRelease": {
+    "name": "3.19.0",
+    "date": "2026-09-28T05:13:59Z"
+   },
    "thumbs": [],
    "setup": "advanced"
+  },
+  {
+   "id": "apache-openoffice",
+   "name": "Apache OpenOffice",
+   "summary": "Apache OpenOffice is a free office suite with a word processor, spreadsheet and presentation program. It is for people who want a free alternative to Microsoft Office. It is one of two continuations of the older OpenOffice.org; LibreOffice is the other.",
+   "kind": "app",
+   "code": "github.com/apache/openoffice",
+   "website": "https://www.openoffice.org/",
+   "download": null,
+   "license": "Apache-2.0",
+   "licenseClass": "open",
+   "licenseNeedsCheck": false,
+   "stars": 1258,
+   "archived": false,
+   "inactive": false,
+   "unconfirmed": [],
+   "source": "family",
+   "verified": false,
+   "platforms": [
+    "windows",
+    "mac",
+    "linux"
+   ],
+   "licenseSource": "https://github.com/apache/openoffice/blob/trunk/LICENSE",
+   "screenshots": [],
+   "forks": 386,
+   "thumbs": [],
+   "setup": "easy"
   },
   {
    "id": "apitable",
@@ -640,6 +748,11 @@
     "web",
     "server"
    ],
+   "forks": 1425,
+   "latestRelease": {
+    "name": "v1.14.0-beta",
+    "date": "2026-09-06T14:15:13Z"
+   },
    "thumbs": [
     "assets/shots/apitable-0.webp",
     "assets/shots/apitable-1.webp",
@@ -681,6 +794,11 @@
     "android",
     "ios"
    ],
+   "forks": 6098,
+   "latestRelease": {
+    "name": "v0.14.11",
+    "date": "2026-10-26T00:59:22Z"
+   },
    "thumbs": [
     "assets/shots/appflowy-0.webp",
     "assets/shots/appflowy-1.webp"
@@ -716,6 +834,11 @@
     "mac",
     "linux"
    ],
+   "forks": 688,
+   "latestRelease": {
+    "name": "Apprise v2.1.0",
+    "date": "2026-10-24T19:33:44Z"
+   },
    "thumbs": [],
    "setup": "advanced"
   },
@@ -749,6 +872,11 @@
     "web",
     "server"
    ],
+   "forks": 4823,
+   "latestRelease": {
+    "name": "Release v2.5.1 🌈",
+    "date": "2026-10-21T02:29:46Z"
+   },
    "thumbs": [],
    "setup": "advanced"
   },
@@ -784,6 +912,11 @@
    "platforms": [
     "server"
    ],
+   "forks": 5820,
+   "latestRelease": {
+    "name": "2.6.2",
+    "date": "2026-10-24T13:40:08Z"
+   },
    "thumbs": [
     "assets/shots/appwrite-0.webp"
    ],
@@ -855,6 +988,7 @@
     "mac",
     "linux"
    ],
+   "forks": 1010,
    "thumbs": [
     "assets/shots/ardour-0.webp"
    ],
@@ -890,6 +1024,11 @@
     "mac",
     "linux"
    ],
+   "forks": 2699,
+   "latestRelease": {
+    "name": "Audacity-4.0.1",
+    "date": "2026-09-30T11:59:48Z"
+   },
    "thumbs": [
     "assets/shots/audacity-0.webp"
    ],
@@ -927,6 +1066,11 @@
     "android",
     "server"
    ],
+   "forks": 1230,
+   "latestRelease": {
+    "name": "v2.37.2",
+    "date": "2026-10-23T20:18:17Z"
+   },
    "thumbs": [
     "assets/shots/audiobookshelf-0.webp"
    ],
@@ -961,6 +1105,11 @@
    "platforms": [
     "android"
    ],
+   "forks": 975,
+   "latestRelease": {
+    "name": "4.8.4",
+    "date": "2026-07-27T17:54:54.560Z"
+   },
    "thumbs": [
     "assets/shots/aurora-store-0.webp",
     "assets/shots/aurora-store-1.webp"
@@ -997,6 +1146,11 @@
     "linux",
     "server"
    ],
+   "forks": 130,
+   "latestRelease": {
+    "name": "2026-10-22.0",
+    "date": "2026-10-22T16:07:15Z"
+   },
    "thumbs": [
     "assets/shots/authgear-0.webp"
    ],
@@ -1033,6 +1187,11 @@
     "server"
    ],
    "licenseSource": "https://raw.githubusercontent.com/automatisch/automatisch/main/LICENSE",
+   "forks": 1059,
+   "latestRelease": {
+    "name": "v0.15.0",
+    "date": "2025-08-08T13:07:43Z"
+   },
    "thumbs": [
     "assets/shots/automatisch-0.webp"
    ],
@@ -1071,6 +1230,11 @@
    "platforms": [
     "android"
    ],
+   "forks": 255,
+   "latestRelease": {
+    "name": "v1.15.8",
+    "date": "2026-10-21T15:07:23Z"
+   },
    "thumbs": [
     "assets/shots/aves-0.webp",
     "assets/shots/aves-1.webp",
@@ -1108,6 +1272,11 @@
    "platforms": [
     "server"
    ],
+   "forks": 3344,
+   "latestRelease": {
+    "name": "v2.5.0",
+    "date": "2026-10-06T14:11:45Z"
+   },
    "thumbs": [
     "assets/shots/bagisto-0.webp"
    ],
@@ -1123,7 +1292,7 @@
    "license": "MIT",
    "licenseClass": "open_core",
    "licenseNeedsCheck": false,
-   "stars": null,
+   "stars": 2264,
    "archived": false,
    "inactive": false,
    "unconfirmed": [
@@ -1144,6 +1313,11 @@
     "server"
    ],
    "licenseSource": "https://gitlab.com/bramw/baserow/-/raw/develop/LICENSE",
+   "forks": 444,
+   "latestRelease": {
+    "name": "1.35.3",
+    "date": "2025-10-08T18:45:28.978Z"
+   },
    "thumbs": [],
    "setup": "advanced"
   },
@@ -1169,7 +1343,7 @@
    ],
    "source": "starter",
    "verified": false,
-   "release": "https://github.com/ublue-os/bazzite/releases/tag/44.20261023",
+   "release": "https://github.com/ublue-os/bazzite/releases/tag/44.20261026",
    "screenshots": [
     "https://raw.githubusercontent.com/ublue-os/bazzite/HEAD/repo_content/desktop1.png?raw=true",
     "https://raw.githubusercontent.com/ublue-os/bazzite/HEAD/repo_content/desktop2.png?raw=true",
@@ -1179,6 +1353,11 @@
    "platforms": [
     "linux"
    ],
+   "forks": 1146,
+   "latestRelease": {
+    "name": "44.20261026: Stable (F44.20261026)",
+    "date": "2026-10-26T20:54:27Z"
+   },
    "thumbs": [
     "assets/shots/bazzite-0.webp",
     "assets/shots/bazzite-1.webp",
@@ -1186,7 +1365,14 @@
     "assets/shots/bazzite-3.webp"
    ],
    "setup": "advanced",
-   "setupWhy": "An operating system: installing it means replacing or sitting alongside your computer or phone's current system, which is more than installing an app."
+   "setupWhy": "An operating system: installing it means replacing or sitting alongside your computer or phone's current system, which is more than installing an app.",
+   "lineage": {
+    "of": "fedora",
+    "relation": "built-on",
+    "why": "Built from Fedora's Atomic Desktops (Kinoite and Silverblue) through the Universal Blue project.",
+    "source": "https://bazzite.gg/",
+    "confirmed": "mod"
+   }
   },
   {
    "id": "beton-inspector",
@@ -1218,6 +1404,11 @@
    "platforms": [
     "server"
    ],
+   "forks": 2,
+   "latestRelease": {
+    "name": "Preflight MVP v0.0.1",
+    "date": "2026-02-16T15:55:29Z"
+   },
    "thumbs": [
     "assets/shots/beton-inspector-0.webp"
    ],
@@ -1251,6 +1442,11 @@
    "platforms": [
     "server"
    ],
+   "forks": 5980,
+   "latestRelease": {
+    "name": "v4.0.0",
+    "date": "2026-10-14T23:32:13Z"
+   },
    "thumbs": [
     "assets/shots/bigbluebutton-0.webp"
    ],
@@ -1290,6 +1486,11 @@
     "web"
    ],
    "licenseSource": "https://raw.githubusercontent.com/bitwarden/clients/main/LICENSE.txt",
+   "forks": 2153,
+   "latestRelease": {
+    "name": "Desktop v2026.10.1",
+    "date": "2026-10-22T22:00:48Z"
+   },
    "thumbs": [
     "assets/shots/bitwarden-0.webp"
    ],
@@ -1327,6 +1528,7 @@
     "linux"
    ],
    "licenseSource": "https://projects.blender.org/blender/blender/raw/branch/main/source/blender/blenkernel/intern/mesh.cc",
+   "forks": 1229,
    "thumbs": [
     "assets/shots/blender-0.webp",
     "assets/shots/blender-1.webp",
@@ -1363,6 +1565,11 @@
     "android",
     "ios"
    ],
+   "forks": 2857,
+   "latestRelease": {
+    "name": "v1.136.0",
+    "date": "2026-10-21T20:13:01Z"
+   },
    "thumbs": [
     "assets/shots/bluesky-0.webp"
    ],
@@ -1399,6 +1606,11 @@
     "web",
     "server"
    ],
+   "forks": 2433,
+   "latestRelease": {
+    "name": "BookStack v26.09.2",
+    "date": "2026-10-20T11:48:40Z"
+   },
    "thumbs": [
     "assets/shots/bookstack-0.webp",
     "assets/shots/bookstack-1.webp"
@@ -1433,6 +1645,11 @@
    "platforms": [
     "web"
    ],
+   "forks": 1120,
+   "latestRelease": {
+    "name": "v1.13.2",
+    "date": "2026-10-08T17:18:31Z"
+   },
    "thumbs": [],
    "setup": "advanced"
   },
@@ -1464,6 +1681,11 @@
     "linux"
    ],
    "licenseSource": "https://raw.githubusercontent.com/borgbackup/borg/master/LICENSE",
+   "forks": 883,
+   "latestRelease": {
+    "name": "Release 1.4.5",
+    "date": "2026-07-18T22:36:16Z"
+   },
    "thumbs": [],
    "setup": "advanced"
   },
@@ -1495,6 +1717,11 @@
    "platforms": [
     "server"
    ],
+   "forks": 238,
+   "latestRelease": {
+    "name": "Release v26.2.0",
+    "date": "2026-03-20T18:49:46Z"
+   },
    "thumbs": [],
    "setup": "advanced"
   },
@@ -1532,11 +1759,23 @@
     "android",
     "ios"
    ],
+   "forks": 3261,
+   "latestRelease": {
+    "name": "Release v1.98.60 (Chromium 156.0.8078.48) \n\n",
+    "date": "2026-10-21T09:09:05Z"
+   },
    "thumbs": [
     "assets/shots/brave-0.webp",
     "assets/shots/brave-1.webp"
    ],
-   "setup": "easy"
+   "setup": "easy",
+   "lineage": {
+    "of": "chromium",
+    "relation": "built-on",
+    "why": "A browser based on the Chromium web browser, made by Brave Software.",
+    "source": "https://en.wikipedia.org/wiki/Brave_(web_browser)",
+    "confirmed": "mod"
+   }
   },
   {
    "id": "briar",
@@ -1571,6 +1810,7 @@
     "android"
    ],
    "licenseSource": "https://raw.githubusercontent.com/briar/briar/master/LICENSE.txt",
+   "forks": 65,
    "thumbs": [
     "assets/shots/briar-0.webp"
    ],
@@ -1599,7 +1839,7 @@
     "awesome-foss-alternatives"
    ],
    "verified": false,
-   "release": "https://github.com/bruin-data/bruin/releases/tag/v0.11.797",
+   "release": "https://github.com/bruin-data/bruin/releases/tag/v0.11.798",
    "screenshots": [],
    "platforms": [
     "windows",
@@ -1607,6 +1847,11 @@
     "linux",
     "android"
    ],
+   "forks": 99,
+   "latestRelease": {
+    "name": "v0.11.798",
+    "date": "2026-10-26T14:41:30Z"
+   },
    "thumbs": [],
    "setup": "advanced"
   },
@@ -1640,6 +1885,7 @@
    "platforms": [
     "server"
    ],
+   "forks": 102,
    "thumbs": [
     "assets/shots/btw-0.webp"
    ],
@@ -1678,6 +1924,11 @@
     "server"
    ],
    "licenseSource": "https://raw.githubusercontent.com/Budibase/budibase/master/LICENSE",
+   "forks": 2236,
+   "latestRelease": {
+    "name": "v3.50.0",
+    "date": "2026-10-19T08:09:46Z"
+   },
    "thumbs": [
     "assets/shots/budibase-0.webp",
     "assets/shots/budibase-1.webp"
@@ -1715,6 +1966,7 @@
    "platforms": [
     "server"
    ],
+   "forks": 320,
    "thumbs": [
     "assets/shots/bugzilla-0.webp"
    ],
@@ -1749,6 +2001,11 @@
     "windows",
     "linux"
    ],
+   "forks": 1680,
+   "latestRelease": {
+    "name": "v4.3.0",
+    "date": "2025-05-12T20:33:21Z"
+   },
    "thumbs": [],
    "setup": "advanced"
   },
@@ -1785,6 +2042,11 @@
     "mac",
     "linux"
    ],
+   "forks": 1639,
+   "latestRelease": {
+    "name": "v1.4.5",
+    "date": "2026-08-23T08:28:36Z"
+   },
    "thumbs": [
     "assets/shots/buzz-0.webp",
     "assets/shots/buzz-1.webp",
@@ -1826,7 +2088,14 @@
     "assets/shots/cachyos-1.webp"
    ],
    "setup": "advanced",
-   "setupWhy": "An operating system: installing it means replacing or sitting alongside your computer or phone's current system, which is more than installing an app."
+   "setupWhy": "An operating system: installing it means replacing or sitting alongside your computer or phone's current system, which is more than installing an app.",
+   "lineage": {
+    "of": "arch-linux",
+    "relation": "built-on",
+    "why": "A Linux distribution based on Arch Linux.",
+    "source": "https://en.wikipedia.org/wiki/CachyOS",
+    "confirmed": "mod"
+   }
   },
   {
    "id": "cal-com",
@@ -1854,6 +2123,11 @@
    "platforms": [
     "server"
    ],
+   "forks": 15445,
+   "latestRelease": {
+    "name": "v6.2.0",
+    "date": "2026-03-01T23:49:01Z"
+   },
    "thumbs": [],
    "setup": "advanced"
   },
@@ -1886,6 +2160,11 @@
     "windows",
     "mac"
    ],
+   "forks": 2734,
+   "latestRelease": {
+    "name": "version 9.17.0",
+    "date": "2026-10-23T03:50:48Z"
+   },
    "thumbs": [
     "assets/shots/calibre-0.webp",
     "assets/shots/calibre-1.webp"
@@ -1924,6 +2203,11 @@
     "server"
    ],
    "licenseSource": "https://raw.githubusercontent.com/caprover/caprover/master/LICENSE",
+   "forks": 1011,
+   "latestRelease": {
+    "name": "v1.15.5",
+    "date": "2026-10-23T17:46:07Z"
+   },
    "thumbs": [
     "assets/shots/caprover-0.webp"
    ],
@@ -1959,6 +2243,11 @@
     "mac",
     "linux"
    ],
+   "forks": 4291,
+   "latestRelease": {
+    "name": "v1.23.5",
+    "date": "2026-09-24T14:09:30Z"
+   },
    "thumbs": [
     "assets/shots/chatbox-community-edition-0.webp",
     "assets/shots/chatbox-community-edition-1.webp"
@@ -1995,11 +2284,44 @@
    "platforms": [
     "server"
    ],
+   "forks": 9351,
+   "latestRelease": {
+    "name": "v4.19.1",
+    "date": "2026-10-24T04:48:08Z"
+   },
    "thumbs": [
     "assets/shots/chatwoot-0.webp",
     "assets/shots/chatwoot-1.webp"
    ],
    "setup": "advanced"
+  },
+  {
+   "id": "chromium",
+   "name": "Chromium",
+   "summary": "Chromium is the open-source web browser project that Google Chrome, Microsoft Edge, Brave and many other browsers are built from. It is for people who want a Chrome-like browser made entirely from open code.",
+   "kind": "app",
+   "code": "github.com/chromium/chromium",
+   "website": "https://www.chromium.org/",
+   "download": null,
+   "license": "BSD-3-Clause",
+   "licenseClass": "open",
+   "licenseNeedsCheck": false,
+   "stars": 25148,
+   "archived": false,
+   "inactive": false,
+   "unconfirmed": [],
+   "source": "family",
+   "verified": false,
+   "platforms": [
+    "windows",
+    "mac",
+    "linux"
+   ],
+   "licenseSource": "https://github.com/chromium/chromium/blob/main/LICENSE",
+   "screenshots": [],
+   "forks": 9374,
+   "thumbs": [],
+   "setup": "easy"
   },
   {
    "archived": false,
@@ -2025,7 +2347,8 @@
     "linux",
     "server"
    ],
-   "thumbs": []
+   "thumbs": [],
+   "setup": "easy"
   },
   {
    "archived": false,
@@ -2048,7 +2371,8 @@
    "platforms": [
     "server"
    ],
-   "thumbs": []
+   "thumbs": [],
+   "setup": "advanced"
   },
   {
    "id": "cline",
@@ -2082,6 +2406,11 @@
     "mac",
     "linux"
    ],
+   "forks": 7769,
+   "latestRelease": {
+    "name": "v4.1.26",
+    "date": "2026-10-26T09:06:50Z"
+   },
    "thumbs": [
     "assets/shots/cline-0.webp",
     "assets/shots/cline-1.webp"
@@ -2117,6 +2446,11 @@
     "mac",
     "linux"
    ],
+   "forks": 20697,
+   "latestRelease": {
+    "name": "0.164.0",
+    "date": "2026-10-23T04:48:10Z"
+   },
    "thumbs": [
     "assets/shots/codex-cli-0.webp"
    ],
@@ -2154,10 +2488,23 @@
     "server"
    ],
    "licenseSource": "https://raw.githubusercontent.com/CollaboraOnline/online/main/COPYING",
+   "forks": 1012,
+   "latestRelease": {
+    "name": "25.04.7-mobile",
+    "date": "2025-12-05T16:41:36Z"
+   },
    "thumbs": [
     "assets/shots/collabora-online-0.webp"
    ],
-   "setup": "advanced"
+   "setup": "advanced",
+   "lineage": {
+    "of": "libreoffice-writer",
+    "relation": "built-on",
+    "why": "An online office suite made by Collabora and based on LibreOffice's code.",
+    "source": "https://en.wikipedia.org/wiki/Collabora_Online",
+    "confirmed": "mod",
+    "label": "Built on LibreOffice"
+   }
   },
   {
    "id": "comaps",
@@ -2189,10 +2536,23 @@
     "android"
    ],
    "licenseSource": "https://codeberg.org/comaps/comaps/raw/branch/main/LICENSE",
+   "forks": 213,
+   "latestRelease": {
+    "name": "v2026.10.05-19",
+    "date": "2026-10-06T01:55:34+02:00"
+   },
    "thumbs": [
     "assets/shots/comaps-0.webp"
    ],
-   "setup": "easy"
+   "setup": "easy",
+   "lineage": {
+    "of": "organic-maps",
+    "relation": "split",
+    "since": 2025,
+    "why": "A community-led fork of Organic Maps, which itself began as a fork of Maps.me.",
+    "source": "https://codeberg.org/comaps/comaps",
+    "confirmed": "mod"
+   }
   },
   {
    "id": "comfyui",
@@ -2214,13 +2574,18 @@
    ],
    "source": "starter",
    "verified": false,
-   "release": "https://github.com/Comfy-Org/ComfyUI/releases/tag/v0.42.1",
+   "release": "https://github.com/Comfy-Org/ComfyUI/releases/tag/v0.43.0",
    "screenshots": [
     "https://github.com/user-attachments/assets/36e065e0-bfae-4456-8c7f-8369d5ea48a2"
    ],
    "platforms": [
     "windows"
    ],
+   "forks": 16926,
+   "latestRelease": {
+    "name": "v0.43.0",
+    "date": "2026-10-27T02:40:46Z"
+   },
    "thumbs": [
     "assets/shots/comfyui-0.webp"
    ],
@@ -2254,6 +2619,11 @@
    "platforms": [
     "server"
    ],
+   "forks": 492,
+   "latestRelease": {
+    "name": "9.5.7",
+    "date": "2026-10-20T20:56:33Z"
+   },
    "thumbs": [],
    "setup": "advanced"
   },
@@ -2290,6 +2660,11 @@
    "platforms": [
     "server"
    ],
+   "forks": 5830,
+   "latestRelease": {
+    "name": "v4.5.0",
+    "date": "2026-10-23T10:41:38Z"
+   },
    "thumbs": [
     "assets/shots/coolify-0.webp"
    ],
@@ -2327,6 +2702,11 @@
    "platforms": [
     "server"
    ],
+   "forks": 414,
+   "latestRelease": {
+    "name": "1.28.1",
+    "date": "2026-10-21T21:42:48Z"
+   },
    "thumbs": [
     "assets/shots/coroot-0.webp",
     "assets/shots/coroot-1.webp",
@@ -2361,6 +2741,11 @@
    "platforms": [
     "server"
    ],
+   "forks": 589,
+   "latestRelease": {
+    "name": "v0.42.1",
+    "date": "2022-09-23T18:01:31Z"
+   },
    "thumbs": [],
    "setup": "advanced"
   },
@@ -2391,6 +2776,11 @@
    "platforms": [
     "server"
    ],
+   "forks": 619,
+   "latestRelease": {
+    "name": "6.4.6",
+    "date": "2026-10-08T12:05:39Z"
+   },
    "thumbs": [],
    "setup": "advanced"
   },
@@ -2422,6 +2812,11 @@
     "android",
     "ios"
    ],
+   "forks": 1714,
+   "latestRelease": {
+    "name": "Release 6.0.6",
+    "date": "2022-03-06T07:25:43Z"
+   },
    "thumbs": [],
    "setup": "easy"
   },
@@ -2454,6 +2849,11 @@
    "platforms": [
     "server"
    ],
+   "forks": 727,
+   "latestRelease": {
+    "name": "v0.49.0",
+    "date": "2023-11-21T10:31:03Z"
+   },
    "thumbs": [],
    "setup": "advanced"
   },
@@ -2487,6 +2887,11 @@
     "web",
     "server"
    ],
+   "forks": 866,
+   "latestRelease": {
+    "name": "🍂 Autumn Release (2026.10.0)",
+    "date": "2026-10-21T14:23:14Z"
+   },
    "thumbs": [
     "assets/shots/cryptpad-0.webp",
     "assets/shots/cryptpad-1.webp"
@@ -2523,6 +2928,11 @@
     "linux"
    ],
    "licenseSource": "https://raw.githubusercontent.com/cube-js/cube/master/LICENSE",
+   "forks": 2173,
+   "latestRelease": {
+    "name": "v1.8.13",
+    "date": "2026-10-25T02:43:14Z"
+   },
    "thumbs": [],
    "setup": "advanced"
   },
@@ -2556,6 +2966,11 @@
     "server"
    ],
    "licenseSource": "https://raw.githubusercontent.com/customermates/customermates/main/LICENSE",
+   "forks": 32,
+   "latestRelease": {
+    "name": "v1.1.0",
+    "date": "2026-03-27T13:16:42Z"
+   },
    "thumbs": [],
    "setup": "advanced"
   },
@@ -2588,6 +3003,11 @@
     "mac",
     "linux"
    ],
+   "forks": 1495,
+   "latestRelease": {
+    "name": "release 5.6.2",
+    "date": "2026-10-04T16:36:31Z"
+   },
    "thumbs": [
     "assets/shots/darktable-0.webp"
    ],
@@ -2621,6 +3041,7 @@
    "platforms": [
     "server"
    ],
+   "forks": 124,
    "thumbs": [],
    "setup": "advanced"
   },
@@ -2654,6 +3075,11 @@
     "linux",
     "server"
    ],
+   "forks": 900,
+   "latestRelease": {
+    "name": "v1.2.881",
+    "date": "2026-04-17T08:01:42Z"
+   },
    "thumbs": [],
    "setup": "advanced"
   },
@@ -2721,6 +3147,11 @@
    "platforms": [
     "web"
    ],
+   "forks": 3142,
+   "latestRelease": {
+    "name": "decap-cms@3.17.3",
+    "date": "2026-10-26T10:51:45Z"
+   },
    "thumbs": [],
    "setup": "easy"
   },
@@ -2752,6 +3183,11 @@
    "platforms": [
     "server"
    ],
+   "forks": 632,
+   "latestRelease": {
+    "name": "v2.5.8",
+    "date": "2026-03-07T16:54:37Z"
+   },
    "thumbs": [],
    "setup": "advanced"
   },
@@ -2783,6 +3219,11 @@
    "platforms": [
     "server"
    ],
+   "forks": 3346,
+   "latestRelease": {
+    "name": "v3.4.1",
+    "date": "2026-10-21T19:10:58Z"
+   },
    "thumbs": [],
    "setup": "advanced"
   },
@@ -2818,6 +3259,11 @@
     "android",
     "ios"
    ],
+   "forks": 240,
+   "latestRelease": {
+    "name": "v2.62.0",
+    "date": "2026-09-26T21:17:50Z"
+   },
    "thumbs": [
     "assets/shots/delta-chat-0.webp"
    ],
@@ -2845,7 +3291,8 @@
     "web",
     "server"
    ],
-   "thumbs": []
+   "thumbs": [],
+   "setup": "advanced"
   },
   {
    "id": "digikam",
@@ -2880,6 +3327,7 @@
     "linux"
    ],
    "licenseSource": "https://invent.kde.org/graphics/digikam/-/raw/master/core/app/main/main.cpp",
+   "forks": 131,
    "thumbs": [
     "assets/shots/digikam-0.webp",
     "assets/shots/digikam-1.webp",
@@ -2915,6 +3363,7 @@
    "platforms": [
     "server"
    ],
+   "forks": 9055,
    "thumbs": [
     "assets/shots/discourse-0.webp",
     "assets/shots/discourse-1.webp"
@@ -2954,6 +3403,11 @@
     "web",
     "server"
    ],
+   "forks": 1647,
+   "latestRelease": {
+    "name": "v0.97.0",
+    "date": "2026-10-25T14:12:25Z"
+   },
    "thumbs": [
     "assets/shots/docmost-0.webp",
     "assets/shots/docmost-1.webp",
@@ -2992,6 +3446,11 @@
    "platforms": [
     "server"
    ],
+   "forks": 3409,
+   "latestRelease": {
+    "name": "v2.21.1",
+    "date": "2026-10-22T08:28:23Z"
+   },
    "thumbs": [
     "assets/shots/documenso-0.webp"
    ],
@@ -3027,6 +3486,11 @@
    "platforms": [
     "server"
    ],
+   "forks": 1908,
+   "latestRelease": {
+    "name": "3.3.4",
+    "date": "2026-10-26T10:48:06Z"
+   },
    "thumbs": [
     "assets/shots/docuseal-0.webp"
    ],
@@ -3062,6 +3526,11 @@
     "linux",
     "server"
    ],
+   "forks": 2095,
+   "latestRelease": {
+    "name": "v0.38.32",
+    "date": "2026-10-25T03:17:32Z"
+   },
    "thumbs": [],
    "setup": "advanced"
   },
@@ -3094,6 +3563,11 @@
    "platforms": [
     "server"
    ],
+   "forks": 3591,
+   "latestRelease": {
+    "name": "24.0.1",
+    "date": "2026-09-07T12:58:22Z"
+   },
    "thumbs": [
     "assets/shots/dolibarr-0.webp"
    ],
@@ -3127,6 +3601,11 @@
    "platforms": [
     "server"
    ],
+   "forks": 3447,
+   "latestRelease": {
+    "name": "v2.28.2",
+    "date": "2026-04-20T11:19:42Z"
+   },
    "thumbs": [],
    "setup": "advanced"
   },
@@ -3136,7 +3615,7 @@
    "summary": "Dub is a tool for creating short links and tracking clicks and conversions, with support for affiliate programs. It is aimed at marketing teams and businesses, and can be self-hosted or used as a paid hosted service.",
    "kind": "self_hosted",
    "code": "github.com/dubinc/dub",
-   "website": "https://dub.co",
+   "website": "https://dub.link",
    "license": "AGPL-3.0",
    "licenseClass": "open_core",
    "licenseNeedsCheck": false,
@@ -3158,6 +3637,7 @@
     "server"
    ],
    "licenseSource": "https://raw.githubusercontent.com/dubinc/dub/main/LICENSE.md",
+   "forks": 3345,
    "thumbs": [],
    "setup": "advanced"
   },
@@ -3188,6 +3668,11 @@
     "mac",
     "linux"
    ],
+   "forks": 1086,
+   "latestRelease": {
+    "name": "v2.4.0.1_stable_2026-10-07",
+    "date": "2026-10-07T13:08:30Z"
+   },
    "thumbs": [],
    "setup": "easy"
   },
@@ -3219,6 +3704,11 @@
     "web",
     "server"
    ],
+   "forks": 130,
+   "latestRelease": {
+    "name": "0.15.4",
+    "date": "2025-05-11T11:28:50Z"
+   },
    "thumbs": [],
    "setup": "advanced"
   },
@@ -3256,10 +3746,27 @@
     "ios",
     "web"
    ],
+   "forks": 2805,
+   "latestRelease": {
+    "name": "v1.12.32",
+    "date": "2026-10-16T13:17:44Z"
+   },
    "thumbs": [
     "assets/shots/element-0.webp"
    ],
-   "setup": "easy"
+   "setup": "easy",
+   "lineage": {
+    "ofName": "Riot",
+    "relation": "renamed",
+    "since": 2020,
+    "why": "Renamed from Riot to Element in July 2020.",
+    "source": "https://en.wikipedia.org/wiki/Element_(software)",
+    "confirmed": "mod",
+    "oldNames": [
+     "Riot",
+     "Vector"
+    ]
+   }
   },
   {
    "id": "element-call",
@@ -3290,6 +3797,11 @@
     "web",
     "server"
    ],
+   "forks": 225,
+   "latestRelease": {
+    "name": "v0.26.1",
+    "date": "2026-09-28T11:11:50Z"
+   },
    "thumbs": [
     "assets/shots/element-call-0.webp"
    ],
@@ -3326,6 +3838,11 @@
     "linux",
     "server"
    ],
+   "forks": 650,
+   "latestRelease": {
+    "name": "v1.58.8 — Fixes and improvements",
+    "date": "2026-10-20T19:18:07Z"
+   },
    "thumbs": [],
    "setup": "advanced"
   },
@@ -3362,6 +3879,11 @@
     "ios",
     "web"
    ],
+   "forks": 1875,
+   "latestRelease": {
+    "name": "locker-v1.0.11",
+    "date": "2026-10-26T07:05:27Z"
+   },
    "thumbs": [
     "assets/shots/ente-auth-0.webp",
     "assets/shots/ente-auth-1.webp"
@@ -3401,6 +3923,11 @@
     "ios",
     "web"
    ],
+   "forks": 1875,
+   "latestRelease": {
+    "name": "locker-v1.0.11",
+    "date": "2026-10-26T07:05:27Z"
+   },
    "thumbs": [
     "assets/shots/ente-photos-0.webp",
     "assets/shots/ente-photos-1.webp"
@@ -3440,6 +3967,11 @@
     "web",
     "server"
    ],
+   "forks": 13283,
+   "latestRelease": {
+    "name": "v15.124.1",
+    "date": "2026-10-22T14:51:26Z"
+   },
    "thumbs": [
     "assets/shots/erpnext-0.webp",
     "assets/shots/erpnext-1.webp"
@@ -3476,6 +4008,11 @@
     "web",
     "server"
    ],
+   "forks": 1015,
+   "latestRelease": {
+    "name": "10.0.11",
+    "date": "2026-10-23T11:44:47Z"
+   },
    "thumbs": [
     "assets/shots/espocrm-0.webp"
    ],
@@ -3509,6 +4046,11 @@
    "platforms": [
     "android"
    ],
+   "forks": 450,
+   "latestRelease": {
+    "name": "v1.0.57",
+    "date": "2026-07-27T15:31:40Z"
+   },
    "thumbs": [
     "assets/shots/etar-calendar-0.webp"
    ],
@@ -3546,6 +4088,11 @@
     "web",
     "server"
    ],
+   "forks": 3058,
+   "latestRelease": {
+    "name": "v3.3.11",
+    "date": "2026-10-24T18:07:01Z"
+   },
    "thumbs": [
     "assets/shots/etherpad-0.webp",
     "assets/shots/etherpad-1.webp",
@@ -3584,6 +4131,11 @@
     "linux",
     "server"
    ],
+   "forks": 431,
+   "latestRelease": {
+    "name": "@evidence-dev/evidence@40.1.8",
+    "date": "2026-02-06T16:08:58Z"
+   },
    "thumbs": [],
    "setup": "advanced"
   },
@@ -3615,6 +4167,11 @@
    "platforms": [
     "android"
    ],
+   "forks": 1101,
+   "latestRelease": {
+    "name": "1.23.2",
+    "date": "2026-02-18T00:00:00.000Z"
+   },
    "thumbs": [
     "assets/shots/f-droid-0.webp",
     "assets/shots/f-droid-1.webp"
@@ -3651,6 +4208,11 @@
    "platforms": [
     "android"
    ],
+   "forks": 712,
+   "latestRelease": {
+    "name": "1.2339 Elopteryx",
+    "date": "2026-10-24T08:42:30Z"
+   },
    "thumbs": [
     "assets/shots/fairemail-0.webp",
     "assets/shots/fairemail-1.webp",
@@ -3682,7 +4244,7 @@
     "awesome-oss-alternatives"
    ],
    "verified": false,
-   "release": "https://github.com/infobyte/faraday/releases/tag/v5.25.1",
+   "release": "https://github.com/infobyte/faraday/releases/tag/v5.25.2",
    "screenshots": [
     "https://raw.githubusercontent.com/infobyte/faraday/HEAD/docs/images/manage.png",
     "https://raw.githubusercontent.com/infobyte/faraday/HEAD/docs/images/dashboard.png"
@@ -3691,6 +4253,11 @@
     "linux",
     "server"
    ],
+   "forks": 1085,
+   "latestRelease": {
+    "name": "v5.25.2",
+    "date": "2026-10-26T22:10:29Z"
+   },
    "thumbs": [
     "assets/shots/faraday-0.webp",
     "assets/shots/faraday-1.webp"
@@ -3769,6 +4336,7 @@
     "web",
     "server"
    ],
+   "forks": 1015,
    "thumbs": [
     "assets/shots/filestash-0.webp",
     "assets/shots/filestash-1.webp",
@@ -3811,6 +4379,11 @@
     "mac",
     "linux"
    ],
+   "forks": 170,
+   "latestRelease": {
+    "name": "v3.3.0-beta.3",
+    "date": "2024-03-04T12:46:18Z"
+   },
    "thumbs": [
     "assets/shots/firecamp-0.webp"
    ],
@@ -3847,6 +4420,11 @@
     "web",
     "server"
    ],
+   "forks": 2351,
+   "latestRelease": {
+    "name": "v6.7.9",
+    "date": "2026-10-11T19:16:51Z"
+   },
    "thumbs": [
     "assets/shots/firefly-iii-0.webp",
     "assets/shots/firefly-iii-1.webp",
@@ -3888,6 +4466,7 @@
     "ios"
    ],
    "licenseSource": "https://raw.githubusercontent.com/mozilla/gecko-dev/master/toolkit/content/license.html",
+   "forks": 1687,
    "thumbs": [
     "assets/shots/firefox-0.webp",
     "assets/shots/firefox-1.webp"
@@ -3925,11 +4504,56 @@
    "platforms": [
     "server"
    ],
+   "forks": 594,
+   "latestRelease": {
+    "name": "v2.287.0",
+    "date": "2026-10-20T13:32:02Z"
+   },
    "thumbs": [
     "assets/shots/flagsmith-0.webp",
     "assets/shots/flagsmith-1.webp"
    ],
    "setup": "advanced"
+  },
+  {
+   "id": "floorp",
+   "name": "Floorp",
+   "summary": "Floorp is a web browser built from Firefox's code, made in Japan, with extra ways to arrange and customize its look and layout. It is for people who like Firefox but want more control over how it looks.",
+   "kind": "app",
+   "code": "github.com/Floorp-Projects/Floorp",
+   "website": "https://floorp.app/",
+   "download": null,
+   "license": "MPL-2.0",
+   "licenseClass": "open",
+   "licenseNeedsCheck": false,
+   "stars": 8462,
+   "archived": false,
+   "inactive": false,
+   "unconfirmed": [],
+   "source": "family",
+   "verified": false,
+   "platforms": [
+    "windows",
+    "mac",
+    "linux"
+   ],
+   "licenseSource": "https://github.com/Floorp-Projects/Floorp/blob/main/LICENSE",
+   "screenshots": [],
+   "forks": 284,
+   "latestRelease": {
+    "name": "Floorp 12.20.2",
+    "date": "2026-10-17T02:43:43Z"
+   },
+   "thumbs": [],
+   "setup": "easy",
+   "lineage": {
+    "of": "firefox",
+    "relation": "fork-keeps-up",
+    "since": 2021,
+    "why": "A Japanese browser based on Firefox, focused on customizing the interface.",
+    "source": "https://en.wikipedia.org/wiki/Floorp",
+    "confirmed": "mod"
+   }
   },
   {
    "id": "florisboard",
@@ -3957,6 +4581,11 @@
    "platforms": [
     "android"
    ],
+   "forks": 749,
+   "latestRelease": {
+    "name": "v0.5.2",
+    "date": "2025-11-28T15:17:55Z"
+   },
    "thumbs": [
     "assets/shots/florisboard-0.webp"
    ],
@@ -3994,6 +4623,11 @@
     "mac",
     "linux"
    ],
+   "forks": 548,
+   "latestRelease": {
+    "name": "Fluent Reader v1.3.1",
+    "date": "2026-10-15T20:37:37Z"
+   },
    "thumbs": [
     "assets/shots/fluent-reader-0.webp",
     "assets/shots/fluent-reader-1.webp"
@@ -4032,6 +4666,11 @@
    "platforms": [
     "server"
    ],
+   "forks": 2,
+   "latestRelease": {
+    "name": "Folio v0.4.2",
+    "date": "2026-10-23T18:40:23Z"
+   },
    "thumbs": [
     "assets/shots/folio-wiki-0.webp",
     "assets/shots/folio-wiki-1.webp",
@@ -4064,11 +4703,16 @@
     "open-source-alternatives"
    ],
    "verified": false,
-   "release": "https://github.com/fonoster/fonoster/releases/tag/v0.33.0",
+   "release": "https://github.com/fonoster/fonoster/releases/tag/v0.34.3",
    "screenshots": [],
    "platforms": [
     "server"
    ],
+   "forks": 566,
+   "latestRelease": {
+    "name": "Release v0.34.3",
+    "date": "2026-10-26T17:39:40Z"
+   },
    "thumbs": [],
    "setup": "advanced"
   },
@@ -4083,7 +4727,7 @@
    "license": "GPL-3.0-or-later",
    "licenseClass": "open",
    "licenseNeedsCheck": false,
-   "stars": 5718,
+   "stars": 5724,
    "archived": false,
    "inactive": false,
    "unconfirmed": [
@@ -4094,7 +4738,7 @@
    ],
    "source": "starter",
    "verified": false,
-   "release": "https://codeberg.org/forgejo/forgejo/releases/tag/v17.0.0",
+   "release": "https://codeberg.org/forgejo/forgejo/releases/tag/v17.0.1",
    "screenshots": [
     "https://forgejo.org/_astro/og-preview.Uy75QWb0_6Lpd2.webp"
    ],
@@ -4103,10 +4747,23 @@
     "server"
    ],
    "licenseSource": "https://codeberg.org/forgejo/forgejo/raw/branch/forgejo/README.md",
+   "forks": 1010,
+   "latestRelease": {
+    "name": "v17.0.1",
+    "date": "2026-10-26T19:39:32+01:00"
+   },
    "thumbs": [
     "assets/shots/forgejo-0.webp"
    ],
-   "setup": "advanced"
+   "setup": "advanced",
+   "lineage": {
+    "of": "gitea",
+    "relation": "split",
+    "since": 2022,
+    "why": "Started in December 2022 as a fork of Gitea, after Gitea's trademarks and operations were moved to a for-profit company.",
+    "source": "https://en.wikipedia.org/wiki/Forgejo",
+    "confirmed": "mod"
+   }
   },
   {
    "id": "formbricks",
@@ -4136,6 +4793,11 @@
    "platforms": [
     "server"
    ],
+   "forks": 2599,
+   "latestRelease": {
+    "name": "6.1.1",
+    "date": "2026-10-22T06:16:54Z"
+   },
    "thumbs": [
     "assets/shots/formbricks-0.webp"
    ],
@@ -4168,6 +4830,7 @@
    "platforms": [
     "server"
    ],
+   "forks": 766,
    "thumbs": [],
    "setup": "advanced"
   },
@@ -4202,6 +4865,7 @@
    "platforms": [
     "android"
    ],
+   "forks": 85,
    "thumbs": [
     "assets/shots/fossdroid-0.webp",
     "assets/shots/fossdroid-1.webp",
@@ -4239,12 +4903,29 @@
    "platforms": [
     "android"
    ],
+   "forks": 243,
+   "latestRelease": {
+    "name": "1.12.1",
+    "date": "2026-10-24T13:54:02Z"
+   },
    "thumbs": [
     "assets/shots/fossify-calendar-0.webp",
     "assets/shots/fossify-calendar-1.webp",
     "assets/shots/fossify-calendar-2.webp"
    ],
-   "setup": "easy"
+   "setup": "easy",
+   "lineage": {
+    "ofName": "Simple Calendar",
+    "ofUrl": "https://github.com/SimpleMobileTools/Simple-Calendar",
+    "relation": "continues",
+    "why": "Fossify emerged as a fork of the discontinued Simple Mobile Tools apps, to continue them.",
+    "source": "https://github.com/FossifyOrg/.github/blob/main/profile/README.md",
+    "confirmed": "mod",
+    "oldNames": [
+     "Simple Mobile Tools",
+     "Simple Calendar"
+    ]
+   }
   },
   {
    "id": "fossify-gallery",
@@ -4278,11 +4959,28 @@
    "platforms": [
     "android"
    ],
+   "forks": 284,
+   "latestRelease": {
+    "name": "1.14.1",
+    "date": "2026-10-24T13:54:16Z"
+   },
    "thumbs": [
     "assets/shots/fossify-gallery-0.webp",
     "assets/shots/fossify-gallery-1.webp"
    ],
-   "setup": "easy"
+   "setup": "easy",
+   "lineage": {
+    "ofName": "Simple Gallery",
+    "ofUrl": "https://github.com/SimpleMobileTools/Simple-Gallery",
+    "relation": "continues",
+    "why": "Fossify emerged as a fork of the discontinued Simple Mobile Tools apps, to continue them.",
+    "source": "https://github.com/FossifyOrg/.github/blob/main/profile/README.md",
+    "confirmed": "mod",
+    "oldNames": [
+     "Simple Mobile Tools",
+     "Simple Gallery"
+    ]
+   }
   },
   {
    "archived": false,
@@ -4307,7 +5005,8 @@
     "mac",
     "linux"
    ],
-   "thumbs": []
+   "thumbs": [],
+   "setup": "easy"
   },
   {
    "id": "freetube",
@@ -4339,6 +5038,7 @@
     "mac",
     "linux"
    ],
+   "forks": 1551,
    "thumbs": [
     "assets/shots/freetube-0.webp",
     "assets/shots/freetube-1.webp",
@@ -4377,6 +5077,11 @@
     "android",
     "server"
    ],
+   "forks": 1326,
+   "latestRelease": {
+    "name": "FreshRSS 1.30.4",
+    "date": "2026-10-21T20:45:47Z"
+   },
    "thumbs": [
     "assets/shots/freshrss-0.webp"
    ],
@@ -4413,10 +5118,23 @@
     "mac",
     "linux"
    ],
+   "forks": 76,
+   "latestRelease": {
+    "name": "Friction 1.0.0-rc.3",
+    "date": "2025-12-31T21:53:48Z"
+   },
    "thumbs": [
     "assets/shots/friction-0.webp"
    ],
-   "setup": "easy"
+   "setup": "easy",
+   "lineage": {
+    "ofName": "enve",
+    "ofUrl": "https://github.com/MaurycyLiebner/enve",
+    "relation": "built-on",
+    "why": "Says it is based on enve, an earlier 2D animation program.",
+    "source": "https://github.com/friction2d/friction",
+    "confirmed": "mod"
+   }
   },
   {
    "id": "friendica",
@@ -4451,6 +5169,11 @@
     "web",
     "server"
    ],
+   "forks": 384,
+   "latestRelease": {
+    "name": "Friendica 2026.05 released",
+    "date": "2026-05-21T05:17:46Z"
+   },
    "thumbs": [
     "assets/shots/friendica-0.webp",
     "assets/shots/friendica-1.webp",
@@ -4488,6 +5211,11 @@
     "server"
    ],
    "licenseSource": "https://dev.funkwhale.audio/funkwhale/funkwhale/-/raw/develop/LICENSE",
+   "forks": 51,
+   "latestRelease": {
+    "name": "2.0.12",
+    "date": "2026-10-15T12:49:09.934Z"
+   },
    "thumbs": [
     "assets/shots/funkwhale-0.webp"
    ],
@@ -4526,6 +5254,11 @@
    "platforms": [
     "server"
    ],
+   "forks": 246,
+   "latestRelease": {
+    "name": "v7.2.1",
+    "date": "2026-10-21T19:03:17Z"
+   },
    "thumbs": [
     "assets/shots/fusio-0.webp",
     "assets/shots/fusio-1.webp",
@@ -4564,6 +5297,7 @@
     "web",
     "server"
    ],
+   "forks": 205,
    "thumbs": [],
    "setup": "advanced"
   },
@@ -4600,6 +5334,11 @@
     "web",
     "server"
    ],
+   "forks": 65,
+   "latestRelease": {
+    "name": "v1.6.7",
+    "date": "2026-09-07T23:47:05Z"
+   },
    "thumbs": [
     "assets/shots/gathio-0.webp",
     "assets/shots/gathio-1.webp"
@@ -4636,6 +5375,11 @@
     "mac",
     "linux"
    ],
+   "forks": 14850,
+   "latestRelease": {
+    "name": "Release v0.65.0",
+    "date": "2026-10-20T21:17:57Z"
+   },
    "thumbs": [
     "assets/shots/gemini-cli-0.webp"
    ],
@@ -4668,6 +5412,7 @@
    "platforms": [
     "server"
    ],
+   "forks": 280,
    "thumbs": [],
    "setup": "advanced"
   },
@@ -4698,6 +5443,11 @@
    "platforms": [
     "server"
    ],
+   "forks": 12034,
+   "latestRelease": {
+    "name": "v6.72.0",
+    "date": "2026-10-20T15:09:13Z"
+   },
    "thumbs": [
     "assets/shots/ghost-0.webp"
    ],
@@ -4734,6 +5484,11 @@
     "web",
     "server"
    ],
+   "forks": 1384,
+   "latestRelease": {
+    "name": "3.93.0",
+    "date": "2026-10-25T16:09:16Z"
+   },
    "thumbs": [
     "assets/shots/ghostfolio-0.webp"
    ],
@@ -4773,6 +5528,11 @@
     "linux"
    ],
    "licenseSource": "https://gitlab.gnome.org/GNOME/gimp/-/raw/master/app/main.c",
+   "forks": 561,
+   "latestRelease": {
+    "name": "GIMP 3.2.6",
+    "date": "2026-09-10T12:30:18.110Z"
+   },
    "thumbs": [
     "assets/shots/gimp-0.webp",
     "assets/shots/gimp-1.webp",
@@ -4813,13 +5573,26 @@
     "linux",
     "server"
    ],
+   "forks": 7309,
+   "latestRelease": {
+    "name": "v28.2.0",
+    "date": "2026-10-18T18:25:03Z"
+   },
    "thumbs": [
     "assets/shots/gitea-0.webp",
     "assets/shots/gitea-1.webp",
     "assets/shots/gitea-2.webp",
     "assets/shots/gitea-3.webp"
    ],
-   "setup": "advanced"
+   "setup": "advanced",
+   "lineage": {
+    "of": "gogs",
+    "relation": "split",
+    "since": 2016,
+    "why": "Started in November 2016 as a fork of Gogs, to develop it as a community-run project.",
+    "source": "https://en.wikipedia.org/wiki/Gitea",
+    "confirmed": "mod"
+   }
   },
   {
    "id": "gitlab",
@@ -4850,6 +5623,7 @@
     "server"
    ],
    "licenseSource": "https://raw.githubusercontent.com/gitlabhq/gitlabhq/master/LICENSE",
+   "forks": 5944,
    "thumbs": [],
    "setup": "advanced"
   },
@@ -4879,8 +5653,16 @@
     "linux",
     "server"
    ],
+   "forks": 8301,
    "thumbs": [],
-   "setup": "advanced"
+   "setup": "advanced",
+   "lineage": {
+    "of": "gitlab",
+    "relation": "free-edition",
+    "why": "GitLab's free, open-source edition; GitLab also sells a paid Enterprise Edition.",
+    "source": "https://about.gitlab.com/install/ce-or-ee/",
+    "confirmed": "mod"
+   }
   },
   {
    "id": "gnumeric",
@@ -4910,6 +5692,11 @@
     "linux"
    ],
    "licenseSource": "https://gitlab.gnome.org/GNOME/gnumeric/-/raw/master/COPYING",
+   "forks": 45,
+   "latestRelease": {
+    "name": "GNUMERIC_1_12_62",
+    "date": "2026-09-20T21:49:14.968Z"
+   },
    "thumbs": [
     "assets/shots/gnumeric-0.webp"
    ],
@@ -4944,6 +5731,11 @@
     "server"
    ],
    "licenseSource": "https://raw.githubusercontent.com/arp242/goatcounter/main/LICENSE",
+   "forks": 284,
+   "latestRelease": {
+    "name": "v2.7.0",
+    "date": "2025-12-15T19:01:48Z"
+   },
    "thumbs": [],
    "setup": "advanced"
   },
@@ -4977,6 +5769,11 @@
     "linux",
     "server"
    ],
+   "forks": 5074,
+   "latestRelease": {
+    "name": "0.14.3",
+    "date": "2026-06-07T20:51:06Z"
+   },
    "thumbs": [],
    "setup": "advanced"
   },
@@ -5010,6 +5807,11 @@
     "mac",
     "linux"
    ],
+   "forks": 6467,
+   "latestRelease": {
+    "name": "v1.56.0",
+    "date": "2026-10-23T15:49:34Z"
+   },
    "thumbs": [
     "assets/shots/goose-0.webp"
    ],
@@ -5044,6 +5846,11 @@
     "linux",
     "server"
    ],
+   "forks": 14866,
+   "latestRelease": {
+    "name": "13.2.4",
+    "date": "2026-10-13T11:41:03Z"
+   },
    "thumbs": [],
    "setup": "advanced"
   },
@@ -5112,6 +5919,7 @@
    "platforms": [
     "web"
    ],
+   "forks": 1300,
    "thumbs": [
     "assets/shots/graphite-0.webp",
     "assets/shots/graphite-1.webp"
@@ -5153,6 +5961,11 @@
     "server"
    ],
    "licenseSource": "https://raw.githubusercontent.com/gravitl/netmaker/develop/LICENSE.md",
+   "forks": 665,
+   "latestRelease": {
+    "name": "v1.7.0",
+    "date": "2026-08-31T14:48:24Z"
+   },
    "thumbs": [
     "assets/shots/gravitl-0.webp",
     null
@@ -5188,6 +6001,11 @@
     "web",
     "server"
    ],
+   "forks": 674,
+   "latestRelease": {
+    "name": "v1.7.21",
+    "date": "2026-10-09T20:08:10Z"
+   },
    "thumbs": [
     "assets/shots/grist-0.webp"
    ],
@@ -5224,6 +6042,11 @@
     "server"
    ],
    "licenseSource": "https://raw.githubusercontent.com/growthbook/growthbook/main/LICENSE",
+   "forks": 885,
+   "latestRelease": {
+    "name": "v5.1.0",
+    "date": "2026-09-22T03:07:54Z"
+   },
    "thumbs": [
     "assets/shots/growthbook-0.webp"
    ],
@@ -5259,6 +6082,11 @@
     "mac",
     "linux"
    ],
+   "forks": 1021,
+   "latestRelease": {
+    "name": "Hanko v3.1",
+    "date": "2026-10-01T12:51:22Z"
+   },
    "thumbs": [],
    "setup": "advanced"
   },
@@ -5286,7 +6114,8 @@
     "mac",
     "linux"
    ],
-   "thumbs": []
+   "thumbs": [],
+   "setup": "advanced"
   },
   {
    "id": "hedgedoc",
@@ -5319,6 +6148,11 @@
     "web",
     "server"
    ],
+   "forks": 610,
+   "latestRelease": {
+    "name": "HedgeDoc 1.12.0",
+    "date": "2026-08-21T21:46:18Z"
+   },
    "thumbs": [
     "assets/shots/hedgedoc-0.webp"
    ],
@@ -5352,11 +6186,23 @@
    "platforms": [
     "android"
    ],
+   "forks": 633,
+   "latestRelease": {
+    "name": "HeliBoard 4.2",
+    "date": "2026-10-12T17:32:37Z"
+   },
    "thumbs": [
     "assets/shots/heliboard-0.webp",
     "assets/shots/heliboard-1.webp"
    ],
-   "setup": "easy"
+   "setup": "easy",
+   "lineage": {
+    "of": "openboard",
+    "relation": "built-on",
+    "why": "Describes itself as \"based on AOSP / OpenBoard\".",
+    "source": "https://github.com/Helium314/HeliBoard",
+    "confirmed": "mod"
+   }
   },
   {
    "id": "hermes-agent",
@@ -5387,6 +6233,11 @@
     "mac",
     "linux"
    ],
+   "forks": 56415,
+   "latestRelease": {
+    "name": "Hermes Agent v0.22.5",
+    "date": "2026-10-23T05:28:45Z"
+   },
    "thumbs": [
     "assets/shots/hermes-agent-0.webp",
     "assets/shots/hermes-agent-1.webp"
@@ -5416,7 +6267,8 @@
     "mac",
     "linux"
    ],
-   "thumbs": []
+   "thumbs": [],
+   "setup": "easy"
   },
   {
    "id": "heyform",
@@ -5445,6 +6297,11 @@
    "platforms": [
     "server"
    ],
+   "forks": 724,
+   "latestRelease": {
+    "name": "v3.0.5",
+    "date": "2026-10-24T13:10:51Z"
+   },
    "thumbs": [
     "assets/shots/heyform-0.webp"
    ],
@@ -5484,6 +6341,11 @@
     "server"
    ],
    "licenseSource": "https://raw.githubusercontent.com/highlight/highlight/main/LICENSE",
+   "forks": 693,
+   "latestRelease": {
+    "name": "docker-v0.5.6",
+    "date": "2025-08-08T15:42:36Z"
+   },
    "thumbs": [
     "assets/shots/highlight-0.webp",
     "assets/shots/highlight-1.webp",
@@ -5521,6 +6383,11 @@
     "web",
     "server"
    ],
+   "forks": 39032,
+   "latestRelease": {
+    "name": "2026.10.4",
+    "date": "2026-10-24T20:03:14Z"
+   },
    "thumbs": [
     "assets/shots/home-assistant-0.webp"
    ],
@@ -5558,6 +6425,11 @@
     "web",
     "server"
    ],
+   "forks": 6190,
+   "latestRelease": {
+    "name": "2026.9.0",
+    "date": "2026-09-30T11:50:32Z"
+   },
    "thumbs": [],
    "setup": "advanced"
   },
@@ -5581,7 +6453,7 @@
    ],
    "source": "starter",
    "verified": false,
-   "release": "https://github.com/huginn/huginn/releases/tag/v2026.10.24",
+   "release": "https://github.com/huginn/huginn/releases/tag/v2026.10.26",
    "screenshots": [
     "https://raw.githubusercontent.com/huginn/huginn/master/doc/imgs/your-agents.png",
     "https://raw.githubusercontent.com/huginn/huginn/master/doc/imgs/diagram.png",
@@ -5591,6 +6463,11 @@
    "platforms": [
     "server"
    ],
+   "forks": 4318,
+   "latestRelease": {
+    "name": "v2026.10.26",
+    "date": "2026-10-26T14:21:22Z"
+   },
    "thumbs": [
     "assets/shots/huginn-0.webp",
     "assets/shots/huginn-1.webp",
@@ -5628,6 +6505,11 @@
    "platforms": [
     "server"
    ],
+   "forks": 503,
+   "latestRelease": {
+    "name": "@hyperdx/cli v0.8.0",
+    "date": "2026-10-23T23:05:01Z"
+   },
    "thumbs": [
     "assets/shots/hyperdx-0.webp"
    ],
@@ -5661,6 +6543,11 @@
    "platforms": [
     "server"
    ],
+   "forks": 3157,
+   "latestRelease": {
+    "name": "4.1.1",
+    "date": "2026-03-16T19:17:57Z"
+   },
    "thumbs": [],
    "setup": "advanced"
   },
@@ -5693,6 +6580,11 @@
    "platforms": [
     "server"
    ],
+   "forks": 1209,
+   "latestRelease": {
+    "name": "illa-builder@4.8.5",
+    "date": "2024-08-05T09:23:19Z"
+   },
    "thumbs": [],
    "setup": "advanced"
   },
@@ -5725,6 +6617,11 @@
     "ios",
     "server"
    ],
+   "forks": 7368,
+   "latestRelease": {
+    "name": "v3.3.5",
+    "date": "2026-10-21T18:12:57Z"
+   },
    "thumbs": [
     "assets/shots/immich-0.webp"
    ],
@@ -5740,7 +6637,7 @@
    "license": "Apache-2.0",
    "licenseClass": "open",
    "licenseNeedsCheck": false,
-   "stars": null,
+   "stars": 70,
    "archived": false,
    "inactive": false,
    "unconfirmed": [
@@ -5759,6 +6656,11 @@
     "android"
    ],
    "licenseSource": "https://gitlab.com/indicproject/indic-keyboard/-/raw/master/LICENSE",
+   "forks": 89,
+   "latestRelease": {
+    "name": "v3.4",
+    "date": "2021-08-09T02:33:00.466Z"
+   },
    "thumbs": [],
    "setup": "easy"
   },
@@ -5792,6 +6694,11 @@
     "web",
     "server"
    ],
+   "forks": 558,
+   "latestRelease": {
+    "name": "v3.3.14",
+    "date": "2026-10-13T15:11:40Z"
+   },
    "thumbs": [
     "assets/shots/indico-0.webp"
    ],
@@ -5825,6 +6732,11 @@
    "platforms": [
     "server"
    ],
+   "forks": 3762,
+   "latestRelease": {
+    "name": "v3.12.1 | 10-14-26",
+    "date": "2026-10-15T17:44:55Z"
+   },
    "thumbs": [],
    "setup": "advanced"
   },
@@ -5860,6 +6772,11 @@
     "linux"
    ],
    "licenseSource": "https://gitlab.com/inkscape/inkscape/-/raw/master/COPYING",
+   "forks": 1991,
+   "latestRelease": {
+    "name": "Inkscape 1.4",
+    "date": "2024-10-12T22:00:00.000Z"
+   },
    "thumbs": [
     "assets/shots/inkscape-0.webp",
     "assets/shots/inkscape-1.webp",
@@ -5899,6 +6816,11 @@
     "mac",
     "linux"
    ],
+   "forks": 2386,
+   "latestRelease": {
+    "name": "13.3.1 📦",
+    "date": "2026-10-09T07:35:39Z"
+   },
    "thumbs": [
     "assets/shots/insomnia-0.webp",
     "assets/shots/insomnia-1.webp"
@@ -5915,7 +6837,7 @@
    "license": "AGPL-3.0",
    "licenseClass": "open",
    "licenseNeedsCheck": false,
-   "stars": null,
+   "stars": 37,
    "archived": false,
    "inactive": false,
    "unconfirmed": [
@@ -5935,6 +6857,7 @@
     "server"
    ],
    "licenseSource": "https://codeberg.org/inventaire/inventaire/raw/branch/main/README.md",
+   "forks": 2,
    "thumbs": [],
    "setup": "easy"
   },
@@ -5968,6 +6891,11 @@
     "mac",
     "linux"
    ],
+   "forks": 3078,
+   "latestRelease": {
+    "name": "Version 6.14.2",
+    "date": "2026-09-27T18:31:53Z"
+   },
    "thumbs": [
     "assets/shots/invokeai-0.webp"
    ],
@@ -5996,7 +6924,8 @@
     "mac",
     "linux"
    ],
-   "thumbs": []
+   "thumbs": [],
+   "setup": "easy"
   },
   {
    "archived": false,
@@ -6021,7 +6950,8 @@
     "mac",
     "linux"
    ],
-   "thumbs": []
+   "thumbs": [],
+   "setup": "easy"
   },
   {
    "id": "jami",
@@ -6056,6 +6986,7 @@
     "android",
     "ios"
    ],
+   "forks": 10,
    "thumbs": [
     "assets/shots/jami-0.webp",
     "assets/shots/jami-1.webp"
@@ -6093,6 +7024,11 @@
     "mac",
     "linux"
    ],
+   "forks": 3111,
+   "latestRelease": {
+    "name": "0.8.7",
+    "date": "2026-10-20T04:33:57Z"
+   },
    "thumbs": [
     "assets/shots/jan-0.webp",
     "assets/shots/jan-1.webp",
@@ -6130,6 +7066,11 @@
     "linux",
     "server"
    ],
+   "forks": 177,
+   "latestRelease": {
+    "name": "v2.5.0",
+    "date": "2026-10-07T13:26:12Z"
+   },
    "thumbs": [],
    "setup": "advanced"
   },
@@ -6154,7 +7095,7 @@
    ],
    "source": "starter",
    "verified": true,
-   "release": "https://github.com/jellyfin/jellyfin/releases/tag/v12.3",
+   "release": "https://github.com/jellyfin/jellyfin/releases/tag/v12.4",
    "screenshots": [
     "https://jellyfin.org/assets/images/10.8-home-4a73a92bf90d1eeffa5081201ca9c7bb.png"
    ],
@@ -6163,10 +7104,23 @@
     "ios",
     "server"
    ],
+   "forks": 5719,
+   "latestRelease": {
+    "name": "12.4",
+    "date": "2026-10-26T21:30:17Z"
+   },
    "thumbs": [
     "assets/shots/jellyfin-0.webp"
    ],
-   "setup": "advanced"
+   "setup": "advanced",
+   "lineage": {
+    "ofName": "Emby",
+    "relation": "split",
+    "since": 2018,
+    "why": "Started in December 2018 as a fork of Emby.",
+    "source": "https://en.wikipedia.org/wiki/Jellyfin",
+    "confirmed": "mod"
+   }
   },
   {
    "id": "jenkins",
@@ -6196,6 +7150,11 @@
     "windows",
     "linux"
    ],
+   "forks": 9811,
+   "latestRelease": {
+    "name": "2.587",
+    "date": "2026-10-20T12:22:29Z"
+   },
    "thumbs": [],
    "setup": "advanced"
   },
@@ -6232,6 +7191,11 @@
     "web",
     "server"
    ],
+   "forks": 8109,
+   "latestRelease": {
+    "name": "2.0.11248",
+    "date": "2026-09-14T13:07:11Z"
+   },
    "thumbs": [
     "assets/shots/jitsi-meet-0.webp"
    ],
@@ -6264,6 +7228,11 @@
    "platforms": [
     "server"
    ],
+   "forks": 404,
+   "latestRelease": {
+    "name": "Jitsu CLI Release 1.11.0",
+    "date": "2026-07-09T17:07:35Z"
+   },
    "thumbs": [],
    "setup": "advanced"
   },
@@ -6301,6 +7270,11 @@
     "ios"
    ],
    "licenseSource": "https://raw.githubusercontent.com/laurent22/joplin/dev/LICENSE",
+   "forks": 6373,
+   "latestRelease": {
+    "name": "v3.7.21",
+    "date": "2026-09-25T21:31:12Z"
+   },
    "thumbs": [
     "assets/shots/joplin-0.webp"
    ],
@@ -6336,6 +7310,11 @@
    "platforms": [
     "server"
    ],
+   "forks": 2013,
+   "latestRelease": {
+    "name": "Kanboard 1.2.56",
+    "date": "2026-10-21T21:28:45Z"
+   },
    "thumbs": [
     "assets/shots/kanboard-0.webp"
    ],
@@ -6365,7 +7344,8 @@
     "ios",
     "server"
    ],
-   "thumbs": []
+   "thumbs": [],
+   "setup": "advanced"
   },
   {
    "id": "kdenlive",
@@ -6399,6 +7379,7 @@
     "linux"
    ],
    "licenseSource": "https://invent.kde.org/multimedia/kdenlive/-/raw/master/src/mainwindow.cpp",
+   "forks": 248,
    "thumbs": [
     "assets/shots/kdenlive-0.webp",
     "assets/shots/kdenlive-1.webp",
@@ -6433,9 +7414,42 @@
    "platforms": [
     "android"
    ],
+   "forks": 415,
+   "latestRelease": {
+    "name": "🦋 Beautiful Butterfly",
+    "date": "2026-10-17T20:53:59Z"
+   },
    "thumbs": [
     "assets/shots/keepassdx-0.webp"
    ],
+   "setup": "easy"
+  },
+  {
+   "id": "keepassx",
+   "name": "KeePassX",
+   "summary": "KeePassX is a password manager that keeps your logins in one locked file on your own computer. Its developers announced in December 2021 that it is no longer developed; KeePassXC continues it. It is listed so people who still have it can find its successor.",
+   "kind": "app",
+   "code": "github.com/keepassx/keepassx",
+   "website": "https://www.keepassx.org/",
+   "download": null,
+   "license": "GPL-2.0 or GPL-3.0",
+   "licenseClass": "open",
+   "licenseNeedsCheck": false,
+   "stars": 4515,
+   "archived": true,
+   "inactive": true,
+   "unconfirmed": [],
+   "source": "family",
+   "verified": false,
+   "platforms": [
+    "windows",
+    "mac",
+    "linux"
+   ],
+   "licenseSource": "https://github.com/keepassx/keepassx/blob/master/COPYING",
+   "screenshots": [],
+   "forks": 601,
+   "thumbs": [],
    "setup": "easy"
   },
   {
@@ -6471,12 +7485,25 @@
     "linux"
    ],
    "licenseSource": "https://raw.githubusercontent.com/keepassxreboot/keepassxc/develop/COPYING",
+   "forks": 1983,
+   "latestRelease": {
+    "name": "Release 2.8.0",
+    "date": "2026-10-21T21:57:23Z"
+   },
    "thumbs": [
     "assets/shots/keepassxc-0.webp",
     "assets/shots/keepassxc-1.webp",
     "assets/shots/keepassxc-2.webp"
    ],
-   "setup": "easy"
+   "setup": "easy",
+   "lineage": {
+    "of": "keepassx",
+    "relation": "continues",
+    "since": 2016,
+    "why": "A community fork of KeePassX; KeePassX announced on 2021-12-09 that it is no longer developed.",
+    "source": "https://keepassxc.org/docs/",
+    "confirmed": "mod"
+   }
   },
   {
    "id": "keila",
@@ -6509,6 +7536,11 @@
     "web",
     "server"
    ],
+   "forks": 177,
+   "latestRelease": {
+    "name": "Keila v0.30.3",
+    "date": "2026-09-06T09:30:31Z"
+   },
    "thumbs": [
     "assets/shots/keila-0.webp",
     "assets/shots/keila-1.webp"
@@ -6544,6 +7576,11 @@
    "platforms": [
     "server"
    ],
+   "forks": 3482,
+   "latestRelease": {
+    "name": "v2.0.7",
+    "date": "2026-10-20T14:07:27Z"
+   },
    "thumbs": [
     "assets/shots/kestra-0.webp"
    ],
@@ -6578,6 +7615,11 @@
    "platforms": [
     "server"
    ],
+   "forks": 9106,
+   "latestRelease": {
+    "name": "26.8.1",
+    "date": "2026-10-13T08:58:15Z"
+   },
    "thumbs": [],
    "setup": "advanced"
   },
@@ -6591,9 +7633,9 @@
    "license": "AGPL-3.0",
    "licenseClass": "open",
    "licenseNeedsCheck": false,
-   "stars": null,
+   "stars": 340,
    "archived": false,
-   "inactive": false,
+   "inactive": true,
    "unconfirmed": [
     "The lists gave no descriptions, so the Keybase comparison relies on the project name and README only.",
     "Whether the LICENSE file text matches AGPL-v3 was not provided.",
@@ -6610,6 +7652,11 @@
     "server"
    ],
    "licenseSource": "https://codeberg.org/keyoxide/keyoxide-web/raw/branch/main/LICENSE",
+   "forks": 39,
+   "latestRelease": {
+    "name": "Release 5.1.0",
+    "date": "2024-12-03T20:46:07+01:00"
+   },
    "thumbs": [],
    "setup": "advanced"
   },
@@ -6644,10 +7691,23 @@
     "mac",
     "linux"
    ],
+   "forks": 3307,
+   "latestRelease": {
+    "name": "v7.8.18 (release)",
+    "date": "2026-10-26T09:05:47Z"
+   },
    "thumbs": [
     "assets/shots/kilo-code-0.webp"
    ],
-   "setup": "advanced"
+   "setup": "advanced",
+   "lineage": {
+    "of": "cline",
+    "relation": "split",
+    "since": 2025,
+    "why": "Launched in March 2025 as a fork of Roo Code, which was itself derived from Cline.",
+    "source": "https://en.wikipedia.org/wiki/Kilo_Code",
+    "confirmed": "mod"
+   }
   },
   {
    "id": "kimai",
@@ -6679,6 +7739,11 @@
    "platforms": [
     "server"
    ],
+   "forks": 870,
+   "latestRelease": {
+    "name": "2.71.0",
+    "date": "2026-10-25T18:48:48Z"
+   },
    "thumbs": [
     "assets/shots/kimai-0.webp"
    ],
@@ -6716,10 +7781,26 @@
     "android"
    ],
    "licenseSource": "https://raw.githubusercontent.com/xbmc/xbmc/master/LICENSE.md",
+   "forks": 6648,
+   "latestRelease": {
+    "name": "v21.3-Omega",
+    "date": "2025-10-31T17:21:33Z"
+   },
    "thumbs": [
     "assets/shots/kodi-0.webp"
    ],
-   "setup": "easy"
+   "setup": "easy",
+   "lineage": {
+    "ofName": "XBMC",
+    "relation": "renamed",
+    "since": 2014,
+    "why": "Renamed from XBMC to Kodi in July 2014.",
+    "source": "https://en.wikipedia.org/wiki/Kodi_(software)",
+    "confirmed": "mod",
+    "oldNames": [
+     "XBMC"
+    ]
+   }
   },
   {
    "id": "koreader",
@@ -6752,6 +7833,11 @@
     "linux",
     "android"
    ],
+   "forks": 1998,
+   "latestRelease": {
+    "name": "KOReader 2026.07.1",
+    "date": "2026-08-01T11:10:30Z"
+   },
    "thumbs": [
     "assets/shots/koreader-0.webp",
     "assets/shots/koreader-1.webp"
@@ -6790,6 +7876,7 @@
     "linux"
    ],
    "licenseSource": "https://invent.kde.org/graphics/krita/-/raw/master/README.md",
+   "forks": 508,
    "thumbs": [
     "assets/shots/krita-0.webp",
     "assets/shots/krita-1.webp",
@@ -6831,6 +7918,11 @@
    "platforms": [
     "server"
    ],
+   "forks": 217,
+   "latestRelease": {
+    "name": "v3.1.1",
+    "date": "2025-09-17T09:26:34Z"
+   },
    "thumbs": [
     "assets/shots/kubero-0.webp",
     "assets/shots/kubero-1.webp",
@@ -6871,6 +7963,11 @@
     "mac",
     "linux"
    ],
+   "forks": 134,
+   "latestRelease": {
+    "name": "v0.3.42-weekly",
+    "date": "2026-09-20T08:15:03Z"
+   },
    "thumbs": [
     "assets/shots/kubestellar-console-0.webp"
    ],
@@ -6909,6 +8006,11 @@
    "platforms": [
     "server"
    ],
+   "forks": 1521,
+   "latestRelease": {
+    "name": "v3.2.6",
+    "date": "2026-07-05T10:38:58Z"
+   },
    "thumbs": [
     "assets/shots/kutt-0.webp",
     "assets/shots/kutt-1.webp",
@@ -6944,6 +8046,11 @@
    "platforms": [
     "server"
    ],
+   "forks": 134,
+   "latestRelease": {
+    "name": "v2.59.0",
+    "date": "2026-10-01T14:02:15Z"
+   },
    "thumbs": [],
    "setup": "advanced"
   },
@@ -6979,6 +8086,11 @@
     "web",
     "server"
    ],
+   "forks": 775,
+   "latestRelease": {
+    "name": "v1.55.0",
+    "date": "2026-10-07T16:25:42Z"
+   },
    "thumbs": [
     "assets/shots/lago-0.webp"
    ],
@@ -7005,7 +8117,8 @@
    "platforms": [
     "server"
    ],
-   "thumbs": []
+   "thumbs": [],
+   "setup": "advanced"
   },
   {
    "id": "lastsaas",
@@ -7037,6 +8150,11 @@
     "mac",
     "linux"
    ],
+   "forks": 62,
+   "latestRelease": {
+    "name": "v1.0.0",
+    "date": "2026-02-26T21:28:11Z"
+   },
    "thumbs": [],
    "setup": "advanced"
   },
@@ -7072,6 +8190,11 @@
    "platforms": [
     "server"
    ],
+   "forks": 1163,
+   "latestRelease": {
+    "name": "Leantime v3.12.0",
+    "date": "2026-10-15T23:11:05Z"
+   },
    "thumbs": [
     "assets/shots/leantime-0.webp",
     "assets/shots/leantime-1.webp",
@@ -7100,7 +8223,7 @@
    ],
    "source": "starter",
    "verified": false,
-   "release": "https://github.com/LemmyNet/lemmy/releases/tag/0.19.20",
+   "release": "https://github.com/LemmyNet/lemmy/releases/tag/0.19.21",
    "screenshots": [
     "https://i.postimg.cc/wvYVvKjP/main-screen-2.webp",
     "https://i.postimg.cc/hjRrjFty/mobile-pic.webp"
@@ -7108,6 +8231,11 @@
    "platforms": [
     "server"
    ],
+   "forks": 969,
+   "latestRelease": {
+    "name": "0.19.21",
+    "date": "2026-10-26T13:48:58Z"
+   },
    "thumbs": [
     "assets/shots/lemmy-0.webp",
     "assets/shots/lemmy-1.webp"
@@ -7144,6 +8272,7 @@
     "mac",
     "linux"
    ],
+   "forks": 1477,
    "thumbs": [],
    "setup": "easy"
   },
@@ -7171,7 +8300,8 @@
     "mac",
     "linux"
    ],
-   "thumbs": []
+   "thumbs": [],
+   "setup": "easy"
   },
   {
    "id": "librechat",
@@ -7201,6 +8331,7 @@
    "platforms": [
     "server"
    ],
+   "forks": 9525,
    "thumbs": [
     "assets/shots/librechat-0.webp",
     "assets/shots/librechat-1.webp"
@@ -7238,6 +8369,11 @@
    "platforms": [
     "server"
    ],
+   "forks": 3,
+   "latestRelease": {
+    "name": "v1.2",
+    "date": "2022-06-18T06:52:13Z"
+   },
    "thumbs": [
     "assets/shots/librengine-0.webp"
    ],
@@ -7276,7 +8412,15 @@
    "thumbs": [
     "assets/shots/libreoffice-calc-0.webp"
    ],
-   "setup": "easy"
+   "setup": "easy",
+   "lineage": {
+    "of": "apache-openoffice",
+    "relation": "split",
+    "since": 2010,
+    "why": "Created in 2010 as a fork of OpenOffice.org; Apache OpenOffice is the other continuation of that code.",
+    "source": "https://en.wikipedia.org/wiki/LibreOffice",
+    "confirmed": "mod"
+   }
   },
   {
    "id": "libreoffice-impress",
@@ -7311,7 +8455,15 @@
    "thumbs": [
     "assets/shots/libreoffice-impress-0.webp"
    ],
-   "setup": "easy"
+   "setup": "easy",
+   "lineage": {
+    "of": "apache-openoffice",
+    "relation": "split",
+    "since": 2010,
+    "why": "Created in 2010 as a fork of OpenOffice.org; Apache OpenOffice is the other continuation of that code.",
+    "source": "https://en.wikipedia.org/wiki/LibreOffice",
+    "confirmed": "mod"
+   }
   },
   {
    "id": "libreoffice-writer",
@@ -7346,7 +8498,19 @@
    "thumbs": [
     "assets/shots/libreoffice-writer-0.webp"
    ],
-   "setup": "easy"
+   "setup": "easy",
+   "lineage": {
+    "of": "apache-openoffice",
+    "relation": "split",
+    "since": 2010,
+    "why": "Created in 2010 as a fork of OpenOffice.org; Apache OpenOffice is the other continuation of that code.",
+    "source": "https://en.wikipedia.org/wiki/LibreOffice",
+    "confirmed": "mod",
+    "oldNames": [
+     "OpenOffice.org",
+     "OpenOffice"
+    ]
+   }
   },
   {
    "id": "libresign",
@@ -7370,13 +8534,18 @@
     "awesome-oss-alternatives"
    ],
    "verified": false,
-   "release": "https://github.com/LibreSign/libresign/releases/tag/v15.0.9",
+   "release": "https://github.com/LibreSign/libresign/releases/tag/v15.0.10",
    "screenshots": [
     "https://raw.githubusercontent.com/LibreSign/libresign/HEAD/img/screenshot/request-signature.png"
    ],
    "platforms": [
     "server"
    ],
+   "forks": 171,
+   "latestRelease": {
+    "name": "15.0.10",
+    "date": "2026-10-27T01:42:02Z"
+   },
    "thumbs": [
     "assets/shots/libresign-0.webp"
    ],
@@ -7413,6 +8582,11 @@
     "web",
     "server"
    ],
+   "forks": 2515,
+   "latestRelease": {
+    "name": "LibreSpeed 6.3.1",
+    "date": "2026-10-21T22:04:51Z"
+   },
    "thumbs": [
     "assets/shots/librespeed-0.webp"
    ],
@@ -7446,6 +8620,11 @@
    "platforms": [
     "server"
    ],
+   "forks": 1789,
+   "latestRelease": {
+    "name": "1.9.6",
+    "date": "2026-05-26T17:45:39Z"
+   },
    "thumbs": [
     "assets/shots/libretranslate-0.webp",
     "assets/shots/libretranslate-1.webp"
@@ -7483,10 +8662,22 @@
     "linux"
    ],
    "licenseSource": "https://codeberg.org/librewolf/source/raw/branch/main/LICENSE",
+   "forks": 93,
+   "latestRelease": {
+    "name": "LibreWolf Source v153.0.4-1",
+    "date": "2026-08-11T14:18:36+02:00"
+   },
    "thumbs": [
     "assets/shots/librewolf-0.webp"
    ],
-   "setup": "easy"
+   "setup": "easy",
+   "lineage": {
+    "of": "firefox",
+    "relation": "fork-keeps-up",
+    "why": "A fork of Firefox with privacy and security settings changed; its releases carry Firefox's version numbers.",
+    "source": "https://en.wikipedia.org/wiki/LibreWolf",
+    "confirmed": "mod"
+   }
   },
   {
    "id": "lightdash",
@@ -7511,7 +8702,7 @@
     "awesome-oss-alternatives"
    ],
    "verified": false,
-   "release": "https://github.com/lightdash/lightdash/releases/tag/3.55.0",
+   "release": "https://github.com/lightdash/lightdash/releases/tag/3.61.0",
    "screenshots": [],
    "platforms": [
     "mac",
@@ -7519,6 +8710,11 @@
     "server"
    ],
    "licenseSource": "https://raw.githubusercontent.com/lightdash/lightdash/main/LICENSE",
+   "forks": 792,
+   "latestRelease": {
+    "name": "3.61.0",
+    "date": "2026-10-26T22:34:02Z"
+   },
    "thumbs": [],
    "setup": "advanced"
   },
@@ -7551,6 +8747,7 @@
     "web",
     "server"
    ],
+   "forks": 1127,
    "thumbs": [
     "assets/shots/limesurvey-0.webp"
    ],
@@ -7588,7 +8785,18 @@
     "assets/shots/lineageos-0.webp"
    ],
    "setup": "advanced",
-   "setupWhy": "An operating system: installing it means replacing or sitting alongside your computer or phone's current system, which is more than installing an app."
+   "setupWhy": "An operating system: installing it means replacing or sitting alongside your computer or phone's current system, which is more than installing an app.",
+   "lineage": {
+    "ofName": "CyanogenMod",
+    "relation": "continues",
+    "since": 2016,
+    "why": "A community fork and successor to CyanogenMod, launched in December 2016.",
+    "source": "https://en.wikipedia.org/wiki/LineageOS",
+    "confirmed": "mod",
+    "oldNames": [
+     "CyanogenMod"
+    ]
+   }
   },
   {
    "archived": false,
@@ -7612,7 +8820,8 @@
     "web",
     "server"
    ],
-   "thumbs": []
+   "thumbs": [],
+   "setup": "advanced"
   },
   {
    "id": "linux-mint",
@@ -7648,7 +8857,14 @@
     "assets/shots/linux-mint-1.webp"
    ],
    "setup": "advanced",
-   "setupWhy": "An operating system: installing it means replacing or sitting alongside your computer or phone's current system, which is more than installing an app."
+   "setupWhy": "An operating system: installing it means replacing or sitting alongside your computer or phone's current system, which is more than installing an app.",
+   "lineage": {
+    "of": "ubuntu",
+    "relation": "built-on",
+    "why": "Based on Ubuntu and uses its package repositories.",
+    "source": "https://en.wikipedia.org/wiki/Linux_Mint",
+    "confirmed": "mod"
+   }
   },
   {
    "id": "listmonk",
@@ -7680,6 +8896,11 @@
    "platforms": [
     "server"
    ],
+   "forks": 2718,
+   "latestRelease": {
+    "name": "v7.0.0-beta.1",
+    "date": "2026-10-20T10:25:57Z"
+   },
    "thumbs": [
     "assets/shots/listmonk-0.webp"
    ],
@@ -7718,6 +8939,11 @@
    "platforms": [
     "server"
    ],
+   "forks": 336,
+   "latestRelease": {
+    "name": "Upgraded to svelte4 and shadcn",
+    "date": "2025-06-08T08:36:40Z"
+   },
    "thumbs": [
     "assets/shots/litekart-0.webp",
     "assets/shots/litekart-1.webp",
@@ -7756,6 +8982,11 @@
     "linux",
     "server"
    ],
+   "forks": 2500,
+   "latestRelease": {
+    "name": "v1.13.11",
+    "date": "2026-10-25T09:45:31Z"
+   },
    "thumbs": [],
    "setup": "advanced"
   },
@@ -7788,6 +9019,11 @@
     "mac",
     "linux"
    ],
+   "forks": 1302,
+   "latestRelease": {
+    "name": "1.2.2",
+    "date": "2020-07-04T12:35:12Z"
+   },
    "thumbs": [
     "assets/shots/lmms-0.webp"
    ],
@@ -7824,6 +9060,11 @@
     "linux",
     "android"
    ],
+   "forks": 5404,
+   "latestRelease": {
+    "name": "v1.18.2",
+    "date": "2026-08-21T14:02:01Z"
+   },
    "thumbs": [
     "assets/shots/localsend-0.webp",
     "assets/shots/localsend-1.webp"
@@ -7862,6 +9103,11 @@
     "android",
     "ios"
    ],
+   "forks": 2853,
+   "latestRelease": {
+    "name": "Desktop APP 2.0.2 (Beta Testing)",
+    "date": "2026-10-07T14:18:57Z"
+   },
    "thumbs": [
     "assets/shots/logseq-0.webp"
    ],
@@ -7900,6 +9146,11 @@
     "web",
     "server"
    ],
+   "forks": 1204,
+   "latestRelease": {
+    "name": "v1.45.0",
+    "date": "2026-10-13T07:52:46Z"
+   },
    "thumbs": [
     "assets/shots/logto-0.webp",
     "assets/shots/logto-1.webp",
@@ -7936,6 +9187,11 @@
    "platforms": [
     "server"
    ],
+   "forks": 63,
+   "latestRelease": {
+    "name": "v1.0.0-beta.15 - Security Release",
+    "date": "2026-10-23T01:56:15Z"
+   },
    "thumbs": [
     "assets/shots/loops-0.webp"
    ],
@@ -7972,6 +9228,11 @@
     "mac",
     "linux"
    ],
+   "forks": 2279,
+   "latestRelease": {
+    "name": "3.70.1",
+    "date": "2026-10-19T12:33:53Z"
+   },
    "thumbs": [
     "assets/shots/losslesscut-0.webp"
    ],
@@ -8006,6 +9267,11 @@
    "platforms": [
     "server"
    ],
+   "forks": 187,
+   "latestRelease": {
+    "name": "v6.2.0",
+    "date": "2026-10-21T11:15:54Z"
+   },
    "thumbs": [
     "assets/shots/lowdefy-0.webp"
    ],
@@ -8032,7 +9298,8 @@
    "platforms": [
     "linux"
    ],
-   "thumbs": []
+   "thumbs": [],
+   "setup": "easy"
   },
   {
    "id": "mailspring",
@@ -8064,6 +9331,11 @@
     "mac",
     "linux"
    ],
+   "forks": 1064,
+   "latestRelease": {
+    "name": "1.26.2",
+    "date": "2026-10-22T14:51:00Z"
+   },
    "thumbs": [
     "assets/shots/mailspring-0.webp"
    ],
@@ -8096,6 +9368,11 @@
    "platforms": [
     "server"
    ],
+   "forks": 652,
+   "latestRelease": {
+    "name": "Manticore Search 29.9.0",
+    "date": "2026-09-11T14:20:16Z"
+   },
    "thumbs": [],
    "setup": "advanced"
   },
@@ -8122,7 +9399,8 @@
     "linux",
     "server"
    ],
-   "thumbs": []
+   "thumbs": [],
+   "setup": "advanced"
   },
   {
    "id": "mastodon",
@@ -8152,6 +9430,11 @@
    "platforms": [
     "server"
    ],
+   "forks": 7521,
+   "latestRelease": {
+    "name": "v4.7.3",
+    "date": "2026-10-01T14:09:40Z"
+   },
    "thumbs": [
     "assets/shots/mastodon-0.webp",
     "assets/shots/mastodon-1.webp"
@@ -8191,6 +9474,7 @@
     "linux",
     "server"
    ],
+   "forks": 121,
    "thumbs": [
     "assets/shots/matano-0.webp",
     "assets/shots/matano-1.webp"
@@ -8223,6 +9507,11 @@
    "platforms": [
     "server"
    ],
+   "forks": 2923,
+   "latestRelease": {
+    "name": "5.14.2",
+    "date": "2026-10-22T02:49:53Z"
+   },
    "thumbs": [
     "assets/shots/matomo-0.webp"
    ],
@@ -8262,6 +9551,11 @@
     "web",
     "server"
    ],
+   "forks": 9071,
+   "latestRelease": {
+    "name": "v12.0.1",
+    "date": "2026-10-22T12:26:41Z"
+   },
    "thumbs": [
     "assets/shots/mattermost-0.webp"
    ],
@@ -8295,10 +9589,27 @@
     "web",
     "server"
    ],
+   "forks": 33,
+   "latestRelease": {
+    "name": "v1.11.0",
+    "date": "2026-10-09T07:22:28Z"
+   },
    "thumbs": [
     "assets/shots/mbin-0.webp"
    ],
-   "setup": "advanced"
+   "setup": "advanced",
+   "lineage": {
+    "ofName": "kbin",
+    "ofUrl": "https://codeberg.org/Kbin/kbin-core",
+    "relation": "continues",
+    "since": 2023,
+    "why": "A fork and continuation of kbin.",
+    "source": "https://github.com/MbinOrg/mbin",
+    "confirmed": "mod",
+    "oldNames": [
+     "kbin"
+    ]
+   }
   },
   {
    "id": "mediawiki",
@@ -8332,6 +9643,7 @@
     "server"
    ],
    "licenseSource": "https://raw.githubusercontent.com/wikimedia/mediawiki/master/COPYING",
+   "forks": 1559,
    "thumbs": [
     "assets/shots/mediawiki-0.webp",
     "assets/shots/mediawiki-1.webp"
@@ -8363,6 +9675,11 @@
    "platforms": [
     "server"
    ],
+   "forks": 5468,
+   "latestRelease": {
+    "name": "v2.22.1: Payment Session Client Data Updates, Promotion Ranking Fix, Dashboard Improvements",
+    "date": "2026-10-23T12:39:23Z"
+   },
    "thumbs": [],
    "setup": "advanced"
   },
@@ -8402,6 +9719,11 @@
     "linux"
    ],
    "licenseSource": "https://raw.githubusercontent.com/meilisearch/meilisearch/main/LICENSE",
+   "forks": 2762,
+   "latestRelease": {
+    "name": "v1.56.0 🐫",
+    "date": "2026-10-26T09:51:16Z"
+   },
    "thumbs": [
     "assets/shots/mellisearch-0.webp",
     "assets/shots/mellisearch-1.webp"
@@ -8440,6 +9762,11 @@
     "web",
     "server"
    ],
+   "forks": 4904,
+   "latestRelease": {
+    "name": "v0.31.0",
+    "date": "2026-09-19T16:50:57Z"
+   },
    "thumbs": [
     "assets/shots/memos-0.webp"
    ],
@@ -8479,6 +9806,11 @@
     "android",
     "server"
    ],
+   "forks": 1045,
+   "latestRelease": {
+    "name": "1.3.1",
+    "date": "2026-10-23T16:59:57Z"
+   },
    "thumbs": [
     "assets/shots/meshcentral-0.webp"
    ],
@@ -8517,6 +9849,11 @@
     "server"
    ],
    "licenseSource": "https://raw.githubusercontent.com/metabase/metabase/master/LICENSE.txt",
+   "forks": 6929,
+   "latestRelease": {
+    "name": "Metabase 64.1",
+    "date": "2026-10-07T18:42:49Z"
+   },
    "thumbs": [
     "assets/shots/metabase-0.webp"
    ],
@@ -8550,6 +9887,7 @@
    "platforms": [
     "server"
    ],
+   "forks": 26,
    "thumbs": [],
    "setup": "advanced"
   },
@@ -8585,6 +9923,11 @@
     "linux",
     "server"
    ],
+   "forks": 952,
+   "latestRelease": {
+    "name": "Miniflux 2.3.4",
+    "date": "2026-10-20T01:08:39Z"
+   },
    "thumbs": [
     "assets/shots/miniflux-0.webp",
     "assets/shots/miniflux-1.webp"
@@ -8618,6 +9961,11 @@
    "platforms": [
     "server"
    ],
+   "forks": 1637,
+   "latestRelease": {
+    "name": "2026.10.1",
+    "date": "2026-10-23T23:34:05Z"
+   },
    "thumbs": [
     "assets/shots/misskey-0.webp"
    ],
@@ -8652,6 +10000,11 @@
     "server"
    ],
    "licenseSource": "https://raw.githubusercontent.com/synmetrix/synmetrix/main/LICENSE",
+   "forks": 49,
+   "latestRelease": {
+    "name": "v0.1.55 ⛱",
+    "date": "2025-02-07T23:14:35Z"
+   },
    "thumbs": [],
    "setup": "advanced"
   },
@@ -8682,8 +10035,48 @@
    "platforms": [
     "web"
    ],
+   "forks": 0,
+   "latestRelease": {
+    "name": "MonoMap v1.2",
+    "date": "2026-09-30T07:10:04Z"
+   },
    "thumbs": [],
    "setup": "easy"
+  },
+  {
+   "id": "mullvad-browser",
+   "name": "Mullvad Browser",
+   "summary": "Mullvad Browser is a privacy-focused web browser made by Mullvad VPN together with the Tor Project. It makes its users look alike to websites so they are harder to track, and it works without the Tor network. It is for people who want strong tracking protection.",
+   "kind": "app",
+   "code": "https://gitlab.torproject.org/tpo/applications/mullvad-browser",
+   "website": "https://mullvad.net/browser",
+   "download": null,
+   "license": "MPL-2.0",
+   "licenseClass": "open",
+   "licenseNeedsCheck": false,
+   "stars": null,
+   "archived": false,
+   "inactive": false,
+   "unconfirmed": [],
+   "source": "family",
+   "verified": false,
+   "platforms": [
+    "windows",
+    "mac",
+    "linux"
+   ],
+   "licenseSource": "https://gitlab.torproject.org/tpo/applications/mullvad-browser/-/raw/mullvad-browser-153.5.0esr-16.0-1/toolkit/content/license.html",
+   "screenshots": [],
+   "forks": 14,
+   "thumbs": [],
+   "setup": "easy",
+   "lineage": {
+    "of": "tor-browser",
+    "relation": "built-on",
+    "why": "Made by Mullvad VPN together with the Tor Project, which describe it as \"a Tor Browser to use without the Tor Network\".",
+    "source": "https://github.com/mullvad/mullvad-browser",
+    "confirmed": "mod"
+   }
   },
   {
    "archived": false,
@@ -8710,7 +10103,8 @@
     "android",
     "ios"
    ],
-   "thumbs": []
+   "thumbs": [],
+   "setup": "easy"
   },
   {
    "id": "mumble",
@@ -8741,6 +10135,11 @@
     "mac",
     "linux"
    ],
+   "forks": 1408,
+   "latestRelease": {
+    "name": "v1.5.939",
+    "date": "2026-10-11T11:52:37Z"
+   },
    "thumbs": [
     "assets/shots/mumble-0.webp"
    ],
@@ -8775,6 +10174,11 @@
     "windows",
     "linux"
    ],
+   "forks": 448,
+   "latestRelease": {
+    "name": "MyPaint v2.0.1 (2020-05-29)",
+    "date": "2020-05-29T19:30:08Z"
+   },
    "thumbs": [
     "assets/shots/mypaint-0.webp"
    ],
@@ -8808,6 +10212,11 @@
    "platforms": [
     "mac"
    ],
+   "forks": 421,
+   "latestRelease": {
+    "name": "Natron 2.5.0",
+    "date": "2022-11-26T00:48:14Z"
+   },
    "thumbs": [
     "assets/shots/natron-0.webp"
    ],
@@ -8844,6 +10253,11 @@
     "web",
     "server"
    ],
+   "forks": 1777,
+   "latestRelease": {
+    "name": "v0.64.2",
+    "date": "2026-09-24T23:26:20Z"
+   },
    "thumbs": [
     "assets/shots/navidrome-0.webp",
     "assets/shots/navidrome-1.webp",
@@ -8883,6 +10297,11 @@
     "linux",
     "server"
    ],
+   "forks": 2739,
+   "latestRelease": {
+    "name": "3.2.0-alpha08",
+    "date": "2017-04-11T08:47:47Z"
+   },
    "thumbs": [],
    "setup": "advanced"
   },
@@ -8909,7 +10328,7 @@
     "awesome-oss-alternatives"
    ],
    "verified": false,
-   "release": "https://github.com/netbirdio/netbird/releases/tag/v0.81.4",
+   "release": "https://github.com/netbirdio/netbird/releases/tag/v0.81.5",
    "screenshots": [],
    "platforms": [
     "windows",
@@ -8917,6 +10336,11 @@
     "linux"
    ],
    "licenseSource": "https://raw.githubusercontent.com/netbirdio/netbird/main/LICENSE",
+   "forks": 1788,
+   "latestRelease": {
+    "name": "v0.81.5",
+    "date": "2026-10-26T17:38:07Z"
+   },
    "thumbs": [],
    "setup": "easy"
   },
@@ -8951,6 +10375,11 @@
    "platforms": [
     "windows"
    ],
+   "forks": 6699,
+   "latestRelease": {
+    "name": "v2.12.2",
+    "date": "2026-10-23T13:29:11Z"
+   },
    "thumbs": [
     "assets/shots/netdata-0.webp"
    ],
@@ -8986,6 +10415,11 @@
     "mac",
     "ios"
    ],
+   "forks": 778,
+   "latestRelease": {
+    "name": "NetNewsWire 7.2.1 for Mac",
+    "date": "2026-10-20T16:59:23Z"
+   },
    "thumbs": [],
    "setup": "easy"
   },
@@ -9019,6 +10453,11 @@
    "platforms": [
     "android"
    ],
+   "forks": 3929,
+   "latestRelease": {
+    "name": "v0.29.1",
+    "date": "2026-08-15T22:05:38Z"
+   },
    "thumbs": [
     "assets/shots/newpipe-0.webp",
     "assets/shots/newpipe-1.webp",
@@ -9056,6 +10495,7 @@
    "platforms": [
     "linux"
    ],
+   "forks": 251,
    "thumbs": [
     "assets/shots/newsboat-0.webp"
    ],
@@ -9091,6 +10531,11 @@
     "web",
     "server"
    ],
+   "forks": 575,
+   "latestRelease": {
+    "name": "NexoPOS v6.3.0",
+    "date": "2026-10-22T14:28:45Z"
+   },
    "thumbs": [],
    "setup": "easy"
   },
@@ -9127,10 +10572,23 @@
     "web",
     "server"
    ],
+   "forks": 5310,
+   "latestRelease": {
+    "name": "v33.0.10",
+    "date": "2026-10-15T08:37:28Z"
+   },
    "thumbs": [
     "assets/shots/nextcloud-0.webp"
    ],
-   "setup": "advanced"
+   "setup": "advanced",
+   "lineage": {
+    "of": "owncloud",
+    "relation": "split",
+    "since": 2016,
+    "why": "Started in 2016 as a fork of ownCloud by Frank Karlitschek, ownCloud's founder and then CTO, after he left the company.",
+    "source": "https://en.wikipedia.org/wiki/OwnCloud",
+    "confirmed": "mod"
+   }
   },
   {
    "id": "nextcloud-calendar",
@@ -9161,6 +10619,11 @@
     "web",
     "server"
    ],
+   "forks": 338,
+   "latestRelease": {
+    "name": "v3.3.2",
+    "date": "2022-06-02T07:23:46Z"
+   },
    "thumbs": [
     "assets/shots/nextcloud-calendar-0.webp"
    ],
@@ -9197,6 +10660,11 @@
    "platforms": [
     "server"
    ],
+   "forks": 130,
+   "latestRelease": {
+    "name": "v5.4.1",
+    "date": "2026-10-22T21:58:58Z"
+   },
    "thumbs": [
     "assets/shots/nextcloud-forms-0.webp",
     "assets/shots/nextcloud-forms-1.webp",
@@ -9240,6 +10708,11 @@
     "web",
     "server"
    ],
+   "forks": 163,
+   "latestRelease": {
+    "name": "v6.1.0",
+    "date": "2026-09-15T11:32:39Z"
+   },
    "thumbs": [
     "assets/shots/nextcloud-notes-0.webp"
    ],
@@ -9277,6 +10750,11 @@
    "platforms": [
     "server"
    ],
+   "forks": 91,
+   "latestRelease": {
+    "name": "v9.3.0",
+    "date": "2026-09-18T06:17:11Z"
+   },
    "thumbs": [
     "assets/shots/nextcloud-polls-0.webp",
     "assets/shots/nextcloud-polls-1.webp",
@@ -9318,6 +10796,11 @@
     "ios",
     "server"
    ],
+   "forks": 596,
+   "latestRelease": {
+    "name": "v25.0.6",
+    "date": "2026-10-15T16:17:02Z"
+   },
    "thumbs": [
     "assets/shots/nextcloud-talk-0.webp"
    ],
@@ -9347,12 +10830,17 @@
     "open-source-alternatives"
    ],
    "verified": false,
-   "release": "https://github.com/nhost/nhost/releases/tag/%40nhost/dashboard%403.8.1",
+   "release": "https://github.com/nhost/nhost/releases/tag/cli%401.52.2",
    "screenshots": [],
    "platforms": [
     "mac",
     "linux"
    ],
+   "forks": 640,
+   "latestRelease": {
+    "name": "cli@1.52.2",
+    "date": "2026-10-26T14:22:37Z"
+   },
    "thumbs": [],
    "setup": "advanced"
   },
@@ -9387,6 +10875,11 @@
     "mac",
     "linux"
    ],
+   "forks": 3952,
+   "latestRelease": {
+    "name": "5.0.9: Maintenance Release",
+    "date": "2026-10-21T10:29:19Z"
+   },
    "thumbs": [
     "assets/shots/node-red-0.webp"
    ],
@@ -9423,6 +10916,7 @@
     "web",
     "server"
    ],
+   "forks": 78,
    "thumbs": [
     "assets/shots/notabase-0.webp"
    ],
@@ -9461,6 +10955,11 @@
    "platforms": [
     "android"
    ],
+   "forks": 199,
+   "latestRelease": {
+    "name": "v6.2",
+    "date": "2026-05-16T15:17:57Z"
+   },
    "thumbs": [
     "assets/shots/notally-0.webp",
     "assets/shots/notally-1.webp",
@@ -9501,6 +11000,11 @@
     "linux",
     "android"
    ],
+   "forks": 976,
+   "latestRelease": {
+    "name": "NoteGen v0.39.0",
+    "date": "2026-10-25T03:55:30Z"
+   },
    "thumbs": [
     "assets/shots/notegen-0.webp"
    ],
@@ -9533,7 +11037,7 @@
     "open-source-alternatives"
    ],
    "verified": false,
-   "release": "https://github.com/streetwriters/notesnook/releases/tag/v3.4.10",
+   "release": "https://github.com/streetwriters/notesnook/releases/tag/v3.4.11",
    "screenshots": [
     "https://notesnook.com/social-2.png"
    ],
@@ -9545,6 +11049,11 @@
     "ios",
     "web"
    ],
+   "forks": 1038,
+   "latestRelease": {
+    "name": "Notesnook Desktop v3.4.11",
+    "date": "2026-10-26T12:23:43Z"
+   },
    "thumbs": [
     "assets/shots/notesnook-0.webp"
    ],
@@ -9585,6 +11094,11 @@
     "web",
     "server"
    ],
+   "forks": 1679,
+   "latestRelease": {
+    "name": "v2.34.0",
+    "date": "2026-10-24T19:21:58Z"
+   },
    "thumbs": [
     "assets/shots/ntfy-0.webp",
     "assets/shots/ntfy-1.webp",
@@ -9623,6 +11137,11 @@
     "mac",
     "linux"
    ],
+   "forks": 3947,
+   "latestRelease": {
+    "name": "v3.11.1",
+    "date": "2026-08-08T12:21:32Z"
+   },
    "thumbs": [],
    "setup": "advanced"
   },
@@ -9656,6 +11175,11 @@
     "mac",
     "linux"
    ],
+   "forks": 10887,
+   "latestRelease": {
+    "name": "OBS Studio 33.0.0",
+    "date": "2026-10-23T22:20:29Z"
+   },
    "thumbs": [
     "assets/shots/obs-studio-0.webp"
    ],
@@ -9693,6 +11217,11 @@
    "platforms": [
     "android"
    ],
+   "forks": 662,
+   "latestRelease": {
+    "name": "v1.7.3",
+    "date": "2026-10-25T02:16:13Z"
+   },
    "thumbs": [
     "assets/shots/obtainium-0.webp",
     "assets/shots/obtainium-1.webp",
@@ -9733,6 +11262,7 @@
     "server"
    ],
    "licenseSource": "https://raw.githubusercontent.com/odoo/odoo/20.0/LICENSE",
+   "forks": 34117,
    "thumbs": [],
    "setup": "advanced"
   },
@@ -9768,6 +11298,11 @@
     "mac",
     "ios"
    ],
+   "forks": 15,
+   "latestRelease": {
+    "name": "OffPDF v0.5.0",
+    "date": "2026-10-25T13:12:28Z"
+   },
    "thumbs": [
     "assets/shots/offpdf-0.webp"
    ],
@@ -9804,6 +11339,7 @@
     "linux"
    ],
    "licenseSource": "https://invent.kde.org/graphics/okular/-/raw/master/core/document.cpp",
+   "forks": 293,
    "thumbs": [
     "assets/shots/okular-0.webp"
    ],
@@ -9840,6 +11376,11 @@
     "mac",
     "linux"
    ],
+   "forks": 18623,
+   "latestRelease": {
+    "name": "v0.40.11",
+    "date": "2026-10-24T00:30:13Z"
+   },
    "thumbs": [
     "assets/shots/ollama-0.webp"
    ],
@@ -9877,6 +11418,11 @@
     "linux",
     "android"
    ],
+   "forks": 53,
+   "latestRelease": {
+    "name": "OmniEdge v2.9.0",
+    "date": "2026-02-16T12:05:48Z"
+   },
    "thumbs": [],
    "setup": "advanced"
   },
@@ -9913,6 +11459,11 @@
     "web",
     "server"
    ],
+   "forks": 1326,
+   "latestRelease": {
+    "name": "ONLYOFFICE-DocumentServer-10.0.0",
+    "date": "2026-10-12T15:01:39Z"
+   },
    "thumbs": [
     "assets/shots/onlyoffice-docs-0.webp",
     "assets/shots/onlyoffice-docs-1.webp",
@@ -9949,6 +11500,11 @@
     "mac",
     "linux"
    ],
+   "forks": 5920,
+   "latestRelease": {
+    "name": "Open Interpreter 0.0.56",
+    "date": "2026-10-07T03:42:13Z"
+   },
    "thumbs": [],
    "setup": "advanced"
   },
@@ -9980,6 +11536,11 @@
    "platforms": [
     "web"
    ],
+   "forks": 2071,
+   "latestRelease": {
+    "name": "deploy-2026-10-15-at-22-14",
+    "date": "2026-10-15T23:45:22Z"
+   },
    "thumbs": [],
    "setup": "easy",
    "setupWhy": "It is a website: you use it at openlibrary.org in a browser."
@@ -10008,7 +11569,8 @@
     "mac",
     "linux"
    ],
-   "thumbs": []
+   "thumbs": [],
+   "setup": "advanced"
   },
   {
    "id": "openblocks",
@@ -10040,6 +11602,11 @@
    "platforms": [
     "server"
    ],
+   "forks": 405,
+   "latestRelease": {
+    "name": "v1.1.8",
+    "date": "2023-03-23T11:01:12Z"
+   },
    "thumbs": [
     "assets/shots/openblocks-0.webp"
    ],
@@ -10073,6 +11640,11 @@
    "platforms": [
     "android"
    ],
+   "forks": 319,
+   "latestRelease": {
+    "name": "v1.4.5",
+    "date": "2022-08-05T16:44:23Z"
+   },
    "thumbs": [],
    "setup": "easy"
   },
@@ -10109,6 +11681,7 @@
    "platforms": [
     "server"
    ],
+   "forks": 6,
    "thumbs": [
     "assets/shots/openbooks-0.webp",
     "assets/shots/openbooks-1.webp",
@@ -10146,10 +11719,27 @@
     "mac",
     "linux"
    ],
+   "forks": 82662,
+   "latestRelease": {
+    "name": "openclaw 2026.10.7",
+    "date": "2026-10-24T09:53:46Z"
+   },
    "thumbs": [
     "assets/shots/openclaw-0.webp"
    ],
-   "setup": "easy"
+   "setup": "easy",
+   "lineage": {
+    "ofName": "Moltbot",
+    "relation": "renamed",
+    "since": 2026,
+    "why": "Renamed twice in January 2026, first to Moltbot and three days later to OpenClaw.",
+    "source": "https://en.wikipedia.org/wiki/OpenClaw",
+    "confirmed": "mod",
+    "oldNames": [
+     "Moltbot",
+     "Clawd"
+    ]
+   }
   },
   {
    "id": "opencode",
@@ -10182,6 +11772,11 @@
     "mac",
     "linux"
    ],
+   "forks": 29695,
+   "latestRelease": {
+    "name": "v1.19.4",
+    "date": "2026-10-22T13:03:41Z"
+   },
    "thumbs": [
     "assets/shots/opencode-0.webp"
    ],
@@ -10216,6 +11811,11 @@
    "platforms": [
     "web"
    ],
+   "forks": 9551,
+   "latestRelease": {
+    "name": "v0.3.0",
+    "date": "2026-04-15T02:04:44Z"
+   },
    "thumbs": [],
    "setup": "easy"
   },
@@ -10250,6 +11850,11 @@
     "linux",
     "server"
    ],
+   "forks": 12213,
+   "latestRelease": {
+    "name": "v1.33.0",
+    "date": "2026-10-23T13:46:20Z"
+   },
    "thumbs": [
     "assets/shots/openhands-0.webp"
    ],
@@ -10290,6 +11895,11 @@
     "web",
     "server"
    ],
+   "forks": 109,
+   "latestRelease": {
+    "name": "v7.31.1",
+    "date": "2026-10-26T09:34:52Z"
+   },
    "thumbs": [
     "assets/shots/openpost-0.webp",
     "assets/shots/openpost-1.webp",
@@ -10325,6 +11935,11 @@
    "platforms": [
     "server"
    ],
+   "forks": 3624,
+   "latestRelease": {
+    "name": "OpenProject 17.9.4",
+    "date": "2026-10-26T06:00:52Z"
+   },
    "thumbs": [
     "assets/shots/openproject-0.webp"
    ],
@@ -10363,6 +11978,11 @@
     "server"
    ],
    "licenseSource": "https://raw.githubusercontent.com/openreplay/openreplay/main/LICENSE",
+   "forks": 871,
+   "latestRelease": {
+    "name": "v1.28",
+    "date": "2026-09-25T13:44:04Z"
+   },
    "thumbs": [
     "assets/shots/openreplay-0.webp"
    ],
@@ -10392,7 +12012,8 @@
     "mac",
     "linux"
    ],
-   "thumbs": []
+   "thumbs": [],
+   "setup": "easy"
   },
   {
    "id": "openshot",
@@ -10424,6 +12045,11 @@
     "mac",
     "linux"
    ],
+   "forks": 830,
+   "latestRelease": {
+    "name": "v4.0.1",
+    "date": "2026-09-27T22:16:25Z"
+   },
    "thumbs": [
     "assets/shots/openshot-0.webp"
    ],
@@ -10458,6 +12084,7 @@
    "platforms": [
     "server"
    ],
+   "forks": 799,
    "thumbs": [
     "assets/shots/openstatus-0.webp"
    ],
@@ -10491,9 +12118,51 @@
     "web",
     "server"
    ],
+   "forks": 1100,
    "thumbs": [],
    "setup": "easy",
    "setupWhy": "It is a website: you use it at openstreetmap.org in a browser."
+  },
+  {
+   "id": "opentofu",
+   "name": "OpenTofu",
+   "summary": "OpenTofu lets you describe servers and cloud services in files, then creates and updates them automatically. It is a Linux Foundation project that continues Terraform under an open-source license. It is for developers and system administrators.",
+   "kind": "developer_tool",
+   "code": "github.com/opentofu/opentofu",
+   "website": "https://opentofu.org/",
+   "download": null,
+   "license": "MPL-2.0",
+   "licenseClass": "open",
+   "licenseNeedsCheck": false,
+   "stars": 30639,
+   "archived": false,
+   "inactive": false,
+   "unconfirmed": [],
+   "source": "family",
+   "verified": false,
+   "platforms": [
+    "windows",
+    "mac",
+    "linux"
+   ],
+   "licenseSource": "https://github.com/opentofu/opentofu/blob/main/LICENSE",
+   "screenshots": [],
+   "forks": 1407,
+   "latestRelease": {
+    "name": "v1.13.2",
+    "date": "2026-10-21T14:36:09Z"
+   },
+   "thumbs": [],
+   "setup": "advanced",
+   "lineage": {
+    "ofName": "Terraform",
+    "ofUrl": "https://en.wikipedia.org/wiki/Terraform_(software)",
+    "relation": "split",
+    "since": 2023,
+    "why": "Started in 2023 as a fork of Terraform under the MPL, after HashiCorp relicensed Terraform under the Business Source License.",
+    "source": "https://en.wikipedia.org/wiki/OpenTofu",
+    "confirmed": "mod"
+   }
   },
   {
    "id": "openvidu",
@@ -10524,6 +12193,11 @@
    "platforms": [
     "server"
    ],
+   "forks": 480,
+   "latestRelease": {
+    "name": "v3.9.0",
+    "date": "2026-09-29T16:27:34Z"
+   },
    "thumbs": [
     "assets/shots/openvidu-0.webp"
    ],
@@ -10554,7 +12228,8 @@
     "linux",
     "server"
    ],
-   "thumbs": []
+   "thumbs": [],
+   "setup": "advanced"
   },
   {
    "id": "openwebanalytics",
@@ -10583,6 +12258,11 @@
    "platforms": [
     "server"
    ],
+   "forks": 487,
+   "latestRelease": {
+    "name": "Release 1.14.2",
+    "date": "2026-10-23T05:43:36Z"
+   },
    "thumbs": [],
    "setup": "advanced"
   },
@@ -10621,6 +12301,11 @@
     "web",
     "server"
    ],
+   "forks": 28,
+   "latestRelease": {
+    "name": "2026.10.25",
+    "date": "2026-10-25T00:22:30Z"
+   },
    "thumbs": [
     "assets/shots/orbit-0.webp",
     "assets/shots/orbit-1.webp",
@@ -10661,6 +12346,11 @@
     "android",
     "ios"
    ],
+   "forks": 1664,
+   "latestRelease": {
+    "name": "2026.09.29-32-android",
+    "date": "2026-09-29T21:16:46Z"
+   },
    "thumbs": [
     "assets/shots/organic-maps-0.webp",
     "assets/shots/organic-maps-1.webp",
@@ -10700,6 +12390,11 @@
     "linux",
     "server"
    ],
+   "forks": 1205,
+   "latestRelease": {
+    "name": "v26.2.0",
+    "date": "2026-03-20T14:10:32Z"
+   },
    "thumbs": [],
    "setup": "advanced"
   },
@@ -10733,6 +12428,11 @@
     "android",
     "ios"
    ],
+   "forks": 1251,
+   "latestRelease": {
+    "name": "OsmAnd-api",
+    "date": "2019-10-15T09:45:30Z"
+   },
    "thumbs": [
     "assets/shots/osmand-0.webp",
     "assets/shots/osmand-1.webp"
@@ -10767,6 +12467,11 @@
    "platforms": [
     "server"
    ],
+   "forks": 185,
+   "latestRelease": {
+    "name": "Release v6.4.2",
+    "date": "2026-10-13T14:12:15Z"
+   },
    "thumbs": [],
    "setup": "advanced"
   },
@@ -10796,7 +12501,8 @@
     "ios",
     "server"
    ],
-   "thumbs": []
+   "thumbs": [],
+   "setup": "advanced"
   },
   {
    "id": "owncast",
@@ -10826,6 +12532,11 @@
     "web",
     "server"
    ],
+   "forks": 1192,
+   "latestRelease": {
+    "name": "Owncast v0.3.0",
+    "date": "2026-09-03T16:31:05Z"
+   },
    "thumbs": [
     "assets/shots/owncast-0.webp"
    ],
@@ -10866,6 +12577,11 @@
     "web",
     "server"
    ],
+   "forks": 2062,
+   "latestRelease": {
+    "name": "v10.16.6",
+    "date": "2026-10-06T13:23:03Z"
+   },
    "thumbs": [
     "assets/shots/owncloud-0.webp"
    ],
@@ -10903,6 +12619,11 @@
     "web",
     "server"
    ],
+   "forks": 283,
+   "latestRelease": {
+    "name": "v8.2.2",
+    "date": "2026-10-21T10:09:21Z"
+   },
    "thumbs": [],
    "setup": "advanced"
   },
@@ -10941,6 +12662,11 @@
     "android",
     "ios"
    ],
+   "forks": 270,
+   "latestRelease": {
+    "name": "v4.3.0",
+    "date": "2023-03-06T16:05:49Z"
+   },
    "thumbs": [],
    "setup": "easy"
   },
@@ -10971,6 +12697,7 @@
    "platforms": [
     "server"
    ],
+   "forks": 44,
    "thumbs": [],
    "setup": "advanced"
   },
@@ -11003,6 +12730,11 @@
    "platforms": [
     "server"
    ],
+   "forks": 581,
+   "latestRelease": {
+    "name": "Initial Release",
+    "date": "2020-08-01T02:01:38Z"
+   },
    "thumbs": [
     "assets/shots/papercups-0.webp"
    ],
@@ -11043,6 +12775,11 @@
     "ios",
     "server"
    ],
+   "forks": 407,
+   "latestRelease": {
+    "name": "Mad World",
+    "date": "2026-10-20T11:57:25Z"
+   },
    "thumbs": [
     "assets/shots/passbolt-0.webp"
    ],
@@ -11075,6 +12812,11 @@
    "platforms": [
     "server"
    ],
+   "forks": 4345,
+   "latestRelease": {
+    "name": "v3.92.0",
+    "date": "2026-10-22T16:28:57Z"
+   },
    "thumbs": [],
    "setup": "advanced"
   },
@@ -11106,6 +12848,11 @@
     "windows",
     "linux"
    ],
+   "forks": 325,
+   "latestRelease": {
+    "name": "1.14.0",
+    "date": "2026-05-23T03:47:07Z"
+   },
    "thumbs": [
     "assets/shots/pdf-arranger-0.webp"
    ],
@@ -11132,7 +12879,7 @@
    ],
    "source": "starter",
    "verified": false,
-   "release": "https://github.com/Chocobozzz/PeerTube/releases/tag/v8.3.1",
+   "release": "https://github.com/Chocobozzz/PeerTube/releases/tag/v8.3.2",
    "screenshots": [
     "https://asso.framasoft.org/pic/wI6n1YIH/hKfCL8Xi.png",
     "https://asso.framasoft.org/pic/lYrgaP2N/Sj3hgkeo.png",
@@ -11143,6 +12890,11 @@
     "web",
     "server"
    ],
+   "forks": 1848,
+   "latestRelease": {
+    "name": "v8.3.2",
+    "date": "2026-10-26T12:51:01Z"
+   },
    "thumbs": [
     "assets/shots/peertube-0.webp",
     "assets/shots/peertube-1.webp",
@@ -11182,6 +12934,11 @@
     "web",
     "server"
    ],
+   "forks": 4290,
+   "latestRelease": {
+    "name": "2.18.5",
+    "date": "2026-10-26T09:53:19Z"
+   },
    "thumbs": [
     "assets/shots/penpot-0.webp",
     "assets/shots/penpot-1.webp",
@@ -11217,6 +12974,11 @@
    "platforms": [
     "server"
    ],
+   "forks": 25,
+   "latestRelease": {
+    "name": "v1.2.0",
+    "date": "2026-10-16T10:15:42Z"
+   },
    "thumbs": [],
    "setup": "advanced"
   },
@@ -11251,6 +13013,11 @@
     "linux",
     "server"
    ],
+   "forks": 2336,
+   "latestRelease": {
+    "name": "October 7, 2026",
+    "date": "2026-10-07T09:20:36Z"
+   },
    "thumbs": [
     "assets/shots/photoprism-0.webp",
     "assets/shots/photoprism-1.webp",
@@ -11286,6 +13053,11 @@
     "server"
    ],
    "licenseSource": "https://codeberg.org/rimu/pyfedi/raw/branch/main/LICENSE",
+   "forks": 82,
+   "latestRelease": {
+    "name": "v1.8.8",
+    "date": "2026-10-22T10:50:58+02:00"
+   },
    "thumbs": [],
    "setup": "advanced"
   },
@@ -11318,6 +13090,11 @@
     "web",
     "server"
    ],
+   "forks": 6279,
+   "latestRelease": {
+    "name": "TiDB v7.5.8",
+    "date": "2026-09-17T05:57:53Z"
+   },
    "thumbs": [],
    "setup": "advanced"
   },
@@ -11343,7 +13120,8 @@
     "web",
     "server"
    ],
-   "thumbs": []
+   "thumbs": [],
+   "setup": "advanced"
   },
   {
    "id": "pinta",
@@ -11374,6 +13152,11 @@
     "mac",
     "linux"
    ],
+   "forks": 401,
+   "latestRelease": {
+    "name": "Pinta 3.1.2",
+    "date": "2026-04-02T17:27:39Z"
+   },
    "thumbs": [
     "assets/shots/pinta-0.webp"
    ],
@@ -11406,6 +13189,11 @@
    "platforms": [
     "server"
    ],
+   "forks": 894,
+   "latestRelease": {
+    "name": "v0.15.2 - Security Update: PHP RCE + CA Update Compromise",
+    "date": "2026-10-21T23:43:09Z"
+   },
    "thumbs": [
     "assets/shots/pixelfed-0.webp"
    ],
@@ -11442,6 +13230,11 @@
    "platforms": [
     "server"
    ],
+   "forks": 6192,
+   "latestRelease": {
+    "name": "v1.4.2",
+    "date": "2026-08-23T14:39:21Z"
+   },
    "thumbs": [
     "assets/shots/plane-0.webp",
     "assets/shots/plane-1.webp",
@@ -11480,6 +13273,7 @@
    "platforms": [
     "web"
    ],
+   "forks": 737,
    "thumbs": [
     "assets/shots/plasmic-0.webp"
    ],
@@ -11512,6 +13306,11 @@
    "platforms": [
     "server"
    ],
+   "forks": 1922,
+   "latestRelease": {
+    "name": "v3.2.1",
+    "date": "2026-05-15T09:15:56Z"
+   },
    "thumbs": [
     "assets/shots/plausible-0.webp"
    ],
@@ -11538,7 +13337,8 @@
    "platforms": [
     "windows"
    ],
-   "thumbs": []
+   "thumbs": [],
+   "setup": "easy"
   },
   {
    "id": "plume",
@@ -11568,6 +13368,7 @@
    "platforms": [
     "server"
    ],
+   "forks": 149,
    "thumbs": [],
    "setup": "advanced"
   },
@@ -11597,6 +13398,11 @@
    "platforms": [
     "android"
    ],
+   "forks": 317,
+   "latestRelease": {
+    "name": "8.22",
+    "date": "2026-10-13T04:32:02Z"
+   },
    "thumbs": [],
    "setup": "easy"
   },
@@ -11632,6 +13438,11 @@
     "mac",
     "linux"
    ],
+   "forks": 3745,
+   "latestRelease": {
+    "name": "v0.40.6 Release",
+    "date": "2026-10-23T11:21:45Z"
+   },
    "thumbs": [
     "assets/shots/pocketbase-0.webp",
     "assets/shots/pocketbase-1.webp"
@@ -11673,7 +13484,14 @@
     "assets/shots/pop-os-1.webp"
    ],
    "setup": "advanced",
-   "setupWhy": "An operating system: installing it means replacing or sitting alongside your computer or phone's current system, which is more than installing an app."
+   "setupWhy": "An operating system: installing it means replacing or sitting alongside your computer or phone's current system, which is more than installing an app.",
+   "lineage": {
+    "of": "ubuntu",
+    "relation": "built-on",
+    "why": "Based on Ubuntu; developed by System76.",
+    "source": "https://en.wikipedia.org/wiki/Pop!_OS",
+    "confirmed": "mod"
+   }
   },
   {
    "id": "posnic-pos",
@@ -11708,6 +13526,11 @@
     "mac",
     "linux"
    ],
+   "forks": 21,
+   "latestRelease": {
+    "name": "Posnic 1.9.0",
+    "date": "2026-09-30T21:03:30Z"
+   },
    "thumbs": [
     "assets/shots/posnic-pos-0.webp"
    ],
@@ -11741,6 +13564,11 @@
    "platforms": [
     "server"
    ],
+   "forks": 1314,
+   "latestRelease": {
+    "name": "v3.3.7",
+    "date": "2026-06-03T15:25:03Z"
+   },
    "thumbs": [],
    "setup": "advanced"
   },
@@ -11769,7 +13597,8 @@
     "linux",
     "server"
    ],
-   "thumbs": []
+   "thumbs": [],
+   "setup": "advanced"
   },
   {
    "id": "posthog",
@@ -11798,13 +13627,18 @@
     "open-source-alternatives"
    ],
    "verified": false,
-   "release": "https://github.com/PostHog/posthog/releases/tag/desktop-v0.61.839",
+   "release": "https://github.com/PostHog/posthog/releases/tag/desktop-v0.61.844",
    "screenshots": [],
    "platforms": [
     "web",
     "server"
    ],
    "licenseSource": "https://raw.githubusercontent.com/PostHog/posthog/master/LICENSE",
+   "forks": 3555,
+   "latestRelease": {
+    "name": "desktop-v0.61.844",
+    "date": "2026-10-26T17:56:02Z"
+   },
    "thumbs": [],
    "setup": "advanced"
   },
@@ -11841,6 +13675,11 @@
     "web",
     "server"
    ],
+   "forks": 7461,
+   "latestRelease": {
+    "name": "v2.25.3",
+    "date": "2026-10-24T14:16:43Z"
+   },
    "thumbs": [
     "assets/shots/postiz-0.webp",
     "assets/shots/postiz-1.webp",
@@ -11917,6 +13756,11 @@
    "platforms": [
     "server"
    ],
+   "forks": 18533,
+   "latestRelease": {
+    "name": "6.1.0",
+    "date": "2026-05-13T18:32:25Z"
+   },
    "thumbs": [
     "assets/shots/preset-0.webp",
     "assets/shots/preset-1.webp",
@@ -11954,6 +13798,11 @@
     "server"
    ],
    "licenseSource": "https://raw.githubusercontent.com/PrestaShop/PrestaShop/develop/LICENSE.md",
+   "forks": 5048,
+   "latestRelease": {
+    "name": "PrestaShop 9.2.0",
+    "date": "2026-09-30T09:56:24Z"
+   },
    "thumbs": [
     "assets/shots/presta-0.webp"
    ],
@@ -11989,6 +13838,11 @@
    "platforms": [
     "server"
    ],
+   "forks": 4,
+   "latestRelease": {
+    "name": "v0.20.0",
+    "date": "2025-06-25T20:25:15Z"
+   },
    "thumbs": [
     "assets/shots/prisme-analytics-0.webp"
    ],
@@ -12019,7 +13873,8 @@
     "android",
     "ios"
    ],
-   "thumbs": []
+   "thumbs": [],
+   "setup": "easy"
   },
   {
    "id": "psitransfer",
@@ -12048,6 +13903,11 @@
    "platforms": [
     "server"
    ],
+   "forks": 244,
+   "latestRelease": {
+    "name": "v2.4.5",
+    "date": "2026-10-24T21:26:32Z"
+   },
    "thumbs": [
     "assets/shots/psitransfer-0.webp"
    ],
@@ -12077,7 +13937,8 @@
     "mac",
     "linux"
    ],
-   "thumbs": []
+   "thumbs": [],
+   "setup": "easy"
   },
   {
    "id": "qdrant",
@@ -12111,6 +13972,11 @@
     "mac",
     "linux"
    ],
+   "forks": 2778,
+   "latestRelease": {
+    "name": "v1.20.0",
+    "date": "2026-10-22T14:14:12Z"
+   },
    "thumbs": [
     "assets/shots/qdrant-0.webp"
    ],
@@ -12142,6 +14008,11 @@
    "platforms": [
     "server"
    ],
+   "forks": 110,
+   "latestRelease": {
+    "name": "v0.14.1",
+    "date": "2026-10-07T21:05:57Z"
+   },
    "thumbs": [],
    "setup": "advanced"
   },
@@ -12174,6 +14045,7 @@
     "web",
     "server"
    ],
+   "forks": 293,
    "thumbs": [],
    "setup": "advanced"
   },
@@ -12208,6 +14080,11 @@
     "linux",
     "server"
    ],
+   "forks": 1681,
+   "latestRelease": {
+    "name": "10.1.0",
+    "date": "2026-10-22T11:48:11Z"
+   },
    "thumbs": [
     "assets/shots/questdb-0.webp"
    ],
@@ -12242,6 +14119,11 @@
     "linux",
     "server"
    ],
+   "forks": 619,
+   "latestRelease": {
+    "name": "v0.9.3",
+    "date": "2026-10-22T19:13:39Z"
+   },
    "thumbs": [],
    "setup": "advanced"
   },
@@ -12276,11 +14158,27 @@
    "platforms": [
     "android"
    ],
+   "forks": 126,
+   "latestRelease": {
+    "name": "v1.5.15",
+    "date": "2026-10-09T14:52:57Z"
+   },
    "thumbs": [
     "assets/shots/quillpad-0.webp",
     "assets/shots/quillpad-1.webp"
    ],
-   "setup": "easy"
+   "setup": "easy",
+   "lineage": {
+    "ofName": "Quillnote",
+    "ofUrl": "https://github.com/msoultanidis/quillnote",
+    "relation": "continues",
+    "why": "A fork of Quillnote, started so development could continue.",
+    "source": "https://github.com/quillpad/quillpad",
+    "confirmed": "mod",
+    "oldNames": [
+     "Quillnote"
+    ]
+   }
   },
   {
    "id": "rawtherapee",
@@ -12314,12 +14212,47 @@
     "mac",
     "linux"
    ],
+   "forks": 426,
+   "latestRelease": {
+    "name": "5.13",
+    "date": "2026-07-26T18:07:26Z"
+   },
    "thumbs": [
     "assets/shots/rawtherapee-0.webp",
     "assets/shots/rawtherapee-1.webp",
     "assets/shots/rawtherapee-2.webp"
    ],
    "setup": "easy"
+  },
+  {
+   "id": "redis",
+   "name": "Redis",
+   "summary": "Redis is a fast in-memory database that websites and apps use to keep data they need quickly, such as logged-in sessions or saved pages. It is for developers and server administrators.",
+   "kind": "self_hosted",
+   "code": "github.com/redis/redis",
+   "website": "https://redis.io/",
+   "download": null,
+   "license": "AGPL-3.0 (also offered under source-available licenses)",
+   "licenseClass": "open",
+   "licenseNeedsCheck": true,
+   "stars": 77130,
+   "archived": false,
+   "inactive": false,
+   "unconfirmed": [],
+   "source": "family",
+   "verified": false,
+   "platforms": [
+    "server"
+   ],
+   "licenseSource": "https://github.com/redis/redis/blob/unstable/LICENSE.txt",
+   "screenshots": [],
+   "forks": 24923,
+   "latestRelease": {
+    "name": "8.10.3",
+    "date": "2026-10-26T11:56:24Z"
+   },
+   "thumbs": [],
+   "setup": "advanced"
   },
   {
    "id": "redmine",
@@ -12350,6 +14283,7 @@
     "server"
    ],
    "licenseSource": "https://raw.githubusercontent.com/redmine/redmine/master/LICENSE.txt",
+   "forks": 2474,
    "thumbs": [],
    "setup": "advanced"
   },
@@ -12377,6 +14311,11 @@
     "mac",
     "linux"
    ],
+   "forks": 1944,
+   "latestRelease": {
+    "name": "restic 0.19.1",
+    "date": "2026-07-05T08:13:33Z"
+   },
    "thumbs": [],
    "setup": "advanced"
   },
@@ -12405,6 +14344,11 @@
     "web",
     "server"
    ],
+   "forks": 17028,
+   "latestRelease": {
+    "name": "6.0.2",
+    "date": "2026-09-10T15:41:21Z"
+   },
    "thumbs": [],
    "setup": "advanced"
   },
@@ -12436,6 +14380,11 @@
     "web",
     "server"
    ],
+   "forks": 436,
+   "latestRelease": {
+    "name": "Review Board 8: The New Frontier",
+    "date": "2026-06-09T20:54:00Z"
+   },
    "thumbs": [],
    "setup": "advanced"
   },
@@ -12473,6 +14422,11 @@
     "web",
     "server"
    ],
+   "forks": 14045,
+   "latestRelease": {
+    "name": "8.9.0 LTS",
+    "date": "2026-10-05T17:41:21Z"
+   },
    "thumbs": [
     "assets/shots/rocket-chat-0.webp"
    ],
@@ -12506,6 +14460,11 @@
     "web",
     "server"
    ],
+   "forks": 1803,
+   "latestRelease": {
+    "name": "Roundcube Webmail 1.7.5",
+    "date": "2026-10-19T07:02:13Z"
+   },
    "thumbs": [
     "assets/shots/roundcube-0.webp"
    ],
@@ -12539,6 +14498,11 @@
     "web"
    ],
    "licenseSource": "https://raw.githubusercontent.com/buildship-ai/rowy/main/LICENSE",
+   "forks": 558,
+   "latestRelease": {
+    "name": "Rowy's biggest release yet 🎉 + Introducing BuildShip",
+    "date": "2023-10-27T15:21:32Z"
+   },
    "thumbs": [],
    "setup": "advanced"
   },
@@ -12576,6 +14540,11 @@
     "linux",
     "android"
    ],
+   "forks": 20061,
+   "latestRelease": {
+    "name": "1.5.0",
+    "date": "2026-09-30T16:11:03Z"
+   },
    "thumbs": [
     "assets/shots/rustdesk-0.webp",
     "assets/shots/rustdesk-1.webp"
@@ -12610,6 +14579,11 @@
    "platforms": [
     "server"
    ],
+   "forks": 6162,
+   "latestRelease": {
+    "name": "3.23.44",
+    "date": "2026-10-20T16:50:29Z"
+   },
    "thumbs": [
     "assets/shots/saleor-0.webp"
    ],
@@ -12645,6 +14619,7 @@
     "mac",
     "linux"
    ],
+   "forks": 146,
    "thumbs": [
     "assets/shots/scribus-0.webp",
     "assets/shots/scribus-1.webp"
@@ -12684,6 +14659,11 @@
     "web",
     "server"
    ],
+   "forks": 1676,
+   "latestRelease": {
+    "name": "v9.0.5",
+    "date": "2024-02-27T07:51:16Z"
+   },
    "thumbs": [
     "assets/shots/seafile-0.webp"
    ],
@@ -12718,6 +14698,7 @@
     "web",
     "server"
    ],
+   "forks": 3542,
    "thumbs": [
     "assets/shots/searxng-0.webp"
    ],
@@ -12753,6 +14734,11 @@
     "linux"
    ],
    "licenseSource": "https://raw.githubusercontent.com/weaviate/weaviate/main/LICENSE",
+   "forks": 1429,
+   "latestRelease": {
+    "name": "v1.40.2 - eMudhra intermediate certificates security patch",
+    "date": "2026-10-22T08:54:36Z"
+   },
    "thumbs": [],
    "setup": "advanced"
   },
@@ -12783,6 +14769,11 @@
    "platforms": [
     "server"
    ],
+   "forks": 438,
+   "latestRelease": {
+    "name": "v5.1.8",
+    "date": "2026-10-21T18:25:11Z"
+   },
    "thumbs": [],
    "setup": "advanced"
   },
@@ -12816,6 +14807,11 @@
     "mac",
     "linux"
    ],
+   "forks": 1550,
+   "latestRelease": {
+    "name": "v26.9.27",
+    "date": "2026-09-28T00:29:29Z"
+   },
    "thumbs": [
     "assets/shots/shotcut-0.webp"
    ],
@@ -12851,6 +14847,11 @@
     "server"
    ],
    "licenseSource": "https://raw.githubusercontent.com/shuup/shuup/master/LICENSE",
+   "forks": 1155,
+   "latestRelease": {
+    "name": "Release 3.1.0",
+    "date": "2021-08-17T13:29:05Z"
+   },
    "thumbs": [],
    "setup": "advanced"
   },
@@ -12884,6 +14885,11 @@
    "platforms": [
     "server"
    ],
+   "forks": 213,
+   "latestRelease": {
+    "name": "Security and dependency updates",
+    "date": "2026-03-15T23:00:30Z"
+   },
    "thumbs": [
     "assets/shots/shynet-0.webp",
     "assets/shots/shynet-1.webp"
@@ -12922,6 +14928,11 @@
     "android",
     "ios"
    ],
+   "forks": 6933,
+   "latestRelease": {
+    "name": "v8.32.3",
+    "date": "2026-10-22T22:30:03Z"
+   },
    "thumbs": [
     "assets/shots/signal-0.webp"
    ],
@@ -12964,6 +14975,11 @@
     "server"
    ],
    "licenseSource": "https://raw.githubusercontent.com/SigNoz/signoz/main/LICENSE",
+   "forks": 2557,
+   "latestRelease": {
+    "name": "v0.147.0",
+    "date": "2026-10-22T06:42:23Z"
+   },
    "thumbs": [
     "assets/shots/signoz-0.webp",
     "assets/shots/signoz-1.webp",
@@ -13007,6 +15023,11 @@
     "linux",
     "server"
    ],
+   "forks": 696,
+   "latestRelease": {
+    "name": "v3.9.0",
+    "date": "2026-07-26T23:11:22Z"
+   },
    "thumbs": [
     "assets/shots/silex-0.webp"
    ],
@@ -13043,6 +15064,11 @@
     "web",
     "server"
    ],
+   "forks": 520,
+   "latestRelease": {
+    "name": "2.12.1",
+    "date": "2026-10-12T06:28:07Z"
+   },
    "thumbs": [
     "assets/shots/silverbullet-0.webp"
    ],
@@ -13078,10 +15104,23 @@
    "platforms": [
     "android"
    ],
+   "forks": 352,
+   "latestRelease": {
+    "name": "6.8",
+    "date": "2026-10-22T09:56:20Z"
+   },
    "thumbs": [
     "assets/shots/simple-keyboard-0.webp"
    ],
-   "setup": "easy"
+   "setup": "easy",
+   "lineage": {
+    "ofName": "Simple Keyboard (Simple Mobile Tools)",
+    "ofUrl": "https://github.com/SimpleMobileTools/Simple-Keyboard",
+    "relation": "unrelated-same-name",
+    "why": "A separate app by a different developer; it is not a fork of the Simple Mobile Tools keyboard of the same name.",
+    "source": "https://github.com/rkkr/simple-keyboard",
+    "confirmed": "mod"
+   }
   },
   {
    "id": "simplex-chat",
@@ -13119,6 +15158,11 @@
     "android",
     "ios"
    ],
+   "forks": 1317,
+   "latestRelease": {
+    "name": "v7.0.3",
+    "date": "2026-09-26T14:30:13Z"
+   },
    "thumbs": [
     "assets/shots/simplex-chat-0.webp",
     "assets/shots/simplex-chat-1.webp",
@@ -13161,6 +15205,11 @@
     "ios",
     "web"
    ],
+   "forks": 3090,
+   "latestRelease": {
+    "name": "v3.8.8",
+    "date": "2026-10-20T05:16:00Z"
+   },
    "thumbs": [
     "assets/shots/siyuan-0.webp",
     "assets/shots/siyuan-1.webp"
@@ -13196,6 +15245,11 @@
    "platforms": [
     "web"
    ],
+   "forks": 2248,
+   "latestRelease": {
+    "name": "v53.0.0",
+    "date": "2026-09-16T04:21:11Z"
+   },
    "thumbs": [
     "assets/shots/slidev-0.webp",
     "assets/shots/slidev-1.webp",
@@ -13235,6 +15289,7 @@
     "ios",
     "server"
    ],
+   "forks": 52,
    "thumbs": [
     "assets/shots/snikket-0.webp"
    ],
@@ -13275,6 +15330,11 @@
     "android",
     "server"
    ],
+   "forks": 246,
+   "latestRelease": {
+    "name": "Release 3.1.2",
+    "date": "2026-10-21T14:23:01Z"
+   },
    "thumbs": [
     "assets/shots/solidinvoice-0.webp",
     "assets/shots/solidinvoice-1.webp",
@@ -13305,7 +15365,7 @@
     "awesome-foss-alternatives"
    ],
    "verified": false,
-   "release": "https://github.com/fclairamb/solidping/releases/tag/v0.41.0",
+   "release": "https://github.com/fclairamb/solidping/releases/tag/v0.42.0",
    "screenshots": [
     "https://raw.githubusercontent.com/fclairamb/solidping/main/res/screenshots/checks-list.png",
     "https://raw.githubusercontent.com/fclairamb/solidping/main/res/screenshots/check-form.png",
@@ -13317,6 +15377,11 @@
     "linux",
     "server"
    ],
+   "forks": 2,
+   "latestRelease": {
+    "name": "v0.42.0",
+    "date": "2026-10-26T21:34:04Z"
+   },
    "thumbs": [
     "assets/shots/solidping-0.webp",
     "assets/shots/solidping-1.webp",
@@ -13353,6 +15418,11 @@
    "platforms": [
     "server"
    ],
+   "forks": 523,
+   "latestRelease": {
+    "name": "v0.22.1",
+    "date": "2026-10-21T18:17:25Z"
+   },
    "thumbs": [
     "assets/shots/solidtime-0.webp"
    ],
@@ -13381,7 +15451,8 @@
     "mac",
     "linux"
    ],
-   "thumbs": []
+   "thumbs": [],
+   "setup": "easy"
   },
   {
    "id": "sonic",
@@ -13411,6 +15482,11 @@
     "linux",
     "server"
    ],
+   "forks": 621,
+   "latestRelease": {
+    "name": "Sonic v1.10.2",
+    "date": "2026-10-05T13:25:51Z"
+   },
    "thumbs": [],
    "setup": "advanced"
   },
@@ -13443,6 +15519,7 @@
    "platforms": [
     "server"
    ],
+   "forks": 229,
    "thumbs": [],
    "setup": "advanced"
   },
@@ -13474,6 +15551,11 @@
    "platforms": [
     "server"
    ],
+   "forks": 523,
+   "latestRelease": {
+    "name": "1.30.0",
+    "date": "2026-10-11T04:38:16Z"
+   },
    "thumbs": [],
    "setup": "advanced"
   },
@@ -13507,6 +15589,11 @@
     "mac",
     "linux"
    ],
+   "forks": 32510,
+   "latestRelease": {
+    "name": "1.10.1",
+    "date": "2025-02-09T08:00:10Z"
+   },
    "thumbs": [
     "assets/shots/stable-diffusion-web-ui-0.webp"
    ],
@@ -13533,7 +15620,7 @@
    ],
    "source": "starter",
    "verified": false,
-   "release": "https://github.com/standardnotes/app/releases/tag/%40standardnotes/desktop%403.202.10",
+   "release": "https://github.com/standardnotes/app/releases/tag/%40standardnotes/desktop%403.202.11",
    "screenshots": [],
    "platforms": [
     "windows",
@@ -13543,6 +15630,11 @@
     "ios",
     "web"
    ],
+   "forks": 563,
+   "latestRelease": {
+    "name": "Desktop 3.202.11",
+    "date": "2026-10-23T21:24:19Z"
+   },
    "thumbs": [],
    "setup": "easy"
   },
@@ -13573,6 +15665,11 @@
    "platforms": [
     "server"
    ],
+   "forks": 100,
+   "latestRelease": {
+    "name": "2.8.2",
+    "date": "2024-06-10T10:19:31Z"
+   },
    "thumbs": [],
    "setup": "advanced"
   },
@@ -13606,6 +15703,11 @@
     "linux",
     "server"
    ],
+   "forks": 10625,
+   "latestRelease": {
+    "name": "3.2.2 new annotations and other minor changes and improvements",
+    "date": "2026-10-24T09:24:55Z"
+   },
    "thumbs": [
     "assets/shots/stirling-pdf-0.webp"
    ],
@@ -13642,6 +15744,11 @@
     "server"
    ],
    "licenseSource": "https://raw.githubusercontent.com/strapi/strapi/develop/LICENSE",
+   "forks": 9933,
+   "latestRelease": {
+    "name": "v5.59.0",
+    "date": "2026-10-21T09:40:56Z"
+   },
    "thumbs": [],
    "setup": "advanced"
   },
@@ -13672,6 +15779,11 @@
    "platforms": [
     "server"
    ],
+   "forks": 2432,
+   "latestRelease": {
+    "name": "7.15.2",
+    "date": "2026-07-31T13:37:50Z"
+   },
    "thumbs": [],
    "setup": "advanced"
   },
@@ -13704,6 +15816,11 @@
    "platforms": [
     "server"
    ],
+   "forks": 371,
+   "latestRelease": {
+    "name": "Release 3.0.10 (2026-10-01)",
+    "date": "2026-10-01T00:23:34Z"
+   },
    "thumbs": [
     "assets/shots/sulu-0.webp"
    ],
@@ -13743,6 +15860,11 @@
     "web",
     "server"
    ],
+   "forks": 16310,
+   "latestRelease": {
+    "name": "Developer Update - August 2026",
+    "date": "2026-08-07T13:57:57Z"
+   },
    "thumbs": [
     "assets/shots/supabase-0.webp",
     "assets/shots/supabase-1.webp"
@@ -13782,6 +15904,11 @@
     "linux",
     "android"
    ],
+   "forks": 2204,
+   "latestRelease": {
+    "name": "v19.3.1",
+    "date": "2026-10-25T14:42:30Z"
+   },
    "thumbs": [
     "assets/shots/super-productivity-0.webp"
    ],
@@ -13821,6 +15948,11 @@
     "server"
    ],
    "licenseSource": "https://raw.githubusercontent.com/supertokens/supertokens-core/master/LICENSE.md",
+   "forks": 788,
+   "latestRelease": {
+    "name": "v12.4.1",
+    "date": "2026-10-23T07:24:52Z"
+   },
    "thumbs": [
     "assets/shots/supertokens-0.webp",
     "assets/shots/supertokens-1.webp"
@@ -13857,6 +15989,11 @@
    "platforms": [
     "server"
    ],
+   "forks": 2163,
+   "latestRelease": {
+    "name": "v2.3.2",
+    "date": "2026-10-22T15:49:42Z"
+   },
    "thumbs": [
     "assets/shots/sylius-0.webp"
    ],
@@ -13891,6 +16028,11 @@
     "mac",
     "linux"
    ],
+   "forks": 5549,
+   "latestRelease": {
+    "name": "v2.1.7",
+    "date": "2026-10-21T06:09:14Z"
+   },
    "thumbs": [
     "assets/shots/syncthing-0.webp"
    ],
@@ -13922,6 +16064,11 @@
    "platforms": [
     "server"
    ],
+   "forks": 1792,
+   "latestRelease": {
+    "name": "v0.32.0",
+    "date": "2026-01-25T17:07:44Z"
+   },
    "thumbs": [],
    "setup": "advanced"
   },
@@ -13950,6 +16097,11 @@
    "release": "https://github.com/tabler/tabler-icons/releases/tag/v3.49.0",
    "screenshots": [],
    "platforms": [],
+   "forks": 1254,
+   "latestRelease": {
+    "name": "Release 3.49.0",
+    "date": "2026-10-05T14:51:44Z"
+   },
    "thumbs": [],
    "setup": "advanced"
   },
@@ -13983,6 +16135,7 @@
     "web",
     "server"
    ],
+   "forks": 87,
    "thumbs": [
     "assets/shots/taiga-0.webp"
    ],
@@ -14019,6 +16172,11 @@
     "linux",
     "server"
    ],
+   "forks": 5016,
+   "latestRelease": {
+    "name": "3.4.3.3",
+    "date": "2026-10-19T08:09:13Z"
+   },
    "thumbs": [],
    "setup": "advanced"
   },
@@ -14053,6 +16211,11 @@
    "platforms": [
     "server"
    ],
+   "forks": 6,
+   "latestRelease": {
+    "name": "Telemetry Tracker v1.22.15",
+    "date": "2026-10-26T10:52:09Z"
+   },
    "thumbs": [
     "assets/shots/telemetry-tracker-0.webp",
     "assets/shots/telemetry-tracker-1.webp"
@@ -14087,6 +16250,11 @@
    "platforms": [
     "linux"
    ],
+   "forks": 161,
+   "latestRelease": {
+    "name": "TerminusDB Server v12.0.8",
+    "date": "2026-10-12T15:29:13Z"
+   },
    "thumbs": [],
    "setup": "advanced"
   },
@@ -14159,6 +16327,11 @@
     "web",
     "server"
    ],
+   "forks": 770,
+   "latestRelease": {
+    "name": "tinacms@3.15.0",
+    "date": "2026-10-19T01:31:21Z"
+   },
    "thumbs": [
     "assets/shots/tina-0.webp"
    ],
@@ -14202,6 +16375,11 @@
     "ios",
     "server"
    ],
+   "forks": 2093,
+   "latestRelease": {
+    "name": "Bug fixes, dependencies updated, dependencies upgraded.",
+    "date": "2026-07-04T14:36:42Z"
+   },
    "thumbs": [
     "assets/shots/tinode-0.webp",
     "assets/shots/tinode-1.webp",
@@ -14234,7 +16412,7 @@
     "awesome-oss-alternatives"
    ],
    "verified": false,
-   "release": "https://github.com/tolgee/tolgee-platform/releases/tag/v3.240.2",
+   "release": "https://github.com/tolgee/tolgee-platform/releases/tag/v3.240.3",
    "screenshots": [
     "https://raw.githubusercontent.com/tolgee/tolgee-platform/HEAD/tolgee.gif",
     "https://raw.githubusercontent.com/tolgee/tolgee-platform/HEAD/Tolgee-specs.gif",
@@ -14246,6 +16424,11 @@
     "server"
    ],
    "licenseSource": "https://raw.githubusercontent.com/tolgee/tolgee-platform/main/LICENSE",
+   "forks": 376,
+   "latestRelease": {
+    "name": "v3.240.3",
+    "date": "2026-10-26T13:25:01Z"
+   },
    "thumbs": [
     "assets/shots/tolgee-0.webp",
     "assets/shots/tolgee-1.webp",
@@ -14282,6 +16465,11 @@
    "platforms": [
     "server"
    ],
+   "forks": 5503,
+   "latestRelease": {
+    "name": "v3.20.250-lts",
+    "date": "2026-10-26T05:58:30Z"
+   },
    "thumbs": [],
    "setup": "advanced"
   },
@@ -14316,10 +16504,18 @@
     "android"
    ],
    "licenseSource": "https://gitlab.torproject.org/tpo/applications/tor-browser/-/raw/tor-browser-140.5.0esr-15.0-1/toolkit/content/license.html",
+   "forks": 69,
    "thumbs": [
     "assets/shots/tor-browser-0.webp"
    ],
-   "setup": "easy"
+   "setup": "easy",
+   "lineage": {
+    "of": "firefox",
+    "relation": "fork-keeps-up",
+    "why": "A modified Firefox ESR (Firefox's long-support version) bundled with the Tor network software.",
+    "source": "https://en.wikipedia.org/wiki/Tor_(network)",
+    "confirmed": "mod"
+   }
   },
   {
    "id": "trench",
@@ -14351,6 +16547,11 @@
    "platforms": [
     "server"
    ],
+   "forks": 65,
+   "latestRelease": {
+    "name": "trench-js@0.0.17",
+    "date": "2024-12-04T02:44:44Z"
+   },
    "thumbs": [
     "assets/shots/trench-0.webp"
    ],
@@ -14388,10 +16589,23 @@
     "web",
     "server"
    ],
+   "forks": 2601,
+   "latestRelease": {
+    "name": "v0.106.1",
+    "date": "2026-10-23T21:07:15Z"
+   },
    "thumbs": [
     "assets/shots/trilium-notes-0.webp"
    ],
-   "setup": "easy"
+   "setup": "easy",
+   "lineage": {
+    "ofName": "Trilium (original)",
+    "ofUrl": "https://github.com/zadam/trilium",
+    "relation": "continues",
+    "why": "The original developer, zadam, gave the Trilium repository to the TriliumNext community project.",
+    "source": "https://github.com/TriliumNext/Trilium",
+    "confirmed": "mod"
+   }
   },
   {
    "id": "tuta",
@@ -14430,6 +16644,11 @@
     "ios",
     "web"
    ],
+   "forks": 650,
+   "latestRelease": {
+    "name": "362.261023.2 (Desktop)",
+    "date": "2026-10-23T15:02:12Z"
+   },
    "thumbs": [
     "assets/shots/tuta-0.webp",
     "assets/shots/tuta-1.webp",
@@ -14470,6 +16689,11 @@
     "server"
    ],
    "licenseSource": "https://raw.githubusercontent.com/twentyhq/twenty/main/LICENSE",
+   "forks": 9779,
+   "latestRelease": {
+    "name": "twenty/v2.51.0",
+    "date": "2026-10-25T09:46:28Z"
+   },
    "thumbs": [
     "assets/shots/twenty-0.webp",
     "assets/shots/twenty-1.webp",
@@ -14509,6 +16733,11 @@
    "platforms": [
     "server"
    ],
+   "forks": 50,
+   "latestRelease": {
+    "name": "v1.31.0",
+    "date": "2026-10-23T17:07:07Z"
+   },
    "thumbs": [
     "assets/shots/tymeslot-0.webp",
     "assets/shots/tymeslot-1.webp",
@@ -14548,6 +16777,11 @@
    "platforms": [
     "server"
    ],
+   "forks": 1021,
+   "latestRelease": {
+    "name": "Version 30.2",
+    "date": "2026-04-19T16:00:09Z"
+   },
    "thumbs": [
     "assets/shots/typesense-0.webp"
    ],
@@ -14588,7 +16822,14 @@
     "assets/shots/ubuntu-1.webp"
    ],
    "setup": "advanced",
-   "setupWhy": "An operating system: installing it means replacing or sitting alongside your computer or phone's current system, which is more than installing an app."
+   "setupWhy": "An operating system: installing it means replacing or sitting alongside your computer or phone's current system, which is more than installing an app.",
+   "lineage": {
+    "of": "debian",
+    "relation": "built-on",
+    "why": "A Linux distribution based on Debian.",
+    "source": "https://en.wikipedia.org/wiki/Ubuntu",
+    "confirmed": "mod"
+   }
   },
   {
    "id": "ubuntu-touch",
@@ -14656,6 +16897,7 @@
     "mac",
     "linux"
    ],
+   "forks": 300,
    "thumbs": [
     "assets/shots/ultravnc-0.webp"
    ],
@@ -14688,6 +16930,11 @@
    "platforms": [
     "server"
    ],
+   "forks": 8424,
+   "latestRelease": {
+    "name": "v3.4.1",
+    "date": "2026-10-23T08:26:44Z"
+   },
    "thumbs": [
     "assets/shots/umami-0.webp"
    ],
@@ -14723,11 +16970,23 @@
     "mac",
     "linux"
    ],
+   "forks": 1278,
+   "latestRelease": {
+    "name": "156.0.8078.47-1",
+    "date": "2026-10-23T01:55:42Z"
+   },
    "thumbs": [
     "assets/shots/ungoogled-chromium-0.webp",
     "assets/shots/ungoogled-chromium-1.webp"
    ],
-   "setup": "easy"
+   "setup": "easy",
+   "lineage": {
+    "of": "chromium",
+    "relation": "fork-keeps-up",
+    "why": "Chromium with its dependence on Google web services removed.",
+    "source": "https://github.com/ungoogled-software/ungoogled-chromium",
+    "confirmed": "mod"
+   }
   },
   {
    "id": "unleash",
@@ -14756,6 +17015,11 @@
    "platforms": [
     "server"
    ],
+   "forks": 916,
+   "latestRelease": {
+    "name": "v8.2.1",
+    "date": "2026-10-22T08:46:40Z"
+   },
    "thumbs": [],
    "setup": "advanced"
   },
@@ -14795,6 +17059,11 @@
     "linux",
     "server"
    ],
+   "forks": 223,
+   "latestRelease": {
+    "name": "v2.1.0-rc.2",
+    "date": "2026-10-22T09:12:02Z"
+   },
    "thumbs": [
     "assets/shots/uptrace-0.webp",
     "assets/shots/uptrace-1.webp",
@@ -14831,8 +17100,51 @@
    "platforms": [
     "server"
    ],
+   "forks": 562,
+   "latestRelease": {
+    "name": "v1.1.8",
+    "date": "2025-09-19T12:41:20Z"
+   },
    "thumbs": [],
    "setup": "advanced"
+  },
+  {
+   "id": "valkey",
+   "name": "Valkey",
+   "summary": "Valkey is a fast in-memory database that websites and apps use to keep data they need quickly, such as logged-in sessions or saved pages. It continues the last open-licensed version of Redis and is run by the Linux Foundation. It is for developers and server administrators.",
+   "kind": "self_hosted",
+   "code": "github.com/valkey-io/valkey",
+   "website": "https://valkey.io/",
+   "download": null,
+   "license": "BSD-3-Clause",
+   "licenseClass": "open",
+   "licenseNeedsCheck": false,
+   "stars": 27528,
+   "archived": false,
+   "inactive": false,
+   "unconfirmed": [],
+   "source": "family",
+   "verified": false,
+   "platforms": [
+    "server"
+   ],
+   "licenseSource": "https://github.com/valkey-io/valkey/blob/unstable/COPYING",
+   "screenshots": [],
+   "forks": 1428,
+   "latestRelease": {
+    "name": "9.1.3",
+    "date": "2026-10-26T23:21:45Z"
+   },
+   "thumbs": [],
+   "setup": "advanced",
+   "lineage": {
+    "of": "redis",
+    "relation": "split",
+    "since": 2024,
+    "why": "Forked in 2024 from the last BSD-licensed Redis (7.2.4) by Linux Foundation members, after Redis moved to a source-available license.",
+    "source": "https://en.wikipedia.org/wiki/Valkey",
+    "confirmed": "mod"
+   }
   },
   {
    "id": "vane-formerly-perplexica",
@@ -14862,10 +17174,29 @@
    "platforms": [
     "server"
    ],
+   "forks": 4205,
+   "latestRelease": {
+    "name": "v1.12.2",
+    "date": "2026-04-10T13:30:52Z"
+   },
    "thumbs": [
     "assets/shots/vane-formerly-perplexica-0.webp"
    ],
-   "setup": "advanced"
+   "setup": "advanced",
+   "lineage": {
+    "ofName": "Perplexica",
+    "ofUrl": "https://github.com/ItzCrazyKns/Perplexica",
+    "relation": "renamed",
+    "why": "Perplexica was renamed Vane; Perplexica's old GitHub address now forwards to Vane's.",
+    "source": "https://github.com/ItzCrazyKns/Perplexica",
+    "confirmed": "mod",
+    "oldNames": [
+     "Perplexica"
+    ],
+    "redirectFrom": [
+     "perplexica"
+    ]
+   }
   },
   {
    "id": "vaultwarden",
@@ -14893,8 +17224,21 @@
    "platforms": [
     "server"
    ],
+   "forks": 3372,
+   "latestRelease": {
+    "name": "1.37.4",
+    "date": "2026-10-05T23:40:54Z"
+   },
    "thumbs": [],
-   "setup": "advanced"
+   "setup": "advanced",
+   "lineage": {
+    "of": "bitwarden",
+    "relation": "built-on",
+    "why": "An unofficial rewrite of the Bitwarden server that works with Bitwarden's apps; it was called Bitwarden_RS until renamed to avoid confusion with the official server.",
+    "source": "https://github.com/dani-garcia/vaultwarden",
+    "confirmed": "mod",
+    "label": "Works with Bitwarden's apps"
+   }
   },
   {
    "id": "vendure",
@@ -14925,6 +17269,11 @@
     "server"
    ],
    "licenseSource": "https://raw.githubusercontent.com/vendurehq/vendure/master/LICENSE.md",
+   "forks": 1537,
+   "latestRelease": {
+    "name": "v3.8.1",
+    "date": "2026-10-23T12:35:26Z"
+   },
    "thumbs": [],
    "setup": "advanced"
   },
@@ -14958,6 +17307,11 @@
     "mac",
     "linux"
    ],
+   "forks": 205,
+   "latestRelease": {
+    "name": "v1.53.0",
+    "date": "2026-10-01T11:20:01Z"
+   },
    "thumbs": [],
    "setup": "advanced"
   },
@@ -14985,7 +17339,7 @@
     "awesome-oss-alternatives"
    ],
    "verified": false,
-   "release": "https://github.com/VictoriaMetrics/VictoriaMetrics/releases/tag/v1.154.1",
+   "release": "https://github.com/VictoriaMetrics/VictoriaMetrics/releases/tag/v1.155.0",
    "screenshots": [],
    "platforms": [
     "windows",
@@ -14993,6 +17347,11 @@
     "linux",
     "server"
    ],
+   "forks": 1783,
+   "latestRelease": {
+    "name": "v1.155.0",
+    "date": "2026-10-26T13:40:31Z"
+   },
    "thumbs": [],
    "setup": "advanced"
   },
@@ -15029,11 +17388,61 @@
     "android",
     "server"
    ],
+   "forks": 782,
+   "latestRelease": {
+    "name": "v2.7.1",
+    "date": "2026-10-20T22:08:51Z"
+   },
    "thumbs": [
     "assets/shots/vikunja-0.webp",
     "assets/shots/vikunja-1.webp"
    ],
    "setup": "advanced"
+  },
+  {
+   "id": "vscodium",
+   "name": "VSCodium",
+   "summary": "VSCodium is a ready-to-install version of the code editor behind Microsoft's Visual Studio Code, built without Microsoft's branding, tracking and license terms. It is for programmers who want VS Code's editor from fully open-source downloads.",
+   "kind": "developer_tool",
+   "code": "github.com/VSCodium/vscodium",
+   "website": "https://vscodium.com/",
+   "download": null,
+   "license": "MIT",
+   "licenseClass": "open",
+   "licenseNeedsCheck": false,
+   "stars": 33815,
+   "archived": false,
+   "inactive": false,
+   "unconfirmed": [],
+   "source": "family",
+   "verified": false,
+   "platforms": [
+    "windows",
+    "mac",
+    "linux"
+   ],
+   "licenseSource": "https://github.com/VSCodium/vscodium/blob/master/LICENSE",
+   "screenshots": [],
+   "forks": 1899,
+   "latestRelease": {
+    "name": "1.143.17183",
+    "date": "2026-10-26T08:18:16Z"
+   },
+   "thumbs": [],
+   "setup": "advanced",
+   "lineage": {
+    "ofName": "Visual Studio Code",
+    "ofUrl": "https://code.visualstudio.com/",
+    "relation": "built-on",
+    "why": "Build scripts that turn Microsoft's open-source vscode code into freely licensed downloads without Microsoft's branding and telemetry; the project says it is not a fork.",
+    "source": "https://github.com/VSCodium/vscodium",
+    "confirmed": "mod",
+    "label": "Open-source build of Visual Studio Code",
+    "oldNames": [
+     "VS Code",
+     "Visual Studio Code"
+    ]
+   }
   },
   {
    "id": "wallabag",
@@ -15065,6 +17474,11 @@
     "web",
     "server"
    ],
+   "forks": 906,
+   "latestRelease": {
+    "name": "2.6.14",
+    "date": "2025-10-07T08:06:17Z"
+   },
    "thumbs": [
     "assets/shots/wallabag-0.webp"
    ],
@@ -15100,6 +17514,11 @@
     "server"
    ],
    "licenseSource": "https://raw.githubusercontent.com/webiny/webiny-js/next/LICENSE",
+   "forks": 683,
+   "latestRelease": {
+    "name": "v6.5.0",
+    "date": "2026-10-20T10:49:01Z"
+   },
    "thumbs": [],
    "setup": "advanced"
   },
@@ -15127,12 +17546,17 @@
     "open-source-alternatives"
    ],
    "verified": false,
-   "release": "https://github.com/webstudio-is/webstudio/releases/tag/0.307.0",
+   "release": "https://github.com/webstudio-is/webstudio/releases/tag/0.308.0",
    "screenshots": [],
    "platforms": [
     "web",
     "server"
    ],
+   "forks": 1632,
+   "latestRelease": {
+    "name": "0.308.0",
+    "date": "2026-10-26T13:44:07Z"
+   },
    "thumbs": [],
    "setup": "advanced"
   },
@@ -15168,6 +17592,11 @@
     "android",
     "server"
    ],
+   "forks": 3003,
+   "latestRelease": {
+    "name": "v12.65",
+    "date": "2026-10-25T16:20:16Z"
+   },
    "thumbs": [
     "assets/shots/wekan-0.webp"
    ],
@@ -15198,6 +17627,11 @@
    "platforms": [
     "windows"
    ],
+   "forks": 13484,
+   "latestRelease": {
+    "name": "v20250625",
+    "date": "2025-06-26T01:06:09Z"
+   },
    "thumbs": [],
    "setup": "advanced"
   },
@@ -15230,6 +17664,11 @@
     "windows",
     "linux"
    ],
+   "forks": 6241,
+   "latestRelease": {
+    "name": "v1.9.5",
+    "date": "2026-10-06T17:39:17Z"
+   },
    "thumbs": [
     "assets/shots/whisper-cpp-0.webp"
    ],
@@ -15258,7 +17697,7 @@
     "open-source-alternatives"
    ],
    "verified": false,
-   "release": "https://github.com/windmill-labs/windmill/releases/tag/v1.849.0",
+   "release": "https://github.com/windmill-labs/windmill/releases/tag/v1.850.0",
    "screenshots": [
     "https://raw.githubusercontent.com/windmill-labs/windmill/HEAD/imgs/windmill-editor.png",
     "https://raw.githubusercontent.com/windmill-labs/windmill/HEAD/imgs/windmill-run.png",
@@ -15270,6 +17709,11 @@
     "server"
    ],
    "licenseSource": "https://raw.githubusercontent.com/windmill-labs/windmill/main/LICENSE",
+   "forks": 1128,
+   "latestRelease": {
+    "name": "v1.850.0",
+    "date": "2026-10-27T00:29:26Z"
+   },
    "thumbs": [
     "assets/shots/windmill-0.webp",
     "assets/shots/windmill-1.webp",
@@ -15304,6 +17748,11 @@
    "platforms": [
     "server"
    ],
+   "forks": 10665,
+   "latestRelease": {
+    "name": "11.2.1",
+    "date": "2026-10-09T18:16:12Z"
+   },
    "thumbs": [],
    "setup": "advanced"
   },
@@ -15336,6 +17785,7 @@
    "platforms": [
     "server"
    ],
+   "forks": 12997,
    "thumbs": [
     "assets/shots/wordpress-0.webp",
     "assets/shots/wordpress-1.webp"
@@ -15371,6 +17821,11 @@
     "linux",
     "server"
    ],
+   "forks": 405,
+   "latestRelease": {
+    "name": "v0.17.2",
+    "date": "2026-08-10T07:27:49Z"
+   },
    "thumbs": [
     "assets/shots/writefreely-0.webp"
    ],
@@ -15412,6 +17867,11 @@
     "linux",
     "android"
    ],
+   "forks": 1163,
+   "latestRelease": {
+    "name": "Xournal++ 1.3.8",
+    "date": "2026-09-26T06:23:53Z"
+   },
    "thumbs": [
     "assets/shots/xournal-0.webp",
     "assets/shots/xournal-1.webp",
@@ -15442,11 +17902,16 @@
     "awesome-foss-alternatives"
    ],
    "verified": false,
-   "release": "https://github.com/xwiki/xwiki-platform/releases/tag/xwiki-platform-18.9.0-rc-1",
+   "release": "https://github.com/xwiki/xwiki-platform/releases/tag/xwiki-platform-18.9.0",
    "screenshots": [],
    "platforms": [
     "server"
    ],
+   "forks": 675,
+   "latestRelease": {
+    "name": "18.9.0",
+    "date": "2026-10-26T16:20:39Z"
+   },
    "thumbs": [],
    "setup": "advanced"
   },
@@ -15480,6 +17945,7 @@
     "server"
    ],
    "licenseSource": "https://raw.githubusercontent.com/yacy/yacy_search_server/master/COPYRIGHT",
+   "forks": 504,
    "thumbs": [
     "assets/shots/yacy-0.webp",
     "assets/shots/yacy-1.webp",
@@ -15522,6 +17988,11 @@
     "mac",
     "linux"
    ],
+   "forks": 921,
+   "latestRelease": {
+    "name": "v3.93.1",
+    "date": "2026-10-17T04:43:07Z"
+   },
    "thumbs": [
     "assets/shots/yanknote-0.webp",
     "assets/shots/yanknote-1.webp",
@@ -15565,6 +18036,11 @@
     "linux",
     "android"
    ],
+   "forks": 3,
+   "latestRelease": {
+    "name": "v1.3.3",
+    "date": "2026-10-23T15:29:30Z"
+   },
    "thumbs": [
     "assets/shots/youcoded-0.webp",
     "assets/shots/youcoded-1.webp",
@@ -15599,6 +18075,11 @@
    "platforms": [
     "server"
    ],
+   "forks": 2077,
+   "latestRelease": {
+    "name": "1.10.6",
+    "date": "2026-08-30T08:24:15Z"
+   },
    "thumbs": [],
    "setup": "advanced"
   },
@@ -15633,6 +18114,11 @@
     "server"
    ],
    "licenseSource": "https://raw.githubusercontent.com/yugabyte/yugabyte-db/master/LICENSE.md",
+   "forks": 1393,
+   "latestRelease": {
+    "name": "v2026.1.2.0 (Released September 22, 2026)",
+    "date": "2026-09-22T20:30:38Z"
+   },
    "thumbs": [],
    "setup": "advanced"
   },
@@ -15661,6 +18147,7 @@
    "platforms": [
     "server"
    ],
+   "forks": 1080,
    "thumbs": [],
    "setup": "advanced"
   },
@@ -15695,6 +18182,11 @@
     "mac",
     "linux"
    ],
+   "forks": 11228,
+   "latestRelease": {
+    "name": "v1.25.3",
+    "date": "2026-10-23T13:45:48Z"
+   },
    "thumbs": [
     "assets/shots/zed-0.webp"
    ],
@@ -15731,11 +18223,24 @@
     "mac",
     "linux"
    ],
+   "forks": 1910,
+   "latestRelease": {
+    "name": "Release build - 1.23.4b (2026-10-20)",
+    "date": "2026-10-21T13:41:13Z"
+   },
    "thumbs": [
     "assets/shots/zen-browser-0.webp",
     "assets/shots/zen-browser-1.webp"
    ],
-   "setup": "easy"
+   "setup": "easy",
+   "lineage": {
+    "of": "firefox",
+    "relation": "fork-keeps-up",
+    "since": 2024,
+    "why": "A fork of Firefox introduced in 2024, focused on privacy, customizability and design.",
+    "source": "https://en.wikipedia.org/wiki/Zen_Browser",
+    "confirmed": "mod"
+   }
   },
   {
    "id": "zettlr",
@@ -15769,6 +18274,11 @@
     "mac",
     "linux"
    ],
+   "forks": 865,
+   "latestRelease": {
+    "name": "Release v4.9.0",
+    "date": "2026-10-25T07:25:19Z"
+   },
    "thumbs": [
     "assets/shots/zettlr-0.webp",
     "assets/shots/zettlr-1.webp"
@@ -15810,6 +18320,11 @@
     "server"
    ],
    "licenseSource": "https://raw.githubusercontent.com/zincsearch/zincsearch/main/LICENSE",
+   "forks": 784,
+   "latestRelease": {
+    "name": "v1.0.0-beta3",
+    "date": "2026-09-16T11:13:47Z"
+   },
    "thumbs": [
     "assets/shots/zinc-labs-0.webp",
     "assets/shots/zinc-labs-1.webp",
@@ -15847,6 +18362,11 @@
     "linux",
     "server"
    ],
+   "forks": 1405,
+   "latestRelease": {
+    "name": "v4.20.0",
+    "date": "2026-10-22T10:18:58Z"
+   },
    "thumbs": [],
    "setup": "advanced"
   },
@@ -15875,7 +18395,8 @@
     "linux",
     "ios"
    ],
-   "thumbs": []
+   "thumbs": [],
+   "setup": "easy"
   },
   {
    "id": "zulip",
@@ -15911,6 +18432,11 @@
     "web",
     "server"
    ],
+   "forks": 10483,
+   "latestRelease": {
+    "name": "Zulip Server 12.3",
+    "date": "2026-09-21T17:10:07Z"
+   },
    "thumbs": [
     "assets/shots/zulip-0.webp",
     "assets/shots/zulip-1.webp"

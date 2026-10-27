@@ -76,3 +76,25 @@ a.chip.hl { color:var(--on-accent); }
 .tools { display:flex; gap:8px; align-items:center; flex-wrap:wrap; justify-content:flex-end; }
 .card[hidden] { display:none; }
 .identity > .row { display:flex; justify-content:space-between; align-items:flex-start; gap:12px; }
+
+/* Families (forks stream): "Split from Gitea (2022)" on cards and pages, the Family tree, and the "development stopped" banner. */
+.card .family { font-size:11px; color:var(--fg-2); line-height:1.35; }
+.card .family a { position:relative; z-index:1; color:var(--fg); text-decoration:underline; text-decoration-color:var(--edge-strong); text-underline-offset:2px; } /* above the card's stretched link */
+.famline { margin:0; font-size:12px; color:var(--fg-2); line-height:1.5; }
+.famline a, .fam-note a, .fam-why a, .fam-banner a { color:var(--fg); }
+.fam-banner { margin-bottom:12px; }
+.fam-tree, .fam-tree ul { list-style:none; margin:0; padding:0; }
+.fam-tree ul { margin:6px 0 0 14px; padding-left:14px; border-left:2px solid var(--edge-card); display:flex; flex-direction:column; gap:10px; }
+.fam-tree > li { padding-top:2px; }
+.fam-tree li.here > .fam-row b { color:var(--fg); }
+.fam-row { display:flex; align-items:center; gap:8px; flex-wrap:wrap; font-size:14px; }
+.fam-row a { color:var(--fg); }
+.fam-rel { font-size:12px; color:var(--fg-2); }
+.fam-detail { font-size:12px; color:var(--fg-2); margin-top:2px; }
+.fam-note { font-size:12px; color:var(--fg-2); margin:12px 0 0; }
+/* Status pills: words, not only colour (Active / Inactive / Archived / Old name / Not on this map). */
+.pill.fam-active { background:rgb(74 222 128 / .15); border-color:rgb(74 222 128 / .3); }
+.pill.fam-inactive, .pill.fam-archived { background:rgb(245 158 11 / .15); border-color:rgb(245 158 11 / .3); }
+.pill.fam-renamed, .pill.fam-outside { background:color-mix(in srgb,var(--accent) 8%,transparent); border-color:var(--edge-card); }
+.pill.fam-active, .pill.fam-inactive, .pill.fam-archived, .pill.fam-renamed, .pill.fam-outside { padding-left:8px; }
+.famlink { margin-left:4px; }

@@ -136,6 +136,27 @@ if (existsSync(fixFile)) {
   for (const id of [...projects.keys()]) if (!listed.has(id)) projects.delete(id);
 }
 
+// ── Hand-added family projects (prefill/family-projects.json) ──
+// WHY (forks stream, review Oct 26 section 5): well-known relatives were missing (Apache OpenOffice, VSCodium, Valkey,
+// OpenTofu, Floorp...), so a fork and its original could not be shown side by side. Each is added with a license read
+// from its own files (licenseSource) and placed in a group. Skipped quietly if the map already has that project.
+const familyAdded = [];
+const famFile = join(HERE, 'family-projects.json');
+if (existsSync(famFile)) {
+  const fam = read(famFile);
+  for (const g of fam.newGroups ?? []) if (!groups.has(g.id)) groups.set(g.id, { ...g, closed: [...g.closed], source: 'family', alternatives: [] });
+  for (const { groups: placed, ...f } of fam.projects) {
+    const code = f.code?.replace(/^https?:\/\//, '').toLowerCase();
+    if (projects.has(f.id) || [...projects.values()].some((x) => code && x.code?.replace(/^https?:\/\//, '').toLowerCase() === code)) continue;
+    projects.set(f.id, { ...f }); familyAdded.push(f.id);
+    for (const a of placed) groups.get(a.group)?.alternatives.push({ project: f.id, fit: a.fit, note: a.note });
+  }
+  for (const a of fam.extraAlts ?? []) {
+    const g = groups.get(a.group);
+    if (g && projects.has(a.project) && !g.alternatives.some((x) => x.project === a.project)) g.alternatives.push({ project: a.project, fit: a.fit, note: a.note });
+  }
+}
+
 // ── Website and download links (prefill/fetch-links.mjs) ──
 // WHY: pages link "Website" and "Download" next to "Source code" (Destin, Oct 27). A project's own site wins over
 // one a list gave; "release" is its latest downloadable release page.
@@ -153,9 +174,10 @@ if (existsSync(shotsFile)) { const shots = read(shotsFile); for (const p of proj
 // WHY (Destin, Oct 27): "can I just install this on my laptop or phone?" is a newcomer's first question.
 const platFile = join(OUT, 'platforms.json');
 if (existsSync(platFile)) {
+  // WHY `?? p.platforms` below (forks stream): hand-added family projects carry their own devices and have no scan result.
   const plat = read(platFile); const fixes = read(join(HERE, 'platform-fixes.json')).fixes;
   const ORDER = ['windows', 'mac', 'linux', 'android', 'ios', 'web', 'server'];
-  for (const p of projects.values()) p.platforms = (fixes[p.id] ?? plat[p.id]?.platforms ?? []).slice().sort((a, b) => ORDER.indexOf(a) - ORDER.indexOf(b));
+  for (const p of projects.values()) p.platforms = (fixes[p.id] ?? plat[p.id]?.platforms ?? p.platforms ?? []).slice().sort((a, b) => ORDER.indexOf(a) - ORDER.indexOf(b));
 }
 
 // ── Hand corrections and approved suggestions, applied last so nothing automatic overwrites them ──
@@ -232,6 +254,31 @@ if (df) {
   for (const r of df.addAlts ?? []) { const g = groups.get(r.group); need(g && projects.has(r.project), `addAlts: ${r.group}/${r.project}`); if (!alt(r.group, r.project)) g.alternatives.push({ project: r.project, fit: r.fit, note: r.note ?? null }); }
 }
 
+// Facts from each project's own code site (prefill/fetch-host-facts.mjs: Codeberg, GitLab, KDE, GNOME, Blender, Tor...)
+// plus fork count and latest release (GitHub: prefill/out/links.json; others: the same host facts).
+// WHY after the hand fixes, before mods' suggestions: stars, "archived" and "quiet for a year" are plain measurements and
+// should be fresh; a license is only FILLED IN when we had none (a license a person already checked is never overwritten).
+const hostFile = join(OUT, 'host-facts.json');
+const hostNotes = { applied: 0, licenseFilled: 0 };
+if (existsSync(hostFile)) {
+  for (const [id, f] of Object.entries(read(hostFile))) {
+    const p = projects.get(id); if (!p || !f.found) continue;
+    hostNotes.applied++;
+    // WHY stars only from the big public hosts (or when we already had a number): a small self-run site's star count (Krita 91 on KDE Invent,
+    // while its fans star the GitHub mirror) would make well-loved projects look unpopular in sorting and search.
+    if (f.stars != null && (p.stars != null || ['github.com', 'gitlab.com', 'codeberg.org'].includes(f.host))) p.stars = f.stars;
+    p.archived = !!f.archived;
+    if (f.quietForAYear != null) p.inactive = f.quietForAYear;
+    if (!p.license && f.license && licenseVerdict(f.license) === 'open') { p.license = f.license; p.licenseSource = f.licenseHow; p.licenseNeedsCheck = false; hostNotes.licenseFilled++; }
+    if (f.forks != null) p.forks = f.forks;
+    if (f.latest) p.latestRelease = f.latest;
+  }
+}
+if (existsSync(linksFile)) {
+  const lk = read(linksFile);
+  for (const p of projects.values()) { const l = p.code && lk[p.code]; if (!l) continue; if (l.forkCount != null) p.forks = l.forkCount; if (l.latest) p.latestRelease = l.latest; }
+}
+
 // Mods' approved suggestions (data/edits.json, written by .github/robot/suggestion.mjs).
 for (const e of optional(join(ROOT, 'data/edits.json'))?.edits ?? []) {
   if (e.type === 'add-project' && groups.has(e.group)) {
@@ -284,6 +331,26 @@ for (const p of projects.values()) {
   if (o) { p.setup = o[0]; p.setupWhy = o[1]; }
 }
 for (const k of ['easy', 'advanced']) for (const id of Object.keys(setupFile[k])) if (!projects.has(id)) console.warn(`setup-ratings.json: unknown project "${id}"`);
+// ── Families (data/lineage.json, hand-edited): which project came from which, and how ──
+// WHY a hand-edited input file and not a guess (review Oct 26 section 5): fork disputes are personal and the site speaks
+// for the subreddit, so every claim needs a sourced, neutral sentence and a person's sign-off. The robot only SUGGESTS.
+const RELATIONS = ['fork-keeps-up', 'split', 'continues', 'renamed', 'built-on', 'free-edition', 'unrelated-same-name'];
+const lineageNotes = { kept: 0, skipped: [] };
+for (const [id, e] of Object.entries(optional(join(ROOT, 'data/lineage.json'))?.lineage ?? {})) {
+  const bad = (why) => { throw new Error(`data/lineage.json "${id}": ${why}`); };
+  if (!RELATIONS.includes(e.relation)) bad(`relation must be one of ${RELATIONS.join(', ')}`);
+  if (!e.of && !e.ofName) bad('needs "of" (a project id) or "ofName" (a project that is not on the map)');
+  if (!e.why || e.why.length > 400) bad('"why" is one short neutral sentence');
+  if (!/^https:\/\//.test(e.source ?? '')) bad('"source" must be an https link that backs the claim');
+  if (!['mod', 'suggested'].includes(e.confirmed)) bad('"confirmed" must be "mod" or "suggested"');
+  const p = projects.get(id);
+  // WHY skip instead of failing: a project can leave the map (a mod removes it) without the family file being edited first.
+  if (!p) { lineageNotes.skipped.push(`${id} (not on the map)`); continue; }
+  if (e.of && !projects.has(e.of)) { lineageNotes.skipped.push(`${id} (parent ${e.of} not on the map)`); continue; }
+  const { of, ofName, ofUrl, relation, since, why, source, confirmed, label, oldNames, redirectFrom } = e;
+  p.lineage = Object.fromEntries(Object.entries({ of, ofName, ofUrl, relation, since, why, source, confirmed, label, oldNames, redirectFrom }).filter(([, v]) => v != null));
+  lineageNotes.kept++;
+}
 
 // WHY: a project whose last listing was removed (by the review or a mod) has no page to belong to.
 const listed = new Set([...groups.values()].flatMap((g) => g.alternatives.map((a) => a.project)));
@@ -319,6 +386,7 @@ const msg = `
 - Opus corrections applied: ${fixes.removed} listings removed, ${fixes.fit} fits changed, ${fixes.summary} descriptions rewritten.
 - Groups with no alternative yet (gaps): ${empty.join(', ') || 'none'}.
 - By category: ${perCat}.
+- Families: ${lineageNotes.kept} lineage entries read from data/lineage.json${lineageNotes.skipped.length ? `; skipped: ${lineageNotes.skipped.join(', ')}` : ''}. Hand-added family projects: ${familyAdded.length}. Facts from code sites applied to ${hostNotes.applied} projects (${hostNotes.licenseFilled} licenses filled in).
 `;
 writeFileSync(join(OUT, 'unplaced.json'), JSON.stringify(unplaced, null, 1));
 appendFileSync(join(OUT, 'summary.md'), msg);

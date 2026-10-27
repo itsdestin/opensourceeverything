@@ -152,3 +152,6 @@ table.credits a { color:var(--fg); }
   .sres-thumb { width:72px; }
   .sres-top .mstr { margin-left:0; }
 }
+
+/* Old-name hints on the results page ("Looking for kbin? It continues as Mbin.") are full sentences: let them wrap on phones. */
+.sres-why .chip { white-space:normal; flex:0 1 auto; }
