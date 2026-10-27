@@ -1,0 +1,4293 @@
+{
+ "batch": "dev",
+ "checked": "2026-10-27",
+ "answers": {
+  "forgejo": {
+   "managed-cloud": {
+    "v": "partly",
+    "note": "Only community-run hosts such as Codeberg",
+    "source": "https://forgejo.org/",
+    "quote": "You can create an account on Codeberg and other instances or download it to self-host"
+   },
+   "one-command-install": {
+    "v": "yes",
+    "note": null,
+    "source": "https://forgejo.org/docs/latest/admin/installation/",
+    "quote": "from binary with Docker with third-party packaging"
+   },
+   "github-import": {
+    "v": "yes",
+    "note": null,
+    "source": "https://forgejo.org/docs/latest/user/",
+    "quote": "Migrating Repositories"
+   },
+   "code-review": {
+    "v": "yes",
+    "note": "Pull requests with review comments",
+    "source": "https://forgejo.org/docs/latest/user/",
+    "quote": null
+   },
+   "ci-built-in": {
+    "v": "yes",
+    "note": null,
+    "source": "https://forgejo.org/docs/latest/user/actions/",
+    "quote": "Forgejo Actions"
+   },
+   "package-registry": {
+    "v": "yes",
+    "note": "Many kinds incl. container, npm, PyPI",
+    "source": "https://forgejo.org/docs/latest/user/packages/",
+    "quote": "Container Registry CRAN Package Registry Debian Package Registry"
+   },
+   "no-paid-edition": {
+    "v": "yes",
+    "note": null,
+    "source": "https://forgejo.org/",
+    "quote": "Forgejo can be trusted to be exclusively Free Software"
+   }
+  },
+  "gitea": {
+   "managed-cloud": {
+    "v": "yes",
+    "note": null,
+    "source": "https://about.gitea.com/pricing",
+    "quote": "Gitea Cloud Fully managed Gitea, ready in minutes"
+   },
+   "one-command-install": {
+    "v": "yes",
+    "note": null,
+    "source": "https://docs.gitea.com/",
+    "quote": "Installation with Docker"
+   },
+   "github-import": {
+    "v": "yes",
+    "note": null,
+    "source": "https://docs.gitea.com/usage/migration",
+    "quote": "How to migrate from Gogs/GitHub/GitLab to Gitea"
+   },
+   "code-review": {
+    "v": "yes",
+    "note": "Pull requests with review",
+    "source": "https://docs.gitea.com/",
+    "quote": null
+   },
+   "ci-built-in": {
+    "v": "yes",
+    "note": null,
+    "source": "https://docs.gitea.com/",
+    "quote": "Actions Overview Quick Start Gitea Runner"
+   },
+   "package-registry": {
+    "v": "yes",
+    "note": "Many kinds",
+    "source": "https://docs.gitea.com/usage/packages/overview",
+    "quote": "The following package managers are currently supported"
+   },
+   "no-paid-edition": {
+    "v": "partly",
+    "note": "Paid Enterprise edition adds SSO, audit logs",
+    "source": "https://about.gitea.com/pricing",
+    "quote": "Gitea Enterprise Self-hosted Gitea with SSO, audit logs, and SLA support"
+   }
+  },
+  "gitlab-community-edition": {
+   "managed-cloud": {
+    "v": "yes",
+    "note": "GitLab.com is the official hosted service",
+    "source": "https://about.gitlab.com/install/",
+    "quote": null
+   },
+   "one-command-install": {
+    "v": "yes",
+    "note": "Official Docker image and Linux package",
+    "source": "https://about.gitlab.com/install/",
+    "quote": null
+   },
+   "github-import": {
+    "v": "yes",
+    "note": "Imports repositories, issues, pull requests",
+    "source": "https://docs.gitlab.com/user/project/import/github/",
+    "quote": "Migrate from GitHub"
+   },
+   "code-review": {
+    "v": "yes",
+    "note": "Merge requests with line comments",
+    "source": "https://docs.gitlab.com/user/project/merge_requests/",
+    "quote": null
+   },
+   "ci-built-in": {
+    "v": "yes",
+    "note": "GitLab CI/CD is built in",
+    "source": "https://docs.gitlab.com/ci/",
+    "quote": null
+   },
+   "package-registry": {
+    "v": "yes",
+    "note": "Package and container registries",
+    "source": "https://docs.gitlab.com/user/packages/",
+    "quote": null
+   },
+   "no-paid-edition": {
+    "v": "partly",
+    "note": "Paid tiers add features",
+    "source": "https://about.gitlab.com/pricing/",
+    "quote": null
+   }
+  },
+  "gitlab": {
+   "managed-cloud": {
+    "v": "yes",
+    "note": "GitLab.com is the official hosted service",
+    "source": "https://about.gitlab.com/install/",
+    "quote": null
+   },
+   "one-command-install": {
+    "v": "yes",
+    "note": "Official Docker image and Linux package",
+    "source": "https://about.gitlab.com/install/",
+    "quote": null
+   },
+   "github-import": {
+    "v": "yes",
+    "note": "Imports repositories, issues, pull requests",
+    "source": "https://docs.gitlab.com/user/project/import/github/",
+    "quote": "Migrate from GitHub"
+   },
+   "code-review": {
+    "v": "yes",
+    "note": "Merge requests with line comments",
+    "source": "https://docs.gitlab.com/user/project/merge_requests/",
+    "quote": null
+   },
+   "ci-built-in": {
+    "v": "yes",
+    "note": "GitLab CI/CD is built in",
+    "source": "https://docs.gitlab.com/ci/",
+    "quote": null
+   },
+   "package-registry": {
+    "v": "yes",
+    "note": "Package and container registries",
+    "source": "https://docs.gitlab.com/user/packages/",
+    "quote": null
+   },
+   "no-paid-edition": {
+    "v": "partly",
+    "note": "Paid tiers add features",
+    "source": "https://about.gitlab.com/pricing/",
+    "quote": null
+   }
+  },
+  "gerrit": {
+   "managed-cloud": {
+    "v": "partly",
+    "note": "Only third-party hosts, no official one",
+    "source": "https://www.gerritcodereview.com/",
+    "quote": null
+   },
+   "one-command-install": {
+    "v": "yes",
+    "note": "Official Docker image or single WAR file",
+    "source": "https://gerrit-review.googlesource.com/Documentation/index.html",
+    "quote": null
+   },
+   "code-review": {
+    "v": "yes",
+    "note": null,
+    "source": "https://github.com/GerritCodeReview/gerrit",
+    "quote": "showing changes in a side-by-side display, and allowing inline comments to be added by any reviewer"
+   },
+   "ci-built-in": {
+    "v": "partly",
+    "note": "Works with external CI such as Jenkins or Zuul",
+    "source": "https://github.com/GerritCodeReview/gerrit",
+    "quote": null
+   },
+   "package-registry": {
+    "v": "no",
+    "note": "Review tool, no package hosting",
+    "source": "https://github.com/GerritCodeReview/gerrit",
+    "quote": null
+   },
+   "no-paid-edition": {
+    "v": "yes",
+    "note": "Apache licensed, no paid edition",
+    "source": "https://github.com/GerritCodeReview/gerrit",
+    "quote": null
+   }
+  },
+  "gogs": {
+   "managed-cloud": {
+    "v": "no",
+    "note": "Self-host only",
+    "source": "https://gogs.io/",
+    "quote": null
+   },
+   "one-command-install": {
+    "v": "yes",
+    "note": "Docker image or single binary",
+    "source": "https://github.com/gogs/gogs",
+    "quote": null
+   },
+   "github-import": {
+    "v": "partly",
+    "note": "Repositories only, not issues or pull requests",
+    "source": "https://github.com/gogs/gogs",
+    "quote": null
+   },
+   "code-review": {
+    "v": "partly",
+    "note": "Pull requests with basic comments",
+    "source": "https://github.com/gogs/gogs",
+    "quote": null
+   },
+   "ci-built-in": {
+    "v": "no",
+    "note": "No built-in CI; webhooks to external CI",
+    "source": "https://github.com/gogs/gogs",
+    "quote": null
+   },
+   "package-registry": {
+    "v": "no",
+    "note": "No package hosting",
+    "source": "https://github.com/gogs/gogs",
+    "quote": null
+   },
+   "no-paid-edition": {
+    "v": "yes",
+    "note": "MIT licensed, no paid edition",
+    "source": "https://github.com/gogs/gogs",
+    "quote": null
+   }
+  },
+  "pagure": {
+   "managed-cloud": {
+    "v": "partly",
+    "note": "Only pagure.io, run by Fedora, plus other small hosts",
+    "source": "https://pagure.io/",
+    "quote": null
+   },
+   "one-command-install": {
+    "v": "partly",
+    "note": "Several services to set up",
+    "source": "https://github.com/Pagure/pagure",
+    "quote": null
+   },
+   "code-review": {
+    "v": "yes",
+    "note": null,
+    "source": "https://github.com/Pagure/pagure",
+    "quote": "contribute to it via the now-popular pull-request mechanism"
+   },
+   "ci-built-in": {
+    "v": "partly",
+    "note": "Needs external CI such as Jenkins",
+    "source": "https://pagure.io/pagure",
+    "quote": null
+   },
+   "package-registry": {
+    "v": "no",
+    "note": "No package hosting",
+    "source": "https://github.com/Pagure/pagure",
+    "quote": null
+   },
+   "no-paid-edition": {
+    "v": "yes",
+    "note": "GPL, no paid edition",
+    "source": "https://github.com/Pagure/pagure",
+    "quote": null
+   }
+  },
+  "review-board": {
+   "managed-cloud": {
+    "v": "yes",
+    "note": null,
+    "source": "https://www.reviewboard.org/",
+    "quote": "RBCommons Review Board as a Service, hosted by us"
+   },
+   "one-command-install": {
+    "v": "yes",
+    "note": "Official Docker install guide",
+    "source": "https://www.reviewboard.org/docs/manual/latest/admin/installation/docker/",
+    "quote": null
+   },
+   "github-import": {
+    "v": "no",
+    "note": "Review tool; connects to GitHub repos, no import",
+    "source": "https://github.com/reviewboard/reviewboard",
+    "quote": null
+   },
+   "code-review": {
+    "v": "yes",
+    "note": null,
+    "source": "https://github.com/reviewboard/reviewboard",
+    "quote": "Our diff viewer does more than just display diffs"
+   },
+   "ci-built-in": {
+    "v": "partly",
+    "note": "Separate Review Bot add-on",
+    "source": "https://github.com/reviewboard/reviewboard",
+    "quote": null
+   },
+   "package-registry": {
+    "v": "no",
+    "note": "Review tool, no package hosting",
+    "source": "https://github.com/reviewboard/reviewboard",
+    "quote": null
+   },
+   "no-paid-edition": {
+    "v": "partly",
+    "note": "Paid Power Pack adds features",
+    "source": "https://github.com/reviewboard/reviewboard",
+    "quote": "Power Pack extends Review Board, adding such helpful features as: Report generation"
+   }
+  },
+  "plausible": {
+   "no-cookie-banner": {
+    "v": "yes",
+    "note": null,
+    "source": "https://github.com/plausible/analytics",
+    "quote": "no cookies or persistent identifiers are used"
+   },
+   "managed-cloud": {
+    "v": "yes",
+    "note": null,
+    "source": "https://github.com/plausible/analytics",
+    "quote": "Available in managed cloud or self-hosted community edition"
+   },
+   "one-command-install": {
+    "v": "partly",
+    "note": "Several containers: app, Postgres, ClickHouse",
+    "source": "https://plausible.io/self-hosted-web-analytics",
+    "quote": null
+   },
+   "goals-funnels": {
+    "v": "yes",
+    "note": null,
+    "source": "https://github.com/plausible/analytics",
+    "quote": "Track goals, conversions, revenue attribution and funnels"
+   },
+   "ga-import": {
+    "v": "yes",
+    "note": null,
+    "source": "https://github.com/plausible/analytics",
+    "quote": "Import your historical Google Analytics stats"
+   },
+   "tiny-script": {
+    "v": "yes",
+    "note": null,
+    "source": "https://plausible.io/lightweight-web-analytics",
+    "quote": "The Plausible tracking script is 2.5KB"
+   }
+  },
+  "umami": {
+   "no-cookie-banner": {
+    "v": "yes",
+    "note": null,
+    "source": "https://github.com/umami-software/umami",
+    "quote": "no cookies, no surveillance"
+   },
+   "managed-cloud": {
+    "v": "yes",
+    "note": null,
+    "source": "https://umami.is/docs",
+    "quote": "You can use the managed cloud service or self-host Umami"
+   },
+   "one-command-install": {
+    "v": "yes",
+    "note": null,
+    "source": "https://github.com/umami-software/umami",
+    "quote": "Docker compose (Runs Umami with a PostgreSQL database): docker compose up -d"
+   },
+   "goals-funnels": {
+    "v": "yes",
+    "note": null,
+    "source": "https://umami.is/",
+    "quote": "Funnels and goals show how far visitors get toward the outcomes you care about"
+   }
+  },
+  "matomo": {
+   "no-cookie-banner": {
+    "v": "partly",
+    "note": "Cookie-free needs a setting; default uses cookies",
+    "source": "https://matomo.org/faq/new-to-piwik/how-do-i-configure-matomo-to-not-use-cookies/",
+    "quote": null
+   },
+   "managed-cloud": {
+    "v": "yes",
+    "note": null,
+    "source": "https://matomo.org/pricing/",
+    "quote": "Matomo Cloud"
+   },
+   "one-command-install": {
+    "v": "partly",
+    "note": "Needs separate web server and database",
+    "source": "https://matomo.org/",
+    "quote": null
+   },
+   "goals-funnels": {
+    "v": "partly",
+    "note": "Goals free; funnels are a paid plugin",
+    "source": "https://plugins.matomo.org/Funnels",
+    "quote": null
+   },
+   "ga-import": {
+    "v": "partly",
+    "note": "Separate importer plugin",
+    "source": "https://matomo.org/guide/installation-maintenance/google-analytics-importer/",
+    "quote": null
+   }
+  },
+  "goatcounter": {
+   "no-cookie-banner": {
+    "v": "yes",
+    "note": null,
+    "source": "https://www.goatcounter.com/",
+    "quote": "Identify unique visits without cookies or persistently storing any personal data"
+   },
+   "managed-cloud": {
+    "v": "yes",
+    "note": null,
+    "source": "https://www.goatcounter.com/",
+    "quote": "available as a free donation-supported hosted service or self-hosted app"
+   },
+   "one-command-install": {
+    "v": "yes",
+    "note": "Single program file",
+    "source": "https://github.com/arp242/goatcounter",
+    "quote": null
+   },
+   "goals-funnels": {
+    "v": "partly",
+    "note": "Events, but no step-by-step funnels",
+    "source": "https://www.goatcounter.com/help/events",
+    "quote": null
+   },
+   "tiny-script": {
+    "v": "yes",
+    "note": null,
+    "source": "https://www.goatcounter.com/",
+    "quote": "adds just ~3.5KB of extra data to your site"
+   }
+  },
+  "openwebanalytics": {
+   "no-cookie-banner": {
+    "v": "no",
+    "note": "Uses cookies; can be session-only",
+    "source": "https://github.com/Open-Web-Analytics/Open-Web-Analytics",
+    "quote": "cookiePersistence: false makes every one of them a *session* cookie"
+   }
+  },
+  "prisme-analytics": {
+   "no-cookie-banner": {
+    "v": "yes",
+    "note": null,
+    "source": "https://github.com/prismelabs/analytics",
+    "quote": "cookie-less analytics that collect only anonymized data"
+   },
+   "managed-cloud": {
+    "v": "yes",
+    "note": null,
+    "source": "https://github.com/prismelabs/analytics",
+    "quote": "create an account on Prisme Cloud"
+   },
+   "tiny-script": {
+    "v": "yes",
+    "note": null,
+    "source": "https://github.com/prismelabs/analytics",
+    "quote": "Prisme tracking script is around 2kB"
+   }
+  },
+  "shynet": {
+   "no-cookie-banner": {
+    "v": "yes",
+    "note": null,
+    "source": "https://github.com/milesmcc/shynet",
+    "quote": "It works without cookies, so you don't need any intrusive cookie notices"
+   },
+   "managed-cloud": {
+    "v": "no",
+    "note": "Self-host only",
+    "source": "https://github.com/milesmcc/shynet",
+    "quote": "You host it yourself, so the data is yours"
+   },
+   "one-command-install": {
+    "v": "yes",
+    "note": null,
+    "source": "https://github.com/milesmcc/shynet",
+    "quote": "Shynet can easily run as a single docker container on a single small VPS"
+   },
+   "tiny-script": {
+    "v": "yes",
+    "note": null,
+    "source": "https://github.com/milesmcc/shynet",
+    "quote": "The tracking script weighs less than a kilobyte"
+   }
+  },
+  "trench": {
+   "no-cookie-banner": {
+    "v": "yes",
+    "note": null,
+    "source": "https://github.com/FrigadeHQ/trench",
+    "quote": "Trench is no-cookie, GDPR, and PECR compliant"
+   },
+   "managed-cloud": {
+    "v": "yes",
+    "note": null,
+    "source": "https://github.com/FrigadeHQ/trench",
+    "quote": "Trench Cloud: A fully-managed serverless solution"
+   },
+   "one-command-install": {
+    "v": "yes",
+    "note": null,
+    "source": "https://github.com/FrigadeHQ/trench",
+    "quote": "Deploy quickly with a single production-ready Docker image"
+   },
+   "ready-connectors": {
+    "v": "no",
+    "note": "Webhooks only",
+    "source": "https://github.com/FrigadeHQ/trench",
+    "quote": "Connect data to other destinations with webhooks"
+   },
+   "event-collection": {
+    "v": "yes",
+    "note": null,
+    "source": "https://github.com/FrigadeHQ/trench",
+    "quote": "Compliant with the Segment API (Track, Group, Identify)"
+   },
+   "reverse-etl": {
+    "v": "no",
+    "note": "Webhooks only, no warehouse sync",
+    "source": "https://github.com/FrigadeHQ/trench",
+    "quote": null
+   },
+   "session-replay": {
+    "v": "no",
+    "note": "Not in feature list",
+    "source": "https://github.com/FrigadeHQ/trench",
+    "quote": null
+   },
+   "heatmaps": {
+    "v": "no",
+    "note": "Not in feature list",
+    "source": "https://github.com/FrigadeHQ/trench",
+    "quote": null
+   },
+   "no-paid-edition": {
+    "v": "yes",
+    "note": "Paid plan is hosting only",
+    "source": "https://github.com/FrigadeHQ/trench",
+    "quote": "Open-source and MIT Licensed"
+   }
+  },
+  "woocommerce": {
+   "ready-storefront": {
+    "v": "yes",
+    "note": "Themes provide the shop front",
+    "source": "https://woocommerce.com/storefront/",
+    "quote": null
+   },
+   "managed-cloud": {
+    "v": "partly",
+    "note": "Recommended partner hosts, not run by makers",
+    "source": "https://woocommerce.com/hosting-solutions/",
+    "quote": null
+   },
+   "card-payments": {
+    "v": "yes",
+    "note": null,
+    "source": "https://woocommerce.com/products/",
+    "quote": "PayPal Payments"
+   },
+   "shop-themes": {
+    "v": "yes",
+    "note": "Many themes in official marketplace",
+    "source": "https://woocommerce.com/storefront/",
+    "quote": null
+   },
+   "shipping-tax": {
+    "v": "yes",
+    "note": null,
+    "source": "https://woocommerce.com/document/woocommerce-shipping-and-tax/",
+    "quote": "WooCommerce Shipping & Tax"
+   },
+   "plugins": {
+    "v": "yes",
+    "note": "Large extension marketplace",
+    "source": "https://woocommerce.com/products/",
+    "quote": null
+   }
+  },
+  "medusa": {
+   "ready-storefront": {
+    "v": "partly",
+    "note": "Next.js starter you customise in code",
+    "source": "https://docs.medusajs.com/resources/storefront-development",
+    "quote": "build it on top of the Next.js Starter storefront"
+   },
+   "managed-cloud": {
+    "v": "yes",
+    "note": null,
+    "source": "https://github.com/medusajs/medusa",
+    "quote": "Medusa Cloud, a managed environment for Medusa applications"
+   },
+   "card-payments": {
+    "v": "yes",
+    "note": "Stripe and PayPal providers",
+    "source": "https://docs.medusajs.com/resources/integrations",
+    "quote": "Payment # A Payment Module Provider processes payments ... Stripe PayPal"
+   },
+   "shop-themes": {
+    "v": "no",
+    "note": "Headless; one starter only",
+    "source": "https://docs.medusajs.com/resources/storefront-development",
+    "quote": null
+   },
+   "shipping-tax": {
+    "v": "yes",
+    "note": "Tax and fulfillment modules built in",
+    "source": "https://docs.medusajs.com/resources/commerce-modules/tax",
+    "quote": null
+   },
+   "plugins": {
+    "v": "partly",
+    "note": "Plugin system; few official plugins",
+    "source": "https://github.com/medusajs/medusa",
+    "quote": "Official plugins, such as draft orders and loyalty"
+   }
+  },
+  "saleor": {
+   "ready-storefront": {
+    "v": "partly",
+    "note": "Example storefront to customise; core is API-only",
+    "source": "https://github.com/saleor/saleor#readme",
+    "quote": "An open-source storefront example built with Next.js App Router, React.js, TypeScript, GraphQL, and Tailwind CSS."
+   },
+   "managed-cloud": {
+    "v": "yes",
+    "note": null,
+    "source": "https://github.com/saleor/saleor#readme",
+    "quote": "The fastest way to develop with Saleor is by using developer accounts in Saleor Cloud."
+   }
+  },
+  "bagisto": {
+   "managed-cloud": {
+    "v": "yes",
+    "note": null,
+    "source": "https://github.com/bagisto/bagisto#readme",
+    "quote": "Deploy and scale your Bagisto store effortlessly with Bagisto Cloud Hosting a fully managed, optimized hosting solution"
+   },
+   "plugins": {
+    "v": "yes",
+    "note": null,
+    "source": "https://github.com/bagisto/bagisto#readme",
+    "quote": "Make use of 200+ Bagisto pre-built extensions from Bagisto Extension Marketplace"
+   }
+  },
+  "litekart": {
+   "ready-storefront": {
+    "v": "yes",
+    "note": "Shop front only; needs a separate shop back end",
+    "source": "https://github.com/itswadesh/svelte-commerce#readme",
+    "quote": "production-ready open-source headless ecommerce storefront built with SvelteKit and TypeScript"
+   },
+   "shop-themes": {
+    "v": "partly",
+    "note": "Themes page exists; count not checked",
+    "source": "https://github.com/itswadesh/svelte-commerce#readme",
+    "quote": "Premium themes made using svelte-commerce"
+   }
+  },
+  "presta": {
+   "card-payments": {
+    "v": "yes",
+    "note": null,
+    "source": "https://github.com/PrestaShop/PrestaShop#readme",
+    "quote": "supports all the major payment services"
+   }
+  },
+  "sylius": {
+   "plugins": {
+    "v": "yes",
+    "note": null,
+    "source": "https://github.com/Sylius/Sylius#readme",
+    "quote": "You can find Sylius plugins on our Sylius Store which is a Marketplace with Sylius extensions."
+   }
+  },
+  "vendure": {
+   "ready-storefront": {
+    "v": "no",
+    "note": "Back end only",
+    "source": "https://github.com/vendurehq/vendure#readme",
+    "quote": "A single extensible core serves any frontend through a GraphQL API"
+   },
+   "managed-cloud": {
+    "v": "yes",
+    "note": null,
+    "source": "https://github.com/vendurehq/vendure#readme",
+    "quote": "Vendure Cloud is the managed runtime for Vendure."
+   },
+   "shipping-tax": {
+    "v": "yes",
+    "note": null,
+    "source": "https://github.com/vendurehq/vendure#readme",
+    "quote": "Catalog, orders, customers, promotions, channels, tax, shipping, payments, and stock are built in."
+   }
+  },
+  "chatwoot": {
+   "chat-widget": {
+    "v": "yes",
+    "note": null,
+    "source": "https://github.com/chatwoot/chatwoot#readme",
+    "quote": "It supports live chat on your website, email, Facebook, Instagram, Twitter, WhatsApp, Telegram, Line, SMS etc."
+   },
+   "email-tickets": {
+    "v": "yes",
+    "note": null,
+    "source": "https://github.com/chatwoot/chatwoot#readme",
+    "quote": "It supports live chat on your website, email, Facebook, Instagram, Twitter, WhatsApp, Telegram, Line, SMS etc."
+   },
+   "more-channels": {
+    "v": "yes",
+    "note": null,
+    "source": "https://github.com/chatwoot/chatwoot#readme",
+    "quote": "Facebook, Instagram, Twitter, WhatsApp, Telegram, Line, SMS etc."
+   },
+   "help-center": {
+    "v": "yes",
+    "note": null,
+    "source": "https://github.com/chatwoot/chatwoot#readme",
+    "quote": "Publish help articles, FAQs, and guides through the built-in Help Center Portal."
+   },
+   "managed-cloud": {
+    "v": "yes",
+    "note": "Hosted sign-up at app.chatwoot.com",
+    "source": "https://www.chatwoot.com/features",
+    "quote": "15-day free trial"
+   }
+  },
+  "zammad": {
+   "chat-widget": {
+    "v": "yes",
+    "note": "Chat listed as a channel; widget not separately checked",
+    "source": "https://github.com/zammad/zammad#readme",
+    "quote": "customer communication across channels like email, chat, telephone and social media"
+   },
+   "email-tickets": {
+    "v": "yes",
+    "note": null,
+    "source": "https://github.com/zammad/zammad#readme",
+    "quote": "customer communication across channels like email, chat, telephone and social media"
+   },
+   "more-channels": {
+    "v": "yes",
+    "note": null,
+    "source": "https://github.com/zammad/zammad#readme",
+    "quote": "channels like email, chat, telephone and social media"
+   },
+   "managed-cloud": {
+    "v": "yes",
+    "note": null,
+    "source": "https://github.com/zammad/zammad#readme",
+    "quote": "The easiest and often most cost-effective way to operate Zammad is our cloud service."
+   }
+  },
+  "papercups": {
+   "chat-widget": {
+    "v": "yes",
+    "note": null,
+    "source": "https://github.com/papercups-io/papercups#readme",
+    "quote": "Custom chat widget - a customizable chat widget you can embed on your website"
+   },
+   "managed-cloud": {
+    "v": "yes",
+    "note": null,
+    "source": "https://github.com/papercups-io/papercups#readme",
+    "quote": "We offer a hosted version at app.papercups.io."
+   },
+   "email-tickets": {
+    "v": "partly",
+    "note": "Email replies only; chat-first tool",
+    "source": "https://github.com/papercups-io/papercups#readme",
+    "quote": "Reply from email - use Papercups to answer support tickets via email"
+   },
+   "more-channels": {
+    "v": "partly",
+    "note": "SMS and Slack, no WhatsApp or Facebook listed",
+    "source": "https://github.com/papercups-io/papercups#readme",
+    "quote": "Reply from SMS - forward Twilio conversations and respond to SMS requests from Papercups"
+   }
+  },
+  "uvdesk": {
+   "email-tickets": {
+    "v": "yes",
+    "note": null,
+    "source": "https://github.com/uvdesk/community-skeleton#readme",
+    "quote": "Mailbox Component - Convert and get all your emails to support tickets on UVDesk"
+   },
+   "help-center": {
+    "v": "yes",
+    "note": null,
+    "source": "https://github.com/uvdesk/community-skeleton#readme",
+    "quote": "A powerful knowledge base and FAQ system-organize content by articles, categories, and folders."
+   }
+  },
+  "node-red": {
+   "no-code-builder": {
+    "v": "partly",
+    "note": "Visual wiring; code needed for custom logic",
+    "source": "https://nodered.org/about/",
+    "quote": "Node-RED provides a browser-based flow editor."
+   }
+  },
+  "activepieces": {
+   "ready-connectors": {
+    "v": "yes",
+    "note": null,
+    "source": "https://github.com/activepieces/activepieces#readme",
+    "quote": "Activepieces supports integrations with Google Sheets, OpenAI, Discord, RSS, and over 200 other services."
+   },
+   "ai-steps": {
+    "v": "yes",
+    "note": null,
+    "source": "https://github.com/activepieces/activepieces#readme",
+    "quote": "Native AI pieces let you experiment with various providers"
+   },
+   "no-code-builder": {
+    "v": "yes",
+    "note": null,
+    "source": "https://github.com/activepieces/activepieces#readme",
+    "quote": "anyone in the organization can use the no-code builder"
+   },
+   "managed-cloud": {
+    "v": "yes",
+    "note": null,
+    "source": "https://www.activepieces.com/docs/install/overview",
+    "quote": "We host and manage it for you."
+   },
+   "one-command-install": {
+    "v": "yes",
+    "note": null,
+    "source": "https://www.activepieces.com/docs/install/overview",
+    "quote": "curl -fsSL https://get.activepieces.com | sh"
+   }
+  },
+  "huginn": {
+   "one-command-install": {
+    "v": "yes",
+    "note": "Official image runs everything in one container",
+    "source": "https://github.com/huginn/huginn#readme",
+    "quote": "docker run -it -p 3000:3000 ghcr.io/huginn/huginn"
+   }
+  },
+  "automatisch": {
+   "one-command-install": {
+    "v": "yes",
+    "note": null,
+    "source": "https://github.com/automatisch/automatisch#readme",
+    "quote": "git clone https://github.com/automatisch/automatisch.git ... docker compose up"
+   },
+   "no-paid-edition": {
+    "v": "partly",
+    "note": "Some files are under a paid enterprise licence",
+    "source": "https://github.com/automatisch/automatisch#readme",
+    "quote": "Automatisch Enterprise Edition (Automatisch EE) is a commercial offering with the Enterprise license."
+   }
+  },
+  "abilian-hop3": {
+   "deploy-dashboard": {
+    "v": "partly",
+    "note": "Listed among features some of which are still planned",
+    "source": "https://github.com/abilian/hop3#readme",
+    "quote": "Centralized Web UI: A web dashboard for managing applications"
+   },
+   "auto-https": {
+    "v": "partly",
+    "note": "Set during server install",
+    "source": "https://github.com/abilian/hop3#readme",
+    "quote": "--domain example.com --acme-email you@example.com for a Let's Encrypt certificate"
+   }
+  },
+  "abilian-nua": {
+   "deploy-dashboard": {
+    "v": "no",
+    "note": "Command line only for now",
+    "source": "https://github.com/abilian/nua#readme",
+    "quote": "nua-server: web UI for a Nua iserver. Not ready yet."
+   }
+  },
+  "coolify": {
+   "git-push-deploy": {
+    "v": "yes",
+    "note": null,
+    "source": "https://github.com/coollabsio/coolify#readme",
+    "quote": "Deploy on every Git push, create pull-request previews"
+   },
+   "preview-deploys": {
+    "v": "yes",
+    "note": null,
+    "source": "https://github.com/coollabsio/coolify#readme",
+    "quote": "Deploy on every Git push, create pull-request previews"
+   },
+   "auto-https": {
+    "v": "yes",
+    "note": null,
+    "source": "https://github.com/coollabsio/coolify#readme",
+    "quote": "custom domains, automatic HTTPS certificates"
+   },
+   "one-click-databases": {
+    "v": "yes",
+    "note": null,
+    "source": "https://github.com/coollabsio/coolify#readme",
+    "quote": "Deploy managed databases and more than 360 one-click services"
+   },
+   "deploy-dashboard": {
+    "v": "yes",
+    "note": null,
+    "source": "https://github.com/coollabsio/coolify#readme",
+    "quote": "Manage resources through the dashboard, API, CLI, MCP"
+   }
+  },
+  "caprover": {
+   "git-push-deploy": {
+    "v": "partly",
+    "note": "Needs a webhook set up in GitHub or Bitbucket",
+    "source": "https://caprover.com/docs/deployment-methods.html",
+    "quote": "Captain listens to POST requests on this link and triggers a build."
+   },
+   "deploy-dashboard": {
+    "v": "yes",
+    "note": null,
+    "source": "https://github.com/caprover/caprover#readme",
+    "quote": "Web GUI for ease of access and convenience"
+   },
+   "auto-https": {
+    "v": "partly",
+    "note": "One click per domain, after domain setup",
+    "source": "https://caprover.com/docs/app-configuration.html",
+    "quote": "To enable HTTPS for any domain, just click on enable HTTPS!"
+   },
+   "one-click-databases": {
+    "v": "yes",
+    "note": null,
+    "source": "https://github.com/caprover/caprover#readme",
+    "quote": "installing MariaDB, MySQL, MongoDB and etc on their server by selecting from a dropdown and clicking on install"
+   },
+   "scales-out": {
+    "v": "partly",
+    "note": "Apps spread over servers; one-click databases run on one",
+    "source": "https://github.com/caprover/caprover#readme",
+    "quote": "Docker Swarm under the hood for containerization and clustering"
+   }
+  },
+  "dokku": {
+   "git-push-deploy": {
+    "v": "yes",
+    "note": null,
+    "source": "https://dokku.com/docs/deployment/application-deployment/",
+    "quote": "you can deploy applications using git push"
+   },
+   "auto-https": {
+    "v": "partly",
+    "note": "Through a plugin you install and enable",
+    "source": "https://dokku.com/docs/community/plugins/",
+    "quote": "Let's Encrypt"
+   },
+   "one-click-databases": {
+    "v": "partly",
+    "note": "Database plugins, one command each; no clicking",
+    "source": "https://dokku.com/docs/community/plugins/",
+    "quote": "PostgreSQL (single container)"
+   },
+   "scales-out": {
+    "v": "partly",
+    "note": "Only with the optional k3s mode; default is one server",
+    "source": "https://dokku.com/docs/deployment/schedulers/k3s/",
+    "quote": "Adding a worker node"
+   }
+  },
+  "dyrector-io": {
+   "git-push-deploy": {
+    "v": "partly",
+    "note": "Needs a CI workflow you set up",
+    "source": "https://github.com/dyrector-io/dyrectorio#readme",
+    "quote": "Automate your deployments by generating a CD token you can use with GitHub Actions"
+   },
+   "deploy-dashboard": {
+    "v": "yes",
+    "note": null,
+    "source": "https://github.com/dyrector-io/dyrectorio#readme",
+    "quote": "Manage environments without SSH or kubectl"
+   },
+   "preview-deploys": {
+    "v": "partly",
+    "note": "Per branch, not per proposed change",
+    "source": "https://github.com/dyrector-io/dyrectorio#readme",
+    "quote": "Instant test environments from any branches"
+   }
+  },
+  "kubero": {
+   "git-push-deploy": {
+    "v": "yes",
+    "note": null,
+    "source": "https://github.com/kubero-dev/kubero#readme",
+    "quote": "Automatic Redeployments  Trigger app redeployments on pushes to branches or tags."
+   },
+   "deploy-dashboard": {
+    "v": "yes",
+    "note": null,
+    "source": "https://github.com/kubero-dev/kubero#readme",
+    "quote": "Application Logs  View logs directly from the web UI for easy monitoring."
+   },
+   "preview-deploys": {
+    "v": "yes",
+    "note": null,
+    "source": "https://github.com/kubero-dev/kubero#readme",
+    "quote": "GitOps Review Apps  Automatically build, start, and clean up review apps when opening or closing pull requests."
+   },
+   "one-click-databases": {
+    "v": "yes",
+    "note": null,
+    "source": "https://github.com/kubero-dev/kubero#readme",
+    "quote": "Add-ons Integration  Seamlessly deploy add-ons such as PostgreSQL and Redis alongside your applications."
+   },
+   "scales-out": {
+    "v": "partly",
+    "note": "Depends on the Kubernetes cluster you run",
+    "source": "https://github.com/kubero-dev/kubero#readme",
+    "quote": "Kubernetes native and runs with two containers on any Kubernetes instance"
+   }
+  },
+  "otomi": {
+   "git-push-deploy": {
+    "v": "partly",
+    "note": "Built-in Gitea and Tekton pipelines; needs setup",
+    "source": "https://github.com/linode/apl-core#readme",
+    "quote": "Deploy containerized workloads the GitOps way using the provided quickstarts or BYO golden path templates."
+   },
+   "auto-https": {
+    "v": "partly",
+    "note": "Certificates come from cert-manager; needs setup",
+    "source": "https://github.com/linode/apl-core#readme",
+    "quote": "Cert-manager - Bring your own wildcard certificate or request one from Let's Encrypt."
+   },
+   "one-click-databases": {
+    "v": "partly",
+    "note": "PostgreSQL listed; other kinds not confirmed",
+    "source": "https://github.com/linode/apl-core#readme",
+    "quote": "Cloudnative-pg: Open source operator designed to manage PostgreSQL workloads."
+   }
+  },
+  "peon": {
+   "git-push-deploy": {
+    "v": "yes",
+    "note": null,
+    "source": "https://github.com/Peon-sh/Peon#readme",
+    "quote": "git push to deploy, TLS, backups, logs, and team workspaces on infrastructure you control."
+   },
+   "deploy-dashboard": {
+    "v": "yes",
+    "note": null,
+    "source": "https://github.com/Peon-sh/Peon#readme",
+    "quote": "This app (dashboard, API, worker)"
+   },
+   "auto-https": {
+    "v": "yes",
+    "note": null,
+    "source": "https://github.com/Peon-sh/Peon#readme",
+    "quote": "git push to deploy, TLS, backups, logs, and team workspaces on infrastructure you control."
+   },
+   "one-click-databases": {
+    "v": "yes",
+    "note": null,
+    "source": "https://github.com/Peon-sh/Peon#readme",
+    "quote": "One-click service templates (databases, compose stacks, and more)"
+   }
+  },
+  "apache-apisix": {
+   "api-client": {
+    "v": "no",
+    "note": "It is a gateway, not a request-testing app",
+    "source": "https://github.com/apache/apisix#readme",
+    "quote": "Apache APISIX is a dynamic, real-time, high-performance API Gateway."
+   },
+   "postman-import": {
+    "v": "no",
+    "note": "Not a testing client",
+    "source": "https://github.com/apache/apisix#readme",
+    "quote": "Apache APISIX is a dynamic, real-time, high-performance API Gateway."
+   },
+   "api-gateway": {
+    "v": "yes",
+    "note": null,
+    "source": "https://github.com/apache/apisix#readme",
+    "quote": "Apache APISIX is a dynamic, real-time, high-performance API Gateway."
+   }
+  },
+  "firecamp": {
+   "api-client": {
+    "v": "yes",
+    "note": null,
+    "source": "https://github.com/firecamp-dev/firecamp#readme",
+    "quote": "Open Source Postman Alternative"
+   },
+   "scheduled-checks": {
+    "v": "partly",
+    "note": "Tests run via CLI or CI; no built-in schedule found",
+    "source": "https://github.com/firecamp-dev/firecamp#readme",
+    "quote": "CLI & CI/CD: Run API Collection Tests in the terminal or set in CI/CD pipeline"
+   },
+   "works-in-browser": {
+    "v": "yes",
+    "note": null,
+    "source": "https://github.com/firecamp-dev/firecamp#readme",
+    "quote": "Firecamp Web: Get quick access to the web platform"
+   }
+  },
+  "fusio": {
+   "api-gateway": {
+    "v": "yes",
+    "note": null,
+    "source": "https://github.com/apioo/fusio#readme",
+    "quote": "Fusio is a self-hosted, open-source backend platform and API gateway"
+   }
+  },
+  "hoppscotch": {
+   "api-client": {
+    "v": "yes",
+    "note": null,
+    "source": "https://github.com/hoppscotch/hoppscotch#readme",
+    "quote": "Collections: Keep your API requests organized with collections and folders."
+   },
+   "works-in-browser": {
+    "v": "yes",
+    "note": null,
+    "source": "site data",
+    "quote": "web platform listed"
+   }
+  },
+  "insomnia": {
+   "api-client": {
+    "v": "yes",
+    "note": null,
+    "source": "https://github.com/Kong/insomnia#readme",
+    "quote": "Insomnia is an open-source, cross-platform API client for GraphQL, REST, WebSockets, Server-Sent Events (SSE), gRPC"
+   },
+   "no-account-needed": {
+    "v": "partly",
+    "note": "Most features need a free account",
+    "source": "https://github.com/Kong/insomnia#readme",
+    "quote": "You can use Insomnia without an account with the local Scratch Pad"
+   },
+   "works-in-browser": {
+    "v": "no",
+    "note": null,
+    "source": "site data",
+    "quote": "platforms: windows, mac, linux only"
+   }
+  },
+  "step-ci": {
+   "api-client": {
+    "v": "partly",
+    "note": "Runs written test files; no point-and-click client",
+    "source": "https://github.com/stepci/stepci#readme",
+    "quote": "Step CI is an open-source API Quality Assurance framework"
+   },
+   "postman-import": {
+    "v": "no",
+    "note": "Postman import is an open request, not built",
+    "source": "https://github.com/stepci/stepci/issues/29",
+    "quote": "For users migrating from Postman and Insomnia, see issues #29 and #30 respectively"
+   },
+   "no-account-needed": {
+    "v": "yes",
+    "note": null,
+    "source": "https://github.com/stepci/stepci#readme",
+    "quote": "Self-hosted. Test services on your network, locally and CI/CD"
+   },
+   "works-in-browser": {
+    "v": "partly",
+    "note": "Online playground only; main tool is a CLI",
+    "source": "https://github.com/stepci/stepci#readme",
+    "quote": "Try the Online Playground"
+   }
+  },
+  "appsmith": {
+   "no-code-builder": {
+    "v": "partly",
+    "note": "Visual builder; code needed for logic",
+    "source": "https://github.com/appsmithorg/appsmith#readme",
+    "quote": "Appsmith is an open-source low-code platform"
+   },
+   "managed-cloud": {
+    "v": "yes",
+    "note": null,
+    "source": "https://github.com/appsmithorg/appsmith#readme",
+    "quote": "Signup on Appsmith Cloud"
+   }
+  },
+  "budibase": {
+   "data-connectors": {
+    "v": "yes",
+    "note": null,
+    "source": "https://github.com/Budibase/budibase#readme",
+    "quote": "Integrate with databases, AI models, and business apps"
+   },
+   "managed-cloud": {
+    "v": "yes",
+    "note": null,
+    "source": "https://github.com/Budibase/budibase#readme",
+    "quote": "Get started - we host (Budibase Cloud)"
+   },
+   "one-command-install": {
+    "v": "yes",
+    "note": null,
+    "source": "https://github.com/Budibase/budibase#readme",
+    "quote": "Docker - single ARM compatible image"
+   },
+   "no-paid-edition": {
+    "v": "partly",
+    "note": "A paid edition adds some features",
+    "source": "https://github.com/Budibase/budibase#readme",
+    "quote": "Budibase paid features are licensed under the Business Source License"
+   }
+  },
+  "dashpress": {
+   "no-code-builder": {
+    "v": "partly",
+    "note": "Generates admin screens from a database; not drag-and-drop",
+    "source": "https://github.com/dashpresshq/dashpress#readme",
+    "quote": "https://demo.dashpress.io is an example admin app generated with DashPress without writing any line of code."
+   },
+   "one-command-install": {
+    "v": "yes",
+    "note": null,
+    "source": "https://github.com/dashpresshq/dashpress#readme",
+    "quote": "$ npx dashpress"
+   }
+  },
+  "illa": {
+   "no-code-builder": {
+    "v": "partly",
+    "note": "Drag-and-drop canvas, aimed at developers",
+    "source": "https://github.com/illacloud/illa-builder#readme",
+    "quote": "ILLA is a robust open source low-code platform for developers to build internal tools."
+   },
+   "data-connectors": {
+    "v": "yes",
+    "note": null,
+    "source": "https://github.com/illacloud/illa-builder",
+    "quote": "Supports PostgreSQL, MySQL, Supabase, GraphQL, MongoDB, MSSQL, Rest API, Hugging Face, Redis, etc."
+   },
+   "managed-cloud": {
+    "v": "yes",
+    "note": null,
+    "source": "https://github.com/illacloud/illa-builder#readme",
+    "quote": "sign up and log in to ILLA Cloud"
+   }
+  },
+  "lowdefy": {
+   "data-connectors": {
+    "v": "yes",
+    "note": null,
+    "source": "https://github.com/lowdefy/lowdefy#readme",
+    "quote": "10+ data connectors \u2014 MongoDB, PostgreSQL, MySQL, REST APIs, Google Sheets, S3, Elasticsearch, Stripe."
+   }
+  },
+  "openblocks": {
+   "no-code-builder": {
+    "v": "yes",
+    "note": null,
+    "source": "https://github.com/openblocks-dev/openblocks#readme",
+    "quote": "Visual UI builder with 50+ built-in components."
+   },
+   "data-connectors": {
+    "v": "yes",
+    "note": null,
+    "source": "https://github.com/openblocks-dev/openblocks#readme",
+    "quote": "Native connections to PostgreSQL, MongoDB, MySQL, Redis, Elasticsearch, REST API, SMTP, etc."
+   },
+   "managed-cloud": {
+    "v": "partly",
+    "note": "Cloud exists, but repo last updated Oct 2023",
+    "source": "https://github.com/openblocks-dev/openblocks#readme",
+    "quote": "You can access Openblocks from cloud-hosted version"
+   }
+  },
+  "tooljet": {
+   "no-code-builder": {
+    "v": "yes",
+    "note": null,
+    "source": "https://github.com/ToolJet/ToolJet",
+    "quote": "Visual App Builder: 80+ responsive components"
+   },
+   "data-connectors": {
+    "v": "yes",
+    "note": null,
+    "source": "https://github.com/ToolJet/ToolJet",
+    "quote": "90+ Data Sources: Connect to databases, APIs, cloud storage, and SaaS tools."
+   },
+   "managed-cloud": {
+    "v": "yes",
+    "note": null,
+    "source": "https://github.com/ToolJet/ToolJet",
+    "quote": "ToolJet Cloud offers a hosted solution of ToolJet."
+   },
+   "one-command-install": {
+    "v": "yes",
+    "note": null,
+    "source": "https://github.com/ToolJet/ToolJet",
+    "quote": "docker run --name tooljet ... tooljet/try:ee-lts-latest"
+   },
+   "company-sso": {
+    "v": "partly",
+    "note": "Google/GitHub sign-in free; OpenID marked paid",
+    "source": "https://github.com/ToolJet/ToolJet/blob/develop/docs/docs/user-management/sso/oidc/setup.md",
+    "quote": "Paid feature"
+   },
+   "app-versioning": {
+    "v": "no",
+    "note": "Git sync is a paid feature",
+    "source": "https://github.com/ToolJet/ToolJet/blob/develop/docs/docs/development-lifecycle/gitsync/overview.md",
+    "quote": "Paid feature"
+   },
+   "no-paid-edition": {
+    "v": "no",
+    "note": "Git sync, SCIM, audit logs are Enterprise-only",
+    "source": "https://github.com/ToolJet/ToolJet",
+    "quote": "GitSync & CI/CD ... (Enterprise)"
+   }
+  },
+  "windmill": {
+   "no-code-builder": {
+    "v": "partly",
+    "note": "Code-first; business teams build with AI and app editor",
+    "source": "https://github.com/windmill-labs/windmill",
+    "quote": "Open-source, self-hostable code-first platform for workflows, apps and AI agents"
+   },
+   "data-connectors": {
+    "v": "yes",
+    "note": null,
+    "source": "https://github.com/windmill-labs/windmill",
+    "quote": "DuckDB scripts query S3 and Azure Blob files ... data tables, Postgres, MySQL and BigQuery"
+   },
+   "managed-cloud": {
+    "v": "yes",
+    "note": null,
+    "source": "https://github.com/windmill-labs/windmill",
+    "quote": "<a href=\"https://app.windmill.dev\">Try it</a>; Windmill Labs offers dedicated instances and commercial support"
+   },
+   "one-command-install": {
+    "v": "partly",
+    "note": "Download three files, then docker compose up",
+    "source": "https://github.com/windmill-labs/windmill",
+    "quote": "Deploy Windmill with 3 files (docker-compose.yml, Caddyfile, .env)"
+   },
+   "company-sso": {
+    "v": "partly",
+    "note": "OAuth-style SSO listed; SAML not stated",
+    "source": "https://github.com/windmill-labs/windmill",
+    "quote": "Configure OAuth and SSO (Google Workspace, Microsoft/Azure, Okta) directly from the superadmin UI."
+   },
+   "app-versioning": {
+    "v": "partly",
+    "note": "Git sync listed; free-edition limits not checked",
+    "source": "https://github.com/windmill-labs/windmill",
+    "quote": "Git sync | Two-way sync between a workspace and your Git repository"
+   },
+   "no-paid-edition": {
+    "v": "partly",
+    "note": "Enterprise build and commercial license exist",
+    "source": "https://github.com/windmill-labs/windmill",
+    "quote": "The binary built from this repository without the `enterprise` feature flag is open source under AGPLv3"
+   }
+  },
+  "appwrite": {
+   "built-in-auth": {
+    "v": "yes",
+    "note": null,
+    "source": "https://github.com/appwrite/appwrite",
+    "quote": "Authenticate users securely with email, SMS, OAuth, anonymous sessions, and magic URLs."
+   },
+   "realtime-data": {
+    "v": "yes",
+    "note": null,
+    "source": "https://github.com/appwrite/appwrite",
+    "quote": "Subscribe and react to events across your project as they happen."
+   },
+   "file-storage": {
+    "v": "yes",
+    "note": null,
+    "source": "https://github.com/appwrite/appwrite",
+    "quote": "Store files with compression, encryption, image transformations, and access control."
+   },
+   "server-functions": {
+    "v": "yes",
+    "note": null,
+    "source": "https://github.com/appwrite/appwrite",
+    "quote": "Deploy serverless functions with secure isolated runtimes and event-driven execution."
+   },
+   "managed-cloud": {
+    "v": "yes",
+    "note": null,
+    "source": "https://github.com/appwrite/appwrite",
+    "quote": "Appwrite is available as a managed cloud platform"
+   },
+   "one-command-install": {
+    "v": "yes",
+    "note": null,
+    "source": "https://github.com/appwrite/appwrite",
+    "quote": "docker run -it --rm ... (setup wizard)"
+   }
+  },
+  "acebase": {
+   "built-in-auth": {
+    "v": "yes",
+    "note": null,
+    "source": "https://github.com/appy-one/acebase",
+    "quote": "acebase-server ... Includes built-in user authentication and authorization, supports using external OAuth providers such as Facebook and Google"
+   },
+   "realtime-data": {
+    "v": "yes",
+    "note": null,
+    "source": "https://github.com/appy-one/acebase",
+    "quote": "with realtime data change notifications"
+   }
+  },
+  "encore": {
+   "built-in-auth": {
+    "v": "no",
+    "note": "You write the sign-in check yourself",
+    "source": "https://encore.dev/docs/ts/develop/auth",
+    "quote": "you must define an authentication handler in your application"
+   },
+   "file-storage": {
+    "v": "yes",
+    "note": null,
+    "source": "https://github.com/encoredev/encore",
+    "quote": "import { Bucket } from \"encore.dev/storage/objects\"; Define an object storage bucket"
+   },
+   "managed-cloud": {
+    "v": "partly",
+    "note": "Deploys into your own AWS/GCP; not a hosted backend",
+    "source": "https://github.com/encoredev/encore",
+    "quote": "Encore's optional managed deployment platform is a commercial service."
+   },
+   "one-command-install": {
+    "v": "partly",
+    "note": "Builds an image; you set up the infrastructure",
+    "source": "https://github.com/encoredev/encore",
+    "quote": "Run `encore build docker` to produce a standalone image and supply your own infra config"
+   }
+  },
+  "kuzzle": {
+   "built-in-auth": {
+    "v": "partly",
+    "note": "Login and roles; reset and providers not confirmed",
+    "source": "https://github.com/kuzzleio/kuzzle",
+    "quote": "User Management: login, logout and security rules are no more a burden."
+   },
+   "realtime-data": {
+    "v": "yes",
+    "note": null,
+    "source": "https://github.com/kuzzleio/kuzzle",
+    "quote": "Realtime Notifications: use the pub/sub system or subscribe to database notifications."
+   },
+   "server-functions": {
+    "v": "yes",
+    "note": null,
+    "source": "https://github.com/kuzzleio/kuzzle",
+    "quote": "Extensible: develop advanced business feature directly with the integrated framework."
+   },
+   "one-command-install": {
+    "v": "partly",
+    "note": "Needs Elasticsearch and Redis alongside",
+    "source": "https://github.com/kuzzleio/kuzzle",
+    "quote": "Then you need to run Kuzzle services, Elasticsearch and Redis"
+   }
+  },
+  "nhost": {
+   "built-in-auth": {
+    "v": "yes",
+    "note": null,
+    "source": "https://github.com/nhost/nhost",
+    "quote": "Authentication: Auth"
+   },
+   "file-storage": {
+    "v": "yes",
+    "note": null,
+    "source": "https://github.com/nhost/nhost",
+    "quote": "Storage: Storage"
+   },
+   "server-functions": {
+    "v": "yes",
+    "note": "JavaScript/TypeScript only",
+    "source": "https://github.com/nhost/nhost",
+    "quote": "Serverless Functions: Node.js (JavaScript and TypeScript)"
+   },
+   "managed-cloud": {
+    "v": "yes",
+    "note": null,
+    "source": "https://github.com/nhost/nhost",
+    "quote": "Option 1: Nhost Hosted Platform"
+   },
+   "one-command-install": {
+    "v": "partly",
+    "note": "Example compose file with several services",
+    "source": "https://github.com/nhost/nhost",
+    "quote": "you can self-host the whole Nhost stack. Check out the example docker-compose file"
+   }
+  },
+  "pocketbase": {
+   "built-in-auth": {
+    "v": "yes",
+    "note": null,
+    "source": "https://github.com/pocketbase/pocketbase",
+    "quote": "built-in files and users management"
+   },
+   "realtime-data": {
+    "v": "yes",
+    "note": null,
+    "source": "https://github.com/pocketbase/pocketbase",
+    "quote": "embedded database (SQLite) with realtime subscriptions"
+   },
+   "file-storage": {
+    "v": "yes",
+    "note": null,
+    "source": "https://github.com/pocketbase/pocketbase",
+    "quote": "built-in files and users management"
+   },
+   "server-functions": {
+    "v": "yes",
+    "note": null,
+    "source": "https://pocketbase.io/docs/",
+    "quote": "Extend with JavaScript (JS event hooks and routing)"
+   },
+   "one-command-install": {
+    "v": "yes",
+    "note": null,
+    "source": "https://github.com/pocketbase/pocketbase",
+    "quote": "download the prebuilt executable ... run `./pocketbase serve`"
+   }
+  },
+  "supabase": {
+   "built-in-auth": {
+    "v": "yes",
+    "note": null,
+    "source": "https://github.com/supabase/supabase",
+    "quote": "Authentication and Authorization."
+   },
+   "realtime-data": {
+    "v": "yes",
+    "note": null,
+    "source": "https://github.com/supabase/supabase",
+    "quote": "Realtime subscriptions."
+   },
+   "file-storage": {
+    "v": "yes",
+    "note": null,
+    "source": "https://github.com/supabase/supabase",
+    "quote": "File Storage."
+   },
+   "server-functions": {
+    "v": "yes",
+    "note": null,
+    "source": "https://github.com/supabase/supabase",
+    "quote": "Edge Functions"
+   },
+   "managed-cloud": {
+    "v": "yes",
+    "note": null,
+    "source": "https://github.com/supabase/supabase",
+    "quote": "Supabase is a hosted platform. You can sign up and start using Supabase without installing anything."
+   }
+  },
+  "authgear": {
+   "passkey-login": {
+    "v": "yes",
+    "note": null,
+    "source": "https://github.com/authgear/authgear-server",
+    "quote": "Passkeys"
+   },
+   "two-step-login": {
+    "v": "yes",
+    "note": null,
+    "source": "https://github.com/authgear/authgear-server",
+    "quote": "2FA: TOTP (Google Authenticator, Authy), SMS, Email"
+   },
+   "ready-login-pages": {
+    "v": "yes",
+    "note": null,
+    "source": "https://github.com/authgear/authgear-server",
+    "quote": "Pre-built signup/login page"
+   },
+   "managed-cloud": {
+    "v": "yes",
+    "note": null,
+    "source": "https://github.com/authgear/authgear-server",
+    "quote": "Available for self-hosting and on Authgear Cloud."
+   }
+  },
+  "boxyhq": {
+   "enterprise-sso-customers": {
+    "v": "yes",
+    "note": null,
+    "source": "https://github.com/ory/polis",
+    "quote": "bridges or proxies a SAML login flow to OAuth 2.0 or OpenID Connect"
+   },
+   "managed-cloud": {
+    "v": "yes",
+    "note": null,
+    "source": "https://github.com/ory/polis",
+    "quote": "SAML & SCIM on Ory Network are powered by Ory Polis."
+   }
+  },
+  "hanko": {
+   "social-login": {
+    "v": "yes",
+    "note": null,
+    "source": "https://github.com/teamhanko/hanko",
+    "quote": "OAuth SSO (Sign in with Apple/Google/GitHub and more)"
+   },
+   "passkey-login": {
+    "v": "yes",
+    "note": null,
+    "source": "https://github.com/teamhanko/hanko",
+    "quote": "Passwords, passcodes, passkeys"
+   },
+   "two-step-login": {
+    "v": "yes",
+    "note": null,
+    "source": "https://github.com/teamhanko/hanko",
+    "quote": "MFA (TOTP, security keys)"
+   },
+   "enterprise-sso-customers": {
+    "v": "yes",
+    "note": null,
+    "source": "https://github.com/teamhanko/hanko",
+    "quote": "SAML Enterprise SSO"
+   },
+   "ready-login-pages": {
+    "v": "yes",
+    "note": null,
+    "source": "https://github.com/teamhanko/hanko",
+    "quote": "Hanko Elements web components"
+   },
+   "managed-cloud": {
+    "v": "yes",
+    "note": null,
+    "source": "https://github.com/teamhanko/hanko",
+    "quote": "Available for self-hosting and as a fully managed service on Hanko Cloud."
+   }
+  },
+  "janssen": {
+   "passkey-login": {
+    "v": "yes",
+    "note": null,
+    "source": "https://github.com/JanssenProject/jans",
+    "quote": "Enables end-users to enroll and authenticate with passkeys and other FIDO authenticators."
+   }
+  },
+  "keycloak": {
+   "social-login": {
+    "v": "yes",
+    "note": null,
+    "source": "https://www.keycloak.org/",
+    "quote": "enabling social login is easy to add through the admin console"
+   },
+   "enterprise-sso-customers": {
+    "v": "yes",
+    "note": null,
+    "source": "https://www.keycloak.org/",
+    "quote": "support for OpenID Connect, OAuth 2.0, and SAML"
+   },
+   "ready-login-pages": {
+    "v": "yes",
+    "note": null,
+    "source": "https://www.keycloak.org/",
+    "quote": "Themes: Customize look and feel"
+   }
+  },
+  "logto": {
+   "social-login": {
+    "v": "yes",
+    "note": null,
+    "source": "https://github.com/logto-io/logto",
+    "quote": "Sign-up, sign-in, social login, Google One Tap, MFA, SSO."
+   },
+   "enterprise-sso-customers": {
+    "v": "yes",
+    "note": null,
+    "source": "https://github.com/logto-io/logto",
+    "quote": "Multi-tenancy, enterprise SSO, and RBAC: ready to use, no workarounds."
+   },
+   "ready-login-pages": {
+    "v": "yes",
+    "note": null,
+    "source": "https://github.com/logto-io/logto",
+    "quote": "Pre-built sign-in flows, customizable UIs"
+   },
+   "managed-cloud": {
+    "v": "yes",
+    "note": null,
+    "source": "https://github.com/logto-io/logto",
+    "quote": "Logto Cloud: Fully managed, zero setup."
+   }
+  },
+  "ory": {
+   "social-login": {
+    "v": "yes",
+    "note": null,
+    "source": "https://github.com/ory/kratos",
+    "quote": "passkeys, biometrics, social login, SSO, and multi factor authentication"
+   },
+   "passkey-login": {
+    "v": "yes",
+    "note": null,
+    "source": "https://github.com/ory/kratos",
+    "quote": "passkeys, biometrics, social login, SSO, and multi factor authentication"
+   },
+   "two-step-login": {
+    "v": "yes",
+    "note": null,
+    "source": "https://github.com/ory/kratos",
+    "quote": "Multi factor authentication"
+   },
+   "enterprise-sso-customers": {
+    "v": "partly",
+    "note": "Separate Ory Polis project; hosted SAML is top-plan only",
+    "source": "https://www.ory.com/pricing",
+    "quote": "One-click SAML SSO: No (Developer/Production/Growth), Yes (Enterprise)"
+   },
+   "managed-cloud": {
+    "v": "yes",
+    "note": null,
+    "source": "https://github.com/ory/kratos",
+    "quote": "The Ory Network is the fastest way to use Ory"
+   },
+   "no-paid-edition": {
+    "v": "partly",
+    "note": "Enterprise License adds features",
+    "source": "https://github.com/ory/kratos",
+    "quote": "Ory Enterprise License (OEL) provides enhanced features"
+   }
+  },
+  "supertokens": {
+   "social-login": {
+    "v": "yes",
+    "note": null,
+    "source": "https://github.com/supertokens/supertokens-core",
+    "quote": "Social Login"
+   },
+   "two-step-login": {
+    "v": "partly",
+    "note": "MFA is a paid add-on",
+    "source": "https://supertokens.com/pricing",
+    "quote": "MFA $0.01 / MAU, minimum billing $100 / month"
+   },
+   "enterprise-sso-customers": {
+    "v": "partly",
+    "note": "Listed under multi-tenancy, a paid add-on",
+    "source": "https://supertokens.com/pricing",
+    "quote": "Multi Tenancy / Organization Support (Enterprise SSO)"
+   },
+   "ready-login-pages": {
+    "v": "yes",
+    "note": null,
+    "source": "https://supertokens.com/pricing",
+    "quote": "Sign up / Sign in Page UI"
+   },
+   "managed-cloud": {
+    "v": "yes",
+    "note": null,
+    "source": "https://supertokens.com/pricing",
+    "quote": "Cloud service free under 5K MAUs"
+   },
+   "no-paid-edition": {
+    "v": "partly",
+    "note": "Open-core; some features are paid add-ons",
+    "source": "https://github.com/supertokens/supertokens-core",
+    "quote": "SuperTokens is an open-core alternative"
+   }
+  },
+  "zitadel": {
+   "social-login": {
+    "v": "yes",
+    "note": null,
+    "source": "https://github.com/zitadel/zitadel",
+    "quote": "Enterprise IdPs and social logins"
+   },
+   "passkey-login": {
+    "v": "yes",
+    "note": null,
+    "source": "https://github.com/zitadel/zitadel",
+    "quote": "Passkeys (FIDO2 / WebAuthn)"
+   },
+   "two-step-login": {
+    "v": "yes",
+    "note": null,
+    "source": "https://github.com/zitadel/zitadel",
+    "quote": "MFA: OTP, U2F, OTP Email, OTP SMS"
+   },
+   "enterprise-sso-customers": {
+    "v": "yes",
+    "note": null,
+    "source": "https://github.com/zitadel/zitadel",
+    "quote": "OpenID Connect certified \u00b7 SAML 2.0"
+   },
+   "ready-login-pages": {
+    "v": "yes",
+    "note": null,
+    "source": "https://github.com/zitadel/zitadel",
+    "quote": "Hosted Login V2"
+   },
+   "managed-cloud": {
+    "v": "yes",
+    "note": null,
+    "source": "https://github.com/zitadel/zitadel",
+    "quote": "ZITADEL Cloud (SaaS)"
+   }
+  },
+  "buildbot": {
+   "container-jobs": {
+    "v": "partly",
+    "note": "Optional Docker latent workers, not the default",
+    "source": "https://docs.buildbot.net/latest/manual/configuration/workers-docker.html",
+    "quote": "Docker latent worker"
+   },
+   "parallel-jobs": {
+    "v": "yes",
+    "note": null,
+    "source": "https://www.buildbot.net",
+    "quote": "Buildbot supports distributed, parallel execution of jobs across multiple platforms"
+   },
+   "forge-integration": {
+    "v": "yes",
+    "note": null,
+    "source": "https://docs.buildbot.net/latest/manual/configuration/wwwhooks.html",
+    "quote": "GitHub hook ... BitBucket hook ... GitLab hook"
+   },
+   "plugins": {
+    "v": "partly",
+    "note": "Plugin system, short wiki list of add-ons",
+    "source": "https://docs.buildbot.net/latest/manual/plugins.html",
+    "quote": "Plugins were introduced in Buildbot-0.8.11, so as of this writing, only components that are bundled with Buildbot are available as plugins"
+   }
+  },
+  "drone": {
+   "pipeline-as-file": {
+    "v": "yes",
+    "note": null,
+    "source": "https://www.drone.io",
+    "quote": "configured with a simple, easy-to-read file that you commit to your git repository"
+   },
+   "container-jobs": {
+    "v": "yes",
+    "note": null,
+    "source": "https://docs.drone.io/pipeline/docker/overview/",
+    "quote": "Docker pipelines execute pipeline commands inside ephemeral Docker containers"
+   },
+   "parallel-jobs": {
+    "v": "yes",
+    "note": null,
+    "source": "https://docs.drone.io/runner/overview/",
+    "quote": "You can install one or many runners, of one or many types"
+   },
+   "forge-integration": {
+    "v": "yes",
+    "note": null,
+    "source": "https://docs.drone.io/server/overview/",
+    "quote": "GitHub GitHub Enterprise Gitea Gitee GitLab Gogs Bitbucket Cloud Bitbucket Server"
+   },
+   "plugins": {
+    "v": "yes",
+    "note": null,
+    "source": "https://plugins.drone.io",
+    "quote": "Browse our registry of community plugins to customize your continuous integration pipeline"
+   }
+  },
+  "jenkins": {
+   "pipeline-as-file": {
+    "v": "partly",
+    "note": "Jenkinsfile optional; web-page jobs also possible",
+    "source": "https://www.jenkins.io/doc/book/pipeline/jenkinsfile/",
+    "quote": "Creating a Jenkinsfile, which is checked into source control"
+   },
+   "container-jobs": {
+    "v": "partly",
+    "note": "Needs Docker Pipeline plugin",
+    "source": "https://www.jenkins.io/doc/book/pipeline/docker/",
+    "quote": "Using Docker with Pipeline"
+   },
+   "parallel-jobs": {
+    "v": "yes",
+    "note": null,
+    "source": "https://www.jenkins.io/doc/book/using/using-agents/",
+    "quote": "balancing the workload among multiple agents running jobs in parallel"
+   },
+   "forge-integration": {
+    "v": "yes",
+    "note": "Via plugins such as GitHub Branch Source",
+    "source": "https://plugins.jenkins.io/",
+    "quote": "Jenkins integrates with practically every tool in the continuous integration and continuous delivery toolchain"
+   },
+   "plugins": {
+    "v": "yes",
+    "note": null,
+    "source": "https://plugins.jenkins.io/",
+    "quote": "Discover the 2300+ community contributed Jenkins plugins"
+   }
+  },
+  "concrete": {
+   "managed-cloud": {
+    "v": "yes",
+    "note": null,
+    "source": "https://www.concretecms.com/hosting",
+    "quote": "Fully-Managed Infrastructure"
+   },
+   "team-permissions": {
+    "v": "yes",
+    "note": null,
+    "source": "https://www.concretecms.com",
+    "quote": "Assign roles and groups for controlled access for everything, down to the individual block of text"
+   },
+   "plugins": {
+    "v": "yes",
+    "note": null,
+    "source": "https://marketplace.concretecms.com",
+    "quote": "This marketplace offers add-ons, themes, and integrations that all work with your existing Concrete sites"
+   },
+   "headless-api": {
+    "v": "yes",
+    "note": null,
+    "source": "https://documentation.concretecms.org/9-x/developers/rest-api/introduction",
+    "quote": "Concrete CMS REST API"
+   }
+  },
+  "decap-cms": {
+   "managed-cloud": {
+    "v": "yes",
+    "note": null,
+    "source": "https://github.com/decaporg/decap-cms",
+    "quote": "Decap Turbo is a hosted backend for Decap CMS"
+   },
+   "plugins": {
+    "v": "partly",
+    "note": "Extension points; no add-on listing seen",
+    "source": "https://decapcms.org/docs/intro/",
+    "quote": "Fully extensible: Create custom-styled previews, UI widgets, and editor plugins"
+   },
+   "multi-language-content": {
+    "v": "yes",
+    "note": "Docs have an i18n section; page gives no detail",
+    "source": "https://decapcms.org/docs/beta-features/",
+    "quote": "i18n Support"
+   }
+  },
+  "payload": {
+   "multi-language-content": {
+    "v": "yes",
+    "note": null,
+    "source": "https://github.com/payloadcms/payload",
+    "quote": "Localization"
+   },
+   "plugins": {
+    "v": "yes",
+    "note": null,
+    "source": "https://github.com/payloadcms/payload",
+    "quote": "There are both officially-supported and community-supported plugins available"
+   },
+   "headless-api": {
+    "v": "yes",
+    "note": null,
+    "source": "https://github.com/payloadcms/payload",
+    "quote": "Intensely fast API"
+   }
+  },
+  "plasmic": {
+   "no-code-builder": {
+    "v": "yes",
+    "note": null,
+    "source": "https://github.com/plasmicapp/plasmic",
+    "quote": "Plasmic is a visual builder for the web. It enables rapidly designing and building applications and websites--code optional."
+   },
+   "headless-api": {
+    "v": "yes",
+    "note": null,
+    "source": "https://www.plasmic.app/pricing",
+    "quote": "Unlimited headless CMS"
+   },
+   "managed-cloud": {
+    "v": "yes",
+    "note": null,
+    "source": "https://www.plasmic.app/pricing",
+    "quote": "Use custom domains with Plasmic hosting"
+   },
+   "multi-language-content": {
+    "v": "yes",
+    "note": null,
+    "source": "https://www.plasmic.app/pricing",
+    "quote": "Localization"
+   },
+   "team-permissions": {
+    "v": "yes",
+    "note": null,
+    "source": "https://www.plasmic.app/pricing",
+    "quote": "Team roles & permissions"
+   }
+  },
+  "silex": {
+   "no-code-builder": {
+    "v": "yes",
+    "note": null,
+    "source": "https://github.com/silexlabs/Silex",
+    "quote": "drag-and-drop page building with HTML, CSS, and JS editors"
+   },
+   "plugins": {
+    "v": "partly",
+    "note": "Plugin system; few listed add-ons",
+    "source": "https://github.com/silexlabs/Silex",
+    "quote": "Plugin system \u2014 extend with server and client plugins in JS/TS"
+   }
+  },
+  "strapi": {
+   "headless-api": {
+    "v": "yes",
+    "note": null,
+    "source": "https://strapi.io",
+    "quote": "Strapi turns your model into REST and GraphQL APIs instantly"
+   },
+   "managed-cloud": {
+    "v": "yes",
+    "note": null,
+    "source": "https://github.com/strapi/strapi",
+    "quote": "Open-source headless CMS, self-hosted or Cloud you're in control."
+   },
+   "multi-language-content": {
+    "v": "yes",
+    "note": null,
+    "source": "https://docs.strapi.io/cms/features/internationalization",
+    "quote": "The Internationalization feature allows you to manage content in different languages, called \"locales\"."
+   },
+   "plugins": {
+    "v": "yes",
+    "note": null,
+    "source": "https://strapi.io",
+    "quote": "Drop in reviewed, tested plugins and integrations for your favorite tools, or add your own."
+   },
+   "no-code-builder": {
+    "v": "partly",
+    "note": "Visual for content models; the website itself needs code",
+    "source": "https://strapi.io",
+    "quote": "Create and manage content models through a user-friendly interface"
+   }
+  },
+  "tina": {
+   "managed-cloud": {
+    "v": "yes",
+    "note": null,
+    "source": "https://tina.io/docs/",
+    "quote": "we provide an easy-to-use hosted version of the backend, called TinaCloud"
+   },
+   "headless-api": {
+    "v": "yes",
+    "note": null,
+    "source": "https://tina.io/docs/",
+    "quote": "TinaCMS provides a GraphQL API"
+   },
+   "no-code-builder": {
+    "v": "partly",
+    "note": "Visual editing of content; site build needs code",
+    "source": "https://tina.io/docs/",
+    "quote": "For sites using React, TinaCMS supports \"Visual Editing\""
+   }
+  },
+  "webstudio": {
+   "managed-cloud": {
+    "v": "yes",
+    "note": null,
+    "source": "https://github.com/webstudio-is/webstudio",
+    "quote": "You can use the hosted version or roll out your own."
+   },
+   "no-code-builder": {
+    "v": "yes",
+    "note": null,
+    "source": "https://github.com/webstudio-is/webstudio",
+    "quote": "Webstudio is an Open Source Visual Development Platform"
+   }
+  },
+  "webiny": {
+   "no-code-builder": {
+    "v": "yes",
+    "note": null,
+    "source": "https://github.com/webiny/webiny-js",
+    "quote": "Website Builder \u2014 Visual drag-and-drop page editor with a Next.js SDK"
+   },
+   "headless-api": {
+    "v": "yes",
+    "note": null,
+    "source": "https://github.com/webiny/webiny-js",
+    "quote": "Headless CMS \u2014 Custom content models, GraphQL API"
+   },
+   "multi-language-content": {
+    "v": "yes",
+    "note": null,
+    "source": "https://github.com/webiny/webiny-js",
+    "quote": "field-level permissions, localization, versioning"
+   },
+   "team-permissions": {
+    "v": "yes",
+    "note": null,
+    "source": "https://github.com/webiny/webiny-js",
+    "quote": "field-level permissions"
+   },
+   "managed-cloud": {
+    "v": "no",
+    "note": "README describes only self-hosting in your own AWS account",
+    "source": "https://github.com/webiny/webiny-js",
+    "quote": "Self-hosted on AWS serverless."
+   }
+  },
+  "bruin": {
+   "ready-connectors": {
+    "v": "partly",
+    "note": "Dozens of sources",
+    "source": "https://getbruin.com/docs/bruin/",
+    "quote": "ingest from 70+ sources"
+   }
+  },
+  "jitsu": {
+   "event-collection": {
+    "v": "yes",
+    "note": null,
+    "source": "https://github.com/jitsucom/jitsu",
+    "quote": "Event collection from the browser, mobile, or the server"
+   },
+   "managed-cloud": {
+    "v": "yes",
+    "note": null,
+    "source": "https://github.com/jitsucom/jitsu",
+    "quote": "or on Jitsu Cloud, same software, hosted."
+   }
+  },
+  "kestra": {
+   "ready-connectors": {
+    "v": "yes",
+    "note": null,
+    "source": "https://github.com/kestra-io/kestra",
+    "quote": "hundreds of plugins built in to extract data from any database, cloud storage, or API"
+   },
+   "schedules-retries": {
+    "v": "yes",
+    "note": null,
+    "source": "https://github.com/kestra-io/kestra",
+    "quote": "scheduled and event-driven automation ... retries, timeout, error handling"
+   },
+   "managed-cloud": {
+    "v": "yes",
+    "note": null,
+    "source": "https://kestra.io/docs/installation",
+    "quote": "Kestra Cloud ... a fully managed platform without the overhead of infrastructure maintenance"
+   },
+   "one-command-install": {
+    "v": "yes",
+    "note": null,
+    "source": "https://kestra.io/docs/installation",
+    "quote": "runs Kestra locally on a laptop with a single command"
+   }
+  },
+  "airflow": {
+   "ready-connectors": {
+    "v": "partly",
+    "note": "Provider packages of operators; you write each job",
+    "source": "https://airflow.apache.org/docs/apache-airflow-providers/index.html",
+    "quote": "The Apache Airflow Community develops and maintain more than 80 providers."
+   }
+  },
+  "coroot": {
+   "metrics": {
+    "v": "yes",
+    "note": null,
+    "source": "https://github.com/coroot/coroot",
+    "quote": "Metrics, logs, traces, and profiles are gathered automatically by using eBPF"
+   },
+   "logs": {
+    "v": "yes",
+    "note": null,
+    "source": "https://github.com/coroot/coroot",
+    "quote": "Metrics, logs, traces, and profiles are gathered automatically by using eBPF"
+   },
+   "traces": {
+    "v": "yes",
+    "note": null,
+    "source": "https://github.com/coroot/coroot",
+    "quote": "Metrics, logs, traces, and profiles are gathered automatically by using eBPF"
+   },
+   "one-command-install": {
+    "v": "yes",
+    "note": null,
+    "source": "https://docs.coroot.com/",
+    "quote": "To deploy Coroot using Docker Compose, run the following command."
+   }
+  },
+  "grafana": {
+   "metrics": {
+    "v": "partly",
+    "note": "Charts metrics kept in other stores; not a collector itself",
+    "source": "https://github.com/grafana/grafana",
+    "quote": "Grafana allows you to query, visualize, alert on and understand your metrics no matter where they are stored."
+   },
+   "logs": {
+    "v": "partly",
+    "note": "Searches logs stored elsewhere (such as Loki)",
+    "source": "https://github.com/grafana/grafana",
+    "quote": "Explore Logs: ... Quickly search through all your logs or streaming them live."
+   },
+   "traces": {
+    "v": "partly",
+    "note": "Shows traces from a separate store such as Tempo",
+    "source": "https://grafana.com/oss/",
+    "quote": "Grafana Tempo is a distributed tracing backend"
+   },
+   "alerts": {
+    "v": "yes",
+    "note": null,
+    "source": "https://grafana.com/docs/grafana/latest/alerting/configure-notifications/manage-contact-points/",
+    "quote": "Alertmanager AWS SNS ... Discord Email Google Chat ... Microsoft Teams ... PagerDuty ... Slack Telegram ... Webhook"
+   },
+   "uptime-checks": {
+    "v": "partly",
+    "note": "Built-in synthetic checks are Grafana Cloud; self-run needs blackbox exporter",
+    "source": "https://grafana.com/docs/grafana-cloud/testing/synthetic-monitoring/",
+    "quote": "Synthetic Monitoring | Grafana Cloud documentation"
+   },
+   "opentelemetry": {
+    "v": "partly",
+    "note": "Takes OTel data only through Alloy or Tempo, not on its own",
+    "source": "https://grafana.com/oss/",
+    "quote": "Grafana Alloy is an open source OpenTelemetery collector with built-in Prometheus pipelines"
+   },
+   "managed-cloud": {
+    "v": "yes",
+    "note": "Grafana Cloud",
+    "source": "https://grafana.com/pricing/",
+    "quote": "Grafana Cloud"
+   },
+   "one-command-install": {
+    "v": "yes",
+    "note": null,
+    "source": "https://grafana.com/docs/grafana/latest/setup-grafana/installation/docker/",
+    "quote": "docker run -d -p 3000:3000 --name=grafana grafana/grafana-enterprise"
+   }
+  },
+  "hyperdx": {
+   "metrics": {
+    "v": "yes",
+    "note": null,
+    "source": "https://github.com/hyperdxio/hyperdx",
+    "quote": "Correlate/search logs, metrics, session replays and traces all in one place"
+   },
+   "logs": {
+    "v": "yes",
+    "note": null,
+    "source": "https://github.com/hyperdxio/hyperdx",
+    "quote": "Intuitive full-text search and property search syntax (ex. level:err)"
+   },
+   "traces": {
+    "v": "yes",
+    "note": null,
+    "source": "https://github.com/hyperdxio/hyperdx",
+    "quote": "Live tail logs and traces to always get the freshest events"
+   },
+   "alerts": {
+    "v": "yes",
+    "note": "Slack, PagerDuty, generic webhooks, email",
+    "source": "https://clickhouse.com/docs/use-cases/observability/clickstack/alerts",
+    "quote": "A webhook can be created for different service types, including Slack and PagerDuty, as well as generic targets."
+   },
+   "uptime-checks": {
+    "v": "no",
+    "note": "No outside up-check feature in docs",
+    "source": "https://clickhouse.com/docs/use-cases/observability/clickstack/alerts",
+    "quote": null
+   },
+   "opentelemetry": {
+    "v": "yes",
+    "note": null,
+    "source": "https://github.com/hyperdxio/hyperdx",
+    "quote": "OpenTelemetry supported out of the box"
+   },
+   "managed-cloud": {
+    "v": "yes",
+    "note": "Managed ClickStack in ClickHouse Cloud",
+    "source": "https://clickhouse.com/docs/use-cases/observability/clickstack/overview",
+    "quote": "In Managed ClickStack, ClickHouse and the HyperDX UI are hosted and operated in ClickHouse Cloud"
+   },
+   "one-command-install": {
+    "v": "yes",
+    "note": null,
+    "source": "https://github.com/hyperdxio/hyperdx",
+    "quote": "docker run -p 8080:8080 -p 4317:4317 -p 4318:4318 docker.hyperdx.io/hyperdx/hyperdx-all-in-one"
+   }
+  },
+  "kubestellar-console": {
+   "metrics": {
+    "v": "partly",
+    "note": "Cluster health and GPU numbers only; Kubernetes-focused",
+    "source": "https://github.com/kubestellar/console",
+    "quote": "Enable GPU metrics collection"
+   },
+   "alerts": {
+    "v": "yes",
+    "note": "Browser, Slack, webhooks",
+    "source": "https://kubestellar.io/docs/console/features/alerts",
+    "quote": "Notification Channels ... Browser Notifications ... Slack ... Webhooks"
+   },
+   "traces": {
+    "v": "no",
+    "note": "No tracing cards in card list",
+    "source": "https://kubestellar.io/docs/console/features/card-reference",
+    "quote": null
+   },
+   "uptime-checks": {
+    "v": "no",
+    "note": "No outside up-check feature in docs",
+    "source": "https://kubestellar.io/docs/console/features/card-reference",
+    "quote": null
+   },
+   "opentelemetry": {
+    "v": "no",
+    "note": "Not mentioned in README or card list",
+    "source": "https://kubestellar.io/docs/console/features/card-reference",
+    "quote": null
+   },
+   "managed-cloud": {
+    "v": "no",
+    "note": "Hosted site is a demo with canned data only",
+    "source": "https://github.com/kubestellar/console",
+    "quote": "The hosted demo is a self-contained showcase: it serves canned demo data"
+   },
+   "one-command-install": {
+    "v": "yes",
+    "note": null,
+    "source": "https://github.com/kubestellar/console",
+    "quote": "curl -sSL https://raw.githubusercontent.com/kubestellar/console/main/start.sh | bash"
+   }
+  },
+  "matano": {
+   "metrics": {
+    "v": "no",
+    "note": "Security log lake; no metrics charts",
+    "source": "https://github.com/matanolabs/matano",
+    "quote": null
+   },
+   "logs": {
+    "v": "yes",
+    "note": "Security logs, stored in your AWS account",
+    "source": "https://github.com/matanolabs/matano",
+    "quote": "Collect All Your Logs: Integrates out of the box with 50+ sources for security logs"
+   },
+   "traces": {
+    "v": "no",
+    "note": "Security log lake; no request tracing",
+    "source": "https://github.com/matanolabs/matano",
+    "quote": null
+   },
+   "alerts": {
+    "v": "partly",
+    "note": "Amazon SNS and Slack",
+    "source": "https://github.com/matanolabs/matano",
+    "quote": "Alert destinations - Amazon SNS - Slack"
+   },
+   "uptime-checks": {
+    "v": "no",
+    "note": "Security log lake; no up-checks",
+    "source": "https://github.com/matanolabs/matano",
+    "quote": null
+   },
+   "managed-cloud": {
+    "v": "yes",
+    "note": "Makers sell a managed Cloud SIEM",
+    "source": "https://github.com/matanolabs/matano",
+    "quote": "Matano offers a commercial managed Cloud SIEM for a complete enterprise Security Operations platform."
+   },
+   "one-command-install": {
+    "v": "partly",
+    "note": "Deploys into your own AWS account with a CLI",
+    "source": "https://github.com/matanolabs/matano",
+    "quote": "Open source security data lake for AWS"
+   }
+  },
+  "netdata": {
+   "metrics": {
+    "v": "yes",
+    "note": null,
+    "source": "https://github.com/netdata/netdata",
+    "quote": "Collect \u2013 Gather metrics from systems, containers, apps, logs, APIs, and synthetic checks."
+   },
+   "logs": {
+    "v": "yes",
+    "note": "Reads systemd-journal on Linux and Windows Event Log; also OpenTelemetry logs",
+    "source": "https://learn.netdata.cloud/docs/collecting-metrics/opentelemetry",
+    "quote": "indexes logs for exploration in the Logs tab"
+   },
+   "traces": {
+    "v": "partly",
+    "note": "Takes traces over OpenTelemetry and shows them in a Traces tab",
+    "source": "https://learn.netdata.cloud/docs/collecting-metrics/opentelemetry",
+    "quote": "indexes traces for exploration in the Traces tab"
+   },
+   "alerts": {
+    "v": "yes",
+    "note": null,
+    "source": "https://www.netdata.cloud",
+    "quote": "Any Notification Channel: Slack, PagerDuty, Teams, email, webhooks"
+   },
+   "uptime-checks": {
+    "v": "partly",
+    "note": "Checks run from the machine itself, not from outside",
+    "source": "https://github.com/netdata/netdata",
+    "quote": "Synthetic Checks: Test APIs, TCP ports, Ping, Certificates, etc"
+   },
+   "opentelemetry": {
+    "v": "yes",
+    "note": "Metrics, logs and traces over OTLP",
+    "source": "https://learn.netdata.cloud/docs/collecting-metrics/opentelemetry",
+    "quote": "Receive OpenTelemetry metrics, logs, and traces from an OpenTelemetry Collector over OTLP/gRPC or OTLP/HTTP."
+   },
+   "managed-cloud": {
+    "v": "yes",
+    "note": "Netdata Cloud (free for 5 nodes)",
+    "source": "https://www.netdata.cloud/pricing/",
+    "quote": "Free Up to 5 Nodes | From $4.50/node"
+   },
+   "one-command-install": {
+    "v": "yes",
+    "note": null,
+    "source": "https://learn.netdata.cloud/docs/netdata-agent/installation/docker",
+    "quote": "You can create a new Agent container with docker run or docker-compose"
+   }
+  },
+  "openstatus": {
+   "metrics": {
+    "v": "partly",
+    "note": "Charts check response times only, not server numbers",
+    "source": "https://www.openstatus.dev",
+    "quote": "Check any URL from 28 regions"
+   },
+   "traces": {
+    "v": "no",
+    "note": "Uptime and status-page tool; no tracing",
+    "source": "https://github.com/openstatusHQ/openstatus",
+    "quote": null
+   },
+   "alerts": {
+    "v": "yes",
+    "note": "Slack, PagerDuty, email, webhook",
+    "source": "https://www.openstatus.dev",
+    "quote": "Also PagerDuty paged \u00b7 Email sent \u00b7 Webhook 200"
+   },
+   "uptime-checks": {
+    "v": "yes",
+    "note": "From 28 regions",
+    "source": "https://github.com/openstatusHQ/openstatus",
+    "quote": "open-source status page, incident response and uptime monitoring platform"
+   },
+   "managed-cloud": {
+    "v": "yes",
+    "note": null,
+    "source": "https://github.com/openstatusHQ/openstatus",
+    "quote": "Available as a managed service or self-hosted."
+   }
+  },
+  "manticore-search": {
+   "metrics": {
+    "v": "no",
+    "note": "A search database, not a monitoring tool",
+    "source": "https://github.com/manticoresoftware/manticoresearch",
+    "quote": null
+   },
+   "logs": {
+    "v": "partly",
+    "note": "Can store and search logs; works with Logstash, Fluent Bit, Vector",
+    "source": "https://manticoresearch.com",
+    "quote": "Integrations ... Grafana Fluentbit Logstash/Filebeat Kibana Vector.dev"
+   },
+   "traces": {
+    "v": "no",
+    "note": "A search database, not a monitoring tool",
+    "source": "https://github.com/manticoresoftware/manticoresearch",
+    "quote": null
+   },
+   "alerts": {
+    "v": "no",
+    "note": "No alerting feature in its README or site",
+    "source": "https://github.com/manticoresoftware/manticoresearch",
+    "quote": null
+   },
+   "uptime-checks": {
+    "v": "no",
+    "note": "A search database, not a monitoring tool",
+    "source": "https://github.com/manticoresoftware/manticoresearch",
+    "quote": null
+   },
+   "managed-cloud": {
+    "v": "no",
+    "note": "Site offers consulting and support; engine runs on your own servers",
+    "source": "https://manticoresearch.com",
+    "quote": "Query it over SQL or HTTP, on your own servers."
+   },
+   "one-command-install": {
+    "v": "yes",
+    "note": null,
+    "source": "https://manticoresearch.com",
+    "quote": "Install Manticore Search in one command on Linux or macOS: curl https://manticoresearch.com | sh"
+   },
+   "typo-tolerance": {
+    "v": "yes",
+    "note": "Fuzzy search option",
+    "source": "https://github.com/manticoresoftware/manticoresearch",
+    "quote": "Fuzzy search"
+   },
+   "hybrid-search": {
+    "v": "yes",
+    "note": null,
+    "source": "https://github.com/manticoresoftware/manticoresearch",
+    "quote": "Hybrid search combines full-text and vector retrieval in a single query for better relevance."
+   },
+   "field-filters": {
+    "v": "yes",
+    "note": null,
+    "source": "https://github.com/manticoresoftware/manticoresearch",
+    "quote": "Rich filtering functionality"
+   },
+   "scales-out": {
+    "v": "yes",
+    "note": "Free version",
+    "source": "https://github.com/manticoresoftware/manticoresearch",
+    "quote": "Sharded tables transparently distribute reads and writes across physical shards on one node or across a replication cluster."
+   }
+  },
+  "quickwit": {
+   "metrics": {
+    "v": "no",
+    "note": "Metrics support is only planned",
+    "source": "https://github.com/quickwit-oss/quickwit",
+    "quote": "Metrics support is on the roadmap"
+   },
+   "logs": {
+    "v": "yes",
+    "note": null,
+    "source": "https://github.com/quickwit-oss/quickwit",
+    "quote": "Log management"
+   },
+   "traces": {
+    "v": "yes",
+    "note": null,
+    "source": "https://github.com/quickwit-oss/quickwit",
+    "quote": "Distributed tracing"
+   },
+   "uptime-checks": {
+    "v": "no",
+    "note": "A search engine, not an uptime checker",
+    "source": "https://github.com/quickwit-oss/quickwit",
+    "quote": null
+   },
+   "opentelemetry": {
+    "v": "partly",
+    "note": "Logs and traces only, not metrics",
+    "source": "https://github.com/quickwit-oss/quickwit",
+    "quote": "OTEL-native for logs and traces"
+   },
+   "managed-cloud": {
+    "v": "no",
+    "note": "No hosted service; site says Quickwit joined Datadog",
+    "source": "https://quickwit.io",
+    "quote": "Quickwit joins Datadog! Read the blog post!"
+   },
+   "one-command-install": {
+    "v": "yes",
+    "note": null,
+    "source": "https://quickwit.io/docs/get-started/installation",
+    "quote": "docker run --rm quickwit/quickwit --version"
+   },
+   "typo-tolerance": {
+    "v": "no",
+    "note": "Query language has no fuzzy matching",
+    "source": "https://quickwit.io/docs/reference/query-language",
+    "quote": null
+   },
+   "hybrid-search": {
+    "v": "no",
+    "note": "Keyword search only",
+    "source": "https://quickwit.io/docs/reference/query-language",
+    "quote": null
+   },
+   "field-filters": {
+    "v": "yes",
+    "note": "Range and field queries",
+    "source": "https://quickwit.io/docs/reference/query-language",
+    "quote": "field_clause = term | term_prefix | term_set | phrase | phrase_prefix | range"
+   },
+   "scales-out": {
+    "v": "yes",
+    "note": "Stateless search nodes",
+    "source": "https://quickwit.io/docs/overview/architecture",
+    "quote": "It is composed of stateless nodes: any node can answer any query about any splits."
+   }
+  },
+  "solidping": {
+   "metrics": {
+    "v": "partly",
+    "note": "Check results and response times; can test a scraped Prometheus number",
+    "source": "https://github.com/fclairamb/solidping",
+    "quote": "Prometheus | prometheus | Thresholds on a scraped metric"
+   },
+   "logs": {
+    "v": "no",
+    "note": "Uptime tool; README lists no log search",
+    "source": "https://github.com/fclairamb/solidping",
+    "quote": null
+   },
+   "traces": {
+    "v": "no",
+    "note": "Uptime tool; README lists no tracing",
+    "source": "https://github.com/fclairamb/solidping",
+    "quote": null
+   },
+   "alerts": {
+    "v": "yes",
+    "note": null,
+    "source": "https://www.solidping.io",
+    "quote": "Slack, Microsoft Teams, PagerDuty, Discord, Telegram, email, webhooks, SMS and voice"
+   },
+   "uptime-checks": {
+    "v": "yes",
+    "note": "40+ check types, multi-region",
+    "source": "https://github.com/fclairamb/solidping",
+    "quote": "Distributed, self-hostable uptime monitoring"
+   },
+   "opentelemetry": {
+    "v": "no",
+    "note": "Not mentioned in README or site",
+    "source": "https://github.com/fclairamb/solidping",
+    "quote": null
+   },
+   "managed-cloud": {
+    "v": "yes",
+    "note": null,
+    "source": "https://github.com/fclairamb/solidping",
+    "quote": "Hosted | www.solidping.io, no card needed"
+   },
+   "one-command-install": {
+    "v": "yes",
+    "note": null,
+    "source": "https://www.solidping.io",
+    "quote": "docker run -p 4000:4000 -v solidping-data:/data -e SP_DB_TYPE=sqlite ... ghcr.io/fclairamb/solidping:latest"
+   }
+  },
+  "signoz": {
+   "metrics": {
+    "v": "yes",
+    "note": null,
+    "source": "https://github.com/SigNoz/signoz",
+    "quote": "logs, metrics, traces, alerts, and dashboards in one place"
+   },
+   "logs": {
+    "v": "yes",
+    "note": null,
+    "source": "https://github.com/SigNoz/signoz",
+    "quote": "logs, metrics, traces, alerts, and dashboards in one place"
+   },
+   "traces": {
+    "v": "yes",
+    "note": null,
+    "source": "https://github.com/SigNoz/signoz",
+    "quote": "logs, metrics, traces, alerts, and dashboards in one place"
+   },
+   "alerts": {
+    "v": "yes",
+    "note": null,
+    "source": "https://signoz.io/docs/alerts.md",
+    "quote": "Connect Slack, PagerDuty, Opsgenie, MS Teams, email, or webhooks."
+   },
+   "opentelemetry": {
+    "v": "yes",
+    "note": null,
+    "source": "https://github.com/SigNoz/signoz",
+    "quote": "open-source, OpenTelemetry-native observability platform"
+   },
+   "managed-cloud": {
+    "v": "yes",
+    "note": "SigNoz Cloud",
+    "source": "https://github.com/SigNoz/signoz",
+    "quote": "SigNoz Cloud (Recommended) Fully managed SigNoz"
+   },
+   "one-command-install": {
+    "v": "partly",
+    "note": "Docker Compose runs several services; old install script is retired",
+    "source": "https://signoz.io/docs/install/docker/",
+    "quote": "It runs all the components SigNoz requires on a single machine"
+   }
+  },
+  "uptrace": {
+   "metrics": {
+    "v": "yes",
+    "note": null,
+    "source": "https://github.com/uptrace/uptrace",
+    "quote": "Single UI for traces, metrics, and logs."
+   },
+   "logs": {
+    "v": "yes",
+    "note": null,
+    "source": "https://github.com/uptrace/uptrace",
+    "quote": "Single UI for traces, metrics, and logs."
+   },
+   "traces": {
+    "v": "yes",
+    "note": null,
+    "source": "https://github.com/uptrace/uptrace",
+    "quote": "Uptrace is an open source APM that supports distributed tracing, metrics, and logs."
+   },
+   "alerts": {
+    "v": "yes",
+    "note": null,
+    "source": "https://github.com/uptrace/uptrace",
+    "quote": "notifications via Email, Slack, WebHook, and AlertManager."
+   },
+   "opentelemetry": {
+    "v": "yes",
+    "note": null,
+    "source": "https://github.com/uptrace/uptrace",
+    "quote": "Uptrace uses OpenTelemetry framework to collect data"
+   },
+   "managed-cloud": {
+    "v": "yes",
+    "note": "Uptrace Cloud",
+    "source": "https://uptrace.dev/get/hosted/open-source-apm",
+    "quote": "Uptrace Cloud is the simplest way to use Uptrace."
+   },
+   "one-command-install": {
+    "v": "partly",
+    "note": "Docker Compose with Uptrace, ClickHouse and PostgreSQL",
+    "source": "https://github.com/uptrace/uptrace",
+    "quote": "It also requires PostgreSQL database to store metadata"
+   }
+  },
+  "telemetry-tracker": {
+   "metrics": {
+    "v": "partly",
+    "note": "Page-speed and Web Vitals plus error counts only",
+    "source": "https://github.com/Telemetry-Tracker/telemetry-tracker",
+    "quote": "Performance / Web Vitals"
+   },
+   "logs": {
+    "v": "no",
+    "note": "Tracks errors, events and sessions, not logs",
+    "source": "https://github.com/Telemetry-Tracker/telemetry-tracker",
+    "quote": "Open-source error tracking, product analytics, and session telemetry."
+   },
+   "traces": {
+    "v": "no",
+    "note": "No request tracing in its feature table",
+    "source": "https://github.com/Telemetry-Tracker/telemetry-tracker",
+    "quote": null
+   },
+   "alerts": {
+    "v": "yes",
+    "note": null,
+    "source": "https://github.com/Telemetry-Tracker/telemetry-tracker",
+    "quote": "Alert delivery is in-app notifications, email, HTTPS webhooks, Slack, Discord, Microsoft Teams and Telegram."
+   },
+   "uptime-checks": {
+    "v": "no",
+    "note": "Only a 'no events' alert, not outside checks",
+    "source": "https://github.com/Telemetry-Tracker/telemetry-tracker",
+    "quote": null
+   },
+   "opentelemetry": {
+    "v": "no",
+    "note": "Uses its own SDKs; no OpenTelemetry mention",
+    "source": "https://github.com/Telemetry-Tracker/telemetry-tracker",
+    "quote": null
+   },
+   "managed-cloud": {
+    "v": "yes",
+    "note": null,
+    "source": "https://github.com/Telemetry-Tracker/telemetry-tracker",
+    "quote": "use the official hosted cloud at telemetry-tracker.com"
+   },
+   "one-command-install": {
+    "v": "partly",
+    "note": "Needs clone, pnpm install, Docker database and migration",
+    "source": "https://github.com/Telemetry-Tracker/telemetry-tracker",
+    "quote": "git clone ... pnpm install docker compose up -d ... pnpm db:migrate"
+   }
+  },
+  "victorialogs": {
+   "metrics": {
+    "v": "no",
+    "note": "A log database; metrics are a separate product (VictoriaMetrics)",
+    "source": "https://github.com/VictoriaMetrics/VictoriaLogs",
+    "quote": null
+   },
+   "logs": {
+    "v": "yes",
+    "note": null,
+    "source": "https://github.com/VictoriaMetrics/VictoriaLogs",
+    "quote": "VictoriaLogs is a high-performance, lightweight, zero-config, schema-free database for logs"
+   },
+   "traces": {
+    "v": "no",
+    "note": "Traces are a separate product (VictoriaTraces)",
+    "source": "https://docs.victoriametrics.com/victorialogs/",
+    "quote": null
+   },
+   "alerts": {
+    "v": "partly",
+    "note": "Needs the separate vmalert tool",
+    "source": "https://docs.victoriametrics.com/victorialogs/",
+    "quote": null
+   },
+   "uptime-checks": {
+    "v": "no",
+    "note": "A log database, not an uptime checker",
+    "source": "https://github.com/VictoriaMetrics/VictoriaLogs",
+    "quote": null
+   },
+   "opentelemetry": {
+    "v": "partly",
+    "note": "Accepts OpenTelemetry logs only",
+    "source": "https://docs.victoriametrics.com/victorialogs/data-ingestion/opentelemetry/",
+    "quote": "VictoriaLogs: Data Ingestion: OpenTelemetry Setup"
+   },
+   "managed-cloud": {
+    "v": "yes",
+    "note": "VictoriaMetrics Cloud includes it",
+    "source": "https://victoriametrics.com/products/cloud/",
+    "quote": "fully managed observability solution built on open-source VictoriaMetrics, VictoriaLogs & VictoriaTraces"
+   },
+   "one-command-install": {
+    "v": "yes",
+    "note": "Single binary or Docker image",
+    "source": "https://github.com/VictoriaMetrics/VictoriaLogs",
+    "quote": "Available: Binary releases, docker images Docker Hub and Quay"
+   }
+  },
+  "victoriametrics": {
+   "metrics": {
+    "v": "yes",
+    "note": null,
+    "source": "https://github.com/VictoriaMetrics/VictoriaMetrics",
+    "quote": "fast, cost-effective monitoring solution and time series database"
+   },
+   "logs": {
+    "v": "no",
+    "note": "Logs are a separate product (VictoriaLogs)",
+    "source": "https://victoriametrics.com/products/cloud/",
+    "quote": null
+   },
+   "traces": {
+    "v": "no",
+    "note": "Traces are a separate product (VictoriaTraces)",
+    "source": "https://victoriametrics.com/products/cloud/",
+    "quote": null
+   },
+   "alerts": {
+    "v": "partly",
+    "note": "Needs separate vmalert and Alertmanager",
+    "source": "https://docs.victoriametrics.com/victoriametrics/",
+    "quote": null
+   },
+   "opentelemetry": {
+    "v": "partly",
+    "note": "Metrics only",
+    "source": "https://github.com/VictoriaMetrics/VictoriaMetrics",
+    "quote": "OpenTelemetry metrics format"
+   },
+   "managed-cloud": {
+    "v": "yes",
+    "note": "VictoriaMetrics Cloud, from $200/month",
+    "source": "https://victoriametrics.com/products/cloud/",
+    "quote": "VictoriaMetrics Cloud From $200/month. Free for 30 days"
+   },
+   "one-command-install": {
+    "v": "yes",
+    "note": "Single binary or Docker image",
+    "source": "https://github.com/VictoriaMetrics/VictoriaMetrics",
+    "quote": "Single-node version and Cluster version under Apache License 2.0"
+   }
+  },
+  "flagsmith": {
+   "gradual-rollout": {
+    "v": "yes",
+    "note": null,
+    "source": "https://github.com/Flagsmith/flagsmith/blob/main/docs/docs/managing-flags/rollout/rollout-by-percentage.md",
+    "quote": "Docs page 'rollout-by-percentage' in the project's repo; README: Roll out, segment, experiment, and optimise"
+   },
+   "ab-testing": {
+    "v": "yes",
+    "note": "Built-in statistics engine, still in beta",
+    "source": "https://github.com/Flagsmith/flagsmith/blob/main/docs/docs/experimentation/index.md",
+    "quote": "read the results with a built-in Bayesian statistics engine"
+   },
+   "many-sdks": {
+    "v": "yes",
+    "note": "15+ languages",
+    "source": "https://github.com/Flagsmith/flagsmith",
+    "quote": "SDKs and frameworks: Choose from 15+ popular languages like TypeScript, .NET, Java, and more."
+   },
+   "managed-cloud": {
+    "v": "yes",
+    "note": null,
+    "source": "https://github.com/Flagsmith/flagsmith",
+    "quote": "Choose from three deployment options: self-hosted ..., private cloud, and cloud."
+   },
+   "one-command-install": {
+    "v": "yes",
+    "note": null,
+    "source": "https://docs.flagsmith.com/deployment-self-hosting/hosting-guides/docker",
+    "quote": "curl -o docker-compose.yml https://raw.githubusercontent.com/Flagsmith/flagsmith/main/docker-compose.yml  docker-compose -f docker-compose.yml up"
+   },
+   "no-paid-edition": {
+    "v": "partly",
+    "note": "Paid plans add SSO, governance, audit logs",
+    "source": "https://www.flagsmith.com/pricing",
+    "quote": "SAML/SSO Authentication Governance Features - Roles, Permissions, Change Requests, Audit Logs"
+   }
+  },
+  "growthbook": {
+   "gradual-rollout": {
+    "v": "yes",
+    "note": null,
+    "source": "https://github.com/growthbook/growthbook",
+    "quote": "Feature flags with advanced targeting, gradual rollouts, and experiments"
+   },
+   "ab-testing": {
+    "v": "yes",
+    "note": null,
+    "source": "https://github.com/growthbook/growthbook",
+    "quote": "World class experiment stats engine (CUPED, Sequential, Bayesian, Post-Strat, Bandits, SRM checks)."
+   },
+   "many-sdks": {
+    "v": "yes",
+    "note": null,
+    "source": "https://github.com/growthbook/growthbook",
+    "quote": "24 SDKs including React, Python, Android, and iOS."
+   },
+   "managed-cloud": {
+    "v": "yes",
+    "note": "GrowthBook Cloud, free Starter plan",
+    "source": "https://www.growthbook.io/pricing",
+    "quote": "The Starter plan is free for up to three users and includes unlimited feature flags and experiments on GrowthBook's cloud platform"
+   },
+   "one-command-install": {
+    "v": "yes",
+    "note": "Clone, then docker compose up -d (database included)",
+    "source": "https://github.com/growthbook/growthbook",
+    "quote": "git clone https://github.com/growthbook/growthbook.git cd growthbook docker compose up -d"
+   },
+   "no-paid-edition": {
+    "v": "partly",
+    "note": "Open core; some folders are under a paid Enterprise license",
+    "source": "https://github.com/growthbook/growthbook",
+    "quote": "GrowthBook is an Open Core product. The bulk of the code is under the permissive MIT license."
+   }
+  },
+  "unleash": {
+   "gradual-rollout": {
+    "v": "yes",
+    "note": null,
+    "source": "https://docs.getunleash.io/reference/activation-strategies",
+    "quote": "Rollout percentage: determines the proportion of users exposed to a feature."
+   },
+   "ab-testing": {
+    "v": "partly",
+    "note": "Splits users and logs impressions; results are read in another analytics tool",
+    "source": "https://docs.getunleash.io/guides/a-b-testing",
+    "quote": "One way to collect this data is by enabling impression data per feature flag."
+   },
+   "many-sdks": {
+    "v": "yes",
+    "note": "15 official SDKs",
+    "source": "https://github.com/Unleash/unleash",
+    "quote": "It supports 15 official client and server SDKs and over 15 community SDKs."
+   },
+   "managed-cloud": {
+    "v": "yes",
+    "note": "Unleash Enterprise Cloud",
+    "source": "https://docs.getunleash.io/quickstart",
+    "quote": "Sign up for a free, cloud-hosted Unleash Enterprise instance."
+   },
+   "no-paid-edition": {
+    "v": "partly",
+    "note": "Paid Enterprise edition adds features (e.g. multi-arm bandit tests)",
+    "source": "https://docs.getunleash.io/guides/a-b-testing",
+    "quote": "A/B testing with enterprise automation; Multi-arm bandit tests to find the winning variant"
+   }
+  },
+  "fonoster": {
+   "phone-numbers": {
+    "v": "partly",
+    "note": "Calls via numbers or SIP trunks you link (e.g. Twilio); no texts found",
+    "source": "https://docs.fonoster.com",
+    "quote": "Telephony: Numbers and routing, Link a Twilio number, Connect a SIP trunk"
+   },
+   "video-rooms": {
+    "v": "no",
+    "note": "Phone/voice calls only; no video in docs or README",
+    "source": "https://docs.fonoster.com",
+    "quote": null
+   },
+   "ai-voice-agents": {
+    "v": "yes",
+    "note": null,
+    "source": "https://github.com/fonoster/fonoster",
+    "quote": "open-source platform for building, testing, and running voice agents on real phone lines"
+   },
+   "many-sdks": {
+    "v": "partly",
+    "note": "TypeScript and Python voice SDKs",
+    "source": "https://github.com/fonoster/fonoster",
+    "quote": "the SDKs for TypeScript (@fonoster/voice) and Python (fonoster-voice)"
+   },
+   "managed-cloud": {
+    "v": "yes",
+    "note": "Fonoster Cloud",
+    "source": "https://github.com/fonoster/fonoster",
+    "quote": "Use Fonoster Cloud, or run it on your own servers."
+   }
+  },
+  "livekit": {
+   "phone-numbers": {
+    "v": "yes",
+    "note": null,
+    "source": "https://docs.livekit.io/sip/",
+    "quote": "Purchase and manage phone numbers for your telephony apps directly through LiveKit."
+   },
+   "video-rooms": {
+    "v": "yes",
+    "note": null,
+    "source": "https://github.com/livekit/livekit",
+    "quote": "open source platform for building voice, video, and physical AI agents"
+   },
+   "ai-voice-agents": {
+    "v": "yes",
+    "note": null,
+    "source": "https://github.com/livekit/livekit",
+    "quote": "LiveKit Agents is the SDK for code-first realtime voice agents. STT, LLM, TTS, turn detection"
+   },
+   "many-sdks": {
+    "v": "yes",
+    "note": "Swift, Android, Flutter, JS, Go, Node, Python, Ruby, Kotlin and more",
+    "source": "https://github.com/livekit/livekit",
+    "quote": "Modern, full-featured SDKs for web, mobile, desktop, embedded, and server"
+   },
+   "managed-cloud": {
+    "v": "yes",
+    "note": null,
+    "source": "https://github.com/livekit/livekit",
+    "quote": "LiveKit Cloud is the fastest and most reliable way to run LiveKit. It runs in 19+ regions"
+   }
+  },
+  "openvidu": {
+   "video-rooms": {
+    "v": "yes",
+    "note": null,
+    "source": "https://github.com/OpenVidu/openvidu",
+    "quote": "OpenVidu Meet is a ready-to-use, self-hosted video conferencing application ... rooms, recordings, chat, screen sharing and moderation included"
+   },
+   "ai-voice-agents": {
+    "v": "partly",
+    "note": "Agents for transcription and translation, not call answering",
+    "source": "https://github.com/OpenVidu/openvidu",
+    "quote": "AI agents (transcription, translation), virtual backgrounds, and more."
+   },
+   "many-sdks": {
+    "v": "yes",
+    "note": "Uses LiveKit's SDKs",
+    "source": "https://github.com/OpenVidu/openvidu",
+    "quote": "API-compatible with LiveKit: any LiveKit client/server SDK works unchanged."
+   },
+   "managed-cloud": {
+    "v": "no",
+    "note": "Self-hosted only; paid PRO edition is also self-hosted",
+    "source": "https://github.com/OpenVidu/openvidu",
+    "quote": "There is no hosted/SaaS tier: OpenVidu PRO is a paid, self-hosted edition"
+   }
+  },
+  "lastsaas": {
+   "saas-payments": {
+    "v": "yes",
+    "note": null,
+    "source": "https://github.com/metavert-io/lastsaas",
+    "quote": "Stripe billing with subscriptions, per-seat pricing, trials, and credit bundles"
+   },
+   "built-in-auth": {
+    "v": "yes",
+    "note": null,
+    "source": "https://github.com/metavert-io/lastsaas",
+    "quote": "Email verification and password resets; Magic link passwordless authentication"
+   },
+   "teams-orgs": {
+    "v": "yes",
+    "note": null,
+    "source": "https://github.com/metavert-io/lastsaas",
+    "quote": "Team invitations and member management"
+   },
+   "admin-panel": {
+    "v": "yes",
+    "note": null,
+    "source": "https://github.com/metavert-io/lastsaas",
+    "quote": "A full admin interface for managing everything"
+   }
+  },
+  "highlight": {
+   "session-replay": {
+    "v": "yes",
+    "note": null,
+    "source": "https://github.com/highlight/highlight",
+    "quote": "Dom-based High-fidelity Replay: Replay every interaction and dom change that happened in a given browser session"
+   },
+   "goals-funnels": {
+    "v": "no",
+    "note": "Not in README feature list or docs",
+    "source": "https://github.com/highlight/highlight/tree/main/docs-content",
+    "quote": "Features listed: Session Replay, Error Monitoring, Logs, Traces"
+   },
+   "heatmaps": {
+    "v": "no",
+    "note": "Not in README feature list or docs",
+    "source": "https://github.com/highlight/highlight/tree/main/docs-content",
+    "quote": "Features listed: Session Replay, Error Monitoring, Logs, Traces"
+   },
+   "managed-cloud": {
+    "v": "yes",
+    "note": "Company is now part of LaunchDarkly",
+    "source": "https://github.com/highlight/highlight",
+    "quote": "signing up for free at app.highlight.io"
+   },
+   "one-command-install": {
+    "v": "yes",
+    "note": "Hobby setup is one Docker script",
+    "source": "https://github.com/highlight/highlight",
+    "quote": "Deploy a hobby instance in one line on Linux with Docker ... cd docker && ./run-hobby.sh"
+   },
+   "no-paid-edition": {
+    "v": "partly",
+    "note": "Enterprise self-host adds SSO, HA, upgrades",
+    "source": "https://github.com/highlight/highlight/blob/main/docs-content/general/4_company/open-source/hosting/3_self-host-enterprise.md",
+    "quote": "User Management Support (RBAC, SSO, SSL, etc..) | Hobby \u274c | Enterprise \u2705"
+   }
+  },
+  "openreplay": {
+   "session-replay": {
+    "v": "yes",
+    "note": null,
+    "source": "https://github.com/openreplay/openreplay",
+    "quote": "Session Replay. Relive what your users experience \u2014 where they navigate, click, hesitate, or struggle"
+   },
+   "goals-funnels": {
+    "v": "yes",
+    "note": null,
+    "source": "https://github.com/openreplay/openreplay",
+    "quote": "Know which journeys convert and where users drop off, with funnels, trends, journeys, heatmaps"
+   },
+   "heatmaps": {
+    "v": "yes",
+    "note": null,
+    "source": "https://github.com/openreplay/openreplay",
+    "quote": "funnels, trends, journeys, heatmaps, and web analytics"
+   },
+   "managed-cloud": {
+    "v": "yes",
+    "note": null,
+    "source": "https://github.com/openreplay/openreplay",
+    "quote": "OpenReplay Cloud ... Serverless (usage-based), a fully managed Dedicated instance"
+   },
+   "one-command-install": {
+    "v": "yes",
+    "note": "Single script on one VM",
+    "source": "https://docs.openreplay.com/en/deployment/deploy-docker/",
+    "quote": "install command is a single line that runs the docker-install.sh script"
+   },
+   "no-paid-edition": {
+    "v": "partly",
+    "note": "Enterprise folder under commercial license",
+    "source": "https://github.com/openreplay/openreplay",
+    "quote": "everything under the ee/ directory (the Enterprise Edition) is licensed under a separate commercial license"
+   }
+  },
+  "posthog": {
+   "session-replay": {
+    "v": "yes",
+    "note": null,
+    "source": "https://github.com/PostHog/posthog",
+    "quote": "Session replay: Watch real user sessions from your website or mobile app"
+   },
+   "goals-funnels": {
+    "v": "yes",
+    "note": null,
+    "source": "https://posthog.com/docs/product-analytics/funnels",
+    "quote": "Funnels"
+   },
+   "heatmaps": {
+    "v": "yes",
+    "note": null,
+    "source": "https://github.com/PostHog/posthog",
+    "quote": "Heatmaps: See where users click, scroll, and move on your site."
+   },
+   "managed-cloud": {
+    "v": "yes",
+    "note": null,
+    "source": "https://github.com/PostHog/posthog",
+    "quote": "signing up for free to PostHog Cloud US or PostHog Cloud EU"
+   },
+   "one-command-install": {
+    "v": "yes",
+    "note": "Hobby deploy only, small scale",
+    "source": "https://github.com/PostHog/posthog",
+    "quote": "deploy a hobby instance in one line on Linux with Docker"
+   },
+   "no-paid-edition": {
+    "v": "partly",
+    "note": "ee folder is proprietary; FOSS fork exists",
+    "source": "https://github.com/PostHog/posthog",
+    "quote": "MIT expat license, except for the `ee` directory ... posthog-foss repository, which is purged of all proprietary code and features"
+   }
+  },
+  "apprise": {
+   "iphone-push": {
+    "v": "partly",
+    "note": "Only through iPhone apps like Bark, Prowl, Pushover",
+    "source": "https://github.com/caronc/apprise",
+    "quote": "Bark; Prowl; Pushover (service list)"
+   },
+   "web-push": {
+    "v": "yes",
+    "note": null,
+    "source": "https://github.com/caronc/apprise",
+    "quote": "Vapid (WebPush) | vapid://"
+   },
+   "many-destinations": {
+    "v": "yes",
+    "note": null,
+    "source": "https://github.com/caronc/apprise",
+    "quote": "send a notification to almost all of the most popular notification services available ... Telegram, Discord, Slack, Amazon SNS, Gotify"
+   },
+   "push-campaigns": {
+    "v": "no",
+    "note": "Library/CLI with no audience groups or campaigns",
+    "source": "https://github.com/caronc/apprise",
+    "quote": "Apprise provides one consistent URL format and notification interface for your apps, automation, and infrastructure"
+   },
+   "no-server-needed": {
+    "v": "yes",
+    "note": "Command-line tool or Python library; pip install",
+    "source": "https://github.com/caronc/apprise",
+    "quote": "pip install apprise"
+   }
+  },
+  "ntfy": {
+   "iphone-push": {
+    "v": "yes",
+    "note": null,
+    "source": "https://github.com/binwiederhier/ntfy",
+    "quote": "open source iOS app available on the App Store"
+   },
+   "web-push": {
+    "v": "yes",
+    "note": "Some browsers need to stay open",
+    "source": "https://docs.ntfy.sh/subscribe/web/",
+    "quote": "You don't need an active ntfy tab open, but in some cases you may need to keep your browser open."
+   },
+   "many-destinations": {
+    "v": "partly",
+    "note": "Phone, desktop, email and webhooks; not chat apps",
+    "source": "https://docs.ntfy.sh/publish/",
+    "quote": "Notification ... forwarded via email"
+   },
+   "push-campaigns": {
+    "v": "no",
+    "note": "Topic-based; no audience segments or campaigns",
+    "source": "https://docs.ntfy.sh/publish/",
+    "quote": "You can delay the delivery of messages and let ntfy send them at a later date."
+   },
+   "no-server-needed": {
+    "v": "yes",
+    "note": null,
+    "source": "https://github.com/binwiederhier/ntfy",
+    "quote": "You can access the free version of ntfy at ntfy.sh"
+   }
+  },
+  "tolgee": {
+   "in-context-editing": {
+    "v": "yes",
+    "note": null,
+    "source": "https://github.com/tolgee/tolgee-platform",
+    "quote": "edit them directly within your app ... hold the ALT/Option key and click on an element to open a dialog where you can modify your strings"
+   },
+   "machine-translation": {
+    "v": "yes",
+    "note": null,
+    "source": "https://github.com/tolgee/tolgee-platform",
+    "quote": "We support DeepL, Google Translate, AWS Translate, and Azure Translator"
+   },
+   "repo-sync": {
+    "v": "partly",
+    "note": "Push/pull by command line",
+    "source": "https://docs.tolgee.io/tolgee-cli",
+    "quote": "download and upload localization files using the pull and push commands"
+   },
+   "managed-cloud": {
+    "v": "yes",
+    "note": null,
+    "source": "https://tolgee.io/pricing",
+    "quote": "Do you offer a completely free cloud plan? Absolutely!"
+   },
+   "one-command-install": {
+    "v": "partly",
+    "note": "Single test container; compose file with separate database for real use",
+    "source": "https://docs.tolgee.io/platform/self_hosting/running_with_docker",
+    "quote": "docker run -v tolgee_data:/data/ -p 8085:8080 tolgee/tolgee"
+   }
+  },
+  "postal": {
+   "send-api-smtp": {
+    "v": "yes",
+    "note": null,
+    "source": "https://docs.postalserver.io/welcome/feature-list",
+    "quote": "Send messages to the SMTP server or using the HTTP API."
+   },
+   "deliverability": {
+    "v": "partly",
+    "note": "DKIM signing and DNS checks; bounce/complaint handling not confirmed",
+    "source": "https://docs.postalserver.io/welcome/feature-list",
+    "quote": "Support for DKIM signing of outbound messages."
+   },
+   "tracking-stats": {
+    "v": "yes",
+    "note": "Opens and clicks",
+    "source": "https://docs.postalserver.io/welcome/feature-list",
+    "quote": "Click and open tracking to keep track of when recipients open your e-mails and click links within them."
+   },
+   "managed-cloud": {
+    "v": "no",
+    "note": "Docs describe self-hosting only",
+    "source": "https://docs.postalserver.io/getting-started",
+    "quote": "Install Docker and other pre-requisites."
+   },
+   "one-command-install": {
+    "v": "partly",
+    "note": "Docker plus separate database, DNS and config steps",
+    "source": "https://docs.postalserver.io/getting-started",
+    "quote": "Add configuration and DNS entries. Start Postal. Create your first user."
+   }
+  },
+  "vscodium": {
+   "plugins": {
+    "v": "yes",
+    "note": "Open VSX store; some Microsoft-made ones missing",
+    "source": "https://github.com/VSCodium/vscodium",
+    "quote": "VSCodium uses open-vsx.org"
+   },
+   "microsoft-extensions": {
+    "v": "partly",
+    "note": "Remote Development and C# debugger don't work",
+    "source": "https://github.com/VSCodium/vscodium/blob/master/docs/extensions.md",
+    "quote": "some extensions ... (like the Remote Development Extensions) only function with the official Visual Studio Code build"
+   },
+   "remote-dev": {
+    "v": "partly",
+    "note": "Via the Open Remote - SSH add-on",
+    "source": "https://github.com/VSCodium/vscodium/blob/master/docs/troubleshooting.md",
+    "quote": "Use the VSCodium's compatible extension Open Remote - SSH."
+   },
+   "ai-helpers": {
+    "v": "partly",
+    "note": "Off by default; needs settings change or a plugin",
+    "source": "https://github.com/VSCodium/vscodium/blob/master/docs/ext-github-copilot.md",
+    "quote": "Unlike Visual Studio Code, in VSCodium, Copilot features are disabled and not configured."
+   },
+   "live-collab": {
+    "v": "no",
+    "note": "Microsoft Live Share doesn't work",
+    "source": "https://github.com/VSCodium/vscodium/issues?q=%22live+share%22",
+    "quote": "Live Share's sign in does not work"
+   },
+   "no-tracking": {
+    "v": "yes",
+    "note": null,
+    "source": "https://github.com/VSCodium/vscodium/blob/master/docs/telemetry.md",
+    "quote": "We disable all the following telemetry-related settings by default to enhance your privacy"
+   }
+  },
+  "zed": {
+   "plugins": {
+    "v": "yes",
+    "note": null,
+    "source": "https://zed.dev/docs/extensions",
+    "quote": "Zed lets you add new functionality using user-defined extensions."
+   },
+   "microsoft-extensions": {
+    "v": "no",
+    "note": "Own extension system, not VS Code's",
+    "source": "https://zed.dev/docs/extensions",
+    "quote": "Zed lets you add new functionality using user-defined extensions."
+   },
+   "remote-dev": {
+    "v": "yes",
+    "note": null,
+    "source": "https://zed.dev/docs/remote-development",
+    "quote": "Remote Development lets you edit code on a remote server while running Zed locally."
+   },
+   "ai-helpers": {
+    "v": "yes",
+    "note": "Zed-hosted, own API keys, subscriptions, local models",
+    "source": "https://zed.dev/docs/ai/llm-providers",
+    "quote": "Local models: models run locally or self-hosted; Zed Agent and Inline Assistant"
+   },
+   "live-collab": {
+    "v": "yes",
+    "note": null,
+    "source": "https://zed.dev/docs/collaboration/overview",
+    "quote": "Zed supports real-time multiplayer editing."
+   },
+   "no-tracking": {
+    "v": "partly",
+    "note": "Usage and crash data sent until turned off",
+    "source": "https://zed.dev/docs/telemetry",
+    "quote": "Client-side: Usage metrics and crash reports. You can disable these in settings."
+   }
+  },
+  "valkey": {
+   "redis-compatible": {
+    "v": "yes",
+    "note": "Fork of Redis; compatible with Redis OSS 7.2",
+    "source": "https://github.com/valkey-io/valkey",
+    "quote": "This project was forked from the open source Redis project right before the transition to their new source available licenses."
+   },
+   "scales-out": {
+    "v": "yes",
+    "note": null,
+    "source": "https://valkey.io/topics/cluster-tutorial/",
+    "quote": "data is automatically sharded across multiple Valkey nodes"
+   },
+   "saves-to-disk": {
+    "v": "yes",
+    "note": null,
+    "source": "https://valkey.io/topics/persistence/",
+    "quote": "RDB persistence performs point-in-time snapshots ... AOF persistence logs every write operation"
+   },
+   "managed-cloud": {
+    "v": "yes",
+    "note": "Run by big hosts such as Amazon ElastiCache",
+    "source": "https://aws.amazon.com/elasticache/",
+    "quote": "full Valkey, Memcached, and Redis OSS compatibility"
+   }
+  },
+  "redis": {
+   "redis-compatible": {
+    "v": "yes",
+    "note": null,
+    "source": "https://github.com/redis/redis",
+    "quote": null
+   },
+   "scales-out": {
+    "v": "yes",
+    "note": null,
+    "source": "https://redis.io/docs/latest/operate/oss_and_stack/management/scaling/",
+    "quote": "data is automatically sharded across multiple Redis nodes"
+   },
+   "saves-to-disk": {
+    "v": "yes",
+    "note": null,
+    "source": "https://redis.io/docs/latest/operate/oss_and_stack/management/persistence/",
+    "quote": "RDB persistence performs point-in-time snapshots ... AOF persistence logs every write operation"
+   },
+   "managed-cloud": {
+    "v": "yes",
+    "note": null,
+    "source": "https://redis.io/cloud/",
+    "quote": "Redis Cloud is the fully managed version of Redis"
+   }
+  },
+  "opentofu": {
+   "terraform-compatible": {
+    "v": "yes",
+    "note": null,
+    "source": "https://opentofu.org/",
+    "quote": "a drop-in replacement for Terraform, preserving your existing workflows and configurations"
+   },
+   "provider-registry": {
+    "v": "yes",
+    "note": null,
+    "source": "https://opentofu.org/",
+    "quote": "a thriving ecosystem of 3,900+ providers and 23,600+ modules"
+   },
+   "state-encryption": {
+    "v": "yes",
+    "note": null,
+    "source": "https://opentofu.org/docs/language/state/encryption/",
+    "quote": "OpenTofu supports encrypting state and plan files at rest, both for local storage and when using a backend."
+   },
+   "managed-cloud": {
+    "v": "partly",
+    "note": "No official service; third-party platforms such as Spacelift run it",
+    "source": "https://spacelift.io/blog/what-is-opentofu",
+    "quote": "Spacelift supports OpenTofu out of the box"
+   }
+  },
+  "postgresql": {
+   "pg-mysql-compatible": {
+    "v": "yes",
+    "note": "It is PostgreSQL itself",
+    "source": "https://www.postgresql.org",
+    "quote": "PostgreSQL"
+   },
+   "scales-out": {
+    "v": "partly",
+    "note": "Read copies and manual splitting; no built-in sharding",
+    "source": "https://www.postgresql.org/docs/current/different-replication-solutions.html",
+    "quote": "Data partitioning splits tables into data sets. Each set can be modified by only one server."
+   },
+   "auto-failover": {
+    "v": "partly",
+    "note": "Needs outside tools to detect failure",
+    "source": "https://www.postgresql.org/docs/current/warm-standby-failover.html",
+    "quote": "PostgreSQL does not provide the system software required to identify a failure on the primary and notify the standby database server."
+   },
+   "multi-region": {
+    "v": "partly",
+    "note": "Read-only copies elsewhere",
+    "source": "https://www.postgresql.org/docs/current/different-replication-solutions.html",
+    "quote": "PostgreSQL does not offer this type of replication [synchronous multi-master]"
+   },
+   "managed-cloud": {
+    "v": "yes",
+    "note": "Run by big hosts such as Amazon Aurora/RDS",
+    "source": "site data",
+    "quote": "You run it yourself or rent hosting; Aurora is a managed service"
+   }
+  },
+  "mariadb": {
+   "pg-mysql-compatible": {
+    "v": "partly",
+    "note": "MySQL apps mostly work; differences grow each version",
+    "source": "https://mariadb.com/kb/en/mariadb-vs-mysql-compatibility/",
+    "quote": "the implementation differences continue to grow in each new MariaDB version"
+   },
+   "scales-out": {
+    "v": "yes",
+    "note": null,
+    "source": "https://github.com/MariaDB/server",
+    "quote": "Galera synchronous multi-primary clustering; Spider for sharding"
+   },
+   "auto-failover": {
+    "v": "partly",
+    "note": "Galera clustering built in; failover routing needs extra tools",
+    "source": "https://github.com/MariaDB/server",
+    "quote": "Replication and clustering ... plus Galera synchronous multi-primary clustering."
+   },
+   "multi-region": {
+    "v": "partly",
+    "note": "Replication copies across sites; no dedicated feature",
+    "source": "https://github.com/MariaDB/server",
+    "quote": "Asynchronous, semi-synchronous, and parallel replication with global transaction IDs"
+   },
+   "managed-cloud": {
+    "v": "yes",
+    "note": null,
+    "source": "https://mariadb.com/products/skysql/",
+    "quote": "MariaDB Cloud (formerly SkySQL) is a fully managed database-as-a-service."
+   }
+  },
+  "pingcap": {
+   "pg-mysql-compatible": {
+    "v": "partly",
+    "note": "MySQL-compatible; some MySQL features missing",
+    "source": "https://docs.pingcap.com/tidb/stable/overview",
+    "quote": "It is MySQL compatible and features horizontal scalability, strong consistency, and high availability."
+   },
+   "scales-out": {
+    "v": "yes",
+    "note": null,
+    "source": "https://docs.pingcap.com/tidb/stable/overview",
+    "quote": "scale out or scale in the computing or storage capacity online as needed"
+   },
+   "auto-failover": {
+    "v": "yes",
+    "note": null,
+    "source": "https://docs.pingcap.com/tidb/stable/overview",
+    "quote": "guarantees strong consistency and availability when a minority of replicas go down"
+   },
+   "multi-region": {
+    "v": "yes",
+    "note": "Data can be placed across data centers",
+    "source": "https://docs.pingcap.com/tidb/stable/overview",
+    "quote": "configure the geographic location and number of replicas"
+   },
+   "managed-cloud": {
+    "v": "yes",
+    "note": null,
+    "source": "https://docs.pingcap.com/tidb/stable/overview",
+    "quote": "TiDB Cloud ... the fully-managed TiDB service"
+   }
+  },
+  "yugabyte": {
+   "pg-mysql-compatible": {
+    "v": "partly",
+    "note": "PostgreSQL only, most but not all features",
+    "source": "https://github.com/yugabyte/yugabyte-db",
+    "quote": "reuses the PostgreSQL query layer ... thereby supporting most of its features"
+   },
+   "scales-out": {
+    "v": "yes",
+    "note": null,
+    "source": "https://github.com/yugabyte/yugabyte-db",
+    "quote": "Scaling a YugabyteDB cluster to achieve more IOPS or data storage is as simple as adding nodes to the cluster."
+   },
+   "auto-failover": {
+    "v": "yes",
+    "note": null,
+    "source": "https://github.com/yugabyte/yugabyte-db",
+    "quote": "YugabyteDB is extremely resilient to common outages with native failover and repair."
+   },
+   "multi-region": {
+    "v": "yes",
+    "note": null,
+    "source": "https://github.com/yugabyte/yugabyte-db",
+    "quote": "It supports deployments that span three or more fault domains, such as multi-zone, multi-rack, multi-region, and multi-cloud deployments."
+   },
+   "managed-cloud": {
+    "v": "yes",
+    "note": null,
+    "source": "https://www.yugabyte.com/yugabytedb-aeon/",
+    "quote": "fully managed YugabyteDB (Aeon)"
+   }
+  },
+  "cratedb": {
+   "pg-mysql-compatible": {
+    "v": "partly",
+    "note": "Speaks PostgreSQL protocol; SQL dialect differs",
+    "source": "https://github.com/crate/crate",
+    "quote": "Use standard SQL via the PostgreSQL wire protocol or an HTTP API."
+   },
+   "scales-out": {
+    "v": "yes",
+    "note": null,
+    "source": "https://github.com/crate/crate",
+    "quote": "Horizontally scalable, highly available and fault-tolerant clusters"
+   },
+   "auto-failover": {
+    "v": "yes",
+    "note": null,
+    "source": "https://github.com/crate/crate",
+    "quote": "Horizontally scalable, highly available and fault-tolerant clusters that run very well in virtualized and containerized environments."
+   },
+   "multi-region": {
+    "v": "partly",
+    "note": "README says multi-region; no setup detail given",
+    "source": "https://github.com/crate/crate",
+    "quote": "from personal computers to multi-region hybrid clouds and the edge"
+   },
+   "managed-cloud": {
+    "v": "yes",
+    "note": null,
+    "source": "https://github.com/crate/crate",
+    "quote": "Crate.io also offers CrateDB Cloud, a fully-managed CrateDB Database as a Service (DBaaS)."
+   },
+   "sql-queries": {
+    "v": "yes",
+    "note": null,
+    "source": "https://github.com/crate/crate",
+    "quote": "You can run ad-hoc queries using standard SQL."
+   },
+   "retention-downsampling": {
+    "v": "partly",
+    "note": "Needs an outside scheduled job or toolkit; not built in",
+    "source": "https://cratedb.com/docs/guide/integrate/airflow/data-retention-policy.html",
+    "quote": "a daily Airflow job deletes partitions past their retention period"
+   },
+   "grafana-ready": {
+    "v": "partly",
+    "note": "Works through Grafana's PostgreSQL connector, no own plugin",
+    "source": "https://cratedb.com/docs/guide/integrate/grafana/index.html",
+    "quote": "Connecting to a CrateDB cluster uses the Grafana PostgreSQL data source adapter."
+   }
+  },
+  "typesense": {
+   "typo-tolerance": {
+    "v": "yes",
+    "note": null,
+    "source": "https://github.com/typesense/typesense",
+    "quote": "Typo Tolerance: Handles typographical errors elegantly, out-of-the-box."
+   },
+   "hybrid-search": {
+    "v": "yes",
+    "note": null,
+    "source": "https://github.com/typesense/typesense",
+    "quote": "Semantic / Hybrid Search: Automatically generate embeddings from within Typesense using built-in models"
+   },
+   "field-filters": {
+    "v": "yes",
+    "note": null,
+    "source": "https://github.com/typesense/typesense",
+    "quote": "Faceting & Filtering: Drill down and refine results."
+   },
+   "search-widgets": {
+    "v": "yes",
+    "note": null,
+    "source": "https://github.com/typesense/typesense",
+    "quote": "You can use our InstantSearch.js adapter"
+   },
+   "scales-out": {
+    "v": "partly",
+    "note": "Copies all data to every server; does not split it",
+    "source": "https://typesense.org/docs/guide/high-availability.html",
+    "quote": "Typesense will automatically replicate your entire dataset to all nodes in the cluster"
+   },
+   "managed-cloud": {
+    "v": "yes",
+    "note": null,
+    "source": "https://github.com/typesense/typesense",
+    "quote": "Spin up a managed cluster with Typesense Cloud"
+   },
+   "one-command-install": {
+    "v": "yes",
+    "note": null,
+    "source": "https://github.com/typesense/typesense",
+    "quote": "docker run -p 8108:8108 -v/tmp/data:/data typesense/typesense:29.0 --data-dir /data --api-key=..."
+   }
+  },
+  "mellisearch": {
+   "typo-tolerance": {
+    "v": "yes",
+    "note": null,
+    "source": "https://github.com/meilisearch/meilisearch",
+    "quote": "Typo tolerance: get relevant matches even when queries contain typos"
+   },
+   "hybrid-search": {
+    "v": "yes",
+    "note": null,
+    "source": "https://github.com/meilisearch/meilisearch",
+    "quote": "Hybrid search: Combine the best of semantic & full-text search"
+   },
+   "field-filters": {
+    "v": "yes",
+    "note": null,
+    "source": "https://github.com/meilisearch/meilisearch",
+    "quote": "Filtering and faceted search"
+   },
+   "search-widgets": {
+    "v": "yes",
+    "note": null,
+    "source": "https://github.com/meilisearch/meilisearch-js-plugins",
+    "quote": "The search client to use Meilisearch with InstantSearch."
+   },
+   "scales-out": {
+    "v": "partly",
+    "note": "Sharding only in the paid Enterprise edition",
+    "source": "https://github.com/meilisearch/meilisearch",
+    "quote": "Self-hosted, Enterprise Edition | Adds sharding and other advanced features. Requires a commercial agreement for production use."
+   },
+   "managed-cloud": {
+    "v": "yes",
+    "note": null,
+    "source": "https://github.com/meilisearch/meilisearch",
+    "quote": "Meilisearch Cloud | Managed Meilisearch: no servers to deploy or upgrade"
+   },
+   "one-command-install": {
+    "v": "yes",
+    "note": null,
+    "source": "https://github.com/meilisearch/meilisearch",
+    "quote": "Option B: Self-host. Run the open-source engine locally with Docker"
+   }
+  },
+  "zinc-labs": {
+   "typo-tolerance": {
+    "v": "partly",
+    "note": "Fuzzy matching is a separate query type you choose",
+    "source": "https://zincsearch-docs.zinc.dev/api/search/search/",
+    "quote": "search_type can have following values: matchall match matchphrase term querystring prefix wildcard fuzzy daterange"
+   },
+   "hybrid-search": {
+    "v": "no",
+    "note": "Keyword search only; no vector search found in docs",
+    "source": "https://github.com/zincsearch/zincsearch",
+    "quote": "ZincSearch is a search engine that does full text indexing."
+   },
+   "field-filters": {
+    "v": "yes",
+    "note": "Term, range and date-range queries",
+    "source": "https://zincsearch-docs.zinc.dev/api/search/search/",
+    "quote": "search_type can have following values: matchall match matchphrase term querystring prefix wildcard fuzzy daterange"
+   },
+   "search-widgets": {
+    "v": "no",
+    "note": "Only its own admin web page; no site widgets found",
+    "source": "https://zincsearch-docs.zinc.dev/",
+    "quote": null
+   },
+   "scales-out": {
+    "v": "no",
+    "note": "One server only",
+    "source": "https://github.com/zincsearch/zincsearch",
+    "quote": "High availability | Not available"
+   },
+   "managed-cloud": {
+    "v": "no",
+    "note": "The only cloud listed is for OpenObserve, a different product",
+    "source": "https://github.com/zincsearch/zincsearch",
+    "quote": "Get started | Open source docs (ZincSearch) vs Open source docs or Cloud (OpenObserve)"
+   },
+   "one-command-install": {
+    "v": "yes",
+    "note": null,
+    "source": "https://zincsearch-docs.zinc.dev/quickstart/",
+    "quote": "docker run -v /full/path/of/data:/data -e ZINC_DATA_PATH=\"/data\" -p 4080:4080 ..."
+   }
+  },
+  "sonic": {
+   "typo-tolerance": {
+    "v": "yes",
+    "note": null,
+    "source": "https://github.com/valeriansaliou/sonic",
+    "quote": "Search query typos are corrected if there are not enough exact-match results for a given word in a search query"
+   },
+   "hybrid-search": {
+    "v": "no",
+    "note": "Keyword index only",
+    "source": "https://github.com/valeriansaliou/sonic",
+    "quote": "This makes Sonic a simple word index, that points to identifier results."
+   },
+   "field-filters": {
+    "v": "no",
+    "note": "Only collection and bucket separation, no field filters",
+    "source": "https://github.com/valeriansaliou/sonic",
+    "quote": "Search terms are stored in collections, organized in buckets"
+   },
+   "search-widgets": {
+    "v": "no",
+    "note": "Only client libraries; no search box widgets",
+    "source": "https://github.com/valeriansaliou/sonic",
+    "quote": null
+   },
+   "managed-cloud": {
+    "v": "no",
+    "note": "No hosted service mentioned",
+    "source": "https://github.com/valeriansaliou/sonic",
+    "quote": null
+   },
+   "one-command-install": {
+    "v": "yes",
+    "note": null,
+    "source": "https://github.com/valeriansaliou/sonic",
+    "quote": "You can find the pre-built Sonic image on Docker Hub as valeriansaliou/sonic."
+   }
+  },
+  "neo4j": {
+   "graph-query-language": {
+    "v": "yes",
+    "note": null,
+    "source": "https://neo4j.com/docs/browser/",
+    "quote": "a developer-focused tool that allows you to execute Cypher queries and visualize the results"
+   },
+   "graph-explorer": {
+    "v": "yes",
+    "note": null,
+    "source": "https://neo4j.com/docs/browser/",
+    "quote": "the default developer interface for both Enterprise and Community editions of Neo4j"
+   },
+   "scales-out": {
+    "v": "partly",
+    "note": "Clustering is in the paid Enterprise edition",
+    "source": "https://neo4j.com/docs/operations-manual/current/clustering/",
+    "quote": "Clustering (Enterprise Edition)"
+   },
+   "managed-cloud": {
+    "v": "yes",
+    "note": null,
+    "source": "https://github.com/neo4j/neo4j",
+    "quote": "Neo4j Aura is the fully managed graph database solution for Neo4j."
+   },
+   "no-paid-edition": {
+    "v": "partly",
+    "note": "Enterprise adds clustering and other closed features",
+    "source": "https://github.com/neo4j/neo4j",
+    "quote": "Neo4j Enterprise Edition includes additional closed-source components not available in this repository and requires a commercial license"
+   }
+  },
+  "terminusdb": {
+   "graph-query-language": {
+    "v": "no",
+    "note": "Uses its own WOQL and GraphQL, not Cypher or GQL",
+    "source": "https://github.com/terminusdb/terminusdb",
+    "quote": "Multimodal: Support for REST API, GraphQL, WOQL and using RDF semantics"
+   },
+   "scales-out": {
+    "v": "partly",
+    "note": "Clustering listed only for Enterprise",
+    "source": "https://github.com/terminusdb/terminusdb",
+    "quote": "TerminusDB Enterprise: ... higher write performance, clustering"
+   },
+   "managed-cloud": {
+    "v": "yes",
+    "note": null,
+    "source": "https://terminusdb.com",
+    "quote": "Try TerminusDB Cloud"
+   },
+   "no-paid-edition": {
+    "v": "partly",
+    "note": "Enterprise edition adds some features",
+    "source": "https://github.com/terminusdb/terminusdb",
+    "quote": "TerminusDB Enterprise: Full JSON-LD, Turtle, and RDF/XML documents, enterprise features, very fast commit history queries, higher write performance, clustering"
+   }
+  },
+  "questdb": {
+   "sql-queries": {
+    "v": "yes",
+    "note": null,
+    "source": "https://github.com/questdb/questdb",
+    "quote": "The SQL is standard, extended where time series needs it: SAMPLE BY, LATEST ON, ASOF JOIN"
+   },
+   "retention-downsampling": {
+    "v": "yes",
+    "note": "SAMPLE BY also summarises data",
+    "source": "https://questdb.com/docs/concepts/ttl/",
+    "quote": "automatically drops old partitions based on data age"
+   },
+   "grafana-ready": {
+    "v": "yes",
+    "note": null,
+    "source": "https://github.com/questdb/questdb",
+    "quote": "our Grafana-native plugin"
+   },
+   "scales-out": {
+    "v": "partly",
+    "note": "Open source is one server; scaling is Enterprise only",
+    "source": "https://questdb.com/pricing",
+    "quote": "Horizontal scaling: Open Source limited to a single instance; Enterprise: Read replicas plus tiered object storage scale beyond a single box"
+   },
+   "managed-cloud": {
+    "v": "partly",
+    "note": "Makers run it, but only under paid Enterprise",
+    "source": "https://questdb.com/pricing",
+    "quote": "Self-managed or Bring Your Own Cloud (BYOC)"
+   }
+  },
+  "influxdb": {
+   "sql-queries": {
+    "v": "yes",
+    "note": null,
+    "source": "https://github.com/influxdata/influxdb",
+    "quote": "SQL query engine with support for FlightSQL and HTTP query API"
+   },
+   "retention-downsampling": {
+    "v": "yes",
+    "note": "Retention set when database is created; downsampler plugin exists",
+    "source": "https://docs.influxdata.com/influxdb3/core/admin/databases/create/",
+    "quote": "automatically delete expired data and optimize storage"
+   },
+   "grafana-ready": {
+    "v": "yes",
+    "note": null,
+    "source": "https://docs.influxdata.com/influxdb3/core/visualize-data/grafana/",
+    "quote": "The InfluxDB data source plugin is included in the Grafana core distribution."
+   },
+   "scales-out": {
+    "v": "partly",
+    "note": "Free Core is single server; more is paid",
+    "source": "https://docs.influxdata.com/influxdb3/core/",
+    "quote": "The Enterprise version adds the following features to Core: High availability, Read replicas"
+   },
+   "managed-cloud": {
+    "v": "yes",
+    "note": null,
+    "source": "https://docs.influxdata.com/influxdb3/core/",
+    "quote": "InfluxDB 3 Cloud, Cloud Serverless, and Cloud Dedicated"
+   }
+  },
+  "tdengine": {
+   "sql-queries": {
+    "v": "partly",
+    "note": "SQL with its own time-series extensions",
+    "source": "https://docs.tdengine.com/",
+    "quote": "TDengine uses SQL as its query language to lower learning and migration cost, and extends SQL for time-series scenarios"
+   },
+   "retention-downsampling": {
+    "v": "yes",
+    "note": "Old data deleted automatically after KEEP period",
+    "source": "https://docs.tdengine.com/3.2/taos-sql/database/",
+    "quote": "KEEP specifies the time for which data is retained."
+   },
+   "grafana-ready": {
+    "v": "yes",
+    "note": null,
+    "source": "https://docs.tdengine.com/ecosystem-integrations/visual/grafana/",
+    "quote": "integrate the TDengine data source with the open-source data visualization system Grafana"
+   },
+   "scales-out": {
+    "v": "yes",
+    "note": null,
+    "source": "https://github.com/taosdata/TDengine",
+    "quote": "TDengine's core modules, including cluster feature and AI agent, are all available under open source licenses."
+   },
+   "managed-cloud": {
+    "v": "yes",
+    "note": null,
+    "source": "https://github.com/taosdata/TDengine",
+    "quote": "The easiest way to experience TDengine is through TDengine Cloud."
+   }
+  },
+  "clickhouse": {
+   "sql-queries": {
+    "v": "partly",
+    "note": "Own SQL dialect with differences",
+    "source": "https://clickhouse.com/docs/en/sql-reference",
+    "quote": "SQL statements, clauses, operators, and syntax reference."
+   },
+   "separate-storage": {
+    "v": "yes",
+    "note": null,
+    "source": "https://clickhouse.com/docs/en/guides/separation-storage-compute",
+    "quote": "While self-managed ClickHouse allows for separation of storage and compute as discussed in this guide"
+   },
+   "scales-out": {
+    "v": "yes",
+    "note": null,
+    "source": "https://clickhouse.com/docs/en/architecture/horizontal-scaling",
+    "quote": "you have successfully set up a ClickHouse cluster with two shards and one replica per shard"
+   },
+   "managed-cloud": {
+    "v": "yes",
+    "note": null,
+    "source": "https://github.com/ClickHouse/ClickHouse",
+    "quote": "ClickHouse Cloud ClickHouse as a service, built by the creators and maintainers."
+   }
+  },
+  "databend": {
+   "sql-queries": {
+    "v": "yes",
+    "note": null,
+    "source": "https://docs.databend.com/",
+    "quote": "Snowflake-compatible SQL"
+   },
+   "separate-storage": {
+    "v": "yes",
+    "note": null,
+    "source": "https://docs.databend.com/",
+    "quote": "fully based on object storage"
+   },
+   "scales-out": {
+    "v": "yes",
+    "note": null,
+    "source": "https://github.com/databendlabs/databend",
+    "quote": "Enterprise Scale: Elastic compute, cloud native. S3/Azure/GCS."
+   },
+   "managed-cloud": {
+    "v": "yes",
+    "note": null,
+    "source": "https://docs.databend.com/",
+    "quote": "Fully-managed serverless data warehouse"
+   }
+  }
+ },
+ "tagIssues": [
+  {
+   "group": "code-hosting",
+   "tag": "github-import",
+   "problem": "Does not fit review-only tools (Gerrit, Review Board); every answer is no"
+  },
+  {
+   "group": "code-hosting",
+   "tag": "package-registry",
+   "problem": "Review-only tools all no; group mixes full hosts and review tools"
+  },
+  {
+   "group": "code-hosting",
+   "tag": "one-command-install",
+   "problem": "Same name used in shared groups; Docker image vs one binary vs full stack needs consistent bar"
+  },
+  {
+   "group": "analytics",
+   "tag": "tiny-script",
+   "problem": "Matomo, Umami script sizes not stated on sites; hard to source"
+  },
+  {
+   "group": "app-hosting",
+   "tag": "scales-out",
+   "problem": "Wording about databases vs apps is unclear; docs rarely say; hard to answer from READMEs"
+  },
+  {
+   "group": "shop",
+   "tag": "ready-storefront",
+   "problem": "Several entries are headless back ends; also storefront-only projects like Litekart fit oddly"
+  },
+  {
+   "group": "automation",
+   "tag": "no-paid-edition",
+   "problem": "Needs license pages per project; READMEs rarely settle it"
+  },
+  {
+   "group": "app-hosting",
+   "tag": "scales-out",
+   "problem": "Asks about a database/service but most tools only spread apps; reword to apps vs databases."
+  },
+  {
+   "group": "app-hosting",
+   "tag": "auto-https",
+   "problem": "Most answers are partly (certificate step needed); say what counts as built in."
+  },
+  {
+   "group": "api-tools",
+   "tag": "api-gateway",
+   "problem": "Gateways (APISIX, Fusio) vs clients are different jobs; every client answers no."
+  },
+  {
+   "group": "internal-tools",
+   "tag": "company-sso",
+   "problem": "SSO tiers change by plan and docs are script-rendered; hard to verify from the page text."
+  },
+  {
+   "group": "internal-tools",
+   "tag": "no-code-builder",
+   "problem": "Code-first tools (Windmill) land between yes and no; meaning is workable but borderline"
+  },
+  {
+   "group": "login-auth (boxyhq)",
+   "tag": "social-login/passkey-login/two-step-login/ready-login-pages",
+   "problem": "BoxyHQ/Ory Polis is only a SAML bridge, so most login tags do not apply to it"
+  },
+  {
+   "group": "login-auth",
+   "tag": "enterprise-sso-customers",
+   "problem": "Wording asks for SAML 'built in, free' but SAML vs OIDC and who is the identity provider vs consumer differ per project; many READMEs do not say if free"
+  },
+  {
+   "group": "backend-service",
+   "tag": "built-in-auth",
+   "problem": "Encore is a framework, not a backend service; auth/realtime/storage tags barely fit it"
+  },
+  {
+   "group": "ci",
+   "tag": "pipeline-as-file",
+   "problem": "Buildbot keeps config in a Python file on the server, which fits neither yes nor no; clarify"
+  },
+  {
+   "group": "cms",
+   "tag": "no-code-builder",
+   "problem": "Mixes site builders (Webstudio) with content editors (Decap, Tina, Strapi); too vague"
+  },
+  {
+   "group": "cms",
+   "tag": "headless-api",
+   "problem": "Page builders and git-based editors have no content API of their own; answers hard to compare"
+  },
+  {
+   "group": "ci",
+   "tag": "managed-cloud",
+   "problem": "Jenkins/Buildbot have vendors (CloudBees) but no official host; rule unclear"
+  },
+  {
+   "group": "monitoring",
+   "tag": "metrics",
+   "problem": "Group mixes dashboards (Grafana), security log lakes (Matano), status pages, search engines and log stores; metrics/logs/traces fit only full-stack tools. Consider splitting uptime/status pages from observability."
+  },
+  {
+   "group": "feature-flags",
+   "tag": "no-paid-edition",
+   "problem": "Every project in the group is open core, so the answer is nearly always partly; consider naming the specific paid features."
+  },
+  {
+   "group": "voice-apis",
+   "tag": "phone-numbers",
+   "problem": "Joins calls and texts in one question; a project can do calls but not texts. Split or say calls only."
+  },
+  {
+   "group": "monitoring",
+   "tag": "uptime-checks",
+   "problem": "Self-hosted tools differ on 'from outside'; Netdata/Grafana run checks from your own machine."
+  },
+  {
+   "group": "monitoring",
+   "tag": "one-command-install",
+   "problem": "Shared tag; Docker Compose with several services is judged partly, which makes SigNoz and Uptrace look the same as hand-assembled setups."
+  },
+  {
+   "group": "voice-apis",
+   "tag": "phone-numbers",
+   "problem": "OpenVidu docs not checked for SIP; left blank"
+  },
+  {
+   "group": "sql-databases",
+   "tag": "pg-mysql-compatible",
+   "problem": "Merges two different protocols; PostgreSQL scores yes by being itself, MariaDB/TiDB are MySQL-only. Split into 'Works with MySQL apps' and 'Works with PostgreSQL apps'."
+  },
+  {
+   "group": "sql-databases",
+   "tag": "scales-out",
+   "problem": "Overlaps with multi-region and auto-failover; hard to judge 'limited or paid'"
+  },
+  {
+   "group": "push-notifications",
+   "tag": "no-server-needed",
+   "problem": "Apprise is a command-line/library tool; 'regular person' wording doesn't fit it"
+  },
+  {
+   "group": "product-analytics",
+   "tag": "no-paid-edition",
+   "problem": "Nearly everyone is 'partly' because of an enterprise folder; consider saying whether core job features are free"
+  },
+  {
+   "group": "email-sending",
+   "tag": "deliverability",
+   "problem": "Bundles DKIM, bounces and complaints; hard to confirm all three from docs"
+  },
+  {
+   "group": "search-engines",
+   "tag": "scales-out",
+   "problem": "Ambiguous: Typesense copies full data to each server (safety, not growth); answered partly, but sites may read it differently"
+  },
+  {
+   "group": "data-warehouses",
+   "tag": "separate-storage",
+   "problem": "Meaning text says 'partly: partly', which is circular; ClickHouse only separates storage and compute with extra setup (Cloud is easier)"
+  },
+  {
+   "group": "search-engines",
+   "tag": "search-widgets",
+   "problem": "Hard to prove a 'no' for small projects; mostly answered from absence in docs"
+  },
+  {
+   "group": "search-engines",
+   "tag": "field-filters",
+   "problem": "Sonic is a word index without fields, so the tag does not fit it well"
+  },
+  {
+   "group": "time-series-databases",
+   "tag": "sql-queries",
+   "problem": "Every project uses its own SQL dialect; line between 'full' and 'SQL-like' is vague"
+  }
+ ],
+ "dataErrors": [
+  {
+   "project": "gitlab / gitlab-community-edition",
+   "evidence": "github.com/gitlabhq/gitlabhq description is 'GitLab CE Mirror' with homepage about.gitlab.com/getting-help/, so these two entries are the same project; gitlab's website field is a help page"
+  },
+  "litekart: repo itswadesh/svelte-commerce README says it is a headless storefront that connects to other back ends (Shopify, Medusa, Saleor...), not a full shop platform; listed with server-side shop platforms",
+  "openblocks: github.com/openblocks-dev/openblocks last pushed 2023-10-19 (stale; project succeeded by Lowcoder)",
+  "otomi: code is linode/apl-core, website is Akamai techdocs (project renamed to App Platform)",
+  "drone: code link github.com/harness/harness is now Harness Open Source; its README says Drone is kept on the 'drone' branch (https://github.com/harness/harness#where-is-drone)",
+  "netdata: site platforms list is only ['windows']; Netdata mainly runs on Linux (README/installer)",
+  "matano: repo last pushed 2025-01-08, appears dormant",
+  "quickwit: site banner says 'Quickwit joins Datadog!' (https://quickwit.io) - project future/hosted status unclear",
+  "telemetry-tracker: it is an error/analytics tracker, not a metrics/uptime monitor - weak fit for the monitoring group",
+  "solidping: README intro says 44 check types, GitHub description says 40",
+  "highlight: website app.highlight.io; highlight.io now redirects (308) to launchdarkly.com, so the company was absorbed by LaunchDarkly",
+  "valkey/redis/postgresql: managed-cloud answers rely on third-party hosts (ElastiCache, Aurora) per tag question wording",
+  "Project id/name 'Mellisearch' is misspelled; project is Meilisearch (repo github.com/meilisearch/meilisearch)",
+  "Zinc Labs: ZincSearch is the project; website field points to its docs site, and its README says cloud/HA belong to OpenObserve, a separate product",
+  "Sonic website field is a crates.io page, not a project site"
+ ]
+}

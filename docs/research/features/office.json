@@ -1,0 +1,3356 @@
+{
+ "batch": "office",
+ "checked": "2026-10-27",
+ "answers": {
+  "restic": {
+   "point-and-click": {
+    "v": "no",
+    "note": null,
+    "source": "https://github.com/restic/restic",
+    "quote": "$ restic init --repo /tmp/backup"
+   },
+   "cloud-destinations": {
+    "v": "yes",
+    "note": "Amazon S3, Backblaze B2, Google Cloud Storage, Azure, many more via rclone",
+    "source": "https://github.com/restic/restic",
+    "quote": "Amazon S3 ... BackBlaze B2 ... Google Cloud Storage ... many other services via the rclone Backend"
+   },
+   "e2e-encrypted": {
+    "v": "yes",
+    "note": "Backups are encrypted before leaving your computer",
+    "source": "https://github.com/restic/restic",
+    "quote": "The location the backup data is stored is assumed not to be a trusted environment"
+   },
+   "incremental-backup": {
+    "v": "yes",
+    "note": "Repeat backups store only new data",
+    "source": "https://restic.readthedocs.io/en/stable/040_backup.html",
+    "quote": "no new data was added to the repository (since all data is already there). This is deduplication at work!"
+   },
+   "scheduled-backup": {
+    "v": "partly",
+    "note": "No built-in scheduler; use cron, systemd or Task Scheduler",
+    "source": "https://restic.readthedocs.io/en/stable/040_backup.html",
+    "quote": "Restic does not have a built-in way of scheduling backups"
+   }
+  },
+  "ghostfolio": {
+   "envelope-budgeting": {
+    "v": "no",
+    "note": "Investment tracker, not a budgeting tool",
+    "source": "https://github.com/ghostfolio/ghostfolio",
+    "quote": "open source wealth management software ... keep track of stocks, ETFs or cryptocurrencies"
+   },
+   "no-server-needed": {
+    "v": "partly",
+    "note": "Paid Ghostfolio Premium hosting, or run it yourself",
+    "source": "https://github.com/ghostfolio/ghostfolio",
+    "quote": "Ghostfolio Premium cloud offering is the easiest way to get started"
+   },
+   "phone-app": {
+    "v": "no",
+    "note": "Installable web app only; no store apps",
+    "source": "https://github.com/ghostfolio/ghostfolio",
+    "quote": "Progressive Web App (PWA) with a mobile-first design"
+   },
+   "investments": {
+    "v": "yes",
+    "note": "Stocks, ETFs and crypto with performance",
+    "source": "https://github.com/ghostfolio/ghostfolio",
+    "quote": "keep track of stocks, ETFs or cryptocurrencies"
+   }
+  },
+  "filestash": {
+   "no-server-needed": {
+    "v": "no",
+    "note": "Self-host it; no free hosted version found",
+    "source": "https://www.filestash.app/docs/",
+    "quote": "Path 1 : Selfhost it on your own server"
+   },
+   "phone-app": {
+    "v": "yes",
+    "note": "Sync app for Android and iPhone",
+    "source": "https://www.filestash.app/",
+    "quote": "Install the app on your device (windows, mac, linux, android or an iphone)"
+   },
+   "e2e-encrypted": {
+    "v": "partly",
+    "note": "Only with the optional PGP plugin",
+    "source": "https://www.filestash.app/docs/plugin/",
+    "quote": "plg_application_pgp: File content is encrypted on the client before upload using user-held keys"
+   },
+   "office-in-browser": {
+    "v": "partly",
+    "note": "Through office plugins (LibreOffice, OnlyOffice)",
+    "source": "https://www.filestash.app/docs/plugin/",
+    "quote": "plg_application_office ... .doc, .docx ... running entirely from the browser"
+   }
+  },
+  "cryptpad": {
+   "live-collab": {
+    "v": "yes",
+    "note": null,
+    "source": "https://github.com/cryptpad/cryptpad",
+    "quote": "designed to facilitate collaboration by synchronizing changes to documents in real time"
+   },
+   "word-files": {
+    "v": "partly",
+    "note": "Imports .docx into its simpler editor; formatting can change",
+    "source": "https://docs.cryptpad.org/en/FAQ.html",
+    "quote": "The Document supported format are Microsoft Word .docx and OpenDocument .odt"
+   },
+   "comments-suggestions": {
+    "v": "partly",
+    "note": "Comments and replies; no accept/reject edits found",
+    "source": "https://docs.cryptpad.org/en/user_guide/apps/richtext.html",
+    "quote": "To comment on a part of the text: Select the text to comment ... Reply ... Resolve"
+   },
+   "no-server-needed": {
+    "v": "yes",
+    "note": "Free account on the project's hosted site",
+    "source": "https://cryptpad.org/",
+    "quote": "Try CryptPad ... the free version within all features"
+   },
+   "phone-app": {
+    "v": "no",
+    "note": "Works in a phone browser; no app planned",
+    "source": "https://docs.cryptpad.org/en/FAQ.html",
+    "quote": "We are not planning a dedicated mobile application"
+   }
+  },
+  "localsend": {
+   "no-server-needed": {
+    "v": "yes",
+    "note": null,
+    "source": "https://localsend.org/",
+    "quote": "No account, no login, no servers."
+   },
+   "over-internet": {
+    "v": "no",
+    "note": "Same Wi-Fi network only",
+    "source": "https://localsend.org/",
+    "quote": "Does it work over the internet? No. LocalSend uses your local WiFi network"
+   },
+   "no-account-needed": {
+    "v": "yes",
+    "note": null,
+    "source": "https://localsend.org/",
+    "quote": "LocalSend does not require any account or login"
+   },
+   "e2e-encrypted": {
+    "v": "yes",
+    "note": "Sent straight between devices",
+    "source": "https://localsend.org/",
+    "quote": "End-to-end encryption ensures that only you and the recipient can access your files"
+   },
+   "expiring-links": {
+    "v": "no",
+    "note": "Sends direct to nearby devices; no download links",
+    "source": "https://localsend.org/",
+    "quote": "Does it work over the internet? No."
+   }
+  },
+  "karakeep": {
+   "picture-boards": {
+    "v": "partly",
+    "note": "Images saved into lists; no free-form boards found",
+    "source": "https://github.com/karakeep-app/karakeep",
+    "quote": "Bookmark links, take simple notes and store images and pdfs ... Sort your bookmarks into lists"
+   },
+   "browser-extension": {
+    "v": "yes",
+    "note": "Chrome and Firefox (also Safari)",
+    "source": "https://github.com/karakeep-app/karakeep",
+    "quote": "Chrome plugin, Firefox addon, and Safari extension"
+   },
+   "share-with-others": {
+    "v": "yes",
+    "note": "Shared lists",
+    "source": "https://github.com/karakeep-app/karakeep",
+    "quote": "Collaborate with others on the same list"
+   },
+   "phone-app": {
+    "v": "yes",
+    "note": null,
+    "source": "https://github.com/karakeep-app/karakeep",
+    "quote": "An iOS app, and an Android app"
+   },
+   "no-server-needed": {
+    "v": "no",
+    "note": "Built to be self-hosted; no hosted version found",
+    "source": "https://docs.karakeep.app/",
+    "quote": "The app is built with self-hosting as a first class citizen"
+   }
+  },
+  "joplin": {
+   "syncs-devices": {
+    "v": "yes",
+    "note": "Dropbox, OneDrive, Joplin Cloud and more",
+    "source": "https://joplinapp.org/",
+    "quote": "synchronising with various services, including Joplin Cloud, Dropbox and OneDrive"
+   },
+   "phone-app": {
+    "v": "yes",
+    "note": null,
+    "source": "https://joplinapp.org/",
+    "quote": "The app is available on Windows, macOS, Linux, Android and iOS"
+   },
+   "notion-databases": {
+    "v": "no",
+    "note": "Notes with Markdown tables only",
+    "source": "https://joplinapp.org/",
+    "quote": "Multimedia notes ... Rich Text or Markdown"
+   },
+   "e2e-encrypted": {
+    "v": "partly",
+    "note": "Must be turned on by hand in settings",
+    "source": "https://joplinapp.org/help/apps/sync/e2ee/",
+    "quote": "E2EE needs to be manually enabled on a single device first"
+   },
+   "notes-import": {
+    "v": "yes",
+    "note": "Evernote and OneNote built in",
+    "source": "https://joplinapp.org/help/apps/import_export",
+    "quote": "Joplin can import complete Evernote notebooks ... Joplin can also import OneNote notebooks"
+   },
+   "plain-files": {
+    "v": "partly",
+    "note": "Full export to Markdown files",
+    "source": "https://joplinapp.org/help/apps/import_export",
+    "quote": "your notes are saved to an open format"
+   }
+  },
+  "docmost": {
+   "syncs-devices": {
+    "v": "yes",
+    "note": "Web app; same account on every device",
+    "source": "site data",
+    "quote": null
+   },
+   "phone-app": {
+    "v": "no",
+    "note": "Web app only",
+    "source": "site data",
+    "quote": null
+   },
+   "notion-databases": {
+    "v": "partly",
+    "note": "Plain tables free; database views (Bases) are paid",
+    "source": "https://docmost.com/docs",
+    "quote": "Bases (Table and Kanban views) ... Paid Editions"
+   },
+   "notes-import": {
+    "v": "partly",
+    "note": "Notion import found; Evernote and OneNote not listed",
+    "source": "https://docmost.com/docs",
+    "quote": "Notion import Confluence import PDF & DOCX import"
+   },
+   "plain-files": {
+    "v": "partly",
+    "note": "Export pages to Markdown or HTML",
+    "source": "https://docmost.com/docs",
+    "quote": "Import and export pages in Markdown and HTML formats"
+   },
+   "live-collab": {
+    "v": "yes",
+    "note": null,
+    "source": "https://docmost.com/docs",
+    "quote": "Work on the same page at the same time in real-time"
+   }
+  },
+  "notesnook": {
+   "syncs-devices": {
+    "v": "yes",
+    "note": "Encrypted sync across devices",
+    "source": "https://notesnook.com/",
+    "quote": "Start it on your laptop, finish it on your phone"
+   },
+   "phone-app": {
+    "v": "yes",
+    "note": null,
+    "source": "https://notesnook.com/",
+    "quote": "Windows, macOS, Linux, Android, iOS and the web"
+   },
+   "notion-databases": {
+    "v": "no",
+    "note": "Tables and checklists inside notes only",
+    "source": "https://notesnook.com/",
+    "quote": "Tables, checklists, code, maths, outlines and attachments"
+   },
+   "e2e-encrypted": {
+    "v": "yes",
+    "note": null,
+    "source": "https://notesnook.com/",
+    "quote": "Open source \u00b7 End-to-end encrypted. Notes only you can read"
+   },
+   "notes-import": {
+    "v": "partly",
+    "note": "Evernote importer; Notion and OneNote not listed",
+    "source": "https://help.notesnook.com/importing-notes/import-notes-from-evernote",
+    "quote": "Importing notes: Evernote, Google Keep, Joplin, Obsidian, Simplenote ..."
+   },
+   "plain-files": {
+    "v": "partly",
+    "note": "Encrypted in-app; export to Markdown/HTML available",
+    "source": "https://help.notesnook.com/importing-notes/import-notes-from-evernote",
+    "quote": "Backup & export > Exporting notes"
+   }
+  },
+  "pdf-arranger": {
+   "pdf-edit-text": {
+    "v": "no",
+    "note": "Page arranging only",
+    "source": "https://github.com/pdfarranger/pdfarranger/wiki/User-Manual",
+    "quote": "Supported features list covers page reorder, rotate, crop, merge, split, export only"
+   },
+   "pdf-sign-forms": {
+    "v": "no",
+    "note": "Page arranging only",
+    "source": "https://github.com/pdfarranger/pdfarranger/wiki/User-Manual",
+    "quote": "Supported features list covers page reorder, rotate, crop, merge, split, export only"
+   },
+   "pdf-ocr": {
+    "v": "no",
+    "note": "Page arranging only",
+    "source": "https://github.com/pdfarranger/pdfarranger/wiki/User-Manual",
+    "quote": "Supported features list covers page reorder, rotate, crop, merge, split, export only"
+   },
+   "pdf-annotate": {
+    "v": "no",
+    "note": "Page arranging only",
+    "source": "https://github.com/pdfarranger/pdfarranger/wiki/User-Manual",
+    "quote": "Supported features list covers page reorder, rotate, crop, merge, split, export only"
+   },
+   "pdf-convert-office": {
+    "v": "no",
+    "note": "Page arranging only",
+    "source": "https://github.com/pdfarranger/pdfarranger/wiki/User-Manual",
+    "quote": "Supported features list covers page reorder, rotate, crop, merge, split, export only"
+   },
+   "pdf-merge-split": {
+    "v": "yes",
+    "note": "Merge, split, reorder, rotate, crop",
+    "source": "https://github.com/pdfarranger/pdfarranger",
+    "quote": "helps the user to merge or split PDF documents and rotate, crop and rearrange their pages"
+   },
+   "no-server-needed": {
+    "v": "yes",
+    "note": "Desktop app",
+    "source": "site data",
+    "quote": null
+   }
+  },
+  "libreoffice-impress": {
+   "no-server-needed": {
+    "v": "yes",
+    "note": "Desktop app",
+    "source": "site data",
+    "quote": null
+   }
+  },
+  "plane": {
+   "kanban-boards": {
+    "v": "yes",
+    "note": null,
+    "source": "https://docs.plane.so/core-concepts/issues/layouts",
+    "quote": "The Board layout resembles a Kanban board, with work items represented as cards in vertical columns"
+   },
+   "gantt-timeline": {
+    "v": "yes",
+    "note": null,
+    "source": "https://docs.plane.so/core-concepts/issues/layouts",
+    "quote": "Timeline layout, similar to a Gantt chart ... Dependencies: Link tasks to define order"
+   },
+   "tasks-import": {
+    "v": "yes",
+    "note": "Jira, Linear, Asana, ClickUp, Monday",
+    "source": "https://plane.so/",
+    "quote": "import from Jira, Linear, Asana, ClickUp or Monday"
+   },
+   "phone-app": {
+    "v": "yes",
+    "note": null,
+    "source": "https://plane.so/",
+    "quote": "Download for iOS Download for Android"
+   },
+   "no-server-needed": {
+    "v": "yes",
+    "note": "Free Plane Cloud account",
+    "source": "https://github.com/makeplane/plane",
+    "quote": "Sign up for a free account on Plane Cloud"
+   }
+  },
+  "monomap": {
+   "kanban-boards": {
+    "v": "yes",
+    "note": null,
+    "source": "https://github.com/tehnika-mk/monomap",
+    "quote": "Kanban boards \u2014 drag-and-drop cards and columns, labels, due dates"
+   },
+   "gantt-timeline": {
+    "v": "no",
+    "note": "Boards and mind maps only",
+    "source": "https://github.com/tehnika-mk/monomap",
+    "quote": "Feature list: mind map, kanban, due dates; no timeline view"
+   },
+   "recurring-reminders": {
+    "v": "no",
+    "note": "Due dates only; no repeats or reminders",
+    "source": "https://github.com/tehnika-mk/monomap",
+    "quote": "labels, due dates, and sub-task checklists"
+   },
+   "tasks-import": {
+    "v": "no",
+    "note": "Imports only its own files, Markdown and text",
+    "source": "https://github.com/tehnika-mk/monomap",
+    "quote": "import .md / .txt / profiles"
+   },
+   "phone-app": {
+    "v": "no",
+    "note": "Web app only",
+    "source": "site data",
+    "quote": null
+   },
+   "no-server-needed": {
+    "v": "yes",
+    "note": "Runs in your browser",
+    "source": "https://github.com/tehnika-mk/monomap",
+    "quote": "MonoMap runs entirely in your browser"
+   }
+  },
+  "borgbackup": {
+   "point-and-click": {
+    "v": "no",
+    "note": null,
+    "source": "https://github.com/borgbackup/borg#readme",
+    "quote": "$ borg repo-create --encryption=aes256-ocb --key-location=repokey"
+   },
+   "cloud-destinations": {
+    "v": "yes",
+    "note": null,
+    "source": "https://github.com/borgbackup/borg#readme",
+    "quote": "s3:// / b2:// ... rclone: - lots of protocols / providers supported by rclone"
+   },
+   "e2e-encrypted": {
+    "v": "partly",
+    "note": "Encryption is optional; set when creating the repository",
+    "source": "https://github.com/borgbackup/borg#readme",
+    "quote": "Optionally, it supports compression and authenticated encryption."
+   },
+   "incremental-backup": {
+    "v": "yes",
+    "note": null,
+    "source": "https://github.com/borgbackup/borg#readme",
+    "quote": "The data deduplication technique used makes Borg suitable for daily backups since only changes are stored."
+   },
+   "scheduled-backup": {
+    "v": "partly",
+    "note": "Needs your system's scheduler (cron etc.); none built in",
+    "source": "https://borgbackup.readthedocs.io/en/stable/faq.html",
+    "quote": "running a backup script as a cron job might not work"
+   }
+  },
+  "nextcloud-calendar": {
+   "phone-app": {
+    "v": "no",
+    "note": "No phone app listed for this app on the site",
+    "source": "site data",
+    "quote": null
+   },
+   "syncs-devices": {
+    "v": "yes",
+    "note": null,
+    "source": "https://github.com/nextcloud/calendar#readme",
+    "quote": "Easily sync events from various devices with your Nextcloud"
+   },
+   "google-outlook-sync": {
+    "v": "partly",
+    "note": "Outside calendars are read-only subscriptions; Outlook not mentioned",
+    "source": "https://docs.nextcloud.com/server/latest/user_manual/en/groupware/calendar.html",
+    "quote": "+ New subscription from link (read-only)"
+   },
+   "meeting-invites": {
+    "v": "yes",
+    "note": null,
+    "source": "https://docs.nextcloud.com/server/latest/user_manual/en/groupware/calendar.html",
+    "quote": "Attendees receive an email invitation and can confirm or cancel their participation"
+   },
+   "no-server-needed": {
+    "v": "no",
+    "note": "Needs a Nextcloud server",
+    "source": "site data",
+    "quote": null
+   },
+   "shared-calendars": {
+    "v": "yes",
+    "note": null,
+    "source": "https://docs.nextcloud.com/server/latest/user_manual/en/groupware/calendar.html",
+    "quote": "Calendars may be shared with write access or read-only."
+   }
+  },
+  "owncloud": {
+   "no-server-needed": {
+    "v": "no",
+    "note": "Someone has to run the server",
+    "source": "site data",
+    "quote": null
+   },
+   "phone-app": {
+    "v": "yes",
+    "note": null,
+    "source": "site data",
+    "quote": null
+   },
+   "share-links": {
+    "v": "yes",
+    "note": null,
+    "source": "https://owncloud.com/features/",
+    "quote": "Public Link Sharing ... protected by passwords and expiry dates"
+   },
+   "office-in-browser": {
+    "v": "partly",
+    "note": "Through Collabora or OnlyOffice add-ons",
+    "source": "https://owncloud.com/features/",
+    "quote": "OnlyOffice Integration ... collaboratively edit office files directly from the ownCloud frontend"
+   }
+  },
+  "etherpad": {
+   "live-collab": {
+    "v": "yes",
+    "note": null,
+    "source": "https://etherpad.org",
+    "quote": "Real-time collaborative editing"
+   },
+   "comments-suggestions": {
+    "v": "partly",
+    "note": "Comments only, through a plugin",
+    "source": "https://github.com/ether/etherpad#readme",
+    "quote": "ep_comments_page"
+   },
+   "phone-app": {
+    "v": "yes",
+    "note": "Desktop & Mobile App project",
+    "source": "https://etherpad.org",
+    "quote": "as a native app on Windows, macOS, Linux, Android and iOS"
+   },
+   "word-files": {
+    "v": "partly",
+    "note": "DOCX import/export works; pads hold basic formatting only",
+    "source": "https://github.com/ether/etherpad/blob/develop/doc/docker.md",
+    "quote": "DOCX export, PDF export, and DOCX import work out of the box"
+   }
+  },
+  "psitransfer": {
+   "no-server-needed": {
+    "v": "no",
+    "note": "Needs a server",
+    "source": "site data",
+    "quote": null
+   },
+   "no-account-needed": {
+    "v": "yes",
+    "note": null,
+    "source": "https://github.com/psi-4ward/psitransfer#readme",
+    "quote": "No accounts, no logins"
+   },
+   "expiring-links": {
+    "v": "yes",
+    "note": null,
+    "source": "https://github.com/psi-4ward/psitransfer#readme",
+    "quote": "Set an expire-time for your upload bucket / One-time downloads"
+   },
+   "e2e-encrypted": {
+    "v": "no",
+    "note": "Only the download list is password-protected; server holds files",
+    "source": "https://github.com/psi-4ward/psitransfer#readme",
+    "quote": "Password protected download list (AES)"
+   }
+  },
+  "linkwarden": {
+   "public-discovery": {
+    "v": "partly",
+    "note": "Public sharing links only, no public feed",
+    "source": "https://github.com/linkwarden/linkwarden#readme",
+    "quote": "Share your collected links and preserved formats with the world"
+   },
+   "share-with-others": {
+    "v": "yes",
+    "note": null,
+    "source": "https://github.com/linkwarden/linkwarden#readme",
+    "quote": "Collaborate on gathering links in a collection"
+   },
+   "phone-app": {
+    "v": "yes",
+    "note": null,
+    "source": "https://github.com/linkwarden/linkwarden#readme",
+    "quote": "Native iOS and android mobile apps"
+   },
+   "no-server-needed": {
+    "v": "partly",
+    "note": "Paid hosted version available",
+    "source": "https://github.com/linkwarden/linkwarden#readme",
+    "quote": "Our official Cloud offering provides the simplest way to begin using Linkwarden"
+   },
+   "browser-extension": {
+    "v": "yes",
+    "note": null,
+    "source": "https://github.com/linkwarden/browser-extension#readme",
+    "quote": "You can get the browser extension from both the Chrome Web Store and Firefox Add-ons"
+   },
+   "picture-boards": {
+    "v": "partly",
+    "note": "Saved pages show screenshots; no free-form boards",
+    "source": "https://github.com/linkwarden/linkwarden#readme",
+    "quote": "Auto capture a screenshot, PDF, and single html file of each webpage"
+   }
+  },
+  "logseq": {
+   "phone-app": {
+    "v": "yes",
+    "note": null,
+    "source": "site data",
+    "quote": null
+   },
+   "syncs-devices": {
+    "v": "partly",
+    "note": "Built-in sync is a paid beta; plain files work with other sync tools",
+    "source": "https://github.com/logseq/docs/blob/master/pages/Logseq%20Sync.md",
+    "quote": "Paid feature that provides encrypted synchronization of graphs between devices."
+   },
+   "e2e-encrypted": {
+    "v": "partly",
+    "note": "Only in the paid Sync service; local notes are not encrypted",
+    "source": "https://github.com/logseq/docs/blob/master/pages/Logseq%20Sync.md",
+    "quote": "Each graph is encrypted with a password. The contents of the file as well as its name are all encrypted."
+   },
+   "plain-files": {
+    "v": "yes",
+    "note": null,
+    "source": "https://github.com/logseq/docs/blob/master/pages/How%20to%20sync%20your%20Logseq%20graph%20across%20devices.md",
+    "quote": "Logseq saves all of your notes and settings in plain text files (in Markdown format)"
+   },
+   "live-collab": {
+    "v": "partly",
+    "note": "Real-time collaboration is in early testing in the new version",
+    "source": "https://github.com/logseq/logseq#readme",
+    "quote": "the new mobile app and RTC is in alpha"
+   },
+   "notion-databases": {
+    "v": "partly",
+    "note": "Simple tables and queries; full databases only in the new beta version",
+    "source": "https://github.com/logseq/docs/blob/master/pages/Tables.md",
+    "quote": "supports multi-line markdown tables and Query table"
+   }
+  },
+  "folio-wiki": {
+   "live-collab": {
+    "v": "yes",
+    "note": null,
+    "source": "https://github.com/evergreen-it-dev/folio#readme",
+    "quote": "Real-time editing, a page tree, search, access rights, history, sharing"
+   },
+   "works-offline": {
+    "v": "yes",
+    "note": null,
+    "source": "https://github.com/evergreen-it-dev/folio#readme",
+    "quote": "it keeps working offline"
+   },
+   "plain-files": {
+    "v": "yes",
+    "note": null,
+    "source": "https://github.com/evergreen-it-dev/folio#readme",
+    "quote": "Every page is a plain file in a Git repository you"
+   },
+   "phone-app": {
+    "v": "no",
+    "note": "No phone app listed",
+    "source": "site data",
+    "quote": null
+   },
+   "e2e-encrypted": {
+    "v": "no",
+    "note": null,
+    "source": "https://github.com/evergreen-it-dev/folio/blob/main/docs/LIMITATIONS.md",
+    "quote": "No end-to-end encryption of content"
+   },
+   "notion-databases": {
+    "v": "partly",
+    "note": "Tables with views and filters; board view not supported",
+    "source": "https://github.com/evergreen-it-dev/folio#readme",
+    "quote": "Views as tabs, each with its own columns, order, widths, multi-column sort and and/or filters"
+   },
+   "no-server-needed": {
+    "v": "no",
+    "note": "You host it; only a shared demo is offered",
+    "source": "https://github.com/evergreen-it-dev/folio#readme",
+    "quote": "docker compose up -d"
+   }
+  },
+  "nextcloud-notes": {
+   "phone-app": {
+    "v": "yes",
+    "note": null,
+    "source": "https://github.com/nextcloud/notes#readme",
+    "quote": "Android ... iOS"
+   },
+   "syncs-devices": {
+    "v": "yes",
+    "note": null,
+    "source": "https://github.com/nextcloud/notes#readme",
+    "quote": "Notes are saved as files in your Nextcloud, so you can view and edit them with every Nextcloud client"
+   },
+   "plain-files": {
+    "v": "yes",
+    "note": null,
+    "source": "https://github.com/nextcloud/notes#readme",
+    "quote": "Notes are saved as files in your Nextcloud"
+   },
+   "notion-databases": {
+    "v": "no",
+    "note": null,
+    "source": "https://github.com/nextcloud/notes#readme",
+    "quote": "distraction free notes taking app ... supports formatting using Markdown syntax"
+   }
+  },
+  "offpdf": {
+   "pdf-edit-text": {
+    "v": "yes",
+    "note": null,
+    "source": "https://github.com/McanKul/offpdf#readme",
+    "quote": "Change a line of existing text in the document's own font when OffPDF can verify the change"
+   },
+   "pdf-sign-forms": {
+    "v": "yes",
+    "note": null,
+    "source": "https://github.com/McanKul/offpdf#readme",
+    "quote": "OffPDF can fill existing AcroForm text fields"
+   },
+   "pdf-merge-split": {
+    "v": "yes",
+    "note": null,
+    "source": "https://github.com/McanKul/offpdf#readme",
+    "quote": "Merge PDFs / Split PDF / Organize pages"
+   },
+   "pdf-ocr": {
+    "v": "yes",
+    "note": null,
+    "source": "https://github.com/McanKul/offpdf#readme",
+    "quote": "OCR (make searchable)"
+   },
+   "pdf-annotate": {
+    "v": "yes",
+    "note": null,
+    "source": "https://github.com/McanKul/offpdf#readme",
+    "quote": "PDF notes, highlights, underlines, strikeouts, and ink annotations"
+   },
+   "no-server-needed": {
+    "v": "yes",
+    "note": null,
+    "source": "site data",
+    "quote": null
+   }
+  },
+  "slidev": {
+   "presenter-view": {
+    "v": "yes",
+    "note": null,
+    "source": "https://github.com/slidevjs/slidev/blob/main/docs/guide/ui.md",
+    "quote": "The presenter view offers three different layouts"
+   },
+   "no-server-needed": {
+    "v": "partly",
+    "note": "Online try-out exists; real use needs Node.js install",
+    "source": "https://github.com/slidevjs/slidev#readme",
+    "quote": "Try it Online"
+   },
+   "slide-animations": {
+    "v": "yes",
+    "note": null,
+    "source": "https://github.com/slidevjs/slidev/blob/main/docs/guide/animations.md",
+    "quote": "Slidev provides a variety of ways to animate your slides"
+   },
+   "live-collab": {
+    "v": "no",
+    "note": "Slides are a text file edited in your own editor",
+    "source": "https://github.com/slidevjs/slidev#readme",
+    "quote": "Markdown-based - focus on content and use your favorite editor"
+   }
+  },
+  "openproject": {
+   "kanban-boards": {
+    "v": "yes",
+    "note": null,
+    "source": "https://github.com/opf/openproject#readme",
+    "quote": "Agile boards, Kanban, Scrum, SAFe"
+   },
+   "gantt-timeline": {
+    "v": "yes",
+    "note": null,
+    "source": "https://www.openproject.org/docs/user-guide/gantt-chart/",
+    "quote": "A blue line connects two work packages; they are predecessor and follower."
+   },
+   "phone-app": {
+    "v": "yes",
+    "note": null,
+    "source": "https://www.openproject.org/collaboration-software-features/",
+    "quote": "there is a dedicated mobile app for iOS and Android"
+   },
+   "no-server-needed": {
+    "v": "partly",
+    "note": "Free trial; ongoing cloud use is paid",
+    "source": "https://github.com/opf/openproject#readme",
+    "quote": "Start a 14-days free trial of OpenProject"
+   },
+   "tasks-import": {
+    "v": "partly",
+    "note": "Jira migration tool listed; other tools via CSV file",
+    "source": "https://www.openproject.org/docs/user-guide/",
+    "quote": "Jira Migrator ... How to create many work packages at once from a CSV file"
+   }
+  },
+  "orbit": {
+   "kanban-boards": {
+    "v": "yes",
+    "note": null,
+    "source": "https://github.com/Noveum/orbit#readme",
+    "quote": "fast list or keyboard-accessible drag-and-drop board"
+   },
+   "phone-app": {
+    "v": "no",
+    "note": "No phone app; mobile layout is a planned item",
+    "source": "https://github.com/Noveum/orbit/blob/main/docs/roadmap.md",
+    "quote": "Orbit is built for a keyboard and a large screen, and it shows on a phone."
+   },
+   "no-server-needed": {
+    "v": "yes",
+    "note": "Free hosted instance",
+    "source": "https://github.com/Noveum/orbit#readme",
+    "quote": "Noveum AI, who pay for the hosted instance"
+   }
+  },
+  "duplicati": {
+   "point-and-click": {
+    "v": "yes",
+    "note": null,
+    "source": "https://github.com/duplicati/duplicati",
+    "quote": "Available as a user-friendly application or a command-line tool."
+   },
+   "cloud-destinations": {
+    "v": "yes",
+    "note": null,
+    "source": "https://github.com/duplicati/duplicati",
+    "quote": "Amazon S3, ... Backblaze (B2), Box, Dropbox, FTP, Google Cloud and Drive, MEGA, Microsoft Azure and OneDrive ... and more!"
+   },
+   "incremental-backup": {
+    "v": "yes",
+    "note": null,
+    "source": "https://github.com/duplicati/duplicati",
+    "quote": "Only initial backup is with full contents, all additional backups are differential"
+   },
+   "scheduled-backup": {
+    "v": "yes",
+    "note": null,
+    "source": "https://github.com/duplicati/duplicati",
+    "quote": "Built-in scheduler ensures backups stay up-to-date automatically."
+   },
+   "whole-system-restore": {
+    "v": "partly",
+    "note": "Full-disk backup restores a bootable disk; admin rights needed",
+    "source": "https://github.com/duplicati/documentation/blob/main/detailed-descriptions/automation-and-integration/full-disk-backup-and-restore.md",
+    "quote": "restore the backup onto a blank replacement disk and end up with a bootable system"
+   },
+   "e2e-encrypted": {
+    "v": "partly",
+    "note": "Optional: leave the passphrase empty for no encryption",
+    "source": "https://github.com/duplicati/documentation/blob/main/getting-started/restoring-files.md",
+    "quote": "If the backup is not encrypted, leave the field empty."
+   }
+  },
+  "fossify-calendar": {
+   "phone-app": {
+    "v": "partly",
+    "note": "Android only",
+    "source": "site data",
+    "quote": null
+   },
+   "syncs-devices": {
+    "v": "partly",
+    "note": "Syncs through calendar accounts; no sync service of its own",
+    "source": "https://github.com/FossifyOrg/Calendar",
+    "quote": "Sync effortlessly with Google Calendar, Outlook, Nextcloud, Exchange, and more."
+   },
+   "google-outlook-sync": {
+    "v": "yes",
+    "note": null,
+    "source": "https://github.com/FossifyOrg/Calendar",
+    "quote": "Sync effortlessly with Google Calendar, Outlook, Nextcloud, Exchange, and more."
+   },
+   "no-server-needed": {
+    "v": "yes",
+    "note": null,
+    "source": "site data",
+    "quote": null
+   }
+  },
+  "apitable": {
+   "no-server-needed": {
+    "v": "yes",
+    "note": "Free hosted version at aitable.ai",
+    "source": "https://github.com/apitable/apitable",
+    "quote": "If you just want to try out APITable, use our cloud-hosted AI version at aitable.ai."
+   },
+   "db-views": {
+    "v": "yes",
+    "note": null,
+    "source": "https://github.com/apitable/apitable",
+    "quote": "7 View Types: Grid View (Datasheet) / Gallery View / Mindmap View / Kanban View / Full-Feature Gantt View / Calendar View"
+   },
+   "db-automations": {
+    "v": "yes",
+    "note": null,
+    "source": "https://github.com/apitable/apitable",
+    "quote": "Robot Automation and customization available."
+   },
+   "live-collab": {
+    "v": "yes",
+    "note": null,
+    "source": "https://github.com/apitable/apitable",
+    "quote": "Realtime collaboration allows multiple users to edit together in real time"
+   },
+   "integrations-api": {
+    "v": "yes",
+    "note": null,
+    "source": "https://github.com/apitable/apitable",
+    "quote": "Full-stack API access, from Data to Metadata. Integration with n8n.io / Zapier / Appsmith"
+   }
+  },
+  "apache-openoffice": {
+   "works-offline": {
+    "v": "yes",
+    "note": "Desktop suite you install",
+    "source": "https://www.openoffice.org/product/index.html",
+    "quote": null
+   },
+   "no-server-needed": {
+    "v": "yes",
+    "note": null,
+    "source": "site data",
+    "quote": null
+   },
+   "phone-app": {
+    "v": "no",
+    "note": "Desktop only",
+    "source": "site data",
+    "quote": null
+   },
+   "presenter-view": {
+    "v": "yes",
+    "note": null,
+    "source": "https://www.openoffice.org/product/impress.html",
+    "quote": "Presenter Screen, which lets you see your next slides as well as the time and the speaker notes"
+   },
+   "slide-animations": {
+    "v": "yes",
+    "note": null,
+    "source": "https://www.openoffice.org/product/impress.html",
+    "quote": "special effects, animation ... Slide show Animation and Effects"
+   },
+   "slide-templates": {
+    "v": "partly",
+    "note": "Master pages built in; extra templates are downloaded",
+    "source": "https://www.openoffice.org/product/impress.html",
+    "quote": "Master Pages simplify the task ... downloading templates from our Templates repository"
+   },
+   "pivot-tables": {
+    "v": "yes",
+    "note": "Called DataPilot",
+    "source": "https://www.openoffice.org/product/calc.html",
+    "quote": "DataPilot ... cross-tabulate, summarize, and convert it into meaningful information"
+   },
+   "live-collab": {
+    "v": "partly",
+    "note": "Shared spreadsheets only, taking turns",
+    "source": "https://www.openoffice.org/product/calc.html",
+    "quote": "By sharing a spreadsheet, other users can easily add their data to the spreadsheet."
+   },
+   "comments-suggestions": {
+    "v": "partly",
+    "note": "Side comments documented; no suggestion mode found",
+    "source": "https://www.openoffice.org/product/writer.html",
+    "quote": "notes and comments on the side of the document ... notes from different users are displayed in different colors"
+   }
+  },
+  "limesurvey": {
+   "no-server-needed": {
+    "v": "partly",
+    "note": "Hosted version is paid; free version needs your own server",
+    "source": "https://www.limesurvey.org/pricing",
+    "quote": "Basic $39 / month billed monthly"
+   },
+   "conditional-logic": {
+    "v": "yes",
+    "note": null,
+    "source": "https://github.com/LimeSurvey/LimeSurvey",
+    "quote": "Skip logic and question branching"
+   },
+   "file-upload-answers": {
+    "v": "yes",
+    "note": null,
+    "source": "https://www.limesurvey.org/pricing",
+    "quote": "Question types: Data-upload; 250 MB upload storage"
+   },
+   "form-embed": {
+    "v": "yes",
+    "note": null,
+    "source": "https://www.limesurvey.org/",
+    "quote": "Embed surveys seamlessly on your website"
+   },
+   "integrations-api": {
+    "v": "yes",
+    "note": null,
+    "source": "https://github.com/LimeSurvey/LimeSurvey",
+    "quote": "RemoteControl API (via XML-RPC / JSON-RPC) ... Integrations (SAML, LDAP, ... REST API ...)"
+   },
+   "results-charts": {
+    "v": "yes",
+    "note": null,
+    "source": "https://www.limesurvey.org/manual/Statistics",
+    "quote": "charts are limited to pie charts (single choice questions) and bar charts (multiple choice question types)"
+   }
+  },
+  "organic-maps": {
+   "works-offline": {
+    "v": "yes",
+    "note": null,
+    "source": "https://organicmaps.app/",
+    "quote": "supports 100% of features without an active Internet connection"
+   },
+   "turn-by-turn": {
+    "v": "yes",
+    "note": null,
+    "source": "https://organicmaps.app/",
+    "quote": "Turn-by-turn walking, cycling, and car navigation with voice guidance"
+   },
+   "live-traffic": {
+    "v": "no",
+    "note": "Offline app, no traffic data",
+    "source": "site data",
+    "quote": "Offline maps; no live traffic"
+   },
+   "public-transit": {
+    "v": "partly",
+    "note": "Shows metro and transport lines on the map",
+    "source": "https://organicmaps.app/",
+    "quote": "Metro/subway maps"
+   },
+   "car-integration": {
+    "v": "yes",
+    "note": null,
+    "source": "https://organicmaps.app/",
+    "quote": "CarPlay/Android Auto support"
+   },
+   "phone-app": {
+    "v": "yes",
+    "note": null,
+    "source": "site data",
+    "quote": null
+   }
+  },
+  "trilium-notes": {
+   "syncs-devices": {
+    "v": "yes",
+    "note": "Sync server or desktop-to-desktop",
+    "source": "https://docs.triliumnotes.org/user-guide/setup/synchronization",
+    "quote": "Desktop-to-desktop sync ... without requiring a Server Installation"
+   },
+   "phone-app": {
+    "v": "no",
+    "note": "Mobile web page only, no native app",
+    "source": "site data",
+    "quote": "Touch optimized mobile frontend for smartphones and tablets"
+   },
+   "works-offline": {
+    "v": "yes",
+    "note": "Desktop app",
+    "source": "site data",
+    "quote": null
+   },
+   "e2e-encrypted": {
+    "v": "partly",
+    "note": "Optional per note; titles and structure of notes stay readable",
+    "source": "https://docs.triliumnotes.org/user-guide/concepts/notes/protected-notes",
+    "quote": "By default, notes are unprotected. ... Not encrypted: Note structure"
+   },
+   "notes-import": {
+    "v": "yes",
+    "note": null,
+    "source": "https://docs.triliumnotes.org/user-guide/concepts/import-export",
+    "quote": "Importing data from other applications: Microsoft OneNote, Notion, Google Keep, Evernote, Anytype, Obsidian"
+   },
+   "notion-databases": {
+    "v": "yes",
+    "note": null,
+    "source": "https://docs.triliumnotes.org/user-guide/collections",
+    "quote": "Calendar ... Table displays each note as a row ... Kanban Board displays notes in columns"
+   },
+   "live-collab": {
+    "v": "no",
+    "note": "Edits on separate copies merge by keeping the newer change",
+    "source": "https://docs.triliumnotes.org/user-guide/setup/synchronization",
+    "quote": "If you edit the same note on multiple instances before synchronization, Trilium resolves conflicts by retaining the newer change"
+   }
+  },
+  "hedgedoc": {
+   "phone-app": {
+    "v": "no",
+    "note": "Web page only",
+    "source": "site data",
+    "quote": null
+   },
+   "works-offline": {
+    "v": "no",
+    "note": "Runs in a browser against your server",
+    "source": "https://hedgedoc.org/",
+    "quote": "web-based, self-hosted, collaborative markdown editor"
+   },
+   "notion-databases": {
+    "v": "no",
+    "note": "Shared Markdown pages only",
+    "source": "site data",
+    "quote": "Shared Markdown pages; no databases or boards"
+   },
+   "live-collab": {
+    "v": "yes",
+    "note": null,
+    "source": "https://hedgedoc.org/",
+    "quote": "Real-time collaboration: Collaborate in real-time with friends, family and colleagues."
+   }
+  },
+  "quillpad": {
+   "syncs-devices": {
+    "v": "partly",
+    "note": "Nextcloud sync is experimental; folder sync via other tool",
+    "source": "https://github.com/quillpad/quillpad",
+    "quote": "Sync with Nextcloud (experimental...)"
+   },
+   "phone-app": {
+    "v": "partly",
+    "note": "Android only",
+    "source": "site data",
+    "quote": null
+   },
+   "works-offline": {
+    "v": "yes",
+    "note": "Notes stay on the phone",
+    "source": "https://github.com/quillpad/quillpad",
+    "quote": "never ... upload your notes anywhere without you knowing"
+   },
+   "notes-import": {
+    "v": "partly",
+    "note": "Only via separate converter scripts",
+    "source": "https://github.com/quillpad/quillpad",
+    "quote": "Notes from Google Keep can be converted to Quillpad compatible backups using gk2qp"
+   },
+   "plain-files": {
+    "v": "partly",
+    "note": "Optional sync saves notes as Markdown files",
+    "source": "https://github.com/quillpad/quillpad",
+    "quote": "Sync notes to the file system (store notes as markdown files in a local or cloud folder)"
+   },
+   "e2e-encrypted": {
+    "v": "no",
+    "note": "Encryption requests still open",
+    "source": "https://github.com/quillpad/quillpad/issues/325",
+    "quote": "Encryption support (open issue)"
+   }
+  },
+  "zotero": {
+   "browser-extension": {
+    "v": "yes",
+    "note": null,
+    "source": "https://www.zotero.org/download/",
+    "quote": "Chrome Connector, Firefox Connector, Edge Connector"
+   },
+   "word-plugin": {
+    "v": "yes",
+    "note": null,
+    "source": "https://www.zotero.org/support/word_processor_integration",
+    "quote": "plugins, available for Microsoft Word, LibreOffice, and Google Docs"
+   },
+   "pdf-annotate": {
+    "v": "yes",
+    "note": null,
+    "source": "https://www.zotero.org/support/pdf_reader",
+    "quote": "Highlights and Underlines ... Creating Annotations"
+   },
+   "syncs-devices": {
+    "v": "yes",
+    "note": null,
+    "source": "https://www.zotero.org/",
+    "quote": "Zotero can optionally synchronize your data across devices"
+   },
+   "group-libraries": {
+    "v": "yes",
+    "note": null,
+    "source": "https://www.zotero.org/",
+    "quote": "You can share a Zotero library with as many people you like, at no cost."
+   }
+  },
+  "reveal-js": {
+   "presenter-view": {
+    "v": "yes",
+    "note": null,
+    "source": "https://revealjs.com/speaker-view/",
+    "quote": "notes window ... preview of the next upcoming slide ... A speaker timer starts as soon as the speaker view is opened."
+   },
+   "slide-templates": {
+    "v": "partly",
+    "note": "A few color themes, no slide layouts",
+    "source": "https://revealjs.com/themes/",
+    "quote": "The framework comes with a few different themes included."
+   },
+   "slide-animations": {
+    "v": "yes",
+    "note": null,
+    "source": "https://revealjs.com/",
+    "quote": "Auto-Animate ... Fragments ... Transition Styles"
+   },
+   "pptx-files": {
+    "v": "no",
+    "note": "No PowerPoint import or export; requests still open",
+    "source": "https://github.com/hakimel/reveal.js/issues/3914",
+    "quote": "Editable PPTX from exported reveal.js slides/screenshots (open issue)"
+   }
+  },
+  "vikunja": {
+   "kanban-boards": {
+    "v": "yes",
+    "note": null,
+    "source": "https://vikunja.io/features/",
+    "quote": "Vikunja lets you organize and prioritize your tasks in a kanban board."
+   },
+   "recurring-reminders": {
+    "v": "yes",
+    "note": null,
+    "source": "https://vikunja.io/features/",
+    "quote": "remind you of tasks when they're due ... set tasks to repeat in a time interval"
+   },
+   "tasks-import": {
+    "v": "yes",
+    "note": null,
+    "source": "https://vikunja.io/features/",
+    "quote": "Import your tasks from Todoist, Trello or Microsoft To-Do"
+   },
+   "phone-app": {
+    "v": "partly",
+    "note": "Android only per site data",
+    "source": "site data",
+    "quote": null
+   },
+   "no-server-needed": {
+    "v": "partly",
+    "note": "Hosted Vikunja Cloud is paid (14-day trial)",
+    "source": "https://vikunja.io/features/",
+    "quote": "consider buying a subscription ... try it risk-free with a 14-day trial"
+   }
+  },
+  "redmine": {
+   "gantt-timeline": {
+    "v": "yes",
+    "note": null,
+    "source": "https://www.redmine.org/projects/redmine/wiki/Features",
+    "quote": "Gantt chart and calendar: Automatic gantt and calendar based on issues start and due dates"
+   },
+   "phone-app": {
+    "v": "no",
+    "note": "No app listed",
+    "source": "site data",
+    "quote": null
+   },
+   "no-server-needed": {
+    "v": "no",
+    "note": "Someone has to run a server",
+    "source": "site data",
+    "quote": null
+   }
+  },
+  "cal-com": {
+   "no-server-needed": {
+    "v": "no",
+    "note": "No hosted version; you run it yourself",
+    "source": "https://cal.diy",
+    "quote": "There is no hosted/managed version. You run it on your own infrastructure."
+   },
+   "calendar-connect": {
+    "v": "yes",
+    "note": null,
+    "source": "https://cal.diy",
+    "quote": "Google Calendar, Outlook / Office 365 Calendar, Apple Calendar, CalDAV"
+   },
+   "video-link-auto": {
+    "v": "yes",
+    "note": null,
+    "source": "https://cal.diy",
+    "quote": "Cal Video (Daily.co), Zoom, Google Meet, Microsoft Teams, Webex, Jitsi"
+   },
+   "team-booking": {
+    "v": "no",
+    "note": "Teams and round-robin removed from this edition",
+    "source": "https://cal.diy",
+    "quote": "Teams \u274c Team Event Types (Round-Robin) \u274c Team Event Types (Collective) \u274c"
+   },
+   "booking-payments": {
+    "v": "yes",
+    "note": null,
+    "source": "https://cal.diy",
+    "quote": "Paid Events (Stripe/PayPal) \u2705"
+   }
+  },
+  "etar-calendar": {
+   "phone-app": {
+    "v": "partly",
+    "note": "Android only",
+    "source": "site data",
+    "quote": null
+   },
+   "syncs-devices": {
+    "v": "partly",
+    "note": "Needs a separate sync app such as DAVx5",
+    "source": "https://github.com/Etar-Group/Etar-Calendar",
+    "quote": "To sync such a calendar to some server you need yet another app, e. g. DAVx5."
+   },
+   "google-outlook-sync": {
+    "v": "partly",
+    "note": "Shows calendars already synced to Android; no own account login",
+    "source": "https://github.com/Etar-Group/Etar-Calendar",
+    "quote": "Uses Android calendar storage to show all synchronized calendars."
+   },
+   "shared-calendars": {
+    "v": "partly",
+    "note": "Sharing by ICS file only",
+    "source": "https://github.com/Etar-Group/Etar-Calendar",
+    "quote": "Support sharing calendars via ICS and the ability to import/export from SD card."
+   },
+   "no-server-needed": {
+    "v": "yes",
+    "note": null,
+    "source": "site data",
+    "quote": null
+   }
+  },
+  "baserow": {
+   "no-server-needed": {
+    "v": "yes",
+    "note": "Free hosted cloud plan exists",
+    "source": "https://baserow.io/",
+    "quote": "Baserow cloud and self-hosted deployments"
+   },
+   "db-views": {
+    "v": "yes",
+    "note": null,
+    "source": "https://baserow.io/user-docs",
+    "quote": "Grid, Gallery, Kanban, Calendar, Form and Timeline views (docs list a guide for each)"
+   },
+   "airtable-import": {
+    "v": "yes",
+    "note": null,
+    "source": "https://baserow.io/user-docs/import-airtable-to-baserow",
+    "quote": "Import your Airtable base into Baserow"
+   },
+   "db-automations": {
+    "v": "yes",
+    "note": null,
+    "source": "https://baserow.io/user-docs/workflow-automation",
+    "quote": "Baserow workflow publishing turns your drafted logic into active, always-on automation"
+   },
+   "integrations-api": {
+    "v": "yes",
+    "note": null,
+    "source": "https://gitlab.com/baserow/baserow",
+    "quote": "Headless and API first."
+   }
+  },
+  "thunderbird": {
+   "any-email-provider": {
+    "v": "yes",
+    "note": null,
+    "source": "https://www.thunderbird.net/en-US/mobile/",
+    "quote": "Sync with email accounts for home, school, and work. Almost anywhere you receive messages, we will have you covered."
+   },
+   "phone-app": {
+    "v": "partly",
+    "note": "Android only; no iPhone app",
+    "source": "site data",
+    "quote": null
+   },
+   "computer-app": {
+    "v": "yes",
+    "note": null,
+    "source": "site data",
+    "quote": null
+   },
+   "unified-inbox": {
+    "v": "yes",
+    "note": null,
+    "source": "https://www.thunderbird.net/",
+    "quote": "Manage all accounts separately or in a unified inbox."
+   },
+   "e2e-encrypted": {
+    "v": "partly",
+    "note": "OpenPGP is optional",
+    "source": "https://www.thunderbird.net/en-US/mobile/",
+    "quote": "send and receive encrypted emails using the OpenPGP standard"
+   },
+   "email-calendar": {
+    "v": "yes",
+    "note": null,
+    "source": "https://www.thunderbird.net/",
+    "quote": "the powerful email, calendar, and contacts app for Windows, Linux, and macOS"
+   },
+   "no-server-needed": {
+    "v": "yes",
+    "note": null,
+    "source": "site data",
+    "quote": null
+   }
+  },
+  "formbricks": {
+   "no-server-needed": {
+    "v": "yes",
+    "note": "Free hosted cloud plan",
+    "source": "https://github.com/formbricks/formbricks",
+    "quote": "Formbricks has a hosted cloud offering with a generous free plan"
+   },
+   "conditional-logic": {
+    "v": "yes",
+    "note": null,
+    "source": "https://formbricks.com/docs/surveys/general-features/conditional-logic",
+    "quote": "Send different respondents down different paths... skip ahead, require an answer, or update a variable."
+   },
+   "results-charts": {
+    "v": "yes",
+    "note": null,
+    "source": "https://formbricks.com/docs/surveys/analysis/reading-results",
+    "quote": "choice questions show each option with its share, and rating-style questions show the distribution"
+   },
+   "file-upload-answers": {
+    "v": "yes",
+    "note": "Self-hosters must set up file storage",
+    "source": "https://formbricks.com/docs/surveys/question-type/file-upload",
+    "quote": "The File Upload question type allows respondents to upload files"
+   },
+   "form-embed": {
+    "v": "yes",
+    "note": null,
+    "source": "https://formbricks.com/docs/surveys/link-surveys/embed-surveys",
+    "quote": "Paste the copied iframe code into the HTML of your web page"
+   },
+   "integrations-api": {
+    "v": "yes",
+    "note": null,
+    "source": "https://github.com/formbricks/formbricks",
+    "quote": "Integrate Formbricks with Slack, Notion, Zapier, n8n and more (docs also list webhooks and API v1/v2)"
+   }
+  },
+  "comaps": {
+   "works-offline": {
+    "v": "yes",
+    "note": null,
+    "source": "https://www.comaps.app/",
+    "quote": "Navigate with turn-by-turn instructions... No internet needed"
+   },
+   "turn-by-turn": {
+    "v": "yes",
+    "note": null,
+    "source": "https://www.comaps.app/",
+    "quote": "Navigate with turn-by-turn instructions by foot, bike or car, including voice announcements."
+   },
+   "live-traffic": {
+    "v": "no",
+    "note": "Offline maps; no live traffic in site notes",
+    "source": "site data",
+    "quote": null
+   },
+   "phone-app": {
+    "v": "yes",
+    "note": null,
+    "source": "https://codeberg.org/comaps/comaps",
+    "quote": "Cross-platform: Available for Android, iOS, MacOS, and Linux."
+   }
+  },
+  "siyuan": {
+   "syncs-devices": {
+    "v": "partly",
+    "note": "Official sync is a paid plan; other sync needs PRO",
+    "source": "https://b3log.org/siyuan/en/pricing.html",
+    "quote": "Official data sync and backup... Third-party S3 data sync and backup integration (PRO Features)"
+   },
+   "phone-app": {
+    "v": "yes",
+    "note": null,
+    "source": "https://github.com/siyuan-note/siyuan",
+    "quote": "Android/iOS/HarmonyOS App"
+   },
+   "works-offline": {
+    "v": "yes",
+    "note": null,
+    "source": "https://b3log.org/siyuan/en/pricing.html",
+    "quote": "Local storage, completely free"
+   },
+   "notion-databases": {
+    "v": "partly",
+    "note": "Table view only",
+    "source": "https://github.com/siyuan-note/siyuan",
+    "quote": "Database - Table view"
+   },
+   "plain-files": {
+    "v": "partly",
+    "note": "Saved as JSON; exports to standard Markdown",
+    "source": "https://github.com/siyuan-note/siyuan",
+    "quote": "files with the suffix of .sy ... data format is JSON; Export: Standard Markdown with assets"
+   }
+  },
+  "mediawiki": {
+   "live-collab": {
+    "v": "partly",
+    "note": "Two can edit; conflicts are flagged on save",
+    "source": "https://www.mediawiki.org/wiki/Help:Edit_conflict",
+    "quote": "Edit conflicts in MediaWiki happen when two or more users try to edit the same section of a page simultaneously."
+   }
+  },
+  "jabref": {
+   "browser-extension": {
+    "v": "yes",
+    "note": null,
+    "source": "https://github.com/JabRef/jabref",
+    "quote": "official browser extension for Firefox, Chrome"
+   },
+   "word-plugin": {
+    "v": "yes",
+    "note": null,
+    "source": "https://github.com/JabRef/jabref",
+    "quote": "Support for Word and LibreOffice/OpenOffice for inserting and formatting citations"
+   },
+   "syncs-devices": {
+    "v": "partly",
+    "note": "No built-in sync; library file goes via Dropbox",
+    "source": "https://github.com/JabRef/jabref",
+    "quote": "Library is saved as a simple text file, and thus it is easy to share with others via Dropbox"
+   },
+   "group-libraries": {
+    "v": "yes",
+    "note": null,
+    "source": "https://github.com/JabRef/jabref",
+    "quote": "Work in a team: sync the contents of your library via a SQL database"
+   }
+  },
+  "home-assistant": {
+   "device-support": {
+    "v": "yes",
+    "note": null,
+    "source": "https://www.home-assistant.io/green/",
+    "quote": "More than 1,000 built-in integrations support hundreds of thousands of smart devices and online services"
+   },
+   "works-offline": {
+    "v": "yes",
+    "note": null,
+    "source": "https://www.home-assistant.io/green/",
+    "quote": "you can access your smart home even when the Internet is down"
+   },
+   "home-automations": {
+    "v": "yes",
+    "note": null,
+    "source": "https://www.home-assistant.io/docs/automation/editor/",
+    "quote": "The visual editor opens and you can edit the automation."
+   },
+   "voice-assistant": {
+    "v": "yes",
+    "note": null,
+    "source": "https://www.home-assistant.io/voice_control/",
+    "quote": "Assist is the voice assistant built into Home Assistant."
+   },
+   "phone-app": {
+    "v": "yes",
+    "note": "Official iOS and Android companion apps",
+    "source": "https://www.home-assistant.io",
+    "quote": "Companion apps: iOS and Apple devices; Android and Wear OS"
+   },
+   "buy-hardware": {
+    "v": "yes",
+    "note": "Official Home Assistant Green box",
+    "source": "https://www.home-assistant.io/green/",
+    "quote": "Home Assistant Green"
+   }
+  },
+  "wekan": {
+   "kanban-boards": {
+    "v": "yes",
+    "note": null,
+    "source": "https://github.com/wekan/wekan",
+    "quote": "WeKan is a FLOSS collaborative kanban board application"
+   },
+   "gantt-timeline": {
+    "v": "yes",
+    "note": null,
+    "source": "https://github.com/wekan/wekan",
+    "quote": "Gantt, Frappe Gantt, DHTMLX Gantt; Dependencies"
+   },
+   "tasks-import": {
+    "v": "yes",
+    "note": null,
+    "source": "https://github.com/wekan/wekan",
+    "quote": "Add Board / Import: Trello, Jira, Asana ..."
+   },
+   "phone-app": {
+    "v": "partly",
+    "note": "Android only per site data",
+    "source": "site data",
+    "quote": null
+   },
+   "no-server-needed": {
+    "v": "partly",
+    "note": "Hosted option exists; free tier unclear",
+    "source": "https://github.com/wekan/wekan",
+    "quote": "SaaS: Free with App or Paid with Admin Panel"
+   }
+  },
+  "super-productivity": {
+   "kanban-boards": {
+    "v": "yes",
+    "note": null,
+    "source": "https://github.com/super-productivity/super-productivity",
+    "quote": "Sort tasks visually on boards, like the built-in Kanban and Eisenhower Matrix"
+   },
+   "gantt-timeline": {
+    "v": "partly",
+    "note": "Day-by-day schedule timeline; no dependencies",
+    "source": "https://github.com/super-productivity/super-productivity/wiki/4.04-Schedule-View",
+    "quote": "The Schedule view shows a time-based timeline of how your planned tasks unfold over time."
+   },
+   "recurring-reminders": {
+    "v": "yes",
+    "note": null,
+    "source": "https://github.com/super-productivity/super-productivity/wiki/4.13-Repeating-Tasks",
+    "quote": "tasks that recur on a schedule\u2014daily, weekly, monthly, or yearly; Reminder: when to be notified"
+   },
+   "tasks-import": {
+    "v": "yes",
+    "note": null,
+    "source": "https://github.com/super-productivity/super-productivity",
+    "quote": "Integrate with Jira, Trello, GitHub, GitLab ... Auto import tasks assigned to you"
+   },
+   "phone-app": {
+    "v": "yes",
+    "note": "Android and iOS apps",
+    "source": "https://github.com/super-productivity/super-productivity",
+    "quote": "Runs on Linux, macOS, Windows, Android, iOS and in the browser."
+   },
+   "no-server-needed": {
+    "v": "yes",
+    "note": null,
+    "source": "site data",
+    "quote": null
+   }
+  },
+  "tymeslot": {
+   "no-server-needed": {
+    "v": "yes",
+    "note": "Hosted cloud with a free plan",
+    "source": "https://github.com/Tymeslot/tymeslot#readme",
+    "quote": "Managed Cloud | tymeslot.app | Zero setup, free plan included"
+   },
+   "calendar-connect": {
+    "v": "yes",
+    "note": null,
+    "source": "https://github.com/Tymeslot/tymeslot#readme",
+    "quote": "Every connected calendar is checked the moment someone books ... across Google, Outlook, CalDAV and the rest."
+   },
+   "video-link-auto": {
+    "v": "yes",
+    "note": null,
+    "source": "https://github.com/Tymeslot/tymeslot#readme",
+    "quote": "video rooms are created automatically on the provider they choose (Google Meet, Teams, Zoom, Jitsi...)"
+   },
+   "booking-payments": {
+    "v": "yes",
+    "note": "Optional, uses your own Stripe account; paid bookings are a Pro feature in the cloud version",
+    "source": "https://github.com/Tymeslot/tymeslot#readme",
+    "quote": "Charge attendees through Stripe at booking time."
+   }
+  },
+  "nextcloud": {
+   "no-server-needed": {
+    "v": "partly",
+    "note": "Sign up with a hosting provider, usually paid",
+    "source": "https://github.com/nextcloud/server#readme",
+    "quote": "Simply sign up at one of our providers either through our website or through the apps directly."
+   },
+   "phone-app": {
+    "v": "yes",
+    "note": null,
+    "source": "site data",
+    "quote": null
+   },
+   "share-links": {
+    "v": "yes",
+    "note": null,
+    "source": "https://docs.nextcloud.com/server/latest/user_manual/en/files/sharing.html",
+    "quote": "Password protect ... Set expiration date will automatically disable the share"
+   },
+   "files-on-demand": {
+    "v": "partly",
+    "note": "Works on Windows; Linux client lacks it",
+    "source": "https://nextcloud.com/blog/nextcloud-introduces-virtual-drive-in-desktop-client-to-simplify-desktop-integration/",
+    "quote": null
+   },
+   "auto-backup-phone": {
+    "v": "yes",
+    "note": null,
+    "source": "https://nextcloud.com/clients/",
+    "quote": "Auto-upload of any type of data including photos and videos (Android); Auto-upload of photos and videos (iOS)"
+   },
+   "e2e-encrypted": {
+    "v": "partly",
+    "note": "Optional, per folder you choose",
+    "source": "https://nextcloud.com/encryption/",
+    "quote": "It enables users to pick one or more folders on their desktop or mobile client for end-to-end encryption."
+   },
+   "office-in-browser": {
+    "v": "partly",
+    "note": "Needs the Nextcloud Office add-on (Collabora)",
+    "source": "https://nextcloud.com/features/",
+    "quote": "Nextcloud Office Real time document collaboration - Collabora Online"
+   }
+  },
+  "rowy": {
+   "no-server-needed": {
+    "v": "no",
+    "note": "Installs into your own Google Cloud project",
+    "source": "https://github.com/buildship-ai/rowy#readme",
+    "quote": "Set up Rowy on your Google Cloud Platform project ... managed via a cloud run instance that operates exclusively on your GCP project."
+   },
+   "airtable-import": {
+    "v": "partly",
+    "note": "CSV, JSON or TSV file import only",
+    "source": "https://github.com/buildship-ai/rowy#readme",
+    "quote": "Bulk import or export data - csv, json, tsv"
+   },
+   "db-automations": {
+    "v": "yes",
+    "note": null,
+    "source": "https://github.com/buildship-ai/rowy#readme",
+    "quote": "Build cloud functions workflows on field level data changes"
+   },
+   "integrations-api": {
+    "v": "partly",
+    "note": "Ready-made extensions and webhooks",
+    "source": "https://docs.rowy.io/",
+    "quote": "Integrate with ANY third party platform - Extend with APIs, Webhooks"
+   }
+  },
+  "roundcube": {
+   "any-email-provider": {
+    "v": "partly",
+    "note": "Any IMAP account, but the site owner sets it up",
+    "source": "https://github.com/roundcube/roundcubemail#readme",
+    "quote": "Roundcube Webmail is a browser-based multilingual IMAP client"
+   },
+   "phone-app": {
+    "v": "no",
+    "note": null,
+    "source": "site data",
+    "quote": null
+   },
+   "computer-app": {
+    "v": "no",
+    "note": null,
+    "source": "site data",
+    "quote": null
+   },
+   "e2e-encrypted": {
+    "v": "partly",
+    "note": "Optional PGP support",
+    "source": "https://roundcube.net/about/",
+    "quote": "Support for PGP encryption"
+   },
+   "email-calendar": {
+    "v": "partly",
+    "note": "Address book built in; calendar is an add-on",
+    "source": "https://roundcube.net/about/",
+    "quote": "Full featured address book with groups and LDAP connectors ... Calendar module"
+   }
+  },
+  "heyform": {
+   "no-server-needed": {
+    "v": "partly",
+    "note": "Hosted version is paid (7-day trial)",
+    "source": "https://heyform.net/pricing",
+    "quote": "Basic $15 ... Start 7-day free trial"
+   },
+   "conditional-logic": {
+    "v": "yes",
+    "note": null,
+    "source": "https://docs.heyform.net/features/conditional-logic",
+    "quote": "Conditional logic allows you to create dynamic form paths, guiding respondents to relevant pages based on their answers."
+   },
+   "results-charts": {
+    "v": "partly",
+    "note": "Per-question report is on paid plans",
+    "source": "https://docs.heyform.net/features/analytics",
+    "quote": "With report you can see all the answers and statistics of each question. This feature is available in the Basic plan and above."
+   },
+   "file-upload-answers": {
+    "v": "partly",
+    "note": "10 MB limit on lower paid plans",
+    "source": "https://heyform.net/pricing",
+    "quote": "Unlimited uploads 10MB 10MB unlimited unlimited"
+   },
+   "form-embed": {
+    "v": "yes",
+    "note": null,
+    "source": "https://docs.heyform.net/features/embed-your-form",
+    "quote": "Easily embed a HeyForm on any webpage ... Standard / Modal / Popup / Full page"
+   },
+   "integrations-api": {
+    "v": "partly",
+    "note": "Ready-made connections and webhooks",
+    "source": "https://github.com/heyform/heyform#readme",
+    "quote": "Connect with webhooks, analytics, marketing platforms, and tools like Zapier and Make.com."
+   }
+  },
+  "osmand": {
+   "works-offline": {
+    "v": "yes",
+    "note": null,
+    "source": "https://github.com/osmandapp/OsmAnd#readme",
+    "quote": "All main functionalities work both online and offline (no internet needed)."
+   },
+   "turn-by-turn": {
+    "v": "yes",
+    "note": null,
+    "source": "https://github.com/osmandapp/OsmAnd#readme",
+    "quote": "Turn-by-turn voice guidance (recorded and synthesized voices)"
+   },
+   "live-traffic": {
+    "v": "partly",
+    "note": "Traffic only shown as an online map layer",
+    "source": "https://osmand.net/docs/user/map/",
+    "quote": "You can display an overlay of hiking routes, live rain maps, live traffic data"
+   },
+   "public-transit": {
+    "v": "yes",
+    "note": null,
+    "source": "https://osmand.net/",
+    "quote": "Public transport navigation"
+   },
+   "car-integration": {
+    "v": "yes",
+    "note": null,
+    "source": "https://osmand.net/",
+    "quote": "Android Auto and CarPlay support"
+   },
+   "phone-app": {
+    "v": "yes",
+    "note": null,
+    "source": "site data",
+    "quote": null
+   }
+  },
+  "standard-notes": {
+   "syncs-devices": {
+    "v": "yes",
+    "note": null,
+    "source": "https://github.com/standardnotes/app#readme",
+    "quote": "Fast, free, and encrypted cross-platform sync on unlimited devices."
+   },
+   "phone-app": {
+    "v": "yes",
+    "note": null,
+    "source": "site data",
+    "quote": null
+   },
+   "works-offline": {
+    "v": "yes",
+    "note": null,
+    "source": "https://standardnotes.com/help/59/can-i-use-standard-notes-totally-offline",
+    "quote": "Standard Notes can be used totally offline without an account, and without an internet connection."
+   },
+   "notion-databases": {
+    "v": "partly",
+    "note": "Has a spreadsheet note type, no boards or calendars",
+    "source": "https://standardnotes.com/features",
+    "quote": "Rich text, spreadsheets, tasks & todos, markdown, passwords & tokens"
+   },
+   "e2e-encrypted": {
+    "v": "yes",
+    "note": null,
+    "source": "https://github.com/standardnotes/app#readme",
+    "quote": "End-to-end encrypted sync. Only you can read your notes."
+   },
+   "notes-import": {
+    "v": "partly",
+    "note": "Imports Evernote but not Notion or OneNote",
+    "source": "https://standardnotes.com/help/10/how-can-i-import-my-notes-from-evernote",
+    "quote": "Choose Import. Click or tap on the Evernote import option, then select your ENEX file(s)"
+   },
+   "live-collab": {
+    "v": "no",
+    "note": null,
+    "source": "https://standardnotes.com/help/50/can-i-collaborate-with-others-on-a-note",
+    "quote": "Standard Notes does not currently provide a real-time collaboration solution."
+   }
+  },
+  "memos": {
+   "syncs-devices": {
+    "v": "yes",
+    "note": "All devices use the one copy on your server",
+    "source": "https://usememos.com/docs",
+    "quote": "Your record lives on your own server"
+   },
+   "phone-app": {
+    "v": "partly",
+    "note": "Only unofficial apps (Moe Memos)",
+    "source": "https://apps.apple.com/us/app/moe-memos/id1643902185",
+    "quote": "third-party client for Memos, not affiliated with the project"
+   },
+   "notes-import": {
+    "v": "no",
+    "note": "Imports only from another Memos export",
+    "source": "https://usememos.com/docs/usage/export-import",
+    "quote": "Download your memos and attachments as a ZIP file, then import them into your account on another Memos instance."
+   },
+   "plain-files": {
+    "v": "partly",
+    "note": "Full export to Markdown files in a ZIP",
+    "source": "https://usememos.com/docs/usage/export-import",
+    "quote": "It uses Memos Export Format, with Markdown content and JSON metadata for each memo"
+   }
+  },
+  "yanknote": {
+   "syncs-devices": {
+    "v": "partly",
+    "note": "No built-in sync; notes are local files you can sync yourself",
+    "source": "https://github.com/purocean/yn#readme",
+    "quote": "Data is saved as local Markdown files"
+   },
+   "phone-app": {
+    "v": "no",
+    "note": null,
+    "source": "site data",
+    "quote": null
+   },
+   "works-offline": {
+    "v": "yes",
+    "note": "Desktop app working on local files",
+    "source": "https://github.com/purocean/yn#readme",
+    "quote": "Data is saved as local Markdown files"
+   },
+   "notion-databases": {
+    "v": "partly",
+    "note": "Tables and embedded spreadsheets, no boards or calendars",
+    "source": "https://github.com/purocean/yn#readme",
+    "quote": "Embed Luckysheet tables: document supports embedded Luckysheet tables"
+   },
+   "e2e-encrypted": {
+    "v": "partly",
+    "note": "Optional, password per file",
+    "source": "https://github.com/purocean/yn#readme",
+    "quote": "Encryption: files ending with `.c.md` are treated as encrypted files"
+   },
+   "plain-files": {
+    "v": "yes",
+    "note": null,
+    "source": "https://github.com/purocean/yn#readme",
+    "quote": "Data is saved as local Markdown files"
+   },
+   "live-collab": {
+    "v": "no",
+    "note": "Single-user local editor",
+    "source": "https://github.com/purocean/yn#readme",
+    "quote": null
+   }
+  },
+  "spliit-app": {
+   "no-account-needed": {
+    "v": "yes",
+    "note": null,
+    "source": "https://spliit.app/",
+    "quote": "No ads. No account. Open Source. Forever Free."
+   },
+   "phone-app": {
+    "v": "partly",
+    "note": "iPhone app and installable web app; no Android app found",
+    "source": "https://spliit.app/",
+    "quote": "Spliit for iPhone: The whole app, rewritten in SwiftUI"
+   },
+   "simplify-debts": {
+    "v": "yes",
+    "note": null,
+    "source": "https://spliit.app/",
+    "quote": "Reimbursements: Optimize money transfers between participants."
+   },
+   "multi-currency": {
+    "v": "yes",
+    "note": "Per-expense currency with exchange rates",
+    "source": "https://github.com/spliit-app/spliit/issues/690",
+    "quote": "Split by amount converts each share at the fetched rate when a custom rate is set"
+   },
+   "receipt-photos": {
+    "v": "yes",
+    "note": null,
+    "source": "https://spliit.app/",
+    "quote": "Receipts: Attach receipt images to expenses."
+   }
+  },
+  "librespeed": {
+   "no-server-needed": {
+    "v": "yes",
+    "note": "Free public test page",
+    "source": "https://github.com/librespeed/speedtest#readme",
+    "quote": "Try it: Take a speed test (librespeed.org)"
+   },
+   "no-tracking": {
+    "v": "partly",
+    "note": "Public site stores results and IP; self-hosted telemetry is optional",
+    "source": "https://librespeed.org/",
+    "quote": "At the end of the test, the following data is collected and stored: Test ID, Time of testing, Test results..."
+   },
+   "phone-app": {
+    "v": "partly",
+    "note": "Android app template only; no iPhone app found",
+    "source": "https://github.com/librespeed/speedtest-android#readme",
+    "quote": "The LibreSpeed Android template allows you to configure and distribute an Android app"
+   }
+  },
+  "taiga": {
+   "kanban-boards": {
+    "v": "yes",
+    "note": null,
+    "source": "https://www.taiga.io/",
+    "quote": "Intuitive and simple, yet feature complete Kanban board"
+   },
+   "tasks-import": {
+    "v": "yes",
+    "note": null,
+    "source": "https://docs.taiga.io/",
+    "quote": "Checkout the documentation about how to import a project from Github, from Jira, or from Trello."
+   },
+   "phone-app": {
+    "v": "no",
+    "note": null,
+    "source": "site data",
+    "quote": null
+   }
+  },
+  "libretranslate": {
+   "no-server-needed": {
+    "v": "yes",
+    "note": "Free online translator page; API key is paid",
+    "source": "https://github.com/LibreTranslate/LibreTranslate#readme",
+    "quote": "Try it online! libretranslate.com"
+   },
+   "works-offline": {
+    "v": "yes",
+    "note": "When self-hosted",
+    "source": "https://libretranslate.com/",
+    "quote": "Free to download. Offline Capable."
+   },
+   "many-languages": {
+    "v": "yes",
+    "note": "51 languages",
+    "source": "https://libretranslate.com/languages",
+    "quote": null
+   },
+   "translate-documents": {
+    "v": "yes",
+    "note": null,
+    "source": "https://libretranslate.com/",
+    "quote": "Translate Text | Translate Files ... Supported file formats"
+   },
+   "phone-app": {
+    "v": "no",
+    "note": null,
+    "source": "site data",
+    "quote": null
+   }
+  },
+  "nextcloud-polls": {
+   "no-server-needed": {
+    "v": "no",
+    "note": null,
+    "source": "site data",
+    "quote": null
+   },
+   "group-polls": {
+    "v": "yes",
+    "note": null,
+    "source": "https://github.com/nextcloud/polls",
+    "quote": "Polls - an app, similar to doodle or DuD-Poll, for Nextcloud"
+   },
+   "team-booking": {
+    "v": "no",
+    "note": "Poll app only, no booking pages",
+    "source": "https://github.com/nextcloud/polls",
+    "quote": "Polls - an app, similar to doodle or DuD-Poll, for Nextcloud"
+   },
+   "booking-payments": {
+    "v": "no",
+    "note": "Poll app only, no booking pages",
+    "source": "https://github.com/nextcloud/polls",
+    "quote": "Polls - an app, similar to doodle or DuD-Poll, for Nextcloud"
+   },
+   "video-link-auto": {
+    "v": "no",
+    "note": "Poll app only, no booking pages",
+    "source": "https://github.com/nextcloud/polls",
+    "quote": "Polls - an app, similar to doodle or DuD-Poll, for Nextcloud"
+   }
+  },
+  "seafile": {
+   "no-server-needed": {
+    "v": "partly",
+    "note": "Self-host, or paid SeafilePlus Cloud hosting",
+    "source": "https://www.seafile.com/en/home/",
+    "quote": null
+   },
+   "phone-app": {
+    "v": "yes",
+    "note": null,
+    "source": "site data",
+    "quote": null
+   },
+   "share-links": {
+    "v": "yes",
+    "note": null,
+    "source": "https://www.seafile.com/en/home/",
+    "quote": "Password protection, expiration time, and access control for share links"
+   },
+   "office-in-browser": {
+    "v": "yes",
+    "note": null,
+    "source": "https://www.seafile.com/en/home/",
+    "quote": "View and edit files online - supports multiple file formats, like Office and text"
+   },
+   "e2e-encrypted": {
+    "v": "partly",
+    "note": "Optional encrypted libraries; file names stay visible",
+    "source": "https://help.seafile.com/security_features/encrypted_libraries/",
+    "quote": "How to use encrypted libraries"
+   }
+  },
+  "libreoffice-writer": {
+   "no-server-needed": {
+    "v": "yes",
+    "note": null,
+    "source": "site data",
+    "quote": null
+   }
+  },
+  "libreoffice-calc": {
+   "no-server-needed": {
+    "v": "yes",
+    "note": null,
+    "source": "site data",
+    "quote": null
+   }
+  },
+  "mailspring": {
+   "computer-app": {
+    "v": "yes",
+    "note": null,
+    "source": "site data",
+    "quote": null
+   },
+   "phone-app": {
+    "v": "no",
+    "note": null,
+    "source": "site data",
+    "quote": null
+   },
+   "unified-inbox": {
+    "v": "yes",
+    "note": null,
+    "source": "https://getmailspring.com/",
+    "quote": "Unified inbox  Using a single inbox for all of your email accounts"
+   },
+   "any-email-provider": {
+    "v": "yes",
+    "note": null,
+    "source": "https://getmailspring.com/",
+    "quote": "Gmail, iCloud, Office 365, FastMail, Outlook.com, Yahoo!, and IMAP/SMTP"
+   },
+   "snooze-send-later": {
+    "v": "yes",
+    "note": "Free version limits uses; Pro removes limits",
+    "source": "https://getmailspring.com/pro",
+    "quote": "so you can snooze messages, schedule reminders, and send later an unlimited number of times"
+   }
+  },
+  "zettlr": {
+   "phone-app": {
+    "v": "no",
+    "note": null,
+    "source": "site data",
+    "quote": null
+   },
+   "works-offline": {
+    "v": "yes",
+    "note": null,
+    "source": "https://www.zettlr.com/",
+    "quote": "all files stay on your computer"
+   },
+   "syncs-devices": {
+    "v": "partly",
+    "note": "No built-in sync; use your own sync tool",
+    "source": "https://www.zettlr.com/",
+    "quote": "There is no forced cloud-synchronization or telemetry"
+   },
+   "notes-import": {
+    "v": "no",
+    "note": "Imports Pandoc formats (Word, HTML); no Notion or Evernote importer",
+    "source": "https://docs.zettlr.com/en/core/import",
+    "quote": null
+   },
+   "plain-files": {
+    "v": "yes",
+    "note": null,
+    "source": "https://www.zettlr.com/",
+    "quote": "Your notes stay where you put them."
+   },
+   "notion-databases": {
+    "v": "no",
+    "note": "Plain Markdown notes only",
+    "source": "https://www.zettlr.com/",
+    "quote": null
+   }
+  },
+  "notegen": {
+   "phone-app": {
+    "v": "partly",
+    "note": "Android only, no iPhone app",
+    "source": "site data",
+    "quote": null
+   },
+   "plain-files": {
+    "v": "yes",
+    "note": null,
+    "source": "https://github.com/codexu/note-gen",
+    "quote": "Your written notes remain ordinary Markdown files in the workspace you choose."
+   },
+   "syncs-devices": {
+    "v": "partly",
+    "note": "Sync goes through separate services you already use",
+    "source": "https://github.com/codexu/note-gen",
+    "quote": "When you need them on another device, you can sync through services you already use."
+   }
+  },
+  "xournal": {
+   "no-server-needed": {
+    "v": "yes",
+    "note": null,
+    "source": "site data",
+    "quote": null
+   },
+   "phone-app": {
+    "v": "partly",
+    "note": "Android only, via a separate project",
+    "source": "site data",
+    "quote": null
+   },
+   "pdf-annotate": {
+    "v": "yes",
+    "note": null,
+    "source": "https://github.com/xournalpp/xournalpp",
+    "quote": "Annotate on top of PDFs"
+   }
+  },
+  "bugzilla": {
+   "no-server-needed": {
+    "v": "no",
+    "note": null,
+    "source": "https://www.bugzilla.org/about/",
+    "quote": "Bugzilla is a web-based system but needs to be installed on your server for you to use it."
+   }
+  },
+  "languagetool": {
+   "many-languages": {
+    "v": "yes",
+    "note": null,
+    "source": "https://github.com/languagetool-org/languagetool",
+    "quote": "English, Spanish, French, German, Portuguese, Polish, Dutch, and more than 20 other languages"
+   },
+   "works-offline": {
+    "v": "partly",
+    "note": "Local server possible; AI rules cloud-only",
+    "source": "https://dev.languagetool.org/http-server",
+    "quote": "The AI-based rules are only available in the cloud."
+   }
+  },
+  "documenso": {
+   "integrations-api": {
+    "v": "yes",
+    "note": null,
+    "source": "https://docs.documenso.com/",
+    "quote": "Integrate document signing into your applications with the REST API, webhooks, and embedding."
+   },
+   "sign-templates": {
+    "v": "yes",
+    "note": null,
+    "source": "https://docs.documenso.com/llms.txt",
+    "quote": "Build reusable document templates for contracts, agreements, and other documents you send frequently."
+   }
+  },
+  "formio": {
+   "form-embed": {
+    "v": "yes",
+    "note": null,
+    "source": "https://form.io/",
+    "quote": "Direct JavaScript embedding: the form experience placed directly inside your application"
+   },
+   "integrations-api": {
+    "v": "yes",
+    "note": null,
+    "source": "https://form.io/",
+    "quote": "APIs: the routing layer for creating, reading, updating, and moving submission data; webhooks"
+   },
+   "conditional-logic": {
+    "v": "yes",
+    "note": null,
+    "source": "https://form.io/",
+    "quote": "Conditional logic and workflow: the experience layer that decides what users see and where data goes next"
+   },
+   "results-charts": {
+    "v": "partly",
+    "note": "Live report grids; no charts found",
+    "source": "https://form.io/",
+    "quote": "every report is a live, interactive grid you embed in your own application"
+   },
+   "no-server-needed": {
+    "v": "partly",
+    "note": "Hosted version is paid; only a 30-day free trial",
+    "source": "https://form.io/",
+    "quote": "Try Free for 30 Days"
+   }
+  },
+  "actual-budget": {
+   "bank-sync": {
+    "v": "partly",
+    "note": "Needs your own provider account; limited regions",
+    "source": "https://actualbudget.org/docs/advanced/bank-sync",
+    "quote": "Akahu (New Zealand), Enable Banking (European), SimpleFIN Bridge (North American), Pluggy.ai (Brazilian)"
+   },
+   "envelope-budgeting": {
+    "v": "yes",
+    "note": null,
+    "source": "https://github.com/actualbudget/actual",
+    "quote": "Read about Envelope budgeting to know more about the idea behind Actual Budget."
+   },
+   "no-server-needed": {
+    "v": "yes",
+    "note": null,
+    "source": "site data",
+    "quote": "Local-only apps - downloadable Windows, Mac and Linux apps"
+   },
+   "phone-app": {
+    "v": "partly",
+    "note": "Web app plus unofficial native clients; no official app",
+    "source": "https://actualbudget.org/docs/faq",
+    "quote": "There is no official Android app yet. ... the community also maintains unofficial native clients."
+   },
+   "bank-file-import": {
+    "v": "yes",
+    "note": null,
+    "source": "https://actualbudget.org/docs/transactions/importing",
+    "quote": "CSV, OFX, QFX and QIF files"
+   }
+  },
+  "owncloud-infinite-scale": {
+   "no-server-needed": {
+    "v": "no",
+    "note": null,
+    "source": "site data",
+    "quote": null
+   },
+   "phone-app": {
+    "v": "yes",
+    "note": null,
+    "source": "https://github.com/owncloud/ocis",
+    "quote": "Infinite Scale allows the following ownCloud clients: Web, Android, iOS and Desktop"
+   },
+   "share-links": {
+    "v": "yes",
+    "note": null,
+    "source": "https://owncloud.com/features/",
+    "quote": "Share files and folders with outside contacts, protected by passwords and expiry dates."
+   },
+   "office-in-browser": {
+    "v": "partly",
+    "note": "Through Collabora or OnlyOffice add-on",
+    "source": "https://github.com/owncloud/ocis",
+    "quote": "Infinite Scale can integrate web office applications such as Collabora Online, OnlyOffice Docs"
+   },
+   "files-on-demand": {
+    "v": "partly",
+    "note": "Virtual files, desktop client only",
+    "source": "https://owncloud.com/features/",
+    "quote": "Let users sync virtual files, saving on storage and bandwidth."
+   }
+  },
+  "onlyoffice-docs": {
+   "live-collab": {
+    "v": "yes",
+    "note": null,
+    "source": "https://www.onlyoffice.com/office-suite",
+    "quote": "collaborate in real time"
+   },
+   "works-offline": {
+    "v": "yes",
+    "note": "Via free Desktop Editors",
+    "source": "https://www.onlyoffice.com/office-suite",
+    "quote": "edit local documents offline"
+   },
+   "no-server-needed": {
+    "v": "yes",
+    "note": "Free desktop app available",
+    "source": "site data",
+    "quote": null
+   },
+   "phone-app": {
+    "v": "yes",
+    "note": null,
+    "source": "https://www.onlyoffice.com/office-suite",
+    "quote": "A free app is available for iOS and Android"
+   }
+  },
+  "fairemail": {
+   "any-email-provider": {
+    "v": "yes",
+    "note": "No Exchange Web Services or ActiveSync",
+    "source": "https://github.com/M66B/FairEmail",
+    "quote": "works with virtually all email providers, including Gmail, Outlook and Yahoo!"
+   },
+   "phone-app": {
+    "v": "partly",
+    "note": "Android only",
+    "source": "site data",
+    "quote": null
+   },
+   "computer-app": {
+    "v": "no",
+    "note": null,
+    "source": "site data",
+    "quote": null
+   },
+   "unified-inbox": {
+    "v": "yes",
+    "note": null,
+    "source": "https://github.com/M66B/FairEmail",
+    "quote": "Unified inbox (optionally accounts or folders)"
+   },
+   "e2e-encrypted": {
+    "v": "partly",
+    "note": "Optional OpenPGP or S/MIME",
+    "source": "https://github.com/M66B/FairEmail",
+    "quote": "Encryption/decryption supported"
+   },
+   "snooze-send-later": {
+    "v": "yes",
+    "note": "Both are Pro (paid) features",
+    "source": "https://github.com/M66B/FairEmail",
+    "quote": "Snooze messages; Send messages after selected time"
+   }
+  },
+  "nextcloud-forms": {
+   "no-server-needed": {
+    "v": "no",
+    "note": null,
+    "source": "site data",
+    "quote": null
+   },
+   "results-charts": {
+    "v": "yes",
+    "note": null,
+    "source": "https://github.com/nextcloud/forms",
+    "quote": "Results are visualized and can also be exported as CSV"
+   },
+   "integrations-api": {
+    "v": "yes",
+    "note": "API plus webhooks",
+    "source": "https://github.com/nextcloud/forms/blob/main/docs/API_v3.md",
+    "quote": "Webhook support; API v3 docs"
+   },
+   "file-upload-answers": {
+    "v": "yes",
+    "note": null,
+    "source": "https://github.com/nextcloud/forms/blob/main/docs/DataStructure.md",
+    "quote": "file: One or multiple files. It is possible to specify which mime types are allowed"
+   },
+   "form-embed": {
+    "v": "yes",
+    "note": null,
+    "source": "https://github.com/nextcloud/forms/blob/main/docs/Embedding.md",
+    "quote": "it is possible to embed forms inside external websites"
+   },
+   "conditional-logic": {
+    "v": "no",
+    "note": "Requested but not built yet",
+    "source": "https://github.com/nextcloud/forms/issues/358",
+    "quote": "Support conditional logic (open issue)"
+   }
+  },
+  "appflowy": {
+   "phone-app": {
+    "v": "yes",
+    "note": null,
+    "source": "https://github.com/AppFlowy-IO/AppFlowy",
+    "quote": "Available on App Store: iPhone; Play Store: Android 10 or above"
+   },
+   "notion-databases": {
+    "v": "yes",
+    "note": null,
+    "source": "https://appflowy.com/what-is-new",
+    "quote": "Calendar view now supports a weekly view; Kanban Board Column Coloring; Grid grouping"
+   },
+   "syncs-devices": {
+    "v": "yes",
+    "note": null,
+    "source": "https://appflowy.com/what-is-new",
+    "quote": "Improved syncing performance and reliability across platforms"
+   },
+   "notes-import": {
+    "v": "partly",
+    "note": "Notion import only",
+    "source": "https://appflowy.com/what-is-new",
+    "quote": "Fixed Notion import to target the correct view"
+   }
+  },
+  "silverbullet": {
+   "phone-app": {
+    "v": "partly",
+    "note": "Installable web app, not a store app",
+    "source": "https://github.com/silverbulletmd/silverbullet/blob/main/docs/PWA.md",
+    "quote": "Install SilverBullet as a standalone app on your device... Add to Home Screen"
+   },
+   "plain-files": {
+    "v": "yes",
+    "note": null,
+    "source": "https://github.com/silverbulletmd/silverbullet",
+    "quote": "you keep your content as a collection of Markdown Pages (called a Space)"
+   },
+   "works-offline": {
+    "v": "yes",
+    "note": null,
+    "source": "https://github.com/silverbulletmd/silverbullet/blob/main/docs/PWA.md",
+    "quote": "After your first load and sync, all functionality is available without a network connection."
+   },
+   "syncs-devices": {
+    "v": "yes",
+    "note": null,
+    "source": "https://github.com/silverbulletmd/silverbullet/blob/main/docs/PWA.md",
+    "quote": "changes are continuously synced between the browser and the server"
+   },
+   "e2e-encrypted": {
+    "v": "no",
+    "note": "Only the copy kept in your browser can be encrypted",
+    "source": "https://github.com/silverbulletmd/silverbullet/blob/main/docs/Client Encryption.md",
+    "quote": "Client encryption... all your content kept on the client will be encrypted"
+   },
+   "live-collab": {
+    "v": "partly",
+    "note": "Merges edits from several people, not live typing",
+    "source": "https://github.com/silverbulletmd/silverbullet/blob/main/docs/Collaboration.md",
+    "quote": "more classic real-time, collaborative edit[ing]... deliberately not"
+   }
+  },
+  "notally": {
+   "phone-app": {
+    "v": "partly",
+    "note": "Android only",
+    "source": "site data",
+    "quote": null
+   }
+  },
+  "stirling-pdf": {
+   "no-server-needed": {
+    "v": "yes",
+    "note": "Desktop app for Windows, Mac and Linux",
+    "source": "https://docs.stirlingpdf.com",
+    "quote": "Install the editor on your own computer, on Windows, Mac and Linux. Works offline."
+   },
+   "pdf-sign-forms": {
+    "v": "yes",
+    "note": null,
+    "source": "https://docs.stirlingpdf.com",
+    "quote": "Sign; Fill forms"
+   },
+   "pdf-ocr": {
+    "v": "yes",
+    "note": null,
+    "source": "https://github.com/Stirling-Tools/Stirling-PDF",
+    "quote": "50+ PDF tools - Edit, merge, split, sign, redact, convert, OCR, compress"
+   },
+   "pdf-merge-split": {
+    "v": "yes",
+    "note": null,
+    "source": "https://docs.stirlingpdf.com/Tools/",
+    "quote": "Merge; Split; Reorganize Pages"
+   },
+   "pdf-annotate": {
+    "v": "yes",
+    "note": null,
+    "source": "https://docs.stirlingpdf.com/Tools/",
+    "quote": "Annotate: highlights, draws, and adds notes and shapes"
+   },
+   "pdf-edit-text": {
+    "v": "yes",
+    "note": null,
+    "source": "https://docs.stirlingpdf.com/Tools/",
+    "quote": "PDF Text Editor: edits existing text and images in a PDF"
+   }
+  },
+  "docuseal": {
+   "integrations-api": {
+    "v": "yes",
+    "note": "API and webhooks in the self-hosted version",
+    "source": "https://github.com/docusealco/docuseal",
+    "quote": "API and Webhooks for integrations"
+   },
+   "sign-audit-trail": {
+    "v": "yes",
+    "note": null,
+    "source": "https://www.docuseal.com/pricing",
+    "quote": "Audit log; Trusted signing certificate"
+   },
+   "sign-templates": {
+    "v": "yes",
+    "note": null,
+    "source": "https://www.docuseal.com/pricing",
+    "quote": "Templates and folders: Unlimited"
+   },
+   "qualified-signature": {
+    "v": "partly",
+    "note": "Qualified signature only on paid cloud Pro plan",
+    "source": "https://www.docuseal.com/pricing",
+    "quote": "EU Qualified Signature, $2-$4 / QeS"
+   },
+   "no-server-needed": {
+    "v": "yes",
+    "note": "Free cloud plan",
+    "source": "https://www.docuseal.com/pricing",
+    "quote": "Basic plan $0 / user / month"
+   }
+  },
+  "grist": {
+   "live-collab": {
+    "v": "yes",
+    "note": null,
+    "source": "https://github.com/gristlabs/grist-core",
+    "quote": "See who else is viewing a document in real time."
+   },
+   "no-server-needed": {
+    "v": "yes",
+    "note": "Free hosted plan",
+    "source": "https://www.getgrist.com/pricing/",
+    "quote": "Free plan, $0, under Our servers"
+   },
+   "phone-app": {
+    "v": "no",
+    "note": "Web only",
+    "source": "site data",
+    "quote": null
+   },
+   "pivot-tables": {
+    "v": "partly",
+    "note": "Summary tables group data like pivots",
+    "source": "https://support.getgrist.com/summary-tables/",
+    "quote": "similar to pivot tables in spreadsheets, and to GROUP BY clauses in databases"
+   }
+  },
+  "kanboard": {
+   "kanban-boards": {
+    "v": "yes",
+    "note": null,
+    "source": "https://kanboard.org",
+    "quote": "a free and open source Kanban project management software"
+   },
+   "phone-app": {
+    "v": "no",
+    "note": null,
+    "source": "site data",
+    "quote": null
+   },
+   "no-server-needed": {
+    "v": "no",
+    "note": null,
+    "source": "site data",
+    "quote": null
+   },
+   "gantt-timeline": {
+    "v": "partly",
+    "note": "Project Gantt chart from start and end dates",
+    "source": "https://github.com/kanboard/documentation/blob/main/content/en/v1/user/projects.md",
+    "quote": "The start date and end date are used to generate the project Gantt chart."
+   },
+   "recurring-reminders": {
+    "v": "partly",
+    "note": "Recurring tasks yes; reminders only email notifications",
+    "source": "https://github.com/kanboard/documentation/blob/main/content/en/v1/user/tasks.md",
+    "quote": "recurrence_status, recurrence_trigger, recurrence_timeframe"
+   }
+  },
+  "harper": {
+   "browser-extension": {
+    "v": "yes",
+    "note": "Chrome and Firefox (also Edge)",
+    "source": "https://writewithharper.com",
+    "quote": "Chrome Web Store extension; AMO add-on"
+   },
+   "works-offline": {
+    "v": "yes",
+    "note": null,
+    "source": "https://writewithharper.com",
+    "quote": "Every check happens locally."
+   },
+   "many-languages": {
+    "v": "no",
+    "note": "English only",
+    "source": "https://github.com/automattic/harper",
+    "quote": "Harper currently only supports English"
+   },
+   "ai-rewrite": {
+    "v": "no",
+    "note": null,
+    "source": "https://writewithharper.com",
+    "quote": "no LLM in the loop"
+   }
+  },
+  "firefly-iii": {
+   "bank-sync": {
+    "v": "partly",
+    "note": "Separate importer; Europe-focused providers, some paid",
+    "source": "https://github.com/firefly-iii/docs/blob/main/docs/docs/how-to/data-importer/import/third-party-providers.md",
+    "quote": "GoCardless API access is paid ... Enable Banking ... 2500+ banks across 29 European countries"
+   },
+   "envelope-budgeting": {
+    "v": "partly",
+    "note": "Budgets with amounts per period; author rejects zero-based budgeting",
+    "source": "https://docs.firefly-iii.org/explanation/firefly-iii/background/zero-based-budgeting/",
+    "quote": "I believe this approach is pretty terrible."
+   },
+   "no-server-needed": {
+    "v": "partly",
+    "note": "Only through paid hosting (e.g. PikaPods, Hostinger)",
+    "source": "https://github.com/firefly-iii/firefly-iii",
+    "quote": "Both are excellent choices for affordable and safe Firefly III hosting."
+   },
+   "investments": {
+    "v": "no",
+    "note": "Docs say stock/investment tracking is not supported",
+    "source": "https://github.com/firefly-iii/firefly-iii/issues/2750",
+    "quote": "Firefly III will not support stock accounts, investment tracking, real estate or other features besides basic personal finances."
+   },
+   "bank-file-import": {
+    "v": "partly",
+    "note": "CSV and CAMT.053 only; no OFX or QIF",
+    "source": "https://github.com/firefly-iii/docs/blob/main/docs/docs/how-to/data-importer/import/file.md",
+    "quote": "The data importer can import the following file types: CSV files, CAMT.053 files"
+   },
+   "phone-app": {
+    "v": "no",
+    "note": null,
+    "source": "site data",
+    "quote": null
+   }
+  },
+  "syncthing": {
+   "no-server-needed": {
+    "v": "yes",
+    "note": null,
+    "source": "site data",
+    "quote": null
+   },
+   "phone-app": {
+    "v": "partly",
+    "note": "Official Android app discontinued; community apps for Android and iOS",
+    "source": "https://docs.syncthing.net/users/faq.html",
+    "quote": "There are no plans by the current Syncthing team to officially support iOS"
+   },
+   "share-links": {
+    "v": "no",
+    "note": "Devices sync directly; no link sharing",
+    "source": "https://docs.syncthing.net/users/faq.html",
+    "quote": null
+   },
+   "files-on-demand": {
+    "v": "no",
+    "note": "Folders sync in full; only a third-party iOS app adds on-demand",
+    "source": "https://docs.syncthing.net/users/faq.html",
+    "quote": "open source app for iOS ... features for selective synchronization as well as on-demand access to files"
+   },
+   "e2e-encrypted": {
+    "v": "yes",
+    "note": "Device-to-device always encrypted; optional folder passwords for untrusted devices (beta)",
+    "source": "https://docs.syncthing.net/users/faq.html",
+    "quote": "Data that is sent over the network is compressed (optionally) and encrypted (always)."
+   },
+   "office-in-browser": {
+    "v": "no",
+    "note": "File sync only; no document editing",
+    "source": "https://github.com/syncthing/syncthing",
+    "quote": "Syncthing is a continuous file synchronization program."
+   }
+  },
+  "collabora-online": {
+   "live-collab": {
+    "v": "yes",
+    "note": null,
+    "source": "https://www.collaboraonline.com/collabora-online/",
+    "quote": "Real-time collaboration"
+   },
+   "word-files": {
+    "v": "yes",
+    "note": null,
+    "source": "https://www.collaboraonline.com/collabora-online/",
+    "quote": "Preservation of layout and formatting of documents text documents (odt, docx, doc,\u2026)"
+   },
+   "comments-suggestions": {
+    "v": "yes",
+    "note": "Comments and track changes in Writer",
+    "source": "https://www.collaboraonline.com/writer/",
+    "quote": "Accept or reject changes in bulk, or inspect them one by one."
+   },
+   "no-server-needed": {
+    "v": "no",
+    "note": null,
+    "source": "site data",
+    "quote": null
+   },
+   "phone-app": {
+    "v": "yes",
+    "note": "Collabora Office mobile apps",
+    "source": "https://www.collaboraonline.com/collabora-online/",
+    "quote": "Mobile app for Android, iOS and Chromebook"
+   }
+  },
+  "tuta": {
+   "any-email-provider": {
+    "v": "no",
+    "note": "Only Tuta's own email service",
+    "source": "site data",
+    "quote": null
+   },
+   "phone-app": {
+    "v": "yes",
+    "note": null,
+    "source": "site data",
+    "quote": null
+   },
+   "computer-app": {
+    "v": "yes",
+    "note": null,
+    "source": "site data",
+    "quote": null
+   },
+   "e2e-encrypted": {
+    "v": "yes",
+    "note": null,
+    "source": "https://tuta.com/pricing",
+    "quote": "End-to-end encryption All data in Tuta is encrypted. Tuta has zero access to your mailbox"
+   },
+   "snooze-send-later": {
+    "v": "partly",
+    "note": "Scheduled send exists; no snooze found",
+    "source": "https://tuta.com/blog/development-feature-list",
+    "quote": "Schedule send Undo send"
+   },
+   "email-calendar": {
+    "v": "yes",
+    "note": null,
+    "source": "https://tuta.com/",
+    "quote": "Take back your data with Tuta's encrypted email, calendar and contacts."
+   }
+  },
+  "pinry": {
+   "picture-boards": {
+    "v": "yes",
+    "note": null,
+    "source": "https://github.com/pinry/pinry",
+    "quote": "a tiling image board system for people who want to save, tag, and share images, videos and webpages"
+   },
+   "browser-extension": {
+    "v": "yes",
+    "note": "Community-made, linked from official docs",
+    "source": "https://pinry.github.io/pinry/extensions/",
+    "quote": "Lapo Luchini has been kind enough to create extensions for both Chrome and Firefox."
+   },
+   "phone-app": {
+    "v": "no",
+    "note": null,
+    "source": "site data",
+    "quote": null
+   },
+   "no-server-needed": {
+    "v": "no",
+    "note": null,
+    "source": "site data",
+    "quote": null
+   }
+  },
+  "affine": {
+   "syncs-devices": {
+    "v": "yes",
+    "note": "Through AFFiNE Cloud or self-hosting",
+    "source": "https://github.com/toeverything/AFFiNE",
+    "quote": "AFFiNE supports real-time sync and collaborations on web and cross-platform clients."
+   },
+   "phone-app": {
+    "v": "yes",
+    "note": "iOS and Android apps",
+    "source": "https://affine.pro/download",
+    "quote": "iOS & Android Free apps on the App Store and Google Play"
+   },
+   "works-offline": {
+    "v": "yes",
+    "note": null,
+    "source": "https://affine.pro/download",
+    "quote": "Work offline with your notes, docs, and whiteboards always available"
+   },
+   "notion-databases": {
+    "v": "yes",
+    "note": null,
+    "source": "https://github.com/toeverything/AFFiNE",
+    "quote": "multi-view databases"
+   },
+   "e2e-encrypted": {
+    "v": "no",
+    "note": "Encryption requested but not built; maintainers say it needs design",
+    "source": "https://github.com/toeverything/AFFiNE/issues/5491",
+    "quote": null
+   },
+   "live-collab": {
+    "v": "yes",
+    "note": null,
+    "source": "https://github.com/toeverything/AFFiNE",
+    "quote": "Local-first & Real-time collaborative"
+   }
+  },
+  "bookstack": {
+   "phone-app": {
+    "v": "no",
+    "note": null,
+    "source": "site data",
+    "quote": null
+   },
+   "notion-databases": {
+    "v": "partly",
+    "note": "Simple tables only; no boards or calendars",
+    "source": "https://www.bookstackapp.com/docs/user/markdown-editor/",
+    "quote": "along with a few extensions including tables and task-lists"
+   },
+   "notes-import": {
+    "v": "no",
+    "note": "Only imports BookStack's own ZIP files",
+    "source": "https://www.bookstackapp.com/docs/user/export-import/",
+    "quote": "you can import \u201cPortable ZIP\u201d files"
+   },
+   "plain-files": {
+    "v": "partly",
+    "note": "Exports to Markdown, HTML, PDF, text; stored in a database",
+    "source": "https://www.bookstackapp.com/docs/user/export-import/",
+    "quote": "Markdown File A \u201c.md\u201d file with a markdown representation of your content."
+   }
+  },
+  "notabase": {
+   "syncs-devices": {
+    "v": "yes",
+    "note": null,
+    "source": "https://github.com/churichard/notabase",
+    "quote": "Your notes are synced to the cloud and can be accessed on any device"
+   },
+   "phone-app": {
+    "v": "no",
+    "note": "Installable web app only",
+    "source": "site data",
+    "quote": null
+   },
+   "works-offline": {
+    "v": "partly",
+    "note": "Installable web app allows offline viewing",
+    "source": "https://github.com/churichard/notabase",
+    "quote": "Can be installed as a Progressive Web App (PWA) for faster loading and offline viewing"
+   },
+   "notes-import": {
+    "v": "no",
+    "note": "Importer accepts only Markdown and text files",
+    "source": "https://github.com/churichard/notabase/blob/main/utils/useImport.ts",
+    "quote": "input.accept = '.text, .txt, .md, .mkdn, .mdwn, .mdown, .markdown'"
+   },
+   "plain-files": {
+    "v": "partly",
+    "note": "Import and export at any time; stored in cloud database",
+    "source": "https://github.com/churichard/notabase",
+    "quote": "Import or export your notes at any time"
+   }
+  },
+  "okular": {
+   "pdf-edit-text": {
+    "v": "no",
+    "note": "Viewer with annotations; existing text cannot be changed",
+    "source": "https://okular.kde.org/",
+    "quote": "Okular - The Universal Document Viewer"
+   },
+   "pdf-sign-forms": {
+    "v": "yes",
+    "note": null,
+    "source": "https://github.com/KDE/okular/blob/master/doc/index.docbook",
+    "quote": "You can add digital signatures to documents ... to enter data into the form fields."
+   },
+   "pdf-merge-split": {
+    "v": "no",
+    "note": "No merge, split or reorder feature",
+    "source": "https://okular.kde.org/",
+    "quote": null
+   },
+   "pdf-ocr": {
+    "v": "no",
+    "note": "OCR is an open wishlist item",
+    "source": "https://bugs.kde.org/show_bug.cgi?id=200564",
+    "quote": "Intergrate Ocrad into Okular for enhanced usage and increased accessibilty."
+   },
+   "pdf-annotate": {
+    "v": "yes",
+    "note": null,
+    "source": "https://okular.kde.org/",
+    "quote": "add inline and popup notes, highlight and underline text, or even add your own text"
+   },
+   "pdf-convert-office": {
+    "v": "no",
+    "note": "Reads PDFs only; no Word conversion",
+    "source": "https://okular.kde.org/",
+    "quote": null
+   },
+   "no-server-needed": {
+    "v": "yes",
+    "note": null,
+    "source": "site data",
+    "quote": null
+   }
+  },
+  "libresign": {
+   "no-server-needed": {
+    "v": "partly",
+    "note": "Needs Nextcloud; vendor offers paid hosting",
+    "source": "https://libresign.coop/faq/",
+    "quote": "provision and operate a complete LibreSign environment for you"
+   },
+   "sign-audit-trail": {
+    "v": "yes",
+    "note": null,
+    "source": "https://libresign.coop/faq/",
+    "quote": "It also records the timestamp of every signature, creating a complete and auditable signing history."
+   },
+   "signing-order": {
+    "v": "yes",
+    "note": null,
+    "source": "https://libresign.coop/faq/",
+    "quote": "LibreSign supports sequential signing, so you can define the order in which recipients must sign."
+   },
+   "sign-templates": {
+    "v": "no",
+    "note": "Reusable templates are an open feature request",
+    "source": "https://github.com/LibreSign/libresign/issues/5628",
+    "quote": "Wouldn\u2019t it be more efficient to create templates with predefined signature fields"
+   },
+   "qualified-signature": {
+    "v": "yes",
+    "note": null,
+    "source": "https://libresign.coop/faq/",
+    "quote": "LibreSign supports SES, AES, and QES workflows."
+   },
+   "integrations-api": {
+    "v": "yes",
+    "note": null,
+    "source": "https://libresign.coop/faq/",
+    "quote": "LibreSign provides a full REST API that allows you to integrate the platform with other systems"
+   }
+  },
+  "gnumeric": {
+   "live-collab": {
+    "v": "no",
+    "note": "No co-editing",
+    "source": "site data",
+    "quote": null
+   },
+   "excel-files": {
+    "v": "partly",
+    "note": "Opens xlsx; some Excel features like data tables don't work",
+    "source": "https://gitlab.gnome.org/GNOME/gnumeric/-/work_items/244",
+    "quote": "Excel data table does not work in Gnumeric"
+   },
+   "modern-formulas": {
+    "v": "partly",
+    "note": "Has XLOOKUP, XMATCH, UNIQUE; no FILTER or LET found",
+    "source": "https://gitlab.gnome.org/GNOME/gnumeric/-/blob/master/NEWS",
+    "quote": "New functions XLOOKUP and XMATCH."
+   },
+   "pivot-tables": {
+    "v": "no",
+    "note": "Pivot tables are an open feature request",
+    "source": "https://gitlab.gnome.org/GNOME/gnumeric/-/work_items/387",
+    "quote": "[RFE] Pivot Table"
+   },
+   "no-server-needed": {
+    "v": "yes",
+    "note": null,
+    "source": "site data",
+    "quote": null
+   },
+   "phone-app": {
+    "v": "no",
+    "note": null,
+    "source": "site data",
+    "quote": null
+   }
+  },
+  "leantime": {
+   "kanban-boards": {
+    "v": "yes",
+    "note": null,
+    "source": "https://github.com/Leantime/leantime",
+    "quote": "Task management via kanban boards, gantt, table, list and calendar views"
+   },
+   "gantt-timeline": {
+    "v": "yes",
+    "note": null,
+    "source": "https://leantime.io/",
+    "quote": "Our To Dos also include Subtasks and Dependencies ... view them on a timeline (gantt chart)"
+   },
+   "recurring-reminders": {
+    "v": "partly",
+    "note": "Recurring tasks only via a paid plugin",
+    "source": "https://marketplace.leantime.io/",
+    "quote": "Recurring Tasks Leantime Set it up once, benefit forever."
+   },
+   "tasks-import": {
+    "v": "partly",
+    "note": "CSV import only; no Trello, Asana or Jira importer found",
+    "source": "https://github.com/Leantime/leantime/issues/2426",
+    "quote": "administration > integrations > 'CSV Import'"
+   },
+   "phone-app": {
+    "v": "no",
+    "note": null,
+    "source": "site data",
+    "quote": null
+   },
+   "no-server-needed": {
+    "v": "partly",
+    "note": "Only through paid hosting (Leantime Pro, free trial)",
+    "source": "https://leantime.io/pricing",
+    "quote": "Leantime Pro $ 10 user / month ... 14-day free trial"
+   }
+  }
+ },
+ "tagIssues": [
+  {
+   "group": "backup",
+   "tag": "whole-system-restore",
+   "problem": "restic docs never say either way; left blank"
+  },
+  {
+   "group": "tasks",
+   "tag": "recurring-reminders",
+   "problem": "Two things in one tag; projects with only one are hard to rate"
+  },
+  {
+   "group": "notes",
+   "tag": "notes-import",
+   "problem": "Notion/Evernote/OneNote are three tools; most projects cover one, so partly is common"
+  },
+  {
+   "group": "notes",
+   "tag": "notion-databases",
+   "problem": "Hard to verify from READMEs alone; needs product docs per project"
+  },
+  {
+   "group": "slides",
+   "tag": "no-server-needed",
+   "problem": "reveal.js can be used from a local folder with no server, but the site lists it as web+server; unclear how to answer, left blank"
+  },
+  {
+   "group": "slides",
+   "tag": "slide-templates",
+   "problem": "Meaning fits Office apps; code-based tools only have color themes"
+  },
+  {
+   "group": "calendars",
+   "tag": "meeting-invites",
+   "problem": "Hard to verify from docs for simple calendar apps"
+  },
+  {
+   "group": "notes",
+   "tag": "notes-import",
+   "problem": "Name says Notion or Evernote but meaning counts OneNote too; most apps import other apps (Simplenote, Keep) which fall into a gap. Consider 'Imports from other note apps'."
+  },
+  {
+   "group": "cloud-storage",
+   "tag": "auto-backup-phone",
+   "problem": "iOS cannot reliably run background photo upload; 'yes' for both platforms is hard to verify from docs."
+  },
+  {
+   "group": "maps",
+   "tag": "live-traffic",
+   "problem": "Meaning has no case for 'shows traffic but does not route around it'; OsmAnd only overlays traffic."
+  },
+  {
+   "group": "notes",
+   "tag": "syncs-devices",
+   "problem": "Self-hosted web notes (Memos) are 'in step' only because one server holds everything; meaning doesn't say how to answer."
+  },
+  {
+   "group": "documents",
+   "tag": "phone-app",
+   "problem": "LibreOffice has no clear official iPhone+Android app; left blank"
+  },
+  {
+   "group": "booking-pages",
+   "tag": "team-booking",
+   "problem": "Nextcloud Polls is a poll tool, not a booking tool; booking tags all read 'no'"
+  },
+  {
+   "group": "notes",
+   "tag": "phone-app",
+   "problem": "Prefill note says ios+android; web-only or Android-only projects need partly/no"
+  },
+  {
+   "group": "notes",
+   "tag": "syncs-devices",
+   "problem": "Unclear for web/server apps (BookStack): one server reached from any browser; left blank."
+  },
+  {
+   "group": "budgeting",
+   "tag": "bank-file-import",
+   "problem": "Unclear whether two formats (CSV + CAMT) count as 'several'; question lists OFX/QIF specifically."
+  },
+  {
+   "group": "notes",
+   "tag": "works-offline",
+   "problem": "Hard to answer for web-only server apps; no project documents offline behaviour."
+  },
+  {
+   "group": "documents",
+   "tag": "works-offline",
+   "problem": "Collabora Online (web) vs Collabora Office (desktop, offline) are separate products; left blank."
+  },
+  {
+   "group": "notes",
+   "tag": "phone-app",
+   "problem": "Question asks both iPhone and Android; Android-only or mobile-web-only cases need clearer partly/no wording"
+  },
+  {
+   "group": "notes",
+   "tag": "syncs-devices",
+   "problem": "Does not fit server wikis (MediaWiki, XWiki): they are web sites, not synced apps"
+  },
+  {
+   "group": "notes",
+   "tag": "phone-app",
+   "problem": "Wiki servers have no own phone app; answer is unclear for self-hosted wikis"
+  },
+  {
+   "group": "notes",
+   "tag": "e2e-encrypted",
+   "problem": "Not meaningful for public/team wikis; every wiki would be 'no'"
+  }
+ ],
+ "dataErrors": [
+  {
+   "project": "localsend",
+   "problem": "platforms omit iOS but README and localsend.org list an iOS App Store app"
+  },
+  {
+   "project": "plane",
+   "problem": "platforms list only 'server' but plane.so offers hosted Plane Cloud and iOS/Android apps"
+  },
+  {
+   "project": "ghostfolio",
+   "problem": "Sits in 'budgeting' but README describes an investment/wealth tracker, not a budgeting tool"
+  },
+  {
+   "project": "docmost",
+   "problem": "Docmost has Pro 'Bases' databases; listing says fewer features than Notion (fine) but platforms 'web, server' omits hosted cloud at docmost.com/pricing"
+  },
+  {
+   "project": "openproject",
+   "problem": "Site lists server only, but openproject.org/collaboration-software-features says 'a dedicated mobile app for iOS and Android'"
+  },
+  {
+   "project": "etherpad",
+   "problem": "Site lists web/server only, but etherpad.org says it runs 'as a native app on ... Android and iOS' (Desktop & Mobile App)"
+  },
+  {
+   "project": "nextcloud-calendar",
+   "problem": "Likely missing phone coverage: Nextcloud has phone apps and calendars sync via CalDAV; listing has none"
+  },
+  {
+   "project": "trilium-notes",
+   "problem": "Platforms list excludes phone but README says it has a touch-optimized mobile frontend (web)"
+  },
+  {
+   "project": "super-productivity",
+   "problem": "Site platforms omit iOS; README says 'Runs on Linux, macOS, Windows, Android, iOS and in the browser' (github.com/super-productivity/super-productivity)"
+  },
+  {
+   "project": "comaps",
+   "problem": "Site platforms list linux+android only; README says 'Available for Android, iOS, MacOS, and Linux' and site has App Store button"
+  },
+  {
+   "project": "home-assistant",
+   "problem": "Platforms lack ios/android; official Companion apps exist (home-assistant.io footer: iOS and Apple devices, Android and Wear OS)"
+  },
+  {
+   "project": "taiga",
+   "problem": "Code link github.com/kaleidos-ventures/taiga is the 'Taiga Next' rewrite repo (README: 'the next iteration of Taiga'), last pushed 2023-12-13; the live product at taiga.io is documented at docs.taiga.io and its repos taiga-back/taiga-front. Answers here are from taiga.io and docs.taiga.io."
+  },
+  {
+   "project": "spliit-app",
+   "problem": "Platforms list only 'server', but spliit.app advertises 'Spliit for iPhone' (SwiftUI app) and the README lists 'Progressive Web App'; also the public site spliit.app is free to use with no account (so web belongs in platforms)."
+  },
+  {
+   "project": "roundcube",
+   "problem": "Listing note 'needs your own mail server' is inaccurate: Roundcube is an IMAP client (README: 'browser-based multilingual IMAP client'); it needs a web server plus any IMAP account, not its own mail server."
+  },
+  {
+   "project": "rowy",
+   "problem": "Code link buildship-ai/rowy: repo last pushed 2024-11-23; README still points to rowyio/rowy and rowy.app/docs.rowy.io; project looks inactive. Not archived on GitHub."
+  },
+  {
+   "project": "onlyoffice-docs",
+   "problem": "platforms omit ios/android but onlyoffice.com/office-suite says a free iOS and Android app exists"
+  },
+  {
+   "project": "kanboard",
+   "problem": "README says project is in maintenance mode (no new major features)"
+  },
+  {
+   "project": "syncthing",
+   "problem": "Platforms omit Android; community Syncthing-Fork exists (official app discontinued Dec 2024: github.com/syncthing/syncthing-android). iOS only via third-party apps (docs.syncthing.net FAQ)."
+  },
+  {
+   "project": "affine",
+   "problem": "Platforms list iOS but not Android; affine.pro/download lists Android app on Google Play."
+  },
+  {
+   "project": "collabora-online",
+   "problem": "Platforms omit Android/iOS; collaboraonline.com/collabora-online/ says 'Mobile app for Android, iOS and Chromebook'."
+  },
+  {
+   "project": "firefly-iii",
+   "problem": "Setup note 'You run it yourself' misses paid hosting options listed in README (PikaPods, Hostinger)."
+  },
+  {
+   "project": "leantime",
+   "problem": "Listing says server-only/advanced but leantime.io/pricing sells hosted Leantime Pro with 14-day trial."
+  }
+ ]
+}
