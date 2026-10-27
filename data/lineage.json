@@ -208,12 +208,26 @@
    "source": "https://en.wikipedia.org/wiki/CachyOS",
    "confirmed": "mod"
   },
-  "gitlab-community-edition": {
-   "relation": "free-edition",
-   "of": "gitlab",
-   "why": "GitLab's free, open-source edition; GitLab also sells a paid Enterprise Edition.",
-   "source": "https://about.gitlab.com/install/ce-or-ee/",
-   "confirmed": "mod"
+  "postmarketos": {
+   "relation": "renamed",
+   "ofName": "postmarketOS",
+   "why": "postmarketOS was renamed Nura; postmarketos.org now forwards to nura.eco, which says Nura was formerly known as postmarketOS.",
+   "source": "https://nura.eco/",
+   "ofUrl": "https://postmarketos.org",
+   "oldNames": [
+    "postmarketOS"
+   ],
+   "confirmed": "suggested"
+  },
+  "mlcraft": {
+   "relation": "renamed",
+   "ofName": "MLCraft",
+   "why": "MLCraft was renamed Synmetrix; the project's README says \"Synmetrix (prev. MLCraft)\".",
+   "source": "https://github.com/synmetrix/synmetrix",
+   "oldNames": [
+    "MLCraft"
+   ],
+   "confirmed": "suggested"
   },
   "libreoffice-writer": {
    "relation": "split",

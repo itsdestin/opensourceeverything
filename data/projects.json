@@ -374,8 +374,9 @@
     "windows",
     "mac",
     "linux",
-    "web",
-    "ios"
+    "android",
+    "ios",
+    "web"
    ],
    "forks": 5402,
    "latestRelease": {
@@ -713,6 +714,49 @@
    "forks": 386,
    "thumbs": [],
    "setup": "easy"
+  },
+  {
+   "id": "preset",
+   "name": "Apache Superset",
+   "summary": "Superset is a web-based tool for exploring data, building charts and dashboards, and running SQL queries against many database types. It is aimed at analysts and business teams who want to understand their data.",
+   "kind": "self_hosted",
+   "code": "github.com/apache/superset",
+   "website": "https://superset.apache.org/",
+   "license": "Apache-2.0",
+   "licenseClass": "open",
+   "licenseNeedsCheck": false,
+   "stars": 75312,
+   "archived": false,
+   "inactive": false,
+   "unconfirmed": [
+    "Whether Superset is a direct replacement for PowerBI, Tableau or Mode is not stated in the README; it only says it can replace or augment proprietary BI tools.",
+    "The README does not state a specific list of supported database names beyond the logos and the phrase 'Presto, Trino, Athena'."
+   ],
+   "source": "lists",
+   "sourceLists": [
+    "awesome-oss-alternatives"
+   ],
+   "verified": false,
+   "release": "https://github.com/apache/superset/releases/tag/6.1.0",
+   "screenshots": [
+    "https://superset.apache.org/img/screenshots/gallery.jpg",
+    "https://superset.apache.org/img/screenshots/dashboard.jpg",
+    "https://superset.apache.org/img/screenshots/explore.jpg"
+   ],
+   "platforms": [
+    "server"
+   ],
+   "forks": 18533,
+   "latestRelease": {
+    "name": "6.1.0",
+    "date": "2026-05-13T18:32:25Z"
+   },
+   "thumbs": [
+    "assets/shots/preset-0.webp",
+    "assets/shots/preset-1.webp",
+    "assets/shots/preset-2.webp"
+   ],
+   "setup": "advanced"
   },
   {
    "id": "apitable",
@@ -2158,7 +2202,8 @@
    ],
    "platforms": [
     "windows",
-    "mac"
+    "mac",
+    "linux"
    ],
    "forks": 2734,
    "latestRelease": {
@@ -2532,8 +2577,10 @@
     "https://www.comaps.app/images/sections/map-s-3.webp"
    ],
    "platforms": [
+    "mac",
     "linux",
-    "android"
+    "android",
+    "ios"
    ],
    "licenseSource": "https://codeberg.org/comaps/comaps/raw/branch/main/LICENSE",
    "forks": 213,
@@ -2579,7 +2626,9 @@
     "https://github.com/user-attachments/assets/36e065e0-bfae-4456-8c7f-8369d5ea48a2"
    ],
    "platforms": [
-    "windows"
+    "windows",
+    "mac",
+    "linux"
    ],
    "forks": 16926,
    "latestRelease": {
@@ -2787,10 +2836,10 @@
   {
    "id": "crater",
    "name": "Crater",
-   "summary": "Crater is a free web and mobile app for making invoices and estimates, and tracking expenses and payments. It is for individuals and small businesses that need to bill customers.",
-   "kind": "app",
+   "summary": "Crater is a free invoicing app you run yourself, with companion Android and iPhone apps, for making invoices and estimates and tracking expenses and payments. It is for individuals and small businesses that need to bill customers. It has had no updates since 2023, and its old website now shows a different product.",
+   "kind": "self_hosted",
    "code": "github.com/crater-invoice-inc/crater",
-   "website": "https://craterapp.com",
+   "website": null,
    "license": "AGPL-3.0",
    "licenseClass": "open",
    "licenseNeedsCheck": false,
@@ -2809,8 +2858,10 @@
    "release": "https://github.com/crater-invoice-inc/crater/releases/tag/6.0.6",
    "screenshots": [],
    "platforms": [
+    "web",
     "android",
-    "ios"
+    "ios",
+    "server"
    ],
    "forks": 1714,
    "latestRelease": {
@@ -2818,7 +2869,7 @@
     "date": "2022-03-06T07:25:43Z"
    },
    "thumbs": [],
-   "setup": "easy"
+   "setup": "advanced"
   },
   {
    "id": "crowd-dev",
@@ -3575,8 +3626,8 @@
   },
   {
    "id": "drone",
-   "name": "Drone",
-   "summary": "Harness is a self-hosted developer platform that combines code hosting, automated build and deploy pipelines, hosted development environments, and artifact registries. It is for development teams who want to run these tools on their own machines or servers.",
+   "name": "Drone / Harness Open Source",
+   "summary": "Drone is a tool that builds, tests and deploys software automatically. Its makers' newer open source platform, Harness Open Source (the code linked here), adds code hosting, hosted development environments and artifact registries; the original Drone is kept on a separate branch of that code. It is for development teams who want to run these tools on their own machines or servers.",
    "kind": "self_hosted",
    "code": "github.com/harness/harness",
    "website": "https://www.harness.io/open-source",
@@ -4085,6 +4136,11 @@
     "https://raw.githubusercontent.com/ether/etherpad/HEAD/doc/public/etherpad_basic.png"
    ],
    "platforms": [
+    "windows",
+    "mac",
+    "linux",
+    "android",
+    "ios",
     "web",
     "server"
    ],
@@ -5595,45 +5651,12 @@
    }
   },
   {
-   "id": "gitlab",
-   "name": "Gitlab",
-   "summary": "GitLab is software for storing code with Git, reviewing changes and running automated build and deploy pipelines. It is for software teams that want to host their own code platform instead of using GitHub.",
-   "kind": "self_hosted",
-   "code": "github.com/gitlabhq/gitlabhq",
-   "website": "https://about.gitlab.com/getting-help/",
-   "license": "MIT",
-   "licenseClass": "open_core",
-   "licenseNeedsCheck": false,
-   "stars": 24544,
-   "archived": false,
-   "inactive": false,
-   "unconfirmed": [
-    "Whether the GitHub replacement covers all of GitHub's features, since the material only describes code hosting, reviews and CI/CD.",
-    "The exact license and terms of the ee/ and jh/ directories, which are referenced but not included in the material given."
-   ],
-   "source": "lists",
-   "sourceLists": [
-    "awesome-foss-alternatives"
-   ],
-   "verified": false,
-   "release": null,
-   "screenshots": [],
-   "platforms": [
-    "linux",
-    "server"
-   ],
-   "licenseSource": "https://raw.githubusercontent.com/gitlabhq/gitlabhq/master/LICENSE",
-   "forks": 5944,
-   "thumbs": [],
-   "setup": "advanced"
-  },
-  {
    "id": "gitlab-community-edition",
    "name": "GitLab Community Edition",
    "summary": "GitLab Community Edition is a self-hosted web platform for storing code with Git, reviewing changes, and running automated build and test pipelines. It is aimed at software teams who want to run their own code hosting server.",
    "kind": "self_hosted",
    "code": "gitlab.com/gitlab-org/gitlab-foss",
-   "website": null,
+   "website": "https://about.gitlab.com/install/ce-or-ee/",
    "download": null,
    "license": "MIT",
    "licenseClass": "open",
@@ -5655,14 +5678,7 @@
    ],
    "forks": 8301,
    "thumbs": [],
-   "setup": "advanced",
-   "lineage": {
-    "of": "gitlab",
-    "relation": "free-edition",
-    "why": "GitLab's free, open-source edition; GitLab also sells a paid Enterprise Edition.",
-    "source": "https://about.gitlab.com/install/ce-or-ee/",
-    "confirmed": "mod"
-   }
+   "setup": "advanced"
   },
   {
    "id": "gnumeric",
@@ -6259,7 +6275,7 @@
    "kind": "app",
    "code": "github.com/Heroic-Games-Launcher/HeroicGamesLauncher",
    "website": "https://heroicgameslauncher.com",
-   "summary": "Heroic lets you sign in to your Epic, GOG and Amazon Games accounts and install and play the games you already own, on Windows, Mac and Linux. It does not sell games.",
+   "summary": "Heroic lets you sign in to your Epic, GOG and Amazon Games accounts and install and play the games you already own, on Windows, Mac and Linux. It also opens those stores inside the app; the games are sold by the stores, not by Heroic.",
    "license": "GPL-3.0",
    "stars": 12518,
    "platforms": [
@@ -6310,7 +6326,7 @@
   {
    "id": "highlight",
    "name": "highlight",
-   "summary": "Highlight is a monitoring platform that records user sessions, tracks errors and collects logs so developers can find out why bugs happen. It is aimed at software developers who run web apps.",
+   "summary": "Highlight is a monitoring platform that records user sessions, tracks errors and collects logs so developers can find out why bugs happen. It is aimed at software developers who run web apps. Its team has joined LaunchDarkly, and highlight.io now forwards to LaunchDarkly's site.",
    "kind": "self_hosted",
    "code": "github.com/highlight/highlight",
    "website": "https://app.highlight.io",
@@ -6380,6 +6396,8 @@
    ],
    "platforms": [
     "linux",
+    "android",
+    "ios",
     "web",
     "server"
    ],
@@ -7100,8 +7118,12 @@
     "https://jellyfin.org/assets/images/10.8-home-4a73a92bf90d1eeffa5081201ca9c7bb.png"
    ],
    "platforms": [
+    "windows",
+    "mac",
+    "linux",
     "android",
     "ios",
+    "web",
     "server"
    ],
    "forks": 5719,
@@ -7283,7 +7305,7 @@
   {
    "id": "kanboard",
    "name": "Kanboard",
-   "summary": "Kanboard is project management software that uses Kanban boards to track tasks and their progress. It is for teams and individuals who want to organize work visually and host it themselves.",
+   "summary": "Kanboard is project management software that uses Kanban boards to track tasks and their progress. It is for teams and individuals who want to organize work visually and host it themselves. Its makers describe it as in maintenance mode, which means no big new features are planned.",
    "kind": "self_hosted",
    "code": "github.com/kanboard/kanboard",
    "website": "https://kanboard.org",
@@ -9058,7 +9080,8 @@
     "windows",
     "mac",
     "linux",
-    "android"
+    "android",
+    "ios"
    ],
    "forks": 5404,
    "latestRelease": {
@@ -9685,7 +9708,7 @@
   },
   {
    "id": "mellisearch",
-   "name": "Mellisearch",
+   "name": "Meilisearch",
    "summary": "Meilisearch is a search engine that lets websites and apps find items quickly, even when the search has typos. It is for developers who want to add search to their own sites or apps, either on a hosted service or on their own servers.",
    "kind": "developer_tool",
    "code": "github.com/meilisearch/meilisearch",
@@ -9969,43 +9992,6 @@
    "thumbs": [
     "assets/shots/misskey-0.webp"
    ],
-   "setup": "advanced"
-  },
-  {
-   "id": "mlcraft",
-   "name": "MLCraft",
-   "summary": "Synmetrix (formerly MLCraft) is a self-hosted semantic layer that defines business metrics once so teams and BI tools read the same numbers. It is aimed at data teams and organizations that want a single source of truth for metrics.",
-   "kind": "self_hosted",
-   "code": "github.com/synmetrix/synmetrix",
-   "website": "https://synmetrix.org",
-   "license": "Apache-2.0",
-   "licenseClass": "open",
-   "licenseNeedsCheck": false,
-   "stars": 626,
-   "archived": false,
-   "inactive": true,
-   "unconfirmed": [
-    "Whether the license file covers the entire repository or only the core, since the README also mentions a separate MIT license for other contents.",
-    "Whether the Looker comparison holds for dashboards and visualization, which the README does not describe in detail.",
-    "Exact scope of the Cube dependency and whether it is bundled or separately licensed."
-   ],
-   "source": "lists",
-   "sourceLists": [
-    "awesome-oss-alternatives"
-   ],
-   "verified": false,
-   "release": "https://github.com/synmetrix/synmetrix/releases/tag/v0.1.55",
-   "screenshots": [],
-   "platforms": [
-    "server"
-   ],
-   "licenseSource": "https://raw.githubusercontent.com/synmetrix/synmetrix/main/LICENSE",
-   "forks": 49,
-   "latestRelease": {
-    "name": "v0.1.55 ⛱",
-    "date": "2025-02-07T23:14:35Z"
-   },
-   "thumbs": [],
    "setup": "advanced"
   },
   {
@@ -10373,7 +10359,9 @@
     "https://www.netdata.cloud/img/og-image.png"
    ],
    "platforms": [
-    "windows"
+    "windows",
+    "mac",
+    "linux"
    ],
    "forks": 6699,
    "latestRelease": {
@@ -11146,6 +11134,54 @@
    "setup": "advanced"
   },
   {
+   "id": "postmarketos",
+   "name": "Nura (formerly postmarketOS)",
+   "summary": "Nura, formerly called postmarketOS, is a Linux-based operating system for phones, built to keep older devices useful for many years. It is for tinkerers: on most phones, calls, the camera or mobile data do not fully work yet.",
+   "kind": "app",
+   "code": null,
+   "website": "https://nura.eco",
+   "download": "https://postmarketos.org/download/",
+   "license": "GPL-3.0-or-later",
+   "licenseClass": "open",
+   "licenseNeedsCheck": false,
+   "stars": null,
+   "archived": false,
+   "inactive": false,
+   "unconfirmed": [
+    "License terms (no license reported or provided)",
+    "Which phone models are supported",
+    "App compatibility with Android or iOS apps",
+    "Current maturity and daily-use readiness beyond the README statement that it is not yet ready for everyone"
+   ],
+   "source": "starter",
+   "verified": false,
+   "screenshots": [
+    "https://upload.wikimedia.org/wikipedia/commons/0/0f/PostmarketOS-With-Phosh.png",
+    "https://upload.wikimedia.org/wikipedia/commons/e/ee/Phosh_0.14.0.png"
+   ],
+   "platforms": [
+    "linux"
+   ],
+   "licenseSource": "https://gitlab.postmarketos.org/postmarketOS/pmbootstrap/-/raw/main/pmbootstrap.py",
+   "thumbs": [
+    "assets/shots/postmarketos-0.webp",
+    "assets/shots/postmarketos-1.webp"
+   ],
+   "setup": "advanced",
+   "setupWhy": "An operating system: installing it means replacing or sitting alongside your computer or phone's current system, which is more than installing an app.",
+   "lineage": {
+    "ofName": "postmarketOS",
+    "ofUrl": "https://postmarketos.org",
+    "relation": "renamed",
+    "why": "postmarketOS was renamed Nura; postmarketos.org now forwards to nura.eco, which says Nura was formerly known as postmarketOS.",
+    "source": "https://nura.eco/",
+    "confirmed": "suggested",
+    "oldNames": [
+     "postmarketOS"
+    ]
+   }
+  },
+  {
    "id": "obs-studio",
    "name": "OBS Studio",
    "summary": "OBS Studio is free software for recording your screen and live streaming video. It is for people who want to capture, mix and broadcast video from their computer.",
@@ -11456,6 +11492,8 @@
     "windows",
     "mac",
     "linux",
+    "android",
+    "ios",
     "web",
     "server"
    ],
@@ -11575,7 +11613,7 @@
   {
    "id": "openblocks",
    "name": "Openblocks",
-   "summary": "Openblocks is a tool for building internal business apps, such as dashboards and admin panels, by connecting to databases and APIs and arranging ready-made components on screen. It is aimed at software teams and companies that need custom tools for their staff or customers.",
+   "summary": "Openblocks is a tool for building internal business apps, such as dashboards and admin panels, by connecting to databases and APIs and arranging ready-made components on screen. It is aimed at software teams and companies that need custom tools for their staff or customers. The project has had no updates since October 2023; Lowcoder continues from it.",
    "kind": "self_hosted",
    "code": "github.com/openblocks-dev/openblocks",
    "website": "https://cloud.openblocks.dev",
@@ -11933,7 +11971,9 @@
     "https://raw.githubusercontent.com/opf/openproject/HEAD/GitHub-tab-new.png"
    ],
    "platforms": [
-    "server"
+    "server",
+    "android",
+    "ios"
    ],
    "forks": 3624,
    "latestRelease": {
@@ -13228,6 +13268,9 @@
     "https://media.docs.plane.so/GitHub-readme/github-modules.webp"
    ],
    "platforms": [
+    "web",
+    "android",
+    "ios",
     "server"
    ],
    "forks": 6192,
@@ -13375,10 +13418,10 @@
   {
    "id": "pocket-casts",
    "name": "Pocket Casts",
-   "summary": "Pocket Casts is a podcast app for finding, subscribing to and listening to shows on Android. It is made for people who listen to podcasts on their phones.",
+   "summary": "Pocket Casts is a podcast app for finding, subscribing to and listening to shows on Android and iPhone. It is made for people who listen to podcasts on their phones.",
    "kind": "app",
    "code": "github.com/Automattic/pocket-casts-android",
-   "website": "https://forums.pocketcasts.com",
+   "website": "https://pocketcasts.com",
    "download": null,
    "license": "MPL-2.0",
    "licenseClass": "open",
@@ -13396,7 +13439,8 @@
    "release": "https://github.com/Automattic/pocket-casts-android/releases/tag/8.22",
    "screenshots": [],
    "platforms": [
-    "android"
+    "android",
+    "ios"
    ],
    "forks": 317,
    "latestRelease": {
@@ -13689,86 +13733,6 @@
    "setup": "advanced"
   },
   {
-   "id": "postmarketos",
-   "name": "postmarketOS",
-   "summary": "postmarketOS is a Linux-based operating system for phones, built to keep older devices useful for many years. It is for tinkerers: on most phones, calls, the camera or mobile data do not fully work yet.",
-   "kind": "app",
-   "code": null,
-   "website": "https://postmarketos.org",
-   "download": "https://postmarketos.org/download/",
-   "license": "GPL-3.0-or-later",
-   "licenseClass": "open",
-   "licenseNeedsCheck": false,
-   "stars": null,
-   "archived": false,
-   "inactive": false,
-   "unconfirmed": [
-    "License terms (no license reported or provided)",
-    "Which phone models are supported",
-    "App compatibility with Android or iOS apps",
-    "Current maturity and daily-use readiness beyond the README statement that it is not yet ready for everyone"
-   ],
-   "source": "starter",
-   "verified": false,
-   "screenshots": [
-    "https://upload.wikimedia.org/wikipedia/commons/0/0f/PostmarketOS-With-Phosh.png",
-    "https://upload.wikimedia.org/wikipedia/commons/e/ee/Phosh_0.14.0.png"
-   ],
-   "platforms": [
-    "linux"
-   ],
-   "licenseSource": "https://gitlab.postmarketos.org/postmarketOS/pmbootstrap/-/raw/main/pmbootstrap.py",
-   "thumbs": [
-    "assets/shots/postmarketos-0.webp",
-    "assets/shots/postmarketos-1.webp"
-   ],
-   "setup": "advanced",
-   "setupWhy": "An operating system: installing it means replacing or sitting alongside your computer or phone's current system, which is more than installing an app."
-  },
-  {
-   "id": "preset",
-   "name": "Preset",
-   "summary": "Superset is a web-based tool for exploring data, building charts and dashboards, and running SQL queries against many database types. It is aimed at analysts and business teams who want to understand their data.",
-   "kind": "self_hosted",
-   "code": "github.com/apache/superset",
-   "website": "https://superset.apache.org/",
-   "license": "Apache-2.0",
-   "licenseClass": "open",
-   "licenseNeedsCheck": false,
-   "stars": 75312,
-   "archived": false,
-   "inactive": false,
-   "unconfirmed": [
-    "Whether Superset is a direct replacement for PowerBI, Tableau or Mode is not stated in the README; it only says it can replace or augment proprietary BI tools.",
-    "The README does not state a specific list of supported database names beyond the logos and the phrase 'Presto, Trino, Athena'."
-   ],
-   "source": "lists",
-   "sourceLists": [
-    "awesome-oss-alternatives"
-   ],
-   "verified": false,
-   "release": "https://github.com/apache/superset/releases/tag/6.1.0",
-   "screenshots": [
-    "https://superset.apache.org/img/screenshots/gallery.jpg",
-    "https://superset.apache.org/img/screenshots/dashboard.jpg",
-    "https://superset.apache.org/img/screenshots/explore.jpg"
-   ],
-   "platforms": [
-    "server"
-   ],
-   "forks": 18533,
-   "latestRelease": {
-    "name": "6.1.0",
-    "date": "2026-05-13T18:32:25Z"
-   },
-   "thumbs": [
-    "assets/shots/preset-0.webp",
-    "assets/shots/preset-1.webp",
-    "assets/shots/preset-2.webp"
-   ],
-   "setup": "advanced"
-  },
-  {
    "id": "presta",
    "name": "Presta",
    "summary": "PrestaShop is free software for building and running an online shop, written in PHP. It is meant for merchants who want to sell products on their own website.",
@@ -14022,7 +13986,7 @@
    "summary": "Quant-UX is a tool for designing, prototyping and testing app or website screens, and collecting data on how people use them. It is aimed at researchers, UX designers and product teams who want data-driven feedback on their designs.",
    "kind": "self_hosted",
    "code": "github.com/KlausSchaefers/quant-ux",
-   "website": null,
+   "website": "https://quant-ux.com/",
    "license": "GPL-3.0",
    "licenseClass": "open",
    "licenseNeedsCheck": false,
@@ -14093,7 +14057,7 @@
   {
    "id": "quickwit",
    "name": "Quickwit",
-   "summary": "Quickwit is a search engine for storing and searching large amounts of logs and traces, kept on cloud storage. It is aimed at engineers and operations teams who monitor software systems.",
+   "summary": "Quickwit is a search engine for storing and searching large amounts of logs and traces, kept on cloud storage. It is aimed at engineers and operations teams who monitor software systems. Its team announced that Quickwit joined Datadog; the code remains open source.",
    "kind": "self_hosted",
    "code": "github.com/quickwit-oss/quickwit",
    "website": "https://quickwit.io",
@@ -14702,44 +14666,6 @@
    "thumbs": [
     "assets/shots/searxng-0.webp"
    ],
-   "setup": "advanced"
-  },
-  {
-   "id": "semi",
-   "name": "SeMI",
-   "summary": "Weaviate is a database that stores text and images as numerical vectors so it can find items by meaning rather than exact keywords. It is aimed at developers building AI search, chatbot and recommendation features.",
-   "kind": "developer_tool",
-   "code": "github.com/weaviate/weaviate",
-   "website": "https://weaviate.io/developers/weaviate/",
-   "license": "BSD-3-Clause",
-   "licenseClass": "open_core",
-   "licenseNeedsCheck": false,
-   "stars": 16915,
-   "archived": false,
-   "inactive": false,
-   "unconfirmed": [
-    "Whether the 'wl' enterprise features are required for the main functions listed in the README is not stated.",
-    "The host license field was NOASSERTION, so the license file was used to determine the verdict.",
-    "Whether a hosted Algolia-style search service is offered by Weaviate Cloud for the same use is not stated in the README."
-   ],
-   "source": "lists",
-   "sourceLists": [
-    "awesome-oss-alternatives"
-   ],
-   "verified": false,
-   "release": "https://github.com/weaviate/weaviate/releases/tag/v1.40.2",
-   "screenshots": [],
-   "platforms": [
-    "mac",
-    "linux"
-   ],
-   "licenseSource": "https://raw.githubusercontent.com/weaviate/weaviate/main/LICENSE",
-   "forks": 1429,
-   "latestRelease": {
-    "name": "v1.40.2 - eMudhra intermediate certificates security patch",
-    "date": "2026-10-22T08:54:36Z"
-   },
-   "thumbs": [],
    "setup": "advanced"
   },
   {
@@ -15460,7 +15386,7 @@
    "summary": "Sonic is a search engine server that stores words and item IDs so an app can quickly find matching items. It is meant for developers who want a lighter alternative to heavy search systems like Elasticsearch.",
    "kind": "self_hosted",
    "code": "github.com/valeriansaliou/sonic",
-   "website": "https://crates.io/crates/sonic-server",
+   "website": null,
    "license": "MPL-2.0",
    "licenseClass": "open",
    "licenseNeedsCheck": false,
@@ -15549,6 +15475,8 @@
    "release": "https://github.com/spliit-app/spliit/releases/tag/1.30.0",
    "screenshots": [],
    "platforms": [
+    "web",
+    "ios",
     "server"
    ],
    "forks": 523,
@@ -15902,7 +15830,9 @@
     "windows",
     "mac",
     "linux",
-    "android"
+    "android",
+    "ios",
+    "web"
    ],
    "forks": 2204,
    "latestRelease": {
@@ -16039,6 +15969,53 @@
    "setup": "easy"
   },
   {
+   "id": "mlcraft",
+   "name": "Synmetrix (formerly MLCraft)",
+   "summary": "Synmetrix (formerly MLCraft) is a self-hosted semantic layer that defines business metrics once so teams and BI tools read the same numbers. It is aimed at data teams and organizations that want a single source of truth for metrics.",
+   "kind": "self_hosted",
+   "code": "github.com/synmetrix/synmetrix",
+   "website": "https://synmetrix.org",
+   "license": "Apache-2.0",
+   "licenseClass": "open",
+   "licenseNeedsCheck": false,
+   "stars": 626,
+   "archived": false,
+   "inactive": true,
+   "unconfirmed": [
+    "Whether the license file covers the entire repository or only the core, since the README also mentions a separate MIT license for other contents.",
+    "Whether the Looker comparison holds for dashboards and visualization, which the README does not describe in detail.",
+    "Exact scope of the Cube dependency and whether it is bundled or separately licensed."
+   ],
+   "source": "lists",
+   "sourceLists": [
+    "awesome-oss-alternatives"
+   ],
+   "verified": false,
+   "release": "https://github.com/synmetrix/synmetrix/releases/tag/v0.1.55",
+   "screenshots": [],
+   "platforms": [
+    "server"
+   ],
+   "licenseSource": "https://raw.githubusercontent.com/synmetrix/synmetrix/main/LICENSE",
+   "forks": 49,
+   "latestRelease": {
+    "name": "v0.1.55 ⛱",
+    "date": "2025-02-07T23:14:35Z"
+   },
+   "thumbs": [],
+   "setup": "advanced",
+   "lineage": {
+    "ofName": "MLCraft",
+    "relation": "renamed",
+    "why": "MLCraft was renamed Synmetrix; the project's README says \"Synmetrix (prev. MLCraft)\".",
+    "source": "https://github.com/synmetrix/synmetrix",
+    "confirmed": "suggested",
+    "oldNames": [
+     "MLCraft"
+    ]
+   }
+  },
+  {
    "id": "tabby",
    "name": "Tabby",
    "summary": "Tabby is a self-hosted AI coding assistant that suggests code as you type. It is for developers who want to run the server on their own hardware instead of using a cloud service.",
@@ -16108,17 +16085,17 @@
   {
    "id": "taiga",
    "name": "Taiga",
-   "summary": "Taiga is a free, open-source project management tool for agile teams, with boards for planning and tracking tasks and projects. This repository holds the next version of Taiga, which is being redesigned around the same core ideas.",
-   "kind": "app",
-   "code": "github.com/kaleidos-ventures/taiga",
-   "website": null,
+   "summary": "Taiga is a free, open-source project management tool for agile teams, with boards for planning and tracking tasks and projects. You can run it yourself or use the hosted version at taiga.io. Its code is split across several repositories; the link goes to the main one.",
+   "kind": "self_hosted",
+   "code": "github.com/taigaio/taiga-back",
+   "website": "https://taiga.io",
    "download": null,
    "license": "MPL-2.0",
    "licenseClass": "open",
    "licenseNeedsCheck": false,
-   "stars": 575,
+   "stars": 859,
    "archived": false,
-   "inactive": true,
+   "inactive": false,
    "unconfirmed": [
     "Whether Taiga offers boards, sprints or other specific features that match Trello, Asana, Jira or Monday.com.",
     "Whether Taiga is intended for personal to-do lists as Todoist is.",
@@ -16135,11 +16112,11 @@
     "web",
     "server"
    ],
-   "forks": 87,
+   "forks": 319,
    "thumbs": [
     "assets/shots/taiga-0.webp"
    ],
-   "setup": "easy"
+   "setup": "advanced"
   },
   {
    "id": "tdengine",
@@ -17485,6 +17462,44 @@
    "setup": "advanced"
   },
   {
+   "id": "semi",
+   "name": "Weaviate",
+   "summary": "Weaviate is a database that stores text and images as numerical vectors so it can find items by meaning rather than exact keywords. It is aimed at developers building AI search, chatbot and recommendation features.",
+   "kind": "developer_tool",
+   "code": "github.com/weaviate/weaviate",
+   "website": "https://weaviate.io/developers/weaviate/",
+   "license": "BSD-3-Clause",
+   "licenseClass": "open_core",
+   "licenseNeedsCheck": false,
+   "stars": 16915,
+   "archived": false,
+   "inactive": false,
+   "unconfirmed": [
+    "Whether the 'wl' enterprise features are required for the main functions listed in the README is not stated.",
+    "The host license field was NOASSERTION, so the license file was used to determine the verdict.",
+    "Whether a hosted Algolia-style search service is offered by Weaviate Cloud for the same use is not stated in the README."
+   ],
+   "source": "lists",
+   "sourceLists": [
+    "awesome-oss-alternatives"
+   ],
+   "verified": false,
+   "release": "https://github.com/weaviate/weaviate/releases/tag/v1.40.2",
+   "screenshots": [],
+   "platforms": [
+    "mac",
+    "linux"
+   ],
+   "licenseSource": "https://raw.githubusercontent.com/weaviate/weaviate/main/LICENSE",
+   "forks": 1429,
+   "latestRelease": {
+    "name": "v1.40.2 - eMudhra intermediate certificates security patch",
+    "date": "2026-10-22T08:54:36Z"
+   },
+   "thumbs": [],
+   "setup": "advanced"
+  },
+  {
    "id": "webiny",
    "name": "Webiny",
    "summary": "Webiny is a headless content management system with a drag-and-drop page builder that companies run on their own Amazon Web Services account. It is aimed at developer teams who build complex websites and apps and extend them with TypeScript code.",
@@ -17625,7 +17640,9 @@
    "release": "https://github.com/openai/whisper/releases/tag/v20250625",
    "screenshots": [],
    "platforms": [
-    "windows"
+    "windows",
+    "mac",
+    "linux"
    ],
    "forks": 13484,
    "latestRelease": {
@@ -17662,7 +17679,10 @@
    ],
    "platforms": [
     "windows",
-    "linux"
+    "mac",
+    "linux",
+    "android",
+    "ios"
    ],
    "forks": 6241,
    "latestRelease": {
@@ -18287,8 +18307,8 @@
   },
   {
    "id": "zinc-labs",
-   "name": "Zinc Labs",
-   "summary": "ZincSearch is a search engine that indexes text so you can find things quickly inside your own data. It is meant for developers and teams who want full text search without the complexity of Elasticsearch.",
+   "name": "ZincSearch",
+   "summary": "ZincSearch is a search engine that indexes text so you can find things quickly inside your own data. It is meant for developers and teams who want full text search without the complexity of Elasticsearch. Its README points people who want to search logs to OpenObserve, a separate product.",
    "kind": "self_hosted",
    "code": "github.com/zincsearch/zincsearch",
    "website": "https://zincsearch-docs.zinc.dev",
