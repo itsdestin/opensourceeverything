@@ -1,0 +1,85 @@
+{
+ "deck": "ose-features-stance",
+ "started": "2026-10-27T04:00:50.092Z",
+ "submitted": "2026-10-27T04:20:29Z",
+ "cur": 1,
+ "answers": {
+  "F-build": {
+   "v": "yes",
+   "t": 1793074043124,
+   "note": "we should dedicate 1 opus subagent to just thinking through the most useful/valuable starter tags for each category. and think through how these relate to whats missing labels and such",
+   "seconds": 66,
+   "theme": "light"
+  },
+  "F-scale": {
+   "v": "pick",
+   "pick": "ypn",
+   "t": 1793074043124,
+   "seconds": 66,
+   "theme": "light"
+  },
+  "F-fill": {
+   "v": "pick",
+   "pick": "ai-draft",
+   "t": 1793074043124,
+   "note": "dont bother marking, just fill these in.",
+   "seconds": 66,
+   "theme": "light"
+  },
+  "F-change": {
+   "v": "picks",
+   "picks": [
+    "users",
+    "mods"
+   ],
+   "t": 1793074043124,
+   "seconds": 66,
+   "theme": "light"
+  },
+  "F-show": {
+   "v": "picks",
+   "t": 1793074043124,
+   "picks": [
+    "gaps",
+    "filter",
+    "table",
+    "card"
+   ],
+   "note": "i think the filters should be a multiselect dropdown of some sort. the per-card items can be in like a dropdown section or something instead of real \"chips\" on the main card hero thing ",
+   "seconds": 66,
+   "theme": "light"
+  },
+  "F-boards": {
+   "v": "other",
+   "t": 1793074043124,
+   "note": "want to think through the various use case of this application/site further and where users would find most utility. want proposals with pros/cons",
+   "seconds": 66,
+   "theme": "light"
+  },
+  "S-labels": {
+   "v": "other",
+   "t": 1793074828298,
+   "note": "none of these. \"AI Contributions: Non-developers welcome/Traditional Developers Only/Not Accepted/See Policy\". see policy should only be used for cases that REALLY cant fit into the broad policy categories. each should have a popup with a slighly more tuned/clear description of the specific policy for that org/repo where available.",
+   "seconds": 262,
+   "theme": "light"
+  },
+  "S-details": {
+   "v": "picks",
+   "picks": [
+    "start",
+    "open",
+    "quote"
+   ],
+   "t": 1793074828298,
+   "seconds": 262,
+   "theme": "light"
+  },
+  "S-who": {
+   "v": "other",
+   "t": 1793074828298,
+   "note": "we should use a good ai for all of the big/important projects and. project maintainers/devs should be able to update themselves after claiming a project, clearing the temp ai marker. for a lot of the smaller projecst we can just skip fillling for now with clear empty state saying maintainers can set it.",
+   "seconds": 262,
+   "theme": "light"
+  }
+ }
+}
