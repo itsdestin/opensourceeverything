@@ -1,0 +1,102 @@
+{
+ "deck": "ose-structure-1",
+ "started": "2026-10-28T10:15:38.133Z",
+ "submitted": "2026-10-28T10:19:13Z",
+ "cur": 12,
+ "answers": {
+  "M-home": {
+   "note": "just keep them all on one big card",
+   "t": 1793182571612,
+   "v": "other",
+   "seconds": 33,
+   "theme": "light",
+   "zoom": 1
+  },
+  "M-home-phone": {
+   "v": "other",
+   "t": 1793182583225,
+   "seconds": 12,
+   "theme": "light",
+   "zoom": 1
+  },
+  "M-category": {
+   "v": "yes",
+   "t": 1793182603327,
+   "seconds": 20,
+   "theme": "light",
+   "zoom": 1
+  },
+  "M-group": {
+   "v": "yes",
+   "t": 1793182623017,
+   "seconds": 20,
+   "theme": "light",
+   "zoom": 1
+  },
+  "M-group-phone": {
+   "v": "yes",
+   "t": 1793182629578,
+   "seconds": 7,
+   "theme": "light",
+   "zoom": 1
+  },
+  "M-compare": {
+   "v": "yes",
+   "t": 1793182635983,
+   "seconds": 6,
+   "theme": "light",
+   "zoom": 1
+  },
+  "M-uptime": {
+   "v": "yes",
+   "t": 1793182651651,
+   "seconds": 16,
+   "theme": "light",
+   "zoom": 1
+  },
+  "M-kernel": {
+   "note": "",
+   "t": 1793182694854,
+   "v": "yes",
+   "seconds": 43,
+   "theme": "light",
+   "zoom": 1
+  },
+  "M-project": {
+   "v": "yes",
+   "t": 1793182699586,
+   "seconds": 5,
+   "theme": "light",
+   "zoom": 1
+  },
+  "M-project-phone": {
+   "v": "yes",
+   "t": 1793182706343,
+   "seconds": 7,
+   "theme": "light",
+   "zoom": 1
+  },
+  "M-search": {
+   "v": "yes",
+   "t": 1793182735857,
+   "note": "",
+   "seconds": 30,
+   "theme": "light",
+   "zoom": 1
+  },
+  "Q-key": {
+   "v": "yes",
+   "t": 1793182748402,
+   "seconds": 13,
+   "theme": "light",
+   "zoom": 1
+  },
+  "Q-live": {
+   "v": "yes",
+   "t": 1793182751971,
+   "seconds": 4,
+   "theme": "light",
+   "zoom": 1
+  }
+ }
+}
