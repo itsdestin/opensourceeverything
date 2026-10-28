@@ -1,0 +1,339 @@
+{
+ "title": "New map structure and the 173 new groups",
+ "key": "ose-structure-1",
+ "out": "structure-1.review.html",
+ "images": "images/structure-1.review",
+ "runs": {
+  "after": "runs-redesign-10/after"
+ },
+ "labels": {
+  "after": "Now"
+ },
+ "themes": [
+  "light"
+ ],
+ "theme": "fixed",
+ "crops": {
+  "home-areas-desktop": [
+   "ose",
+   "home-areas-desktop",
+   "1440x900+0+0"
+  ],
+  "home-areas-phone": [
+   "ose",
+   "home-areas-phone",
+   "390x844+0+0"
+  ],
+  "category-tv-desktop": [
+   "ose",
+   "category-tv-desktop",
+   "1440x900+0+0"
+  ],
+  "group-tv-desktop": [
+   "ose",
+   "group-tv-desktop",
+   "1440x900+0+0"
+  ],
+  "group-tv-phone": [
+   "ose",
+   "group-tv-phone",
+   "390x844+0+0"
+  ],
+  "group-tv-compare-desktop": [
+   "ose",
+   "group-tv-compare-desktop",
+   "1440x900+0+0"
+  ],
+  "group-uptime-desktop": [
+   "ose",
+   "group-uptime-desktop",
+   "1440x900+0+0"
+  ],
+  "group-kernel-desktop": [
+   "ose",
+   "group-kernel-desktop",
+   "1440x900+0+0"
+  ],
+  "project-homestead-desktop": [
+   "ose",
+   "project-homestead-desktop",
+   "1440x900+0+0"
+  ],
+  "project-homestead-phone": [
+   "ose",
+   "project-homestead-phone",
+   "390x844+0+0"
+  ],
+  "search-chrome-desktop": [
+   "ose",
+   "search-chrome-desktop",
+   "1440x900+0+0"
+  ]
+ },
+ "steps": [
+  {
+   "id": "M-home",
+   "surface": "Home page",
+   "path": "Home, computer",
+   "crop": "home-areas-desktop",
+   "runs": [
+    "after"
+   ],
+   "new": true,
+   "headline": "Everyday categories stay first; a new \"More areas\" row holds the other five areas.",
+   "changed": "Each area card lists its categories as chips.",
+   "notice": "Your pick: everyday first, areas below.",
+   "risk": "None worth noting.",
+   "highlight": {
+    "box": [
+     1,
+     1,
+     98,
+     98
+    ]
+   }
+  },
+  {
+   "id": "M-home-phone",
+   "surface": "Home page",
+   "path": "Home, phone",
+   "crop": "home-areas-phone",
+   "runs": [
+    "after"
+   ],
+   "new": true,
+   "headline": "Same on phones: one card per area.",
+   "changed": "Chips scroll sideways.",
+   "notice": "Category cards above are unchanged.",
+   "risk": "None worth noting.",
+   "highlight": {
+    "box": [
+     1,
+     1,
+     98,
+     98
+    ]
+   }
+  },
+  {
+   "id": "M-category",
+   "surface": "Category pages",
+   "path": "TVs & streaming boxes",
+   "crop": "category-tv-desktop",
+   "runs": [
+    "after"
+   ],
+   "new": true,
+   "headline": "A new category: the breadcrumb starts with its area; \"Also in\" lists its neighbours.",
+   "changed": "7 new groups, all with checked projects.",
+   "notice": "Groups with nothing open would show the warning pill.",
+   "risk": "None worth noting.",
+   "highlight": {
+    "box": [
+     1,
+     1,
+     98,
+     98
+    ]
+   }
+  },
+  {
+   "id": "M-group",
+   "surface": "Group pages",
+   "path": "TV home screens",
+   "crop": "group-tv-desktop",
+   "runs": [
+    "after"
+   ],
+   "new": true,
+   "headline": "A new group, filled with checked projects.",
+   "changed": "Summaries, setup, devices and screenshots where the project has them.",
+   "notice": "Two have no screenshot yet.",
+   "risk": "None worth noting.",
+   "highlight": {
+    "box": [
+     1,
+     1,
+     98,
+     98
+    ]
+   }
+  },
+  {
+   "id": "M-group-phone",
+   "surface": "Group pages",
+   "path": "TV home screens, phone",
+   "crop": "group-tv-phone",
+   "runs": [
+    "after"
+   ],
+   "new": true,
+   "headline": "Same group on a phone.",
+   "changed": "Bigger cards from round 6.",
+   "notice": "Filter button opens the sheet.",
+   "risk": "None worth noting.",
+   "highlight": {
+    "box": [
+     1,
+     1,
+     98,
+     98
+    ]
+   }
+  },
+  {
+   "id": "M-compare",
+   "surface": "Group pages",
+   "path": "Compare, TV home screens",
+   "crop": "group-tv-compare-desktop",
+   "runs": [
+    "after"
+   ],
+   "new": true,
+   "headline": "Each new group has its own checklist (4\u20138 items), answered from each project's own page.",
+   "changed": "Blank means not checked yet.",
+   "notice": "The AI was cautious: FLauncher shows \"partly\" for Android TV.",
+   "risk": "None worth noting.",
+   "highlight": {
+    "box": [
+     1,
+     1,
+     98,
+     98
+    ]
+   }
+  },
+  {
+   "id": "M-uptime",
+   "surface": "Group pages",
+   "path": "Uptime checks and status pages",
+   "crop": "group-uptime-desktop",
+   "runs": [
+    "after"
+   ],
+   "new": true,
+   "headline": "Another new group: Uptime Kuma, Gatus, Upptime, OneUptime.",
+   "changed": "Replaces UptimeRobot, Pingdom, Statuspage.",
+   "notice": "Screenshots are the projects' own.",
+   "risk": "None worth noting.",
+   "highlight": {
+    "box": [
+     1,
+     1,
+     98,
+     98
+    ]
+   }
+  },
+  {
+   "id": "M-kernel",
+   "surface": "Group pages",
+   "path": "The Linux kernel and system core",
+   "crop": "group-kernel-desktop",
+   "runs": [
+    "after"
+   ],
+   "new": true,
+   "headline": "A group with no paid rival: no \"Replaces\" row.",
+   "changed": "Your answer: no line when there's nothing closed.",
+   "notice": "Page title and AI prompts name the job instead.",
+   "risk": "None worth noting.",
+   "highlight": {
+    "box": [
+     1,
+     1,
+     98,
+     98
+    ]
+   }
+  },
+  {
+   "id": "M-project",
+   "surface": "Project pages",
+   "path": "Homestead",
+   "crop": "project-homestead-desktop",
+   "runs": [
+    "after"
+   ],
+   "new": true,
+   "headline": "A new project page: same layout as the rest.",
+   "changed": "Checklist answers link to their source.",
+   "notice": "License read from the code site.",
+   "risk": "None worth noting.",
+   "highlight": {
+    "box": [
+     1,
+     1,
+     98,
+     98
+    ]
+   }
+  },
+  {
+   "id": "M-project-phone",
+   "surface": "Project pages",
+   "path": "Homestead, phone",
+   "crop": "project-homestead-phone",
+   "runs": [
+    "after"
+   ],
+   "new": true,
+   "headline": "On phones every section folds.",
+   "changed": "Same as approved.",
+   "notice": "Nothing new.",
+   "risk": "None worth noting.",
+   "highlight": {
+    "box": [
+     1,
+     1,
+     98,
+     98
+    ]
+   }
+  },
+  {
+   "id": "M-search",
+   "surface": "Search",
+   "path": "\"chrome\"",
+   "crop": "search-chrome-desktop",
+   "runs": [
+    "after"
+   ],
+   "new": true,
+   "headline": "Search still puts Google Chrome first, ahead of the new \"Claude in Chrome\".",
+   "changed": "Also fixed: \"windows\", \"android\", \"whats app\".",
+   "notice": "\"linux\" and \"claude code\" now open on a niche match; the right pages are still listed.",
+   "risk": "None worth noting.",
+   "highlight": {
+    "box": [
+     1,
+     1,
+     98,
+     98
+    ]
+   }
+  },
+  {
+   "id": "Q-key",
+   "words": true,
+   "surface": "Group pages",
+   "path": "Compare table",
+   "headline": "Add a one-line key under the compare table (\u2713 yes \u00b7 ~ partly \u00b7 \u00b7 not checked)?",
+   "changed": "The design reviewer flagged that the marks aren't explained; today you tap a column for its question.",
+   "notice": "One small grey line under the table.",
+   "yes": "Add the key",
+   "no": "Leave as is"
+  },
+  {
+   "id": "Q-live",
+   "words": true,
+   "surface": "The data",
+   "path": "173 new groups, 568 projects",
+   "headline": "Ready for the new groups to go live with the rest of the redesign?",
+   "changed": "A 40-listing fact-check found 31 fully right; all 9 mistakes are fixed (mostly devices and setup). 78 licenses that only the AI read are marked for a mod to confirm.",
+   "notice": "About 1 in 4 listings may still have a small mistake (devices, setup or a checklist answer). Visitors can flag them with \"Suggest a fix\".",
+   "yes": "Yes, ship them",
+   "no": "Do another check first"
+  }
+ ]
+}
