@@ -29,7 +29,7 @@ const CAT_ICON = {
   business: svg('<rect x="3" y="7" width="18" height="13" rx="2"/><path d="M9 7V5a2 2 0 0 1 2-2h2a2 2 0 0 1 2 2v2M3 13h18"/>'),
   games: svg('<rect x="2" y="7" width="20" height="11" rx="4"/><path d="M7 11v3M5.5 12.5h3"/><circle cx="16" cy="11.5" r="1"/><circle cx="18" cy="13.5" r="1"/>'),
 };
-// One icon per area for the "More areas" cards (same Lucide-style strokes).
+// One icon per area for the area cards that follow the everyday categories (same Lucide-style strokes).
 const AREA_ICON = {
   'ai-area': CAT_ICON.ai,
   'os-area': CAT_ICON.os,
@@ -81,7 +81,7 @@ export default function home(d) {
         <div class="gchips">${gs.slice(0, SHOWN).map((g) => `<a class="fchip" href="${url(`g/${g.id}/`)}">${esc(g.name)}</a>`).join('')}${gs.length > SHOWN ? `<a class="fchip more" href="${url(`c/${c.id}/`)}">+ ${gs.length - SHOWN} more</a>` : ''}</div>
       </div>`;
   }).join('');
-  // ── More areas: one card per area, its categories as chips (the same card shape as above, one level up) ──
+  // ── The other five areas: one card per area, its categories as chips (same card shape, one level up) ──
   // WHY the card has no whole-card link: an area has no page of its own; each chip opens a category. The id lets a
   // category page's breadcrumb come back to its area's card.
   const areaCards = d.areas.filter((a) => a !== everyday).map((a) => ({ a, cs: catsIn(a) })).filter(({ cs }) => cs.length).map(({ a, cs }) => {
@@ -122,13 +122,10 @@ export default function home(d) {
 
   <section class="surface sec" id="categories">
     <div class="sec-head"><div><h2 class="h-large">Browse by category</h2></div></div>
-    <div class="catgrid">${cats}</div>
+    <!-- WHY one grid (Destin, structure deck: "just keep them all on one big card"): the five other areas follow the everyday
+         categories in the same card, with no second heading. -->
+    <div class="catgrid">${cats}${areaCards}</div>
   </section>
-
-  ${areaCards ? `<section class="surface sec" id="areas">
-    <div class="sec-head"><div><h2 class="h-large">More areas</h2></div></div>
-    <div class="catgrid">${areaCards}</div>
-  </section>` : ''}
 
   ${SOCIAL ? `<!-- WHY here (review Oct 26): people's asks, ranked, are the clearest "what next"; filled in by assets/contrib.js -->
   <section class="surface sec">

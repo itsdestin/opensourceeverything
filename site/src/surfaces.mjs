@@ -64,7 +64,9 @@ export function groupCompare(g, alts) {
     <tbody>${alts.map((x) => `<tr data-pid="${esc(x.p.id)}"><th scope="row"><a href="${url(`p/${x.p.id}/`)}">${esc(x.p.name)}</a></th>${tags.map((t) => {
       const a = answerOf(x.p.id, t.id);
       return a ? `<td><button type="button" class="cell ${a.v}" data-name="${esc(t.name)}" data-v="${MARK[a.v][1]}"${a.note ? ` data-note="${esc(a.note)}"` : ''}${a.source ? ` data-src="${esc(a.source)}"` : ''} title="${esc([t.name + ': ' + MARK[a.v][1], a.note].filter(Boolean).join(' · '))}">${MARK[a.v][0]}</button></td>` : '<td><span class="fm unk" aria-label="Not checked yet">·</span></td>';
-    }).join('')}</tr>`).join('')}</tbody></table></div><div class="callout info" data-cmp-none hidden>None of these have everything you picked.</div></div>
+    }).join('')}</tr>`).join('')}</tbody></table></div>
+    <!-- WHY a key (Destin, structure deck: yes to "add a one-line key"): the marks were only explained by tapping. Same marks as the cells. -->
+    <p class="cmpkey"><span class="fm yes" aria-hidden="true">✓</span><span>Yes</span><span class="fm partly" aria-hidden="true">~</span><span>Partly</span><span class="fm no" aria-hidden="true">✗</span><span>No</span><span class="fm unk" aria-hidden="true">·</span><span>Not checked yet</span></p><div class="callout info" data-cmp-none hidden>None of these have everything you picked.</div></div>
   <div class="callout info" data-must-none hidden>None of these have everything you picked.</div>`;
 }
 

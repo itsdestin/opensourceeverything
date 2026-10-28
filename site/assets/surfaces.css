@@ -10,6 +10,11 @@
 :root[data-theme="dark"] .fm.yes { color:rgb(134 239 172); } :root[data-theme="dark"] .fm.partly { color:rgb(252 211 77); }
 
 .quiet { margin:0; font-size:12px; color:var(--fg-dim); }
+/* The compare table's key: one grey 12px line, marks at the same size as the table's (Destin, structure deck). */
+.cmpkey { margin:8px 0 0; display:flex; flex-wrap:wrap; align-items:center; gap:4px 6px; font-size:12px; color:var(--fg-dim); }
+/* WHY full-size marks (reviewer, structure round): smaller marks than the table's were hard to read on a phone. */
+.cmpkey .fm + * { margin-right:6px; }
+.cmpkey .fm.unk { font-weight:700; color:var(--fg-dim); }
 
 /* View switch and Must have menu. */
 .seg { display:inline-flex; border:1px solid var(--edge); border-radius:var(--radius-sm); overflow:hidden; flex:none; }
