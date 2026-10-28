@@ -26,7 +26,7 @@ export default function categories(d) {
       path: `c/${c.id}/`, title: c.name, styles: ['pages.css'],
       description: `Open-source alternatives in ${c.name}: ${gs.map((g) => g.name).join(', ')}.`,
       body: `
-  ${crumbs([[area?.name ?? 'Browse', url(!area || area.id === 'everyday' ? '#categories' : `#area-${area.id}`)], [c.name]])}
+  ${crumbs([[area?.name ?? 'Browse', url(area ? `#area-${area.id}` : '#categories')], [c.name]])}
   <div class="surface identity">
     <div><h1 class="h-subject">${esc(c.name)}</h1></div>
     ${others ? `<div class="pop" style="padding-left:0"><span class="muted11">Also in ${esc(area.name)}</span><div class="fchips">${others}</div></div>` : ''}

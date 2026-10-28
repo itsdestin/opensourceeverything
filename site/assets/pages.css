@@ -105,6 +105,10 @@ table.credits a { color:var(--fg); }
 
 /* Categories: a tidy grid of equal cards, each with an icon, its numbers and its biggest jobs. */
 .catgrid { display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:12px; }
+/* Area rows inside the one Browse card (Oct 28): a small grey label, then that area's categories. 20px between rows. */
+.arearow + .arearow { margin-top:20px; }
+.arearow > .label { padding-left:4px; scroll-margin-top:80px; }
+.arearow { scroll-margin-top:80px; }
 .catcard2 { position:relative; gap:12px; }
 .catcard2 .cardlink { position:absolute; inset:0; border-radius:inherit; }
 .cathead { display:flex; align-items:center; gap:12px; }

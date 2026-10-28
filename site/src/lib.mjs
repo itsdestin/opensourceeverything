@@ -81,8 +81,14 @@ export function loadData(root) {
   // WHY hide empty new groups (Destin picked "hide the 20 thinnest until a project lands in them", Oct 27): a group from the new
   // structure with no checked project is not a gap (projects exist, they just haven't passed the checks yet), so it stays off
   // every page, the search and the open data until it has one. Older groups with nothing open stay visible: those ARE gaps.
-  const groups = read('groups.json').groups.filter((g) => g.alternatives.length || (g.source !== 'taxonomy' && !g.waitForProject));
-  const projects = read('projects.json').projects;
+  // WHY 3 for new groups (Destin, Oct 28: the structure looked cluttered; 33 new groups had only 1–2 projects): a new group shows once
+  // it has 3 checked projects. Its projects still show if any other visible group lists them.
+  const NEW_MIN = 3;
+  const groups = read('groups.json').groups.filter((g) => (g.source === 'taxonomy' ? g.alternatives.length >= NEW_MIN : g.alternatives.length || !g.waitForProject));
+  // WHY drop projects listed only in hidden groups: a project page with no group has no breadcrumb, no "Listed in" and no
+  // neighbours to compare. They stay in data/projects.json and come back when their group reaches 3 projects.
+  const shown = new Set(groups.flatMap((g) => g.alternatives.map((a) => a.project)));
+  const projects = read('projects.json').projects.filter((p) => shown.has(p.id));
   // WHY merged here, not stored in projects.json (review Oct 26): "How to help" comes from two other files, one written weekly by
   // prefill/help-facts.mjs and one edited by hand (data/plugin-docs.json), so neither fights with the data the map is built from.
   const optional = (f) => { try { return JSON.parse(readFileSync(join(root, 'data', f), 'utf8')).projects ?? {}; } catch { return {}; } };

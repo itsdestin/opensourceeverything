@@ -56,11 +56,15 @@ for (const f of html) if (/couldn.t confirm|checked by AI/i.test(readFileSync(f,
 {
   const opt = (f, empty) => { try { return JSON.parse(readFileSync(join(HERE, '..', 'data', f), 'utf8')); } catch { return empty; } };
   const feat = opt('features.json', { tags: {}, groups: {}, answers: {} }); const guides = opt('switch-guides.json', { guides: {} }).guides; const ai = opt('ai-contribution.json', { projects: {} }).projects;
-  const groupIds = new Set(d.groups.map((g) => g.id));
+  // WHY the full data files, not the shown ones (Oct 28): groups with fewer than 3 projects are hidden from the site but keep their
+  // checklists for when they fill. This check is for typos, so it asks "does it exist at all", not "is it shown".
+  const allGroups = opt('groups.json', { groups: [] }).groups;
+  const groupIds = new Set(allGroups.map((g) => g.id));
+  const allProjects = new Set(opt('projects.json', { projects: [] }).projects.map((p) => p.id));
   const slug = (n) => n.toLowerCase().normalize('NFKD').replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, '');
   const apps = new Set(d.groups.flatMap((g) => g.closed.map(slug)));
   for (const [g, list] of Object.entries(feat.groups)) { if (!groupIds.has(g)) problems.push(`features: unknown group ${g}`); for (const t of list) if (!feat.tags[t]) problems.push(`features: group ${g} uses unknown tag ${t}`); }
-  for (const [p, a] of Object.entries(feat.answers)) { if (!d.projById.has(p)) problems.push(`features: unknown project ${p}`); for (const [t, v] of Object.entries(a)) { if (!feat.tags[t]) problems.push(`features: ${p} answers unknown tag ${t}`); if (!['yes', 'partly', 'no'].includes(v.v)) problems.push(`features: ${p}/${t} has answer "${v.v}"`); } }
+  for (const [p, a] of Object.entries(feat.answers)) { if (!allProjects.has(p)) problems.push(`features: unknown project ${p}`); for (const [t, v] of Object.entries(a)) { if (!feat.tags[t]) problems.push(`features: ${p} answers unknown tag ${t}`); if (!['yes', 'partly', 'no'].includes(v.v)) problems.push(`features: ${p}/${t} has answer "${v.v}"`); } }
   for (const [s, g] of Object.entries(guides)) { if (!apps.has(s)) problems.push(`switch guide for unknown closed app ${s}`); for (const o of g.opensIn ?? []) if (!d.projById.has(o.project)) problems.push(`switch guide ${s}: unknown project ${o.project}`); }
   const LABELS = ['non-developers-welcome', 'traditional-developers-only', 'not-accepted', 'see-policy', null];
   for (const [p, a] of Object.entries(ai)) { if (!d.projById.has(p)) problems.push(`ai-contribution: unknown project ${p}`); if (!LABELS.includes(a.label)) problems.push(`ai-contribution: ${p} has label "${a.label}"`); if (a.label && !a.description) problems.push(`ai-contribution: ${p} has a label but no description`); }

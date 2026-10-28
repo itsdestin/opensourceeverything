@@ -29,7 +29,7 @@ const CAT_ICON = {
   business: svg('<rect x="3" y="7" width="18" height="13" rx="2"/><path d="M9 7V5a2 2 0 0 1 2-2h2a2 2 0 0 1 2 2v2M3 13h18"/>'),
   games: svg('<rect x="2" y="7" width="20" height="11" rx="4"/><path d="M7 11v3M5.5 12.5h3"/><circle cx="16" cy="11.5" r="1"/><circle cx="18" cy="13.5" r="1"/>'),
 };
-// One icon per area for the area cards that follow the everyday categories (same Lucide-style strokes).
+// One icon per area, used by any category in it that has no icon of its own (same Lucide-style strokes).
 const AREA_ICON = {
   'ai-area': CAT_ICON.ai,
   'os-area': CAT_ICON.os,
@@ -73,24 +73,24 @@ export default function home(d) {
   const everyday = d.areas.find((a) => a.id === EVERYDAY) ?? d.areas[0];
   // WHY skip empty categories: a category whose groups are all still waiting for checked projects has nothing to open.
   const catsIn = (a) => a.categories.map((id) => d.catById.get(id)).filter((c) => c && d.groups.some((g) => g.category === c.id));
-  const cats = catsIn(everyday).map((c) => {
-    const gs = d.groups.filter((g) => g.category === c.id).sort((a, b) => b.alternatives.length - a.alternatives.length);
+  // WHY each category card gets its area's icon when it has none of its own: the 18 non-everyday categories had no icons.
+  const catCard = (c, a) => {
+    const gs = d.groups.filter((g) => g.category === c.id).sort((x, y) => y.alternatives.length - x.alternatives.length);
     return `<div class="card catcard2">
         <a class="cardlink" href="${url(`c/${c.id}/`)}" aria-label="${esc(c.name)}"></a>
-        <div class="cathead"><span class="caticon">${CAT_ICON[c.id] ?? ''}</span><div><h3>${esc(c.name)}</h3><div class="desc12">${numbers(gs)}</div></div></div>
+        <div class="cathead"><span class="caticon">${CAT_ICON[c.id] ?? AREA_ICON[a.id] ?? ''}</span><div><h3>${esc(c.name)}</h3><div class="desc12">${numbers(gs)}</div></div></div>
         <div class="gchips">${gs.slice(0, SHOWN).map((g) => `<a class="fchip" href="${url(`g/${g.id}/`)}">${esc(g.name)}</a>`).join('')}${gs.length > SHOWN ? `<a class="fchip more" href="${url(`c/${c.id}/`)}">+ ${gs.length - SHOWN} more</a>` : ''}</div>
       </div>`;
-  }).join('');
-  // ── The other five areas: one card per area, its categories as chips (same card shape, one level up) ──
-  // WHY the card has no whole-card link: an area has no page of its own; each chip opens a category. The id lets a
-  // category page's breadcrumb come back to its area's card.
-  const areaCards = d.areas.filter((a) => a !== everyday).map((a) => ({ a, cs: catsIn(a) })).filter(({ cs }) => cs.length).map(({ a, cs }) => {
-    const gs = d.groups.filter((g) => cs.some((c) => c.id === g.category));
-    return `<div class="card catcard2" id="area-${a.id}">
-        <div class="cathead"><span class="caticon">${AREA_ICON[a.id] ?? ''}</span><div><h3>${esc(a.name)}</h3><div class="desc12">${numbers(gs)}</div></div></div>
-        <div class="gchips">${cs.map((c) => `<a class="fchip" href="${url(`c/${c.id}/`)}">${esc(c.name)}</a>`).join('')}</div>
-      </div>`;
-  }).join('');
+  };
+  // ── Browse: ONE card; each area is a labelled row of category cards, everyday first ──
+  // WHY (Destin, Oct 28: "confused about the hierarchy… clutter"): area cards and category cards looked the same but behaved
+  // differently (areas have no page). Now areas are only headings, so every card is a category and every card opens one.
+  // The ids let a category page's breadcrumb jump back to its area's row.
+  const areaRows = [everyday, ...d.areas.filter((a) => a !== everyday)].map((a) => ({ a, cs: catsIn(a) })).filter(({ cs }) => cs.length)
+    .map(({ a, cs }) => `<div class="arearow" id="area-${a.id}">
+      <h3 class="label">${esc(a === everyday ? 'Everyday apps' : a.name)}</h3>
+      <div class="catgrid">${cs.map((c) => catCard(c, a)).join('')}</div>
+    </div>`).join('');
 
   // ── Still missing: the four worst gaps, everyday first ──
   const gaps = d.groups.filter((g) => fullCount(g) === 0)
@@ -122,9 +122,8 @@ export default function home(d) {
 
   <section class="surface sec" id="categories">
     <div class="sec-head"><div><h2 class="h-large">Browse by category</h2></div></div>
-    <!-- WHY one grid (Destin, structure deck: "just keep them all on one big card"): the five other areas follow the everyday
-         categories in the same card, with no second heading. -->
-    <div class="catgrid">${cats}${areaCards}</div>
+    <!-- WHY one card (Destin, structure deck: "just keep them all on one big card"), split into area rows (Oct 28). -->
+    ${areaRows}
   </section>
 
   ${SOCIAL ? `<!-- WHY here (review Oct 26): people's asks, ranked, are the clearest "what next"; filled in by assets/contrib.js -->
