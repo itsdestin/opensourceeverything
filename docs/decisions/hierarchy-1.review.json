@@ -1,0 +1,152 @@
+{
+ "title": "Clearer hierarchy: areas as headings, fewer thin groups",
+ "key": "ose-hierarchy-1",
+ "out": "hierarchy-1.review.html",
+ "images": "images/hierarchy-1.review",
+ "runs": {
+  "before": "runs-redesign-11/before",
+  "after": "runs-redesign-11/after"
+ },
+ "labels": {
+  "before": "Before",
+  "after": "Now"
+ },
+ "themes": [
+  "light"
+ ],
+ "theme": "fixed",
+ "crops": {
+  "home-areas-desktop": [
+   "ose",
+   "home-areas-desktop",
+   "1440x900+0+0"
+  ],
+  "home-areas-phone": [
+   "ose",
+   "home-areas-phone",
+   "390x844+0+0"
+  ],
+  "home-areas-mid-desktop": [
+   "ose",
+   "home-areas-mid-desktop",
+   "1440x900+0+0"
+  ],
+  "category-thin-desktop": [
+   "ose",
+   "category-thin-desktop",
+   "1440x900+0+0"
+  ]
+ },
+ "steps": [
+  {
+   "id": "H-home",
+   "surface": "Home page",
+   "path": "Browse, computer",
+   "crop": "home-areas-desktop",
+   "runs": [
+    "before",
+    "after"
+   ],
+   "headline": "Areas are now small headings inside the one Browse card; every card is a category.",
+   "changed": "Before, the five area cards looked like categories but opened nothing.",
+   "notice": "Every card opens a category page.",
+   "risk": "None worth noting.",
+   "highlight": {
+    "box": [
+     1,
+     1,
+     98,
+     98
+    ]
+   }
+  },
+  {
+   "id": "H-rows",
+   "surface": "Home page",
+   "path": "Browse, further down",
+   "crop": "home-areas-mid-desktop",
+   "runs": [
+    "after"
+   ],
+   "new": true,
+   "headline": "Each area row holds its own categories, 24px apart.",
+   "changed": "Categories without an icon use their area's icon.",
+   "notice": "A category page's first breadcrumb jumps back to its row.",
+   "risk": "None worth noting.",
+   "highlight": {
+    "box": [
+     1,
+     1,
+     98,
+     98
+    ]
+   }
+  },
+  {
+   "id": "H-phone",
+   "surface": "Home page",
+   "path": "Browse, phone",
+   "crop": "home-areas-phone",
+   "runs": [
+    "before",
+    "after"
+   ],
+   "headline": "On phones the rows stack: 26 category cards in one column.",
+   "changed": "Same rows as on computer.",
+   "notice": "It's a long scroll; see the question at the end.",
+   "risk": "Long page on phones.",
+   "highlight": {
+    "box": [
+     1,
+     1,
+     98,
+     98
+    ]
+   }
+  },
+  {
+   "id": "H-thin",
+   "surface": "Category pages",
+   "path": "Under the hood",
+   "crop": "category-thin-desktop",
+   "runs": [
+    "after"
+   ],
+   "new": true,
+   "headline": "New groups now show once they have 3 projects: 263 groups instead of 296.",
+   "changed": "33 thin groups wait for more projects. Desktops & customization is hidden for now.",
+   "notice": "Three categories still have only 2 groups, like this one.",
+   "risk": "None worth noting.",
+   "highlight": {
+    "box": [
+     1,
+     1,
+     98,
+     98
+    ]
+   }
+  },
+  {
+   "id": "Q-merge",
+   "words": true,
+   "surface": "Categories",
+   "path": "The three smallest categories",
+   "headline": "Fold the three 2-group categories into a neighbour?",
+   "changed": "Under the hood \u2192 Computer systems & Linux; Home, network & gadgets \u2192 Computer accessories (renamed Devices & accessories); IT security \u2192 Home servers & self-hosting.",
+   "notice": "Old addresses keep working. 3 fewer cards on the home page.",
+   "yes": "Fold them in",
+   "no": "Keep them"
+  },
+  {
+   "id": "Q-fold",
+   "words": true,
+   "surface": "Home page",
+   "path": "Phones only",
+   "headline": "On phones, show only Everyday apps open and fold the other five areas behind a tap?",
+   "changed": "The phone home page is 26 cards long today.",
+   "notice": "Each area becomes one row you tap to open, like project pages already do.",
+   "yes": "Fold them",
+   "no": "Keep it long"
+  }
+ ]
+}
