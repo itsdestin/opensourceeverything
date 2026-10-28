@@ -19,7 +19,9 @@ export function searchIndex(d) {
     // WHY one entry per closed app, pointing at its own page: an app in two groups (Photoshop) appears once.
     // WHY reversed before the Map: a Map keeps the last value per key, so this keeps each app's FIRST group
     // (Spotify → Music streaming, not Podcasts), matching the order of its own page.
-    closed: [...new Map(d.groups.flatMap((g) => g.closed.map((c) => [appSlug(c), { n: c, g: g.name, j: g.job, u: `alternatives-to/${appSlug(c)}/` }])).reverse()).values()].reverse(),
+    // a: how many open projects replace it, across all its groups (search-core.js uses it as a popularity hint).
+    closed: [...new Map(d.groups.flatMap((g) => g.closed.map((c) => [appSlug(c), { n: c, g: g.name, j: g.job, u: `alternatives-to/${appSlug(c)}/`,
+      a: new Set(d.groups.filter((h) => h.closed.some((x) => appSlug(x) === appSlug(c))).flatMap((h) => h.alternatives.map((y) => y.project))).size }])).reverse()).values()].reverse(),
     // k: phrases people might type (data/search-keywords.json, written by prefill/search-keywords.mjs).
     groups: d.groups.map((g) => ({ n: g.name, c: d.catById.get(g.category)?.name ?? '', j: g.job, x: g.closed, u: `g/${g.id}/`, k: KW.groups[g.id] ?? [] })),
     projects: d.projects.map((p) => {

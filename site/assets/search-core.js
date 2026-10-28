@@ -186,7 +186,11 @@
   function prepare(raw) {
     const vocab = makeVocab(), field = vocab.field;
     const items = [];
-    for (const x of raw.closed) items.push({ kind: 'closed', n: x.n, u: x.u, label: x.g, pop: 0,
+    // WHY pop from x.a (taxonomy-v2, Oct 27): with 194 more groups, "chrome" also matches "Claude in Chrome". The number of open
+    // alternatives a closed app has is a fair sign of how widely it is used, so Google Chrome edges out a niche namesake on a tie.
+    for (const x of raw.closed) items.push({ kind: 'closed', n: x.n, u: x.u, label: x.g, pop: Math.log10((x.a ?? 0) + 1) / 1.2,
+      // WHY the name without its maker: people type "windows", "chrome", "android", not "microsoft windows".
+      bare: compact(String(x.n).replace(/^(microsoft|google|apple|adobe|amazon|meta)\s+/i, '')),
       fields: [field(x.n, 1), field(x.g, 0.45, 'group'), field(x.j, 0.35, 'job')], groups: [x.g], jobs: [x.j] });
     // WHY the group's id as a near-name: ids are the short words people type ("2fa", "crm", "pdf", "vpn").
     for (const x of raw.groups) items.push({ kind: 'group', n: x.n, u: x.u, label: x.c, pop: 0,
@@ -225,12 +229,15 @@
         if (CANON.has(key)) ws.splice(i, n, CANON.get(key));
       }
     }
+    // WHY keep the whole typed text squashed (Oct 27): "whats app" is WhatsApp, but "app" is a filler word, so without this
+    // the search only saw "whats" and matched "see what apps connect to".
+    const raw = ws.join('');
     const kept = ws.filter((w) => !FILLER.has(w));
     if (kept.length) ws = kept;
     // WHY remember the device but keep the word in the search: "linux" still helps find Linux apps by text, and the
     // device also reorders projects afterwards (see deviceAdjust), so a Mac-only app doesn't top "photo editor for linux".
     const dev = new Set(); if (ws.length > 1) for (const w of ws) for (const c of DEVICE_INTENT[w] || []) dev.add(c);
-    return { ws, ss: ws.map(stem), phrase: ws.join(' '), c: ws.join(''), dev };
+    return { ws, ss: ws.map(stem), phrase: ws.join(' '), c: ws.join(''), raw, dev };
   }
 
   // WHY a nudge, not a filter: platform lists are incomplete, and an app that can run in a browser or on your own server
@@ -252,7 +259,7 @@
     const short = q.c.length <= 2;
     // WHY check the name with spaces removed first: "drop box", "libre office" and "you tube" are the name,
     // just spaced differently, even though "box" alone matches nothing.
-    const nameHit = q.c.length >= 4 && (it.nc === q.c || (q.ws.length > 1 && it.nc.startsWith(q.c)) ||
+    const nameHit = (q.raw.length >= 5 && it.nc === q.raw) || (q.c.length >= 4 && it.bare === q.c) || q.c.length >= 4 && (it.nc === q.c || (q.ws.length > 1 && it.nc.startsWith(q.c)) ||
       (q.ws.length > 1 && q.c.length >= 6 && it.nc.includes(q.c)) || // "one note" in "Microsoft OneNote"
       // A typo and odd spacing at once ("libre ofice"): compare without spaces, allowing the usual typos.
       (q.ws.length > 1 && q.c.length >= 6 && dist(q.c, it.nc.slice(0, q.c.length), typoAllowance(q.c.length)) <= typoAllowance(q.c.length)));
@@ -312,8 +319,8 @@
     if (it.kind === 'project' && groupWords === q.ws.length) {
       return 0.8 + (it.ed || 0) * 0.4 + it.pop * 0.08 + (it.easy ? 0.03 : 0) + (it.nn === q.phrase || it.nc === q.c ? 1.2 : 0) - (it.dead ? 0.1 : 0);
     }
-    // The name itself, as a whole, is the strongest signal.
-    if (it.nn === q.phrase || it.nc === q.c) s += 1.2;
+    // The name itself, as a whole, is the strongest signal (also when typed with filler words, or without its maker's name).
+    if (it.nn === q.phrase || it.nc === q.c || (q.raw.length >= 5 && it.nc === q.raw) || (it.bare && it.bare.length >= 4 && it.bare === q.c)) s += 1.2;
     else if (it.nn.startsWith(q.phrase + ' ')) s += 0.6;
     // WHY whole words beat word starts: "word" means Microsoft Word, not WordPress.
     else if (onName >= q.ws.length) s += 0.5;
@@ -331,7 +338,10 @@
     if (q.ws.length > 1 && it.kind === 'closed' && typoNamed) s = Math.max(s, 0.7);
     if (q.ws.length > 1 && replacesNamed) s += 0.25;
     // Popular, living projects edge out obscure or abandoned ones when everything else is equal.
-    s += it.pop * 0.08 + (it.ed || 0) * 0.1 + (it.easy ? 0.03 : 0);
+    // WHY a closed app's popularity counts only when every typed word is in its name: on a described need ("cash register for
+    // my coffee shop") a famous app that shares one word must not climb above the real answers.
+    const popOk = it.kind !== 'closed' || onName >= q.ws.length;
+    s += (popOk ? it.pop * 0.08 : 0) + (it.ed || 0) * 0.1 + (it.easy ? 0.03 : 0);
     if (it.dead) s -= 0.1;
     return s;
   }
