@@ -387,6 +387,20 @@
   ],
   "glazewm": [
    "windows"
+  ],
+  "traefik": [
+   "server"
+  ],
+  "wanderer": [
+   "server"
+  ],
+  "lighthouse": [
+   "web"
+  ],
+  "podman": [
+   "windows",
+   "mac",
+   "linux"
   ]
  }
 }

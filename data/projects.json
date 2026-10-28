@@ -1,6 +1,6 @@
 {
  "license": "CC BY-SA 4.0",
- "generated": "2026-10-27",
+ "generated": "2026-10-28",
  "credits": "See data/CREDITS.md",
  "projects": [
   {
@@ -17009,15 +17009,14 @@
     "https://raw.githubusercontent.com/GoogleChrome/lighthouse/443ff2c8a297dfd2297dfaca86c4966a87c8574a/assets/example_audit.png"
    ],
    "platforms": [
-    "windows",
-    "mac",
-    "linux"
+    "web"
    ],
    "thumbs": [
     "assets/shots/lighthouse-0.webp",
     "assets/shots/lighthouse-1.webp"
    ],
-   "setup": "advanced"
+   "setup": "easy",
+   "setupWhy": "It is built into Chrome: open the browser's developer tools and choose Lighthouse to get a report."
   },
   {
    "id": "limesurvey",
@@ -25395,13 +25394,13 @@
    "name": "Podman",
    "summary": "The material provided is the source code for the podman.io website, the home page for the Podman project. It does not describe what Podman itself does, so the website's purpose is the only thing confirmed here.",
    "kind": "developer_tool",
-   "code": "github.com/podman-container-tools/podman.io",
+   "code": "github.com/podman-container-tools/podman",
    "website": "https://podman.io",
    "download": null,
    "license": "Apache-2.0",
    "licenseClass": "open",
    "licenseNeedsCheck": false,
-   "stars": 118,
+   "stars": 33134,
    "archived": false,
    "inactive": false,
    "unconfirmed": [
@@ -25414,7 +25413,11 @@
    "source": "taxonomy-v2",
    "verified": false,
    "screenshots": [],
-   "platforms": [],
+   "platforms": [
+    "windows",
+    "mac",
+    "linux"
+   ],
    "thumbs": [],
    "setup": "advanced"
   },
@@ -31916,7 +31919,7 @@
    "id": "traefik",
    "name": "Traefik",
    "summary": "Traefik is a free tool that sits in front of several home or company apps and routes visitors to the right one, with automatic HTTPS certificates. It is aimed at technical people who run many services on servers.",
-   "kind": "developer_tool",
+   "kind": "self_hosted",
    "code": "github.com/traefik/traefik",
    "website": "https://traefik.io/traefik",
    "download": null,
@@ -31937,9 +31940,7 @@
     "https://raw.githubusercontent.com/traefik/traefik/HEAD/docs/content/assets/img/webui-dashboard.png"
    ],
    "platforms": [
-    "windows",
-    "mac",
-    "linux"
+    "server"
    ],
    "thumbs": [
     "assets/shots/traefik-0.webp"
@@ -34056,7 +34057,6 @@
     "https://raw.githubusercontent.com/open-wanderer/wanderer/HEAD/docs/src/assets/hero.png"
    ],
    "platforms": [
-    "android",
     "server"
    ],
    "thumbs": [

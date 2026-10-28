@@ -767,7 +767,8 @@
    "source": "https://github.com/IgnisDa/ryot"
   },
   "auto-log-plays": {
-   "v": "yes",
+   "v": "partly",
+   "note": "Through Jellyfin, Plex, Kodi or Emby only",
    "source": "https://github.com/IgnisDa/ryot"
   },
   "share-with-others": {
