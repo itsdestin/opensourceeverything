@@ -208,9 +208,24 @@
    ],
    "source": "taxonomy-v2",
    "verified": false,
-   "screenshots": [],
-   "platforms": [],
-   "thumbs": [],
+   "screenshots": [
+    "https://raw.githubusercontent.com/ace-step/ACE-Step/HEAD/assets/rap_machine_demo.gif",
+    "https://raw.githubusercontent.com/ace-step/ACE-Step/HEAD/assets/train_demo.gif",
+    "https://raw.githubusercontent.com/ace-step/ACE-Step/HEAD/assets/audio2audio_demo.gif",
+    "https://github.com/user-attachments/assets/0a13d90a-9086-47ee-abab-976bad20fa7c"
+   ],
+   "platforms": [
+    "windows",
+    "mac",
+    "linux",
+    "web"
+   ],
+   "thumbs": [
+    "assets/shots/ace-step-0.webp",
+    "assets/shots/ace-step-1.webp",
+    "assets/shots/ace-step-2.webp",
+    "assets/shots/ace-step-3.webp"
+   ],
    "setup": "advanced"
   },
   {
@@ -275,7 +290,10 @@
    "source": "taxonomy-v2",
    "verified": false,
    "screenshots": [],
-   "platforms": [],
+   "platforms": [
+    "windows",
+    "linux"
+   ],
    "thumbs": [],
    "setup": "easy"
   },
@@ -407,7 +425,9 @@
    "source": "taxonomy-v2",
    "verified": false,
    "screenshots": [],
-   "platforms": [],
+   "platforms": [
+    "server"
+   ],
    "thumbs": [],
    "setup": "advanced"
   },
@@ -432,9 +452,19 @@
    ],
    "source": "taxonomy-v2",
    "verified": false,
-   "screenshots": [],
-   "platforms": [],
-   "thumbs": [],
+   "screenshots": [
+    "https://cdn.adtidy.org/public/Adguard/Common/adguard_home.gif"
+   ],
+   "platforms": [
+    "windows",
+    "mac",
+    "linux",
+    "ios",
+    "server"
+   ],
+   "thumbs": [
+    "assets/shots/adguard-home-0.webp"
+   ],
    "setup": "advanced"
   },
   {
@@ -459,9 +489,21 @@
    ],
    "source": "taxonomy-v2",
    "verified": false,
-   "screenshots": [],
-   "platforms": [],
-   "thumbs": [],
+   "screenshots": [
+    "https://raw.githubusercontent.com/seanmorley15/AdventureLog/HEAD/brand/screenshots/map.png",
+    "https://raw.githubusercontent.com/seanmorley15/AdventureLog/HEAD/brand/screenshots/adventures.png",
+    "https://raw.githubusercontent.com/seanmorley15/AdventureLog/HEAD/brand/screenshots/dashboard.png",
+    "https://raw.githubusercontent.com/seanmorley15/AdventureLog/HEAD/brand/screenshots/itinerary.png"
+   ],
+   "platforms": [
+    "server"
+   ],
+   "thumbs": [
+    "assets/shots/adventurelog-0.webp",
+    "assets/shots/adventurelog-1.webp",
+    "assets/shots/adventurelog-2.webp",
+    "assets/shots/adventurelog-3.webp"
+   ],
    "setup": "advanced"
   },
   {
@@ -526,7 +568,10 @@
    "source": "taxonomy-v2",
    "verified": false,
    "screenshots": [],
-   "platforms": [],
+   "platforms": [
+    "windows",
+    "mac"
+   ],
    "thumbs": [],
    "setup": "easy"
   },
@@ -552,7 +597,9 @@
    "source": "taxonomy-v2",
    "verified": false,
    "screenshots": [],
-   "platforms": [],
+   "platforms": [
+    "mac"
+   ],
    "thumbs": [],
    "setup": "easy"
   },
@@ -623,7 +670,11 @@
    "source": "taxonomy-v2",
    "verified": false,
    "screenshots": [],
-   "platforms": [],
+   "platforms": [
+    "windows",
+    "mac",
+    "linux"
+   ],
    "thumbs": [],
    "setup": "advanced"
   },
@@ -690,9 +741,15 @@
    ],
    "source": "taxonomy-v2",
    "verified": false,
-   "screenshots": [],
-   "platforms": [],
-   "thumbs": [],
+   "screenshots": [
+    "https://github.com/user-attachments/assets/c13b7364-6abe-4df1-a983-ecf4f847f0b3"
+   ],
+   "platforms": [
+    "linux"
+   ],
+   "thumbs": [
+    "assets/shots/ais-catcher-0.webp"
+   ],
    "setup": "advanced"
   },
   {
@@ -716,9 +773,16 @@
    ],
    "source": "taxonomy-v2",
    "verified": false,
-   "screenshots": [],
-   "platforms": [],
-   "thumbs": [],
+   "screenshots": [
+    "https://raw.githubusercontent.com/alacritty/alacritty/master/extra/promo/alacritty-readme.png"
+   ],
+   "platforms": [
+    "windows",
+    "mac"
+   ],
+   "thumbs": [
+    "assets/shots/alacritty-0.webp"
+   ],
    "setup": "easy"
   },
   {
@@ -784,9 +848,15 @@
    ],
    "source": "taxonomy-v2",
    "verified": false,
-   "screenshots": [],
-   "platforms": [],
-   "thumbs": [],
+   "screenshots": [
+    "https://raw.githubusercontent.com/all-contributors/allcontributors.org/HEAD/src/assets/reference/contributors-table-small.png"
+   ],
+   "platforms": [
+    "web"
+   ],
+   "thumbs": [
+    "assets/shots/all-contributors-0.webp"
+   ],
    "setup": "advanced"
   },
   {
@@ -848,7 +918,12 @@
    "source": "taxonomy-v2",
    "verified": false,
    "screenshots": [],
-   "platforms": [],
+   "platforms": [
+    "windows",
+    "mac",
+    "linux",
+    "server"
+   ],
    "thumbs": [],
    "setup": "advanced"
   },
@@ -872,9 +947,17 @@
    ],
    "source": "taxonomy-v2",
    "verified": false,
-   "screenshots": [],
-   "platforms": [],
-   "thumbs": [],
+   "screenshots": [
+    "https://img.youtube.com/vi/3zCN2IlxHrU/0.jpg"
+   ],
+   "platforms": [
+    "windows",
+    "mac",
+    "linux"
+   ],
+   "thumbs": [
+    "assets/shots/amica-0.webp"
+   ],
    "setup": "easy"
   },
   {
@@ -900,7 +983,11 @@
    "source": "taxonomy-v2",
    "verified": false,
    "screenshots": [],
-   "platforms": [],
+   "platforms": [
+    "windows",
+    "mac",
+    "linux"
+   ],
    "thumbs": [],
    "setup": "advanced"
   },
@@ -926,7 +1013,9 @@
    "source": "taxonomy-v2",
    "verified": false,
    "screenshots": [],
-   "platforms": [],
+   "platforms": [
+    "android"
+   ],
    "thumbs": [],
    "setup": "advanced"
   },
@@ -953,7 +1042,10 @@
    "source": "taxonomy-v2",
    "verified": false,
    "screenshots": [],
-   "platforms": [],
+   "platforms": [
+    "windows",
+    "linux"
+   ],
    "thumbs": [],
    "setup": "easy"
   },
@@ -978,7 +1070,11 @@
    "source": "taxonomy-v2",
    "verified": false,
    "screenshots": [],
-   "platforms": [],
+   "platforms": [
+    "windows",
+    "mac",
+    "linux"
+   ],
    "thumbs": [],
    "setup": "easy"
   },
@@ -1027,9 +1123,16 @@
    ],
    "source": "taxonomy-v2",
    "verified": false,
-   "screenshots": [],
-   "platforms": [],
-   "thumbs": [],
+   "screenshots": [
+    "https://raw.githubusercontent.com/morfredus/ant-renamer-qt/HEAD/docs/screenshots/English/modern-ui-light-single-screen-bands.png"
+   ],
+   "platforms": [
+    "windows",
+    "linux"
+   ],
+   "thumbs": [
+    "assets/shots/ant-renamer-0.webp"
+   ],
    "setup": "easy"
   },
   {
@@ -1097,9 +1200,16 @@
    ],
    "source": "taxonomy-v2",
    "verified": false,
-   "screenshots": [],
-   "platforms": [],
-   "thumbs": [],
+   "screenshots": [
+    "https://anthias.screenly.io/images/screenshots/home@3x_hu_659a5430256166e3.png"
+   ],
+   "platforms": [
+    "linux",
+    "server"
+   ],
+   "thumbs": [
+    "assets/shots/anthias-0.webp"
+   ],
    "setup": "advanced"
   },
   {
@@ -1124,9 +1234,22 @@
    ],
    "source": "taxonomy-v2",
    "verified": false,
-   "screenshots": [],
-   "platforms": [],
-   "thumbs": [],
+   "screenshots": [
+    "https://raw.githubusercontent.com/AntiMicroX/antimicrox/HEAD/other/appdata/screenshots/app_light.png",
+    "https://raw.githubusercontent.com/AntiMicroX/antimicrox/HEAD/other/appdata/screenshots/controllermapping.png",
+    "https://raw.githubusercontent.com/AntiMicroX/antimicrox/HEAD/other/appdata/screenshots/calibration.png",
+    "https://raw.githubusercontent.com/AntiMicroX/antimicrox/HEAD/other/appdata/screenshots/advanced.png"
+   ],
+   "platforms": [
+    "windows",
+    "linux"
+   ],
+   "thumbs": [
+    "assets/shots/antimicrox-0.webp",
+    "assets/shots/antimicrox-1.webp",
+    "assets/shots/antimicrox-2.webp",
+    "assets/shots/antimicrox-3.webp"
+   ],
    "setup": "easy"
   },
   {
@@ -1151,7 +1274,11 @@
    "source": "taxonomy-v2",
    "verified": false,
    "screenshots": [],
-   "platforms": [],
+   "platforms": [
+    "windows",
+    "linux",
+    "server"
+   ],
    "thumbs": [],
    "setup": "advanced"
   },
@@ -1313,7 +1440,9 @@
    "source": "taxonomy-v2",
    "verified": false,
    "screenshots": [],
-   "platforms": [],
+   "platforms": [
+    "web"
+   ],
    "thumbs": [],
    "setup": "advanced"
   },
@@ -1334,11 +1463,7 @@
    "unconfirmed": [],
    "source": "family",
    "verified": false,
-   "platforms": [
-    "windows",
-    "mac",
-    "linux"
-   ],
+   "platforms": [],
    "licenseSource": "https://github.com/apache/openoffice/blob/trunk/LICENSE",
    "screenshots": [],
    "forks": 386,
@@ -1619,9 +1744,18 @@
    ],
    "source": "taxonomy-v2",
    "verified": false,
-   "screenshots": [],
-   "platforms": [],
-   "thumbs": [],
+   "screenshots": [
+    "https://raw.githubusercontent.com/getarcaneapp/arcane/HEAD/.github/assets/arcane-dash-2.18.1.png"
+   ],
+   "platforms": [
+    "mac",
+    "linux",
+    "android",
+    "server"
+   ],
+   "thumbs": [
+    "assets/shots/arcane-0.webp"
+   ],
    "setup": "advanced"
   },
   {
@@ -1717,9 +1851,17 @@
    ],
    "source": "taxonomy-v2",
    "verified": false,
-   "screenshots": [],
-   "platforms": [],
-   "thumbs": [],
+   "screenshots": [
+    "https://raw.githubusercontent.com/arduino/arduino-ide/HEAD/static/screenshot.png"
+   ],
+   "platforms": [
+    "windows",
+    "mac",
+    "linux"
+   ],
+   "thumbs": [
+    "assets/shots/arduino-ide-0.webp"
+   ],
    "setup": "easy"
   },
   {
@@ -1743,7 +1885,11 @@
    "source": "taxonomy-v2",
    "verified": false,
    "screenshots": [],
-   "platforms": [],
+   "platforms": [
+    "windows",
+    "mac",
+    "linux"
+   ],
    "thumbs": [],
    "setup": "advanced"
   },
@@ -1768,7 +1914,12 @@
    "source": "taxonomy-v2",
    "verified": false,
    "screenshots": [],
-   "platforms": [],
+   "platforms": [
+    "windows",
+    "mac",
+    "linux",
+    "android"
+   ],
    "thumbs": [],
    "setup": "advanced"
   },
@@ -1795,7 +1946,11 @@
    "source": "taxonomy-v2",
    "verified": false,
    "screenshots": [],
-   "platforms": [],
+   "platforms": [
+    "mac",
+    "linux",
+    "server"
+   ],
    "thumbs": [],
    "setup": "advanced"
   },
@@ -1819,7 +1974,11 @@
    "source": "taxonomy-v2",
    "verified": false,
    "screenshots": [],
-   "platforms": [],
+   "platforms": [
+    "windows",
+    "mac",
+    "linux"
+   ],
    "thumbs": [],
    "setup": "advanced"
   },
@@ -2007,7 +2166,9 @@
    "source": "taxonomy-v2",
    "verified": false,
    "screenshots": [],
-   "platforms": [],
+   "platforms": [
+    "linux"
+   ],
    "thumbs": [],
    "setup": "easy"
   },
@@ -2122,7 +2283,9 @@
    "source": "taxonomy-v2",
    "verified": false,
    "screenshots": [],
-   "platforms": [],
+   "platforms": [
+    "linux"
+   ],
    "thumbs": [],
    "setup": "advanced"
   },
@@ -2187,7 +2350,11 @@
    "source": "taxonomy-v2",
    "verified": false,
    "screenshots": [],
-   "platforms": [],
+   "platforms": [
+    "windows",
+    "mac",
+    "linux"
+   ],
    "thumbs": [],
    "setup": "easy"
   },
@@ -2252,7 +2419,11 @@
    "source": "taxonomy-v2",
    "verified": false,
    "screenshots": [],
-   "platforms": [],
+   "platforms": [
+    "windows",
+    "mac",
+    "linux"
+   ],
    "thumbs": [],
    "setup": "advanced"
   },
@@ -2331,9 +2502,17 @@
    ],
    "source": "taxonomy-v2",
    "verified": false,
-   "screenshots": [],
-   "platforms": [],
-   "thumbs": [],
+   "screenshots": [
+    "https://raw.githubusercontent.com/chenxiaolong/BCR/HEAD/app/images/light.png",
+    "https://raw.githubusercontent.com/chenxiaolong/BCR/HEAD/app/images/dark.png"
+   ],
+   "platforms": [
+    "android"
+   ],
+   "thumbs": [
+    "assets/shots/bcr-call-recorder-0.webp",
+    "assets/shots/bcr-call-recorder-1.webp"
+   ],
    "setup": "easy"
   },
   {
@@ -2359,7 +2538,9 @@
    "source": "taxonomy-v2",
    "verified": false,
    "screenshots": [],
-   "platforms": [],
+   "platforms": [
+    "server"
+   ],
    "thumbs": [],
    "setup": "advanced"
   },
@@ -2385,9 +2566,19 @@
    ],
    "source": "taxonomy-v2",
    "verified": false,
-   "screenshots": [],
-   "platforms": [],
-   "thumbs": [],
+   "screenshots": [
+    "https://user-images.githubusercontent.com/279769/203650152-4a34af1f-8a38-47cf-a273-d34d1c84feeb.png",
+    "https://www.beekeeperstudio.io/assets/img/screenshots/main-dark-4a9d553efc2856d03967ef19a6da61a030bf1b3bba584c4faf720d00262ad5fd1c405821e62dc220cca2579f95d7f56a1048ca02690a52aac44312e44b66b7f8.png"
+   ],
+   "platforms": [
+    "windows",
+    "mac",
+    "linux"
+   ],
+   "thumbs": [
+    "assets/shots/beekeeper-studio-0.webp",
+    "assets/shots/beekeeper-studio-1.webp"
+   ],
    "setup": "easy"
   },
   {
@@ -2437,9 +2628,24 @@
    ],
    "source": "taxonomy-v2",
    "verified": false,
-   "screenshots": [],
-   "platforms": [],
-   "thumbs": [],
+   "screenshots": [
+    "https://henrygd-assets.b-cdn.net/beszel/screenshot-new.png",
+    "https://beszel.dev/image/dashboard.png",
+    "https://beszel.dev/image/system-full.png",
+    "https://beszel.dev/image/settings-notifications.png"
+   ],
+   "platforms": [
+    "windows",
+    "mac",
+    "linux",
+    "server"
+   ],
+   "thumbs": [
+    "assets/shots/beszel-0.webp",
+    "assets/shots/beszel-1.webp",
+    "assets/shots/beszel-2.webp",
+    "assets/shots/beszel-3.webp"
+   ],
    "setup": "advanced"
   },
   {
@@ -2530,9 +2736,13 @@
    ],
    "source": "taxonomy-v2",
    "verified": false,
-   "screenshots": [],
+   "screenshots": [
+    "https://bibisco.com/wp-content/uploads/2024/09/bibisco-featured-image.png"
+   ],
    "platforms": [],
-   "thumbs": [],
+   "thumbs": [
+    "assets/shots/bibisco-0.webp"
+   ],
    "setup": "easy"
   },
   {
@@ -2559,7 +2769,9 @@
    "source": "taxonomy-v2",
    "verified": false,
    "screenshots": [],
-   "platforms": [],
+   "platforms": [
+    "server"
+   ],
    "thumbs": [],
    "setup": "advanced"
   },
@@ -2623,7 +2835,9 @@
    "source": "taxonomy-v2",
    "verified": false,
    "screenshots": [],
-   "platforms": [],
+   "platforms": [
+    "web"
+   ],
    "thumbs": [],
    "setup": "advanced"
   },
@@ -2648,7 +2862,11 @@
    "source": "taxonomy-v2",
    "verified": false,
    "screenshots": [],
-   "platforms": [],
+   "platforms": [
+    "windows",
+    "mac",
+    "linux"
+   ],
    "thumbs": [],
    "setup": "advanced"
   },
@@ -2674,9 +2892,21 @@
    ],
    "source": "taxonomy-v2",
    "verified": false,
-   "screenshots": [],
-   "platforms": [],
-   "thumbs": [],
+   "screenshots": [
+    "https://raw.githubusercontent.com/jamesread/biscuittin/HEAD/var/marketing/screenshots/home.png",
+    "https://raw.githubusercontent.com/jamesread/biscuittin/HEAD/var/marketing/screenshots/home-idle-rss.png",
+    "https://raw.githubusercontent.com/jamesread/biscuittin/HEAD/var/marketing/screenshots/more.png",
+    "https://raw.githubusercontent.com/jamesread/biscuittin/HEAD/var/marketing/screenshots/integrations.png"
+   ],
+   "platforms": [
+    "linux"
+   ],
+   "thumbs": [
+    "assets/shots/biscuittin-0.webp",
+    "assets/shots/biscuittin-1.webp",
+    "assets/shots/biscuittin-2.webp",
+    "assets/shots/biscuittin-3.webp"
+   ],
    "setup": "easy"
   },
   {
@@ -2701,7 +2931,11 @@
    "source": "taxonomy-v2",
    "verified": false,
    "screenshots": [],
-   "platforms": [],
+   "platforms": [
+    "windows",
+    "mac",
+    "linux"
+   ],
    "thumbs": [],
    "setup": "easy"
   },
@@ -2771,7 +3005,10 @@
    "source": "taxonomy-v2",
    "verified": false,
    "screenshots": [],
-   "platforms": [],
+   "platforms": [
+    "windows",
+    "linux"
+   ],
    "thumbs": [],
    "setup": "easy"
   },
@@ -2837,7 +3074,12 @@
    "source": "taxonomy-v2",
    "verified": false,
    "screenshots": [],
-   "platforms": [],
+   "platforms": [
+    "windows",
+    "mac",
+    "linux",
+    "server"
+   ],
    "thumbs": [],
    "setup": "advanced"
   },
@@ -2900,7 +3142,11 @@
    "source": "taxonomy-v2",
    "verified": false,
    "screenshots": [],
-   "platforms": [],
+   "platforms": [
+    "windows",
+    "mac",
+    "linux"
+   ],
    "thumbs": [],
    "setup": "advanced"
   },
@@ -3005,7 +3251,11 @@
    "source": "taxonomy-v2",
    "verified": false,
    "screenshots": [],
-   "platforms": [],
+   "platforms": [
+    "windows",
+    "mac",
+    "linux"
+   ],
    "thumbs": [],
    "setup": "advanced"
   },
@@ -3068,7 +3318,9 @@
    "source": "taxonomy-v2",
    "verified": false,
    "screenshots": [],
-   "platforms": [],
+   "platforms": [
+    "mac"
+   ],
    "thumbs": [],
    "setup": "easy"
   },
@@ -3094,9 +3346,15 @@
    ],
    "source": "taxonomy-v2",
    "verified": false,
-   "screenshots": [],
-   "platforms": [],
-   "thumbs": [],
+   "screenshots": [
+    "https://user-images.githubusercontent.com/10071388/248040379-8aee1b03-c483-4040-8ee0-741554310e88.png"
+   ],
+   "platforms": [
+    "web"
+   ],
+   "thumbs": [
+    "assets/shots/botpress-0.webp"
+   ],
    "setup": "advanced"
   },
   {
@@ -3120,9 +3378,17 @@
    ],
    "source": "taxonomy-v2",
    "verified": false,
-   "screenshots": [],
-   "platforms": [],
-   "thumbs": [],
+   "screenshots": [
+    "https://raw.githubusercontent.com/bottlesdevs/Bottles/HEAD/docs/screenshot-dark.png#gh-dark-mode-only",
+    "https://raw.githubusercontent.com/bottlesdevs/Bottles/HEAD/docs/screenshot-light.png#gh-light-mode-only"
+   ],
+   "platforms": [
+    "linux"
+   ],
+   "thumbs": [
+    "assets/shots/bottles-0.webp",
+    "assets/shots/bottles-1.webp"
+   ],
    "setup": "easy"
   },
   {
@@ -3274,9 +3540,13 @@
    ],
    "source": "taxonomy-v2",
    "verified": false,
-   "screenshots": [],
+   "screenshots": [
+    "https://github.com/user-attachments/assets/135885e8-1141-4e10-b719-bf690ae7d260"
+   ],
    "platforms": [],
-   "thumbs": [],
+   "thumbs": [
+    "assets/shots/browser-use-0.webp"
+   ],
    "setup": "advanced"
   },
   {
@@ -3301,9 +3571,19 @@
    ],
    "source": "taxonomy-v2",
    "verified": false,
-   "screenshots": [],
-   "platforms": [],
-   "thumbs": [],
+   "screenshots": [
+    "https://raw.githubusercontent.com/browseros-ai/BrowserOS/HEAD/docs/images/browserclaw--mcp-install-board.png",
+    "https://raw.githubusercontent.com/browseros-ai/BrowserOS/HEAD/docs/images/browserclaw--dashboard-populated.png"
+   ],
+   "platforms": [
+    "windows",
+    "mac",
+    "linux"
+   ],
+   "thumbs": [
+    "assets/shots/browseros-0.webp",
+    "assets/shots/browseros-1.webp"
+   ],
    "setup": "easy"
   },
   {
@@ -3368,7 +3648,9 @@
    "source": "taxonomy-v2",
    "verified": false,
    "screenshots": [],
-   "platforms": [],
+   "platforms": [
+    "windows"
+   ],
    "thumbs": [],
    "setup": "advanced"
   },
@@ -3393,9 +3675,21 @@
    ],
    "source": "taxonomy-v2",
    "verified": false,
-   "screenshots": [],
-   "platforms": [],
-   "thumbs": [],
+   "screenshots": [
+    "https://raw.githubusercontent.com/aristocratos/btop/HEAD/Img/normal.png",
+    "https://raw.githubusercontent.com/aristocratos/btop/HEAD/Img/tty.png",
+    "https://raw.githubusercontent.com/aristocratos/btop/HEAD/Img/alt.png",
+    "https://raw.githubusercontent.com/aristocratos/btop/HEAD/Img/options-menu.png"
+   ],
+   "platforms": [
+    "linux"
+   ],
+   "thumbs": [
+    "assets/shots/btop-0.webp",
+    "assets/shots/btop-1.webp",
+    "assets/shots/btop-2.webp",
+    "assets/shots/btop-3.webp"
+   ],
    "setup": "advanced"
   },
   {
@@ -3419,7 +3713,9 @@
    "source": "taxonomy-v2",
    "verified": false,
    "screenshots": [],
-   "platforms": [],
+   "platforms": [
+    "linux"
+   ],
    "thumbs": [],
    "setup": "advanced"
   },
@@ -3598,7 +3894,12 @@
    "source": "taxonomy-v2",
    "verified": false,
    "screenshots": [],
-   "platforms": [],
+   "platforms": [
+    "windows",
+    "mac",
+    "linux",
+    "android"
+   ],
    "thumbs": [],
    "setup": "advanced"
   },
@@ -3713,7 +4014,12 @@
    "source": "taxonomy-v2",
    "verified": false,
    "screenshots": [],
-   "platforms": [],
+   "platforms": [
+    "windows",
+    "mac",
+    "linux",
+    "server"
+   ],
    "thumbs": [],
    "setup": "advanced"
   },
@@ -3738,7 +4044,12 @@
    "source": "taxonomy-v2",
    "verified": false,
    "screenshots": [],
-   "platforms": [],
+   "platforms": [
+    "mac",
+    "linux",
+    "android",
+    "ios"
+   ],
    "thumbs": [],
    "setup": "easy"
   },
@@ -3839,9 +4150,21 @@
    ],
    "source": "taxonomy-v2",
    "verified": false,
-   "screenshots": [],
-   "platforms": [],
-   "thumbs": [],
+   "screenshots": [
+    "https://raw.githubusercontent.com/samolego/Canta/HEAD/metadata/en-US/images/phoneScreenshots/screenshot-main.png",
+    "https://raw.githubusercontent.com/samolego/Canta/HEAD/metadata/en-US/images/phoneScreenshots/screenshot-search.png",
+    "https://raw.githubusercontent.com/samolego/Canta/HEAD/metadata/en-US/images/phoneScreenshots/screenshot-uninstall-dialog.png",
+    "https://raw.githubusercontent.com/samolego/Canta/HEAD/metadata/en-US/images/phoneScreenshots/screenshot-app-description.png"
+   ],
+   "platforms": [
+    "android"
+   ],
+   "thumbs": [
+    "assets/shots/canta-0.webp",
+    "assets/shots/canta-1.webp",
+    "assets/shots/canta-2.webp",
+    "assets/shots/canta-3.webp"
+   ],
    "setup": "easy"
   },
   {
@@ -3865,7 +4188,9 @@
    "source": "taxonomy-v2",
    "verified": false,
    "screenshots": [],
-   "platforms": [],
+   "platforms": [
+    "server"
+   ],
    "thumbs": [],
    "setup": "advanced"
   },
@@ -3932,9 +4257,16 @@
    ],
    "source": "taxonomy-v2",
    "verified": false,
-   "screenshots": [],
-   "platforms": [],
-   "thumbs": [],
+   "screenshots": [
+    "https://raw.githubusercontent.com/IceWhaleTech/CasaOS/HEAD/snapshot-light.jpg"
+   ],
+   "platforms": [
+    "linux",
+    "server"
+   ],
+   "thumbs": [
+    "assets/shots/casaos-0.webp"
+   ],
    "setup": "advanced"
   },
   {
@@ -3958,9 +4290,24 @@
    ],
    "source": "taxonomy-v2",
    "verified": false,
-   "screenshots": [],
-   "platforms": [],
-   "thumbs": [],
+   "screenshots": [
+    "https://raw.githubusercontent.com/sirmalloc/ccstatusline/main/screenshots/emojiSupport.png",
+    "https://raw.githubusercontent.com/sirmalloc/ccstatusline/main/screenshots/autoAlign.png",
+    "https://raw.githubusercontent.com/sirmalloc/ccstatusline/main/screenshots/powerline-flex.png",
+    "https://raw.githubusercontent.com/sirmalloc/ccstatusline/main/screenshots/cwdAndSessionCost.png"
+   ],
+   "platforms": [
+    "windows",
+    "mac",
+    "linux",
+    "server"
+   ],
+   "thumbs": [
+    "assets/shots/ccstatusline-0.webp",
+    "assets/shots/ccstatusline-1.webp",
+    "assets/shots/ccstatusline-2.webp",
+    "assets/shots/ccstatusline-3.webp"
+   ],
    "setup": "advanced"
   },
   {
@@ -3984,9 +4331,13 @@
    ],
    "source": "taxonomy-v2",
    "verified": false,
-   "screenshots": [],
+   "screenshots": [
+    "https://cdn.jsdelivr.net/gh/ccusage/ccusage@main/docs/public/screenshot.png"
+   ],
    "platforms": [],
-   "thumbs": [],
+   "thumbs": [
+    "assets/shots/ccusage-0.webp"
+   ],
    "setup": "advanced"
   },
   {
@@ -4011,7 +4362,12 @@
    "source": "taxonomy-v2",
    "verified": false,
    "screenshots": [],
-   "platforms": [],
+   "platforms": [
+    "windows",
+    "mac",
+    "linux",
+    "server"
+   ],
    "thumbs": [],
    "setup": "advanced"
   },
@@ -4036,9 +4392,21 @@
    ],
    "source": "taxonomy-v2",
    "verified": false,
-   "screenshots": [],
-   "platforms": [],
-   "thumbs": [],
+   "screenshots": [
+    "https://raw.githubusercontent.com/dgtlmoon/changedetection.io/master/docs/screenshot.png",
+    "https://raw.githubusercontent.com/dgtlmoon/changedetection.io/HEAD/docs/LLM-change-summary.jpeg",
+    "https://raw.githubusercontent.com/dgtlmoon/changedetection.io/master/docs/screenshot-diff.png",
+    "https://raw.githubusercontent.com/dgtlmoon/changedetection.io/HEAD/docs/restock-overview.png"
+   ],
+   "platforms": [
+    "server"
+   ],
+   "thumbs": [
+    "assets/shots/changedetection-io-0.webp",
+    "assets/shots/changedetection-io-1.webp",
+    "assets/shots/changedetection-io-2.webp",
+    "assets/shots/changedetection-io-3.webp"
+   ],
    "setup": "advanced"
   },
   {
@@ -4129,7 +4497,11 @@
    "source": "taxonomy-v2",
    "verified": false,
    "screenshots": [],
-   "platforms": [],
+   "platforms": [
+    "mac",
+    "linux",
+    "web"
+   ],
    "thumbs": [],
    "setup": "advanced"
   },
@@ -4195,7 +4567,12 @@
    "source": "taxonomy-v2",
    "verified": false,
    "screenshots": [],
-   "platforms": [],
+   "platforms": [
+    "windows",
+    "mac",
+    "linux",
+    "android"
+   ],
    "thumbs": [],
    "setup": "advanced"
   },
@@ -4221,7 +4598,9 @@
    "source": "taxonomy-v2",
    "verified": false,
    "screenshots": [],
-   "platforms": [],
+   "platforms": [
+    "linux"
+   ],
    "thumbs": [],
    "setup": "easy"
   },
@@ -4242,11 +4621,7 @@
    "unconfirmed": [],
    "source": "family",
    "verified": false,
-   "platforms": [
-    "windows",
-    "mac",
-    "linux"
-   ],
+   "platforms": [],
    "licenseSource": "https://github.com/chromium/chromium/blob/main/LICENSE",
    "screenshots": [],
    "forks": 9374,
@@ -4271,7 +4646,9 @@
    "source": "taxonomy-v2",
    "verified": false,
    "screenshots": [],
-   "platforms": [],
+   "platforms": [
+    "linux"
+   ],
    "thumbs": [],
    "setup": "easy"
   },
@@ -4324,9 +4701,21 @@
    ],
    "source": "taxonomy-v2",
    "verified": false,
-   "screenshots": [],
-   "platforms": [],
-   "thumbs": [],
+   "screenshots": [
+    "https://raw.githubusercontent.com/siteboon/claudecodeui/HEAD/public/screenshots/desktop-main.png",
+    "https://raw.githubusercontent.com/siteboon/claudecodeui/HEAD/public/screenshots/mobile-chat.png",
+    "https://raw.githubusercontent.com/siteboon/claudecodeui/HEAD/public/screenshots/cli-selection.png",
+    "https://raw.githubusercontent.com/siteboon/claudecodeui/HEAD/public/screenshots/tools-modal.png"
+   ],
+   "platforms": [
+    "server"
+   ],
+   "thumbs": [
+    "assets/shots/claude-code-ui-0.webp",
+    "assets/shots/claude-code-ui-1.webp",
+    "assets/shots/claude-code-ui-2.webp",
+    "assets/shots/claude-code-ui-3.webp"
+   ],
    "setup": "advanced"
   },
   {
@@ -4350,9 +4739,17 @@
    ],
    "source": "taxonomy-v2",
    "verified": false,
-   "screenshots": [],
-   "platforms": [],
-   "thumbs": [],
+   "screenshots": [
+    "https://raw.githubusercontent.com/Maciek-roboblog/Claude-Code-Usage-Monitor/main/doc/scnew.png"
+   ],
+   "platforms": [
+    "windows",
+    "mac",
+    "linux"
+   ],
+   "thumbs": [
+    "assets/shots/claude-code-usage-monitor-0.webp"
+   ],
    "setup": "advanced"
   },
   {
@@ -4375,9 +4772,17 @@
    ],
    "source": "taxonomy-v2",
    "verified": false,
-   "screenshots": [],
-   "platforms": [],
-   "thumbs": [],
+   "screenshots": [
+    "https://raw.githubusercontent.com/smtg-ai/claude-squad/HEAD/assets/screenshot.png"
+   ],
+   "platforms": [
+    "windows",
+    "mac",
+    "linux"
+   ],
+   "thumbs": [
+    "assets/shots/claude-squad-0.webp"
+   ],
    "setup": "advanced"
   },
   {
@@ -4401,9 +4806,17 @@
    ],
    "source": "taxonomy-v2",
    "verified": false,
-   "screenshots": [],
-   "platforms": [],
-   "thumbs": [],
+   "screenshots": [
+    "https://raw.githubusercontent.com/musistudio/claude-code-router/HEAD/blog/images/claude-code-router.png"
+   ],
+   "platforms": [
+    "windows",
+    "mac",
+    "linux"
+   ],
+   "thumbs": [
+    "assets/shots/claude-code-router-0.webp"
+   ],
    "setup": "advanced"
   },
   {
@@ -4428,9 +4841,17 @@
    ],
    "source": "taxonomy-v2",
    "verified": false,
-   "screenshots": [],
-   "platforms": [],
-   "thumbs": [],
+   "screenshots": [
+    "https://raw.githubusercontent.com/thedotmack/claude-mem/main/docs/public/cm-preview.gif"
+   ],
+   "platforms": [
+    "windows",
+    "mac",
+    "linux"
+   ],
+   "thumbs": [
+    "assets/shots/claude-mem-0.webp"
+   ],
    "setup": "advanced"
   },
   {
@@ -4521,9 +4942,24 @@
    ],
    "source": "taxonomy-v2",
    "verified": false,
-   "screenshots": [],
-   "platforms": [],
-   "thumbs": [],
+   "screenshots": [
+    "https://github.com/user-attachments/assets/369d5db5-685c-4284-946d-b6a0e1f4fef9",
+    "https://github.com/user-attachments/assets/2c0a7f4d-652c-4f4c-97e9-ee9b9d66f03f",
+    "https://github.com/user-attachments/assets/a5606f3c-6d8a-434f-8f1d-03d6276e03c0",
+    "https://github.com/user-attachments/assets/f1acd9f4-27ee-4eb0-8696-a786a21551ed"
+   ],
+   "platforms": [
+    "windows",
+    "mac",
+    "linux",
+    "android"
+   ],
+   "thumbs": [
+    "assets/shots/clipcascade-0.webp",
+    "assets/shots/clipcascade-1.webp",
+    "assets/shots/clipcascade-2.webp",
+    "assets/shots/clipcascade-3.webp"
+   ],
    "setup": "easy"
   },
   {
@@ -4549,7 +4985,10 @@
    "source": "taxonomy-v2",
    "verified": false,
    "screenshots": [],
-   "platforms": [],
+   "platforms": [
+    "web",
+    "server"
+   ],
    "thumbs": [],
    "setup": "easy"
   },
@@ -4574,9 +5013,23 @@
    ],
    "source": "taxonomy-v2",
    "verified": false,
-   "screenshots": [],
-   "platforms": [],
-   "thumbs": [],
+   "screenshots": [
+    "https://raw.githubusercontent.com/MaibornWolff/codecharta/HEAD/assets/metric.gif",
+    "https://raw.githubusercontent.com/MaibornWolff/codecharta/HEAD/assets/domain-words.png",
+    "https://raw.githubusercontent.com/MaibornWolff/codecharta/HEAD/assets/dependencies.gif",
+    "https://raw.githubusercontent.com/MaibornWolff/codecharta/HEAD/assets/delta.png"
+   ],
+   "platforms": [
+    "windows",
+    "mac",
+    "linux"
+   ],
+   "thumbs": [
+    "assets/shots/codecharta-0.webp",
+    "assets/shots/codecharta-1.webp",
+    "assets/shots/codecharta-2.webp",
+    "assets/shots/codecharta-3.webp"
+   ],
    "setup": "advanced"
   },
   {
@@ -4845,7 +5298,11 @@
    "source": "taxonomy-v2",
    "verified": false,
    "screenshots": [],
-   "platforms": [],
+   "platforms": [
+    "windows",
+    "mac",
+    "linux"
+   ],
    "thumbs": [],
    "setup": "advanced"
   },
@@ -4870,9 +5327,15 @@
    ],
    "source": "taxonomy-v2",
    "verified": false,
-   "screenshots": [],
-   "platforms": [],
-   "thumbs": [],
+   "screenshots": [
+    "https://raw.githubusercontent.com/C4illin/ConvertX/HEAD/images/preview.png"
+   ],
+   "platforms": [
+    "server"
+   ],
+   "thumbs": [
+    "assets/shots/convertx-0.webp"
+   ],
    "setup": "advanced"
   },
   {
@@ -4893,7 +5356,11 @@
    "source": "taxonomy-v2",
    "verified": false,
    "screenshots": [],
-   "platforms": [],
+   "platforms": [
+    "windows",
+    "mac",
+    "linux"
+   ],
    "thumbs": [],
    "setup": "advanced"
   },
@@ -4920,7 +5387,9 @@
    "source": "taxonomy-v2",
    "verified": false,
    "screenshots": [],
-   "platforms": [],
+   "platforms": [
+    "linux"
+   ],
    "thumbs": [],
    "setup": "easy"
   },
@@ -4985,7 +5454,11 @@
    "source": "taxonomy-v2",
    "verified": false,
    "screenshots": [],
-   "platforms": [],
+   "platforms": [
+    "windows",
+    "mac",
+    "linux"
+   ],
    "thumbs": [],
    "setup": "advanced"
   },
@@ -5011,7 +5484,11 @@
    "source": "taxonomy-v2",
    "verified": false,
    "screenshots": [],
-   "platforms": [],
+   "platforms": [
+    "windows",
+    "mac",
+    "linux"
+   ],
    "thumbs": [],
    "setup": "easy"
   },
@@ -5037,7 +5514,11 @@
    "source": "taxonomy-v2",
    "verified": false,
    "screenshots": [],
-   "platforms": [],
+   "platforms": [
+    "windows",
+    "linux",
+    "server"
+   ],
    "thumbs": [],
    "setup": "advanced"
   },
@@ -5062,7 +5543,11 @@
    "source": "taxonomy-v2",
    "verified": false,
    "screenshots": [],
-   "platforms": [],
+   "platforms": [
+    "windows",
+    "mac",
+    "linux"
+   ],
    "thumbs": [],
    "setup": "advanced"
   },
@@ -5194,7 +5679,10 @@
    "source": "taxonomy-v2",
    "verified": false,
    "screenshots": [],
-   "platforms": [],
+   "platforms": [
+    "windows",
+    "server"
+   ],
    "thumbs": [],
    "setup": "advanced"
   },
@@ -5293,7 +5781,9 @@
    "source": "taxonomy-v2",
    "verified": false,
    "screenshots": [],
-   "platforms": [],
+   "platforms": [
+    "server"
+   ],
    "thumbs": [],
    "setup": "advanced"
   },
@@ -5318,7 +5808,11 @@
    "source": "taxonomy-v2",
    "verified": false,
    "screenshots": [],
-   "platforms": [],
+   "platforms": [
+    "windows",
+    "mac",
+    "linux"
+   ],
    "thumbs": [],
    "setup": "advanced"
   },
@@ -5343,9 +5837,18 @@
    ],
    "source": "taxonomy-v2",
    "verified": false,
-   "screenshots": [],
-   "platforms": [],
-   "thumbs": [],
+   "screenshots": [
+    "https://raw.githubusercontent.com/schollz/croc/HEAD/src/install/customization.gif"
+   ],
+   "platforms": [
+    "windows",
+    "mac",
+    "linux",
+    "android"
+   ],
+   "thumbs": [
+    "assets/shots/croc-0.webp"
+   ],
    "setup": "advanced"
   },
   {
@@ -5406,9 +5909,22 @@
    ],
    "source": "taxonomy-v2",
    "verified": false,
-   "screenshots": [],
-   "platforms": [],
-   "thumbs": [],
+   "screenshots": [
+    "https://raw.githubusercontent.com/crowdsecurity/crowdsec-docs/main/crowdsec-docs/static/img/console/blocklists/data_insights.png",
+    "https://raw.githubusercontent.com/crowdsecurity/crowdsec-docs/main/crowdsec-docs/static/img/console/alert-explorer/overview-full-dark.png",
+    "https://raw.githubusercontent.com/crowdsecurity/crowdsec-docs/main/crowdsec-docs/static/img/supported_platforms.png",
+    "https://cms.crowdsec.net/wp-content/uploads/2024/09/Thumbnail-Homepage.png"
+   ],
+   "platforms": [
+    "windows",
+    "server"
+   ],
+   "thumbs": [
+    "assets/shots/crowdsec-0.webp",
+    "assets/shots/crowdsec-1.webp",
+    "assets/shots/crowdsec-2.webp",
+    "assets/shots/crowdsec-3.webp"
+   ],
    "setup": "advanced"
   },
   {
@@ -5433,7 +5949,11 @@
    "source": "taxonomy-v2",
    "verified": false,
    "screenshots": [],
-   "platforms": [],
+   "platforms": [
+    "windows",
+    "mac",
+    "linux"
+   ],
    "thumbs": [],
    "setup": "easy"
   },
@@ -5501,9 +6021,13 @@
    "source": "taxonomy-v2",
    "verified": false,
    "screenshots": [],
-   "platforms": [],
+   "platforms": [
+    "mac",
+    "linux"
+   ],
    "thumbs": [],
-   "setup": "advanced"
+   "setup": "easy",
+   "setupWhy": "It is a desktop app you install like any other program."
   },
   {
    "id": "cube-js",
@@ -5601,9 +6125,17 @@
    ],
    "source": "taxonomy-v2",
    "verified": false,
-   "screenshots": [],
-   "platforms": [],
-   "thumbs": [],
+   "screenshots": [
+    "https://raw.githubusercontent.com/rizinorg/cutter/dev/docs/source/images/screenshot.png"
+   ],
+   "platforms": [
+    "windows",
+    "mac",
+    "linux"
+   ],
+   "thumbs": [
+    "assets/shots/cutter-0.webp"
+   ],
    "setup": "easy"
   },
   {
@@ -5627,9 +6159,13 @@
    "source": "taxonomy-v2",
    "verified": false,
    "screenshots": [],
-   "platforms": [],
+   "platforms": [
+    "web",
+    "server"
+   ],
    "thumbs": [],
-   "setup": "advanced"
+   "setup": "easy",
+   "setupWhy": "It is a website: you use it in a browser with nothing to install."
   },
   {
    "id": "cyberduck",
@@ -5654,7 +6190,9 @@
    "source": "taxonomy-v2",
    "verified": false,
    "screenshots": [],
-   "platforms": [],
+   "platforms": [
+    "windows"
+   ],
    "thumbs": [],
    "setup": "easy"
   },
@@ -5680,7 +6218,9 @@
    "source": "taxonomy-v2",
    "verified": false,
    "screenshots": [],
-   "platforms": [],
+   "platforms": [
+    "server"
+   ],
    "thumbs": [],
    "setup": "advanced"
   },
@@ -5706,7 +6246,10 @@
    "source": "taxonomy-v2",
    "verified": false,
    "screenshots": [],
-   "platforms": [],
+   "platforms": [
+    "web",
+    "server"
+   ],
    "thumbs": [],
    "setup": "advanced"
   },
@@ -5802,9 +6345,21 @@
    ],
    "source": "taxonomy-v2",
    "verified": false,
-   "screenshots": [],
-   "platforms": [],
-   "thumbs": [],
+   "screenshots": [
+    "https://i.ibb.co/L8YbNNc/dashy-demo2.gif",
+    "https://raw.githubusercontent.com/Lissy93/dashy/master/docs/assets/theme-slideshow.gif",
+    "https://raw.githubusercontent.com/Lissy93/dashy/master/docs/assets/theme-config-demo.gif",
+    "https://raw.githubusercontent.com/Lissy93/dashy/master/docs/assets/status-check-demo.gif"
+   ],
+   "platforms": [
+    "server"
+   ],
+   "thumbs": [
+    "assets/shots/dashy-0.webp",
+    "assets/shots/dashy-1.webp",
+    "assets/shots/dashy-2.webp",
+    "assets/shots/dashy-3.webp"
+   ],
    "setup": "advanced"
   },
   {
@@ -5866,9 +6421,22 @@
    ],
    "source": "taxonomy-v2",
    "verified": false,
-   "screenshots": [],
-   "platforms": [],
-   "thumbs": [],
+   "screenshots": [
+    "https://raw.githubusercontent.com/Freika/dawarich/HEAD/screenshots/map.png",
+    "https://raw.githubusercontent.com/Freika/dawarich/HEAD/screenshots/timeline.png",
+    "https://raw.githubusercontent.com/Freika/dawarich/HEAD/screenshots/insights.png",
+    "https://raw.githubusercontent.com/Freika/dawarich/HEAD/screenshots/family.png"
+   ],
+   "platforms": [
+    "android",
+    "server"
+   ],
+   "thumbs": [
+    "assets/shots/dawarich-0.webp",
+    "assets/shots/dawarich-1.webp",
+    "assets/shots/dawarich-2.webp",
+    "assets/shots/dawarich-3.webp"
+   ],
    "setup": "advanced"
   },
   {
@@ -5892,9 +6460,23 @@
    ],
    "source": "taxonomy-v2",
    "verified": false,
-   "screenshots": [],
-   "platforms": [],
-   "thumbs": [],
+   "screenshots": [
+    "https://dbeaver.io/product/dbeaver-sql-editor.png",
+    "https://dbeaver.io/product/dbeaver-gis-viewer.png",
+    "https://dbeaver.io/product/dbeaver-data-editor.png",
+    "https://dbeaver.io/product/dbeaver-erd.png"
+   ],
+   "platforms": [
+    "windows",
+    "mac",
+    "linux"
+   ],
+   "thumbs": [
+    "assets/shots/dbeaver-community-0.webp",
+    "assets/shots/dbeaver-community-1.webp",
+    "assets/shots/dbeaver-community-2.webp",
+    "assets/shots/dbeaver-community-3.webp"
+   ],
    "setup": "easy"
   },
   {
@@ -5919,7 +6501,11 @@
    "source": "taxonomy-v2",
    "verified": false,
    "screenshots": [],
-   "platforms": [],
+   "platforms": [
+    "mac",
+    "linux",
+    "server"
+   ],
    "thumbs": [],
    "setup": "advanced"
   },
@@ -5945,7 +6531,9 @@
    "source": "taxonomy-v2",
    "verified": false,
    "screenshots": [],
-   "platforms": [],
+   "platforms": [
+    "linux"
+   ],
    "thumbs": [],
    "setup": "advanced"
   },
@@ -5971,7 +6559,11 @@
    "source": "taxonomy-v2",
    "verified": false,
    "screenshots": [],
-   "platforms": [],
+   "platforms": [
+    "windows",
+    "mac",
+    "linux"
+   ],
    "thumbs": [],
    "setup": "advanced"
   },
@@ -5996,9 +6588,19 @@
    ],
    "source": "taxonomy-v2",
    "verified": false,
-   "screenshots": [],
-   "platforms": [],
-   "thumbs": [],
+   "screenshots": [
+    "https://raw.githubusercontent.com/qdm12/ddns-updater/HEAD/readme/webui-desktop.gif",
+    "https://raw.githubusercontent.com/qdm12/ddns-updater/HEAD/readme/webui-mobile.png"
+   ],
+   "platforms": [
+    "windows",
+    "mac",
+    "linux"
+   ],
+   "thumbs": [
+    "assets/shots/ddns-updater-0.webp",
+    "assets/shots/ddns-updater-1.webp"
+   ],
    "setup": "advanced"
   },
   {
@@ -6210,7 +6812,12 @@
    "source": "taxonomy-v2",
    "verified": false,
    "screenshots": [],
-   "platforms": [],
+   "platforms": [
+    "windows",
+    "mac",
+    "linux",
+    "server"
+   ],
    "thumbs": [],
    "setup": "easy"
   },
@@ -6236,7 +6843,9 @@
    "source": "taxonomy-v2",
    "verified": false,
    "screenshots": [],
-   "platforms": [],
+   "platforms": [
+    "server"
+   ],
    "thumbs": [],
    "setup": "advanced"
   },
@@ -6261,9 +6870,17 @@
    ],
    "source": "taxonomy-v2",
    "verified": false,
-   "screenshots": [],
-   "platforms": [],
-   "thumbs": [],
+   "screenshots": [
+    "https://raw.githubusercontent.com/loft-sh/devpod/HEAD/docs/static/media/devpod-flow.gif"
+   ],
+   "platforms": [
+    "windows",
+    "mac",
+    "linux"
+   ],
+   "thumbs": [
+    "assets/shots/devpod-0.webp"
+   ],
    "setup": "advanced"
   },
   {
@@ -6286,9 +6903,17 @@
    ],
    "source": "taxonomy-v2",
    "verified": false,
-   "screenshots": [],
-   "platforms": [],
-   "thumbs": [],
+   "screenshots": [
+    "https://raw.githubusercontent.com/DevToys-app/DevToys/HEAD/assets/hero-screenshot.png"
+   ],
+   "platforms": [
+    "windows",
+    "mac",
+    "linux"
+   ],
+   "thumbs": [
+    "assets/shots/devtoys-0.webp"
+   ],
    "setup": "easy"
   },
   {
@@ -6414,7 +7039,9 @@
    "source": "taxonomy-v2",
    "verified": false,
    "screenshots": [],
-   "platforms": [],
+   "platforms": [
+    "windows"
+   ],
    "thumbs": [],
    "setup": "easy"
   },
@@ -6439,9 +7066,18 @@
    ],
    "source": "taxonomy-v2",
    "verified": false,
-   "screenshots": [],
-   "platforms": [],
-   "thumbs": [],
+   "screenshots": [
+    "https://raw.githubusercontent.com/crazy-max/diun/HEAD/.res/screenshot.png"
+   ],
+   "platforms": [
+    "windows",
+    "mac",
+    "linux",
+    "server"
+   ],
+   "thumbs": [
+    "assets/shots/diun-0.webp"
+   ],
    "setup": "advanced"
   },
   {
@@ -6462,7 +7098,9 @@
    "source": "taxonomy-v2",
    "verified": false,
    "screenshots": [],
-   "platforms": [],
+   "platforms": [
+    "server"
+   ],
    "thumbs": [],
    "setup": "advanced"
   },
@@ -6488,7 +7126,9 @@
    "source": "taxonomy-v2",
    "verified": false,
    "screenshots": [],
-   "platforms": [],
+   "platforms": [
+    "server"
+   ],
    "thumbs": [],
    "setup": "advanced"
   },
@@ -6513,7 +7153,9 @@
    "source": "taxonomy-v2",
    "verified": false,
    "screenshots": [],
-   "platforms": [],
+   "platforms": [
+    "server"
+   ],
    "thumbs": [],
    "setup": "advanced"
   },
@@ -6538,7 +7180,11 @@
    "source": "taxonomy-v2",
    "verified": false,
    "screenshots": [],
-   "platforms": [],
+   "platforms": [
+    "windows",
+    "mac",
+    "linux"
+   ],
    "thumbs": [],
    "setup": "advanced"
   },
@@ -6791,7 +7437,15 @@
    "source": "taxonomy-v2",
    "verified": false,
    "screenshots": [],
-   "platforms": [],
+   "platforms": [
+    "windows",
+    "mac",
+    "linux",
+    "android",
+    "ios",
+    "web",
+    "server"
+   ],
    "thumbs": [],
    "setup": "easy"
   },
@@ -6886,7 +7540,11 @@
    "source": "taxonomy-v2",
    "verified": false,
    "screenshots": [],
-   "platforms": [],
+   "platforms": [
+    "windows",
+    "mac",
+    "linux"
+   ],
    "thumbs": [],
    "setup": "easy"
   },
@@ -6983,7 +7641,9 @@
    "source": "taxonomy-v2",
    "verified": false,
    "screenshots": [],
-   "platforms": [],
+   "platforms": [
+    "server"
+   ],
    "thumbs": [],
    "setup": "advanced"
   },
@@ -7008,9 +7668,21 @@
    ],
    "source": "taxonomy-v2",
    "verified": false,
-   "screenshots": [],
-   "platforms": [],
-   "thumbs": [],
+   "screenshots": [
+    "https://raw.githubusercontent.com/wwmm/easyeffects/HEAD/src/contents/docs/images/easyeffects-light-screenshot-1.png#gh-light-mode-only",
+    "https://raw.githubusercontent.com/wwmm/easyeffects/HEAD/src/contents/docs/images/easyeffects-light-screenshot-2.png#gh-light-mode-only",
+    "https://raw.githubusercontent.com/wwmm/easyeffects/HEAD/src/contents/docs/images/easyeffects-light-screenshot-3.png#gh-light-mode-only",
+    "https://raw.githubusercontent.com/wwmm/easyeffects/HEAD/src/contents/docs/images/easyeffects-dark-screenshot-1.png#gh-dark-mode-only"
+   ],
+   "platforms": [
+    "linux"
+   ],
+   "thumbs": [
+    "assets/shots/easyeffects-0.webp",
+    "assets/shots/easyeffects-1.webp",
+    "assets/shots/easyeffects-2.webp",
+    "assets/shots/easyeffects-3.webp"
+   ],
    "setup": "easy"
   },
   {
@@ -7034,7 +7706,11 @@
    "source": "taxonomy-v2",
    "verified": false,
    "screenshots": [],
-   "platforms": [],
+   "platforms": [
+    "windows",
+    "mac",
+    "linux"
+   ],
    "thumbs": [],
    "setup": "advanced"
   },
@@ -7060,7 +7736,12 @@
    "source": "taxonomy-v2",
    "verified": false,
    "screenshots": [],
-   "platforms": [],
+   "platforms": [
+    "windows",
+    "mac",
+    "linux",
+    "android"
+   ],
    "thumbs": [],
    "setup": "easy"
   },
@@ -7181,7 +7862,9 @@
    "source": "taxonomy-v2",
    "verified": false,
    "screenshots": [],
-   "platforms": [],
+   "platforms": [
+    "linux"
+   ],
    "thumbs": [],
    "setup": "easy"
   },
@@ -7335,7 +8018,9 @@
    "source": "taxonomy-v2",
    "verified": false,
    "screenshots": [],
-   "platforms": [],
+   "platforms": [
+    "mac"
+   ],
    "thumbs": [],
    "setup": "easy"
   },
@@ -7362,7 +8047,9 @@
    "source": "taxonomy-v2",
    "verified": false,
    "screenshots": [],
-   "platforms": [],
+   "platforms": [
+    "windows"
+   ],
    "thumbs": [],
    "setup": "easy"
   },
@@ -7431,9 +8118,18 @@
    ],
    "source": "taxonomy-v2",
    "verified": false,
-   "screenshots": [],
-   "platforms": [],
-   "thumbs": [],
+   "screenshots": [
+    "https://ersatztv.org/images/home/epg-example.png"
+   ],
+   "platforms": [
+    "windows",
+    "mac",
+    "linux",
+    "server"
+   ],
+   "thumbs": [
+    "assets/shots/ersatztv-0.webp"
+   ],
    "setup": "advanced"
   },
   {
@@ -7484,7 +8180,11 @@
    "source": "taxonomy-v2",
    "verified": false,
    "screenshots": [],
-   "platforms": [],
+   "platforms": [
+    "windows",
+    "mac",
+    "linux"
+   ],
    "thumbs": [],
    "setup": "easy"
   },
@@ -7674,9 +8374,15 @@
    ],
    "source": "taxonomy-v2",
    "verified": false,
-   "screenshots": [],
-   "platforms": [],
-   "thumbs": [],
+   "screenshots": [
+    "https://excalidraw.nyc3.cdn.digitaloceanspaces.com/github%2Fproduct_showcase.png"
+   ],
+   "platforms": [
+    "web"
+   ],
+   "thumbs": [
+    "assets/shots/excalidraw-0.webp"
+   ],
    "setup": "easy"
   },
   {
@@ -7738,9 +8444,18 @@
    ],
    "source": "taxonomy-v2",
    "verified": false,
-   "screenshots": [],
-   "platforms": [],
-   "thumbs": [],
+   "screenshots": [
+    "https://f2.freshman.tech/assets/2.D-uxLR9T.png"
+   ],
+   "platforms": [
+    "windows",
+    "mac",
+    "linux",
+    "android"
+   ],
+   "thumbs": [
+    "assets/shots/f2-0.webp"
+   ],
    "setup": "advanced"
   },
   {
@@ -7852,7 +8567,11 @@
    "source": "taxonomy-v2",
    "verified": false,
    "screenshots": [],
-   "platforms": [],
+   "platforms": [
+    "windows",
+    "mac",
+    "linux"
+   ],
    "thumbs": [],
    "setup": "advanced"
   },
@@ -7915,9 +8634,23 @@
    ],
    "source": "taxonomy-v2",
    "verified": false,
-   "screenshots": [],
-   "platforms": [],
-   "thumbs": [],
+   "screenshots": [
+    "https://raw.githubusercontent.com/jeffvli/feishin/HEAD/media/preview_full_screen_player.png",
+    "https://raw.githubusercontent.com/jeffvli/feishin/HEAD/media/preview_album_artist_detail.png",
+    "https://raw.githubusercontent.com/jeffvli/feishin/HEAD/media/preview_album_detail.png",
+    "https://raw.githubusercontent.com/jeffvli/feishin/HEAD/media/preview_smart_playlist.png"
+   ],
+   "platforms": [
+    "windows",
+    "mac",
+    "linux"
+   ],
+   "thumbs": [
+    "assets/shots/feishin-0.webp",
+    "assets/shots/feishin-1.webp",
+    "assets/shots/feishin-2.webp",
+    "assets/shots/feishin-3.webp"
+   ],
    "setup": "easy"
   },
   {
@@ -7942,7 +8675,9 @@
    "source": "taxonomy-v2",
    "verified": false,
    "screenshots": [],
-   "platforms": [],
+   "platforms": [
+    "windows"
+   ],
    "thumbs": [],
    "setup": "easy"
   },
@@ -7967,7 +8702,9 @@
    "source": "taxonomy-v2",
    "verified": false,
    "screenshots": [],
-   "platforms": [],
+   "platforms": [
+    "windows"
+   ],
    "thumbs": [],
    "setup": "easy"
   },
@@ -8082,7 +8819,9 @@
    "source": "taxonomy-v2",
    "verified": false,
    "screenshots": [],
-   "platforms": [],
+   "platforms": [
+    "server"
+   ],
    "thumbs": [],
    "setup": "advanced"
   },
@@ -8192,7 +8931,10 @@
    "source": "taxonomy-v2",
    "verified": false,
    "screenshots": [],
-   "platforms": [],
+   "platforms": [
+    "web",
+    "server"
+   ],
    "thumbs": [],
    "setup": "easy"
   },
@@ -8217,7 +8959,10 @@
    "source": "taxonomy-v2",
    "verified": false,
    "screenshots": [],
-   "platforms": [],
+   "platforms": [
+    "mac",
+    "linux"
+   ],
    "thumbs": [],
    "setup": "advanced"
   },
@@ -8243,7 +8988,9 @@
    "source": "taxonomy-v2",
    "verified": false,
    "screenshots": [],
-   "platforms": [],
+   "platforms": [
+    "server"
+   ],
    "thumbs": [],
    "setup": "advanced"
   },
@@ -8312,7 +9059,11 @@
    "source": "taxonomy-v2",
    "verified": false,
    "screenshots": [],
-   "platforms": [],
+   "platforms": [
+    "windows",
+    "mac",
+    "linux"
+   ],
    "thumbs": [],
    "setup": "easy"
   },
@@ -8337,7 +9088,10 @@
    "source": "taxonomy-v2",
    "verified": false,
    "screenshots": [],
-   "platforms": [],
+   "platforms": [
+    "linux",
+    "server"
+   ],
    "thumbs": [],
    "setup": "advanced"
   },
@@ -8364,7 +9118,9 @@
    "source": "taxonomy-v2",
    "verified": false,
    "screenshots": [],
-   "platforms": [],
+   "platforms": [
+    "android"
+   ],
    "thumbs": [],
    "setup": "easy"
   },
@@ -8466,9 +9222,21 @@
    ],
    "source": "taxonomy-v2",
    "verified": false,
-   "screenshots": [],
-   "platforms": [],
-   "thumbs": [],
+   "screenshots": [
+    "https://user-images.githubusercontent.com/6903107/145332614-74909973-f6eb-47c2-8235-289931e30718.png",
+    "https://user-images.githubusercontent.com/6903107/145018796-658b7c24-a34f-46b6-98d4-cf4f636d8b60.png",
+    "https://user-images.githubusercontent.com/6903107/144517502-5325de01-d0d9-4c2e-aafb-33c3f5d82f81.png",
+    "https://user-images.githubusercontent.com/6903107/144831031-0e01e8ea-3247-4ba4-a7b4-48b0db620bc1.png"
+   ],
+   "platforms": [
+    "windows"
+   ],
+   "thumbs": [
+    "assets/shots/flow-launcher-0.webp",
+    "assets/shots/flow-launcher-1.webp",
+    "assets/shots/flow-launcher-2.webp",
+    "assets/shots/flow-launcher-3.webp"
+   ],
    "setup": "easy"
   },
   {
@@ -8617,9 +9385,23 @@
    ],
    "source": "taxonomy-v2",
    "verified": false,
-   "screenshots": [],
-   "platforms": [],
-   "thumbs": [],
+   "screenshots": [
+    "https://fooyin.org/assets/images/simple.webp",
+    "https://fooyin.org/assets/images/browser.webp",
+    "https://fooyin.org/assets/images/obsidian.webp",
+    "https://fooyin.org/assets/images/gallery.webp"
+   ],
+   "platforms": [
+    "windows",
+    "mac",
+    "linux"
+   ],
+   "thumbs": [
+    "assets/shots/fooyin-0.webp",
+    "assets/shots/fooyin-1.webp",
+    "assets/shots/fooyin-2.webp",
+    "assets/shots/fooyin-3.webp"
+   ],
    "setup": "easy"
   },
   {
@@ -8913,7 +9695,9 @@
    "source": "taxonomy-v2",
    "verified": false,
    "screenshots": [],
-   "platforms": [],
+   "platforms": [
+    "linux"
+   ],
    "thumbs": [],
    "setup": "advanced"
   },
@@ -8965,9 +9749,21 @@
    ],
    "source": "taxonomy-v2",
    "verified": false,
-   "screenshots": [],
-   "platforms": [],
-   "thumbs": [],
+   "screenshots": [
+    "https://raw.githubusercontent.com/frappe/hrms/HEAD/.github/hrms-hero.png",
+    "https://raw.githubusercontent.com/frappe/hrms/HEAD/.github/hrms-appraisal.png",
+    "https://raw.githubusercontent.com/frappe/hrms/HEAD/.github/hrms-requisition.png",
+    "https://raw.githubusercontent.com/frappe/hrms/HEAD/.github/hrms-attendance.png"
+   ],
+   "platforms": [
+    "server"
+   ],
+   "thumbs": [
+    "assets/shots/frappe-hr-0.webp",
+    "assets/shots/frappe-hr-1.webp",
+    "assets/shots/frappe-hr-2.webp",
+    "assets/shots/frappe-hr-3.webp"
+   ],
    "setup": "advanced"
   },
   {
@@ -9018,7 +9814,9 @@
    "source": "taxonomy-v2",
    "verified": false,
    "screenshots": [],
-   "platforms": [],
+   "platforms": [
+    "server"
+   ],
    "thumbs": [],
    "setup": "advanced"
   },
@@ -9244,9 +10042,15 @@
    ],
    "source": "taxonomy-v2",
    "verified": false,
-   "screenshots": [],
-   "platforms": [],
-   "thumbs": [],
+   "screenshots": [
+    "https://github.com/user-attachments/assets/f292b6ce-b530-4e8e-b9db-8770a1e27946"
+   ],
+   "platforms": [
+    "linux"
+   ],
+   "thumbs": [
+    "assets/shots/frog-0.webp"
+   ],
    "setup": "easy"
   },
   {
@@ -9271,9 +10075,18 @@
    ],
    "source": "taxonomy-v2",
    "verified": false,
-   "screenshots": [],
-   "platforms": [],
-   "thumbs": [],
+   "screenshots": [
+    "https://raw.githubusercontent.com/fatedier/frp/HEAD/doc/pic/dashboard.png"
+   ],
+   "platforms": [
+    "windows",
+    "mac",
+    "linux",
+    "android"
+   ],
+   "thumbs": [
+    "assets/shots/frp-0.webp"
+   ],
    "setup": "advanced"
   },
   {
@@ -9297,9 +10110,17 @@
    ],
    "source": "taxonomy-v2",
    "verified": false,
-   "screenshots": [],
-   "platforms": [],
-   "thumbs": [],
+   "screenshots": [
+    "https://raw.githubusercontent.com/cboxdoerfer/fsearch/master/data/screenshots/02-main_window_menubar.png",
+    "https://raw.githubusercontent.com/cboxdoerfer/fsearch/master/data/screenshots/01-main_window_headerbar.png"
+   ],
+   "platforms": [
+    "linux"
+   ],
+   "thumbs": [
+    "assets/shots/fsearch-0.webp",
+    "assets/shots/fsearch-1.webp"
+   ],
    "setup": "easy"
   },
   {
@@ -9409,9 +10230,21 @@
    ],
    "source": "taxonomy-v2",
    "verified": false,
-   "screenshots": [],
-   "platforms": [],
-   "thumbs": [],
+   "screenshots": [
+    "https://raw.githubusercontent.com/frangoteam/FUXA/HEAD/screenshot/fuxa-editor.png",
+    "https://raw.githubusercontent.com/frangoteam/FUXA/HEAD/screenshot/fuxa-thinglinks.gif",
+    "https://raw.githubusercontent.com/frangoteam/FUXA/HEAD/screenshot/feature-action-move.gif",
+    "https://github.com/user-attachments/assets/40f01e1d-cf39-4145-99a0-e8fedf791edf"
+   ],
+   "platforms": [
+    "server"
+   ],
+   "thumbs": [
+    "assets/shots/fuxa-0.webp",
+    "assets/shots/fuxa-1.webp",
+    "assets/shots/fuxa-2.webp",
+    "assets/shots/fuxa-3.webp"
+   ],
    "setup": "advanced"
   },
   {
@@ -9437,7 +10270,9 @@
    "source": "taxonomy-v2",
    "verified": false,
    "screenshots": [],
-   "platforms": [],
+   "platforms": [
+    "server"
+   ],
    "thumbs": [],
    "setup": "advanced"
   },
@@ -9464,7 +10299,9 @@
    "source": "taxonomy-v2",
    "verified": false,
    "screenshots": [],
-   "platforms": [],
+   "platforms": [
+    "windows"
+   ],
    "thumbs": [],
    "setup": "easy"
   },
@@ -9489,9 +10326,24 @@
    ],
    "source": "taxonomy-v2",
    "verified": false,
-   "screenshots": [],
-   "platforms": [],
-   "thumbs": [],
+   "screenshots": [
+    "https://raw.githubusercontent.com/junegunn/i/master/fzf-preview.png",
+    "https://raw.githubusercontent.com/junegunn/i/master/fzf-style-default.png",
+    "https://raw.githubusercontent.com/junegunn/i/master/fzf-style-full.png",
+    "https://raw.githubusercontent.com/junegunn/i/master/fzf-style-minimal.png"
+   ],
+   "platforms": [
+    "windows",
+    "mac",
+    "linux",
+    "android"
+   ],
+   "thumbs": [
+    "assets/shots/fzf-0.webp",
+    "assets/shots/fzf-1.webp",
+    "assets/shots/fzf-2.webp",
+    "assets/shots/fzf-3.webp"
+   ],
    "setup": "advanced"
   },
   {
@@ -9516,9 +10368,21 @@
    ],
    "source": "taxonomy-v2",
    "verified": false,
-   "screenshots": [],
-   "platforms": [],
-   "thumbs": [],
+   "screenshots": [
+    "https://raw.githubusercontent.com/seerge/g-helper/refs/heads/main/docs/app-hero.jpg",
+    "https://github.com/user-attachments/assets/9376fe90-fbb6-420a-abbd-0186189665e1",
+    "https://github.com/user-attachments/assets/254d33eb-2af1-4715-a097-ed8678c7e9db",
+    "https://github.com/user-attachments/assets/48ce19a6-d149-40ed-9145-23f974c513f7"
+   ],
+   "platforms": [
+    "windows"
+   ],
+   "thumbs": [
+    "assets/shots/g-helper-0.webp",
+    "assets/shots/g-helper-1.webp",
+    "assets/shots/g-helper-2.webp",
+    "assets/shots/g-helper-3.webp"
+   ],
    "setup": "easy"
   },
   {
@@ -9545,7 +10409,9 @@
    "source": "taxonomy-v2",
    "verified": false,
    "screenshots": [],
-   "platforms": [],
+   "platforms": [
+    "android"
+   ],
    "thumbs": [],
    "setup": "easy"
   },
@@ -9606,7 +10472,10 @@
    "source": "taxonomy-v2",
    "verified": false,
    "screenshots": [],
-   "platforms": [],
+   "platforms": [
+    "windows",
+    "linux"
+   ],
    "thumbs": [],
    "setup": "advanced"
   },
@@ -9632,7 +10501,9 @@
    "source": "taxonomy-v2",
    "verified": false,
    "screenshots": [],
-   "platforms": [],
+   "platforms": [
+    "linux"
+   ],
    "thumbs": [],
    "setup": "advanced"
   },
@@ -9660,7 +10531,9 @@
    "source": "taxonomy-v2",
    "verified": false,
    "screenshots": [],
-   "platforms": [],
+   "platforms": [
+    "linux"
+   ],
    "thumbs": [],
    "setup": "advanced"
   },
@@ -9729,9 +10602,21 @@
    ],
    "source": "taxonomy-v2",
    "verified": false,
-   "screenshots": [],
-   "platforms": [],
-   "thumbs": [],
+   "screenshots": [
+    "https://raw.githubusercontent.com/TwiN/gatus/HEAD/.github/assets/dashboard-dark.jpg",
+    "https://raw.githubusercontent.com/TwiN/gatus/HEAD/.github/assets/dashboard-conditions.jpg",
+    "https://raw.githubusercontent.com/TwiN/gatus/HEAD/.github/assets/example.jpg",
+    "https://raw.githubusercontent.com/TwiN/gatus/HEAD/.github/assets/past-announcements.jpg"
+   ],
+   "platforms": [
+    "server"
+   ],
+   "thumbs": [
+    "assets/shots/gatus-0.webp",
+    "assets/shots/gatus-1.webp",
+    "assets/shots/gatus-2.webp",
+    "assets/shots/gatus-3.webp"
+   ],
    "setup": "advanced"
   },
   {
@@ -9757,7 +10642,9 @@
    "source": "taxonomy-v2",
    "verified": false,
    "screenshots": [],
-   "platforms": [],
+   "platforms": [
+    "linux"
+   ],
    "thumbs": [],
    "setup": "easy"
   },
@@ -9783,9 +10670,15 @@
    ],
    "source": "taxonomy-v2",
    "verified": false,
-   "screenshots": [],
-   "platforms": [],
-   "thumbs": [],
+   "screenshots": [
+    "https://raw.githubusercontent.com/mijorus/gearlever/master/docs/gearlever3.png"
+   ],
+   "platforms": [
+    "linux"
+   ],
+   "thumbs": [
+    "assets/shots/gear-lever-0.webp"
+   ],
    "setup": "easy"
   },
   {
@@ -9881,9 +10774,14 @@
    "source": "taxonomy-v2",
    "verified": false,
    "screenshots": [],
-   "platforms": [],
+   "platforms": [
+    "windows",
+    "mac",
+    "linux"
+   ],
    "thumbs": [],
-   "setup": "advanced"
+   "setup": "easy",
+   "setupWhy": "It is a desktop program you download and open, though it is aimed at specialists."
   },
   {
    "id": "ghost",
@@ -9984,7 +10882,9 @@
    "source": "taxonomy-v2",
    "verified": false,
    "screenshots": [],
-   "platforms": [],
+   "platforms": [
+    "mac"
+   ],
    "thumbs": [],
    "setup": "easy"
   },
@@ -10056,9 +10956,15 @@
    ],
    "source": "taxonomy-v2",
    "verified": false,
-   "screenshots": [],
-   "platforms": [],
-   "thumbs": [],
+   "screenshots": [
+    "https://raw.githubusercontent.com/geovens/gInk/master/screenshot1.jpg"
+   ],
+   "platforms": [
+    "windows"
+   ],
+   "thumbs": [
+    "assets/shots/gink-0.webp"
+   ],
    "setup": "easy"
   },
   {
@@ -10084,7 +10990,9 @@
    "source": "taxonomy-v2",
    "verified": false,
    "screenshots": [],
-   "platforms": [],
+   "platforms": [
+    "windows"
+   ],
    "thumbs": [],
    "setup": "easy"
   },
@@ -10165,9 +11073,16 @@
    ],
    "source": "taxonomy-v2",
    "verified": false,
-   "screenshots": [],
-   "platforms": [],
-   "thumbs": [],
+   "screenshots": [
+    "https://user-images.githubusercontent.com/634063/202742985-bb3b3b94-8aca-404a-8d8a-fd6a6f030672.png"
+   ],
+   "platforms": [
+    "windows",
+    "mac"
+   ],
+   "thumbs": [
+    "assets/shots/github-desktop-0.webp"
+   ],
    "setup": "easy"
   },
   {
@@ -10192,7 +11107,11 @@
    "source": "taxonomy-v2",
    "verified": false,
    "screenshots": [],
-   "platforms": [],
+   "platforms": [
+    "windows",
+    "mac",
+    "linux"
+   ],
    "thumbs": [],
    "setup": "advanced"
   },
@@ -10259,7 +11178,11 @@
    "source": "taxonomy-v2",
    "verified": false,
    "screenshots": [],
-   "platforms": [],
+   "platforms": [
+    "windows",
+    "mac",
+    "linux"
+   ],
    "thumbs": [],
    "setup": "advanced"
   },
@@ -10283,9 +11206,19 @@
    ],
    "source": "taxonomy-v2",
    "verified": false,
-   "screenshots": [],
-   "platforms": [],
-   "thumbs": [],
+   "screenshots": [
+    "https://raw.githubusercontent.com/gitui-org/gitui/HEAD/demo.gif",
+    "https://raw.githubusercontent.com/gitui-org/gitui/HEAD/assets/light-theme.png"
+   ],
+   "platforms": [
+    "windows",
+    "mac",
+    "linux"
+   ],
+   "thumbs": [
+    "assets/shots/gitui-0.webp",
+    "assets/shots/gitui-1.webp"
+   ],
    "setup": "advanced"
   },
   {
@@ -10308,9 +11241,22 @@
    ],
    "source": "taxonomy-v2",
    "verified": false,
-   "screenshots": [],
-   "platforms": [],
-   "thumbs": [],
+   "screenshots": [
+    "https://raw.githubusercontent.com/glanceapp/glance/HEAD/docs/images/readme-main-image.png",
+    "https://raw.githubusercontent.com/glanceapp/glance/HEAD/docs/images/mobile-preview.png",
+    "https://raw.githubusercontent.com/glanceapp/glance/HEAD/docs/images/themes-example.png"
+   ],
+   "platforms": [
+    "windows",
+    "mac",
+    "linux",
+    "server"
+   ],
+   "thumbs": [
+    "assets/shots/glance-0.webp",
+    "assets/shots/glance-1.webp",
+    "assets/shots/glance-2.webp"
+   ],
    "setup": "advanced"
   },
   {
@@ -10336,9 +11282,12 @@
    "source": "taxonomy-v2",
    "verified": false,
    "screenshots": [],
-   "platforms": [],
+   "platforms": [
+    "windows"
+   ],
    "thumbs": [],
-   "setup": "advanced"
+   "setup": "easy",
+   "setupWhy": "It has an installer for Windows that you run like any other program."
   },
   {
    "id": "gltr",
@@ -10363,9 +11312,16 @@
    ],
    "source": "taxonomy-v2",
    "verified": false,
-   "screenshots": [],
-   "platforms": [],
-   "thumbs": [],
+   "screenshots": [
+    "https://raw.githubusercontent.com/HendrikStrobelt/detecting-fake-text/HEAD/figs/overview.png"
+   ],
+   "platforms": [
+    "web",
+    "server"
+   ],
+   "thumbs": [
+    "assets/shots/gltr-0.webp"
+   ],
    "setup": "advanced"
   },
   {
@@ -10417,7 +11373,9 @@
    "source": "taxonomy-v2",
    "verified": false,
    "screenshots": [],
-   "platforms": [],
+   "platforms": [
+    "linux"
+   ],
    "thumbs": [],
    "setup": "easy"
   },
@@ -10444,7 +11402,9 @@
    "source": "taxonomy-v2",
    "verified": false,
    "screenshots": [],
-   "platforms": [],
+   "platforms": [
+    "linux"
+   ],
    "thumbs": [],
    "setup": "easy"
   },
@@ -10497,7 +11457,10 @@
    "source": "taxonomy-v2",
    "verified": false,
    "screenshots": [],
-   "platforms": [],
+   "platforms": [
+    "mac",
+    "linux"
+   ],
    "thumbs": [],
    "setup": "advanced"
   },
@@ -10596,10 +11559,20 @@
    ],
    "source": "taxonomy-v2",
    "verified": false,
-   "screenshots": [],
-   "platforms": [],
-   "thumbs": [],
-   "setup": "advanced"
+   "screenshots": [
+    "https://raw.githubusercontent.com/godotengine/godot-design/master/screenshots/editor_tps_demo_1920x1080.jpg"
+   ],
+   "platforms": [
+    "windows",
+    "mac",
+    "linux",
+    "android"
+   ],
+   "thumbs": [
+    "assets/shots/godot-0.webp"
+   ],
+   "setup": "easy",
+   "setupWhy": "It is a desktop program you download and open; no server or command line needed."
   },
   {
    "id": "gogs",
@@ -10659,9 +11632,17 @@
    ],
    "source": "taxonomy-v2",
    "verified": false,
-   "screenshots": [],
-   "platforms": [],
-   "thumbs": [],
+   "screenshots": [
+    "https://raw.githubusercontent.com/GoldenCheetah/GoldenCheetah/067696aafdad21c702672b2c9c41da03c076451c/doc/wiki/GoldenCheetah-Screenshot.png"
+   ],
+   "platforms": [
+    "windows",
+    "mac",
+    "linux"
+   ],
+   "thumbs": [
+    "assets/shots/goldencheetah-0.webp"
+   ],
    "setup": "easy"
   },
   {
@@ -10725,9 +11706,21 @@
    ],
    "source": "taxonomy-v2",
    "verified": false,
-   "screenshots": [],
-   "platforms": [],
-   "thumbs": [],
+   "screenshots": [
+    "https://raw.githubusercontent.com/GopeedLab/gopeed/HEAD/_docs/img/ui-concept-en.png",
+    "https://gopeed.com/images/screenshot.png"
+   ],
+   "platforms": [
+    "windows",
+    "mac",
+    "linux",
+    "android",
+    "ios"
+   ],
+   "thumbs": [
+    "assets/shots/gopeed-0.webp",
+    "assets/shots/gopeed-1.webp"
+   ],
    "setup": "easy"
   },
   {
@@ -10887,7 +11880,9 @@
    "source": "taxonomy-v2",
    "verified": false,
    "screenshots": [],
-   "platforms": [],
+   "platforms": [
+    "server"
+   ],
    "thumbs": [],
    "setup": "advanced"
   },
@@ -10959,7 +11954,9 @@
    "source": "taxonomy-v2",
    "verified": false,
    "screenshots": [],
-   "platforms": [],
+   "platforms": [
+    "windows"
+   ],
    "thumbs": [],
    "setup": "easy"
   },
@@ -11024,7 +12021,10 @@
    "source": "taxonomy-v2",
    "verified": false,
    "screenshots": [],
-   "platforms": [],
+   "platforms": [
+    "windows",
+    "server"
+   ],
    "thumbs": [],
    "setup": "advanced"
   },
@@ -11092,9 +12092,17 @@
    ],
    "source": "taxonomy-v2",
    "verified": false,
-   "screenshots": [],
-   "platforms": [],
-   "thumbs": [],
+   "screenshots": [
+    "https://user-images.githubusercontent.com/590471/90276236-9868f300-de31-11ea-8068-4268b6b68529.gif"
+   ],
+   "platforms": [
+    "windows",
+    "mac",
+    "linux"
+   ],
+   "thumbs": [
+    "assets/shots/grype-0.webp"
+   ],
    "setup": "advanced"
   },
   {
@@ -11119,7 +12127,9 @@
    "source": "taxonomy-v2",
    "verified": false,
    "screenshots": [],
-   "platforms": [],
+   "platforms": [
+    "linux"
+   ],
    "thumbs": [],
    "setup": "easy"
   },
@@ -11143,9 +12153,13 @@
    ],
    "source": "taxonomy-v2",
    "verified": false,
-   "screenshots": [],
+   "screenshots": [
+    "https://cdn.kde.org/screenshots/gwenview/gwenview-image.png"
+   ],
    "platforms": [],
-   "thumbs": [],
+   "thumbs": [
+    "assets/shots/gwenview-0.webp"
+   ],
    "setup": "easy"
   },
   {
@@ -11170,7 +12184,9 @@
    "source": "taxonomy-v2",
    "verified": false,
    "screenshots": [],
-   "platforms": [],
+   "platforms": [
+    "mac"
+   ],
    "thumbs": [],
    "setup": "advanced"
   },
@@ -11198,7 +12214,9 @@
    "source": "taxonomy-v2",
    "verified": false,
    "screenshots": [],
-   "platforms": [],
+   "platforms": [
+    "server"
+   ],
    "thumbs": [],
    "setup": "advanced"
   },
@@ -11223,7 +12241,11 @@
    "source": "taxonomy-v2",
    "verified": false,
    "screenshots": [],
-   "platforms": [],
+   "platforms": [
+    "windows",
+    "mac",
+    "linux"
+   ],
    "thumbs": [],
    "setup": "easy"
   },
@@ -11288,7 +12310,10 @@
    "source": "taxonomy-v2",
    "verified": false,
    "screenshots": [],
-   "platforms": [],
+   "platforms": [
+    "mac",
+    "android"
+   ],
    "thumbs": [],
    "setup": "easy"
   },
@@ -11341,7 +12366,12 @@
    "source": "taxonomy-v2",
    "verified": false,
    "screenshots": [],
-   "platforms": [],
+   "platforms": [
+    "windows",
+    "mac",
+    "linux",
+    "android"
+   ],
    "thumbs": [],
    "setup": "advanced"
   },
@@ -11365,10 +12395,25 @@
    ],
    "source": "taxonomy-v2",
    "verified": false,
-   "screenshots": [],
-   "platforms": [],
-   "thumbs": [],
-   "setup": "advanced"
+   "screenshots": [
+    "https://raw.githubusercontent.com/kubernetes-sigs/headlamp/screenshots/videos/headlamp_quick_run.gif",
+    "https://raw.githubusercontent.com/kubernetes-sigs/headlamp/screenshots/screenshots/home.png",
+    "https://raw.githubusercontent.com/kubernetes-sigs/headlamp/screenshots/screenshots/cluster_chooser.png",
+    "https://raw.githubusercontent.com/kubernetes-sigs/headlamp/screenshots/screenshots/workloads.png"
+   ],
+   "platforms": [
+    "windows",
+    "mac",
+    "linux"
+   ],
+   "thumbs": [
+    "assets/shots/headlamp-0.webp",
+    "assets/shots/headlamp-1.webp",
+    "assets/shots/headlamp-2.webp",
+    "assets/shots/headlamp-3.webp"
+   ],
+   "setup": "easy",
+   "setupWhy": "It has a desktop app for Windows, Mac and Linux."
   },
   {
    "id": "hedgedoc",
@@ -11430,9 +12475,15 @@
    ],
    "source": "taxonomy-v2",
    "verified": false,
-   "screenshots": [],
-   "platforms": [],
-   "thumbs": [],
+   "screenshots": [
+    "https://i.imgur.com/MrC4QpN.gif"
+   ],
+   "platforms": [
+    "server"
+   ],
+   "thumbs": [
+    "assets/shots/heimdall-0.webp"
+   ],
    "setup": "advanced"
   },
   {
@@ -11506,9 +12557,15 @@
    ],
    "source": "taxonomy-v2",
    "verified": false,
-   "screenshots": [],
-   "platforms": [],
-   "thumbs": [],
+   "screenshots": [
+    "https://github.com/user-attachments/assets/e16332e9-d642-427e-b3ce-1a74a17f7b2c"
+   ],
+   "platforms": [
+    "server"
+   ],
+   "thumbs": [
+    "assets/shots/helicone-0.webp"
+   ],
    "setup": "advanced"
   },
   {
@@ -11598,9 +12655,15 @@
    ],
    "source": "taxonomy-v2",
    "verified": false,
-   "screenshots": [],
-   "platforms": [],
-   "thumbs": [],
+   "screenshots": [
+    "https://storage.hestiacp.com/hestiascreen.png"
+   ],
+   "platforms": [
+    "server"
+   ],
+   "thumbs": [
+    "assets/shots/hestiacp-0.webp"
+   ],
    "setup": "advanced"
   },
   {
@@ -11660,9 +12723,19 @@
    ],
    "source": "taxonomy-v2",
    "verified": false,
-   "screenshots": [],
-   "platforms": [],
-   "thumbs": [],
+   "screenshots": [
+    "https://raw.githubusercontent.com/jeffshee/hidamari/master/res/screenshot-1.png",
+    "https://raw.githubusercontent.com/jeffshee/hidamari/master/res/screenshot-2.png",
+    "https://raw.githubusercontent.com/jeffshee/hidamari/master/res/screenshot-3.png"
+   ],
+   "platforms": [
+    "linux"
+   ],
+   "thumbs": [
+    "assets/shots/hidamari-0.webp",
+    "assets/shots/hidamari-1.webp",
+    "assets/shots/hidamari-2.webp"
+   ],
    "setup": "easy"
   },
   {
@@ -11732,7 +12805,10 @@
    "source": "taxonomy-v2",
    "verified": false,
    "screenshots": [],
-   "platforms": [],
+   "platforms": [
+    "linux",
+    "server"
+   ],
    "thumbs": [],
    "setup": "advanced"
   },
@@ -11798,9 +12874,15 @@
    ],
    "source": "taxonomy-v2",
    "verified": false,
-   "screenshots": [],
-   "platforms": [],
-   "thumbs": [],
+   "screenshots": [
+    "https://brew.sh/assets/img/brew-install.gif"
+   ],
+   "platforms": [
+    "mac"
+   ],
+   "thumbs": [
+    "assets/shots/homebrew-0.webp"
+   ],
    "setup": "advanced"
   },
   {
@@ -11823,9 +12905,15 @@
    ],
    "source": "taxonomy-v2",
    "verified": false,
-   "screenshots": [],
-   "platforms": [],
-   "thumbs": [],
+   "screenshots": [
+    "https://raw.githubusercontent.com/gethomepage/homepage/HEAD/images/1.png?v=2"
+   ],
+   "platforms": [
+    "server"
+   ],
+   "thumbs": [
+    "assets/shots/homepage-0.webp"
+   ],
    "setup": "advanced"
   },
   {
@@ -11850,7 +12938,9 @@
    "source": "taxonomy-v2",
    "verified": false,
    "screenshots": [],
-   "platforms": [],
+   "platforms": [
+    "android"
+   ],
    "thumbs": [],
    "setup": "easy"
   },
@@ -11999,9 +13089,15 @@
    ],
    "source": "taxonomy-v2",
    "verified": false,
-   "screenshots": [],
-   "platforms": [],
-   "thumbs": [],
+   "screenshots": [
+    "https://user-images.githubusercontent.com/1138515/99553152-b8bac780-29b5-11eb-9d75-8756ed7581b6.png"
+   ],
+   "platforms": [
+    "linux"
+   ],
+   "thumbs": [
+    "assets/shots/hypnotix-0.webp"
+   ],
    "setup": "easy"
   },
   {
@@ -12025,7 +13121,9 @@
    "source": "taxonomy-v2",
    "verified": false,
    "screenshots": [],
-   "platforms": [],
+   "platforms": [
+    "linux"
+   ],
    "thumbs": [],
    "setup": "easy"
   },
@@ -12086,9 +13184,17 @@
    ],
    "source": "taxonomy-v2",
    "verified": false,
-   "screenshots": [],
-   "platforms": [],
-   "thumbs": [],
+   "screenshots": [
+    "https://iina.io/img/blog/150-release/plugin-store.png",
+    "https://iina.io/img/screenshot.png"
+   ],
+   "platforms": [
+    "mac"
+   ],
+   "thumbs": [
+    "assets/shots/iina-0.webp",
+    "assets/shots/iina-1.webp"
+   ],
    "setup": "easy"
   },
   {
@@ -12150,9 +13256,19 @@
    ],
    "source": "taxonomy-v2",
    "verified": false,
-   "screenshots": [],
-   "platforms": [],
-   "thumbs": [],
+   "screenshots": [
+    "https://github.com/user-attachments/assets/ca49c1be-4ab6-4714-b23b-8b094b5eda90",
+    "https://imageglass.org/img/og-default.jpg"
+   ],
+   "platforms": [
+    "windows",
+    "mac",
+    "linux"
+   ],
+   "thumbs": [
+    "assets/shots/imageglass-0.webp",
+    "assets/shots/imageglass-1.webp"
+   ],
    "setup": "easy"
   },
   {
@@ -12176,9 +13292,19 @@
    ],
    "source": "taxonomy-v2",
    "verified": false,
-   "screenshots": [],
-   "platforms": [],
-   "thumbs": [],
+   "screenshots": [
+    "https://github.com/user-attachments/assets/902a7c4c-410d-490f-999e-14c856fec027",
+    "https://github.com/user-attachments/assets/58eefa1f-31c9-4bb8-a1c1-8cdd8ddbd29f"
+   ],
+   "platforms": [
+    "windows",
+    "mac",
+    "linux"
+   ],
+   "thumbs": [
+    "assets/shots/imhex-0.webp",
+    "assets/shots/imhex-1.webp"
+   ],
    "setup": "easy"
   },
   {
@@ -12242,7 +13368,12 @@
    "source": "taxonomy-v2",
    "verified": false,
    "screenshots": [],
-   "platforms": [],
+   "platforms": [
+    "windows",
+    "mac",
+    "linux",
+    "server"
+   ],
    "thumbs": [],
    "setup": "advanced"
   },
@@ -12426,7 +13557,9 @@
    "source": "taxonomy-v2",
    "verified": false,
    "screenshots": [],
-   "platforms": [],
+   "platforms": [
+    "linux"
+   ],
    "thumbs": [],
    "setup": "advanced"
   },
@@ -12527,9 +13660,22 @@
    ],
    "source": "taxonomy-v2",
    "verified": false,
-   "screenshots": [],
-   "platforms": [],
-   "thumbs": [],
+   "screenshots": [
+    "https://raw.githubusercontent.com/iv-org/invidious/HEAD/screenshots/01_player.png",
+    "https://raw.githubusercontent.com/iv-org/invidious/HEAD/screenshots/02_preferences.png",
+    "https://raw.githubusercontent.com/iv-org/invidious/HEAD/screenshots/03_subscriptions.png",
+    "https://raw.githubusercontent.com/iv-org/invidious/HEAD/screenshots/04_description.png"
+   ],
+   "platforms": [
+    "web",
+    "server"
+   ],
+   "thumbs": [
+    "assets/shots/invidious-0.webp",
+    "assets/shots/invidious-1.webp",
+    "assets/shots/invidious-2.webp",
+    "assets/shots/invidious-3.webp"
+   ],
    "setup": "advanced"
   },
   {
@@ -12594,7 +13740,10 @@
    "source": "taxonomy-v2",
    "verified": false,
    "screenshots": [],
-   "platforms": [],
+   "platforms": [
+    "web",
+    "server"
+   ],
    "thumbs": [],
    "setup": "easy"
   },
@@ -12712,9 +13861,14 @@
    "source": "taxonomy-v2",
    "verified": false,
    "screenshots": [],
-   "platforms": [],
+   "platforms": [
+    "windows",
+    "mac",
+    "linux"
+   ],
    "thumbs": [],
-   "setup": "easy"
+   "setup": "easy",
+   "setupWhy": "It has desktop installers for Windows, Mac and Linux."
   },
   {
    "id": "jan",
@@ -12819,7 +13973,10 @@
    "source": "taxonomy-v2",
    "verified": false,
    "screenshots": [],
-   "platforms": [],
+   "platforms": [
+    "windows",
+    "mac"
+   ],
    "thumbs": [],
    "setup": "easy"
   },
@@ -12898,7 +14055,9 @@
    "source": "taxonomy-v2",
    "verified": false,
    "screenshots": [],
-   "platforms": [],
+   "platforms": [
+    "android"
+   ],
    "thumbs": [],
    "setup": "easy"
   },
@@ -12923,9 +14082,15 @@
    ],
    "source": "taxonomy-v2",
    "verified": false,
-   "screenshots": [],
-   "platforms": [],
-   "thumbs": [],
+   "screenshots": [
+    "https://raw.githubusercontent.com/Fallenbagel/jellyseerr/HEAD/public/preview.jpg"
+   ],
+   "platforms": [
+    "server"
+   ],
+   "thumbs": [
+    "assets/shots/jellyseerr-0.webp"
+   ],
    "setup": "advanced"
   },
   {
@@ -13063,9 +14228,19 @@
    ],
    "source": "taxonomy-v2",
    "verified": false,
-   "screenshots": [],
-   "platforms": [],
-   "thumbs": [],
+   "screenshots": [
+    "https://raw.githubusercontent.com/Gsync/jobsync/HEAD/screenshots/jobsync-ai-jobmatch.gif",
+    "https://raw.githubusercontent.com/Gsync/jobsync/HEAD/screenshots/jobsync-dashboard.png?raw=true",
+    "https://raw.githubusercontent.com/Gsync/jobsync/HEAD/screenshots/jobsync-jobs.png?raw=true"
+   ],
+   "platforms": [
+    "server"
+   ],
+   "thumbs": [
+    "assets/shots/jobsync-0.webp",
+    "assets/shots/jobsync-1.webp",
+    "assets/shots/jobsync-2.webp"
+   ],
    "setup": "advanced"
   },
   {
@@ -13135,7 +14310,10 @@
    "source": "taxonomy-v2",
    "verified": false,
    "screenshots": [],
-   "platforms": [],
+   "platforms": [
+    "windows",
+    "linux"
+   ],
    "thumbs": [],
    "setup": "easy"
   },
@@ -13161,7 +14339,11 @@
    "source": "taxonomy-v2",
    "verified": false,
    "screenshots": [],
-   "platforms": [],
+   "platforms": [
+    "windows",
+    "mac",
+    "linux"
+   ],
    "thumbs": [],
    "setup": "advanced"
   },
@@ -13187,7 +14369,10 @@
    "source": "taxonomy-v2",
    "verified": false,
    "screenshots": [],
-   "platforms": [],
+   "platforms": [
+    "linux",
+    "server"
+   ],
    "thumbs": [],
    "setup": "advanced"
   },
@@ -13237,9 +14422,24 @@
    ],
    "source": "taxonomy-v2",
    "verified": false,
-   "screenshots": [],
-   "platforms": [],
-   "thumbs": [],
+   "screenshots": [
+    "https://raw.githubusercontent.com/derailed/k9s/HEAD/assets/screen_po.png",
+    "https://raw.githubusercontent.com/derailed/k9s/HEAD/assets/screen_logs.png",
+    "https://raw.githubusercontent.com/derailed/k9s/HEAD/assets/screen_dp.png",
+    "https://raw.githubusercontent.com/derailed/k9s/HEAD/assets/skins/dracula.png"
+   ],
+   "platforms": [
+    "windows",
+    "mac",
+    "linux",
+    "android"
+   ],
+   "thumbs": [
+    "assets/shots/k9s-0.webp",
+    "assets/shots/k9s-1.webp",
+    "assets/shots/k9s-2.webp",
+    "assets/shots/k9s-3.webp"
+   ],
    "setup": "advanced"
   },
   {
@@ -13264,7 +14464,11 @@
    "source": "taxonomy-v2",
    "verified": false,
    "screenshots": [],
-   "platforms": [],
+   "platforms": [
+    "windows",
+    "mac",
+    "linux"
+   ],
    "thumbs": [],
    "setup": "easy"
   },
@@ -13329,7 +14533,9 @@
    "source": "taxonomy-v2",
    "verified": false,
    "screenshots": [],
-   "platforms": [],
+   "platforms": [
+    "mac"
+   ],
    "thumbs": [],
    "setup": "easy"
   },
@@ -13380,9 +14586,18 @@
    ],
    "source": "taxonomy-v2",
    "verified": false,
-   "screenshots": [],
-   "platforms": [],
-   "thumbs": [],
+   "screenshots": [
+    "https://github.com/user-attachments/assets/f016b34f-3c4c-4f07-8e72-12cd6f4e71ea"
+   ],
+   "platforms": [
+    "windows",
+    "mac",
+    "linux",
+    "server"
+   ],
+   "thumbs": [
+    "assets/shots/kavita-0.webp"
+   ],
    "setup": "advanced"
   },
   {
@@ -13479,11 +14694,7 @@
    "unconfirmed": [],
    "source": "family",
    "verified": false,
-   "platforms": [
-    "windows",
-    "mac",
-    "linux"
-   ],
+   "platforms": [],
    "licenseSource": "https://github.com/keepassx/keepassx/blob/master/COPYING",
    "screenshots": [],
    "forks": 601,
@@ -13566,9 +14777,15 @@
    ],
    "source": "taxonomy-v2",
    "verified": false,
-   "screenshots": [],
-   "platforms": [],
-   "thumbs": [],
+   "screenshots": [
+    "https://raw.githubusercontent.com/newmarcel/KeepingYouAwake/HEAD/Extras/Screenshot@2x.jpg"
+   ],
+   "platforms": [
+    "mac"
+   ],
+   "thumbs": [
+    "assets/shots/keepingyouawake-0.webp"
+   ],
    "setup": "easy"
   },
   {
@@ -13634,7 +14851,12 @@
    "source": "taxonomy-v2",
    "verified": false,
    "screenshots": [],
-   "platforms": [],
+   "platforms": [
+    "windows",
+    "mac",
+    "linux",
+    "android"
+   ],
    "thumbs": [],
    "setup": "advanced"
   },
@@ -13774,7 +14996,15 @@
    "source": "taxonomy-v2",
    "verified": false,
    "screenshots": [],
-   "platforms": [],
+   "platforms": [
+    "windows",
+    "mac",
+    "linux",
+    "android",
+    "ios",
+    "web",
+    "server"
+   ],
    "thumbs": [],
    "setup": "easy"
   },
@@ -13891,9 +15121,23 @@
    ],
    "source": "taxonomy-v2",
    "verified": false,
-   "screenshots": [],
-   "platforms": [],
-   "thumbs": [],
+   "screenshots": [
+    "https://raw.githubusercontent.com/tombursch/kitchenowl/HEAD/metadata/en-US/images/phoneScreenshots/groceries.png",
+    "https://raw.githubusercontent.com/tombursch/kitchenowl/HEAD/metadata/en-US/images/phoneScreenshots/recipe.png",
+    "https://raw.githubusercontent.com/tombursch/kitchenowl/HEAD/metadata/en-US/images/phoneScreenshots/plan.png"
+   ],
+   "platforms": [
+    "windows",
+    "mac",
+    "linux",
+    "android",
+    "server"
+   ],
+   "thumbs": [
+    "assets/shots/kitchenowl-0.webp",
+    "assets/shots/kitchenowl-1.webp",
+    "assets/shots/kitchenowl-2.webp"
+   ],
    "setup": "advanced"
   },
   {
@@ -13917,7 +15161,10 @@
    "source": "taxonomy-v2",
    "verified": false,
    "screenshots": [],
-   "platforms": [],
+   "platforms": [
+    "mac",
+    "linux"
+   ],
    "thumbs": [],
    "setup": "easy"
   },
@@ -13942,9 +15189,24 @@
    ],
    "source": "taxonomy-v2",
    "verified": false,
-   "screenshots": [],
-   "platforms": [],
-   "thumbs": [],
+   "screenshots": [
+    "https://raw.githubusercontent.com/LostRuins/koboldcpp/HEAD/media/preview3.png",
+    "https://raw.githubusercontent.com/LostRuins/koboldcpp/HEAD/media/preview4.png",
+    "https://raw.githubusercontent.com/LostRuins/koboldcpp/HEAD/media/preview.png",
+    "https://raw.githubusercontent.com/LostRuins/koboldcpp/HEAD/media/preview2.png"
+   ],
+   "platforms": [
+    "windows",
+    "mac",
+    "linux",
+    "android"
+   ],
+   "thumbs": [
+    "assets/shots/koboldcpp-0.webp",
+    "assets/shots/koboldcpp-1.webp",
+    "assets/shots/koboldcpp-2.webp",
+    "assets/shots/koboldcpp-3.webp"
+   ],
    "setup": "easy"
   },
   {
@@ -14023,7 +15285,10 @@
    "source": "taxonomy-v2",
    "verified": false,
    "screenshots": [],
-   "platforms": [],
+   "platforms": [
+    "windows",
+    "mac"
+   ],
    "thumbs": [],
    "setup": "advanced"
   },
@@ -14050,7 +15315,13 @@
    "source": "taxonomy-v2",
    "verified": false,
    "screenshots": [],
-   "platforms": [],
+   "platforms": [
+    "windows",
+    "mac",
+    "linux",
+    "android",
+    "server"
+   ],
    "thumbs": [],
    "setup": "advanced"
   },
@@ -14075,7 +15346,9 @@
    "source": "taxonomy-v2",
    "verified": false,
    "screenshots": [],
-   "platforms": [],
+   "platforms": [
+    "server"
+   ],
    "thumbs": [],
    "setup": "advanced"
   },
@@ -14101,9 +15374,22 @@
    ],
    "source": "taxonomy-v2",
    "verified": false,
-   "screenshots": [],
-   "platforms": [],
-   "thumbs": [],
+   "screenshots": [
+    "https://raw.githubusercontent.com/moghtech/komodo/main/screenshots/Light-Dashboard.png",
+    "https://raw.githubusercontent.com/moghtech/komodo/main/screenshots/Light-Stack.png",
+    "https://raw.githubusercontent.com/moghtech/komodo/main/screenshots/Light-Compose.png",
+    "https://raw.githubusercontent.com/moghtech/komodo/main/screenshots/Light-Env.png"
+   ],
+   "platforms": [
+    "mac",
+    "server"
+   ],
+   "thumbs": [
+    "assets/shots/komodo-0.webp",
+    "assets/shots/komodo-1.webp",
+    "assets/shots/komodo-2.webp",
+    "assets/shots/komodo-3.webp"
+   ],
    "setup": "advanced"
   },
   {
@@ -14209,9 +15495,17 @@
    ],
    "source": "taxonomy-v2",
    "verified": false,
-   "screenshots": [],
-   "platforms": [],
-   "thumbs": [],
+   "screenshots": [
+    "https://i.imgur.com/0oP6i1H.png"
+   ],
+   "platforms": [
+    "windows",
+    "mac",
+    "linux"
+   ],
+   "thumbs": [
+    "assets/shots/ksnip-0.webp"
+   ],
    "setup": "easy"
   },
   {
@@ -14236,7 +15530,9 @@
    "source": "taxonomy-v2",
    "verified": false,
    "screenshots": [],
-   "platforms": [],
+   "platforms": [
+    "server"
+   ],
    "thumbs": [],
    "setup": "advanced"
   },
@@ -14433,9 +15729,21 @@
    ],
    "source": "taxonomy-v2",
    "verified": false,
-   "screenshots": [],
-   "platforms": [],
-   "thumbs": [],
+   "screenshots": [
+    "https://raw.githubusercontent.com/ilya-zlobintsev/LACT/HEAD/res/screenshots/1.png",
+    "https://raw.githubusercontent.com/ilya-zlobintsev/LACT/HEAD/res/screenshots/2.png",
+    "https://raw.githubusercontent.com/ilya-zlobintsev/LACT/HEAD/res/screenshots/3.png",
+    "https://raw.githubusercontent.com/ilya-zlobintsev/LACT/HEAD/res/screenshots/4.png"
+   ],
+   "platforms": [
+    "linux"
+   ],
+   "thumbs": [
+    "assets/shots/lact-0.webp",
+    "assets/shots/lact-1.webp",
+    "assets/shots/lact-2.webp",
+    "assets/shots/lact-3.webp"
+   ],
    "setup": "easy"
   },
   {
@@ -14502,7 +15810,11 @@
    "source": "taxonomy-v2",
    "verified": false,
    "screenshots": [],
-   "platforms": [],
+   "platforms": [
+    "windows",
+    "mac",
+    "linux"
+   ],
    "thumbs": [],
    "setup": "advanced"
   },
@@ -14528,9 +15840,16 @@
    ],
    "source": "taxonomy-v2",
    "verified": false,
-   "screenshots": [],
-   "platforms": [],
-   "thumbs": [],
+   "screenshots": [
+    "https://github.com/user-attachments/assets/8f6995b7-285f-441a-b52f-1331d13ceb45"
+   ],
+   "platforms": [
+    "web",
+    "server"
+   ],
+   "thumbs": [
+    "assets/shots/langfuse-0.webp"
+   ],
    "setup": "advanced"
   },
   {
@@ -14603,7 +15922,9 @@
    "source": "taxonomy-v2",
    "verified": false,
    "screenshots": [],
-   "platforms": [],
+   "platforms": [
+    "server"
+   ],
    "thumbs": [],
    "setup": "advanced"
   },
@@ -14666,7 +15987,11 @@
    "source": "taxonomy-v2",
    "verified": false,
    "screenshots": [],
-   "platforms": [],
+   "platforms": [
+    "windows",
+    "mac",
+    "linux"
+   ],
    "thumbs": [],
    "setup": "advanced"
   },
@@ -14737,7 +16062,11 @@
    "source": "taxonomy-v2",
    "verified": false,
    "screenshots": [],
-   "platforms": [],
+   "platforms": [
+    "windows",
+    "mac",
+    "linux"
+   ],
    "thumbs": [],
    "setup": "easy"
   },
@@ -14836,7 +16165,11 @@
    "source": "taxonomy-v2",
    "verified": false,
    "screenshots": [],
-   "platforms": [],
+   "platforms": [
+    "windows",
+    "mac",
+    "linux"
+   ],
    "thumbs": [],
    "setup": "advanced"
   },
@@ -14862,7 +16195,10 @@
    "source": "taxonomy-v2",
    "verified": false,
    "screenshots": [],
-   "platforms": [],
+   "platforms": [
+    "web",
+    "server"
+   ],
    "thumbs": [],
    "setup": "advanced"
   },
@@ -14888,9 +16224,19 @@
    ],
    "source": "taxonomy-v2",
    "verified": false,
-   "screenshots": [],
-   "platforms": [],
-   "thumbs": [],
+   "screenshots": [
+    "https://github.com/user-attachments/assets/6596b81f-3f91-483c-9a04-cb576f2a673b",
+    "https://github.com/user-attachments/assets/f57e9ebe-103a-482d-b657-c2e8893e2be2",
+    "https://github.com/user-attachments/assets/5714975f-a7bd-4201-a281-c4700967c5cd"
+   ],
+   "platforms": [
+    "windows"
+   ],
+   "thumbs": [
+    "assets/shots/lgtv-companion-0.webp",
+    "assets/shots/lgtv-companion-1.webp",
+    "assets/shots/lgtv-companion-2.webp"
+   ],
    "setup": "easy"
   },
   {
@@ -14914,7 +16260,11 @@
    "source": "taxonomy-v2",
    "verified": false,
    "screenshots": [],
-   "platforms": [],
+   "platforms": [
+    "windows",
+    "mac",
+    "linux"
+   ],
    "thumbs": [],
    "setup": "advanced"
   },
@@ -14942,7 +16292,9 @@
    "source": "taxonomy-v2",
    "verified": false,
    "screenshots": [],
-   "platforms": [],
+   "platforms": [
+    "linux"
+   ],
    "thumbs": [],
    "setup": "advanced"
   },
@@ -15031,7 +16383,10 @@
    "source": "taxonomy-v2",
    "verified": false,
    "screenshots": [],
-   "platforms": [],
+   "platforms": [
+    "linux",
+    "server"
+   ],
    "thumbs": [],
    "setup": "advanced"
   },
@@ -15099,7 +16454,9 @@
    "source": "taxonomy-v2",
    "verified": false,
    "screenshots": [],
-   "platforms": [],
+   "platforms": [
+    "server"
+   ],
    "thumbs": [],
    "setup": "advanced"
   },
@@ -15264,7 +16621,12 @@
    "source": "taxonomy-v2",
    "verified": false,
    "screenshots": [],
-   "platforms": [],
+   "platforms": [
+    "windows",
+    "mac",
+    "linux",
+    "server"
+   ],
    "thumbs": [],
    "setup": "easy"
   },
@@ -15370,7 +16732,12 @@
    "source": "taxonomy-v2",
    "verified": false,
    "screenshots": [],
-   "platforms": [],
+   "platforms": [
+    "windows",
+    "mac",
+    "linux",
+    "android"
+   ],
    "thumbs": [],
    "setup": "easy"
   },
@@ -15506,7 +16873,9 @@
    "source": "taxonomy-v2",
    "verified": false,
    "screenshots": [],
-   "platforms": [],
+   "platforms": [
+    "windows"
+   ],
    "thumbs": [],
    "setup": "advanced"
   },
@@ -15530,9 +16899,18 @@
    ],
    "source": "taxonomy-v2",
    "verified": false,
-   "screenshots": [],
-   "platforms": [],
-   "thumbs": [],
+   "screenshots": [
+    "https://raw.githubusercontent.com/lichess-org/lila/master/public/images/home-bicolor.png"
+   ],
+   "platforms": [
+    "android",
+    "ios",
+    "web",
+    "server"
+   ],
+   "thumbs": [
+    "assets/shots/lichess-0.webp"
+   ],
    "setup": "advanced"
   },
   {
@@ -15557,7 +16935,12 @@
    "source": "taxonomy-v2",
    "verified": false,
    "screenshots": [],
-   "platforms": [],
+   "platforms": [
+    "windows",
+    "mac",
+    "linux",
+    "server"
+   ],
    "thumbs": [],
    "setup": "advanced"
   },
@@ -15621,9 +17004,19 @@
    ],
    "source": "taxonomy-v2",
    "verified": false,
-   "screenshots": [],
-   "platforms": [],
-   "thumbs": [],
+   "screenshots": [
+    "https://user-images.githubusercontent.com/2766281/204185043-9c49abe5-baee-4b26-b5ce-ece410661213.png",
+    "https://raw.githubusercontent.com/GoogleChrome/lighthouse/443ff2c8a297dfd2297dfaca86c4966a87c8574a/assets/example_audit.png"
+   ],
+   "platforms": [
+    "windows",
+    "mac",
+    "linux"
+   ],
+   "thumbs": [
+    "assets/shots/lighthouse-0.webp",
+    "assets/shots/lighthouse-1.webp"
+   ],
    "setup": "advanced"
   },
   {
@@ -15729,7 +17122,9 @@
    "source": "taxonomy-v2",
    "verified": false,
    "screenshots": [],
-   "platforms": [],
+   "platforms": [
+    "mac"
+   ],
    "thumbs": [],
    "setup": "easy"
   },
@@ -15754,9 +17149,15 @@
    ],
    "source": "taxonomy-v2",
    "verified": false,
-   "screenshots": [],
-   "platforms": [],
-   "thumbs": [],
+   "screenshots": [
+    "https://raw.githubusercontent.com/sissbruecker/linkding/HEAD/docs/public/linkding-screenshot.png?raw=true"
+   ],
+   "platforms": [
+    "server"
+   ],
+   "thumbs": [
+    "assets/shots/linkding-0.webp"
+   ],
    "setup": "advanced"
   },
   {
@@ -15851,7 +17252,9 @@
    "source": "taxonomy-v2",
    "verified": false,
    "screenshots": [],
-   "platforms": [],
+   "platforms": [
+    "linux"
+   ],
    "thumbs": [],
    "setup": "easy"
   },
@@ -15878,7 +17281,10 @@
    "source": "taxonomy-v2",
    "verified": false,
    "screenshots": [],
-   "platforms": [],
+   "platforms": [
+    "linux",
+    "server"
+   ],
    "thumbs": [],
    "setup": "advanced"
   },
@@ -15992,7 +17398,9 @@
    "source": "taxonomy-v2",
    "verified": false,
    "screenshots": [],
-   "platforms": [],
+   "platforms": [
+    "server"
+   ],
    "thumbs": [],
    "setup": "advanced"
   },
@@ -16056,7 +17464,9 @@
    "source": "taxonomy-v2",
    "verified": false,
    "screenshots": [],
-   "platforms": [],
+   "platforms": [
+    "server"
+   ],
    "thumbs": [],
    "setup": "advanced"
   },
@@ -16082,9 +17492,20 @@
    ],
    "source": "taxonomy-v2",
    "verified": false,
-   "screenshots": [],
-   "platforms": [],
-   "thumbs": [],
+   "screenshots": [
+    "https://github.com/user-attachments/assets/88726b48-1713-48aa-a525-95a02e78afc4",
+    "https://github.com/user-attachments/assets/b402f972-2e32-4def-8771-8d849f08cf2e"
+   ],
+   "platforms": [
+    "windows",
+    "mac",
+    "linux",
+    "android"
+   ],
+   "thumbs": [
+    "assets/shots/llama-cpp-0.webp",
+    "assets/shots/llama-cpp-1.webp"
+   ],
    "setup": "advanced"
   },
   {
@@ -16149,7 +17570,10 @@
    "source": "taxonomy-v2",
    "verified": false,
    "screenshots": [],
-   "platforms": [],
+   "platforms": [
+    "mac",
+    "linux"
+   ],
    "thumbs": [],
    "setup": "advanced"
   },
@@ -16424,7 +17848,9 @@
    "source": "taxonomy-v2",
    "verified": false,
    "screenshots": [],
-   "platforms": [],
+   "platforms": [
+    "linux"
+   ],
    "thumbs": [],
    "setup": "advanced"
   },
@@ -16450,7 +17876,9 @@
    "source": "taxonomy-v2",
    "verified": false,
    "screenshots": [],
-   "platforms": [],
+   "platforms": [
+    "android"
+   ],
    "thumbs": [],
    "setup": "advanced"
   },
@@ -16476,7 +17904,11 @@
    "source": "taxonomy-v2",
    "verified": false,
    "screenshots": [],
-   "platforms": [],
+   "platforms": [
+    "windows",
+    "linux",
+    "server"
+   ],
    "thumbs": [],
    "setup": "advanced"
   },
@@ -16526,9 +17958,15 @@
    ],
    "source": "taxonomy-v2",
    "verified": false,
-   "screenshots": [],
-   "platforms": [],
-   "thumbs": [],
+   "screenshots": [
+    "https://lycheeorg.dev/_astro/og.BOcNih_l_Z1q3ooI.jpg"
+   ],
+   "platforms": [
+    "server"
+   ],
+   "thumbs": [
+    "assets/shots/lychee-0.webp"
+   ],
    "setup": "advanced"
   },
   {
@@ -16553,7 +17991,11 @@
    "source": "taxonomy-v2",
    "verified": false,
    "screenshots": [],
-   "platforms": [],
+   "platforms": [
+    "windows",
+    "mac",
+    "linux"
+   ],
    "thumbs": [],
    "setup": "easy"
   },
@@ -16578,7 +18020,9 @@
    "source": "taxonomy-v2",
    "verified": false,
    "screenshots": [],
-   "platforms": [],
+   "platforms": [
+    "mac"
+   ],
    "thumbs": [],
    "setup": "easy"
   },
@@ -16603,9 +18047,20 @@
    ],
    "source": "taxonomy-v2",
    "verified": false,
-   "screenshots": [],
-   "platforms": [],
-   "thumbs": [],
+   "screenshots": [
+    "https://raw.githubusercontent.com/Macro-Deck-App/Macro-Deck/HEAD/.github/images/deck.webp"
+   ],
+   "platforms": [
+    "windows",
+    "mac",
+    "linux",
+    "android",
+    "ios",
+    "server"
+   ],
+   "thumbs": [
+    "assets/shots/macro-deck-0.webp"
+   ],
    "setup": "advanced"
   },
   {
@@ -16628,9 +18083,21 @@
    ],
    "source": "taxonomy-v2",
    "verified": false,
-   "screenshots": [],
-   "platforms": [],
-   "thumbs": [],
+   "screenshots": [
+    "https://raw.githubusercontent.com/mobile-dev-inc/maestro/HEAD/assets/twitch2-small.gif",
+    "https://raw.githubusercontent.com/mobile-dev-inc/maestro/HEAD/assets/maestro-mcp-demo.gif"
+   ],
+   "platforms": [
+    "windows",
+    "mac",
+    "linux",
+    "android",
+    "ios"
+   ],
+   "thumbs": [
+    "assets/shots/maestro-0.webp",
+    "assets/shots/maestro-1.webp"
+   ],
    "setup": "advanced"
   },
   {
@@ -16655,7 +18122,11 @@
    "source": "taxonomy-v2",
    "verified": false,
    "screenshots": [],
-   "platforms": [],
+   "platforms": [
+    "windows",
+    "mac",
+    "linux"
+   ],
    "thumbs": [],
    "setup": "easy"
   },
@@ -16681,7 +18152,9 @@
    "source": "taxonomy-v2",
    "verified": false,
    "screenshots": [],
-   "platforms": [],
+   "platforms": [
+    "android"
+   ],
    "thumbs": [],
    "setup": "easy"
   },
@@ -16708,7 +18181,9 @@
    "source": "taxonomy-v2",
    "verified": false,
    "screenshots": [],
-   "platforms": [],
+   "platforms": [
+    "server"
+   ],
    "thumbs": [],
    "setup": "advanced"
   },
@@ -16773,9 +18248,15 @@
    ],
    "source": "taxonomy-v2",
    "verified": false,
-   "screenshots": [],
-   "platforms": [],
-   "thumbs": [],
+   "screenshots": [
+    "https://raw.githubusercontent.com/flightlessmango/MangoHud/HEAD/assets/overlay_example.gif"
+   ],
+   "platforms": [
+    "linux"
+   ],
+   "thumbs": [
+    "assets/shots/mangohud-0.webp"
+   ],
    "setup": "easy"
   },
   {
@@ -16833,9 +18314,17 @@
    ],
    "source": "taxonomy-v2",
    "verified": false,
-   "screenshots": [],
-   "platforms": [],
-   "thumbs": [],
+   "screenshots": [
+    "https://www.theologeek.ch/manuskript/wp-content/uploads/2017/11/manuskript-0.5.0-main-view.jpg"
+   ],
+   "platforms": [
+    "windows",
+    "mac",
+    "linux"
+   ],
+   "thumbs": [
+    "assets/shots/manuskript-0.webp"
+   ],
    "setup": "easy"
   },
   {
@@ -16886,7 +18375,9 @@
    "source": "taxonomy-v2",
    "verified": false,
    "screenshots": [],
-   "platforms": [],
+   "platforms": [
+    "mac"
+   ],
    "thumbs": [],
    "setup": "advanced"
   },
@@ -16911,9 +18402,19 @@
    ],
    "source": "taxonomy-v2",
    "verified": false,
-   "screenshots": [],
-   "platforms": [],
-   "thumbs": [],
+   "screenshots": [
+    "https://raw.githubusercontent.com/gsantner/markor/master/metadata/en-US/phoneScreenshots/99-123.jpg",
+    "https://raw.githubusercontent.com/gsantner/markor/master/metadata/en-US/phoneScreenshots/99-456.jpg",
+    "https://raw.githubusercontent.com/gsantner/markor/HEAD/doc/assets/2019-05-06-sdcard-mount.webp"
+   ],
+   "platforms": [
+    "android"
+   ],
+   "thumbs": [
+    "assets/shots/markor-0.webp",
+    "assets/shots/markor-1.webp",
+    "assets/shots/markor-2.webp"
+   ],
    "setup": "easy"
   },
   {
@@ -16936,9 +18437,17 @@
    ],
    "source": "taxonomy-v2",
    "verified": false,
-   "screenshots": [],
-   "platforms": [],
-   "thumbs": [],
+   "screenshots": [
+    "https://raw.githubusercontent.com/marktext/marktext/HEAD/docs/assets/marktext.png?raw=true"
+   ],
+   "platforms": [
+    "windows",
+    "mac",
+    "linux"
+   ],
+   "thumbs": [
+    "assets/shots/marktext-0.webp"
+   ],
    "setup": "easy"
   },
   {
@@ -17002,7 +18511,9 @@
    "source": "taxonomy-v2",
    "verified": false,
    "screenshots": [],
-   "platforms": [],
+   "platforms": [
+    "server"
+   ],
    "thumbs": [],
    "setup": "advanced"
   },
@@ -17148,7 +18659,9 @@
    "source": "taxonomy-v2",
    "verified": false,
    "screenshots": [],
-   "platforms": [],
+   "platforms": [
+    "server"
+   ],
    "thumbs": [],
    "setup": "advanced"
   },
@@ -17224,7 +18737,9 @@
    "source": "taxonomy-v2",
    "verified": false,
    "screenshots": [],
-   "platforms": [],
+   "platforms": [
+    "server"
+   ],
    "thumbs": [],
    "setup": "advanced"
   },
@@ -17249,7 +18764,9 @@
    "source": "taxonomy-v2",
    "verified": false,
    "screenshots": [],
-   "platforms": [],
+   "platforms": [
+    "server"
+   ],
    "thumbs": [],
    "setup": "advanced"
   },
@@ -17276,7 +18793,9 @@
    "source": "taxonomy-v2",
    "verified": false,
    "screenshots": [],
-   "platforms": [],
+   "platforms": [
+    "server"
+   ],
    "thumbs": [],
    "setup": "advanced"
   },
@@ -17421,7 +18940,9 @@
    "source": "taxonomy-v2",
    "verified": false,
    "screenshots": [],
-   "platforms": [],
+   "platforms": [
+    "server"
+   ],
    "thumbs": [],
    "setup": "advanced"
   },
@@ -17489,7 +19010,9 @@
    "source": "taxonomy-v2",
    "verified": false,
    "screenshots": [],
-   "platforms": [],
+   "platforms": [
+    "web"
+   ],
    "thumbs": [],
    "setup": "advanced"
   },
@@ -17601,9 +19124,15 @@
    ],
    "source": "taxonomy-v2",
    "verified": false,
-   "screenshots": [],
-   "platforms": [],
-   "thumbs": [],
+   "screenshots": [
+    "https://raw.githubusercontent.com/metatool-ai/metamcp/HEAD/metamcp_screenshot.png"
+   ],
+   "platforms": [
+    "server"
+   ],
+   "thumbs": [
+    "assets/shots/metamcp-0.webp"
+   ],
    "setup": "advanced"
   },
   {
@@ -17630,7 +19159,10 @@
    "source": "taxonomy-v2",
    "verified": false,
    "screenshots": [],
-   "platforms": [],
+   "platforms": [
+    "mac",
+    "linux"
+   ],
    "thumbs": [],
    "setup": "advanced"
   },
@@ -17687,7 +19219,11 @@
    "source": "taxonomy-v2",
    "verified": false,
    "screenshots": [],
-   "platforms": [],
+   "platforms": [
+    "windows",
+    "mac",
+    "linux"
+   ],
    "thumbs": [],
    "setup": "advanced"
   },
@@ -17713,7 +19249,11 @@
    "source": "taxonomy-v2",
    "verified": false,
    "screenshots": [],
-   "platforms": [],
+   "platforms": [
+    "windows",
+    "mac",
+    "linux"
+   ],
    "thumbs": [],
    "setup": "advanced"
   },
@@ -17740,7 +19280,9 @@
    "source": "taxonomy-v2",
    "verified": false,
    "screenshots": [],
-   "platforms": [],
+   "platforms": [
+    "android"
+   ],
    "thumbs": [],
    "setup": "easy"
   },
@@ -17765,7 +19307,10 @@
    "source": "taxonomy-v2",
    "verified": false,
    "screenshots": [],
-   "platforms": [],
+   "platforms": [
+    "linux",
+    "android"
+   ],
    "thumbs": [],
    "setup": "easy"
   },
@@ -17834,7 +19379,9 @@
    "source": "taxonomy-v2",
    "verified": false,
    "screenshots": [],
-   "platforms": [],
+   "platforms": [
+    "linux"
+   ],
    "thumbs": [],
    "setup": "easy"
   },
@@ -17897,7 +19444,11 @@
    "source": "taxonomy-v2",
    "verified": false,
    "screenshots": [],
-   "platforms": [],
+   "platforms": [
+    "windows",
+    "mac",
+    "linux"
+   ],
    "thumbs": [],
    "setup": "advanced"
   },
@@ -17949,7 +19500,9 @@
    "source": "taxonomy-v2",
    "verified": false,
    "screenshots": [],
-   "platforms": [],
+   "platforms": [
+    "windows"
+   ],
    "thumbs": [],
    "setup": "easy"
   },
@@ -17974,9 +19527,21 @@
    ],
    "source": "taxonomy-v2",
    "verified": false,
-   "screenshots": [],
-   "platforms": [],
-   "thumbs": [],
+   "screenshots": [
+    "https://raw.githubusercontent.com/MonitorControl/MonitorControl/HEAD/.github/screenshot.png",
+    "https://raw.githubusercontent.com/MonitorControl/MonitorControl/HEAD/.github/pref_2.png",
+    "https://raw.githubusercontent.com/MonitorControl/MonitorControl/HEAD/.github/pref_3.png",
+    "https://raw.githubusercontent.com/MonitorControl/MonitorControl/HEAD/.github/pref_4.png"
+   ],
+   "platforms": [
+    "mac"
+   ],
+   "thumbs": [
+    "assets/shots/monitorcontrol-0.webp",
+    "assets/shots/monitorcontrol-1.webp",
+    "assets/shots/monitorcontrol-2.webp",
+    "assets/shots/monitorcontrol-3.webp"
+   ],
    "setup": "easy"
   },
   {
@@ -18001,9 +19566,21 @@
    ],
    "source": "taxonomy-v2",
    "verified": false,
-   "screenshots": [],
-   "platforms": [],
-   "thumbs": [],
+   "screenshots": [
+    "https://raw.githubusercontent.com/emoacht/Monitorian/HEAD/Images/Screenshot_main.png",
+    "https://raw.githubusercontent.com/emoacht/Monitorian/HEAD/Images/Screenshot_unison.png",
+    "https://raw.githubusercontent.com/emoacht/Monitorian/HEAD/Images/Screenshot_range.png",
+    "https://raw.githubusercontent.com/emoacht/Monitorian/HEAD/Images/Screenshot_contrast.png"
+   ],
+   "platforms": [
+    "windows"
+   ],
+   "thumbs": [
+    "assets/shots/monitorian-0.webp",
+    "assets/shots/monitorian-1.webp",
+    "assets/shots/monitorian-2.webp",
+    "assets/shots/monitorian-3.webp"
+   ],
    "setup": "easy"
   },
   {
@@ -18062,9 +19639,21 @@
    ],
    "source": "taxonomy-v2",
    "verified": false,
-   "screenshots": [],
-   "platforms": [],
-   "thumbs": [],
+   "screenshots": [
+    "https://raw.githubusercontent.com/agalwood/Motrix/HEAD/screenshots/motrix-dashboard-en-light.webp",
+    "https://raw.githubusercontent.com/agalwood/Motrix/HEAD/screenshots/motrix-downloads-en-light.webp",
+    "https://raw.githubusercontent.com/agalwood/Motrix/HEAD/screenshots/motrix-settings-en-light.webp"
+   ],
+   "platforms": [
+    "windows",
+    "mac",
+    "linux"
+   ],
+   "thumbs": [
+    "assets/shots/motrix-0.webp",
+    "assets/shots/motrix-1.webp",
+    "assets/shots/motrix-2.webp"
+   ],
    "setup": "easy"
   },
   {
@@ -18089,7 +19678,9 @@
    "source": "taxonomy-v2",
    "verified": false,
    "screenshots": [],
-   "platforms": [],
+   "platforms": [
+    "server"
+   ],
    "thumbs": [],
    "setup": "advanced"
   },
@@ -18115,7 +19706,9 @@
    "source": "taxonomy-v2",
    "verified": false,
    "screenshots": [],
-   "platforms": [],
+   "platforms": [
+    "windows"
+   ],
    "thumbs": [],
    "setup": "easy"
   },
@@ -18142,7 +19735,10 @@
    "source": "taxonomy-v2",
    "verified": false,
    "screenshots": [],
-   "platforms": [],
+   "platforms": [
+    "windows",
+    "mac"
+   ],
    "thumbs": [],
    "setup": "easy"
   },
@@ -18168,7 +19764,11 @@
    "source": "taxonomy-v2",
    "verified": false,
    "screenshots": [],
-   "platforms": [],
+   "platforms": [
+    "windows",
+    "mac",
+    "linux"
+   ],
    "thumbs": [],
    "setup": "advanced"
   },
@@ -18189,11 +19789,7 @@
    "unconfirmed": [],
    "source": "family",
    "verified": false,
-   "platforms": [
-    "windows",
-    "mac",
-    "linux"
-   ],
+   "platforms": [],
    "licenseSource": "https://gitlab.torproject.org/tpo/applications/mullvad-browser/-/raw/mullvad-browser-153.5.0esr-16.0-1/toolkit/content/license.html",
    "screenshots": [],
    "forks": 14,
@@ -18336,9 +19932,19 @@
    ],
    "source": "taxonomy-v2",
    "verified": false,
-   "screenshots": [],
-   "platforms": [],
-   "thumbs": [],
+   "screenshots": [
+    "https://raw.githubusercontent.com/M2Team/NanaZip/HEAD/Documents/ContextMenu.png",
+    "https://raw.githubusercontent.com/M2Team/NanaZip/HEAD/Documents/MainWindowLightMode.png",
+    "https://raw.githubusercontent.com/M2Team/NanaZip/HEAD/Documents/MainWindowDarkMode.png"
+   ],
+   "platforms": [
+    "windows"
+   ],
+   "thumbs": [
+    "assets/shots/nanazip-0.webp",
+    "assets/shots/nanazip-1.webp",
+    "assets/shots/nanazip-2.webp"
+   ],
    "setup": "easy"
   },
   {
@@ -18364,7 +19970,11 @@
    "source": "taxonomy-v2",
    "verified": false,
    "screenshots": [],
-   "platforms": [],
+   "platforms": [
+    "windows",
+    "mac",
+    "linux"
+   ],
    "thumbs": [],
    "setup": "easy"
   },
@@ -18389,9 +19999,21 @@
    ],
    "source": "taxonomy-v2",
    "verified": false,
-   "screenshots": [],
-   "platforms": [],
-   "thumbs": [],
+   "screenshots": [
+    "https://www.naps2.com/images/naps2-desktop-win.png?1",
+    "https://www.naps2.com/images/naps2-desktop-mac.png?1",
+    "https://www.naps2.com/images/naps2-desktop-linux.png?1"
+   ],
+   "platforms": [
+    "windows",
+    "mac",
+    "linux"
+   ],
+   "thumbs": [
+    "assets/shots/naps2-0.webp",
+    "assets/shots/naps2-1.webp",
+    "assets/shots/naps2-2.webp"
+   ],
    "setup": "easy"
   },
   {
@@ -18497,9 +20119,15 @@
    ],
    "source": "taxonomy-v2",
    "verified": false,
-   "screenshots": [],
-   "platforms": [],
-   "thumbs": [],
+   "screenshots": [
+    "https://neko.m1k1o.net/img/intro.gif"
+   ],
+   "platforms": [
+    "server"
+   ],
+   "thumbs": [
+    "assets/shots/neko-0.webp"
+   ],
    "setup": "advanced"
   },
   {
@@ -18563,7 +20191,9 @@
    "source": "taxonomy-v2",
    "verified": false,
    "screenshots": [],
-   "platforms": [],
+   "platforms": [
+    "server"
+   ],
    "thumbs": [],
    "setup": "advanced"
   },
@@ -18626,9 +20256,16 @@
    ],
    "source": "taxonomy-v2",
    "verified": false,
-   "screenshots": [],
-   "platforms": [],
-   "thumbs": [],
+   "screenshots": [
+    "https://netboot.xyz/images/netboot.xyz.gif"
+   ],
+   "platforms": [
+    "linux",
+    "server"
+   ],
+   "thumbs": [
+    "assets/shots/netboot-xyz-0.webp"
+   ],
    "setup": "advanced"
   },
   {
@@ -18695,9 +20332,21 @@
    ],
    "source": "taxonomy-v2",
    "verified": false,
-   "screenshots": [],
-   "platforms": [],
-   "thumbs": [],
+   "screenshots": [
+    "https://raw.githubusercontent.com/M66B/NetGuard/master/screenshots/01-main.png",
+    "https://raw.githubusercontent.com/M66B/NetGuard/master/screenshots/02-main-details.png",
+    "https://raw.githubusercontent.com/M66B/NetGuard/master/screenshots/03-main-access.png",
+    "https://raw.githubusercontent.com/M66B/NetGuard/master/screenshots/101-main.png"
+   ],
+   "platforms": [
+    "android"
+   ],
+   "thumbs": [
+    "assets/shots/netguard-0.webp",
+    "assets/shots/netguard-1.webp",
+    "assets/shots/netguard-2.webp",
+    "assets/shots/netguard-3.webp"
+   ],
    "setup": "easy"
   },
   {
@@ -19144,7 +20793,9 @@
    "source": "taxonomy-v2",
    "verified": false,
    "screenshots": [],
-   "platforms": [],
+   "platforms": [
+    "server"
+   ],
    "thumbs": [],
    "setup": "advanced"
   },
@@ -19207,7 +20858,9 @@
    "source": "taxonomy-v2",
    "verified": false,
    "screenshots": [],
-   "platforms": [],
+   "platforms": [
+    "linux"
+   ],
    "thumbs": [],
    "setup": "advanced"
   },
@@ -19273,9 +20926,19 @@
    ],
    "source": "taxonomy-v2",
    "verified": false,
-   "screenshots": [],
-   "platforms": [],
-   "thumbs": [],
+   "screenshots": [
+    "https://raw.githubusercontent.com/nomacs/nomacs/HEAD/ImageLounge/screenshots/nomacs_3_21-raw_metadata.png",
+    "https://raw.githubusercontent.com/nomacs/nomacs/HEAD/ImageLounge/screenshots/nomacs_3_21-thumbnails.png"
+   ],
+   "platforms": [
+    "windows",
+    "mac",
+    "linux"
+   ],
+   "thumbs": [
+    "assets/shots/nomacs-0.webp",
+    "assets/shots/nomacs-1.webp"
+   ],
    "setup": "easy"
   },
   {
@@ -19298,9 +20961,17 @@
    ],
    "source": "taxonomy-v2",
    "verified": false,
-   "screenshots": [],
-   "platforms": [],
-   "thumbs": [],
+   "screenshots": [
+    "https://user-images.githubusercontent.com/11071876/189767585-8bc45c18-8392-411d-84dc-cef1cb5dbc47.gif"
+   ],
+   "platforms": [
+    "windows",
+    "mac",
+    "linux"
+   ],
+   "thumbs": [
+    "assets/shots/normcap-0.webp"
+   ],
    "setup": "easy"
   },
   {
@@ -19497,9 +21168,16 @@
    ],
    "source": "taxonomy-v2",
    "verified": false,
-   "screenshots": [],
-   "platforms": [],
-   "thumbs": [],
+   "screenshots": [
+    "https://raw.githubusercontent.com/saga-soft/novelWriter/main/setup/screenshot.png"
+   ],
+   "platforms": [
+    "windows",
+    "linux"
+   ],
+   "thumbs": [
+    "assets/shots/novelwriter-0.webp"
+   ],
    "setup": "easy"
   },
   {
@@ -19658,7 +21336,11 @@
    "source": "taxonomy-v2",
    "verified": false,
    "screenshots": [],
-   "platforms": [],
+   "platforms": [
+    "windows",
+    "mac",
+    "linux"
+   ],
    "thumbs": [],
    "setup": "advanced"
   },
@@ -19685,7 +21367,9 @@
    "source": "taxonomy-v2",
    "verified": false,
    "screenshots": [],
-   "platforms": [],
+   "platforms": [
+    "windows"
+   ],
    "thumbs": [],
    "setup": "easy"
   },
@@ -19712,7 +21396,10 @@
    "source": "taxonomy-v2",
    "verified": false,
    "screenshots": [],
-   "platforms": [],
+   "platforms": [
+    "linux",
+    "server"
+   ],
    "thumbs": [],
    "setup": "advanced"
   },
@@ -19738,7 +21425,9 @@
    "source": "taxonomy-v2",
    "verified": false,
    "screenshots": [],
-   "platforms": [],
+   "platforms": [
+    "windows"
+   ],
    "thumbs": [],
    "setup": "advanced"
   },
@@ -19926,7 +21615,11 @@
    "source": "taxonomy-v2",
    "verified": false,
    "screenshots": [],
-   "platforms": [],
+   "platforms": [
+    "mac",
+    "linux",
+    "android"
+   ],
    "thumbs": [],
    "setup": "advanced"
   },
@@ -20055,7 +21748,9 @@
    "source": "taxonomy-v2",
    "verified": false,
    "screenshots": [],
-   "platforms": [],
+   "platforms": [
+    "linux"
+   ],
    "thumbs": [],
    "setup": "easy"
   },
@@ -20122,7 +21817,9 @@
    "source": "taxonomy-v2",
    "verified": false,
    "screenshots": [],
-   "platforms": [],
+   "platforms": [
+    "linux"
+   ],
    "thumbs": [],
    "setup": "easy"
   },
@@ -20147,7 +21844,9 @@
    "source": "taxonomy-v2",
    "verified": false,
    "screenshots": [],
-   "platforms": [],
+   "platforms": [
+    "server"
+   ],
    "thumbs": [],
    "setup": "advanced"
   },
@@ -20172,9 +21871,20 @@
    ],
    "source": "taxonomy-v2",
    "verified": false,
-   "screenshots": [],
-   "platforms": [],
-   "thumbs": [],
+   "screenshots": [
+    "https://raw.githubusercontent.com/oneuptime/oneuptime/HEAD/packages/Home/Static/img/readme/hero-command-center.png"
+   ],
+   "platforms": [
+    "windows",
+    "mac",
+    "linux",
+    "android",
+    "ios",
+    "server"
+   ],
+   "thumbs": [
+    "assets/shots/oneuptime-0.webp"
+   ],
    "setup": "advanced"
   },
   {
@@ -20248,7 +21958,10 @@
    "source": "taxonomy-v2",
    "verified": false,
    "screenshots": [],
-   "platforms": [],
+   "platforms": [
+    "mac",
+    "linux"
+   ],
    "thumbs": [],
    "setup": "easy"
   },
@@ -20347,9 +22060,15 @@
    ],
    "source": "taxonomy-v2",
    "verified": false,
-   "screenshots": [],
-   "platforms": [],
-   "thumbs": [],
+   "screenshots": [
+    "https://raw.githubusercontent.com/lfnovo/open-notebook/HEAD/docs/assets/asset_list.png"
+   ],
+   "platforms": [
+    "server"
+   ],
+   "thumbs": [
+    "assets/shots/open-notebook-0.webp"
+   ],
    "setup": "advanced"
   },
   {
@@ -20373,9 +22092,22 @@
    ],
    "source": "taxonomy-v2",
    "verified": false,
-   "screenshots": [],
-   "platforms": [],
-   "thumbs": [],
+   "screenshots": [
+    "https://raw.githubusercontent.com/Open-LLM-VTuber/Open-LLM-VTuber/HEAD/assets/i1.jpg",
+    "https://raw.githubusercontent.com/Open-LLM-VTuber/Open-LLM-VTuber/HEAD/assets/i2.jpg",
+    "https://raw.githubusercontent.com/Open-LLM-VTuber/Open-LLM-VTuber/HEAD/assets/i3.jpg",
+    "https://raw.githubusercontent.com/Open-LLM-VTuber/Open-LLM-VTuber/HEAD/assets/i4.jpg"
+   ],
+   "platforms": [
+    "windows",
+    "mac"
+   ],
+   "thumbs": [
+    "assets/shots/open-llm-vtuber-0.webp",
+    "assets/shots/open-llm-vtuber-1.webp",
+    "assets/shots/open-llm-vtuber-2.webp",
+    "assets/shots/open-llm-vtuber-3.webp"
+   ],
    "setup": "easy"
   },
   {
@@ -20674,9 +22406,23 @@
    ],
    "source": "taxonomy-v2",
    "verified": false,
-   "screenshots": [],
-   "platforms": [],
-   "thumbs": [],
+   "screenshots": [
+    "https://raw.githubusercontent.com/nekename/OpenDeck/HEAD/.github/readme/mainmenu.png",
+    "https://raw.githubusercontent.com/nekename/OpenDeck/HEAD/.github/readme/multiaction.png",
+    "https://raw.githubusercontent.com/nekename/OpenDeck/HEAD/.github/readme/plugins.png",
+    "https://raw.githubusercontent.com/nekename/OpenDeck/HEAD/.github/readme/profiles.png"
+   ],
+   "platforms": [
+    "windows",
+    "mac",
+    "linux"
+   ],
+   "thumbs": [
+    "assets/shots/opendeck-0.webp",
+    "assets/shots/opendeck-1.webp",
+    "assets/shots/opendeck-2.webp",
+    "assets/shots/opendeck-3.webp"
+   ],
    "setup": "easy"
   },
   {
@@ -20700,7 +22446,9 @@
    "source": "taxonomy-v2",
    "verified": false,
    "screenshots": [],
-   "platforms": [],
+   "platforms": [
+    "server"
+   ],
    "thumbs": [],
    "setup": "advanced"
   },
@@ -20766,9 +22514,24 @@
    ],
    "source": "taxonomy-v2",
    "verified": false,
-   "screenshots": [],
-   "platforms": [],
-   "thumbs": [],
+   "screenshots": [
+    "https://raw.githubusercontent.com/openlit/openlit/HEAD/docs/images/docs-ai-observability-trace.png",
+    "https://raw.githubusercontent.com/openlit/openlit/HEAD/docs/images/auto-evals-dashboard.png",
+    "https://raw.githubusercontent.com/openlit/openlit/HEAD/docs/images/organisation/connectors-list.png",
+    "https://raw.githubusercontent.com/openlit/openlit/HEAD/docs/images/docs-prompt-hub-details.png"
+   ],
+   "platforms": [
+    "windows",
+    "mac",
+    "linux",
+    "server"
+   ],
+   "thumbs": [
+    "assets/shots/openlit-0.webp",
+    "assets/shots/openlit-1.webp",
+    "assets/shots/openlit-2.webp",
+    "assets/shots/openlit-3.webp"
+   ],
    "setup": "advanced"
   },
   {
@@ -20793,7 +22556,9 @@
    "source": "taxonomy-v2",
    "verified": false,
    "screenshots": [],
-   "platforms": [],
+   "platforms": [
+    "server"
+   ],
    "thumbs": [],
    "setup": "advanced"
   },
@@ -20820,9 +22585,22 @@
    ],
    "source": "taxonomy-v2",
    "verified": false,
-   "screenshots": [],
-   "platforms": [],
-   "thumbs": [],
+   "screenshots": [
+    "https://raw.githubusercontent.com/simonoppowa/OpenNutriTracker/HEAD/docs/screenshots/1_en-US.png",
+    "https://raw.githubusercontent.com/simonoppowa/OpenNutriTracker/HEAD/docs/screenshots/2_en-US.png",
+    "https://raw.githubusercontent.com/simonoppowa/OpenNutriTracker/HEAD/docs/screenshots/3_en-US.png",
+    "https://raw.githubusercontent.com/simonoppowa/OpenNutriTracker/HEAD/docs/screenshots/4_en-US.png"
+   ],
+   "platforms": [
+    "android",
+    "ios"
+   ],
+   "thumbs": [
+    "assets/shots/opennutritracker-0.webp",
+    "assets/shots/opennutritracker-1.webp",
+    "assets/shots/opennutritracker-2.webp",
+    "assets/shots/opennutritracker-3.webp"
+   ],
    "setup": "easy"
   },
   {
@@ -20935,7 +22713,9 @@
    "source": "taxonomy-v2",
    "verified": false,
    "screenshots": [],
-   "platforms": [],
+   "platforms": [
+    "linux"
+   ],
    "thumbs": [],
    "setup": "advanced"
   },
@@ -21003,9 +22783,18 @@
    ],
    "source": "taxonomy-v2",
    "verified": false,
-   "screenshots": [],
-   "platforms": [],
-   "thumbs": [],
+   "screenshots": [
+    "https://i.ibb.co/jzcrrt8/resume-builder-demo-optimize.gif",
+    "https://i.ibb.co/JvSVwNk/resume-parser-demo-optimize.gif"
+   ],
+   "platforms": [
+    "web",
+    "server"
+   ],
+   "thumbs": [
+    "assets/shots/openresume-0.webp",
+    "assets/shots/openresume-1.webp"
+   ],
    "setup": "easy"
   },
   {
@@ -21030,7 +22819,9 @@
    "source": "taxonomy-v2",
    "verified": false,
    "screenshots": [],
-   "platforms": [],
+   "platforms": [
+    "linux"
+   ],
    "thumbs": [],
    "setup": "easy"
   },
@@ -21122,9 +22913,15 @@
    ],
    "source": "taxonomy-v2",
    "verified": false,
-   "screenshots": [],
-   "platforms": [],
-   "thumbs": [],
+   "screenshots": [
+    "https://user-images.githubusercontent.com/2742953/85205382-6ba9cb00-b31b-11ea-8e9a-bd4b8b05a236.png"
+   ],
+   "platforms": [
+    "linux"
+   ],
+   "thumbs": [
+    "assets/shots/opensnitch-0.webp"
+   ],
    "setup": "easy"
   },
   {
@@ -21147,9 +22944,17 @@
    ],
    "source": "taxonomy-v2",
    "verified": false,
-   "screenshots": [],
-   "platforms": [],
-   "thumbs": [],
+   "screenshots": [
+    "https://raw.githubusercontent.com/Fission-AI/OpenSpec/HEAD/assets/openspec_dashboard.png"
+   ],
+   "platforms": [
+    "windows",
+    "mac",
+    "linux"
+   ],
+   "thumbs": [
+    "assets/shots/openspec-0.webp"
+   ],
    "setup": "advanced"
   },
   {
@@ -21240,7 +23045,8 @@
    "platforms": [
     "windows",
     "mac",
-    "linux"
+    "linux",
+    "android"
    ],
    "licenseSource": "https://github.com/opentofu/opentofu/blob/main/LICENSE",
    "screenshots": [],
@@ -21285,7 +23091,9 @@
    "source": "taxonomy-v2",
    "verified": false,
    "screenshots": [],
-   "platforms": [],
+   "platforms": [
+    "windows"
+   ],
    "thumbs": [],
    "setup": "easy"
   },
@@ -21413,7 +23221,9 @@
    "source": "taxonomy-v2",
    "verified": false,
    "screenshots": [],
-   "platforms": [],
+   "platforms": [
+    "server"
+   ],
    "thumbs": [],
    "setup": "advanced"
   },
@@ -21439,7 +23249,9 @@
    "source": "taxonomy-v2",
    "verified": false,
    "screenshots": [],
-   "platforms": [],
+   "platforms": [
+    "linux"
+   ],
    "thumbs": [],
    "setup": "advanced"
   },
@@ -21465,7 +23277,10 @@
    "source": "taxonomy-v2",
    "verified": false,
    "screenshots": [],
-   "platforms": [],
+   "platforms": [
+    "web",
+    "server"
+   ],
    "thumbs": [],
    "setup": "advanced"
   },
@@ -21491,7 +23306,9 @@
    "source": "taxonomy-v2",
    "verified": false,
    "screenshots": [],
-   "platforms": [],
+   "platforms": [
+    "server"
+   ],
    "thumbs": [],
    "setup": "advanced"
   },
@@ -21517,7 +23334,9 @@
    "source": "taxonomy-v2",
    "verified": false,
    "screenshots": [],
-   "platforms": [],
+   "platforms": [
+    "windows"
+   ],
    "thumbs": [],
    "setup": "easy"
   },
@@ -21591,7 +23410,9 @@
    "source": "taxonomy-v2",
    "verified": false,
    "screenshots": [],
-   "platforms": [],
+   "platforms": [
+    "linux"
+   ],
    "thumbs": [],
    "setup": "easy"
   },
@@ -21662,7 +23483,11 @@
    "source": "taxonomy-v2",
    "verified": false,
    "screenshots": [],
-   "platforms": [],
+   "platforms": [
+    "windows",
+    "mac",
+    "linux"
+   ],
    "thumbs": [],
    "setup": "advanced"
   },
@@ -21768,9 +23593,21 @@
    ],
    "source": "taxonomy-v2",
    "verified": false,
-   "screenshots": [],
-   "platforms": [],
-   "thumbs": [],
+   "screenshots": [
+    "https://raw.githubusercontent.com/Akylas/OSS-DocumentScanner/HEAD/fastlane/metadata/com.akylas.documentscanner/android/en-US/images/phoneScreenshots/1_en-US.png",
+    "https://raw.githubusercontent.com/Akylas/OSS-DocumentScanner/HEAD/fastlane/metadata/com.akylas.documentscanner/android/en-US/images/phoneScreenshots/2_en-US.png",
+    "https://raw.githubusercontent.com/Akylas/OSS-DocumentScanner/HEAD/fastlane/metadata/com.akylas.documentscanner/android/en-US/images/phoneScreenshots/3_en-US.png",
+    "https://raw.githubusercontent.com/Akylas/OSS-DocumentScanner/HEAD/fastlane/metadata/com.akylas.cardwallet/android/en-US/images/phoneScreenshots/2_en-US.png"
+   ],
+   "platforms": [
+    "android"
+   ],
+   "thumbs": [
+    "assets/shots/oss-document-scanner-0.webp",
+    "assets/shots/oss-document-scanner-1.webp",
+    "assets/shots/oss-document-scanner-2.webp",
+    "assets/shots/oss-document-scanner-3.webp"
+   ],
    "setup": "easy"
   },
   {
@@ -21795,9 +23632,17 @@
    ],
    "source": "taxonomy-v2",
    "verified": false,
-   "screenshots": [],
-   "platforms": [],
-   "thumbs": [],
+   "screenshots": [
+    "https://github.com/user-attachments/assets/8bb95366-27ec-45d1-86ed-e42890f2fb46"
+   ],
+   "platforms": [
+    "windows",
+    "mac",
+    "linux"
+   ],
+   "thumbs": [
+    "assets/shots/osv-scanner-0.webp"
+   ],
    "setup": "advanced"
   },
   {
@@ -21886,9 +23731,15 @@
    ],
    "source": "taxonomy-v2",
    "verified": false,
-   "screenshots": [],
-   "platforms": [],
-   "thumbs": [],
+   "screenshots": [
+    "https://raw.githubusercontent.com/overleaf/overleaf/HEAD/doc/screenshot.png"
+   ],
+   "platforms": [
+    "server"
+   ],
+   "thumbs": [
+    "assets/shots/overleaf-community-edition-0.webp"
+   ],
    "setup": "advanced"
   },
   {
@@ -22108,9 +23959,21 @@
    ],
    "source": "taxonomy-v2",
    "verified": false,
-   "screenshots": [],
-   "platforms": [],
-   "thumbs": [],
+   "screenshots": [
+    "https://raw.githubusercontent.com/schlagmichdoch/pairdrop/HEAD/docs/pairdrop_screenshot_mobile.gif"
+   ],
+   "platforms": [
+    "windows",
+    "mac",
+    "linux",
+    "android",
+    "ios",
+    "web",
+    "server"
+   ],
+   "thumbs": [
+    "assets/shots/pairdrop-0.webp"
+   ],
    "setup": "easy"
   },
   {
@@ -22134,9 +23997,17 @@
    ],
    "source": "taxonomy-v2",
    "verified": false,
-   "screenshots": [],
-   "platforms": [],
-   "thumbs": [],
+   "screenshots": [
+    "https://raw.githubusercontent.com/tw93/static/main/pake/pake1.gif"
+   ],
+   "platforms": [
+    "windows",
+    "mac",
+    "linux"
+   ],
+   "thumbs": [
+    "assets/shots/pake-0.webp"
+   ],
    "setup": "advanced"
   },
   {
@@ -22161,9 +24032,22 @@
    ],
    "source": "taxonomy-v2",
    "verified": false,
-   "screenshots": [],
-   "platforms": [],
-   "thumbs": [],
+   "screenshots": [
+    "https://raw.githubusercontent.com/fosrl/pangolin/HEAD/public/screenshots/hero.png",
+    "https://raw.githubusercontent.com/fosrl/pangolin/HEAD/public/screenshots/sites.png",
+    "https://raw.githubusercontent.com/fosrl/pangolin/HEAD/public/clip.gif",
+    "https://raw.githubusercontent.com/fosrl/pangolin/HEAD/public/screenshots/private-resources.png"
+   ],
+   "platforms": [
+    "linux",
+    "server"
+   ],
+   "thumbs": [
+    "assets/shots/pangolin-0.webp",
+    "assets/shots/pangolin-1.webp",
+    "assets/shots/pangolin-2.webp",
+    "assets/shots/pangolin-3.webp"
+   ],
    "setup": "advanced"
   },
   {
@@ -22226,9 +24110,15 @@
    ],
    "source": "taxonomy-v2",
    "verified": false,
-   "screenshots": [],
-   "platforms": [],
-   "thumbs": [],
+   "screenshots": [
+    "https://raw.githubusercontent.com/paperless-ngx/paperless-ngx/main/docs/assets/screenshots/documents-smallcards.png"
+   ],
+   "platforms": [
+    "server"
+   ],
+   "thumbs": [
+    "assets/shots/paperless-ngx-0.webp"
+   ],
    "setup": "advanced"
   },
   {
@@ -22252,9 +24142,15 @@
    ],
    "source": "taxonomy-v2",
    "verified": false,
-   "screenshots": [],
-   "platforms": [],
-   "thumbs": [],
+   "screenshots": [
+    "https://raw.githubusercontent.com/papra-hq/papra/HEAD/.github/papra-screenshot.png"
+   ],
+   "platforms": [
+    "server"
+   ],
+   "thumbs": [
+    "assets/shots/papra-0.webp"
+   ],
    "setup": "advanced"
   },
   {
@@ -22322,9 +24218,21 @@
    ],
    "source": "taxonomy-v2",
    "verified": false,
-   "screenshots": [],
-   "platforms": [],
-   "thumbs": [],
+   "screenshots": [
+    "https://raw.githubusercontent.com/pglombardo/PasswordPusher/HEAD/app/assets/images/features/front-page-thumb.png",
+    "https://raw.githubusercontent.com/pglombardo/PasswordPusher/HEAD/app/assets/images/features/audit-log-thumb.png",
+    "https://raw.githubusercontent.com/pglombardo/PasswordPusher/HEAD/app/assets/images/features/secret-url-languages-thumb.png",
+    "https://raw.githubusercontent.com/pglombardo/PasswordPusher/HEAD/app/assets/images/features/password-generator-thumb.png"
+   ],
+   "platforms": [
+    "server"
+   ],
+   "thumbs": [
+    "assets/shots/password-pusher-0.webp",
+    "assets/shots/password-pusher-1.webp",
+    "assets/shots/password-pusher-2.webp",
+    "assets/shots/password-pusher-3.webp"
+   ],
    "setup": "advanced"
   },
   {
@@ -22420,9 +24328,19 @@
    ],
    "source": "taxonomy-v2",
    "verified": false,
-   "screenshots": [],
-   "platforms": [],
-   "thumbs": [],
+   "screenshots": [
+    "https://peazip.github.io/linux-dark-mode.png",
+    "https://peazip.github.io/peazip.png"
+   ],
+   "platforms": [
+    "windows",
+    "mac",
+    "linux"
+   ],
+   "thumbs": [
+    "assets/shots/peazip-0.webp",
+    "assets/shots/peazip-1.webp"
+   ],
    "setup": "easy"
   },
   {
@@ -22492,7 +24410,9 @@
    "source": "taxonomy-v2",
    "verified": false,
    "screenshots": [],
-   "platforms": [],
+   "platforms": [
+    "server"
+   ],
    "thumbs": [],
    "setup": "advanced"
   },
@@ -22595,9 +24515,23 @@
    ],
    "source": "taxonomy-v2",
    "verified": false,
-   "screenshots": [],
-   "platforms": [],
-   "thumbs": [],
+   "screenshots": [
+    "https://persepolisdm.github.io/img/screen/ghostbsd.png",
+    "https://persepolisdm.github.io/img/screen/mac_401.png",
+    "https://img.youtube.com/vi/QHdMShFgzhQ/0.jpg",
+    "https://persepolisdm.github.io/img/screen/persepolis.png"
+   ],
+   "platforms": [
+    "windows",
+    "mac",
+    "linux"
+   ],
+   "thumbs": [
+    "assets/shots/persepolis-0.webp",
+    "assets/shots/persepolis-1.webp",
+    "assets/shots/persepolis-2.webp",
+    "assets/shots/persepolis-3.webp"
+   ],
    "setup": "easy"
   },
   {
@@ -22620,7 +24554,12 @@
    "source": "taxonomy-v2",
    "verified": false,
    "screenshots": [],
-   "platforms": [],
+   "platforms": [
+    "windows",
+    "mac",
+    "linux",
+    "server"
+   ],
    "thumbs": [],
    "setup": "easy"
   },
@@ -22715,7 +24654,10 @@
    "source": "taxonomy-v2",
    "verified": false,
    "screenshots": [],
-   "platforms": [],
+   "platforms": [
+    "linux",
+    "server"
+   ],
    "thumbs": [],
    "setup": "advanced"
   },
@@ -22739,9 +24681,16 @@
    ],
    "source": "taxonomy-v2",
    "verified": false,
-   "screenshots": [],
-   "platforms": [],
-   "thumbs": [],
+   "screenshots": [
+    "https://raw.githubusercontent.com/mtlynch/picoshare/master/docs/readme-assets/demo.gif"
+   ],
+   "platforms": [
+    "linux",
+    "server"
+   ],
+   "thumbs": [
+    "assets/shots/picoshare-0.webp"
+   ],
    "setup": "advanced"
   },
   {
@@ -22903,7 +24852,11 @@
    "source": "taxonomy-v2",
    "verified": false,
    "screenshots": [],
-   "platforms": [],
+   "platforms": [
+    "windows",
+    "mac",
+    "linux"
+   ],
    "thumbs": [],
    "setup": "advanced"
   },
@@ -22927,9 +24880,19 @@
    ],
    "source": "taxonomy-v2",
    "verified": false,
-   "screenshots": [],
-   "platforms": [],
-   "thumbs": [],
+   "screenshots": [
+    "https://screenletstore.appspot.com/img/95aaa0f0-37a4-11e7-a652-7b8128ce3e3b.png"
+   ],
+   "platforms": [
+    "windows",
+    "mac",
+    "linux",
+    "web",
+    "server"
+   ],
+   "thumbs": [
+    "assets/shots/piskel-0.webp"
+   ],
    "setup": "advanced"
   },
   {
@@ -22990,9 +24953,18 @@
    ],
    "source": "taxonomy-v2",
    "verified": false,
-   "screenshots": [],
-   "platforms": [],
-   "thumbs": [],
+   "screenshots": [
+    "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/2779170/ss_54395040c25b243cb82a3bd68778e19e04b43ade.1920x1080.jpg?t=1719424898"
+   ],
+   "platforms": [
+    "windows",
+    "mac",
+    "linux",
+    "android"
+   ],
+   "thumbs": [
+    "assets/shots/pixelorama-0.webp"
+   ],
    "setup": "easy"
   },
   {
@@ -23064,7 +25036,9 @@
    "source": "taxonomy-v2",
    "verified": false,
    "screenshots": [],
-   "platforms": [],
+   "platforms": [
+    "web"
+   ],
    "thumbs": [],
    "setup": "easy"
   },
@@ -23125,9 +25099,13 @@
    ],
    "source": "taxonomy-v2",
    "verified": false,
-   "screenshots": [],
+   "screenshots": [
+    "https://platformio.org/images/platformio-ide-laptop.93fc8e69.png"
+   ],
    "platforms": [],
-   "thumbs": [],
+   "thumbs": [
+    "assets/shots/platformio-0.webp"
+   ],
    "setup": "advanced"
   },
   {
@@ -23212,7 +25190,11 @@
    "source": "taxonomy-v2",
    "verified": false,
    "screenshots": [],
-   "platforms": [],
+   "platforms": [
+    "windows",
+    "mac",
+    "linux"
+   ],
    "thumbs": [],
    "setup": "advanced"
   },
@@ -23237,7 +25219,9 @@
    "source": "taxonomy-v2",
    "verified": false,
    "screenshots": [],
-   "platforms": [],
+   "platforms": [
+    "server"
+   ],
    "thumbs": [],
    "setup": "advanced"
   },
@@ -23319,7 +25303,12 @@
    "source": "taxonomy-v2",
    "verified": false,
    "screenshots": [],
-   "platforms": [],
+   "platforms": [
+    "windows",
+    "mac",
+    "linux",
+    "android"
+   ],
    "thumbs": [],
    "setup": "advanced"
   },
@@ -23448,9 +25437,17 @@
    ],
    "source": "taxonomy-v2",
    "verified": false,
-   "screenshots": [],
-   "platforms": [],
-   "thumbs": [],
+   "screenshots": [
+    "https://raw.githubusercontent.com/zidoro/pomatez/HEAD/.github/assets/preview.png"
+   ],
+   "platforms": [
+    "windows",
+    "mac",
+    "linux"
+   ],
+   "thumbs": [
+    "assets/shots/pomatez-0.webp"
+   ],
    "setup": "easy"
   },
   {
@@ -23520,9 +25517,15 @@
    ],
    "source": "taxonomy-v2",
    "verified": false,
-   "screenshots": [],
-   "platforms": [],
-   "thumbs": [],
+   "screenshots": [
+    "https://github.com/user-attachments/assets/362bc916-0fc9-43f1-a39e-4bd71aac4a3a"
+   ],
+   "platforms": [
+    "server"
+   ],
+   "thumbs": [
+    "assets/shots/portkey-gateway-0.webp"
+   ],
    "setup": "advanced"
   },
   {
@@ -23546,9 +25549,16 @@
    ],
    "source": "taxonomy-v2",
    "verified": false,
-   "screenshots": [],
-   "platforms": [],
-   "thumbs": [],
+   "screenshots": [
+    "https://safing.io/assets/img/page-specific/landing/portmaster-thumbnail.png?"
+   ],
+   "platforms": [
+    "windows",
+    "linux"
+   ],
+   "thumbs": [
+    "assets/shots/portmaster-0.webp"
+   ],
    "setup": "easy"
   },
   {
@@ -23768,7 +25778,9 @@
    "source": "taxonomy-v2",
    "verified": false,
    "screenshots": [],
-   "platforms": [],
+   "platforms": [
+    "windows"
+   ],
    "thumbs": [],
    "setup": "easy"
   },
@@ -23793,9 +25805,17 @@
    ],
    "source": "taxonomy-v2",
    "verified": false,
-   "screenshots": [],
-   "platforms": [],
-   "thumbs": [],
+   "screenshots": [
+    "https://raw.githubusercontent.com/The-PR-Agent/pr-agent/main/docs/static/img/review_new_short_main.png",
+    "https://raw.githubusercontent.com/The-PR-Agent/pr-agent/main/docs/static/img/improve_new_short_main.png"
+   ],
+   "platforms": [
+    "server"
+   ],
+   "thumbs": [
+    "assets/shots/pr-agent-0.webp",
+    "assets/shots/pr-agent-1.webp"
+   ],
    "setup": "advanced"
   },
   {
@@ -23860,9 +25880,19 @@
    ],
    "source": "taxonomy-v2",
    "verified": false,
-   "screenshots": [],
-   "platforms": [],
-   "thumbs": [],
+   "screenshots": [
+    "https://raw.githubusercontent.com/jez500/pricebuddy/HEAD/docs/docs/.vuepress/public/screenshots/dashboard.png",
+    "https://raw.githubusercontent.com/jez500/pricebuddy/HEAD/docs/docs/.vuepress/public/screenshots/product.png",
+    "https://raw.githubusercontent.com/jez500/pricebuddy/HEAD/docs/docs/.vuepress/public/screenshots/history.png"
+   ],
+   "platforms": [
+    "server"
+   ],
+   "thumbs": [
+    "assets/shots/pricebuddy-0.webp",
+    "assets/shots/pricebuddy-1.webp",
+    "assets/shots/pricebuddy-2.webp"
+   ],
    "setup": "advanced"
   },
   {
@@ -23887,7 +25917,11 @@
    "source": "taxonomy-v2",
    "verified": false,
    "screenshots": [],
-   "platforms": [],
+   "platforms": [
+    "windows",
+    "mac",
+    "linux"
+   ],
    "thumbs": [],
    "setup": "easy"
   },
@@ -23952,7 +25986,10 @@
    "source": "taxonomy-v2",
    "verified": false,
    "screenshots": [],
-   "platforms": [],
+   "platforms": [
+    "web",
+    "server"
+   ],
    "thumbs": [],
    "setup": "advanced"
   },
@@ -24031,7 +26068,12 @@
    "source": "taxonomy-v2",
    "verified": false,
    "screenshots": [],
-   "platforms": [],
+   "platforms": [
+    "windows",
+    "mac",
+    "linux",
+    "server"
+   ],
    "thumbs": [],
    "setup": "advanced"
   },
@@ -24093,7 +26135,9 @@
    "source": "taxonomy-v2",
    "verified": false,
    "screenshots": [],
-   "platforms": [],
+   "platforms": [
+    "linux"
+   ],
    "thumbs": [],
    "setup": "easy"
   },
@@ -24118,9 +26162,15 @@
    ],
    "source": "taxonomy-v2",
    "verified": false,
-   "screenshots": [],
-   "platforms": [],
-   "thumbs": [],
+   "screenshots": [
+    "https://cdn.pterodactyl.io/site-assets/pterodactyl_v1_demo.gif"
+   ],
+   "platforms": [
+    "server"
+   ],
+   "thumbs": [
+    "assets/shots/pterodactyl-0.webp"
+   ],
    "setup": "advanced"
   },
   {
@@ -24146,7 +26196,10 @@
    "source": "taxonomy-v2",
    "verified": false,
    "screenshots": [],
-   "platforms": [],
+   "platforms": [
+    "linux",
+    "server"
+   ],
    "thumbs": [],
    "setup": "advanced"
   },
@@ -24171,7 +26224,9 @@
    "source": "taxonomy-v2",
    "verified": false,
    "screenshots": [],
-   "platforms": [],
+   "platforms": [
+    "linux"
+   ],
    "thumbs": [],
    "setup": "advanced"
   },
@@ -24277,7 +26332,11 @@
    "source": "taxonomy-v2",
    "verified": false,
    "screenshots": [],
-   "platforms": [],
+   "platforms": [
+    "mac",
+    "linux",
+    "server"
+   ],
    "thumbs": [],
    "setup": "easy"
   },
@@ -24343,9 +26402,19 @@
    ],
    "source": "taxonomy-v2",
    "verified": false,
-   "screenshots": [],
-   "platforms": [],
-   "thumbs": [],
+   "screenshots": [
+    "https://raw.githubusercontent.com/easymodo/qimgv/HEAD/qimgv/distrib/screenshots/qimgv0.9_1_thumb.jpg",
+    "https://raw.githubusercontent.com/easymodo/qimgv/HEAD/qimgv/distrib/screenshots/qimgv0.9_2_thumb.jpg",
+    "https://raw.githubusercontent.com/easymodo/qimgv/HEAD/qimgv/distrib/screenshots/qimgv_3_thumb.jpg"
+   ],
+   "platforms": [
+    "windows"
+   ],
+   "thumbs": [
+    "assets/shots/qimgv-0.webp",
+    "assets/shots/qimgv-1.webp",
+    "assets/shots/qimgv-2.webp"
+   ],
    "setup": "easy"
   },
   {
@@ -24398,7 +26467,9 @@
    "source": "taxonomy-v2",
    "verified": false,
    "screenshots": [],
-   "platforms": [],
+   "platforms": [
+    "windows"
+   ],
    "thumbs": [],
    "setup": "easy"
   },
@@ -24491,7 +26562,11 @@
    "source": "taxonomy-v2",
    "verified": false,
    "screenshots": [],
-   "platforms": [],
+   "platforms": [
+    "windows",
+    "mac",
+    "linux"
+   ],
    "thumbs": [],
    "setup": "easy"
   },
@@ -24559,7 +26634,9 @@
    "source": "taxonomy-v2",
    "verified": false,
    "screenshots": [],
-   "platforms": [],
+   "platforms": [
+    "windows"
+   ],
    "thumbs": [],
    "setup": "easy"
   },
@@ -24585,7 +26662,9 @@
    "source": "taxonomy-v2",
    "verified": false,
    "screenshots": [],
-   "platforms": [],
+   "platforms": [
+    "linux"
+   ],
    "thumbs": [],
    "setup": "advanced"
   },
@@ -24700,9 +26779,22 @@
    ],
    "source": "taxonomy-v2",
    "verified": false,
-   "screenshots": [],
-   "platforms": [],
-   "thumbs": [],
+   "screenshots": [
+    "https://r2modman-readme-assets.ebkr.dev/GameSelection.png",
+    "https://r2modman-readme-assets.ebkr.dev/InstalledList.png",
+    "https://r2modman-readme-assets.ebkr.dev/OnlineList.png",
+    "https://r2modman-readme-assets.ebkr.dev/ConfigEditor.png"
+   ],
+   "platforms": [
+    "windows",
+    "linux"
+   ],
+   "thumbs": [
+    "assets/shots/r2modman-0.webp",
+    "assets/shots/r2modman-1.webp",
+    "assets/shots/r2modman-2.webp",
+    "assets/shots/r2modman-3.webp"
+   ],
    "setup": "easy"
   },
   {
@@ -24727,7 +26819,12 @@
    "source": "taxonomy-v2",
    "verified": false,
    "screenshots": [],
-   "platforms": [],
+   "platforms": [
+    "windows",
+    "mac",
+    "linux",
+    "server"
+   ],
    "thumbs": [],
    "setup": "advanced"
   },
@@ -24752,9 +26849,16 @@
    ],
    "source": "taxonomy-v2",
    "verified": false,
-   "screenshots": [],
-   "platforms": [],
-   "thumbs": [],
+   "screenshots": [
+    "https://radix-ui.com/social/themes.png"
+   ],
+   "platforms": [
+    "web",
+    "server"
+   ],
+   "thumbs": [
+    "assets/shots/radix-ui-0.webp"
+   ],
    "setup": "advanced"
   },
   {
@@ -24778,9 +26882,22 @@
    ],
    "source": "taxonomy-v2",
    "verified": false,
-   "screenshots": [],
-   "platforms": [],
-   "thumbs": [],
+   "screenshots": [
+    "https://raw.githubusercontent.com/infiniflow/ragflow-docs/refs/heads/image/image/chunking.gif",
+    "https://raw.githubusercontent.com/infiniflow/ragflow-docs/refs/heads/image/image/agentic-dark.gif",
+    "https://github.com/user-attachments/assets/18c9707e-b8aa-4caf-a154-037089c105ba"
+   ],
+   "platforms": [
+    "windows",
+    "mac",
+    "linux",
+    "server"
+   ],
+   "thumbs": [
+    "assets/shots/ragflow-0.webp",
+    "assets/shots/ragflow-1.webp",
+    "assets/shots/ragflow-2.webp"
+   ],
    "setup": "advanced"
   },
   {
@@ -24806,7 +26923,9 @@
    "source": "taxonomy-v2",
    "verified": false,
    "screenshots": [],
-   "platforms": [],
+   "platforms": [
+    "windows"
+   ],
    "thumbs": [],
    "setup": "easy"
   },
@@ -24833,7 +26952,11 @@
    "source": "taxonomy-v2",
    "verified": false,
    "screenshots": [],
-   "platforms": [],
+   "platforms": [
+    "windows",
+    "mac",
+    "linux"
+   ],
    "thumbs": [],
    "setup": "advanced"
   },
@@ -24860,7 +26983,11 @@
    "source": "taxonomy-v2",
    "verified": false,
    "screenshots": [],
-   "platforms": [],
+   "platforms": [
+    "windows",
+    "mac",
+    "linux"
+   ],
    "thumbs": [],
    "setup": "advanced"
   },
@@ -24929,7 +27056,11 @@
    "source": "taxonomy-v2",
    "verified": false,
    "screenshots": [],
-   "platforms": [],
+   "platforms": [
+    "windows",
+    "mac",
+    "linux"
+   ],
    "thumbs": [],
    "setup": "advanced"
   },
@@ -24953,7 +27084,12 @@
    "source": "taxonomy-v2",
    "verified": false,
    "screenshots": [],
-   "platforms": [],
+   "platforms": [
+    "android",
+    "ios",
+    "web",
+    "server"
+   ],
    "thumbs": [],
    "setup": "advanced"
   },
@@ -24977,9 +27113,16 @@
    ],
    "source": "taxonomy-v2",
    "verified": false,
-   "screenshots": [],
-   "platforms": [],
-   "thumbs": [],
+   "screenshots": [
+    "https://raw.githubusercontent.com/reactive-resume/reactive-resume/HEAD/docs/images/getting-started/editor-overview.webp"
+   ],
+   "platforms": [
+    "web",
+    "server"
+   ],
+   "thumbs": [
+    "assets/shots/reactive-resume-0.webp"
+   ],
    "setup": "easy"
   },
   {
@@ -25004,7 +27147,12 @@
    "source": "taxonomy-v2",
    "verified": false,
    "screenshots": [],
-   "platforms": [],
+   "platforms": [
+    "windows",
+    "mac",
+    "linux",
+    "server"
+   ],
    "thumbs": [],
    "setup": "advanced"
   },
@@ -25031,7 +27179,10 @@
    "source": "taxonomy-v2",
    "verified": false,
    "screenshots": [],
-   "platforms": [],
+   "platforms": [
+    "mac",
+    "linux"
+   ],
    "thumbs": [],
    "setup": "advanced"
   },
@@ -25057,7 +27208,9 @@
    "source": "taxonomy-v2",
    "verified": false,
    "screenshots": [],
-   "platforms": [],
+   "platforms": [
+    "server"
+   ],
    "thumbs": [],
    "setup": "advanced"
   },
@@ -25081,9 +27234,15 @@
    ],
    "source": "taxonomy-v2",
    "verified": false,
-   "screenshots": [],
-   "platforms": [],
-   "thumbs": [],
+   "screenshots": [
+    "https://github.com/user-attachments/assets/c088d1e2-3661-4041-ac30-95da89ac4a41"
+   ],
+   "platforms": [
+    "mac"
+   ],
+   "thumbs": [
+    "assets/shots/rectangle-0.webp"
+   ],
    "setup": "easy"
   },
   {
@@ -25138,9 +27297,17 @@
    ],
    "source": "taxonomy-v2",
    "verified": false,
-   "screenshots": [],
-   "platforms": [],
-   "thumbs": [],
+   "screenshots": [
+    "https://i.ibb.co/18vrdxk/redlib-rust.png"
+   ],
+   "platforms": [
+    "windows",
+    "linux",
+    "server"
+   ],
+   "thumbs": [
+    "assets/shots/redlib-0.webp"
+   ],
    "setup": "advanced"
   },
   {
@@ -25221,9 +27388,17 @@
    ],
    "source": "taxonomy-v2",
    "verified": false,
-   "screenshots": [],
-   "platforms": [],
-   "thumbs": [],
+   "screenshots": [
+    "https://raw.githubusercontent.com/rendercv/rendercv/main/docs/assets/images/examples/ink.png"
+   ],
+   "platforms": [
+    "windows",
+    "mac",
+    "linux"
+   ],
+   "thumbs": [
+    "assets/shots/rendercv-0.webp"
+   ],
    "setup": "advanced"
   },
   {
@@ -25247,7 +27422,9 @@
    "source": "taxonomy-v2",
    "verified": false,
    "screenshots": [],
-   "platforms": [],
+   "platforms": [
+    "server"
+   ],
    "thumbs": [],
    "setup": "advanced"
   },
@@ -25271,9 +27448,18 @@
    ],
    "source": "taxonomy-v2",
    "verified": false,
-   "screenshots": [],
-   "platforms": [],
-   "thumbs": [],
+   "screenshots": [
+    "https://raw.githubusercontent.com/yamadashy/repomix/HEAD/website/client/src/public/images/docs/browser-extension.png"
+   ],
+   "platforms": [
+    "mac",
+    "linux",
+    "web",
+    "server"
+   ],
+   "thumbs": [
+    "assets/shots/repomix-0.webp"
+   ],
    "setup": "advanced"
   },
   {
@@ -25397,9 +27583,23 @@
    ],
    "source": "taxonomy-v2",
    "verified": false,
-   "screenshots": [],
-   "platforms": [],
-   "thumbs": [],
+   "screenshots": [
+    "https://user-images.githubusercontent.com/3797062/40884858-6efd82a0-6756-11e8-9f1a-c6af4f920fb0.png",
+    "https://user-images.githubusercontent.com/3797062/40941822-1d775064-6887-11e8-98e9-4775d37d47f8.png",
+    "https://user-images.githubusercontent.com/3797062/40941738-d62acb0a-6886-11e8-858d-7b97aded2a42.png",
+    "https://raw.githubusercontent.com/haya14busa/i/dc0ccb1e110515ea407c146d99b749018db05c45/reviewdog/sample-comment.png"
+   ],
+   "platforms": [
+    "windows",
+    "mac",
+    "linux"
+   ],
+   "thumbs": [
+    "assets/shots/reviewdog-0.webp",
+    "assets/shots/reviewdog-1.webp",
+    "assets/shots/reviewdog-2.webp",
+    "assets/shots/reviewdog-3.webp"
+   ],
    "setup": "advanced"
   },
   {
@@ -25423,9 +27623,17 @@
    ],
    "source": "taxonomy-v2",
    "verified": false,
-   "screenshots": [],
-   "platforms": [],
-   "thumbs": [],
+   "screenshots": [
+    "https://burntsushi.net/stuff/ripgrep1.png"
+   ],
+   "platforms": [
+    "windows",
+    "mac",
+    "linux"
+   ],
+   "thumbs": [
+    "assets/shots/ripgrep-0.webp"
+   ],
    "setup": "advanced"
   },
   {
@@ -25493,7 +27701,9 @@
    "source": "taxonomy-v2",
    "verified": false,
    "screenshots": [],
-   "platforms": [],
+   "platforms": [
+    "server"
+   ],
    "thumbs": [],
    "setup": "advanced"
   },
@@ -25518,9 +27728,15 @@
    ],
    "source": "taxonomy-v2",
    "verified": false,
-   "screenshots": [],
-   "platforms": [],
-   "thumbs": [],
+   "screenshots": [
+    "https://raw.githubusercontent.com/davatorium/rofi/next/releasenotes/1.4.0/rofi-no-fzf.png"
+   ],
+   "platforms": [
+    "linux"
+   ],
+   "thumbs": [
+    "assets/shots/rofi-0.webp"
+   ],
    "setup": "easy"
   },
   {
@@ -25544,7 +27760,11 @@
    "source": "taxonomy-v2",
    "verified": false,
    "screenshots": [],
-   "platforms": [],
+   "platforms": [
+    "windows",
+    "mac",
+    "linux"
+   ],
    "thumbs": [],
    "setup": "advanced"
   },
@@ -25571,7 +27791,9 @@
    "source": "taxonomy-v2",
    "verified": false,
    "screenshots": [],
-   "platforms": [],
+   "platforms": [
+    "web"
+   ],
    "thumbs": [],
    "setup": "easy"
   },
@@ -25671,7 +27893,11 @@
    "source": "taxonomy-v2",
    "verified": false,
    "screenshots": [],
-   "platforms": [],
+   "platforms": [
+    "windows",
+    "mac",
+    "linux"
+   ],
    "thumbs": [],
    "setup": "advanced"
   },
@@ -25695,7 +27921,9 @@
    "source": "taxonomy-v2",
    "verified": false,
    "screenshots": [],
-   "platforms": [],
+   "platforms": [
+    "windows"
+   ],
    "thumbs": [],
    "setup": "easy"
   },
@@ -25765,9 +27993,19 @@
    ],
    "source": "taxonomy-v2",
    "verified": false,
-   "screenshots": [],
-   "platforms": [],
-   "thumbs": [],
+   "screenshots": [
+    "https://raw.githubusercontent.com/IgnisDa/ryot/HEAD/apps/website/public/cta-image.png",
+    "https://raw.githubusercontent.com/IgnisDa/ryot/HEAD/apps/website/public/features/measurements-graph.png",
+    "https://raw.githubusercontent.com/IgnisDa/ryot/HEAD/apps/website/public/features/exercise-dataset.png"
+   ],
+   "platforms": [
+    "server"
+   ],
+   "thumbs": [
+    "assets/shots/ryot-0.webp",
+    "assets/shots/ryot-1.webp",
+    "assets/shots/ryot-2.webp"
+   ],
    "setup": "advanced"
   },
   {
@@ -25791,7 +28029,13 @@
    "source": "taxonomy-v2",
    "verified": false,
    "screenshots": [],
-   "platforms": [],
+   "platforms": [
+    "windows",
+    "mac",
+    "linux",
+    "web",
+    "server"
+   ],
    "thumbs": [],
    "setup": "advanced"
   },
@@ -25855,7 +28099,11 @@
    "source": "taxonomy-v2",
    "verified": false,
    "screenshots": [],
-   "platforms": [],
+   "platforms": [
+    "windows",
+    "mac",
+    "linux"
+   ],
    "thumbs": [],
    "setup": "advanced"
   },
@@ -25880,7 +28128,11 @@
    "source": "taxonomy-v2",
    "verified": false,
    "screenshots": [],
-   "platforms": [],
+   "platforms": [
+    "windows",
+    "mac",
+    "linux"
+   ],
    "thumbs": [],
    "setup": "advanced"
   },
@@ -25907,9 +28159,17 @@
    ],
    "source": "taxonomy-v2",
    "verified": false,
-   "screenshots": [],
-   "platforms": [],
-   "thumbs": [],
+   "screenshots": [
+    "https://raw.githubusercontent.com/Genymobile/scrcpy/HEAD/assets/screenshot-debian-600.jpg"
+   ],
+   "platforms": [
+    "windows",
+    "mac",
+    "linux"
+   ],
+   "thumbs": [
+    "assets/shots/scrcpy-0.webp"
+   ],
    "setup": "easy"
   },
   {
@@ -26039,9 +28299,21 @@
    ],
    "source": "taxonomy-v2",
    "verified": false,
-   "screenshots": [],
-   "platforms": [],
-   "thumbs": [],
+   "screenshots": [
+    "https://raw.githubusercontent.com/JunkFood02/Seal/HEAD/fastlane/metadata/android/en-US/images/phoneScreenshots/1.jpg",
+    "https://raw.githubusercontent.com/JunkFood02/Seal/HEAD/fastlane/metadata/android/en-US/images/phoneScreenshots/2.jpg",
+    "https://raw.githubusercontent.com/JunkFood02/Seal/HEAD/fastlane/metadata/android/en-US/images/phoneScreenshots/3.jpg",
+    "https://raw.githubusercontent.com/JunkFood02/Seal/HEAD/fastlane/metadata/android/en-US/images/phoneScreenshots/4.jpg"
+   ],
+   "platforms": [
+    "android"
+   ],
+   "thumbs": [
+    "assets/shots/seal-0.webp",
+    "assets/shots/seal-1.webp",
+    "assets/shots/seal-2.webp",
+    "assets/shots/seal-3.webp"
+   ],
    "setup": "easy"
   },
   {
@@ -26100,9 +28372,21 @@
    ],
    "source": "taxonomy-v2",
    "verified": false,
-   "screenshots": [],
-   "platforms": [],
-   "thumbs": [],
+   "screenshots": [
+    "https://raw.githubusercontent.com/semgrep/semgrep/develop/images/semgrep-scan-cli.jpg",
+    "https://raw.githubusercontent.com/semgrep/semgrep/develop/images/semgrep-main-image.jpg",
+    "https://raw.githubusercontent.com/semgrep/semgrep/develop/images/semgrep-example-rules-editor.jpg"
+   ],
+   "platforms": [
+    "mac",
+    "linux",
+    "server"
+   ],
+   "thumbs": [
+    "assets/shots/semgrep-community-edition-0.webp",
+    "assets/shots/semgrep-community-edition-1.webp",
+    "assets/shots/semgrep-community-edition-2.webp"
+   ],
    "setup": "advanced"
   },
   {
@@ -26152,9 +28436,15 @@
    ],
    "source": "taxonomy-v2",
    "verified": false,
-   "screenshots": [],
-   "platforms": [],
-   "thumbs": [],
+   "screenshots": [
+    "https://serpbear.b-cdn.net/serpbear_readme_v2.gif"
+   ],
+   "platforms": [
+    "server"
+   ],
+   "thumbs": [
+    "assets/shots/serpbear-0.webp"
+   ],
    "setup": "advanced"
   },
   {
@@ -26178,9 +28468,13 @@
    ],
    "source": "taxonomy-v2",
    "verified": false,
-   "screenshots": [],
+   "screenshots": [
+    "https://raw.githubusercontent.com/shadcn-ui/ui/HEAD/apps/v4/public/opengraph-image.png"
+   ],
    "platforms": [],
-   "thumbs": [],
+   "thumbs": [
+    "assets/shots/shadcn-ui-0.webp"
+   ],
    "setup": "advanced"
   },
   {
@@ -26205,9 +28499,15 @@
    ],
    "source": "taxonomy-v2",
    "verified": false,
-   "screenshots": [],
-   "platforms": [],
-   "thumbs": [],
+   "screenshots": [
+    "https://getsharex.com/img/ShareX_Screenshot.png"
+   ],
+   "platforms": [
+    "windows"
+   ],
+   "thumbs": [
+    "assets/shots/sharex-0.webp"
+   ],
    "setup": "easy"
   },
   {
@@ -26232,7 +28532,9 @@
    "source": "taxonomy-v2",
    "verified": false,
    "screenshots": [],
-   "platforms": [],
+   "platforms": [
+    "android"
+   ],
    "thumbs": [],
    "setup": "advanced"
   },
@@ -26548,9 +28850,21 @@
    ],
    "source": "taxonomy-v2",
    "verified": false,
-   "screenshots": [],
-   "platforms": [],
-   "thumbs": [],
+   "screenshots": [
+    "https://github.com/user-attachments/assets/9b5f32f0-c3b3-4102-b3f5-0e9213c0f50f",
+    "https://github.com/user-attachments/assets/913fdbaa-7d33-42f1-ae2c-89dca41c53d1"
+   ],
+   "platforms": [
+    "windows",
+    "mac",
+    "linux",
+    "android",
+    "server"
+   ],
+   "thumbs": [
+    "assets/shots/sillytavern-0.webp",
+    "assets/shots/sillytavern-1.webp"
+   ],
    "setup": "advanced"
   },
   {
@@ -26664,9 +28978,15 @@
    ],
    "source": "taxonomy-v2",
    "verified": false,
-   "screenshots": [],
-   "platforms": [],
-   "thumbs": [],
+   "screenshots": [
+    "https://raw.githubusercontent.com/simple-login/app/HEAD/docs/hero.png"
+   ],
+   "platforms": [
+    "server"
+   ],
+   "thumbs": [
+    "assets/shots/simplelogin-0.webp"
+   ],
    "setup": "advanced"
   },
   {
@@ -26690,9 +29010,17 @@
    ],
    "source": "taxonomy-v2",
    "verified": false,
-   "screenshots": [],
-   "platforms": [],
-   "thumbs": [],
+   "screenshots": [
+    "https://raw.githubusercontent.com/henrypp/simplewall/HEAD/images/simplewall.png?cache",
+    "https://raw.githubusercontent.com/henrypp/simplewall/HEAD/images/simplewall_rules.png?cache2"
+   ],
+   "platforms": [
+    "windows"
+   ],
+   "thumbs": [
+    "assets/shots/simplewall-0.webp",
+    "assets/shots/simplewall-1.webp"
+   ],
    "setup": "easy"
   },
   {
@@ -26811,9 +29139,21 @@
    ],
    "source": "taxonomy-v2",
    "verified": false,
-   "screenshots": [],
-   "platforms": [],
-   "thumbs": [],
+   "screenshots": [
+    "https://raw.githubusercontent.com/cascodigital/skippy-tv/HEAD/docs/screenshots/demo.gif",
+    "https://raw.githubusercontent.com/cascodigital/skippy-tv/HEAD/docs/screenshots/shield-home.jpg",
+    "https://raw.githubusercontent.com/cascodigital/skippy-tv/HEAD/docs/screenshots/firetv-home.jpg",
+    "https://raw.githubusercontent.com/cascodigital/skippy-tv/HEAD/docs/screenshots/bridge.jpg"
+   ],
+   "platforms": [
+    "android"
+   ],
+   "thumbs": [
+    "assets/shots/skippy-tv-0.webp",
+    "assets/shots/skippy-tv-1.webp",
+    "assets/shots/skippy-tv-2.webp",
+    "assets/shots/skippy-tv-3.webp"
+   ],
    "setup": "easy"
   },
   {
@@ -26837,9 +29177,22 @@
    ],
    "source": "taxonomy-v2",
    "verified": false,
-   "screenshots": [],
-   "platforms": [],
-   "thumbs": [],
+   "screenshots": [
+    "https://raw.githubusercontent.com/Skyvern-AI/skyvern/HEAD/fern/images/skyvern_2_0_screenshot.png",
+    "https://raw.githubusercontent.com/Skyvern-AI/skyvern/HEAD/fern/images/block_example_v2.png",
+    "https://raw.githubusercontent.com/Skyvern-AI/skyvern/HEAD/fern/images/secure_password_task_example.png"
+   ],
+   "platforms": [
+    "windows",
+    "mac",
+    "linux",
+    "server"
+   ],
+   "thumbs": [
+    "assets/shots/skyvern-0.webp",
+    "assets/shots/skyvern-1.webp",
+    "assets/shots/skyvern-2.webp"
+   ],
    "setup": "advanced"
   },
   {
@@ -26905,9 +29258,15 @@
    ],
    "source": "taxonomy-v2",
    "verified": false,
-   "screenshots": [],
-   "platforms": [],
-   "thumbs": [],
+   "screenshots": [
+    "https://raw.githubusercontent.com/yuliskov/SmartTube/HEAD/images/browse_home.png"
+   ],
+   "platforms": [
+    "android"
+   ],
+   "thumbs": [
+    "assets/shots/smarttube-0.webp"
+   ],
    "setup": "easy"
   },
   {
@@ -26931,9 +29290,23 @@
    ],
    "source": "taxonomy-v2",
    "verified": false,
-   "screenshots": [],
-   "platforms": [],
-   "thumbs": [],
+   "screenshots": [
+    "https://raw.githubusercontent.com/GyulyVGC/sniffnet/main/resources/repository/pages/overview.png",
+    "https://raw.githubusercontent.com/GyulyVGC/sniffnet/main/resources/repository/pages/inspect.png",
+    "https://raw.githubusercontent.com/GyulyVGC/sniffnet/main/resources/repository/pages/notifications.png",
+    "https://raw.githubusercontent.com/GyulyVGC/sniffnet/main/resources/repository/pages/deep_cosmos.png"
+   ],
+   "platforms": [
+    "windows",
+    "mac",
+    "linux"
+   ],
+   "thumbs": [
+    "assets/shots/sniffnet-0.webp",
+    "assets/shots/sniffnet-1.webp",
+    "assets/shots/sniffnet-2.webp",
+    "assets/shots/sniffnet-3.webp"
+   ],
    "setup": "easy"
   },
   {
@@ -26995,7 +29368,10 @@
    "source": "taxonomy-v2",
    "verified": false,
    "screenshots": [],
-   "platforms": [],
+   "platforms": [
+    "web",
+    "server"
+   ],
    "thumbs": [],
    "setup": "advanced"
   },
@@ -27021,7 +29397,9 @@
    "source": "taxonomy-v2",
    "verified": false,
    "screenshots": [],
-   "platforms": [],
+   "platforms": [
+    "server"
+   ],
    "thumbs": [],
    "setup": "advanced"
   },
@@ -27046,9 +29424,21 @@
    ],
    "source": "taxonomy-v2",
    "verified": false,
-   "screenshots": [],
-   "platforms": [],
-   "thumbs": [],
+   "screenshots": [
+    "https://pwr-solaar.github.io/Solaar/screenshots/Solaar-main-window-multiple.png",
+    "https://pwr-solaar.github.io/Solaar/screenshots/Solaar-main-window-receiver.png",
+    "https://pwr-solaar.github.io/Solaar/screenshots/Solaar-main-window-back-divert.png",
+    "https://pwr-solaar.github.io/Solaar/screenshots/Solaar-rule-editor.png"
+   ],
+   "platforms": [
+    "linux"
+   ],
+   "thumbs": [
+    "assets/shots/solaar-0.webp",
+    "assets/shots/solaar-1.webp",
+    "assets/shots/solaar-2.webp",
+    "assets/shots/solaar-3.webp"
+   ],
    "setup": "easy"
   },
   {
@@ -27231,7 +29621,12 @@
    "source": "taxonomy-v2",
    "verified": false,
    "screenshots": [],
-   "platforms": [],
+   "platforms": [
+    "windows",
+    "mac",
+    "linux",
+    "server"
+   ],
    "thumbs": [],
    "setup": "advanced"
   },
@@ -27293,9 +29688,17 @@
    ],
    "source": "taxonomy-v2",
    "verified": false,
-   "screenshots": [],
-   "platforms": [],
-   "thumbs": [],
+   "screenshots": [
+    "https://raw.githubusercontent.com/sourcebot-dev/sourcebot/HEAD/.github/images/codeSearch.gif",
+    "https://raw.githubusercontent.com/sourcebot-dev/sourcebot/HEAD/.github/images/askSourcebot.gif"
+   ],
+   "platforms": [
+    "server"
+   ],
+   "thumbs": [
+    "assets/shots/sourcebot-0.webp",
+    "assets/shots/sourcebot-1.webp"
+   ],
    "setup": "advanced"
   },
   {
@@ -27352,9 +29755,17 @@
    ],
    "source": "taxonomy-v2",
    "verified": false,
-   "screenshots": [],
-   "platforms": [],
-   "thumbs": [],
+   "screenshots": [
+    "https://sparrowwallet.com/assets/images/control-your-sends.png"
+   ],
+   "platforms": [
+    "windows",
+    "mac",
+    "linux"
+   ],
+   "thumbs": [
+    "assets/shots/sparrow-wallet-0.webp"
+   ],
    "setup": "easy"
   },
   {
@@ -27378,7 +29789,12 @@
    "source": "taxonomy-v2",
    "verified": false,
    "screenshots": [],
-   "platforms": [],
+   "platforms": [
+    "windows",
+    "mac",
+    "linux",
+    "server"
+   ],
    "thumbs": [],
    "setup": "advanced"
   },
@@ -27405,7 +29821,9 @@
    "source": "taxonomy-v2",
    "verified": false,
    "screenshots": [],
-   "platforms": [],
+   "platforms": [
+    "windows"
+   ],
    "thumbs": [],
    "setup": "easy"
   },
@@ -27468,7 +29886,10 @@
    "source": "taxonomy-v2",
    "verified": false,
    "screenshots": [],
-   "platforms": [],
+   "platforms": [
+    "windows",
+    "mac"
+   ],
    "thumbs": [],
    "setup": "advanced"
   },
@@ -27496,7 +29917,9 @@
    "source": "taxonomy-v2",
    "verified": false,
    "screenshots": [],
-   "platforms": [],
+   "platforms": [
+    "web"
+   ],
    "thumbs": [],
    "setup": "easy"
   },
@@ -27563,7 +29986,11 @@
    "source": "taxonomy-v2",
    "verified": false,
    "screenshots": [],
-   "platforms": [],
+   "platforms": [
+    "windows",
+    "mac",
+    "linux"
+   ],
    "thumbs": [],
    "setup": "advanced"
   },
@@ -27652,7 +30079,11 @@
    "source": "taxonomy-v2",
    "verified": false,
    "screenshots": [],
-   "platforms": [],
+   "platforms": [
+    "windows",
+    "mac",
+    "linux"
+   ],
    "thumbs": [],
    "setup": "advanced"
   },
@@ -27677,9 +30108,17 @@
    ],
    "source": "taxonomy-v2",
    "verified": false,
-   "screenshots": [],
-   "platforms": [],
-   "thumbs": [],
+   "screenshots": [
+    "https://cdn.mac-stats.com/assets/images/popups.png",
+    "https://cdn.mac-stats.com/assets/images/menus.png"
+   ],
+   "platforms": [
+    "mac"
+   ],
+   "thumbs": [
+    "assets/shots/stats-0.webp",
+    "assets/shots/stats-1.webp"
+   ],
    "setup": "easy"
   },
   {
@@ -27817,9 +30256,15 @@
    ],
    "source": "taxonomy-v2",
    "verified": false,
-   "screenshots": [],
-   "platforms": [],
-   "thumbs": [],
+   "screenshots": [
+    "https://raw.githubusercontent.com/strawberrymusicplayer/strawberry/master/data/screenshot/screenshot.png"
+   ],
+   "platforms": [
+    "linux"
+   ],
+   "thumbs": [
+    "assets/shots/strawberry-0.webp"
+   ],
    "setup": "easy"
   },
   {
@@ -27842,9 +30287,15 @@
    ],
    "source": "taxonomy-v2",
    "verified": false,
-   "screenshots": [],
-   "platforms": [],
-   "thumbs": [],
+   "screenshots": [
+    "https://streamcontroller.core447.com/assets/screenshots/main_screen.png"
+   ],
+   "platforms": [
+    "linux"
+   ],
+   "thumbs": [
+    "assets/shots/streamcontroller-0.webp"
+   ],
    "setup": "easy"
   },
   {
@@ -27867,9 +30318,24 @@
    ],
    "source": "taxonomy-v2",
    "verified": false,
-   "screenshots": [],
-   "platforms": [],
-   "thumbs": [],
+   "screenshots": [
+    "https://raw.githubusercontent.com/hovancik/stretchly/HEAD/welcome.png",
+    "https://raw.githubusercontent.com/hovancik/stretchly/HEAD/minibreak.png",
+    "https://raw.githubusercontent.com/hovancik/stretchly/HEAD/longbreak.png",
+    "https://raw.githubusercontent.com/hovancik/stretchly/HEAD/skip.png"
+   ],
+   "platforms": [
+    "windows",
+    "mac",
+    "linux",
+    "android"
+   ],
+   "thumbs": [
+    "assets/shots/stretchly-0.webp",
+    "assets/shots/stretchly-1.webp",
+    "assets/shots/stretchly-2.webp",
+    "assets/shots/stretchly-3.webp"
+   ],
    "setup": "easy"
   },
   {
@@ -28153,7 +30619,12 @@
    "source": "taxonomy-v2",
    "verified": false,
    "screenshots": [],
-   "platforms": [],
+   "platforms": [
+    "windows",
+    "mac",
+    "linux",
+    "android"
+   ],
    "thumbs": [],
    "setup": "easy"
   },
@@ -28179,7 +30650,11 @@
    "source": "taxonomy-v2",
    "verified": false,
    "screenshots": [],
-   "platforms": [],
+   "platforms": [
+    "windows",
+    "mac",
+    "linux"
+   ],
    "thumbs": [],
    "setup": "easy"
   },
@@ -28206,7 +30681,9 @@
    "source": "taxonomy-v2",
    "verified": false,
    "screenshots": [],
-   "platforms": [],
+   "platforms": [
+    "linux"
+   ],
    "thumbs": [],
    "setup": "advanced"
   },
@@ -28233,7 +30710,12 @@
    "source": "taxonomy-v2",
    "verified": false,
    "screenshots": [],
-   "platforms": [],
+   "platforms": [
+    "windows",
+    "mac",
+    "linux",
+    "server"
+   ],
    "thumbs": [],
    "setup": "advanced"
   },
@@ -28280,9 +30762,17 @@
    ],
    "source": "taxonomy-v2",
    "verified": false,
-   "screenshots": [],
-   "platforms": [],
-   "thumbs": [],
+   "screenshots": [
+    "https://raw.githubusercontent.com/svix/svix-webhooks/HEAD/static-assets/watch.gif"
+   ],
+   "platforms": [
+    "windows",
+    "mac",
+    "linux"
+   ],
+   "thumbs": [
+    "assets/shots/svix-0.webp"
+   ],
    "setup": "advanced"
   },
   {
@@ -28307,7 +30797,9 @@
    "source": "taxonomy-v2",
    "verified": false,
    "screenshots": [],
-   "platforms": [],
+   "platforms": [
+    "server"
+   ],
    "thumbs": [],
    "setup": "advanced"
   },
@@ -28332,7 +30824,9 @@
    "source": "taxonomy-v2",
    "verified": false,
    "screenshots": [],
-   "platforms": [],
+   "platforms": [
+    "linux"
+   ],
    "thumbs": [],
    "setup": "easy"
   },
@@ -28397,7 +30891,11 @@
    "source": "taxonomy-v2",
    "verified": false,
    "screenshots": [],
-   "platforms": [],
+   "platforms": [
+    "windows",
+    "mac",
+    "linux"
+   ],
    "thumbs": [],
    "setup": "easy"
   },
@@ -28510,7 +31008,9 @@
    "source": "taxonomy-v2",
    "verified": false,
    "screenshots": [],
-   "platforms": [],
+   "platforms": [
+    "windows"
+   ],
    "thumbs": [],
    "setup": "easy"
   },
@@ -28536,7 +31036,9 @@
    "source": "taxonomy-v2",
    "verified": false,
    "screenshots": [],
-   "platforms": [],
+   "platforms": [
+    "linux"
+   ],
    "thumbs": [],
    "setup": "advanced"
   },
@@ -28595,9 +31097,25 @@
    ],
    "source": "taxonomy-v2",
    "verified": false,
-   "screenshots": [],
-   "platforms": [],
-   "thumbs": [],
+   "screenshots": [
+    "https://raw.githubusercontent.com/FriesI23/mhabit/HEAD/docs/README/images/feature-growth-chart.webp",
+    "https://raw.githubusercontent.com/FriesI23/mhabit/HEAD/docs/README/images/feature-sync-settings.png",
+    "https://raw.githubusercontent.com/FriesI23/mhabit/HEAD/docs/README/images/feature-customization-01.png",
+    "https://raw.githubusercontent.com/FriesI23/mhabit/HEAD/docs/README/images/feature-customization-02.png"
+   ],
+   "platforms": [
+    "windows",
+    "mac",
+    "linux",
+    "android",
+    "ios"
+   ],
+   "thumbs": [
+    "assets/shots/table-habit-0.webp",
+    "assets/shots/table-habit-1.webp",
+    "assets/shots/table-habit-2.webp",
+    "assets/shots/table-habit-3.webp"
+   ],
    "setup": "easy"
   },
   {
@@ -28654,9 +31172,18 @@
    ],
    "source": "taxonomy-v2",
    "verified": false,
-   "screenshots": [],
-   "platforms": [],
-   "thumbs": [],
+   "screenshots": [
+    "https://www.tagspaces.org/content/videos/hero-video-poster.jpg"
+   ],
+   "platforms": [
+    "windows",
+    "mac",
+    "linux",
+    "android"
+   ],
+   "thumbs": [
+    "assets/shots/tagspaces-0.webp"
+   ],
    "setup": "easy"
   },
   {
@@ -28716,9 +31243,18 @@
    ],
    "source": "taxonomy-v2",
    "verified": false,
-   "screenshots": [],
-   "platforms": [],
-   "thumbs": [],
+   "screenshots": [
+    "https://raw.githubusercontent.com/wiedehopf/tar1090/screenshots/screenshot3.png",
+    "https://raw.githubusercontent.com/wiedehopf/tar1090/screenshots/screenshot4.png"
+   ],
+   "platforms": [
+    "linux",
+    "server"
+   ],
+   "thumbs": [
+    "assets/shots/tar1090-0.webp",
+    "assets/shots/tar1090-1.webp"
+   ],
    "setup": "advanced"
   },
   {
@@ -28742,9 +31278,15 @@
    ],
    "source": "taxonomy-v2",
    "verified": false,
-   "screenshots": [],
-   "platforms": [],
-   "thumbs": [],
+   "screenshots": [
+    "https://user-images.githubusercontent.com/5904370/68332933-e6e5a600-00d7-11ea-885d-50395f7239a1.png"
+   ],
+   "platforms": [
+    "server"
+   ],
+   "thumbs": [
+    "assets/shots/tasmota-0.webp"
+   ],
    "setup": "advanced"
   },
   {
@@ -28769,7 +31311,11 @@
    "source": "taxonomy-v2",
    "verified": false,
    "screenshots": [],
-   "platforms": [],
+   "platforms": [
+    "windows",
+    "mac",
+    "linux"
+   ],
    "thumbs": [],
    "setup": "advanced"
   },
@@ -28833,9 +31379,15 @@
    ],
    "source": "taxonomy-v2",
    "verified": false,
-   "screenshots": [],
-   "platforms": [],
-   "thumbs": [],
+   "screenshots": [
+    "https://technitium.com/dns/ScreenShot1.png"
+   ],
+   "platforms": [
+    "server"
+   ],
+   "thumbs": [
+    "assets/shots/technitium-dns-server-0.webp"
+   ],
    "setup": "advanced"
   },
   {
@@ -28938,7 +31490,11 @@
    "source": "taxonomy-v2",
    "verified": false,
    "screenshots": [],
-   "platforms": [],
+   "platforms": [
+    "windows",
+    "mac",
+    "linux"
+   ],
    "thumbs": [],
    "setup": "easy"
   },
@@ -28963,9 +31519,17 @@
    ],
    "source": "taxonomy-v2",
    "verified": false,
-   "screenshots": [],
-   "platforms": [],
-   "thumbs": [],
+   "screenshots": [
+    "https://raw.githubusercontent.com/RajSolai/TextSnatcher/master/data/screenshots/snap-default.png",
+    "https://raw.githubusercontent.com/RajSolai/TextSnatcher/master/data/screenshots/snap-dark.png"
+   ],
+   "platforms": [
+    "linux"
+   ],
+   "thumbs": [
+    "assets/shots/textsnatcher-0.webp",
+    "assets/shots/textsnatcher-1.webp"
+   ],
    "setup": "easy"
   },
   {
@@ -28990,7 +31554,12 @@
    "source": "taxonomy-v2",
    "verified": false,
    "screenshots": [],
-   "platforms": [],
+   "platforms": [
+    "windows",
+    "mac",
+    "linux",
+    "server"
+   ],
    "thumbs": [],
    "setup": "advanced"
   },
@@ -29014,7 +31583,9 @@
    "source": "taxonomy-v2",
    "verified": false,
    "screenshots": [],
-   "platforms": [],
+   "platforms": [
+    "linux"
+   ],
    "thumbs": [],
    "setup": "easy"
   },
@@ -29169,7 +31740,10 @@
    "source": "taxonomy-v2",
    "verified": false,
    "screenshots": [],
-   "platforms": [],
+   "platforms": [
+    "mac",
+    "linux"
+   ],
    "thumbs": [],
    "setup": "advanced"
   },
@@ -29325,9 +31899,17 @@
    ],
    "source": "taxonomy-v2",
    "verified": false,
-   "screenshots": [],
-   "platforms": [],
-   "thumbs": [],
+   "screenshots": [
+    "https://raw.githubusercontent.com/traccar/traccar/HEAD/.github/screenshot.png"
+   ],
+   "platforms": [
+    "windows",
+    "linux",
+    "server"
+   ],
+   "thumbs": [
+    "assets/shots/traccar-0.webp"
+   ],
    "setup": "advanced"
   },
   {
@@ -29351,9 +31933,17 @@
    ],
    "source": "taxonomy-v2",
    "verified": false,
-   "screenshots": [],
-   "platforms": [],
-   "thumbs": [],
+   "screenshots": [
+    "https://raw.githubusercontent.com/traefik/traefik/HEAD/docs/content/assets/img/webui-dashboard.png"
+   ],
+   "platforms": [
+    "windows",
+    "mac",
+    "linux"
+   ],
+   "thumbs": [
+    "assets/shots/traefik-0.webp"
+   ],
    "setup": "advanced"
   },
   {
@@ -29377,7 +31967,10 @@
    "source": "taxonomy-v2",
    "verified": false,
    "screenshots": [],
-   "platforms": [],
+   "platforms": [
+    "windows",
+    "mac"
+   ],
    "thumbs": [],
    "setup": "easy"
   },
@@ -29492,9 +32085,17 @@
    ],
    "source": "taxonomy-v2",
    "verified": false,
-   "screenshots": [],
-   "platforms": [],
-   "thumbs": [],
+   "screenshots": [
+    "https://raw.githubusercontent.com/aquasecurity/trivy/HEAD/docs/imgs/trivy-k8s.png"
+   ],
+   "platforms": [
+    "windows",
+    "mac",
+    "linux"
+   ],
+   "thumbs": [
+    "assets/shots/trivy-0.webp"
+   ],
    "setup": "advanced"
   },
   {
@@ -29518,7 +32119,9 @@
    "source": "taxonomy-v2",
    "verified": false,
    "screenshots": [],
-   "platforms": [],
+   "platforms": [
+    "server"
+   ],
    "thumbs": [],
    "setup": "advanced"
   },
@@ -29542,9 +32145,22 @@
    ],
    "source": "taxonomy-v2",
    "verified": false,
-   "screenshots": [],
-   "platforms": [],
-   "thumbs": [],
+   "screenshots": [
+    "https://raw.githubusercontent.com/chrisbenincasa/tunarr/HEAD/design/tunarr-guide.png",
+    "https://raw.githubusercontent.com/chrisbenincasa/tunarr/HEAD/design/tunarr-channels.png",
+    "https://raw.githubusercontent.com/chrisbenincasa/tunarr/HEAD/docs/assets/channel-properties.png"
+   ],
+   "platforms": [
+    "windows",
+    "mac",
+    "linux",
+    "server"
+   ],
+   "thumbs": [
+    "assets/shots/tunarr-0.webp",
+    "assets/shots/tunarr-1.webp",
+    "assets/shots/tunarr-2.webp"
+   ],
    "setup": "advanced"
   },
   {
@@ -29618,9 +32234,19 @@
    ],
    "source": "taxonomy-v2",
    "verified": false,
-   "screenshots": [],
+   "screenshots": [
+    "https://raw.githubusercontent.com/Gathin23/tv-vibehack/HEAD/docs/focus-2-up-netflix.png",
+    "https://raw.githubusercontent.com/Gathin23/tv-vibehack/HEAD/docs/inputs-menu.jpg",
+    "https://raw.githubusercontent.com/Gathin23/tv-vibehack/HEAD/docs/focus-1-fancode.png",
+    "https://raw.githubusercontent.com/Gathin23/tv-vibehack/HEAD/themes/aurora/screenshot.jpg"
+   ],
    "platforms": [],
-   "thumbs": [],
+   "thumbs": [
+    "assets/shots/tv-vibehack-0.webp",
+    "assets/shots/tv-vibehack-1.webp",
+    "assets/shots/tv-vibehack-2.webp",
+    "assets/shots/tv-vibehack-3.webp"
+   ],
    "setup": "advanced"
   },
   {
@@ -29645,7 +32271,9 @@
    "source": "taxonomy-v2",
    "verified": false,
    "screenshots": [],
-   "platforms": [],
+   "platforms": [
+    "server"
+   ],
    "thumbs": [],
    "setup": "advanced"
   },
@@ -29714,9 +32342,17 @@
    ],
    "source": "taxonomy-v2",
    "verified": false,
-   "screenshots": [],
-   "platforms": [],
-   "thumbs": [],
+   "screenshots": [
+    "https://raw.githubusercontent.com/xanderfrangos/twinkle-tray/gh-pages/assets/img/tt-screenshot-w11.jpg",
+    "https://raw.githubusercontent.com/xanderfrangos/twinkle-tray/gh-pages/assets/img/tt-comparison.jpg"
+   ],
+   "platforms": [
+    "windows"
+   ],
+   "thumbs": [
+    "assets/shots/twinkle-tray-0.webp",
+    "assets/shots/twinkle-tray-1.webp"
+   ],
    "setup": "easy"
   },
   {
@@ -29826,9 +32462,17 @@
    ],
    "source": "taxonomy-v2",
    "verified": false,
-   "screenshots": [],
-   "platforms": [],
-   "thumbs": [],
+   "screenshots": [
+    "https://user-images.githubusercontent.com/17899797/228031796-ced0e452-fcee-4ae9-92da-b9287764ff25.png"
+   ],
+   "platforms": [
+    "windows",
+    "mac",
+    "linux"
+   ],
+   "thumbs": [
+    "assets/shots/typst-0.webp"
+   ],
    "setup": "advanced"
   },
   {
@@ -29853,7 +32497,9 @@
    "source": "taxonomy-v2",
    "verified": false,
    "screenshots": [],
-   "platforms": [],
+   "platforms": [
+    "mac"
+   ],
    "thumbs": [],
    "setup": "easy"
   },
@@ -29877,9 +32523,18 @@
    ],
    "source": "taxonomy-v2",
    "verified": false,
-   "screenshots": [],
-   "platforms": [],
-   "thumbs": [],
+   "screenshots": [
+    "https://user-images.githubusercontent.com/585534/232531439-a8f81cc3-6622-45c4-8b32-7348cecf6e98.png"
+   ],
+   "platforms": [
+    "windows",
+    "mac",
+    "linux",
+    "android"
+   ],
+   "thumbs": [
+    "assets/shots/ublock-origin-0.webp"
+   ],
    "setup": "easy"
   },
   {
@@ -29983,9 +32638,19 @@
    ],
    "source": "taxonomy-v2",
    "verified": false,
-   "screenshots": [],
-   "platforms": [],
-   "thumbs": [],
+   "screenshots": [
+    "https://i.imgur.com/8FpJLGG.png?1",
+    "https://i.imgur.com/wJvXSmP.png?1",
+    "https://i.imgur.com/2a4GCW7.png?1"
+   ],
+   "platforms": [
+    "linux"
+   ],
+   "thumbs": [
+    "assets/shots/ulauncher-0.webp",
+    "assets/shots/ulauncher-1.webp",
+    "assets/shots/ulauncher-2.webp"
+   ],
    "setup": "easy"
   },
   {
@@ -30134,9 +32799,23 @@
    ],
    "source": "taxonomy-v2",
    "verified": false,
-   "screenshots": [],
-   "platforms": [],
-   "thumbs": [],
+   "screenshots": [
+    "https://raw.githubusercontent.com/marticliment/UniGetUI/HEAD/media/UniGetUI-Image.png",
+    "https://raw.githubusercontent.com/marticliment/UniGetUI/HEAD/media/UniGetUI_1.png",
+    "https://raw.githubusercontent.com/marticliment/UniGetUI/HEAD/media/UniGetUI_2.png",
+    "https://raw.githubusercontent.com/marticliment/UniGetUI/HEAD/media/UniGetUI_3.png"
+   ],
+   "platforms": [
+    "windows",
+    "mac",
+    "linux"
+   ],
+   "thumbs": [
+    "assets/shots/unigetui-0.webp",
+    "assets/shots/unigetui-1.webp",
+    "assets/shots/unigetui-2.webp",
+    "assets/shots/unigetui-3.webp"
+   ],
    "setup": "easy"
   },
   {
@@ -30195,7 +32874,11 @@
    "source": "taxonomy-v2",
    "verified": false,
    "screenshots": [],
-   "platforms": [],
+   "platforms": [
+    "windows",
+    "mac",
+    "linux"
+   ],
    "thumbs": [],
    "setup": "advanced"
   },
@@ -30220,9 +32903,21 @@
    ],
    "source": "taxonomy-v2",
    "verified": false,
-   "screenshots": [],
-   "platforms": [],
-   "thumbs": [],
+   "screenshots": [
+    "https://raw.githubusercontent.com/upptime/upptime.js.org/master/static/img/screenshot-status.png",
+    "https://raw.githubusercontent.com/upptime/upptime.js.org/master/static/img/screenshot-issue.png",
+    "https://raw.githubusercontent.com/upptime/upptime.js.org/master/static/img/screenshot-incident.png",
+    "https://raw.githubusercontent.com/upptime/upptime.js.org/master/static/img/screenshot-history.png"
+   ],
+   "platforms": [
+    "server"
+   ],
+   "thumbs": [
+    "assets/shots/upptime-0.webp",
+    "assets/shots/upptime-1.webp",
+    "assets/shots/upptime-2.webp",
+    "assets/shots/upptime-3.webp"
+   ],
    "setup": "advanced"
   },
   {
@@ -30246,9 +32941,17 @@
    ],
    "source": "taxonomy-v2",
    "verified": false,
-   "screenshots": [],
-   "platforms": [],
-   "thumbs": [],
+   "screenshots": [
+    "https://user-images.githubusercontent.com/1336778/212262296-e6205815-ad62-488c-83ec-a5b0d0689f7c.jpg",
+    "https://user-images.githubusercontent.com/1336778/134628766-a3fe0981-0926-4285-ab46-891a21c3e4cb.png"
+   ],
+   "platforms": [
+    "server"
+   ],
+   "thumbs": [
+    "assets/shots/uptime-kuma-0.webp",
+    "assets/shots/uptime-kuma-1.webp"
+   ],
    "setup": "advanced"
   },
   {
@@ -30320,9 +33023,21 @@
    ],
    "source": "taxonomy-v2",
    "verified": false,
-   "screenshots": [],
-   "platforms": [],
-   "thumbs": [],
+   "screenshots": [
+    "https://raw.githubusercontent.com/utmapp/UTM/HEAD/screen.png",
+    "https://raw.githubusercontent.com/utmapp/UTM/HEAD/screenmac.png",
+    "https://getutm.app/assets/img/og.jpg"
+   ],
+   "platforms": [
+    "mac",
+    "linux",
+    "ios"
+   ],
+   "thumbs": [
+    "assets/shots/utm-0.webp",
+    "assets/shots/utm-1.webp",
+    "assets/shots/utm-2.webp"
+   ],
    "setup": "easy"
   },
   {
@@ -30346,7 +33061,11 @@
    "source": "taxonomy-v2",
    "verified": false,
    "screenshots": [],
-   "platforms": [],
+   "platforms": [
+    "windows",
+    "mac",
+    "linux"
+   ],
    "thumbs": [],
    "setup": "advanced"
   },
@@ -30408,7 +33127,10 @@
    "source": "taxonomy-v2",
    "verified": false,
    "screenshots": [],
-   "platforms": [],
+   "platforms": [
+    "mac",
+    "ios"
+   ],
    "thumbs": [],
    "setup": "easy"
   },
@@ -30434,7 +33156,9 @@
    "source": "taxonomy-v2",
    "verified": false,
    "screenshots": [],
-   "platforms": [],
+   "platforms": [
+    "linux"
+   ],
    "thumbs": [],
    "setup": "easy"
   },
@@ -30550,9 +33274,15 @@
    ],
    "source": "taxonomy-v2",
    "verified": false,
-   "screenshots": [],
-   "platforms": [],
-   "thumbs": [],
+   "screenshots": [
+    "https://user-images.githubusercontent.com/1457048/181916884-8a388e15-67dc-45ff-a8e2-e05aac7fca91.png"
+   ],
+   "platforms": [
+    "linux"
+   ],
+   "thumbs": [
+    "assets/shots/variety-0.webp"
+   ],
    "setup": "easy"
   },
   {
@@ -30622,7 +33352,11 @@
    "source": "taxonomy-v2",
    "verified": false,
    "screenshots": [],
-   "platforms": [],
+   "platforms": [
+    "windows",
+    "mac",
+    "linux"
+   ],
    "thumbs": [],
    "setup": "advanced"
   },
@@ -30685,9 +33419,16 @@
    ],
    "source": "taxonomy-v2",
    "verified": false,
-   "screenshots": [],
-   "platforms": [],
-   "thumbs": [],
+   "screenshots": [
+    "https://www.ventoy.net/static/img/screen/screen_uefi.png"
+   ],
+   "platforms": [
+    "windows",
+    "linux"
+   ],
+   "thumbs": [
+    "assets/shots/ventoy-0.webp"
+   ],
    "setup": "advanced"
   },
   {
@@ -30740,7 +33481,11 @@
    "source": "taxonomy-v2",
    "verified": false,
    "screenshots": [],
-   "platforms": [],
+   "platforms": [
+    "windows",
+    "mac",
+    "linux"
+   ],
    "thumbs": [],
    "setup": "easy"
   },
@@ -30792,9 +33537,19 @@
    ],
    "source": "taxonomy-v2",
    "verified": false,
-   "screenshots": [],
-   "platforms": [],
-   "thumbs": [],
+   "screenshots": [
+    "https://raw.githubusercontent.com/BloopAI/vibe-kanban/HEAD/packages/public/vibe-kanban-screenshot-overview.png",
+    "https://raw.githubusercontent.com/BloopAI/vibe-kanban/HEAD/packages/public/vibe-kanban-screenshot-workspace.png"
+   ],
+   "platforms": [
+    "windows",
+    "mac",
+    "linux"
+   ],
+   "thumbs": [
+    "assets/shots/vibe-kanban-0.webp",
+    "assets/shots/vibe-kanban-1.webp"
+   ],
    "setup": "advanced"
   },
   {
@@ -30941,7 +33696,9 @@
    "source": "taxonomy-v2",
    "verified": false,
    "screenshots": [],
-   "platforms": [],
+   "platforms": [
+    "linux"
+   ],
    "thumbs": [],
    "setup": "easy"
   },
@@ -30967,7 +33724,11 @@
    "source": "taxonomy-v2",
    "verified": false,
    "screenshots": [],
-   "platforms": [],
+   "platforms": [
+    "windows",
+    "mac",
+    "linux"
+   ],
    "thumbs": [],
    "setup": "easy"
   },
@@ -30994,7 +33755,9 @@
    "source": "taxonomy-v2",
    "verified": false,
    "screenshots": [],
-   "platforms": [],
+   "platforms": [
+    "linux"
+   ],
    "thumbs": [],
    "setup": "advanced"
   },
@@ -31020,7 +33783,13 @@
    "source": "taxonomy-v2",
    "verified": false,
    "screenshots": [],
-   "platforms": [],
+   "platforms": [
+    "windows",
+    "mac",
+    "linux",
+    "android",
+    "ios"
+   ],
    "thumbs": [],
    "setup": "easy"
   },
@@ -31047,7 +33816,9 @@
    "source": "taxonomy-v2",
    "verified": false,
    "screenshots": [],
-   "platforms": [],
+   "platforms": [
+    "server"
+   ],
    "thumbs": [],
    "setup": "advanced"
   },
@@ -31072,7 +33843,9 @@
    "source": "taxonomy-v2",
    "verified": false,
    "screenshots": [],
-   "platforms": [],
+   "platforms": [
+    "linux"
+   ],
    "thumbs": [],
    "setup": "advanced"
   },
@@ -31098,7 +33871,9 @@
    "source": "taxonomy-v2",
    "verified": false,
    "screenshots": [],
-   "platforms": [],
+   "platforms": [
+    "windows"
+   ],
    "thumbs": [],
    "setup": "easy"
   },
@@ -31170,7 +33945,11 @@
    "source": "taxonomy-v2",
    "verified": false,
    "screenshots": [],
-   "platforms": [],
+   "platforms": [
+    "windows",
+    "mac",
+    "linux"
+   ],
    "thumbs": [],
    "setup": "advanced"
   },
@@ -31195,9 +33974,21 @@
    ],
    "source": "taxonomy-v2",
    "verified": false,
-   "screenshots": [],
-   "platforms": [],
-   "thumbs": [],
+   "screenshots": [
+    "https://raw.githubusercontent.com/davidhealey/waistline/HEAD/metadata/en-US/images/phoneScreenshots/1.png",
+    "https://raw.githubusercontent.com/davidhealey/waistline/HEAD/metadata/en-US/images/phoneScreenshots/2.png",
+    "https://raw.githubusercontent.com/davidhealey/waistline/HEAD/metadata/en-US/images/phoneScreenshots/3.png",
+    "https://raw.githubusercontent.com/davidhealey/waistline/HEAD/metadata/en-US/images/phoneScreenshots/4.png"
+   ],
+   "platforms": [
+    "android"
+   ],
+   "thumbs": [
+    "assets/shots/waistline-0.webp",
+    "assets/shots/waistline-1.webp",
+    "assets/shots/waistline-2.webp",
+    "assets/shots/waistline-3.webp"
+   ],
    "setup": "easy"
   },
   {
@@ -31261,9 +34052,16 @@
    ],
    "source": "taxonomy-v2",
    "verified": false,
-   "screenshots": [],
-   "platforms": [],
-   "thumbs": [],
+   "screenshots": [
+    "https://raw.githubusercontent.com/open-wanderer/wanderer/HEAD/docs/src/assets/hero.png"
+   ],
+   "platforms": [
+    "android",
+    "server"
+   ],
+   "thumbs": [
+    "assets/shots/wanderer-0.webp"
+   ],
    "setup": "advanced"
   },
   {
@@ -31288,9 +34086,21 @@
    ],
    "source": "taxonomy-v2",
    "verified": false,
-   "screenshots": [],
-   "platforms": [],
-   "thumbs": [],
+   "screenshots": [
+    "https://raw.githubusercontent.com/sbondCo/Watcharr/HEAD/screenshot/devices-mock.png",
+    "https://raw.githubusercontent.com/sbondCo/Watcharr/HEAD/screenshot/homepage.png?v=2",
+    "https://raw.githubusercontent.com/sbondCo/Watcharr/HEAD/screenshot/homepage-poster-hover.png?v=2",
+    "https://raw.githubusercontent.com/sbondCo/Watcharr/HEAD/screenshot/homepage-poster-change-status.png?v=2"
+   ],
+   "platforms": [
+    "server"
+   ],
+   "thumbs": [
+    "assets/shots/watcharr-0.webp",
+    "assets/shots/watcharr-1.webp",
+    "assets/shots/watcharr-2.webp",
+    "assets/shots/watcharr-3.webp"
+   ],
    "setup": "advanced"
   },
   {
@@ -31313,9 +34123,15 @@
    ],
    "source": "taxonomy-v2",
    "verified": false,
-   "screenshots": [],
-   "platforms": [],
-   "thumbs": [],
+   "screenshots": [
+    "https://raw.githubusercontent.com/alexays/waybar/master/preview-2.png"
+   ],
+   "platforms": [
+    "linux"
+   ],
+   "thumbs": [
+    "assets/shots/waybar-0.webp"
+   ],
    "setup": "easy"
   },
   {
@@ -31340,7 +34156,9 @@
    "source": "taxonomy-v2",
    "verified": false,
    "screenshots": [],
-   "platforms": [],
+   "platforms": [
+    "linux"
+   ],
    "thumbs": [],
    "setup": "easy"
   },
@@ -31404,7 +34222,9 @@
    "source": "taxonomy-v2",
    "verified": false,
    "screenshots": [],
-   "platforms": [],
+   "platforms": [
+    "linux"
+   ],
    "thumbs": [],
    "setup": "easy"
   },
@@ -31430,9 +34250,18 @@
    ],
    "source": "taxonomy-v2",
    "verified": false,
-   "screenshots": [],
-   "platforms": [],
-   "thumbs": [],
+   "screenshots": [
+    "https://webcamoid.github.io/theme/images/screenshots/Main.webp"
+   ],
+   "platforms": [
+    "windows",
+    "mac",
+    "linux",
+    "android"
+   ],
+   "thumbs": [
+    "assets/shots/webcamoid-0.webp"
+   ],
    "setup": "easy"
   },
   {
@@ -31457,7 +34286,12 @@
    "source": "taxonomy-v2",
    "verified": false,
    "screenshots": [],
-   "platforms": [],
+   "platforms": [
+    "windows",
+    "mac",
+    "linux",
+    "server"
+   ],
    "thumbs": [],
    "setup": "advanced"
   },
@@ -31519,9 +34353,18 @@
    ],
    "source": "taxonomy-v2",
    "verified": false,
-   "screenshots": [],
-   "platforms": [],
-   "thumbs": [],
+   "screenshots": [
+    "https://github.com/user-attachments/assets/a01d0a78-4130-4665-9284-814955ae1c97",
+    "https://github.com/user-attachments/assets/da4b90a0-c002-4e10-8b34-5acb251bbec9"
+   ],
+   "platforms": [
+    "linux",
+    "server"
+   ],
+   "thumbs": [
+    "assets/shots/webmin-0.webp",
+    "assets/shots/webmin-1.webp"
+   ],
    "setup": "advanced"
   },
   {
@@ -31625,9 +34468,17 @@
    ],
    "source": "taxonomy-v2",
    "verified": false,
-   "screenshots": [],
-   "platforms": [],
-   "thumbs": [],
+   "screenshots": [
+    "https://raw.githubusercontent.com/wezterm/wezterm/HEAD/docs/screenshots/two.png"
+   ],
+   "platforms": [
+    "windows",
+    "mac",
+    "linux"
+   ],
+   "thumbs": [
+    "assets/shots/wezterm-0.webp"
+   ],
    "setup": "easy"
   },
   {
@@ -31653,7 +34504,12 @@
    "source": "taxonomy-v2",
    "verified": false,
    "screenshots": [],
-   "platforms": [],
+   "platforms": [
+    "linux",
+    "android",
+    "ios",
+    "server"
+   ],
    "thumbs": [],
    "setup": "advanced"
   },
@@ -31756,7 +34612,12 @@
    "source": "taxonomy-v2",
    "verified": false,
    "screenshots": [],
-   "platforms": [],
+   "platforms": [
+    "windows",
+    "mac",
+    "linux",
+    "web"
+   ],
    "thumbs": [],
    "setup": "advanced"
   },
@@ -31784,7 +34645,9 @@
    "source": "taxonomy-v2",
    "verified": false,
    "screenshots": [],
-   "platforms": [],
+   "platforms": [
+    "server"
+   ],
    "thumbs": [],
    "setup": "advanced"
   },
@@ -31809,9 +34672,15 @@
    ],
    "source": "taxonomy-v2",
    "verified": false,
-   "screenshots": [],
-   "platforms": [],
-   "thumbs": [],
+   "screenshots": [
+    "https://raw.githubusercontent.com/Raphire/Win11Debloat/HEAD/Assets/Images/menu.png"
+   ],
+   "platforms": [
+    "windows"
+   ],
+   "thumbs": [
+    "assets/shots/win11debloat-0.webp"
+   ],
    "setup": "advanced"
   },
   {
@@ -31837,7 +34706,9 @@
    "source": "taxonomy-v2",
    "verified": false,
    "screenshots": [],
-   "platforms": [],
+   "platforms": [
+    "windows"
+   ],
    "thumbs": [],
    "setup": "easy"
   },
@@ -31911,7 +34782,9 @@
    "source": "taxonomy-v2",
    "verified": false,
    "screenshots": [],
-   "platforms": [],
+   "platforms": [
+    "windows"
+   ],
    "thumbs": [],
    "setup": "advanced"
   },
@@ -31938,7 +34811,9 @@
    "source": "taxonomy-v2",
    "verified": false,
    "screenshots": [],
-   "platforms": [],
+   "platforms": [
+    "windows"
+   ],
    "thumbs": [],
    "setup": "easy"
   },
@@ -31964,9 +34839,15 @@
    ],
    "source": "taxonomy-v2",
    "verified": false,
-   "screenshots": [],
-   "platforms": [],
-   "thumbs": [],
+   "screenshots": [
+    "https://raw.githubusercontent.com/ChrisTitusTech/winutil/HEAD/docs/src/assets/branding/title-screen.png"
+   ],
+   "platforms": [
+    "windows"
+   ],
+   "thumbs": [
+    "assets/shots/winutil-0.webp"
+   ],
    "setup": "advanced"
   },
   {
@@ -32100,7 +34981,9 @@
    "source": "taxonomy-v2",
    "verified": false,
    "screenshots": [],
-   "platforms": [],
+   "platforms": [
+    "server"
+   ],
    "thumbs": [],
    "setup": "advanced"
   },
@@ -32126,7 +35009,11 @@
    "source": "taxonomy-v2",
    "verified": false,
    "screenshots": [],
-   "platforms": [],
+   "platforms": [
+    "windows",
+    "linux",
+    "server"
+   ],
    "thumbs": [],
    "setup": "advanced"
   },
@@ -32199,9 +35086,23 @@
    ],
    "source": "taxonomy-v2",
    "verified": false,
-   "screenshots": [],
-   "platforms": [],
-   "thumbs": [],
+   "screenshots": [
+    "https://raw.githubusercontent.com/subhra74/xdm/HEAD/screenshots/main-window.webp",
+    "https://raw.githubusercontent.com/subhra74/xdm/HEAD/screenshots/new-download.webp",
+    "https://raw.githubusercontent.com/subhra74/xdm/HEAD/screenshots/download-progress.webp",
+    "https://raw.githubusercontent.com/subhra74/xdm/HEAD/screenshots/download-complete.webp"
+   ],
+   "platforms": [
+    "windows",
+    "mac",
+    "linux"
+   ],
+   "thumbs": [
+    "assets/shots/xtreme-download-manager-0.webp",
+    "assets/shots/xtreme-download-manager-1.webp",
+    "assets/shots/xtreme-download-manager-2.webp",
+    "assets/shots/xtreme-download-manager-3.webp"
+   ],
    "setup": "easy"
   },
   {
@@ -32261,7 +35162,11 @@
    "source": "taxonomy-v2",
    "verified": false,
    "screenshots": [],
-   "platforms": [],
+   "platforms": [
+    "windows",
+    "mac",
+    "linux"
+   ],
    "thumbs": [],
    "setup": "easy"
   },
@@ -32324,7 +35229,10 @@
    "source": "taxonomy-v2",
    "verified": false,
    "screenshots": [],
-   "platforms": [],
+   "platforms": [
+    "mac",
+    "linux"
+   ],
    "thumbs": [],
    "setup": "advanced"
   },
@@ -32349,9 +35257,24 @@
    ],
    "source": "taxonomy-v2",
    "verified": false,
-   "screenshots": [],
-   "platforms": [],
-   "thumbs": [],
+   "screenshots": [
+    "https://raw.githubusercontent.com/yamlresume/yamlresume/HEAD/docs/static/images/yamlresume-playground.webp",
+    "https://raw.githubusercontent.com/yamlresume/yamlresume/HEAD/docs/static/images/yamlresume-validate.webp",
+    "https://raw.githubusercontent.com/yamlresume/yamlresume/HEAD/docs/static/images/html-calm-template.webp",
+    "https://raw.githubusercontent.com/yamlresume/yamlresume/HEAD/docs/static/images/html-vscode-template.webp"
+   ],
+   "platforms": [
+    "windows",
+    "mac",
+    "linux",
+    "server"
+   ],
+   "thumbs": [
+    "assets/shots/yamlresume-0.webp",
+    "assets/shots/yamlresume-1.webp",
+    "assets/shots/yamlresume-2.webp",
+    "assets/shots/yamlresume-3.webp"
+   ],
    "setup": "advanced"
   },
   {
@@ -32376,7 +35299,9 @@
    "source": "taxonomy-v2",
    "verified": false,
    "screenshots": [],
-   "platforms": [],
+   "platforms": [
+    "server"
+   ],
    "thumbs": [],
    "setup": "advanced"
   },
@@ -32449,7 +35374,11 @@
    "source": "taxonomy-v2",
    "verified": false,
    "screenshots": [],
-   "platforms": [],
+   "platforms": [
+    "windows",
+    "mac",
+    "linux"
+   ],
    "thumbs": [],
    "setup": "advanced"
   },
@@ -32472,9 +35401,13 @@
    ],
    "source": "taxonomy-v2",
    "verified": false,
-   "screenshots": [],
+   "screenshots": [
+    "https://raw.githubusercontent.com/yeoman/yo/HEAD/screenshot.png"
+   ],
    "platforms": [],
-   "thumbs": [],
+   "thumbs": [
+    "assets/shots/yeoman-0.webp"
+   ],
    "setup": "advanced"
   },
   {
@@ -32498,7 +35431,9 @@
    "source": "taxonomy-v2",
    "verified": false,
    "screenshots": [],
-   "platforms": [],
+   "platforms": [
+    "server"
+   ],
    "thumbs": [],
    "setup": "advanced"
   },
@@ -32524,7 +35459,12 @@
    "source": "taxonomy-v2",
    "verified": false,
    "screenshots": [],
-   "platforms": [],
+   "platforms": [
+    "windows",
+    "mac",
+    "linux",
+    "server"
+   ],
    "thumbs": [],
    "setup": "advanced"
   },
@@ -32550,7 +35490,11 @@
    "source": "taxonomy-v2",
    "verified": false,
    "screenshots": [],
-   "platforms": [],
+   "platforms": [
+    "windows",
+    "mac",
+    "linux"
+   ],
    "thumbs": [],
    "setup": "advanced"
   },
@@ -32658,7 +35602,11 @@
    "source": "taxonomy-v2",
    "verified": false,
    "screenshots": [],
-   "platforms": [],
+   "platforms": [
+    "windows",
+    "mac",
+    "linux"
+   ],
    "thumbs": [],
    "setup": "advanced"
   },
@@ -32722,9 +35670,17 @@
    ],
    "source": "taxonomy-v2",
    "verified": false,
-   "screenshots": [],
-   "platforms": [],
-   "thumbs": [],
+   "screenshots": [
+    "https://raw.githubusercontent.com/YunoHost/doc/master/images/webadmin.jpg",
+    "https://raw.githubusercontent.com/YunoHost/doc/master/images/user_panel.jpg"
+   ],
+   "platforms": [
+    "server"
+   ],
+   "thumbs": [
+    "assets/shots/yunohost-0.webp",
+    "assets/shots/yunohost-1.webp"
+   ],
    "setup": "advanced"
   },
   {
@@ -32845,9 +35801,19 @@
    ],
    "source": "taxonomy-v2",
    "verified": false,
-   "screenshots": [],
-   "platforms": [],
-   "thumbs": [],
+   "screenshots": [
+    "https://zellij.dev/img/floating-panes-preview.png",
+    "https://raw.githubusercontent.com/zellij-org/zellij/main/assets/demo.gif"
+   ],
+   "platforms": [
+    "windows",
+    "mac",
+    "linux"
+   ],
+   "thumbs": [
+    "assets/shots/zellij-0.webp",
+    "assets/shots/zellij-1.webp"
+   ],
    "setup": "advanced"
   },
   {
@@ -32925,7 +35891,9 @@
    "source": "taxonomy-v2",
    "verified": false,
    "screenshots": [],
-   "platforms": [],
+   "platforms": [
+    "linux"
+   ],
    "thumbs": [],
    "setup": "advanced"
   },
@@ -32994,7 +35962,11 @@
    "source": "taxonomy-v2",
    "verified": false,
    "screenshots": [],
-   "platforms": [],
+   "platforms": [
+    "windows",
+    "mac",
+    "linux"
+   ],
    "thumbs": [],
    "setup": "advanced"
   },
@@ -33067,7 +36039,9 @@
    "source": "taxonomy-v2",
    "verified": false,
    "screenshots": [],
-   "platforms": [],
+   "platforms": [
+    "server"
+   ],
    "thumbs": [],
    "setup": "advanced"
   },
@@ -33156,9 +36130,20 @@
    ],
    "source": "taxonomy-v2",
    "verified": false,
-   "screenshots": [],
-   "platforms": [],
-   "thumbs": [],
+   "screenshots": [
+    "https://raw.githubusercontent.com/tobychui/zoraxy/HEAD/img/screenshots/1.png",
+    "https://raw.githubusercontent.com/tobychui/zoraxy/HEAD/img/screenshots/2.png"
+   ],
+   "platforms": [
+    "windows",
+    "mac",
+    "linux",
+    "server"
+   ],
+   "thumbs": [
+    "assets/shots/zoraxy-0.webp",
+    "assets/shots/zoraxy-1.webp"
+   ],
    "setup": "advanced"
   },
   {
@@ -33209,7 +36194,12 @@
    "source": "taxonomy-v2",
    "verified": false,
    "screenshots": [],
-   "platforms": [],
+   "platforms": [
+    "windows",
+    "mac",
+    "linux",
+    "android"
+   ],
    "thumbs": [],
    "setup": "advanced"
   },
@@ -33236,9 +36226,23 @@
    ],
    "source": "taxonomy-v2",
    "verified": false,
-   "screenshots": [],
-   "platforms": [],
-   "thumbs": [],
+   "screenshots": [
+    "https://raw.githubusercontent.com/openziti/zrok/HEAD/website/docs/images/zrok_web_console.png",
+    "https://raw.githubusercontent.com/openziti/zrok/HEAD/website/docs/images/zrok_share_public.png",
+    "https://raw.githubusercontent.com/openziti/zrok/HEAD/website/docs/images/zrok_share_public_drive.png",
+    "https://raw.githubusercontent.com/openziti/zrok/HEAD/website/docs/images/zrok_share_public_drive_explorer.png"
+   ],
+   "platforms": [
+    "windows",
+    "mac",
+    "linux"
+   ],
+   "thumbs": [
+    "assets/shots/zrok-0.webp",
+    "assets/shots/zrok-1.webp",
+    "assets/shots/zrok-2.webp",
+    "assets/shots/zrok-3.webp"
+   ],
    "setup": "advanced"
   },
   {

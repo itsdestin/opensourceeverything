@@ -4,7 +4,14 @@
   "stirling-pdf": "It has desktop installers for Windows, Mac and Linux that you install like any other program.",
   "openstreetmap": "It is a website: you use it at openstreetmap.org in a browser.",
   "open-library": "It is a website: you use it at openlibrary.org in a browser.",
-  "onlyoffice-docs": "ONLYOFFICE makes a free desktop app (ONLYOFFICE Desktop Editors) for Windows, Mac and Linux that you install like any other program; only the shared online editor needs a server."
+  "onlyoffice-docs": "ONLYOFFICE makes a free desktop app (ONLYOFFICE Desktop Editors) for Windows, Mac and Linux that you install like any other program; only the shared online editor needs a server.",
+  "glazewm": "It has an installer for Windows that you run like any other program.",
+  "godot": "It is a desktop program you download and open; no server or command line needed.",
+  "ghidra": "It is a desktop program you download and open, though it is aimed at specialists.",
+  "crystal": "It is a desktop app you install like any other program.",
+  "headlamp": "It has a desktop app for Windows, Mac and Linux.",
+  "cyberchef": "It is a website: you use it in a browser with nothing to install.",
+  "jamovi": "It has desktop installers for Windows, Mac and Linux."
  },
  "advanced": {
   "linux-mint": "An operating system: installing it means replacing or sitting alongside your computer or phone's current system, which is more than installing an app.",

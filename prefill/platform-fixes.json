@@ -379,6 +379,14 @@
    "mac",
    "linux",
    "android"
+  ],
+  "jamovi": [
+   "windows",
+   "mac",
+   "linux"
+  ],
+  "glazewm": [
+   "windows"
   ]
  }
 }

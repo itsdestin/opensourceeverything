@@ -16,7 +16,11 @@ const HERE = dirname(fileURLToPath(import.meta.url));
 const ROOT = join(HERE, '..');
 const GH = process.env.GH_TOKEN;
 if (!GH) { console.error('Set GH_TOKEN (e.g. GH_TOKEN=$(gh auth token)).'); process.exit(1); }
-const projects = JSON.parse(readFileSync(join(ROOT, 'data/projects.json'), 'utf8')).projects;
+// --new: look up only projects that have no result yet and keep every earlier one (used when the new groups were filled, Oct 27).
+// WHY: earlier results were re-checked by the AI pass; re-scanning them would throw those answers away.
+const NEW_ONLY = process.argv.includes('--new');
+const previous = NEW_ONLY ? JSON.parse(readFileSync(join(HERE, 'out/platforms.json'), 'utf8')) : {};
+const projects = JSON.parse(readFileSync(join(ROOT, 'data/projects.json'), 'utf8')).projects.filter((p) => !previous[p.id]);
 const ORDER = ['windows', 'mac', 'linux', 'android', 'ios', 'web', 'server'];
 
 // "code" is either "github.com/o/n" or a full https URL; normalise to host/path.
@@ -130,7 +134,7 @@ async function platformsFor(p) {
   return { platforms, evidence: platforms.map((x) => `${x}: ${found.get(x)}`), sure: Boolean(sure) };
 }
 
-const result = {}; const queue = [...projects]; let done = 0;
+const result = { ...previous }; const queue = [...projects]; let done = 0;
 await Promise.all(Array.from({ length: 12 }, async () => {
   for (let p = queue.shift(); p; p = queue.shift()) {
     result[p.id] = await platformsFor(p);

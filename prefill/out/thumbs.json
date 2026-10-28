@@ -3309,5 +3309,2750 @@
    "file": "tolgee-3.webp",
    "kb": 8
   }
+ ],
+ "adventurelog": [
+  {
+   "from": "https://raw.githubusercontent.com/seanmorley15/AdventureLog/HEAD/brand/screenshots/map.png",
+   "file": "adventurelog-0.webp",
+   "kb": 25
+  },
+  {
+   "from": "https://raw.githubusercontent.com/seanmorley15/AdventureLog/HEAD/brand/screenshots/adventures.png",
+   "file": "adventurelog-1.webp",
+   "kb": 31
+  },
+  {
+   "from": "https://raw.githubusercontent.com/seanmorley15/AdventureLog/HEAD/brand/screenshots/dashboard.png",
+   "file": "adventurelog-2.webp",
+   "kb": 8
+  },
+  {
+   "from": "https://raw.githubusercontent.com/seanmorley15/AdventureLog/HEAD/brand/screenshots/itinerary.png",
+   "file": "adventurelog-3.webp",
+   "kb": 47
+  }
+ ],
+ "ace-step": [
+  {
+   "from": "https://raw.githubusercontent.com/ace-step/ACE-Step/HEAD/assets/rap_machine_demo.gif",
+   "file": "ace-step-0.webp",
+   "kb": 19
+  },
+  {
+   "from": "https://raw.githubusercontent.com/ace-step/ACE-Step/HEAD/assets/train_demo.gif",
+   "file": "ace-step-1.webp",
+   "kb": 25
+  },
+  {
+   "from": "https://raw.githubusercontent.com/ace-step/ACE-Step/HEAD/assets/audio2audio_demo.gif",
+   "file": "ace-step-2.webp",
+   "kb": 9
+  },
+  {
+   "from": "https://github.com/user-attachments/assets/0a13d90a-9086-47ee-abab-976bad20fa7c",
+   "file": "ace-step-3.webp",
+   "kb": 17
+  }
+ ],
+ "alacritty": [
+  {
+   "from": "https://raw.githubusercontent.com/alacritty/alacritty/master/extra/promo/alacritty-readme.png",
+   "file": "alacritty-0.webp",
+   "kb": 24
+  }
+ ],
+ "ant-renamer": [
+  {
+   "from": "https://raw.githubusercontent.com/morfredus/ant-renamer-qt/HEAD/docs/screenshots/English/modern-ui-light-single-screen-bands.png",
+   "file": "ant-renamer-0.webp",
+   "kb": 31
+  }
+ ],
+ "all-contributors": [
+  {
+   "from": "https://raw.githubusercontent.com/all-contributors/allcontributors.org/HEAD/src/assets/reference/contributors-table-small.png",
+   "file": "all-contributors-0.webp",
+   "kb": 18
+  }
+ ],
+ "amica": [
+  {
+   "from": "https://img.youtube.com/vi/3zCN2IlxHrU/0.jpg",
+   "file": "amica-0.webp",
+   "kb": 14
+  }
+ ],
+ "antimicrox": [
+  {
+   "from": "https://raw.githubusercontent.com/AntiMicroX/antimicrox/HEAD/other/appdata/screenshots/app_light.png",
+   "file": "antimicrox-0.webp",
+   "kb": 10
+  },
+  {
+   "from": "https://raw.githubusercontent.com/AntiMicroX/antimicrox/HEAD/other/appdata/screenshots/controllermapping.png",
+   "file": "antimicrox-1.webp",
+   "kb": 23
+  },
+  {
+   "from": "https://raw.githubusercontent.com/AntiMicroX/antimicrox/HEAD/other/appdata/screenshots/calibration.png",
+   "file": "antimicrox-2.webp",
+   "kb": 8
+  },
+  {
+   "from": "https://raw.githubusercontent.com/AntiMicroX/antimicrox/HEAD/other/appdata/screenshots/advanced.png",
+   "file": "antimicrox-3.webp",
+   "kb": 5
+  }
+ ],
+ "arcane": [
+  {
+   "from": "https://raw.githubusercontent.com/getarcaneapp/arcane/HEAD/.github/assets/arcane-dash-2.18.1.png",
+   "file": "arcane-0.webp",
+   "kb": 6
+  }
+ ],
+ "anthias": [
+  {
+   "from": "https://anthias.screenly.io/images/screenshots/home@3x_hu_659a5430256166e3.png",
+   "file": "anthias-0.webp",
+   "kb": 17
+  }
+ ],
+ "bcr-call-recorder": [
+  {
+   "from": "https://raw.githubusercontent.com/chenxiaolong/BCR/HEAD/app/images/light.png",
+   "file": "bcr-call-recorder-0.webp",
+   "kb": 68
+  },
+  {
+   "from": "https://raw.githubusercontent.com/chenxiaolong/BCR/HEAD/app/images/dark.png",
+   "file": "bcr-call-recorder-1.webp",
+   "kb": 63
+  }
+ ],
+ "ais-catcher": [
+  {
+   "from": "https://github.com/user-attachments/assets/c13b7364-6abe-4df1-a983-ecf4f847f0b3",
+   "file": "ais-catcher-0.webp",
+   "kb": 16
+  }
+ ],
+ "adguard-home": [
+  {
+   "from": "https://cdn.adtidy.org/public/Adguard/Common/adguard_home.gif",
+   "file": "adguard-home-0.webp",
+   "kb": 19
+  }
+ ],
+ "arduino-ide": [
+  {
+   "from": "https://raw.githubusercontent.com/arduino/arduino-ide/HEAD/static/screenshot.png",
+   "file": "arduino-ide-0.webp",
+   "kb": 45
+  }
+ ],
+ "beekeeper-studio": [
+  {
+   "from": "https://user-images.githubusercontent.com/279769/203650152-4a34af1f-8a38-47cf-a273-d34d1c84feeb.png",
+   "file": "beekeeper-studio-0.webp",
+   "kb": 37
+  },
+  {
+   "from": "https://www.beekeeperstudio.io/assets/img/screenshots/main-dark-4a9d553efc2856d03967ef19a6da61a030bf1b3bba584c4faf720d00262ad5fd1c405821e62dc220cca2579f95d7f56a1048ca02690a52aac44312e44b66b7f8.png",
+   "file": "beekeeper-studio-1.webp",
+   "kb": 38
+  }
+ ],
+ "beszel": [
+  {
+   "from": "https://henrygd-assets.b-cdn.net/beszel/screenshot-new.png",
+   "file": "beszel-0.webp",
+   "kb": 12
+  },
+  {
+   "from": "https://beszel.dev/image/dashboard.png",
+   "file": "beszel-1.webp",
+   "kb": 16
+  },
+  {
+   "from": "https://beszel.dev/image/system-full.png",
+   "file": "beszel-2.webp",
+   "kb": 49
+  },
+  {
+   "from": "https://beszel.dev/image/settings-notifications.png",
+   "file": "beszel-3.webp",
+   "kb": 11
+  }
+ ],
+ "bottles": [
+  {
+   "from": "https://raw.githubusercontent.com/bottlesdevs/Bottles/HEAD/docs/screenshot-dark.png#gh-dark-mode-only",
+   "file": "bottles-0.webp",
+   "kb": 11
+  },
+  {
+   "from": "https://raw.githubusercontent.com/bottlesdevs/Bottles/HEAD/docs/screenshot-light.png#gh-light-mode-only",
+   "file": "bottles-1.webp",
+   "kb": 11
+  }
+ ],
+ "bibisco": [
+  {
+   "from": "https://bibisco.com/wp-content/uploads/2024/09/bibisco-featured-image.png",
+   "file": "bibisco-0.webp",
+   "kb": 26
+  }
+ ],
+ "browseros": [
+  {
+   "from": "https://raw.githubusercontent.com/browseros-ai/BrowserOS/HEAD/docs/images/browserclaw--mcp-install-board.png",
+   "file": "browseros-0.webp",
+   "kb": 6
+  },
+  {
+   "from": "https://raw.githubusercontent.com/browseros-ai/BrowserOS/HEAD/docs/images/browserclaw--dashboard-populated.png",
+   "file": "browseros-1.webp",
+   "kb": 22
+  }
+ ],
+ "botpress": [
+  {
+   "from": "https://user-images.githubusercontent.com/10071388/248040379-8aee1b03-c483-4040-8ee0-741554310e88.png",
+   "file": "botpress-0.webp",
+   "kb": 22
+  }
+ ],
+ "biscuittin": [
+  {
+   "from": "https://raw.githubusercontent.com/jamesread/biscuittin/HEAD/var/marketing/screenshots/home.png",
+   "file": "biscuittin-0.webp",
+   "kb": 33
+  },
+  {
+   "from": "https://raw.githubusercontent.com/jamesread/biscuittin/HEAD/var/marketing/screenshots/home-idle-rss.png",
+   "file": "biscuittin-1.webp",
+   "kb": 52
+  },
+  {
+   "from": "https://raw.githubusercontent.com/jamesread/biscuittin/HEAD/var/marketing/screenshots/more.png",
+   "file": "biscuittin-2.webp",
+   "kb": 34
+  },
+  {
+   "from": "https://raw.githubusercontent.com/jamesread/biscuittin/HEAD/var/marketing/screenshots/integrations.png",
+   "file": "biscuittin-3.webp",
+   "kb": 36
+  }
+ ],
+ "browser-use": [
+  {
+   "from": "https://github.com/user-attachments/assets/135885e8-1141-4e10-b719-bf690ae7d260",
+   "file": "browser-use-0.webp",
+   "kb": 5
+  }
+ ],
+ "btop": [
+  {
+   "from": "https://raw.githubusercontent.com/aristocratos/btop/HEAD/Img/normal.png",
+   "file": "btop-0.webp",
+   "kb": 50
+  },
+  {
+   "from": "https://raw.githubusercontent.com/aristocratos/btop/HEAD/Img/tty.png",
+   "file": "btop-1.webp",
+   "kb": 48
+  },
+  {
+   "from": "https://raw.githubusercontent.com/aristocratos/btop/HEAD/Img/alt.png",
+   "file": "btop-2.webp",
+   "kb": 52
+  },
+  {
+   "from": "https://raw.githubusercontent.com/aristocratos/btop/HEAD/Img/options-menu.png",
+   "file": "btop-3.webp",
+   "kb": 28
+  }
+ ],
+ "canta": [
+  {
+   "from": "https://raw.githubusercontent.com/samolego/Canta/HEAD/metadata/en-US/images/phoneScreenshots/screenshot-main.png",
+   "file": "canta-0.webp",
+   "kb": 61
+  },
+  {
+   "from": "https://raw.githubusercontent.com/samolego/Canta/HEAD/metadata/en-US/images/phoneScreenshots/screenshot-search.png",
+   "file": "canta-1.webp",
+   "kb": 36
+  },
+  {
+   "from": "https://raw.githubusercontent.com/samolego/Canta/HEAD/metadata/en-US/images/phoneScreenshots/screenshot-uninstall-dialog.png",
+   "file": "canta-2.webp",
+   "kb": 33
+  },
+  {
+   "from": "https://raw.githubusercontent.com/samolego/Canta/HEAD/metadata/en-US/images/phoneScreenshots/screenshot-app-description.png",
+   "file": "canta-3.webp",
+   "kb": 40
+  }
+ ],
+ "ccstatusline": [
+  {
+   "from": "https://raw.githubusercontent.com/sirmalloc/ccstatusline/main/screenshots/emojiSupport.png",
+   "file": "ccstatusline-0.webp",
+   "kb": 14
+  },
+  {
+   "from": "https://raw.githubusercontent.com/sirmalloc/ccstatusline/main/screenshots/autoAlign.png",
+   "file": "ccstatusline-1.webp",
+   "kb": 8
+  },
+  {
+   "from": "https://raw.githubusercontent.com/sirmalloc/ccstatusline/main/screenshots/powerline-flex.png",
+   "file": "ccstatusline-2.webp",
+   "kb": 4
+  },
+  {
+   "from": "https://raw.githubusercontent.com/sirmalloc/ccstatusline/main/screenshots/cwdAndSessionCost.png",
+   "file": "ccstatusline-3.webp",
+   "kb": 7
+  }
+ ],
+ "changedetection-io": [
+  {
+   "from": "https://raw.githubusercontent.com/dgtlmoon/changedetection.io/master/docs/screenshot.png",
+   "file": "changedetection-io-0.webp",
+   "kb": 22
+  },
+  {
+   "from": "https://raw.githubusercontent.com/dgtlmoon/changedetection.io/HEAD/docs/LLM-change-summary.jpeg",
+   "file": "changedetection-io-1.webp",
+   "kb": 20
+  },
+  {
+   "from": "https://raw.githubusercontent.com/dgtlmoon/changedetection.io/master/docs/screenshot-diff.png",
+   "file": "changedetection-io-2.webp",
+   "kb": 36
+  },
+  {
+   "from": "https://raw.githubusercontent.com/dgtlmoon/changedetection.io/HEAD/docs/restock-overview.png",
+   "file": "changedetection-io-3.webp",
+   "kb": 16
+  }
+ ],
+ "casaos": [
+  {
+   "from": "https://raw.githubusercontent.com/IceWhaleTech/CasaOS/HEAD/snapshot-light.jpg",
+   "file": "casaos-0.webp",
+   "kb": 16
+  }
+ ],
+ "claude-code-usage-monitor": [
+  {
+   "from": "https://raw.githubusercontent.com/Maciek-roboblog/Claude-Code-Usage-Monitor/main/doc/scnew.png",
+   "file": "claude-code-usage-monitor-0.webp",
+   "kb": 15
+  }
+ ],
+ "claude-code-ui": [
+  {
+   "from": "https://raw.githubusercontent.com/siteboon/claudecodeui/HEAD/public/screenshots/desktop-main.png",
+   "file": "claude-code-ui-0.webp",
+   "kb": 15
+  },
+  {
+   "from": "https://raw.githubusercontent.com/siteboon/claudecodeui/HEAD/public/screenshots/mobile-chat.png",
+   "file": "claude-code-ui-1.webp",
+   "kb": 43
+  },
+  {
+   "from": "https://raw.githubusercontent.com/siteboon/claudecodeui/HEAD/public/screenshots/cli-selection.png",
+   "file": "claude-code-ui-2.webp",
+   "kb": 26
+  },
+  {
+   "from": "https://raw.githubusercontent.com/siteboon/claudecodeui/HEAD/public/screenshots/tools-modal.png",
+   "file": "claude-code-ui-3.webp",
+   "kb": 11
+  }
+ ],
+ "clipcascade": [
+  {
+   "from": "https://github.com/user-attachments/assets/369d5db5-685c-4284-946d-b6a0e1f4fef9",
+   "file": "clipcascade-0.webp",
+   "kb": 14
+  },
+  {
+   "from": "https://github.com/user-attachments/assets/2c0a7f4d-652c-4f4c-97e9-ee9b9d66f03f",
+   "file": "clipcascade-1.webp",
+   "kb": 10
+  },
+  {
+   "from": "https://github.com/user-attachments/assets/a5606f3c-6d8a-434f-8f1d-03d6276e03c0",
+   "file": "clipcascade-2.webp",
+   "kb": 8
+  },
+  {
+   "from": "https://github.com/user-attachments/assets/f1acd9f4-27ee-4eb0-8696-a786a21551ed",
+   "file": "clipcascade-3.webp",
+   "kb": 10
+  }
+ ],
+ "claude-squad": [
+  {
+   "from": "https://raw.githubusercontent.com/smtg-ai/claude-squad/HEAD/assets/screenshot.png",
+   "file": "claude-squad-0.webp",
+   "kb": 23
+  }
+ ],
+ "claude-code-router": [
+  {
+   "from": "https://raw.githubusercontent.com/musistudio/claude-code-router/HEAD/blog/images/claude-code-router.png",
+   "file": "claude-code-router-0.webp",
+   "kb": 12
+  }
+ ],
+ "codecharta": [
+  {
+   "from": "https://raw.githubusercontent.com/MaibornWolff/codecharta/HEAD/assets/metric.gif",
+   "file": "codecharta-0.webp",
+   "kb": 16
+  },
+  {
+   "from": "https://raw.githubusercontent.com/MaibornWolff/codecharta/HEAD/assets/domain-words.png",
+   "file": "codecharta-1.webp",
+   "kb": 22
+  },
+  {
+   "from": "https://raw.githubusercontent.com/MaibornWolff/codecharta/HEAD/assets/dependencies.gif",
+   "file": "codecharta-2.webp",
+   "kb": 5
+  },
+  {
+   "from": "https://raw.githubusercontent.com/MaibornWolff/codecharta/HEAD/assets/delta.png",
+   "file": "codecharta-3.webp",
+   "kb": 20
+  }
+ ],
+ "ccusage": [
+  {
+   "from": "https://cdn.jsdelivr.net/gh/ccusage/ccusage@main/docs/public/screenshot.png",
+   "file": "ccusage-0.webp",
+   "kb": 36
+  }
+ ],
+ "convertx": [
+  {
+   "from": "https://raw.githubusercontent.com/C4illin/ConvertX/HEAD/images/preview.png",
+   "file": "convertx-0.webp",
+   "kb": 27
+  }
+ ],
+ "crowdsec": [
+  {
+   "from": "https://raw.githubusercontent.com/crowdsecurity/crowdsec-docs/main/crowdsec-docs/static/img/console/blocklists/data_insights.png",
+   "file": "crowdsec-0.webp",
+   "kb": 7
+  },
+  {
+   "from": "https://raw.githubusercontent.com/crowdsecurity/crowdsec-docs/main/crowdsec-docs/static/img/console/alert-explorer/overview-full-dark.png",
+   "file": "crowdsec-1.webp",
+   "kb": 22
+  },
+  {
+   "from": "https://raw.githubusercontent.com/crowdsecurity/crowdsec-docs/main/crowdsec-docs/static/img/supported_platforms.png",
+   "file": "crowdsec-2.webp",
+   "kb": 4
+  },
+  {
+   "from": "https://cms.crowdsec.net/wp-content/uploads/2024/09/Thumbnail-Homepage.png",
+   "file": "crowdsec-3.webp",
+   "kb": 18
+  }
+ ],
+ "claude-mem": [
+  {
+   "from": "https://raw.githubusercontent.com/thedotmack/claude-mem/main/docs/public/cm-preview.gif",
+   "file": "claude-mem-0.webp",
+   "kb": 19
+  }
+ ],
+ "croc": [
+  {
+   "from": "https://raw.githubusercontent.com/schollz/croc/HEAD/src/install/customization.gif",
+   "file": "croc-0.webp",
+   "kb": 4
+  }
+ ],
+ "cutter": [
+  {
+   "from": "https://raw.githubusercontent.com/rizinorg/cutter/dev/docs/source/images/screenshot.png",
+   "file": "cutter-0.webp",
+   "kb": 13
+  }
+ ],
+ "dashy": [
+  {
+   "from": "https://i.ibb.co/L8YbNNc/dashy-demo2.gif",
+   "file": "dashy-0.webp",
+   "kb": 20
+  },
+  {
+   "from": "https://raw.githubusercontent.com/Lissy93/dashy/master/docs/assets/theme-slideshow.gif",
+   "file": "dashy-1.webp",
+   "kb": 21
+  },
+  {
+   "from": "https://raw.githubusercontent.com/Lissy93/dashy/master/docs/assets/theme-config-demo.gif",
+   "file": "dashy-2.webp",
+   "kb": 19
+  },
+  {
+   "from": "https://raw.githubusercontent.com/Lissy93/dashy/master/docs/assets/status-check-demo.gif",
+   "file": "dashy-3.webp",
+   "kb": 22
+  }
+ ],
+ "dawarich": [
+  {
+   "from": "https://raw.githubusercontent.com/Freika/dawarich/HEAD/screenshots/map.png",
+   "file": "dawarich-0.webp",
+   "kb": 59
+  },
+  {
+   "from": "https://raw.githubusercontent.com/Freika/dawarich/HEAD/screenshots/timeline.png",
+   "file": "dawarich-1.webp",
+   "kb": 32
+  },
+  {
+   "from": "https://raw.githubusercontent.com/Freika/dawarich/HEAD/screenshots/insights.png",
+   "file": "dawarich-2.webp",
+   "kb": 25
+  },
+  {
+   "from": "https://raw.githubusercontent.com/Freika/dawarich/HEAD/screenshots/family.png",
+   "file": "dawarich-3.webp",
+   "kb": 7
+  }
+ ],
+ "ddns-updater": [
+  {
+   "from": "https://raw.githubusercontent.com/qdm12/ddns-updater/HEAD/readme/webui-desktop.gif",
+   "file": "ddns-updater-0.webp",
+   "kb": 10
+  },
+  {
+   "from": "https://raw.githubusercontent.com/qdm12/ddns-updater/HEAD/readme/webui-mobile.png",
+   "file": "ddns-updater-1.webp",
+   "kb": 11
+  }
+ ],
+ "dbeaver-community": [
+  {
+   "from": "https://dbeaver.io/product/dbeaver-sql-editor.png",
+   "file": "dbeaver-community-0.webp",
+   "kb": 46
+  },
+  {
+   "from": "https://dbeaver.io/product/dbeaver-gis-viewer.png",
+   "file": "dbeaver-community-1.webp",
+   "kb": 35
+  },
+  {
+   "from": "https://dbeaver.io/product/dbeaver-data-editor.png",
+   "file": "dbeaver-community-2.webp",
+   "kb": 50
+  },
+  {
+   "from": "https://dbeaver.io/product/dbeaver-erd.png",
+   "file": "dbeaver-community-3.webp",
+   "kb": 23
+  }
+ ],
+ "devtoys": [
+  {
+   "from": "https://raw.githubusercontent.com/DevToys-app/DevToys/HEAD/assets/hero-screenshot.png",
+   "file": "devtoys-0.webp",
+   "kb": 16
+  }
+ ],
+ "diun": [
+  {
+   "from": "https://raw.githubusercontent.com/crazy-max/diun/HEAD/.res/screenshot.png",
+   "file": "diun-0.webp",
+   "kb": 14
+  }
+ ],
+ "easyeffects": [
+  {
+   "from": "https://raw.githubusercontent.com/wwmm/easyeffects/HEAD/src/contents/docs/images/easyeffects-light-screenshot-1.png#gh-light-mode-only",
+   "file": "easyeffects-0.webp",
+   "kb": 19
+  },
+  {
+   "from": "https://raw.githubusercontent.com/wwmm/easyeffects/HEAD/src/contents/docs/images/easyeffects-light-screenshot-2.png#gh-light-mode-only",
+   "file": "easyeffects-1.webp",
+   "kb": 19
+  },
+  {
+   "from": "https://raw.githubusercontent.com/wwmm/easyeffects/HEAD/src/contents/docs/images/easyeffects-light-screenshot-3.png#gh-light-mode-only",
+   "file": "easyeffects-2.webp",
+   "kb": 21
+  },
+  {
+   "from": "https://raw.githubusercontent.com/wwmm/easyeffects/HEAD/src/contents/docs/images/easyeffects-dark-screenshot-1.png#gh-dark-mode-only",
+   "file": "easyeffects-3.webp",
+   "kb": 19
+  }
+ ],
+ "excalidraw": [
+  {
+   "from": "https://excalidraw.nyc3.cdn.digitaloceanspaces.com/github%2Fproduct_showcase.png",
+   "file": "excalidraw-0.webp",
+   "kb": 23
+  }
+ ],
+ "ersatztv": [
+  {
+   "from": "https://ersatztv.org/images/home/epg-example.png",
+   "file": "ersatztv-0.webp",
+   "kb": 27
+  }
+ ],
+ "feishin": [
+  {
+   "from": "https://raw.githubusercontent.com/jeffvli/feishin/HEAD/media/preview_full_screen_player.png",
+   "file": "feishin-0.webp",
+   "kb": 16
+  },
+  {
+   "from": "https://raw.githubusercontent.com/jeffvli/feishin/HEAD/media/preview_album_artist_detail.png",
+   "file": "feishin-1.webp",
+   "kb": 20
+  },
+  {
+   "from": "https://raw.githubusercontent.com/jeffvli/feishin/HEAD/media/preview_album_detail.png",
+   "file": "feishin-2.webp",
+   "kb": 14
+  },
+  {
+   "from": "https://raw.githubusercontent.com/jeffvli/feishin/HEAD/media/preview_smart_playlist.png",
+   "file": "feishin-3.webp",
+   "kb": 15
+  }
+ ],
+ "flow-launcher": [
+  {
+   "from": "https://user-images.githubusercontent.com/6903107/145332614-74909973-f6eb-47c2-8235-289931e30718.png",
+   "file": "flow-launcher-0.webp",
+   "kb": 22
+  },
+  {
+   "from": "https://user-images.githubusercontent.com/6903107/145018796-658b7c24-a34f-46b6-98d4-cf4f636d8b60.png",
+   "file": "flow-launcher-1.webp",
+   "kb": 15
+  },
+  {
+   "from": "https://user-images.githubusercontent.com/6903107/144517502-5325de01-d0d9-4c2e-aafb-33c3f5d82f81.png",
+   "file": "flow-launcher-2.webp",
+   "kb": 5
+  },
+  {
+   "from": "https://user-images.githubusercontent.com/6903107/144831031-0e01e8ea-3247-4ba4-a7b4-48b0db620bc1.png",
+   "file": "flow-launcher-3.webp",
+   "kb": 14
+  }
+ ],
+ "f2": [
+  {
+   "from": "https://f2.freshman.tech/assets/2.D-uxLR9T.png",
+   "file": "f2-0.webp",
+   "kb": 42
+  }
+ ],
+ "fooyin": [
+  {
+   "from": "https://fooyin.org/assets/images/simple.webp",
+   "file": "fooyin-0.webp",
+   "kb": 36
+  },
+  {
+   "from": "https://fooyin.org/assets/images/browser.webp",
+   "file": "fooyin-1.webp",
+   "kb": 25
+  },
+  {
+   "from": "https://fooyin.org/assets/images/obsidian.webp",
+   "file": "fooyin-2.webp",
+   "kb": 28
+  },
+  {
+   "from": "https://fooyin.org/assets/images/gallery.webp",
+   "file": "fooyin-3.webp",
+   "kb": 39
+  }
+ ],
+ "devpod": [
+  {
+   "from": "https://raw.githubusercontent.com/loft-sh/devpod/HEAD/docs/static/media/devpod-flow.gif",
+   "file": "devpod-0.webp",
+   "kb": 5
+  }
+ ],
+ "frp": [
+  {
+   "from": "https://raw.githubusercontent.com/fatedier/frp/HEAD/doc/pic/dashboard.png",
+   "file": "frp-0.webp",
+   "kb": 5
+  }
+ ],
+ "fsearch": [
+  {
+   "from": "https://raw.githubusercontent.com/cboxdoerfer/fsearch/master/data/screenshots/02-main_window_menubar.png",
+   "file": "fsearch-0.webp",
+   "kb": 22
+  },
+  {
+   "from": "https://raw.githubusercontent.com/cboxdoerfer/fsearch/master/data/screenshots/01-main_window_headerbar.png",
+   "file": "fsearch-1.webp",
+   "kb": 42
+  }
+ ],
+ "frog": [
+  {
+   "from": "https://github.com/user-attachments/assets/f292b6ce-b530-4e8e-b9db-8770a1e27946",
+   "file": "frog-0.webp",
+   "kb": 16
+  }
+ ],
+ "frappe-hr": [
+  {
+   "from": "https://raw.githubusercontent.com/frappe/hrms/HEAD/.github/hrms-hero.png",
+   "file": "frappe-hr-0.webp",
+   "kb": 16
+  },
+  {
+   "from": "https://raw.githubusercontent.com/frappe/hrms/HEAD/.github/hrms-appraisal.png",
+   "file": "frappe-hr-1.webp",
+   "kb": 13
+  },
+  {
+   "from": "https://raw.githubusercontent.com/frappe/hrms/HEAD/.github/hrms-requisition.png",
+   "file": "frappe-hr-2.webp",
+   "kb": 16
+  },
+  {
+   "from": "https://raw.githubusercontent.com/frappe/hrms/HEAD/.github/hrms-attendance.png",
+   "file": "frappe-hr-3.webp",
+   "kb": 14
+  }
+ ],
+ "fuxa": [
+  {
+   "from": "https://raw.githubusercontent.com/frangoteam/FUXA/HEAD/screenshot/fuxa-editor.png",
+   "file": "fuxa-0.webp",
+   "kb": 26
+  },
+  {
+   "from": "https://raw.githubusercontent.com/frangoteam/FUXA/HEAD/screenshot/fuxa-thinglinks.gif",
+   "file": "fuxa-1.webp",
+   "kb": 35
+  },
+  {
+   "from": "https://raw.githubusercontent.com/frangoteam/FUXA/HEAD/screenshot/feature-action-move.gif",
+   "file": "fuxa-2.webp",
+   "kb": 14
+  },
+  {
+   "from": "https://github.com/user-attachments/assets/40f01e1d-cf39-4145-99a0-e8fedf791edf",
+   "file": "fuxa-3.webp",
+   "kb": 7
+  }
+ ],
+ "fzf": [
+  {
+   "from": "https://raw.githubusercontent.com/junegunn/i/master/fzf-preview.png",
+   "file": "fzf-0.webp",
+   "kb": 22
+  },
+  {
+   "from": "https://raw.githubusercontent.com/junegunn/i/master/fzf-style-default.png",
+   "file": "fzf-1.webp",
+   "kb": 24
+  },
+  {
+   "from": "https://raw.githubusercontent.com/junegunn/i/master/fzf-style-full.png",
+   "file": "fzf-2.webp",
+   "kb": 22
+  },
+  {
+   "from": "https://raw.githubusercontent.com/junegunn/i/master/fzf-style-minimal.png",
+   "file": "fzf-3.webp",
+   "kb": 25
+  }
+ ],
+ "g-helper": [
+  {
+   "from": "https://raw.githubusercontent.com/seerge/g-helper/refs/heads/main/docs/app-hero.jpg",
+   "file": "g-helper-0.webp",
+   "kb": 17
+  },
+  {
+   "from": "https://github.com/user-attachments/assets/9376fe90-fbb6-420a-abbd-0186189665e1",
+   "file": "g-helper-1.webp",
+   "kb": 19
+  },
+  {
+   "from": "https://github.com/user-attachments/assets/254d33eb-2af1-4715-a097-ed8678c7e9db",
+   "file": "g-helper-2.webp",
+   "kb": 21
+  },
+  {
+   "from": "https://github.com/user-attachments/assets/48ce19a6-d149-40ed-9145-23f974c513f7",
+   "file": "g-helper-3.webp",
+   "kb": 22
+  }
+ ],
+ "gatus": [
+  {
+   "from": "https://raw.githubusercontent.com/TwiN/gatus/HEAD/.github/assets/dashboard-dark.jpg",
+   "file": "gatus-0.webp",
+   "kb": 29
+  },
+  {
+   "from": "https://raw.githubusercontent.com/TwiN/gatus/HEAD/.github/assets/dashboard-conditions.jpg",
+   "file": "gatus-1.webp",
+   "kb": 32
+  },
+  {
+   "from": "https://raw.githubusercontent.com/TwiN/gatus/HEAD/.github/assets/example.jpg",
+   "file": "gatus-2.webp",
+   "kb": 10
+  },
+  {
+   "from": "https://raw.githubusercontent.com/TwiN/gatus/HEAD/.github/assets/past-announcements.jpg",
+   "file": "gatus-3.webp",
+   "kb": 12
+  }
+ ],
+ "gear-lever": [
+  {
+   "from": "https://raw.githubusercontent.com/mijorus/gearlever/master/docs/gearlever3.png",
+   "file": "gear-lever-0.webp",
+   "kb": 33
+  }
+ ],
+ "gink": [
+  {
+   "from": "https://raw.githubusercontent.com/geovens/gInk/master/screenshot1.jpg",
+   "file": "gink-0.webp",
+   "kb": 41
+  }
+ ],
+ "gitui": [
+  {
+   "from": "https://raw.githubusercontent.com/gitui-org/gitui/HEAD/demo.gif",
+   "file": "gitui-0.webp",
+   "kb": 10
+  },
+  {
+   "from": "https://raw.githubusercontent.com/gitui-org/gitui/HEAD/assets/light-theme.png",
+   "file": "gitui-1.webp",
+   "kb": 41
+  }
+ ],
+ "github-desktop": [
+  {
+   "from": "https://user-images.githubusercontent.com/634063/202742985-bb3b3b94-8aca-404a-8d8a-fd6a6f030672.png",
+   "file": "github-desktop-0.webp",
+   "kb": 30
+  }
+ ],
+ "glance": [
+  {
+   "from": "https://raw.githubusercontent.com/glanceapp/glance/HEAD/docs/images/readme-main-image.png",
+   "file": "glance-0.webp",
+   "kb": 27
+  },
+  {
+   "from": "https://raw.githubusercontent.com/glanceapp/glance/HEAD/docs/images/mobile-preview.png",
+   "file": "glance-1.webp",
+   "kb": 34
+  },
+  {
+   "from": "https://raw.githubusercontent.com/glanceapp/glance/HEAD/docs/images/themes-example.png",
+   "file": "glance-2.webp",
+   "kb": 20
+  }
+ ],
+ "gltr": [
+  {
+   "from": "https://raw.githubusercontent.com/HendrikStrobelt/detecting-fake-text/HEAD/figs/overview.png",
+   "file": "gltr-0.webp",
+   "kb": 53
+  }
+ ],
+ "gopeed": [
+  {
+   "from": "https://raw.githubusercontent.com/GopeedLab/gopeed/HEAD/_docs/img/ui-concept-en.png",
+   "file": "gopeed-0.webp",
+   "kb": 16
+  },
+  {
+   "from": "https://gopeed.com/images/screenshot.png",
+   "file": "gopeed-1.webp",
+   "kb": 16
+  }
+ ],
+ "goldencheetah": [
+  {
+   "from": "https://raw.githubusercontent.com/GoldenCheetah/GoldenCheetah/067696aafdad21c702672b2c9c41da03c076451c/doc/wiki/GoldenCheetah-Screenshot.png",
+   "file": "goldencheetah-0.webp",
+   "kb": 27
+  }
+ ],
+ "godot": [
+  {
+   "from": "https://raw.githubusercontent.com/godotengine/godot-design/master/screenshots/editor_tps_demo_1920x1080.jpg",
+   "file": "godot-0.webp",
+   "kb": 48
+  }
+ ],
+ "grype": [
+  {
+   "from": "https://user-images.githubusercontent.com/590471/90276236-9868f300-de31-11ea-8068-4268b6b68529.gif",
+   "file": "grype-0.webp",
+   "kb": 3
+  }
+ ],
+ "headlamp": [
+  {
+   "from": "https://raw.githubusercontent.com/kubernetes-sigs/headlamp/screenshots/videos/headlamp_quick_run.gif",
+   "file": "headlamp-0.webp",
+   "kb": 7
+  },
+  {
+   "from": "https://raw.githubusercontent.com/kubernetes-sigs/headlamp/screenshots/screenshots/home.png",
+   "file": "headlamp-1.webp",
+   "kb": 7
+  },
+  {
+   "from": "https://raw.githubusercontent.com/kubernetes-sigs/headlamp/screenshots/screenshots/cluster_chooser.png",
+   "file": "headlamp-2.webp",
+   "kb": 19
+  },
+  {
+   "from": "https://raw.githubusercontent.com/kubernetes-sigs/headlamp/screenshots/screenshots/workloads.png",
+   "file": "headlamp-3.webp",
+   "kb": 18
+  }
+ ],
+ "gwenview": [
+  {
+   "from": "https://cdn.kde.org/screenshots/gwenview/gwenview-image.png",
+   "file": "gwenview-0.webp",
+   "kb": 33
+  }
+ ],
+ "helicone": [
+  {
+   "from": "https://github.com/user-attachments/assets/e16332e9-d642-427e-b3ce-1a74a17f7b2c",
+   "file": "helicone-0.webp",
+   "kb": 13
+  }
+ ],
+ "hidamari": [
+  {
+   "from": "https://raw.githubusercontent.com/jeffshee/hidamari/master/res/screenshot-1.png",
+   "file": "hidamari-0.webp",
+   "kb": 23
+  },
+  {
+   "from": "https://raw.githubusercontent.com/jeffshee/hidamari/master/res/screenshot-2.png",
+   "file": "hidamari-1.webp",
+   "kb": 5
+  },
+  {
+   "from": "https://raw.githubusercontent.com/jeffshee/hidamari/master/res/screenshot-3.png",
+   "file": "hidamari-2.webp",
+   "kb": 7
+  }
+ ],
+ "hestiacp": [
+  {
+   "from": "https://storage.hestiacp.com/hestiascreen.png",
+   "file": "hestiacp-0.webp",
+   "kb": 12
+  }
+ ],
+ "hypnotix": [
+  {
+   "from": "https://user-images.githubusercontent.com/1138515/99553152-b8bac780-29b5-11eb-9d75-8756ed7581b6.png",
+   "file": "hypnotix-0.webp",
+   "kb": 10
+  }
+ ],
+ "homebrew": [
+  {
+   "from": "https://brew.sh/assets/img/brew-install.gif",
+   "file": "homebrew-0.webp",
+   "kb": 5
+  }
+ ],
+ "heimdall": [
+  {
+   "from": "https://i.imgur.com/MrC4QpN.gif",
+   "file": "heimdall-0.webp",
+   "kb": 13
+  }
+ ],
+ "iina": [
+  {
+   "from": "https://iina.io/img/blog/150-release/plugin-store.png",
+   "file": "iina-0.webp",
+   "kb": 33
+  },
+  {
+   "from": "https://iina.io/img/screenshot.png",
+   "file": "iina-1.webp",
+   "kb": 18
+  }
+ ],
+ "homepage": [
+  {
+   "from": "https://raw.githubusercontent.com/gethomepage/homepage/HEAD/images/1.png?v=2",
+   "file": "homepage-0.webp",
+   "kb": 15
+  }
+ ],
+ "imageglass": [
+  {
+   "from": "https://github.com/user-attachments/assets/ca49c1be-4ab6-4714-b23b-8b094b5eda90",
+   "file": "imageglass-0.webp",
+   "kb": 22
+  },
+  {
+   "from": "https://imageglass.org/img/og-default.jpg",
+   "file": "imageglass-1.webp",
+   "kb": 20
+  }
+ ],
+ "invidious": [
+  {
+   "from": "https://raw.githubusercontent.com/iv-org/invidious/HEAD/screenshots/01_player.png",
+   "file": "invidious-0.webp",
+   "kb": 18
+  },
+  {
+   "from": "https://raw.githubusercontent.com/iv-org/invidious/HEAD/screenshots/02_preferences.png",
+   "file": "invidious-1.webp",
+   "kb": 14
+  },
+  {
+   "from": "https://raw.githubusercontent.com/iv-org/invidious/HEAD/screenshots/03_subscriptions.png",
+   "file": "invidious-2.webp",
+   "kb": 8
+  },
+  {
+   "from": "https://raw.githubusercontent.com/iv-org/invidious/HEAD/screenshots/04_description.png",
+   "file": "invidious-3.webp",
+   "kb": 22
+  }
+ ],
+ "imhex": [
+  {
+   "from": "https://github.com/user-attachments/assets/902a7c4c-410d-490f-999e-14c856fec027",
+   "file": "imhex-0.webp",
+   "kb": 42
+  },
+  {
+   "from": "https://github.com/user-attachments/assets/58eefa1f-31c9-4bb8-a1c1-8cdd8ddbd29f",
+   "file": "imhex-1.webp",
+   "kb": 28
+  }
+ ],
+ "jellyseerr": [
+  {
+   "from": "https://raw.githubusercontent.com/Fallenbagel/jellyseerr/HEAD/public/preview.jpg",
+   "file": "jellyseerr-0.webp",
+   "kb": 47
+  }
+ ],
+ "k9s": [
+  {
+   "from": "https://raw.githubusercontent.com/derailed/k9s/HEAD/assets/screen_po.png",
+   "file": "k9s-0.webp",
+   "kb": 36
+  },
+  {
+   "from": "https://raw.githubusercontent.com/derailed/k9s/HEAD/assets/screen_logs.png",
+   "file": "k9s-1.webp",
+   "kb": 53
+  },
+  {
+   "from": "https://raw.githubusercontent.com/derailed/k9s/HEAD/assets/screen_dp.png",
+   "file": "k9s-2.webp",
+   "kb": 12
+  },
+  {
+   "from": "https://raw.githubusercontent.com/derailed/k9s/HEAD/assets/skins/dracula.png",
+   "file": "k9s-3.webp",
+   "kb": 8
+  }
+ ],
+ "jobsync": [
+  {
+   "from": "https://raw.githubusercontent.com/Gsync/jobsync/HEAD/screenshots/jobsync-ai-jobmatch.gif",
+   "file": "jobsync-0.webp",
+   "kb": 33
+  },
+  {
+   "from": "https://raw.githubusercontent.com/Gsync/jobsync/HEAD/screenshots/jobsync-dashboard.png?raw=true",
+   "file": "jobsync-1.webp",
+   "kb": 18
+  },
+  {
+   "from": "https://raw.githubusercontent.com/Gsync/jobsync/HEAD/screenshots/jobsync-jobs.png?raw=true",
+   "file": "jobsync-2.webp",
+   "kb": 13
+  }
+ ],
+ "keepingyouawake": [
+  {
+   "from": "https://raw.githubusercontent.com/newmarcel/KeepingYouAwake/HEAD/Extras/Screenshot@2x.jpg",
+   "file": "keepingyouawake-0.webp",
+   "kb": 13
+  }
+ ],
+ "kitchenowl": [
+  {
+   "from": "https://raw.githubusercontent.com/tombursch/kitchenowl/HEAD/metadata/en-US/images/phoneScreenshots/groceries.png",
+   "file": "kitchenowl-0.webp",
+   "kb": 28
+  },
+  {
+   "from": "https://raw.githubusercontent.com/tombursch/kitchenowl/HEAD/metadata/en-US/images/phoneScreenshots/recipe.png",
+   "file": "kitchenowl-1.webp",
+   "kb": 65
+  },
+  {
+   "from": "https://raw.githubusercontent.com/tombursch/kitchenowl/HEAD/metadata/en-US/images/phoneScreenshots/plan.png",
+   "file": "kitchenowl-2.webp",
+   "kb": 38
+  }
+ ],
+ "kavita": [
+  {
+   "from": "https://github.com/user-attachments/assets/f016b34f-3c4c-4f07-8e72-12cd6f4e71ea",
+   "file": "kavita-0.webp",
+   "kb": 47
+  }
+ ],
+ "koboldcpp": [
+  {
+   "from": "https://raw.githubusercontent.com/LostRuins/koboldcpp/HEAD/media/preview3.png",
+   "file": "koboldcpp-0.webp",
+   "kb": 10
+  },
+  {
+   "from": "https://raw.githubusercontent.com/LostRuins/koboldcpp/HEAD/media/preview4.png",
+   "file": "koboldcpp-1.webp",
+   "kb": 10
+  },
+  {
+   "from": "https://raw.githubusercontent.com/LostRuins/koboldcpp/HEAD/media/preview.png",
+   "file": "koboldcpp-2.webp",
+   "kb": 13
+  },
+  {
+   "from": "https://raw.githubusercontent.com/LostRuins/koboldcpp/HEAD/media/preview2.png",
+   "file": "koboldcpp-3.webp",
+   "kb": 17
+  }
+ ],
+ "komodo": [
+  {
+   "from": "https://raw.githubusercontent.com/moghtech/komodo/main/screenshots/Light-Dashboard.png",
+   "file": "komodo-0.webp",
+   "kb": 11
+  },
+  {
+   "from": "https://raw.githubusercontent.com/moghtech/komodo/main/screenshots/Light-Stack.png",
+   "file": "komodo-1.webp",
+   "kb": 11
+  },
+  {
+   "from": "https://raw.githubusercontent.com/moghtech/komodo/main/screenshots/Light-Compose.png",
+   "file": "komodo-2.webp",
+   "kb": 17
+  },
+  {
+   "from": "https://raw.githubusercontent.com/moghtech/komodo/main/screenshots/Light-Env.png",
+   "file": "komodo-3.webp",
+   "kb": 11
+  }
+ ],
+ "lact": [
+  {
+   "from": "https://raw.githubusercontent.com/ilya-zlobintsev/LACT/HEAD/res/screenshots/1.png",
+   "file": "lact-0.webp",
+   "kb": 13
+  },
+  {
+   "from": "https://raw.githubusercontent.com/ilya-zlobintsev/LACT/HEAD/res/screenshots/2.png",
+   "file": "lact-1.webp",
+   "kb": 17
+  },
+  {
+   "from": "https://raw.githubusercontent.com/ilya-zlobintsev/LACT/HEAD/res/screenshots/3.png",
+   "file": "lact-2.webp",
+   "kb": 14
+  },
+  {
+   "from": "https://raw.githubusercontent.com/ilya-zlobintsev/LACT/HEAD/res/screenshots/4.png",
+   "file": "lact-3.webp",
+   "kb": 13
+  }
+ ],
+ "ksnip": [
+  {
+   "from": "https://i.imgur.com/0oP6i1H.png",
+   "file": "ksnip-0.webp",
+   "kb": 28
+  }
+ ],
+ "lichess": [
+  {
+   "from": "https://raw.githubusercontent.com/lichess-org/lila/master/public/images/home-bicolor.png",
+   "file": "lichess-0.webp",
+   "kb": 34
+  }
+ ],
+ "lgtv-companion": [
+  {
+   "from": "https://github.com/user-attachments/assets/6596b81f-3f91-483c-9a04-cb576f2a673b",
+   "file": "lgtv-companion-0.webp",
+   "kb": 9
+  },
+  {
+   "from": "https://github.com/user-attachments/assets/f57e9ebe-103a-482d-b657-c2e8893e2be2",
+   "file": "lgtv-companion-1.webp",
+   "kb": 24
+  },
+  {
+   "from": "https://github.com/user-attachments/assets/5714975f-a7bd-4201-a281-c4700967c5cd",
+   "file": "lgtv-companion-2.webp",
+   "kb": 25
+  }
+ ],
+ "lighthouse": [
+  {
+   "from": "https://user-images.githubusercontent.com/2766281/204185043-9c49abe5-baee-4b26-b5ce-ece410661213.png",
+   "file": "lighthouse-0.webp",
+   "kb": 12
+  },
+  {
+   "from": "https://raw.githubusercontent.com/GoogleChrome/lighthouse/443ff2c8a297dfd2297dfaca86c4966a87c8574a/assets/example_audit.png",
+   "file": "lighthouse-1.webp",
+   "kb": 31
+  }
+ ],
+ "llama-cpp": [
+  {
+   "from": "https://github.com/user-attachments/assets/88726b48-1713-48aa-a525-95a02e78afc4",
+   "file": "llama-cpp-0.webp",
+   "kb": 20
+  },
+  {
+   "from": "https://github.com/user-attachments/assets/b402f972-2e32-4def-8771-8d849f08cf2e",
+   "file": "llama-cpp-1.webp",
+   "kb": 14
+  }
+ ],
+ "linkding": [
+  {
+   "from": "https://raw.githubusercontent.com/sissbruecker/linkding/HEAD/docs/public/linkding-screenshot.png?raw=true",
+   "file": "linkding-0.webp",
+   "kb": 32
+  }
+ ],
+ "macro-deck": [
+  {
+   "from": "https://raw.githubusercontent.com/Macro-Deck-App/Macro-Deck/HEAD/.github/images/deck.webp",
+   "file": "macro-deck-0.webp",
+   "kb": 14
+  }
+ ],
+ "langfuse": [
+  {
+   "from": "https://github.com/user-attachments/assets/8f6995b7-285f-441a-b52f-1331d13ceb45",
+   "file": "langfuse-0.webp",
+   "kb": 14
+  }
+ ],
+ "markor": [
+  {
+   "from": "https://raw.githubusercontent.com/gsantner/markor/master/metadata/en-US/phoneScreenshots/99-123.jpg",
+   "file": "markor-0.webp",
+   "kb": 57
+  },
+  {
+   "from": "https://raw.githubusercontent.com/gsantner/markor/master/metadata/en-US/phoneScreenshots/99-456.jpg",
+   "file": "markor-1.webp",
+   "kb": 33
+  },
+  {
+   "from": "https://raw.githubusercontent.com/gsantner/markor/HEAD/doc/assets/2019-05-06-sdcard-mount.webp",
+   "file": "markor-2.webp",
+   "kb": 17
+  }
+ ],
+ "lychee": [
+  {
+   "from": "https://lycheeorg.dev/_astro/og.BOcNih_l_Z1q3ooI.jpg",
+   "file": "lychee-0.webp",
+   "kb": 21
+  }
+ ],
+ "manuskript": [
+  {
+   "from": "https://www.theologeek.ch/manuskript/wp-content/uploads/2017/11/manuskript-0.5.0-main-view.jpg",
+   "file": "manuskript-0.webp",
+   "kb": 26
+  }
+ ],
+ "monitorcontrol": [
+  {
+   "from": "https://raw.githubusercontent.com/MonitorControl/MonitorControl/HEAD/.github/screenshot.png",
+   "file": "monitorcontrol-0.webp",
+   "kb": 29
+  },
+  {
+   "from": "https://raw.githubusercontent.com/MonitorControl/MonitorControl/HEAD/.github/pref_2.png",
+   "file": "monitorcontrol-1.webp",
+   "kb": 33
+  },
+  {
+   "from": "https://raw.githubusercontent.com/MonitorControl/MonitorControl/HEAD/.github/pref_3.png",
+   "file": "monitorcontrol-2.webp",
+   "kb": 37
+  },
+  {
+   "from": "https://raw.githubusercontent.com/MonitorControl/MonitorControl/HEAD/.github/pref_4.png",
+   "file": "monitorcontrol-3.webp",
+   "kb": 32
+  }
+ ],
+ "metamcp": [
+  {
+   "from": "https://raw.githubusercontent.com/metatool-ai/metamcp/HEAD/metamcp_screenshot.png",
+   "file": "metamcp-0.webp",
+   "kb": 13
+  }
+ ],
+ "marktext": [
+  {
+   "from": "https://raw.githubusercontent.com/marktext/marktext/HEAD/docs/assets/marktext.png?raw=true",
+   "file": "marktext-0.webp",
+   "kb": 20
+  }
+ ],
+ "monitorian": [
+  {
+   "from": "https://raw.githubusercontent.com/emoacht/Monitorian/HEAD/Images/Screenshot_main.png",
+   "file": "monitorian-0.webp",
+   "kb": 9
+  },
+  {
+   "from": "https://raw.githubusercontent.com/emoacht/Monitorian/HEAD/Images/Screenshot_unison.png",
+   "file": "monitorian-1.webp",
+   "kb": 4
+  },
+  {
+   "from": "https://raw.githubusercontent.com/emoacht/Monitorian/HEAD/Images/Screenshot_range.png",
+   "file": "monitorian-2.webp",
+   "kb": 5
+  },
+  {
+   "from": "https://raw.githubusercontent.com/emoacht/Monitorian/HEAD/Images/Screenshot_contrast.png",
+   "file": "monitorian-3.webp",
+   "kb": 5
+  }
+ ],
+ "motrix": [
+  {
+   "from": "https://raw.githubusercontent.com/agalwood/Motrix/HEAD/screenshots/motrix-dashboard-en-light.webp",
+   "file": "motrix-0.webp",
+   "kb": 14
+  },
+  {
+   "from": "https://raw.githubusercontent.com/agalwood/Motrix/HEAD/screenshots/motrix-downloads-en-light.webp",
+   "file": "motrix-1.webp",
+   "kb": 10
+  },
+  {
+   "from": "https://raw.githubusercontent.com/agalwood/Motrix/HEAD/screenshots/motrix-settings-en-light.webp",
+   "file": "motrix-2.webp",
+   "kb": 16
+  }
+ ],
+ "nanazip": [
+  {
+   "from": "https://raw.githubusercontent.com/M2Team/NanaZip/HEAD/Documents/ContextMenu.png",
+   "file": "nanazip-0.webp",
+   "kb": 26
+  },
+  {
+   "from": "https://raw.githubusercontent.com/M2Team/NanaZip/HEAD/Documents/MainWindowLightMode.png",
+   "file": "nanazip-1.webp",
+   "kb": 23
+  },
+  {
+   "from": "https://raw.githubusercontent.com/M2Team/NanaZip/HEAD/Documents/MainWindowDarkMode.png",
+   "file": "nanazip-2.webp",
+   "kb": 24
+  }
+ ],
+ "naps2": [
+  {
+   "from": "https://www.naps2.com/images/naps2-desktop-win.png?1",
+   "file": "naps2-0.webp",
+   "kb": 15
+  },
+  {
+   "from": "https://www.naps2.com/images/naps2-desktop-mac.png?1",
+   "file": "naps2-1.webp",
+   "kb": 14
+  },
+  {
+   "from": "https://www.naps2.com/images/naps2-desktop-linux.png?1",
+   "file": "naps2-2.webp",
+   "kb": 18
+  }
+ ],
+ "netboot-xyz": [
+  {
+   "from": "https://netboot.xyz/images/netboot.xyz.gif",
+   "file": "netboot-xyz-0.webp",
+   "kb": 5
+  }
+ ],
+ "netguard": [
+  {
+   "from": "https://raw.githubusercontent.com/M66B/NetGuard/master/screenshots/01-main.png",
+   "file": "netguard-0.webp",
+   "kb": 39
+  },
+  {
+   "from": "https://raw.githubusercontent.com/M66B/NetGuard/master/screenshots/02-main-details.png",
+   "file": "netguard-1.webp",
+   "kb": 38
+  },
+  {
+   "from": "https://raw.githubusercontent.com/M66B/NetGuard/master/screenshots/03-main-access.png",
+   "file": "netguard-2.webp",
+   "kb": 80
+  },
+  {
+   "from": "https://raw.githubusercontent.com/M66B/NetGuard/master/screenshots/101-main.png",
+   "file": "netguard-3.webp",
+   "kb": 14
+  }
+ ],
+ "neko": [
+  {
+   "from": "https://neko.m1k1o.net/img/intro.gif",
+   "file": "neko-0.webp",
+   "kb": 6
+  }
+ ],
+ "normcap": [
+  {
+   "from": "https://user-images.githubusercontent.com/11071876/189767585-8bc45c18-8392-411d-84dc-cef1cb5dbc47.gif",
+   "file": "normcap-0.webp",
+   "kb": 25
+  }
+ ],
+ "oneuptime": [
+  {
+   "from": "https://raw.githubusercontent.com/oneuptime/oneuptime/HEAD/packages/Home/Static/img/readme/hero-command-center.png",
+   "file": "oneuptime-0.webp",
+   "kb": 9
+  }
+ ],
+ "novelwriter": [
+  {
+   "from": "https://raw.githubusercontent.com/saga-soft/novelWriter/main/setup/screenshot.png",
+   "file": "novelwriter-0.webp",
+   "kb": 28
+  }
+ ],
+ "open-notebook": [
+  {
+   "from": "https://raw.githubusercontent.com/lfnovo/open-notebook/HEAD/docs/assets/asset_list.png",
+   "file": "open-notebook-0.webp",
+   "kb": 14
+  }
+ ],
+ "nomacs": [
+  {
+   "from": "https://raw.githubusercontent.com/nomacs/nomacs/HEAD/ImageLounge/screenshots/nomacs_3_21-raw_metadata.png",
+   "file": "nomacs-0.webp",
+   "kb": 31
+  },
+  {
+   "from": "https://raw.githubusercontent.com/nomacs/nomacs/HEAD/ImageLounge/screenshots/nomacs_3_21-thumbnails.png",
+   "file": "nomacs-1.webp",
+   "kb": 88
+  }
+ ],
+ "open-llm-vtuber": [
+  {
+   "from": "https://raw.githubusercontent.com/Open-LLM-VTuber/Open-LLM-VTuber/HEAD/assets/i1.jpg",
+   "file": "open-llm-vtuber-0.webp",
+   "kb": 28
+  },
+  {
+   "from": "https://raw.githubusercontent.com/Open-LLM-VTuber/Open-LLM-VTuber/HEAD/assets/i2.jpg",
+   "file": "open-llm-vtuber-1.webp",
+   "kb": 51
+  },
+  {
+   "from": "https://raw.githubusercontent.com/Open-LLM-VTuber/Open-LLM-VTuber/HEAD/assets/i3.jpg",
+   "file": "open-llm-vtuber-2.webp",
+   "kb": 32
+  },
+  {
+   "from": "https://raw.githubusercontent.com/Open-LLM-VTuber/Open-LLM-VTuber/HEAD/assets/i4.jpg",
+   "file": "open-llm-vtuber-3.webp",
+   "kb": 40
+  }
+ ],
+ "maestro": [
+  {
+   "from": "https://raw.githubusercontent.com/mobile-dev-inc/maestro/HEAD/assets/twitch2-small.gif",
+   "file": "maestro-0.webp",
+   "kb": 11
+  },
+  {
+   "from": "https://raw.githubusercontent.com/mobile-dev-inc/maestro/HEAD/assets/maestro-mcp-demo.gif",
+   "file": "maestro-1.webp",
+   "kb": 8
+  }
+ ],
+ "opendeck": [
+  {
+   "from": "https://raw.githubusercontent.com/nekename/OpenDeck/HEAD/.github/readme/mainmenu.png",
+   "file": "opendeck-0.webp",
+   "kb": 24
+  },
+  {
+   "from": "https://raw.githubusercontent.com/nekename/OpenDeck/HEAD/.github/readme/multiaction.png",
+   "file": "opendeck-1.webp",
+   "kb": 16
+  },
+  {
+   "from": "https://raw.githubusercontent.com/nekename/OpenDeck/HEAD/.github/readme/plugins.png",
+   "file": "opendeck-2.webp",
+   "kb": 22
+  },
+  {
+   "from": "https://raw.githubusercontent.com/nekename/OpenDeck/HEAD/.github/readme/profiles.png",
+   "file": "opendeck-3.webp",
+   "kb": 10
+  }
+ ],
+ "opennutritracker": [
+  {
+   "from": "https://raw.githubusercontent.com/simonoppowa/OpenNutriTracker/HEAD/docs/screenshots/1_en-US.png",
+   "file": "opennutritracker-0.webp",
+   "kb": 20
+  },
+  {
+   "from": "https://raw.githubusercontent.com/simonoppowa/OpenNutriTracker/HEAD/docs/screenshots/2_en-US.png",
+   "file": "opennutritracker-1.webp",
+   "kb": 22
+  },
+  {
+   "from": "https://raw.githubusercontent.com/simonoppowa/OpenNutriTracker/HEAD/docs/screenshots/3_en-US.png",
+   "file": "opennutritracker-2.webp",
+   "kb": 16
+  },
+  {
+   "from": "https://raw.githubusercontent.com/simonoppowa/OpenNutriTracker/HEAD/docs/screenshots/4_en-US.png",
+   "file": "opennutritracker-3.webp",
+   "kb": 20
+  }
+ ],
+ "openlit": [
+  {
+   "from": "https://raw.githubusercontent.com/openlit/openlit/HEAD/docs/images/docs-ai-observability-trace.png",
+   "file": "openlit-0.webp",
+   "kb": 30
+  },
+  {
+   "from": "https://raw.githubusercontent.com/openlit/openlit/HEAD/docs/images/auto-evals-dashboard.png",
+   "file": "openlit-1.webp",
+   "kb": 7
+  },
+  {
+   "from": "https://raw.githubusercontent.com/openlit/openlit/HEAD/docs/images/organisation/connectors-list.png",
+   "file": "openlit-2.webp",
+   "kb": 23
+  },
+  {
+   "from": "https://raw.githubusercontent.com/openlit/openlit/HEAD/docs/images/docs-prompt-hub-details.png",
+   "file": "openlit-3.webp",
+   "kb": 15
+  }
+ ],
+ "opensnitch": [
+  {
+   "from": "https://user-images.githubusercontent.com/2742953/85205382-6ba9cb00-b31b-11ea-8e9a-bd4b8b05a236.png",
+   "file": "opensnitch-0.webp",
+   "kb": 37
+  }
+ ],
+ "oss-document-scanner": [
+  {
+   "from": "https://raw.githubusercontent.com/Akylas/OSS-DocumentScanner/HEAD/fastlane/metadata/com.akylas.documentscanner/android/en-US/images/phoneScreenshots/1_en-US.png",
+   "file": "oss-document-scanner-0.webp",
+   "kb": 18
+  },
+  {
+   "from": "https://raw.githubusercontent.com/Akylas/OSS-DocumentScanner/HEAD/fastlane/metadata/com.akylas.documentscanner/android/en-US/images/phoneScreenshots/2_en-US.png",
+   "file": "oss-document-scanner-1.webp",
+   "kb": 56
+  },
+  {
+   "from": "https://raw.githubusercontent.com/Akylas/OSS-DocumentScanner/HEAD/fastlane/metadata/com.akylas.documentscanner/android/en-US/images/phoneScreenshots/3_en-US.png",
+   "file": "oss-document-scanner-2.webp",
+   "kb": 12
+  },
+  {
+   "from": "https://raw.githubusercontent.com/Akylas/OSS-DocumentScanner/HEAD/fastlane/metadata/com.akylas.cardwallet/android/en-US/images/phoneScreenshots/2_en-US.png",
+   "file": "oss-document-scanner-3.webp",
+   "kb": 77
+  }
+ ],
+ "mangohud": [
+  {
+   "from": "https://raw.githubusercontent.com/flightlessmango/MangoHud/HEAD/assets/overlay_example.gif",
+   "file": "mangohud-0.webp",
+   "kb": 8
+  }
+ ],
+ "openspec": [
+  {
+   "from": "https://raw.githubusercontent.com/Fission-AI/OpenSpec/HEAD/assets/openspec_dashboard.png",
+   "file": "openspec-0.webp",
+   "kb": 33
+  }
+ ],
+ "overleaf-community-edition": [
+  {
+   "from": "https://raw.githubusercontent.com/overleaf/overleaf/HEAD/doc/screenshot.png",
+   "file": "overleaf-community-edition-0.webp",
+   "kb": 22
+  }
+ ],
+ "osv-scanner": [
+  {
+   "from": "https://github.com/user-attachments/assets/8bb95366-27ec-45d1-86ed-e42890f2fb46",
+   "file": "osv-scanner-0.webp",
+   "kb": 12
+  }
+ ],
+ "openresume": [
+  {
+   "from": "https://i.ibb.co/jzcrrt8/resume-builder-demo-optimize.gif",
+   "file": "openresume-0.webp",
+   "kb": 7
+  },
+  {
+   "from": "https://i.ibb.co/JvSVwNk/resume-parser-demo-optimize.gif",
+   "file": "openresume-1.webp",
+   "kb": 23
+  }
+ ],
+ "pairdrop": [
+  {
+   "from": "https://raw.githubusercontent.com/schlagmichdoch/pairdrop/HEAD/docs/pairdrop_screenshot_mobile.gif",
+   "file": "pairdrop-0.webp",
+   "kb": 21
+  }
+ ],
+ "pangolin": [
+  {
+   "from": "https://raw.githubusercontent.com/fosrl/pangolin/HEAD/public/screenshots/hero.png",
+   "file": "pangolin-0.webp",
+   "kb": 22
+  },
+  {
+   "from": "https://raw.githubusercontent.com/fosrl/pangolin/HEAD/public/screenshots/sites.png",
+   "file": "pangolin-1.webp",
+   "kb": 16
+  },
+  {
+   "from": "https://raw.githubusercontent.com/fosrl/pangolin/HEAD/public/clip.gif",
+   "file": "pangolin-2.webp",
+   "kb": 5
+  },
+  {
+   "from": "https://raw.githubusercontent.com/fosrl/pangolin/HEAD/public/screenshots/private-resources.png",
+   "file": "pangolin-3.webp",
+   "kb": 19
+  }
+ ],
+ "papra": [
+  {
+   "from": "https://raw.githubusercontent.com/papra-hq/papra/HEAD/.github/papra-screenshot.png",
+   "file": "papra-0.webp",
+   "kb": 17
+  }
+ ],
+ "password-pusher": [
+  {
+   "from": "https://raw.githubusercontent.com/pglombardo/PasswordPusher/HEAD/app/assets/images/features/front-page-thumb.png",
+   "file": "password-pusher-0.webp",
+   "kb": 5
+  },
+  {
+   "from": "https://raw.githubusercontent.com/pglombardo/PasswordPusher/HEAD/app/assets/images/features/audit-log-thumb.png",
+   "file": "password-pusher-1.webp",
+   "kb": 5
+  },
+  {
+   "from": "https://raw.githubusercontent.com/pglombardo/PasswordPusher/HEAD/app/assets/images/features/secret-url-languages-thumb.png",
+   "file": "password-pusher-2.webp",
+   "kb": 6
+  },
+  {
+   "from": "https://raw.githubusercontent.com/pglombardo/PasswordPusher/HEAD/app/assets/images/features/password-generator-thumb.png",
+   "file": "password-pusher-3.webp",
+   "kb": 3
+  }
+ ],
+ "peazip": [
+  {
+   "from": "https://peazip.github.io/linux-dark-mode.png",
+   "file": "peazip-0.webp",
+   "kb": 28
+  },
+  {
+   "from": "https://peazip.github.io/peazip.png",
+   "file": "peazip-1.webp",
+   "kb": 18
+  }
+ ],
+ "persepolis": [
+  {
+   "from": "https://persepolisdm.github.io/img/screen/ghostbsd.png",
+   "file": "persepolis-0.webp",
+   "kb": 22
+  },
+  {
+   "from": "https://persepolisdm.github.io/img/screen/mac_401.png",
+   "file": "persepolis-1.webp",
+   "kb": 30
+  },
+  {
+   "from": "https://img.youtube.com/vi/QHdMShFgzhQ/0.jpg",
+   "file": "persepolis-2.webp",
+   "kb": 7
+  },
+  {
+   "from": "https://persepolisdm.github.io/img/screen/persepolis.png",
+   "file": "persepolis-3.webp",
+   "kb": 39
+  }
+ ],
+ "paperless-ngx": [
+  {
+   "from": "https://raw.githubusercontent.com/paperless-ngx/paperless-ngx/main/docs/assets/screenshots/documents-smallcards.png",
+   "file": "paperless-ngx-0.webp",
+   "kb": 38
+  }
+ ],
+ "piskel": [
+  {
+   "from": "https://screenletstore.appspot.com/img/95aaa0f0-37a4-11e7-a652-7b8128ce3e3b.png",
+   "file": "piskel-0.webp",
+   "kb": 28
+  }
+ ],
+ "pixelorama": [
+  {
+   "from": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/2779170/ss_54395040c25b243cb82a3bd68778e19e04b43ade.1920x1080.jpg?t=1719424898",
+   "file": "pixelorama-0.webp",
+   "kb": 24
+  }
+ ],
+ "pomatez": [
+  {
+   "from": "https://raw.githubusercontent.com/zidoro/pomatez/HEAD/.github/assets/preview.png",
+   "file": "pomatez-0.webp",
+   "kb": 22
+  }
+ ],
+ "pr-agent": [
+  {
+   "from": "https://raw.githubusercontent.com/The-PR-Agent/pr-agent/main/docs/static/img/review_new_short_main.png",
+   "file": "pr-agent-0.webp",
+   "kb": 20
+  },
+  {
+   "from": "https://raw.githubusercontent.com/The-PR-Agent/pr-agent/main/docs/static/img/improve_new_short_main.png",
+   "file": "pr-agent-1.webp",
+   "kb": 18
+  }
+ ],
+ "portmaster": [
+  {
+   "from": "https://safing.io/assets/img/page-specific/landing/portmaster-thumbnail.png?",
+   "file": "portmaster-0.webp",
+   "kb": 14
+  }
+ ],
+ "picoshare": [
+  {
+   "from": "https://raw.githubusercontent.com/mtlynch/picoshare/master/docs/readme-assets/demo.gif",
+   "file": "picoshare-0.webp",
+   "kb": 5
+  }
+ ],
+ "pricebuddy": [
+  {
+   "from": "https://raw.githubusercontent.com/jez500/pricebuddy/HEAD/docs/docs/.vuepress/public/screenshots/dashboard.png",
+   "file": "pricebuddy-0.webp",
+   "kb": 10
+  },
+  {
+   "from": "https://raw.githubusercontent.com/jez500/pricebuddy/HEAD/docs/docs/.vuepress/public/screenshots/product.png",
+   "file": "pricebuddy-1.webp",
+   "kb": 11
+  },
+  {
+   "from": "https://raw.githubusercontent.com/jez500/pricebuddy/HEAD/docs/docs/.vuepress/public/screenshots/history.png",
+   "file": "pricebuddy-2.webp",
+   "kb": 9
+  }
+ ],
+ "platformio": [
+  {
+   "from": "https://platformio.org/images/platformio-ide-laptop.93fc8e69.png",
+   "file": "platformio-0.webp",
+   "kb": 38
+  }
+ ],
+ "qimgv": [
+  {
+   "from": "https://raw.githubusercontent.com/easymodo/qimgv/HEAD/qimgv/distrib/screenshots/qimgv0.9_1_thumb.jpg",
+   "file": "qimgv-0.webp",
+   "kb": 7
+  },
+  {
+   "from": "https://raw.githubusercontent.com/easymodo/qimgv/HEAD/qimgv/distrib/screenshots/qimgv0.9_2_thumb.jpg",
+   "file": "qimgv-1.webp",
+   "kb": 5
+  },
+  {
+   "from": "https://raw.githubusercontent.com/easymodo/qimgv/HEAD/qimgv/distrib/screenshots/qimgv_3_thumb.jpg",
+   "file": "qimgv-2.webp",
+   "kb": 5
+  }
+ ],
+ "r2modman": [
+  {
+   "from": "https://r2modman-readme-assets.ebkr.dev/GameSelection.png",
+   "file": "r2modman-0.webp",
+   "kb": 28
+  },
+  {
+   "from": "https://r2modman-readme-assets.ebkr.dev/InstalledList.png",
+   "file": "r2modman-1.webp",
+   "kb": 14
+  },
+  {
+   "from": "https://r2modman-readme-assets.ebkr.dev/OnlineList.png",
+   "file": "r2modman-2.webp",
+   "kb": 22
+  },
+  {
+   "from": "https://r2modman-readme-assets.ebkr.dev/ConfigEditor.png",
+   "file": "r2modman-3.webp",
+   "kb": 14
+  }
+ ],
+ "portkey-gateway": [
+  {
+   "from": "https://github.com/user-attachments/assets/362bc916-0fc9-43f1-a39e-4bd71aac4a3a",
+   "file": "portkey-gateway-0.webp",
+   "kb": 10
+  }
+ ],
+ "radix-ui": [
+  {
+   "from": "https://radix-ui.com/social/themes.png",
+   "file": "radix-ui-0.webp",
+   "kb": 15
+  }
+ ],
+ "ragflow": [
+  {
+   "from": "https://raw.githubusercontent.com/infiniflow/ragflow-docs/refs/heads/image/image/chunking.gif",
+   "file": "ragflow-0.webp",
+   "kb": 12
+  },
+  {
+   "from": "https://raw.githubusercontent.com/infiniflow/ragflow-docs/refs/heads/image/image/agentic-dark.gif",
+   "file": "ragflow-1.webp",
+   "kb": 10
+  },
+  {
+   "from": "https://github.com/user-attachments/assets/18c9707e-b8aa-4caf-a154-037089c105ba",
+   "file": "ragflow-2.webp",
+   "kb": 13
+  }
+ ],
+ "pterodactyl": [
+  {
+   "from": "https://cdn.pterodactyl.io/site-assets/pterodactyl_v1_demo.gif",
+   "file": "pterodactyl-0.webp",
+   "kb": 13
+  }
+ ],
+ "reactive-resume": [
+  {
+   "from": "https://raw.githubusercontent.com/reactive-resume/reactive-resume/HEAD/docs/images/getting-started/editor-overview.webp",
+   "file": "reactive-resume-0.webp",
+   "kb": 34
+  }
+ ],
+ "repomix": [
+  {
+   "from": "https://raw.githubusercontent.com/yamadashy/repomix/HEAD/website/client/src/public/images/docs/browser-extension.png",
+   "file": "repomix-0.webp",
+   "kb": 14
+  }
+ ],
+ "rectangle": [
+  {
+   "from": "https://github.com/user-attachments/assets/c088d1e2-3661-4041-ac30-95da89ac4a41",
+   "file": "rectangle-0.webp",
+   "kb": 48
+  }
+ ],
+ "reviewdog": [
+  {
+   "from": "https://user-images.githubusercontent.com/3797062/40884858-6efd82a0-6756-11e8-9f1a-c6af4f920fb0.png",
+   "file": "reviewdog-0.webp",
+   "kb": 18
+  },
+  {
+   "from": "https://user-images.githubusercontent.com/3797062/40941822-1d775064-6887-11e8-98e9-4775d37d47f8.png",
+   "file": "reviewdog-1.webp",
+   "kb": 6
+  },
+  {
+   "from": "https://user-images.githubusercontent.com/3797062/40941738-d62acb0a-6886-11e8-858d-7b97aded2a42.png",
+   "file": "reviewdog-2.webp",
+   "kb": 12
+  },
+  {
+   "from": "https://raw.githubusercontent.com/haya14busa/i/dc0ccb1e110515ea407c146d99b749018db05c45/reviewdog/sample-comment.png",
+   "file": "reviewdog-3.webp",
+   "kb": 14
+  }
+ ],
+ "redlib": [
+  {
+   "from": "https://i.ibb.co/18vrdxk/redlib-rust.png",
+   "file": "redlib-0.webp",
+   "kb": 24
+  }
+ ],
+ "rendercv": [
+  {
+   "from": "https://raw.githubusercontent.com/rendercv/rendercv/main/docs/assets/images/examples/ink.png",
+   "file": "rendercv-0.webp",
+   "kb": 56
+  }
+ ],
+ "rofi": [
+  {
+   "from": "https://raw.githubusercontent.com/davatorium/rofi/next/releasenotes/1.4.0/rofi-no-fzf.png",
+   "file": "rofi-0.webp",
+   "kb": 10
+  }
+ ],
+ "ryot": [
+  {
+   "from": "https://raw.githubusercontent.com/IgnisDa/ryot/HEAD/apps/website/public/cta-image.png",
+   "file": "ryot-0.webp",
+   "kb": 17
+  },
+  {
+   "from": "https://raw.githubusercontent.com/IgnisDa/ryot/HEAD/apps/website/public/features/measurements-graph.png",
+   "file": "ryot-1.webp",
+   "kb": 12
+  },
+  {
+   "from": "https://raw.githubusercontent.com/IgnisDa/ryot/HEAD/apps/website/public/features/exercise-dataset.png",
+   "file": "ryot-2.webp",
+   "kb": 28
+  }
+ ],
+ "ripgrep": [
+  {
+   "from": "https://burntsushi.net/stuff/ripgrep1.png",
+   "file": "ripgrep-0.webp",
+   "kb": 32
+  }
+ ],
+ "scrcpy": [
+  {
+   "from": "https://raw.githubusercontent.com/Genymobile/scrcpy/HEAD/assets/screenshot-debian-600.jpg",
+   "file": "scrcpy-0.webp",
+   "kb": 12
+  }
+ ],
+ "seal": [
+  {
+   "from": "https://raw.githubusercontent.com/JunkFood02/Seal/HEAD/fastlane/metadata/android/en-US/images/phoneScreenshots/1.jpg",
+   "file": "seal-0.webp",
+   "kb": 25
+  },
+  {
+   "from": "https://raw.githubusercontent.com/JunkFood02/Seal/HEAD/fastlane/metadata/android/en-US/images/phoneScreenshots/2.jpg",
+   "file": "seal-1.webp",
+   "kb": 28
+  },
+  {
+   "from": "https://raw.githubusercontent.com/JunkFood02/Seal/HEAD/fastlane/metadata/android/en-US/images/phoneScreenshots/3.jpg",
+   "file": "seal-2.webp",
+   "kb": 55
+  },
+  {
+   "from": "https://raw.githubusercontent.com/JunkFood02/Seal/HEAD/fastlane/metadata/android/en-US/images/phoneScreenshots/4.jpg",
+   "file": "seal-3.webp",
+   "kb": 39
+  }
+ ],
+ "semgrep-community-edition": [
+  {
+   "from": "https://raw.githubusercontent.com/semgrep/semgrep/develop/images/semgrep-scan-cli.jpg",
+   "file": "semgrep-community-edition-0.webp",
+   "kb": 33
+  },
+  {
+   "from": "https://raw.githubusercontent.com/semgrep/semgrep/develop/images/semgrep-main-image.jpg",
+   "file": "semgrep-community-edition-1.webp",
+   "kb": 24
+  },
+  {
+   "from": "https://raw.githubusercontent.com/semgrep/semgrep/develop/images/semgrep-example-rules-editor.jpg",
+   "file": "semgrep-community-edition-2.webp",
+   "kb": 18
+  }
+ ],
+ "shadcn-ui": [
+  {
+   "from": "https://raw.githubusercontent.com/shadcn-ui/ui/HEAD/apps/v4/public/opengraph-image.png",
+   "file": "shadcn-ui-0.webp",
+   "kb": 11
+  }
+ ],
+ "pake": [
+  {
+   "from": "https://raw.githubusercontent.com/tw93/static/main/pake/pake1.gif",
+   "file": "pake-0.webp",
+   "kb": 22
+  }
+ ],
+ "sharex": [
+  {
+   "from": "https://getsharex.com/img/ShareX_Screenshot.png",
+   "file": "sharex-0.webp",
+   "kb": 17
+  }
+ ],
+ "sillytavern": [
+  {
+   "from": "https://github.com/user-attachments/assets/9b5f32f0-c3b3-4102-b3f5-0e9213c0f50f",
+   "file": "sillytavern-0.webp",
+   "kb": 15
+  },
+  {
+   "from": "https://github.com/user-attachments/assets/913fdbaa-7d33-42f1-ae2c-89dca41c53d1",
+   "file": "sillytavern-1.webp",
+   "kb": 22
+  }
+ ],
+ "simplewall": [
+  {
+   "from": "https://raw.githubusercontent.com/henrypp/simplewall/HEAD/images/simplewall.png?cache",
+   "file": "simplewall-0.webp",
+   "kb": 26
+  },
+  {
+   "from": "https://raw.githubusercontent.com/henrypp/simplewall/HEAD/images/simplewall_rules.png?cache2",
+   "file": "simplewall-1.webp",
+   "kb": 8
+  }
+ ],
+ "skippy-tv": [
+  {
+   "from": "https://raw.githubusercontent.com/cascodigital/skippy-tv/HEAD/docs/screenshots/demo.gif",
+   "file": "skippy-tv-0.webp",
+   "kb": 18
+  },
+  {
+   "from": "https://raw.githubusercontent.com/cascodigital/skippy-tv/HEAD/docs/screenshots/shield-home.jpg",
+   "file": "skippy-tv-1.webp",
+   "kb": 26
+  },
+  {
+   "from": "https://raw.githubusercontent.com/cascodigital/skippy-tv/HEAD/docs/screenshots/firetv-home.jpg",
+   "file": "skippy-tv-2.webp",
+   "kb": 27
+  },
+  {
+   "from": "https://raw.githubusercontent.com/cascodigital/skippy-tv/HEAD/docs/screenshots/bridge.jpg",
+   "file": "skippy-tv-3.webp",
+   "kb": 51
+  }
+ ],
+ "simplelogin": [
+  {
+   "from": "https://raw.githubusercontent.com/simple-login/app/HEAD/docs/hero.png",
+   "file": "simplelogin-0.webp",
+   "kb": 15
+  }
+ ],
+ "skyvern": [
+  {
+   "from": "https://raw.githubusercontent.com/Skyvern-AI/skyvern/HEAD/fern/images/skyvern_2_0_screenshot.png",
+   "file": "skyvern-0.webp",
+   "kb": 9
+  },
+  {
+   "from": "https://raw.githubusercontent.com/Skyvern-AI/skyvern/HEAD/fern/images/block_example_v2.png",
+   "file": "skyvern-1.webp",
+   "kb": 11
+  },
+  {
+   "from": "https://raw.githubusercontent.com/Skyvern-AI/skyvern/HEAD/fern/images/secure_password_task_example.png",
+   "file": "skyvern-2.webp",
+   "kb": 17
+  }
+ ],
+ "serpbear": [
+  {
+   "from": "https://serpbear.b-cdn.net/serpbear_readme_v2.gif",
+   "file": "serpbear-0.webp",
+   "kb": 8
+  }
+ ],
+ "sniffnet": [
+  {
+   "from": "https://raw.githubusercontent.com/GyulyVGC/sniffnet/main/resources/repository/pages/overview.png",
+   "file": "sniffnet-0.webp",
+   "kb": 31
+  },
+  {
+   "from": "https://raw.githubusercontent.com/GyulyVGC/sniffnet/main/resources/repository/pages/inspect.png",
+   "file": "sniffnet-1.webp",
+   "kb": 33
+  },
+  {
+   "from": "https://raw.githubusercontent.com/GyulyVGC/sniffnet/main/resources/repository/pages/notifications.png",
+   "file": "sniffnet-2.webp",
+   "kb": 22
+  },
+  {
+   "from": "https://raw.githubusercontent.com/GyulyVGC/sniffnet/main/resources/repository/pages/deep_cosmos.png",
+   "file": "sniffnet-3.webp",
+   "kb": 27
+  }
+ ],
+ "solaar": [
+  {
+   "from": "https://pwr-solaar.github.io/Solaar/screenshots/Solaar-main-window-multiple.png",
+   "file": "solaar-0.webp",
+   "kb": 18
+  },
+  {
+   "from": "https://pwr-solaar.github.io/Solaar/screenshots/Solaar-main-window-receiver.png",
+   "file": "solaar-1.webp",
+   "kb": 18
+  },
+  {
+   "from": "https://pwr-solaar.github.io/Solaar/screenshots/Solaar-main-window-back-divert.png",
+   "file": "solaar-2.webp",
+   "kb": 27
+  },
+  {
+   "from": "https://pwr-solaar.github.io/Solaar/screenshots/Solaar-rule-editor.png",
+   "file": "solaar-3.webp",
+   "kb": 33
+  }
+ ],
+ "smarttube": [
+  {
+   "from": "https://raw.githubusercontent.com/yuliskov/SmartTube/HEAD/images/browse_home.png",
+   "file": "smarttube-0.webp",
+   "kb": 30
+  }
+ ],
+ "stats": [
+  {
+   "from": "https://cdn.mac-stats.com/assets/images/popups.png",
+   "file": "stats-0.webp",
+   "kb": 28
+  },
+  {
+   "from": "https://cdn.mac-stats.com/assets/images/menus.png",
+   "file": "stats-1.webp",
+   "kb": 5
+  }
+ ],
+ "streamcontroller": [
+  {
+   "from": "https://streamcontroller.core447.com/assets/screenshots/main_screen.png",
+   "file": "streamcontroller-0.webp",
+   "kb": 10
+  }
+ ],
+ "stretchly": [
+  {
+   "from": "https://raw.githubusercontent.com/hovancik/stretchly/HEAD/welcome.png",
+   "file": "stretchly-0.webp",
+   "kb": 9
+  },
+  {
+   "from": "https://raw.githubusercontent.com/hovancik/stretchly/HEAD/minibreak.png",
+   "file": "stretchly-1.webp",
+   "kb": 6
+  },
+  {
+   "from": "https://raw.githubusercontent.com/hovancik/stretchly/HEAD/longbreak.png",
+   "file": "stretchly-2.webp",
+   "kb": 9
+  },
+  {
+   "from": "https://raw.githubusercontent.com/hovancik/stretchly/HEAD/skip.png",
+   "file": "stretchly-3.webp",
+   "kb": 7
+  }
+ ],
+ "strawberry": [
+  {
+   "from": "https://raw.githubusercontent.com/strawberrymusicplayer/strawberry/master/data/screenshot/screenshot.png",
+   "file": "strawberry-0.webp",
+   "kb": 38
+  }
+ ],
+ "sparrow-wallet": [
+  {
+   "from": "https://sparrowwallet.com/assets/images/control-your-sends.png",
+   "file": "sparrow-wallet-0.webp",
+   "kb": 23
+  }
+ ],
+ "table-habit": [
+  {
+   "from": "https://raw.githubusercontent.com/FriesI23/mhabit/HEAD/docs/README/images/feature-growth-chart.webp",
+   "file": "table-habit-0.webp",
+   "kb": 11
+  },
+  {
+   "from": "https://raw.githubusercontent.com/FriesI23/mhabit/HEAD/docs/README/images/feature-sync-settings.png",
+   "file": "table-habit-1.webp",
+   "kb": 23
+  },
+  {
+   "from": "https://raw.githubusercontent.com/FriesI23/mhabit/HEAD/docs/README/images/feature-customization-01.png",
+   "file": "table-habit-2.webp",
+   "kb": 22
+  },
+  {
+   "from": "https://raw.githubusercontent.com/FriesI23/mhabit/HEAD/docs/README/images/feature-customization-02.png",
+   "file": "table-habit-3.webp",
+   "kb": 22
+  }
+ ],
+ "svix": [
+  {
+   "from": "https://raw.githubusercontent.com/svix/svix-webhooks/HEAD/static-assets/watch.gif",
+   "file": "svix-0.webp",
+   "kb": 15
+  }
+ ],
+ "tagspaces": [
+  {
+   "from": "https://www.tagspaces.org/content/videos/hero-video-poster.jpg",
+   "file": "tagspaces-0.webp",
+   "kb": 58
+  }
+ ],
+ "tasmota": [
+  {
+   "from": "https://user-images.githubusercontent.com/5904370/68332933-e6e5a600-00d7-11ea-885d-50395f7239a1.png",
+   "file": "tasmota-0.webp",
+   "kb": 7
+  }
+ ],
+ "textsnatcher": [
+  {
+   "from": "https://raw.githubusercontent.com/RajSolai/TextSnatcher/master/data/screenshots/snap-default.png",
+   "file": "textsnatcher-0.webp",
+   "kb": 5
+  },
+  {
+   "from": "https://raw.githubusercontent.com/RajSolai/TextSnatcher/master/data/screenshots/snap-dark.png",
+   "file": "textsnatcher-1.webp",
+   "kb": 5
+  }
+ ],
+ "traccar": [
+  {
+   "from": "https://raw.githubusercontent.com/traccar/traccar/HEAD/.github/screenshot.png",
+   "file": "traccar-0.webp",
+   "kb": 44
+  }
+ ],
+ "tar1090": [
+  {
+   "from": "https://raw.githubusercontent.com/wiedehopf/tar1090/screenshots/screenshot3.png",
+   "file": "tar1090-0.webp",
+   "kb": 62
+  },
+  {
+   "from": "https://raw.githubusercontent.com/wiedehopf/tar1090/screenshots/screenshot4.png",
+   "file": "tar1090-1.webp",
+   "kb": 54
+  }
+ ],
+ "traefik": [
+  {
+   "from": "https://raw.githubusercontent.com/traefik/traefik/HEAD/docs/content/assets/img/webui-dashboard.png",
+   "file": "traefik-0.webp",
+   "kb": 15
+  }
+ ],
+ "trivy": [
+  {
+   "from": "https://raw.githubusercontent.com/aquasecurity/trivy/HEAD/docs/imgs/trivy-k8s.png",
+   "file": "trivy-0.webp",
+   "kb": 13
+  }
+ ],
+ "tunarr": [
+  {
+   "from": "https://raw.githubusercontent.com/chrisbenincasa/tunarr/HEAD/design/tunarr-guide.png",
+   "file": "tunarr-0.webp",
+   "kb": 23
+  },
+  {
+   "from": "https://raw.githubusercontent.com/chrisbenincasa/tunarr/HEAD/design/tunarr-channels.png",
+   "file": "tunarr-1.webp",
+   "kb": 8
+  },
+  {
+   "from": "https://raw.githubusercontent.com/chrisbenincasa/tunarr/HEAD/docs/assets/channel-properties.png",
+   "file": "tunarr-2.webp",
+   "kb": 8
+  }
+ ],
+ "tv-vibehack": [
+  {
+   "from": "https://raw.githubusercontent.com/Gathin23/tv-vibehack/HEAD/docs/focus-2-up-netflix.png",
+   "file": "tv-vibehack-0.webp",
+   "kb": 11
+  },
+  {
+   "from": "https://raw.githubusercontent.com/Gathin23/tv-vibehack/HEAD/docs/inputs-menu.jpg",
+   "file": "tv-vibehack-1.webp",
+   "kb": 15
+  },
+  {
+   "from": "https://raw.githubusercontent.com/Gathin23/tv-vibehack/HEAD/docs/focus-1-fancode.png",
+   "file": "tv-vibehack-2.webp",
+   "kb": 12
+  },
+  {
+   "from": "https://raw.githubusercontent.com/Gathin23/tv-vibehack/HEAD/themes/aurora/screenshot.jpg",
+   "file": "tv-vibehack-3.webp",
+   "kb": 14
+  }
+ ],
+ "technitium-dns-server": [
+  {
+   "from": "https://technitium.com/dns/ScreenShot1.png",
+   "file": "technitium-dns-server-0.webp",
+   "kb": 34
+  }
+ ],
+ "twinkle-tray": [
+  {
+   "from": "https://raw.githubusercontent.com/xanderfrangos/twinkle-tray/gh-pages/assets/img/tt-screenshot-w11.jpg",
+   "file": "twinkle-tray-0.webp",
+   "kb": 19
+  },
+  {
+   "from": "https://raw.githubusercontent.com/xanderfrangos/twinkle-tray/gh-pages/assets/img/tt-comparison.jpg",
+   "file": "twinkle-tray-1.webp",
+   "kb": 14
+  }
+ ],
+ "ublock-origin": [
+  {
+   "from": "https://user-images.githubusercontent.com/585534/232531439-a8f81cc3-6622-45c4-8b32-7348cecf6e98.png",
+   "file": "ublock-origin-0.webp",
+   "kb": 21
+  }
+ ],
+ "ulauncher": [
+  {
+   "from": "https://i.imgur.com/8FpJLGG.png?1",
+   "file": "ulauncher-0.webp",
+   "kb": 9
+  },
+  {
+   "from": "https://i.imgur.com/wJvXSmP.png?1",
+   "file": "ulauncher-1.webp",
+   "kb": 4
+  },
+  {
+   "from": "https://i.imgur.com/2a4GCW7.png?1",
+   "file": "ulauncher-2.webp",
+   "kb": 8
+  }
+ ],
+ "typst": [
+  {
+   "from": "https://user-images.githubusercontent.com/17899797/228031796-ced0e452-fcee-4ae9-92da-b9287764ff25.png",
+   "file": "typst-0.webp",
+   "kb": 29
+  }
+ ],
+ "unigetui": [
+  {
+   "from": "https://raw.githubusercontent.com/marticliment/UniGetUI/HEAD/media/UniGetUI-Image.png",
+   "file": "unigetui-0.webp",
+   "kb": 24
+  },
+  {
+   "from": "https://raw.githubusercontent.com/marticliment/UniGetUI/HEAD/media/UniGetUI_1.png",
+   "file": "unigetui-1.webp",
+   "kb": 25
+  },
+  {
+   "from": "https://raw.githubusercontent.com/marticliment/UniGetUI/HEAD/media/UniGetUI_2.png",
+   "file": "unigetui-2.webp",
+   "kb": 25
+  },
+  {
+   "from": "https://raw.githubusercontent.com/marticliment/UniGetUI/HEAD/media/UniGetUI_3.png",
+   "file": "unigetui-3.webp",
+   "kb": 40
+  }
+ ],
+ "upptime": [
+  {
+   "from": "https://raw.githubusercontent.com/upptime/upptime.js.org/master/static/img/screenshot-status.png",
+   "file": "upptime-0.webp",
+   "kb": 13
+  },
+  {
+   "from": "https://raw.githubusercontent.com/upptime/upptime.js.org/master/static/img/screenshot-issue.png",
+   "file": "upptime-1.webp",
+   "kb": 15
+  },
+  {
+   "from": "https://raw.githubusercontent.com/upptime/upptime.js.org/master/static/img/screenshot-incident.png",
+   "file": "upptime-2.webp",
+   "kb": 11
+  },
+  {
+   "from": "https://raw.githubusercontent.com/upptime/upptime.js.org/master/static/img/screenshot-history.png",
+   "file": "upptime-3.webp",
+   "kb": 13
+  }
+ ],
+ "uptime-kuma": [
+  {
+   "from": "https://user-images.githubusercontent.com/1336778/212262296-e6205815-ad62-488c-83ec-a5b0d0689f7c.jpg",
+   "file": "uptime-kuma-0.webp",
+   "kb": 18
+  },
+  {
+   "from": "https://user-images.githubusercontent.com/1336778/134628766-a3fe0981-0926-4285-ab46-891a21c3e4cb.png",
+   "file": "uptime-kuma-1.webp",
+   "kb": 14
+  }
+ ],
+ "utm": [
+  {
+   "from": "https://raw.githubusercontent.com/utmapp/UTM/HEAD/screen.png",
+   "file": "utm-0.webp",
+   "kb": 24
+  },
+  {
+   "from": "https://raw.githubusercontent.com/utmapp/UTM/HEAD/screenmac.png",
+   "file": "utm-1.webp",
+   "kb": 21
+  },
+  {
+   "from": "https://getutm.app/assets/img/og.jpg",
+   "file": "utm-2.webp",
+   "kb": 23
+  }
+ ],
+ "waistline": [
+  {
+   "from": "https://raw.githubusercontent.com/davidhealey/waistline/HEAD/metadata/en-US/images/phoneScreenshots/1.png",
+   "file": "waistline-0.webp",
+   "kb": 17
+  },
+  {
+   "from": "https://raw.githubusercontent.com/davidhealey/waistline/HEAD/metadata/en-US/images/phoneScreenshots/2.png",
+   "file": "waistline-1.webp",
+   "kb": 17
+  },
+  {
+   "from": "https://raw.githubusercontent.com/davidhealey/waistline/HEAD/metadata/en-US/images/phoneScreenshots/3.png",
+   "file": "waistline-2.webp",
+   "kb": 9
+  },
+  {
+   "from": "https://raw.githubusercontent.com/davidhealey/waistline/HEAD/metadata/en-US/images/phoneScreenshots/4.png",
+   "file": "waistline-3.webp",
+   "kb": 9
+  }
+ ],
+ "vibe-kanban": [
+  {
+   "from": "https://raw.githubusercontent.com/BloopAI/vibe-kanban/HEAD/packages/public/vibe-kanban-screenshot-overview.png",
+   "file": "vibe-kanban-0.webp",
+   "kb": 12
+  },
+  {
+   "from": "https://raw.githubusercontent.com/BloopAI/vibe-kanban/HEAD/packages/public/vibe-kanban-screenshot-workspace.png",
+   "file": "vibe-kanban-1.webp",
+   "kb": 17
+  }
+ ],
+ "variety": [
+  {
+   "from": "https://user-images.githubusercontent.com/1457048/181916884-8a388e15-67dc-45ff-a8e2-e05aac7fca91.png",
+   "file": "variety-0.webp",
+   "kb": 30
+  }
+ ],
+ "ventoy": [
+  {
+   "from": "https://www.ventoy.net/static/img/screen/screen_uefi.png",
+   "file": "ventoy-0.webp",
+   "kb": 18
+  }
+ ],
+ "watcharr": [
+  {
+   "from": "https://raw.githubusercontent.com/sbondCo/Watcharr/HEAD/screenshot/devices-mock.png",
+   "file": "watcharr-0.webp",
+   "kb": 33
+  },
+  {
+   "from": "https://raw.githubusercontent.com/sbondCo/Watcharr/HEAD/screenshot/homepage.png?v=2",
+   "file": "watcharr-1.webp",
+   "kb": 73
+  },
+  {
+   "from": "https://raw.githubusercontent.com/sbondCo/Watcharr/HEAD/screenshot/homepage-poster-hover.png?v=2",
+   "file": "watcharr-2.webp",
+   "kb": 72
+  },
+  {
+   "from": "https://raw.githubusercontent.com/sbondCo/Watcharr/HEAD/screenshot/homepage-poster-change-status.png?v=2",
+   "file": "watcharr-3.webp",
+   "kb": 72
+  }
+ ],
+ "waybar": [
+  {
+   "from": "https://raw.githubusercontent.com/alexays/waybar/master/preview-2.png",
+   "file": "waybar-0.webp",
+   "kb": 1
+  }
+ ],
+ "wanderer": [
+  {
+   "from": "https://raw.githubusercontent.com/open-wanderer/wanderer/HEAD/docs/src/assets/hero.png",
+   "file": "wanderer-0.webp",
+   "kb": 33
+  }
+ ],
+ "webcamoid": [
+  {
+   "from": "https://webcamoid.github.io/theme/images/screenshots/Main.webp",
+   "file": "webcamoid-0.webp",
+   "kb": 22
+  }
+ ],
+ "win11debloat": [
+  {
+   "from": "https://raw.githubusercontent.com/Raphire/Win11Debloat/HEAD/Assets/Images/menu.png",
+   "file": "win11debloat-0.webp",
+   "kb": 33
+  }
+ ],
+ "webmin": [
+  {
+   "from": "https://github.com/user-attachments/assets/a01d0a78-4130-4665-9284-814955ae1c97",
+   "file": "webmin-0.webp",
+   "kb": 27
+  },
+  {
+   "from": "https://github.com/user-attachments/assets/da4b90a0-c002-4e10-8b34-5acb251bbec9",
+   "file": "webmin-1.webp",
+   "kb": 23
+  }
+ ],
+ "wezterm": [
+  {
+   "from": "https://raw.githubusercontent.com/wezterm/wezterm/HEAD/docs/screenshots/two.png",
+   "file": "wezterm-0.webp",
+   "kb": 38
+  }
+ ],
+ "winutil": [
+  {
+   "from": "https://raw.githubusercontent.com/ChrisTitusTech/winutil/HEAD/docs/src/assets/branding/title-screen.png",
+   "file": "winutil-0.webp",
+   "kb": 17
+  }
+ ],
+ "xtreme-download-manager": [
+  {
+   "from": "https://raw.githubusercontent.com/subhra74/xdm/HEAD/screenshots/main-window.webp",
+   "file": "xtreme-download-manager-0.webp",
+   "kb": 14
+  },
+  {
+   "from": "https://raw.githubusercontent.com/subhra74/xdm/HEAD/screenshots/new-download.webp",
+   "file": "xtreme-download-manager-1.webp",
+   "kb": 16
+  },
+  {
+   "from": "https://raw.githubusercontent.com/subhra74/xdm/HEAD/screenshots/download-progress.webp",
+   "file": "xtreme-download-manager-2.webp",
+   "kb": 14
+  },
+  {
+   "from": "https://raw.githubusercontent.com/subhra74/xdm/HEAD/screenshots/download-complete.webp",
+   "file": "xtreme-download-manager-3.webp",
+   "kb": 14
+  }
+ ],
+ "yeoman": [
+  {
+   "from": "https://raw.githubusercontent.com/yeoman/yo/HEAD/screenshot.png",
+   "file": "yeoman-0.webp",
+   "kb": 25
+  }
+ ],
+ "yamlresume": [
+  {
+   "from": "https://raw.githubusercontent.com/yamlresume/yamlresume/HEAD/docs/static/images/yamlresume-playground.webp",
+   "file": "yamlresume-0.webp",
+   "kb": 22
+  },
+  {
+   "from": "https://raw.githubusercontent.com/yamlresume/yamlresume/HEAD/docs/static/images/yamlresume-validate.webp",
+   "file": "yamlresume-1.webp",
+   "kb": 88
+  },
+  {
+   "from": "https://raw.githubusercontent.com/yamlresume/yamlresume/HEAD/docs/static/images/html-calm-template.webp",
+   "file": "yamlresume-2.webp",
+   "kb": 50
+  },
+  {
+   "from": "https://raw.githubusercontent.com/yamlresume/yamlresume/HEAD/docs/static/images/html-vscode-template.webp",
+   "file": "yamlresume-3.webp",
+   "kb": 45
+  }
+ ],
+ "yunohost": [
+  {
+   "from": "https://raw.githubusercontent.com/YunoHost/doc/master/images/webadmin.jpg",
+   "file": "yunohost-0.webp",
+   "kb": 9
+  },
+  {
+   "from": "https://raw.githubusercontent.com/YunoHost/doc/master/images/user_panel.jpg",
+   "file": "yunohost-1.webp",
+   "kb": 23
+  }
+ ],
+ "sourcebot": [
+  {
+   "from": "https://raw.githubusercontent.com/sourcebot-dev/sourcebot/HEAD/.github/images/codeSearch.gif",
+   "file": "sourcebot-0.webp",
+   "kb": 4
+  },
+  {
+   "from": "https://raw.githubusercontent.com/sourcebot-dev/sourcebot/HEAD/.github/images/askSourcebot.gif",
+   "file": "sourcebot-1.webp",
+   "kb": 18
+  }
+ ],
+ "zellij": [
+  {
+   "from": "https://zellij.dev/img/floating-panes-preview.png",
+   "file": "zellij-0.webp",
+   "kb": 32
+  },
+  {
+   "from": "https://raw.githubusercontent.com/zellij-org/zellij/main/assets/demo.gif",
+   "file": "zellij-1.webp",
+   "kb": 3
+  }
+ ],
+ "zoraxy": [
+  {
+   "from": "https://raw.githubusercontent.com/tobychui/zoraxy/HEAD/img/screenshots/1.png",
+   "file": "zoraxy-0.webp",
+   "kb": 12
+  },
+  {
+   "from": "https://raw.githubusercontent.com/tobychui/zoraxy/HEAD/img/screenshots/2.png",
+   "file": "zoraxy-1.webp",
+   "kb": 10
+  }
+ ],
+ "zrok": [
+  {
+   "from": "https://raw.githubusercontent.com/openziti/zrok/HEAD/website/docs/images/zrok_web_console.png",
+   "file": "zrok-0.webp",
+   "kb": 22
+  },
+  {
+   "from": "https://raw.githubusercontent.com/openziti/zrok/HEAD/website/docs/images/zrok_share_public.png",
+   "file": "zrok-1.webp",
+   "kb": 6
+  },
+  {
+   "from": "https://raw.githubusercontent.com/openziti/zrok/HEAD/website/docs/images/zrok_share_public_drive.png",
+   "file": "zrok-2.webp",
+   "kb": 26
+  },
+  {
+   "from": "https://raw.githubusercontent.com/openziti/zrok/HEAD/website/docs/images/zrok_share_public_drive_explorer.png",
+   "file": "zrok-3.webp",
+   "kb": 19
+  }
  ]
 }

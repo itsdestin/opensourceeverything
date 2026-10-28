@@ -60,7 +60,9 @@ async function ask(p) {
   } catch (e) { return { error: String(e).slice(0, 120), usage: {} }; }
 }
 
-const jobs = projects.filter((p) => platforms[p.id] && !platforms[p.id].sure);
+// --source X: only projects whose data "source" is X (e.g. taxonomy-v2 for the new groups), so earlier ones aren't re-sent.
+const si = process.argv.indexOf('--source'); const SOURCE = si > 0 ? process.argv[si + 1] : null;
+const jobs = projects.filter((p) => platforms[p.id] && !platforms[p.id].sure && (!SOURCE || p.source === SOURCE));
 const results = []; const queue = [...jobs]; let n = 0; const started = Date.now();
 await Promise.all(Array.from({ length: 16 }, async () => {
   for (let p = queue.shift(); p; p = queue.shift()) {
