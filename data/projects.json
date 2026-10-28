@@ -12156,7 +12156,9 @@
    "screenshots": [
     "https://cdn.kde.org/screenshots/gwenview/gwenview-image.png"
    ],
-   "platforms": [],
+   "platforms": [
+    "linux"
+   ],
    "thumbs": [
     "assets/shots/gwenview-0.webp"
    ],
@@ -19719,9 +19721,9 @@
    "code": "github.com/mpv-player/mpv",
    "website": "https://mpv.io",
    "download": null,
-   "license": "GPL-2.0-only",
+   "license": "GPL-2.0-or-later",
    "licenseClass": "open",
-   "licenseNeedsCheck": true,
+   "licenseNeedsCheck": false,
    "stars": 37590,
    "archived": false,
    "inactive": false,
@@ -19736,10 +19738,13 @@
    "screenshots": [],
    "platforms": [
     "windows",
-    "mac"
+    "mac",
+    "linux"
    ],
+   "licenseSource": "https://raw.githubusercontent.com/mpv-player/mpv/master/Copyright",
    "thumbs": [],
-   "setup": "easy"
+   "setup": "advanced",
+   "setupWhy": "It has no menus or buttons to start with: you open files from the command line or with a separate front-end app."
   },
   {
    "id": "mtr",
@@ -34615,8 +34620,7 @@
    "platforms": [
     "windows",
     "mac",
-    "linux",
-    "web"
+    "linux"
    ],
    "thumbs": [],
    "setup": "advanced"

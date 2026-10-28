@@ -401,6 +401,19 @@
    "windows",
    "mac",
    "linux"
+  ],
+  "mpv": [
+   "windows",
+   "mac",
+   "linux"
+  ],
+  "gwenview": [
+   "linux"
+  ],
+  "whisperx": [
+   "windows",
+   "mac",
+   "linux"
   ]
  }
 }
