@@ -105,24 +105,23 @@ table.credits a { color:var(--fg); }
 
 /* Categories: a tidy grid of equal cards, each with an icon, its numbers and its biggest jobs. */
 .catgrid { display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:12px; }
-/* Area rows inside the one Browse card (Oct 28): a small grey label, then that area's categories. 24px between rows: the card's
-   own 12px gap plus 12px here (reviewer: 32px looked loose). */
-.arearow { scroll-margin-top:80px; }
-/* Each area folds (Destin, Oct 30). WHY no box around an area (reviewer, Oct 30): an area box inside the Browse card holding boxed
-   category cards was a card in a card in a card (guide: Card levels). The fold header is a plain row instead: name left, count and
-   arrow right, the whole row lit on hover; the category cards are the only boxes. */
-.arearow > summary { list-style:none; display:flex; align-items:center; gap:8px; min-height:44px; padding:0 12px; cursor:pointer; border-radius:var(--radius-lg); }
+/* Each area of the Browse card folds (Destin, Oct 30): the guide's fold row, a boxed row like a setting with the arrow at the right,
+   opening inside its own box. WHY boxed (Destin compared boxed vs plain rows side by side and chose boxes): it is the guide's
+   "Anything that folds open" rule; the box sits at the nested-card level. */
+.arearow { scroll-margin-top:80px; background:color-mix(in srgb, var(--inset) 50%, transparent); border:1px solid var(--edge-card);
+  border-radius:var(--radius-lg); transition:background-color .15s; }
+/* WHY 8px between boxes: the Browse card already spaces its children 12px apart. */
+.arearow + .arearow { margin-top:-2px; }
+.arearow > summary { list-style:none; display:flex; align-items:center; gap:8px; min-height:44px; padding:0 12px; cursor:pointer; }
 .arearow > summary::-webkit-details-marker { display:none; }
 .arearow > summary .label { margin:0; flex:1; font-size:14px; font-weight:500; color:var(--fg); }
 .arearow > summary::after { content:""; flex:none; width:7px; height:7px; margin:0 4px 3px 2px; border-right:2px solid var(--fg-muted); border-bottom:2px solid var(--fg-muted); transform:rotate(45deg); transition:transform .15s; }
 .arearow:not([open]) > summary::after { transform:rotate(-45deg); margin-bottom:0; }
-.arearow > summary:hover { background:var(--inset); }
-.arearow > summary:focus-visible { outline:2px solid var(--accent); outline-offset:2px; }
-.arearow[open] > summary { margin-bottom:4px; }
-/* A thin line between closed rows so a stack of them reads as a list, not floating words. */
-/* WHY margin-top:-12px: the Browse card already spaces its children 12px apart; a divided list needs only the line. */
-.arearow + .arearow { border-top:1px solid var(--edge-dim); margin-top:-4px; padding-top:4px; }
-.arearow[open] + .arearow { margin-top:4px; padding-top:4px; }
+/* WHY the whole box lights, not the header strip (Destin, Oct 30: "corners disappear" on hover; guide: "Pointing at a folded box
+   lights the whole box — its own rounded shape, open or closed"). Only while the pointer is on the header, the part you click. */
+.arearow:has(> summary:hover) { background:var(--inset); }
+.arearow > summary:focus-visible { outline:2px solid var(--accent); outline-offset:-2px; border-radius:var(--radius-lg); }
+.arearow > .catgrid { padding:0 12px 12px; }
 .catcard2 { position:relative; gap:12px; }
 .catcard2 .cardlink { position:absolute; inset:0; border-radius:inherit; }
 .cathead { display:flex; align-items:center; gap:12px; }
