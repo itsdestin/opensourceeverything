@@ -32,6 +32,10 @@ button.chip { font:inherit; font-size:11px; cursor:pointer; }
 .rv-head h3 { flex:1 1 auto; font-size:15px; }
 .rv-head .dd.actions { margin:0; }
 .rvbox .chiprow, .rvbox .whybtn, .rvbox .dd.actions { position:relative; z-index:2; }
+/* WHY (Destin, Oct 30 screenshot: "popup behind chips"): the chip row sits at the same layer as the More menu and comes later in the
+   card, so it drew over the open menu. An open menu (and its card, over the next card) lifts above everything nearby. */
+.rvbox .dd.actions:has(> .menu.open) { z-index:6; }
+.card:has(.dd.actions > .menu.open) { z-index:6; }
 .rvbox .blurb { min-height:0; }
 .whybtn { width:24px; height:24px; padding:0; border:0; background:transparent; color:var(--fg-dim); border-radius:var(--radius-control); display:grid; place-items:center; flex:none; }
 .whybtn:hover, .whybtn[aria-expanded="true"] { background:var(--inset); color:var(--fg); }
