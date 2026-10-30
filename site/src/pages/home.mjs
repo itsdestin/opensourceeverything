@@ -88,8 +88,9 @@ export default function home(d) {
   // The ids let a category page's breadcrumb jump back to its area's row.
   const areaRows = [everyday, ...d.areas.filter((a) => a !== everyday)].map((a) => ({ a, cs: catsIn(a) })).filter(({ cs }) => cs.length)
     // WHY <details> (Destin, hierarchy deck, Oct 30: "all collapsible sections", "on mobile especially"): every area row folds, with
-    // the browser's own keyboard and screen-reader support. All start open; on phones site.js closes all but Everyday apps.
-    .map(({ a, cs }) => `<details class="arearow" id="area-${a.id}" open${a === everyday ? ' data-keep-open' : ''}>
+    // the browser's own keyboard and screen-reader support. WHY only Everyday apps starts open, on every screen (Destin, Oct 30): written
+    // into the page, so nothing flashes open then shut. site.js opens a row a link points at (#area-…, the category breadcrumb).
+    .map(({ a, cs }) => `<details class="arearow" id="area-${a.id}"${a === everyday ? ' open' : ''}>
       <summary><span class="label">${esc(a === everyday ? 'Everyday apps' : a.name)}</span><span class="muted11">${cs.length} ${cs.length === 1 ? 'category' : 'categories'}</span></summary>
       <div class="catgrid">${cs.map((c) => catCard(c, a)).join('')}</div>
     </details>`).join('');

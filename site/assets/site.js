@@ -96,10 +96,12 @@
   };
   window.OI = window.OI || {}; window.OI.foldInit = foldInit; // contrib.js folds the sections it draws later
   document.querySelectorAll('.fold-phone').forEach(foldInit);
-  // Home page area rows (<details>): on phones start with only Everyday apps open (Destin, hierarchy deck, Oct 30).
-  // WHY keep a row open when a link points at it (#area-…): a category page's breadcrumb lands on that area's row.
-  if (phone.matches) document.querySelectorAll('details.arearow:not([data-keep-open])').forEach((el) => { if (location.hash !== `#${el.id}`) el.open = false; });
-  addEventListener('hashchange', () => { const el = document.querySelector(`details.arearow${location.hash.replace(/[^#\w-]/g, '')}`); if (el) el.open = true; });
+  // Home page area rows (<details>) start closed except Everyday apps (written into the page, home.mjs).
+  // WHY open the row a link points at (#area-…): a category page's breadcrumb lands on its area, which must be open to show anything.
+  // WHY scroll after a frame: opening the row changes the page's height, so the jump the browser made on load lands short.
+  const openArea = () => { const el = document.querySelector(`details.arearow${location.hash.replace(/[^#\w-]/g, '')}`); if (el) { el.open = true; requestAnimationFrame(() => el.scrollIntoView({ block: 'start' })); } };
+  if (location.hash.startsWith('#area-')) openArea();
+  addEventListener('hashchange', openArea);
 
   // ── Chip rows fade only on the side that has more to scroll to (design guide, Cards) ──
   // WHY JS: CSS can't tell whether a row overflows. Rows drawn later (search results, social) are caught by the observer.
