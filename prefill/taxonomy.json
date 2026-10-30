@@ -512,7 +512,7 @@
    "category": "office",
    "job": "Writing papers and theses with LaTeX or Typst",
    "closed": [
-    "Overleaf (paid plans)"
+    "Overleaf"
    ],
    "candidates": [
     {
@@ -540,7 +540,7 @@
    "job": "Saving and organising links and web pages to find later",
    "closed": [
     "Raindrop.io",
-    "Pocket (closed down)"
+    "Pocket"
    ],
    "candidates": [
     {
@@ -630,7 +630,7 @@
    "category": "creative",
    "job": "Drawing pixel art, sprites and text art",
    "closed": [
-    "Aseprite (source-available, not open)",
+    "Aseprite",
     "Pyxel Edit"
    ],
    "candidates": [
@@ -756,7 +756,7 @@
    "closed": [
     "Plexamp",
     "Roon",
-    "Apple Music (your library)"
+    "Apple Music"
    ],
    "candidates": [
     {
@@ -856,8 +856,8 @@
    "job": "Looking through and sorting photos on your computer",
    "closed": [
     "ACDSee",
-    "IrfanView (free, closed)",
-    "Picasa (discontinued)"
+    "IrfanView",
+    "Picasa"
    ],
    "candidates": [
     {
@@ -1438,7 +1438,7 @@
    "category": "files",
    "job": "Searching your computer for files or words inside them",
    "closed": [
-    "Everything (free, closed)",
+    "Everything (file search)",
     "Spotlight"
    ],
    "candidates": [
@@ -1849,7 +1849,7 @@
    "category": "web",
    "job": "Blocking ads and trackers in the browser or for the whole home network",
    "closed": [
-    "AdGuard (apps)",
+    "AdGuard",
     "NextDNS",
     "Circle Home"
    ],
@@ -2547,7 +2547,7 @@
    "category": "coding-agents",
    "job": "Turning ideas into specs and task lists an agent can follow",
    "closed": [
-    "Kiro (spec mode)",
+    "Kiro",
     "Traycer"
    ],
    "candidates": [
@@ -2576,7 +2576,7 @@
    "job": "One connection that routes requests to many AI models and tracks keys",
    "closed": [
     "OpenRouter",
-    "Portkey (hosted)",
+    "Portkey",
     "Cloudflare AI Gateway"
    ],
    "candidates": [
@@ -2636,7 +2636,7 @@
    "category": "ai-build",
    "job": "AI models whose weights you can download and run yourself",
    "closed": [
-    "GPT (OpenAI)",
+    "ChatGPT models (OpenAI)",
     "Claude",
     "Gemini"
    ],
@@ -3484,7 +3484,7 @@
    "category": "hw-tv",
    "job": "Turning off ads, tracking and preinstalled apps on a smart TV",
    "closed": [
-    "Vendor TV software (Samsung, LG, TCL, Google TV, Fire OS)"
+    "Built-in smart TV software"
    ],
    "candidates": [
     {
@@ -4057,7 +4057,7 @@
    "category": "hw-pc",
    "job": "Full features for earbuds and headphones without the maker's app",
    "closed": [
-    "Apple AirPods (iPhone only)",
+    "Apple AirPods app",
     "Samsung Galaxy Wearable",
     "Sony Headphones Connect"
    ],
@@ -4463,7 +4463,7 @@
    "category": "dev",
    "job": "Visual maps and tours of how a codebase fits together",
    "closed": [
-    "Sourcegraph (enterprise)",
+    "Sourcegraph",
     "CodeSee"
    ],
    "candidates": [
@@ -4492,7 +4492,7 @@
    "job": "Building games and game-world tools",
    "closed": [
     "Unity",
-    "Unreal Engine (source-available)",
+    "Unreal Engine",
     "GameMaker"
    ],
    "candidates": [
@@ -4619,7 +4619,7 @@
    "closed": [
     "GitHub Codespaces",
     "MAMP Pro",
-    "Local (WP Engine)"
+    "Local by WP Engine"
    ],
    "candidates": [
     {
@@ -4916,7 +4916,7 @@
    "job": "Delivering webhooks reliably between apps",
    "closed": [
     "Hookdeck",
-    "Svix (hosted)"
+    "Svix Cloud"
    ],
    "candidates": [
     {
@@ -4943,7 +4943,7 @@
    "category": "dev-ship",
    "job": "Packaging apps in containers and running them on clusters",
    "closed": [
-    "Docker Desktop (paid tiers)",
+    "Docker Desktop",
     "Red Hat OpenShift"
    ],
    "candidates": [
@@ -5444,7 +5444,7 @@
    "category": "selfhost",
    "job": "Putting home-server apps behind one address with HTTPS certificates",
    "closed": [
-    "Cloudflare (proxy)"
+    "Cloudflare"
    ],
    "candidates": [
     {
@@ -5849,7 +5849,7 @@
    "category": "utilities",
    "job": "Changing hidden settings, removing bloat and keeping the computer awake",
    "closed": [
-    "O&O ShutUp10++ (free, closed)",
+    "O&O ShutUp10++",
     "Amphetamine",
     "Winaero Tweaker"
    ],

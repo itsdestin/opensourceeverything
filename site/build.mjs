@@ -83,6 +83,12 @@ write(join('data', 'names.json'), JSON.stringify({
 // "photoshop"), so each entry carries its group's job, the closed apps it stands in for, and a project's summary.
 // The file is built once on deploy and fetched on first keypress.
 write('search.json', JSON.stringify(searchIndex(d)));
+// WHY a separate small file (Oct 30 performance pass): the results page needs a picture, summary, stars, devices and setup per
+// project, and a group's closed apps and size; it used to download the whole open-data files for that.
+write('search-details.json', JSON.stringify({
+  projects: Object.fromEntries(d.projects.map((p) => [p.id, { thumbs: p.thumbs?.[0] ? [p.thumbs[0]] : undefined, summary: p.summary, stars: p.stars ?? undefined, platforms: p.platforms?.length ? p.platforms : undefined, setup: p.setup }])),
+  groups: Object.fromEntries(d.groups.map((g) => [g.id, { closed: g.closed, job: g.closed.length ? undefined : g.job, alternatives: { length: g.alternatives.length } }])),
+}));
 
 // ── For search engines and AI assistants ──
 write('robots.txt', `User-agent: *\nAllow: /\nSitemap: ${SITE_URL}sitemap.xml\n`);

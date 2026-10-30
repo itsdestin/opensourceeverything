@@ -99,7 +99,10 @@ button.chip { font:inherit; font-size:11px; cursor:pointer; }
 .sres-list { gap:8px; }
 .sr { display:flex; flex-direction:row; align-items:stretch; gap:12px; padding:10px; color:inherit; text-decoration:none; min-width:0; }
 .sr-thumb { flex:none; align-self:stretch; width:128px; min-height:64px; border-radius:var(--radius-md); overflow:hidden; background:var(--inset); border:1px solid var(--edge-card); display:flex; align-items:center; justify-content:center; color:var(--fg-dim); }
-.sr-thumb img { width:100%; height:100%; object-fit:cover; object-position:top; }
+/* WHY absolute (Oct 30 performance pass): the picture used to set the row's height as it loaded, so each result grew 5–20px a moment
+   after the list appeared and everything below jumped. Now the picture fills whatever height the text gives the row. */
+.sr-thumb { position:relative; }
+.sr-thumb img { position:absolute; inset:0; width:100%; height:100%; object-fit:cover; object-position:top; }
 .sr-thumb .letter { font-size:22px; font-weight:600; color:var(--fg-muted); } .sr-thumb .letter.closed { color:var(--fg-faint); }
 .sr-body { flex:1; min-width:0; display:flex; flex-direction:column; gap:4px; justify-content:center; }
 .sr-top { display:flex; align-items:center; justify-content:space-between; gap:12px; }

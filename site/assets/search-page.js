@@ -37,7 +37,8 @@
       const g = details.groups.get(id);
       thumb = ''; // WHY no picture (reviewer, round 5): a placeholder icon looked like a missing screenshot; groups and closed apps are plain rows
       // WHY no job sentence (Destin, Oct 27): the group's name already says it; what it replaces is the new information.
-      summary = g ? `Replaces ${g.closed.slice(0, 4).join(', ')}${g.closed.length > 4 ? '…' : ''}.` : '';
+      // WHY the fallback: a group with no paid rival (taxonomy-v2) has no "Replaces" line; its job says what it is.
+      summary = g ? (g.closed.length ? `Replaces ${g.closed.slice(0, 4).join(', ')}${g.closed.length > 4 ? '…' : ''}.` : (g.job ?? '')) : '';
       if (g) chips.push(`<span class="chip">${g.alternatives.length} open ${g.alternatives.length === 1 ? 'option' : 'options'}</span>`);
     } else {
       thumb = '';
@@ -109,12 +110,13 @@
   let t = null;
   input.addEventListener('input', () => { q = input.value.trim(); clearTimeout(t); t = setTimeout(() => { try { history.replaceState(null, '', `?q=${encodeURIComponent(q)}`); } catch { /* fine */ } if (ctx) run(); }, 160); });
 
+  // WHY search-details.json (Oct 30 performance pass): this page downloaded the full open-data files (1.2 MB) to use six fields;
+  // the build writes just those fields (site/build.mjs), about a fifth of the size.
   Promise.all([
     window.OI.loadSearch(),
-    fetch(BASE + 'data/projects.json').then((r) => r.json()),
-    fetch(BASE + 'data/groups.json').then((r) => r.json()),
-  ]).then(([items, pj, gj]) => {
-    details = { projects: new Map(pj.projects.map((p) => [p.id, p])), groups: new Map(gj.groups.map((g) => [g.id, g])) };
+    fetch(BASE + 'search-details.json').then((r) => r.json()),
+  ]).then(([items, sd]) => {
+    details = { projects: new Map(Object.entries(sd.projects)), groups: new Map(Object.entries(sd.groups)) };
     ctx = { items }; return run();
   }).catch(() => { list.innerHTML = '<div class="empty">Search couldn\'t load. Check your connection and reload the page.</div>'; });
 })();

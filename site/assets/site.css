@@ -8,7 +8,9 @@
   --accent:#8B47B8; --on-accent:#FFFFFF;
   --fg:#21152C; --fg-2:#43354E; --fg-dim:#50415C; --fg-muted:#5D4D69; --fg-faint:#887695;
   --edge:#C9B0DB; --edge-dim:#B597CCA0;
-  --wallpaper:url("youcoded-wallpaper.jpg"); --panels-opacity:.72;
+  /* WHY 1920px WebP (Oct 30 performance pass): the 2560px JPEGs were 150–220 KB and redrawn under every glass panel; these are
+     25–40 KB and look the same (checked side by side for banding). The JPEGs stay in assets/ as the originals. */
+  --wallpaper:url("youcoded-wallpaper.webp"); --panels-opacity:.72;
   --radius-sm:6px; --radius-md:12px; --radius-lg:18px; --radius-xl:24px; --radius-control:14px;
   --shadow-strength:.15;
   --shadow-card:0 4px 20px rgb(0 0 0 / .16), 0 1px 3px rgb(0 0 0 / .08);
@@ -22,7 +24,7 @@
     --accent:#C99BF0; --on-accent:#1A0F24;
     --fg:#F3EAF9; --fg-2:#B3A8BC; --fg-dim:#A397AC; --fg-muted:#95899F; --fg-faint:#6B5D76;
     --edge:#45305A; --edge-dim:#5A3F75A0;
-    --wallpaper:url("youcoded-night-wallpaper.jpg"); --panels-opacity:.7; --shadow-strength:.4;
+    --wallpaper:url("youcoded-night-wallpaper.webp"); --panels-opacity:.7; --shadow-strength:.4;
   }
 }
 :root {
@@ -32,7 +34,9 @@
   --glass:color-mix(in srgb, var(--panel) calc(var(--panels-opacity) * 100%), transparent);
 }
 * { box-sizing:border-box; }
-html { background:var(--canvas) var(--wallpaper) center / cover fixed no-repeat; }
+/* WHY scrollbar-gutter (Oct 30 performance pass): on the search page the scrollbar appeared once results filled the page, and every
+   card jumped 15px sideways. Reserving its space keeps the page still whether or not it scrolls. */
+html { background:var(--canvas) var(--wallpaper) center / cover fixed no-repeat; scrollbar-gutter:stable; }
 body { margin:0; min-height:100vh; color:var(--fg); font:14px/1.45 var(--font); }
 svg { display:block; flex:none; }
 button, input, textarea { font:inherit; color:inherit; }
@@ -138,10 +142,16 @@ b.num { font-weight:500; color:var(--fg); }
 .menu-note a:hover, .empty a:hover { color:var(--accent); }
 /* WHY: the browser's own clear icon (blue ✕ in Chrome) clashed with every theme; it is replaced by the site's ✕ button (site.js). */
 input[type="search"]::-webkit-search-cancel-button, input[type="search"]::-webkit-search-decoration { -webkit-appearance:none; appearance:none; display:none; }
-.sclear { flex:none; width:28px; height:28px; padding:0; border:0; border-radius:9999px; background:transparent; color:var(--fg-muted); display:grid; place-items:center; cursor:pointer; }
-.sclear:hover { background:var(--inset); color:var(--fg); }
-.sclear:focus-visible { outline:2px solid var(--accent); outline-offset:1px; }
-.sclear[hidden] { display:none; }
+/* WHY height:0 with the circle drawn by ::before (Destin, Oct 30: "the whole header shifts when I type"): a 28px button inside a
+   24px-tall box made the box grow by 4px the moment it appeared, and the centred hero title moved with it. Now the button takes no
+   height at all; its 28px circle and click area hang over the box's padding. WHY visibility, not display: the space it takes in the
+   row stays the same before and after, so the text never reflows either. */
+.sclear { flex:none; position:relative; width:28px; height:0; padding:0; margin:0 -4px 0 0; border:0; background:transparent; color:var(--fg-muted); cursor:pointer; align-self:center; }
+.sclear::before { content:""; position:absolute; left:0; top:-14px; width:28px; height:28px; border-radius:9999px; }
+.sclear svg { position:absolute; left:7px; top:-7px; pointer-events:none; }
+.sclear:hover { color:var(--fg); } .sclear:hover::before { background:var(--inset); }
+.sclear:focus-visible { outline:none; } .sclear:focus-visible::before { outline:2px solid var(--accent); outline-offset:1px; }
+.sclear[hidden] { display:block; visibility:hidden; }
 .menu-sep { height:1px; background:var(--edge-dim); margin:4px 6px; }
 .search-menu { left:0; right:0; max-height:360px; overflow-y:auto; }
 
@@ -255,9 +265,11 @@ textarea.field { resize:vertical; min-height:4.8em; }
 
 /* ── Toast ── */
 .toast { position:fixed; left:50%; bottom:24px; transform:translateX(-50%) translateY(20px); z-index:80; opacity:0; pointer-events:none;
-  background:var(--glass); backdrop-filter:blur(16px); border:1px solid var(--edge); border-radius:var(--radius-md); box-shadow:0 8px 32px rgba(0,0,0,var(--shadow-strength));
-  padding:8px 14px; font-size:12px; transition:.2s; max-width:calc(100% - 32px); }
-.toast.show { opacity:1; transform:translateX(-50%); }
+  background:var(--glass); border:1px solid var(--edge); border-radius:var(--radius-md); box-shadow:0 8px 32px rgba(0,0,0,var(--shadow-strength));
+  padding:8px 14px; font-size:12px; transition:opacity .2s, transform .2s; max-width:calc(100% - 32px); visibility:hidden; }
+/* WHY blur and visibility only while shown (Oct 30 performance pass): a hidden toast still made the browser blur the page behind it on
+   every frame. Visibility switches off after the fade, so it never sits on the page invisibly. */
+.toast.show { opacity:1; transform:translateX(-50%); visibility:visible; backdrop-filter:blur(16px); -webkit-backdrop-filter:blur(16px); }
 
 @media (max-width:900px) {
   .cols, .dialog .cols { grid-template-columns:minmax(0,1fr); }
@@ -313,8 +325,10 @@ textarea.field { resize:vertical; min-height:4.8em; }
 .builders { padding:16px; display:flex; align-items:center; justify-content:space-between; gap:16px; flex-wrap:wrap; }
 .builders .btns { display:flex; gap:8px; flex-wrap:wrap; }
 .footer { display:flex; gap:8px; flex-wrap:wrap; justify-content:center; }
+/* WHY no blur on footer chips (Oct 30 performance pass): eight small blurred patches cost a blur pass each on every scroll frame,
+   and at this size the frosting can't be seen; a slightly more solid fill looks the same. */
 .footchip { padding:4px 12px; border-radius:var(--radius-control); font-size:12px; color:var(--fg-2); border:1px solid var(--edge);
-  background:var(--glass); backdrop-filter:blur(16px); -webkit-backdrop-filter:blur(16px); }
+  background:color-mix(in srgb, var(--panel) 80%, transparent); }
 .footchip:hover { color:var(--fg); border-color:var(--edge-strong); }
 .mi.suggest { color:var(--fg); font-weight:500; }
 select.field { appearance:auto; }

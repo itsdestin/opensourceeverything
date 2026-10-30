@@ -18,6 +18,13 @@
   let index = null, loading = null;
   const loadIndex = () => loading || (loading = fetch(BASE + 'search.json').then((r) => r.json()).then((d) => (index = window.OISearch.prepare(d))));
   window.OI.loadSearch = loadIndex; // the results page (search-page.js) shares the same loaded index
+  // WHY warm it up when the browser is idle on pages with a search box (Oct 30 performance pass): getting the index ready takes
+  // ~0.25s on a fast computer and over a second on a phone; done on the first keystroke, that froze the box (Destin: "laggy").
+  // Idle time comes after the page is drawn, so this never slows the page appearing; it is one 210 KB download, cached after.
+  if (document.querySelector('[data-search], [data-sres-input]')) {
+    const warm = () => (window.requestIdleCallback ? requestIdleCallback(() => loadIndex(), { timeout: 4000 }) : setTimeout(loadIndex, 1500));
+    if (document.readyState === 'complete') warm(); else addEventListener('load', warm, { once: true });
+  }
   const HEADINGS = { closed: 'Closed apps', group: 'Groups', project: 'Open projects' };
   const resultsUrl = (t) => `${BASE}search/?q=${encodeURIComponent(t.trim())}`;
   function results(t, better) {
@@ -52,6 +59,10 @@
     let aiTimer;
     input.addEventListener('input', update);
     input.addEventListener('focus', () => { loadIndex(); if (input.value.trim()) update(); });
+    // WHY earlier than focus (Oct 30 performance pass: the first letter took ~0.7s while the index loaded and was prepared):
+    // start when the pointer reaches the box or a finger touches it, so it is usually ready by the first keystroke.
+    wrap.addEventListener('pointerenter', loadIndex, { once: true });
+    wrap.addEventListener('touchstart', loadIndex, { once: true, passive: true });
     input.addEventListener('keydown', (e) => {
       const items = [...menu.querySelectorAll('.mi')]; const i = items.indexOf(document.activeElement);
       if (e.key === 'ArrowDown' && items.length) { e.preventDefault(); items[0].focus(); }
