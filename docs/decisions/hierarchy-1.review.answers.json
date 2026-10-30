@@ -1,0 +1,53 @@
+{
+ "deck": "ose-hierarchy-1",
+ "started": "2026-10-28T11:25:46.625Z",
+ "submitted": "2026-10-30T06:00:16Z",
+ "cur": 5,
+ "answers": {
+  "H-home": {
+   "note": "",
+   "t": 1793186893018,
+   "v": "yes",
+   "seconds": 146,
+   "theme": "light",
+   "zoom": 1
+  },
+  "H-rows": {
+   "v": "yes",
+   "t": 1793339923118,
+   "seconds": 39,
+   "theme": "light",
+   "zoom": 1
+  },
+  "H-phone": {
+   "v": "other",
+   "seconds": 29,
+   "theme": "light",
+   "zoom": 1,
+   "t": 1793339942210,
+   "note": "i think, on mobile especially, the sections need to be collapsible"
+  },
+  "H-thin": {
+   "v": "yes",
+   "t": 1793339969275,
+   "seconds": 27,
+   "theme": "light",
+   "zoom": 1
+  },
+  "Q-merge": {
+   "v": "yes",
+   "t": 1793339997956,
+   "seconds": 29,
+   "theme": "light",
+   "zoom": 1
+  },
+  "Q-fold": {
+   "v": "other",
+   "t": 1793340015458,
+   "note": "all collapsible sections",
+   "seconds": 18,
+   "theme": "light",
+   "zoom": 1
+  }
+ }
+}
