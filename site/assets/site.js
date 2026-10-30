@@ -29,6 +29,8 @@
     // WHY sections come in the order of their best match: a job search opens on the group, a name on the app.
     const secs = better || window.OISearch.search(index, t);
     // WHY a "see all" row: Enter opens the full list; this says so, and works for mouse and touch too.
+    // WHY (Destin, Oct 30 screenshot): search needs two letters, so one letter said "Nothing matches" — wrong, and it offered to add "w".
+    if (t.trim().length < 2) return '<div class="menu-note">Keep typing…</div>';
     return secs.length
       ? secs.map((sec) => `<div class="menu-note">${HEADINGS[sec.kind]}</div>` + sec.items.map(row).join('')).join('') +
         `<a class="mi see-all" role="option" href="${resultsUrl(t)}">See all results for “${esc(t.trim())}”<span class="muted11">Enter ↵</span></a>`
@@ -96,6 +98,19 @@
   };
   window.OI = window.OI || {}; window.OI.foldInit = foldInit; // contrib.js folds the sections it draws later
   document.querySelectorAll('.fold-phone').forEach(foldInit);
+
+  // ── One clear (✕) button for every search box, in the theme's colours (site.css .sclear) ──
+  // WHY (Destin, Oct 30 screenshot): the browser drew its own bright-blue ✕, which clashed with every theme. Clearing fires
+  // "input" so each page's own search code updates as if the person had deleted the text, then focus returns to the box.
+  const X = '<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" aria-hidden="true"><path d="M6 6l12 12M18 6 6 18"/></svg>';
+  document.querySelectorAll('input[type="search"]').forEach((inp) => {
+    const b = document.createElement('button'); b.type = 'button'; b.className = 'sclear'; b.setAttribute('aria-label', 'Clear search'); b.innerHTML = X;
+    inp.after(b);
+    // WHY also on load: the results page fills its box with the search after this runs (search-page.js).
+    const sync = () => { b.hidden = !inp.value; }; sync(); addEventListener('load', sync);
+    inp.addEventListener('input', sync);
+    b.addEventListener('click', () => { inp.value = ''; inp.dispatchEvent(new Event('input', { bubbles: true })); inp.focus(); });
+  });
   // Home page area rows (<details>) start closed except Everyday apps (written into the page, home.mjs).
   // WHY open the row a link points at (#area-…): a category page's breadcrumb lands on its area, which must be open to show anything.
   // WHY scroll after a frame: opening the row changes the page's height, so the jump the browser made on load lands short.

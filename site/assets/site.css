@@ -132,6 +132,16 @@ b.num { font-weight:500; color:var(--fg); }
 .mi .muted11 { font-weight:400; }
 .mi:disabled { opacity:.6; cursor:default; background:transparent; }
 .menu-note { font-size:11px; color:var(--fg-muted); padding:6px 10px; }
+/* WHY (Destin, Oct 30 screenshot): links in menu notes and empty states fell back to the browser's blue, unreadable on dark themes.
+   Same look as other in-text links: normal text colour, underlined. */
+.menu-note a, .empty a { color:var(--fg); text-decoration:underline; text-underline-offset:2px; }
+.menu-note a:hover, .empty a:hover { color:var(--accent); }
+/* WHY: the browser's own clear icon (blue ✕ in Chrome) clashed with every theme; it is replaced by the site's ✕ button (site.js). */
+input[type="search"]::-webkit-search-cancel-button, input[type="search"]::-webkit-search-decoration { -webkit-appearance:none; appearance:none; display:none; }
+.sclear { flex:none; width:28px; height:28px; padding:0; border:0; border-radius:9999px; background:transparent; color:var(--fg-muted); display:grid; place-items:center; cursor:pointer; }
+.sclear:hover { background:var(--inset); color:var(--fg); }
+.sclear:focus-visible { outline:2px solid var(--accent); outline-offset:1px; }
+.sclear[hidden] { display:none; }
 .menu-sep { height:1px; background:var(--edge-dim); margin:4px 6px; }
 .search-menu { left:0; right:0; max-height:360px; overflow-y:auto; }
 

@@ -64,7 +64,8 @@
     for (const k of ['', 'easy', 'advanced']) { const el = document.querySelector(`[data-scount="${k}"]`); if (el) if (el) el.textContent = k ? projs.filter((r) => (proj(r)?.setup === 'easy') === (k === 'easy')).length : ''; }
     const show = document.querySelector('[data-fshow]'); if (show) show.textContent = `Show ${shown.length} ${shown.length === 1 ? 'result' : 'results'}`;
     sub.textContent = results.length ? (shown.length === results.length ? count(results.length) : `${shown.length} of ${results.length}`) : '';
-    list.innerHTML = shown.length ? shown.slice(0, 60).map(row).join('') :
+    // WHY (Destin, Oct 30 screenshot): search needs two letters; one letter (or an empty box) is not "nothing matches".
+    list.innerHTML = q.length < 2 ? '<div class="empty">Type at least two letters.</div>' : shown.length ? shown.slice(0, 60).map(row).join('') :
       /* WHY: nothing found usually means a closed app is missing, so "Suggest it" opens the add-closed-app form with the searched name filled in (it used to open the new-group form). */ `<div class="empty">Nothing matches${devices.size ? ' with those devices' : ''}. ${devices.size ? 'Try fewer filters, or ' : ''}<a href="https://github.com/itsdestin/opensourceeverything/issues/new?template=3-add-closed-app.yml&app=${encodeURIComponent(q)}" rel="noopener">suggest what's missing</a>.</div>`;
   }
 
