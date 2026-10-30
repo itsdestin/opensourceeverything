@@ -107,9 +107,22 @@ table.credits a { color:var(--fg); }
 .catgrid { display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:12px; }
 /* Area rows inside the one Browse card (Oct 28): a small grey label, then that area's categories. 24px between rows: the card's
    own 12px gap plus 12px here (reviewer: 32px looked loose). */
-.arearow + .arearow { margin-top:12px; }
-.arearow > .label { padding-left:4px; scroll-margin-top:80px; }
 .arearow { scroll-margin-top:80px; }
+/* Each area folds (Destin, Oct 30). WHY no box around an area (reviewer, Oct 30): an area box inside the Browse card holding boxed
+   category cards was a card in a card in a card (guide: Card levels). The fold header is a plain row instead: name left, count and
+   arrow right, the whole row lit on hover; the category cards are the only boxes. */
+.arearow > summary { list-style:none; display:flex; align-items:center; gap:8px; min-height:44px; padding:0 12px; cursor:pointer; border-radius:var(--radius-lg); }
+.arearow > summary::-webkit-details-marker { display:none; }
+.arearow > summary .label { margin:0; flex:1; font-size:14px; font-weight:500; color:var(--fg); }
+.arearow > summary::after { content:""; flex:none; width:7px; height:7px; margin:0 4px 3px 2px; border-right:2px solid var(--fg-muted); border-bottom:2px solid var(--fg-muted); transform:rotate(45deg); transition:transform .15s; }
+.arearow:not([open]) > summary::after { transform:rotate(-45deg); margin-bottom:0; }
+.arearow > summary:hover { background:var(--inset); }
+.arearow > summary:focus-visible { outline:2px solid var(--accent); outline-offset:2px; }
+.arearow[open] > summary { margin-bottom:4px; }
+/* A thin line between closed rows so a stack of them reads as a list, not floating words. */
+/* WHY margin-top:-12px: the Browse card already spaces its children 12px apart; a divided list needs only the line. */
+.arearow + .arearow { border-top:1px solid var(--edge-dim); margin-top:-4px; padding-top:4px; }
+.arearow[open] + .arearow { margin-top:4px; padding-top:4px; }
 .catcard2 { position:relative; gap:12px; }
 .catcard2 .cardlink { position:absolute; inset:0; border-radius:inherit; }
 .cathead { display:flex; align-items:center; gap:12px; }

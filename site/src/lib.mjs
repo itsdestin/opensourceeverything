@@ -107,7 +107,7 @@ export function loadData(root) {
   // Groups that were split (data/redirects.json): old id -> new ids. Optional, so older data still builds.
   let moved = {}; let movedApps = {};
   try { { const r = read('redirects.json'); moved = r.moved ?? {}; movedApps = r.apps ?? {}; } } catch { /* none yet */ }
-  return { areas, areaOf, categories, groups, projects, projById, catById, groupsByProject, moved, movedApps };
+  return { areas, areaOf, mergedCategories: catFile.merged ?? {}, categories, groups, projects, projById, catById, groupsByProject, moved, movedApps };
 }
 
 export const ICON = {

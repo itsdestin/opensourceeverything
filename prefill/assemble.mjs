@@ -425,7 +425,11 @@ if (taxonomy) {
   for (const [gid, cat] of Object.entries(taxonomy.moves)) if (groups.has(gid)) groups.get(gid).category = cat;
   // WHY whole sentences in the file: a widened job replaces the old one outright, so the page reads as one plain line.
   for (const [gid, job] of Object.entries(taxonomy.widened)) if (groups.has(gid)) groups.get(gid).job = job;
+  // WHY (Destin, hierarchy deck, Oct 30): three 2-group categories were folded into a neighbour; any group still naming one moves too.
+  for (const g of groups.values()) if (taxonomy.mergedCategories?.[g.category]) g.category = taxonomy.mergedCategories[g.category];
 }
+// Old category ids -> the category that absorbed them, so their old addresses can forward (site/src/pages/category.mjs).
+const mergedCategories = taxonomy?.mergedCategories ?? {};
 
 // ── Write ──
 const groupList = [...groups.values()].sort((a, b) => categories.findIndex((c) => c.id === a.category) - categories.findIndex((c) => c.id === b.category));
@@ -441,7 +445,7 @@ const projectKeys = new Set([...projects.values()].map((p) => key(p.name)));
 for (const g of groupList) for (const c of g.closed) if (projectKeys.has(key(c))) throw new Error(`"${c}" is listed as a closed app in ${g.id} and is also an open project`);
 const meta = { license: 'CC BY-SA 4.0', generated: new Date().toISOString().slice(0, 10), credits: 'See data/CREDITS.md' };
 // WHY areas live beside categories (one file): the site and the open data both need "which area holds which category".
-writeFileSync(join(ROOT, 'data/categories.json'), JSON.stringify({ ...meta, ...(areas.length ? { areas } : {}), categories }, null, 1));
+writeFileSync(join(ROOT, 'data/categories.json'), JSON.stringify({ ...meta, ...(areas.length ? { areas } : {}), categories, ...(Object.keys(mergedCategories).length ? { merged: mergedCategories } : {}) }, null, 1));
 writeFileSync(join(ROOT, 'data/groups.json'), JSON.stringify({ ...meta, groups: groupList }, null, 1));
 writeFileSync(join(ROOT, 'data/redirects.json'), JSON.stringify({ ...meta, note: 'Groups that were split: old group id → the groups that replaced it. The site keeps the old address working.', moved: redirects, apps: appRedirects }, null, 1));
 writeFileSync(join(ROOT, 'data/projects.json'), JSON.stringify({ ...meta, projects: [...projects.values()].sort((a, b) => a.name.localeCompare(b.name)) }, null, 1));

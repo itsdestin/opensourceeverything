@@ -87,10 +87,12 @@ export default function home(d) {
   // differently (areas have no page). Now areas are only headings, so every card is a category and every card opens one.
   // The ids let a category page's breadcrumb jump back to its area's row.
   const areaRows = [everyday, ...d.areas.filter((a) => a !== everyday)].map((a) => ({ a, cs: catsIn(a) })).filter(({ cs }) => cs.length)
-    .map(({ a, cs }) => `<div class="arearow" id="area-${a.id}">
-      <h3 class="label">${esc(a === everyday ? 'Everyday apps' : a.name)}</h3>
+    // WHY <details> (Destin, hierarchy deck, Oct 30: "all collapsible sections", "on mobile especially"): every area row folds, with
+    // the browser's own keyboard and screen-reader support. All start open; on phones site.js closes all but Everyday apps.
+    .map(({ a, cs }) => `<details class="arearow" id="area-${a.id}" open${a === everyday ? ' data-keep-open' : ''}>
+      <summary><span class="label">${esc(a === everyday ? 'Everyday apps' : a.name)}</span><span class="muted11">${cs.length} ${cs.length === 1 ? 'category' : 'categories'}</span></summary>
       <div class="catgrid">${cs.map((c) => catCard(c, a)).join('')}</div>
-    </div>`).join('');
+    </details>`).join('');
 
   // ── Still missing: the four worst gaps, everyday first ──
   const gaps = d.groups.filter((g) => fullCount(g) === 0)

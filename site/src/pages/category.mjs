@@ -4,7 +4,14 @@ import { crumbs } from '../redesign.mjs';
 
 export default function categories(d) {
   // WHY skip empty categories (taxonomy-v2): a new category whose groups all wait for checked projects would be a blank page.
-  return d.categories.filter((c) => d.groups.some((g) => g.category === c.id)).map((c) => {
+  // WHY forwarders (Destin, hierarchy deck, Oct 30): three small categories were folded into a neighbour; their old addresses
+  // may be shared, so each sends visitors on to the category that absorbed it (same pattern as boards.mjs).
+  const forwards = Object.entries(d.mergedCategories ?? {}).filter(([, to]) => d.catById.has(to)).map(([from, to]) => {
+    const target = url(`c/${to}/`);
+    return { path: `c/${from}/`, title: d.catById.get(to).name, noIndex: true, description: `Moved to ${d.catById.get(to).name}.`,
+      body: `<section class="surface sec"><p class="body2">This is now part of <a href="${target}">${esc(d.catById.get(to).name)}</a>…</p><script>location.replace(${JSON.stringify(target)});</script></section>` };
+  });
+  return [...forwards, ...d.categories.filter((c) => d.groups.some((g) => g.category === c.id)).map((c) => {
     const gs = d.groups.filter((g) => g.category === c.id);
     const n = gs.reduce((s, g) => s + g.alternatives.length, 0);
     const card = (g) => {
@@ -36,5 +43,5 @@ export default function categories(d) {
     <div class="gaplist">${gs.map(card).join('')}</div>
   </section>`,
     };
-  });
+  })];
 }

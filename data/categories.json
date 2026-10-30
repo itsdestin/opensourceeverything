@@ -1,6 +1,6 @@
 {
  "license": "CC BY-SA 4.0",
- "generated": "2026-10-27",
+ "generated": "2026-10-30",
  "credits": "See data/CREDITS.md",
  "areas": [
   {
@@ -33,7 +33,6 @@
    "categories": [
     "os",
     "os-desktops",
-    "os-core",
     "os-mobile"
    ]
   },
@@ -43,7 +42,6 @@
    "categories": [
     "hw-tv",
     "hw-pc",
-    "hw-gadgets",
     "hw-makers"
    ]
   },
@@ -62,7 +60,6 @@
    "name": "Self-hosting & system tools",
    "categories": [
     "selfhost",
-    "security",
     "utilities"
    ]
   }
@@ -130,17 +127,12 @@
   },
   {
    "id": "os",
-   "name": "Computer systems & Linux distributions",
+   "name": "Computer systems & Linux",
    "area": "os-area"
   },
   {
    "id": "os-desktops",
    "name": "Desktops & customization",
-   "area": "os-area"
-  },
-  {
-   "id": "os-core",
-   "name": "Under the hood: kernel, drivers, compatibility",
    "area": "os-area"
   },
   {
@@ -155,12 +147,7 @@
   },
   {
    "id": "hw-pc",
-   "name": "Computer accessories & parts",
-   "area": "hardware"
-  },
-  {
-   "id": "hw-gadgets",
-   "name": "Home, network & personal gadgets",
+   "name": "Devices & accessories",
    "area": "hardware"
   },
   {
@@ -190,12 +177,7 @@
   },
   {
    "id": "selfhost",
-   "name": "Home servers & self-hosting",
-   "area": "system"
-  },
-  {
-   "id": "security",
-   "name": "IT security",
+   "name": "Home servers & security",
    "area": "system"
   },
   {
@@ -203,5 +185,10 @@
    "name": "Computer utilities",
    "area": "system"
   }
- ]
+ ],
+ "merged": {
+  "os-core": "os",
+  "hw-gadgets": "hw-pc",
+  "security": "selfhost"
+ }
 }

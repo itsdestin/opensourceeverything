@@ -31,7 +31,6 @@
    "categories": [
     "os",
     "os-desktops",
-    "os-core",
     "os-mobile"
    ]
   },
@@ -41,7 +40,6 @@
    "categories": [
     "hw-tv",
     "hw-pc",
-    "hw-gadgets",
     "hw-makers"
    ]
   },
@@ -60,7 +58,6 @@
    "name": "Self-hosting & system tools",
    "categories": [
     "selfhost",
-    "security",
     "utilities"
    ]
   }
@@ -128,17 +125,12 @@
   },
   {
    "id": "os",
-   "name": "Computer systems & Linux distributions",
+   "name": "Computer systems & Linux",
    "area": "os-area"
   },
   {
    "id": "os-desktops",
    "name": "Desktops & customization",
-   "area": "os-area"
-  },
-  {
-   "id": "os-core",
-   "name": "Under the hood: kernel, drivers, compatibility",
    "area": "os-area"
   },
   {
@@ -153,12 +145,7 @@
   },
   {
    "id": "hw-pc",
-   "name": "Computer accessories & parts",
-   "area": "hardware"
-  },
-  {
-   "id": "hw-gadgets",
-   "name": "Home, network & personal gadgets",
+   "name": "Devices & accessories",
    "area": "hardware"
   },
   {
@@ -188,12 +175,7 @@
   },
   {
    "id": "selfhost",
-   "name": "Home servers & self-hosting",
-   "area": "system"
-  },
-  {
-   "id": "security",
-   "name": "IT security",
+   "name": "Home servers & security",
    "area": "system"
   },
   {
@@ -298,7 +280,7 @@
   "keyboards": "os-mobile",
   "app-stores": "os-mobile",
   "phone-os": "os-mobile",
-  "smart-home": "hw-gadgets",
+  "smart-home": "hw-pc",
   "code-editors": "dev",
   "api-tools": "dev",
   "app-hosting": "dev-ship",
@@ -324,7 +306,7 @@
   "push-notifications": "dev-blocks",
   "saas-starters": "dev-blocks",
   "vpn": "selfhost",
-  "security-scanning": "security",
+  "security-scanning": "selfhost",
   "remote-desktop": "utilities"
  },
  "widened": {
@@ -3193,7 +3175,7 @@
   {
    "id": "linux-kernel",
    "name": "The Linux kernel and system core",
-   "category": "os-core",
+   "category": "os",
    "job": "The kernel and core system parts (startup, services, libraries) every Linux system runs on",
    "closed": [],
    "candidates": [
@@ -3222,7 +3204,7 @@
   {
    "id": "linux-drivers",
    "name": "Getting hardware working on Linux",
-   "category": "os-core",
+   "category": "os",
    "job": "Drivers and fixes for graphics, sound, fingerprint and face login, and laptops on Linux",
    "closed": [
     "NVIDIA proprietary driver"
@@ -3253,7 +3235,7 @@
   {
    "id": "app-compat",
    "name": "Running apps from other systems",
-   "category": "os-core",
+   "category": "os",
    "job": "Running Windows or Android apps and games on Linux or Mac",
    "closed": [
     "CrossOver",
@@ -3289,7 +3271,7 @@
   {
    "id": "linux-app-stores",
    "name": "Installing apps on Linux",
-   "category": "os-core",
+   "category": "os",
    "job": "App stores, Flatpak, AppImage and package helpers for Linux",
    "closed": [
     "Microsoft Store",
@@ -3321,7 +3303,7 @@
   {
    "id": "filesystems",
    "name": "Filesystems and disks",
-   "category": "os-core",
+   "category": "os",
    "job": "How files are stored on disks: ZFS, Btrfs, partitions",
    "closed": [],
    "candidates": [
@@ -3955,7 +3937,7 @@
   {
    "id": "cars",
    "name": "Car apps, upkeep and driver assist",
-   "category": "hw-gadgets",
+   "category": "hw-pc",
    "job": "Car dashboards, maintenance logs and driver-assistance software",
    "closed": [
     "Android Auto",
@@ -3985,7 +3967,7 @@
   {
    "id": "router-firmware",
    "name": "Router and firewall software",
-   "category": "hw-gadgets",
+   "category": "hw-pc",
    "job": "Replacing a router's software or running your own firewall",
    "closed": [
     "Vendor router firmware",
@@ -4018,7 +4000,7 @@
   {
    "id": "e-readers",
    "name": "E-reader software",
-   "category": "hw-gadgets",
+   "category": "hw-pc",
    "job": "Reading apps and firmware for Kindle, Kobo and other e-readers",
    "closed": [
     "Amazon Kindle firmware",
@@ -4043,7 +4025,7 @@
   {
    "id": "game-handhelds",
    "name": "Handheld gaming PCs",
-   "category": "hw-gadgets",
+   "category": "hw-pc",
    "job": "Software for Steam Deck-style handhelds",
    "closed": [
     "ASUS Armoury Crate SE",
@@ -4072,7 +4054,7 @@
   {
    "id": "headphones",
    "name": "Earbud and headphone apps",
-   "category": "hw-gadgets",
+   "category": "hw-pc",
    "job": "Full features for earbuds and headphones without the maker's app",
    "closed": [
     "Apple AirPods (iPhone only)",
@@ -4102,7 +4084,7 @@
   {
    "id": "security-cameras",
    "name": "Home security cameras",
-   "category": "hw-gadgets",
+   "category": "hw-pc",
    "job": "Recording and watching home cameras without a subscription",
    "closed": [
     "Ring",
@@ -4133,7 +4115,7 @@
   {
    "id": "security-keys",
    "name": "Security keys",
-   "category": "hw-gadgets",
+   "category": "hw-pc",
    "job": "Hardware keys for passwordless and two-step sign-in",
    "closed": [
     "YubiKey firmware",
@@ -4162,7 +4144,7 @@
   {
    "id": "smartwatches",
    "name": "Smartwatches and fitness bands",
-   "category": "hw-gadgets",
+   "category": "hw-pc",
    "job": "Apps and firmware for watches without the maker's cloud",
    "closed": [
     "Garmin Connect",
@@ -5639,7 +5621,7 @@
   {
    "id": "security-monitoring",
    "name": "Intrusion detection and security monitoring",
-   "category": "security",
+   "category": "selfhost",
    "job": "Spotting attacks and suspicious activity on servers and computers",
    "closed": [
     "Splunk",
@@ -5672,7 +5654,7 @@
   {
    "id": "security-testing",
    "name": "Security testing and password recovery",
-   "category": "security",
+   "category": "selfhost",
    "job": "Testing your own systems the way an attacker would",
    "closed": [
     "Burp Suite Pro",
@@ -5709,7 +5691,7 @@
   {
    "id": "network-tools",
    "name": "Network scanners and diagnostics",
-   "category": "security",
+   "category": "selfhost",
    "job": "Seeing what's on your network and why it's slow",
    "closed": [
     "Fing",
@@ -6186,5 +6168,11 @@
    ]
   }
  ],
- "_widenedWhy": "Jobs widened to absorb thin ideas instead of new groups (taxonomy-v2 section 5), written as whole sentences."
+ "_widenedWhy": "Jobs widened to absorb thin ideas instead of new groups (taxonomy-v2 section 5), written as whole sentences.",
+ "mergedCategories": {
+  "os-core": "os",
+  "hw-gadgets": "hw-pc",
+  "security": "selfhost"
+ },
+ "_mergedWhy": "Destin, hierarchy deck (Oct 30): the three 2-group categories folded into a neighbour. Old addresses forward (site/src/pages/category.mjs)."
 }

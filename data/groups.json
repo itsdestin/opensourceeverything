@@ -1,6 +1,6 @@
 {
  "license": "CC BY-SA 4.0",
- "generated": "2026-10-27",
+ "generated": "2026-10-30",
  "credits": "See data/CREDITS.md",
  "groups": [
   {
@@ -6044,6 +6044,129 @@
    "alternatives": []
   },
   {
+   "id": "linux-kernel",
+   "name": "The Linux kernel and system core",
+   "category": "os",
+   "job": "The kernel and core system parts (startup, services, libraries) every Linux system runs on",
+   "closed": [],
+   "source": "taxonomy",
+   "alternatives": [
+    {
+     "project": "systemd",
+     "fit": "partial",
+     "note": "Covers startup and services, but not the Linux kernel itself."
+    },
+    {
+     "project": "zen-kernel",
+     "fit": "full",
+     "note": null
+    }
+   ]
+  },
+  {
+   "id": "linux-drivers",
+   "name": "Getting hardware working on Linux",
+   "category": "os",
+   "job": "Drivers and fixes for graphics, sound, fingerprint and face login, and laptops on Linux",
+   "closed": [
+    "NVIDIA proprietary driver"
+   ],
+   "source": "taxonomy",
+   "alternatives": [
+    {
+     "project": "nvidia-open-kernel-modules",
+     "fit": "partial",
+     "note": "Covers NVIDIA graphics only; no sound, fingerprint, face login or laptop drivers listed."
+    },
+    {
+     "project": "fprintd",
+     "fit": "partial",
+     "note": "Covers fingerprint login on Linux only; not graphics, sound, or other hardware."
+    }
+   ]
+  },
+  {
+   "id": "app-compat",
+   "name": "Running apps from other systems",
+   "category": "os",
+   "job": "Running Windows or Android apps and games on Linux or Mac",
+   "closed": [
+    "CrossOver",
+    "Parallels Desktop"
+   ],
+   "source": "taxonomy",
+   "alternatives": [
+    {
+     "project": "bottles",
+     "fit": "partial",
+     "note": "Covers Windows apps on Linux; Mac and Android are not mentioned in the README."
+    },
+    {
+     "project": "waydroid",
+     "fit": "partial",
+     "note": "Runs Android apps only; does not run Windows apps, and it is Linux-only."
+    },
+    {
+     "project": "lutris",
+     "fit": "partial",
+     "note": "Runs games via emulators and compatibility layers; not stated for Android apps."
+    },
+    {
+     "project": "heroic-games-launcher",
+     "fit": "partial",
+     "note": "Windows games only, not general apps; no Android support mentioned"
+    }
+   ]
+  },
+  {
+   "id": "linux-app-stores",
+   "name": "Installing apps on Linux",
+   "category": "os",
+   "job": "App stores, Flatpak, AppImage and package helpers for Linux",
+   "closed": [
+    "Microsoft Store",
+    "Mac App Store"
+   ],
+   "source": "taxonomy",
+   "alternatives": [
+    {
+     "project": "flathub",
+     "fit": "partial",
+     "note": "The website is a browsing front end; the apps are installed by other tools."
+    },
+    {
+     "project": "gnome-software",
+     "fit": "full",
+     "note": null
+    },
+    {
+     "project": "gear-lever",
+     "fit": "partial",
+     "note": "Manages AppImages only; not a store for browsing or installing apps."
+    }
+   ]
+  },
+  {
+   "id": "filesystems",
+   "name": "Filesystems and disks",
+   "category": "os",
+   "job": "How files are stored on disks: ZFS, Btrfs, partitions",
+   "closed": [],
+   "source": "taxonomy",
+   "alternatives": [
+    {
+     "project": "openzfs",
+     "fit": "full",
+     "note": null
+    },
+    {
+     "project": "btrfs",
+     "fit": "full",
+     "note": null
+    }
+   ]
+  },
+  {
    "id": "desktop-customization",
    "name": "Themes, extensions and desktop add-ons",
    "category": "os-desktops",
@@ -6080,129 +6203,6 @@
     },
     {
      "project": "hyprland",
-     "fit": "full",
-     "note": null
-    }
-   ]
-  },
-  {
-   "id": "linux-kernel",
-   "name": "The Linux kernel and system core",
-   "category": "os-core",
-   "job": "The kernel and core system parts (startup, services, libraries) every Linux system runs on",
-   "closed": [],
-   "source": "taxonomy",
-   "alternatives": [
-    {
-     "project": "systemd",
-     "fit": "partial",
-     "note": "Covers startup and services, but not the Linux kernel itself."
-    },
-    {
-     "project": "zen-kernel",
-     "fit": "full",
-     "note": null
-    }
-   ]
-  },
-  {
-   "id": "linux-drivers",
-   "name": "Getting hardware working on Linux",
-   "category": "os-core",
-   "job": "Drivers and fixes for graphics, sound, fingerprint and face login, and laptops on Linux",
-   "closed": [
-    "NVIDIA proprietary driver"
-   ],
-   "source": "taxonomy",
-   "alternatives": [
-    {
-     "project": "nvidia-open-kernel-modules",
-     "fit": "partial",
-     "note": "Covers NVIDIA graphics only; no sound, fingerprint, face login or laptop drivers listed."
-    },
-    {
-     "project": "fprintd",
-     "fit": "partial",
-     "note": "Covers fingerprint login on Linux only; not graphics, sound, or other hardware."
-    }
-   ]
-  },
-  {
-   "id": "app-compat",
-   "name": "Running apps from other systems",
-   "category": "os-core",
-   "job": "Running Windows or Android apps and games on Linux or Mac",
-   "closed": [
-    "CrossOver",
-    "Parallels Desktop"
-   ],
-   "source": "taxonomy",
-   "alternatives": [
-    {
-     "project": "bottles",
-     "fit": "partial",
-     "note": "Covers Windows apps on Linux; Mac and Android are not mentioned in the README."
-    },
-    {
-     "project": "waydroid",
-     "fit": "partial",
-     "note": "Runs Android apps only; does not run Windows apps, and it is Linux-only."
-    },
-    {
-     "project": "lutris",
-     "fit": "partial",
-     "note": "Runs games via emulators and compatibility layers; not stated for Android apps."
-    },
-    {
-     "project": "heroic-games-launcher",
-     "fit": "partial",
-     "note": "Windows games only, not general apps; no Android support mentioned"
-    }
-   ]
-  },
-  {
-   "id": "linux-app-stores",
-   "name": "Installing apps on Linux",
-   "category": "os-core",
-   "job": "App stores, Flatpak, AppImage and package helpers for Linux",
-   "closed": [
-    "Microsoft Store",
-    "Mac App Store"
-   ],
-   "source": "taxonomy",
-   "alternatives": [
-    {
-     "project": "flathub",
-     "fit": "partial",
-     "note": "The website is a browsing front end; the apps are installed by other tools."
-    },
-    {
-     "project": "gnome-software",
-     "fit": "full",
-     "note": null
-    },
-    {
-     "project": "gear-lever",
-     "fit": "partial",
-     "note": "Manages AppImages only; not a store for browsing or installing apps."
-    }
-   ]
-  },
-  {
-   "id": "filesystems",
-   "name": "Filesystems and disks",
-   "category": "os-core",
-   "job": "How files are stored on disks: ZFS, Btrfs, partitions",
-   "closed": [],
-   "source": "taxonomy",
-   "alternatives": [
-    {
-     "project": "openzfs",
-     "fit": "full",
-     "note": null
-    },
-    {
-     "project": "btrfs",
      "fit": "full",
      "note": null
     }
@@ -6650,6 +6650,25 @@
    ]
   },
   {
+   "id": "smart-home",
+   "name": "Smart home",
+   "category": "hw-pc",
+   "job": "Controlling lights and devices at home",
+   "closed": [
+    "Google Home",
+    "Amazon Alexa",
+    "SmartThings"
+   ],
+   "source": "starter",
+   "alternatives": [
+    {
+     "project": "home-assistant",
+     "fit": "full",
+     "note": null
+    }
+   ]
+  },
+  {
    "id": "keyboard-tools",
    "name": "Keyboard firmware, remapping and sounds",
    "category": "hw-pc",
@@ -6918,28 +6937,9 @@
    "alternatives": []
   },
   {
-   "id": "smart-home",
-   "name": "Smart home",
-   "category": "hw-gadgets",
-   "job": "Controlling lights and devices at home",
-   "closed": [
-    "Google Home",
-    "Amazon Alexa",
-    "SmartThings"
-   ],
-   "source": "starter",
-   "alternatives": [
-    {
-     "project": "home-assistant",
-     "fit": "full",
-     "note": null
-    }
-   ]
-  },
-  {
    "id": "cars",
    "name": "Car apps, upkeep and driver assist",
-   "category": "hw-gadgets",
+   "category": "hw-pc",
    "job": "Car dashboards, maintenance logs and driver-assistance software",
    "closed": [
     "Android Auto",
@@ -6964,7 +6964,7 @@
   {
    "id": "router-firmware",
    "name": "Router and firewall software",
-   "category": "hw-gadgets",
+   "category": "hw-pc",
    "job": "Replacing a router's software or running your own firewall",
    "closed": [
     "Vendor router firmware",
@@ -6993,7 +6993,7 @@
   {
    "id": "e-readers",
    "name": "E-reader software",
-   "category": "hw-gadgets",
+   "category": "hw-pc",
    "job": "Reading apps and firmware for Kindle, Kobo and other e-readers",
    "closed": [
     "Amazon Kindle firmware",
@@ -7006,7 +7006,7 @@
   {
    "id": "game-handhelds",
    "name": "Handheld gaming PCs",
-   "category": "hw-gadgets",
+   "category": "hw-pc",
    "job": "Software for Steam Deck-style handhelds",
    "closed": [
     "ASUS Armoury Crate SE",
@@ -7019,7 +7019,7 @@
   {
    "id": "headphones",
    "name": "Earbud and headphone apps",
-   "category": "hw-gadgets",
+   "category": "hw-pc",
    "job": "Full features for earbuds and headphones without the maker's app",
    "closed": [
     "Apple AirPods (iPhone only)",
@@ -7033,7 +7033,7 @@
   {
    "id": "security-cameras",
    "name": "Home security cameras",
-   "category": "hw-gadgets",
+   "category": "hw-pc",
    "job": "Recording and watching home cameras without a subscription",
    "closed": [
     "Ring",
@@ -7048,7 +7048,7 @@
   {
    "id": "security-keys",
    "name": "Security keys",
-   "category": "hw-gadgets",
+   "category": "hw-pc",
    "job": "Hardware keys for passwordless and two-step sign-in",
    "closed": [
     "YubiKey firmware",
@@ -7061,7 +7061,7 @@
   {
    "id": "smartwatches",
    "name": "Smartwatches and fitness bands",
-   "category": "hw-gadgets",
+   "category": "hw-pc",
    "job": "Apps and firmware for watches without the maker's cloud",
    "closed": [
     "Garmin Connect",
@@ -9174,6 +9174,36 @@
    ]
   },
   {
+   "id": "security-scanning",
+   "name": "Security scanning",
+   "category": "selfhost",
+   "job": "Find and track security weaknesses",
+   "closed": [
+    "Plextrac",
+    "Vulcan",
+    "Tenable Nessus",
+    "Prisma Cloud"
+   ],
+   "source": "lists",
+   "alternatives": [
+    {
+     "project": "deepfence-threatmapper",
+     "fit": "partial",
+     "note": null
+    },
+    {
+     "project": "faraday",
+     "fit": "partial",
+     "note": null
+    },
+    {
+     "project": "nuclei",
+     "fit": "partial",
+     "note": null
+    }
+   ]
+  },
+  {
    "id": "vpn",
    "name": "VPN & private networks",
    "category": "selfhost",
@@ -9518,39 +9548,9 @@
    ]
   },
   {
-   "id": "security-scanning",
-   "name": "Security scanning",
-   "category": "security",
-   "job": "Find and track security weaknesses",
-   "closed": [
-    "Plextrac",
-    "Vulcan",
-    "Tenable Nessus",
-    "Prisma Cloud"
-   ],
-   "source": "lists",
-   "alternatives": [
-    {
-     "project": "deepfence-threatmapper",
-     "fit": "partial",
-     "note": null
-    },
-    {
-     "project": "faraday",
-     "fit": "partial",
-     "note": null
-    },
-    {
-     "project": "nuclei",
-     "fit": "partial",
-     "note": null
-    }
-   ]
-  },
-  {
    "id": "security-monitoring",
    "name": "Intrusion detection and security monitoring",
-   "category": "security",
+   "category": "selfhost",
    "job": "Spotting attacks and suspicious activity on servers and computers",
    "closed": [
     "Splunk",
@@ -9579,7 +9579,7 @@
   {
    "id": "security-testing",
    "name": "Security testing and password recovery",
-   "category": "security",
+   "category": "selfhost",
    "job": "Testing your own systems the way an attacker would",
    "closed": [
     "Burp Suite Pro",
@@ -9618,7 +9618,7 @@
   {
    "id": "network-tools",
    "name": "Network scanners and diagnostics",
-   "category": "security",
+   "category": "selfhost",
    "job": "Seeing what's on your network and why it's slow",
    "closed": [
     "Fing",
