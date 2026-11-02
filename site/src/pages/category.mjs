@@ -49,8 +49,9 @@ export default function categories(d) {
   ${mapTrail(d, { category: c.id }, c.name)}
   <section class="surface sec">
     <!-- WHY the big name with its icon (Destin, Nov 2: "keep the old header text size/improve this a bit visually"): the category's
-         name keeps the old title size and the home page's icon; "Subcategories" and the count are quieter beside it. -->
-    <div class="sec-head cattitle"><span class="caticon">${catIcon(c.id, area?.id)}</span><h1 class="h-subject">${esc(c.name)}<span class="sub"><span class="dash"> – </span>Subcategories<span class="count">${gs.length}</span></span></h1></div>
+         name keeps the old title size and the home page's icon; "21 subcategories" is quieter beside it. WHY the number in the words (Destin, Nov 2): a small
+         grey count after the heading looked out of place. -->
+    <div class="sec-head cattitle"><span class="caticon">${catIcon(c.id, area?.id)}</span><h1 class="h-subject">${esc(c.name)}<span class="sub"><span class="dash"> – </span>${gs.length} ${gs.length === 1 ? 'subcategory' : 'subcategories'}</span></h1></div>
     <div class="gaplist grplist">${gs.map(card).join('')}</div>
   </section>
   ${others ? `<section class="surface sec">
