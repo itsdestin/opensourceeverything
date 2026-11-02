@@ -67,18 +67,21 @@ table.credits a { color:var(--fg); }
 /* ═══ Home page, Oct 27 redesign ═══ */
 /* Top card: the headline at the left, a fan of real app screens at the right (Destin, Nov 2). Search lives in the top strip.
    WHY 16px padding: the same as every other page's top card, so the headline lines up with the section titles. */
-.hero3 { position:relative; overflow:hidden; display:flex; align-items:center; justify-content:space-between; gap:24px; padding:16px; min-height:200px; }
+/* WHY 40px around the headline and a 168px card (Destin, Nov 2: "margins on header text a little more consistent"): with 16px at the
+   left and about 60px above and below, the text looked pushed to one side; now the space is about the same on three sides. */
+.hero3 { position:relative; overflow:hidden; display:flex; align-items:center; justify-content:space-between; gap:24px; padding:40px; min-height:168px; }
 .hero3 h1 { flex:1 1 0; margin:0; font-size:clamp(24px,2.6vw,34px); line-height:1.15; font-weight:600; letter-spacing:-.01em; text-wrap:balance; min-width:0; max-width:20em; }
 /* WHY 20em (Destin, Nov 2): keeps the headline to about two lines on wide screens; 13em made three. */
 /* WHY overlapping and tilted: one glance shows several real, colourful apps; the bottom ones run off the card's edge on purpose. */
-.fan { flex:0 0 min(52%,760px); position:relative; align-self:stretch; min-height:180px; margin:-16px -16px -16px 0; }
+.fan { flex:0 0 min(52%,760px); position:relative; align-self:stretch; min-height:168px; margin:-40px -40px -40px 0; }
 .fan img { position:absolute; width:46%; aspect-ratio:16/10; object-fit:cover; object-position:top; border-radius:var(--radius-md);
   border:1px solid var(--edge-card); box-shadow:0 10px 30px rgb(0 0 0 / .22), 0 2px 6px rgb(0 0 0 / .1); background:var(--inset); }
 /* WHY measured from the right (Destin, Nov 2: "the fanout more on the right side"): the fan hugs the card's right edge at any width. */
-.fan .f0 { right:50%; top:34%; transform:rotate(-7deg); }
-.fan .f1 { right:33%; top:10%; transform:rotate(-2deg); z-index:1; }
-.fan .f2 { right:16%; top:20%; transform:rotate(3deg); z-index:2; }
-.fan .f3 { right:-2%; top:40%; transform:rotate(8deg); z-index:3; }
+/* WHY 4% further in than flush (Destin, Nov 2: "back to the left a smidge"). */
+.fan .f0 { right:54%; top:34%; transform:rotate(-7deg); }
+.fan .f1 { right:37%; top:10%; transform:rotate(-2deg); z-index:1; }
+.fan .f2 { right:20%; top:20%; transform:rotate(3deg); z-index:2; }
+.fan .f3 { right:2%; top:40%; transform:rotate(8deg); z-index:3; }
 
 /* Popular alternatives: picture cards, five to a row in two rows (Destin, Nov 2), with shorter previews. */
 .swgrid { display:grid; grid-template-columns:repeat(5,minmax(0,1fr)); gap:12px; }
@@ -131,9 +134,9 @@ table.credits a { color:var(--fg); }
 }
 @media (max-width:640px) {
   /* WHY stacked on phones: the headline, then a shorter fan under it. */
-  .hero3 { flex-direction:column; align-items:stretch; gap:8px; min-height:0; }
+  .hero3 { flex-direction:column; align-items:stretch; gap:8px; min-height:0; padding:20px; }
   .hero3 h1 { font-size:24px; max-width:none; }
-  .fan { flex:none; height:130px; min-height:0; margin:0 -16px -16px; }
+  .fan { flex:none; height:130px; min-height:0; margin:0 -20px -20px; }
   /* WHY sideways rows on phones (design guide: long screens become short): switches and gaps scroll, categories stack. */
   .swgrid, .gapgrid { display:flex; overflow-x:auto; scrollbar-width:none; padding:8px 4px 16px; margin:-8px -4px -16px; }
   .swgrid > .card { flex:0 0 240px; } .gapgrid > .card { flex:0 0 240px; }
