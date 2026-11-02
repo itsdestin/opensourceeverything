@@ -1,6 +1,6 @@
 // One page per category (c/<id>/): every group in it, as raised cards.
 import { url, esc, SOCIAL } from '../lib.mjs';
-import { mapTrail, areaLabel } from '../redesign.mjs';
+import { mapTrail } from '../redesign.mjs';
 
 export default function categories(d) {
   // WHY skip empty categories (taxonomy-v2): a new category whose groups all wait for checked projects would be a blank page.
@@ -25,24 +25,35 @@ export default function categories(d) {
         <p class="job">${esc(g.job)}</p>
         <div class="chiprow"><span class="chip">${g.alternatives.length} ${g.alternatives.length === 1 ? 'alternative' : 'alternatives'}${full ? ` · ${full} full` : ''}</span>${g.closed.length ? `<span class="chip replaces" title="Replaces ${esc(g.closed.join(', '))}">Replaces ${esc(g.closed.join(', '))}</span>` : ''}</div></a>`;
     };
-    // WHY "Other categories" lists only this area's (taxonomy-v2, Oct 27): 26 chips across six areas was a wall; the neighbours
-    // in the same area are the useful jumps, and the crumb's area link reaches the rest.
+    // WHY "Related categories" lists only this area's (taxonomy-v2, Oct 27): 26 across six areas was a wall; the neighbours
+    // in the same area are the useful jumps, and the trail's area link reaches the rest.
+    // WHY a card of cards at the bottom (Destin, Nov 2): it replaces the chip row in the old top card, so the subcategories
+    // come first; each looks like a subcategory card (name, two lines naming what's inside, counts) so the page reads as one set.
     const area = d.areaOf.get(c.id);
     const others = (area?.categories ?? []).filter((id) => id !== c.id && d.groups.some((g) => g.category === id)).map((id) => d.catById.get(id)).filter(Boolean)
-      .map((x) => `<a class="fchip" href="${url(`c/${x.id}/`)}">${esc(x.name)}</a>`).join('');
+      .map((x) => {
+        const xs = d.groups.filter((g) => g.category === x.id).sort((p, q) => q.alternatives.length - p.alternatives.length);
+        const projects = new Set(xs.flatMap((g) => g.alternatives.map((a) => a.project))).size;
+        return `<a class="card gcard grpcard" href="${url(`c/${x.id}/`)}">
+        <h3>${esc(x.name)}</h3>
+        <p class="job">${esc(xs.map((g) => g.name).join(', '))}</p>
+        <div class="chiprow"><span class="chip">${xs.length} ${xs.length === 1 ? 'subcategory' : 'subcategories'}</span><span class="chip">${projects} open projects</span></div></a>`;
+      }).join('');
     return {
       path: `c/${c.id}/`, title: c.name, styles: ['pages.css'],
       description: `Open-source alternatives in ${c.name}: ${gs.map((g) => g.name).join(', ')}.`,
+      // WHY the subcategories are the top card (Destin, Nov 2: "groups should change to 'Office & productivity - Subcategories'
+      // and become the top card"): the separate title card only held the name and the chips, now in the heading and the bottom card.
       body: `
   ${mapTrail(d, { category: c.id }, c.name)}
-  <div class="surface identity">
-    <div><h1 class="h-subject">${esc(c.name)}</h1></div>
-    ${others ? `<div class="pop" style="padding-left:0"><span class="muted11">Also in ${esc(areaLabel(area))}</span><div class="fchips">${others}</div></div>` : ''}
-  </div>
   <section class="surface sec">
-    <div class="sec-head"><div><h2 class="h-large">Groups<span class="count">${gs.length}</span></h2></div></div>
+    <div class="sec-head"><div><h1 class="h-large">${esc(c.name)} – Subcategories<span class="count">${gs.length}</span></h1></div></div>
     <div class="gaplist grplist">${gs.map(card).join('')}</div>
-  </section>`,
+  </section>
+  ${others ? `<section class="surface sec">
+    <div class="sec-head"><div><h2 class="h-large">Related categories</h2></div></div>
+    <div class="gaplist grplist">${others}</div>
+  </section>` : ''}`,
     };
   })];
 }
