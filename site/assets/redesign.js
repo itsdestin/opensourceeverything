@@ -32,11 +32,8 @@
     if (pop && !e.target.closest('.tip')) close();
   }, true);
   document.addEventListener('keydown', (e) => { if (e.key === 'Escape') close(); });
-  // The back button on project pages: go back when we came from this site, otherwise it is the plain link to the home page.
-  document.addEventListener('click', (e) => {
-    const b = e.target.closest('[data-back]'); if (!b) return;
-    if (document.referrer.startsWith(location.origin) && history.length > 1) { e.preventDefault(); history.back(); }
-  });
+  // WHY no history-back button any more (Nov 2): the phone's "up a level" link (redesign.mjs crumbs) is a plain link, so it
+  // always lands where the trail says. The old catch-all [data-back] handler also caught the suggestion form's own Back button.
   // Fold rows on phones (family list): a click on a [data-fold] header toggles its section.
   document.addEventListener('click', (e) => {
     const h = e.target.closest('[data-fold]'); if (!h) return;

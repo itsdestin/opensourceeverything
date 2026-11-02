@@ -206,9 +206,21 @@ body { display:flex; flex-direction:column; }
 .page { flex:1 0 auto; width:100%; }
 .footer { margin-top:auto; }
 .top { width:100%; }
-.crumbs { display:flex; align-items:center; gap:6px; font-size:12px; color:var(--fg-dim); min-width:0; overflow-x:auto; scrollbar-width:none; white-space:nowrap; }
-.crumbs a { color:var(--fg-2); text-decoration:none; padding:2px 8px; border:1px solid var(--edge-dim); border-radius:var(--radius-control); background:var(--glass); }
-.crumbs a:hover { border-color:var(--accent); color:var(--fg); } .crumbs i { font-style:normal; color:var(--fg-faint); } .crumbs [aria-current] { color:var(--fg); }
+/* The trail (redesign.mjs crumbs). WHY plain text links, not pills (Nov 2): pills looked like the filter chips, so the trail
+   didn't read as "where you are". Wide screens show the whole trail; phones show one glass "‹ up a level" button. */
+.crumbs { display:flex; align-items:center; min-width:0; padding:0 4px; }
+.crumb-trail { list-style:none; margin:0; padding:0; display:flex; flex-wrap:wrap; align-items:center; row-gap:4px; font-size:13px; color:var(--fg-muted); }
+.crumb-trail li + li::before { content:"›"; margin:0 8px; color:var(--fg-faint); }
+.crumb-trail a { color:var(--fg-2); text-decoration:none; }
+.crumb-trail a:hover { color:var(--fg); text-decoration:underline; }
+.crumb-trail [aria-current] { color:var(--fg); font-weight:500; }
+/* WHY .crumbs in front: the shared glass rule below would otherwise show this phone-only button on wide screens too. */
+.crumbs .crumb-up { display:none; }
+@media (max-width:640px) {
+  .crumbs { padding:0; }
+  .crumb-trail { display:none; }
+  .crumbs .crumb-up { display:inline-flex; max-width:100%; gap:4px; padding:0 12px 0 8px; overflow:hidden; white-space:nowrap; text-overflow:ellipsis; }
+}
 .identity .row .btn { flex:none; }
 @media (max-width:640px) {
   /* The footer: a small grid of links, not a row that runs off the screen. */
@@ -217,20 +229,29 @@ body { display:flex; flex-direction:column; }
   .identity .row { flex-direction:column; align-items:stretch; }
 }
 
-/* ── Top controls: Home, Back, Search and Sign in are one set (Destin, round 5): the same translucent glass pill, the same height ── */
-.glass, .top .acct .btn, .top .acct .avatar {
+/* ── Top controls: Home, Up, Search and Sign in are one set (Destin, round 5): the same translucent glass pill, the same height ── */
+.glass, .top .acct .btn, .top .acct .avatar, .crumb-up {
   display:inline-flex; align-items:center; justify-content:center; gap:8px; height:32px; min-width:32px; padding:0 10px; border-radius:9999px; flex:none;
   color:var(--fg); font-size:12px; font-weight:600; text-decoration:none; cursor:pointer;
   background:color-mix(in srgb, var(--panel) 42%, transparent); backdrop-filter:blur(16px) saturate(1.6); -webkit-backdrop-filter:blur(16px) saturate(1.6);
   border:1px solid color-mix(in srgb, #fff 55%, var(--edge-dim)); box-shadow:inset 0 1px 0 rgb(255 255 255 / .55), 0 2px 8px rgb(0 0 0 / .06); }
-.glass:hover, .top .acct .btn:hover, .top .acct .avatar:hover { background:color-mix(in srgb, var(--panel) 62%, transparent); color:var(--fg); }
+.glass:hover, .top .acct .btn:hover, .top .acct .avatar:hover, .crumb-up:hover { background:color-mix(in srgb, var(--panel) 62%, transparent); color:var(--fg); }
 .iconbtn { padding:0; width:32px; }
 .homebtn { padding:0 14px 0 10px; }
 .top .acct .avatar { padding:0; width:32px; }
-.crumbs .glass { padding:0; margin-right:2px; border-radius:9999px; border:1px solid color-mix(in srgb, #fff 55%, var(--edge-dim)); }
+/* The home page's search bar in the top strip (Destin, Nov 2): the same glass as the other controls, a little taller. */
+.topsearch { width:min(440px,100%); }
+.topsearch .searchpill.glass { display:flex; width:100%; height:40px; justify-content:flex-start; padding:0 16px; gap:10px; cursor:text; font-weight:400; }
+.topsearch .searchpill.glass:hover { background:color-mix(in srgb, var(--panel) 42%, transparent); }
+.topsearch .searchpill.glass:focus-within { background:color-mix(in srgb, var(--panel) 70%, transparent); border-color:var(--accent); }
+.topsearch .searchpill input { font-size:14px; }
+.top:has(.search-menu.open) { position:relative; z-index:20; }
 @media (max-width:640px) {
   .homebtn { padding:0; width:32px; } .homebtn .hname { display:none; }
   .top { padding:10px 16px 6px; }
+  /* WHY the bar takes the row on phones: only the site's mark sits beside it. */
+  .top-home .grow { display:none !important; }
+  .topsearch { flex:1; width:auto; min-width:0; }
 }
 .signin-card { gap:12px; }
 .btn.full { width:100%; }

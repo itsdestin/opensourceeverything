@@ -1,6 +1,6 @@
 // One page per open-source project (p/<id>/): what it is, which groups it's listed in, and its facts.
 import { familyIndex, stoppedBanner } from '../family.mjs';
-import { rvTop, rvFamilyA, crumbs } from '../redesign.mjs';
+import { rvTop, rvFamilyA, mapTrail } from '../redesign.mjs';
 import { projectFeatures, helpWithAi } from '../surfaces.mjs';
 import { esc, url, SITE_URL, KIND, SETUP, SETUP_MEANING, setupOf, setupWhy, factChips, hostOf, fmtStars, actions, codeUrl, devicesText, suggestUrl, shot, SOCIAL } from '../lib.mjs';
 
@@ -29,7 +29,7 @@ export default function projectPages(d) {
     // not visitors. They stay in data/projects.json (field "unconfirmed"); the public copy of the data drops them (build.mjs).
     // WHY (forks stream): where it came from, in one plain line, and the reverse ("Forked by: Forgejo") on the original.
     const body = `
-  ${crumbs(listed[0] ? [[d.catById.get(listed[0].group.category)?.name ?? '', url(`c/${listed[0].group.category}/`)], [listed[0].group.name, url(`g/${listed[0].group.id}/`)], [p.name]] : [[p.name]], { back: true, fallback: listed[0] ? url(`g/${listed[0].group.id}/`) : url() })}
+  ${mapTrail(d, { group: listed[0]?.group }, p.name)}
   ${stoppedBanner(p, fam)}
   ${rvTop(p, links)}
 

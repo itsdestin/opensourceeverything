@@ -35,7 +35,34 @@ export function rvFamilyA(p, fam) {
     ${nodes.length > 5 ? `<button class="btn sm secondary showall" type="button" data-showall>Show all ${nodes.length}</button>` : ''}${tips}</section>`;
 }
 
-// A compact trail under the top bar (Destin, round 4): where this page sits, so a phone visitor can step up a level. items: [[label, href], ...]; the last is plain text.
-// back: true puts the Back arrow at the start of the row (round 5: "back button probably beside breadcrumb"); it goes back when the visitor came from this site, else it is a link to `fallback`.
-const BACK = '<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m15 18-6-6 6-6"/></svg>';
-export const crumbs = (items, { back = false, fallback = '/' } = {}) => `<nav class="crumbs" aria-label="Breadcrumb">${back ? `<a class="glass iconbtn" data-back href="${fallback}" title="Back" aria-label="Back">${BACK}</a>` : ''}${items.map(([label, href], i) => (href ? `<a href="${href}">${esc(label)}</a>` : `<span aria-current="page">${esc(label)}</span>`) + (i < items.length - 1 ? '<i aria-hidden="true">›</i>' : '')).join('')}</nav>`;
+// A trail under the top bar: where this page sits on the map, so a visitor can step up a level.
+// WHY rebuilt (Destin, Nov 2: "breadcrumbs and back button feel super broken and confusing"). Before: only project pages had a
+// back arrow, and it went to the previous page in history while the trail beside it showed a different, fixed path; closed-app
+// pages had no trail at all; trails started mid-way, at a level other pages skipped; the area was called "Apps for everyday life"
+// though the home page says "Everyday apps"; and the trail's links were pills that looked like the filter chips. Now:
+// - every page below home has the same trail, always starting at the area: Area › Category › Group › this page;
+// - on wide screens it is the whole trail as plain text links; on phones it is one link up a level ("‹ Photo editing"), which
+//   is the back button, always going to the same place the trail shows. The browser's own back still goes to the last page.
+// - Home itself is the house button at the top left, so the trail doesn't repeat it.
+// items: [[label, href], ...]; the last is this page (plain text).
+const UP = '<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m15 18-6-6 6-6"/></svg>';
+export const crumbs = (items) => {
+  const parent = items.length > 1 ? items[items.length - 2] : null;
+  return `<nav class="crumbs" aria-label="Breadcrumb">
+    ${parent ? `<a class="crumb-up" href="${parent[1]}">${UP}${esc(parent[0])}</a>` : ''}
+    <ol class="crumb-trail">${items.map(([label, href], i) => `<li>${href && i < items.length - 1 ? `<a href="${href}">${esc(label)}</a>` : `<span aria-current="page">${esc(label)}</span>`}</li>`).join('')}</ol>
+  </nav>`;
+};
+// WHY the home page's name for an area: the trail's first link opens that area's fold on the home page, so it must match its title there.
+export const areaLabel = (a) => (a.id === 'everyday' ? 'Everyday apps' : a.name);
+// The trail from the area down to this page. category: a category page (its own name ends the trail); group: a page inside
+// that group (group page, project, closed app).
+export const mapTrail = (d, { category, group }, here) => {
+  const cat = d.catById.get(group?.category ?? category); const area = cat && d.areaOf.get(cat.id);
+  return crumbs([
+    ...(area ? [[areaLabel(area), url(`#area-${area.id}`)]] : []),
+    ...(cat && group ? [[cat.name, url(`c/${cat.id}/`)]] : []),
+    ...(group && group.name !== here ? [[group.name, url(`g/${group.id}/`)]] : []),
+    [here],
+  ]);
+};

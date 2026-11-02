@@ -4,6 +4,7 @@
 import { esc, url, SITE_URL, SOCIAL } from '../lib.mjs';
 import { altCard, appSlug, appUrl, sortAlts, deviceFilter, buildBox, chooseBox } from '../cards.mjs';
 import { switchGuide } from '../surfaces.mjs';
+import { mapTrail } from '../redesign.mjs';
 
 export default function appPages(d) {
   // WHY keyed by address, not spelling: the imported lists spell some apps two ways ("Datadog", "DataDog");
@@ -29,7 +30,9 @@ export default function appPages(d) {
       : `<div class="callout info">Nothing open does this yet. It's one of the <a href="${url('gaps/')}">gaps on the map</a>: if you're building one, <a href="${url(`g/${g.id}/#build`)}">see what to reuse first</a>.</div>`}
   </section>`;
 
+    // WHY a trail here too (Nov 2): closed-app pages were the only deep pages with no way up a level.
     const body = `
+  ${mapTrail(d, { group: groups[0] }, name)}
   <div class="surface identity">
     <div class="row"><div><h1 class="h-subject">Open-source alternatives to ${esc(name)}</h1>
       ${all.length ? '' : `<p class="desc12" style="margin-top:4px">No open-source app replaces ${esc(name)} yet.</p>`}</div>${all.length > 1 ? deviceFilter('devMenu') : ''}</div>

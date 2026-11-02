@@ -5,7 +5,7 @@ import { esc, url, ICON, SITE_URL, API_URL, SOCIAL, SUBREDDIT, codeUrl, suggestU
 import { altCard, appUrl, sortAlts, deviceFilter, buildBox, chooseBox, FILTERS } from '../cards.mjs';
 import { relatedGroups } from '../related.mjs';
 import { likedBox } from '../liked.mjs';
-import { crumbs } from '../redesign.mjs';
+import { mapTrail } from '../redesign.mjs';
 import { groupTools, groupCompare, tagsOf } from '../surfaces.mjs';
 
 // WHY only the first letter, and not before a capital: "AI agents" and "PDF tools" keep their capitals mid-sentence.
@@ -38,7 +38,7 @@ export default function groupPages(d) {
     // WHY no job line under the group name (Destin, Oct 27: "Web browsers / Browsing the web" says nothing the name and the
     // Replaces row don't). Same for category cards, closed-app sections and See also. The AI prompts still get the job sentence.
     const body = `
-  ${crumbs([[cat?.name ?? '', url(`c/${g.category}/`)], [g.name]])}
+  ${mapTrail(d, { group: g }, g.name)}
   <div class="surface identity">
     <div class="row">
       <div><h1 class="h-subject">${esc(g.name)}</h1></div>

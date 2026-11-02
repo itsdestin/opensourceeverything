@@ -125,7 +125,37 @@
   // Home page area rows (<details>) start closed except Everyday apps (written into the page, home.mjs).
   // WHY open the row a link points at (#area-…): a category page's breadcrumb lands on its area, which must be open to show anything.
   // WHY scroll after a frame: opening the row changes the page's height, so the jump the browser made on load lands short.
-  const openArea = () => { const el = document.querySelector(`details.arearow${location.hash.replace(/[^#\w-]/g, '')}`); if (el) { el.open = true; requestAnimationFrame(() => el.scrollIntoView({ block: 'start' })); } };
+  // WHY one open at a time, sliding (Destin, Nov 2: "opening one should close the other… smoother animation"): the rows share
+  // name="areas" (browsers that know it keep one open themselves); this also does it for older browsers and animates the
+  // height so the rows slide instead of jumping. Reduced-motion visitors get the instant open/close.
+  const rows = [...document.querySelectorAll('details.arearow')];
+  const still = matchMedia('(prefers-reduced-motion: reduce)');
+  const EASE = { duration: 240, easing: 'cubic-bezier(.2,.8,.2,1)' };
+  const slide = (row, opening) => {
+    const box = row.querySelector('.catgrid');
+    if (!box || still.matches) { row.open = opening; return; }
+    row._anim?.cancel();
+    if (opening) row.open = true;
+    const full = box.scrollHeight;
+    box.classList.add('animating');
+    const pad = getComputedStyle(box).paddingBottom;
+    const shut = { height: '0px', paddingBottom: '0px', opacity: 0 }, shown = { height: full + 'px', paddingBottom: pad, opacity: 1 };
+    row._anim = box.animate(opening ? [shut, shown] : [shown, shut], EASE);
+    row._anim.onfinish = () => { box.classList.remove('animating'); if (!opening) row.open = false; row._anim = null; };
+  };
+  const openOnly = (row, animate = true) => {
+    rows.forEach((r) => { if (r !== row && r.open) animate ? slide(r, false) : (r.open = false); });
+    animate ? slide(row, true) : (row.open = true);
+  };
+  rows.forEach((row) => row.querySelector('summary').addEventListener('click', (e) => {
+    e.preventDefault();
+    if (row.open && !row._anim) { slide(row, false); return; }
+    const before = row.getBoundingClientRect().top;
+    openOnly(row);
+    // WHY: a row closing above this one pulls it up the page; once the slide ends, bring its header back into view if it left.
+    setTimeout(() => { const top = row.getBoundingClientRect().top; if (top < 60 && top < before) row.scrollIntoView({ block: 'start', behavior: still.matches ? 'auto' : 'smooth' }); }, EASE.duration + 20);
+  }));
+  const openArea = () => { const el = document.querySelector(`details.arearow${location.hash.replace(/[^#\w-]/g, '')}`); if (el) { openOnly(el, false); requestAnimationFrame(() => el.scrollIntoView({ block: 'start' })); } };
   if (location.hash.startsWith('#area-')) openArea();
   addEventListener('hashchange', openArea);
 

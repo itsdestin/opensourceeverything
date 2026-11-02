@@ -1,6 +1,6 @@
 // One page per category (c/<id>/): every group in it, as raised cards.
 import { url, esc, SOCIAL } from '../lib.mjs';
-import { crumbs } from '../redesign.mjs';
+import { mapTrail, areaLabel } from '../redesign.mjs';
 
 export default function categories(d) {
   // WHY skip empty categories (taxonomy-v2): a new category whose groups all wait for checked projects would be a blank page.
@@ -33,10 +33,10 @@ export default function categories(d) {
       path: `c/${c.id}/`, title: c.name, styles: ['pages.css'],
       description: `Open-source alternatives in ${c.name}: ${gs.map((g) => g.name).join(', ')}.`,
       body: `
-  ${crumbs([[area?.name ?? 'Browse', url(area ? `#area-${area.id}` : '#categories')], [c.name]])}
+  ${mapTrail(d, { category: c.id }, c.name)}
   <div class="surface identity">
     <div><h1 class="h-subject">${esc(c.name)}</h1></div>
-    ${others ? `<div class="pop" style="padding-left:0"><span class="muted11">Also in ${esc(area.name)}</span><div class="fchips">${others}</div></div>` : ''}
+    ${others ? `<div class="pop" style="padding-left:0"><span class="muted11">Also in ${esc(areaLabel(area))}</span><div class="fchips">${others}</div></div>` : ''}
   </div>
   <section class="surface sec">
     <div class="sec-head"><div><h2 class="h-large">Groups<span class="count">${gs.length}</span></h2></div></div>

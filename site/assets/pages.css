@@ -65,19 +65,22 @@ table.credits a { color:var(--fg); }
 .gapbtns { margin-top:auto; padding-top:4px; display:flex; gap:8px; justify-content:flex-end; flex-wrap:wrap; }
 
 /* ═══ Home page, Oct 27 redesign ═══ */
-/* Top card: the headline and a big search, nothing else (Destin, Nov 2: "much smaller"). WHY one row on wide screens
-   (design review, Nov 2): stacked, the search box left the card's right half empty; side by side the card is one line
-   tall. WHY 16px padding: the same as every other page's top card, so the headline lines up with the section titles. */
-.hero3 { display:flex; align-items:center; justify-content:space-between; gap:24px; padding:16px; }
-.hero3 h1 { margin:0; font-size:clamp(22px,2.2vw,28px); line-height:1.2; font-weight:600; letter-spacing:-.01em; text-wrap:balance; min-width:0; }
-.searchwrap.big { flex:0 0 min(520px,48%); }
-.searchwrap.big .searchpill { padding:12px 16px; border-radius:var(--radius-lg); box-shadow:var(--shadow-card); background:var(--well); }
-.searchwrap.big .searchpill input { font-size:15px; }
-/* WHY: lifts the card above the next section while its search dropdown is open, so the list isn't covered. */
-.hero3:has(.search-menu.open) { position:relative; z-index:5; }
+/* Top card: the headline at the left, a fan of real app screens at the right (Destin, Nov 2). Search lives in the top strip.
+   WHY 16px padding: the same as every other page's top card, so the headline lines up with the section titles. */
+.hero3 { position:relative; overflow:hidden; display:flex; align-items:center; justify-content:space-between; gap:24px; padding:16px; min-height:200px; }
+.hero3 h1 { flex:1 1 0; margin:0; font-size:clamp(24px,2.6vw,34px); line-height:1.15; font-weight:600; letter-spacing:-.01em; text-wrap:balance; min-width:0; max-width:13em; }
+/* WHY overlapping and tilted: one glance shows several real, colourful apps; the bottom ones run off the card's edge on purpose. */
+.fan { flex:0 0 min(52%,760px); position:relative; align-self:stretch; min-height:180px; margin:-16px -16px -16px 0; }
+.fan img { position:absolute; width:46%; aspect-ratio:16/10; object-fit:cover; object-position:top; border-radius:var(--radius-md);
+  border:1px solid var(--edge-card); box-shadow:0 10px 30px rgb(0 0 0 / .22), 0 2px 6px rgb(0 0 0 / .1); background:var(--inset); }
+.fan .f0 { left:2%; top:34%; transform:rotate(-7deg); }
+.fan .f1 { left:20%; top:10%; transform:rotate(-2deg); z-index:1; }
+.fan .f2 { left:38%; top:20%; transform:rotate(3deg); z-index:2; }
+.fan .f3 { left:56%; top:40%; transform:rotate(8deg); z-index:3; }
 
-/* Popular alternatives: picture cards, four to a row. */
-.swgrid { display:grid; grid-template-columns:repeat(4,minmax(0,1fr)); gap:12px; }
+/* Popular alternatives: picture cards, five to a row in two rows (Destin, Nov 2), with shorter previews. */
+.swgrid { display:grid; grid-template-columns:repeat(5,minmax(0,1fr)); gap:12px; }
+.swcard .preview { aspect-ratio:16/9; }
 .swcard .inner { gap:2px; }
 .swcard h3 { margin:0; font-size:16px; font-weight:500; }
 .swcard .foot { margin-top:4px; }
@@ -101,6 +104,8 @@ table.credits a { color:var(--fg); }
 .arearow:has(> summary:hover) { background:var(--inset); }
 .arearow > summary:focus-visible { outline:2px solid var(--accent); outline-offset:-2px; border-radius:var(--radius-lg); }
 .arearow > .catgrid { padding:0 12px 12px; }
+/* While a fold animates (site.js), its content is clipped to the growing or shrinking height. */
+.arearow > .catgrid.animating { overflow:hidden; }
 .catcard2 { position:relative; gap:12px; }
 .catcard2 .cardlink { position:absolute; inset:0; border-radius:inherit; }
 .cathead { display:flex; align-items:center; gap:12px; }
@@ -116,13 +121,17 @@ table.credits a { color:var(--fg); }
 .gapgrid .gcard h3 { white-space:normal; }
 
 @media (max-width:1000px) {
-  .swgrid, .gapgrid { grid-template-columns:repeat(2,minmax(0,1fr)); }
+  .gapgrid { grid-template-columns:repeat(2,minmax(0,1fr)); }
+  /* WHY a sideways row here too (Nov 2): two to a row made ten huge cards; five across is too cramped below this width. */
+  .swgrid { display:flex; overflow-x:auto; scrollbar-width:none; padding:8px 4px 16px; margin:-8px -4px -16px; }
+  .swgrid > .card { flex:0 0 220px; }
   .catgrid { grid-template-columns:repeat(2,minmax(0,1fr)); }
 }
 @media (max-width:640px) {
-  /* WHY stacked on phones: there's no room side by side. */
-  .hero3 { flex-direction:column; align-items:stretch; gap:12px; }
-  .searchwrap.big { flex:none; }
+  /* WHY stacked on phones: the headline, then a shorter fan under it. */
+  .hero3 { flex-direction:column; align-items:stretch; gap:8px; min-height:0; }
+  .hero3 h1 { font-size:24px; max-width:none; }
+  .fan { flex:none; height:130px; min-height:0; margin:0 -16px -16px; }
   /* WHY sideways rows on phones (design guide: long screens become short): switches and gaps scroll, categories stack. */
   .swgrid, .gapgrid { display:flex; overflow-x:auto; scrollbar-width:none; padding:8px 4px 16px; margin:-8px -4px -16px; }
   .swgrid > .card { flex:0 0 240px; } .gapgrid > .card { flex:0 0 240px; }

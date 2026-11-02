@@ -6,13 +6,20 @@ import { esc, url, ICON, SITE_URL, SUBREDDIT, REPO, SOCIAL, DEMO, API_URL } from
 const BUILD = Date.now().toString(36);
 const asset = (p) => `${url(p)}?v=${BUILD}`;
 
-// WHY (Destin, round 5: "there should be a way to get back home", "sign in needs the glassy look"): the top-left control is always Home (the site mark, plus the
-// name on desktop); search and Sign in share its glass look, so the three controls read as one set. The back arrow now lives in the breadcrumb row (redesign.mjs crumbs).
-export function topStrip({ search = true } = {}) {
-  return `<div class="top">
-  <a class="glass homebtn" href="${url()}" title="Home" aria-label="Open Source Everything home">${ICON.home}<span class="hname">Open Source Everything</span></a>
+// WHY (Destin, round 5: "there should be a way to get back home", "sign in needs the glassy look"): the top-left control is always the
+// site's name; search and Sign in share its glass look, so the controls read as one set.
+// WHY two looks (Destin, Nov 2): on the home page the name wears the map mark and search is a full glass search bar (the home
+// card no longer has its own box); on every deeper page the mark becomes a house, so it reads as "back to home", and search
+// shrinks to a button. WHY the short placeholder: the longer "Which app do you want to replace?" was cut off on phones.
+const HOUSE = '<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 10.5 12 3l9 7.5V20a1 1 0 0 1-1 1h-5v-6H9v6H4a1 1 0 0 1-1-1z"/></svg>';
+export function topStrip({ search = true, home = false } = {}) {
+  return `<div class="top${home ? ' top-home' : ''}">
+  <a class="glass homebtn" href="${url()}" title="Home" aria-label="Open Source Everything home">${home ? ICON.home : HOUSE}<span class="hname">Open Source Everything</span></a>
   <div class="grow"></div>
-${search ? `<a class="glass iconbtn top-search" href="${url('search/')}" title="Search" aria-label="Search">${ICON.search.replace(/width="14" height="14"/, 'width="16" height="16"')}</a>` : ''}
+${home ? `  <div class="searchwrap topsearch" data-search>
+    <div class="searchpill glass">${ICON.search}<input type="search" placeholder="Which app to replace?" autocomplete="off" aria-label="Search for an app to replace"></div>
+    <div class="menu search-menu" role="listbox"></div>
+  </div>` : search ? `<a class="glass iconbtn top-search" href="${url('search/')}" title="Search" aria-label="Search">${ICON.search.replace(/width="14" height="14"/, 'width="16" height="16"')}</a>` : ''}
   ${SOCIAL ? '<div class="acct" data-account></div>' : ''}
 </div>`;
 }
@@ -83,7 +90,7 @@ ${jsonLd ? `<script type="application/ld+json">${JSON.stringify(jsonLd)}</script
 <script>window.OI = { base: ${JSON.stringify(url())}, repo: ${JSON.stringify(REPO)}, chev: ${JSON.stringify(ICON.chev)} };</script>
 </head>
 <body>
-${topStrip({ search })}
+${topStrip({ search, home: path === '' })}
 <main class="page">
 ${body}
 ${footer()}

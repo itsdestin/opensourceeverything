@@ -1,11 +1,15 @@
 // The home page, in the order a newcomer needs it (Destin, Oct 27: "clearer… more polished for newcomers"):
 // 1. what this is and a big search, 2. popular switches with real screenshots, 3. every category as a tidy card,
 // 4. what's still missing, 5. the builders' card. Everything sits inside a raised card (no bare text).
-import { url, esc, ICON, suggestUrl, shot, SITE_URL, SOCIAL, counts } from '../lib.mjs';
+import { url, esc, suggestUrl, shot, SITE_URL, SOCIAL, counts } from '../lib.mjs';
 import { appUrl, sortAlts } from '../cards.mjs';
 
 // WHY a list: the picture cards need a replacement with a real screenshot.
-const POPULAR = ['Google Docs', 'Adobe Photoshop', 'Microsoft Windows', 'Google Chrome', 'Notion', 'Google Photos', 'Figma', 'WhatsApp'];
+// WHY ten (Destin, Nov 2): two rows of five shorter cards. Premiere Pro and Trello added for an editing and a work app.
+const POPULAR = ['Google Docs', 'Adobe Photoshop', 'Microsoft Windows', 'Google Chrome', 'Notion', 'Google Photos', 'Figma', 'WhatsApp', 'Adobe Premiere Pro', 'Trello'];
+// WHY these four for the top card's fan (Destin, Nov 2: "more visually interesting options"): 3D animation, painting, a game
+// engine and video editing are colourful screens that show open source isn't only plain office windows. [project id, screenshot number]
+const FAN = [['blender', 1], ['krita', 0], ['godot', 0], ['kdenlive', 1]];
 // WHY by hand: the obvious answer isn't always the most-starred one (GIMP has no GitHub stars; it lives on GNOME's own server).
 const LEAD = { 'Adobe Photoshop': 'gimp' };
 // WHY everyday first (Destin picked "Everyday first, areas below" in the taxonomy-v2 deck, Oct 27): most visitors come to replace a
@@ -50,18 +54,20 @@ export default function home(d) {
     // WHY a Verified pick first (Oct 27): the card's one name should be the one mods vouch for, e.g. Linux Mint for Windows.
     const withShot = (x) => x.p.screenshots?.length;
     const lead = alts.find((x) => x.p.id === LEAD[name]) ?? alts.find((x) => x.p.verified && x.a.fit === 'full' && withShot(x)) ?? alts.find((x) => x.a.fit === 'full' && withShot(x)) ?? alts.find(withShot) ?? alts[0];
-    return lead ? { name, lead, more: alts.length - 1 } : null;
+    return lead ? { name, lead, total: alts.length } : null;
   }).filter(Boolean);
-  const switchCard = ({ name, lead, more }) => `<a class="card pic swcard" href="${appUrl(name)}">
+  // WHY the closed app's name as the title (Destin, Nov 2): visitors look for the app they want to leave; the count says what's
+  // behind the click, so the "+5 more" chip went. The screenshot is still the best-known replacement's.
+  const switchCard = ({ name, lead, total }) => `<a class="card pic swcard" href="${appUrl(name)}">
       ${lead.p.screenshots?.[0] ? `<div class="preview"><img src="${esc(shot(lead.p))}" alt="${esc(lead.p.name)} screenshot" loading="lazy" referrerpolicy="no-referrer"></div>` : '<div class="preview empty">No screenshot yet</div>'}
       <div class="inner">
-        <div class="muted11">Instead of ${esc(name)}</div>
-        <h3>${esc(lead.p.name)}</h3>
-        ${more > 0 ? `<div class="foot"><span class="chip">+${more} more</span></div>` : ''}
+        <div class="muted11">See ${total} ${total === 1 ? 'alternative' : 'alternatives'} for</div>
+        <h3>${esc(name)}</h3>
       </div></a>`;
 
 
   // ── Categories: icon, name, a summary line and its first groups; the rest is one "+ more" chip ──
+  const fan = FAN.map(([id, n]) => d.projById.get(id)).map((p, i) => p && shot(p, FAN[i][1])).filter(Boolean);
   const SHOWN = 6;
   const numbers = (gs) => { const n = new Set(gs.flatMap((g) => g.alternatives.map((a) => a.project))).size;
     return `<b class="num">${gs.length}</b> ${gs.length === 1 ? 'job' : 'jobs'} · <b class="num">${n}</b> open projects`; };
@@ -85,7 +91,7 @@ export default function home(d) {
     // WHY <details> (Destin, hierarchy deck, Oct 30: "all collapsible sections", "on mobile especially"): every area row folds, with
     // the browser's own keyboard and screen-reader support. WHY only Everyday apps starts open, on every screen (Destin, Oct 30): written
     // into the page, so nothing flashes open then shut. site.js opens a row a link points at (#area-…, the category breadcrumb).
-    .map(({ a, cs }) => `<details class="arearow" id="area-${a.id}"${a === everyday ? ' open' : ''}>
+    .map(({ a, cs }) => `<details class="arearow" name="areas" id="area-${a.id}"${a === everyday ? ' open' : ''}>
       <summary><span class="label">${esc(a === everyday ? 'Everyday apps' : a.name)}</span><span class="muted11">${cs.length} ${cs.length === 1 ? 'category' : 'categories'}</span></summary>
       <div class="catgrid">${cs.map((c) => catCard(c, a)).join('')}</div>
     </details>`).join('');
@@ -100,14 +106,11 @@ export default function home(d) {
       <div class="foot">Replaces ${esc(g.closed.join(', '))}</div></a>`;
 
   const body = `
-  <!-- WHY a small top card (Destin, Nov 2): just the headline and the search box. The site name (top left), the search
-       button (top right) and Sign in sit in the shared top strip, as on every other page. -->
+  <!-- WHY no search box here (Destin, Nov 2): on the home page the top strip's search becomes a full search bar, so the card
+       holds the headline and a fan of real app screens. -->
   <div class="surface hero3">
-    <h1>Find an open-source replacement for the apps you use</h1>
-    <div class="searchwrap big" data-search>
-      <div class="searchpill">${ICON.search}<input type="search" placeholder="Which app do you want to replace?" autocomplete="off" aria-label="Search for an app"></div>
-      <div class="menu search-menu" role="listbox"></div>
-    </div>
+    <h1>Find free, open source replacements for almost any software</h1>
+    ${fan.length === 4 ? `<div class="fan" aria-hidden="true">${fan.map((u, i) => `<img class="f${i}" src="${esc(u)}" alt="" referrerpolicy="no-referrer">`).join('')}</div>` : ''}
   </div>
 
   <section class="surface sec">
