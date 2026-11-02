@@ -8,7 +8,6 @@ import { appUrl, sortAlts } from '../cards.mjs';
 const POPULAR = ['Google Docs', 'Adobe Photoshop', 'Microsoft Windows', 'Google Chrome', 'Notion', 'Google Photos', 'Figma', 'WhatsApp'];
 // WHY by hand: the obvious answer isn't always the most-starred one (GIMP has no GitHub stars; it lives on GNOME's own server).
 const LEAD = { 'Adobe Photoshop': 'gimp' };
-// WHY no "Try" chips (Destin, Nov 2): dropped before launch; the Popular alternatives cards right below already name these apps.
 // WHY everyday first (Destin picked "Everyday first, areas below" in the taxonomy-v2 deck, Oct 27): most visitors come to replace a
 // paid app, so the everyday area's categories lead; the other five areas follow as one card each.
 const EVERYDAY = 'everyday';
@@ -61,8 +60,6 @@ export default function home(d) {
         ${more > 0 ? `<div class="foot"><span class="chip">+${more} more</span></div>` : ''}
       </div></a>`;
 
-  // WHY no screenshot fan in the top card (Destin, Nov 2: "make the header card much smaller"): it set the card's height,
-  // and the Popular alternatives cards right below already show real screenshots.
 
   // ── Categories: icon, name, a summary line and its first groups; the rest is one "+ more" chip ──
   const SHOWN = 6;

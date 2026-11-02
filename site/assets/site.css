@@ -296,14 +296,7 @@ textarea.field { resize:vertical; min-height:4.8em; }
 /* ═══ From the home demo: hero, one-line rows, category cards ═══ */
 /* Home-only pieces; everything else comes from demo.css. */
 .page { padding-top:12px; }
-.hero2 { padding:16px; display:flex; flex-direction:column; gap:12px; }
-.hero-row { display:flex; align-items:center; gap:12px; }
-.hero2 .searchwrap { width:min(520px,45%); }
-.hero2 .searchpill { padding:6px 6px 6px 14px; }
-.hero2 .searchpill input { font-size:14px; }
 .pop { display:flex; align-items:center; gap:8px; min-width:0; padding-left:40px; }
-.headline { flex:1; min-width:0; }
-.headline h1 { font-size:16px; font-weight:600; margin:0; }
 .row1 { display:grid; grid-template-columns:repeat(auto-fill,minmax(280px,1fr)); gap:12px; }
 .fchips { display:flex; gap:6px; overflow-x:auto; scrollbar-width:none; }
 .fchips::-webkit-scrollbar { display:none; }
@@ -333,9 +326,6 @@ textarea.field { resize:vertical; min-height:4.8em; }
 .mi.suggest { color:var(--fg); font-weight:500; }
 select.field { appearance:auto; }
 @media (max-width:640px) {
-  .hero-row { flex-wrap:wrap; }
-  .hero-row .headline { flex-basis:calc(100% - 44px); }
-  .hero2 .searchwrap { width:100%; }
   .pop { padding-left:0; }
   .row1 { display:flex; overflow-x:auto; scrollbar-width:none; padding:8px 4px 16px; margin:-8px -4px -16px; }
   .row1 .card { flex:0 0 260px; }

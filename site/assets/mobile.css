@@ -103,7 +103,7 @@
 
 @media (max-width:640px) {
   /* ── A slim app header: the site's name, and Sign in or your avatar (Destin, Oct 27: sign-in isn't a tab) ── */
-  .top, body:has(.hero3) > .top { display:flex; padding:10px 16px 6px; gap:8px; }
+  .top { display:flex; padding:10px 16px 6px; gap:8px; }
   .top .searchwrap { display:none; }
 
   /* ── Less dead space ── */
@@ -115,6 +115,6 @@
   .idfoot .muted11 { display:none; }
 
   /* ── The home page's top card: headline and search only (Destin, Nov 2) ── */
-  .hero3 h1 { font-size:22px; }
+  .hero3 h1 { font-size:20px; }
   .searchwrap.big .searchpill { padding:10px 14px; }
 }
