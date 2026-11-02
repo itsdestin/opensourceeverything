@@ -78,6 +78,10 @@ export function page({ path, title, description, body, styles = [], scripts = []
 <meta property="og:url" content="${SITE_URL}${path}">
 <meta property="og:site_name" content="Open Source Everything">
 <link rel="icon" href="${url('assets/icon.svg')}" type="image/svg+xml">
+<!-- WHY preload the main font (Destin, Nov 2: "the whole page frequently seems to flicker/resize slightly when clicking between
+     pages"): each page drew its text in a stand-in font, then swapped to Outfit about 45ms later, nudging text and cards. Asking
+     for the font first means it is ready before the first paint. -->
+<link rel="preload" href="${url('assets/fonts/outfit-latin.woff2')}" as="font" type="font/woff2" crossorigin>
 <link rel="stylesheet" href="${asset('assets/fonts.css')}">
 <link rel="stylesheet" href="${asset('assets/site.css')}">
 ${styles.map((s) => `<link rel="stylesheet" href="${asset('assets/' + s)}">`).join('\n')}

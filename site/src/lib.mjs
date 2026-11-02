@@ -1,6 +1,9 @@
 // Shared helpers for building Open Source Everything's pages: loading the map data, links, small HTML pieces.
 import { readFileSync } from 'node:fs';
-import { join } from 'node:path';
+import { join, dirname } from 'node:path';
+import { fileURLToPath } from 'node:url';
+// The site/ folder (thumbnail paths like assets/shots/x.webp are relative to it).
+const SITE_DIR = join(dirname(fileURLToPath(import.meta.url)), '..');
 
 // WHY "/": the site has its own address, opensourceeverything.org (Destin registered it Oct 27). SITE_BASE is kept for
 // building a copy that lives in a folder, e.g. itsdestin.github.io/opensourceeverything/ before the address works.
@@ -21,6 +24,25 @@ export const REPO = 'https://github.com/itsdestin/opensourceeverything';
 export const suggestUrl = (template, fields = {}) => `${REPO}/issues/new?template=${template}.yml${Object.entries(fields).map(([k, v]) => `&${k}=${encodeURIComponent(v)}`).join('')}`;
 // The small copy of screenshot n (prefill/make-thumbs.mjs), or the project's original when none was made.
 export const shot = (p, n = 0) => (p.thumbs?.[n] ? url(p.thumbs[n]) : p.screenshots?.[n]);
+// The pixel size of one of our own screenshot thumbnails (WebP), read from the file's header; null for outside images.
+// WHY (Nov 2, flicker between pages): an image with no size takes no room until it loads, then pushes things over. Writing
+// width and height into the page lets the browser keep its room from the first paint.
+const sizeCache = new Map();
+export const shotSize = (p, n = 0) => {
+  const rel = p.thumbs?.[n]; if (!rel) return null;
+  if (sizeCache.has(rel)) return sizeCache.get(rel);
+  let size = null;
+  try {
+    const b = readFileSync(join(SITE_DIR, rel));
+    const kind = b.toString('ascii', 12, 16);
+    if (kind === 'VP8X') size = [1 + b.readUIntLE(24, 3), 1 + b.readUIntLE(27, 3)];
+    else if (kind === 'VP8 ') size = [b.readUInt16LE(26) & 0x3fff, b.readUInt16LE(28) & 0x3fff];
+    else if (kind === 'VP8L') { const v = b.readUInt32LE(21); size = [(v & 0x3fff) + 1, ((v >> 14) & 0x3fff) + 1]; }
+  } catch {}
+  sizeCache.set(rel, size); return size;
+};
+// Ready-made width/height attributes for an <img>, or nothing.
+export const shotDims = (p, n = 0) => { const s = shotSize(p, n); return s ? ` width="${s[0]}" height="${s[1]}"` : ''; };
 export const url = (path = '') => BASE + path.replace(/^\//, '');
 export const esc = (s) => String(s ?? '').replace(/[&<>"']/g, (c) => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c]));
 export const fmtStars = (n) => (n >= 1000 ? (n / 1000).toFixed(n >= 10000 ? 0 : 1).replace(/\.0$/, '') + 'k' : String(n));

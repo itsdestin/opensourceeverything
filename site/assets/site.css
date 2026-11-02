@@ -37,6 +37,10 @@
 /* WHY scrollbar-gutter (Oct 30 performance pass): on the search page the scrollbar appeared once results filled the page, and every
    card jumped 15px sideways. Reserving its space keeps the page still whether or not it scrolls. */
 html { background:var(--canvas) var(--wallpaper) center / cover fixed no-repeat; scrollbar-gutter:stable; }
+/* WHY (Destin, Nov 2: flicker between pages): browsers that support it fade from one page to the next instead of blanking and
+   redrawing. Visitors who ask for less motion keep the plain switch. */
+@media (prefers-reduced-motion: no-preference) { @view-transition { navigation: auto; } }
+::view-transition-old(root), ::view-transition-new(root) { animation-duration:.15s; }
 body { margin:0; min-height:100vh; color:var(--fg); font:14px/1.45 var(--font); }
 svg { display:block; flex:none; }
 button, input, textarea { font:inherit; color:inherit; }

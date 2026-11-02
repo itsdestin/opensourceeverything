@@ -2,7 +2,7 @@
 import { familyIndex, stoppedBanner } from '../family.mjs';
 import { rvTop, rvFamilyA, mapTrail } from '../redesign.mjs';
 import { projectFeatures, helpWithAi } from '../surfaces.mjs';
-import { esc, url, SITE_URL, KIND, SETUP, SETUP_MEANING, setupOf, setupWhy, factChips, hostOf, fmtStars, actions, codeUrl, devicesText, suggestUrl, shot, SOCIAL } from '../lib.mjs';
+import { esc, url, SITE_URL, KIND, SETUP, SETUP_MEANING, setupOf, setupWhy, factChips, hostOf, fmtStars, actions, codeUrl, devicesText, suggestUrl, shot, shotDims, SOCIAL } from '../lib.mjs';
 
 const HOSTS = { 'github.com': 'GitHub', 'gitlab.com': 'GitLab', 'codeberg.org': 'Codeberg' };
 
@@ -42,7 +42,7 @@ export default function projectPages(d) {
   ${p.screenshots?.length ? `<section class="surface sec fold-phone${p.screenshots.length < 3 ? ' shots-few' : ''}">
         <div class="sec-head fold-head"><div><h2 class="h-large">Screenshots${p.screenshots.length > 1 ? `<span class="count">${p.screenshots.length}</span>` : ''}</h2></div></div>
         <!-- WHY small thumbnails (Destin, Oct 27: full-size pictures were "overwhelming"); full size opens in a viewer. -->
-        <div class="thumbstrip">${p.screenshots.map((u, i) => `<button class="thumb" type="button" data-shot="${esc(u)}" aria-label="Screenshot ${i + 1} of ${p.screenshots.length}, full size"><img src="${esc(shot(p, i))}" alt="" loading="lazy" referrerpolicy="no-referrer"></button>`).join('')}</div>
+        <div class="thumbstrip">${p.screenshots.map((u, i) => `<button class="thumb" type="button" data-shot="${esc(u)}" aria-label="Screenshot ${i + 1} of ${p.screenshots.length}, full size"><img src="${esc(shot(p, i))}"${shotDims(p, i)} alt="" loading="lazy" referrerpolicy="no-referrer"></button>`).join('')}</div>
       </section>` : ''}
       <section class="surface sec fold-phone">
         <!-- WHY (reviewer, round 5): with ONE group there is no box in a box and no empty heading line: the fit pill sits on the section's own line and the vote box is the only box. With several groups each gets a named row. -->
