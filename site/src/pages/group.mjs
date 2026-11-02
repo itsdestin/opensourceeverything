@@ -1,5 +1,5 @@
 // One page per group (g/<id>/): the job, the closed apps it replaces, and its open alternatives.
-// Ported from mockups/group-page.html. Votes, comments, "still missing", suggest and report need the server,
+// Ported from the old mockups/group-page.html demo (removed Oct 31). Votes, comments, "still missing", suggest and report need the server,
 // so they only appear once API_URL is set (see lib.mjs).
 import { esc, url, ICON, SITE_URL, API_URL, SOCIAL, SUBREDDIT, codeUrl, suggestUrl } from '../lib.mjs';
 import { altCard, appUrl, sortAlts, deviceFilter, buildBox, chooseBox, FILTERS } from '../cards.mjs';

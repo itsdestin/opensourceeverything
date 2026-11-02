@@ -5,7 +5,7 @@ status: active
 
 The real server (Cloudflare Worker + D1) and the preview's pretend server (`site/assets/fake-api.js`) obey exactly
 this list. The page never decides anyone's rights: every note comes back with a `can` list saying what the signed-in
-person may do with it, and the page only shows those buttons. Decisions: Destin, Oct 27 (from `docs/discussion-design.md`
+person may do with it, and the page only shows those buttons. Decisions: Destin, Oct 27 (from `docs/archive/discussion-design.md`
 and the review of the draft).
 
 ## Numbers (returned by `GET /me` as `rules`, so the page never hard-codes them)

@@ -7,7 +7,7 @@
 //
 // WHY these weights (points, 100 is roughly "everything good"):
 //   fit        40 / 14   The question the visitor asked is "can this replace it?". Nothing else outweighs a partial fit.
-//   community  ±30       People's thumbs are the main signal once there are enough of them (v1-plan). Capped, so a
+//   community  ±30       People's thumbs are the main signal once there are enough of them (docs/archive/v1-plan.md). Capped, so a
 //                        crowd can reorder neighbours but never lift a partial replacement over a full one on its own.
 //   editors    0..6      The data file lists each group best-first, BUT Destin confirmed (Oct 26) that order was written
 //                        by the AI pre-fill, not by people. So it is only a mild tie-breaker (was 0..14) and fades twice

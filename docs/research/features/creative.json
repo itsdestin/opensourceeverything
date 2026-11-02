@@ -1,0 +1,4104 @@
+{
+ "batch": "creative",
+ "checked": "2026-10-27",
+ "answers": {
+  "blender": {
+   "modelling-3d": {
+    "v": "yes",
+    "note": null,
+    "source": "https://www.blender.org/features/",
+    "quote": "Sculpting, retopology, modeling, curves. Blender's modeling toolset is extensive."
+   },
+   "rigging-animation": {
+    "v": "yes",
+    "note": null,
+    "source": "https://docs.blender.org/manual/en/latest/animation/index.html",
+    "quote": "Manual chapter lists Animation & Rigging: Keyframes, Armatures, Bones, Graph Editor, F-Curves"
+   },
+   "compositing-vfx": {
+    "v": "yes",
+    "note": null,
+    "source": "https://www.blender.org/features/",
+    "quote": "From camera and object motion tracking to masking and compositing, you can 'fix it in post'."
+   },
+   "fbx-files": {
+    "v": "yes",
+    "note": null,
+    "source": "https://docs.blender.org/manual/en/latest/files/import_export.html",
+    "quote": "Manual lists Universal Scene Description, Wavefront OBJ, Alembic, FBX under importing and exporting files"
+   },
+   "gpu-render": {
+    "v": "yes",
+    "note": null,
+    "source": "https://docs.blender.org/manual/en/latest/render/cycles/gpu_rendering.html",
+    "quote": "Select either CUDA, OptiX, HIP, oneAPI, or Metal in the Cycles Render Devices user preference."
+   }
+  },
+  "librechat": {
+   "point-and-click": {
+    "v": "partly",
+    "note": "Daily use is a web page; setup needs commands (Docker)",
+    "source": "https://www.librechat.ai/docs/quick_start",
+    "quote": "Copy .env.example to .env; Run docker compose up; Open localhost:3080 and register"
+   },
+   "local-models": {
+    "v": "partly",
+    "note": "Works with Ollama and similar after configuration",
+    "source": "https://github.com/LibreChat-AI/LibreChat",
+    "quote": "Compatible with Local & Remote AI Providers: Ollama, AMD Lemonade, koboldcpp ..."
+   },
+   "any-provider": {
+    "v": "yes",
+    "note": null,
+    "source": "https://github.com/LibreChat-AI/LibreChat",
+    "quote": "Anthropic (Claude), AWS Bedrock, OpenAI, Azure OpenAI, Google, Vertex AI ... Use any OpenAI-compatible API"
+   },
+   "chat-with-documents": {
+    "v": "yes",
+    "note": null,
+    "source": "https://github.com/LibreChat-AI/LibreChat",
+    "quote": "Chat with Files using Custom Endpoints, OpenAI, Azure, Anthropic, AWS Bedrock, & Google"
+   },
+   "web-search": {
+    "v": "yes",
+    "note": null,
+    "source": "https://github.com/LibreChat-AI/LibreChat",
+    "quote": "Web Search: Combines search providers, content scrapers, and result rerankers"
+   },
+   "voice-chat": {
+    "v": "yes",
+    "note": null,
+    "source": "https://github.com/LibreChat-AI/LibreChat",
+    "quote": "Chat hands-free with Speech-to-Text and Text-to-Speech"
+   }
+  },
+  "openhands": {
+   "mcp-tools": {
+    "v": "yes",
+    "note": null,
+    "source": "https://docs.openhands.dev/openhands/usage/settings/mcp-settings",
+    "quote": "Model Context Protocol (MCP) is a mechanism that allows OpenHands to communicate with external tool servers."
+   },
+   "local-models": {
+    "v": "partly",
+    "note": "Needs a local model server such as LM Studio or Ollama set up",
+    "source": "https://docs.openhands.dev/openhands/usage/llms/local-llms",
+    "quote": "Connect OpenHands to local LLM servers such as LM Studio, Ollama, vLLM, and SGLang."
+   },
+   "inside-editor": {
+    "v": "yes",
+    "note": "Zed, JetBrains and VS Code (community extension)",
+    "source": "https://docs.openhands.dev/openhands/usage/cli/ide/overview",
+    "quote": "Supported IDEs: Zed Native; VS Code Community Extension; JetBrains Native"
+   },
+   "any-provider": {
+    "v": "yes",
+    "note": null,
+    "source": "https://github.com/OpenHands/OpenHands",
+    "quote": "Bring your own model: Use with any LLM"
+   },
+   "point-and-click": {
+    "v": "partly",
+    "note": "Used in a browser; install needs npm or Docker commands",
+    "source": "https://github.com/OpenHands/OpenHands",
+    "quote": "npm install -g @openhands/agent-canvas ... Open http://localhost:8000"
+   },
+   "agent-mode": {
+    "v": "yes",
+    "note": null,
+    "source": "https://docs.openhands.dev/openhands/usage/cli/ide/overview",
+    "quote": "Always Approve: the agent runs all actions without asking for confirmation ... Always Ask (Default)"
+   }
+  },
+  "invokeai": {
+   "point-and-click": {
+    "v": "yes",
+    "note": null,
+    "source": "https://invoke-ai.github.io/InvokeAI/",
+    "quote": "The Invoke Launcher is the fastest way to get up and running on Windows, macOS, and Linux."
+   },
+   "inpainting": {
+    "v": "yes",
+    "note": null,
+    "source": "https://github.com/invoke-ai/InvokeAI",
+    "quote": "The Unified Canvas ... support for all core generation capabilities, in/out-painting, brush tools, and more."
+   },
+   "community-models": {
+    "v": "yes",
+    "note": null,
+    "source": "https://invoke-ai.github.io/InvokeAI/concepts/models/",
+    "quote": "Paste a HF Repo ID to install it."
+   },
+   "modest-hardware": {
+    "v": "partly",
+    "note": "SDXL needs 8 GB; newer models need more; less is slower",
+    "source": "https://invoke.ai/start-here/system-requirements",
+    "quote": "GPUs with less VRAM typically still work, if a bit slower. SDXL ... Nvidia 20xx+ 8GB"
+   }
+  },
+  "lightdash": {
+   "managed-cloud": {
+    "v": "yes",
+    "note": null,
+    "source": "https://github.com/lightdash/lightdash",
+    "quote": "The fastest way to use Lightdash is Lightdash Cloud: no infrastructure to run, always up to date"
+   },
+   "dashboard-sharing": {
+    "v": "partly",
+    "note": "Embedding only on paid Cloud or Enterprise plans",
+    "source": "https://docs.lightdash.com/references/embedding",
+    "quote": "Embedding is available for Lightdash Cloud and Enterprise On-Prem customers where Lightdash has enabled it."
+   },
+   "no-paid-edition": {
+    "v": "partly",
+    "note": "Enterprise features need a paid license key",
+    "source": "https://github.com/lightdash/lightdash",
+    "quote": "Enterprise features are available on self-hosted deployments with a license key"
+   }
+  },
+  "inventaire": {
+   "phone-app": {
+    "v": "no",
+    "note": "Web app only; makers explain why there is no phone app",
+    "source": "https://wiki.inventaire.io/wiki/Why_is_there_no_app%3F",
+    "quote": "inventaire.io is what we called a web application: a website built to be used by any device thanks to web standards."
+   },
+   "book-catalog": {
+    "v": "yes",
+    "note": "Members request books others give, lend or sell",
+    "source": "https://wiki.inventaire.io/wiki/Help",
+    "quote": "How to change my book transaction mode; How to make a request for a book"
+   },
+   "ebook-reader": {
+    "v": "no",
+    "note": "A book inventory and sharing site, no reader",
+    "source": "https://codeberg.org/inventaire/inventaire",
+    "quote": "Inventaire is a libre/open webapp to make inventories and lists of books"
+   },
+   "send-to-ereader": {
+    "v": "no",
+    "note": "No e-reader sending in docs or help pages",
+    "source": "https://wiki.inventaire.io/wiki/Help",
+    "quote": null
+   }
+  },
+  "espocrm": {
+   "sales-pipeline": {
+    "v": "yes",
+    "note": null,
+    "source": "https://www.espocrm.com/features/",
+    "quote": "Opportunities · Move deals through the sales pipeline"
+   },
+   "managed-cloud": {
+    "v": "yes",
+    "note": null,
+    "source": "https://www.espocrm.com/pricing/",
+    "quote": "Set Up a CRM in Minutes, Not Months. Basic $15.00 per user/month (EspoCRM Cloud)"
+   },
+   "integrations-api": {
+    "v": "yes",
+    "note": null,
+    "source": "https://github.com/espocrm/espocrm",
+    "quote": "Straightforward REST API. It can be easily integrated with other applications using a REST API."
+   },
+   "no-paid-edition": {
+    "v": "partly",
+    "note": "Some add-on packs (reports, sales, workflows) are paid",
+    "source": "https://www.espocrm.com/extensions/",
+    "quote": "Advanced Pack: Reports, Business Process Management, Workflows; Sales Pack: Products and pricing, Quotations"
+   }
+  },
+  "odoo": {
+   "managed-cloud": {
+    "v": "yes",
+    "note": null,
+    "source": "https://www.odoo.com/pricing",
+    "quote": "Standard ... / user / month All apps Odoo Online"
+   },
+   "no-paid-edition": {
+    "v": "partly",
+    "note": "Enterprise edition is licensed and adds features",
+    "source": "https://www.odoo.com/page/editions",
+    "quote": "Our business management software is available in 2 versions: Odoo Community (open-source) and Odoo Enterprise (licensed)."
+   },
+   "inventory": {
+    "v": "yes",
+    "note": null,
+    "source": "https://www.odoo.com/app/inventory",
+    "quote": "Never run out-of-stock with smart replenishment strategies like min-max rules, MTO, or the master production schedule."
+   },
+   "local-tax": {
+    "v": "yes",
+    "note": "Country-specific modules installed by company country",
+    "source": "https://www.odoo.com/documentation/19.0/applications/finance/fiscal_localizations.html",
+    "quote": "Fiscal localizations are country-specific modules that allows for compliance with a country's fiscal requirements."
+   }
+  },
+  "wallabag": {
+   "no-server-needed": {
+    "v": "partly",
+    "note": "Hosted version wallabag.it is paid after a 14-day trial",
+    "source": "https://wallabag.it/en",
+    "quote": "See plans from 11€ a year. 14-day free trial, no limitation and no credit card required."
+   },
+   "phone-app": {
+    "v": "partly",
+    "note": "Android app official; iOS app archived, no longer announced as official",
+    "source": "https://wallabag.org/news",
+    "quote": "The wallabag iOS app source repository is archived and the app is no longer announced as the official open source iOS app."
+   },
+   "syncs-devices": {
+    "v": "yes",
+    "note": null,
+    "source": "https://wallabag.it/en",
+    "quote": "Save articles now, read them later on every device"
+   },
+   "read-later": {
+    "v": "yes",
+    "note": null,
+    "source": "https://github.com/wallabag/wallabag",
+    "quote": "wallabag is a web application allowing you to save web pages for later reading."
+   },
+   "full-article": {
+    "v": "yes",
+    "note": null,
+    "source": "https://wallabag.org/",
+    "quote": "wallabag extracts the article content, removes distractions"
+   },
+   "feed-discovery": {
+    "v": "no",
+    "note": "You save pages you choose; no suggestions in site or docs",
+    "source": "https://wallabag.org/",
+    "quote": null
+   }
+  },
+  "tabler-icons": {
+   "commercial-free": {
+    "v": "yes",
+    "note": "MIT licence: keep the licence text with copied files",
+    "source": "https://github.com/tabler/tabler-icons",
+    "quote": "A set of 6238 free, MIT-licensed, high-quality SVG icons for your web projects."
+   },
+   "large-icon-set": {
+    "v": "yes",
+    "note": null,
+    "source": "https://github.com/tabler/tabler-icons",
+    "quote": "A set of 6238 free, MIT-licensed, high-quality SVG icons"
+   },
+   "icon-formats": {
+    "v": "yes",
+    "note": null,
+    "source": "https://github.com/tabler/tabler-icons",
+    "quote": "@tabler/icons: Raw SVG files; @tabler/icons-webfont: Icon font with CSS and SCSS files"
+   },
+   "icon-styles": {
+    "v": "yes",
+    "note": null,
+    "source": "https://github.com/tabler/tabler-icons",
+    "quote": "Outline version (5184 icons); Filled version (1054 icons)"
+   },
+   "design-tool-plugin": {
+    "v": "yes",
+    "note": null,
+    "source": "https://tabler.io/icons",
+    "quote": "Tabler Icons offers a plugin for Figma, with which you can easily find and customize the icons you just need."
+   }
+  },
+  "owncast": {
+   "live-chat": {
+    "v": "yes",
+    "note": null,
+    "source": "https://github.com/owncast/owncast",
+    "quote": "self-hosted, decentralized, single user live video streaming and chat server"
+   },
+   "stream-directory": {
+    "v": "partly",
+    "note": "Optional shared directory you can list yourself in",
+    "source": "https://owncast.online/docs/directory/",
+    "quote": "we have an optional Owncast directory located at https://owncast.directory you can add yourself to."
+   },
+   "federated": {
+    "v": "partly",
+    "note": "People on Mastodon can follow and share; chat stays on your site",
+    "source": "https://owncast.online/docs/social/",
+    "quote": "allows people to follow, engage with, and share your stream with others on what is known as The Fediverse"
+   },
+   "no-server-needed": {
+    "v": "no",
+    "note": "You run the server yourself",
+    "source": "https://github.com/owncast/owncast",
+    "quote": "Owncast is an open source, self-hosted ... live video streaming and chat server"
+   }
+  },
+  "mypaint": {
+   "pressure-pen": {
+    "v": "yes",
+    "note": null,
+    "source": "https://github.com/mypaint/mypaint/wiki/FAQ-Tilt-support",
+    "quote": "MyPaint has supported tilt since version 0.8."
+   },
+   "tablet-app": {
+    "v": "no",
+    "note": "Only Windows and Linux downloads",
+    "source": "https://github.com/mypaint/mypaint",
+    "quote": "Download ... installers for full releases for Windows, and AppImage files for Linux."
+   },
+   "psd-files": {
+    "v": "no",
+    "note": "Documents exchanged as OpenRaster, PNG or JPG",
+    "source": "https://github.com/mypaint/mypaint/wiki/FAQ-Interoperability",
+    "quote": "For this we support the OpenRaster file format ... we support JPG and PNG like most other applications."
+   },
+   "frame-animation": {
+    "v": "no",
+    "note": "Listing says no animation",
+    "source": "site data",
+    "quote": "Simpler than Procreate; no text or animation"
+   },
+   "comic-tools": {
+    "v": "no",
+    "note": "No speech balloon or panel tools in features list",
+    "source": "https://github.com/mypaint/mypaint",
+    "quote": null
+   }
+  },
+  "rawtherapee": {
+   "non-destructive": {
+    "v": "yes",
+    "note": null,
+    "source": "https://www.rawtherapee.com/",
+    "quote": "Non-destructive, 32-bit (floating point) processing engine."
+   },
+   "raw-photos": {
+    "v": "yes",
+    "note": null,
+    "source": "https://www.rawtherapee.com/",
+    "quote": "It is designed for developing raw files from a broad range of digital cameras."
+   },
+   "photo-library": {
+    "v": "partly",
+    "note": "Browses and rates files; no full library",
+    "source": "https://github.com/RawTherapee/RawTherapee",
+    "quote": "will probably lack some peripheral features such as Digital Asset Management, printing, uploading"
+   },
+   "heal-remove": {
+    "v": "partly",
+    "note": "Has a spot removal tool; no content-aware fill",
+    "source": "https://github.com/RawTherapee/RawTherapee/issues/7426",
+    "quote": "Issue titled 'Spot Removal and Rotation tools' (tool exists in the app)"
+   }
+  },
+  "obs-studio": {
+   "screen-recording": {
+    "v": "yes",
+    "note": null,
+    "source": "https://obsproject.com/",
+    "quote": "Create scenes made up of multiple sources including window captures, images, text, browser windows, webcams, capture cards and more. Intuitive audio mixer"
+   },
+   "scenes-overlays": {
+    "v": "yes",
+    "note": null,
+    "source": "https://obsproject.com/",
+    "quote": "Set up an unlimited number of scenes you can switch between seamlessly via custom transitions."
+   },
+   "stream-out": {
+    "v": "yes",
+    "note": null,
+    "source": "https://obsproject.com/",
+    "quote": "Free and open source software for video recording and live streaming."
+   },
+   "built-in-editor": {
+    "v": "no",
+    "note": "No editing features on site or in quick-start guide",
+    "source": "https://obsproject.com/kb/quick-start-guide",
+    "quote": null
+   },
+   "instant-share-link": {
+    "v": "no",
+    "note": "No upload or share-link feature on site or in quick-start guide",
+    "source": "https://obsproject.com/kb/quick-start-guide",
+    "quote": null
+   }
+  },
+  "quant-ux": {
+   "no-server-needed": {
+    "v": "yes",
+    "note": "Free hosted version at quant-ux.com",
+    "source": "https://quant-ux.com/",
+    "quote": "Quant UX is a research, usability and prototyping tool ... Get started now, it's free!"
+   },
+   "prototyping": {
+    "v": "yes",
+    "note": null,
+    "source": "https://quant-ux.com/",
+    "quote": "Use our visual editor to create a interactive prototypes in minutes, that feel like real apps."
+   },
+   "figma-import": {
+    "v": "yes",
+    "note": "Reported not working in the Docker self-host setup",
+    "source": "https://github.com/KlausSchaefers/quant-ux/issues/330",
+    "quote": "similar to what you offer with the Figma importer (user comment); see also issue #294"
+   }
+  },
+  "natron": {
+   "compositing-vfx": {
+    "v": "yes",
+    "note": null,
+    "source": "https://github.com/NatronGitHub/Natron",
+    "quote": "Natron is a free, open-source (GPLv2 license) video compositor, similar in functionality to Adobe After Effects, Foundry's Nuke, or Blackmagic Fusion."
+   },
+   "motion-graphics": {
+    "v": "partly",
+    "note": "Animation tools exist; no dedicated text or logo tools",
+    "source": "https://github.com/NatronGitHub/Natron",
+    "quote": "Natron offers a simple and efficient way to deal with keyframes with a very accurate and intuitive Curve Editor as well as a Dope Sheet to quickly edit your motion graphics."
+   },
+   "modelling-3d": {
+    "v": "no",
+    "note": "Compositing only; no modelling tools in its feature list",
+    "source": "https://github.com/NatronGitHub/Natron",
+    "quote": null
+   },
+   "fbx-files": {
+    "v": "no",
+    "note": "Lists image and video formats only, no 3D formats",
+    "source": "https://github.com/NatronGitHub/Natron",
+    "quote": null
+   }
+  },
+  "ollama": {
+   "local-models": {
+    "v": "yes",
+    "note": null,
+    "source": "https://github.com/ollama/ollama",
+    "quote": "Access the latest releases locally or in the cloud with complete privacy."
+   },
+   "web-search": {
+    "v": "partly",
+    "note": "Web search is a separate service; needs a free account and key",
+    "source": "https://docs.ollama.com/capabilities/web-search",
+    "quote": "Web search is provided as a REST API with deeper tool integrations in the Python and JavaScript libraries."
+   },
+   "phone-app": {
+    "v": "partly",
+    "note": "Only unofficial third-party phone apps",
+    "source": "https://github.com/ollama/ollama",
+    "quote": "Ollama Android Chat - One-click Ollama on Android"
+   }
+  },
+  "codex-cli": {
+   "agent-mode": {
+    "v": "yes",
+    "note": null,
+    "source": "https://github.com/openai/codex",
+    "quote": "Codex CLI is a coding agent from OpenAI that runs locally on your computer."
+   },
+   "inside-editor": {
+    "v": "yes",
+    "note": "VS Code, Cursor, Windsurf",
+    "source": "https://github.com/openai/codex",
+    "quote": "If you want Codex in your code editor (VS Code, Cursor, Windsurf), install in your IDE."
+   },
+   "any-provider": {
+    "v": "yes",
+    "note": "Custom providers set in config file",
+    "source": "https://learn.chatgpt.com/docs/config-file/config-advanced",
+    "quote": "A model provider defines how Codex connects to a model (base URL, wire API, authentication, and optional HTTP headers)."
+   },
+   "local-models": {
+    "v": "yes",
+    "note": "Via --oss flag with Ollama or LM Studio",
+    "source": "https://learn.chatgpt.com/docs/config-file/config-advanced",
+    "quote": "Codex can run against a local \"open source\" provider such as Ollama or LM Studio when you pass --oss."
+   },
+   "mcp-tools": {
+    "v": "yes",
+    "note": null,
+    "source": "https://learn.chatgpt.com/docs/extend/mcp?surface=cli",
+    "quote": "Local Codex clients can also connect directly to MCP servers and share their configuration."
+   },
+   "point-and-click": {
+    "v": "no",
+    "note": "Terminal tool; separate desktop app exists",
+    "source": "https://github.com/openai/codex",
+    "quote": "Then simply run `codex` to get started."
+   }
+  },
+  "stable-diffusion-web-ui": {
+   "inpainting": {
+    "v": "yes",
+    "note": null,
+    "source": "https://github.com/AUTOMATIC1111/stable-diffusion-webui",
+    "quote": "Inpainting"
+   },
+   "modest-hardware": {
+    "v": "yes",
+    "note": null,
+    "source": "https://github.com/AUTOMATIC1111/stable-diffusion-webui",
+    "quote": "4GB video card support (also reports of 2GB working)"
+   },
+   "community-models": {
+    "v": "yes",
+    "note": "Load checkpoints and Loras; add by file",
+    "source": "https://github.com/AUTOMATIC1111/stable-diffusion-webui",
+    "quote": "Loras (same as Hypernetworks but more pretty)"
+   },
+   "point-and-click": {
+    "v": "partly",
+    "note": "Used in a web page; install needs Python, git, scripts",
+    "source": "https://github.com/AUTOMATIC1111/stable-diffusion-webui",
+    "quote": "Install Python 3.10.6 ... Install git ... Run webui-user.bat from Windows Explorer"
+   }
+  },
+  "metriql": {
+   "sql-queries": {
+    "v": "yes",
+    "note": "Through its JDBC driver",
+    "source": "https://metriql.com/introduction/intro",
+    "quote": "The docs include SQL and MQL querying pages and a JDBC Driver integration."
+   }
+  },
+  "open-library": {
+   "ebook-reader": {
+    "v": "yes",
+    "note": null,
+    "source": "https://openlibrary.org/help/faq/borrow",
+    "quote": "BookReader editions may be read online immediately in your web browser. No special software is required."
+   },
+   "book-catalog": {
+    "v": "partly",
+    "note": "Borrow only; no buying",
+    "source": "https://openlibrary.org/help/faq/borrow",
+    "quote": "These books are available in BookReader format and usually in PDF and ePub formats."
+   },
+   "audiobook-player": {
+    "v": "partly",
+    "note": "Read-aloud and volunteer recordings, not a full audiobook shelf",
+    "source": "https://openlibrary.org/help/faq/borrow",
+    "quote": "Any book that you can borrow from Open Library is also available in audio form."
+   },
+   "reading-tracking": {
+    "v": "yes",
+    "note": "Reading Log, lists and community reviews",
+    "source": "https://openlibrary.org/help/faq/reading-log",
+    "quote": "track books that you're currently reading, that you've already read, or that you want to read."
+   }
+  },
+  "suitecrm": {
+   "managed-cloud": {
+    "v": "yes",
+    "note": "SuiteCRM Hosted",
+    "source": "https://github.com/SuiteCRM/SuiteCRM",
+    "quote": "SuiteCRM Ltd also offers a range of complimentary hosting and support services: Hosting"
+   },
+   "integrations-api": {
+    "v": "yes",
+    "note": null,
+    "source": "https://suitecrm.com/",
+    "quote": "open REST API, allowing you to integrate CRM with core business systems"
+   }
+  },
+  "openbooks": {
+   "accounting": {
+    "v": "yes",
+    "note": null,
+    "source": "https://github.com/braedonsaunders/openbooks",
+    "quote": "Double-entry journals, chart of accounts, dimensions and custom segments, budgets, open items, controlled reversals/corrections, close tasks, approvals"
+   },
+   "inventory": {
+    "v": "yes",
+    "note": null,
+    "source": "https://github.com/braedonsaunders/openbooks",
+    "quote": "Stock locations, FIFO/average/standard costing, landed cost, cost-layer inquiry"
+   },
+   "manufacturing": {
+    "v": "yes",
+    "note": null,
+    "source": "https://github.com/braedonsaunders/openbooks",
+    "quote": "Standalone operator workspace, BOMs, versioned routings, work centers/rates, work orders"
+   },
+   "payroll": {
+    "v": "yes",
+    "note": "Packs for 14 countries",
+    "source": "https://github.com/braedonsaunders/openbooks",
+    "quote": "Payroll packs are registered for AU, BR, CA, DE, ES, FR, GB, IE, IT, JP, NL, PL, SG, and US."
+   },
+   "local-tax": {
+    "v": "partly",
+    "note": "41 country tax packs; not full coverage",
+    "source": "https://github.com/braedonsaunders/openbooks",
+    "quote": "Tax packs are configurable preparation workpapers, not a promise of direct electronic filing, government approval, or complete local coverage"
+   }
+  },
+  "heroic-games-launcher": {
+   "runs-windows-games": {
+    "v": "yes",
+    "note": "Wine or Proton",
+    "source": "https://github.com/Heroic-Games-Launcher/HeroicGamesLauncher",
+    "quote": "Play games using Wine or Proton [Linux]"
+   },
+   "cloud-saves": {
+    "v": "yes",
+    "note": null,
+    "source": "https://github.com/Heroic-Games-Launcher/HeroicGamesLauncher",
+    "quote": "Sync saves with the cloud"
+   },
+   "computer-app": {
+    "v": "yes",
+    "note": null,
+    "source": "https://github.com/Heroic-Games-Launcher/HeroicGamesLauncher",
+    "quote": "Heroic is an Open Source Game Launcher for Linux, Windows and macOS."
+   },
+   "combines-stores": {
+    "v": "partly",
+    "note": "Epic, GOG, Amazon; no Steam",
+    "source": "https://github.com/Heroic-Games-Launcher/HeroicGamesLauncher",
+    "quote": "Login with an existing Epic Games, GOG or Amazon account"
+   },
+   "sells-games": {
+    "v": "partly",
+    "note": "Opens store pages in the app; purchases happen on the stores",
+    "source": "https://github.com/Heroic-Games-Launcher/HeroicGamesLauncher",
+    "quote": "Access to Epic, GOG and Amazon Games stores directly from Heroic"
+   }
+  },
+  "inkscape": {
+   "cmyk-print": {
+    "v": "partly",
+    "note": "Works in RGB; CMYK support still in development",
+    "source": "https://davidrevoy.com/article1061/cmyk-support-in-inkscape-could-be-a-game-changer-for-professional-print-designers",
+    "quote": "Developer Martin Owens's goals for 2025 include delivering a PDF exporter (article describes CMYK support as work in progress)"
+   },
+   "ai-files": {
+    "v": "partly",
+    "note": "EPS imports; Illustrator .ai not listed",
+    "source": "https://gitlab.com/inkscape/inkscape/-/raw/master/README.md",
+    "quote": "imports several formats like EPS, Postscript, JPEG, PNG, BMP, and TIFF"
+   }
+  },
+  "peertube": {
+   "federated": {
+    "v": "yes",
+    "note": null,
+    "source": "https://github.com/Chocobozzz/PeerTube",
+    "quote": "PeerTube is a free, decentralized and federated video platform"
+   },
+   "no-server-needed": {
+    "v": "yes",
+    "note": "Join an existing instance",
+    "source": "https://github.com/Chocobozzz/PeerTube",
+    "quote": "Join an instance"
+   },
+   "live-chat": {
+    "v": "yes",
+    "note": null,
+    "source": "https://joinpeertube.org/",
+    "quote": "Stream via OBS or other RTMP software, enable replays and interact with viewers via live chat."
+   }
+  },
+  "aves": {
+   "map-view": {
+    "v": "yes",
+    "note": null,
+    "source": "https://github.com/deckerst/aves",
+    "quote": "The goal is for users to easily flow from albums to photos to tags to maps, etc."
+   },
+   "hidden-album": {
+    "v": "yes",
+    "note": "Locked vaults",
+    "source": "https://github.com/deckerst/aves/blob/develop/CHANGELOG.md",
+    "quote": "Vaults: allow hiding like other albums"
+   },
+   "recycle-bin": {
+    "v": "yes",
+    "note": null,
+    "source": "https://github.com/deckerst/aves/blob/develop/CHANGELOG.md",
+    "quote": "Navigation: allow adding recycle bin to bottom navigation bar"
+   }
+  },
+  "krita": {
+   "psd-files": {
+    "v": "yes",
+    "note": null,
+    "source": "https://krita.org/en/features/",
+    "quote": "Open PSD files that even Photoshop cannot open."
+   },
+   "brush-library": {
+    "v": "yes",
+    "note": null,
+    "source": "https://krita.org/en/features/",
+    "quote": "Over 100 professionally made brushes that come preloaded."
+   },
+   "frame-animation": {
+    "v": "yes",
+    "note": null,
+    "source": "https://krita.org/en/features/",
+    "quote": "Supports 1,000s of frames on timeline"
+   },
+   "comic-tools": {
+    "v": "yes",
+    "note": null,
+    "source": "https://krita.org/en/features/",
+    "quote": "Built-in vector tools help you create comic panels."
+   },
+   "non-destructive": {
+    "v": "yes",
+    "note": "Filter layers and masks",
+    "source": "https://krita.org/en/features/",
+    "quote": "In addition to painting, Krita comes with vector, filter, group, and file layers."
+   },
+   "tablet-app": {
+    "v": "partly",
+    "note": "Android tablets only; no iPad",
+    "source": "https://krita.org/en/download/",
+    "quote": "Apple iPads and iPhones are not supported."
+   }
+  },
+  "kimai": {
+   "hours-to-invoices": {
+    "v": "yes",
+    "note": null,
+    "source": "https://github.com/kimai/kimai",
+    "quote": "JSON API, invoicing, data exports, multi-timer and punch-in punch-out mode"
+   },
+   "managed-cloud": {
+    "v": "yes",
+    "note": "Kimai Cloud",
+    "source": "https://github.com/kimai/kimai",
+    "quote": "if you don't want to host Kimai, you can use the Cloud version of it."
+   },
+   "no-server-needed": {
+    "v": "yes",
+    "note": "Via Kimai Cloud",
+    "source": "https://github.com/kimai/kimai",
+    "quote": "if you don't want to host Kimai, you can use the Cloud version of it."
+   },
+   "phone-app": {
+    "v": "partly",
+    "note": "Third-party apps for iOS and Android",
+    "source": "https://www.kimai.org/en/blog/2023/kimai-mobile-ios-release",
+    "quote": null
+   }
+  },
+  "qdrant": {
+   "hybrid-search": {
+    "v": "yes",
+    "note": null,
+    "source": "https://github.com/qdrant/qdrant",
+    "quote": "Combine multiple vectors in a single query to get the best of semantic understanding and keyword precision"
+   },
+   "field-filters": {
+    "v": "yes",
+    "note": null,
+    "source": "https://github.com/qdrant/qdrant",
+    "quote": "Attach any JSON payload to your vectors and filter on it using a rich set of conditions"
+   },
+   "scales-out": {
+    "v": "yes",
+    "note": null,
+    "source": "https://github.com/qdrant/qdrant",
+    "quote": "Scale horizontally with sharding and replication"
+   },
+   "managed-cloud": {
+    "v": "yes",
+    "note": null,
+    "source": "https://github.com/qdrant/qdrant",
+    "quote": "Qdrant is also available as a fully managed Qdrant Cloud including a free tier."
+   },
+   "one-command-install": {
+    "v": "yes",
+    "note": null,
+    "source": "https://github.com/qdrant/qdrant",
+    "quote": "docker run -p 6333:6333 qdrant/qdrant"
+   }
+  },
+  "friction": {
+   "motion-graphics": {
+    "v": "yes",
+    "note": null,
+    "source": "https://github.com/friction2d/friction",
+    "quote": "a powerful and versatile motion graphics application that allows you to create vector and raster animations for web and video"
+   },
+   "modelling-3d": {
+    "v": "no",
+    "note": "2D vector and raster animation only",
+    "source": "https://friction.graphics",
+    "quote": null
+   },
+   "fbx-files": {
+    "v": "no",
+    "note": "Describes 2D animation only; no 3D exchange",
+    "source": "https://friction.graphics",
+    "quote": null
+   }
+  },
+  "youcoded": {
+   "point-and-click": {
+    "v": "yes",
+    "note": null,
+    "source": "https://github.com/itsdestin/youcoded",
+    "quote": "Download .exe/.dmg/.AppImage/.apk from Releases (a normal app)"
+   },
+   "local-models": {
+    "v": "yes",
+    "note": null,
+    "source": "https://github.com/itsdestin/youcoded",
+    "quote": "you choose the AI behind it: a local model on your computer, a cloud provider or API key, a ChatGPT plan, or Claude Code"
+   },
+   "any-provider": {
+    "v": "yes",
+    "note": null,
+    "source": "https://github.com/itsdestin/youcoded",
+    "quote": "Claude Code, ChatGPT, OpenRouter and compatible cloud providers, or local models"
+   },
+   "phone-app": {
+    "v": "partly",
+    "note": "Android app only; no iPhone app",
+    "source": "site data",
+    "quote": "Android | Available | Download .apk from Releases"
+   },
+   "agent-mode": {
+    "v": "yes",
+    "note": null,
+    "source": "https://github.com/itsdestin/youcoded",
+    "quote": "Its own permission-based agent can use tools, skills, and specialists"
+   },
+   "mcp-tools": {
+    "v": "yes",
+    "note": null,
+    "source": "https://github.com/itsdestin/youcoded/pull/280",
+    "quote": "Native MCP phase 1: MCP servers in native sessions"
+   },
+   "works-on-files": {
+    "v": "yes",
+    "note": null,
+    "source": "https://github.com/itsdestin/youcoded",
+    "quote": "helps you work with files, projects, research, and everyday tasks; Edit Word, Excel and PowerPoint files inside the desktop app"
+   },
+   "asks-before-acting": {
+    "v": "yes",
+    "note": null,
+    "source": "https://github.com/itsdestin/youcoded",
+    "quote": "Permission mode cycling (Normal, Auto-Accept, Plan Mode)"
+   }
+  },
+  "opencode": {
+   "any-provider": {
+    "v": "yes",
+    "note": null,
+    "source": "https://opencode.ai",
+    "quote": "75+ LLM providers through Models.dev, including local models"
+   },
+   "local-models": {
+    "v": "yes",
+    "note": null,
+    "source": "https://opencode.ai",
+    "quote": "You can even connect your local models."
+   },
+   "agent-mode": {
+    "v": "yes",
+    "note": null,
+    "source": "https://opencode.ai/docs/agents/",
+    "quote": "Build: the default primary agent with all tools enabled (file operations and shell commands)"
+   },
+   "inside-editor": {
+    "v": "partly",
+    "note": "VS Code and its forks; other editors via terminal",
+    "source": "https://opencode.ai/docs/ide/",
+    "quote": "VS Code and popular forks like Cursor, Windsurf, VSCodium"
+   },
+   "point-and-click": {
+    "v": "yes",
+    "note": "Desktop app is in beta",
+    "source": "https://opencode.ai",
+    "quote": "OpenCode is now available as an app for your desktop and web."
+   },
+   "mcp-tools": {
+    "v": "yes",
+    "note": null,
+    "source": "https://opencode.ai/docs/mcp-servers/",
+    "quote": "You can add external tools to OpenCode using the Model Context Protocol, or MCP."
+   }
+  },
+  "vane-formerly-perplexica": {
+   "no-server-needed": {
+    "v": "no",
+    "note": "Run it yourself with Docker; no hosted version listed",
+    "source": "https://github.com/ItzCrazyKns/Vane",
+    "quote": "docker run -d -p 3000:3000 ... Docker is highly recommended"
+   },
+   "sources-cited": {
+    "v": "yes",
+    "note": null,
+    "source": "https://github.com/ItzCrazyKns/Vane",
+    "quote": "delivering accurate answers with cited sources"
+   },
+   "local-models": {
+    "v": "yes",
+    "note": null,
+    "source": "https://github.com/ItzCrazyKns/Vane",
+    "quote": "support for local LLMs (Ollama) and cloud providers (OpenAI, Claude, Groq)"
+   },
+   "any-provider": {
+    "v": "yes",
+    "note": null,
+    "source": "https://github.com/ItzCrazyKns/Vane",
+    "quote": "Use local LLMs through Ollama or connect to OpenAI, Anthropic Claude, Google Gemini, Groq, and more"
+   }
+  },
+  "mlcraft": {
+   "sql-queries": {
+    "v": "partly",
+    "note": "SQL API on top of its own data models",
+    "source": "https://github.com/synmetrix/synmetrix",
+    "quote": "integrate with any BI tool via the SQL API"
+   },
+   "scheduled-reports": {
+    "v": "partly",
+    "note": "Scheduled reports and alerts; email not confirmed",
+    "source": "https://github.com/synmetrix/synmetrix",
+    "quote": "Scheduled reports and alerts: Monitor metrics and get notified of changes via configurable reports and alerts."
+   },
+   "managed-cloud": {
+    "v": "no",
+    "note": "Site only offers self-hosting and sales contact",
+    "source": "https://synmetrix.org",
+    "quote": null
+   }
+  },
+  "freecad": {
+   "dwg-files": {
+    "v": "partly",
+    "note": "Needs a separate converter; 3D files often need cleanup",
+    "source": "https://wiki.freecad.org/FreeCAD_and_DWG_Import",
+    "quote": "It requires an external 3rd party file converter to convert DWG files to DXF files, and vice-versa"
+   },
+   "drafting-2d": {
+    "v": "yes",
+    "note": null,
+    "source": "https://github.com/FreeCAD/FreeCAD",
+    "quote": "tools to adjust dimensions and create high-quality production drawings from 3D models"
+   },
+   "parametric": {
+    "v": "yes",
+    "note": null,
+    "source": "https://www.freecad.org/features.php",
+    "quote": "All FreeCAD objects are natively parametric"
+   },
+   "assemblies": {
+    "v": "yes",
+    "note": null,
+    "source": "https://www.freecad.org/features.php",
+    "quote": "With FreeCAD 1.0, a new built-in assembly workbench is also included"
+   },
+   "push-pull-3d": {
+    "v": "partly",
+    "note": "Sketch then build with Part Design; no direct push-pull",
+    "source": "https://www.freecad.org/features.php",
+    "quote": "Sketches are the main building block of FreeCAD"
+   },
+   "cam": {
+    "v": "yes",
+    "note": null,
+    "source": "https://www.freecad.org/features.php",
+    "quote": "3D printing, CAM and CNC ... Path Workbench"
+   },
+   "simulation": {
+    "v": "yes",
+    "note": null,
+    "source": "https://www.freecad.org/features.php",
+    "quote": "perform analyses such as Finite Element Analyses"
+   }
+  },
+  "twenty": {
+   "sales-pipeline": {
+    "v": "yes",
+    "note": null,
+    "source": "https://docs.twenty.com/user-guide/views-pipelines/capabilities/kanban-views",
+    "quote": "Kanban Board Views"
+   },
+   "email-sync": {
+    "v": "yes",
+    "note": null,
+    "source": "https://docs.twenty.com/user-guide/calendar-emails/overview",
+    "quote": "Google Account (Gmail & Google Calendar); Microsoft Account (Outlook & Microsoft Calendar)"
+   },
+   "integrations-api": {
+    "v": "yes",
+    "note": null,
+    "source": "https://docs.twenty.com/developers/introduction",
+    "quote": "Read and write records over REST and GraphQL, get webhooks when records change, and connect apps with OAuth."
+   },
+   "managed-cloud": {
+    "v": "yes",
+    "note": null,
+    "source": "https://github.com/twentyhq/twenty",
+    "quote": "Cloud: Sign up at twenty.com and spin up a workspace in under a minute, with no infrastructure to manage"
+   },
+   "no-paid-edition": {
+    "v": "partly",
+    "note": "Paid plans add SSO and row-level permissions",
+    "source": "https://twenty.com/pricing",
+    "quote": "Organization unlocks SSO and row-level permissions"
+   }
+  },
+  "quackback": {
+   "voting": {
+    "v": "yes",
+    "note": null,
+    "source": "https://github.com/QuackbackIO/quackback",
+    "quote": "Customers post ideas, vote and comment."
+   },
+   "public-roadmap": {
+    "v": "yes",
+    "note": null,
+    "source": "https://github.com/QuackbackIO/quackback",
+    "quote": "Show what's planned, in progress and complete."
+   },
+   "changelog": {
+    "v": "yes",
+    "note": null,
+    "source": "https://github.com/QuackbackIO/quackback",
+    "quote": "Publish updates and link the requests they ship, so every voter hears about it ... reach subscribers by email and RSS"
+   },
+   "no-server-needed": {
+    "v": "yes",
+    "note": null,
+    "source": "https://github.com/QuackbackIO/quackback",
+    "quote": "Quackback Cloud ... Start free ... The Free plan needs no card"
+   },
+   "integrations-api": {
+    "v": "yes",
+    "note": null,
+    "source": "https://github.com/QuackbackIO/quackback",
+    "quote": "A REST API with an OpenAPI spec, signed webhooks, and an MCP server"
+   }
+  },
+  "lutris": {
+   "sells-games": {
+    "v": "no",
+    "note": "Plays games you own; no store",
+    "source": "site data",
+    "quote": null
+   },
+   "combines-stores": {
+    "v": "yes",
+    "note": null,
+    "source": "https://lutris.net",
+    "quote": "Get direct access to your Steam, Epic Games Store, GOG and Humble Bundle game libraries."
+   },
+   "runs-windows-games": {
+    "v": "yes",
+    "note": null,
+    "source": "https://lutris.net",
+    "quote": "We provide emulators, compatibility layers and game engine re-implementations needed to run games in the most optimal way."
+   },
+   "cloud-saves": {
+    "v": "partly",
+    "note": "GOG cloud save sync added 2026; other stores unclear",
+    "source": "https://github.com/lutris/lutris/pull/6478",
+    "quote": "feat: Add GOG cloud save synchronization support (merged Mar 8, 2026)"
+   },
+   "computer-app": {
+    "v": "partly",
+    "note": "Linux only",
+    "source": "site data",
+    "quote": null
+   }
+  },
+  "graphite": {
+   "ai-files": {
+    "v": "no",
+    "note": "Listed as planned, not yet available",
+    "source": "https://graphite.art/features",
+    "quote": "Import: PDF, EPS, AI, DXF, PSD, TIFF (roadmap)"
+   },
+   "cmyk-print": {
+    "v": "no",
+    "note": "Listed as planned, not yet available",
+    "source": "https://graphite.art/features",
+    "quote": "CMYK, spot color, and ICC profiles (roadmap)"
+   },
+   "image-trace": {
+    "v": "no",
+    "note": "Listed as planned; open request",
+    "source": "https://github.com/GraphiteEditor/Graphite/issues/2332",
+    "quote": "Image trace vectorization"
+   },
+   "works-in-browser": {
+    "v": "yes",
+    "note": "Alpha release",
+    "source": "https://github.com/GraphiteEditor/Graphite",
+    "quote": "available now in alpha at editor.graphite.art"
+   }
+  },
+  "cortex": {
+   "model-serving": {
+    "v": "yes",
+    "note": null,
+    "source": "https://github.com/cortexlabs/cortex",
+    "quote": "Realtime - respond to requests in real-time and autoscale based on in-flight request volumes."
+   },
+   "multi-gpu": {
+    "v": "yes",
+    "note": null,
+    "source": "https://github.com/cortexlabs/cortex",
+    "quote": "Autoscaling - elastically scale clusters with CPU and GPU instances."
+   },
+   "managed-cloud": {
+    "v": "no",
+    "note": "Runs in your own AWS account; no hosted service listed",
+    "source": "https://github.com/cortexlabs/cortex",
+    "quote": "VPC - deploy clusters into a VPC on your AWS account"
+   }
+  },
+  "fossify-gallery": {
+   "photo-basic-editor": {
+    "v": "yes",
+    "note": null,
+    "source": "https://github.com/FossifyOrg/Gallery",
+    "quote": "Crop, resize, rotate, flip, draw, and apply stunning filters"
+   },
+   "map-view": {
+    "v": "no",
+    "note": "Map support requested, closed as not planned",
+    "source": "https://github.com/FossifyOrg/Gallery/issues/83",
+    "quote": "Geotagging/Map Support (closed, not planned)"
+   },
+   "hidden-album": {
+    "v": "yes",
+    "note": null,
+    "source": "https://github.com/FossifyOrg/Gallery",
+    "quote": "Lock down your memories with pin, pattern, or fingerprint protection. Secure specific photos, videos, or the entire app"
+   },
+   "recycle-bin": {
+    "v": "yes",
+    "note": null,
+    "source": "https://github.com/FossifyOrg/Gallery",
+    "quote": "built-in recycle bin lets you recover deleted photos and videos"
+   }
+  },
+  "digikam": {
+   "non-destructive": {
+    "v": "partly",
+    "note": "Keeps originals via versions; tools not re-openable",
+    "source": "https://www.digikam.org/about/features/",
+    "quote": "Image versioning support to not lost original"
+   },
+   "raw-photos": {
+    "v": "yes",
+    "note": null,
+    "source": "https://www.digikam.org/about/features/",
+    "quote": "RAW pictures support ... Native (based on Libraw)"
+   },
+   "photo-library": {
+    "v": "yes",
+    "note": null,
+    "source": "https://www.digikam.org/about/features/",
+    "quote": "By Labels (rating, color marks, flags); filtering by rating, filename, file type, tags"
+   },
+   "heal-remove": {
+    "v": "partly",
+    "note": "Basic healing clone brush",
+    "source": "https://docs.digikam.org/en/image_editor/enhancement_tools.html",
+    "quote": "Healing Clone copies pixel colors from a specific portion of the image and pastes them into another using a brush"
+   }
+  },
+  "solidtime": {
+   "one-click-timer": {
+    "v": "yes",
+    "note": null,
+    "source": "https://www.solidtime.io",
+    "quote": "Desktop apps & browser extension now available."
+   },
+   "hours-to-invoices": {
+    "v": "yes",
+    "note": null,
+    "source": "https://www.solidtime.io",
+    "quote": "Billable hours, invoiced in seconds; reports exported as PDF, CSV, or Excel"
+   },
+   "no-server-needed": {
+    "v": "yes",
+    "note": null,
+    "source": "https://github.com/solidtime-io/solidtime",
+    "quote": "If you do not want to self-host solidtime ... you can sign up for solidtime cloud"
+   }
+  },
+  "semi": {
+   "hybrid-search": {
+    "v": "yes",
+    "note": null,
+    "source": "https://github.com/weaviate/weaviate",
+    "quote": "Combine the power of semantic search with traditional keyword (BM25) search"
+   },
+   "field-filters": {
+    "v": "yes",
+    "note": null,
+    "source": "https://github.com/weaviate/weaviate",
+    "quote": "vector similarity search with keyword filtering ... advanced filtering"
+   },
+   "scales-out": {
+    "v": "yes",
+    "note": null,
+    "source": "https://github.com/weaviate/weaviate",
+    "quote": "native support for horizontal scaling"
+   },
+   "managed-cloud": {
+    "v": "yes",
+    "note": null,
+    "source": "https://github.com/weaviate/weaviate",
+    "quote": "Quickstart - Weaviate Cloud (console.weaviate.cloud)"
+   },
+   "one-command-install": {
+    "v": "yes",
+    "note": null,
+    "source": "https://github.com/weaviate/weaviate",
+    "quote": "You can easily start Weaviate and a local vector embedding model with Docker (docker compose up -d)"
+   },
+   "no-paid-edition": {
+    "v": "partly",
+    "note": "Enterprise Edition features need a license key",
+    "source": "https://github.com/weaviate/weaviate",
+    "quote": "This repository contains code in our Community Edition and our Enterprise Edition ... Requires license key"
+   }
+  },
+  "goose": {
+   "point-and-click": {
+    "v": "yes",
+    "note": null,
+    "source": "https://github.com/aaif-goose/goose",
+    "quote": "A native desktop app for macOS, Linux, and Windows."
+   },
+   "works-on-files": {
+    "v": "yes",
+    "note": null,
+    "source": "https://github.com/aaif-goose/goose/blob/main/documentation/docs/guides/managing-tools/goose-permissions.md",
+    "quote": "goose can modify files, use extensions, and delete files without requiring approval"
+   },
+   "asks-before-acting": {
+    "v": "partly",
+    "note": "Asks only if you switch to Manual or Smart approval",
+    "source": "https://github.com/aaif-goose/goose/blob/main/documentation/docs/guides/managing-tools/goose-permissions.md",
+    "quote": "`Autonomous Mode` is applied by default."
+   },
+   "any-provider": {
+    "v": "yes",
+    "note": null,
+    "source": "https://github.com/aaif-goose/goose",
+    "quote": "goose works with 15+ providers — Anthropic, OpenAI, Google, Ollama, OpenRouter, Azure, Bedrock, and more."
+   },
+   "local-models": {
+    "v": "partly",
+    "note": "Needs Ollama or similar installed separately",
+    "source": "https://github.com/aaif-goose/goose/blob/main/documentation/docs/getting-started/providers.md",
+    "quote": "Ollama: Local model runner... Because this provider runs locally, you must first download and run a model."
+   },
+   "mcp-tools": {
+    "v": "yes",
+    "note": null,
+    "source": "https://github.com/aaif-goose/goose",
+    "quote": "Connect to 70+ extensions via the Model Context Protocol open standard."
+   },
+   "phone-app": {
+    "v": "partly",
+    "note": "iPhone app only; Android planned",
+    "source": "https://github.com/aaif-goose/goose/blob/main/documentation/blog/2026-01-20-goose-mobile-apps/index.md",
+    "quote": "The goose-ios client is more production ready, and in the app store... We hope to have a port of that to Android"
+   }
+  },
+  "chatbox-community-edition": {
+   "point-and-click": {
+    "v": "yes",
+    "note": null,
+    "source": "https://github.com/chatboxai/chatbox",
+    "quote": "No-Deployment Installation Packages: Get started quickly with downloadable installation packages. No complex setup necessary!"
+   },
+   "local-models": {
+    "v": "partly",
+    "note": "Needs Ollama installed separately",
+    "source": "https://github.com/chatboxai/chatbox",
+    "quote": "Ollama (enable access to local models like llama2, Mistral, Mixtral, codellama...)"
+   },
+   "any-provider": {
+    "v": "yes",
+    "note": null,
+    "source": "https://github.com/chatboxai/chatbox",
+    "quote": "Support for Multiple LLM Providers: OpenAI (ChatGPT), Azure OpenAI, Claude, Google Gemini Pro, Ollama..."
+   },
+   "chat-with-documents": {
+    "v": "yes",
+    "note": null,
+    "source": "https://chatboxai.app",
+    "quote": "Desktop knowledge base for private documents"
+   },
+   "web-search": {
+    "v": "yes",
+    "note": null,
+    "source": "https://chatboxai.app",
+    "quote": "Real-time web search and browsing"
+   },
+   "phone-app": {
+    "v": "yes",
+    "note": null,
+    "source": "https://github.com/chatboxai/chatbox",
+    "quote": "Native iOS and Android applications for on-the-go access."
+   }
+  },
+  "gemini-cli": {
+   "agent-mode": {
+    "v": "yes",
+    "note": null,
+    "source": "https://github.com/google-gemini/gemini-cli",
+    "quote": "Gemini CLI is an open-source AI agent... Built-in Tools: File System Operations, Shell Commands"
+   },
+   "inside-editor": {
+    "v": "yes",
+    "note": null,
+    "source": "https://github.com/google-gemini/gemini-cli/blob/main/docs/ide-integration/index.md",
+    "quote": "VS Code companion extension... ACP... used for integrations with tools like JetBrains and Zed"
+   },
+   "any-provider": {
+    "v": "no",
+    "note": "Google sign-in, Gemini key or Vertex only; other providers request closed",
+    "source": "https://github.com/google-gemini/gemini-cli/issues/5938",
+    "quote": null
+   },
+   "local-models": {
+    "v": "no",
+    "note": "Request for local models closed as not planned",
+    "source": "https://github.com/google-gemini/gemini-cli/issues/5938",
+    "quote": "Add support for local/offline language models (Ollola, LM Studio, etc.) [closed, not planned]"
+   },
+   "point-and-click": {
+    "v": "no",
+    "note": null,
+    "source": "https://github.com/google-gemini/gemini-cli",
+    "quote": "brings the power of Gemini directly into your terminal"
+   },
+   "mcp-tools": {
+    "v": "yes",
+    "note": null,
+    "source": "https://github.com/google-gemini/gemini-cli",
+    "quote": "Use MCP servers to connect new capabilities"
+   }
+  },
+  "audacity": {
+   "multitrack-recording": {
+    "v": "yes",
+    "note": null,
+    "source": "https://github.com/audacity/audacity",
+    "quote": "Audacity is an easy-to-use, multi-track audio editor and recorder"
+   },
+   "noise-removal": {
+    "v": "yes",
+    "note": null,
+    "source": "https://manual.audacityteam.org/man/noise_reduction.html",
+    "quote": "Accessed by: Effect > Noise Removal and Repair > Noise Reduction"
+   },
+   "vst-plugins": {
+    "v": "yes",
+    "note": null,
+    "source": "https://www.audacityteam.org/",
+    "quote": "a vast selection of third-party plugins, including VST3, Nyquist and more"
+   }
+  },
+  "metabase": {
+   "no-code-builder": {
+    "v": "yes",
+    "note": null,
+    "source": "https://github.com/metabase/metabase",
+    "quote": "Let anyone on your team ask questions without knowing SQL."
+   },
+   "sql-queries": {
+    "v": "yes",
+    "note": null,
+    "source": "https://github.com/metabase/metabase",
+    "quote": "Use the SQL editor for more complex queries."
+   },
+   "dashboard-sharing": {
+    "v": "yes",
+    "note": null,
+    "source": "https://github.com/metabase/metabase",
+    "quote": "Embed Metabase in your app, with components for charts, dashboards... You can even put an entire Metabase in your app."
+   },
+   "scheduled-reports": {
+    "v": "yes",
+    "note": null,
+    "source": "https://github.com/metabase/metabase",
+    "quote": "schedule dashboard subscriptions to email, Slack, or even a webhook."
+   },
+   "managed-cloud": {
+    "v": "yes",
+    "note": null,
+    "source": "https://github.com/metabase/metabase",
+    "quote": "or have us host Metabase for you so you don't even need to think about it."
+   },
+   "company-sso": {
+    "v": "partly",
+    "note": "SAML is paid; Google sign-in has limits",
+    "source": "https://www.metabase.com/docs/latest/people-and-groups/authenticating-with-saml",
+    "quote": "SAML authentication is only available on Pro and Enterprise plans"
+   },
+   "no-paid-edition": {
+    "v": "no",
+    "note": "SSO and advanced embedding are paid-only",
+    "source": "https://www.metabase.com/pricing/",
+    "quote": "SSO, required 2FA, and IP allowlists [Pro]; Advanced embedding features are available on the Pro and Enterprise plans."
+   }
+  },
+  "librecad": {
+   "dwg-files": {
+    "v": "partly",
+    "note": "DWG only works in builds with DWG support turned on",
+    "source": "https://github.com/LibreCAD/LibreCAD",
+    "quote": "DWG input and output require a build with DWGSUPPORT enabled."
+   },
+   "drafting-2d": {
+    "v": "yes",
+    "note": null,
+    "source": "https://github.com/LibreCAD/LibreCAD",
+    "quote": "LibreCAD is a 2D CAD drawing tool"
+   },
+   "parametric": {
+    "v": "no",
+    "note": "2D drawing tool only",
+    "source": "https://github.com/LibreCAD/LibreCAD",
+    "quote": "LibreCAD is a 2D CAD drawing tool"
+   },
+   "assemblies": {
+    "v": "no",
+    "note": null,
+    "source": "https://github.com/LibreCAD/LibreCAD",
+    "quote": "LibreCAD is a 2D CAD drawing tool"
+   },
+   "push-pull-3d": {
+    "v": "no",
+    "note": null,
+    "source": "https://github.com/LibreCAD/LibreCAD",
+    "quote": "LibreCAD is a 2D CAD drawing tool"
+   },
+   "simulation": {
+    "v": "no",
+    "note": null,
+    "source": "https://github.com/LibreCAD/LibreCAD",
+    "quote": "LibreCAD is a 2D CAD drawing tool"
+   }
+  },
+  "beton-inspector": {
+   "crm-sync": {
+    "v": "yes",
+    "note": null,
+    "source": "https://github.com/getbeton/inspector",
+    "quote": "CRM Sync — Routes scored accounts and signals to Attio, HubSpot, Pipedrive, or Zoho"
+   },
+   "managed-cloud": {
+    "v": "yes",
+    "note": null,
+    "source": "https://github.com/getbeton/inspector",
+    "quote": "Prefer managed hosting? See Beton Cloud pricing — $0.50 per tracked user, free trial"
+   },
+   "one-command-install": {
+    "v": "partly",
+    "note": "Needs Supabase, PostHog and environment keys first",
+    "source": "https://github.com/getbeton/inspector",
+    "quote": "docker compose up ... Prerequisites: Docker, PostgreSQL via Supabase, PostHog account"
+   }
+  },
+  "fluent-reader": {
+   "no-server-needed": {
+    "v": "yes",
+    "note": null,
+    "source": "https://github.com/yang991178/fluent-reader",
+    "quote": "Read locally or sync with self-hosted services compatible with Fever or Google Reader API."
+   },
+   "phone-app": {
+    "v": "yes",
+    "note": "Separate paid mobile app ($1.99)",
+    "source": "https://github.com/yang991178/fluent-reader-lite",
+    "quote": "iOS: Download from App Store... Android: Download from Google Play"
+   },
+   "syncs-devices": {
+    "v": "partly",
+    "note": "Needs a separate RSS service to sync",
+    "source": "https://github.com/yang991178/fluent-reader",
+    "quote": "Sync with RSS Services including Inoreader, Feedbin, The Old Reader, BazQux Reader, and more."
+   },
+   "read-later": {
+    "v": "no",
+    "note": null,
+    "source": "https://github.com/yang991178/fluent-reader/issues/631",
+    "quote": "[Feature request] Mark articles for read later (open)"
+   },
+   "full-article": {
+    "v": "yes",
+    "note": null,
+    "source": "https://github.com/yang991178/fluent-reader",
+    "quote": "Read the full content with the built-in article view or load webpages by default."
+   }
+  },
+  "playnite": {
+   "sells-games": {
+    "v": "no",
+    "note": null,
+    "source": "https://github.com/JosefNemec/Playnite",
+    "quote": "An open source video game library manager and launcher"
+   },
+   "combines-stores": {
+    "v": "yes",
+    "note": null,
+    "source": "https://github.com/JosefNemec/Playnite",
+    "quote": "support for 3rd party libraries like Steam, Epic, GOG, EA App, Battle.net and others"
+   },
+   "runs-windows-games": {
+    "v": "no",
+    "note": "Windows only",
+    "source": "https://github.com/JosefNemec/Playnite",
+    "quote": "Requirements: Windows 10 or 11"
+   },
+   "computer-app": {
+    "v": "partly",
+    "note": "Windows only",
+    "source": "site data",
+    "quote": null
+   }
+  },
+  "openbb": {
+   "point-and-click": {
+    "v": "partly",
+    "note": "Point-and-click part is hosted; install uses commands",
+    "source": "https://github.com/OpenBB-finance/OpenBB",
+    "quote": "Get started with: pip install openbb ... OpenBB Workspace offers the enterprise UI"
+   },
+   "market-news": {
+    "v": "partly",
+    "note": "News comes from connected data providers",
+    "source": "https://github.com/OpenBB-finance/OpenBB/tree/develop/openbb_platform/extensions/news",
+    "quote": null
+   }
+  },
+  "deepset": {
+   "model-serving": {
+    "v": "partly",
+    "note": "Serves pipelines via the separate Hayhooks tool",
+    "source": "https://github.com/deepset-ai/haystack",
+    "quote": "Hayhooks provides a simple way for you to wrap pipelines and agents... and expose them through HTTP endpoints or MCP."
+   },
+   "doc-qa-pipelines": {
+    "v": "yes",
+    "note": null,
+    "source": "https://github.com/deepset-ai/haystack",
+    "quote": "Build scalable RAG systems, multimodal applications, semantic search, question answering, and autonomous agents"
+   },
+   "managed-cloud": {
+    "v": "yes",
+    "note": null,
+    "source": "https://github.com/deepset-ai/haystack",
+    "quote": "The Haystack Enterprise Platform... is available as a managed cloud service or as a self-hosted solution."
+   },
+   "one-command-install": {
+    "v": "yes",
+    "note": null,
+    "source": "https://github.com/deepset-ai/haystack",
+    "quote": "pip install haystack-ai"
+   },
+   "no-paid-edition": {
+    "v": "partly",
+    "note": "Paid platform adds collaboration and governance features",
+    "source": "https://github.com/deepset-ai/haystack",
+    "quote": "Haystack Enterprise Platform helps you build, test, deploy and operate Haystack pipelines with built-in observability, collaboration, governance, and access controls."
+   }
+  },
+  "immich": {
+   "auto-backup-phone": {
+    "v": "yes",
+    "note": "Android battery settings can block background uploads",
+    "source": "https://docs.immich.app/features/automatic-backup",
+    "quote": "uploads also happen periodically in the background (README features table: Background backup - Mobile: Yes)"
+   },
+   "no-server-needed": {
+    "v": "no",
+    "note": null,
+    "source": "https://github.com/immich-app/immich",
+    "quote": "High performance self-hosted photo and video management solution"
+   },
+   "face-recognition": {
+    "v": "yes",
+    "note": null,
+    "source": "https://github.com/immich-app/immich",
+    "quote": "Facial recognition and clustering | Yes | Yes"
+   },
+   "smart-search": {
+    "v": "yes",
+    "note": null,
+    "source": "https://docs.immich.app/features/search",
+    "quote": "This allows for freeform searches without requiring specific keywords in the image or video metadata."
+   },
+   "shared-albums": {
+    "v": "yes",
+    "note": null,
+    "source": "https://github.com/immich-app/immich",
+    "quote": "Album and Shared albums | Yes | Yes; Partner Sharing | Yes | Yes"
+   },
+   "google-photos-import": {
+    "v": "partly",
+    "note": "Needs the separate immich-go tool",
+    "source": "https://github.com/simulot/immich-go",
+    "quote": "excels at handling the massive archives you download from Google Photos using Google Takeout"
+   }
+  },
+  "pinta": {
+   "non-destructive": {
+    "v": "no",
+    "note": null,
+    "source": "https://github.com/PintaProject/Pinta/issues/1405",
+    "quote": "Non Destructive Editing - Plans and roadmap (open)"
+   },
+   "heal-remove": {
+    "v": "no",
+    "note": null,
+    "source": "https://github.com/PintaProject/Pinta/issues/1161",
+    "quote": "Retouch / heal tool? (open feature request)"
+   },
+   "photo-library": {
+    "v": "no",
+    "note": "Paint program, no photo library",
+    "source": "https://github.com/PintaProject/Pinta",
+    "quote": "Pinta - Simple Gtk# Paint Program"
+   }
+  },
+  "buzz": {
+   "point-and-click": {
+    "v": "yes",
+    "note": null,
+    "source": "https://github.com/chidiwilliams/buzz",
+    "quote": "Download the .dmg ... Get the installation files from SourceForge"
+   },
+   "works-offline": {
+    "v": "yes",
+    "note": null,
+    "source": "https://github.com/chidiwilliams/buzz",
+    "quote": "Transcribe and translate audio offline on your personal computer."
+   },
+   "speaker-labels": {
+    "v": "yes",
+    "note": null,
+    "source": "https://github.com/chidiwilliams/buzz",
+    "quote": "Speaker identification in transcribed media"
+   },
+   "live-transcription": {
+    "v": "yes",
+    "note": null,
+    "source": "https://github.com/chidiwilliams/buzz",
+    "quote": "Live realtime audio transcription from microphone"
+   },
+   "subtitle-export": {
+    "v": "yes",
+    "note": null,
+    "source": "https://github.com/chidiwilliams/buzz",
+    "quote": "Export transcripts to TXT, SRT, and VTT"
+   }
+  },
+  "kdenlive": {
+   "multi-track": {
+    "v": "yes",
+    "note": null,
+    "source": "https://docs.kdenlive.org/en/getting_started/introduction.html",
+    "quote": "Multitrack editing with a timeline and virtually unlimited number of video and audio tracks"
+   },
+   "auto-captions": {
+    "v": "yes",
+    "note": null,
+    "source": "https://kdenlive.org",
+    "quote": "Create professional subtitles with automatic transcription, advanced layering and styling."
+   },
+   "color-grading": {
+    "v": "yes",
+    "note": null,
+    "source": "https://kdenlive.org",
+    "quote": "Apply LUTs, do basic color corrections or detailed creative grading."
+   },
+   "proxy-editing": {
+    "v": "yes",
+    "note": null,
+    "source": "https://kdenlive.org",
+    "quote": "use proxies for smooth playback even on low-end systems."
+   },
+   "hardware-export": {
+    "v": "partly",
+    "note": "Presets marked experimental",
+    "source": "https://docs.kdenlive.org/en/exporting/render.html",
+    "quote": "Hardware Accelerated (experimental): NVENC, VAAPI, VideoToolbox presets"
+   },
+   "phone-app": {
+    "v": "no",
+    "note": "Desktop only",
+    "source": "https://kdenlive.org",
+    "quote": "works on Linux, Windows, macOS, and BSD"
+   }
+  },
+  "open-interpreter": {
+   "point-and-click": {
+    "v": "no",
+    "note": "Used from a terminal",
+    "source": "https://github.com/openinterpreter/openinterpreter",
+    "quote": "Then type `i` or `interpreter` in your terminal to start a session."
+   },
+   "works-on-files": {
+    "v": "yes",
+    "note": null,
+    "source": "https://github.com/openinterpreter/openinterpreter",
+    "quote": "Open Interpreter ships with a QA skill that lets any model operate and test interfaces... native apps with trycua; Runs commands inside native sandboxing"
+   },
+   "asks-before-acting": {
+    "v": "yes",
+    "note": "Approval modes are set in Sandbox & approvals",
+    "source": "https://www.openinterpreter.com/docs/terminal",
+    "quote": "Sandbox & approvals: Decide what runs automatically and what asks first."
+   },
+   "any-provider": {
+    "v": "yes",
+    "note": null,
+    "source": "https://www.openinterpreter.com/docs/terminal/providers",
+    "quote": "Switches providers and models from the TUI with `/model`."
+   },
+   "local-models": {
+    "v": "partly",
+    "note": "Through Ollama or LM Studio installed separately",
+    "source": "https://www.openinterpreter.com/docs/terminal/providers",
+    "quote": "Responses ... OpenAI, Bedrock, Ollama, LM Studio, custom Responses-compatible providers"
+   },
+   "mcp-tools": {
+    "v": "yes",
+    "note": null,
+    "source": "https://github.com/openinterpreter/openinterpreter",
+    "quote": "Supports `exec`, MCP, skills, hooks, permissions, and `AGENTS.md`."
+   },
+   "phone-app": {
+    "v": "no",
+    "note": "Desktop only",
+    "source": "site data",
+    "quote": null
+   }
+  },
+  "anythingllm": {
+   "point-and-click": {
+    "v": "yes",
+    "note": null,
+    "source": "https://github.com/Mintplex-Labs/anything-llm",
+    "quote": "AnythingLLM for desktop (Mac, Windows, & Linux)! Download Now"
+   },
+   "local-models": {
+    "v": "yes",
+    "note": null,
+    "source": "https://github.com/Mintplex-Labs/anything-llm",
+    "quote": "Built-in local LLM engine - Run local models on your CPU or GPU ... with no extra setup"
+   },
+   "any-provider": {
+    "v": "yes",
+    "note": null,
+    "source": "https://github.com/Mintplex-Labs/anything-llm",
+    "quote": "Works with all popular closed and open-source LLM providers."
+   },
+   "chat-with-documents": {
+    "v": "yes",
+    "note": null,
+    "source": "https://github.com/Mintplex-Labs/anything-llm",
+    "quote": "Chat with your docs."
+   },
+   "web-search": {
+    "v": "yes",
+    "note": null,
+    "source": "https://github.com/Mintplex-Labs/anything-llm",
+    "quote": "Agents inside your workspace (browse the web, etc)"
+   },
+   "voice-chat": {
+    "v": "yes",
+    "note": "Speech in and out; browser voice by default",
+    "source": "https://github.com/Mintplex-Labs/anything-llm",
+    "quote": "TTS (text-to-speech) support ... STT (speech-to-text) support: Native Browser Built-in (default)"
+   },
+   "phone-app": {
+    "v": "partly",
+    "note": "Android only; no iPhone app",
+    "source": "https://github.com/Mintplex-Labs/anything-llm",
+    "quote": "AnythingLLM Mobile (Android) is open source!"
+   }
+  },
+  "kilo-code": {
+   "agent-mode": {
+    "v": "yes",
+    "note": null,
+    "source": "https://kilo.ai/",
+    "quote": "Kilo Code is an open source AI coding agent... It writes, debugs, refactors, and reviews code"
+   },
+   "inside-editor": {
+    "v": "yes",
+    "note": null,
+    "source": "https://github.com/Kilo-Org/kilocode",
+    "quote": "The open source coding agent for building with AI in VS Code, JetBrains, or the CLI."
+   },
+   "any-provider": {
+    "v": "yes",
+    "note": null,
+    "source": "https://github.com/Kilo-Org/kilocode",
+    "quote": "You pick from 500+ models, switch between them mid-task"
+   },
+   "local-models": {
+    "v": "partly",
+    "note": "Through Ollama or LM Studio installed separately",
+    "source": "https://kilo.ai/",
+    "quote": "local models via Ollama or LM Studio"
+   },
+   "point-and-click": {
+    "v": "yes",
+    "note": "Install as an editor extension",
+    "source": "https://github.com/Kilo-Org/kilocode",
+    "quote": "Install the Kilo Code extension directly, or grab it from the VS Code Marketplace."
+   },
+   "mcp-tools": {
+    "v": "yes",
+    "note": null,
+    "source": "https://kilo.ai/docs/automate/mcp/overview",
+    "quote": "The Model Context Protocol (MCP) is a standard for extending Kilo Code's capabilities"
+   }
+  },
+  "ardour": {
+   "multitrack-recording": {
+    "v": "yes",
+    "note": null,
+    "source": "https://ardour.org/features.html",
+    "quote": "Track multiple sources in the dedicated Recorder view... No tier limitations for the number of tracks and busses."
+   },
+   "midi-instruments": {
+    "v": "yes",
+    "note": "Ships two software synths",
+    "source": "https://github.com/Ardour/ardour/tree/master/libs/plugins",
+    "quote": "libs/plugins contains reasonablesynth.lv2 and a-fluidsynth.lv2; features page: pianoroll note drawing, MIDI editing"
+   },
+   "vst-plugins": {
+    "v": "yes",
+    "note": null,
+    "source": "https://manual.ardour.org/working-with-plugins/",
+    "quote": "VST: Plugins using Steinberg's VST2 and VST3 plugin standard; LV2; AU"
+   },
+   "loops-library": {
+    "v": "yes",
+    "note": null,
+    "source": "https://ardour.org/features.html",
+    "quote": "access thousands of royalty-free MIDI grooves and audio clips"
+   },
+   "step-sequencer": {
+    "v": "partly",
+    "note": "Note step entry; no pattern grid",
+    "source": "https://ardour.org/features.html",
+    "quote": "Capture performances live, with step entry or pianoroll note drawing for precise timing."
+   }
+  },
+  "preset": {
+   "no-code-builder": {
+    "v": "yes",
+    "note": null,
+    "source": "https://github.com/apache/superset",
+    "quote": "A no-code interface for building charts quickly"
+   },
+   "sql-queries": {
+    "v": "yes",
+    "note": null,
+    "source": "https://github.com/apache/superset",
+    "quote": "A powerful, web-based SQL Editor for advanced querying"
+   },
+   "dashboard-sharing": {
+    "v": "yes",
+    "note": null,
+    "source": "https://github.com/apache/superset/blob/master/docs/admin_docs/security/securing_superset.mdx",
+    "quote": "if you need to embed Superset dashboards into other applications using an iFrame"
+   },
+   "scheduled-reports": {
+    "v": "yes",
+    "note": "Needs extra setup to switch on",
+    "source": "https://github.com/apache/superset/blob/master/docs/admin_docs/configuration/alerts-reports.mdx",
+    "quote": "Users can configure automated alerts and reports to send dashboards or charts to an email recipient or Slack channel. Reports are sent on a schedule"
+   },
+   "company-sso": {
+    "v": "yes",
+    "note": null,
+    "source": "https://github.com/apache/superset/blob/master/docs/admin_docs/configuration/configuring-superset.mdx",
+    "quote": "If an OAuth2 authorization server supports OpenID Connect 1.0, you could configure its configuration document URL"
+   },
+   "managed-cloud": {
+    "v": "yes",
+    "note": "Preset Cloud, by Superset's main sponsors",
+    "source": "https://preset.io/",
+    "quote": "Preset Cloud: Fully-managed, cloud-hosted service for Apache Superset"
+   }
+  },
+  "qcad": {
+   "dwg-files": {
+    "v": "partly",
+    "note": "DWG is in paid Professional; free edition uses DXF",
+    "source": "https://qcad.org/en/faq",
+    "quote": "QCAD Professional is the latest version of QCAD with add-ons for advanced DXF support, DWG support and many extra tools"
+   },
+   "drafting-2d": {
+    "v": "yes",
+    "note": null,
+    "source": "https://qcad.org/en/features",
+    "quote": "QCAD is packed with tools for professional 2D CAD. ... Dimensions: Aligned, Linear, Radius, Diameter, Angles"
+   },
+   "parametric": {
+    "v": "no",
+    "note": "2D drawing only",
+    "source": "https://github.com/qcad/qcad",
+    "quote": "QCAD is a 2D CAD solution for Windows, macOS and Linux."
+   },
+   "assemblies": {
+    "v": "no",
+    "note": "2D drawing only",
+    "source": "https://github.com/qcad/qcad",
+    "quote": "QCAD is a 2D CAD solution for Windows, macOS and Linux."
+   },
+   "push-pull-3d": {
+    "v": "no",
+    "note": "2D drawing only",
+    "source": "https://github.com/qcad/qcad",
+    "quote": "QCAD is a 2D CAD solution for Windows, macOS and Linux."
+   },
+   "simulation": {
+    "v": "no",
+    "note": "2D drawing only",
+    "source": "https://github.com/qcad/qcad",
+    "quote": "QCAD is a 2D CAD solution for Windows, macOS and Linux."
+   },
+   "cam": {
+    "v": "partly",
+    "note": "Only in the separate paid QCAD/CAM edition",
+    "source": "https://qcad.org/en/features",
+    "quote": "A check mark shows which editions include each feature: all QCAD versions, QCAD Professional, or QCAD/CAM."
+   }
+  },
+  "crowd-dev": {
+   "community-sources": {
+    "v": "yes",
+    "note": "GitHub, Discord, Slack, GitLab, Reddit and more",
+    "source": "https://github.com/linuxfoundation/crowd.dev/tree/main/services/libs/integrations/src/integrations",
+    "quote": "Integration folders: discord, discourse, github, gitlab, reddit, slack, stackoverflow, twitter, linkedin, devto, hackernews, groupsio..."
+   },
+   "one-command-install": {
+    "v": "partly",
+    "note": "Several services to run and connect",
+    "source": "https://github.com/linuxfoundation/crowd.dev",
+    "quote": "Our services can be deployed using Kubernetes, as well as a lightweight development environment using Docker. ... This documentation is outdated"
+   }
+  },
+  "freshrss": {
+   "no-server-needed": {
+    "v": "partly",
+    "note": "Only by joining a server someone else runs",
+    "source": "https://freshrss.org",
+    "quote": "Try FreshRSS at demo.freshrss.org, or sign up to an existing server."
+   },
+   "phone-app": {
+    "v": "partly",
+    "note": "Third-party apps only; no official app",
+    "source": "https://freshrss.org",
+    "quote": "Mobile: Follow your feeds with or without a third-party application."
+   },
+   "syncs-devices": {
+    "v": "yes",
+    "note": "Server keeps state; apps use its API",
+    "source": "https://github.com/FreshRSS/FreshRSS",
+    "quote": "There is an API for (mobile) clients"
+   },
+   "full-article": {
+    "v": "partly",
+    "note": "Set up per feed with a CSS selector",
+    "source": "https://freshrss.github.io/FreshRSS/en/users/04_Subscriptions.html",
+    "quote": "retrieve a truncated RSS feed ... The main one, 'Article CSS selector on original website'"
+   },
+   "feed-discovery": {
+    "v": "no",
+    "note": "You paste each feed's address",
+    "source": "https://freshrss.github.io/FreshRSS/en/users/04_Subscriptions.html",
+    "quote": "To add a feed, copy the URL of its RSS or Atom file"
+   },
+   "read-later": {
+    "v": "partly",
+    "note": "Favorites for feed articles only; no saving any page",
+    "source": "https://freshrss.github.io/FreshRSS/en/users/10_filter.html",
+    "quote": "The second attribute indicates if the article was marked as favorite or not."
+   }
+  },
+  "itch-app": {
+   "sells-games": {
+    "v": "yes",
+    "note": "Buys happen on itch.io via the in-app browser",
+    "source": "https://itch.io/app",
+    "quote": "Access your collections and purchases, or browse for new games via the in-app browser."
+   },
+   "combines-stores": {
+    "v": "no",
+    "note": "Only itch.io games",
+    "source": "https://github.com/itchio/itch",
+    "quote": "The goal of this project is to give you a desktop application that you can download and run games from itch.io with."
+   },
+   "runs-windows-games": {
+    "v": "no",
+    "note": "Wine support is only a request",
+    "source": "https://github.com/itchio/itch/issues/433",
+    "quote": "Open issue: Wine option for Linux"
+   },
+   "computer-app": {
+    "v": "yes",
+    "note": null,
+    "source": "https://itch.io/app",
+    "quote": "Install, update and play indie games. For Windows, macOS, and Linux"
+   }
+  },
+  "crater": {
+   "recurring-invoices": {
+    "v": "yes",
+    "note": null,
+    "source": "https://github.com/crater-invoice-inc/crater",
+    "quote": "Roadmap: [x] Recurring Invoices; docs list 'Recurring Invoices'"
+   },
+   "online-payments": {
+    "v": "partly",
+    "note": "Stripe only",
+    "source": "https://github.com/crater-invoice-inc/crater",
+    "quote": "Roadmap: [x] Accept Payments (Stripe Integration)"
+   },
+   "expenses": {
+    "v": "yes",
+    "note": null,
+    "source": "https://docs.craterapp.com/",
+    "quote": "Crater is an open-source web & mobile app that helps you track expenses, payments & create professional invoices & estimates."
+   },
+   "multi-currency": {
+    "v": "yes",
+    "note": "Exchange-rate providers built in",
+    "source": "https://github.com/crater-invoice-inc/crater/blob/master/database/migrations/2021_09_28_081543_create_exchange_rate_providers_table.php",
+    "quote": "Migration create_exchange_rate_providers_table (and exchange_rate_logs)"
+   },
+   "usage-billing": {
+    "v": "partly",
+    "note": "Repeating invoices only; no metering",
+    "source": "https://github.com/crater-invoice-inc/crater",
+    "quote": "Roadmap: Recurring Invoices; no usage or metered billing listed"
+   },
+   "no-server-needed": {
+    "v": "no",
+    "note": "You install it on your own server",
+    "source": "https://docs.craterapp.com/installation.html",
+    "quote": "Installation Steps (self-hosted Laravel web app; mobile apps connect to it)"
+   }
+  },
+  "navidrome": {
+   "music-catalog": {
+    "v": "no",
+    "note": "Plays only your own files",
+    "source": "https://github.com/navidrome/navidrome",
+    "quote": "Navidrome is an open source web-based music collection server and streamer. It gives you freedom to listen to your music collection"
+   },
+   "phone-app": {
+    "v": "yes",
+    "note": "Third-party apps on both",
+    "source": "https://www.navidrome.org/apps/",
+    "quote": "Stream your music anywhere with apps for Android, iOS, desktop, and web. Any app that supports the OpenSubsonic API works with Navidrome."
+   },
+   "works-offline": {
+    "v": "partly",
+    "note": "Offline only in some phone apps",
+    "source": "https://www.navidrome.org/apps/",
+    "quote": "Amperfy: An iOS/iPadOS/macOS music player with offline support"
+   },
+   "no-server-needed": {
+    "v": "partly",
+    "note": "Only through paid partner hosting",
+    "source": "https://github.com/navidrome/navidrome",
+    "quote": "Cloud Hosting: Several cloud hosting providers partner with us to offer officially supported, cloud-hosted solutions."
+   }
+  },
+  "ente-photos": {
+   "auto-backup-phone": {
+    "v": "yes",
+    "note": null,
+    "source": "https://ente.com",
+    "quote": "Ente has apps for Android, iOS, Web, Mac, Linux and Windows. All of these apps are open-source, and automatically backup your photos in the background."
+   },
+   "no-server-needed": {
+    "v": "yes",
+    "note": "Hosted service with 10GB free",
+    "source": "https://github.com/ente/ente",
+    "quote": "Ente Photos is a paid service, but we offer 10GB of free storage."
+   },
+   "face-recognition": {
+    "v": "yes",
+    "note": null,
+    "source": "https://github.com/ente/ente",
+    "quote": "Face detection. Semantic search. Private sharing. Collaborative albums."
+   },
+   "smart-search": {
+    "v": "yes",
+    "note": null,
+    "source": "https://github.com/ente/ente",
+    "quote": "Face detection. Semantic search."
+   },
+   "shared-albums": {
+    "v": "yes",
+    "note": null,
+    "source": "https://github.com/ente/ente",
+    "quote": "Private sharing. Collaborative albums. Family plans."
+   },
+   "e2e-encrypted": {
+    "v": "yes",
+    "note": null,
+    "source": "https://github.com/ente/ente",
+    "quote": "Ente is a service that provides a fully open source, end-to-end encrypted platform"
+   },
+   "google-photos-import": {
+    "v": "yes",
+    "note": "Uses Google Takeout export",
+    "source": "https://github.com/ente/ente/blob/main/docs/docs/photos/migration/from-google-photos/index.md",
+    "quote": "Import from Google Photos: Follow these steps to recover your data from Google Photos and preserve it with Ente."
+   }
+  },
+  "antennapod": {
+   "phone-app": {
+    "v": "partly",
+    "note": "Android only; no iPhone app",
+    "source": "https://github.com/AntennaPod/AntennaPod",
+    "quote": "the easy-to-use, flexible and open-source podcast manager for Android."
+   },
+   "syncs-devices": {
+    "v": "partly",
+    "note": "Through a separate sync account (gPodder.net)",
+    "source": "https://github.com/AntennaPod/AntennaPod/blob/develop/ui/i18n/src/main/res/values/strings.xml",
+    "quote": "synchronization_sum: Synchronize with other devices; store page: Back-up your subscriptions with the gPodder.net integration"
+   },
+   "podcast-discovery": {
+    "v": "partly",
+    "note": "Search through directories; no recommendations seen",
+    "source": "https://github.com/AntennaPod/StoreMetadata/blob/main/listings/en-US/full-description.txt",
+    "quote": "Add and import feeds via the Apple Podcasts, gPodder.net, fyyd or Podcast Index directories, OPML files and RSS or Atom links"
+   },
+   "works-offline": {
+    "v": "yes",
+    "note": null,
+    "source": "https://antennapod.org",
+    "quote": "With AntennaPod, you can download episodes and listen anywhere."
+   },
+   "playback-speed": {
+    "v": "yes",
+    "note": null,
+    "source": "https://github.com/AntennaPod/AntennaPod/blob/develop/ui/i18n/src/main/res/values/strings.xml",
+    "quote": "pref_skip_silence_title: Skip silence in audio; store page: adjustable playback speeds"
+   }
+  },
+  "whisper-cpp": {
+   "point-and-click": {
+    "v": "no",
+    "note": "Command-line tools",
+    "source": "https://github.com/ggml-org/whisper.cpp",
+    "quote": "whisper-cli -m models/ggml-base.bin -f samples/jfk.wav"
+   },
+   "works-offline": {
+    "v": "yes",
+    "note": "Runs on your device after downloading a model",
+    "source": "https://github.com/ggml-org/whisper.cpp",
+    "quote": "Plain C/C++ implementation without dependencies; Apple Silicon first-class citizen"
+   },
+   "speaker-labels": {
+    "v": "partly",
+    "note": "Experimental tinydiarize model only",
+    "source": "https://github.com/ggml-org/whisper.cpp",
+    "quote": "Speaker segmentation via tinydiarize (experimental)"
+   },
+   "live-transcription": {
+    "v": "yes",
+    "note": "Sample tool; described as naive",
+    "source": "https://github.com/ggml-org/whisper.cpp",
+    "quote": "Real-time audio input example: performing real-time inference on audio from your microphone... whisper-stream"
+   },
+   "many-languages": {
+    "v": "yes",
+    "note": "About 99 languages with multilingual models",
+    "source": "https://github.com/ggml-org/whisper.cpp/blob/master/src/whisper.cpp",
+    "quote": "static const std::map<std::string, std::pair<int, std::string>> g_lang = { ... } (about 99 language codes)"
+   },
+   "subtitle-export": {
+    "v": "yes",
+    "note": null,
+    "source": "https://github.com/ggml-org/whisper.cpp/blob/master/examples/cli/README.md",
+    "quote": "-ovtt, --output-vtt  output result in a vtt file; -osrt, --output-srt  output result in a srt file"
+   }
+  },
+  "shotcut": {
+   "multi-track": {
+    "v": "yes",
+    "note": "No limit stated",
+    "source": "https://www.shotcut.org/features/",
+    "quote": "Multitrack timeline with thumbnails and waveforms; Video compositing across video tracks"
+   },
+   "auto-captions": {
+    "v": "yes",
+    "note": null,
+    "source": "https://www.shotcut.org/features/",
+    "quote": "Convert spoken word to subtitle text and text-to-speech"
+   },
+   "video-templates": {
+    "v": "partly",
+    "note": "Filter and export presets; no template packs",
+    "source": "https://www.shotcut.org/features/",
+    "quote": "Presets for most filters and Export - both supplied and user-created"
+   },
+   "color-grading": {
+    "v": "yes",
+    "note": null,
+    "source": "https://www.shotcut.org/features/",
+    "quote": "3-way (shadows, mids, highlights) color wheels for color correction and grading; 3D LUT; Levels"
+   },
+   "proxy-editing": {
+    "v": "yes",
+    "note": null,
+    "source": "https://www.shotcut.org/features/",
+    "quote": "Low resolution proxy editing to improve speed of seeking and eliminate or minimize scaling"
+   },
+   "hardware-export": {
+    "v": "yes",
+    "note": null,
+    "source": "https://www.shotcut.org/features/",
+    "quote": "Hardware acceleration for encoding and decoding"
+   },
+   "phone-app": {
+    "v": "no",
+    "note": "Desktop only",
+    "source": "site data",
+    "quote": null
+   }
+  },
+  "openclaw": {
+   "point-and-click": {
+    "v": "partly",
+    "note": "Everyday use via apps and chat; setup runs terminal commands",
+    "source": "https://github.com/openclaw/openclaw#readme",
+    "quote": "openclaw onboard --install-daemon (README install steps); native apps for macOS, iOS, Android, Windows, and Linux"
+   },
+   "works-on-files": {
+    "v": "yes",
+    "note": null,
+    "source": "https://docs.openclaw.ai/tools/exec-approvals",
+    "quote": "Tools run on the host for the main session unless you configure sandboxing (README); lets a sandboxed agent run commands on a real host"
+   },
+   "asks-before-acting": {
+    "v": "partly",
+    "note": "Approval prompts exist but default to off",
+    "source": "https://docs.openclaw.ai/tools/exec-approvals",
+    "quote": "exec.ask ... Default is off ... always - prompt on every command"
+   },
+   "any-provider": {
+    "v": "yes",
+    "note": null,
+    "source": "https://docs.openclaw.ai/concepts/model-providers",
+    "quote": "Models and agent harnesses (Claude, Codex, local models) are plugins you can swap"
+   },
+   "local-models": {
+    "v": "yes",
+    "note": null,
+    "source": "https://github.com/openclaw/openclaw#readme",
+    "quote": "OpenClaw works with hosted and local model providers"
+   },
+   "mcp-tools": {
+    "v": "yes",
+    "note": null,
+    "source": "https://docs.openclaw.ai/tools/mcp",
+    "quote": "an MCP server exposes tools, resources, and prompts, and OpenClaw connects to it and makes those tools available to your agents"
+   },
+   "phone-app": {
+    "v": "yes",
+    "note": null,
+    "source": "https://docs.openclaw.ai/platforms",
+    "quote": "Companion apps exist for Linux, Windows Hub, macOS (menu bar app), and mobile nodes (iOS/Android)"
+   }
+  },
+  "leon": {
+   "point-and-click": {
+    "v": "no",
+    "note": "Installed with npm and run from a terminal",
+    "source": "https://getleon.ai",
+    "quote": "npm install --global @leon-ai/cli (site); pnpm install / pnpm start (README)"
+   },
+   "local-models": {
+    "v": "yes",
+    "note": null,
+    "source": "https://github.com/leon-ai/leon#readme",
+    "quote": "Leon can work with local models and local context instead of forcing everything through third-party services."
+   },
+   "any-provider": {
+    "v": "yes",
+    "note": null,
+    "source": "https://github.com/leon-ai/leon/tree/develop/server/src/core/llm-manager/llm-providers",
+    "quote": "Leon supports both local and remote AI providers (README); code has Anthropic, OpenAI, DeepSeek, Groq, OpenRouter, llama.cpp and more"
+   },
+   "web-search": {
+    "v": "yes",
+    "note": null,
+    "source": "https://github.com/leon-ai/leon/tree/develop/skills/native/search_web_toolkit_skill",
+    "quote": "skills include search_web_toolkit_skill and a search_web tool"
+   },
+   "voice-chat": {
+    "v": "yes",
+    "note": null,
+    "source": "https://github.com/leon-ai/leon#readme",
+    "quote": "skills and toolkits for ... voice/audio features (README); repo has speech-to-text (asr) and text-to-speech (tts) modules"
+   },
+   "phone-app": {
+    "v": "no",
+    "note": null,
+    "source": "https://github.com/leon-ai/leon#readme",
+    "quote": null
+   }
+  },
+  "zed": {
+   "agent-mode": {
+    "v": "yes",
+    "note": null,
+    "source": "https://zed.dev/docs/ai/agent-panel",
+    "quote": "The Agent Panel is where you interact with AI agents that can read, write, and run code in your project."
+   },
+   "inside-editor": {
+    "v": "no",
+    "note": "It is its own editor; no plugins for other editors",
+    "source": "https://zed.dev/docs/ai/overview",
+    "quote": null
+   },
+   "any-provider": {
+    "v": "yes",
+    "note": null,
+    "source": "https://zed.dev/docs/ai/llm-providers",
+    "quote": "Zed-Hosted Models, API Access, Existing Subscription, Gateway (OpenRouter, Bedrock...), Local Model"
+   },
+   "local-models": {
+    "v": "yes",
+    "note": null,
+    "source": "https://zed.dev/docs/ai/llm-providers",
+    "quote": "Use a Local Model: You run models locally or self-hosted"
+   },
+   "point-and-click": {
+    "v": "yes",
+    "note": null,
+    "source": "https://zed.dev/docs/ai/overview",
+    "quote": "Zed is a downloadable desktop editor; AI is set up in its Agent Panel and settings"
+   },
+   "mcp-tools": {
+    "v": "yes",
+    "note": null,
+    "source": "https://zed.dev/docs/ai/mcp",
+    "quote": "Zed uses the Model Context Protocol to interact with context servers."
+   }
+  },
+  "lmms": {
+   "multitrack-recording": {
+    "v": "no",
+    "note": "No built-in audio recording from a microphone",
+    "source": "https://github.com/LMMS/lmms/issues/7629",
+    "quote": "Duplicate of #1297 and being worked on in #5990. But we won't see recording in the latest release as the PR is stuck"
+   },
+   "midi-instruments": {
+    "v": "yes",
+    "note": null,
+    "source": "https://github.com/LMMS/lmms#readme",
+    "quote": "15+ synthesizer plugins by default ... full MIDI support; MIDI file importing and exporting"
+   },
+   "vst-plugins": {
+    "v": "yes",
+    "note": null,
+    "source": "https://github.com/LMMS/lmms#readme",
+    "quote": "Compatible with many standards such as SoundFont2, VST2 (instruments and effects), LADSPA, LV2"
+   },
+   "loops-library": {
+    "v": "yes",
+    "note": null,
+    "source": "https://lmms.io",
+    "quote": "Bundled with ready-to-use content from an assortment of instrument and effect plugins, presets and samples"
+   },
+   "step-sequencer": {
+    "v": "yes",
+    "note": null,
+    "source": "https://github.com/LMMS/lmms#readme",
+    "quote": "Pattern-Editor for creating beats and patterns; Beat Sequencer"
+   }
+  },
+  "calibre": {
+   "ebook-reader": {
+    "v": "yes",
+    "note": null,
+    "source": "https://calibre-ebook.com/about",
+    "quote": "calibre has a built-in e-book viewer that can display all the major e-book formats"
+   },
+   "audiobook-player": {
+    "v": "no",
+    "note": null,
+    "source": "https://calibre-ebook.com/about",
+    "quote": null
+   },
+   "syncs-devices": {
+    "v": "partly",
+    "note": "Last-read position syncs only through its built-in web server",
+    "source": "https://manual.calibre-ebook.com/server.html",
+    "quote": "open the same book on multiple devices and it will remember your last read position"
+   },
+   "send-to-ereader": {
+    "v": "yes",
+    "note": null,
+    "source": "https://calibre-ebook.com/about",
+    "quote": "You can transfer your e-books from one device to another in seconds, wirelessly or with a cable ... calibre will send the best file format for your device"
+   },
+   "reading-tracking": {
+    "v": "partly",
+    "note": "Ratings and tags; no reviews or reading history",
+    "source": "https://manual.calibre-ebook.com/gui.html",
+    "quote": "You can sort them by title, author, date, rating, etc."
+   },
+   "phone-app": {
+    "v": "partly",
+    "note": "No official app; third-party reader apps connect to it",
+    "source": "https://manual.calibre-ebook.com/faq.html",
+    "quote": "How do I use calibre with my Android phone/tablet ... iPad/iPhone? Using the Content server"
+   }
+  },
+  "openscad": {
+   "dwg-files": {
+    "v": "no",
+    "note": "Only DXF is supported for 2D",
+    "source": "https://openscad.org/about.html",
+    "quote": "Autocad DXF files can be used as the data exchange format for such 2D outlines."
+   },
+   "drafting-2d": {
+    "v": "no",
+    "note": "No dimensioned drawings",
+    "source": "https://github.com/openscad/openscad/issues/3433",
+    "quote": "Can we talk about dimensioned drawings? ... no open enhancement discussion for displaying or exporting dimensioned drawings"
+   },
+   "parametric": {
+    "v": "yes",
+    "note": null,
+    "source": "https://openscad.org/about.html",
+    "quote": "allows you to easily change any step in the modelling process or make designs that are defined by configurable parameters"
+   },
+   "push-pull-3d": {
+    "v": "no",
+    "note": "You write a script, not a drag-and-pull sketch",
+    "source": "https://openscad.org/about.html",
+    "quote": "OpenSCAD is not an interactive modeller. Instead it is something like a 3D-compiler that reads in a script file"
+   },
+   "cam": {
+    "v": "no",
+    "note": null,
+    "source": "https://github.com/openscad/openscad/issues/2017",
+    "quote": "CAM functionality (open request): i would be happy if i could prepare operations for CNC milling directly in OpenSCAD"
+   },
+   "simulation": {
+    "v": "no",
+    "note": null,
+    "source": "https://github.com/openscad/openscad/issues/3824",
+    "quote": "Coupling to FEM Calculix (request closed as stale, never built)"
+   }
+  },
+  "dolibarr": {
+   "accounting": {
+    "v": "yes",
+    "note": null,
+    "source": "https://github.com/Dolibarr/dolibarr#readme",
+    "quote": "Finance/Accounting: Invoices/Payments, Bank accounts management, Accounting management; site: Double entry accounting"
+   },
+   "inventory": {
+    "v": "yes",
+    "note": null,
+    "source": "https://github.com/Dolibarr/dolibarr#readme",
+    "quote": "Stock / Warehouse management + Inventory; Batches / Lots / Serials"
+   },
+   "manufacturing": {
+    "v": "yes",
+    "note": null,
+    "source": "https://github.com/Dolibarr/dolibarr#readme",
+    "quote": "Bill of Materials (BOM); Manufacturing Orders (MO); Workstations"
+   },
+   "payroll": {
+    "v": "no",
+    "note": null,
+    "source": "https://github.com/Dolibarr/dolibarr#readme",
+    "quote": "WHAT DOLIBARR CAN'T DO YET ... Payroll module"
+   },
+   "local-tax": {
+    "v": "yes",
+    "note": null,
+    "source": "https://github.com/Dolibarr/dolibarr#readme",
+    "quote": "Support a lot of country-specific features: Spanish Tax RE and IRPF, French NPR VAT, Canadian double taxes, ..."
+   },
+   "managed-cloud": {
+    "v": "yes",
+    "note": "Hosted by preferred partners such as DoliCloud",
+    "source": "https://saas.dolibarr.org",
+    "quote": "DoliCloud: Use your ERP & CRM from anywhere through an internet connection ... 15-day trial"
+   },
+   "no-paid-edition": {
+    "v": "yes",
+    "note": "Extra add-on modules in the Dolistore may cost money",
+    "source": "https://github.com/Dolibarr/dolibarr#readme",
+    "quote": "around 100 modules available by default, 1000+ addons at the official marketplace Dolistore.com"
+   }
+  },
+  "miniflux": {
+   "no-server-needed": {
+    "v": "partly",
+    "note": "Only through its paid hosted version",
+    "source": "https://miniflux.app/hosting.html",
+    "quote": "The hosted version ... costs only $15/year and includes a free 15-day trial period"
+   },
+   "phone-app": {
+    "v": "partly",
+    "note": "No official app; works with third-party apps",
+    "source": "https://github.com/miniflux/v2#readme",
+    "quote": "Compatibility with existing mobile applications using the Fever or Google Reader API. No requirement to download an app"
+   },
+   "syncs-devices": {
+    "v": "yes",
+    "note": "State is kept on the server, so all devices match",
+    "source": "https://github.com/miniflux/v2#readme",
+    "quote": "Responsive design that adapts seamlessly to desktop, tablet, and mobile devices."
+   },
+   "read-later": {
+    "v": "partly",
+    "note": "Bookmarks feed items; saves to other read-later apps",
+    "source": "https://miniflux.app/features.html",
+    "quote": "Organizes articles using categories and bookmarks ... Saves articles to third-party services."
+   },
+   "full-article": {
+    "v": "yes",
+    "note": null,
+    "source": "https://miniflux.app/",
+    "quote": "Do you have feeds that display only a summary? Automatically fetch the original article."
+   },
+   "feed-discovery": {
+    "v": "no",
+    "note": "You add each site yourself",
+    "source": "https://miniflux.app/features.html",
+    "quote": null
+   }
+  },
+  "jellyfin": {
+   "phone-app": {
+    "v": "yes",
+    "note": null,
+    "source": "https://jellyfin.org/downloads/clients/",
+    "quote": "Official Android app ... Jellyfin for iOS: The official Jellyfin app for iOS and iPadOS devices."
+   },
+   "tv-apps": {
+    "v": "yes",
+    "note": null,
+    "source": "https://jellyfin.org/downloads/clients/",
+    "quote": "Jellyfin for Android TV ... Fire TV; Roku; WebOS (LG); Tizen (Samsung)"
+   },
+   "hardware-transcoding": {
+    "v": "yes",
+    "note": null,
+    "source": "https://jellyfin.org/docs/general/post-install/transcoding/",
+    "quote": "Jellyfin supports hardware accelerated transcoding on all modern GPUs from Intel, AMD, Nvidia, Apple and Rockchip"
+   },
+   "remote-access": {
+    "v": "partly",
+    "note": "Needs port forwarding or a reverse proxy",
+    "source": "https://jellyfin.org/docs/general/post-install/networking/",
+    "quote": "External access settings through a reverse proxy ... Firewall / Port Forwarding"
+   },
+   "share-with-others": {
+    "v": "yes",
+    "note": null,
+    "source": "https://jellyfin.org/docs/general/server/users/adding-managing-users",
+    "quote": "disabling this option will enable you to give the user access rights per library"
+   },
+   "live-tv": {
+    "v": "yes",
+    "note": null,
+    "source": "https://jellyfin.org/",
+    "quote": "Live TV & DVR: Watch TV and set automatic recordings to expand your library."
+   },
+   "no-paid-edition": {
+    "v": "yes",
+    "note": null,
+    "source": "https://jellyfin.org/",
+    "quote": "The Jellyfin server and official clients are free to download, now and always. There are no costs, hidden or otherwise"
+   },
+   "show-catalog": {
+    "v": "no",
+    "note": "Only plays media you supply",
+    "source": "https://jellyfin.org/",
+    "quote": "we're also not in the media business, so the only media you see is your own"
+   }
+  },
+  "lago": {
+   "recurring-invoices": {
+    "v": "yes",
+    "note": null,
+    "source": "https://github.com/getlago/lago#readme",
+    "quote": "Bill customers: Subscriptions, invoices, credit notes, taxes, multiple currencies"
+   },
+   "online-payments": {
+    "v": "yes",
+    "note": "Through Stripe, Adyen, GoCardless or other providers",
+    "source": "https://github.com/getlago/lago#readme",
+    "quote": "Connect Stripe, Adyen, GoCardless, or another provider without making its product catalog your source of truth."
+   },
+   "expenses": {
+    "v": "no",
+    "note": "It bills customers; it does not track your spending",
+    "source": "https://github.com/getlago/lago#readme",
+    "quote": "README capability table covers metering, pricing, billing, collecting revenue, analytics - no expense tracking"
+   },
+   "multi-currency": {
+    "v": "partly",
+    "note": "Several currencies; currency conversion not mentioned",
+    "source": "https://github.com/getlago/lago#readme",
+    "quote": "Bill customers: Subscriptions, invoices, credit notes, taxes, multiple currencies"
+   },
+   "usage-billing": {
+    "v": "yes",
+    "note": null,
+    "source": "https://github.com/getlago/lago#readme",
+    "quote": "Turn usage into pricing, credits, entitlements, invoices, payments, and revenue; Real-time event ingestion, filters, dimensions, custom aggregations"
+   },
+   "no-server-needed": {
+    "v": "partly",
+    "note": "Only through its paid Lago Cloud",
+    "source": "https://github.com/getlago/lago#readme",
+    "quote": "Talk to us about Lago Cloud (https://getlago.com/pricing)"
+   }
+  },
+  "funkwhale": {
+   "music-catalog": {
+    "v": "partly",
+    "note": "Only music users upload or share across pods",
+    "source": "https://www.funkwhale.audio/",
+    "quote": "Funkwhale supports advanced sharing features to promote Freely licensed content ... Content can be shared across instances"
+   },
+   "phone-app": {
+    "v": "partly",
+    "note": "No official working app; third-party Subsonic apps on both",
+    "source": "https://www.funkwhale.audio/apps",
+    "quote": "Android: Tempus, DSub2000, Ultrasonic ... Funkwhale for Android (native, abandoned); Apple: Substreamer, Amperfy"
+   },
+   "music-discovery": {
+    "v": "yes",
+    "note": null,
+    "source": "https://docs.funkwhale.audio/user/radios/index.html",
+    "quote": "Radios are a great way to discover new music or rediscover old favorites. A radio builds a dynamic playlist of content based on selected criteria."
+   },
+   "no-server-needed": {
+    "v": "yes",
+    "note": "Join a pod that is already running",
+    "source": "https://www.funkwhale.audio/join",
+    "quote": "A pod is a server running the Funkwhale software. You join the network by registering an account on a pod."
+   }
+  },
+  "photoprism": {
+   "auto-backup-phone": {
+    "v": "partly",
+    "note": "Needs a separate app such as PhotoSync",
+    "source": "https://github.com/photoprism/photoprism#readme",
+    "quote": "Use compatible apps like PhotoSync to back up iOS and Android phones in the background"
+   },
+   "no-server-needed": {
+    "v": "partly",
+    "note": "Self-hosted; the cloud option is paid",
+    "source": "https://www.photoprism.app/",
+    "quote": "whether self-hosted or in the cloud"
+   },
+   "face-recognition": {
+    "v": "yes",
+    "note": null,
+    "source": "https://github.com/photoprism/photoprism#readme",
+    "quote": "recognizes the faces of your family and friends"
+   },
+   "smart-search": {
+    "v": "yes",
+    "note": null,
+    "source": "https://github.com/photoprism/photoprism#readme",
+    "quote": "Automatically labels your pictures based on content and location ... powerful search filters"
+   },
+   "shared-albums": {
+    "v": "partly",
+    "note": "Sharing is by secret link",
+    "source": "https://docs.photoprism.app/user-guide/share/",
+    "quote": "Secret links make it easy to share manually created albums ... with your loved ones"
+   },
+   "e2e-encrypted": {
+    "v": "no",
+    "note": null,
+    "source": "https://github.com/photoprism/photoprism/issues/1471",
+    "quote": "Encryption (open request): found nothing about possible data encryption on my disk, and nothing in the roadmap"
+   },
+   "google-photos-import": {
+    "v": "partly",
+    "note": "Reads Google Photos metadata; albums not mentioned",
+    "source": "https://github.com/photoprism/photoprism#readme",
+    "quote": "Metadata can be extracted and merged from Exif, XMP, and other sources like Google Photos"
+   }
+  },
+  "pocket-casts": {
+   "phone-app": {
+    "v": "yes",
+    "note": null,
+    "source": "https://github.com/Automattic/pocket-casts-android#readme",
+    "quote": "you can find it on Google Play (Android); iOS app source at github.com/Automattic/pocket-casts-ios"
+   },
+   "syncs-devices": {
+    "v": "yes",
+    "note": null,
+    "source": "https://github.com/Automattic/pocket-casts-android/blob/main/modules/services/localization/src/main/res/values/strings.xml",
+    "quote": "Save your podcasts in the cloud and sync your progress with other devices"
+   },
+   "podcast-discovery": {
+    "v": "yes",
+    "note": null,
+    "source": "https://github.com/Automattic/pocket-casts-android/blob/main/modules/services/localization/src/main/res/values/strings.xml",
+    "quote": "Discover Podcasts; Search podcasts or add RSS URL"
+   },
+   "works-offline": {
+    "v": "yes",
+    "note": "Download episodes first",
+    "source": "https://github.com/Automattic/pocket-casts-android/blob/main/modules/services/localization/src/main/res/values/strings.xml",
+    "quote": "Auto download; This removes all downloaded podcasts and data from this device"
+   },
+   "playback-speed": {
+    "v": "yes",
+    "note": null,
+    "source": "https://github.com/Automattic/pocket-casts-android/blob/main/modules/services/localization/src/main/res/values/strings.xml",
+    "quote": "Playback speed; Trim Silence"
+   }
+  },
+  "whisper": {
+   "point-and-click": {
+    "v": "no",
+    "note": "Installed with pip and run from a terminal",
+    "source": "https://github.com/openai/whisper#readme",
+    "quote": "pip install -U openai-whisper ... whisper japanese.wav --model medium --language Japanese"
+   },
+   "works-offline": {
+    "v": "yes",
+    "note": "Needs a one-time model download",
+    "source": "https://github.com/openai/whisper#readme",
+    "quote": "runs on your own computer: pip install -U openai-whisper; model speeds measured 'depending on ... the available hardware'"
+   },
+   "speaker-labels": {
+    "v": "no",
+    "note": null,
+    "source": "https://github.com/openai/whisper#readme",
+    "quote": "README lists multilingual speech recognition, translation, language identification, voice activity detection - no speaker labelling; no matching issue found"
+   },
+   "live-transcription": {
+    "v": "no",
+    "note": "Works on recordings; real-time only as unmerged examples",
+    "source": "https://github.com/openai/whisper/pull/2696",
+    "quote": "[Examples] Add real-time transcription script (open, not merged)"
+   },
+   "many-languages": {
+    "v": "yes",
+    "note": null,
+    "source": "https://github.com/openai/whisper/blob/main/whisper/tokenizer.py",
+    "quote": "See tokenizer.py for the list of all available languages (about 99)"
+   },
+   "subtitle-export": {
+    "v": "yes",
+    "note": null,
+    "source": "https://github.com/openai/whisper/blob/main/whisper/utils.py",
+    "quote": "class WriteVTT / class WriteSRT in get_writer (also txt, tsv, json)"
+   }
+  },
+  "openshot": {
+   "multi-track": {
+    "v": "yes",
+    "note": null,
+    "source": "https://www.openshot.org/features/",
+    "quote": "Drag video, audio, and images onto unlimited tracks."
+   },
+   "auto-captions": {
+    "v": "no",
+    "note": "Captions are typed by hand; auto-generation is only a request",
+    "source": "https://github.com/OpenShot/openshot-qt/issues/6056",
+    "quote": "Feature: Auto-generate subtitles with FunASR/SenseVoice speech recognition (open)"
+   },
+   "video-templates": {
+    "v": "partly",
+    "note": "Title templates only, no effects packs",
+    "source": "https://www.openshot.org/features/",
+    "quote": "OpenShot includes more than 40 editable vector title templates."
+   },
+   "color-grading": {
+    "v": "yes",
+    "note": null,
+    "source": "https://www.openshot.org/features/",
+    "quote": "Adjust shadows, midtones, and highlights with color wheels, curves, LUTs, and live video scopes."
+   },
+   "proxy-editing": {
+    "v": "yes",
+    "note": null,
+    "source": "https://github.com/OpenShot/openshot-qt/blob/develop/src/classes/proxy_service.py",
+    "quote": "optimized-preview proxy management logic (you switch to proxy editing yourself; issue #5464)"
+   },
+   "hardware-export": {
+    "v": "yes",
+    "note": null,
+    "source": "https://github.com/OpenShot/openshot-qt/blob/develop/doc/export.rst",
+    "quote": "OpenShot supports GPU-accelerated video encoding on supported hardware (NVENC, VA-API, QSV)"
+   },
+   "phone-app": {
+    "v": "no",
+    "note": null,
+    "source": "https://www.openshot.org/",
+    "quote": null
+   }
+  },
+  "hermes-agent": {
+   "point-and-click": {
+    "v": "yes",
+    "note": null,
+    "source": "https://hermes-agent.nousresearch.com",
+    "quote": "Download Hermes Desktop for macOS or Windows, or use the terminal installation command above."
+   },
+   "works-on-files": {
+    "v": "yes",
+    "note": null,
+    "source": "https://github.com/NousResearch/hermes-agent",
+    "quote": "Six built-in terminal backends — local, Docker, SSH, Modal, Daytona, and Vercel Sandbox"
+   },
+   "asks-before-acting": {
+    "v": "yes",
+    "note": null,
+    "source": "https://hermes-agent.nousresearch.com/docs/user-guide/security",
+    "quote": "Before executing any command, Hermes checks it against a curated list of dangerous patterns. If a match is found, the user must explicitly approve it."
+   },
+   "any-provider": {
+    "v": "yes",
+    "note": null,
+    "source": "https://github.com/NousResearch/hermes-agent",
+    "quote": "Use any model you want — Nous Portal, OpenRouter, OpenAI, your own endpoint, and many others"
+   },
+   "local-models": {
+    "v": "partly",
+    "note": "Works with a local Ollama or vLLM server you set up",
+    "source": "https://hermes-agent.nousresearch.com/docs/integrations/providers",
+    "quote": "self-hosted endpoints like Ollama and vLLM"
+   },
+   "mcp-tools": {
+    "v": "yes",
+    "note": null,
+    "source": "https://hermes-agent.nousresearch.com/docs/user-guide/features/mcp",
+    "quote": "MCP support ships with the standard install — no extra step needed."
+   },
+   "phone-app": {
+    "v": "partly",
+    "note": "Android only, through a terminal app; no iPhone app",
+    "source": "https://github.com/NousResearch/hermes-agent",
+    "quote": "Android / Termux: A signed APT repository is available for aarch64 devices"
+   }
+  },
+  "cline": {
+   "agent-mode": {
+    "v": "yes",
+    "note": null,
+    "source": "https://github.com/cline/cline",
+    "quote": "Create files, run commands, browse the web, and use tools with human-in-the-loop approval."
+   },
+   "inside-editor": {
+    "v": "yes",
+    "note": null,
+    "source": "https://github.com/cline/cline",
+    "quote": "VS Code Extension ... JetBrains Plugin: The same Cline experience in IntelliJ IDEA, PyCharm, WebStorm"
+   },
+   "any-provider": {
+    "v": "yes",
+    "note": "Many providers via your own key",
+    "source": "https://cline.bot",
+    "quote": "Cline - AI Coding, Open Source and Open Choice"
+   },
+   "local-models": {
+    "v": "yes",
+    "note": null,
+    "source": "https://docs.cline.bot/llms.txt",
+    "quote": "Run Cline with local models using Ollama, LM Studio or Atomic Chat."
+   },
+   "point-and-click": {
+    "v": "yes",
+    "note": null,
+    "source": "https://github.com/cline/cline",
+    "quote": "Desktop App: Cline as a native app for macOS and Windows."
+   },
+   "mcp-tools": {
+    "v": "yes",
+    "note": null,
+    "source": "https://docs.cline.bot/mcp/mcp-overview",
+    "quote": "Add, configure, and use MCP servers in Cline."
+   }
+  },
+  "tabby": {
+   "agent-mode": {
+    "v": "partly",
+    "note": "Suggestions and chat; the agent is a separate product (Pochi)",
+    "source": "https://github.com/TabbyML/tabby",
+    "quote": "Tabby is a self-hosted AI coding assistant, offering an open-source and on-premises alternative to GitHub Copilot."
+   },
+   "inside-editor": {
+    "v": "yes",
+    "note": null,
+    "source": "https://tabby.tabbyml.com/docs/extensions/",
+    "quote": "Major updates for Tabby IDE plugins across VSCode/Vim/IntelliJ"
+   },
+   "any-provider": {
+    "v": "yes",
+    "note": null,
+    "source": "https://tabby.tabbyml.com/docs/references/models-http-api/openai",
+    "quote": "Amazon Bedrock, Anthropic Claude, Azure OpenAI, DeepSeek, Mistral AI, Ollama, OpenAI, OpenRouter, vLLM ..."
+   },
+   "local-models": {
+    "v": "yes",
+    "note": null,
+    "source": "https://github.com/TabbyML/tabby",
+    "quote": "Tabby is a self-hosted AI coding assistant, offering an open-source and on-premises alternative to GitHub Copilot."
+   },
+   "point-and-click": {
+    "v": "partly",
+    "note": "Server set-up needs commands; editor plugin is point-and-click",
+    "source": "https://github.com/TabbyML/tabby",
+    "quote": "The easiest way to start a Tabby server is by using the following Docker command"
+   },
+   "mcp-tools": {
+    "v": "no",
+    "note": "Open feature request, not supported",
+    "source": "https://github.com/TabbyML/tabby/issues/3936",
+    "quote": "It's time to support MCP like cline."
+   }
+  },
+  "cube-js": {
+   "no-code-builder": {
+    "v": "no",
+    "note": "Code only in the open version",
+    "source": "https://github.com/cube-js/cube",
+    "quote": "Cube Core is headless: it doesn't ship a UI"
+   },
+   "sql-queries": {
+    "v": "partly",
+    "note": "Postgres-style SQL, with a limited command list",
+    "source": "https://docs.cube.dev/reference/core-data-apis/sql-api",
+    "quote": "In general, if an application connects to PostgreSQL database, it can connect to Cube as well."
+   },
+   "dashboard-sharing": {
+    "v": "no",
+    "note": "No dashboards in the open version",
+    "source": "https://github.com/cube-js/cube",
+    "quote": "Cube Core is headless: it doesn't ship a UI"
+   },
+   "managed-cloud": {
+    "v": "yes",
+    "note": "Official hosted Cube Cloud",
+    "source": "https://cube.dev/pricing",
+    "quote": "Free ($0), Starter ($40 per developer/month), Premium, Enterprise; sign-up through cubecloud.dev"
+   },
+   "company-sso": {
+    "v": "no",
+    "note": "SAML single sign-on is an Enterprise feature",
+    "source": "https://cube.dev/pricing",
+    "quote": "SSO with SAML 2.0 (Enterprise only)"
+   },
+   "no-paid-edition": {
+    "v": "no",
+    "note": "Paid plans add features such as SSO",
+    "source": "https://cube.dev/pricing",
+    "quote": "Free, Starter, Premium and Enterprise plans; SSO with SAML 2.0 listed only under Enterprise"
+   }
+  },
+  "koreader": {
+   "ebook-reader": {
+    "v": "yes",
+    "note": null,
+    "source": "https://github.com/koreader/koreader",
+    "quote": "supports fixed page formats (PDF, DjVu, CBT, CBZ) and reflowable e-book formats (EPUB, FB2, Mobi, DOC, RTF, HTML, CHM, TXT)"
+   },
+   "book-catalog": {
+    "v": "partly",
+    "note": "Browses catalogs you add; no built-in store",
+    "source": "https://github.com/koreader/koreader",
+    "quote": "add your own online OPDS catalogs and RSS feeds"
+   },
+   "syncs-devices": {
+    "v": "yes",
+    "note": "Progress Sync plugin; needs a sync server account",
+    "source": "https://koreader.rocks/user_guide/",
+    "quote": "you can still get your annotations and progress synchronized across your devices"
+   },
+   "reading-tracking": {
+    "v": "partly",
+    "note": "Tracks time and progress; no ratings or reviews",
+    "source": "https://koreader.rocks/user_guide/",
+    "quote": "Track your reading statistics including reading progress, time range and calendar views"
+   },
+   "phone-app": {
+    "v": "partly",
+    "note": "Android only; no iPhone app",
+    "source": "site data",
+    "quote": null
+   }
+  },
+  "solvespace": {
+   "drafting-2d": {
+    "v": "partly",
+    "note": "Sketches with dimensions and exports; not a full drafting tool",
+    "source": "https://solvespace.com/features.pl",
+    "quote": "2d vector drawing as DXF, EPS, PDF, SVG, HPGL, STEP"
+   },
+   "parametric": {
+    "v": "yes",
+    "note": null,
+    "source": "https://github.com/solvespace/solvespace",
+    "quote": "a parametric 2d/3d CAD tool"
+   },
+   "assemblies": {
+    "v": "yes",
+    "note": null,
+    "source": "https://solvespace.com/features.pl",
+    "quote": "Parametric and associative assembly: place parts in assembly using constraints"
+   },
+   "push-pull-3d": {
+    "v": "partly",
+    "note": "Extrudes from a sketch; no direct push-pull",
+    "source": "https://solvespace.com/features.pl",
+    "quote": "an extrude, lathe (solid of revolution) or helix from a sketch"
+   },
+   "cam": {
+    "v": "partly",
+    "note": "Exports simple G-code toolpaths only",
+    "source": "https://solvespace.com/features.pl",
+    "quote": "toolpath as G code ... with cutter radius compensation"
+   },
+   "simulation": {
+    "v": "no",
+    "note": "Motion of linkages only; no stress analysis",
+    "source": "https://solvespace.com/features.pl",
+    "quote": null
+   }
+  },
+  "erpnext": {
+   "accounting": {
+    "v": "yes",
+    "note": null,
+    "source": "https://github.com/frappe/erpnext",
+    "quote": "Accounting: All the tools you need to manage cash flow in one place, right from recording transactions to summarizing and analyzing financial reports."
+   },
+   "inventory": {
+    "v": "yes",
+    "note": null,
+    "source": "https://github.com/frappe/erpnext",
+    "quote": "Order Management: Track inventory levels, replenish stock, and manage sales orders"
+   },
+   "manufacturing": {
+    "v": "yes",
+    "note": null,
+    "source": "https://github.com/frappe/erpnext",
+    "quote": "Manufacturing: Simplifies the production cycle, helps track material consumption, exhibits capacity planning, handles subcontracting"
+   },
+   "payroll": {
+    "v": "partly",
+    "note": "Payroll comes from the separate Frappe HR add-on",
+    "source": "https://frappe.io/erpnext",
+    "quote": "HR, payroll, and more"
+   },
+   "local-tax": {
+    "v": "yes",
+    "note": null,
+    "source": "https://frappe.io/erpnext",
+    "quote": "ERPNext supports tax compliance out of the box or allows easy configuration for almost any country."
+   },
+   "managed-cloud": {
+    "v": "yes",
+    "note": "Official Frappe Cloud",
+    "source": "https://frappe.io/erpnext",
+    "quote": "We recommend hosting ERPNext on Frappe Cloud"
+   },
+   "no-paid-edition": {
+    "v": "yes",
+    "note": null,
+    "source": "https://frappe.io/erpnext",
+    "quote": "We don't have any features hidden behind expensive paywalls."
+   }
+  },
+  "newsboat": {
+   "no-server-needed": {
+    "v": "yes",
+    "note": null,
+    "source": "https://github.com/newsboat/newsboat",
+    "quote": "Newsboat is an RSS/Atom feed reader for the text console."
+   },
+   "phone-app": {
+    "v": "no",
+    "note": "Terminal program only; no phone app",
+    "source": "https://github.com/newsboat/newsboat",
+    "quote": "Newsboat is an RSS/Atom feed reader for the text console."
+   },
+   "syncs-devices": {
+    "v": "partly",
+    "note": "Only through a separate sync service",
+    "source": "https://newsboat.org/releases/2.37/docs/newsboat.html",
+    "quote": "Newsboat as a Client for Newsreading Services: ... FreshRSS, Tiny Tiny RSS, Inoreader, Miniflux"
+   },
+   "read-later": {
+    "v": "partly",
+    "note": "Sends links to another tool you set up",
+    "source": "https://newsboat.org/releases/2.37/docs/newsboat.html",
+    "quote": "7.3. Bookmarking"
+   },
+   "feed-discovery": {
+    "v": "no",
+    "note": "You add each feed yourself",
+    "source": "https://newsboat.org/releases/2.37/docs/newsboat.html",
+    "quote": "Error: no URLs configured. Please fill the file ... with RSS feed URLs or import an OPML file."
+   }
+  },
+  "kodi": {
+   "phone-app": {
+    "v": "yes",
+    "note": null,
+    "source": "https://github.com/xbmc/xbmc",
+    "quote": "Available as a native application for Android, Linux, BSD, macOS, iOS, tvOS and Windows operating systems"
+   },
+   "live-tv": {
+    "v": "partly",
+    "note": "Needs a tuner, a separate recording server and an add-on",
+    "source": "https://kodi.wiki/view/PVR/Basics",
+    "quote": "Kodi has no built-in TV tuning; it needs a tuner card, a backend server, and a PVR client add-on."
+   },
+   "no-paid-edition": {
+    "v": "yes",
+    "note": null,
+    "source": "https://github.com/xbmc/xbmc",
+    "quote": "Kodi is an award-winning free and open source software media player"
+   },
+   "show-catalog": {
+    "v": "partly",
+    "note": "Add-ons can supply channels; nothing built in",
+    "source": "https://github.com/xbmc/xbmc",
+    "quote": "website • docs • community • add-ons (kodi.tv/addons)"
+   },
+   "works-offline": {
+    "v": "yes",
+    "note": "Plays your own files without internet",
+    "source": "https://github.com/xbmc/xbmc",
+    "quote": "Kodi is ... a media player and entertainment hub for digital media"
+   }
+  },
+  "solidinvoice": {
+   "recurring-invoices": {
+    "v": "yes",
+    "note": null,
+    "source": "https://github.com/SolidInvoice/SolidInvoice",
+    "quote": "Recurring invoices on flexible schedules"
+   },
+   "online-payments": {
+    "v": "yes",
+    "note": null,
+    "source": "https://github.com/SolidInvoice/SolidInvoice",
+    "quote": "Bring-your-own Stripe, PayPal and other gateways via Payum; Online payment links sent with invoices"
+   },
+   "multi-currency": {
+    "v": "partly",
+    "note": "Several currencies; conversion not mentioned",
+    "source": "https://github.com/SolidInvoice/SolidInvoice",
+    "quote": "Multi-currency support (real Money objects); Per-client currency"
+   },
+   "no-server-needed": {
+    "v": "partly",
+    "note": "Only through the paid hosted plan",
+    "source": "https://github.com/SolidInvoice/SolidInvoice",
+    "quote": "run on your own server for free, or let us host for a flat $8/month"
+   }
+  },
+  "keila": {
+   "email-designer": {
+    "v": "yes",
+    "note": null,
+    "source": "https://www.keila.io/",
+    "quote": "Keila's powerful Block Editor is the right choice for you."
+   },
+   "email-sequences": {
+    "v": "no",
+    "note": "Automations are planned, not built",
+    "source": "https://www.keila.io/",
+    "quote": "Marketing automations (listed only under planned features)"
+   },
+   "signup-forms": {
+    "v": "yes",
+    "note": null,
+    "source": "https://www.keila.io/",
+    "quote": "With Keila's Form Builder, you can create and design sign-up forms for your newsletter."
+   },
+   "tracking-stats": {
+    "v": "partly",
+    "note": "Opens and clicks; bounces not mentioned",
+    "source": "https://www.keila.io/",
+    "quote": "Email analytics with click & open tracking."
+   },
+   "mailchimp-import": {
+    "v": "partly",
+    "note": "By file only; no Mailchimp-specific import",
+    "source": "https://www.keila.io/",
+    "quote": "CSV import & export"
+   },
+   "managed-cloud": {
+    "v": "yes",
+    "note": null,
+    "source": "https://github.com/pentacent/keila",
+    "quote": "You can give a hosted version of Keila a try on app.keila.io. More information about the pricing of Keila Cloud"
+   }
+  },
+  "gimp": {
+   "non-destructive": {
+    "v": "yes",
+    "note": null,
+    "source": "https://www.gimp.org/release-notes/gimp-3.0.html",
+    "quote": "Now by default, filters stay active once committed."
+   },
+   "raw-photos": {
+    "v": "partly",
+    "note": "Needs RawTherapee or darktable installed",
+    "source": "https://rawpedia.rawtherapee.com/GIMP_Plugin",
+    "quote": null
+   },
+   "photo-library": {
+    "v": "no",
+    "note": "Listing says no Lightroom-style library",
+    "source": "site data",
+    "quote": null
+   },
+   "heal-remove": {
+    "v": "partly",
+    "note": "Heal brush; no one-click object removal",
+    "source": "https://docs.gimp.org/3.0/en/gimp-tool-heal.html",
+    "quote": "3.13. Heal (Paint Tools)"
+   },
+   "ai-photo-tools": {
+    "v": "partly",
+    "note": "Only through third-party plugins",
+    "source": "https://www.gimp-forum.net/Thread-Open-source-GIMP-3-plugin-for-local-AI-background-removal",
+    "quote": null
+   }
+  },
+  "nexopos": {
+   "works-offline": {
+    "v": "partly",
+    "note": "Only the local Windows version runs without internet",
+    "source": "https://github.com/Blair2004/NexoPOS",
+    "quote": "NexoPOS for Windows — an all-in-one local Windows environment with NexoPOS, Nginx, HTTPS, SQLite, and printing tools preconfigured."
+   },
+   "inventory": {
+    "v": "yes",
+    "note": null,
+    "source": "https://github.com/Blair2004/NexoPOS",
+    "quote": "Inventory, procurement, stock history, and low-stock workflows"
+   },
+   "receipt-hardware": {
+    "v": "partly",
+    "note": "Barcodes built in; printing needs a separate module",
+    "source": "https://github.com/Blair2004/NexoPOS",
+    "quote": "Barcode and scale barcode support; NPS Adapter: local and network printing workflows"
+   },
+   "multi-store": {
+    "v": "partly",
+    "note": "Separate marketplace module",
+    "source": "https://github.com/Blair2004/NexoPOS",
+    "quote": "Multi-store ... workflows are delivered through modules; MultiStore: Multiple isolated stores managed from one NexoPOS installation"
+   }
+  },
+  "penpot": {
+   "live-collab": {
+    "v": "yes",
+    "note": null,
+    "source": "https://github.com/penpot/penpot",
+    "quote": "Real-time collaboration strengthens this foundation, helping teams scale"
+   },
+   "figma-import": {
+    "v": "partly",
+    "note": "Via a Figma plugin that exports; early and limited",
+    "source": "https://github.com/penpot/penpot-exporter-figma-plugin",
+    "quote": null
+   },
+   "prototyping": {
+    "v": "yes",
+    "note": null,
+    "source": "https://penpot.app/",
+    "quote": "Design responsive and rules-based interfaces with wireframes, interactive prototypes, and CSS Grid and Flex layouts."
+   },
+   "components": {
+    "v": "yes",
+    "note": null,
+    "source": "https://penpot.app/",
+    "quote": "design components, native design tokens and shared libraries"
+   },
+   "auto-layout": {
+    "v": "yes",
+    "note": null,
+    "source": "https://github.com/penpot/penpot",
+    "quote": "With CSS Grid and Flex Layout, teams can design responsive interfaces that behave like real code from the start."
+   },
+   "dev-handoff": {
+    "v": "yes",
+    "note": null,
+    "source": "https://penpot.app/",
+    "quote": "Inspect and integrate code that actually matches design."
+   },
+   "no-server-needed": {
+    "v": "yes",
+    "note": null,
+    "source": "https://penpot.app/",
+    "quote": "Sign up, it's free."
+   },
+   "template-library": {
+    "v": "no",
+    "note": "Listing says no template library like Canva's",
+    "source": "site data",
+    "quote": null
+   }
+  },
+  "losslesscut": {
+   "multi-track": {
+    "v": "no",
+    "note": "Cuts and joins files; no multi-track timeline",
+    "source": "https://losslesscut.app/docs/features",
+    "quote": null
+   },
+   "auto-captions": {
+    "v": "no",
+    "note": "Imports and exports subtitles; does not write them",
+    "source": "https://losslesscut.app/docs/features",
+    "quote": null
+   },
+   "video-templates": {
+    "v": "no",
+    "note": "Only file-name templates",
+    "source": "https://losslesscut.app/docs/features",
+    "quote": null
+   },
+   "color-grading": {
+    "v": "no",
+    "note": "Not an effects editor",
+    "source": "https://losslesscut.app/docs/features",
+    "quote": null
+   },
+   "proxy-editing": {
+    "v": "no",
+    "note": "No proxy workflow; cuts without re-encoding",
+    "source": "https://losslesscut.app/docs/features",
+    "quote": null
+   },
+   "hardware-export": {
+    "v": "no",
+    "note": "No re-encoding, so no graphics-card export",
+    "source": "https://losslesscut.app/docs/features",
+    "quote": "cuts, merges and edits video and audio files without re-encoding them"
+   },
+   "phone-app": {
+    "v": "no",
+    "note": "Desktop only (Windows, Mac, Linux)",
+    "source": "site data",
+    "quote": null
+   }
+  },
+  "jan": {
+   "point-and-click": {
+    "v": "yes",
+    "note": null,
+    "source": "https://github.com/janhq/jan",
+    "quote": "The easiest way to get started is by downloading one of the following versions for your respective operating system"
+   },
+   "local-models": {
+    "v": "yes",
+    "note": null,
+    "source": "https://github.com/janhq/jan",
+    "quote": "Local AI Models: Download and run LLMs (Llama, Gemma, Qwen, GPT-oss etc.) from HuggingFace"
+   },
+   "any-provider": {
+    "v": "yes",
+    "note": null,
+    "source": "https://github.com/janhq/jan",
+    "quote": "Connect to GPT models via OpenAI, Claude models via Anthropic, Mistral, Groq, MiniMax, and others"
+   },
+   "chat-with-documents": {
+    "v": "yes",
+    "note": null,
+    "source": "https://github.com/janhq/jan/blob/dev/docs/src/pages/docs/desktop/file-upload.mdx",
+    "quote": "Attach images, audio, or documents directly to a single message in any chat."
+   },
+   "web-search": {
+    "v": "yes",
+    "note": null,
+    "source": "https://github.com/janhq/jan/blob/dev/docs/src/pages/docs/desktop/web-search.mdx",
+    "quote": "Jan has built-in web search."
+   },
+   "phone-app": {
+    "v": "no",
+    "note": "Desktop only",
+    "source": "site data",
+    "quote": null
+   }
+  },
+  "aider": {
+   "agent-mode": {
+    "v": "partly",
+    "note": "Edits several files; you approve shell commands",
+    "source": "https://github.com/Aider-AI/aider",
+    "quote": "Aider lets you pair program with LLMs to start a new project or build on your existing codebase."
+   },
+   "inside-editor": {
+    "v": "partly",
+    "note": "Terminal tool; reacts to comments saved in any editor",
+    "source": "https://aider.chat/docs/usage/watch.html",
+    "quote": "Aider can watch your files and respond to AI comments you add in your favorite IDE or text editor."
+   },
+   "any-provider": {
+    "v": "yes",
+    "note": null,
+    "source": "https://github.com/Aider-AI/aider",
+    "quote": "can connect to almost any LLM, including local models."
+   },
+   "local-models": {
+    "v": "yes",
+    "note": null,
+    "source": "https://github.com/Aider-AI/aider",
+    "quote": "can connect to almost any LLM, including local models."
+   },
+   "point-and-click": {
+    "v": "no",
+    "note": "Command line only",
+    "source": "https://aider.chat/docs/install.html",
+    "quote": null
+   },
+   "mcp-tools": {
+    "v": "no",
+    "note": "Not supported; most-requested open feature",
+    "source": "https://github.com/Aider-AI/aider/issues/3314",
+    "quote": "MCP SUPPORT (open request, 244 reactions)"
+   }
+  },
+  "comfyui": {
+   "point-and-click": {
+    "v": "yes",
+    "note": null,
+    "source": "https://github.com/Comfy-Org/ComfyUI",
+    "quote": "We highly recommend using the desktop app ... The desktop app is the easiest and best way to use ComfyUI for new users."
+   },
+   "inpainting": {
+    "v": "yes",
+    "note": null,
+    "source": "https://github.com/Comfy-Org/ComfyUI",
+    "quote": "Built-in tools for inpainting, outpainting, reference conditioning, masks and compositing"
+   },
+   "modest-hardware": {
+    "v": "yes",
+    "note": null,
+    "source": "https://github.com/Comfy-Org/ComfyUI",
+    "quote": "Can run even the biggest open source models on as low as 4GB vram + 8GB ram relatively quickly"
+   },
+   "video-generation": {
+    "v": "yes",
+    "note": null,
+    "source": "https://github.com/Comfy-Org/ComfyUI",
+    "quote": "Video generation: Wan 2.1 and 2.2, LTX-Video 2 and 2.3, HunyuanVideo 1.5 ..."
+   }
+  },
+  "evidence": {
+   "no-code-builder": {
+    "v": "no",
+    "note": "Reports are written in code",
+    "source": "https://github.com/evidence-dev/evidence",
+    "quote": "Evidence is an open-source, code-based alternative to drag-and-drop business intelligence tools."
+   },
+   "sql-queries": {
+    "v": "yes",
+    "note": null,
+    "source": "https://github.com/evidence-dev/evidence",
+    "quote": "Create reports in code using SQL and markdown"
+   },
+   "dashboard-sharing": {
+    "v": "partly",
+    "note": "Embedding is Enterprise-only",
+    "source": "https://evidence.dev/pricing",
+    "quote": "Embedding and whitelabelling: Team No, Enterprise Yes"
+   },
+   "scheduled-reports": {
+    "v": "partly",
+    "note": "Only on the paid hosted Studio",
+    "source": "https://evidence.dev",
+    "quote": "Deliver any page to inboxes daily, weekly, or monthly."
+   },
+   "managed-cloud": {
+    "v": "yes",
+    "note": null,
+    "source": "https://github.com/evidence-dev/evidence",
+    "quote": "Self-host or publish on Evidence Studio"
+   },
+   "company-sso": {
+    "v": "no",
+    "note": "SSO is on the Enterprise plan only",
+    "source": "https://evidence.dev/pricing",
+    "quote": "SSO (OIDC & SAML) and SCIM: Team No, Enterprise Yes"
+   },
+   "no-paid-edition": {
+    "v": "no",
+    "note": "Scheduling, SSO, embedding are paid-only",
+    "source": "https://evidence.dev/pricing",
+    "quote": "Team: $2,500/month; Enterprise: custom pricing"
+   }
+  },
+  "audiobookshelf": {
+   "ebook-reader": {
+    "v": "yes",
+    "note": "Described as basic",
+    "source": "https://github.com/advplyr/audiobookshelf",
+    "quote": "Basic ebook support and ereader - Epub, pdf, cbr, cbz"
+   },
+   "audiobook-player": {
+    "v": "yes",
+    "note": null,
+    "source": "https://github.com/advplyr/audiobookshelf",
+    "quote": "Stream all audio formats on the fly"
+   },
+   "book-catalog": {
+    "v": "no",
+    "note": "Only books you upload",
+    "source": "https://github.com/advplyr/audiobookshelf",
+    "quote": "Upload books and podcasts w/ bulk upload drag and drop folders"
+   },
+   "syncs-devices": {
+    "v": "yes",
+    "note": null,
+    "source": "https://github.com/advplyr/audiobookshelf",
+    "quote": "Keeps progress per user and syncs across devices"
+   },
+   "send-to-ereader": {
+    "v": "partly",
+    "note": "Needs email (SMTP) setup",
+    "source": "https://www.audiobookshelf.org/guides/send_to_ereader/",
+    "quote": "Send ebook to device (i.e. Kindle)"
+   },
+   "phone-app": {
+    "v": "partly",
+    "note": "iOS app is beta; testing slots full",
+    "source": "https://github.com/advplyr/audiobookshelf",
+    "quote": "Fully open-source, including the android & iOS app (in beta); iOS: Beta is currently full"
+   }
+  },
+  "customermates": {
+   "sales-pipeline": {
+    "v": "yes",
+    "note": null,
+    "source": "https://github.com/customermates/customermates",
+    "quote": "CRM for contacts, organizations, deals, services, and tasks"
+   },
+   "email-sync": {
+    "v": "partly",
+    "note": "Cloud paid plans only; not in self-hosted",
+    "source": "https://www.customermates.com/pricing",
+    "quote": "Pro: Adds unified inbox (email, LinkedIn, WhatsApp, Instagram, Telegram); Unified inbox and calendar sync: Self-hosted not available"
+   },
+   "phone-app": {
+    "v": "no",
+    "note": "No phone app mentioned",
+    "source": "https://www.customermates.com/pricing",
+    "quote": null
+   },
+   "integrations-api": {
+    "v": "yes",
+    "note": null,
+    "source": "https://github.com/customermates/customermates",
+    "quote": "API access with OpenAPI documentation; Webhooks and event-driven integrations; n8n automation"
+   },
+   "managed-cloud": {
+    "v": "yes",
+    "note": null,
+    "source": "https://github.com/customermates/customermates",
+    "quote": "You can use the managed cloud version or run Customermates yourself"
+   },
+   "no-paid-edition": {
+    "v": "partly",
+    "note": "Paid plans add inbox and sign-in features",
+    "source": "https://github.com/customermates/customermates",
+    "quote": "Single Sign-On and Whitelabeling on the Enterprise plan; Unified inbox (Cloud, from the Pro plan)"
+   }
+  },
+  "idurar-erp-crm": {
+   "accounting": {
+    "v": "partly",
+    "note": "Invoices, payments, expenses only",
+    "source": "https://www.idurarapp.com/",
+    "quote": "Invoices & Payments ... Expenses Management"
+   },
+   "manufacturing": {
+    "v": "no",
+    "note": "Not in feature list",
+    "source": "https://www.idurarapp.com/",
+    "quote": null
+   },
+   "payroll": {
+    "v": "no",
+    "note": "Not in feature list",
+    "source": "https://www.idurarapp.com/",
+    "quote": null
+   },
+   "local-tax": {
+    "v": "no",
+    "note": "Tax rates are set up by hand",
+    "source": "https://www.idurarapp.com/",
+    "quote": "Taxes Configuration"
+   },
+   "managed-cloud": {
+    "v": "no",
+    "note": "Sold as self-hosted",
+    "source": "https://www.idurarapp.com/",
+    "quote": "Self-hosted ERP & CRM"
+   },
+   "no-paid-edition": {
+    "v": "partly",
+    "note": "Paid editions add multi-currency, multi-company, API",
+    "source": "https://www.idurarapp.com/",
+    "quote": "Professional $5,000, Enterprise $10,000, One-Time Lifetime License; Enterprise adds multi-company, multi-currency, multi-language"
+   }
+  },
+  "netnewswire": {
+   "no-server-needed": {
+    "v": "yes",
+    "note": null,
+    "source": "https://netnewswire.com/",
+    "quote": "a free and open source RSS reader for Mac, iPhone, and iPad."
+   },
+   "phone-app": {
+    "v": "partly",
+    "note": "iPhone only; no Android app",
+    "source": "https://netnewswire.com/",
+    "quote": "a free and open source RSS reader for Mac, iPhone, and iPad. (Android not listed)"
+   },
+   "syncs-devices": {
+    "v": "yes",
+    "note": null,
+    "source": "https://netnewswire.com/",
+    "quote": "Syncing via iCloud, Feedbin, Feedly, BazQux, Inoreader, NewsBlur, The Old Reader, and FreshRSS"
+   },
+   "full-article": {
+    "v": "yes",
+    "note": null,
+    "source": "https://netnewswire.com/",
+    "quote": "Reader view"
+   }
+  },
+  "bootstrap": {
+   "commercial-free": {
+    "v": "yes",
+    "note": null,
+    "source": "https://github.com/twbs/icons",
+    "quote": "License: MIT"
+   },
+   "large-icon-set": {
+    "v": "partly",
+    "note": "About 2,080 icons",
+    "source": "https://github.com/twbs/icons",
+    "quote": "Official open source SVG icon library for Bootstrap with over 2,000 icons."
+   },
+   "icon-formats": {
+    "v": "yes",
+    "note": null,
+    "source": "https://github.com/twbs/icons",
+    "quote": "The published package includes individual SVG files, the combined SVG sprite, icon fonts, CSS, and Sass."
+   },
+   "icon-styles": {
+    "v": "yes",
+    "note": "Outline and filled versions",
+    "source": "https://github.com/twbs/icons",
+    "quote": "icons/ folder contains outline icons plus 670 \"-fill\" variants"
+   },
+   "design-tool-plugin": {
+    "v": "partly",
+    "note": "Official Figma file, not a plugin",
+    "source": "https://github.com/twbs/icons",
+    "quote": "The official Bootstrap Icons community file makes the icon set available in Figma for design work."
+   }
+  },
+  "scribus": {
+   "cmyk-print": {
+    "v": "yes",
+    "note": null,
+    "source": "https://github.com/scribusproject/scribus/blob/master/doc/en/color1.html",
+    "quote": "CMYK Colors: These colors are defined in the CMYK color model."
+   },
+   "pdf-x-export": {
+    "v": "yes",
+    "note": null,
+    "source": "https://github.com/scribusproject/scribus/blob/master/doc/en/pdfx3.html",
+    "quote": "Scribus provides easily accessible options that enable end users to create 100 % X-3-compliant PDF files."
+   },
+   "indesign-files": {
+    "v": "partly",
+    "note": "IDML import plugin exists; layouts may change",
+    "source": "https://github.com/scribusproject/scribus/tree/master/scribus/plugins/import/idml",
+    "quote": "scribus/plugins/import/idml/importidml.cpp"
+   },
+   "master-pages": {
+    "v": "yes",
+    "note": null,
+    "source": "https://github.com/scribusproject/scribus/blob/master/doc/en/pagetemplate1.html",
+    "quote": "Master Pages are the means to add content to pages which have repeating content like page numbers, chapter names, section heads"
+   }
+  },
+  "listmonk": {
+   "email-designer": {
+    "v": "yes",
+    "note": null,
+    "source": "https://listmonk.app",
+    "quote": "Write HTML e-mails using a visual drag-and-drop builder"
+   },
+   "email-sequences": {
+    "v": "no",
+    "note": "Maintainers said not available",
+    "source": "https://github.com/knadh/listmonk/issues/2524",
+    "quote": "Listmonk can't do that yet. (closed as not planned)"
+   },
+   "signup-forms": {
+    "v": "partly",
+    "note": "Basic public sign-up page",
+    "source": "https://github.com/knadh/listmonk/pull/3092",
+    "quote": null
+   },
+   "tracking-stats": {
+    "v": "yes",
+    "note": null,
+    "source": "https://github.com/knadh/listmonk/blob/master/docs/docs/content/concepts.md",
+    "quote": "Tracking pixel ... Click tracking ... Bounce"
+   },
+   "managed-cloud": {
+    "v": "partly",
+    "note": "Only third-party hosts",
+    "source": "https://listmonk.app",
+    "quote": "One-click hosted listmonk instances from various 3rd party providers"
+   }
+  },
+  "darktable": {
+   "non-destructive": {
+    "v": "yes",
+    "note": null,
+    "source": "https://github.com/darktable-org/darktable",
+    "quote": "darktable is an open source photography workflow application and non-destructive raw developer"
+   },
+   "psd-files": {
+    "v": "no",
+    "note": "PSD not in supported file formats",
+    "source": "https://github.com/darktable-org/dtdocs/blob/master/content/overview/supported-file-formats.md",
+    "quote": null
+   },
+   "raw-photos": {
+    "v": "yes",
+    "note": null,
+    "source": "https://github.com/darktable-org/darktable",
+    "quote": "non-destructive raw developer - a virtual lighttable and darkroom for photographers"
+   },
+   "photo-library": {
+    "v": "yes",
+    "note": null,
+    "source": "https://github.com/darktable-org/darktable",
+    "quote": "It manages your digital negatives in a database, lets you view them through a zoomable lighttable"
+   },
+   "heal-remove": {
+    "v": "yes",
+    "note": null,
+    "source": "https://github.com/darktable-org/dtdocs/blob/master/content/module-reference/processing-modules/retouch.md",
+    "quote": "retouch: remove and clone spots, perform split-frequency skin editing."
+   },
+   "ai-photo-tools": {
+    "v": "yes",
+    "note": "Optional; models downloaded in preferences",
+    "source": "https://github.com/darktable-org/darktable",
+    "quote": "Darktable includes optional AI-powered features such as object masks, denoise and upscale."
+   }
+  },
+  "posnic-pos": {
+   "works-offline": {
+    "v": "yes",
+    "note": null,
+    "source": "https://github.com/Posnic/POS",
+    "quote": "An offline-first POS for retail shops and restaurants. The primary API and database run on the shop computer"
+   },
+   "card-terminals": {
+    "v": "no",
+    "note": "Does not drive card readers; uses Razorpay/PhonePe",
+    "source": "https://github.com/Posnic/POS/blob/master/docs/HARDWARE_MATRIX.md",
+    "quote": "Integrated card terminals — payments go through Razorpay or PhonePe, or are recorded as taken on a separate machine. Posnic does not drive a PIN pad"
+   },
+   "inventory": {
+    "v": "yes",
+    "note": null,
+    "source": "https://github.com/Posnic/POS",
+    "quote": "Stock: Items, variants, categories, purchases, supplier returns, inventory logs, low-stock alerts"
+   },
+   "receipt-hardware": {
+    "v": "yes",
+    "note": null,
+    "source": "https://github.com/Posnic/POS",
+    "quote": "Documented paths for thermal printers, barcode scanners, cash drawers, weighing scales and second displays"
+   },
+   "tablet-app": {
+    "v": "partly",
+    "note": "Works in a tablet browser; no tablet app",
+    "source": "https://github.com/Posnic/POS",
+    "quote": "A browser on any till, tablet or phone on the network"
+   },
+   "multi-store": {
+    "v": "yes",
+    "note": null,
+    "source": "https://github.com/Posnic/POS",
+    "quote": "Branches: Multiple outlets, per-branch stock, staff roles and permissions"
+   }
+  },
+  "plasmic": {
+   "live-collab": {
+    "v": "yes",
+    "note": null,
+    "source": "https://github.com/plasmicapp/plasmic",
+    "quote": "Deep collaboration with multiplayer, branching, cross-project imports, and multi-workspace organizations."
+   },
+   "figma-import": {
+    "v": "yes",
+    "note": null,
+    "source": "https://github.com/plasmicapp/plasmic",
+    "quote": "Import designs from Figma, translating its proprietary vector document format into DOM/CSS."
+   },
+   "components": {
+    "v": "yes",
+    "note": null,
+    "source": "https://github.com/plasmicapp/plasmic",
+    "quote": "Powerful abstractions like components, variants, slots, composable state management ... cross-project imports"
+   },
+   "no-server-needed": {
+    "v": "yes",
+    "note": null,
+    "source": "https://www.plasmic.app/pricing",
+    "quote": "Free plan: 3 collaborators, Deploy to third-party servers"
+   }
+  },
+  "opencut": {
+   "phone-app": {
+    "v": "no",
+    "note": "Mobile app only planned",
+    "source": "https://github.com/OpenCut-app/OpenCut",
+    "quote": "Desktop, mobile, and browser from one codebase (Rust core) -- listed under \"What's coming\""
+   }
+  }
+ },
+ "tagIssues": [
+  {
+   "group": "icons",
+   "tag": "commercial-free",
+   "problem": "MIT needs the licence text kept with copies, so 'no credit' vs 'credit required' is ambiguous; consider 'Free for commercial use'"
+  },
+  {
+   "group": "ai-images",
+   "tag": "video-generation",
+   "problem": "InvokeAI lists Wan as API-only; unclear if 'video' counts; define whether online-API video is partly"
+  },
+  {
+   "group": "ai-chat",
+   "tag": "point-and-click",
+   "problem": "Every self-hosted project will answer partly; consider splitting use vs install"
+  },
+  {
+   "group": "design",
+   "tag": "tablet-app",
+   "problem": "Desktop-only apps all become no; consider 'works on tablets' wording"
+  },
+  {
+   "group": "ai-chat",
+   "tag": "point-and-click",
+   "problem": "Same name used in ai-coding; for CLI tools answer is trivially no; Ollama has a GUI app but docs fetched did not say so"
+  },
+  {
+   "group": "analytics",
+   "tag": "no-code-builder",
+   "problem": "Metriql is a metrics layer behind other BI tools; dashboard/report tags do not apply to it"
+  },
+  {
+   "group": "graphics",
+   "tag": "ai-files",
+   "problem": "Answer differs for .ai vs EPS; meaning should say which counts"
+  },
+  {
+   "group": "ai-chat",
+   "tag": "phone-app",
+   "problem": "Android-only apps (like YouCoded) score 'partly' same as an unofficial app; also repeated across groups"
+  },
+  {
+   "group": "vector-databases",
+   "tag": "no-server-needed",
+   "problem": "Server-only tools (Vane, Quackback) hinge on hosted versions; 'no-server-needed' is odd for infrastructure"
+  },
+  {
+   "group": "ml-platforms",
+   "tag": "managed-cloud",
+   "problem": "Same wording everywhere; hard to check when project is unmaintained (Cortex)"
+  },
+  {
+   "group": "3d",
+   "tag": "modelling-3d",
+   "problem": "Friction is 2D motion graphics; group 3d may not fit it"
+  },
+  {
+   "group": "cad",
+   "tag": "push-pull-3d",
+   "problem": "Hard to rate; partly vs no depends on opinion"
+  },
+  {
+   "group": "audio",
+   "tag": "midi-instruments",
+   "problem": "Audacity's MIDI support differs by version (3.x vs 4); vague about which version counts"
+  },
+  {
+   "group": "audio",
+   "tag": "vst-plugins",
+   "problem": "Lists VST, LV2, AU together; projects often support only some, hard to say yes/partly"
+  },
+  {
+   "group": "customer-insights",
+   "tag": "community-sources",
+   "problem": "Beton reads product analytics (PostHog), not community activity; tag may not fit the group's tools"
+  },
+  {
+   "group": "ai-agents",
+   "tag": "asks-before-acting",
+   "problem": "Goose asks only in Manual/Smart mode, and default is Autonomous; 'partly' is vague about default"
+  },
+  {
+   "group": "ai-agents",
+   "tag": "phone-app",
+   "problem": "Goose has an iPhone client only; 'official app on both' rule hides remote-client vs on-device difference"
+  },
+  {
+   "group": "bi",
+   "tag": "company-sso",
+   "problem": "Metabase free tier has one-domain Google sign-in; paid SAML; meaning of partly overlaps"
+  },
+  {
+   "group": "ai-agents",
+   "tag": "point-and-click",
+   "problem": "Shared tag: partly covers almost every agent tool; consider separating install from daily use"
+  },
+  {
+   "group": "cad",
+   "tag": "drafting-2d",
+   "problem": "OpenSCAD exports 2D outlines but has no dimensioning; meaning sentence does not say which to pick for 'script-only' tools"
+  },
+  {
+   "group": "audio",
+   "tag": "multitrack-recording",
+   "problem": "LMMS has no audio input recording; meaning fits, no change needed beyond noting recording-in vs MIDI"
+  },
+  {
+   "group": "books",
+   "tag": "book-catalog",
+   "problem": "Left blank for calibre: its 'Get books' search may count as buy but docs I reached do not describe it"
+  },
+  {
+   "group": "music",
+   "tag": "music-catalog",
+   "problem": "Federated sharing (Funkwhale) fits partly only loosely; clarify wording for shared-by-users"
+  },
+  {
+   "group": "photo-backup",
+   "tag": "phone-app",
+   "problem": "Self-hosted apps with only a PWA or third-party apps (PhotoPrism, Miniflux, Funkwhale): meaning sentence needs a rule for web-app-only"
+  },
+  {
+   "group": "transcription",
+   "tag": "point-and-click",
+   "problem": "Tag is written for apps; for libraries like Whisper always no, consider a 'for developers' filter"
+  },
+  {
+   "group": "books",
+   "tag": "send-to-ereader",
+   "problem": "Unclear for apps that ARE the e-reader (KOReader); sending to itself is not the question"
+  },
+  {
+   "group": "books",
+   "tag": "audiobook-player",
+   "problem": "Hard to prove from docs for e-reader apps; left blank"
+  },
+  {
+   "group": "video-editing",
+   "tag": "multi-track",
+   "problem": "Lossless cutters like LosslessCut are not editors; every editing tag is a no, tag set mixes cutters with editors"
+  },
+  {
+   "group": "ai-coding",
+   "tag": "agent-mode",
+   "problem": "Tabby is suggestions/chat only; meaning text for partly covers it, but agent product is separate"
+  },
+  {
+   "group": "bi",
+   "tag": "no-code-builder",
+   "problem": "Cube Core is headless (no UI); all UI tags are no, tag set better for BI tools than semantic layers"
+  },
+  {
+   "group": "pos",
+   "tag": "multi-store",
+   "problem": "Core vs paid marketplace modules blurs yes/partly; no-paid-edition tag would help"
+  },
+  {
+   "group": "video-editing",
+   "tag": "multi-track",
+   "problem": "OpenCut: cannot verify \"unlimited\" tracks from project pages; wording hard to answer"
+  },
+  {
+   "group": "layout",
+   "tag": "indesign-files",
+   "problem": "Scribus meaning \"editable/with losses\" - IDML import is plugin of unknown fidelity; hard to prove"
+  },
+  {
+   "group": "layout",
+   "tag": "long-documents",
+   "problem": "Needs a way to check \"index\" separately; the tag bundles three features so a single answer is hard"
+  },
+  {
+   "group": "feeds",
+   "tag": "read-later",
+   "problem": "Starred articles vs read-later are blurry; unclear what counts"
+  }
+ ],
+ "dataErrors": [
+  "quant-ux: website is empty but https://quant-ux.com/ is the project's hosted site",
+  "librechat: listed code URL LibreChat-AI/LibreChat redirects; canonical repo appears to be danny-avila/LibreChat",
+  "wallabag: listing says nothing of iOS app being archived (April 2026 news)",
+  "heroic-games-launcher listing note says 'sells none' but README says stores are accessible inside Heroic",
+  "openbooks listing says platform 'server'; README says alpha software",
+  "cortex: README says 'no longer actively maintained'; last push 2024-06-12; site cortexlabs.com redirects to /lander",
+  "opencode: setup rated advanced but a desktop app exists (beta)",
+  "vane-formerly-perplexica: website is null",
+  "semi: project is Weaviate; listed platforms omit Windows though Docker runs there",
+  "mlcraft: project renamed Synmetrix (id/name stale)",
+  "mlcraft: no-paid-edition, company-sso, dashboard-sharing, no-code-builder left blank, unverified",
+  "beton-inspector: listed in customer-insights but README describes PostHog usage signals to CRM, not community-activity insights (https://github.com/getbeton/inspector)",
+  "immich: platforms lists android/ios/server, but web and desktop browser use is also supported (README feature table has a Web column)",
+  "deepset: website haystack.deepset.ai is the Haystack framework; the project name 'deepset' covers the framework and a paid Enterprise Platform",
+  "preset: listing is 'Preset' but website and code point to Apache Superset (the open project); Preset is the paid host built on it",
+  "crater: platforms list only android/ios, but it is a self-hosted web app (Laravel/Vue) with mobile companion apps; craterapp.com now advertises a different embedded-payments product; GitHub repo last pushed 2024-08-10 (looks inactive)",
+  "whisper-cpp: platforms list windows and linux only, but the README says Apple Silicon (macOS) is a first-class target; website is empty (could be https://github.com/ggml-org/whisper.cpp)",
+  "calibre: platforms lists only windows, mac; calibre also ships for Linux (https://manual.calibre-ebook.com/ 'cross platform, running on Linux, Windows and macOS'; https://calibre-ebook.com/download_linux)",
+  "whisper: platforms shows only windows and website is null; it is a Python package for Linux/macOS/Windows (README gives apt/pacman/brew/choco install steps)",
+  "pocket-casts: website is forums.pocketcasts.com (a forum); main site is https://pocketcasts.com. Platforms android-only but iOS/web apps exist (github.com/Automattic/pocket-casts-ios)",
+  "jellyfin: platforms lists android, ios, server only; official clients also cover Roku, LG, Samsung, Xbox, Android TV and desktop (https://jellyfin.org/downloads/clients/)",
+  "funkwhale: code link is dev.funkwhale.audio (GitLab, correct but not github)",
+  "gimp code field is a gitlab.gnome.org URL (not github) - fine but gh api cannot read it",
+  "comfyui: site lists platforms as windows only, but README says 'available on Windows, Linux, and macOS' (https://github.com/Comfy-Org/ComfyUI)",
+  "opencut: site says listing 'Early; fewer features than CapCut' but the repo README says the project is mid-rewrite and opencut.app runs the archived 'classic' version (https://github.com/OpenCut-app/OpenCut)"
+ ]
+}
