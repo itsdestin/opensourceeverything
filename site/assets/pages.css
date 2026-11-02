@@ -87,7 +87,8 @@ table.credits a { color:var(--fg); }
 .swgrid { display:grid; grid-template-columns:repeat(5,minmax(0,1fr)); gap:12px; }
 .swcard .preview { aspect-ratio:16/9; }
 .swcard .inner { gap:2px; }
-.swcard h3 { margin:0; font-size:16px; font-weight:500; }
+/* WHY 20px (Destin, Nov 2): the closed app's name is what a visitor scans for; the line above it stays small. */
+.swcard h3 { margin:0; font-size:20px; font-weight:600; line-height:1.2; }
 .swcard .foot { margin-top:4px; }
 
 /* Categories: a tidy grid of equal cards, each with an icon, its numbers and its biggest jobs. */
