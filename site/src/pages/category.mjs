@@ -1,6 +1,7 @@
 // One page per category (c/<id>/): every group in it, as raised cards.
 import { url, esc, SOCIAL } from '../lib.mjs';
 import { mapTrail } from '../redesign.mjs';
+import { catIcon } from '../icons.mjs';
 
 export default function categories(d) {
   // WHY skip empty categories (taxonomy-v2): a new category whose groups all wait for checked projects would be a blank page.
@@ -47,7 +48,9 @@ export default function categories(d) {
       body: `
   ${mapTrail(d, { category: c.id }, c.name)}
   <section class="surface sec">
-    <div class="sec-head"><div><h1 class="h-large">${esc(c.name)} – Subcategories<span class="count">${gs.length}</span></h1></div></div>
+    <!-- WHY the big name with its icon (Destin, Nov 2: "keep the old header text size/improve this a bit visually"): the category's
+         name keeps the old title size and the home page's icon; "Subcategories" and the count are quieter beside it. -->
+    <div class="sec-head cattitle"><span class="caticon">${catIcon(c.id, area?.id)}</span><h1 class="h-subject">${esc(c.name)}<span class="sub"><span class="dash"> – </span>Subcategories<span class="count">${gs.length}</span></span></h1></div>
     <div class="gaplist grplist">${gs.map(card).join('')}</div>
   </section>
   ${others ? `<section class="surface sec">

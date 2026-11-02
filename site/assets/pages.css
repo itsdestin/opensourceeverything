@@ -130,6 +130,14 @@ table.credits a { color:var(--fg); }
 .catcard2 { position:relative; gap:12px; }
 .catcard2 .cardlink { position:absolute; inset:0; border-radius:inherit; }
 .cathead { display:flex; align-items:center; gap:12px; }
+/* A category page's heading: icon, big name, quieter "– Subcategories" and count. */
+.sec > .sec-head.cattitle { justify-content:flex-start; align-items:center; gap:12px; margin-bottom:12px; }
+.cattitle .h-subject { font-size:22px; }
+.cattitle .h-subject .sub { font-weight:400; color:var(--fg-muted); }
+.cattitle .count { font-size:13px; }
+/* WHY on phones "Subcategories" gets its own smaller line: wrapped mid-heading, the dash was left hanging at a line's end. */
+@media (max-width:640px) { .sec > .sec-head.cattitle { flex-direction:row; } .cattitle .h-subject { font-size:19px; } .cattitle .caticon { width:36px; height:36px; }
+  .cattitle .sub { display:block; font-size:13px; margin-top:2px; } .cattitle .dash { display:none; } }
 .cathead h3 { margin:0; font-size:15px; font-weight:500; white-space:normal; }
 .caticon { flex:none; width:40px; height:40px; border-radius:var(--radius-md); display:flex; align-items:center; justify-content:center;
   color:var(--accent); background:color-mix(in srgb,var(--accent) 12%,transparent); border:1px solid color-mix(in srgb,var(--accent) 25%,transparent); }
