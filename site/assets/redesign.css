@@ -218,12 +218,12 @@ body { display:flex; flex-direction:column; }
 }
 
 /* ── Top controls: Home, Back, Search and Sign in are one set (Destin, round 5): the same translucent glass pill, the same height ── */
-.glass, .top .acct .btn, .top .acct .avatar, .hero-acct .btn, .hero-acct .avatar {
+.glass, .top .acct .btn, .top .acct .avatar {
   display:inline-flex; align-items:center; justify-content:center; gap:8px; height:32px; min-width:32px; padding:0 10px; border-radius:9999px; flex:none;
   color:var(--fg); font-size:12px; font-weight:600; text-decoration:none; cursor:pointer;
   background:color-mix(in srgb, var(--panel) 42%, transparent); backdrop-filter:blur(16px) saturate(1.6); -webkit-backdrop-filter:blur(16px) saturate(1.6);
   border:1px solid color-mix(in srgb, #fff 55%, var(--edge-dim)); box-shadow:inset 0 1px 0 rgb(255 255 255 / .55), 0 2px 8px rgb(0 0 0 / .06); }
-.glass:hover, .top .acct .btn:hover, .top .acct .avatar:hover, .hero-acct .btn:hover { background:color-mix(in srgb, var(--panel) 62%, transparent); color:var(--fg); }
+.glass:hover, .top .acct .btn:hover, .top .acct .avatar:hover { background:color-mix(in srgb, var(--panel) 62%, transparent); color:var(--fg); }
 .iconbtn { padding:0; width:32px; }
 .homebtn { padding:0 14px 0 10px; }
 .top .acct .avatar { padding:0; width:32px; }

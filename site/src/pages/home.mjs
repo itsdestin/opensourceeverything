@@ -4,12 +4,11 @@
 import { url, esc, ICON, suggestUrl, shot, SITE_URL, SOCIAL, counts } from '../lib.mjs';
 import { appUrl, sortAlts } from '../cards.mjs';
 
-// WHY two lists: the picture cards need a replacement with a real screenshot, while the "Try" chips can name any
-// app people search for.
+// WHY a list: the picture cards need a replacement with a real screenshot.
 const POPULAR = ['Google Docs', 'Adobe Photoshop', 'Microsoft Windows', 'Google Chrome', 'Notion', 'Google Photos', 'Figma', 'WhatsApp'];
 // WHY by hand: the obvious answer isn't always the most-starred one (GIMP has no GitHub stars; it lives on GNOME's own server).
 const LEAD = { 'Adobe Photoshop': 'gimp' };
-const TRY = ['Google Docs', 'Microsoft Windows', 'Google Chrome', 'Adobe Photoshop', 'Spotify', 'Slack'];
+// WHY no "Try" chips (Destin, Nov 2): dropped before launch; the Popular alternatives cards right below already name these apps.
 // WHY everyday first (Destin picked "Everyday first, areas below" in the taxonomy-v2 deck, Oct 27): most visitors come to replace a
 // paid app, so the everyday area's categories lead; the other five areas follow as one card each.
 const EVERYDAY = 'everyday';
@@ -62,9 +61,8 @@ export default function home(d) {
         ${more > 0 ? `<div class="foot"><span class="chip">+${more} more</span></div>` : ''}
       </div></a>`;
 
-  // ── Hero collage: three real screenshots, slightly fanned, so the first thing a visitor sees is real software ──
-  // WHY these three: wide desktop screenshots fan out cleanly; tall phone shots (AppFlowy's) looked cluttered there.
-  const collage = ['Figma', 'Adobe Photoshop', 'Google Docs'].map((n) => switches.find((s) => s.name === n)?.lead.p).filter(Boolean).map((p) => shot(p)).filter(Boolean);
+  // WHY no screenshot fan in the top card (Destin, Nov 2: "make the header card much smaller"): it set the card's height,
+  // and the Popular alternatives cards right below already show real screenshots.
 
   // ── Categories: icon, name, a summary line and its first groups; the rest is one "+ more" chip ──
   const SHOWN = 6;
@@ -105,17 +103,14 @@ export default function home(d) {
       <div class="foot">Replaces ${esc(g.closed.join(', '))}</div></a>`;
 
   const body = `
+  <!-- WHY a small top card (Destin, Nov 2): just the headline and the search box. The site name (top left), the search
+       button (top right) and Sign in sit in the shared top strip, as on every other page. -->
   <div class="surface hero3">
-    ${SOCIAL ? '<div class="hero-acct" data-account></div>' : ''}
-    <div class="hero-text">
-      <h1>Find an open-source replacement for the apps you use</h1>
-      <div class="searchwrap big" data-search>
-        <div class="searchpill">${ICON.search}<input type="search" placeholder="Which app do you want to replace?" autocomplete="off" aria-label="Search for an app"></div>
-        <div class="menu search-menu" role="listbox"></div>
-      </div>
-      <div class="pop"><span class="muted11">Try</span><div class="fchips">${TRY.map((n) => `<a class="fchip" href="${appUrl(n)}">${esc(n)}</a>`).join('')}</div></div>
+    <h1>Find an open-source replacement for the apps you use</h1>
+    <div class="searchwrap big" data-search>
+      <div class="searchpill">${ICON.search}<input type="search" placeholder="Which app do you want to replace?" autocomplete="off" aria-label="Search for an app"></div>
+      <div class="menu search-menu" role="listbox"></div>
     </div>
-    ${collage.length === 3 ? `<div class="collage" aria-hidden="true">${collage.map((u, i) => `<img class="c${i}" src="${esc(u)}" alt="" referrerpolicy="no-referrer">`).join('')}</div>` : ''}
   </div>
 
   <section class="surface sec">

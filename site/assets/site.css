@@ -350,9 +350,8 @@ a.footchip { text-decoration:none; display:inline-block; }
 a.btn { text-decoration:none; }
 
 /* ═══ Voting, notes and boards (assets/social.js), Oct 27 ═══ */
-/* Sign-in sits at the right end of the top strip, beside the search box; on the home page, in the hero's corner. */
+/* Sign-in sits at the right end of the top strip on every page, the home page included (Nov 2: its corner spot in the old home card is gone). */
 .acct { flex:none; display:flex; align-items:center; }
-.hero-acct { position:absolute; top:16px; right:16px; z-index:3; }
 .acct-btn { font-size:12px; font-weight:600; color:var(--fg); cursor:pointer; }
 .acct-menu { right:0; left:auto; min-width:240px; }
 .acct-menu .menu-note b { color:var(--fg); }
@@ -409,7 +408,6 @@ button.fchip { cursor:pointer; }
 
 @media (max-width:640px) {
   .kindpick, .two { grid-template-columns:1fr; }
-  .hero-acct { top:12px; right:12px; }
 }
 /* The note and mod pages are filled in by social.js inside one wrapper; keep the page's 16px between its cards. */
 [data-note-page], [data-mod] { display:flex; flex-direction:column; gap:16px; min-width:0; }
