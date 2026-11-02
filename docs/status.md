@@ -1,18 +1,19 @@
 ---
 status: active
-updated: 2026-10-31
+updated: 2026-11-02
 ---
-# Where the site stands (Oct 31, 2026)
+# Where the site stands (Nov 2, 2026)
 
 The single place to start. Older plans are in `docs/archive/` (history only: many of their details were later changed).
 
 ## In one paragraph
 
-opensourceeverything.org went live from `main` on Oct 27 with the first version (about 430 projects). Everything since
-is on the branch **`redesign`**: 64 commits that are **not live yet**. It holds the new look built to YouCoded's design
-guide, the new map structure (6 areas, 24 categories, 263 groups and 980 projects shown), smarter search, feature
-checklists, switch guides, safer project claims and an AI connector. Destin approved every design round; what's left is
-his final look, a few small choices, then merging and deploying.
+<!-- WHY rewritten Nov 2: the redesign went live; the "not live yet" text and merge steps no longer applied. -->
+opensourceeverything.org went live on Oct 27 with the first version. On **Nov 2** the redesign was merged into `main` and
+deployed: the new look built to YouCoded's design guide, the new map structure (6 areas, 24 categories, 263 groups and 980
+projects shown), smarter search, feature checklists, switch guides, safer project claims and an AI connector. Database
+changes 0002–0004 ran on the live database (a copy taken just before is at `~/.local/share/ose-backups/db-before-0002-2026-11-02.sql`).
+New work goes on a branch off `main`; every push to `main` republishes the pages, and `cd worker && npm run deploy` deploys the server.
 
 ## What comes after launch
 
@@ -23,24 +24,21 @@ The agreed next design is in `docs/evidence-map-design.md` (not built yet).
 
 | Item | Notes |
 |---|---|
-| Final look at the redesign | Preview: `node site/serve.mjs 4322` in the `redesign` worktree, then http://127.0.0.1:4322/ |
-| Glass blur on the top controls | Speed tests found it is the only effect worth considering. Keep it everywhere (recommended), or drop it on phones only if it still feels slow |
-| Merge `redesign` into `main` and deploy | Only on Destin's word. Steps below |
-| Cloudflare login can't reach the database | Oct 31: `wrangler d1 migrations list opensourceeverything --remote` failed with "account is not valid or is not authorized" (code 7403), though `wrangler whoami` shows the right account. Fix before the server deploy: run `npx wrangler login` again, or use an API token with D1 edit rights |
+| Glass blur on the top controls | Live with the blur everywhere (the recommended choice). Drop it on phones only if it feels slow there |
 | $5/month Cloudflare plan for meaning search | Optional. The trial was a small gain; it's switched off. See `docs/ai-search.md` |
 | Delete the Anthropic API key pasted in chat | It's at Anthropic's console; the local copy is `~/.config/alternatives-map/anthropic-key` |
-| Launch post and esk message | Drafts in `docs/launch.md`; the project count in them is stale |
+| Launch post and esk message | Drafts in `docs/launch.md`; the project count in them is stale (980 shown now) |
+| Delete the 13 old seed notes | From the first "What's missing" seed; `worker/seed-notes.mjs` replaced them. Deleting live data: ask Destin first |
 
-## Merging and deploying (when Destin says so)
+## Deploying
 
-1. Run the checks on the final `redesign` build: `node site/build.mjs && node site/check.mjs`, the site tests
-   (`node --test site/test/escape.test.mjs site/test/family.test.mjs`, `node site/test/search-eval.mjs` plus `--heldout` and `--described`),
-   and the server tests (`cd worker && npm test`).
-2. Merge `redesign` into `main` and push. The "Site" workflow publishes the pages by itself.
-3. Deploy the server: `cd worker && npm run deploy`. It runs database changes 0002–0004 first (contributions, claim
-   hardening, contributor preferences), then the new server code. These have never run on the live database.
+1. Checks: `node site/build.mjs && node site/check.mjs`, the site tests (`node --test site/test/escape.test.mjs site/test/family.test.mjs`,
+   `node site/test/search-eval.mjs` plus `--heldout` and `--described`), and the server tests (`cd worker && npm run dev` in one
+   terminal, with the preview on :4322, then `npm test`).
+2. Pages: push to `main`; the "Site" workflow publishes them.
+3. Server: `cd worker && npm run deploy` (new database changes first, then the code). Nov 2: the first try failed with a Cloudflare
+   "Internal authentication error" (code 10500) after the database step; running `npx wrangler deploy --env=""` again worked.
 4. Check the live site and `https://api.opensourceeverything.org/me`.
-5. Delete the 13 old seed notes from the first "What's missing" seed (`worker/seed-notes.mjs` replaced them).
 
 ## Data work still open (not blocking)
 
