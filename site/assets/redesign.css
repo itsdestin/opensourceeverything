@@ -248,6 +248,10 @@ body { display:flex; flex-direction:column; }
 .topsearch .searchpill.glass:focus-within { background:color-mix(in srgb, var(--panel) 70%, transparent); border-color:var(--accent); }
 .topsearch .searchpill input { font-size:14px; }
 .top:has(.search-menu.open) { position:relative; z-index:20; }
+/* WHY an invisible 40px-tall spacer in every top strip (Destin, Nov 2: "the Open Source Everything button seems to move up/down
+   when moving from homepage elsewhere"): the home page's 40px search bar made its strip 8px taller than other pages' (32px
+   controls), so the button sat 4px lower there. The spacer gives every strip the same height. Its -8px cancels the strip's gap. */
+.top::after { content:""; flex:none; width:0; height:40px; margin-left:-8px; }
 @media (max-width:640px) {
   .homebtn { padding:0; width:32px; } .homebtn .hname { display:none; }
   .top { padding:10px 16px 6px; }
