@@ -14,6 +14,11 @@ guide, the new map structure (6 areas, 24 categories, 263 groups and 980 project
 checklists, switch guides, safer project claims and an AI connector. Destin approved every design round; what's left is
 his final look, a few small choices, then merging and deploying.
 
+## What comes after launch
+
+<!-- WHY: Nov 2 Destin agreed a wider design (evidence labels, closed-app checklists, tests, connections, stack pages); point the next session at it. -->
+The agreed next design is in `docs/evidence-map-design.md` (not built yet).
+
 ## Not done yet: needs Destin
 
 | Item | Notes |
