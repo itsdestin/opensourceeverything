@@ -17,13 +17,13 @@ export default function categories(d) {
     const card = (g) => {
       const full = g.alternatives.filter((a) => a.fit === 'full').length;
       // WHY this order and no status pill (Destin, Nov 2): name, then a two-line description of the job right under it, then
-      // what it replaces, with the count chip at the bottom, so every card is built the same way and the cards line up.
+      // the count and what it replaces as two chips at the bottom (Destin: "replaces should become a chip alongside"), so every
+      // card is built the same way and the cards line up.
       // The "Only partial replacements" pill is gone from this view; the Gaps page still lists those groups.
       return `<a class="card gcard grpcard" href="${url(`g/${g.id}/`)}">
         <h3>${esc(g.name)}</h3>
         <p class="job">${esc(g.job)}</p>
-        ${g.closed.length ? `<div class="foot">Replaces ${esc(g.closed.join(', '))}</div>` : ''}
-        <div class="chiprow"><span class="chip">${g.alternatives.length} ${g.alternatives.length === 1 ? 'alternative' : 'alternatives'}${full ? ` · ${full} full` : ''}</span></div></a>`;
+        <div class="chiprow"><span class="chip">${g.alternatives.length} ${g.alternatives.length === 1 ? 'alternative' : 'alternatives'}${full ? ` · ${full} full` : ''}</span>${g.closed.length ? `<span class="chip replaces" title="Replaces ${esc(g.closed.join(', '))}">Replaces ${esc(g.closed.join(', '))}</span>` : ''}</div></a>`;
     };
     // WHY "Other categories" lists only this area's (taxonomy-v2, Oct 27): 26 chips across six areas was a wall; the neighbours
     // in the same area are the useful jumps, and the crumb's area link reaches the rest.

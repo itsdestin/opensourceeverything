@@ -17,16 +17,19 @@ a.card:focus-visible, a.fchip:focus-visible, a.btn:focus-visible { outline:2px s
 /* WHY wrap: a group name beside its status pill would otherwise be cut off ("Professional netwo…"). */
 .gcard h3 { white-space:normal; }
 .gcard .job { min-height:0; }
-/* Category page group cards (Destin, Nov 2: "more consistent sizes"): the description always takes two lines and "Replaces"
-   one, so cards match; the count chip sits at the bottom edge. */
+/* Category page group cards (Destin, Nov 2: "more consistent sizes"): the description always takes two lines, so cards match;
+   the count and Replaces chips sit at the bottom edge. */
 /* WHY stretch: cards in one row share the tallest card's height (the Gaps page keeps natural heights). */
 .grplist { align-items:stretch; }
 .grplist .card { cursor:pointer; }
 .grpcard { gap:6px; }
 .grpcard h3 { margin:0; }
 .grpcard .job { font-size:13px; line-height:1.4; min-height:calc(2 * 1.4em); display:-webkit-box; -webkit-line-clamp:2; -webkit-box-orient:vertical; overflow:hidden; }
-.grpcard .foot { white-space:nowrap; overflow:hidden; text-overflow:ellipsis; }
-.grpcard .chiprow { margin-top:auto; padding-top:4px; }
+.grpcard .chiprow { margin-top:auto; padding-top:4px; overflow:hidden; padding-right:0; }
+/* WHY the Replaces chip shrinks with "…" (full list on hover): a long list must not push the card wider or scroll. */
+.grpcard .chip { flex:none; }
+/* WHY display:block: "…" only works on a block box; chips are flex boxes, which just clip the text. */
+.grpcard .chip.replaces { display:block; flex:0 1 auto; min-width:0; overflow:hidden; text-overflow:ellipsis; white-space:nowrap; }
 
 /* About page */
 .prose p, .prose ul { margin:0; }
