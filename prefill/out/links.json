@@ -1,1583 +1,4205 @@
 {
  "github.com/twofas/2fas-android": {
   "website": null,
-  "release": "https://github.com/twofas/2fas-android/releases/tag/6.1.0"
+  "release": "https://github.com/twofas/2fas-android/releases/tag/6.1.0",
+  "isFork": false,
+  "forkOf": null,
+  "forkCount": 133,
+  "latest": {
+   "name": "6.1.0",
+   "date": "2026-10-19T18:21:07Z"
+  }
  },
  "github.com/abilian/hop3": {
   "website": null,
-  "release": null
+  "release": null,
+  "isFork": false,
+  "forkOf": null,
+  "forkCount": 3,
+  "latest": null
  },
  "github.com/abilian/nua": {
   "website": "https://nua.rocks/",
-  "release": null
+  "release": null,
+  "isFork": false,
+  "forkOf": null,
+  "forkCount": 7,
+  "latest": null
  },
  "github.com/accrescent/accrescent": {
   "website": "https://accrescent.app",
-  "release": "https://github.com/accrescent/accrescent/releases/tag/0.28.1"
+  "release": "https://github.com/accrescent/accrescent/releases/tag/0.28.1",
+  "isFork": false,
+  "forkOf": null,
+  "forkCount": 59,
+  "latest": {
+   "name": "0.28.1",
+   "date": "2025-11-10T19:08:39Z"
+  }
  },
  "github.com/appy-one/acebase": {
   "website": null,
-  "release": "https://github.com/appy-one/acebase/releases/tag/v1.29.13"
+  "release": "https://github.com/appy-one/acebase/releases/tag/v1.29.13",
+  "isFork": false,
+  "forkOf": null,
+  "forkCount": 31,
+  "latest": {
+   "name": "v1.29.13",
+   "date": "2026-06-25T16:55:42Z"
+  }
  },
  "github.com/activepieces/activepieces": {
   "website": "https://www.activepieces.com",
-  "release": "https://github.com/activepieces/activepieces/releases/tag/0.92.3-hotfix.1"
+  "release": "https://github.com/activepieces/activepieces/releases/tag/0.92.3-hotfix.1",
+  "isFork": false,
+  "forkOf": null,
+  "forkCount": 4396,
+  "latest": {
+   "name": "0.92.3-hotfix.1",
+   "date": "2026-10-23T17:23:51Z"
+  }
  },
  "github.com/actualbudget/actual": {
   "website": "https://actualbudget.org",
-  "release": "https://github.com/actualbudget/actual/releases/tag/v26.10.0"
+  "release": "https://github.com/actualbudget/actual/releases/tag/v26.10.0",
+  "isFork": false,
+  "forkOf": null,
+  "forkCount": 3211,
+  "latest": {
+   "name": "v26.10.0",
+   "date": "2026-10-02T15:32:36Z"
+  }
  },
  "github.com/beemdevelopment/Aegis": {
   "website": "https://getaegis.app",
-  "release": "https://github.com/beemdevelopment/Aegis/releases/tag/v3.4.3"
+  "release": "https://github.com/beemdevelopment/Aegis/releases/tag/v3.4.3",
+  "isFork": false,
+  "forkOf": null,
+  "forkCount": 610,
+  "latest": {
+   "name": "v3.4.3",
+   "date": "2026-09-06T10:31:12Z"
+  }
  },
  "github.com/toeverything/AFFiNE": {
   "website": "https://affine.pro",
-  "release": "https://github.com/toeverything/AFFiNE/releases/tag/v0.27.4"
+  "release": "https://github.com/toeverything/AFFiNE/releases/tag/v0.27.4",
+  "isFork": false,
+  "forkOf": null,
+  "forkCount": 5402,
+  "latest": {
+   "name": "0.27.4",
+   "date": "2026-08-18T16:51:39Z"
+  }
  },
  "github.com/Aider-AI/aider": {
   "website": "https://aider.chat/",
-  "release": "https://github.com/Aider-AI/aider/releases/tag/v0.86.0"
+  "release": "https://github.com/Aider-AI/aider/releases/tag/v0.86.0",
+  "isFork": false,
+  "forkOf": null,
+  "forkCount": 5107,
+  "latest": {
+   "name": "Aider v0.86.0",
+   "date": "2025-08-09T17:42:19Z"
+  }
  },
  "github.com/aliasvault/aliasvault": {
   "website": "https://www.aliasvault.com",
-  "release": "https://github.com/aliasvault/aliasvault/releases/tag/0.31.1"
+  "release": "https://github.com/aliasvault/aliasvault/releases/tag/0.31.1",
+  "isFork": false,
+  "forkOf": null,
+  "forkCount": 111,
+  "latest": {
+   "name": "0.31.1",
+   "date": "2026-10-14T19:28:32Z"
+  }
  },
  "github.com/Alovoa/alovoa": {
   "website": "https://alovoa.com",
-  "release": "https://github.com/Alovoa/alovoa/releases/tag/v2.0.0"
+  "release": "https://github.com/Alovoa/alovoa/releases/tag/v2.0.0",
+  "isFork": false,
+  "forkOf": null,
+  "forkCount": 159,
+  "latest": {
+   "name": "2.0.0",
+   "date": "2025-01-19T17:37:40Z"
+  }
  },
  "github.com/AntennaPod/AntennaPod": {
   "website": "https://antennapod.org",
-  "release": "https://github.com/AntennaPod/AntennaPod/releases/tag/3.12.3"
+  "release": "https://github.com/AntennaPod/AntennaPod/releases/tag/3.12.3",
+  "isFork": false,
+  "forkOf": null,
+  "forkCount": 1840,
+  "latest": {
+   "name": "3.12.3",
+   "date": "2026-10-13T06:21:52Z"
+  }
  },
  "github.com/AnySoftKeyboard/AnySoftKeyboard": {
   "website": "http://anysoftkeyboard.github.io/",
-  "release": "https://github.com/AnySoftKeyboard/AnySoftKeyboard/releases/tag/1.13-r2"
+  "release": "https://github.com/AnySoftKeyboard/AnySoftKeyboard/releases/tag/1.13-r2",
+  "isFork": false,
+  "forkOf": null,
+  "forkCount": 952,
+  "latest": {
+   "name": "v1.13-r2",
+   "date": "2026-09-08T02:35:28Z"
+  }
  },
  "github.com/Mintplex-Labs/anything-llm": {
   "website": "https://anythingllm.com",
-  "release": "https://github.com/Mintplex-Labs/anything-llm/releases/tag/v1.18.0"
+  "release": "https://github.com/Mintplex-Labs/anything-llm/releases/tag/v1.19.0",
+  "isFork": false,
+  "forkOf": null,
+  "forkCount": 7595,
+  "latest": {
+   "name": "AnythingLLM v1.19.0",
+   "date": "2026-10-26T16:14:51Z"
+  }
  },
  "github.com/apache/apisix": {
   "website": "https://apisix.apache.org/blog/",
-  "release": "https://github.com/apache/apisix/releases/tag/3.19.0"
+  "release": "https://github.com/apache/apisix/releases/tag/3.19.0",
+  "isFork": false,
+  "forkOf": null,
+  "forkCount": 2980,
+  "latest": {
+   "name": "3.19.0",
+   "date": "2026-09-28T05:13:59Z"
+  }
  },
  "github.com/apitable/apitable": {
   "website": "https://aitable.ai",
-  "release": "https://github.com/apitable/apitable/releases/tag/v1.14.0-beta"
+  "release": "https://github.com/apitable/apitable/releases/tag/v1.14.0-beta",
+  "isFork": false,
+  "forkOf": null,
+  "forkCount": 1425,
+  "latest": {
+   "name": "v1.14.0-beta",
+   "date": "2026-09-06T14:15:13Z"
+  }
  },
  "github.com/AppFlowy-IO/AppFlowy": {
   "website": "https://appflowy.com",
-  "release": "https://github.com/AppFlowy-IO/AppFlowy/releases/tag/0.14.11"
+  "release": "https://github.com/AppFlowy-IO/AppFlowy/releases/tag/0.14.11",
+  "isFork": false,
+  "forkOf": null,
+  "forkCount": 6098,
+  "latest": {
+   "name": "v0.14.11",
+   "date": "2026-10-26T00:59:22Z"
+  }
  },
  "github.com/caronc/apprise": {
   "website": "https://hub.docker.com/r/caronc/apprise",
-  "release": "https://github.com/caronc/apprise/releases/tag/v2.1.0"
+  "release": "https://github.com/caronc/apprise/releases/tag/v2.1.0",
+  "isFork": false,
+  "forkOf": null,
+  "forkCount": 688,
+  "latest": {
+   "name": "Apprise v2.1.0",
+   "date": "2026-10-24T19:33:44Z"
+  }
  },
  "github.com/appsmithorg/appsmith": {
   "website": "https://www.appsmith.com",
-  "release": "https://github.com/appsmithorg/appsmith/releases/tag/v2.5.1"
+  "release": "https://github.com/appsmithorg/appsmith/releases/tag/v2.5.1",
+  "isFork": false,
+  "forkOf": null,
+  "forkCount": 4823,
+  "latest": {
+   "name": "Release v2.5.1 🌈",
+   "date": "2026-10-21T02:29:46Z"
+  }
  },
  "github.com/appwrite/appwrite": {
   "website": "https://appwrite.io",
-  "release": "https://github.com/appwrite/appwrite/releases/tag/2.6.2"
+  "release": "https://github.com/appwrite/appwrite/releases/tag/2.6.2",
+  "isFork": false,
+  "forkOf": null,
+  "forkCount": 5820,
+  "latest": {
+   "name": "2.6.2",
+   "date": "2026-10-24T13:40:08Z"
+  }
  },
  "github.com/Ardour/ardour": {
   "website": "http://ardour.org",
-  "release": null
+  "release": null,
+  "isFork": false,
+  "forkOf": null,
+  "forkCount": 1010,
+  "latest": null
  },
  "github.com/audacity/audacity": {
   "website": "https://www.audacityteam.org/manual/getting-started/",
-  "release": "https://github.com/audacity/audacity/releases/tag/Audacity-4.0.1"
+  "release": "https://github.com/audacity/audacity/releases/tag/Audacity-4.0.1",
+  "isFork": false,
+  "forkOf": null,
+  "forkCount": 2699,
+  "latest": {
+   "name": "Audacity-4.0.1",
+   "date": "2026-09-30T11:59:48Z"
+  }
  },
  "github.com/advplyr/audiobookshelf": {
   "website": "https://audiobookshelf.org",
-  "release": "https://github.com/advplyr/audiobookshelf/releases/tag/v2.37.2"
+  "release": "https://github.com/advplyr/audiobookshelf/releases/tag/v2.37.2",
+  "isFork": false,
+  "forkOf": null,
+  "forkCount": 1230,
+  "latest": {
+   "name": "v2.37.2",
+   "date": "2026-10-23T20:18:17Z"
+  }
  },
  "github.com/authgear/authgear-server": {
   "website": "https://www.authgear.com",
-  "release": "https://github.com/authgear/authgear-server/releases/tag/2026-10-22.0"
+  "release": "https://github.com/authgear/authgear-server/releases/tag/2026-10-22.0",
+  "isFork": false,
+  "forkOf": null,
+  "forkCount": 130,
+  "latest": {
+   "name": "2026-10-22.0",
+   "date": "2026-10-22T16:07:15Z"
+  }
  },
  "github.com/automatisch/automatisch": {
   "website": "https://automatisch.io",
-  "release": "https://github.com/automatisch/automatisch/releases/tag/v0.15.0"
+  "release": "https://github.com/automatisch/automatisch/releases/tag/v0.15.0",
+  "isFork": false,
+  "forkOf": null,
+  "forkCount": 1059,
+  "latest": {
+   "name": "v0.15.0",
+   "date": "2025-08-08T13:07:43Z"
+  }
  },
  "github.com/deckerst/aves": {
   "website": null,
-  "release": "https://github.com/deckerst/aves/releases/tag/v1.15.8"
+  "release": "https://github.com/deckerst/aves/releases/tag/v1.15.8",
+  "isFork": false,
+  "forkOf": null,
+  "forkCount": 255,
+  "latest": {
+   "name": "v1.15.8",
+   "date": "2026-10-21T15:07:23Z"
+  }
  },
  "github.com/bagisto/bagisto": {
   "website": "https://bagisto.com",
-  "release": "https://github.com/bagisto/bagisto/releases/tag/v2.5.0"
+  "release": "https://github.com/bagisto/bagisto/releases/tag/v2.5.0",
+  "isFork": false,
+  "forkOf": null,
+  "forkCount": 3344,
+  "latest": {
+   "name": "v2.5.0",
+   "date": "2026-10-06T14:11:45Z"
+  }
  },
  "github.com/ublue-os/bazzite": {
   "website": "https://bazzite.gg",
-  "release": "https://github.com/ublue-os/bazzite/releases/tag/44.20261023"
+  "release": "https://github.com/ublue-os/bazzite/releases/tag/44.20261026",
+  "isFork": false,
+  "forkOf": null,
+  "forkCount": 1146,
+  "latest": {
+   "name": "44.20261026: Stable (F44.20261026)",
+   "date": "2026-10-26T20:54:27Z"
+  }
  },
  "github.com/getbeton/inspector": {
   "website": "https://www.getbeton.ai/",
-  "release": "https://github.com/getbeton/inspector/releases/tag/v0.0.1"
+  "release": "https://github.com/getbeton/inspector/releases/tag/v0.0.1",
+  "isFork": false,
+  "forkOf": null,
+  "forkCount": 2,
+  "latest": {
+   "name": "Preflight MVP v0.0.1",
+   "date": "2026-02-16T15:55:29Z"
+  }
  },
  "github.com/bigbluebutton/bigbluebutton": {
   "website": "https://bigbluebutton.org",
-  "release": "https://github.com/bigbluebutton/bigbluebutton/releases/tag/v4.0.0"
+  "release": "https://github.com/bigbluebutton/bigbluebutton/releases/tag/v4.0.0",
+  "isFork": false,
+  "forkOf": null,
+  "forkCount": 5980,
+  "latest": {
+   "name": "v4.0.0",
+   "date": "2026-10-14T23:32:13Z"
+  }
  },
  "github.com/bitwarden/clients": {
   "website": "https://bitwarden.com",
-  "release": "https://github.com/bitwarden/clients/releases/tag/desktop-v2026.10.1"
+  "release": "https://github.com/bitwarden/clients/releases/tag/desktop-v2026.10.1",
+  "isFork": false,
+  "forkOf": null,
+  "forkCount": 2153,
+  "latest": {
+   "name": "Desktop v2026.10.1",
+   "date": "2026-10-22T22:00:48Z"
+  }
  },
  "github.com/bluesky-social/social-app": {
   "website": "https://bsky.app",
-  "release": "https://github.com/bluesky-social/social-app/releases/tag/1.136.0"
+  "release": "https://github.com/bluesky-social/social-app/releases/tag/1.136.0",
+  "isFork": false,
+  "forkOf": null,
+  "forkCount": 2857,
+  "latest": {
+   "name": "v1.136.0",
+   "date": "2026-10-21T20:13:01Z"
+  }
  },
  "github.com/BookStackApp/BookStack": {
   "website": "https://codeberg.org/bookstack/bookstack",
-  "release": "https://github.com/BookStackApp/BookStack/releases/tag/v26.09.2"
+  "release": "https://github.com/BookStackApp/BookStack/releases/tag/v26.09.2",
+  "isFork": false,
+  "forkOf": null,
+  "forkCount": 2433,
+  "latest": {
+   "name": "BookStack v26.09.2",
+   "date": "2026-10-20T11:48:40Z"
+  }
  },
  "github.com/twbs/icons": {
   "website": "https://icons.getbootstrap.com",
-  "release": "https://github.com/twbs/icons/releases/tag/v1.13.2"
+  "release": "https://github.com/twbs/icons/releases/tag/v1.13.2",
+  "isFork": false,
+  "forkOf": null,
+  "forkCount": 1120,
+  "latest": {
+   "name": "v1.13.2",
+   "date": "2026-10-08T17:18:31Z"
+  }
  },
  "github.com/borgbackup/borg": {
   "website": "https://www.borgbackup.org/",
-  "release": "https://github.com/borgbackup/borg/releases/tag/1.4.5"
+  "release": "https://github.com/borgbackup/borg/releases/tag/1.4.5",
+  "isFork": false,
+  "forkOf": null,
+  "forkCount": 883,
+  "latest": {
+   "name": "Release 1.4.5",
+   "date": "2026-07-18T22:36:16Z"
+  }
  },
  "github.com/ory/polis": {
   "website": "https://www.ory.com/?utm_source=github&utm_medium=banner&utm_campaign=polis",
-  "release": "https://github.com/ory/polis/releases/tag/v26.2.0"
+  "release": "https://github.com/ory/polis/releases/tag/v26.2.0",
+  "isFork": false,
+  "forkOf": null,
+  "forkCount": 238,
+  "latest": {
+   "name": "Release v26.2.0",
+   "date": "2026-03-20T18:49:46Z"
+  }
  },
  "github.com/brave/brave-browser": {
   "website": "https://brave.com",
-  "release": "https://github.com/brave/brave-browser/releases/tag/v1.98.60"
+  "release": "https://github.com/brave/brave-browser/releases/tag/v1.98.60",
+  "isFork": false,
+  "forkOf": null,
+  "forkCount": 3261,
+  "latest": {
+   "name": "Release v1.98.60 (Chromium 156.0.8078.48) \n\n",
+   "date": "2026-10-21T09:09:05Z"
+  }
  },
  "github.com/bruin-data/bruin": {
   "website": "https://getbruin.com/docs/bruin/",
-  "release": "https://github.com/bruin-data/bruin/releases/tag/v0.11.797"
+  "release": "https://github.com/bruin-data/bruin/releases/tag/v0.11.798",
+  "isFork": false,
+  "forkOf": null,
+  "forkCount": 99,
+  "latest": {
+   "name": "v0.11.798",
+   "date": "2026-10-26T14:41:30Z"
+  }
  },
  "github.com/btw-so/btw": {
   "website": "https://btw.so",
-  "release": null
+  "release": null,
+  "isFork": false,
+  "forkOf": null,
+  "forkCount": 102,
+  "latest": null
  },
  "github.com/Budibase/budibase": {
   "website": "https://budibase.com",
-  "release": "https://github.com/Budibase/budibase/releases/tag/v3.50.0"
+  "release": "https://github.com/Budibase/budibase/releases/tag/v3.50.0",
+  "isFork": false,
+  "forkOf": null,
+  "forkCount": 2236,
+  "latest": {
+   "name": "v3.50.0",
+   "date": "2026-10-19T08:09:46Z"
+  }
  },
  "github.com/bugzilla/bugzilla": {
   "website": "http://www.bugzilla.org",
-  "release": null
+  "release": null,
+  "isFork": false,
+  "forkOf": null,
+  "forkCount": 320,
+  "latest": null
  },
  "github.com/buildbot/buildbot": {
   "website": "https://www.buildbot.net",
-  "release": "https://github.com/buildbot/buildbot/releases/tag/v4.3.0"
+  "release": "https://github.com/buildbot/buildbot/releases/tag/v4.3.0",
+  "isFork": false,
+  "forkOf": null,
+  "forkCount": 1680,
+  "latest": {
+   "name": "v4.3.0",
+   "date": "2025-05-12T20:33:21Z"
+  }
  },
  "github.com/chidiwilliams/buzz": {
   "website": "https://chidiwilliams.github.io/buzz",
-  "release": "https://github.com/chidiwilliams/buzz/releases/tag/v1.4.5"
+  "release": "https://github.com/chidiwilliams/buzz/releases/tag/v1.4.5",
+  "isFork": false,
+  "forkOf": null,
+  "forkCount": 1639,
+  "latest": {
+   "name": "v1.4.5",
+   "date": "2026-08-23T08:28:36Z"
+  }
  },
  "github.com/calcom/cal.com": {
   "website": "https://cal.diy",
-  "release": "https://github.com/calcom/cal.diy/releases/tag/v6.2.0"
+  "release": "https://github.com/calcom/cal.diy/releases/tag/v6.2.0",
+  "isFork": false,
+  "forkOf": null,
+  "forkCount": 15445,
+  "latest": {
+   "name": "v6.2.0",
+   "date": "2026-03-01T23:49:01Z"
+  }
  },
  "github.com/kovidgoyal/calibre": {
   "website": "https://calibre-ebook.com",
-  "release": "https://github.com/kovidgoyal/calibre/releases/tag/v9.17.0"
+  "release": "https://github.com/kovidgoyal/calibre/releases/tag/v9.17.0",
+  "isFork": false,
+  "forkOf": null,
+  "forkCount": 2734,
+  "latest": {
+   "name": "version 9.17.0",
+   "date": "2026-10-23T03:50:48Z"
+  }
  },
  "github.com/caprover/caprover": {
   "website": "https://CapRover.com",
-  "release": "https://github.com/caprover/caprover/releases/tag/v1.15.5"
+  "release": "https://github.com/caprover/caprover/releases/tag/v1.15.5",
+  "isFork": false,
+  "forkOf": null,
+  "forkCount": 1011,
+  "latest": {
+   "name": "v1.15.5",
+   "date": "2026-10-23T17:46:07Z"
+  }
  },
  "github.com/chatboxai/chatbox": {
   "website": "https://chatboxai.app?utm_medium=github",
-  "release": "https://github.com/chatboxai/chatbox/releases/tag/v1.23.5"
+  "release": "https://github.com/chatboxai/chatbox/releases/tag/v1.23.5",
+  "isFork": false,
+  "forkOf": null,
+  "forkCount": 4291,
+  "latest": {
+   "name": "v1.23.5",
+   "date": "2026-09-24T14:09:30Z"
+  }
  },
  "github.com/chatwoot/chatwoot": {
   "website": "https://www.chatwoot.com/help-center",
-  "release": "https://github.com/chatwoot/chatwoot/releases/tag/v4.19.1"
+  "release": "https://github.com/chatwoot/chatwoot/releases/tag/v4.19.1",
+  "isFork": false,
+  "forkOf": null,
+  "forkCount": 9351,
+  "latest": {
+   "name": "v4.19.1",
+   "date": "2026-10-24T04:48:08Z"
+  }
  },
  "github.com/cline/cline": {
   "website": "https://cline.bot",
-  "release": "https://github.com/cline/cline/releases/tag/v4.1.26"
+  "release": "https://github.com/cline/cline/releases/tag/v4.1.26",
+  "isFork": false,
+  "forkOf": null,
+  "forkCount": 7769,
+  "latest": {
+   "name": "v4.1.26",
+   "date": "2026-10-26T09:06:50Z"
+  }
  },
  "github.com/openai/codex": {
   "website": null,
-  "release": "https://github.com/openai/codex/releases/tag/rust-v0.164.0"
+  "release": "https://github.com/openai/codex/releases/tag/rust-v0.164.0",
+  "isFork": false,
+  "forkOf": null,
+  "forkCount": 20697,
+  "latest": {
+   "name": "0.164.0",
+   "date": "2026-10-23T04:48:10Z"
+  }
  },
  "github.com/CollaboraOnline/online": {
   "website": "https://collaboraonline.com",
-  "release": "https://github.com/CollaboraOnline/online/releases/tag/25.04.7-mobile"
+  "release": "https://github.com/CollaboraOnline/online/releases/tag/25.04.7-mobile",
+  "isFork": false,
+  "forkOf": null,
+  "forkCount": 1012,
+  "latest": {
+   "name": "25.04.7-mobile",
+   "date": "2025-12-05T16:41:36Z"
+  }
  },
  "github.com/Comfy-Org/ComfyUI": {
   "website": "https://www.comfy.org/",
-  "release": "https://github.com/Comfy-Org/ComfyUI/releases/tag/v0.42.1"
+  "release": "https://github.com/Comfy-Org/ComfyUI/releases/tag/v0.43.0",
+  "isFork": false,
+  "forkOf": null,
+  "forkCount": 16926,
+  "latest": {
+   "name": "v0.43.0",
+   "date": "2026-10-27T02:40:46Z"
+  }
  },
  "github.com/concretecms/concretecms": {
   "website": "https://www.concretecms.org",
-  "release": "https://github.com/concretecms/concretecms/releases/tag/9.5.7"
+  "release": "https://github.com/concretecms/concretecms/releases/tag/9.5.7",
+  "isFork": false,
+  "forkOf": null,
+  "forkCount": 492,
+  "latest": {
+   "name": "9.5.7",
+   "date": "2026-10-20T20:56:33Z"
+  }
  },
  "github.com/coollabsio/coolify": {
   "website": "https://coolify.io",
-  "release": "https://github.com/coollabsio/coolify/releases/tag/v4.5.0"
+  "release": "https://github.com/coollabsio/coolify/releases/tag/v4.5.0",
+  "isFork": false,
+  "forkOf": null,
+  "forkCount": 5830,
+  "latest": {
+   "name": "v4.5.0",
+   "date": "2026-10-23T10:41:38Z"
+  }
  },
  "github.com/coroot/coroot": {
   "website": "https://coroot.com",
-  "release": "https://github.com/coroot/coroot/releases/tag/v1.28.1"
+  "release": "https://github.com/coroot/coroot/releases/tag/v1.28.1",
+  "isFork": false,
+  "forkOf": null,
+  "forkCount": 414,
+  "latest": {
+   "name": "1.28.1",
+   "date": "2026-10-21T21:42:48Z"
+  }
  },
  "github.com/cortexlabs/cortex": {
   "website": "https://cortexlabs.com/",
-  "release": "https://github.com/cortexlabs/cortex/releases/tag/v0.42.1"
+  "release": "https://github.com/cortexlabs/cortex/releases/tag/v0.42.1",
+  "isFork": false,
+  "forkOf": null,
+  "forkCount": 589,
+  "latest": {
+   "name": "v0.42.1",
+   "date": "2022-09-23T18:01:31Z"
+  }
  },
  "github.com/crate/crate": {
   "website": "https://cratedb.com/database",
-  "release": "https://github.com/crate/crate/releases/tag/6.4.6"
+  "release": "https://github.com/crate/crate/releases/tag/6.4.6",
+  "isFork": false,
+  "forkOf": null,
+  "forkCount": 619,
+  "latest": {
+   "name": "6.4.6",
+   "date": "2026-10-08T12:05:39Z"
+  }
  },
  "github.com/crater-invoice-inc/crater": {
   "website": "https://craterapp.com",
-  "release": "https://github.com/crater-invoice-inc/crater/releases/tag/6.0.6"
+  "release": "https://github.com/crater-invoice-inc/crater/releases/tag/6.0.6",
+  "isFork": false,
+  "forkOf": null,
+  "forkCount": 1714,
+  "latest": {
+   "name": "Release 6.0.6",
+   "date": "2022-03-06T07:25:43Z"
+  }
  },
  "github.com/linuxfoundation/crowd.dev": {
   "website": "https://lfx.linuxfoundation.org",
-  "release": "https://github.com/linuxfoundation/crowd.dev/releases/tag/v0.49.0"
+  "release": "https://github.com/linuxfoundation/crowd.dev/releases/tag/v0.49.0",
+  "isFork": false,
+  "forkOf": null,
+  "forkCount": 727,
+  "latest": {
+   "name": "v0.49.0",
+   "date": "2023-11-21T10:31:03Z"
+  }
  },
  "github.com/cryptpad/cryptpad": {
   "website": "https://cryptpad.org",
-  "release": "https://github.com/cryptpad/cryptpad/releases/tag/2026.10.0"
+  "release": "https://github.com/cryptpad/cryptpad/releases/tag/2026.10.0",
+  "isFork": false,
+  "forkOf": null,
+  "forkCount": 866,
+  "latest": {
+   "name": "🍂 Autumn Release (2026.10.0)",
+   "date": "2026-10-21T14:23:14Z"
+  }
  },
  "github.com/cube-js/cube": {
   "website": "https://cube.dev",
-  "release": "https://github.com/cube-js/cube/releases/tag/v1.8.13"
+  "release": "https://github.com/cube-js/cube/releases/tag/v1.8.13",
+  "isFork": false,
+  "forkOf": null,
+  "forkCount": 2173,
+  "latest": {
+   "name": "v1.8.13",
+   "date": "2026-10-25T02:43:14Z"
+  }
  },
  "github.com/customermates/customermates": {
   "website": "https://www.customermates.com",
-  "release": "https://github.com/customermates/customermates/releases/tag/v.1.1.0"
+  "release": "https://github.com/customermates/customermates/releases/tag/v.1.1.0",
+  "isFork": false,
+  "forkOf": null,
+  "forkCount": 32,
+  "latest": {
+   "name": "v1.1.0",
+   "date": "2026-03-27T13:16:42Z"
+  }
  },
  "github.com/darktable-org/darktable": {
   "website": "https://www.darktable.org",
-  "release": "https://github.com/darktable-org/darktable/releases/tag/release-5.6.2"
+  "release": "https://github.com/darktable-org/darktable/releases/tag/release-5.6.2",
+  "isFork": false,
+  "forkOf": null,
+  "forkCount": 1495,
+  "latest": {
+   "name": "release 5.6.2",
+   "date": "2026-10-04T16:36:31Z"
+  }
  },
  "github.com/dashpresshq/dashpress": {
   "website": "http://demo.dashpress.io",
-  "release": null
+  "release": null,
+  "isFork": false,
+  "forkOf": null,
+  "forkCount": 124,
+  "latest": null
  },
  "github.com/databendlabs/databend": {
   "website": "https://docs.databend.com",
-  "release": "https://github.com/databendlabs/databend/releases/tag/v1.2.881"
+  "release": "https://github.com/databendlabs/databend/releases/tag/v1.2.881",
+  "isFork": false,
+  "forkOf": null,
+  "forkCount": 900,
+  "latest": {
+   "name": "v1.2.881",
+   "date": "2026-04-17T08:01:42Z"
+  }
  },
  "github.com/decaporg/decap-cms": {
   "website": "https://decapcms.org",
-  "release": "https://github.com/decaporg/decap-cms/releases/tag/decap-cms%403.17.3"
+  "release": "https://github.com/decaporg/decap-cms/releases/tag/decap-cms%403.17.3",
+  "isFork": false,
+  "forkOf": null,
+  "forkCount": 3142,
+  "latest": {
+   "name": "decap-cms@3.17.3",
+   "date": "2026-10-26T10:51:45Z"
+  }
  },
  "github.com/deepfence/ThreatMapper": {
   "website": "https://threatmapper.org",
-  "release": "https://github.com/deepfence/ThreatMapper/releases/tag/v2.5.8"
+  "release": "https://github.com/deepfence/ThreatMapper/releases/tag/v2.5.8",
+  "isFork": false,
+  "forkOf": null,
+  "forkCount": 632,
+  "latest": {
+   "name": "v2.5.8",
+   "date": "2026-03-07T16:54:37Z"
+  }
  },
  "github.com/deepset-ai/haystack": {
   "website": "https://haystack.deepset.ai",
-  "release": "https://github.com/deepset-ai/haystack/releases/tag/v3.4.1"
+  "release": "https://github.com/deepset-ai/haystack/releases/tag/v3.4.1",
+  "isFork": false,
+  "forkOf": null,
+  "forkCount": 3346,
+  "latest": {
+   "name": "v3.4.1",
+   "date": "2026-10-21T19:10:58Z"
+  }
  },
  "github.com/deltachat/deltachat-android": {
   "website": null,
-  "release": "https://github.com/deltachat/deltachat-android/releases/tag/v2.62.0"
+  "release": "https://github.com/deltachat/deltachat-android/releases/tag/v2.62.0",
+  "isFork": false,
+  "forkOf": null,
+  "forkCount": 240,
+  "latest": {
+   "name": "v2.62.0",
+   "date": "2026-09-26T21:17:50Z"
+  }
  },
  "github.com/discourse/discourse": {
   "website": "https://www.discourse.org",
-  "release": null
+  "release": null,
+  "isFork": false,
+  "forkOf": null,
+  "forkCount": 9055,
+  "latest": null
  },
  "github.com/docmost/docmost": {
   "website": "https://docmost.com",
-  "release": "https://github.com/docmost/docmost/releases/tag/v0.97.0"
+  "release": "https://github.com/docmost/docmost/releases/tag/v0.97.0",
+  "isFork": false,
+  "forkOf": null,
+  "forkCount": 1647,
+  "latest": {
+   "name": "v0.97.0",
+   "date": "2026-10-25T14:12:25Z"
+  }
  },
  "github.com/documenso/documenso": {
   "website": "https://documenso.com",
-  "release": "https://github.com/documenso/documenso/releases/tag/v2.21.1"
+  "release": "https://github.com/documenso/documenso/releases/tag/v2.21.1",
+  "isFork": false,
+  "forkOf": null,
+  "forkCount": 3409,
+  "latest": {
+   "name": "v2.21.1",
+   "date": "2026-10-22T08:28:23Z"
+  }
  },
  "github.com/docusealco/docuseal": {
   "website": "https://www.docuseal.com",
-  "release": "https://github.com/docusealco/docuseal/releases/tag/3.3.4"
+  "release": "https://github.com/docusealco/docuseal/releases/tag/3.3.4",
+  "isFork": false,
+  "forkOf": null,
+  "forkCount": 1908,
+  "latest": {
+   "name": "3.3.4",
+   "date": "2026-10-26T10:48:06Z"
+  }
  },
  "github.com/dokku/dokku": {
   "website": "https://dokku.com",
-  "release": "https://github.com/dokku/dokku/releases/tag/v0.38.32"
+  "release": "https://github.com/dokku/dokku/releases/tag/v0.38.32",
+  "isFork": false,
+  "forkOf": null,
+  "forkCount": 2095,
+  "latest": {
+   "name": "v0.38.32",
+   "date": "2026-10-25T03:17:32Z"
+  }
  },
  "github.com/Dolibarr/dolibarr": {
   "website": "https://www.dolibarr.org",
-  "release": "https://github.com/Dolibarr/dolibarr/releases/tag/24.0.1"
+  "release": "https://github.com/Dolibarr/dolibarr/releases/tag/24.0.1",
+  "isFork": false,
+  "forkOf": null,
+  "forkCount": 3591,
+  "latest": {
+   "name": "24.0.1",
+   "date": "2026-09-07T12:58:22Z"
+  }
  },
  "github.com/harness/harness": {
   "website": "https://www.harness.io/open-source",
-  "release": "https://github.com/harness/harness/releases/tag/v2.28.2"
+  "release": "https://github.com/harness/harness/releases/tag/v2.28.2",
+  "isFork": false,
+  "forkOf": null,
+  "forkCount": 3447,
+  "latest": {
+   "name": "v2.28.2",
+   "date": "2026-04-20T11:19:42Z"
+  }
  },
  "github.com/dubinc/dub": {
-  "website": "https://dub.co",
-  "release": null
+  "website": "https://dub.link",
+  "release": null,
+  "isFork": false,
+  "forkOf": null,
+  "forkCount": 3345,
+  "latest": null
  },
  "github.com/duplicati/duplicati": {
   "website": null,
-  "release": "https://github.com/duplicati/duplicati/releases/tag/v2.4.0.1_stable_2026-10-07"
+  "release": "https://github.com/duplicati/duplicati/releases/tag/v2.4.0.1_stable_2026-10-07",
+  "isFork": false,
+  "forkOf": null,
+  "forkCount": 1086,
+  "latest": {
+   "name": "v2.4.0.1_stable_2026-10-07",
+   "date": "2026-10-07T13:08:30Z"
+  }
  },
  "github.com/dyrector-io/dyrectorio": {
   "website": "https://dyrectorio.com",
-  "release": "https://github.com/dyrector-io/dyrectorio/releases/tag/0.15.4"
+  "release": "https://github.com/dyrector-io/dyrectorio/releases/tag/0.15.4",
+  "isFork": false,
+  "forkOf": null,
+  "forkCount": 130,
+  "latest": {
+   "name": "0.15.4",
+   "date": "2025-05-11T11:28:50Z"
+  }
  },
  "github.com/element-hq/element-web": {
   "website": "https://element.io",
-  "release": "https://github.com/element-hq/element-web/releases/tag/v1.12.32"
+  "release": "https://github.com/element-hq/element-web/releases/tag/v1.12.32",
+  "isFork": false,
+  "forkOf": null,
+  "forkCount": 2805,
+  "latest": {
+   "name": "v1.12.32",
+   "date": "2026-10-16T13:17:44Z"
+  }
  },
  "github.com/element-hq/element-call": {
   "website": "https://call.element.io",
-  "release": "https://github.com/element-hq/element-call/releases/tag/v0.26.1"
+  "release": "https://github.com/element-hq/element-call/releases/tag/v0.26.1",
+  "isFork": false,
+  "forkOf": null,
+  "forkCount": 225,
+  "latest": {
+   "name": "v0.26.1",
+   "date": "2026-09-28T11:11:50Z"
+  }
  },
  "github.com/encoredev/encore": {
   "website": "https://encore.dev",
-  "release": "https://github.com/encoredev/encore/releases/tag/v1.58.8"
+  "release": "https://github.com/encoredev/encore/releases/tag/v1.58.8",
+  "isFork": false,
+  "forkOf": null,
+  "forkCount": 650,
+  "latest": {
+   "name": "v1.58.8 — Fixes and improvements",
+   "date": "2026-10-20T19:18:07Z"
+  }
  },
  "github.com/ente/ente": {
   "website": "https://ente.com",
-  "release": "https://github.com/ente/ente/releases/tag/locker-v1.0.11"
+  "release": "https://github.com/ente/ente/releases/tag/locker-v1.0.11",
+  "isFork": false,
+  "forkOf": null,
+  "forkCount": 1875,
+  "latest": {
+   "name": "locker-v1.0.11",
+   "date": "2026-10-26T07:05:27Z"
+  }
  },
  "github.com/frappe/erpnext": {
   "website": "https://frappe.io/erpnext",
-  "release": "https://github.com/frappe/erpnext/releases/tag/v15.124.1"
+  "release": "https://github.com/frappe/erpnext/releases/tag/v15.124.1",
+  "isFork": false,
+  "forkOf": null,
+  "forkCount": 13283,
+  "latest": {
+   "name": "v15.124.1",
+   "date": "2026-10-22T14:51:26Z"
+  }
  },
  "github.com/espocrm/espocrm": {
   "website": "https://www.espocrm.com",
-  "release": "https://github.com/espocrm/espocrm/releases/tag/10.0.11"
+  "release": "https://github.com/espocrm/espocrm/releases/tag/10.0.11",
+  "isFork": false,
+  "forkOf": null,
+  "forkCount": 1015,
+  "latest": {
+   "name": "10.0.11",
+   "date": "2026-10-23T11:44:47Z"
+  }
  },
  "github.com/Etar-Group/Etar-Calendar": {
   "website": "https://f-droid.org/packages/ws.xsoh.etar/",
-  "release": "https://github.com/Etar-Group/Etar-Calendar/releases/tag/v1.0.57"
+  "release": "https://github.com/Etar-Group/Etar-Calendar/releases/tag/v1.0.57",
+  "isFork": false,
+  "forkOf": null,
+  "forkCount": 450,
+  "latest": {
+   "name": "v1.0.57",
+   "date": "2026-07-27T15:31:40Z"
+  }
  },
  "github.com/ether/etherpad": {
   "website": "https://etherpad.org",
-  "release": "https://github.com/ether/etherpad/releases/tag/v3.3.11"
+  "release": "https://github.com/ether/etherpad/releases/tag/v3.3.11",
+  "isFork": false,
+  "forkOf": null,
+  "forkCount": 3058,
+  "latest": {
+   "name": "v3.3.11",
+   "date": "2026-10-24T18:07:01Z"
+  }
  },
  "github.com/evidence-dev/evidence": {
   "website": "https://evidence.dev",
-  "release": "https://github.com/evidence-dev/evidence/releases/tag/%40evidence-dev/evidence%4040.1.8"
+  "release": "https://github.com/evidence-dev/evidence/releases/tag/%40evidence-dev/evidence%4040.1.8",
+  "isFork": false,
+  "forkOf": null,
+  "forkCount": 431,
+  "latest": {
+   "name": "@evidence-dev/evidence@40.1.8",
+   "date": "2026-02-06T16:08:58Z"
+  }
  },
  "github.com/M66B/FairEmail": {
   "website": "https://email.faircode.eu/",
-  "release": "https://github.com/M66B/FairEmail/releases/tag/1.2339"
+  "release": "https://github.com/M66B/FairEmail/releases/tag/1.2339",
+  "isFork": false,
+  "forkOf": null,
+  "forkCount": 712,
+  "latest": {
+   "name": "1.2339 Elopteryx",
+   "date": "2026-10-24T08:42:30Z"
+  }
  },
  "github.com/infobyte/faraday": {
   "website": "https://www.faradaysec.com",
-  "release": "https://github.com/infobyte/faraday/releases/tag/v5.25.1"
+  "release": "https://github.com/infobyte/faraday/releases/tag/v5.25.2",
+  "isFork": false,
+  "forkOf": null,
+  "forkCount": 1085,
+  "latest": {
+   "name": "v5.25.2",
+   "date": "2026-10-26T22:10:29Z"
+  }
  },
  "github.com/mickael-kerjean/filestash": {
   "website": "https://www.filestash.app/",
-  "release": null
+  "release": null,
+  "isFork": false,
+  "forkOf": null,
+  "forkCount": 1015,
+  "latest": null
  },
  "github.com/firecamp-dev/firecamp": {
   "website": "https://firecamp.dev",
-  "release": "https://github.com/firecamp-dev/firecamp/releases/tag/v3.3.0-beta.3"
+  "release": "https://github.com/firecamp-dev/firecamp/releases/tag/v3.3.0-beta.3",
+  "isFork": false,
+  "forkOf": null,
+  "forkCount": 170,
+  "latest": {
+   "name": "v3.3.0-beta.3",
+   "date": "2024-03-04T12:46:18Z"
+  }
  },
  "github.com/firefly-iii/firefly-iii": {
   "website": "https://firefly-iii.org/",
-  "release": "https://github.com/firefly-iii/firefly-iii/releases/tag/v6.7.9"
+  "release": "https://github.com/firefly-iii/firefly-iii/releases/tag/v6.7.9",
+  "isFork": false,
+  "forkOf": null,
+  "forkCount": 2351,
+  "latest": {
+   "name": "v6.7.9",
+   "date": "2026-10-11T19:16:51Z"
+  }
  },
  "github.com/mozilla-firefox/firefox": {
   "website": "https://www.firefox.com/",
-  "release": null
+  "release": null,
+  "isFork": false,
+  "forkOf": null,
+  "forkCount": 1687,
+  "latest": null
  },
  "github.com/Flagsmith/flagsmith": {
   "website": "https://www.flagsmith.com",
-  "release": "https://github.com/Flagsmith/flagsmith/releases/tag/v2.287.0"
+  "release": "https://github.com/Flagsmith/flagsmith/releases/tag/v2.287.0",
+  "isFork": false,
+  "forkOf": null,
+  "forkCount": 594,
+  "latest": {
+   "name": "v2.287.0",
+   "date": "2026-10-20T13:32:02Z"
+  }
  },
  "github.com/florisboard/florisboard": {
   "website": "https://florisboard.org",
-  "release": "https://github.com/florisboard/florisboard/releases/tag/v0.5.2"
+  "release": "https://github.com/florisboard/florisboard/releases/tag/v0.5.2",
+  "isFork": false,
+  "forkOf": null,
+  "forkCount": 749,
+  "latest": {
+   "name": "v0.5.2",
+   "date": "2025-11-28T15:17:55Z"
+  }
  },
  "github.com/yang991178/fluent-reader": {
   "website": "https://hyliu.me/fluent-reader/",
-  "release": "https://github.com/yang991178/fluent-reader/releases/tag/v1.3.1"
+  "release": "https://github.com/yang991178/fluent-reader/releases/tag/v1.3.1",
+  "isFork": false,
+  "forkOf": null,
+  "forkCount": 548,
+  "latest": {
+   "name": "Fluent Reader v1.3.1",
+   "date": "2026-10-15T20:37:37Z"
+  }
  },
  "github.com/evergreen-it-dev/folio": {
   "website": "https://foliowiki.online",
-  "release": "https://github.com/evergreen-it-dev/folio/releases/tag/v0.4.2"
+  "release": "https://github.com/evergreen-it-dev/folio/releases/tag/v0.4.2",
+  "isFork": false,
+  "forkOf": null,
+  "forkCount": 2,
+  "latest": {
+   "name": "Folio v0.4.2",
+   "date": "2026-10-23T18:40:23Z"
+  }
  },
  "github.com/fonoster/fonoster": {
   "website": "https://fonoster.com",
-  "release": "https://github.com/fonoster/fonoster/releases/tag/v0.33.0"
- },
- "github.com/FortAwesome/Font-Awesome": {
-  "website": "https://fontawesome.com",
-  "release": "https://github.com/FortAwesome/Font-Awesome/releases/tag/7.3.1"
+  "release": "https://github.com/fonoster/fonoster/releases/tag/v0.34.3",
+  "isFork": false,
+  "forkOf": null,
+  "forkCount": 566,
+  "latest": {
+   "name": "Release v0.34.3",
+   "date": "2026-10-26T17:39:40Z"
+  }
  },
  "github.com/formbricks/formbricks": {
   "website": "https://formbricks.com",
-  "release": "https://github.com/formbricks/formbricks/releases/tag/6.1.1"
+  "release": "https://github.com/formbricks/formbricks/releases/tag/6.1.1",
+  "isFork": false,
+  "forkOf": null,
+  "forkCount": 2599,
+  "latest": {
+   "name": "6.1.1",
+   "date": "2026-10-22T06:16:54Z"
+  }
  },
  "github.com/formio/formio": {
   "website": "https://form.io",
-  "release": null
+  "release": null,
+  "isFork": false,
+  "forkOf": null,
+  "forkCount": 766,
+  "latest": null
  },
  "github.com/SnaKKo/Fossdroid-Core": {
   "website": "https://fossdroid.com/",
-  "release": null
+  "release": null,
+  "isFork": false,
+  "forkOf": null,
+  "forkCount": 85,
+  "latest": null
  },
  "github.com/FossifyOrg/Calendar": {
   "website": "https://www.fossify.org",
-  "release": "https://github.com/FossifyOrg/Calendar/releases/tag/1.12.1"
+  "release": "https://github.com/FossifyOrg/Calendar/releases/tag/1.12.1",
+  "isFork": false,
+  "forkOf": null,
+  "forkCount": 243,
+  "latest": {
+   "name": "1.12.1",
+   "date": "2026-10-24T13:54:02Z"
+  }
  },
  "github.com/FossifyOrg/Gallery": {
   "website": "https://www.fossify.org",
-  "release": "https://github.com/FossifyOrg/Gallery/releases/tag/1.14.1"
+  "release": "https://github.com/FossifyOrg/Gallery/releases/tag/1.14.1",
+  "isFork": false,
+  "forkOf": null,
+  "forkCount": 284,
+  "latest": {
+   "name": "1.14.1",
+   "date": "2026-10-24T13:54:16Z"
+  }
  },
  "github.com/FreeTubeApp/FreeTube": {
   "website": "https://freetubeapp.io/",
-  "release": null
+  "release": null,
+  "isFork": false,
+  "forkOf": null,
+  "forkCount": 1551,
+  "latest": null
  },
  "github.com/FreshRSS/FreshRSS": {
   "website": "https://freshrss.org",
-  "release": "https://github.com/FreshRSS/FreshRSS/releases/tag/1.30.4"
+  "release": "https://github.com/FreshRSS/FreshRSS/releases/tag/1.30.4",
+  "isFork": false,
+  "forkOf": null,
+  "forkCount": 1326,
+  "latest": {
+   "name": "FreshRSS 1.30.4",
+   "date": "2026-10-21T20:45:47Z"
+  }
  },
  "github.com/friction2d/friction": {
   "website": "https://friction.graphics",
-  "release": "https://github.com/friction2d/friction/releases/tag/v1.0.0-rc.3"
+  "release": "https://github.com/friction2d/friction/releases/tag/v1.0.0-rc.3",
+  "isFork": true,
+  "forkOf": "https://github.com/MaurycyLiebner/enve",
+  "forkCount": 76,
+  "latest": {
+   "name": "Friction 1.0.0-rc.3",
+   "date": "2025-12-31T21:53:48Z"
+  }
  },
  "github.com/friendica/friendica": {
   "website": "https://friendi.ca",
-  "release": "https://github.com/friendica/friendica/releases/tag/2026.05-1"
+  "release": "https://github.com/friendica/friendica/releases/tag/2026.05-1",
+  "isFork": true,
+  "forkOf": "https://github.com/duthied/Free-Friendika",
+  "forkCount": 384,
+  "latest": {
+   "name": "Friendica 2026.05 released",
+   "date": "2026-05-21T05:17:46Z"
+  }
  },
  "github.com/apioo/fusio": {
   "website": "https://www.fusio-project.org",
-  "release": "https://github.com/apioo/fusio/releases/tag/v7.2.1"
+  "release": "https://github.com/apioo/fusio/releases/tag/v7.2.1",
+  "isFork": false,
+  "forkOf": null,
+  "forkCount": 246,
+  "latest": {
+   "name": "v7.2.1",
+   "date": "2026-10-21T19:03:17Z"
+  }
  },
  "github.com/jech/galene": {
   "website": "https://galene.org",
-  "release": null
+  "release": null,
+  "isFork": false,
+  "forkOf": null,
+  "forkCount": 205,
+  "latest": null
  },
  "github.com/lowercasename/gathio": {
   "website": null,
-  "release": "https://github.com/lowercasename/gathio/releases/tag/v1.6.7"
+  "release": "https://github.com/lowercasename/gathio/releases/tag/v1.6.7",
+  "isFork": false,
+  "forkOf": null,
+  "forkCount": 65,
+  "latest": {
+   "name": "v1.6.7",
+   "date": "2026-09-07T23:47:05Z"
+  }
  },
  "github.com/google-gemini/gemini-cli": {
   "website": "https://geminicli.com",
-  "release": "https://github.com/google-gemini/gemini-cli/releases/tag/v0.65.0"
+  "release": "https://github.com/google-gemini/gemini-cli/releases/tag/v0.65.0",
+  "isFork": false,
+  "forkOf": null,
+  "forkCount": 14850,
+  "latest": {
+   "name": "Release v0.65.0",
+   "date": "2026-10-20T21:17:57Z"
+  }
  },
  "github.com/GerritCodeReview/gerrit": {
   "website": null,
-  "release": null
+  "release": null,
+  "isFork": false,
+  "forkOf": null,
+  "forkCount": 280,
+  "latest": null
  },
  "github.com/TryGhost/Ghost": {
   "website": "https://ghost.org",
-  "release": "https://github.com/TryGhost/Ghost/releases/tag/v6.72.0"
+  "release": "https://github.com/TryGhost/Ghost/releases/tag/v6.72.0",
+  "isFork": false,
+  "forkOf": null,
+  "forkCount": 12034,
+  "latest": {
+   "name": "v6.72.0",
+   "date": "2026-10-20T15:09:13Z"
+  }
  },
  "github.com/ghostfolio/ghostfolio": {
   "website": "https://Ghostfol.io",
-  "release": "https://github.com/ghostfolio/ghostfolio/releases/tag/3.93.0"
+  "release": "https://github.com/ghostfolio/ghostfolio/releases/tag/3.93.0",
+  "isFork": false,
+  "forkOf": null,
+  "forkCount": 1384,
+  "latest": {
+   "name": "3.93.0",
+   "date": "2026-10-25T16:09:16Z"
+  }
  },
  "github.com/go-gitea/gitea": {
   "website": "https://gitea.com",
-  "release": "https://github.com/go-gitea/gitea/releases/tag/v28.2.0"
+  "release": "https://github.com/go-gitea/gitea/releases/tag/v28.2.0",
+  "isFork": false,
+  "forkOf": null,
+  "forkCount": 7309,
+  "latest": {
+   "name": "v28.2.0",
+   "date": "2026-10-18T18:25:03Z"
+  }
  },
  "github.com/gitlabhq/gitlabhq": {
   "website": "https://about.gitlab.com/getting-help/",
-  "release": null
+  "release": null,
+  "isFork": false,
+  "forkOf": null,
+  "forkCount": 5944,
+  "latest": null
  },
  "github.com/arp242/goatcounter": {
   "website": "https://www.goatcounter.com",
-  "release": "https://github.com/arp242/goatcounter/releases/tag/v2.7.0"
+  "release": "https://github.com/arp242/goatcounter/releases/tag/v2.7.0",
+  "isFork": false,
+  "forkOf": null,
+  "forkCount": 284,
+  "latest": {
+   "name": "v2.7.0",
+   "date": "2025-12-15T19:01:48Z"
+  }
  },
  "github.com/gogs/gogs": {
   "website": "https://gogs.io",
-  "release": "https://github.com/gogs/gogs/releases/tag/v0.14.3"
+  "release": "https://github.com/gogs/gogs/releases/tag/v0.14.3",
+  "isFork": false,
+  "forkOf": null,
+  "forkCount": 5074,
+  "latest": {
+   "name": "0.14.3",
+   "date": "2026-06-07T20:51:06Z"
+  }
  },
  "github.com/aaif-goose/goose": {
   "website": "https://goose-docs.ai/",
-  "release": "https://github.com/aaif-goose/goose/releases/tag/v1.56.0"
+  "release": "https://github.com/aaif-goose/goose/releases/tag/v1.56.0",
+  "isFork": false,
+  "forkOf": null,
+  "forkCount": 6467,
+  "latest": {
+   "name": "v1.56.0",
+   "date": "2026-10-23T15:49:34Z"
+  }
  },
  "github.com/grafana/grafana": {
   "website": "https://grafana.com",
-  "release": "https://github.com/grafana/grafana/releases/tag/v13.2.4"
+  "release": "https://github.com/grafana/grafana/releases/tag/v13.2.4",
+  "isFork": false,
+  "forkOf": null,
+  "forkCount": 14866,
+  "latest": {
+   "name": "13.2.4",
+   "date": "2026-10-13T11:41:03Z"
+  }
  },
  "github.com/GraphiteEditor/Graphite": {
   "website": "https://graphite.art",
-  "release": null
+  "release": null,
+  "isFork": false,
+  "forkOf": null,
+  "forkCount": 1300,
+  "latest": null
  },
  "github.com/gravitl/netmaker": {
   "website": "https://netmaker.io",
-  "release": "https://github.com/gravitl/netmaker/releases/tag/v1.7.0"
+  "release": "https://github.com/gravitl/netmaker/releases/tag/v1.7.0",
+  "isFork": false,
+  "forkOf": null,
+  "forkCount": 665,
+  "latest": {
+   "name": "v1.7.0",
+   "date": "2026-08-31T14:48:24Z"
+  }
  },
  "github.com/gristlabs/grist-core": {
   "website": "https://www.getgrist.com",
-  "release": "https://github.com/gristlabs/grist-core/releases/tag/v1.7.21"
+  "release": "https://github.com/gristlabs/grist-core/releases/tag/v1.7.21",
+  "isFork": false,
+  "forkOf": null,
+  "forkCount": 674,
+  "latest": {
+   "name": "v1.7.21",
+   "date": "2026-10-09T20:08:10Z"
+  }
  },
  "github.com/growthbook/growthbook": {
   "website": "https://www.growthbook.io",
-  "release": "https://github.com/growthbook/growthbook/releases/tag/v5.1.0"
+  "release": "https://github.com/growthbook/growthbook/releases/tag/v5.1.0",
+  "isFork": false,
+  "forkOf": null,
+  "forkCount": 885,
+  "latest": {
+   "name": "v5.1.0",
+   "date": "2026-09-22T03:07:54Z"
+  }
  },
  "github.com/teamhanko/hanko": {
   "website": "https://www.hanko.io",
-  "release": "https://github.com/teamhanko/hanko/releases/tag/backend/v3.1.0"
+  "release": "https://github.com/teamhanko/hanko/releases/tag/backend/v3.1.0",
+  "isFork": false,
+  "forkOf": null,
+  "forkCount": 1021,
+  "latest": {
+   "name": "Hanko v3.1",
+   "date": "2026-10-01T12:51:22Z"
+  }
  },
  "github.com/hedgedoc/hedgedoc": {
   "website": "https://hedgedoc.org",
-  "release": "https://github.com/hedgedoc/hedgedoc/releases/tag/1.12.0"
+  "release": "https://github.com/hedgedoc/hedgedoc/releases/tag/1.12.0",
+  "isFork": false,
+  "forkOf": null,
+  "forkCount": 610,
+  "latest": {
+   "name": "HedgeDoc 1.12.0",
+   "date": "2026-08-21T21:46:18Z"
+  }
  },
  "github.com/HeliBorg/HeliBoard": {
   "website": null,
-  "release": "https://github.com/HeliBorg/HeliBoard/releases/tag/v4.2"
+  "release": "https://github.com/HeliBorg/HeliBoard/releases/tag/v4.2",
+  "isFork": false,
+  "forkOf": null,
+  "forkCount": 633,
+  "latest": {
+   "name": "HeliBoard 4.2",
+   "date": "2026-10-12T17:32:37Z"
+  }
  },
  "github.com/NousResearch/hermes-agent": {
   "website": "https://hermes-agent.nousresearch.com",
-  "release": "https://github.com/NousResearch/hermes-agent/releases/tag/v0.22.5"
+  "release": "https://github.com/NousResearch/hermes-agent/releases/tag/v0.22.5",
+  "isFork": false,
+  "forkOf": null,
+  "forkCount": 56415,
+  "latest": {
+   "name": "Hermes Agent v0.22.5",
+   "date": "2026-10-23T05:28:45Z"
+  }
  },
  "github.com/heyform/heyform": {
   "website": "https://heyform.net",
-  "release": "https://github.com/heyform/heyform/releases/tag/v3.0.5"
+  "release": "https://github.com/heyform/heyform/releases/tag/v3.0.5",
+  "isFork": false,
+  "forkOf": null,
+  "forkCount": 724,
+  "latest": {
+   "name": "v3.0.5",
+   "date": "2026-10-24T13:10:51Z"
+  }
  },
  "github.com/highlight/highlight": {
   "website": "https://app.highlight.io",
-  "release": "https://github.com/highlight/highlight/releases/tag/docker-v0.5.6"
+  "release": "https://github.com/highlight/highlight/releases/tag/docker-v0.5.6",
+  "isFork": false,
+  "forkOf": null,
+  "forkCount": 693,
+  "latest": {
+   "name": "docker-v0.5.6",
+   "date": "2025-08-08T15:42:36Z"
+  }
  },
  "github.com/home-assistant/core": {
   "website": "https://www.home-assistant.io",
-  "release": "https://github.com/home-assistant/core/releases/tag/2026.10.4"
+  "release": "https://github.com/home-assistant/core/releases/tag/2026.10.4",
+  "isFork": false,
+  "forkOf": null,
+  "forkCount": 39032,
+  "latest": {
+   "name": "2026.10.4",
+   "date": "2026-10-24T20:03:14Z"
+  }
  },
  "github.com/hoppscotch/hoppscotch": {
   "website": "https://hoppscotch.io",
-  "release": "https://github.com/hoppscotch/hoppscotch/releases/tag/2026.9.0"
+  "release": "https://github.com/hoppscotch/hoppscotch/releases/tag/2026.9.0",
+  "isFork": false,
+  "forkOf": null,
+  "forkCount": 6190,
+  "latest": {
+   "name": "2026.9.0",
+   "date": "2026-09-30T11:50:32Z"
+  }
  },
  "github.com/huginn/huginn": {
   "website": null,
-  "release": "https://github.com/huginn/huginn/releases/tag/v2026.10.24"
+  "release": "https://github.com/huginn/huginn/releases/tag/v2026.10.26",
+  "isFork": false,
+  "forkOf": null,
+  "forkCount": 4318,
+  "latest": {
+   "name": "v2026.10.26",
+   "date": "2026-10-26T14:21:22Z"
+  }
  },
  "github.com/hyperdxio/hyperdx": {
   "website": "https://hyperdx.io/",
-  "release": "https://github.com/hyperdxio/hyperdx/releases/tag/cli-v0.8.0"
+  "release": "https://github.com/hyperdxio/hyperdx/releases/tag/cli-v0.8.0",
+  "isFork": false,
+  "forkOf": null,
+  "forkCount": 503,
+  "latest": {
+   "name": "@hyperdx/cli v0.8.0",
+   "date": "2026-10-23T23:05:01Z"
+  }
  },
  "github.com/idurar/idurar-erp-crm": {
   "website": "https://cloud.idurarapp.com",
-  "release": "https://github.com/idurar/idurar-erp-crm/releases/tag/4.1.1"
+  "release": "https://github.com/idurar/idurar-erp-crm/releases/tag/4.1.1",
+  "isFork": false,
+  "forkOf": null,
+  "forkCount": 3157,
+  "latest": {
+   "name": "4.1.1",
+   "date": "2026-03-16T19:17:57Z"
+  }
  },
  "github.com/illacloud/illa-builder": {
   "website": null,
-  "release": "https://github.com/illacloud/illa-builder/releases/tag/illa-builder%404.8.5"
+  "release": "https://github.com/illacloud/illa-builder/releases/tag/illa-builder%404.8.5",
+  "isFork": false,
+  "forkOf": null,
+  "forkCount": 1209,
+  "latest": {
+   "name": "illa-builder@4.8.5",
+   "date": "2024-08-05T09:23:19Z"
+  }
  },
  "github.com/immich-app/immich": {
   "website": "https://immich.app",
-  "release": "https://github.com/immich-app/immich/releases/tag/v3.3.5"
+  "release": "https://github.com/immich-app/immich/releases/tag/v3.3.5",
+  "isFork": false,
+  "forkOf": null,
+  "forkCount": 7368,
+  "latest": {
+   "name": "v3.3.5",
+   "date": "2026-10-21T18:12:57Z"
+  }
  },
  "github.com/indico/indico": {
   "website": "https://getindico.io",
-  "release": "https://github.com/indico/indico/releases/tag/v3.3.14"
+  "release": "https://github.com/indico/indico/releases/tag/v3.3.14",
+  "isFork": false,
+  "forkOf": null,
+  "forkCount": 558,
+  "latest": {
+   "name": "v3.3.14",
+   "date": "2026-10-13T15:11:40Z"
+  }
  },
  "github.com/influxdata/influxdb": {
   "website": "https://influxdata.com",
-  "release": "https://github.com/influxdata/influxdb/releases/tag/v3.12.1"
+  "release": "https://github.com/influxdata/influxdb/releases/tag/v3.12.1",
+  "isFork": false,
+  "forkOf": null,
+  "forkCount": 3762,
+  "latest": {
+   "name": "v3.12.1 | 10-14-26",
+   "date": "2026-10-15T17:44:55Z"
+  }
  },
  "github.com/Kong/insomnia": {
   "website": "https://insomnia.rest",
-  "release": "https://github.com/Kong/insomnia/releases/tag/core%4013.3.1"
+  "release": "https://github.com/Kong/insomnia/releases/tag/core%4013.3.1",
+  "isFork": false,
+  "forkOf": null,
+  "forkCount": 2386,
+  "latest": {
+   "name": "13.3.1 📦",
+   "date": "2026-10-09T07:35:39Z"
+  }
  },
  "github.com/invoke-ai/InvokeAI": {
   "website": "https://invoke-ai.github.io/InvokeAI/",
-  "release": "https://github.com/invoke-ai/InvokeAI/releases/tag/v6.14.2"
+  "release": "https://github.com/invoke-ai/InvokeAI/releases/tag/v6.14.2",
+  "isFork": false,
+  "forkOf": null,
+  "forkCount": 3078,
+  "latest": {
+   "name": "Version 6.14.2",
+   "date": "2026-09-27T18:31:53Z"
+  }
  },
  "github.com/savoirfairelinux/jami-client-qt": {
   "website": "https://git.jami.net/savoirfairelinux/jami-client-qt",
-  "release": null
+  "release": null,
+  "isFork": false,
+  "forkOf": null,
+  "forkCount": 10,
+  "latest": null
  },
  "github.com/janhq/jan": {
   "website": "https://jan.ai/",
-  "release": "https://github.com/janhq/jan/releases/tag/v0.8.7"
+  "release": "https://github.com/janhq/jan/releases/tag/v0.8.7",
+  "isFork": false,
+  "forkOf": null,
+  "forkCount": 3111,
+  "latest": {
+   "name": "0.8.7",
+   "date": "2026-10-20T04:33:57Z"
+  }
  },
  "github.com/JanssenProject/jans": {
   "website": "https://docs.jans.io",
-  "release": "https://github.com/JanssenProject/jans/releases/tag/v2.5.0"
+  "release": "https://github.com/JanssenProject/jans/releases/tag/v2.5.0",
+  "isFork": false,
+  "forkOf": null,
+  "forkCount": 177,
+  "latest": {
+   "name": "v2.5.0",
+   "date": "2026-10-07T13:26:12Z"
+  }
  },
  "github.com/jellyfin/jellyfin": {
   "website": "https://jellyfin.org",
-  "release": "https://github.com/jellyfin/jellyfin/releases/tag/v12.3"
+  "release": "https://github.com/jellyfin/jellyfin/releases/tag/v12.4",
+  "isFork": false,
+  "forkOf": null,
+  "forkCount": 5719,
+  "latest": {
+   "name": "12.4",
+   "date": "2026-10-26T21:30:17Z"
+  }
  },
  "github.com/jenkinsci/jenkins": {
   "website": "https://www.jenkins.io",
-  "release": "https://github.com/jenkinsci/jenkins/releases/tag/jenkins-2.587"
+  "release": "https://github.com/jenkinsci/jenkins/releases/tag/jenkins-2.587",
+  "isFork": false,
+  "forkOf": null,
+  "forkCount": 9811,
+  "latest": {
+   "name": "2.587",
+   "date": "2026-10-20T12:22:29Z"
+  }
  },
  "github.com/jitsi/jitsi-meet": {
   "website": "https://jitsi.org/meet",
-  "release": "https://github.com/jitsi/jitsi-meet/releases/tag/stable/jitsi-meet_11248"
+  "release": "https://github.com/jitsi/jitsi-meet/releases/tag/stable/jitsi-meet_11248",
+  "isFork": false,
+  "forkOf": null,
+  "forkCount": 8109,
+  "latest": {
+   "name": "2.0.11248",
+   "date": "2026-09-14T13:07:11Z"
+  }
  },
  "github.com/jitsucom/jitsu": {
   "website": "https://jitsu.com",
-  "release": "https://github.com/jitsucom/jitsu/releases/tag/jitsu-cli1.11.0"
+  "release": "https://github.com/jitsucom/jitsu/releases/tag/jitsu-cli1.11.0",
+  "isFork": false,
+  "forkOf": null,
+  "forkCount": 404,
+  "latest": {
+   "name": "Jitsu CLI Release 1.11.0",
+   "date": "2026-07-09T17:07:35Z"
+  }
  },
  "github.com/laurent22/joplin": {
   "website": "https://joplinapp.org",
-  "release": "https://github.com/laurent22/joplin/releases/tag/v3.7.21"
+  "release": "https://github.com/laurent22/joplin/releases/tag/v3.7.21",
+  "isFork": false,
+  "forkOf": null,
+  "forkCount": 6373,
+  "latest": {
+   "name": "v3.7.21",
+   "date": "2026-09-25T21:31:12Z"
+  }
  },
  "github.com/kanboard/kanboard": {
   "website": "https://kanboard.org",
-  "release": "https://github.com/kanboard/kanboard/releases/tag/v1.2.56"
+  "release": "https://github.com/kanboard/kanboard/releases/tag/v1.2.56",
+  "isFork": false,
+  "forkOf": null,
+  "forkCount": 2013,
+  "latest": {
+   "name": "Kanboard 1.2.56",
+   "date": "2026-10-21T21:28:45Z"
+  }
  },
  "github.com/Kunzisoft/KeePassDX": {
   "website": "https://www.keepassdx.com/",
-  "release": "https://github.com/Kunzisoft/KeePassDX/releases/tag/4.5.6"
+  "release": "https://github.com/Kunzisoft/KeePassDX/releases/tag/4.5.6",
+  "isFork": false,
+  "forkOf": null,
+  "forkCount": 415,
+  "latest": {
+   "name": "🦋 Beautiful Butterfly",
+   "date": "2026-10-17T20:53:59Z"
+  }
  },
  "github.com/keepassxreboot/keepassxc": {
   "website": "https://keepassxc.org/",
-  "release": "https://github.com/keepassxreboot/keepassxc/releases/tag/2.8.0"
+  "release": "https://github.com/keepassxreboot/keepassxc/releases/tag/2.8.0",
+  "isFork": false,
+  "forkOf": null,
+  "forkCount": 1983,
+  "latest": {
+   "name": "Release 2.8.0",
+   "date": "2026-10-21T21:57:23Z"
+  }
  },
  "github.com/pentacent/keila": {
   "website": "https://keila.io",
-  "release": "https://github.com/pentacent/keila/releases/tag/0.30.3"
+  "release": "https://github.com/pentacent/keila/releases/tag/0.30.3",
+  "isFork": false,
+  "forkOf": null,
+  "forkCount": 177,
+  "latest": {
+   "name": "Keila v0.30.3",
+   "date": "2026-09-06T09:30:31Z"
+  }
  },
  "github.com/kestra-io/kestra": {
   "website": "https://go.kestra.io/home",
-  "release": "https://github.com/kestra-io/kestra/releases/tag/v2.0.7"
+  "release": "https://github.com/kestra-io/kestra/releases/tag/v2.0.7",
+  "isFork": false,
+  "forkOf": null,
+  "forkCount": 3482,
+  "latest": {
+   "name": "v2.0.7",
+   "date": "2026-10-20T14:07:27Z"
+  }
  },
  "github.com/keycloak/keycloak": {
   "website": "https://www.keycloak.org",
-  "release": "https://github.com/keycloak/keycloak/releases/tag/26.8.1"
+  "release": "https://github.com/keycloak/keycloak/releases/tag/26.8.1",
+  "isFork": false,
+  "forkOf": null,
+  "forkCount": 9106,
+  "latest": {
+   "name": "26.8.1",
+   "date": "2026-10-13T08:58:15Z"
+  }
  },
  "github.com/Kilo-Org/kilocode": {
   "website": "https://kilo.ai/",
-  "release": "https://github.com/Kilo-Org/kilocode/releases/tag/v7.8.18"
+  "release": "https://github.com/Kilo-Org/kilocode/releases/tag/v7.8.18",
+  "isFork": false,
+  "forkOf": null,
+  "forkCount": 3307,
+  "latest": {
+   "name": "v7.8.18 (release)",
+   "date": "2026-10-26T09:05:47Z"
+  }
  },
  "github.com/kimai/kimai": {
   "website": "https://www.kimai.org",
-  "release": "https://github.com/kimai/kimai/releases/tag/2.71.0"
+  "release": "https://github.com/kimai/kimai/releases/tag/2.71.0",
+  "isFork": false,
+  "forkOf": null,
+  "forkCount": 870,
+  "latest": {
+   "name": "2.71.0",
+   "date": "2026-10-25T18:48:48Z"
+  }
  },
  "github.com/xbmc/xbmc": {
   "website": "https://kodi.tv/",
-  "release": "https://github.com/xbmc/xbmc/releases/tag/21.3-Omega"
+  "release": "https://github.com/xbmc/xbmc/releases/tag/21.3-Omega",
+  "isFork": false,
+  "forkOf": null,
+  "forkCount": 6648,
+  "latest": {
+   "name": "v21.3-Omega",
+   "date": "2025-10-31T17:21:33Z"
+  }
  },
  "github.com/koreader/koreader": {
   "website": "http://koreader.rocks/",
-  "release": "https://github.com/koreader/koreader/releases/tag/v2026.07.1"
+  "release": "https://github.com/koreader/koreader/releases/tag/v2026.07.1",
+  "isFork": false,
+  "forkOf": null,
+  "forkCount": 1998,
+  "latest": {
+   "name": "KOReader 2026.07.1",
+   "date": "2026-08-01T11:10:30Z"
+  }
  },
  "github.com/kubero-dev/kubero": {
   "website": "https://demo.kubero.dev",
-  "release": "https://github.com/kubero-dev/kubero/releases/tag/v3.1.1"
+  "release": "https://github.com/kubero-dev/kubero/releases/tag/v3.1.1",
+  "isFork": false,
+  "forkOf": null,
+  "forkCount": 217,
+  "latest": {
+   "name": "v3.1.1",
+   "date": "2025-09-17T09:26:34Z"
+  }
  },
  "github.com/kubestellar/console": {
   "website": "https://console.kubestellar.io",
-  "release": "https://github.com/kubestellar/console/releases/tag/v0.3.42"
+  "release": "https://github.com/kubestellar/console/releases/tag/v0.3.42",
+  "isFork": false,
+  "forkOf": null,
+  "forkCount": 134,
+  "latest": {
+   "name": "v0.3.42-weekly",
+   "date": "2026-09-20T08:15:03Z"
+  }
  },
  "github.com/thedevs-network/kutt": {
   "website": "https://kutt.to",
-  "release": "https://github.com/thedevs-network/kutt/releases/tag/v3.2.6"
+  "release": "https://github.com/thedevs-network/kutt/releases/tag/v3.2.6",
+  "isFork": false,
+  "forkOf": null,
+  "forkCount": 1521,
+  "latest": {
+   "name": "v3.2.6",
+   "date": "2026-07-05T10:38:58Z"
+  }
  },
  "github.com/kuzzleio/kuzzle": {
   "website": "https://kuzzle.io",
-  "release": "https://github.com/kuzzleio/kuzzle/releases/tag/v2.59.0"
+  "release": "https://github.com/kuzzleio/kuzzle/releases/tag/v2.59.0",
+  "isFork": false,
+  "forkOf": null,
+  "forkCount": 134,
+  "latest": {
+   "name": "v2.59.0",
+   "date": "2026-10-01T14:02:15Z"
+  }
  },
  "github.com/getlago/lago": {
   "website": "https://www.getlago.com",
-  "release": "https://github.com/getlago/lago/releases/tag/v1.55.0"
+  "release": "https://github.com/getlago/lago/releases/tag/v1.55.0",
+  "isFork": false,
+  "forkOf": null,
+  "forkCount": 775,
+  "latest": {
+   "name": "v1.55.0",
+   "date": "2026-10-07T16:25:42Z"
+  }
  },
  "github.com/metavert-io/lastsaas": {
   "website": "https://metavert.io/lastsaas",
-  "release": "https://github.com/metavert-io/lastsaas/releases/tag/v1.0.0"
+  "release": "https://github.com/metavert-io/lastsaas/releases/tag/v1.0.0",
+  "isFork": false,
+  "forkOf": null,
+  "forkCount": 62,
+  "latest": {
+   "name": "v1.0.0",
+   "date": "2026-02-26T21:28:11Z"
+  }
  },
  "github.com/Leantime/leantime": {
   "website": "https://leantime.io",
-  "release": "https://github.com/Leantime/leantime/releases/tag/v3.12.0"
+  "release": "https://github.com/Leantime/leantime/releases/tag/v3.12.0",
+  "isFork": false,
+  "forkOf": null,
+  "forkCount": 1163,
+  "latest": {
+   "name": "Leantime v3.12.0",
+   "date": "2026-10-15T23:11:05Z"
+  }
  },
  "github.com/LemmyNet/lemmy": {
   "website": "https://join-lemmy.org",
-  "release": "https://github.com/LemmyNet/lemmy/releases/tag/0.19.20"
+  "release": "https://github.com/LemmyNet/lemmy/releases/tag/0.19.21",
+  "isFork": false,
+  "forkOf": null,
+  "forkCount": 969,
+  "latest": {
+   "name": "0.19.21",
+   "date": "2026-10-26T13:48:58Z"
+  }
  },
  "github.com/leon-ai/leon": {
   "website": "https://getleon.ai",
-  "release": null
+  "release": null,
+  "isFork": false,
+  "forkOf": null,
+  "forkCount": 1477,
+  "latest": null
  },
  "github.com/LibreChat-AI/LibreChat": {
   "website": "https://librechat.ai/",
-  "release": null
+  "release": null,
+  "isFork": false,
+  "forkOf": null,
+  "forkCount": 9525,
+  "latest": null
  },
  "github.com/liameno/librengine": {
   "website": null,
-  "release": "https://github.com/liameno/librengine/releases/tag/v1.2"
+  "release": "https://github.com/liameno/librengine/releases/tag/v1.2",
+  "isFork": false,
+  "forkOf": null,
+  "forkCount": 3,
+  "latest": {
+   "name": "v1.2",
+   "date": "2022-06-18T06:52:13Z"
+  }
  },
  "github.com/LibreSign/libresign": {
   "website": "https://libresign.coop",
-  "release": "https://github.com/LibreSign/libresign/releases/tag/v15.0.9"
+  "release": "https://github.com/LibreSign/libresign/releases/tag/v15.0.10",
+  "isFork": false,
+  "forkOf": null,
+  "forkCount": 171,
+  "latest": {
+   "name": "15.0.10",
+   "date": "2026-10-27T01:42:02Z"
+  }
  },
  "github.com/librespeed/speedtest": {
   "website": "https://librespeed.org",
-  "release": "https://github.com/librespeed/speedtest/releases/tag/v6.3.1"
+  "release": "https://github.com/librespeed/speedtest/releases/tag/v6.3.1",
+  "isFork": false,
+  "forkOf": null,
+  "forkCount": 2515,
+  "latest": {
+   "name": "LibreSpeed 6.3.1",
+   "date": "2026-10-21T22:04:51Z"
+  }
  },
  "github.com/LibreTranslate/LibreTranslate": {
   "website": "https://libretranslate.com",
-  "release": "https://github.com/LibreTranslate/LibreTranslate/releases/tag/v1.9.6"
+  "release": "https://github.com/LibreTranslate/LibreTranslate/releases/tag/v1.9.6",
+  "isFork": false,
+  "forkOf": null,
+  "forkCount": 1789,
+  "latest": {
+   "name": "1.9.6",
+   "date": "2026-05-26T17:45:39Z"
+  }
  },
  "github.com/lightdash/lightdash": {
   "website": "https://lightdash.com",
-  "release": "https://github.com/lightdash/lightdash/releases/tag/3.55.0"
+  "release": "https://github.com/lightdash/lightdash/releases/tag/3.61.0",
+  "isFork": false,
+  "forkOf": null,
+  "forkCount": 792,
+  "latest": {
+   "name": "3.61.0",
+   "date": "2026-10-26T22:34:02Z"
+  }
  },
  "github.com/LimeSurvey/LimeSurvey": {
   "website": "https://www.limesurvey.org",
-  "release": null
+  "release": null,
+  "isFork": false,
+  "forkOf": null,
+  "forkCount": 1127,
+  "latest": null
  },
  "github.com/knadh/listmonk": {
   "website": "https://listmonk.app",
-  "release": "https://github.com/knadh/listmonk/releases/tag/v7.0.0-beta.1"
+  "release": "https://github.com/knadh/listmonk/releases/tag/v7.0.0-beta.1",
+  "isFork": false,
+  "forkOf": null,
+  "forkCount": 2718,
+  "latest": {
+   "name": "v7.0.0-beta.1",
+   "date": "2026-10-20T10:25:57Z"
+  }
  },
  "github.com/itswadesh/svelte-commerce": {
   "website": "https://kitcommerce.store/svelte-commerce/",
-  "release": "https://github.com/itswadesh/svelte-commerce/releases/tag/v4.0.0"
+  "release": "https://github.com/itswadesh/svelte-commerce/releases/tag/v4.0.0",
+  "isFork": false,
+  "forkOf": null,
+  "forkCount": 336,
+  "latest": {
+   "name": "Upgraded to svelte4 and shadcn",
+   "date": "2025-06-08T08:36:40Z"
+  }
  },
  "github.com/livekit/livekit": {
   "website": "https://docs.livekit.io",
-  "release": "https://github.com/livekit/livekit/releases/tag/v1.13.11"
+  "release": "https://github.com/livekit/livekit/releases/tag/v1.13.11",
+  "isFork": false,
+  "forkOf": null,
+  "forkCount": 2500,
+  "latest": {
+   "name": "v1.13.11",
+   "date": "2026-10-25T09:45:31Z"
+  }
  },
  "github.com/LMMS/lmms": {
   "website": "https://lmms.io",
-  "release": "https://github.com/LMMS/lmms/releases/tag/v1.2.2"
+  "release": "https://github.com/LMMS/lmms/releases/tag/v1.2.2",
+  "isFork": false,
+  "forkOf": null,
+  "forkCount": 1302,
+  "latest": {
+   "name": "1.2.2",
+   "date": "2020-07-04T12:35:12Z"
+  }
  },
  "github.com/localsend/localsend": {
   "website": "https://localsend.org",
-  "release": "https://github.com/localsend/localsend/releases/tag/v1.18.2"
+  "release": "https://github.com/localsend/localsend/releases/tag/v1.18.2",
+  "isFork": false,
+  "forkOf": null,
+  "forkCount": 5404,
+  "latest": {
+   "name": "v1.18.2",
+   "date": "2026-08-21T14:02:01Z"
+  }
  },
  "github.com/logseq/logseq": {
   "website": "https://logseq.com",
-  "release": "https://github.com/logseq/logseq/releases/tag/2.0.2"
+  "release": "https://github.com/logseq/logseq/releases/tag/2.0.2",
+  "isFork": false,
+  "forkOf": null,
+  "forkCount": 2853,
+  "latest": {
+   "name": "Desktop APP 2.0.2 (Beta Testing)",
+   "date": "2026-10-07T14:18:57Z"
+  }
  },
  "github.com/logto-io/logto": {
   "website": "https://logto.io",
-  "release": "https://github.com/logto-io/logto/releases/tag/v1.45.0"
+  "release": "https://github.com/logto-io/logto/releases/tag/v1.45.0",
+  "isFork": false,
+  "forkOf": null,
+  "forkCount": 1204,
+  "latest": {
+   "name": "v1.45.0",
+   "date": "2026-10-13T07:52:46Z"
+  }
  },
  "github.com/joinloops/loops-server": {
   "website": "https://joinloops.org",
-  "release": "https://github.com/joinloops/loops-server/releases/tag/v1.0.0-beta.15"
+  "release": "https://github.com/joinloops/loops-server/releases/tag/v1.0.0-beta.15",
+  "isFork": false,
+  "forkOf": null,
+  "forkCount": 63,
+  "latest": {
+   "name": "v1.0.0-beta.15 - Security Release",
+   "date": "2026-10-23T01:56:15Z"
+  }
  },
  "github.com/mifi/lossless-cut": {
   "website": "https://losslesscut.app/",
-  "release": "https://github.com/mifi/lossless-cut/releases/tag/v3.70.1"
+  "release": "https://github.com/mifi/lossless-cut/releases/tag/v3.70.1",
+  "isFork": false,
+  "forkOf": null,
+  "forkCount": 2279,
+  "latest": {
+   "name": "3.70.1",
+   "date": "2026-10-19T12:33:53Z"
+  }
  },
  "github.com/lowdefy/lowdefy": {
   "website": "https://lowdefy.com",
-  "release": "https://github.com/lowdefy/lowdefy/releases/tag/v6.2.0"
+  "release": "https://github.com/lowdefy/lowdefy/releases/tag/v6.2.0",
+  "isFork": false,
+  "forkOf": null,
+  "forkCount": 187,
+  "latest": {
+   "name": "v6.2.0",
+   "date": "2026-10-21T11:15:54Z"
+  }
  },
  "github.com/Foundry376/Mailspring": {
   "website": "https://getmailspring.com/",
-  "release": "https://github.com/Foundry376/Mailspring/releases/tag/1.26.2"
+  "release": "https://github.com/Foundry376/Mailspring/releases/tag/1.26.2",
+  "isFork": false,
+  "forkOf": null,
+  "forkCount": 1064,
+  "latest": {
+   "name": "1.26.2",
+   "date": "2026-10-22T14:51:00Z"
+  }
  },
  "github.com/manticoresoftware/manticoresearch": {
   "website": "https://manticoresearch.com",
-  "release": "https://github.com/manticoresoftware/manticoresearch/releases/tag/release-29.9.0"
+  "release": "https://github.com/manticoresoftware/manticoresearch/releases/tag/release-29.9.0",
+  "isFork": false,
+  "forkOf": null,
+  "forkCount": 652,
+  "latest": {
+   "name": "Manticore Search 29.9.0",
+   "date": "2026-09-11T14:20:16Z"
+  }
  },
  "github.com/mastodon/mastodon": {
   "website": "https://joinmastodon.org",
-  "release": "https://github.com/mastodon/mastodon/releases/tag/v4.7.3"
+  "release": "https://github.com/mastodon/mastodon/releases/tag/v4.7.3",
+  "isFork": false,
+  "forkOf": null,
+  "forkCount": 7521,
+  "latest": {
+   "name": "v4.7.3",
+   "date": "2026-10-01T14:09:40Z"
+  }
  },
  "github.com/matanolabs/matano": {
   "website": "https://matano.dev",
-  "release": null
+  "release": null,
+  "isFork": false,
+  "forkOf": null,
+  "forkCount": 121,
+  "latest": null
  },
  "github.com/matomo-org/matomo": {
   "website": "https://matomo.org/",
-  "release": "https://github.com/matomo-org/matomo/releases/tag/5.14.2"
+  "release": "https://github.com/matomo-org/matomo/releases/tag/5.14.2",
+  "isFork": false,
+  "forkOf": null,
+  "forkCount": 2923,
+  "latest": {
+   "name": "5.14.2",
+   "date": "2026-10-22T02:49:53Z"
+  }
  },
  "github.com/mattermost/mattermost": {
   "website": "https://mattermost.com",
-  "release": "https://github.com/mattermost/mattermost/releases/tag/v12.0.1"
+  "release": "https://github.com/mattermost/mattermost/releases/tag/v12.0.1",
+  "isFork": false,
+  "forkOf": null,
+  "forkCount": 9071,
+  "latest": {
+   "name": "v12.0.1",
+   "date": "2026-10-22T12:26:41Z"
+  }
  },
  "github.com/MbinOrg/mbin": {
   "website": "https://joinmbin.org",
-  "release": "https://github.com/MbinOrg/mbin/releases/tag/v1.11.0"
+  "release": "https://github.com/MbinOrg/mbin/releases/tag/v1.11.0",
+  "isFork": false,
+  "forkOf": null,
+  "forkCount": 33,
+  "latest": {
+   "name": "v1.11.0",
+   "date": "2026-10-09T07:22:28Z"
+  }
  },
  "github.com/wikimedia/mediawiki": {
   "website": "https://www.mediawiki.org",
-  "release": null
+  "release": null,
+  "isFork": false,
+  "forkOf": null,
+  "forkCount": 1559,
+  "latest": null
  },
  "github.com/medusajs/medusa": {
   "website": "https://medusajs.com",
-  "release": "https://github.com/medusajs/medusa/releases/tag/v2.22.1"
+  "release": "https://github.com/medusajs/medusa/releases/tag/v2.22.1",
+  "isFork": false,
+  "forkOf": null,
+  "forkCount": 5468,
+  "latest": {
+   "name": "v2.22.1: Payment Session Client Data Updates, Promotion Ranking Fix, Dashboard Improvements",
+   "date": "2026-10-23T12:39:23Z"
+  }
  },
  "github.com/meilisearch/meilisearch": {
   "website": "https://www.meilisearch.com",
-  "release": "https://github.com/meilisearch/meilisearch/releases/tag/v1.56.0"
+  "release": "https://github.com/meilisearch/meilisearch/releases/tag/v1.56.0",
+  "isFork": false,
+  "forkOf": null,
+  "forkCount": 2762,
+  "latest": {
+   "name": "v1.56.0 🐫",
+   "date": "2026-10-26T09:51:16Z"
+  }
  },
  "github.com/usememos/memos": {
   "website": "https://usememos.com",
-  "release": "https://github.com/usememos/memos/releases/tag/v0.31.0"
+  "release": "https://github.com/usememos/memos/releases/tag/v0.31.0",
+  "isFork": false,
+  "forkOf": null,
+  "forkCount": 4904,
+  "latest": {
+   "name": "v0.31.0",
+   "date": "2026-09-19T16:50:57Z"
+  }
  },
  "github.com/Ylianst/MeshCentral": {
   "website": "https://meshcentral.com",
-  "release": "https://github.com/Ylianst/MeshCentral/releases/tag/1.3.1"
+  "release": "https://github.com/Ylianst/MeshCentral/releases/tag/1.3.1",
+  "isFork": false,
+  "forkOf": null,
+  "forkCount": 1045,
+  "latest": {
+   "name": "1.3.1",
+   "date": "2026-10-23T16:59:57Z"
+  }
  },
  "github.com/metabase/metabase": {
   "website": "https://metabase.com",
-  "release": "https://github.com/metabase/metabase/releases/tag/v0.64.1"
+  "release": "https://github.com/metabase/metabase/releases/tag/v0.64.1",
+  "isFork": false,
+  "forkOf": null,
+  "forkCount": 6929,
+  "latest": {
+   "name": "Metabase 64.1",
+   "date": "2026-10-07T18:42:49Z"
+  }
  },
  "github.com/metriql/metriql": {
   "website": "https://metriql.com",
-  "release": null
+  "release": null,
+  "isFork": false,
+  "forkOf": null,
+  "forkCount": 26,
+  "latest": null
  },
  "github.com/miniflux/v2": {
   "website": "https://miniflux.app",
-  "release": "https://github.com/miniflux/v2/releases/tag/2.3.4"
+  "release": "https://github.com/miniflux/v2/releases/tag/2.3.4",
+  "isFork": false,
+  "forkOf": null,
+  "forkCount": 952,
+  "latest": {
+   "name": "Miniflux 2.3.4",
+   "date": "2026-10-20T01:08:39Z"
+  }
  },
  "github.com/misskey-dev/misskey": {
   "website": "https://misskey-hub.net/",
-  "release": "https://github.com/misskey-dev/misskey/releases/tag/2026.10.1"
+  "release": "https://github.com/misskey-dev/misskey/releases/tag/2026.10.1",
+  "isFork": false,
+  "forkOf": null,
+  "forkCount": 1637,
+  "latest": {
+   "name": "2026.10.1",
+   "date": "2026-10-23T23:34:05Z"
+  }
  },
  "github.com/synmetrix/synmetrix": {
   "website": "https://synmetrix.org",
-  "release": "https://github.com/synmetrix/synmetrix/releases/tag/v0.1.55"
+  "release": "https://github.com/synmetrix/synmetrix/releases/tag/v0.1.55",
+  "isFork": false,
+  "forkOf": null,
+  "forkCount": 49,
+  "latest": {
+   "name": "v0.1.55 ⛱",
+   "date": "2025-02-07T23:14:35Z"
+  }
  },
  "github.com/tehnika-mk/monomap": {
   "website": "https://monomap.app",
-  "release": "https://github.com/tehnika-mk/monomap/releases/tag/v1.2"
+  "release": "https://github.com/tehnika-mk/monomap/releases/tag/v1.2",
+  "isFork": false,
+  "forkOf": null,
+  "forkCount": 0,
+  "latest": {
+   "name": "MonoMap v1.2",
+   "date": "2026-09-30T07:10:04Z"
+  }
  },
  "github.com/mumble-voip/mumble": {
   "website": "https://www.mumble.info",
-  "release": "https://github.com/mumble-voip/mumble/releases/tag/v1.5.939"
+  "release": "https://github.com/mumble-voip/mumble/releases/tag/v1.5.939",
+  "isFork": false,
+  "forkOf": null,
+  "forkCount": 1408,
+  "latest": {
+   "name": "v1.5.939",
+   "date": "2026-10-11T11:52:37Z"
+  }
  },
  "github.com/mypaint/mypaint": {
   "website": "https://mypaint.app",
-  "release": "https://github.com/mypaint/mypaint/releases/tag/v2.0.1"
+  "release": "https://github.com/mypaint/mypaint/releases/tag/v2.0.1",
+  "isFork": false,
+  "forkOf": null,
+  "forkCount": 448,
+  "latest": {
+   "name": "MyPaint v2.0.1 (2020-05-29)",
+   "date": "2020-05-29T19:30:08Z"
+  }
  },
  "github.com/NatronGitHub/Natron": {
   "website": "http://NatronGitHub.github.io",
-  "release": "https://github.com/NatronGitHub/Natron/releases/tag/v2.5.0"
+  "release": "https://github.com/NatronGitHub/Natron/releases/tag/v2.5.0",
+  "isFork": false,
+  "forkOf": null,
+  "forkCount": 421,
+  "latest": {
+   "name": "Natron 2.5.0",
+   "date": "2022-11-26T00:48:14Z"
+  }
  },
  "github.com/navidrome/navidrome": {
   "website": "https://www.navidrome.org",
-  "release": "https://github.com/navidrome/navidrome/releases/tag/v0.64.2"
+  "release": "https://github.com/navidrome/navidrome/releases/tag/v0.64.2",
+  "isFork": false,
+  "forkOf": null,
+  "forkCount": 1777,
+  "latest": {
+   "name": "v0.64.2",
+   "date": "2026-09-24T23:26:20Z"
+  }
  },
  "github.com/neo4j/neo4j": {
   "website": "http://neo4j.com",
-  "release": "https://github.com/neo4j/neo4j/releases/tag/3.2.0-alpha08"
+  "release": "https://github.com/neo4j/neo4j/releases/tag/3.2.0-alpha08",
+  "isFork": false,
+  "forkOf": null,
+  "forkCount": 2739,
+  "latest": {
+   "name": "3.2.0-alpha08",
+   "date": "2017-04-11T08:47:47Z"
+  }
  },
  "github.com/netbirdio/netbird": {
   "website": "https://netbird.io",
-  "release": "https://github.com/netbirdio/netbird/releases/tag/v0.81.4"
+  "release": "https://github.com/netbirdio/netbird/releases/tag/v0.81.5",
+  "isFork": false,
+  "forkOf": null,
+  "forkCount": 1788,
+  "latest": {
+   "name": "v0.81.5",
+   "date": "2026-10-26T17:38:07Z"
+  }
  },
  "github.com/netdata/netdata": {
   "website": "https://www.netdata.cloud",
-  "release": "https://github.com/netdata/netdata/releases/tag/v2.12.2"
+  "release": "https://github.com/netdata/netdata/releases/tag/v2.12.2",
+  "isFork": false,
+  "forkOf": null,
+  "forkCount": 6699,
+  "latest": {
+   "name": "v2.12.2",
+   "date": "2026-10-23T13:29:11Z"
+  }
  },
  "github.com/Ranchero-Software/NetNewsWire": {
   "website": "https://netnewswire.com/",
-  "release": "https://github.com/Ranchero-Software/NetNewsWire/releases/tag/mac-7.2.1"
+  "release": "https://github.com/Ranchero-Software/NetNewsWire/releases/tag/mac-7.2.1",
+  "isFork": false,
+  "forkOf": null,
+  "forkCount": 778,
+  "latest": {
+   "name": "NetNewsWire 7.2.1 for Mac",
+   "date": "2026-10-20T16:59:23Z"
+  }
  },
  "github.com/TeamNewPipe/NewPipe": {
   "website": "https://newpipe.net",
-  "release": "https://github.com/TeamNewPipe/NewPipe/releases/tag/v0.29.1"
+  "release": "https://github.com/TeamNewPipe/NewPipe/releases/tag/v0.29.1",
+  "isFork": false,
+  "forkOf": null,
+  "forkCount": 3929,
+  "latest": {
+   "name": "v0.29.1",
+   "date": "2026-08-15T22:05:38Z"
+  }
  },
  "github.com/newsboat/newsboat": {
   "website": "https://newsboat.org/",
-  "release": null
+  "release": null,
+  "isFork": false,
+  "forkOf": null,
+  "forkCount": 251,
+  "latest": null
  },
  "github.com/Blair2004/NexoPOS": {
   "website": "https://my.nexopos.com",
-  "release": "https://github.com/Blair2004/NexoPOS/releases/tag/v6.3.0"
+  "release": "https://github.com/Blair2004/NexoPOS/releases/tag/v6.3.0",
+  "isFork": false,
+  "forkOf": null,
+  "forkCount": 575,
+  "latest": {
+   "name": "NexoPOS v6.3.0",
+   "date": "2026-10-22T14:28:45Z"
+  }
  },
  "github.com/nextcloud/server": {
   "website": "https://nextcloud.com",
-  "release": "https://github.com/nextcloud/server/releases/tag/v33.0.10"
+  "release": "https://github.com/nextcloud/server/releases/tag/v33.0.10",
+  "isFork": false,
+  "forkOf": null,
+  "forkCount": 5310,
+  "latest": {
+   "name": "v33.0.10",
+   "date": "2026-10-15T08:37:28Z"
+  }
  },
  "github.com/nextcloud/calendar": {
   "website": "https://apps.nextcloud.com/apps/calendar",
-  "release": "https://github.com/nextcloud/calendar/releases/tag/v3.3.2"
+  "release": "https://github.com/nextcloud/calendar/releases/tag/v3.3.2",
+  "isFork": false,
+  "forkOf": null,
+  "forkCount": 338,
+  "latest": {
+   "name": "v3.3.2",
+   "date": "2022-06-02T07:23:46Z"
+  }
  },
  "github.com/nextcloud/forms": {
   "website": "https://apps.nextcloud.com/apps/forms",
-  "release": "https://github.com/nextcloud/forms/releases/tag/v5.4.1"
+  "release": "https://github.com/nextcloud/forms/releases/tag/v5.4.1",
+  "isFork": false,
+  "forkOf": null,
+  "forkCount": 130,
+  "latest": {
+   "name": "v5.4.1",
+   "date": "2026-10-22T21:58:58Z"
+  }
  },
  "github.com/nextcloud/notes": {
   "website": "https://apps.nextcloud.com/apps/notes",
-  "release": "https://github.com/nextcloud/notes/releases/tag/v6.1.0"
+  "release": "https://github.com/nextcloud/notes/releases/tag/v6.1.0",
+  "isFork": false,
+  "forkOf": null,
+  "forkCount": 163,
+  "latest": {
+   "name": "v6.1.0",
+   "date": "2026-09-15T11:32:39Z"
+  }
  },
  "github.com/nextcloud/polls": {
   "website": "https://apps.nextcloud.com/apps/polls",
-  "release": "https://github.com/nextcloud/polls/releases/tag/v9.3.0"
+  "release": "https://github.com/nextcloud/polls/releases/tag/v9.3.0",
+  "isFork": false,
+  "forkOf": null,
+  "forkCount": 91,
+  "latest": {
+   "name": "v9.3.0",
+   "date": "2026-09-18T06:17:11Z"
+  }
  },
  "github.com/nextcloud/spreed": {
   "website": "https://nextcloud.com/talk",
-  "release": "https://github.com/nextcloud/spreed/releases/tag/v25.0.6"
+  "release": "https://github.com/nextcloud/spreed/releases/tag/v25.0.6",
+  "isFork": false,
+  "forkOf": null,
+  "forkCount": 596,
+  "latest": {
+   "name": "v25.0.6",
+   "date": "2026-10-15T16:17:02Z"
+  }
  },
  "github.com/nhost/nhost": {
   "website": "https://nhost.io",
-  "release": "https://github.com/nhost/nhost/releases/tag/%40nhost/dashboard%403.8.1"
+  "release": "https://github.com/nhost/nhost/releases/tag/cli%401.52.2",
+  "isFork": false,
+  "forkOf": null,
+  "forkCount": 640,
+  "latest": {
+   "name": "cli@1.52.2",
+   "date": "2026-10-26T14:22:37Z"
+  }
  },
  "github.com/node-red/node-red": {
   "website": "http://nodered.org",
-  "release": "https://github.com/node-red/node-red/releases/tag/5.0.9"
+  "release": "https://github.com/node-red/node-red/releases/tag/5.0.9",
+  "isFork": false,
+  "forkOf": null,
+  "forkCount": 3952,
+  "latest": {
+   "name": "5.0.9: Maintenance Release",
+   "date": "2026-10-21T10:29:19Z"
+  }
  },
  "github.com/churichard/notabase": {
   "website": "https://notabase.io",
-  "release": null
+  "release": null,
+  "isFork": false,
+  "forkOf": null,
+  "forkCount": 78,
+  "latest": null
  },
  "github.com/OmGodse/Notally": {
   "website": null,
-  "release": "https://github.com/OmGodse/Notally/releases/tag/v6.2"
+  "release": "https://github.com/OmGodse/Notally/releases/tag/v6.2",
+  "isFork": false,
+  "forkOf": null,
+  "forkCount": 199,
+  "latest": {
+   "name": "v6.2",
+   "date": "2026-05-16T15:17:57Z"
+  }
  },
  "github.com/codexu/note-gen": {
   "website": "https://notegen.top",
-  "release": "https://github.com/codexu/note-gen/releases/tag/note-gen-v0.39.0"
+  "release": "https://github.com/codexu/note-gen/releases/tag/note-gen-v0.39.0",
+  "isFork": false,
+  "forkOf": null,
+  "forkCount": 976,
+  "latest": {
+   "name": "NoteGen v0.39.0",
+   "date": "2026-10-25T03:55:30Z"
+  }
  },
  "github.com/streetwriters/notesnook": {
   "website": "https://notesnook.com/",
-  "release": "https://github.com/streetwriters/notesnook/releases/tag/v3.4.10"
+  "release": "https://github.com/streetwriters/notesnook/releases/tag/v3.4.11",
+  "isFork": false,
+  "forkOf": null,
+  "forkCount": 1038,
+  "latest": {
+   "name": "Notesnook Desktop v3.4.11",
+   "date": "2026-10-26T12:23:43Z"
+  }
  },
  "github.com/binwiederhier/ntfy": {
   "website": "https://ntfy.sh",
-  "release": "https://github.com/binwiederhier/ntfy/releases/tag/v2.34.0"
+  "release": "https://github.com/binwiederhier/ntfy/releases/tag/v2.34.0",
+  "isFork": false,
+  "forkOf": null,
+  "forkCount": 1679,
+  "latest": {
+   "name": "v2.34.0",
+   "date": "2026-10-24T19:21:58Z"
+  }
  },
  "github.com/projectdiscovery/nuclei": {
   "website": "https://docs.projectdiscovery.io/tools/nuclei",
-  "release": "https://github.com/projectdiscovery/nuclei/releases/tag/v3.11.1"
+  "release": "https://github.com/projectdiscovery/nuclei/releases/tag/v3.11.1",
+  "isFork": false,
+  "forkOf": null,
+  "forkCount": 3947,
+  "latest": {
+   "name": "v3.11.1",
+   "date": "2026-08-08T12:21:32Z"
+  }
  },
  "github.com/obsproject/obs-studio": {
   "website": "https://obsproject.com",
-  "release": "https://github.com/obsproject/obs-studio/releases/tag/33.0.0"
+  "release": "https://github.com/obsproject/obs-studio/releases/tag/33.0.0",
+  "isFork": false,
+  "forkOf": null,
+  "forkCount": 10887,
+  "latest": {
+   "name": "OBS Studio 33.0.0",
+   "date": "2026-10-23T22:20:29Z"
+  }
  },
  "github.com/ImranR98/Obtainium": {
   "website": "https://obtainium.imranr.dev",
-  "release": "https://github.com/ImranR98/Obtainium/releases/tag/v1.7.3"
+  "release": "https://github.com/ImranR98/Obtainium/releases/tag/v1.7.3",
+  "isFork": false,
+  "forkOf": null,
+  "forkCount": 662,
+  "latest": {
+   "name": "v1.7.3",
+   "date": "2026-10-25T02:16:13Z"
+  }
  },
  "github.com/odoo/odoo": {
   "website": "https://www.odoo.com",
-  "release": null
+  "release": null,
+  "isFork": false,
+  "forkOf": null,
+  "forkCount": 34117,
+  "latest": null
  },
  "github.com/McanKul/offpdf": {
   "website": "https://offpdf.com",
-  "release": "https://github.com/McanKul/offpdf/releases/tag/v0.5.0"
+  "release": "https://github.com/McanKul/offpdf/releases/tag/v0.5.0",
+  "isFork": false,
+  "forkOf": null,
+  "forkCount": 15,
+  "latest": {
+   "name": "OffPDF v0.5.0",
+   "date": "2026-10-25T13:12:28Z"
+  }
  },
  "github.com/ollama/ollama": {
   "website": "https://ollama.com",
-  "release": "https://github.com/ollama/ollama/releases/tag/v0.40.11"
+  "release": "https://github.com/ollama/ollama/releases/tag/v0.40.11",
+  "isFork": false,
+  "forkOf": null,
+  "forkCount": 18623,
+  "latest": {
+   "name": "v0.40.11",
+   "date": "2026-10-24T00:30:13Z"
+  }
  },
  "github.com/omniedgeio/omniedge": {
   "website": "https://connect.omniedge.io",
-  "release": "https://github.com/omniedgeio/omniedge/releases/tag/v2.9.0"
+  "release": "https://github.com/omniedgeio/omniedge/releases/tag/v2.9.0",
+  "isFork": false,
+  "forkOf": null,
+  "forkCount": 53,
+  "latest": {
+   "name": "OmniEdge v2.9.0",
+   "date": "2026-02-16T12:05:48Z"
+  }
  },
  "github.com/ONLYOFFICE/DocumentServer": {
   "website": "https://www.onlyoffice.com/see-it-in-action",
-  "release": "https://github.com/ONLYOFFICE/DocumentServer/releases/tag/v10.0.0"
+  "release": "https://github.com/ONLYOFFICE/DocumentServer/releases/tag/v10.0.0",
+  "isFork": false,
+  "forkOf": null,
+  "forkCount": 1326,
+  "latest": {
+   "name": "ONLYOFFICE-DocumentServer-10.0.0",
+   "date": "2026-10-12T15:01:39Z"
+  }
  },
  "github.com/openinterpreter/openinterpreter": {
   "website": "http://openinterpreter.com/",
-  "release": "https://github.com/openinterpreter/openinterpreter/releases/tag/rust-v0.0.56"
+  "release": "https://github.com/openinterpreter/openinterpreter/releases/tag/rust-v0.0.56",
+  "isFork": false,
+  "forkOf": null,
+  "forkCount": 5920,
+  "latest": {
+   "name": "Open Interpreter 0.0.56",
+   "date": "2026-10-07T03:42:13Z"
+  }
  },
  "github.com/internetarchive/openlibrary": {
   "website": "https://openlibrary.org",
-  "release": "https://github.com/internetarchive/openlibrary/releases/tag/deploy-2026-10-15-at-22-14"
+  "release": "https://github.com/internetarchive/openlibrary/releases/tag/deploy-2026-10-15-at-22-14",
+  "isFork": false,
+  "forkOf": null,
+  "forkCount": 2071,
+  "latest": {
+   "name": "deploy-2026-10-15-at-22-14",
+   "date": "2026-10-15T23:45:22Z"
+  }
  },
  "github.com/openblocks-dev/openblocks": {
   "website": "https://cloud.openblocks.dev",
-  "release": "https://github.com/openblocks-dev/openblocks/releases/tag/v1.1.8"
+  "release": "https://github.com/openblocks-dev/openblocks/releases/tag/v1.1.8",
+  "isFork": false,
+  "forkOf": null,
+  "forkCount": 405,
+  "latest": {
+   "name": "v1.1.8",
+   "date": "2023-03-23T11:01:12Z"
+  }
  },
  "github.com/openboard-team/openboard": {
   "website": null,
-  "release": "https://github.com/openboard-team/openboard/releases/tag/v1.4.5"
+  "release": "https://github.com/openboard-team/openboard/releases/tag/v1.4.5",
+  "isFork": false,
+  "forkOf": null,
+  "forkCount": 319,
+  "latest": {
+   "name": "v1.4.5",
+   "date": "2022-08-05T16:44:23Z"
+  }
  },
  "github.com/braedonsaunders/openbooks": {
   "website": "https://openbooks-site.vercel.app",
-  "release": null
+  "release": null,
+  "isFork": false,
+  "forkOf": null,
+  "forkCount": 6,
+  "latest": null
  },
  "github.com/openclaw/openclaw": {
   "website": "https://openclaw.ai",
-  "release": "https://github.com/openclaw/openclaw/releases/tag/v2026.10.7"
+  "release": "https://github.com/openclaw/openclaw/releases/tag/v2026.10.7",
+  "isFork": false,
+  "forkOf": null,
+  "forkCount": 82662,
+  "latest": {
+   "name": "openclaw 2026.10.7",
+   "date": "2026-10-24T09:53:46Z"
+  }
  },
  "github.com/anomalyco/opencode": {
   "website": "https://opencode.ai",
-  "release": "https://github.com/anomalyco/opencode/releases/tag/v1.19.4"
+  "release": "https://github.com/anomalyco/opencode/releases/tag/v1.19.4",
+  "isFork": false,
+  "forkOf": null,
+  "forkCount": 29695,
+  "latest": {
+   "name": "v1.19.4",
+   "date": "2026-10-22T13:03:41Z"
+  }
  },
  "github.com/OpenCut-app/OpenCut": {
   "website": "https://opencut.app",
-  "release": "https://github.com/OpenCut-app/OpenCut/releases/tag/v0.3.0"
+  "release": "https://github.com/OpenCut-app/OpenCut/releases/tag/v0.3.0",
+  "isFork": false,
+  "forkOf": null,
+  "forkCount": 9551,
+  "latest": {
+   "name": "v0.3.0",
+   "date": "2026-04-15T02:04:44Z"
+  }
  },
  "github.com/OpenHands/OpenHands": {
   "website": "https://openhands.dev",
-  "release": "https://github.com/OpenHands/OpenHands/releases/tag/v1.33.0"
+  "release": "https://github.com/OpenHands/OpenHands/releases/tag/v1.33.0",
+  "isFork": false,
+  "forkOf": null,
+  "forkCount": 12213,
+  "latest": {
+   "name": "v1.33.0",
+   "date": "2026-10-23T13:46:20Z"
+  }
  },
  "github.com/getopenpost/openpost": {
   "website": "https://openpo.st",
-  "release": "https://github.com/getopenpost/openpost/releases/tag/v7.31.1"
+  "release": "https://github.com/getopenpost/openpost/releases/tag/v7.31.1",
+  "isFork": false,
+  "forkOf": null,
+  "forkCount": 109,
+  "latest": {
+   "name": "v7.31.1",
+   "date": "2026-10-26T09:34:52Z"
+  }
  },
  "github.com/opf/openproject": {
   "website": "https://www.openproject.org",
-  "release": "https://github.com/opf/openproject/releases/tag/v17.9.4"
+  "release": "https://github.com/opf/openproject/releases/tag/v17.9.4",
+  "isFork": false,
+  "forkOf": null,
+  "forkCount": 3624,
+  "latest": {
+   "name": "OpenProject 17.9.4",
+   "date": "2026-10-26T06:00:52Z"
+  }
  },
  "github.com/openreplay/openreplay": {
   "website": "https://openreplay.com",
-  "release": "https://github.com/openreplay/openreplay/releases/tag/v1.28.0"
+  "release": "https://github.com/openreplay/openreplay/releases/tag/v1.28.0",
+  "isFork": false,
+  "forkOf": null,
+  "forkCount": 871,
+  "latest": {
+   "name": "v1.28",
+   "date": "2026-09-25T13:44:04Z"
+  }
  },
  "github.com/OpenShot/openshot-qt": {
   "website": "http://www.openshot.org",
-  "release": "https://github.com/OpenShot/openshot-qt/releases/tag/v4.0.1"
+  "release": "https://github.com/OpenShot/openshot-qt/releases/tag/v4.0.1",
+  "isFork": false,
+  "forkOf": null,
+  "forkCount": 830,
+  "latest": {
+   "name": "v4.0.1",
+   "date": "2026-09-27T22:16:25Z"
+  }
  },
  "github.com/openstatusHQ/openstatus": {
   "website": "https://openstatus.dev",
-  "release": null
+  "release": null,
+  "isFork": false,
+  "forkOf": null,
+  "forkCount": 799,
+  "latest": null
  },
  "github.com/openstreetmap/openstreetmap-website": {
   "website": "https://www.openstreetmap.org/",
-  "release": null
+  "release": null,
+  "isFork": false,
+  "forkOf": null,
+  "forkCount": 1100,
+  "latest": null
  },
  "github.com/OpenVidu/openvidu": {
   "website": "https://openvidu.io",
-  "release": "https://github.com/OpenVidu/openvidu/releases/tag/v3.9.0"
+  "release": "https://github.com/OpenVidu/openvidu/releases/tag/v3.9.0",
+  "isFork": false,
+  "forkOf": null,
+  "forkCount": 480,
+  "latest": {
+   "name": "v3.9.0",
+   "date": "2026-09-29T16:27:34Z"
+  }
  },
  "github.com/Open-Web-Analytics/Open-Web-Analytics": {
   "website": "http://www.openwebanalytics.com",
-  "release": "https://github.com/Open-Web-Analytics/Open-Web-Analytics/releases/tag/1.14.2"
+  "release": "https://github.com/Open-Web-Analytics/Open-Web-Analytics/releases/tag/1.14.2",
+  "isFork": false,
+  "forkOf": null,
+  "forkCount": 487,
+  "latest": {
+   "name": "Release 1.14.2",
+   "date": "2026-10-23T05:43:36Z"
+  }
  },
  "github.com/Noveum/orbit": {
   "website": "https://orbit.noveum.ai",
-  "release": "https://github.com/Noveum/orbit/releases/tag/2026.10.25"
+  "release": "https://github.com/Noveum/orbit/releases/tag/2026.10.25",
+  "isFork": false,
+  "forkOf": null,
+  "forkCount": 28,
+  "latest": {
+   "name": "2026.10.25",
+   "date": "2026-10-25T00:22:30Z"
+  }
  },
  "github.com/organicmaps/organicmaps": {
   "website": "https://organicmaps.app",
-  "release": "https://github.com/organicmaps/organicmaps/releases/tag/2026.09.29-32-android"
+  "release": "https://github.com/organicmaps/organicmaps/releases/tag/2026.09.29-32-android",
+  "isFork": false,
+  "forkOf": null,
+  "forkCount": 1664,
+  "latest": {
+   "name": "2026.09.29-32-android",
+   "date": "2026-09-29T21:16:46Z"
+  }
  },
  "github.com/ory/kratos": {
   "website": "https://www.ory.com/?utm_source=github&utm_medium=banner&utm_campaign=kratos",
-  "release": "https://github.com/ory/kratos/releases/tag/v26.2.0"
+  "release": "https://github.com/ory/kratos/releases/tag/v26.2.0",
+  "isFork": false,
+  "forkOf": null,
+  "forkCount": 1205,
+  "latest": {
+   "name": "v26.2.0",
+   "date": "2026-03-20T14:10:32Z"
+  }
  },
  "github.com/osmandapp/OsmAnd": {
   "website": "https://osmand.net",
-  "release": "https://github.com/osmandapp/OsmAnd/releases/tag/2.0.0"
+  "release": "https://github.com/osmandapp/OsmAnd/releases/tag/2.0.0",
+  "isFork": false,
+  "forkOf": null,
+  "forkCount": 1251,
+  "latest": {
+   "name": "OsmAnd-api",
+   "date": "2019-10-15T09:45:30Z"
+  }
  },
  "github.com/linode/apl-core": {
   "website": "https://techdocs.akamai.com/app-platform/docs/welcome",
-  "release": "https://github.com/linode/apl-core/releases/tag/v6.4.2"
+  "release": "https://github.com/linode/apl-core/releases/tag/v6.4.2",
+  "isFork": false,
+  "forkOf": null,
+  "forkCount": 185,
+  "latest": {
+   "name": "Release v6.4.2",
+   "date": "2026-10-13T14:12:15Z"
+  }
  },
  "github.com/owncast/owncast": {
   "website": "https://owncast.online",
-  "release": "https://github.com/owncast/owncast/releases/tag/v0.3.0"
+  "release": "https://github.com/owncast/owncast/releases/tag/v0.3.0",
+  "isFork": false,
+  "forkOf": null,
+  "forkCount": 1192,
+  "latest": {
+   "name": "Owncast v0.3.0",
+   "date": "2026-09-03T16:31:05Z"
+  }
  },
  "github.com/owncloud/core": {
   "website": "https://owncloud.com",
-  "release": "https://github.com/owncloud/core/releases/tag/v10.16.6"
+  "release": "https://github.com/owncloud/core/releases/tag/v10.16.6",
+  "isFork": false,
+  "forkOf": null,
+  "forkCount": 2062,
+  "latest": {
+   "name": "v10.16.6",
+   "date": "2026-10-06T13:23:03Z"
+  }
  },
  "github.com/owncloud/ocis": {
   "website": "https://doc.owncloud.com/ocis/",
-  "release": "https://github.com/owncloud/ocis/releases/tag/v8.2.2"
+  "release": "https://github.com/owncloud/ocis/releases/tag/v8.2.2",
+  "isFork": false,
+  "forkOf": null,
+  "forkCount": 283,
+  "latest": {
+   "name": "v8.2.2",
+   "date": "2026-10-21T10:09:21Z"
+  }
  },
  "github.com/padloc/padloc": {
   "website": "https://padloc.app",
-  "release": "https://github.com/padloc/padloc/releases/tag/v4.3.0"
+  "release": "https://github.com/padloc/padloc/releases/tag/v4.3.0",
+  "isFork": false,
+  "forkOf": null,
+  "forkCount": 270,
+  "latest": {
+   "name": "v4.3.0",
+   "date": "2023-03-06T16:05:49Z"
+  }
  },
  "github.com/Pagure/pagure": {
   "website": "https://pagure.io/pagure",
-  "release": null
+  "release": null,
+  "isFork": false,
+  "forkOf": null,
+  "forkCount": 44,
+  "latest": null
  },
  "github.com/papercups-io/papercups": {
   "website": null,
-  "release": "https://github.com/papercups-io/papercups/releases/tag/v1.0.0"
+  "release": "https://github.com/papercups-io/papercups/releases/tag/v1.0.0",
+  "isFork": false,
+  "forkOf": null,
+  "forkCount": 581,
+  "latest": {
+   "name": "Initial Release",
+   "date": "2020-08-01T02:01:38Z"
+  }
  },
  "github.com/passbolt/passbolt_api": {
   "website": "https://passbolt.com",
-  "release": "https://github.com/passbolt/passbolt_api/releases/tag/v5.17.0"
+  "release": "https://github.com/passbolt/passbolt_api/releases/tag/v5.17.0",
+  "isFork": false,
+  "forkOf": null,
+  "forkCount": 407,
+  "latest": {
+   "name": "Mad World",
+   "date": "2026-10-20T11:57:25Z"
+  }
  },
  "github.com/payloadcms/payload": {
   "website": "https://payloadcms.com",
-  "release": "https://github.com/payloadcms/payload/releases/tag/v3.92.0"
+  "release": "https://github.com/payloadcms/payload/releases/tag/v3.92.0",
+  "isFork": false,
+  "forkOf": null,
+  "forkCount": 4345,
+  "latest": {
+   "name": "v3.92.0",
+   "date": "2026-10-22T16:28:57Z"
+  }
  },
  "github.com/pdfarranger/pdfarranger": {
   "website": null,
-  "release": "https://github.com/pdfarranger/pdfarranger/releases/tag/1.14.0"
+  "release": "https://github.com/pdfarranger/pdfarranger/releases/tag/1.14.0",
+  "isFork": false,
+  "forkOf": null,
+  "forkCount": 325,
+  "latest": {
+   "name": "1.14.0",
+   "date": "2026-05-23T03:47:07Z"
+  }
  },
  "github.com/Chocobozzz/PeerTube": {
   "website": "https://joinpeertube.org/",
-  "release": "https://github.com/Chocobozzz/PeerTube/releases/tag/v8.3.1"
+  "release": "https://github.com/Chocobozzz/PeerTube/releases/tag/v8.3.2",
+  "isFork": false,
+  "forkOf": null,
+  "forkCount": 1848,
+  "latest": {
+   "name": "v8.3.2",
+   "date": "2026-10-26T12:51:01Z"
+  }
  },
  "github.com/penpot/penpot": {
   "website": "https://penpot.app",
-  "release": "https://github.com/penpot/penpot/releases/tag/2.18.5"
+  "release": "https://github.com/penpot/penpot/releases/tag/2.18.5",
+  "isFork": false,
+  "forkOf": null,
+  "forkCount": 4290,
+  "latest": {
+   "name": "2.18.5",
+   "date": "2026-10-26T09:53:19Z"
+  }
  },
  "github.com/Peon-sh/Peon": {
   "website": "https://peon.sh",
-  "release": "https://github.com/Peon-sh/Peon/releases/tag/v1.2.0"
+  "release": "https://github.com/Peon-sh/Peon/releases/tag/v1.2.0",
+  "isFork": false,
+  "forkOf": null,
+  "forkCount": 25,
+  "latest": {
+   "name": "v1.2.0",
+   "date": "2026-10-16T10:15:42Z"
+  }
  },
  "github.com/photoprism/photoprism": {
   "website": "https://www.photoprism.app",
-  "release": "https://github.com/photoprism/photoprism/releases/tag/261007-65faaae5d"
+  "release": "https://github.com/photoprism/photoprism/releases/tag/261007-65faaae5d",
+  "isFork": false,
+  "forkOf": null,
+  "forkCount": 2336,
+  "latest": {
+   "name": "October 7, 2026",
+   "date": "2026-10-07T09:20:36Z"
+  }
  },
  "github.com/pingcap/tidb": {
   "website": "https://www.tidb.io/",
-  "release": "https://github.com/pingcap/tidb/releases/tag/v7.5.8"
+  "release": "https://github.com/pingcap/tidb/releases/tag/v7.5.8",
+  "isFork": false,
+  "forkOf": null,
+  "forkCount": 6279,
+  "latest": {
+   "name": "TiDB v7.5.8",
+   "date": "2026-09-17T05:57:53Z"
+  }
  },
  "github.com/PintaProject/Pinta": {
   "website": "http://www.pinta-project.com/",
-  "release": "https://github.com/PintaProject/Pinta/releases/tag/3.1.2"
+  "release": "https://github.com/PintaProject/Pinta/releases/tag/3.1.2",
+  "isFork": false,
+  "forkOf": null,
+  "forkCount": 401,
+  "latest": {
+   "name": "Pinta 3.1.2",
+   "date": "2026-04-02T17:27:39Z"
+  }
  },
  "github.com/pixelfed/pixelfed": {
   "website": "https://pixelfed.org",
-  "release": "https://github.com/pixelfed/pixelfed/releases/tag/v0.15.2"
+  "release": "https://github.com/pixelfed/pixelfed/releases/tag/v0.15.2",
+  "isFork": false,
+  "forkOf": null,
+  "forkCount": 894,
+  "latest": {
+   "name": "v0.15.2 - Security Update: PHP RCE + CA Update Compromise",
+   "date": "2026-10-21T23:43:09Z"
+  }
  },
  "github.com/makeplane/plane": {
   "website": "http://plane.so",
-  "release": "https://github.com/makeplane/plane/releases/tag/v1.4.2"
+  "release": "https://github.com/makeplane/plane/releases/tag/v1.4.2",
+  "isFork": false,
+  "forkOf": null,
+  "forkCount": 6192,
+  "latest": {
+   "name": "v1.4.2",
+   "date": "2026-08-23T14:39:21Z"
+  }
  },
  "github.com/plasmicapp/plasmic": {
   "website": "https://www.plasmic.app",
-  "release": null
+  "release": null,
+  "isFork": false,
+  "forkOf": null,
+  "forkCount": 737,
+  "latest": null
  },
  "github.com/plausible/analytics": {
   "website": "https://plausible.io",
-  "release": "https://github.com/plausible/analytics/releases/tag/v3.2.1"
+  "release": "https://github.com/plausible/analytics/releases/tag/v3.2.1",
+  "isFork": false,
+  "forkOf": null,
+  "forkCount": 1922,
+  "latest": {
+   "name": "v3.2.1",
+   "date": "2026-05-15T09:15:56Z"
+  }
  },
  "github.com/Plume-org/Plume": {
   "website": "https://joinplu.me",
-  "release": null
+  "release": null,
+  "isFork": false,
+  "forkOf": null,
+  "forkCount": 149,
+  "latest": null
  },
  "github.com/Automattic/pocket-casts-android": {
   "website": "https://forums.pocketcasts.com",
-  "release": "https://github.com/Automattic/pocket-casts-android/releases/tag/8.22"
+  "release": "https://github.com/Automattic/pocket-casts-android/releases/tag/8.22",
+  "isFork": false,
+  "forkOf": null,
+  "forkCount": 317,
+  "latest": {
+   "name": "8.22",
+   "date": "2026-10-13T04:32:02Z"
+  }
  },
  "github.com/pocketbase/pocketbase": {
   "website": "https://pocketbase.io",
-  "release": "https://github.com/pocketbase/pocketbase/releases/tag/v0.40.6"
+  "release": "https://github.com/pocketbase/pocketbase/releases/tag/v0.40.6",
+  "isFork": false,
+  "forkOf": null,
+  "forkCount": 3745,
+  "latest": {
+   "name": "v0.40.6 Release",
+   "date": "2026-10-23T11:21:45Z"
+  }
  },
  "github.com/Posnic/POS": {
   "website": "https://www.posnic.com/",
-  "release": "https://github.com/Posnic/POS/releases/tag/v1.9.0"
+  "release": "https://github.com/Posnic/POS/releases/tag/v1.9.0",
+  "isFork": false,
+  "forkOf": null,
+  "forkCount": 21,
+  "latest": {
+   "name": "Posnic 1.9.0",
+   "date": "2026-09-30T21:03:30Z"
+  }
  },
  "github.com/postalserver/postal": {
   "website": "https://postalserver.io",
-  "release": "https://github.com/postalserver/postal/releases/tag/3.3.7"
+  "release": "https://github.com/postalserver/postal/releases/tag/3.3.7",
+  "isFork": false,
+  "forkOf": null,
+  "forkCount": 1314,
+  "latest": {
+   "name": "v3.3.7",
+   "date": "2026-06-03T15:25:03Z"
+  }
  },
  "github.com/PostHog/posthog": {
   "website": "https://posthog.com",
-  "release": "https://github.com/PostHog/posthog/releases/tag/desktop-v0.61.839"
+  "release": "https://github.com/PostHog/posthog/releases/tag/desktop-v0.61.844",
+  "isFork": false,
+  "forkOf": null,
+  "forkCount": 3555,
+  "latest": {
+   "name": "desktop-v0.61.844",
+   "date": "2026-10-26T17:56:02Z"
+  }
  },
  "github.com/gitroomhq/postiz-app": {
   "website": "https://postiz.com",
-  "release": "https://github.com/gitroomhq/postiz-app/releases/tag/v2.25.3"
+  "release": "https://github.com/gitroomhq/postiz-app/releases/tag/v2.25.3",
+  "isFork": false,
+  "forkOf": null,
+  "forkCount": 7461,
+  "latest": {
+   "name": "v2.25.3",
+   "date": "2026-10-24T14:16:43Z"
+  }
  },
  "github.com/apache/superset": {
   "website": "https://superset.apache.org/",
-  "release": "https://github.com/apache/superset/releases/tag/6.1.0"
+  "release": "https://github.com/apache/superset/releases/tag/6.1.0",
+  "isFork": false,
+  "forkOf": null,
+  "forkCount": 18533,
+  "latest": {
+   "name": "6.1.0",
+   "date": "2026-05-13T18:32:25Z"
+  }
  },
  "github.com/PrestaShop/PrestaShop": {
   "website": "https://www.prestashop-project.org/",
-  "release": "https://github.com/PrestaShop/PrestaShop/releases/tag/9.2.0"
+  "release": "https://github.com/PrestaShop/PrestaShop/releases/tag/9.2.0",
+  "isFork": false,
+  "forkOf": null,
+  "forkCount": 5048,
+  "latest": {
+   "name": "PrestaShop 9.2.0",
+   "date": "2026-09-30T09:56:24Z"
+  }
  },
  "github.com/prismelabs/analytics": {
   "website": "https://www.prismeanalytics.com",
-  "release": "https://github.com/prismelabs/analytics/releases/tag/v0.20.0"
+  "release": "https://github.com/prismelabs/analytics/releases/tag/v0.20.0",
+  "isFork": false,
+  "forkOf": null,
+  "forkCount": 4,
+  "latest": {
+   "name": "v0.20.0",
+   "date": "2025-06-25T20:25:15Z"
+  }
  },
  "github.com/psi-4ward/psitransfer": {
   "website": null,
-  "release": "https://github.com/psi-4ward/psitransfer/releases/tag/v2.4.5"
+  "release": "https://github.com/psi-4ward/psitransfer/releases/tag/v2.4.5",
+  "isFork": false,
+  "forkOf": null,
+  "forkCount": 244,
+  "latest": {
+   "name": "v2.4.5",
+   "date": "2026-10-24T21:26:32Z"
+  }
  },
  "github.com/qdrant/qdrant": {
   "website": "https://qdrant.tech",
-  "release": "https://github.com/qdrant/qdrant/releases/tag/v1.20.0"
+  "release": "https://github.com/qdrant/qdrant/releases/tag/v1.20.0",
+  "isFork": false,
+  "forkOf": null,
+  "forkCount": 2778,
+  "latest": {
+   "name": "v1.20.0",
+   "date": "2026-10-22T14:14:12Z"
+  }
  },
  "github.com/QuackbackIO/quackback": {
   "website": "https://quackback.io",
-  "release": "https://github.com/QuackbackIO/quackback/releases/tag/v0.14.1"
+  "release": "https://github.com/QuackbackIO/quackback/releases/tag/v0.14.1",
+  "isFork": false,
+  "forkOf": null,
+  "forkCount": 110,
+  "latest": {
+   "name": "v0.14.1",
+   "date": "2026-10-07T21:05:57Z"
+  }
  },
  "github.com/KlausSchaefers/quant-ux": {
   "website": null,
-  "release": null
+  "release": null,
+  "isFork": false,
+  "forkOf": null,
+  "forkCount": 293,
+  "latest": null
  },
  "github.com/questdb/questdb": {
   "website": "https://questdb.com",
-  "release": "https://github.com/questdb/questdb/releases/tag/10.1.0"
+  "release": "https://github.com/questdb/questdb/releases/tag/10.1.0",
+  "isFork": false,
+  "forkOf": null,
+  "forkCount": 1681,
+  "latest": {
+   "name": "10.1.0",
+   "date": "2026-10-22T11:48:11Z"
+  }
  },
  "github.com/quickwit-oss/quickwit": {
   "website": "https://quickwit.io",
-  "release": "https://github.com/quickwit-oss/quickwit/releases/tag/v0.9.3"
+  "release": "https://github.com/quickwit-oss/quickwit/releases/tag/v0.9.3",
+  "isFork": false,
+  "forkOf": null,
+  "forkCount": 619,
+  "latest": {
+   "name": "v0.9.3",
+   "date": "2026-10-22T19:13:39Z"
+  }
  },
  "github.com/quillpad/quillpad": {
   "website": "https://quillpad.github.io",
-  "release": "https://github.com/quillpad/quillpad/releases/tag/v1.5.15"
+  "release": "https://github.com/quillpad/quillpad/releases/tag/v1.5.15",
+  "isFork": true,
+  "forkOf": "https://github.com/msoultanidis/quillnote",
+  "forkCount": 126,
+  "latest": {
+   "name": "v1.5.15",
+   "date": "2026-10-09T14:52:57Z"
+  }
  },
  "github.com/RawTherapee/RawTherapee": {
   "website": "https://rawtherapee.com",
-  "release": "https://github.com/RawTherapee/RawTherapee/releases/tag/5.13"
+  "release": "https://github.com/RawTherapee/RawTherapee/releases/tag/5.13",
+  "isFork": false,
+  "forkOf": null,
+  "forkCount": 426,
+  "latest": {
+   "name": "5.13",
+   "date": "2026-07-26T18:07:26Z"
+  }
  },
  "github.com/redmine/redmine": {
   "website": "https://www.redmine.org",
-  "release": null
+  "release": null,
+  "isFork": false,
+  "forkOf": null,
+  "forkCount": 2474,
+  "latest": null
  },
  "github.com/restic/restic": {
   "website": "https://restic.net",
-  "release": "https://github.com/restic/restic/releases/tag/v0.19.1"
+  "release": "https://github.com/restic/restic/releases/tag/v0.19.1",
+  "isFork": false,
+  "forkOf": null,
+  "forkCount": 1944,
+  "latest": {
+   "name": "restic 0.19.1",
+   "date": "2026-07-05T08:13:33Z"
+  }
  },
  "github.com/hakimel/reveal.js": {
   "website": "https://revealjs.com",
-  "release": "https://github.com/hakimel/reveal.js/releases/tag/6.0.2"
+  "release": "https://github.com/hakimel/reveal.js/releases/tag/6.0.2",
+  "isFork": false,
+  "forkOf": null,
+  "forkCount": 17028,
+  "latest": {
+   "name": "6.0.2",
+   "date": "2026-09-10T15:41:21Z"
+  }
  },
  "github.com/reviewboard/reviewboard": {
   "website": "https://www.reviewboard.org/",
-  "release": "https://github.com/reviewboard/reviewboard/releases/tag/release-8.0"
+  "release": "https://github.com/reviewboard/reviewboard/releases/tag/release-8.0",
+  "isFork": false,
+  "forkOf": null,
+  "forkCount": 436,
+  "latest": {
+   "name": "Review Board 8: The New Frontier",
+   "date": "2026-06-09T20:54:00Z"
+  }
  },
  "github.com/RocketChat/Rocket.Chat": {
   "website": "https://rocket.chat/",
-  "release": "https://github.com/RocketChat/Rocket.Chat/releases/tag/8.9.0"
+  "release": "https://github.com/RocketChat/Rocket.Chat/releases/tag/8.9.0",
+  "isFork": false,
+  "forkOf": null,
+  "forkCount": 14045,
+  "latest": {
+   "name": "8.9.0 LTS",
+   "date": "2026-10-05T17:41:21Z"
+  }
  },
  "github.com/roundcube/roundcubemail": {
   "website": "https://roundcube.net",
-  "release": "https://github.com/roundcube/roundcubemail/releases/tag/1.7.5"
+  "release": "https://github.com/roundcube/roundcubemail/releases/tag/1.7.5",
+  "isFork": false,
+  "forkOf": null,
+  "forkCount": 1803,
+  "latest": {
+   "name": "Roundcube Webmail 1.7.5",
+   "date": "2026-10-19T07:02:13Z"
+  }
  },
  "github.com/buildship-ai/rowy": {
   "website": "http://rowy.io",
-  "release": "https://github.com/buildship-ai/rowy/releases/tag/v3.0.0"
+  "release": "https://github.com/buildship-ai/rowy/releases/tag/v3.0.0",
+  "isFork": false,
+  "forkOf": null,
+  "forkCount": 558,
+  "latest": {
+   "name": "Rowy's biggest release yet 🎉 + Introducing BuildShip",
+   "date": "2023-10-27T15:21:32Z"
+  }
  },
  "github.com/rustdesk/rustdesk": {
   "website": "https://rustdesk.com",
-  "release": "https://github.com/rustdesk/rustdesk/releases/tag/1.5.0"
+  "release": "https://github.com/rustdesk/rustdesk/releases/tag/1.5.0",
+  "isFork": false,
+  "forkOf": null,
+  "forkCount": 20061,
+  "latest": {
+   "name": "1.5.0",
+   "date": "2026-09-30T16:11:03Z"
+  }
  },
  "github.com/saleor/saleor": {
   "website": "https://saleor.io",
-  "release": "https://github.com/saleor/saleor/releases/tag/3.23.44"
+  "release": "https://github.com/saleor/saleor/releases/tag/3.23.44",
+  "isFork": false,
+  "forkOf": null,
+  "forkCount": 6162,
+  "latest": {
+   "name": "3.23.44",
+   "date": "2026-10-20T16:50:29Z"
+  }
  },
  "github.com/scribusproject/scribus": {
   "website": "https://scribus.net",
-  "release": null
+  "release": null,
+  "isFork": false,
+  "forkOf": null,
+  "forkCount": 146,
+  "latest": null
  },
  "github.com/haiwen/seafile": {
   "website": "http://seafile.com/",
-  "release": "https://github.com/haiwen/seafile/releases/tag/v9.0.5"
+  "release": "https://github.com/haiwen/seafile/releases/tag/v9.0.5",
+  "isFork": false,
+  "forkOf": null,
+  "forkCount": 1676,
+  "latest": {
+   "name": "v9.0.5",
+   "date": "2024-02-27T07:51:16Z"
+  }
  },
  "github.com/searxng/searxng": {
   "website": "https://docs.searxng.org",
-  "release": null
+  "release": null,
+  "isFork": false,
+  "forkOf": null,
+  "forkCount": 3542,
+  "latest": null
  },
  "github.com/weaviate/weaviate": {
   "website": "https://weaviate.io/developers/weaviate/",
-  "release": "https://github.com/weaviate/weaviate/releases/tag/v1.40.2"
+  "release": "https://github.com/weaviate/weaviate/releases/tag/v1.40.2",
+  "isFork": false,
+  "forkOf": null,
+  "forkCount": 1429,
+  "latest": {
+   "name": "v1.40.2 - eMudhra intermediate certificates security patch",
+   "date": "2026-10-22T08:54:36Z"
+  }
  },
  "github.com/shlinkio/shlink": {
   "website": "https://shlink.io",
-  "release": "https://github.com/shlinkio/shlink/releases/tag/v5.1.8"
+  "release": "https://github.com/shlinkio/shlink/releases/tag/v5.1.8",
+  "isFork": false,
+  "forkOf": null,
+  "forkCount": 438,
+  "latest": {
+   "name": "v5.1.8",
+   "date": "2026-10-21T18:25:11Z"
+  }
  },
  "github.com/mltframework/shotcut": {
   "website": "https://www.shotcut.org",
-  "release": "https://github.com/mltframework/shotcut/releases/tag/v26.9.27"
+  "release": "https://github.com/mltframework/shotcut/releases/tag/v26.9.27",
+  "isFork": false,
+  "forkOf": null,
+  "forkCount": 1550,
+  "latest": {
+   "name": "v26.9.27",
+   "date": "2026-09-28T00:29:29Z"
+  }
  },
  "github.com/shuup/shuup": {
   "website": "https://www.shuup.com",
-  "release": "https://github.com/shuup/shuup/releases/tag/v3.1.0"
+  "release": "https://github.com/shuup/shuup/releases/tag/v3.1.0",
+  "isFork": false,
+  "forkOf": null,
+  "forkCount": 1155,
+  "latest": {
+   "name": "Release 3.1.0",
+   "date": "2021-08-17T13:29:05Z"
+  }
  },
  "github.com/milesmcc/shynet": {
   "website": null,
-  "release": "https://github.com/milesmcc/shynet/releases/tag/v0.14.0"
+  "release": "https://github.com/milesmcc/shynet/releases/tag/v0.14.0",
+  "isFork": false,
+  "forkOf": null,
+  "forkCount": 213,
+  "latest": {
+   "name": "Security and dependency updates",
+   "date": "2026-03-15T23:00:30Z"
+  }
  },
  "github.com/signalapp/Signal-Android": {
   "website": "https://signal.org",
-  "release": "https://github.com/signalapp/Signal-Android/releases/tag/v8.32.3"
+  "release": "https://github.com/signalapp/Signal-Android/releases/tag/v8.32.3",
+  "isFork": false,
+  "forkOf": null,
+  "forkCount": 6933,
+  "latest": {
+   "name": "v8.32.3",
+   "date": "2026-10-22T22:30:03Z"
+  }
  },
  "github.com/SigNoz/signoz": {
   "website": "https://signoz.io",
-  "release": "https://github.com/SigNoz/signoz/releases/tag/v0.147.0"
+  "release": "https://github.com/SigNoz/signoz/releases/tag/v0.147.0",
+  "isFork": false,
+  "forkOf": null,
+  "forkCount": 2557,
+  "latest": {
+   "name": "v0.147.0",
+   "date": "2026-10-22T06:42:23Z"
+  }
  },
  "github.com/silexlabs/Silex": {
   "website": "https://www.silex.me",
-  "release": "https://github.com/silexlabs/Silex/releases/tag/v3.9.0"
+  "release": "https://github.com/silexlabs/Silex/releases/tag/v3.9.0",
+  "isFork": false,
+  "forkOf": null,
+  "forkCount": 696,
+  "latest": {
+   "name": "v3.9.0",
+   "date": "2026-07-26T23:11:22Z"
+  }
  },
  "github.com/silverbulletmd/silverbullet": {
   "website": "https://silverbullet.md",
-  "release": "https://github.com/silverbulletmd/silverbullet/releases/tag/2.12.1"
+  "release": "https://github.com/silverbulletmd/silverbullet/releases/tag/2.12.1",
+  "isFork": false,
+  "forkOf": null,
+  "forkCount": 520,
+  "latest": {
+   "name": "2.12.1",
+   "date": "2026-10-12T06:28:07Z"
+  }
  },
  "github.com/rkkr/simple-keyboard": {
   "website": null,
-  "release": "https://github.com/rkkr/simple-keyboard/releases/tag/149"
+  "release": "https://github.com/rkkr/simple-keyboard/releases/tag/149",
+  "isFork": false,
+  "forkOf": null,
+  "forkCount": 352,
+  "latest": {
+   "name": "6.8",
+   "date": "2026-10-22T09:56:20Z"
+  }
  },
  "github.com/simplex-chat/simplex-chat": {
   "website": "https://simplex.chat",
-  "release": "https://github.com/simplex-chat/simplex-chat/releases/tag/v7.0.3"
+  "release": "https://github.com/simplex-chat/simplex-chat/releases/tag/v7.0.3",
+  "isFork": false,
+  "forkOf": null,
+  "forkCount": 1317,
+  "latest": {
+   "name": "v7.0.3",
+   "date": "2026-09-26T14:30:13Z"
+  }
  },
  "github.com/siyuan-note/siyuan": {
   "website": "https://b3log.org/siyuan",
-  "release": "https://github.com/siyuan-note/siyuan/releases/tag/v3.8.8"
+  "release": "https://github.com/siyuan-note/siyuan/releases/tag/v3.8.8",
+  "isFork": false,
+  "forkOf": null,
+  "forkCount": 3090,
+  "latest": {
+   "name": "v3.8.8",
+   "date": "2026-10-20T05:16:00Z"
+  }
  },
  "github.com/slidevjs/slidev": {
   "website": "https://sli.dev",
-  "release": "https://github.com/slidevjs/slidev/releases/tag/v53.0.0"
+  "release": "https://github.com/slidevjs/slidev/releases/tag/v53.0.0",
+  "isFork": false,
+  "forkOf": null,
+  "forkCount": 2248,
+  "latest": {
+   "name": "v53.0.0",
+   "date": "2026-09-16T04:21:11Z"
+  }
  },
  "github.com/snikket-im/snikket-server": {
   "website": "https://snikket.org/service/",
-  "release": null
+  "release": null,
+  "isFork": false,
+  "forkOf": null,
+  "forkCount": 52,
+  "latest": null
  },
  "github.com/SolidInvoice/SolidInvoice": {
   "website": "http://solidinvoice.co",
-  "release": "https://github.com/SolidInvoice/SolidInvoice/releases/tag/3.1.2"
+  "release": "https://github.com/SolidInvoice/SolidInvoice/releases/tag/3.1.2",
+  "isFork": false,
+  "forkOf": null,
+  "forkCount": 246,
+  "latest": {
+   "name": "Release 3.1.2",
+   "date": "2026-10-21T14:23:01Z"
+  }
  },
  "github.com/fclairamb/solidping": {
   "website": "https://www.solidping.io",
-  "release": "https://github.com/fclairamb/solidping/releases/tag/v0.41.0"
+  "release": "https://github.com/fclairamb/solidping/releases/tag/v0.42.0",
+  "isFork": false,
+  "forkOf": null,
+  "forkCount": 2,
+  "latest": {
+   "name": "v0.42.0",
+   "date": "2026-10-26T21:34:04Z"
+  }
  },
  "github.com/solidtime-io/solidtime": {
   "website": "https://www.solidtime.io",
-  "release": "https://github.com/solidtime-io/solidtime/releases/tag/v0.22.1"
+  "release": "https://github.com/solidtime-io/solidtime/releases/tag/v0.22.1",
+  "isFork": false,
+  "forkOf": null,
+  "forkCount": 523,
+  "latest": {
+   "name": "v0.22.1",
+   "date": "2026-10-21T18:17:25Z"
+  }
  },
  "github.com/valeriansaliou/sonic": {
   "website": "https://crates.io/crates/sonic-server",
-  "release": "https://github.com/valeriansaliou/sonic/releases/tag/v1.10.2"
+  "release": "https://github.com/valeriansaliou/sonic/releases/tag/v1.10.2",
+  "isFork": false,
+  "forkOf": null,
+  "forkCount": 621,
+  "latest": {
+   "name": "Sonic v1.10.2",
+   "date": "2026-10-05T13:25:51Z"
+  }
  },
  "github.com/spacebarchat/spacebarchat": {
   "website": "https://spacebar.chat",
-  "release": null
+  "release": null,
+  "isFork": false,
+  "forkOf": null,
+  "forkCount": 229,
+  "latest": null
  },
  "github.com/spliit-app/spliit": {
   "website": "https://spliit.app",
-  "release": "https://github.com/spliit-app/spliit/releases/tag/1.30.0"
+  "release": "https://github.com/spliit-app/spliit/releases/tag/1.30.0",
+  "isFork": false,
+  "forkOf": null,
+  "forkCount": 523,
+  "latest": {
+   "name": "1.30.0",
+   "date": "2026-10-11T04:38:16Z"
+  }
  },
  "github.com/AUTOMATIC1111/stable-diffusion-webui": {
   "website": null,
-  "release": "https://github.com/AUTOMATIC1111/stable-diffusion-webui/releases/tag/v1.10.1"
+  "release": "https://github.com/AUTOMATIC1111/stable-diffusion-webui/releases/tag/v1.10.1",
+  "isFork": false,
+  "forkOf": null,
+  "forkCount": 32510,
+  "latest": {
+   "name": "1.10.1",
+   "date": "2025-02-09T08:00:10Z"
+  }
  },
  "github.com/standardnotes/app": {
   "website": "https://standardnotes.com",
-  "release": "https://github.com/standardnotes/app/releases/tag/%40standardnotes/desktop%403.202.10"
+  "release": "https://github.com/standardnotes/app/releases/tag/%40standardnotes/desktop%403.202.11",
+  "isFork": false,
+  "forkOf": null,
+  "forkCount": 563,
+  "latest": {
+   "name": "Desktop 3.202.11",
+   "date": "2026-10-23T21:24:19Z"
+  }
  },
  "github.com/stepci/stepci": {
   "website": "https://stepci.com",
-  "release": "https://github.com/stepci/stepci/releases/tag/2.8.2"
+  "release": "https://github.com/stepci/stepci/releases/tag/2.8.2",
+  "isFork": false,
+  "forkOf": null,
+  "forkCount": 100,
+  "latest": {
+   "name": "2.8.2",
+   "date": "2024-06-10T10:19:31Z"
+  }
  },
  "github.com/Stirling-Tools/Stirling-PDF": {
   "website": "https://stirling.com",
-  "release": "https://github.com/Stirling-Tools/Stirling-PDF/releases/tag/v3.2.2"
+  "release": "https://github.com/Stirling-Tools/Stirling-PDF/releases/tag/v3.2.2",
+  "isFork": false,
+  "forkOf": null,
+  "forkCount": 10625,
+  "latest": {
+   "name": "3.2.2 new annotations and other minor changes and improvements",
+   "date": "2026-10-24T09:24:55Z"
+  }
  },
  "github.com/strapi/strapi": {
   "website": "https://strapi.io",
-  "release": "https://github.com/strapi/strapi/releases/tag/v5.59.0"
+  "release": "https://github.com/strapi/strapi/releases/tag/v5.59.0",
+  "isFork": false,
+  "forkOf": null,
+  "forkCount": 9933,
+  "latest": {
+   "name": "v5.59.0",
+   "date": "2026-10-21T09:40:56Z"
+  }
  },
  "github.com/SuiteCRM/SuiteCRM": {
   "website": "https://www.suitecrm.com",
-  "release": "https://github.com/SuiteCRM/SuiteCRM/releases/tag/v7.15.2"
+  "release": "https://github.com/SuiteCRM/SuiteCRM/releases/tag/v7.15.2",
+  "isFork": false,
+  "forkOf": null,
+  "forkCount": 2432,
+  "latest": {
+   "name": "7.15.2",
+   "date": "2026-07-31T13:37:50Z"
+  }
  },
  "github.com/sulu/sulu": {
   "website": "https://sulu.io",
-  "release": "https://github.com/sulu/sulu/releases/tag/3.0.10"
+  "release": "https://github.com/sulu/sulu/releases/tag/3.0.10",
+  "isFork": false,
+  "forkOf": null,
+  "forkCount": 371,
+  "latest": {
+   "name": "Release 3.0.10 (2026-10-01)",
+   "date": "2026-10-01T00:23:34Z"
+  }
  },
  "github.com/supabase/supabase": {
   "website": "https://supabase.com",
-  "release": "https://github.com/supabase/supabase/releases/tag/v1.26.08"
+  "release": "https://github.com/supabase/supabase/releases/tag/v1.26.08",
+  "isFork": false,
+  "forkOf": null,
+  "forkCount": 16310,
+  "latest": {
+   "name": "Developer Update - August 2026",
+   "date": "2026-08-07T13:57:57Z"
+  }
  },
  "github.com/super-productivity/super-productivity": {
   "website": "http://super-productivity.com?ref=github",
-  "release": "https://github.com/super-productivity/super-productivity/releases/tag/v19.3.1"
+  "release": "https://github.com/super-productivity/super-productivity/releases/tag/v19.3.1",
+  "isFork": false,
+  "forkOf": null,
+  "forkCount": 2204,
+  "latest": {
+   "name": "v19.3.1",
+   "date": "2026-10-25T14:42:30Z"
+  }
  },
  "github.com/supertokens/supertokens-core": {
   "website": "https://supertokens.com",
-  "release": "https://github.com/supertokens/supertokens-core/releases/tag/v12.4.1"
+  "release": "https://github.com/supertokens/supertokens-core/releases/tag/v12.4.1",
+  "isFork": false,
+  "forkOf": null,
+  "forkCount": 788,
+  "latest": {
+   "name": "v12.4.1",
+   "date": "2026-10-23T07:24:52Z"
+  }
  },
  "github.com/Sylius/Sylius": {
   "website": "https://sylius.com",
-  "release": "https://github.com/Sylius/Sylius/releases/tag/v2.3.2"
+  "release": "https://github.com/Sylius/Sylius/releases/tag/v2.3.2",
+  "isFork": false,
+  "forkOf": null,
+  "forkCount": 2163,
+  "latest": {
+   "name": "v2.3.2",
+   "date": "2026-10-22T15:49:42Z"
+  }
  },
  "github.com/syncthing/syncthing": {
   "website": "https://syncthing.net/",
-  "release": "https://github.com/syncthing/syncthing/releases/tag/v2.1.7"
+  "release": "https://github.com/syncthing/syncthing/releases/tag/v2.1.7",
+  "isFork": false,
+  "forkOf": null,
+  "forkCount": 5549,
+  "latest": {
+   "name": "v2.1.7",
+   "date": "2026-10-21T06:09:14Z"
+  }
  },
  "github.com/TabbyML/tabby": {
   "website": "https://tabbyml.com",
-  "release": "https://github.com/TabbyML/tabby/releases/tag/v0.32.0"
+  "release": "https://github.com/TabbyML/tabby/releases/tag/v0.32.0",
+  "isFork": false,
+  "forkOf": null,
+  "forkCount": 1792,
+  "latest": {
+   "name": "v0.32.0",
+   "date": "2026-01-25T17:07:44Z"
+  }
  },
  "github.com/tabler/tabler-icons": {
   "website": "https://tabler.io/icons",
-  "release": "https://github.com/tabler/tabler-icons/releases/tag/v3.49.0"
+  "release": "https://github.com/tabler/tabler-icons/releases/tag/v3.49.0",
+  "isFork": false,
+  "forkOf": null,
+  "forkCount": 1254,
+  "latest": {
+   "name": "Release 3.49.0",
+   "date": "2026-10-05T14:51:44Z"
+  }
  },
  "github.com/kaleidos-ventures/taiga": {
   "website": null,
-  "release": null
+  "release": null,
+  "isFork": false,
+  "forkOf": null,
+  "forkCount": 87,
+  "latest": null
  },
  "github.com/taosdata/TDengine": {
   "website": "https://tdengine.com",
-  "release": "https://github.com/taosdata/TDengine/releases/tag/ver-3.4.3.3"
+  "release": "https://github.com/taosdata/TDengine/releases/tag/ver-3.4.3.3",
+  "isFork": false,
+  "forkOf": null,
+  "forkCount": 5016,
+  "latest": {
+   "name": "3.4.3.3",
+   "date": "2026-10-19T08:09:13Z"
+  }
  },
  "github.com/Telemetry-Tracker/telemetry-tracker": {
   "website": "https://telemetry-tracker.com",
-  "release": "https://github.com/Telemetry-Tracker/telemetry-tracker/releases/tag/v1.22.15"
+  "release": "https://github.com/Telemetry-Tracker/telemetry-tracker/releases/tag/v1.22.15",
+  "isFork": false,
+  "forkOf": null,
+  "forkCount": 6,
+  "latest": {
+   "name": "Telemetry Tracker v1.22.15",
+   "date": "2026-10-26T10:52:09Z"
+  }
  },
  "github.com/terminusdb/terminusdb": {
   "website": "https://terminusdb.com",
-  "release": "https://github.com/terminusdb/terminusdb/releases/tag/v12.0.8"
+  "release": "https://github.com/terminusdb/terminusdb/releases/tag/v12.0.8",
+  "isFork": false,
+  "forkOf": null,
+  "forkCount": 161,
+  "latest": {
+   "name": "TerminusDB Server v12.0.8",
+   "date": "2026-10-12T15:29:13Z"
+  }
  },
  "github.com/tinacms/tinacms": {
   "website": "https://tina.io",
-  "release": "https://github.com/tinacms/tinacms/releases/tag/tinacms%403.15.0"
+  "release": "https://github.com/tinacms/tinacms/releases/tag/tinacms%403.15.0",
+  "isFork": false,
+  "forkOf": null,
+  "forkCount": 770,
+  "latest": {
+   "name": "tinacms@3.15.0",
+   "date": "2026-10-19T01:31:21Z"
+  }
  },
  "github.com/tinode/chat": {
   "website": null,
-  "release": "https://github.com/tinode/chat/releases/tag/v0.25.3"
+  "release": "https://github.com/tinode/chat/releases/tag/v0.25.3",
+  "isFork": false,
+  "forkOf": null,
+  "forkCount": 2093,
+  "latest": {
+   "name": "Bug fixes, dependencies updated, dependencies upgraded.",
+   "date": "2026-07-04T14:36:42Z"
+  }
  },
  "github.com/tolgee/tolgee-platform": {
   "website": "https://tolgee.io",
-  "release": "https://github.com/tolgee/tolgee-platform/releases/tag/v3.240.2"
+  "release": "https://github.com/tolgee/tolgee-platform/releases/tag/v3.240.3",
+  "isFork": false,
+  "forkOf": null,
+  "forkCount": 376,
+  "latest": {
+   "name": "v3.240.3",
+   "date": "2026-10-26T13:25:01Z"
+  }
  },
  "github.com/ToolJet/ToolJet": {
   "website": "https://tooljet.com",
-  "release": "https://github.com/ToolJet/ToolJet/releases/tag/v3.20.250-lts"
+  "release": "https://github.com/ToolJet/ToolJet/releases/tag/v3.20.250-lts",
+  "isFork": false,
+  "forkOf": null,
+  "forkCount": 5503,
+  "latest": {
+   "name": "v3.20.250-lts",
+   "date": "2026-10-26T05:58:30Z"
+  }
  },
  "github.com/FrigadeHQ/trench": {
   "website": "https://trench.dev",
-  "release": "https://github.com/FrigadeHQ/trench/releases/tag/trench-js%400.0.17"
+  "release": "https://github.com/FrigadeHQ/trench/releases/tag/trench-js%400.0.17",
+  "isFork": false,
+  "forkOf": null,
+  "forkCount": 65,
+  "latest": {
+   "name": "trench-js@0.0.17",
+   "date": "2024-12-04T02:44:44Z"
+  }
  },
  "github.com/TriliumNext/Trilium": {
   "website": "https://triliumnotes.org",
-  "release": "https://github.com/TriliumNext/Trilium/releases/tag/v0.106.1"
+  "release": "https://github.com/TriliumNext/Trilium/releases/tag/v0.106.1",
+  "isFork": false,
+  "forkOf": null,
+  "forkCount": 2601,
+  "latest": {
+   "name": "v0.106.1",
+   "date": "2026-10-23T21:07:15Z"
+  }
  },
  "github.com/tutao/tutanota": {
   "website": "https://tuta.com",
-  "release": "https://github.com/tutao/tutanota/releases/tag/tutanota-desktop-release-362.261023.2"
+  "release": "https://github.com/tutao/tutanota/releases/tag/tutanota-desktop-release-362.261023.2",
+  "isFork": false,
+  "forkOf": null,
+  "forkCount": 650,
+  "latest": {
+   "name": "362.261023.2 (Desktop)",
+   "date": "2026-10-23T15:02:12Z"
+  }
  },
  "github.com/twentyhq/twenty": {
   "website": "https://twenty.com",
-  "release": "https://github.com/twentyhq/twenty/releases/tag/twenty/v2.51.0"
+  "release": "https://github.com/twentyhq/twenty/releases/tag/twenty/v2.51.0",
+  "isFork": false,
+  "forkOf": null,
+  "forkCount": 9779,
+  "latest": {
+   "name": "twenty/v2.51.0",
+   "date": "2026-10-25T09:46:28Z"
+  }
  },
  "github.com/Tymeslot/tymeslot": {
   "website": "https://tymeslot.app",
-  "release": "https://github.com/Tymeslot/tymeslot/releases/tag/v1.31.0"
+  "release": "https://github.com/Tymeslot/tymeslot/releases/tag/v1.31.0",
+  "isFork": false,
+  "forkOf": null,
+  "forkCount": 50,
+  "latest": {
+   "name": "v1.31.0",
+   "date": "2026-10-23T17:07:07Z"
+  }
  },
  "github.com/typesense/typesense": {
   "website": "https://typesense.org",
-  "release": "https://github.com/typesense/typesense/releases/tag/v30.2"
+  "release": "https://github.com/typesense/typesense/releases/tag/v30.2",
+  "isFork": false,
+  "forkOf": null,
+  "forkCount": 1021,
+  "latest": {
+   "name": "Version 30.2",
+   "date": "2026-04-19T16:00:09Z"
+  }
  },
  "github.com/ultravnc/UltraVNC": {
   "website": "https://uvnc.com",
-  "release": null
+  "release": null,
+  "isFork": false,
+  "forkOf": null,
+  "forkCount": 300,
+  "latest": null
  },
  "github.com/umami-software/umami": {
   "website": "https://umami.is",
-  "release": "https://github.com/umami-software/umami/releases/tag/v3.4.1"
+  "release": "https://github.com/umami-software/umami/releases/tag/v3.4.1",
+  "isFork": false,
+  "forkOf": null,
+  "forkCount": 8424,
+  "latest": {
+   "name": "v3.4.1",
+   "date": "2026-10-23T08:26:44Z"
+  }
  },
  "github.com/ungoogled-software/ungoogled-chromium": {
   "website": null,
-  "release": "https://github.com/ungoogled-software/ungoogled-chromium/releases/tag/156.0.8078.47-1"
+  "release": "https://github.com/ungoogled-software/ungoogled-chromium/releases/tag/156.0.8078.47-1",
+  "isFork": false,
+  "forkOf": null,
+  "forkCount": 1278,
+  "latest": {
+   "name": "156.0.8078.47-1",
+   "date": "2026-10-23T01:55:42Z"
+  }
  },
  "github.com/Unleash/unleash": {
   "website": "https://www.getunleash.io",
-  "release": "https://github.com/Unleash/unleash/releases/tag/v8.2.1"
+  "release": "https://github.com/Unleash/unleash/releases/tag/v8.2.1",
+  "isFork": false,
+  "forkOf": null,
+  "forkCount": 916,
+  "latest": {
+   "name": "v8.2.1",
+   "date": "2026-10-22T08:46:40Z"
+  }
  },
  "github.com/uptrace/uptrace": {
   "website": "https://uptrace.dev/get/hosted/open-source-apm",
-  "release": "https://github.com/uptrace/uptrace/releases/tag/v2.1.0-rc.2"
+  "release": "https://github.com/uptrace/uptrace/releases/tag/v2.1.0-rc.2",
+  "isFork": false,
+  "forkOf": null,
+  "forkCount": 223,
+  "latest": {
+   "name": "v2.1.0-rc.2",
+   "date": "2026-10-22T09:12:02Z"
+  }
  },
  "github.com/uvdesk/community-skeleton": {
   "website": "https://www.uvdesk.com",
-  "release": "https://github.com/uvdesk/community-skeleton/releases/tag/v1.1.8"
+  "release": "https://github.com/uvdesk/community-skeleton/releases/tag/v1.1.8",
+  "isFork": false,
+  "forkOf": null,
+  "forkCount": 562,
+  "latest": {
+   "name": "v1.1.8",
+   "date": "2025-09-19T12:41:20Z"
+  }
  },
  "github.com/ItzCrazyKns/Vane": {
   "website": null,
-  "release": "https://github.com/ItzCrazyKns/Vane/releases/tag/v1.12.2"
+  "release": "https://github.com/ItzCrazyKns/Vane/releases/tag/v1.12.2",
+  "isFork": false,
+  "forkOf": null,
+  "forkCount": 4205,
+  "latest": {
+   "name": "v1.12.2",
+   "date": "2026-04-10T13:30:52Z"
+  }
  },
  "github.com/dani-garcia/vaultwarden": {
   "website": null,
-  "release": "https://github.com/dani-garcia/vaultwarden/releases/tag/1.37.4"
+  "release": "https://github.com/dani-garcia/vaultwarden/releases/tag/1.37.4",
+  "isFork": false,
+  "forkOf": null,
+  "forkCount": 3372,
+  "latest": {
+   "name": "1.37.4",
+   "date": "2026-10-05T23:40:54Z"
+  }
  },
  "github.com/vendurehq/vendure": {
   "website": "https://www.vendure.io",
-  "release": "https://github.com/vendurehq/vendure/releases/tag/v3.8.1"
+  "release": "https://github.com/vendurehq/vendure/releases/tag/v3.8.1",
+  "isFork": false,
+  "forkOf": null,
+  "forkCount": 1537,
+  "latest": {
+   "name": "v3.8.1",
+   "date": "2026-10-23T12:35:26Z"
+  }
  },
  "github.com/VictoriaMetrics/VictoriaLogs": {
   "website": "https://docs.victoriametrics.com/victorialogs/",
-  "release": "https://github.com/VictoriaMetrics/VictoriaLogs/releases/tag/v1.53.0"
+  "release": "https://github.com/VictoriaMetrics/VictoriaLogs/releases/tag/v1.53.0",
+  "isFork": false,
+  "forkOf": null,
+  "forkCount": 205,
+  "latest": {
+   "name": "v1.53.0",
+   "date": "2026-10-01T11:20:01Z"
+  }
  },
  "github.com/VictoriaMetrics/VictoriaMetrics": {
   "website": "https://victoriametrics.com/",
-  "release": "https://github.com/VictoriaMetrics/VictoriaMetrics/releases/tag/v1.154.1"
+  "release": "https://github.com/VictoriaMetrics/VictoriaMetrics/releases/tag/v1.155.0",
+  "isFork": false,
+  "forkOf": null,
+  "forkCount": 1783,
+  "latest": {
+   "name": "v1.155.0",
+   "date": "2026-10-26T13:40:31Z"
+  }
  },
  "github.com/go-vikunja/vikunja": {
   "website": "https://vikunja.io",
-  "release": "https://github.com/go-vikunja/vikunja/releases/tag/v2.7.1"
+  "release": "https://github.com/go-vikunja/vikunja/releases/tag/v2.7.1",
+  "isFork": false,
+  "forkOf": null,
+  "forkCount": 782,
+  "latest": {
+   "name": "v2.7.1",
+   "date": "2026-10-20T22:08:51Z"
+  }
  },
  "github.com/wallabag/wallabag": {
   "website": "https://wallabag.org",
-  "release": "https://github.com/wallabag/wallabag/releases/tag/2.6.14"
+  "release": "https://github.com/wallabag/wallabag/releases/tag/2.6.14",
+  "isFork": false,
+  "forkOf": null,
+  "forkCount": 906,
+  "latest": {
+   "name": "2.6.14",
+   "date": "2025-10-07T08:06:17Z"
+  }
  },
  "github.com/webiny/webiny-js": {
   "website": "https://www.webiny.com",
-  "release": "https://github.com/webiny/webiny-js/releases/tag/v6.5.0"
+  "release": "https://github.com/webiny/webiny-js/releases/tag/v6.5.0",
+  "isFork": false,
+  "forkOf": null,
+  "forkCount": 683,
+  "latest": {
+   "name": "v6.5.0",
+   "date": "2026-10-20T10:49:01Z"
+  }
  },
  "github.com/webstudio-is/webstudio": {
   "website": "https://webstudio.is",
-  "release": "https://github.com/webstudio-is/webstudio/releases/tag/0.307.0"
+  "release": "https://github.com/webstudio-is/webstudio/releases/tag/0.308.0",
+  "isFork": false,
+  "forkOf": null,
+  "forkCount": 1632,
+  "latest": {
+   "name": "0.308.0",
+   "date": "2026-10-26T13:44:07Z"
+  }
  },
  "github.com/wekan/wekan": {
   "website": "https://wekan.fi",
-  "release": "https://github.com/wekan/wekan/releases/tag/v12.65"
+  "release": "https://github.com/wekan/wekan/releases/tag/v12.65",
+  "isFork": false,
+  "forkOf": null,
+  "forkCount": 3003,
+  "latest": {
+   "name": "v12.65",
+   "date": "2026-10-25T16:20:16Z"
+  }
  },
  "github.com/openai/whisper": {
   "website": null,
-  "release": "https://github.com/openai/whisper/releases/tag/v20250625"
+  "release": "https://github.com/openai/whisper/releases/tag/v20250625",
+  "isFork": false,
+  "forkOf": null,
+  "forkCount": 13484,
+  "latest": {
+   "name": "v20250625",
+   "date": "2025-06-26T01:06:09Z"
+  }
  },
  "github.com/ggml-org/whisper.cpp": {
   "website": null,
-  "release": "https://github.com/ggml-org/whisper.cpp/releases/tag/v1.9.5"
+  "release": "https://github.com/ggml-org/whisper.cpp/releases/tag/v1.9.5",
+  "isFork": false,
+  "forkOf": null,
+  "forkCount": 6241,
+  "latest": {
+   "name": "v1.9.5",
+   "date": "2026-10-06T17:39:17Z"
+  }
  },
  "github.com/windmill-labs/windmill": {
   "website": "https://windmill.dev",
-  "release": "https://github.com/windmill-labs/windmill/releases/tag/v1.849.0"
+  "release": "https://github.com/windmill-labs/windmill/releases/tag/v1.850.0",
+  "isFork": false,
+  "forkOf": null,
+  "forkCount": 1128,
+  "latest": {
+   "name": "v1.850.0",
+   "date": "2026-10-27T00:29:26Z"
+  }
  },
  "github.com/woocommerce/woocommerce": {
   "website": "https://woocommerce.com",
-  "release": "https://github.com/woocommerce/woocommerce/releases/tag/11.2.1"
+  "release": "https://github.com/woocommerce/woocommerce/releases/tag/11.2.1",
+  "isFork": false,
+  "forkOf": null,
+  "forkCount": 10665,
+  "latest": {
+   "name": "11.2.1",
+   "date": "2026-10-09T18:16:12Z"
+  }
  },
  "github.com/WordPress/WordPress": {
   "website": "https://wordpress.org",
-  "release": null
+  "release": null,
+  "isFork": false,
+  "forkOf": null,
+  "forkCount": 12997,
+  "latest": null
  },
  "github.com/writefreely/writefreely": {
   "website": "https://writefreely.org",
-  "release": "https://github.com/writefreely/writefreely/releases/tag/v0.17.2"
+  "release": "https://github.com/writefreely/writefreely/releases/tag/v0.17.2",
+  "isFork": false,
+  "forkOf": null,
+  "forkCount": 405,
+  "latest": {
+   "name": "v0.17.2",
+   "date": "2026-08-10T07:27:49Z"
+  }
  },
  "github.com/xournalpp/xournalpp": {
   "website": "https://xournalpp.github.io",
-  "release": "https://github.com/xournalpp/xournalpp/releases/tag/v1.3.8"
+  "release": "https://github.com/xournalpp/xournalpp/releases/tag/v1.3.8",
+  "isFork": false,
+  "forkOf": null,
+  "forkCount": 1163,
+  "latest": {
+   "name": "Xournal++ 1.3.8",
+   "date": "2026-09-26T06:23:53Z"
+  }
  },
  "github.com/xwiki/xwiki-platform": {
   "website": "http://platform.xwiki.org/",
-  "release": "https://github.com/xwiki/xwiki-platform/releases/tag/xwiki-platform-18.9.0-rc-1"
+  "release": "https://github.com/xwiki/xwiki-platform/releases/tag/xwiki-platform-18.9.0",
+  "isFork": false,
+  "forkOf": null,
+  "forkCount": 675,
+  "latest": {
+   "name": "18.9.0",
+   "date": "2026-10-26T16:20:39Z"
+  }
  },
  "github.com/yacy/yacy_search_server": {
   "website": "http://yacy.net",
-  "release": null
+  "release": null,
+  "isFork": false,
+  "forkOf": null,
+  "forkCount": 504,
+  "latest": null
  },
  "github.com/purocean/yn": {
   "website": "https://yank-note.com",
-  "release": "https://github.com/purocean/yn/releases/tag/v3.93.1"
+  "release": "https://github.com/purocean/yn/releases/tag/v3.93.1",
+  "isFork": false,
+  "forkOf": null,
+  "forkCount": 921,
+  "latest": {
+   "name": "v3.93.1",
+   "date": "2026-10-17T04:43:07Z"
+  }
  },
  "github.com/itsdestin/youcoded": {
   "website": "https://youcoded.ai",
-  "release": "https://github.com/itsdestin/youcoded/releases/tag/v1.3.3"
+  "release": "https://github.com/itsdestin/youcoded/releases/tag/v1.3.3",
+  "isFork": false,
+  "forkOf": null,
+  "forkCount": 3,
+  "latest": {
+   "name": "v1.3.3",
+   "date": "2026-10-23T15:29:30Z"
+  }
  },
  "github.com/YOURLS/YOURLS": {
   "website": "https://yourls.org",
-  "release": "https://github.com/YOURLS/YOURLS/releases/tag/1.10.6"
+  "release": "https://github.com/YOURLS/YOURLS/releases/tag/1.10.6",
+  "isFork": false,
+  "forkOf": null,
+  "forkCount": 2077,
+  "latest": {
+   "name": "1.10.6",
+   "date": "2026-08-30T08:24:15Z"
+  }
  },
  "github.com/yugabyte/yugabyte-db": {
   "website": "https://www.yugabyte.com",
-  "release": "https://github.com/yugabyte/yugabyte-db/releases/tag/v2026.1.2.0"
+  "release": "https://github.com/yugabyte/yugabyte-db/releases/tag/v2026.1.2.0",
+  "isFork": false,
+  "forkOf": null,
+  "forkCount": 1393,
+  "latest": {
+   "name": "v2026.1.2.0 (Released September 22, 2026)",
+   "date": "2026-09-22T20:30:38Z"
+  }
  },
  "github.com/zammad/zammad": {
   "website": "https://zammad.org",
-  "release": null
+  "release": null,
+  "isFork": false,
+  "forkOf": null,
+  "forkCount": 1080,
+  "latest": null
  },
  "github.com/zed-industries/zed": {
   "website": "https://zed.dev",
-  "release": "https://github.com/zed-industries/zed/releases/tag/v1.25.3"
+  "release": "https://github.com/zed-industries/zed/releases/tag/v1.25.3",
+  "isFork": false,
+  "forkOf": null,
+  "forkCount": 11228,
+  "latest": {
+   "name": "v1.25.3",
+   "date": "2026-10-23T13:45:48Z"
+  }
  },
  "github.com/zen-browser/desktop": {
   "website": "https://zen-browser.app",
-  "release": "https://github.com/zen-browser/desktop/releases/tag/1.23.4b"
+  "release": "https://github.com/zen-browser/desktop/releases/tag/1.23.4b",
+  "isFork": false,
+  "forkOf": null,
+  "forkCount": 1910,
+  "latest": {
+   "name": "Release build - 1.23.4b (2026-10-20)",
+   "date": "2026-10-21T13:41:13Z"
+  }
  },
  "github.com/Zettlr/Zettlr": {
   "website": "https://www.zettlr.com",
-  "release": "https://github.com/Zettlr/Zettlr/releases/tag/v4.9.0"
+  "release": "https://github.com/Zettlr/Zettlr/releases/tag/v4.9.0",
+  "isFork": false,
+  "forkOf": null,
+  "forkCount": 865,
+  "latest": {
+   "name": "Release v4.9.0",
+   "date": "2026-10-25T07:25:19Z"
+  }
  },
  "github.com/zincsearch/zincsearch": {
   "website": "https://zincsearch-docs.zinc.dev",
-  "release": "https://github.com/zincsearch/zincsearch/releases/tag/v1.0.0-beta3"
+  "release": "https://github.com/zincsearch/zincsearch/releases/tag/v1.0.0-beta3",
+  "isFork": false,
+  "forkOf": null,
+  "forkCount": 784,
+  "latest": {
+   "name": "v1.0.0-beta3",
+   "date": "2026-09-16T11:13:47Z"
+  }
  },
  "github.com/zitadel/zitadel": {
   "website": "https://zitadel.com",
-  "release": "https://github.com/zitadel/zitadel/releases/tag/v4.20.0"
+  "release": "https://github.com/zitadel/zitadel/releases/tag/v4.20.0",
+  "isFork": false,
+  "forkOf": null,
+  "forkCount": 1405,
+  "latest": {
+   "name": "v4.20.0",
+   "date": "2026-10-22T10:18:58Z"
+  }
  },
  "github.com/zulip/zulip": {
   "website": "https://zulip.com",
-  "release": "https://github.com/zulip/zulip/releases/tag/12.3"
+  "release": "https://github.com/zulip/zulip/releases/tag/12.3",
+  "isFork": false,
+  "forkOf": null,
+  "forkCount": 10483,
+  "latest": {
+   "name": "Zulip Server 12.3",
+   "date": "2026-09-21T17:10:07Z"
+  }
  },
  "github.com/element-hq/element-x-android": {
   "website": null,
-  "release": "https://github.com/element-hq/element-x-android/releases/tag/v26.10.0"
+  "release": "https://github.com/element-hq/element-x-android/releases/tag/v26.10.0",
+  "isFork": false,
+  "forkOf": null,
+  "forkCount": 691,
+  "latest": {
+   "name": "Element X Android v26.10.0",
+   "date": "2026-10-16T12:26:29Z"
+  }
  },
  "github.com/continuedev/continue": {
   "website": "https://continue.dev",
-  "release": "https://github.com/continuedev/continue/releases/tag/v2.0.0-vscode"
+  "release": "https://github.com/continuedev/continue/releases/tag/v2.0.0-vscode",
+  "isFork": false,
+  "forkOf": null,
+  "forkCount": 5526,
+  "latest": {
+   "name": "v2.0.0-vscode",
+   "date": "2026-06-19T00:24:01Z"
+  }
  },
  "codeberg.org/comaps/comaps": {
   "website": "https://www.comaps.app/",
@@ -1585,7 +4207,7 @@
  },
  "codeberg.org/forgejo/forgejo": {
   "website": "https://forgejo.org",
-  "release": "https://codeberg.org/forgejo/forgejo/releases/tag/v17.0.0"
+  "release": "https://codeberg.org/forgejo/forgejo/releases/tag/v17.0.1"
  },
  "codeberg.org/inventaire/inventaire": {
   "website": "https://wiki.inventaire.io/wiki/Inventaire_software",

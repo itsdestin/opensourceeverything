@@ -1,0 +1,33 @@
+{
+ "note": "Setup rating overrides, read by prefill/assemble.mjs. By default a project is 'Easy setup' when it is an app (install like a normal app or open in a browser) and 'Advanced setup' when it is server software, a developer tool or a code library. The rating is about the software itself, never about someone else's hosted copy (Destin, Oct 27: a free hosted version doesn't make the software easy to set up). 'easy' lists projects whose default kind hides a normal installable app, or that are themselves a public website; 'advanced' lists apps that still take real effort to set up. One reason each; reasons are shown on the project page.",
+ "easy": {
+  "stirling-pdf": "It has desktop installers for Windows, Mac and Linux that you install like any other program.",
+  "openstreetmap": "It is a website: you use it at openstreetmap.org in a browser.",
+  "open-library": "It is a website: you use it at openlibrary.org in a browser.",
+  "onlyoffice-docs": "ONLYOFFICE makes a free desktop app (ONLYOFFICE Desktop Editors) for Windows, Mac and Linux that you install like any other program; only the shared online editor needs a server.",
+  "glazewm": "It has an installer for Windows that you run like any other program.",
+  "godot": "It is a desktop program you download and open; no server or command line needed.",
+  "ghidra": "It is a desktop program you download and open, though it is aimed at specialists.",
+  "crystal": "It is a desktop app you install like any other program.",
+  "headlamp": "It has a desktop app for Windows, Mac and Linux.",
+  "cyberchef": "It is a website: you use it in a browser with nothing to install.",
+  "jamovi": "It has desktop installers for Windows, Mac and Linux.",
+  "lighthouse": "It is built into Chrome: open the browser's developer tools and choose Lighthouse to get a report."
+ },
+ "advanced": {
+  "linux-mint": "An operating system: installing it means replacing or sitting alongside your computer or phone's current system, which is more than installing an app.",
+  "fedora": "An operating system: installing it means replacing or sitting alongside your computer or phone's current system, which is more than installing an app.",
+  "ubuntu": "An operating system: installing it means replacing or sitting alongside your computer or phone's current system, which is more than installing an app.",
+  "debian": "An operating system: installing it means replacing or sitting alongside your computer or phone's current system, which is more than installing an app.",
+  "arch-linux": "An operating system: installing it means replacing or sitting alongside your computer or phone's current system, which is more than installing an app.",
+  "cachyos": "An operating system: installing it means replacing or sitting alongside your computer or phone's current system, which is more than installing an app.",
+  "pop-os": "An operating system: installing it means replacing or sitting alongside your computer or phone's current system, which is more than installing an app.",
+  "bazzite": "An operating system: installing it means replacing or sitting alongside your computer or phone's current system, which is more than installing an app.",
+  "grapheneos": "An operating system: installing it means replacing or sitting alongside your computer or phone's current system, which is more than installing an app.",
+  "lineageos": "An operating system: installing it means replacing or sitting alongside your computer or phone's current system, which is more than installing an app.",
+  "e-os": "An operating system: installing it means replacing or sitting alongside your computer or phone's current system, which is more than installing an app.",
+  "postmarketos": "An operating system: installing it means replacing or sitting alongside your computer or phone's current system, which is more than installing an app.",
+  "ubuntu-touch": "An operating system: installing it means replacing or sitting alongside your computer or phone's current system, which is more than installing an app.",
+  "mpv": "It has no menus or buttons to start with: you open files from the command line or with a separate front-end app."
+ }
+}

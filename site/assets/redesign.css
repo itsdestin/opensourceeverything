@@ -1,0 +1,381 @@
+/* The redesign round's look (Destin's picks): the alternative card, the project top card and Family card, search rows, Most requested,
+   the claim note, and the preview options for "Claim your project". Rules of the YouCoded design guide these follow: card text order (name,
+   ONE chip row that never wraps, two-line description), quick actions top right, actions right-aligned, quiet by default, 4/8/12/16/24
+   spacing, phone chip rows scroll sideways and long sections fold, anything clickable looks clickable, status colours only as tints. */
+
+/* ── The explainer popover (YouCoded's AnchorTip) ── */
+.tip { position:absolute; z-index:90; background:var(--panel); border:1px solid var(--edge); border-radius:var(--radius-md); padding:12px;
+  box-shadow:0 8px 32px rgba(0,0,0,var(--shadow-strength)); font-size:12px; color:var(--fg-2); line-height:1.45; }
+.tip-h { font-size:12px; font-weight:600; color:var(--fg); margin-bottom:4px; }
+.tip-b p { margin:0 0 6px; } .tip-b > :last-child { margin-bottom:0; }
+.tip .tipwhy { color:var(--fg-dim); }
+.tiplist { list-style:none; margin:0 0 8px; padding:0; display:flex; flex-direction:column; gap:4px; }
+.tiplist li { display:flex; justify-content:space-between; gap:12px; }
+.tiplist li span { color:var(--fg-dim); text-align:right; }
+.tiplist li.d1 { padding-left:12px; } .tiplist li.d2 { padding-left:24px; } .tiplist li.d3 { padding-left:36px; }
+.tip a { color:var(--fg); }
+
+/* ── Chips that open an explanation: a normal chip, plus a small (i), and they react when pointed at ── */
+button.chip { font:inherit; font-size:11px; cursor:pointer; }
+.tipchip .tipi { color:var(--fg-faint); }
+.tipchip:hover, .tipchip[aria-expanded="true"] { border-color:var(--accent); color:var(--fg); }
+.tipchip[aria-expanded="true"] { background:color-mix(in srgb,var(--accent) 12%,var(--inset)); }
+
+/* ── The alternative card: a picture band, one chip row, a two-line description, at most one grey line ── */
+.rvbox { display:flex; flex-direction:column; flex:1; min-width:0; }
+.rv-thumb { margin:4px 4px 0; aspect-ratio:16/7; overflow:hidden; display:flex; align-items:center; justify-content:center; background:var(--inset); border:1px solid var(--edge-dim);
+  border-radius:calc(var(--radius-xl) - 4px) calc(var(--radius-xl) - 4px) var(--radius-sm) var(--radius-sm); }
+.rv-thumb img { width:100%; height:100%; object-fit:cover; object-position:top; display:block; }
+.nopic { font-size:11px; color:var(--fg-muted); }
+.rv-main { padding:12px; display:flex; flex-direction:column; gap:8px; min-width:0; flex:1; }
+.rv-head { display:flex; align-items:center; gap:4px; min-width:0; }
+.rv-head h3 { flex:1 1 auto; font-size:15px; }
+.rv-head .dd.actions { margin:0; }
+.rvbox .chiprow, .rvbox .whybtn, .rvbox .dd.actions { position:relative; z-index:2; }
+/* WHY (Destin, Oct 30 screenshot: "popup behind chips"): the chip row sits at the same layer as the More menu and comes later in the
+   card, so it drew over the open menu. An open menu (and its card, over the next card) lifts above everything nearby. */
+.rvbox .dd.actions:has(> .menu.open) { z-index:6; }
+.card:has(.dd.actions > .menu.open) { z-index:6; }
+.rvbox .blurb { min-height:0; }
+.whybtn { width:24px; height:24px; padding:0; border:0; background:transparent; color:var(--fg-dim); border-radius:var(--radius-control); display:grid; place-items:center; flex:none; }
+.whybtn:hover, .whybtn[aria-expanded="true"] { background:var(--inset); color:var(--fg); }
+.gl { margin:0; font-size:11px; color:var(--fg-dim); display:-webkit-box; -webkit-line-clamp:2; -webkit-box-orient:vertical; overflow:hidden; }
+@media (max-width:640px) {
+  .card.pic .rvbox { flex-direction:row; }
+  .card.pic .rv-thumb { flex:0 0 76px; width:76px; aspect-ratio:auto; min-height:76px; margin:6px 0 6px 6px; border-radius:var(--radius-md); }
+  .card.pic .rv-main { padding:8px 8px 8px 10px; gap:4px; }
+  .card.pic .rvbox .blurb { -webkit-line-clamp:1; font-size:12px; }
+  .card.pic .rvbox .dd.actions .btn { padding:3px 8px; }
+  .rvbox .gl { display:none; }
+}
+
+/* ── The project page's top card ── */
+.rvtop { gap:12px; }
+.rvtop .row { display:flex; flex-direction:row; align-items:center; justify-content:flex-start; text-align:left; }
+/* WHY (Destin: "the three buttons should stay right aligned and where they were"): the buttons ride the right edge of the card's foot, filled one last. */
+.rvfoot { display:flex; align-items:center; justify-content:space-between; gap:16px; }
+.rvfoot .links { margin-left:auto; }
+.claimq { margin:0; font-size:12px; color:var(--fg-dim); min-width:0; } .claimq[hidden] { display:none; } .claimq a { color:var(--fg); }
+
+/* ── The Family card: a compact list, one row per project ── */
+.rvfamA .flist { list-style:none; margin:0; padding:4px 8px; display:flex; flex-direction:column; }
+.frow { display:flex; align-items:flex-start; gap:8px; padding:8px; min-width:0; font-size:13px; border-radius:var(--radius-md); }
+.frow .fmain { flex:1; min-width:0; display:flex; flex-direction:column; gap:2px; }
+.frow .ftop { display:flex; align-items:center; gap:8px; min-width:0; }
+.frow .fn { flex:0 1 auto; min-width:0; overflow:hidden; text-overflow:ellipsis; white-space:nowrap; }
+.frow .fn a { color:var(--fg); }
+.frow .fr { font-size:12px; color:var(--fg-2); }
+.frow .whyspace { width:24px; flex:none; }
+.frow.d1 { margin-left:16px; } .frow.d2 { margin-left:32px; }
+.frow.d1::before, .frow.d2::before { content:""; flex:none; width:8px; height:10px; margin-top:4px; border-left:2px solid var(--edge-card); border-bottom:2px solid var(--edge-card); border-radius:0 0 0 4px; }
+.frow.here { background:color-mix(in srgb,var(--accent) 14%,transparent); }
+.frow.extra { display:none; } .rvfamA.all .frow.extra { display:flex; }
+.rvfamA .showall { align-self:stretch; }
+@media (max-width:640px) {
+  .rvfoot { flex-direction:column; align-items:stretch; gap:12px; }
+  .rvfoot .links { flex-direction:column-reverse; width:100%; margin:0; }
+  .rvfoot .links .btn { flex:none; width:100%; }
+}
+
+/* ── Search: one wide card with the box and a Filter button, results beneath ── */
+.sres-bar { padding:12px; position:relative; z-index:20; }
+.sres-count { flex:none; font-size:12px; color:var(--fg-dim); white-space:nowrap; padding-right:4px; }
+.sres-input { display:flex; align-items:center; gap:8px; background:var(--inset); border:1px solid var(--edge); border-radius:var(--radius-control); padding:4px 4px 4px 12px; color:var(--fg-muted); }
+.sres-input:focus-within { border-color:var(--accent); }
+.sres-input > input { flex:1; min-width:0; background:transparent; border:0; outline:0; font-size:15px; color:var(--fg); padding:6px 0; }
+.sres-filterbtn.on { border-color:var(--accent); color:var(--fg); }
+.fcount { display:inline-grid; place-items:center; min-width:16px; height:16px; padding:0 4px; border-radius:9999px; background:var(--accent); color:var(--on-accent); font-size:11px; font-weight:600; }
+.fcount[hidden] { display:none; }
+.fsheet { width:320px; padding:0; max-height:min(560px, 78vh); display:none; flex-direction:column; overflow:hidden; right:0; left:auto; }
+.fsheet.open { display:flex; }
+.fscroll { overflow-y:auto; padding:12px 12px 4px; flex:1; }
+.fgroup { display:flex; flex-direction:column; gap:2px; margin-bottom:8px; } .fgroup .label { margin:0 0 4px 10px; }
+.fsheet .opt { display:flex; align-items:center; gap:10px; color:var(--fg); border:0; }
+.fsheet .opt .ol { flex:1; text-align:left; } .fsheet .opt .oc { font-variant-numeric:tabular-nums; }
+/* Checkbox (pick several) and Radio (pick one), the shape of YouCoded's Checkbox and Radio. */
+.fsheet .ctl { flex:none; width:18px; height:18px; border:1.5px solid var(--edge-strong); background:var(--inset); display:inline-grid; place-items:center; color:var(--on-accent); }
+.fsheet .chk .ctl { border-radius:5px; } .fsheet .chk .ctl svg { visibility:hidden; width:12px; height:12px; }
+.fsheet .chk.sel .ctl { background:var(--accent); border-color:var(--accent); } .fsheet .chk.sel .ctl svg { visibility:visible; }
+.fsheet .rad .ctl { border-radius:9999px; } .fsheet .rad.sel .ctl { border-color:var(--accent); background:radial-gradient(circle, var(--accent) 0 4px, var(--inset) 5px); }
+.fsheet .mi.sel { font-weight:500; background:transparent; } .fsheet .mi:hover { background:var(--inset); }
+/* The footer stays in view while the options scroll. */
+.fsfoot { display:flex; justify-content:flex-end; gap:8px; padding:10px 12px calc(10px + env(safe-area-inset-bottom)); border-top:1px solid var(--edge-dim); background:var(--panel); }
+.sres-list { gap:8px; }
+.sr { display:flex; flex-direction:row; align-items:stretch; gap:12px; padding:10px; color:inherit; text-decoration:none; min-width:0; }
+.sr-thumb { flex:none; align-self:stretch; width:128px; min-height:64px; border-radius:var(--radius-md); overflow:hidden; background:var(--inset); border:1px solid var(--edge-card); display:flex; align-items:center; justify-content:center; color:var(--fg-dim); }
+/* WHY absolute (Oct 30 performance pass): the picture used to set the row's height as it loaded, so each result grew 5–20px a moment
+   after the list appeared and everything below jumped. Now the picture fills whatever height the text gives the row. */
+.sr-thumb { position:relative; }
+.sr-thumb img { position:absolute; inset:0; width:100%; height:100%; object-fit:cover; object-position:top; }
+.sr-thumb .letter { font-size:22px; font-weight:600; color:var(--fg-muted); } .sr-thumb .letter.closed { color:var(--fg-faint); }
+.sr-body { flex:1; min-width:0; display:flex; flex-direction:column; gap:4px; justify-content:center; }
+.sr-top { display:flex; align-items:center; justify-content:space-between; gap:12px; }
+.sr h3 { margin:0; font-size:15px; font-weight:600; color:var(--fg); min-width:0; flex:1; white-space:nowrap; overflow:hidden; text-overflow:ellipsis; }
+.sr-top .mstr { flex:none; }
+.sr-sum { margin:0; font-size:12px; color:var(--fg-2); display:-webkit-box; -webkit-line-clamp:2; -webkit-box-orient:vertical; overflow:hidden; }
+.sr .chip.why { color:var(--fg-dim); }
+@media (max-width:640px) {
+  .sr { gap:10px; padding:8px; } .sr-thumb { width:84px; min-height:72px; }
+  .sres-input > input { font-size:16px; }
+  /* The filter menu is a full-width sheet with its own drag handle (the generic sheet rule in mobile.css positions it). */
+  .fsheet .handle { display:block; padding:8px 0 10px; touch-action:none; cursor:grab; }
+  .fsfoot .btn { flex:1; min-height:44px; }
+  .sres-count { font-size:11px; }
+  .fsheet .handle::before { content:""; display:block; width:40px; height:4px; border-radius:9999px; background:var(--edge-strong); margin:0 auto; }
+  .fsheet.open { transition:transform .1s; }
+}
+
+/* ── Most requested: the top three as raised cards, then a short list; on the home page five equal cards ── */
+.pillvote { flex:none; width:auto; flex-direction:row; align-items:center; gap:8px; padding:6px 12px; border-radius:var(--radius-control); background:transparent; }
+.pillvote b { font-size:13px; font-weight:600; font-variant-numeric:tabular-nums; }
+.pillvote span { font-size:11px; white-space:nowrap; }
+.pillvote.full { width:100%; justify-content:center; }
+[data-most-requested] { display:flex; flex-direction:column; gap:12px; }
+.rq-list { padding:4px; display:flex; flex-direction:column; }
+.rq-list .rrow { cursor:default; }
+.rq-rank { flex:none; width:24px; text-align:center; font-size:14px; font-weight:500; color:var(--fg-muted); font-variant-numeric:tabular-nums; }
+.rq-more { align-self:stretch; }
+.rq-pod, .rq-five { display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:12px; }
+.rq-five { grid-template-columns:repeat(5,minmax(0,1fr)); }
+.rq-card { display:flex; flex-direction:column; align-items:flex-start; gap:8px; padding:12px; border-radius:var(--radius-lg); background:color-mix(in srgb,var(--inset) 50%,transparent); border:1px solid var(--edge-card); box-shadow:0 3px 10px rgb(0 0 0 / .1); min-width:0; }
+.rq-card .rt { font-size:15px; font-weight:600; color:var(--fg); }
+.rq-text { min-width:0; flex:1; display:flex; flex-direction:column; gap:4px; }
+.rq-card .pillvote.full { margin-top:auto; }
+.rq-sub { display:flex; flex-direction:column; align-items:flex-start; gap:4px; min-width:0; }
+.rq-like { font-size:11px; color:var(--fg-dim); }
+.rq-medal { width:24px; height:24px; border-radius:9999px; display:grid; place-items:center; font-size:12px; font-weight:600; background:var(--inset); border:1px solid var(--edge); color:var(--fg); }
+.rq-medal.m1 { background:color-mix(in srgb,var(--accent) 22%,var(--inset)); border-color:var(--accent); }
+.rt { text-decoration:none; } .rt:hover { text-decoration:underline; }
+/* The rest of the list: smaller cards of the same kind as the top three, in two columns, numbered down the first column and then the second (Destin, round 4) */
+.rq-mini { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); grid-template-rows:repeat(var(--rows,1),auto); grid-auto-flow:column; gap:8px; }
+.rq-minicard { display:flex; align-items:center; gap:10px; padding:8px 10px; border-radius:var(--radius-md); background:color-mix(in srgb,var(--inset) 50%,transparent); border:1px solid var(--edge-card); box-shadow:0 2px 6px rgb(0 0 0 / .08); min-width:0; }
+.rq-minicard .nr-main { flex:1; min-width:0; } .rq-minicard .rt { font-size:13px; font-weight:500; color:var(--fg); }
+@media (max-width:640px) {
+  .rq-five { display:flex; overflow-x:auto; scrollbar-width:none; padding:4px; margin:-4px; -webkit-mask-image:linear-gradient(to right,#000 calc(100% - 32px),transparent); mask-image:linear-gradient(to right,#000 calc(100% - 32px),transparent); }
+  .rq-five .rq-card { flex:0 0 220px; }
+  /* Gaps, on a phone: every card stacks full width. In the top three the number is a block as tall as the name and its line, right beside them; the button runs under both. */
+  .rq-pod { display:flex; flex-direction:column; gap:8px; }
+  .rq-pod .rq-card { display:grid; grid-template-columns:36px minmax(0,1fr); grid-template-areas:"m t" "b b"; column-gap:10px; row-gap:8px; align-items:stretch; }
+  .rq-pod .rq-medal { grid-area:m; width:auto; height:auto; border-radius:var(--radius-md); font-size:16px; }
+  .rq-pod .rq-text { grid-area:t; justify-content:center; }
+  .rq-pod .pillvote.full { grid-area:b; }
+  .rq-mini { display:flex; flex-direction:column; }
+  .pillvote { flex-direction:column; gap:0; padding:4px 8px; min-width:76px; } .pillvote span { font-size:11px; } .pillvote.full { flex-direction:row; gap:8px; }
+  .rq-list .rrow { padding:8px 6px; }
+}
+
+/* ── Claim your project: one wide card, each step its own card inside it ── */
+[data-tag] { display:flex; flex-direction:column; gap:16px; }
+.tg-card { gap:12px; padding:16px; }
+.tg-step { display:flex; flex-direction:column; gap:12px; padding:12px 16px; }
+.tg-rowhead { display:flex; align-items:center; gap:12px; } .tg-rowhead > div { flex:1; min-width:0; }
+.tg-num { flex:none; width:24px; height:24px; border-radius:9999px; display:grid; place-items:center; font-size:12px; font-weight:600; border:1px solid var(--edge); background:var(--inset); color:var(--fg); }
+.tg-step.open .tg-num { background:var(--accent); color:var(--on-accent); border-color:var(--accent); }
+.tg-step.done .tg-num { background:color-mix(in srgb,var(--accent) 22%,transparent); }
+.tg-body { display:flex; flex-direction:column; gap:12px; padding-left:36px; }
+.tg-body .field { width:100%; }
+code.copy.block { display:block; }
+.tg-actions { display:flex; justify-content:flex-end; gap:8px; }
+.tg-foot { display:flex; align-items:center; justify-content:space-between; gap:16px; }
+.tg-foot .fieldhint { margin:0; font-size:12px; color:var(--fg-dim); }
+.tg-more summary { padding:8px 12px; }
+.tg-morebody { padding:0 12px 12px; display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:12px; }
+.tg-morebody .before { grid-column:1 / -1; }
+@media (max-width:640px) {
+  .tg-body { padding-left:0; }
+  .tg-morebody { grid-template-columns:minmax(0,1fr); }
+  .tg-foot { flex-direction:column; align-items:stretch; } .tg-actions { flex-direction:column-reverse; } .tg-actions .btn { width:100%; }
+}
+/* WHY: the filter menus hang below the header card; without its own layer the results card painted over them. */
+.sres-head { position:relative; z-index:20; }
+/* Folded cards on a phone: the title at the left, the arrow at the right (mobile.css stacks every .sec-head, so say it again here). */
+@media (max-width:640px) {
+  .fold-phone > .sec-head.fold-head { flex-direction:row; align-items:center; justify-content:space-between; text-align:left; }
+  .fold-phone > .sec-head.fold-head > div:first-child { flex:1; min-width:0; }
+}
+/* The smaller request cards: count over its label, like on a phone, so a name never runs under the button. */
+.rq-minicard .pillvote { flex-direction:column; gap:0; padding:4px 8px; min-width:76px; } .rq-minicard .pillvote span { font-size:11px; }
+.rq-minicard .rq-sub .pill { white-space:normal; }
+.rq-minicard .rq-rank { width:20px; }
+/* A long chip row scrolls sideways under the edge fade; the trailing space lets the last chip clear the fade (phones clipped it). */
+.chiprow { padding-right:24px; }
+
+/* ── The page frame ── */
+/* WHY (Destin, round 4: "keep the bottom chips at the bottom of the page"): the page stretches to the window's height, so the footer rests on the bottom edge when the content is short. */
+body { display:flex; flex-direction:column; }
+.page { flex:1 0 auto; width:100%; }
+.footer { margin-top:auto; }
+.top { width:100%; }
+/* The trail (redesign.mjs crumbs). WHY plain text links, not pills (Nov 2): pills looked like the filter chips, so the trail
+   didn't read as "where you are". Wide screens show the whole trail; phones show one glass "‹ up a level" button. */
+.crumbs { display:flex; align-items:center; min-width:0; padding:0 4px; }
+.crumb-trail { list-style:none; margin:0; padding:0; display:flex; flex-wrap:wrap; align-items:center; row-gap:4px; font-size:13px; color:var(--fg-muted); }
+.crumb-trail li + li::before { content:"›"; margin:0 8px; color:var(--fg-dim); }
+.crumb-trail a { color:var(--fg-2); text-decoration:none; }
+.crumb-trail a:hover { color:var(--fg); text-decoration:underline; }
+.crumb-trail [aria-current] { color:var(--fg); font-weight:500; }
+/* WHY: the browser's own focus ring is faint on the lilac wallpaper (design review, Nov 2). */
+.crumb-trail a:focus-visible, .crumbs .crumb-up:focus-visible { outline:2px solid var(--accent); outline-offset:2px; border-radius:4px; }
+/* WHY .crumbs in front: the shared glass rule below would otherwise show this phone-only button on wide screens too. */
+.crumbs .crumb-up { display:none; }
+@media (max-width:640px) {
+  .crumbs { padding:0; }
+  .crumb-trail { display:none; }
+  .crumbs .crumb-up { display:inline-flex; max-width:100%; gap:4px; padding:0 12px 0 8px; overflow:hidden; white-space:nowrap; text-overflow:ellipsis; }
+}
+.identity .row .btn { flex:none; }
+@media (max-width:640px) {
+  /* The footer: a small grid of links, not a row that runs off the screen. */
+  .footer { display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:6px; }
+  .footchip { text-align:center; padding:6px 4px; } .deskonly { display:none; }
+  .identity .row { flex-direction:column; align-items:stretch; }
+}
+
+/* ── Top controls: Home, Up, Search and Sign in are one set (Destin, round 5): the same translucent glass pill, the same height ── */
+.glass, .top .acct .btn, .top .acct .avatar, .crumb-up {
+  display:inline-flex; align-items:center; justify-content:center; gap:8px; height:32px; min-width:32px; padding:0 10px; border-radius:9999px; flex:none;
+  color:var(--fg); font-size:12px; font-weight:600; text-decoration:none; cursor:pointer;
+  background:color-mix(in srgb, var(--panel) 42%, transparent); backdrop-filter:blur(16px) saturate(1.6); -webkit-backdrop-filter:blur(16px) saturate(1.6);
+  border:1px solid color-mix(in srgb, #fff 55%, var(--edge-dim)); box-shadow:inset 0 1px 0 rgb(255 255 255 / .55), 0 2px 8px rgb(0 0 0 / .06); }
+.glass:hover, .top .acct .btn:hover, .top .acct .avatar:hover, .crumb-up:hover { background:color-mix(in srgb, var(--panel) 62%, transparent); color:var(--fg); }
+.iconbtn { padding:0; width:32px; }
+.homebtn { padding:0 14px 0 10px; }
+.top .acct .avatar { padding:0; width:32px; }
+/* The home page's search bar in the top strip (Destin, Nov 2): the same glass as the other controls, a little taller. */
+.topsearch { width:min(440px,100%); }
+.topsearch .searchpill.glass { display:flex; width:100%; height:40px; justify-content:flex-start; padding:0 16px; gap:10px; cursor:text; font-weight:400; }
+.topsearch .searchpill.glass:hover { background:color-mix(in srgb, var(--panel) 42%, transparent); }
+.topsearch .searchpill.glass:focus-within { background:color-mix(in srgb, var(--panel) 70%, transparent); border-color:var(--accent); }
+.topsearch .searchpill input { font-size:14px; }
+.top:has(.search-menu.open) { position:relative; z-index:20; }
+/* WHY an invisible 40px-tall spacer in every top strip (Destin, Nov 2: "the Open Source Everything button seems to move up/down
+   when moving from homepage elsewhere"): the home page's 40px search bar made its strip 8px taller than other pages' (32px
+   controls), so the button sat 4px lower there. The spacer gives every strip the same height. Its -8px cancels the strip's gap. */
+.top::after { content:""; flex:none; width:0; height:40px; margin-left:-8px; }
+@media (max-width:640px) {
+  .homebtn { padding:0; width:32px; } .homebtn .hname { display:none; }
+  .top { padding:10px 16px 6px; }
+  /* WHY the bar takes the row on phones: only the site's mark sits beside it. */
+  .top-home .grow { display:none !important; }
+  .topsearch { flex:1; width:auto; min-width:0; }
+}
+.signin-card { gap:12px; }
+.btn.full { width:100%; }
+/* A popup on a phone is a solid sheet: text behind it must not show through. */
+@media (max-width:640px) { .scrim .dialog { background:var(--panel); } }
+/* Phone top bar: Home at the left, Search and Sign in together at the right (site.css hid the spacer on phones). */
+@media (max-width:640px) { .top .grow { display:block; } }
+/* The sign-in card on a wide screen: the line at the left and the button at the right of that same line (Buttons recipe); on a phone the button spans the card. */
+@media (min-width:641px) { .signin-card { flex-direction:row; align-items:center; justify-content:space-between; } .signin-card .btn.full { width:auto; flex:none; padding:8px 20px; } }
+
+/* ── Round 5 review fixes ── */
+/* Gaps and category cards: natural heights, one column on a phone. */
+.gaplist .card { cursor:default; }
+.gaplist .gcard:hover { transform:none; }
+.gaplist .gapbtns { margin-top:4px; }
+@media (max-width:640px) { .gaplist { grid-template-columns:minmax(0,1fr); } }
+.partlist li { align-items:baseline; gap:8px; flex-wrap:nowrap; }
+.partlist li a { flex:none; text-decoration:none; font-weight:500; } .partlist li a:hover { text-decoration:underline; }
+.partlist li span { color:var(--fg-dim); min-width:0; } .partlist li span::before { content:""; }
+/* "want this": readable size, compact buttons that sit at the right. */
+.pillvote span { font-size:12px; color:var(--fg-dim); }
+.rq-card .pillvote.full { width:auto; align-self:flex-end; margin-top:auto; }
+.rq-minicard .pillvote span { font-size:11px; }
+@media (max-width:640px) { .pillvote span { font-size:11px; } .rq-pod .pillvote.full { grid-area:b; justify-self:end; } }
+/* Project Listed in: the nested look, vote line under its bar. */
+.listrow { padding:10px 12px; display:flex; flex-direction:column; gap:8px; }
+.listrow .head { display:flex; align-items:center; justify-content:space-between; gap:8px; } .listrow .head h3 { font-size:14px; font-weight:500; margin:0; }
+.listrow .rate { margin-top:0; }
+.rate-res { flex-direction:column; align-items:flex-start; gap:4px; }
+.rate-res .meter { width:min(220px,100%); }
+.shots-few { align-self:flex-start; min-width:min(100%,280px); }
+/* Home: category cards never wrap their chips; they scroll under the edge fade. */
+.catgrid { align-items:start; }
+.catcard2 .gchips { flex-wrap:nowrap; overflow-x:auto; scrollbar-width:none; padding-right:24px; -webkit-mask-image:linear-gradient(to right,#000 calc(100% - 24px),transparent); mask-image:linear-gradient(to right,#000 calc(100% - 24px),transparent); }
+.catcard2 .gchips::-webkit-scrollbar { display:none; }
+.catcard2 .fchip { flex:none; white-space:nowrap; }
+.fchip.more { background:var(--inset); }
+/* See also: every card the same height, with or without a reason line. */
+#see-also .card.listing { min-height:64px; justify-content:center; }
+/* Tools row on a group page: filters at the left, Cards / Compare at the right, one height. */
+.toolbar { display:flex; align-items:center; justify-content:space-between; gap:8px; flex-wrap:wrap; }
+.toolbar .tl { display:flex; gap:8px; flex-wrap:wrap; align-items:center; }
+.toolbar .select.sm, .toolbar .seg button { height:30px; box-sizing:border-box; }
+.toolbar .seg { height:30px; }
+@media (max-width:640px) { .toolbar { flex-wrap:nowrap; overflow-x:auto; scrollbar-width:none; } .toolbar > * { flex:none; } .toolbar .tl { flex-wrap:nowrap; } }
+.aistart .btn { text-decoration:none; }
+/* Sign-in cards (Claim, Your suggestions): ONE narrow centred card, the top-bar Sign in hidden on that page (reviewer, round 5: two Sign in buttons and a thin banner over empty background). */
+.signin-card { gap:12px; max-width:420px; width:100%; margin:0 auto; flex-direction:column !important; align-items:stretch !important; }
+.signin-card .btn.full { width:100% !important; padding:8px 12px !important; }
+body:has(.signin-card) .top .acct { display:none; }
+
+/* Phone footer: one line of links that scrolls under the edge fade instead of wrapping. */
+@media (max-width:640px) {
+  .footer { display:flex !important; flex-wrap:nowrap; justify-content:flex-start; overflow-x:auto; scrollbar-width:none; -webkit-mask-image:linear-gradient(to right,#000 calc(100% - 28px),transparent); mask-image:linear-gradient(to right,#000 calc(100% - 28px),transparent); padding-right:28px; }
+  .footchip { flex:none; padding:6px 12px; }
+}
+/* Family: plain rows, not a box inside the card. */
+.rvfamA .flist { padding:0; }
+.srsq { display:none; }
+.top .acct .avatar, .top .acct .acct-btn { padding:0; width:32px; height:32px; font-size:12px; font-weight:600; }
+/* Search rows: every kind in the same tinted look. */
+.sres-list > .card.sr { background:color-mix(in srgb,var(--inset) 50%,transparent); box-shadow:none; }
+
+/* ── Second review pass ── */
+/* "want this": 12px grey everywhere (the older .vote span rules said 10px and won on specificity). */
+.req-row .vote span, .vote span, .pillvote span, .rq-minicard .pillvote span { font-size:12px !important; color:var(--fg-dim); }
+@media (max-width:640px) { .req-row .vote span, .vote span, .pillvote span, .rq-minicard .pillvote span { font-size:11px !important; } }
+/* The top three: number, name and a compact button on the name's own line. */
+.rq-pod .rq-card, .rq-five .rq-card { display:grid; grid-template-columns:auto minmax(0,1fr) auto; grid-template-areas:"m t b"; column-gap:10px; align-items:center; }
+.rq-card .rq-medal { grid-area:m; } .rq-card .rq-text { grid-area:t; } .rq-card .pillvote { grid-area:b; margin:0; align-self:center; width:auto; }
+.rq-five .rq-card { grid-template-columns:minmax(0,1fr) auto; grid-template-areas:"m b" "t t"; row-gap:6px; }
+@media (max-width:640px) { .rq-pod .rq-card { grid-template-columns:36px minmax(0,1fr) auto; grid-template-areas:"m t b"; } .rq-pod .rq-medal { grid-area:m; } .rq-pod .pillvote { grid-area:b; justify-self:end; } }
+/* Project screenshots: full width like its neighbours, thumbnails in one sideways row. */
+.shots-few { align-self:stretch; min-width:0; }
+.thumbstrip { flex-wrap:nowrap; overflow-x:auto; scrollbar-width:none; -webkit-mask-image:linear-gradient(to right,#000 calc(100% - 24px),transparent); mask-image:linear-gradient(to right,#000 calc(100% - 24px),transparent); padding-right:24px; }
+.thumbstrip::-webkit-scrollbar { display:none; }
+/* See also: every card one height, with or without a reason. */
+#see-also .card.listing { min-height:76px; justify-content:flex-start; }
+#see-also .card.listing .head { min-height:22px; }
+/* Phone group tools: the three menus in one scrolling row; Cards / Compare moves up into the heading line. */
+.sec-head .seg { margin-left:auto; }
+@media (max-width:640px) {
+  .toolbar { flex-wrap:nowrap; overflow-x:auto; scrollbar-width:none; -webkit-mask-image:linear-gradient(to right,#000 calc(100% - 24px),transparent); mask-image:linear-gradient(to right,#000 calc(100% - 24px),transparent); padding-right:24px; }
+  .sec > .sec-head { flex-direction:row; align-items:center; justify-content:space-between; }
+  .footer { -webkit-mask-image:linear-gradient(to right,#000 calc(100% - 40px),transparent); mask-image:linear-gradient(to right,#000 calc(100% - 40px),transparent); padding-right:40px; }
+}
+
+/* ── Round 5 slides ── */
+/* Group page heading line: heading left; one cluster at the right: [Cards | Compare] then the three menus, one height. */
+.gtools { display:flex; align-items:center; gap:8px; margin-left:auto; flex-wrap:wrap; justify-content:flex-end; }
+.gtools .select.sm, .gtools .seg, .gtools .seg button { height:30px; box-sizing:border-box; }
+.gtools .gfilter { display:none; }
+.sec > .sec-head { align-items:center; }
+.seg.wide { display:flex; width:100%; } .seg.wide button { flex:1; height:36px; }
+.gsheet .fgroup .seg { margin:0 4px; }
+.gsheet { right:0; left:auto; }
+@media (max-width:640px) {
+  .gtools > .dd:not(.gfilter), .gtools > .seg { display:none; }
+  .gtools .gfilter { display:block; }
+  .gsheet { right:0; left:0; }
+  /* Bigger, easier cards on a phone: a larger picture, room for the name, a two-line description. */
+  .card.pic .rv-thumb { flex:0 0 104px; width:104px; min-height:112px; }
+  .card.pic .rv-main { padding:10px 10px 10px 12px; gap:6px; }
+  .card.pic .rv-head h3 { font-size:16px; }
+  .card.pic .rvbox .blurb { -webkit-line-clamp:2; font-size:13px; }
+  .card.pic .rv-head .whybtn { display:none; }
+}
+.sres-count { display:none; }
+/* Search results: "Results" at the left, the count on the same line at the right (Destin, round 6). */
+.sres-list { margin-top:4px; }
+.sec > .sec-head.sres-head { flex-direction:row; align-items:baseline; justify-content:space-between; }
+.sres-head [data-sres-sub] { margin:0; }
+/* Claim sign-in page: the card sits in the middle of the window. */
+.page:has(.signin-card) { justify-content:center; align-items:center; min-height:calc(100vh - 120px); }
+.page:has(.signin-card) .signin-card { margin:0 auto; }
+.page:has(.signin-card) .footer { align-self:center; }
+/* The wrapper around the sign-in card fills the free space and centres the card in it, both ways. */
+.page:has(.signin-card) [data-tag] { flex:1; justify-content:center; align-items:center; }
+/* WHY names may take two lines on phones (reviewer, round 6: "Apache OpenO…" was unreadable beside the More button). */
+@media (max-width:640px) { .card.pic .rv-head h3 { font-size:15px; white-space:normal; display:-webkit-box; -webkit-line-clamp:2; -webkit-box-orient:vertical; line-height:1.25; } }
+@media (max-width:640px) { .page:has(.signin-card) .footer { align-self:stretch; justify-content:flex-start; } }

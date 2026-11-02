@@ -3,9 +3,10 @@
   "name": "opensourceeverything-api",
   "type": "module",
   "scripts": {
-    "dev": "wrangler d1 migrations apply opensourceeverything-dev --local --env dev && wrangler dev --env dev --port 8787",
-    "test": "node --test test/",
-    "deploy": "wrangler d1 migrations apply opensourceeverything --remote && wrangler deploy"
+    "snapshot": "node scripts/snapshot.mjs",
+    "dev": "node scripts/snapshot.mjs && wrangler d1 migrations apply opensourceeverything-dev --local --env dev && wrangler dev --env dev --port 8787",
+    "test": "node scripts/snapshot.mjs && node --test test/",
+    "deploy": "node scripts/snapshot.mjs && wrangler d1 migrations apply opensourceeverything --remote && wrangler deploy"
   },
   "devDependencies": { "wrangler": "4.150.0" }
 }

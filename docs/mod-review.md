@@ -29,5 +29,5 @@ checked; no separate mod step. Judgment calls:
 ## Claude's calls on the expert review (overrule any)
 - **Kept "Replaces fully"** for Arch Linux and CachyOS. The reviewer wanted "partly" because they're harder to install.
 - **Left out Proton Mail and Proton Pass.** Their apps are open source, but their servers are closed.
-- **Added 25 projects** the reviewer found missing, and **removed 13 dead or wrong listings.** Details: `docs/group-review.md`.
+- **Added 25 projects** the reviewer found missing, and **removed 13 dead or wrong listings.** Details: `docs/archive/group-review.md`.
 - **The 40 leftover projects:** 24 placed (including 11 new groups), 16 left out with reasons in `prefill/placements.json`.

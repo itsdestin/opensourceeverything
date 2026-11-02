@@ -48,12 +48,16 @@ Drafts for Destin to edit and send. Nothing here is posted or sent automatically
 >
 > Building something for one of last month's gaps? Share it in the Showcase thread.
 
-## 4. Going live (Claude does this once Destin says "launch")
+## 4. Going live
 
-1. Merge the `site` branch into `main` and push. The suggestion forms and robots only work from `main`.
-2. Run the "Site" workflow with "publish" ticked. GitHub Pages is already switched on (source: GitHub Actions, Oct 27), with nothing published yet.
-3. After launch, publish automatically on every merge to `main`, so approved suggestions go live by themselves.
-4. Pin the launch post and update the subreddit sidebar with the link.
+WHY rewritten Oct 31: the first version went live from `main` on Oct 27, so steps 1–3 below are done. The redesign
+(branch `redesign`) goes live the same way once Destin says so; the steps for that are in `docs/status.md`.
+The esk message and launch post above still say "about 430 projects"; update the number (980 shown on Oct 31) before sending.
+
+1. ~~Merge into `main` and push~~ Done Oct 27. The suggestion forms and robots only work from `main`.
+2. ~~Publish~~ Done Oct 27. Every push to `main` now publishes by itself (the "Site" workflow).
+3. Approved suggestions go live by themselves on merge to `main`.
+4. Pin the launch post and update the subreddit sidebar with the link. (Not done yet.)
 5. ~~Buy opensourceeverything.org~~ Done Oct 27 (Cloudflare Registrar, auto-renew). DNS points at GitHub Pages
    (4 A, 4 AAAA, www CNAME, all "DNS only"), and the repo's Pages site has the domain attached, so nobody else can claim it.
    GitHub never issued its own certificate, so (Oct 27) the address records go through Cloudflare (proxied), which

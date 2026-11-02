@@ -10,7 +10,7 @@
   let meP = null; const getMe = (fresh) => (fresh || !meP ? (meP = api.me()) : meP); // → { user, rules }
 
   const ago = (t) => { const s = (Date.now() - t) / 1000; if (s < 60) return 'just now'; const m = s / 60, h = m / 60, d = h / 24;
-    return m < 60 ? `${Math.floor(m)} min ago` : h < 24 ? `${Math.floor(h)} h ago` : d < 30 ? `${Math.floor(d)} days ago` : new Date(t).toLocaleDateString(undefined, { month: 'short', day: 'numeric', year: 'numeric' }); };
+    return m < 60 ? `${Math.floor(m)} min ago` : h < 24 ? `${Math.floor(h)} h ago` : d < 30 ? `${Math.floor(d)} ${Math.floor(d) === 1 ? 'day' : 'days'} ago` : new Date(t).toLocaleDateString(undefined, { month: 'short', day: 'numeric', year: 'numeric' }); };
   const KIND = { missing: 'Missing feature', wish: 'Wish', talk: 'Discussion' };
   // WHY words on the vote button (review, Oct 27): a bare ▲ with a number didn't read as "vote" to newcomers.
   const VOTE_WORD = { missing: 'Me too', wish: 'I want this' };
@@ -39,7 +39,8 @@
     if (!api.demo) { location.href = `${api.url}/auth/login?return=${encodeURIComponent(location.href)}`; return; }
     dialog('Sign in (preview)', `<p class="small2">On the real site this opens GitHub, which asks you to share only your public username. Here, pick who to be:</p>
       <div class="stack"><button class="btn md primary" type="button" data-as="you-sample" data-days="400">An account that's a year old</button>
-      <button class="btn md secondary" type="button" data-as="new-sample" data-days="3">A brand-new account (3 days old)</button></div>`, { size: 'narrow', onOpen: (el, close) => {
+      <button class="btn md secondary" type="button" data-as="new-sample" data-days="3">A brand-new account (3 days old)</button>
+      <button class="btn md secondary" type="button" data-as="penpot-team-sample" data-days="400">Penpot's developer (owns a claimed project)</button></div>`, { size: 'narrow', onOpen: (el, close) => {
       el.addEventListener('click', async (e) => { const b = e.target.closest('[data-as]'); if (!b) return; await api.signIn(b.dataset.as, +b.dataset.days); close(); location.reload(); });
     } });
   }
@@ -82,6 +83,8 @@
     slot.innerHTML = `<div class="dd"><button class="avatar acct-btn" type="button" data-menu="${mid}" aria-haspopup="menu" aria-expanded="false" title="@${esc(user.login)}">${esc(user.login[0].toUpperCase())}</button>
       <div class="menu acct-menu" id="${mid}" role="menu">
         <div class="menu-note">Signed in as <b>@${esc(user.login)}</b></div>
+        <a class="mi" role="menuitem" href="${BASE}suggestions/">Your suggestions</a>
+        <a class="mi" role="menuitem" href="${BASE}tag/">Tag my project</a>
         ${user.isMod ? `<a class="mi" role="menuitem" href="${BASE}mod/">Mod tools</a>` : ''}
         ${api.demo ? '<button class="mi" type="button" data-demo-reset>Preview: start over</button>' : ''}
         <button class="mi" type="button" data-signout>Sign out</button>
@@ -105,11 +108,32 @@
     if (e.target.closest('[data-delete-account]')) confirmBox('Delete your account?', "This removes everything you've posted here, your votes and your answers. Your GitHub account isn't touched. This can't be undone.", 'Delete everything', async () => { await api.deleteAccount(); location.href = BASE; }, true);
   });
 
+  // "Most voted": the alternatives in this job with the most "yes" answers, shown only once at least
+  // 10 answers (yes or not really) exist across the job, so a couple of early votes never look like a verdict.
+  const LIKED_MIN = 10;
+  // WHY no strip any more (Destin, round 4: "a sort field would make more sense"): the same numbers now give every card a vote count and switch on "Most voted" in the sort menu.
+  function drawLiked(boxes, all) {
+    for (const el of boxes) {
+      el.hidden = true;
+      const rated = JSON.parse(el.dataset.alts).map(([id, name]) => ({ id, name, ...(all[`${el.dataset.group}/${id}`] ?? { up: 0, down: 0 }) }));
+      const total = rated.reduce((n, r) => n + r.up + r.down, 0);
+      if (total < LIKED_MIN) continue;
+      const section = el.closest('section') ?? document;
+      for (const r of rated) section.querySelectorAll(`.card[data-project="${r.id}"]`).forEach((c) => { c.dataset.votes = r.up; });
+      document.querySelectorAll('[data-sort="votes"]').forEach((o) => { o.disabled = false; o.removeAttribute('title'); });
+    }
+  }
   // ── "Good replacement?" ratings, one per project per job: a chip on cards, the question on project pages ──
   async function renderRatings() {
-    const chips = $$('[data-rating]'); const rows = $$('[data-rate]'); if (!chips.length && !rows.length) return;
-    const pairs = [...new Map([...chips, ...rows].map((el) => [`${el.dataset.group}/${el.dataset.project}`, { group: el.dataset.group, project: el.dataset.project }])).values()];
-    const all = await api.ratings(pairs).catch(() => ({}));
+    const chips = $$('[data-rating]'); const rows = $$('[data-rate]'); const liked = $$('[data-liked]');
+    if (!chips.length && !rows.length && !liked.length) return;
+    // WHY the liked strips join the same request: they need the same answers the card chips do, so the page asks once.
+    const likedPairs = liked.flatMap((el) => JSON.parse(el.dataset.alts).map(([project]) => ({ group: el.dataset.group, project })));
+    const pairs = [...new Map([...chips.map((el) => ({ group: el.dataset.group, project: el.dataset.project })), ...rows.map((el) => ({ group: el.dataset.group, project: el.dataset.project })), ...likedPairs].map((x) => [`${x.group}/${x.project}`, x])).values()];
+    // The server answers at most 60 pairs per call, so ask in slices.
+    const all = {};
+    for (let i = 0; i < pairs.length; i += 60) Object.assign(all, await api.ratings(pairs.slice(i, i + 60)).catch(() => ({})));
+    drawLiked(liked, all);
     for (const el of chips) {
       const r = all[`${el.dataset.group}/${el.dataset.project}`]; const t = r ? r.up + r.down : 0;
       // WHY hidden under 5 answers: "100%" from one person would mislead.
@@ -191,15 +215,15 @@
   // ── Adding a note ──
   // A dropdown in the site's style, for one choice or several; for several, it stays open while you tick.
   let pickN = 0;
-  function picker(host, options, { single = false, selected = [], none = '', labelledBy, onChange } = {}) {
+  function picker(host, options, { single = false, selected = [], none = '', labelledBy, onChange, action } = {}) {
     const id = `pick${++pickN}`; let sel = new Set(selected);
     const label = () => { const ns = options.filter(([v]) => sel.has(v)).map(([, n]) => n); return ns.length ? (ns.length > 2 ? `${ns.slice(0, 2).join(', ')} and ${ns.length - 2} more` : ns.join(', ')) : none; };
     const draw = () => {
       host.innerHTML = `<div class="dd"><button class="select field-select${sel.size ? '' : ' empty'}" type="button" data-menu="${id}" aria-haspopup="listbox" aria-expanded="false"${labelledBy ? ` aria-labelledby="${labelledBy} ${id}b"` : ''}><span id="${id}b">${esc(label())}</span>${OI.chev}</button>
-        <div class="menu pick-menu" id="${id}" role="listbox"${single ? '' : ' aria-multiselectable="true"'}>${options.map(([v, n]) => `<button class="mi${sel.has(v) ? ' sel' : ''}" type="button" role="option" aria-selected="${sel.has(v)}" data-v="${esc(v)}">${single ? '' : `<span class="tick">${sel.has(v) ? '✓' : ''}</span>`}${esc(n)}</button>`).join('')}</div></div>`;
+        <div class="menu pick-menu" id="${id}" role="listbox"${single ? '' : ' aria-multiselectable="true"'}>${action ? `<a class="mi suggest" href="${esc(action[1])}" target="_blank" rel="noopener">${esc(action[0])}</a><div class="menu-sep"></div>` : ''}${options.map(([v, n]) => `<button class="mi${sel.has(v) ? ' sel' : ''}" type="button" role="option" aria-selected="${sel.has(v)}" data-v="${esc(v)}">${single ? '' : `<span class="tick">${sel.has(v) ? '✓' : ''}</span>`}${esc(n)}</button>`).join('')}</div></div>`;
     };
     host.onclick = (e) => {
-      const o = e.target.closest('.mi'); if (!o) return; e.stopPropagation(); const v = o.dataset.v;
+      const o = e.target.closest('.mi'); if (!o || !o.dataset.v) return; e.stopPropagation(); const v = o.dataset.v;
       if (single) { sel = new Set([v]); draw(); onChange?.(); return; }
       sel.has(v) ? sel.delete(v) : sel.add(v); draw(); $(`#${id}`, host).classList.add('open'); onChange?.();
     };
@@ -294,7 +318,7 @@
       ${isOpen ? '<button class="btn md secondary" type="button" data-status="fixed">Close as fixed</button><button class="btn md secondary" type="button" data-status="wontfix">Close: won\'t happen</button><button class="btn md secondary" type="button" data-status="duplicate">Close as a duplicate</button>' : '<button class="btn md secondary" type="button" data-status="open">Reopen</button>'}
       </div>${n.reports?.length ? `<div class="callout warn">${n.reports.length} report${n.reports.length === 1 ? '' : 's'}: ${n.reports.map((r) => esc(r.reason)).join(' · ')}</div>` : ''}</section>` : '';
     slot.innerHTML = `
-    ${n.held ? `<div class="surface notice-line"><span class="pill warn"><i></i>Waiting for a mod</span><p class="small2">${user?.isMod ? 'This is a first post from a new account. Approve or hide it in Mod tools.' : 'Only you can see this until a mod approves it, usually within a day or two.'}</p></div>` : ''}
+    ${n.held ? `<div class="surface notice-line"><span class="pill warn"><i></i>Waiting for a mod</span><p class="small2">${user?.isMod ? (n.flag ? `The filter held this one: ${esc(n.flag)}. Approve or hide it in Mod tools.` : 'This is a first post from a new account. Approve or hide it in Mod tools.') : 'Only you can see this until a mod approves it, usually within a day or two. (New accounts, bad language and unusual links all wait for a mod.)'}</p></div>` : ''}
     <div class="surface identity note-id">
       <div class="row"><div class="nr-main">
         <div class="chiprow"><span class="chip">${KIND[n.kind]}</span>${pills({ ...n, held: false, fixed: null, building: null })}</div>
@@ -345,12 +369,12 @@
     try { q = await api.modQueue(); } catch (e) { slot.innerHTML = `<div class="surface sec"><h1 class="h-large">Mod tools</h1><p class="small2">${esc(e.status === 403 ? 'Only r/TrueOpenSource mods can open this page.' : e.message)}</p></div>`; return; }
     const titles = new Map();
     const row = (key, title, meta, btns, extra = '') => { titles.set(key, title); return `<div class="lvl1 modrow" data-key="${key}"><div class="nr-main"><a class="rt" href="${BASE}n/?id=${key.split('/')[0]}"></a><div class="nr-meta">${meta}</div>${extra}</div><div class="btns-row">${btns.map(([a, l, p]) => `<button class="btn sm ${p ? 'primary' : 'secondary'}" type="button" data-act="${a}">${l}</button>`).join('')}</div></div>`; };
-    const nmeta = (n) => `<span class="chip">${KIND[n.kind]}</span><span class="muted11">@${esc(n.author)} · ${esc(N.groups[n.group]?.n ?? '')}${n.kind === 'talk' ? '' : ` · ${n.votes} votes`}</span>`;
+    const nmeta = (n) => `<span class="chip">${KIND[n.kind]}</span><span class="muted11">@${esc(n.author)} · ${esc(N.groups[n.group]?.n ?? '')}${n.kind === 'talk' ? '' : ` · ${n.votes} votes`}</span>${n.flag ? `<span class="pill warn"><i></i>Filter: ${esc(n.flag)}</span>` : ''}`;
     const sec = (title, desc, items) => `<section class="surface sec"><div class="sec-head"><div><h2 class="h-large">${title}<span class="count">${items.length}</span></h2><p class="desc12">${desc}</p></div></div>${items.length ? `<div class="stack">${items.join('')}</div>` : '<div class="empty">Nothing waiting.</div>'}</section>`;
     slot.innerHTML = `<div class="surface identity"><div><div class="muted11">Mods</div><h1 class="h-subject">Mod tools</h1><p class="desc12" style="margin-top:4px">Everything waiting for a mod, most urgent first. Suggestions for the map itself arrive on GitHub.</p></div></div>
       ${sec('Waiting for approval', 'First posts from new GitHub accounts. Approving one trusts the account from then on.', [
         ...q.held.map((n) => row(`${n.id}`, n.title, nmeta(n), [['ban', 'Ban the account…'], ['hide', 'Hide'], ['approve', 'Approve', 1]])),
-        ...q.heldReplies.map((r) => row(`${r.note.id}/${r.id}`, `Reply on: ${r.note.title}`, `<span class="chip">Reply</span><span class="muted11">@${esc(r.author)}</span>`, [['ban', 'Ban the account…'], ['hide', 'Hide'], ['approve', 'Approve', 1]], '<p class="small2 reply-text"></p>'))])}
+        ...q.heldReplies.map((r) => row(`${r.note.id}/${r.id}`, `Reply on: ${r.note.title}`, `<span class="chip">Reply</span><span class="muted11">@${esc(r.author)}</span>${r.flag ? `<span class="pill warn"><i></i>Filter: ${esc(r.flag)}</span>` : ''}`, [['ban', 'Ban the account…'], ['hide', 'Hide'], ['approve', 'Approve', 1]], '<p class="small2 reply-text"></p>'))])}
       ${sec('Reported', 'Notes someone flagged', q.reported.map((n) => row(`${n.id}`, n.title, nmeta(n), [['dismiss', 'Keep it'], ['hide', 'Hide', 1]], `<div class="callout warn">${n.reports.map((r) => esc(r.reason)).join(' · ')}</div>`)))}
       ${sec('Says it\'s fixed', 'Someone says a missing feature is fixed; it closes by itself at enough confirmations', q.claims.map((n) => row(`${n.id}`, n.title, nmeta(n), [['reject-fix', 'Not fixed'], ['fixed', 'Close as fixed', 1]], `<div class="small2">@${esc(n.fixed.by)}: <a href="${esc(n.fixed.link)}" rel="nofollow ugc noopener" target="_blank">${shortLink(n.fixed.link)}</a> · ${n.fixed.confirms} confirmed</div>`)))}
       ${sec('Should "Replaces fully" change?', 'Missing features with many votes. If it matters this much, the listing may only replace part of the job.', q.popular.map((n) => row(`${n.id}`, n.title, nmeta(n), [['keep', 'Keep "fully"'], ['partly', 'Suggest "partly"', 1]])))}`;
@@ -380,6 +404,9 @@
   }
 
   // ── Start ──
+  // WHY shared (contrib.js): "I want this too", Tag my project, Your suggestions and the mod Suggestions tab live in their own file
+  // but use the same popups, sign-in and pickers, so they look and behave like everything else here.
+  OI.ui = { dialog, confirmBox, ask, signIn, oops, getMe, picker, loadNames, ago, fillText, remember };
   if (api.demo) document.body.insertAdjacentHTML('afterbegin', '<div class="demo-ribbon">Preview: sample posts and pretend votes, saved only in this browser</div>');
   $$('[data-account]').forEach(renderAccount);
   renderNewAccountLine();

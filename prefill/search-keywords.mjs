@@ -69,7 +69,9 @@ const request = (j) => ({
   messages: [{ role: 'user', content: j.text }],
 });
 
-async function pool(list, fn, n = 16) {
+// WHY --parallel (Oct 27): the current key's account refuses more than a few requests at once (429).
+const PARALLEL = Number(arg('--parallel') ?? 16);
+async function pool(list, fn, n = PARALLEL) {
   const out = []; const q = [...list]; let done = 0;
   await Promise.all(Array.from({ length: n }, async () => {
     for (let j = q.shift(); j; j = q.shift()) {

@@ -1,0 +1,1725 @@
+{
+ "batch": "social",
+ "checked": "2026-10-27",
+ "answers": {
+  "zulip": {
+   "no-server-needed": {
+    "v": "yes",
+    "note": null,
+    "source": "https://github.com/zulip/zulip",
+    "quote": "Using Zulip without setting up a server. Learn about Zulip Cloud hosting options."
+   },
+   "phone-app": {
+    "v": "yes",
+    "note": null,
+    "source": "site data",
+    "quote": null
+   },
+   "built-in-calls": {
+    "v": "yes",
+    "note": null,
+    "source": "https://zulip.com/help/start-a-call",
+    "quote": "Start a video call; Start a voice call"
+   },
+   "company-sso": {
+    "v": "yes",
+    "note": null,
+    "source": "https://zulip.com/help/configure-authentication-methods",
+    "quote": "Configure authentication methods; SAML authentication; SCIM provisioning"
+   },
+   "slack-import": {
+    "v": "yes",
+    "note": null,
+    "source": "https://zulip.com/help/import-from-slack",
+    "quote": "Import an organization: Import from Mattermost, Import from Microsoft Teams, Import from Slack, Import from Rocket.Chat"
+   },
+   "threads": {
+    "v": "yes",
+    "note": "topics",
+    "source": "https://github.com/zulip/zulip",
+    "quote": "Zulip is an open-source organized team chat app with unique topic-based threading"
+   }
+  },
+  "delta-chat": {
+   "phone-app": {
+    "v": "yes",
+    "note": null,
+    "source": "site data",
+    "quote": null
+   },
+   "computer-app": {
+    "v": "yes",
+    "note": null,
+    "source": "site data",
+    "quote": null
+   },
+   "disappearing-messages": {
+    "v": "yes",
+    "note": null,
+    "source": "https://delta.chat/en/help",
+    "quote": "How do disappearing messages work?"
+   },
+   "e2e-encrypted": {
+    "v": "yes",
+    "note": null,
+    "source": "https://delta.chat/en/help",
+    "quote": "Which standards are used for end-to-end encryption?"
+   },
+   "no-phone-number": {
+    "v": "yes",
+    "note": null,
+    "source": "https://delta.chat/en/help",
+    "quote": "Even if chatmail relays do not ask for any private data (including no phone numbers)"
+   },
+   "self-hostable": {
+    "v": "yes",
+    "note": "chatmail servers",
+    "source": "https://delta.chat/en/help",
+    "quote": "I want to manage my own server for Delta Chat. What do you recommend"
+   }
+  },
+  "nextcloud-talk": {
+   "screen-share": {
+    "v": "yes",
+    "note": null,
+    "source": "https://github.com/nextcloud/spreed",
+    "quote": "Screen sharing! Share your screen with the participants of your call."
+   },
+   "phone-app": {
+    "v": "yes",
+    "note": null,
+    "source": "site data",
+    "quote": null
+   },
+   "breakout-rooms": {
+    "v": "yes",
+    "note": null,
+    "source": "https://nextcloud.com/talk",
+    "quote": "Jump start conversations in breakout rooms"
+   },
+   "e2e-encrypted": {
+    "v": "partly",
+    "note": "calls only",
+    "source": "https://nextcloud.com/talk",
+    "quote": "Nextcloud Talk now supports end-to-end encrypted calls for sensitive communication"
+   },
+   "meeting-recording": {
+    "v": "partly",
+    "note": "needs a separate recording backend",
+    "source": "https://nextcloud-talk.readthedocs.io/en/latest/quick-install/",
+    "quote": "Recording backend: A Recording backend to allow recording audio and video calls."
+   },
+   "no-account-needed": {
+    "v": "yes",
+    "note": "guest links",
+    "source": "https://nextcloud.com/talk",
+    "quote": "Users can invite external chat participants with an URL into public rooms on the Nextcloud server."
+   },
+   "no-server-needed": {
+    "v": "yes",
+    "note": "free accounts at providers",
+    "source": "https://nextcloud.com/talk",
+    "quote": "Sign up now Get free account at a provider"
+   }
+  },
+  "mbin": {
+   "federated": {
+    "v": "yes",
+    "note": null,
+    "source": "https://github.com/MbinOrg/mbin",
+    "quote": "decentralized content aggregator... running on the fediverse. It can communicate with various ActivityPub services"
+   },
+   "voting": {
+    "v": "yes",
+    "note": null,
+    "source": "https://joinmbin.org",
+    "quote": "A federated content aggregator, voting, discussion and microblogging"
+   }
+  },
+  "writefreely": {
+   "federated": {
+    "v": "yes",
+    "note": null,
+    "source": "https://github.com/writefreely/writefreely",
+    "quote": "Connect with other communities, whether running WriteFreely, Plume, or other ActivityPub-powered software."
+   },
+   "no-server-needed": {
+    "v": "partly",
+    "note": "paid hosting at Write.as",
+    "source": "https://github.com/writefreely/writefreely",
+    "quote": "The quickest way to deploy WriteFreely is with Write.as, a hosted service from the team behind WriteFreely."
+   }
+  },
+  "postiz": {
+   "content-calendar": {
+    "v": "yes",
+    "note": null,
+    "source": "https://github.com/gitroomhq/postiz-app",
+    "quote": "Scheduling, calendar views, cross-posting, repeated posts..."
+   },
+   "no-server-needed": {
+    "v": "partly",
+    "note": "paid hosted plan",
+    "source": "https://github.com/gitroomhq/postiz-app",
+    "quote": "Subscription per plan, 7-day free trial | Free forever (AGPL-3.0); you pay only for your own infra"
+   },
+   "post-stats": {
+    "v": "yes",
+    "note": null,
+    "source": "https://postiz.com",
+    "quote": "Comprehensive analytics See which posts and channels perform best, then double down on what works."
+   },
+   "social-networks-covered": {
+    "v": "yes",
+    "note": null,
+    "source": "https://postiz.com",
+    "quote": "Channels Facebook Instagram Threads Linkedin Bluesky X TikTok YouTube Google My Business Reddit Telegram Discord Slack Pinterest Dribbble Mastodon"
+   }
+  },
+  "aurora-store": {
+   "play-apps": {
+    "v": "partly",
+    "note": "Paid apps cannot be downloaded or updated.",
+    "source": "https://gitlab.com/AuroraOSS/AuroraStore",
+    "quote": "Can not download or update paid apps."
+   },
+   "tracker-warnings": {
+    "v": "yes",
+    "note": null,
+    "source": "https://gitlab.com/AuroraOSS/AuroraStore",
+    "quote": "Exodus Privacy integration: Instantly see trackers in app"
+   },
+   "no-account-needed": {
+    "v": "partly",
+    "note": "Anonymous Google login option, but a login is still used.",
+    "source": "https://gitlab.com/AuroraOSS/AuroraStore",
+    "quote": "You can login with either personal or an anonymous account"
+   },
+   "auto-updates": {
+    "v": "yes",
+    "note": null,
+    "source": "https://gitlab.com/AuroraOSS/AuroraStore",
+    "quote": "android.permission.REQUEST_IGNORE_BATTERY_OPTIMIZATIONS to auto-update apps without interruption (optional)"
+   }
+  },
+  "openboard": {
+   "clipboard-history": {
+    "v": "yes",
+    "note": null,
+    "source": "https://github.com/openboard-team/openboard",
+    "quote": "Clipboard history feature (checked off in the project's TODO list)"
+   },
+   "emoji-search": {
+    "v": "no",
+    "note": "Listed as a wanted, not-yet-done feature.",
+    "source": "https://github.com/openboard-team/openboard",
+    "quote": "[ ] Emoji search"
+   },
+   "glide-typing": {
+    "v": "no",
+    "note": "Listed as a wanted, not-yet-done feature.",
+    "source": "https://github.com/openboard-team/openboard",
+    "quote": "[ ] Glide typing"
+   }
+  },
+  "librengine": {
+   "own-index": {
+    "v": "yes",
+    "note": null,
+    "source": "https://github.com/liameno/librengine",
+    "quote": "Crawler: Multithreading, Cache, Robots.txt, Queue (BFS)"
+   },
+   "image-search": {
+    "v": "no",
+    "note": "Image crawler is an unchecked TODO item.",
+    "source": "https://github.com/liameno/librengine",
+    "quote": "[ ] Images Crawler"
+   },
+   "no-server-needed": {
+    "v": "no",
+    "note": "Needs a database, crawler and website run by you.",
+    "source": "site data",
+    "quote": null
+   }
+  },
+  "keepassx": {
+   "no-server-needed": {
+    "v": "yes",
+    "note": null,
+    "source": "site data",
+    "quote": null
+   },
+   "breach-alerts": {
+    "v": "no",
+    "note": null,
+    "source": "https://www.keepassx.org/downloads",
+    "quote": "Development of KeePassX has stopped. You might want to switch to KeePassXC which is based on KeePassX. (downloads: Windows, Mac OS X and source only)"
+   },
+   "browser-extension": {
+    "v": "no",
+    "note": null,
+    "source": "https://www.keepassx.org/downloads",
+    "quote": "Development of KeePassX has stopped. You might want to switch to KeePassXC which is based on KeePassX. (downloads: Windows, Mac OS X and source only)"
+   },
+   "passkeys": {
+    "v": "no",
+    "note": null,
+    "source": "https://www.keepassx.org/downloads",
+    "quote": "Development of KeePassX has stopped. You might want to switch to KeePassXC which is based on KeePassX. (downloads: Windows, Mac OS X and source only)"
+   },
+   "phone-app": {
+    "v": "no",
+    "note": null,
+    "source": "https://www.keepassx.org/downloads",
+    "quote": "Development of KeePassX has stopped. You might want to switch to KeePassXC which is based on KeePassX. (downloads: Windows, Mac OS X and source only)"
+   },
+   "share-with-others": {
+    "v": "no",
+    "note": null,
+    "source": "https://www.keepassx.org/downloads",
+    "quote": "Development of KeePassX has stopped. You might want to switch to KeePassXC which is based on KeePassX. (downloads: Windows, Mac OS X and source only)"
+   },
+   "syncs-devices": {
+    "v": "no",
+    "note": null,
+    "source": "https://www.keepassx.org/downloads",
+    "quote": "Development of KeePassX has stopped. You might want to switch to KeePassXC which is based on KeePassX. (downloads: Windows, Mac OS X and source only)"
+   }
+  },
+  "gravitl": {
+   "web-admin": {
+    "v": "yes",
+    "note": null,
+    "source": "https://github.com/gravitl/netmaker",
+    "quote": "Manage: Admin UI"
+   },
+   "access-rules": {
+    "v": "yes",
+    "note": null,
+    "source": "https://github.com/gravitl/netmaker",
+    "quote": "Access Control Lists"
+   },
+   "mesh-direct": {
+    "v": "yes",
+    "note": null,
+    "source": "https://github.com/gravitl/netmaker",
+    "quote": "Mesh VPNs"
+   }
+  },
+  "mullvad-vpn": {
+   "split-tunnel": {
+    "v": "partly",
+    "note": "Built in on desktop and Android, not on iOS.",
+    "source": "https://github.com/mullvad/mullvadvpn-app",
+    "quote": "Split tunneling table row: no check for iOS"
+   },
+   "free-plan": {
+    "v": "no",
+    "note": null,
+    "source": "https://mullvad.net/en/vpn",
+    "quote": "€5/month Privacy-focused VPN"
+   },
+   "independent-audit": {
+    "v": "yes",
+    "note": null,
+    "source": "https://mullvad.net/en/vpn",
+    "quote": "Externally audited We request independent audits of our app and infrastructure to provide transparency and improve our security practices."
+   },
+   "no-account-needed": {
+    "v": "yes",
+    "note": "random account number",
+    "source": "https://mullvad.net/en/vpn",
+    "quote": "Privacy-focused VPN No logging. Anonymous accounts. Circumvents censorship"
+   }
+  },
+  "pop-os": {
+   "preinstalled": {
+    "v": "partly",
+    "note": "System76 only",
+    "source": "https://system76.com/pop/",
+    "quote": "Search Support Contact Log in or Register Cart Search Laptops Desktops Workstations"
+   }
+  },
+  "zen-browser": {
+   "phone-app": {
+    "v": "no",
+    "note": null,
+    "source": "site data",
+    "quote": null
+   }
+  },
+  "mattermost": {
+   "phone-app": {
+    "v": "yes",
+    "note": null,
+    "source": "site data",
+    "quote": null
+   },
+   "built-in-calls": {
+    "v": "yes",
+    "note": null,
+    "source": "https://docs.mattermost.com/about/product.html",
+    "quote": "voice and video calls"
+   },
+   "slack-import": {
+    "v": "yes",
+    "note": null,
+    "source": "https://docs.mattermost.com/about/product.html",
+    "quote": "Slack import"
+   },
+   "threads": {
+    "v": "yes",
+    "note": null,
+    "source": "https://docs.mattermost.com/about/product.html",
+    "quote": "collapsed reply threads"
+   },
+   "no-server-needed": {
+    "v": "partly",
+    "note": "free cloud trial",
+    "source": "https://github.com/mattermost/mattermost",
+    "quote": "Mattermost is an open core, self-hosted collaboration platform ... or try it for free in the cloud."
+   }
+  },
+  "briar": {
+   "computer-app": {
+    "v": "yes",
+    "note": null,
+    "source": "site data",
+    "quote": null
+   },
+   "phone-app": {
+    "v": "partly",
+    "note": "Android only, no iPhone app",
+    "source": "site data",
+    "quote": null
+   },
+   "e2e-encrypted": {
+    "v": "yes",
+    "note": null,
+    "source": "https://briarproject.org",
+    "quote": "End-to-end encryption and decentralized technology ensure conversations stay private and available even without Internet."
+   }
+  },
+  "galene": {
+   "e2e-encrypted": {
+    "v": "no",
+    "note": null,
+    "source": "https://galene.org/",
+    "quote": "Galene does not perform end-to-end encryption."
+   },
+   "meeting-recording": {
+    "v": "yes",
+    "note": null,
+    "source": "https://galene.org/",
+    "quote": "recording to disk"
+   },
+   "screen-share": {
+    "v": "yes",
+    "note": null,
+    "source": "https://galene.org/",
+    "quote": "screen and window sharing"
+   },
+   "large-meetings": {
+    "v": "partly",
+    "note": "about 300 per core for lectures; about 20 in a meeting per core",
+    "source": "https://galene.org",
+    "quote": "For many-to-many communication (meetings), the behaviour is quadratic ... expect to be able to handle on the order of 20 participants in a single meeting on one core, 40 on four cores"
+   },
+   "phone-app": {
+    "v": "partly",
+    "note": "Android client lacks video; no iPhone app, web works in mobile browsers",
+    "source": "https://galene.org",
+    "quote": "Android client for Galene. Does chat, audio and screensharing. For video, please use the web client, which works fine on mobile."
+   },
+   "no-server-needed": {
+    "v": "no",
+    "note": "Someone must run the server",
+    "source": "site data",
+    "quote": null
+   },
+   "no-account-needed": {
+    "v": "yes",
+    "note": "public groups",
+    "source": "https://galene.org",
+    "quote": "You may log in with an empty password."
+   }
+  },
+  "discourse": {
+   "phone-app": {
+    "v": "yes",
+    "note": null,
+    "source": "https://www.discourse.org/about",
+    "quote": "Download Discourse Hub on the App Store / Google Play"
+   },
+   "federated": {
+    "v": "partly",
+    "note": "experimental plugin",
+    "source": "https://meta.discourse.org/t/discourse-activitypub/266794",
+    "quote": "ActivityPub Plugin Customization Plugin experimental ... Discourse ActivityPub allows you to publish Discourse posts via ActivityPub"
+   },
+   "no-server-needed": {
+    "v": "partly",
+    "note": "paid official hosting",
+    "source": "https://github.com/discourse/discourse",
+    "quote": "But if you'd rather skip the setup, maintenance, and server management, we offer official Discourse hosting."
+   },
+   "voting": {
+    "v": "partly",
+    "note": "voting is a plugin",
+    "source": "https://meta.discourse.org/t/discourse-topic-voting/40121",
+    "quote": "allows community members to vote on topics, with votes limited by user trust levels"
+   }
+  },
+  "diaspora": {
+   "federated": {
+    "v": "yes",
+    "note": null,
+    "source": "https://diasporafoundation.org/about",
+    "quote": "Independently run servers, called pods, connect to one another"
+   },
+   "who-sees-post": {
+    "v": "yes",
+    "note": null,
+    "source": "https://diasporafoundation.org/about",
+    "quote": "aspects allow you to share with just those people you want to"
+   },
+   "no-server-needed": {
+    "v": "yes",
+    "note": "join a public pod",
+    "source": "https://github.com/diaspora/diaspora",
+    "quote": "You don't have to install diaspora* to use the network. There are many servers connected to diaspora*s network which are open to anyone, and you can create an account on one of these servers."
+   }
+  },
+  "bazzite": {
+   "update-rollback": {
+    "v": "yes",
+    "note": null,
+    "source": "https://github.com/ublue-os/bazzite",
+    "quote": "Easily roll back to the previous version of Bazzite thanks to rpm-ostree's rollback functionality"
+   },
+   "runs-windows-games": {
+    "v": "yes",
+    "note": null,
+    "source": "https://docs.bazzite.gg/",
+    "quote": "Steam and Lutris bundled; run your PC games"
+   },
+   "nvidia-ready": {
+    "v": "yes",
+    "note": null,
+    "source": "https://bazzite.gg",
+    "quote": "GPU Support Nvidia drivers and the latest Mesa for AMD & Intel pre-installed, with tweaks applied as needed"
+   }
+  },
+  "accrescent": {
+   "auto-updates": {
+    "v": "yes",
+    "note": null,
+    "source": "https://accrescent.app/features",
+    "quote": "perform updates in the background without prompting thereafter"
+   },
+   "no-account-needed": {
+    "v": "yes",
+    "note": null,
+    "source": "https://accrescent.app/features",
+    "quote": "Accrescent doesn't have user accounts"
+   }
+  },
+  "simple-keyboard": {
+   "emoji-search": {
+    "v": "no",
+    "note": null,
+    "source": "https://github.com/rkkr/simple-keyboard",
+    "quote": "Feature it doesn't have: Emojis, GIFs"
+   },
+   "glide-typing": {
+    "v": "no",
+    "note": null,
+    "source": "https://github.com/rkkr/simple-keyboard",
+    "quote": "Feature it doesn't have: Swipe typing"
+   },
+   "no-tracking": {
+    "v": "yes",
+    "note": null,
+    "source": "https://github.com/rkkr/simple-keyboard",
+    "quote": "Minimal permissions (only Vibrate); Ads-free"
+   }
+  },
+  "ungoogled-chromium": {
+   "phone-app": {
+    "v": "no",
+    "note": null,
+    "source": "site data",
+    "quote": null
+   },
+   "chrome-extensions": {
+    "v": "partly",
+    "note": "manual workaround",
+    "source": "https://ungoogled-software.github.io/ungoogled-chromium-wiki/faq",
+    "quote": "Can I install extensions or themes from the Chrome Webstore? Yes, but not via the Chrome Webstore interface."
+   },
+   "no-tracking": {
+    "v": "yes",
+    "note": null,
+    "source": "https://github.com/ungoogled-software/ungoogled-chromium/blob/master/docs/design.md",
+    "quote": "core: Changes regarding background requests, code specific to Google web services, or code using pre-made binaries."
+   }
+  },
+  "bitwarden": {
+   "phone-app": {
+    "v": "yes",
+    "note": null,
+    "source": "https://github.com/bitwarden/clients",
+    "quote": "mobile apps: iOS and android repos"
+   },
+   "passkeys": {
+    "v": "yes",
+    "note": null,
+    "source": "https://bitwarden.com/",
+    "quote": "Sign in with a passkey"
+   },
+   "share-with-others": {
+    "v": "yes",
+    "note": null,
+    "source": "https://bitwarden.com/",
+    "quote": "Share passwords across friends, family, teams"
+   },
+   "no-server-needed": {
+    "v": "yes",
+    "note": null,
+    "source": "https://bitwarden.com/",
+    "quote": "Always free"
+   },
+   "browser-extension": {
+    "v": "yes",
+    "note": null,
+    "source": "https://bitwarden.com/download/",
+    "quote": "Web browser extensions: Edge Chrome Safari Firefox Opera DuckDuckGo Vivaldi Brave Tor"
+   },
+   "passwords-import": {
+    "v": "yes",
+    "note": null,
+    "source": "https://bitwarden.com/help/import-data/",
+    "quote": "Import from LastPass Import from 1Password Import from Keeper Import from Dashlane"
+   },
+   "syncs-devices": {
+    "v": "yes",
+    "note": null,
+    "source": "https://bitwarden.com/download/",
+    "quote": "any device with secure cloud sync"
+   }
+  },
+  "aegis": {
+   "computer-app": {
+    "v": "no",
+    "note": null,
+    "source": "site data",
+    "quote": null
+   },
+   "phone-app": {
+    "v": "partly",
+    "note": "Android only, no iPhone app",
+    "source": "site data",
+    "quote": null
+   },
+   "encrypted-backup": {
+    "v": "yes",
+    "note": null,
+    "source": "https://github.com/beemdevelopment/Aegis",
+    "quote": "Export (plaintext or encrypted); automatic backups of the vault"
+   },
+   "twofa-import": {
+    "v": "yes",
+    "note": null,
+    "source": "https://github.com/beemdevelopment/Aegis",
+    "quote": "Import from other authenticator apps: 2FAS Authenticator, Authenticator..."
+   }
+  },
+  "netbird": {
+   "mesh-direct": {
+    "v": "yes",
+    "note": null,
+    "source": "https://netbird.io/",
+    "quote": "peer-to-peer WireGuard-based network"
+   },
+   "access-rules": {
+    "v": "yes",
+    "note": null,
+    "source": "https://netbird.io/",
+    "quote": "Define granular policies to limit network access"
+   },
+   "company-sso": {
+    "v": "yes",
+    "note": null,
+    "source": "https://github.com/netbirdio/netbird",
+    "quote": "✓ SSO & MFA support ... ✓ IdP integrations"
+   },
+   "web-admin": {
+    "v": "yes",
+    "note": null,
+    "source": "https://github.com/netbirdio/netbird",
+    "quote": "✓ Admin Web UI"
+   }
+  },
+  "proton-vpn": {
+   "free-plan": {
+    "v": "yes",
+    "note": null,
+    "source": "https://protonvpn.com/free-vpn",
+    "quote": "no data or time limits, and will be free forever"
+   },
+   "kill-switch": {
+    "v": "yes",
+    "note": null,
+    "source": "https://protonvpn.com/free-vpn",
+    "quote": "kill switch listed as included feature"
+   },
+   "many-locations": {
+    "v": "yes",
+    "note": null,
+    "source": "https://protonvpn.com/free-vpn",
+    "quote": "110+ / 140+ countries"
+   },
+   "no-account-needed": {
+    "v": "no",
+    "note": null,
+    "source": "https://protonvpn.com/free-vpn",
+    "quote": "Create a free account and download our VPN"
+   },
+   "independent-audit": {
+    "v": "yes",
+    "note": null,
+    "source": "https://protonvpn.com",
+    "quote": "No logs, no ads, open-source and independently audited."
+   }
+  },
+  "wordpress": {
+   "email-newsletter": {
+    "v": "partly",
+    "note": "through plugins",
+    "source": "https://wordpress.org",
+    "quote": "Add a store, analytics, newsletter, social media integration; you're in control with an extensive library of plugins."
+   }
+  },
+  "rocket-chat": {
+   "built-in-calls": {
+    "v": "yes",
+    "note": "Jitsi-based",
+    "source": "https://rocket.chat",
+    "quote": "Collaborate anyway, in one secure platform for messaging, voice, video, apps and AI."
+   },
+   "cross-org": {
+    "v": "partly",
+    "note": "Matrix federation",
+    "source": "https://rocket.chat",
+    "quote": "Federates natively with Matrix"
+   },
+   "e2e-encrypted": {
+    "v": "partly",
+    "note": "optional",
+    "source": "https://github.com/RocketChat/Rocket.Chat",
+    "quote": "Secure by design, with features such as identity management, end-to-end encryption, and role and attribute-based access control."
+   }
+  },
+  "snikket": {
+   "self-hostable": {
+    "v": "yes",
+    "note": null,
+    "source": "https://github.com/snikket-im/snikket-server",
+    "quote": "Snikket is an open-source self-hosted personal messaging service."
+   }
+  },
+  "mastodon": {
+   "federated": {
+    "v": "yes",
+    "note": null,
+    "source": "https://joinmastodon.org",
+    "quote": "Mastodon can speak with any other platform that implements ActivityPub."
+   },
+   "no-server-needed": {
+    "v": "yes",
+    "note": "join a server",
+    "source": "https://joinmastodon.org",
+    "quote": "Servers Browse the directory of other Mastodon servers."
+   },
+   "phone-app": {
+    "v": "yes",
+    "note": null,
+    "source": "https://docs.joinmastodon.org/user/posting/",
+    "quote": "Official iOS and Android apps"
+   },
+   "quote-posts": {
+    "v": "yes",
+    "note": "added in version 4.5",
+    "source": "https://github.com/mastodon/mastodon/releases/tag/v4.5.0",
+    "quote": "Add support for allowing and authoring quotes ... See https://blog.joinmastodon.org/2025/09/introducing-quote-posts/ for a user-centric overview of the feature"
+   }
+  },
+  "pixelfed": {
+   "federated": {
+    "v": "yes",
+    "note": null,
+    "source": "https://github.com/pixelfed/pixelfed",
+    "quote": "Join millions of people sharing across the fediverse."
+   }
+  },
+  "linux-mint": {
+   "update-rollback": {
+    "v": "yes",
+    "note": "system snapshots",
+    "source": "https://linuxmint.com",
+    "quote": "Rock solid With centralized software updates, system snapshots, a unique Update Manager"
+   }
+  },
+  "grapheneos": {
+   "banking-apps": {
+    "v": "partly",
+    "note": "a few refuse",
+    "source": "https://grapheneos.org/usage",
+    "quote": "Some of these work fine with any GrapheneOS configuration but most of them have extensive dependencies on Play services."
+   },
+   "easy-installer": {
+    "v": "yes",
+    "note": null,
+    "source": "https://grapheneos.org/install/web",
+    "quote": "Web installer This is the WebUSB-based installer for GrapheneOS and is the recommended approach for most users."
+   },
+   "google-apps-optional": {
+    "v": "yes",
+    "note": null,
+    "source": "https://grapheneos.org/usage",
+    "quote": "Sandboxed Google Play: GrapheneOS has a compatibility layer providing the option to install and use the official releases of Google Play in the standard app sandbox."
+   },
+   "many-phones": {
+    "v": "partly",
+    "note": "Pixel phones only (19 models)",
+    "source": "https://grapheneos.org/releases",
+    "quote": "Devices Pixel 10a, Pixel 10 Pro Fold, Pixel 10 Pro XL, Pixel 10 Pro, Pixel 10, Pixel 9a, ... Pixel 7a, Pixel 7 Pro, Pixel 7, Pixel 6a, Pixel 6 Pro, Pixel 6 (19 models)"
+   }
+  },
+  "meshcentral": {
+   "computer-app": {
+    "v": "yes",
+    "note": null,
+    "source": "https://meshcentral.com",
+    "quote": "The server and management agent run on Windows, Linux, MacOS and FreeBSD."
+   },
+   "session-file-transfer": {
+    "v": "yes",
+    "note": null,
+    "source": "https://github.com/Ylianst/MeshCentral",
+    "quote": "MeshCentral includes full web-based remote desktop, terminal and file management capability."
+   },
+   "unattended-access": {
+    "v": "yes",
+    "note": null,
+    "source": "https://github.com/Ylianst/MeshCentral",
+    "quote": "download and install an agent on each computer you want to manage. A minute later, the new computer will show up on the web site and you can take control of it."
+   }
+  },
+  "tor-browser": {
+   "ad-blocking": {
+    "v": "partly",
+    "note": "blocks trackers; no ad blocker",
+    "source": "https://www.torproject.org",
+    "quote": "BLOCK TRACKERS Tor Browser isolates each website you visit so third-party trackers and ads can't follow you."
+   },
+   "phone-app": {
+    "v": "partly",
+    "note": "Only one phone system",
+    "source": "site data",
+    "quote": null
+   }
+  },
+  "keepassxc": {
+   "breach-alerts": {
+    "v": "yes",
+    "note": null,
+    "source": "https://github.com/keepassxreboot/keepassxc",
+    "quote": "Database reports (password health, HIBP, and statistics)"
+   },
+   "browser-extension": {
+    "v": "yes",
+    "note": null,
+    "source": "https://github.com/keepassxreboot/keepassxc",
+    "quote": "Browser integration with Google Chrome, Mozilla Firefox, Microsoft Edge, Chromium, Vivaldi, Brave, and Tor-Browser"
+   },
+   "passkeys": {
+    "v": "partly",
+    "note": "computer only",
+    "source": "https://github.com/keepassxreboot/keepassxc",
+    "quote": "Support for passkeys using the browser integration"
+   },
+   "passwords-import": {
+    "v": "partly",
+    "note": "1Password and Bitwarden directly",
+    "source": "https://github.com/keepassxreboot/keepassxc",
+    "quote": "Import databases from CSV, 1Password, Bitwarden, Proton Pass, and KeePass1 formats"
+   },
+   "syncs-devices": {
+    "v": "partly",
+    "note": "needs a separate sync tool",
+    "source": "https://keepassxc.org",
+    "quote": "remote database synchronization with external tools"
+   },
+   "no-server-needed": {
+    "v": "yes",
+    "note": null,
+    "source": "site data",
+    "quote": null
+   }
+  },
+  "ente-auth": {
+   "encrypted-backup": {
+    "v": "yes",
+    "note": null,
+    "source": "https://ente.com",
+    "quote": "End-to-end encrypted backups"
+   },
+   "computer-app": {
+    "v": "yes",
+    "note": null,
+    "source": "site data",
+    "quote": null
+   },
+   "phone-app": {
+    "v": "yes",
+    "note": null,
+    "source": "site data",
+    "quote": null
+   }
+  },
+  "omniedge": {
+   "mesh-direct": {
+    "v": "yes",
+    "note": null,
+    "source": "https://github.com/omniedgeio/omniedge",
+    "quote": "Zero-Config P2P Mesh VPN for AI, Robotics, and Edge Computing"
+   }
+  },
+  "element": {
+   "e2e-encrypted": {
+    "v": "yes",
+    "note": null,
+    "source": "https://element.io",
+    "quote": "End-to-end encrypted messaging and calls, connected to workplace systems"
+   },
+   "computer-app": {
+    "v": "yes",
+    "note": null,
+    "source": "site data",
+    "quote": null
+   },
+   "phone-app": {
+    "v": "yes",
+    "note": null,
+    "source": "site data",
+    "quote": null
+   }
+  },
+  "tinode": {
+   "built-in-calls": {
+    "v": "yes",
+    "note": null,
+    "source": "https://github.com/tinode/chat",
+    "quote": "User features: One-on-one and group messaging. Video and voice calls. Voice messages."
+   },
+   "no-phone-number": {
+    "v": "yes",
+    "note": null,
+    "source": "https://github.com/tinode/chat",
+    "quote": "You must register an account using valid email in order to use the service."
+   },
+   "self-hostable": {
+    "v": "yes",
+    "note": null,
+    "source": "https://github.com/tinode/chat",
+    "quote": "Tinode Instant Messaging Server. Instant messaging full stack. Backend in pure Go"
+   }
+  },
+  "misskey": {
+   "federated": {
+    "v": "yes",
+    "note": null,
+    "source": "https://github.com/misskey-dev/misskey",
+    "quote": "Misskey is an open source, federated social media platform"
+   }
+  },
+  "peertube": {
+   "federated": {
+    "v": "yes",
+    "note": null,
+    "source": "https://joinpeertube.org",
+    "quote": "discover, watch, and share videos hosted across the entire federated network in a single interface"
+   },
+   "phone-app": {
+    "v": "yes",
+    "note": null,
+    "source": "https://joinpeertube.org",
+    "quote": "PeerTube is also available on mobile! Take the whole PeerTube universe with you!"
+   }
+  },
+  "plume": {
+   "federated": {
+    "v": "yes",
+    "note": null,
+    "source": "https://github.com/Plume-org/Plume",
+    "quote": "Plume is a federated blogging engine, based on ActivityPub."
+   }
+  },
+  "lineageos": {
+   "security-updates": {
+    "v": "yes",
+    "note": null,
+    "source": "https://lineageos.org",
+    "quote": "Along with monthly security updates to every supported device, we enhance existing privacy touchpoints around the OS"
+   }
+  },
+  "rustdesk": {
+   "computer-app": {
+    "v": "yes",
+    "note": null,
+    "source": "site data",
+    "quote": null
+   }
+  },
+  "clamav": {
+   "computer-app": {
+    "v": "yes",
+    "note": null,
+    "source": "site data",
+    "quote": null
+   }
+  },
+  "mumble": {
+   "chat-bots": {
+    "v": "partly",
+    "note": "scripts and music bots, no bot store",
+    "source": "https://www.mumble.info",
+    "quote": "scripts making use of server APIs, or host music bots and the like that connect to the server"
+   }
+  },
+  "jitsi-meet": {
+   "e2e-encrypted": {
+    "v": "partly",
+    "note": "optional",
+    "source": "https://github.com/jitsi/jitsi-meet",
+    "quote": "For a detailed description of Jitsi Meet's End-to-End Encryption (E2EE) implementation, please check this link."
+   },
+   "no-account-needed": {
+    "v": "yes",
+    "note": null,
+    "source": "https://jitsi.org/meet",
+    "quote": "with no account needed"
+   },
+   "no-server-needed": {
+    "v": "yes",
+    "note": "meet.jit.si",
+    "source": "https://github.com/jitsi/jitsi-meet",
+    "quote": "Head over to meet.jit.si and give it a try. It's scalable and free to use."
+   },
+   "phone-app": {
+    "v": "yes",
+    "note": null,
+    "source": "https://github.com/jitsi/jitsi-meet",
+    "quote": "Jitsi Meet offers: Support for all current browsers, Mobile applications, Web and native SDKs for integration"
+   }
+  },
+  "bluesky": {
+   "custom-feeds": {
+    "v": "yes",
+    "note": null,
+    "source": "https://github.com/bluesky-social/social-app",
+    "quote": "custom feeds, federated services, clients, and more"
+   },
+   "federated": {
+    "v": "partly",
+    "note": "still being built",
+    "source": "https://github.com/bluesky-social/social-app",
+    "quote": "The Authenticated Transfer Protocol (\"AT Protocol\" or \"atproto\") is a decentralized social media protocol."
+   },
+   "phone-app": {
+    "v": "yes",
+    "note": null,
+    "source": "site data",
+    "quote": null
+   }
+  },
+  "loops": {
+   "federated": {
+    "v": "yes",
+    "note": null,
+    "source": "https://github.com/joinloops/loops-server",
+    "quote": "The short video sharing platform for the social web. Federated, open source, creator-friendly, and powered by ActivityPub."
+   },
+   "short-videos": {
+    "v": "yes",
+    "note": null,
+    "source": "https://joinloops.org",
+    "quote": "Loops - Short videos. Your community. Your rules."
+   }
+  },
+  "alovoa": {
+   "no-server-needed": {
+    "v": "yes",
+    "note": null,
+    "source": "site data",
+    "quote": null
+   }
+  },
+  "e-os": {
+   "preinstalled": {
+    "v": "partly",
+    "note": "Murena shop",
+    "source": "https://e.foundation",
+    "quote": "Buy a Murena smartphone with /e/OS"
+   }
+  },
+  "florisboard": {
+   "clipboard-history": {
+    "v": "yes",
+    "note": null,
+    "source": "https://github.com/florisboard/florisboard",
+    "quote": "Highlighted features - Integrated clipboard manager / history"
+   },
+   "emoji-search": {
+    "v": "partly",
+    "note": "emoji only; no GIFs listed",
+    "source": "https://github.com/florisboard/florisboard",
+    "quote": "Emoji keyboard / history / suggestions"
+   }
+  },
+  "ultravnc": {
+   "phone-app": {
+    "v": "no",
+    "note": null,
+    "source": "site data",
+    "quote": null
+   }
+  },
+  "keepassdx": {
+   "passkeys": {
+    "v": "partly",
+    "note": "Android app only",
+    "source": "https://github.com/Kunzisoft/KeePassDX",
+    "quote": "Features: Passkeys for authentication and local storage of private keys"
+   },
+   "phone-app": {
+    "v": "partly",
+    "note": "Android only",
+    "source": "https://github.com/Kunzisoft/KeePassDX",
+    "quote": "Android KeePassDX: Lightweight password safe and manager for Android"
+   },
+   "no-server-needed": {
+    "v": "yes",
+    "note": null,
+    "source": "site data",
+    "quote": null
+   }
+  },
+  "spacebar": {
+   "chat-bots": {
+    "v": "yes",
+    "note": null,
+    "source": "https://github.com/spacebarchat/spacebarchat",
+    "quote": "Discord-compatible (Use all your custom clients/bots with minimal changes)"
+   }
+  },
+  "bigbluebutton": {
+   "breakout-rooms": {
+    "v": "yes",
+    "note": null,
+    "source": "https://github.com/bigbluebutton/bigbluebutton",
+    "quote": "Instructors can engage remote students with polling, emojis, multi-user whiteboards, shared notes, and breakout rooms."
+   },
+   "meeting-recording": {
+    "v": "yes",
+    "note": null,
+    "source": "https://github.com/bigbluebutton/bigbluebutton",
+    "quote": "Presenters can record and playback content for later sharing with others."
+   },
+   "screen-share": {
+    "v": "yes",
+    "note": null,
+    "source": "https://github.com/bigbluebutton/bigbluebutton",
+    "quote": "sharing of audio, video, slides (with whiteboard annotations), chat, and the screen"
+   }
+  },
+  "friendica": {
+   "federated": {
+    "v": "yes",
+    "note": null,
+    "source": "https://github.com/friendica/friendica",
+    "quote": "Friendica connects you to a federated communications network of thousands of servers called the Fediverse."
+   },
+   "groups-events": {
+    "v": "partly",
+    "note": "groups; events not confirmed",
+    "source": "https://friendi.ca",
+    "quote": "Private conversation groups — on these pages all communications are restricted to group members"
+   },
+   "no-server-needed": {
+    "v": "yes",
+    "note": "join a server",
+    "source": "https://friendi.ca",
+    "quote": "Use it: Find a server, First steps, Find other people, Install your own server"
+   },
+   "who-sees-post": {
+    "v": "yes",
+    "note": null,
+    "source": "https://friendi.ca",
+    "quote": "Privacy: Access lists for every item. Private conversation groups"
+   }
+  },
+  "gathio": {
+   "no-server-needed": {
+    "v": "yes",
+    "note": null,
+    "source": "https://github.com/lowercasename/gathio",
+    "quote": "A simple, federated, privacy-first event hosting platform. You can use the flagship publicly hosted version"
+   }
+  },
+  "debian": {
+   "graphical-installer": {
+    "v": "yes",
+    "note": null,
+    "source": "https://www.debian.org",
+    "quote": "Screenshot Calamares Installer"
+   }
+  },
+  "heliboard": {
+   "clipboard-history": {
+    "v": "yes",
+    "note": null,
+    "source": "https://github.com/HeliBorg/HeliBoard",
+    "quote": "Clipboard history, One-handed mode, Split keyboard, Number pad"
+   },
+   "glide-typing": {
+    "v": "partly",
+    "note": "needs an extra closed-source library",
+    "source": "https://github.com/HeliBorg/HeliBoard",
+    "quote": "Glide typing ( only with closed source library )"
+   },
+   "no-tracking": {
+    "v": "yes",
+    "note": null,
+    "source": "https://github.com/HeliBorg/HeliBoard",
+    "quote": "Does not use internet permission, and thus is 100% offline."
+   }
+  },
+  "firefox": {
+   "ad-blocking": {
+    "v": "partly",
+    "note": null,
+    "source": "https://www.firefox.com",
+    "quote": "Top Features: Fingerprint Blocking, Ad Tracker Blocking, Private Browsing Mode"
+   },
+   "phone-app": {
+    "v": "yes",
+    "note": null,
+    "source": "site data",
+    "quote": null
+   }
+  },
+  "mullvad-browser": {
+   "ad-blocking": {
+    "v": "yes",
+    "note": "uBlock Origin included",
+    "source": "https://mullvad.net/browser",
+    "quote": "Mullvad Browser uses uBlock Origin to block third-party trackers."
+   },
+   "full-ad-block-extensions": {
+    "v": "yes",
+    "note": null,
+    "source": "https://mullvad.net/browser",
+    "quote": "Mullvad Browser uses uBlock Origin to block third-party trackers."
+   }
+  },
+  "aliasvault": {
+   "browser-extension": {
+    "v": "yes",
+    "note": null,
+    "source": "https://github.com/aliasvault/aliasvault",
+    "quote": "Browser extension (Chrome, Firefox, Edge, Safari, Brave)"
+   },
+   "passwords-import": {
+    "v": "yes",
+    "note": null,
+    "source": "https://www.aliasvault.com",
+    "quote": "We support importing from popular services including 1Password, Bitwarden, Chrome, Dashlane, Firefox, KeePass, KeePassXC, Proton Pass, and Strongbox."
+   },
+   "syncs-devices": {
+    "v": "yes",
+    "note": null,
+    "source": "https://www.aliasvault.com",
+    "quote": "changes sync automatically when you're back online"
+   },
+   "no-server-needed": {
+    "v": "yes",
+    "note": null,
+    "source": "site data",
+    "quote": null
+   },
+   "phone-app": {
+    "v": "yes",
+    "note": null,
+    "source": "site data",
+    "quote": null
+   }
+  },
+  "kutt": {
+   "click-stats": {
+    "v": "yes",
+    "note": null,
+    "source": "https://kutt.to",
+    "quote": "monitor them with detailed statistics"
+   },
+   "custom-domain": {
+    "v": "yes",
+    "note": null,
+    "source": "https://github.com/thedevs-network/kutt",
+    "quote": "Kutt is a modern URL shortener with support for custom domains."
+   },
+   "integrations-api": {
+    "v": "partly",
+    "note": "API only",
+    "source": "https://kutt.to",
+    "quote": "Use the provided API to create, delete, and get URLs"
+   },
+   "no-server-needed": {
+    "v": "yes",
+    "note": "free hosted",
+    "source": "https://kutt.to",
+    "quote": "Kutt | Free modern URL shortener ... Log in / Sign up"
+   }
+  },
+  "signal": {
+   "built-in-calls": {
+    "v": "yes",
+    "note": null,
+    "source": "https://github.com/signalapp/Signal-Android",
+    "quote": "participate in HD voice/video calls"
+   },
+   "e2e-encrypted": {
+    "v": "yes",
+    "note": null,
+    "source": "https://signal.org",
+    "quote": "State-of-the-art end-to-end encryption (powered by the open source Signal Protocol)"
+   },
+   "computer-app": {
+    "v": "yes",
+    "note": null,
+    "source": "site data",
+    "quote": null
+   },
+   "phone-app": {
+    "v": "yes",
+    "note": null,
+    "source": "site data",
+    "quote": null
+   }
+  },
+  "element-call": {
+   "e2e-encrypted": {
+    "v": "yes",
+    "note": null,
+    "source": "https://github.com/element-hq/element-call",
+    "quote": "End-to-End Encrypted – Secure and private calls."
+   }
+  },
+  "lemmy": {
+   "federated": {
+    "v": "yes",
+    "note": null,
+    "source": "https://github.com/LemmyNet/lemmy",
+    "quote": "Lemmy: A link aggregator and forum for the fediverse."
+   },
+   "phone-app": {
+    "v": "yes",
+    "note": "third-party apps",
+    "source": "https://join-lemmy.org",
+    "quote": "There are apps for iOS, Android, Desktop and Web."
+   },
+   "voting": {
+    "v": "yes",
+    "note": null,
+    "source": "https://join-lemmy.org",
+    "quote": "Upvotes and Threaded Comments: Posts can be upvoted or downvoted."
+   }
+  },
+  "newpipe": {
+   "no-server-needed": {
+    "v": "yes",
+    "note": null,
+    "source": "https://github.com/TeamNewPipe/NewPipe",
+    "quote": "NewPipe: A libre lightweight streaming front-end for Android."
+   },
+   "phone-app": {
+    "v": "partly",
+    "note": "Android only",
+    "source": "https://newpipe.net",
+    "quote": "NewPipe: The lightweight YouTube experience for Android"
+   }
+  },
+  "indico": {
+   "conference-tools": {
+    "v": "yes",
+    "note": null,
+    "source": "https://github.com/indico/indico",
+    "quote": "full-blown conference organization workflow with: Call for Abstracts and abstract reviewing modules; a paper reviewing workflow; a drag and drop timetable management interface"
+   },
+   "event-tickets": {
+    "v": "yes",
+    "note": "through payment-system integration",
+    "source": "https://github.com/indico/indico",
+    "quote": "flexible registration form creation and configuration; integration with existing payment systems"
+   }
+  },
+  "anysoftkeyboard": {
+   "emoji-search": {
+    "v": "partly",
+    "note": "emoji only; no GIFs listed",
+    "source": "https://github.com/AnySoftKeyboard/AnySoftKeyboard",
+    "quote": "Plenty of emojis - long-press the smiley key."
+   },
+   "glide-typing": {
+    "v": "yes",
+    "note": null,
+    "source": "http://anysoftkeyboard.github.io/",
+    "quote": "Gesture Typing: Swipe to type for faster input with accurate gesture"
+   },
+   "many-languages": {
+    "v": "yes",
+    "note": null,
+    "source": "http://anysoftkeyboard.github.io/",
+    "quote": "50+ Languages"
+   },
+   "no-tracking": {
+    "v": "yes",
+    "note": null,
+    "source": "http://anysoftkeyboard.github.io/",
+    "quote": "100% Open Source, 0 Data Collected"
+   },
+   "voice-typing": {
+    "v": "partly",
+    "note": null,
+    "source": "https://github.com/AnySoftKeyboard/AnySoftKeyboard",
+    "quote": "Voice input."
+   }
+  },
+  "searxng": {
+   "image-search": {
+    "v": "yes",
+    "note": null,
+    "source": "https://docs.searxng.org",
+    "quote": "Image Results, Video Results"
+   },
+   "no-tracking": {
+    "v": "yes",
+    "note": null,
+    "source": "https://docs.searxng.org",
+    "quote": "features: self hosted, no user tracking / no profiling, javascript & cookies are optional"
+   },
+   "own-index": {
+    "v": "no",
+    "note": null,
+    "source": "https://docs.searxng.org",
+    "quote": "SearXNG is a free internet metasearch engine which aggregates results from up to 261 search services"
+   }
+  },
+  "padloc": {
+   "browser-extension": {
+    "v": "yes",
+    "note": null,
+    "source": "https://padloc.app",
+    "quote": "Download Padloc now for... Windows MacOS Linux Android iOS Google Chrome Firefox"
+   },
+   "share-with-others": {
+    "v": "yes",
+    "note": null,
+    "source": "https://padloc.app",
+    "quote": "Share data with your family. coworkers. clients. students. friends."
+   },
+   "no-server-needed": {
+    "v": "yes",
+    "note": null,
+    "source": "site data",
+    "quote": null
+   },
+   "phone-app": {
+    "v": "yes",
+    "note": null,
+    "source": "site data",
+    "quote": null
+   }
+  },
+  "shlink": {
+   "click-stats": {
+    "v": "yes",
+    "note": null,
+    "source": "https://shlink.io",
+    "quote": "List URLs, see visits, manage your domains, etc."
+   },
+   "custom-domain": {
+    "v": "yes",
+    "note": null,
+    "source": "https://shlink.io",
+    "quote": "serving them under your own domains"
+   },
+   "integrations-api": {
+    "v": "partly",
+    "note": "API; own apps",
+    "source": "https://shlink.io",
+    "quote": "Go API-first: Access your shortened URLs from anywhere."
+   },
+   "no-server-needed": {
+    "v": "no",
+    "note": null,
+    "source": "https://github.com/shlinkio/shlink",
+    "quote": "A PHP-based self-hosted URL shortener that can be used to serve shortened URLs under your own domain."
+   }
+  },
+  "simplex-chat": {
+   "built-in-calls": {
+    "v": "yes",
+    "note": null,
+    "source": "https://simplex.chat/docs",
+    "quote": "Audio & video Calls"
+   },
+   "e2e-encrypted": {
+    "v": "yes",
+    "note": null,
+    "source": "https://github.com/simplex-chat/simplex-chat",
+    "quote": "Double ratchet end-to-end encryption, with additional encryption layer."
+   },
+   "no-phone-number": {
+    "v": "yes",
+    "note": null,
+    "source": "https://github.com/simplex-chat/simplex-chat",
+    "quote": "SimpleX - the first messaging platform that has no user identifiers of any kind"
+   },
+   "self-hostable": {
+    "v": "yes",
+    "note": null,
+    "source": "https://simplex.chat/docs",
+    "quote": "Host SMP Server, Host XFTP Server"
+   },
+   "computer-app": {
+    "v": "yes",
+    "note": null,
+    "source": "site data",
+    "quote": null
+   },
+   "phone-app": {
+    "v": "yes",
+    "note": null,
+    "source": "site data",
+    "quote": null
+   }
+  },
+  "jami": {
+   "no-server-needed": {
+    "v": "yes",
+    "note": null,
+    "source": "site data",
+    "quote": null
+   },
+   "phone-app": {
+    "v": "yes",
+    "note": null,
+    "source": "site data",
+    "quote": null
+   }
+  },
+  "piefed": {
+   "federated": {
+    "v": "yes",
+    "note": null,
+    "source": "https://codeberg.org/rimu/pyfedi",
+    "quote": "To build a federated discussion and link aggregation platform, similar to Reddit"
+   },
+   "no-server-needed": {
+    "v": "yes",
+    "note": "join a server",
+    "source": "https://join.piefed.social",
+    "quote": "Join our server or host your own for full control."
+   }
+  },
+  "ghost": {
+   "email-newsletter": {
+    "v": "yes",
+    "note": null,
+    "source": "https://ghost.org",
+    "quote": "Ghost: The best open source blog & newsletter platform"
+   },
+   "no-server-needed": {
+    "v": "partly",
+    "note": "paid hosting (Ghost Pro), free trial",
+    "source": "https://ghost.org",
+    "quote": "Try Ghost completely free for 14 days"
+   },
+   "paid-subscriptions": {
+    "v": "yes",
+    "note": null,
+    "source": "https://ghost.org",
+    "quote": "build a website, publish content, send newsletters & offer paid subscriptions to members"
+   }
+  },
+  "cachyos": {
+   "graphical-installer": {
+    "v": "yes",
+    "note": null,
+    "source": "https://cachyos.org",
+    "quote": "Install Your Way: Two installers to match your workflow: a graphical"
+   },
+   "long-support": {
+    "v": "no",
+    "note": "rolling release",
+    "source": "https://cachyos.org",
+    "quote": "the same rolling-release flexibility you expect"
+   }
+  },
+  "brave": {
+   "ad-blocking": {
+    "v": "yes",
+    "note": null,
+    "source": "https://brave.com",
+    "quote": "Features: Shields adblocker, VPN, Privacy features"
+   },
+   "phone-app": {
+    "v": "yes",
+    "note": null,
+    "source": "site data",
+    "quote": null
+   }
+  },
+  "yacy": {
+   "no-tracking": {
+    "v": "yes",
+    "note": null,
+    "source": "https://yacy.net",
+    "quote": "YaCy has a strong connection to privacy-aware tools. As such it does not collect personalized data."
+   },
+   "own-index": {
+    "v": "yes",
+    "note": null,
+    "source": "https://yacy.net",
+    "quote": "a decentralized peer-to-peer web index"
+   }
+  },
+  "passbolt": {
+   "no-server-needed": {
+    "v": "partly",
+    "note": "hosted Passbolt Cloud available",
+    "source": "https://passbolt.com",
+    "quote": "Passbolt Cloud is back online. Self-hosting? Update PHP now."
+   },
+   "share-with-others": {
+    "v": "yes",
+    "note": null,
+    "source": "https://github.com/passbolt/passbolt_api",
+    "quote": "The open source password manager for teams."
+   }
+  },
+  "nuclei": {
+   "network-scan": {
+    "v": "yes",
+    "note": null,
+    "source": "https://github.com/projectdiscovery/nuclei",
+    "quote": "Supports multiple protocols like TCP, DNS, HTTP, SSL, WHOIS, JavaScript, Code and more."
+   },
+   "no-paid-edition": {
+    "v": "partly",
+    "note": "Pro and Enterprise editions exist",
+    "source": "https://github.com/projectdiscovery/nuclei",
+    "quote": "Get Started - 1. Nuclei CLI - 2. Pro and Enterprise Editions"
+   },
+   "web-app-scan": {
+    "v": "yes",
+    "note": null,
+    "source": "https://github.com/projectdiscovery/nuclei",
+    "quote": "Nuclei is a modern, high-performance vulnerability scanner ... Supports multiple protocols like TCP, DNS, HTTP, SSL"
+   }
+  },
+  "yourls": {
+   "click-stats": {
+    "v": "yes",
+    "note": null,
+    "source": "https://yourls.org",
+    "quote": "awesome stats with historical click reports, referrers tracking and visitors geo-location"
+   },
+   "custom-domain": {
+    "v": "partly",
+    "note": null,
+    "source": "https://yourls.org",
+    "quote": "Full control over your data, on your own domain."
+   },
+   "integrations-api": {
+    "v": "partly",
+    "note": "API; plugins",
+    "source": "https://yourls.org",
+    "quote": "Bookmarklets, developer API, and awesome stats"
+   },
+   "no-server-needed": {
+    "v": "no",
+    "note": null,
+    "source": "https://yourls.org",
+    "quote": "YOURLS: The de facto standard self-hosted URL shortener"
+   }
+  },
+  "freetube": {
+   "no-server-needed": {
+    "v": "yes",
+    "note": null,
+    "source": "site data",
+    "quote": null
+   },
+   "phone-app": {
+    "v": "no",
+    "note": null,
+    "source": "site data",
+    "quote": null
+   }
+  }
+ },
+ "tagIssues": [
+  {
+   "group": "messaging",
+   "tag": "no-server-needed",
+   "problem": "Same tag appears on server-only projects (Mbin, Postiz, Netmaker); answer depends on hosted offerings, hard to judge from README."
+  },
+  {
+   "group": "social",
+   "tag": "large-meetings",
+   "problem": "depends on meeting type and server cores; hard to answer yes/no"
+  },
+  {
+   "group": "video-sharing",
+   "tag": "federated",
+   "problem": "Does not fit client apps (FreeTube, NewPipe) which are not servers; answered no/left blank"
+  },
+  {
+   "group": "video-sharing",
+   "tag": "live-streams-hosted",
+   "problem": "Meaning is about creators streaming on a site; viewer apps (FreeTube, NewPipe) not comparable"
+  },
+  {
+   "group": "phone-os",
+   "tag": "preinstalled",
+   "problem": "Many small sellers vs mainstream line is subjective; no project named per seller"
+  },
+  {
+   "group": "desktop-os",
+   "tag": "long-support",
+   "problem": "Rolling distros (Arch, CachyOS, Bazzite) all land on \"no\"; maybe a separate \"rolling\" note"
+  },
+  {
+   "group": "remote-desktop",
+   "tag": "computer-app",
+   "problem": "UltraVNC site data lists Windows, Mac, Linux but the server is Windows only (data error)"
+  }
+ ],
+ "dataErrors": [
+  "ultravnc: platforms list windows/mac/linux, but UltraVNC is Windows only (uvnc.com)"
+ ],
+ "note": "Checked 2026-10-26 against each project's own README, site and docs. Of 464 answers written from memory: 158 confirmed with a quote and page link, 8 corrected (Nextcloud Talk encryption and hosting, GrapheneOS phone count, Friendica groups, and API answers for Kutt, Shlink, YOURLS and Passbolt hosting), 298 removed because they could not be confirmed (blank, not 'no'). Device answers from site data were left as is."
+}

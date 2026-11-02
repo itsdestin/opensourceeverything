@@ -6,6 +6,8 @@
 import { readFileSync, writeFileSync } from 'node:fs';
 import { join, dirname } from 'node:path';
 import { fileURLToPath } from 'node:url';
+// forks stream: also keep "forked from", fork count and latest release (same request, extra fields)
+import { FAMILY_FIELDS, familyOf } from './family-facts.mjs';
 
 const HERE = dirname(fileURLToPath(import.meta.url));
 const ROOT = join(HERE, '..');
@@ -17,6 +19,9 @@ const starter = JSON.parse(readFileSync(join(ROOT, 'data/starter.json'), 'utf8')
 const codes = new Set(projects.map((p) => p.code).filter(Boolean));
 for (const c of starter.categories) for (const g of c.groups) for (const [, link] of g.alts) if (/^(github\.com|gitlab\.com|codeberg\.org)\//.test(link)) codes.add(link);
 
+// forks stream: hand-added family projects (prefill/family-projects.json) get links too, even before the first assemble
+try { for (const f of JSON.parse(readFileSync(join(HERE, 'family-projects.json'), 'utf8')).projects) if (f.code) codes.add(f.code.replace(/^https?:\/\//, '')); } catch { /* file is optional */ }
+
 const out = {};
 // A homepage that is just the code page again adds nothing.
 const useful = (u, code) => (u && /^https?:\/\//.test(u) && !u.replace(/^https?:\/\/(www\.)?/, '').toLowerCase().startsWith(code.toLowerCase()) ? u : null);
@@ -24,10 +29,10 @@ const useful = (u, code) => (u && /^https?:\/\//.test(u) && !u.replace(/^https?:
 const gh = [...codes].filter((c) => c.startsWith('github.com/'));
 for (let i = 0; i < gh.length; i += 50) {
   const list = gh.slice(i, i + 50);
-  const q = `query { ${list.map((c, k) => { const [, o, n] = c.split('/'); return `r${k}: repository(owner: ${JSON.stringify(o)}, name: ${JSON.stringify(n)}) { homepageUrl latestRelease { url } }`; }).join('\n')} }`;
+  const q = `query { ${list.map((c, k) => { const [, o, n] = c.split('/'); return `r${k}: repository(owner: ${JSON.stringify(o)}, name: ${JSON.stringify(n)}) { homepageUrl isFork latestRelease { url } ${FAMILY_FIELDS} }`; }).join('\n')} }`;
   const res = await fetch('https://api.github.com/graphql', { method: 'POST', headers: { Authorization: `Bearer ${TOKEN}`, 'User-Agent': 'opensourceeverything' }, body: JSON.stringify({ query: q }) });
   const body = await res.json();
-  list.forEach((c, k) => { const d = body.data?.[`r${k}`]; if (d) out[c] = { website: useful(d.homepageUrl, c), release: d.latestRelease?.url ?? null }; });
+  list.forEach((c, k) => { const d = body.data?.[`r${k}`]; if (d) out[c] = { website: useful(d.homepageUrl, c), release: d.latestRelease?.url ?? null, isFork: !!d.isFork, ...familyOf(d) }; });
 }
 for (const c of [...codes].filter((c) => c.startsWith('codeberg.org/'))) {
   try {

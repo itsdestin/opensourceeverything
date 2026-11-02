@@ -74,8 +74,12 @@
     'photos maps music meet drive news books play').split(' '));
 
   // The words for each device code, and how a result names it ("Runs on iPhone").
-  const DEVICE_WORDS = { windows: 'windows pc', mac: 'mac macos apple', linux: 'linux', android: 'android',
+  const DEVICE_WORDS = { windows: 'windows pc', mac: 'mac macos apple', linux: 'linux chromebook chromeos', android: 'android chromebook chromeos',
     ios: 'ios iphone ipad apple', web: 'web browser online', server: 'server selfhosted' };
+  // WHY a separate table for what a typed word MEANS: "chromebook" runs web apps, Android apps and Linux apps, and "ipad" is
+  // an iPhone-class device here. Only unambiguous words: "web" and "browser" are also whole categories, so they are left out.
+  const DEVICE_INTENT = { windows: ['windows'], linux: ['linux'], mac: ['mac'], macos: ['mac'], macbook: ['mac'], android: ['android'],
+    iphone: ['ios'], ipad: ['ios'], ios: ['ios'], chromebook: ['web', 'android', 'linux'], chromeos: ['web', 'android', 'linux'] };
   const DEVICE_NAMES = { windows: 'Windows', mac: 'Mac', linux: 'Linux', android: 'Android', ios: 'iPhone', web: 'the web', server: 'your own server' };
 
   const norm = (s) => String(s ?? '').normalize('NFKD').replace(/[̀-ͯ]/g, '').toLowerCase()
@@ -182,7 +186,11 @@
   function prepare(raw) {
     const vocab = makeVocab(), field = vocab.field;
     const items = [];
-    for (const x of raw.closed) items.push({ kind: 'closed', n: x.n, u: x.u, label: x.g, pop: 0,
+    // WHY pop from x.a (taxonomy-v2, Oct 27): with 194 more groups, "chrome" also matches "Claude in Chrome". The number of open
+    // alternatives a closed app has is a fair sign of how widely it is used, so Google Chrome edges out a niche namesake on a tie.
+    for (const x of raw.closed) items.push({ kind: 'closed', n: x.n, u: x.u, label: x.g, pop: Math.log10((x.a ?? 0) + 1) / 1.2,
+      // WHY the name without its maker: people type "windows", "chrome", "android", not "microsoft windows".
+      bare: compact(String(x.n).replace(/^(microsoft|google|apple|adobe|amazon|meta)\s+/i, '')),
       fields: [field(x.n, 1), field(x.g, 0.45, 'group'), field(x.j, 0.35, 'job')], groups: [x.g], jobs: [x.j] });
     // WHY the group's id as a near-name: ids are the short words people type ("2fa", "crm", "pdf", "vpn").
     for (const x of raw.groups) items.push({ kind: 'group', n: x.n, u: x.u, label: x.c, pop: 0,
@@ -193,13 +201,17 @@
       const gs = (x.gi || []).map((i) => raw.groups[i]).filter(Boolean);
       // WHY a middling guess when stars are unknown: those are mostly big projects hosted off GitHub (GIMP, Krita,
       // LibreOffice), which shouldn't rank as if nobody used them.
-      items.push({ kind: 'project', n: x.n, u: x.u, label: x.g, dead: !!x.dead,
+      items.push({ kind: 'project', n: x.n, u: x.u, label: x.g, dead: !!x.dead, easy: !!x.ez, // WHY: easy-setup projects get a tiny lift (Oct 26), never enough to beat a real match
         pop: Math.log10((x.st ?? 3000) + 1) / 6, ed: x.r != null ? Math.max(0, 5 - x.r) / 5 : 0,
         // WHY devices as a field: "linux note app" should favour apps that run on Linux, and say so.
         fields: [field(x.n, 1), Object.assign(field(gs.flatMap((g) => g.x || []).join(' '), 0.6, 'replaces'), { replaces: true }),
           Object.assign(field(gs.map((g) => g.n).join(' '), 0.5, 'group'), { group: true }),
           field(gs.map((g) => g.j).join(' '), 0.4, 'job'), field((x.k || []).join(' '), 0.45, 'phrases'),
-          field((x.pl || []).map((p) => DEVICE_WORDS[p] || '').join(' '), 0.6, 'device'), field(x.s, 0.3, 'summary')],
+          field((x.pl || []).map((p) => DEVICE_WORDS[p] || '').join(' '), 0.6, 'device'), field(x.s, 0.3, 'summary'),
+          // WHY (forks stream): an old name ("kbin", "OpenOffice") finds the project that continues it; each old name is its own field so
+          // "Looking for kbin? ..." can say which one matched.
+          ...(x.o || []).map((o) => field(o, 0.85, 'old'))],
+        old: (x.o || []).map((o, i) => ({ name: o, text: (x.ot || [])[i] })),
         phrases: (x.k || []).map((p) => field(p, 1, 'phrase')),
         closed: gs.flatMap((g) => g.x || []), groups: gs.map((g) => g.n), jobs: gs.map((g) => g.j), phraseText: x.k || [], pl: x.pl || [] });
     }
@@ -217,18 +229,37 @@
         if (CANON.has(key)) ws.splice(i, n, CANON.get(key));
       }
     }
+    // WHY keep the whole typed text squashed (Oct 27): "whats app" is WhatsApp, but "app" is a filler word, so without this
+    // the search only saw "whats" and matched "see what apps connect to".
+    const raw = ws.join('');
     const kept = ws.filter((w) => !FILLER.has(w));
     if (kept.length) ws = kept;
-    return { ws, ss: ws.map(stem), phrase: ws.join(' '), c: ws.join('') };
+    // WHY remember the device but keep the word in the search: "linux" still helps find Linux apps by text, and the
+    // device also reorders projects afterwards (see deviceAdjust), so a Mac-only app doesn't top "photo editor for linux".
+    const dev = new Set(); if (ws.length > 1) for (const w of ws) for (const c of DEVICE_INTENT[w] || []) dev.add(c);
+    return { ws, ss: ws.map(stem), phrase: ws.join(' '), c: ws.join(''), raw, dev };
+  }
+
+  // WHY a nudge, not a filter: platform lists are incomplete, and an app that can run in a browser or on your own server
+  // may still be usable. Running on the named device lifts a project, not running there lowers it (it can drop out if it was a weak match), below a real
+  // name/phrase match. Only with 2+ words, so a lone "linux" still finds the Linux group and distros by name.
+  function deviceAdjust(it, q) {
+    if (!q.dev.size || it.kind !== 'project' || !it.pl.length) return 0;
+    if (it.pl.some((p) => q.dev.has(p))) return 0.12;
+    return it.pl.some((p) => p === 'web' || p === 'server') ? -0.12 : -0.3;
   }
 
   // Score one item for a parsed query. 0 means "not a result".
   const PRIOR = { group: 0.3, closed: 0.1, project: 0 };
   function score(it, q) {
+    const s0 = scoreText(it, q);
+    return s0 > 0 ? Math.max(0.05, s0 + deviceAdjust(it, q)) : s0;
+  }
+  function scoreText(it, q) {
     const short = q.c.length <= 2;
     // WHY check the name with spaces removed first: "drop box", "libre office" and "you tube" are the name,
     // just spaced differently, even though "box" alone matches nothing.
-    const nameHit = q.c.length >= 4 && (it.nc === q.c || (q.ws.length > 1 && it.nc.startsWith(q.c)) ||
+    const nameHit = (q.raw.length >= 5 && it.nc === q.raw) || (q.c.length >= 4 && it.bare === q.c) || q.c.length >= 4 && (it.nc === q.c || (q.ws.length > 1 && it.nc.startsWith(q.c)) ||
       (q.ws.length > 1 && q.c.length >= 6 && it.nc.includes(q.c)) || // "one note" in "Microsoft OneNote"
       // A typo and odd spacing at once ("libre ofice"): compare without spaces, allowing the usual typos.
       (q.ws.length > 1 && q.c.length >= 6 && dist(q.c, it.nc.slice(0, q.c.length), typoAllowance(q.c.length)) <= typoAllowance(q.c.length)));
@@ -286,10 +317,10 @@
     // relevant and small wording differences in descriptions shouldn't decide; the editors' order (best-first) does.
     // Kept below the group page itself, which is the better first stop; only an exact name match lifts it.
     if (it.kind === 'project' && groupWords === q.ws.length) {
-      return 0.8 + (it.ed || 0) * 0.4 + it.pop * 0.08 + (it.nn === q.phrase || it.nc === q.c ? 1.2 : 0) - (it.dead ? 0.1 : 0);
+      return 0.8 + (it.ed || 0) * 0.4 + it.pop * 0.08 + (it.easy ? 0.03 : 0) + (it.nn === q.phrase || it.nc === q.c ? 1.2 : 0) - (it.dead ? 0.1 : 0);
     }
-    // The name itself, as a whole, is the strongest signal.
-    if (it.nn === q.phrase || it.nc === q.c) s += 1.2;
+    // The name itself, as a whole, is the strongest signal (also when typed with filler words, or without its maker's name).
+    if (it.nn === q.phrase || it.nc === q.c || (q.raw.length >= 5 && it.nc === q.raw) || (it.bare && it.bare.length >= 4 && it.bare === q.c)) s += 1.2;
     else if (it.nn.startsWith(q.phrase + ' ')) s += 0.6;
     // WHY whole words beat word starts: "word" means Microsoft Word, not WordPress.
     else if (onName >= q.ws.length) s += 0.5;
@@ -307,7 +338,10 @@
     if (q.ws.length > 1 && it.kind === 'closed' && typoNamed) s = Math.max(s, 0.7);
     if (q.ws.length > 1 && replacesNamed) s += 0.25;
     // Popular, living projects edge out obscure or abandoned ones when everything else is equal.
-    s += it.pop * 0.08 + (it.ed || 0) * 0.1;
+    // WHY a closed app's popularity counts only when every typed word is in its name: on a described need ("cash register for
+    // my coffee shop") a famous app that shares one word must not climb above the real answers.
+    const popOk = it.kind !== 'closed' || onName >= q.ws.length;
+    s += (popOk ? it.pop * 0.08 : 0) + (it.ed || 0) * 0.1 + (it.easy ? 0.03 : 0);
     if (it.dead) s -= 0.1;
     return s;
   }
@@ -352,7 +386,8 @@
       }
       if (!f0) continue;
       const has = (list) => list.find((x) => words(x).some((w) => w === word || stem(w) === stem(word) || w.startsWith(word))) || list[0];
-      if (f0.role === 'name') add('Name', 'name');
+      if (f0.role === 'old') add((it.old.find((o) => words(o.name).some((w) => w === word || stem(w) === stem(word) || w.startsWith(word))) || it.old[0]).text, 'old');
+      else if (f0.role === 'name') add('Name', 'name');
       else if (f0.role === 'device') add(`Runs on ${it.pl.filter((p) => (DEVICE_WORDS[p] || '').split(' ').includes(word)).map((p) => DEVICE_NAMES[p]).join(', ') || DEVICE_NAMES[it.pl[0]]}`, 'device');
       else if (f0.role === 'replaces') add(`${it.kind === 'group' ? 'Covers' : 'Replaces'} ${has(it.closed)}`, 'replaces');
       else if (f0.role === 'group') add(`In ${has(it.groups)}`, 'group');

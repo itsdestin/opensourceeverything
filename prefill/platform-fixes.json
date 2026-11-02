@@ -379,6 +379,41 @@
    "mac",
    "linux",
    "android"
+  ],
+  "jamovi": [
+   "windows",
+   "mac",
+   "linux"
+  ],
+  "glazewm": [
+   "windows"
+  ],
+  "traefik": [
+   "server"
+  ],
+  "wanderer": [
+   "server"
+  ],
+  "lighthouse": [
+   "web"
+  ],
+  "podman": [
+   "windows",
+   "mac",
+   "linux"
+  ],
+  "mpv": [
+   "windows",
+   "mac",
+   "linux"
+  ],
+  "gwenview": [
+   "linux"
+  ],
+  "whisperx": [
+   "windows",
+   "mac",
+   "linux"
   ]
  }
 }

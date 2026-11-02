@@ -4,6 +4,7 @@
 // WHY (plan: "a weekly robot that refreshes facts and flags license changes"): a project that switches to a
 // non-open license, or is abandoned, must not stay listed silently.
 import { readFileSync, writeFileSync } from 'node:fs';
+import { suggestFromDisk, renderMarkdown } from './family-suggestions.mjs';
 
 const [oldFile, newFile] = process.argv.slice(2);
 const before = new Map(JSON.parse(readFileSync(oldFile, 'utf8')).projects.map((p) => [p.id, p]));
@@ -18,8 +19,12 @@ for (const [id, a] of after) {
   if (!b.inactive && a.inactive) lines.push(`- 💤 ${link} has had no changes in a year.`);
 }
 for (const [id, b] of before) if (!after.has(id)) lines.push(`- ❌ ${b.name} dropped off the map (its code page may be gone, or its license is no longer open).`);
+// Families (forks stream): possible forks/renames for a mod to confirm. Suggestions only; the site changes only when a mod edits data/lineage.json.
+// WHY try/catch: a README lookup hiccup must never stop the weekly report.
+let families = '';
+try { families = renderMarkdown(await suggestFromDisk()); } catch (e) { families = `**Possible families: confirm?**\n\nCould not look this week (${String(e).slice(0, 120)}).\n\n`; }
 const stars = [...after.values()].filter((p) => before.has(p.id) && p.stars !== before.get(p.id).stars).length;
 writeFileSync('refresh-report.md', `The weekly refresh: GitHub stars, activity, licenses, links and downloads, read again for every project.\n\n` +
   (lines.length ? `**Needs a mod's eye**\n\n${lines.join('\n')}\n\n` : 'Nothing needs a mod\'s eye this week.\n\n') +
-  `${stars} projects' star counts changed. Merging puts the new facts on the site.\n`);
+  families + `${stars} projects' star counts changed. Merging puts the new facts on the site.\n`);
 console.log(lines.length ? lines.join('\n') : 'nothing flagged');

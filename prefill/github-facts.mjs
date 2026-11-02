@@ -10,6 +10,8 @@ import { readFileSync, writeFileSync, appendFileSync } from 'node:fs';
 import { join, dirname } from 'node:path';
 import { fileURLToPath } from 'node:url';
 import { licenseVerdict } from '../checker/dist/from-bot/rules.js';
+// -- forks stream: "forked from", fork count and latest release, from the same batch (see family-facts.mjs) --
+import { FAMILY_FIELDS, familyOf } from './family-facts.mjs';
 
 const HERE = dirname(fileURLToPath(import.meta.url));
 const OUT = join(HERE, 'out');
@@ -20,7 +22,7 @@ const { projects } = JSON.parse(readFileSync(join(OUT, 'candidates.json'), 'utf8
 const github = projects.filter((p) => p.repo?.startsWith('github.com/'));
 
 async function batch(list) {
-  const fields = 'nameWithOwner stargazerCount isArchived isFork pushedAt createdAt licenseInfo { spdxId } description';
+  const fields = 'nameWithOwner stargazerCount isArchived isFork pushedAt createdAt licenseInfo { spdxId } description ' + FAMILY_FIELDS;
   const q = `query { ${list.map((p, i) => {
     const [, owner, name] = p.repo.split('/');
     return `r${i}: repository(owner: ${JSON.stringify(owner)}, name: ${JSON.stringify(name)}) { ${fields} }`;
@@ -45,6 +47,7 @@ const facts = results.map(({ id, data }) => {
     id, found: true, repo: data.nameWithOwner, stars: data.stargazerCount, archived: data.isArchived, fork: data.isFork,
     createdAt: data.createdAt, pushedAt: data.pushedAt, license: spdx ?? null, licenseVerdict: licenseVerdict(spdx),
     quietForAYear: Date.now() - new Date(data.pushedAt).getTime() > YEAR, githubDescription: data.description,
+    ...familyOf(data), // forks stream
   };
 });
 writeFileSync(join(OUT, 'facts.json'), JSON.stringify(facts, null, 1));

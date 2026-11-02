@@ -467,6 +467,12 @@
    "verdict": "open",
    "evidence": "https://gitlab.com/ubports/development/core/lomiri/-/raw/main/COPYING",
    "note": "Phone OS from many components; UBports' own Lomiri shell is GPL-3.0 (apps/other repos vary)."
+  },
+  "mpv": {
+   "license": "GPL-2.0-or-later",
+   "verdict": "open",
+   "evidence": "https://raw.githubusercontent.com/mpv-player/mpv/master/Copyright",
+   "note": "Fact-check, Oct 27: 'GPL version 2 or later' by default (LGPL-2.1+ when built without GPL-only files)."
   }
  }
 }

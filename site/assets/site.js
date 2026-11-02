@@ -18,30 +18,51 @@
   let index = null, loading = null;
   const loadIndex = () => loading || (loading = fetch(BASE + 'search.json').then((r) => r.json()).then((d) => (index = window.OISearch.prepare(d))));
   window.OI.loadSearch = loadIndex; // the results page (search-page.js) shares the same loaded index
+  // WHY warm it up when the browser is idle on pages with a search box (Oct 30 performance pass): getting the index ready takes
+  // ~0.25s on a fast computer and over a second on a phone; done on the first keystroke, that froze the box (Destin: "laggy").
+  // Idle time comes after the page is drawn, so this never slows the page appearing; it is one 210 KB download, cached after.
+  if (document.querySelector('[data-search], [data-sres-input]')) {
+    const warm = () => (window.requestIdleCallback ? requestIdleCallback(() => loadIndex(), { timeout: 4000 }) : setTimeout(loadIndex, 1500));
+    if (document.readyState === 'complete') warm(); else addEventListener('load', warm, { once: true });
+  }
   const HEADINGS = { closed: 'Closed apps', group: 'Groups', project: 'Open projects' };
   const resultsUrl = (t) => `${BASE}search/?q=${encodeURIComponent(t.trim())}`;
-  function results(t) {
+  function results(t, better) {
     if (!t.trim()) return '';
     // WHY a small meter on each row (Destin, Oct 26: "more visible relevance scoring"): how well each result fits,
     // at a glance; the words are in its tooltip and on the results page.
     const row = (x) => `<a class="mi" role="option" href="${BASE}${x.u}">${esc(x.n)}<span class="mi-right"><span class="muted11">${esc(x.label)}</span>` +
       `<span class="mstr mini l${x.level}" title="${esc(x.strength)}" aria-label="${esc(x.strength)}"><span class="bars" aria-hidden="true"><i></i><i></i><i></i><i></i></span></span></span></a>`;
     // WHY sections come in the order of their best match: a job search opens on the group, a name on the app.
-    const secs = window.OISearch.search(index, t);
+    const secs = better || window.OISearch.search(index, t);
     // WHY a "see all" row: Enter opens the full list; this says so, and works for mouse and touch too.
+    // WHY (Destin, Oct 30 screenshot): search needs two letters, so one letter said "Nothing matches" — wrong, and it offered to add "w".
+    if (t.trim().length < 2) return '<div class="menu-note">Keep typing…</div>';
     return secs.length
       ? secs.map((sec) => `<div class="menu-note">${HEADINGS[sec.kind]}</div>` + sec.items.map(row).join('')).join('') +
         `<a class="mi see-all" role="option" href="${resultsUrl(t)}">See all results for “${esc(t.trim())}”<span class="muted11">Enter ↵</span></a>`
-      : `<div class="menu-note">Nothing matches "${esc(t.trim())}" yet. <a href="https://github.com/itsdestin/opensourceeverything/issues/new?template=4-new-group.yml&closed=${encodeURIComponent(t.trim())}" rel="noopener">Suggest it</a>.</div>`;
+      : /* WHY: nothing found usually means a closed app is missing, so "Suggest it" opens the add-closed-app form with the searched name filled in (it used to open the new-group form). */ `<div class="menu-note">Nothing matches "${esc(t.trim())}" yet. <a href="https://github.com/itsdestin/opensourceeverything/issues/new?template=3-add-closed-app.yml&app=${encodeURIComponent(t.trim())}" rel="noopener">Suggest it</a>.</div>`;
   }
   document.querySelectorAll('[data-search]').forEach((wrap) => {
     const input = wrap.querySelector('input'); const menu = wrap.querySelector('.search-menu');
     const update = async () => {
       if (!input.value.trim()) { menu.classList.remove('open'); return; }
       await loadIndex(); menu.innerHTML = results(input.value); menu.classList.add('open');
+      // Meaning search (search-ai.js): only when the word match is weak, after a short pause in typing, and only
+      // if the box still holds the same text when the answer arrives. If the server is slow or down, nothing changes.
+      const t = input.value; clearTimeout(aiTimer);
+      if (window.OISearchAI?.serverUrl()) aiTimer = setTimeout(async () => {
+        const all = await window.OISearchAI.improve(index, t, window.OISearch.search(index, t, { all: true }));
+        if (all && input.value === t) menu.innerHTML = results(t, window.OISearchAI.sections(all));
+      }, 350);
     };
+    let aiTimer;
     input.addEventListener('input', update);
     input.addEventListener('focus', () => { loadIndex(); if (input.value.trim()) update(); });
+    // WHY earlier than focus (Oct 30 performance pass: the first letter took ~0.7s while the index loaded and was prepared):
+    // start when the pointer reaches the box or a finger touches it, so it is usually ready by the first keystroke.
+    wrap.addEventListener('pointerenter', loadIndex, { once: true });
+    wrap.addEventListener('touchstart', loadIndex, { once: true, passive: true });
     input.addEventListener('keydown', (e) => {
       const items = [...menu.querySelectorAll('.mi')]; const i = items.indexOf(document.activeElement);
       if (e.key === 'ArrowDown' && items.length) { e.preventDefault(); items[0].focus(); }
@@ -75,26 +96,82 @@
 
   // ── Phones: the Search tab, and side sections that fold (mobile.css) ──
   const phone = matchMedia('(max-width:640px)');
-  document.addEventListener('click', (e) => {
-    if (!e.target.closest('[data-open-search]')) return;
-    // WHY two cases: the home page has its own big search box; other pages slide the search bar down from the top.
-    const hero = document.querySelector('.hero3 [data-search] input');
-    if (hero) { hero.scrollIntoView({ block: 'center', behavior: 'smooth' }); hero.focus(); return; }
-    document.body.classList.add('searching');
-    const input = document.querySelector('.top [data-search] input'); input?.focus();
-  });
-  document.addEventListener('focusout', (e) => {
-    if (!document.body.classList.contains('searching') || !e.target.closest('.top')) return;
-    setTimeout(() => { if (!document.activeElement?.closest('.top')) document.body.classList.remove('searching'); }, 150);
-  });
-  document.addEventListener('keydown', (e) => { if (e.key === 'Escape') document.body.classList.remove('searching'); });
+  // (The old slide-down search bar is gone: the top bar has a magnifier that opens the search page.)
   // WHY folded on phones: the main content comes first; "Before you build", "About this page" and the like open on a tap.
-  document.querySelectorAll('.fold-phone').forEach((sec) => {
+  const foldInit = (sec) => {
     if (phone.matches) sec.classList.add('folded');
     const head = sec.querySelector(':scope > .fold-head');
     head?.setAttribute('role', 'button'); head?.setAttribute('tabindex', '0');
     const toggle = () => { if (phone.matches) { sec.classList.toggle('folded'); head.setAttribute('aria-expanded', String(!sec.classList.contains('folded'))); } };
-    head?.addEventListener('click', toggle);
-    head?.addEventListener('keydown', (e) => { if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); toggle(); } });
+    // WHY ignore buttons and links inside the heading row: "Add a note" must not also fold the card.
+    head?.addEventListener('click', (e) => { if (!e.target.closest('button, a')) toggle(); });
+    head?.addEventListener('keydown', (e) => { if (e.target === head && (e.key === 'Enter' || e.key === ' ')) { e.preventDefault(); toggle(); } });
+  };
+  window.OI = window.OI || {}; window.OI.foldInit = foldInit; // contrib.js folds the sections it draws later
+  document.querySelectorAll('.fold-phone').forEach(foldInit);
+
+  // ── One clear (✕) button for every search box, in the theme's colours (site.css .sclear) ──
+  // WHY (Destin, Oct 30 screenshot): the browser drew its own bright-blue ✕, which clashed with every theme. Clearing fires
+  // "input" so each page's own search code updates as if the person had deleted the text, then focus returns to the box.
+  const X = '<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" aria-hidden="true"><path d="M6 6l12 12M18 6 6 18"/></svg>';
+  document.querySelectorAll('input[type="search"]').forEach((inp) => {
+    const b = document.createElement('button'); b.type = 'button'; b.className = 'sclear'; b.setAttribute('aria-label', 'Clear search'); b.innerHTML = X;
+    inp.after(b);
+    // WHY also on load: the results page fills its box with the search after this runs (search-page.js).
+    const sync = () => { b.hidden = !inp.value; }; sync(); addEventListener('load', sync);
+    inp.addEventListener('input', sync);
+    b.addEventListener('click', () => { inp.value = ''; inp.dispatchEvent(new Event('input', { bubbles: true })); inp.focus(); });
   });
+  // Home page area rows (<details>) all start closed (home.mjs).
+  // WHY open the row a link points at (#area-…): a category page's breadcrumb lands on its area, which must be open to show anything.
+  // WHY scroll after a frame: opening the row changes the page's height, so the jump the browser made on load lands short.
+  // WHY one open at a time, sliding (Destin, Nov 2: "opening one should close the other… smoother animation"): this script keeps
+  // one row open and animates the height so rows slide instead of jumping. Reduced-motion visitors get the instant open/close.
+  const rows = [...document.querySelectorAll('details.arearow')];
+  const still = matchMedia('(prefers-reduced-motion: reduce)');
+  const EASE = { duration: 240, easing: 'cubic-bezier(.2,.8,.2,1)' };
+  const slide = (row, opening) => {
+    const box = row.querySelector('.catgrid');
+    if (!box || still.matches) { row.open = opening; return; }
+    // WHY start from where it is now (design review, Nov 2): a click mid-slide used to snap the row to nothing and start over.
+    const now = row._anim ? { height: getComputedStyle(box).height, paddingBottom: getComputedStyle(box).paddingBottom, opacity: getComputedStyle(box).opacity } : null;
+    row._anim?.cancel();
+    if (opening) row.open = true;
+    box.classList.add('animating');
+    const pad = getComputedStyle(box).paddingBottom;
+    const shut = { height: '0px', paddingBottom: '0px', opacity: 0 }, shown = { height: box.scrollHeight + 'px', paddingBottom: pad, opacity: 1 };
+    row._anim = box.animate(opening ? [now ?? shut, shown] : [now ?? shown, shut], EASE);
+    row._anim.onfinish = () => { box.classList.remove('animating'); if (!opening) row.open = false; row._anim = null; };
+  };
+  const openOnly = (row, animate = true) => {
+    rows.forEach((r) => { if (r !== row && r.open) animate ? slide(r, false) : (r.open = false); });
+    animate ? slide(row, true) : (row.open = true);
+  };
+  rows.forEach((row) => row.querySelector('summary').addEventListener('click', (e) => {
+    e.preventDefault();
+    if (row.open && !row._anim) { slide(row, false); return; }
+    // WHY the page doesn't scroll (Destin, Nov 2: "the whole page scrolls/moves when a category card collapses"): an earlier
+    // version scrolled the page to hold the clicked header still, which moved everything else. Now the page stays put and
+    // the list folds; only if the clicked header would end up above the window does it glide back into view afterwards.
+    const sum = row.querySelector('summary');
+    openOnly(row);
+    setTimeout(() => { if (sum.getBoundingClientRect().top < 0) row.scrollIntoView({ block: 'start', behavior: still.matches ? 'auto' : 'smooth' }); }, EASE.duration + 20);
+  }));
+  const openArea = () => { const el = document.querySelector(`details.arearow${location.hash.replace(/[^#\w-]/g, '')}`); if (el) { openOnly(el, false); requestAnimationFrame(() => el.scrollIntoView({ block: 'start' })); } };
+  if (location.hash.startsWith('#area-')) openArea();
+  addEventListener('hashchange', openArea);
+
+  // ── Chip rows fade only on the side that has more to scroll to (design guide, Cards) ──
+  // WHY JS: CSS can't tell whether a row overflows. Rows drawn later (search results, social) are caught by the observer.
+  const edge = (r) => {
+    const over = r.scrollWidth - r.clientWidth;
+    r.classList.toggle('more-l', over > 1 && r.scrollLeft > 1);
+    r.classList.toggle('more-r', over > 1 && r.scrollLeft < over - 1);
+  };
+  const allRows = () => document.querySelectorAll('.chiprow').forEach(edge);
+  document.addEventListener('scroll', (e) => { if (e.target.classList?.contains('chiprow')) edge(e.target); }, true);
+  addEventListener('resize', allRows);
+  let pend = 0;
+  new MutationObserver(() => { cancelAnimationFrame(pend); pend = requestAnimationFrame(allRows); }).observe(document.body, { childList: true, subtree: true });
+  allRows();
 })();

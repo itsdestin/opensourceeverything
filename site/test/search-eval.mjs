@@ -30,7 +30,9 @@ const items = prepare(raw);
 // search-queries-described.json: 100 needs described in plain words, also written without seeing the code.
 const SET = process.argv.includes('--heldout') ? 'search-queries-heldout.json'
   : process.argv.includes('--described') ? 'search-queries-described.json'
-  : process.argv.includes('--final') ? 'search-queries-final.json' : 'search-queries.json';
+  : process.argv.includes('--final') ? 'search-queries-final.json'
+  // WHY blind: written before the search code was read (ai-search stream); never tune against it.
+  : process.argv.includes('--blind') ? 'search-queries-blind.json' : 'search-queries.json';
 const { queries } = JSON.parse(readFileSync(join(HERE, SET), 'utf8'));
 
 // The dropdown as one list, top to bottom, as ids like "c:notion".
@@ -111,7 +113,9 @@ if (nonsense.length) { console.error('\nFAIL: nonsense query "zzzzqqqq" returned
 
 // WHY a bar: a future change that makes ranking worse should fail loudly, not ship quietly.
 // Plain-words needs are harder by nature, so their bar is a little lower.
-const MIN = SET === 'search-queries-described.json' ? { first: 0.85, found: 0.95, musts: 0.9 } : { first: 0.9, found: 0.97, musts: 0.9 };
+const MIN = SET === 'search-queries-described.json' || SET === 'search-queries-blind.json' ? { first: 0.85, found: 0.95, musts: 0.9 } : { first: 0.9, found: 0.97, musts: 0.9 };
+// WHY no bar for the blind set: it is a yardstick written before the code was read, to be reported, never tuned to.
+if (SET === 'search-queries-blind.json') { console.log('\n(blind set: reported only, no pass/fail bar)'); process.exit(0); }
 const s = summary(newRows);
 const fails = Object.entries(MIN).filter(([k, v]) => s[k] < v);
 if (fails.length) { console.error(`\nFAIL: below the bar: ${fails.map(([k, v]) => `${k} ${s[k].toFixed(2)} < ${v}`).join(', ')}`); process.exit(1); }

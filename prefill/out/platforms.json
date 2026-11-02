@@ -4185,5 +4185,6844 @@
    "server: README: Docker / self-host mention"
   ],
   "sure": true
+ },
+ "aerospace": {
+  "platforms": [
+   "mac"
+  ],
+  "evidence": [
+   "mac: README: Homebrew cask / MacPorts"
+  ],
+  "sure": true
+ },
+ "alacritty": {
+  "platforms": [
+   "windows",
+   "mac"
+  ],
+  "evidence": [
+   "windows: release file: Alacritty-v0.17.0-portable.exe",
+   "mac: release file: Alacritty-v0.17.0.dmg"
+  ],
+  "sure": true
+ },
+ "age": {
+  "platforms": [
+   "windows",
+   "mac",
+   "linux"
+  ],
+  "evidence": [
+   "windows: release file: age-v1.3.2-windows-arm64.zip",
+   "mac: release file: age-v1.3.2-darwin-amd64.tar.gz",
+   "linux: release file: age-v1.3.2-linux-arm.tar.gz"
+  ],
+  "sure": true
+ },
+ "ace-step": {
+  "platforms": [
+   "windows",
+   "mac",
+   "linux",
+   "web"
+  ],
+  "evidence": [
+   "AI (Haiku): README gives Windows (triton-windows, PowerShell venv), Linux/macOS (bash venv, M2 Max benchmark) install steps, and links a public Hugging Face Space demo usable in a browser; no Android or iOS support is mentioned."
+  ],
+  "sure": true
+ },
+ "aegisub": {
+  "platforms": [
+   "windows",
+   "mac"
+  ],
+  "evidence": [
+   "windows: release file: Aegisub-3.5.1-x64.exe",
+   "mac: release file: Aegisub-3.5.1-arm64.dmg"
+  ],
+  "sure": true
+ },
+ "adventurelog": {
+  "platforms": [
+   "server"
+  ],
+  "evidence": [
+   "server: README: Docker / self-host mention"
+  ],
+  "sure": true
+ },
+ "ais-catcher": {
+  "platforms": [
+   "linux"
+  ],
+  "evidence": [
+   "linux: release file: ais-catcher_debian_trixie_amd64.deb"
+  ],
+  "sure": true
+ },
+ "addy-io": {
+  "platforms": [
+   "server"
+  ],
+  "evidence": [
+   "server: kind: self_hosted"
+  ],
+  "sure": false
+ },
+ "actual-budget": {
+  "platforms": [
+   "windows",
+   "mac",
+   "linux"
+  ],
+  "evidence": [
+   "windows: release file: Actual-windows-ia32.appx",
+   "mac: release file: Actual-mac-x64.dmg",
+   "linux: release file: Actual-linux-x86_64.AppImage"
+  ],
+  "sure": true
+ },
+ "actiona": {
+  "platforms": [
+   "windows",
+   "linux"
+  ],
+  "evidence": [
+   "windows: release file: actiona-3.11.4-source-windows.tar.gz",
+   "linux: release file: actiona-3.11.4-source-linux.tar.gz"
+  ],
+  "sure": true
+ },
+ "adguard-home": {
+  "platforms": [
+   "windows",
+   "mac",
+   "linux",
+   "ios",
+   "server"
+  ],
+  "evidence": [
+   "windows: release file: AdGuardHome_windows_arm64.zip",
+   "mac: release file: AdGuardHome_darwin_arm64.zip",
+   "linux: release file: AdGuardHome_linux_riscv64.tar.gz",
+   "ios: README: App Store link (iPhone/iPad)",
+   "server: README: Docker / self-host mention"
+  ],
+  "sure": true
+ },
+ "actions-stale": {
+  "platforms": [],
+  "evidence": [],
+  "sure": false
+ },
+ "amica": {
+  "platforms": [
+   "windows",
+   "mac",
+   "linux"
+  ],
+  "evidence": [
+   "windows: release file: amica_0.2.1_x64_en-US.msi",
+   "mac: release file: amica_0.2.1_x64.dmg",
+   "linux: release file: amica_0.2.1_amd64.deb"
+  ],
+  "sure": true
+ },
+ "androidtvremote2": {
+  "platforms": [
+   "android"
+  ],
+  "evidence": [
+   "android: README: Google Play link"
+  ],
+  "sure": true
+ },
+ "android-tv-debloat": {
+  "platforms": [
+   "windows",
+   "mac",
+   "linux"
+  ],
+  "evidence": [
+   "AI (Haiku): The README says it runs as a Python 3.10+ command-line tool on Windows, macOS, or Linux, controlling the TV from a computer over ADB."
+  ],
+  "sure": true
+ },
+ "altcha": {
+  "platforms": [
+   "windows",
+   "mac",
+   "linux",
+   "server"
+  ],
+  "evidence": [
+   "AI (Haiku): The README gives build steps for macOS, Debian/Ubuntu and Windows (vcpkg), and its library is meant to be integrated into a developer's own server for challenge creation and verification; it is not an end-user app for phones or browsers."
+  ],
+  "sure": true
+ },
+ "all-contributors": {
+  "platforms": [
+   "web"
+  ],
+  "evidence": [
+   "AI (Haiku): All Contributors is a specification and hosted website at allcontributors.org, usable in a browser with no install; the README mentions no installable desktop or mobile app."
+  ],
+  "sure": true
+ },
+ "anki": {
+  "platforms": [
+   "windows",
+   "mac",
+   "linux"
+  ],
+  "evidence": [
+   "windows: release file: anki-26.09.3-win-arm64.msi",
+   "mac: release file: anki-26.09.3-mac-intel.dmg",
+   "linux: release file: anki-26.09.3-linux-x86_64.tar.zst"
+  ],
+  "sure": true
+ },
+ "ant-renamer": {
+  "platforms": [
+   "windows",
+   "linux"
+  ],
+  "evidence": [
+   "windows: release file: AntRenamerQt-3.1.0-beta.1-win64-portable.zip",
+   "linux: release file: SHA256SUMS-linux.txt"
+  ],
+  "sure": true
+ },
+ "ansible": {
+  "platforms": [],
+  "evidence": [],
+  "sure": false
+ },
+ "angry-ip-scanner": {
+  "platforms": [
+   "windows",
+   "linux"
+  ],
+  "evidence": [
+   "windows: release file: ipscan-3.10.0-win.exe",
+   "linux: release file: ipscan_3.10.0_amd64.deb"
+  ],
+  "sure": true
+ },
+ "anthias": {
+  "platforms": [
+   "linux",
+   "server"
+  ],
+  "evidence": [
+   "server: kind: self_hosted",
+   "AI (Haiku): Anthias runs on Raspberry Pi and PC hardware via its installer on Raspberry Pi OS, Debian-based Armbian, and balenaOS, and is self-hosted rather than a Windows, Mac, or mobile app."
+  ],
+  "sure": true
+ },
+ "anubis": {
+  "platforms": [
+   "windows",
+   "linux",
+   "server"
+  ],
+  "evidence": [
+   "windows: release file: anubis-1.28.2-windows-arm64.msi",
+   "linux: release file: anubis-1.28.2-linux-riscv64.tar.gz",
+   "server: kind: self_hosted"
+  ],
+  "sure": true
+ },
+ "antimicrox": {
+  "platforms": [
+   "windows",
+   "linux"
+  ],
+  "evidence": [
+   "windows: release file: antimicrox-3.6.1-Windows-AMD64.exe",
+   "linux: release file: antimicrox-3.6.1-ubuntu-22.04-x86_64.deb"
+  ],
+  "sure": true
+ },
+ "anythingllm": {
+  "platforms": [
+   "windows",
+   "mac",
+   "linux"
+  ],
+  "evidence": [
+   "windows: release file: AnythingLLMDesktop-Arm64.exe",
+   "mac: release file: AnythingLLMDesktop-Silicon.dmg",
+   "linux: release file: AnythingLLMDesktop.AppImage"
+  ],
+  "sure": true
+ },
+ "apache-echarts": {
+  "platforms": [
+   "web"
+  ],
+  "evidence": [
+   "AI (Haiku): A JavaScript library for browsers, with examples hosted on the official public website; it is a developer library rather than an app an ordinary person installs on a device."
+  ],
+  "sure": true
+ },
+ "apache-openoffice": {
+  "platforms": [],
+  "evidence": [],
+  "sure": false
+ },
+ "apitable": {
+  "platforms": [
+   "server"
+  ],
+  "evidence": [
+   "server: README: Docker / self-host mention"
+  ],
+  "sure": true
+ },
+ "airflow": {
+  "platforms": [
+   "server"
+  ],
+  "evidence": [
+   "server: README: Docker / self-host mention"
+  ],
+  "sure": true
+ },
+ "arduino-ide": {
+  "platforms": [
+   "windows",
+   "mac",
+   "linux"
+  ],
+  "evidence": [
+   "windows: release file: arduino-ide_2.3.10_Windows_64bit.zip",
+   "mac: release file: stable-mac.yml",
+   "linux: release file: stable-linux.yml"
+  ],
+  "sure": true
+ },
+ "apprise": {
+  "platforms": [],
+  "evidence": [],
+  "sure": false
+ },
+ "ardupilot": {
+  "platforms": [
+   "windows",
+   "mac",
+   "linux"
+  ],
+  "evidence": [
+   "AI (Haiku): ArduPilot is firmware for flight-controller boards such as Pixhawk, not a desktop app; the README's Cygwin (Windows), macOS and Linux SBC build and test badges are the only OS mentions."
+  ],
+  "sure": true
+ },
+ "arcane": {
+  "platforms": [
+   "mac",
+   "linux",
+   "android",
+   "server"
+  ],
+  "evidence": [
+   "mac: release file: arcane_darwin_arm64",
+   "linux: release file: arcane-cli_linux_386.tar.gz",
+   "android: release file: arcane-cli_2.17.1_armv7.apk",
+   "server: kind: self_hosted"
+  ],
+  "sure": true
+ },
+ "aria2": {
+  "platforms": [
+   "windows",
+   "mac",
+   "linux",
+   "android"
+  ],
+  "evidence": [
+   "windows: release file: aria2-1.37.0-win-64bit-build1.zip",
+   "mac: release file: aria2-1.35.0-osx-darwin.dmg",
+   "linux: release file: aria2-1.37.0-aarch64-linux-android-build1.zip",
+   "android: release file: aria2-1.37.0-aarch64-linux-android-build1.zip"
+  ],
+  "sure": true
+ },
+ "asterisk": {
+  "platforms": [
+   "mac",
+   "linux",
+   "server"
+  ],
+  "evidence": [
+   "server: kind: self_hosted",
+   "AI (Haiku): README says Asterisk is developed and tested primarily on Linux, reportedly runs on Mac OS X and BSD, and is self-hosted on your own server; Windows is not mentioned."
+  ],
+  "sure": true
+ },
+ "atuin": {
+  "platforms": [
+   "windows",
+   "mac",
+   "linux"
+  ],
+  "evidence": [
+   "windows: release file: atuin-server-x86_64-pc-windows-msvc.zip",
+   "mac: release file: atuin-aarch64-apple-darwin.tar.gz",
+   "linux: release file: atuin-aarch64-unknown-linux-gnu.tar.gz"
+  ],
+  "sure": true
+ },
+ "autokey": {
+  "platforms": [
+   "linux"
+  ],
+  "evidence": [
+   "linux: release file: autokey-qt_0.96.0_all.deb"
+  ],
+  "sure": true
+ },
+ "backscrub": {
+  "platforms": [
+   "linux"
+  ],
+  "evidence": [
+   "AI (Haiku): The README says it only works with Linux (it depends on v4l2loopback and is built with cmake/apt), and no Windows, mac, mobile, web, or server support is mentioned."
+  ],
+  "sure": true
+ },
+ "aves": {
+  "platforms": [
+   "android"
+  ],
+  "evidence": [
+   "android: release file: app-play-release.apk"
+  ],
+  "sure": true
+ },
+ "basic-memory": {
+  "platforms": [
+   "windows",
+   "mac",
+   "linux"
+  ],
+  "evidence": [
+   "AI (Haiku): The open-source local install runs on Python via uv on macOS, Windows, and Linux; the web and mobile access is a paid hosted cloud service, not the OSS software."
+  ],
+  "sure": true
+ },
+ "bcr-call-recorder": {
+  "platforms": [
+   "android"
+  ],
+  "evidence": [
+   "AI (Haiku): BCR is an Android app that requires rooted devices or custom firmware, so only Android phones qualify."
+  ],
+  "sure": true
+ },
+ "balenaetcher": {
+  "platforms": [
+   "windows",
+   "mac",
+   "linux"
+  ],
+  "evidence": [
+   "windows: release file: balenaEtcher-win32-x64-2.1.9.zip",
+   "mac: release file: SHA256SUMS.Darwin.arm64.txt",
+   "linux: release file: balena-etcher-2.1.9-1.x86_64.rpm"
+  ],
+  "sure": true
+ },
+ "bazzite": {
+  "platforms": [
+   "server"
+  ],
+  "evidence": [
+   "server: README: Docker / self-host mention"
+  ],
+  "sure": false
+ },
+ "beekeeper-studio": {
+  "platforms": [
+   "windows",
+   "mac",
+   "linux"
+  ],
+  "evidence": [
+   "windows: release file: Beekeeper-Studio-6.2.0-beta.3.msi",
+   "mac: release file: Beekeeper-Studio-6.2.0-beta.3-arm64.dmg",
+   "linux: release file: Beekeeper-Studio-6.2.0-beta.3.AppImage"
+  ],
+  "sure": true
+ },
+ "beaver-habit-tracker": {
+  "platforms": [
+   "server"
+  ],
+  "evidence": [
+   "server: README: Docker / self-host mention"
+  ],
+  "sure": true
+ },
+ "beszel": {
+  "platforms": [
+   "windows",
+   "mac",
+   "linux",
+   "server"
+  ],
+  "evidence": [
+   "windows: release file: beszel-agent_windows_arm64.zip",
+   "mac: release file: beszel-agent_darwin_arm64.tar.gz",
+   "linux: release file: beszel-agent_linux_armv5.tar.gz",
+   "server: README: Docker / self-host mention"
+  ],
+  "sure": true
+ },
+ "beets": {
+  "platforms": [],
+  "evidence": [],
+  "sure": false
+ },
+ "bibisco": {
+  "platforms": [],
+  "evidence": [],
+  "sure": false
+ },
+ "bevy": {
+  "platforms": [],
+  "evidence": [],
+  "sure": false
+ },
+ "bifrost": {
+  "platforms": [
+   "server"
+  ],
+  "evidence": [
+   "server: README: Docker / self-host mention"
+  ],
+  "sure": false
+ },
+ "binoculars": {
+  "platforms": [
+   "web"
+  ],
+  "evidence": [
+   "AI (Haiku): The README describes a Python package installed via pip for developers and academic use, with no mention of Windows, Mac, Linux, or mobile support; the only consumer-facing option is the hosted Hugging Face demo, which is a public web page, though the README says the code is not a consumer product."
+  ],
+  "sure": true
+ },
+ "briar": {
+  "platforms": [],
+  "evidence": [],
+  "sure": false
+ },
+ "biscuittin": {
+  "platforms": [
+   "linux"
+  ],
+  "evidence": [
+   "linux: release file: biscuittin_1.1.0_x86_64.flatpak"
+  ],
+  "sure": true
+ },
+ "bitfocus-companion": {
+  "platforms": [
+   "windows",
+   "mac",
+   "linux"
+  ],
+  "evidence": [
+   "AI (Haiku): The README points to installation docs and bleeding-edge downloads, but does not explicitly list platforms; Companion is known as a desktop app for Windows, macOS, and Linux, and it also has a web-based control page served by the app itself."
+  ],
+  "sure": true
+ },
+ "biome": {
+  "platforms": [
+   "windows",
+   "mac",
+   "linux"
+  ],
+  "evidence": [
+   "windows: release file: biome-win32-arm64.exe",
+   "mac: release file: biome-darwin-arm64",
+   "linux: release file: biome-linux-arm64"
+  ],
+  "sure": true
+ },
+ "bmad-method": {
+  "platforms": [
+   "windows",
+   "mac",
+   "linux"
+  ],
+  "evidence": [
+   "AI (Haiku): It is a command-line/npm-installed set of skills for AI coding tools (needs Node.js and Python), and the README does not explicitly state supported operating systems beyond that; it is not a standalone app, web service, or mobile app."
+  ],
+  "sure": true
+ },
+ "blocky": {
+  "platforms": [
+   "windows",
+   "mac",
+   "linux",
+   "server"
+  ],
+  "evidence": [
+   "windows: release file: blocky_v0.35.0_Windows_x86_64.zip",
+   "mac: release file: blocky_v0.35.0_Darwin_arm64.tar.gz",
+   "linux: release file: blocky_v0.35.0_Linux_armv6.tar.gz",
+   "server: README: Docker / self-host mention"
+  ],
+  "sure": true
+ },
+ "bleachbit": {
+  "platforms": [
+   "windows",
+   "linux"
+  ],
+  "evidence": [
+   "windows: release file: BleachBit-6.0.6-setup.exe",
+   "linux: release file: bleachbit-6.0.6-1.1.alma9.noarch.rpm"
+  ],
+  "sure": true
+ },
+ "bore": {
+  "platforms": [
+   "windows",
+   "mac",
+   "linux"
+  ],
+  "evidence": [
+   "windows: release file: bore-v0.6.0-i686-pc-windows-msvc.zip",
+   "mac: release file: bore-v0.6.0-aarch64-apple-darwin.tar.gz",
+   "linux: release file: bore-v0.6.0-arm-unknown-linux-musleabi.tar.gz"
+  ],
+  "sure": true
+ },
+ "boring-notch": {
+  "platforms": [
+   "mac"
+  ],
+  "evidence": [
+   "mac: release file: boringNotch-nightly.dmg"
+  ],
+  "sure": true
+ },
+ "botpress": {
+  "platforms": [
+   "web"
+  ],
+  "evidence": [
+   "AI (Haiku): The README describes Botpress Cloud, a hosted platform at app.botpress.cloud, and the repo is a developer toolkit (CLI/SDK) with no installable desktop, mobile, or self-hosted app for ordinary users."
+  ],
+  "sure": true
+ },
+ "browser-use": {
+  "platforms": [],
+  "evidence": [],
+  "sure": false
+ },
+ "bottles": {
+  "platforms": [
+   "linux"
+  ],
+  "evidence": [
+   "linux: README: Flathub link"
+  ],
+  "sure": true
+ },
+ "browseros": {
+  "platforms": [
+   "windows",
+   "mac",
+   "linux"
+  ],
+  "evidence": [
+   "windows: release file: browseros-claw-server-rust-resources-windows-x64.zip",
+   "mac: release file: browseros-claw-server-rust-resources-darwin-arm64.zip",
+   "linux: release file: browseros-claw-server-rust-resources-linux-arm64.zip"
+  ],
+  "sure": true
+ },
+ "btrfs": {
+  "platforms": [
+   "linux"
+  ],
+  "evidence": [
+   "AI (Haiku): Btrfs-progs is a Linux command-line tool suite for managing Btrfs filesystems, aimed at sysadmins; it is not a consumer app for windows, mac, mobile, or web."
+  ],
+  "sure": true
+ },
+ "bscpylgtv": {
+  "platforms": [
+   "windows"
+  ],
+  "evidence": [
+   "windows: release file: bscpylgtvcommand-lite_v0.5.5-win64.7z"
+  ],
+  "sure": true
+ },
+ "btop": {
+  "platforms": [
+   "linux"
+  ],
+  "evidence": [
+   "linux: release file: btop-arm-unknown-linux-musleabi.tar.gz"
+  ],
+  "sure": true
+ },
+ "bun": {
+  "platforms": [
+   "windows",
+   "mac",
+   "linux",
+   "android"
+  ],
+  "evidence": [
+   "windows: release file: bun-windows-aarch64.zip",
+   "mac: release file: bun-darwin-aarch64-profile.zip",
+   "linux: release file: bun-linux-aarch64-musl.zip",
+   "android: release file: bun-linux-x64-android-baseline-profile.zip"
+  ],
+  "sure": true
+ },
+ "canta": {
+  "platforms": [
+   "android"
+  ],
+  "evidence": [
+   "android: release file: androidApp-release.apk"
+  ],
+  "sure": true
+ },
+ "caddy": {
+  "platforms": [
+   "windows",
+   "mac",
+   "linux",
+   "server"
+  ],
+  "evidence": [
+   "windows: release file: caddy_2.11.7_windows_arm64.zip",
+   "mac: release file: caddy_2.11.7_mac_amd64.tar.gz",
+   "linux: release file: caddy_2.11.7_linux_riscv64.tar.gz",
+   "server: kind: self_hosted"
+  ],
+  "sure": true
+ },
+ "cake-wallet": {
+  "platforms": [
+   "mac",
+   "linux",
+   "android",
+   "ios"
+  ],
+  "evidence": [
+   "mac: release file: Cake_Wallet_v6.5.0.dmg",
+   "linux: release file: Cake_Wallet_v6.4.4_Linux.flatpak",
+   "android: release file: Cake_Wallet_v6.5.0_4428.apk",
+   "ios: README: App Store link (iPhone/iPad)"
+  ],
+  "sure": true
+ },
+ "baserow": {
+  "platforms": [
+   "server"
+  ],
+  "evidence": [
+   "server: README: Docker / self-host mention"
+  ],
+  "sure": true
+ },
+ "cap": {
+  "platforms": [
+   "server"
+  ],
+  "evidence": [
+   "server: README: Docker / self-host mention"
+  ],
+  "sure": true
+ },
+ "casaos": {
+  "platforms": [
+   "linux",
+   "server"
+  ],
+  "evidence": [
+   "linux: release file: linux-arm-7-casaos-v0.4.17-alpha1.tar.gz",
+   "server: kind: self_hosted"
+  ],
+  "sure": true
+ },
+ "changedetection-io": {
+  "platforms": [
+   "server"
+  ],
+  "evidence": [
+   "server: README: Docker / self-host mention"
+  ],
+  "sure": true
+ },
+ "chart-js": {
+  "platforms": [],
+  "evidence": [],
+  "sure": false
+ },
+ "centrifugo": {
+  "platforms": [
+   "windows",
+   "mac",
+   "linux",
+   "server"
+  ],
+  "evidence": [
+   "windows: release file: centrifugo_6.10.2_windows_amd64.zip",
+   "mac: release file: centrifugo_6.10.2_darwin_arm64.tar.gz",
+   "linux: release file: centrifugo_6.10.2_linux_amd64.tar.gz",
+   "server: README: Docker / self-host mention"
+  ],
+  "sure": true
+ },
+ "ccstatusline": {
+  "platforms": [
+   "windows",
+   "mac",
+   "linux",
+   "server"
+  ],
+  "evidence": [
+   "server: README: Docker / self-host mention",
+   "AI (Haiku): It is a Node.js command-line tool for Claude Code; the README links a Windows support doc and mentions macOS Keychain and Linux terminal probing, so it runs on those three desktop systems."
+  ],
+  "sure": true
+ },
+ "chatbox-community-edition": {
+  "platforms": [
+   "android",
+   "ios"
+  ],
+  "evidence": [
+   "android: README: Google Play link",
+   "ios: README: App Store link (iPhone/iPad)"
+  ],
+  "sure": true
+ },
+ "chatterbox": {
+  "platforms": [
+   "mac",
+   "linux",
+   "web"
+  ],
+  "evidence": [
+   "AI (Haiku): The README shows Python library use on Linux (tested on Debian) and Mac (device 'mps'), plus public Hugging Face demo Spaces; Windows is not mentioned."
+  ],
+  "sure": true
+ },
+ "chimeraos": {
+  "platforms": [
+   "linux"
+  ],
+  "evidence": [
+   "AI (Haiku): ChimeraOS is a Linux-based operating system installed on PC hardware; the README and summary describe it as a Linux distribution with no Windows, Mac, mobile, or web support mentioned."
+  ],
+  "sure": true
+ },
+ "chezmoi": {
+  "platforms": [
+   "windows",
+   "mac",
+   "linux",
+   "android"
+  ],
+  "evidence": [
+   "windows: release file: chezmoi_2.73.3_windows_amd64.zip",
+   "mac: release file: chezmoi_2.73.3_darwin_arm64.tar.gz",
+   "linux: release file: chezmoi_2.73.3_linux_ppc64.tar.gz",
+   "android: release file: chezmoi_2.73.3_android_arm64.tar.gz"
+  ],
+  "sure": true
+ },
+ "chromium": {
+  "platforms": [],
+  "evidence": [],
+  "sure": false
+ },
+ "cinnamon": {
+  "platforms": [
+   "linux"
+  ],
+  "evidence": [
+   "AI (Haiku): Cinnamon is a Linux desktop environment, so it runs only on Linux computers per the summary and README."
+  ],
+  "sure": true
+ },
+ "clamav": {
+  "platforms": [
+   "windows",
+   "mac",
+   "linux"
+  ],
+  "evidence": [
+   "windows: release file: clamav-1.4.6.win.arm64.msi",
+   "mac: release file: clamav-1.4.6.macos.universal.pkg",
+   "linux: release file: clamav-1.4.6.linux.aarch64.deb"
+  ],
+  "sure": true
+ },
+ "ccusage": {
+  "platforms": [],
+  "evidence": [],
+  "sure": false
+ },
+ "claude-code-ui": {
+  "platforms": [
+   "server"
+  ],
+  "evidence": [
+   "server: README: Docker / self-host mention"
+  ],
+  "sure": true
+ },
+ "claude-code-usage-monitor": {
+  "platforms": [
+   "windows",
+   "mac",
+   "linux"
+  ],
+  "evidence": [
+   "AI (Haiku): It is a Python command-line tool, and the README gives install steps for Linux, macOS and Windows and says uv works on all platforms."
+  ],
+  "sure": true
+ },
+ "claude-squad": {
+  "platforms": [
+   "windows",
+   "mac",
+   "linux"
+  ],
+  "evidence": [
+   "windows: release file: claude-squad_1.0.20_windows_arm64.zip",
+   "mac: release file: claude-squad_1.0.20_darwin_arm64.tar.gz",
+   "linux: release file: claude-squad_1.0.20_linux_arm64.tar.gz"
+  ],
+  "sure": true
+ },
+ "claude-code-router": {
+  "platforms": [
+   "windows",
+   "mac",
+   "linux"
+  ],
+  "evidence": [
+   "windows: release file: Claude-Code-Router_3.1.3.exe",
+   "mac: release file: Claude-Code-Router_3.1.3-mac-Apple-Silicon-arm64.zip",
+   "linux: release file: Claude-Code-Router_3.1.3.AppImage"
+  ],
+  "sure": true
+ },
+ "claude-mem": {
+  "platforms": [
+   "windows",
+   "mac",
+   "linux"
+  ],
+  "evidence": [
+   "AI (Haiku): It is a Node.js-based Claude Code plugin installed via npx or the plugin marketplace, with no mention of mobile or browser-only use, but the README does not explicitly list supported operating systems beyond Node >=20 and installer commands."
+  ],
+  "sure": true
+ },
+ "clipcascade": {
+  "platforms": [
+   "windows",
+   "mac",
+   "linux",
+   "android"
+  ],
+  "evidence": [
+   "windows: release file: ClipCascade.exe",
+   "mac: release file: ClipCascade-Apple_macOS.Intel-Series.zip",
+   "linux: release file: ClipCascade_Linux.tar.xz",
+   "android: release file: ClipCascade.apk"
+  ],
+  "sure": true
+ },
+ "clickhouse": {
+  "platforms": [
+   "mac",
+   "linux",
+   "server"
+  ],
+  "evidence": [
+   "mac: release file: clickhouse-macos",
+   "linux: release file: clickhouse-client_26.10.2.103_amd64.deb",
+   "server: kind: self_hosted"
+  ],
+  "sure": true
+ },
+ "cobalt": {
+  "platforms": [
+   "web",
+   "server"
+  ],
+  "evidence": [
+   "AI (Haiku): The README points to the public cobalt.tools website and describes running your own instance (run-an-instance docs), but names no desktop, Android or iOS app."
+  ],
+  "sure": true
+ },
+ "codecharta": {
+  "platforms": [
+   "windows",
+   "mac",
+   "linux"
+  ],
+  "evidence": [
+   "windows: release file: codecharta-visualization-win32-arm64.zip",
+   "mac: release file: codecharta-visualization-darwin-arm64.zip",
+   "linux: release file: codecharta-visualization-linux-x64.zip"
+  ],
+  "sure": true
+ },
+ "colly": {
+  "platforms": [],
+  "evidence": [],
+  "sure": false
+ },
+ "container-use": {
+  "platforms": [
+   "windows",
+   "mac",
+   "linux"
+  ],
+  "evidence": [
+   "windows: release file: container-use_v0.4.2_windows_arm64.tar.gz",
+   "mac: release file: container-use_v0.4.2_darwin_amd64.tar.gz",
+   "linux: release file: container-use_v0.4.2_linux_amd64.tar.gz"
+  ],
+  "sure": true
+ },
+ "cookiecutter": {
+  "platforms": [
+   "windows",
+   "mac",
+   "linux"
+  ],
+  "evidence": [
+   "AI (Haiku): README states Cookiecutter is cross-platform and supports Windows, Mac, and Linux as a command-line tool."
+  ],
+  "sure": true
+ },
+ "convertx": {
+  "platforms": [
+   "server"
+  ],
+  "evidence": [
+   "server: README: Docker / self-host mention"
+  ],
+  "sure": true
+ },
+ "copier": {
+  "platforms": [
+   "windows",
+   "mac",
+   "linux"
+  ],
+  "evidence": [
+   "AI (Haiku): Copier is a Python CLI and library installable via pipx, uv, pip or conda, and the README mentions a Homebrew formula for macOS or Linux; Windows is not explicitly named, so it is included only as a Python-installable CLI."
+  ],
+  "sure": true
+ },
+ "copyq": {
+  "platforms": [
+   "windows",
+   "mac",
+   "linux"
+  ],
+  "evidence": [
+   "windows: release file: copyq-17.0.0-setup.exe",
+   "mac: release file: CopyQ-17.0.0-macos-13-m1.dmg",
+   "linux: release file: CopyQ-17.0.0-x86_64.AppImage"
+  ],
+  "sure": true
+ },
+ "crawl4ai": {
+  "platforms": [
+   "server"
+  ],
+  "evidence": [
+   "server: README: Docker / self-host mention"
+  ],
+  "sure": false
+ },
+ "coredns": {
+  "platforms": [
+   "windows",
+   "mac",
+   "linux"
+  ],
+  "evidence": [
+   "windows: release file: coredns_1.15.0_windows_amd64.zip",
+   "mac: release file: coredns_1.15.0_darwin_arm64.tgz",
+   "linux: release file: coredns_1.15.0_linux_riscv64.tgz"
+  ],
+  "sure": true
+ },
+ "coreelec": {
+  "platforms": [],
+  "evidence": [],
+  "sure": false
+ },
+ "coqui-tts": {
+  "platforms": [
+   "windows",
+   "linux",
+   "server"
+  ],
+  "evidence": [
+   "server: README: Docker / self-host mention",
+   "AI (Haiku): README gives Windows install instructions, tests on Ubuntu/Linux, and a Docker image for self-hosting a server; no macOS, mobile, or browser app is described."
+  ],
+  "sure": true
+ },
+ "croc": {
+  "platforms": [
+   "windows",
+   "mac",
+   "linux",
+   "android"
+  ],
+  "evidence": [
+   "windows: release file: croc_v11.5.5_Windows-64bit.zip",
+   "mac: release file: croc_v11.5.5_macOS-64bit.tar.gz",
+   "linux: release file: croc-web_v11.5.5_Linux-amd64.tar.gz",
+   "android: README: F-Droid link"
+  ],
+  "sure": true
+ },
+ "crewai": {
+  "platforms": [
+   "windows",
+   "mac",
+   "linux"
+  ],
+  "evidence": [
+   "AI (Haiku): CrewAI is a Python library/CLI installed via uv on macOS, Linux, and Windows (README gives install commands for each), not a consumer app, web service, or mobile app."
+  ],
+  "sure": true
+ },
+ "cryptomator": {
+  "platforms": [
+   "windows",
+   "mac",
+   "linux"
+  ],
+  "evidence": [
+   "windows: release file: Cryptomator-1.19.4-x64.exe",
+   "mac: release file: Cryptomator-1.19.4-x64.dmg",
+   "linux: release file: cryptomator-1.19.4-x86_64.AppImage"
+  ],
+  "sure": true
+ },
+ "crowdsec": {
+  "platforms": [
+   "windows",
+   "server"
+  ],
+  "evidence": [
+   "windows: release file: crowdsec_1.8.2.msi",
+   "server: kind: self_hosted"
+  ],
+  "sure": true
+ },
+ "coolercontrol": {
+  "platforms": [
+   "linux"
+  ],
+  "evidence": [
+   "linux: release file: AppImage Daemon CoolerControlD-x86_64.AppImage"
+  ],
+  "sure": true
+ },
+ "cutter": {
+  "platforms": [
+   "windows",
+   "mac",
+   "linux"
+  ],
+  "evidence": [
+   "windows: release file: Cutter-v2.5.0-Windows-x86_64.zip",
+   "mac: release file: Cutter-v2.5.0-macOS-arm64.dmg",
+   "linux: release file: Cutter-v2.5.0-Linux-Qt5-x86_64.AppImage"
+  ],
+  "sure": true
+ },
+ "crystal": {
+  "platforms": [
+   "mac",
+   "linux"
+  ],
+  "evidence": [
+   "mac: release file: Crystal-0.3.5-macOS-universal.dmg",
+   "linux: release file: Crystal-0.3.5-linux-x86_64.AppImage"
+  ],
+  "sure": true
+ },
+ "cyberpanel": {
+  "platforms": [
+   "server"
+  ],
+  "evidence": [
+   "server: kind: self_hosted"
+  ],
+  "sure": false
+ },
+ "cyberduck": {
+  "platforms": [
+   "windows"
+  ],
+  "evidence": [
+   "windows: README: Microsoft Store / winget / Chocolatey / Scoop"
+  ],
+  "sure": true
+ },
+ "cyberchef": {
+  "platforms": [
+   "web",
+   "server"
+  ],
+  "evidence": [
+   "server: README: Docker / self-host mention",
+   "AI (Haiku): CyberChef runs in any modern browser at its official website with no install, and can also be self-hosted via Docker or Node.js, but the README describes no native Windows, Mac, Linux, Android or iOS app."
+  ],
+  "sure": true
+ },
+ "dashy": {
+  "platforms": [
+   "server"
+  ],
+  "evidence": [
+   "server: README: Docker / self-host mention"
+  ],
+  "sure": true
+ },
+ "cytube": {
+  "platforms": [
+   "web",
+   "server"
+  ],
+  "evidence": [
+   "server: kind: self_hosted",
+   "AI (Haiku): CyTube is used via browser at public instances like cytu.be, and the server software is self-hosted by administrators; no native desktop or mobile app is mentioned."
+  ],
+  "sure": true
+ },
+ "dawarich": {
+  "platforms": [
+   "android",
+   "server"
+  ],
+  "evidence": [
+   "android: README: Google Play link",
+   "server: README: Docker / self-host mention"
+  ],
+  "sure": true
+ },
+ "crafty-controller": {
+  "platforms": [
+   "windows",
+   "server"
+  ],
+  "evidence": [
+   "windows: release file: Windows Package download",
+   "server: README: Docker / self-host mention"
+  ],
+  "sure": true
+ },
+ "digikam": {
+  "platforms": [],
+  "evidence": [],
+  "sure": false
+ },
+ "ddclient": {
+  "platforms": [
+   "mac",
+   "linux",
+   "server"
+  ],
+  "evidence": [
+   "AI (Haiku): README says it requires Linux, macOS, or any Unix-ish system with Perl and make, and it is run as a daemon or cron job on a home server or router; no Windows, Android, iOS, or web version is mentioned."
+  ],
+  "sure": true
+ },
+ "ddcutil": {
+  "platforms": [
+   "linux"
+  ],
+  "evidence": [
+   "AI (Haiku): ddcutil is a Linux command-line program and library; the README and summary only mention Linux, with no Windows, mac, mobile, or web support."
+  ],
+  "sure": true
+ },
+ "ddev": {
+  "platforms": [
+   "windows",
+   "mac",
+   "linux"
+  ],
+  "evidence": [
+   "windows: release file: ddev_windows-arm64.v1.25.5.zip",
+   "mac: release file: ddev_macos-amd64.v1.25.5.tar.gz",
+   "linux: release file: ddev_linux-arm64.v1.25.5.tar.gz"
+  ],
+  "sure": true
+ },
+ "dbeaver-community": {
+  "platforms": [
+   "windows",
+   "mac",
+   "linux"
+  ],
+  "evidence": [
+   "windows: release file: dbeaver-ce-26.2.3-windows-aarch64.zip",
+   "mac: release file: dbeaver-ce-26.2.3-macos-aarch64.dmg",
+   "linux: release file: dbeaver-ce-26.2.3-linux-x86_64.rpm"
+  ],
+  "sure": true
+ },
+ "ddns-updater": {
+  "platforms": [
+   "windows",
+   "mac",
+   "linux"
+  ],
+  "evidence": [
+   "windows: release file: ddns-updater_2.10.0_windows_386.exe",
+   "mac: release file: ddns-updater_2.10.0_darwin_amd64",
+   "linux: release file: ddns-updater_2.10.0_linux_armv7"
+  ],
+  "sure": true
+ },
+ "deepfence-threatmapper": {
+  "platforms": [
+   "server"
+  ],
+  "evidence": [
+   "server: README: Docker / self-host mention"
+  ],
+  "sure": true
+ },
+ "devtoys": {
+  "platforms": [
+   "windows",
+   "mac",
+   "linux"
+  ],
+  "evidence": [
+   "windows: release file: devtoys.cli_win_x86.zip",
+   "mac: release file: devtoys_osx_arm64.zip",
+   "linux: release file: devtoys.cli_linux_arm.deb"
+  ],
+  "sure": true
+ },
+ "deluge": {
+  "platforms": [
+   "windows",
+   "mac",
+   "linux",
+   "server"
+  ],
+  "evidence": [
+   "AI (Haiku): Summary describes a desktop app, and the README's pip install and GTK UI point to desktop systems; the Web UI and daemon run on a server you host, and no public hosted web version is mentioned."
+  ],
+  "sure": true
+ },
+ "dependency-track": {
+  "platforms": [
+   "server"
+  ],
+  "evidence": [
+   "server: README: Docker / self-host mention"
+  ],
+  "sure": true
+ },
+ "diaspora": {
+  "platforms": [
+   "server"
+  ],
+  "evidence": [
+   "server: kind: self_hosted"
+  ],
+  "sure": false
+ },
+ "ditto": {
+  "platforms": [
+   "windows"
+  ],
+  "evidence": [
+   "windows: release file: DittoSetup_3_25_113_0.exe"
+  ],
+  "sure": true
+ },
+ "devpod": {
+  "platforms": [
+   "windows",
+   "mac",
+   "linux"
+  ],
+  "evidence": [
+   "windows: release file: devpod-windows-amd64.exe",
+   "mac: release file: DevPod_macos_aarch64.dmg",
+   "linux: release file: devpod-linux-arm64"
+  ],
+  "sure": true
+ },
+ "django": {
+  "platforms": [
+   "server"
+  ],
+  "evidence": [
+   "AI (Haiku): Django is a Python web framework for developers to build web applications, deployed on your own server; it is not an end-user app for ordinary people on any device."
+  ],
+  "sure": true
+ },
+ "diun": {
+  "platforms": [
+   "windows",
+   "mac",
+   "linux",
+   "server"
+  ],
+  "evidence": [
+   "windows: release file: diun_4.33.1_windows_arm64.zip",
+   "mac: release file: diun_4.33.1_darwin_arm64.tar.gz",
+   "linux: release file: diun_4.33.1_linux_ppc64le.tar.gz",
+   "server: README: Docker / self-host mention"
+  ],
+  "sure": true
+ },
+ "dockge": {
+  "platforms": [
+   "server"
+  ],
+  "evidence": [
+   "server: README: Docker / self-host mention"
+  ],
+  "sure": true
+ },
+ "docker-mailserver": {
+  "platforms": [
+   "server"
+  ],
+  "evidence": [
+   "server: README: Docker / self-host mention"
+  ],
+  "sure": true
+ },
+ "docling": {
+  "platforms": [
+   "windows",
+   "mac",
+   "linux"
+  ],
+  "evidence": [
+   "AI (Haiku): README says it works on macOS, Linux and Windows (x86_64 and arm64) via pip install, a CLI/Python library; no native Android or iOS app, and no public hosted web app is mentioned beyond self-run docling-serve."
+  ],
+  "sure": true
+ },
+ "draw-io": {
+  "platforms": [
+   "windows",
+   "mac",
+   "linux",
+   "android",
+   "ios",
+   "web",
+   "server"
+  ],
+  "evidence": [
+   "AI (Haiku): README lists draw.io Desktop (installable app), browser use via hosted app.diagrams.net and supported mobile browsers (WebView Android, Safari iOS), and self-hosting via Docker or .war files."
+  ],
+  "sure": true
+ },
+ "dupeguru": {
+  "platforms": [
+   "windows",
+   "mac",
+   "linux"
+  ],
+  "evidence": [
+   "windows: release file: dupeGuru_win32_4.3.1.exe",
+   "mac: release file: dupeguru_macOS_Qt_4.3.1.zip",
+   "linux: release file: dupeguru_4.3.1_amd64.deb"
+  ],
+  "sure": true
+ },
+ "e2b": {
+  "platforms": [
+   "server"
+  ],
+  "evidence": [
+   "server: README: Docker / self-host mention"
+  ],
+  "sure": false
+ },
+ "docusaurus": {
+  "platforms": [],
+  "evidence": [],
+  "sure": false
+ },
+ "easyeffects": {
+  "platforms": [
+   "linux"
+  ],
+  "evidence": [
+   "linux: README: Flathub link"
+  ],
+  "sure": true
+ },
+ "electron": {
+  "platforms": [
+   "windows",
+   "mac",
+   "linux"
+  ],
+  "evidence": [
+   "windows: release file: electron-v44.10.0-win32-x64.zip",
+   "mac: release file: electron-v44.10.0-darwin-x64.zip",
+   "linux: release file: electron-v44.10.0-linux-x64.zip"
+  ],
+  "sure": true
+ },
+ "ersatztv": {
+  "platforms": [
+   "windows",
+   "mac",
+   "linux",
+   "server"
+  ],
+  "evidence": [
+   "windows: release file: ErsatzTV-Legacy-v26.11.5-win-x64.zip",
+   "mac: release file: ErsatzTV-Legacy-v26.11.5-osx-x64.dmg",
+   "linux: release file: ErsatzTV-Legacy-v26.11.5-linux-musl-x64.tar.gz",
+   "server: kind: self_hosted"
+  ],
+  "sure": true
+ },
+ "elementary-os": {
+  "platforms": [
+   "linux"
+  ],
+  "evidence": [
+   "AI (Haiku): elementary OS is a Linux operating system installed from a bootable ISO built from these configs, so it runs on ordinary computers as a Linux distribution."
+  ],
+  "sure": true
+ },
+ "espanso": {
+  "platforms": [
+   "windows",
+   "mac",
+   "linux"
+  ],
+  "evidence": [
+   "windows: release file: Espanso-Win-Installer-x86_64.exe",
+   "mac: release file: Espanso-Mac-Universal.dmg",
+   "linux: release file: Espanso-X11.AppImage"
+  ],
+  "sure": true
+ },
+ "eslint": {
+  "platforms": [],
+  "evidence": [],
+  "sure": false
+ },
+ "etar-calendar": {
+  "platforms": [
+   "android"
+  ],
+  "evidence": [
+   "android: README: Google Play link"
+  ],
+  "sure": true
+ },
+ "equalizer-apo": {
+  "platforms": [
+   "windows"
+  ],
+  "evidence": [
+   "windows: release file: EqualizerAPO-x64-1.4.2.exe"
+  ],
+  "sure": true
+ },
+ "electrum": {
+  "platforms": [
+   "windows",
+   "mac",
+   "linux",
+   "android"
+  ],
+  "evidence": [
+   "AI (Haiku): README links to Windows and macOS build docs, Linux tarball/AppImage builds, and an Android build; it is not listed for iOS or as a hosted web app."
+  ],
+  "sure": true
+ },
+ "eqmac": {
+  "platforms": [
+   "mac"
+  ],
+  "evidence": [
+   "mac: release file: eqMac.dmg"
+  ],
+  "sure": true
+ },
+ "excalidraw": {
+  "platforms": [
+   "web"
+  ],
+  "evidence": [
+   "AI (Haiku): Excalidraw is used in a browser at excalidraw.com with a PWA that works offline; the README names no native Windows, Mac, Linux, Android or iOS app, only an npm library and a VS Code extension."
+  ],
+  "sure": true
+ },
+ "fairemail": {
+  "platforms": [
+   "android"
+  ],
+  "evidence": [
+   "android: release file: FairEmail-v1.2339a-github-release.apk"
+  ],
+  "sure": true
+ },
+ "fd": {
+  "platforms": [
+   "windows",
+   "mac",
+   "linux"
+  ],
+  "evidence": [
+   "windows: release file: fd-v10.5.0-aarch64-pc-windows-msvc.zip",
+   "mac: release file: fd-v10.5.0-aarch64-apple-darwin.tar.gz",
+   "linux: release file: fd-musl_10.5.0_amd64.deb"
+  ],
+  "sure": true
+ },
+ "f2": {
+  "platforms": [
+   "windows",
+   "mac",
+   "linux",
+   "android"
+  ],
+  "evidence": [
+   "windows: release file: f2_2.2.2-nightly-cfb0192_windows_386.zip",
+   "mac: release file: f2_2.2.2-nightly-cfb0192_darwin_amd64.tar.gz",
+   "linux: release file: f2_2.2.2-nightly-cfb0192_linux_386.tar.gz",
+   "android: release file: f2_2.2.2-nightly-cfb0192_linux_386.apk"
+  ],
+  "sure": true
+ },
+ "file-converter": {
+  "platforms": [
+   "windows"
+  ],
+  "evidence": [
+   "windows: release file: FileConverter-2.2-x64-setup.msi"
+  ],
+  "sure": true
+ },
+ "files": {
+  "platforms": [
+   "windows"
+  ],
+  "evidence": [
+   "windows: README: Microsoft Store / winget / Chocolatey / Scoop"
+  ],
+  "sure": true
+ },
+ "firefly-iii": {
+  "platforms": [
+   "server"
+  ],
+  "evidence": [
+   "server: README: Docker / self-host mention"
+  ],
+  "sure": true
+ },
+ "feishin": {
+  "platforms": [
+   "windows",
+   "mac",
+   "linux"
+  ],
+  "evidence": [
+   "windows: release file: Feishin-1.17.0-win-x64.zip",
+   "mac: release file: Feishin-1.17.0-mac-arm64.dmg.blockmap",
+   "linux: release file: Feishin-linux-x86_64.AppImage"
+  ],
+  "sure": true
+ },
+ "firecrawl": {
+  "platforms": [
+   "server"
+  ],
+  "evidence": [
+   "server: README: Docker / self-host mention"
+  ],
+  "sure": true
+ },
+ "fprintd": {
+  "platforms": [
+   "linux"
+  ],
+  "evidence": [
+   "AI (Haiku): fprintd is described as a background service for Linux, with no mention of Windows, macOS, mobile, web, or server deployment."
+  ],
+  "sure": true
+ },
+ "fragments": {
+  "platforms": [],
+  "evidence": [],
+  "sure": false
+ },
+ "flameshot": {
+  "platforms": [
+   "windows",
+   "mac",
+   "linux"
+  ],
+  "evidence": [
+   "windows: release file: Flameshot-15.0.0-installer-win64.zip",
+   "mac: release file: flameshot-+git0.89861c4-artifact-macos-intel.zip",
+   "linux: release file: flameshot-v15.0.rc1+git1.89861c4a-artifact-ubuntu-26.04-arm64.zip"
+  ],
+  "sure": true
+ },
+ "firefox-relay": {
+  "platforms": [
+   "web",
+   "server"
+  ],
+  "evidence": [
+   "AI (Haiku): It is a Django web app needing Python, PostgreSQL and Node to self-host, with no mobile or desktop app; ordinary users can only use the hosted web service."
+  ],
+  "sure": true
+ },
+ "fish": {
+  "platforms": [
+   "mac",
+   "linux"
+  ],
+  "evidence": [
+   "mac: release file: fish-4.9.3.pkg",
+   "linux: release file: fish-4.9.3-linux-aarch64.tar.xz"
+  ],
+  "sure": true
+ },
+ "flathub": {
+  "platforms": [
+   "linux",
+   "server"
+  ],
+  "evidence": [
+   "linux: README: Flathub link",
+   "server: README: Docker / self-host mention"
+  ],
+  "sure": true
+ },
+ "fittrackee": {
+  "platforms": [
+   "server"
+  ],
+  "evidence": [
+   "server: README: Docker / self-host mention"
+  ],
+  "sure": true
+ },
+ "floorp": {
+  "platforms": [
+   "windows",
+   "mac",
+   "linux"
+  ],
+  "evidence": [
+   "windows: release file: floorp-windows-x86_64.installer.exe",
+   "mac: release file: floorp-mac-universal-full.mar",
+   "linux: release file: floorp-linux-aarch64.tar.xz"
+  ],
+  "sure": true
+ },
+ "flow-launcher": {
+  "platforms": [
+   "windows"
+  ],
+  "evidence": [
+   "windows: release file: Flow-Launcher-Setup.exe"
+  ],
+  "sure": true
+ },
+ "fooyin": {
+  "platforms": [
+   "windows",
+   "mac",
+   "linux"
+  ],
+  "evidence": [
+   "windows: release file: fooyin-0.14.1.gcf7c3d37-windows-arm64-portable.zip",
+   "mac: release file: fooyin-0.14.1.gcf7c3d37-FreeBSD.pkg",
+   "linux: release file: fooyin-0.14.1.gcf7c3d37-aarch64.AppImage"
+  ],
+  "sure": true
+ },
+ "frappe-hr": {
+  "platforms": [
+   "server"
+  ],
+  "evidence": [
+   "server: README: Docker / self-host mention"
+  ],
+  "sure": true
+ },
+ "fossify-gallery": {
+  "platforms": [
+   "android"
+  ],
+  "evidence": [
+   "android: release file: gallery-30-foss-release.apk"
+  ],
+  "sure": true
+ },
+ "fossify-calendar": {
+  "platforms": [
+   "android"
+  ],
+  "evidence": [
+   "android: release file: calendar-24-foss-release.apk"
+  ],
+  "sure": true
+ },
+ "freecad": {
+  "platforms": [
+   "windows",
+   "mac",
+   "linux"
+  ],
+  "evidence": [
+   "windows: release file: FreeCAD_weekly-2026.10.21-Windows-x86_64.7z",
+   "mac: release file: FreeCAD_weekly-2026.10.21-macOS15-arm64.dmg",
+   "linux: release file: FreeCAD_weekly-2026.10.21-Linux-aarch64.AppImage.zsync"
+  ],
+  "sure": true
+ },
+ "freepbx": {
+  "platforms": [
+   "server"
+  ],
+  "evidence": [
+   "server: kind: self_hosted"
+  ],
+  "sure": false
+ },
+ "frp": {
+  "platforms": [
+   "windows",
+   "mac",
+   "linux",
+   "android"
+  ],
+  "evidence": [
+   "windows: release file: frp_0.71.1_windows_arm64.zip",
+   "mac: release file: frp_0.71.1_darwin_amd64.tar.gz",
+   "linux: release file: frp_0.71.1_linux_mips64.tar.gz",
+   "android: release file: frp_0.71.1_android_arm64.tar.gz"
+  ],
+  "sure": true
+ },
+ "flauncher": {
+  "platforms": [
+   "android"
+  ],
+  "evidence": [
+   "android: release file: flauncher-0.18.0.apk flauncher-0.18.0.apk"
+  ],
+  "sure": true
+ },
+ "freshtomato": {
+  "platforms": [],
+  "evidence": [],
+  "sure": false
+ },
+ "frog": {
+  "platforms": [
+   "linux"
+  ],
+  "evidence": [
+   "linux: README: Flathub link"
+  ],
+  "sure": true
+ },
+ "fuxa": {
+  "platforms": [
+   "server"
+  ],
+  "evidence": [
+   "server: README: Docker / self-host mention"
+  ],
+  "sure": true
+ },
+ "fsearch": {
+  "platforms": [
+   "linux"
+  ],
+  "evidence": [
+   "linux: README: Flathub link"
+  ],
+  "sure": true
+ },
+ "fxsound": {
+  "platforms": [
+   "windows"
+  ],
+  "evidence": [
+   "windows: release file: fxsound_setup.exe"
+  ],
+  "sure": true
+ },
+ "fzf": {
+  "platforms": [
+   "windows",
+   "mac",
+   "linux",
+   "android"
+  ],
+  "evidence": [
+   "windows: release file: fzf-0.74.5-windows_amd64.zip",
+   "mac: release file: fzf-0.74.5-darwin_arm64.tar.gz",
+   "linux: release file: fzf-0.74.5-linux_armv7.tar.gz",
+   "android: release file: fzf-0.74.5-android_arm64.tar.gz"
+  ],
+  "sure": true
+ },
+ "g-helper": {
+  "platforms": [
+   "windows"
+  ],
+  "evidence": [
+   "windows: release file: GHelper.exe"
+  ],
+  "sure": true
+ },
+ "gallery-dl": {
+  "platforms": [
+   "windows",
+   "linux"
+  ],
+  "evidence": [
+   "windows: README: Microsoft Store / winget / Chocolatey / Scoop",
+   "linux: README: Snap Store link"
+  ],
+  "sure": true
+ },
+ "gamemode": {
+  "platforms": [
+   "linux"
+  ],
+  "evidence": [
+   "AI (Haiku): GameMode is a Linux-only daemon and library, installed via Linux distribution packages or built from source; no Windows, Mac, mobile, or web support is mentioned."
+  ],
+  "sure": true
+ },
+ "gamescope": {
+  "platforms": [
+   "linux"
+  ],
+  "evidence": [
+   "AI (Haiku): The README describes gamescope as a Linux tool requiring Mesa/DRM or NVIDIA drivers, Xwayland and Debian-based build steps, so it runs only on Linux."
+  ],
+  "sure": true
+ },
+ "gaupol": {
+  "platforms": [
+   "linux"
+  ],
+  "evidence": [
+   "linux: README: Flathub link"
+  ],
+  "sure": true
+ },
+ "gatus": {
+  "platforms": [
+   "server"
+  ],
+  "evidence": [
+   "server: README: Docker / self-host mention"
+  ],
+  "sure": true
+ },
+ "gear-lever": {
+  "platforms": [
+   "linux"
+  ],
+  "evidence": [
+   "linux: release file: gearlever-4.6.2-x86_64.flatpak"
+  ],
+  "sure": true
+ },
+ "gemini-cli": {
+  "platforms": [
+   "mac"
+  ],
+  "evidence": [
+   "mac: release file: gemini-darwin-arm64-unsigned.zip"
+  ],
+  "sure": true
+ },
+ "ghostty": {
+  "platforms": [
+   "mac"
+  ],
+  "evidence": [
+   "mac: release file: ghostty-macos-universal-debug-slow.zip"
+  ],
+  "sure": true
+ },
+ "ghostfolio": {
+  "platforms": [
+   "server"
+  ],
+  "evidence": [
+   "server: README: Docker / self-host mention"
+  ],
+  "sure": true
+ },
+ "ghidra": {
+  "platforms": [
+   "windows",
+   "mac",
+   "linux"
+  ],
+  "evidence": [
+   "AI (Haiku): The README says Ghidra analyzes code on Windows, macOS, and Linux, and its install steps cover ghidraRun.bat for Windows and ./ghidraRun for macOS/Linux; no Android, iOS, web, or server version is mentioned."
+  ],
+  "sure": true
+ },
+ "gnome-network-displays": {
+  "platforms": [],
+  "evidence": [],
+  "sure": false
+ },
+ "gnome-software": {
+  "platforms": [
+   "linux"
+  ],
+  "evidence": [
+   "AI (Haiku): The summary describes GNOME Software as an app store for Linux computers for everyday Linux desktop users, so only Linux is supported."
+  ],
+  "sure": true
+ },
+ "gnome-sushi": {
+  "platforms": [
+   "linux"
+  ],
+  "evidence": [
+   "AI (Haiku): Sushi is a GNOME desktop file previewer for the Files (Nautilus) file manager on Linux, so it runs only on Linux."
+  ],
+  "sure": true
+ },
+ "fwupd-lvfs": {
+  "platforms": [
+   "server"
+  ],
+  "evidence": [
+   "server: kind: self_hosted"
+  ],
+  "sure": false
+ },
+ "gink": {
+  "platforms": [
+   "windows"
+  ],
+  "evidence": [
+   "AI (Haiku): gInk is described as an on-screen annotation tool under Windows, with the README only providing Windows download and usage instructions."
+  ],
+  "sure": true
+ },
+ "git-extensions": {
+  "platforms": [
+   "windows"
+  ],
+  "evidence": [
+   "windows: release file: GitExtensions-arm64-7.2.1.7-0aea2d6df.msi"
+  ],
+  "sure": true
+ },
+ "github-desktop": {
+  "platforms": [
+   "windows",
+   "mac"
+  ],
+  "evidence": [
+   "windows: release file: GitHubDesktopSetup-x64.msi",
+   "mac: README: Homebrew cask / MacPorts"
+  ],
+  "sure": true
+ },
+ "gitui": {
+  "platforms": [
+   "windows",
+   "mac",
+   "linux"
+  ],
+  "evidence": [
+   "windows: release file: gitui-win.tar.gz",
+   "mac: release file: gitui-mac.tar.gz",
+   "linux: release file: gitui-linux-x86_64.tar.gz"
+  ],
+  "sure": true
+ },
+ "github-mcp-server": {
+  "platforms": [
+   "windows",
+   "mac",
+   "linux"
+  ],
+  "evidence": [
+   "windows: release file: github-mcp-server_Windows_arm64.zip",
+   "mac: release file: github-mcp-server_Darwin_arm64.tar.gz",
+   "linux: release file: github-mcp-server_Linux_arm64.tar.gz"
+  ],
+  "sure": true
+ },
+ "gitleaks": {
+  "platforms": [
+   "windows",
+   "mac",
+   "linux"
+  ],
+  "evidence": [
+   "windows: release file: gitleaks_8.30.1_windows_x32.zip",
+   "mac: release file: gitleaks_8.30.1_darwin_x64.tar.gz",
+   "linux: release file: gitleaks_8.30.1_linux_armv7.tar.gz"
+  ],
+  "sure": true
+ },
+ "glazewm": {
+  "platforms": [
+   "windows",
+   "mac"
+  ],
+  "evidence": [
+   "windows: release file: glazewm-v3.10.1.exe",
+   "mac: release file: glazewm-v3.10.1.dmg"
+  ],
+  "sure": true
+ },
+ "gnu-octave": {
+  "platforms": [],
+  "evidence": [],
+  "sure": false
+ },
+ "gnu-stow": {
+  "platforms": [
+   "mac",
+   "linux"
+  ],
+  "evidence": [
+   "AI (Haiku): README describes a Perl CLI tool with installation via INSTALL.md but does not explicitly state Windows support; it is commonly run on Unix-like systems such as Linux and macOS, with no mention of mobile, web, or hosted use."
+  ],
+  "sure": true
+ },
+ "gltr": {
+  "platforms": [
+   "web",
+   "server"
+  ],
+  "evidence": [
+   "AI (Haiku): Runs as a Python server (python server.py) that you host yourself and is used via a browser UI; a hosted online demo also exists, but the README does not say it runs natively on Windows, Mac, or Linux."
+  ],
+  "sure": true
+ },
+ "gwenview": {
+  "platforms": [],
+  "evidence": [],
+  "sure": false
+ },
+ "glance": {
+  "platforms": [
+   "windows",
+   "mac",
+   "linux",
+   "server"
+  ],
+  "evidence": [
+   "windows: release file: glance-windows-arm64.zip",
+   "mac: release file: glance-darwin-amd64.tar.gz",
+   "linux: release file: glance-linux-386.tar.gz",
+   "server: README: Docker / self-host mention"
+  ],
+  "sure": true
+ },
+ "godot": {
+  "platforms": [
+   "windows",
+   "mac",
+   "linux",
+   "android"
+  ],
+  "evidence": [
+   "windows: release file: Godot_v3.6.3-stable_win32.exe.zip",
+   "mac: release file: Godot_v3.6.3-stable_osx.universal.zip",
+   "linux: release file: Godot_v3.6.3-stable_linux.arm32.zip",
+   "android: release file: Godot_v3.6.3-stable_android_editor.aab"
+  ],
+  "sure": true
+ },
+ "goldencheetah": {
+  "platforms": [
+   "windows",
+   "mac",
+   "linux"
+  ],
+  "evidence": [
+   "windows: release file: GoldenCheetah_v3.9_x64.exe",
+   "mac: release file: GoldenCheetah_v3.9_arm64.dmg",
+   "linux: release file: GoldenCheetah_v3.9_x64.AppImage"
+  ],
+  "sure": true
+ },
+ "gopeed": {
+  "platforms": [
+   "windows",
+   "mac",
+   "linux",
+   "android",
+   "ios"
+  ],
+  "evidence": [
+   "windows: release file: gopeed-web-v2.0.0-beta.3-windows-386.zip",
+   "mac: release file: gopeed-web-v2.0.0-beta.3-macos-amd64.zip",
+   "linux: release file: gopeed-web-v2.0.0-beta.3-linux-amd64.zip",
+   "android: release file: Gopeed-v2.0.0-beta.3-android-arm64-v8a.apk",
+   "ios: release file: Gopeed-v2.0.0-beta.3-ios.ipa"
+  ],
+  "sure": true
+ },
+ "greenshot": {
+  "platforms": [
+   "windows"
+  ],
+  "evidence": [
+   "windows: release file: Greenshot-INSTALLER-1.4.385-gbd3147ebb6-UNSTABLE-UNSIGNED.exe"
+  ],
+  "sure": true
+ },
+ "gource": {
+  "platforms": [],
+  "evidence": [],
+  "sure": false
+ },
+ "graphiti": {
+  "platforms": [
+   "server"
+  ],
+  "evidence": [
+   "server: README: Docker / self-host mention"
+  ],
+  "sure": false
+ },
+ "grype": {
+  "platforms": [
+   "windows",
+   "mac",
+   "linux"
+  ],
+  "evidence": [
+   "windows: release file: grype_0.121.0_windows_amd64.zip",
+   "mac: release file: grype_0.121.0_darwin_arm64.tar.gz",
+   "linux: release file: grype_0.121.0_linux_s390x.tar.gz"
+  ],
+  "sure": true
+ },
+ "grocy": {
+  "platforms": [
+   "windows",
+   "server"
+  ],
+  "evidence": [
+   "windows: README: Microsoft Store / winget / Chocolatey / Scoop",
+   "server: README: Docker / self-host mention"
+  ],
+  "sure": true
+ },
+ "gsconnect": {
+  "platforms": [
+   "linux"
+  ],
+  "evidence": [
+   "AI (Haiku): GSConnect is a GNOME Shell extension for Linux desktops; the README mentions KDE Connect apps for other platforms but GSConnect itself is Linux-only."
+  ],
+  "sure": true
+ },
+ "hammond": {
+  "platforms": [
+   "server"
+  ],
+  "evidence": [
+   "server: README: Docker / self-host mention"
+  ],
+  "sure": true
+ },
+ "gadgetbridge": {
+  "platforms": [
+   "android"
+  ],
+  "evidence": [
+   "android: release file: banglejs-0.95.1.apk"
+  ],
+  "sure": true
+ },
+ "hammerspoon": {
+  "platforms": [
+   "mac"
+  ],
+  "evidence": [
+   "AI (Haiku): Hammerspoon is a macOS (OS X) automation tool installed via a Mac app or Homebrew cask; the README and summary only mention Mac."
+  ],
+  "sure": true
+ },
+ "handbrake": {
+  "platforms": [
+   "windows",
+   "mac",
+   "linux"
+  ],
+  "evidence": [
+   "windows: release file: HandBrake-1.11.2-x86_64-Win_GUI.exe",
+   "mac: release file: HandBrake-1.11.2.dmg",
+   "linux: release file: HandBrake.Plugin.IntelMediaSDK-1.11.2-x86_64.flatpak"
+  ],
+  "sure": true
+ },
+ "happy": {
+  "platforms": [
+   "mac",
+   "android"
+  ],
+  "evidence": [
+   "mac: release file: Happy-0.0.103-preview.8-arm64.dmg",
+   "android: README: Google Play link"
+  ],
+  "sure": true
+ },
+ "harper": {
+  "platforms": [
+   "windows",
+   "mac",
+   "linux"
+  ],
+  "evidence": [
+   "windows: release file: harper-win32-arm64-3.0.0.vsix",
+   "mac: release file: harper-ls-x86_64-apple-darwin.tar.gz",
+   "linux: release file: harper-cli-x86_64-unknown-linux-gnu.tar.gz"
+  ],
+  "sure": true
+ },
+ "hashcat": {
+  "platforms": [
+   "windows",
+   "mac",
+   "linux",
+   "android"
+  ],
+  "evidence": [
+   "AI (Haiku): README says it is multi-OS for Linux, Windows and macOS and can be built from source on Android (and BSD); it is not offered as a browser, iOS, or hosted web app."
+  ],
+  "sure": true
+ },
+ "headlamp": {
+  "platforms": [
+   "windows",
+   "mac",
+   "linux"
+  ],
+  "evidence": [
+   "windows: release file: Headlamp-0.46.0-win-arm64.exe",
+   "mac: release file: Headlamp-0.46.0-mac-arm64.dmg",
+   "linux: release file: Headlamp-0.46.0-linux-arm64.AppImage"
+  ],
+  "sure": true
+ },
+ "heimdall": {
+  "platforms": [
+   "server"
+  ],
+  "evidence": [
+   "server: README: Docker / self-host mention"
+  ],
+  "sure": true
+ },
+ "helicone": {
+  "platforms": [
+   "server"
+  ],
+  "evidence": [
+   "server: README: Docker / self-host mention"
+  ],
+  "sure": true
+ },
+ "hestiacp": {
+  "platforms": [
+   "server"
+  ],
+  "evidence": [
+   "server: kind: self_hosted"
+  ],
+  "sure": false
+ },
+ "hidamari": {
+  "platforms": [
+   "linux"
+  ],
+  "evidence": [
+   "linux: README: Flathub link"
+  ],
+  "sure": true
+ },
+ "homarr": {
+  "platforms": [
+   "linux",
+   "server"
+  ],
+  "evidence": [
+   "linux: release file: build-debian-arm64.tar.gz",
+   "server: README: Docker / self-host mention"
+  ],
+  "sure": true
+ },
+ "highlight": {
+  "platforms": [
+   "server"
+  ],
+  "evidence": [
+   "server: README: Docker / self-host mention"
+  ],
+  "sure": true
+ },
+ "heroic-games-launcher": {
+  "platforms": [
+   "windows",
+   "mac",
+   "linux"
+  ],
+  "evidence": [
+   "windows: release file: Heroic-2.22.4-Setup-x64.exe",
+   "mac: release file: Heroic-2.22.4-macOS-x64.dmg",
+   "linux: release file: Heroic-2.22.4-linux-x86_64.AppImage"
+  ],
+  "sure": true
+ },
+ "homebrew": {
+  "platforms": [
+   "mac"
+  ],
+  "evidence": [
+   "mac: release file: Homebrew.pkg"
+  ],
+  "sure": true
+ },
+ "homepage": {
+  "platforms": [
+   "server"
+  ],
+  "evidence": [
+   "server: README: Docker / self-host mention"
+  ],
+  "sure": true
+ },
+ "homestead": {
+  "platforms": [
+   "android"
+  ],
+  "evidence": [
+   "android: release file: homestead.apk"
+  ],
+  "sure": true
+ },
+ "hermes-agent": {
+  "platforms": [
+   "windows"
+  ],
+  "evidence": [
+   "windows: README: Microsoft Store / winget / Chocolatey / Scoop"
+  ],
+  "sure": true
+ },
+ "iina": {
+  "platforms": [
+   "mac"
+  ],
+  "evidence": [
+   "mac: release file: IINA.v1.5.0.dmg"
+  ],
+  "sure": true
+ },
+ "hypnotix": {
+  "platforms": [
+   "linux"
+  ],
+  "evidence": [
+   "AI (Haiku): README describes a Linux desktop app (Linux Mint/Debian packages, GTK/libxapp, Wayland/X11 instructions); no Windows, Mac, mobile, or web support is mentioned."
+  ],
+  "sure": true
+ },
+ "hyprland": {
+  "platforms": [
+   "linux"
+  ],
+  "evidence": [
+   "AI (Haiku): Hyprland is a Wayland compositor for Linux desktops; the README and summary only indicate Linux support."
+  ],
+  "sure": true
+ },
+ "imageglass": {
+  "platforms": [
+   "windows",
+   "mac",
+   "linux"
+  ],
+  "evidence": [
+   "windows: release file: ImageGlass_10.1.0.1021-beta_win-x64.zip",
+   "mac: release file: ImageGlass_10.1.0.1021-beta_mac-arm64.dmg",
+   "linux: release file: ImageGlass_10.1.0.1021-beta_linux-x64.AppImage"
+  ],
+  "sure": true
+ },
+ "imhex": {
+  "platforms": [
+   "windows",
+   "mac",
+   "linux"
+  ],
+  "evidence": [
+   "windows: release file: imhex-1.39.0.WIP-Windows-Portable-x86_64.zip",
+   "mac: release file: imhex-1.39.0.WIP-macOS-arm64.dmg",
+   "linux: release file: imhex-1.39.0.WIP-arm64.AppImage"
+  ],
+  "sure": true
+ },
+ "incus": {
+  "platforms": [
+   "windows",
+   "mac",
+   "linux",
+   "server"
+  ],
+  "evidence": [
+   "windows: release file: bin.windows.incus.aarch64.exe",
+   "mac: release file: bin.macos.incus.aarch64",
+   "linux: release file: bin.linux.incus.x86_64",
+   "server: kind: self_hosted"
+  ],
+  "sure": true
+ },
+ "inputplumber": {
+  "platforms": [
+   "linux"
+  ],
+  "evidence": [
+   "linux: release file: inputplumber_0.83.1-1_amd64.deb.sha256.txt"
+  ],
+  "sure": true
+ },
+ "invidious": {
+  "platforms": [
+   "web",
+   "server"
+  ],
+  "evidence": [
+   "server: kind: self_hosted",
+   "AI (Haiku): Invidious is used via public instances in a browser (web) or self-hosted on your own server; the README points to installation docs for hosting and an instances list for use, with no native Windows, Mac, Linux, Android or iOS app mentioned."
+  ],
+  "sure": true
+ },
+ "it-tools": {
+  "platforms": [
+   "web",
+   "server"
+  ],
+  "evidence": [
+   "server: README: Docker / self-host mention",
+   "AI (Haiku): Usable in a browser at it-tools.tech with no install, and can be self-hosted on your own server via Docker; no native Windows, Mac, Linux, Android or iOS app is mentioned."
+  ],
+  "sure": true
+ },
+ "itch-app": {
+  "platforms": [
+   "windows",
+   "mac",
+   "linux"
+  ],
+  "evidence": [
+   "windows: release file: itch-v26.22.0-windows-amd64.tar.gz",
+   "mac: release file: itch-v26.22.0-darwin-arm64.tar.gz",
+   "linux: release file: itch-v26.22.0-linux-amd64.tar.gz"
+  ],
+  "sure": true
+ },
+ "jabref": {
+  "platforms": [
+   "windows",
+   "mac",
+   "linux"
+  ],
+  "evidence": [
+   "windows: release file: JabRef-portable_windows.zip",
+   "mac: release file: JabRef-6.0_silicon.pkg",
+   "linux: release file: JabRef-portable_linux_arm64.tar.gz"
+  ],
+  "sure": true
+ },
+ "jamovi": {
+  "platforms": [
+   "server"
+  ],
+  "evidence": [
+   "AI (Haiku): The README only describes building and running it yourself via Docker, which starts an embedded web server accessed in a browser at 127.0.0.1; no desktop installers or hosted public instance are mentioned."
+  ],
+  "sure": true
+ },
+ "jasp": {
+  "platforms": [
+   "windows",
+   "mac"
+  ],
+  "evidence": [
+   "windows: release file: JASP-0.99.0.0-Windows.zip",
+   "mac: release file: JASP-0.99.0.0-MacOS-x86_64.dmg"
+  ],
+  "sure": true
+ },
+ "jellyfin-for-android-tv": {
+  "platforms": [
+   "android"
+  ],
+  "evidence": [
+   "android: release file: jellyfin-androidtv-v0.20.0-beta.4-release.apk"
+  ],
+  "sure": true
+ },
+ "jami": {
+  "platforms": [],
+  "evidence": [],
+  "sure": false
+ },
+ "jobsync": {
+  "platforms": [
+   "server"
+  ],
+  "evidence": [
+   "server: README: Docker / self-host mention"
+  ],
+  "sure": true
+ },
+ "joyshockmapper": {
+  "platforms": [
+   "windows",
+   "linux"
+  ],
+  "evidence": [
+   "AI (Haiku): README says it is primarily developed for Windows and can now be built and run on Linux; no mac, android, ios, web, or server support is mentioned."
+  ],
+  "sure": true
+ },
+ "julia": {
+  "platforms": [
+   "windows",
+   "mac",
+   "linux"
+  ],
+  "evidence": [
+   "AI (Haiku): Julia is a developer tool with official binaries via juliaup and manual downloads for Windows, macOS, and Linux; no Android, iOS, or hosted web version is mentioned."
+  ],
+  "sure": true
+ },
+ "k3s": {
+  "platforms": [
+   "linux",
+   "server"
+  ],
+  "evidence": [
+   "AI (Haiku): K3s is a Kubernetes distribution run as a server/agent binary on Linux (x86_64, arm, arm64, s390x); the README names no Windows, Mac, Android, iOS or browser support."
+  ],
+  "sure": true
+ },
+ "inventaire": {
+  "platforms": [],
+  "evidence": [],
+  "sure": false
+ },
+ "k9s": {
+  "platforms": [
+   "windows",
+   "mac",
+   "linux",
+   "android"
+  ],
+  "evidence": [
+   "windows: release file: k9s_Windows_amd64.zip",
+   "mac: release file: k9s_Darwin_amd64.tar.gz",
+   "linux: release file: k9s_Linux_ppc64le.tar.gz",
+   "android: release file: k9s_linux_arm64.apk"
+  ],
+  "sure": true
+ },
+ "k6": {
+  "platforms": [],
+  "evidence": [],
+  "sure": false
+ },
+ "jellyseerr": {
+  "platforms": [
+   "server"
+  ],
+  "evidence": [
+   "server: README: Docker / self-host mention"
+  ],
+  "sure": true
+ },
+ "kanata": {
+  "platforms": [
+   "windows",
+   "mac",
+   "linux"
+  ],
+  "evidence": [
+   "windows: release file: windows-binaries-x64.zip",
+   "mac: release file: macos-binaries-x64.zip",
+   "linux: release file: linux-binaries-x64.zip"
+  ],
+  "sure": true
+ },
+ "karabiner-elements": {
+  "platforms": [
+   "mac"
+  ],
+  "evidence": [
+   "mac: release file: Karabiner-Elements-16.99.5.dmg"
+  ],
+  "sure": true
+ },
+ "karakeep": {
+  "platforms": [
+   "android",
+   "ios",
+   "server"
+  ],
+  "evidence": [
+   "android: README: Google Play link",
+   "ios: README: App Store link (iPhone/iPad)",
+   "server: README: Docker / self-host mention"
+  ],
+  "sure": true
+ },
+ "kavita": {
+  "platforms": [
+   "windows",
+   "mac",
+   "linux",
+   "server"
+  ],
+  "evidence": [
+   "windows: release file: kavita-win-x64.tar.gz",
+   "mac: release file: kavita-osx-arm64.tar.gz",
+   "linux: release file: kavita-linux-musl-x64.tar.gz",
+   "server: README: Docker / self-host mention"
+  ],
+  "sure": true
+ },
+ "keepassdx": {
+  "platforms": [
+   "android"
+  ],
+  "evidence": [
+   "android: release file: KeePassDX-4.5.6-free.apk"
+  ],
+  "sure": true
+ },
+ "keepassx": {
+  "platforms": [],
+  "evidence": [],
+  "sure": false
+ },
+ "keepingyouawake": {
+  "platforms": [
+   "mac"
+  ],
+  "evidence": [
+   "mac: README: Homebrew cask / MacPorts"
+  ],
+  "sure": true
+ },
+ "keila": {
+  "platforms": [
+   "server"
+  ],
+  "evidence": [
+   "server: README: Docker / self-host mention"
+  ],
+  "sure": true
+ },
+ "kernelsu": {
+  "platforms": [
+   "windows",
+   "mac",
+   "linux",
+   "android"
+  ],
+  "evidence": [
+   "windows: release file: ksud-x86_64-pc-windows-gnu.exe",
+   "mac: release file: ksud-aarch64-apple-darwin",
+   "linux: release file: ksud-x86_64-unknown-linux-musl",
+   "android: release file: lkm-x86_64-android15-6.6_kernelsu.ko"
+  ],
+  "sure": true
+ },
+ "khoj": {
+  "platforms": [
+   "windows",
+   "mac",
+   "linux",
+   "android",
+   "ios",
+   "web",
+   "server"
+  ],
+  "evidence": [
+   "server: README: Docker / self-host mention",
+   "AI (Haiku): README lists a browser app at app.khoj.dev, self-hosting via Docker/docs, a Desktop client, a Phone access option and running on your computer, but it does not explicitly name Windows, Mac, Linux, Android or iOS, so those are included only loosely; web and server are clearly supported."
+  ],
+  "sure": true
+ },
+ "kitchenowl": {
+  "platforms": [
+   "windows",
+   "mac",
+   "linux",
+   "android",
+   "server"
+  ],
+  "evidence": [
+   "windows: release file: kitchenowl_Windows.zip",
+   "mac: release file: kitchenowl_macOS.zip",
+   "linux: release file: kitchenowl_Linux.tar.gz",
+   "android: release file: kitchenowl_Android.apk",
+   "server: README: Docker / self-host mention"
+  ],
+  "sure": true
+ },
+ "koboldcpp": {
+  "platforms": [
+   "windows",
+   "mac",
+   "linux",
+   "android"
+  ],
+  "evidence": [
+   "windows: release file: koboldcpp-nocuda.exe",
+   "mac: release file: koboldcpp-mac-arm64",
+   "linux: release file: koboldcpp-linux-x64",
+   "android: README: F-Droid link"
+  ],
+  "sure": true
+ },
+ "kitty": {
+  "platforms": [
+   "mac",
+   "linux"
+  ],
+  "evidence": [
+   "mac: release file: kitty-nightly.dmg",
+   "linux: release file: kitten-linux-amd64"
+  ],
+  "sure": true
+ },
+ "kilo-code": {
+  "platforms": [
+   "windows",
+   "mac",
+   "linux"
+  ],
+  "evidence": [
+   "windows: release file: kilo-windows-arm64.zip",
+   "mac: release file: kilo-darwin-arm64.zip",
+   "linux: release file: kilo-linux-x64.tar.gz"
+  ],
+  "sure": true
+ },
+ "kokoro": {
+  "platforms": [
+   "windows",
+   "mac"
+  ],
+  "evidence": [
+   "AI (Haiku): A Python library installed via pip; the README gives Windows espeak-ng setup and Mac Apple Silicon GPU instructions, and Linux is only implied by the Colab apt-get commands."
+  ],
+  "sure": true
+ },
+ "kolibri": {
+  "platforms": [
+   "windows",
+   "mac",
+   "linux",
+   "android",
+   "server"
+  ],
+  "evidence": [
+   "windows: release file: kolibri-setup-0.20.0a1.exe",
+   "mac: release file: kolibri-0.20.0a1.dmg",
+   "linux: release file: kolibri_0.20.0a1-0ubuntu1_all.deb",
+   "android: release file: kolibri-0.19.5-0.1.10-official-release-universal.apk",
+   "server: kind: self_hosted"
+  ],
+  "sure": true
+ },
+ "komga": {
+  "platforms": [
+   "server"
+  ],
+  "evidence": [
+   "server: README: Docker / self-host mention"
+  ],
+  "sure": true
+ },
+ "komodo": {
+  "platforms": [
+   "mac",
+   "server"
+  ],
+  "evidence": [
+   "mac: release file: km-apple",
+   "server: kind: self_hosted"
+  ],
+  "sure": true
+ },
+ "ksnip": {
+  "platforms": [
+   "windows",
+   "mac",
+   "linux"
+  ],
+  "evidence": [
+   "windows: release file: ksnip-1.11.0-continuous-windows.zip",
+   "mac: release file: ksnip-1.11.0-continuous.dmg",
+   "linux: release file: ksnip-1.11.0-continuous.rpm"
+  ],
+  "sure": true
+ },
+ "lact": {
+  "platforms": [
+   "linux"
+  ],
+  "evidence": [
+   "linux: release file: lact-headless-0.10.1-0.amd64.ubuntu-2604.deb"
+  ],
+  "sure": true
+ },
+ "kubernetes": {
+  "platforms": [
+   "server"
+  ],
+  "evidence": [
+   "AI (Haiku): Kubernetes is a cluster orchestration system run on your own servers; the README describes managing applications across multiple hosts and points to a Go or Docker build, with no desktop, mobile, or browser app mentioned."
+  ],
+  "sure": true
+ },
+ "languagetool": {
+  "platforms": [
+   "server"
+  ],
+  "evidence": [
+   "server: README: Docker / self-host mention"
+  ],
+  "sure": true
+ },
+ "lando": {
+  "platforms": [
+   "windows",
+   "mac",
+   "linux"
+  ],
+  "evidence": [
+   "windows: release file: lando-win-x64-v3.26.9.exe",
+   "mac: release file: lando-macos-x64-v3.26.9",
+   "linux: release file: lando-linux-arm64-v3.26.9"
+  ],
+  "sure": true
+ },
+ "lago": {
+  "platforms": [
+   "server"
+  ],
+  "evidence": [
+   "server: README: Docker / self-host mention"
+  ],
+  "sure": true
+ },
+ "langfuse": {
+  "platforms": [
+   "web",
+   "server"
+  ],
+  "evidence": [
+   "server: README: Docker / self-host mention",
+   "AI (Haiku): Langfuse Cloud is a hosted web app used in a browser, and the README describes self-hosting on your own machine, VM, or Kubernetes cluster with Docker, but it does not name Windows, Mac, or Linux specifically."
+  ],
+  "sure": true
+ },
+ "laravel": {
+  "platforms": [
+   "server"
+  ],
+  "evidence": [
+   "AI (Haiku): Laravel is a PHP web framework for developers; it runs on a server the developer controls (installed via Composer), not as an end-user app on any device."
+  ],
+  "sure": true
+ },
+ "leechblock-ng": {
+  "platforms": [
+   "windows",
+   "mac",
+   "linux"
+  ],
+  "evidence": [
+   "AI (Haiku): LeechBlock NG is a Firefox add-on, and Firefox runs on Windows, Mac and Linux, but the README does not explicitly name these platforms."
+  ],
+  "sure": true
+ },
+ "langgraph": {
+  "platforms": [],
+  "evidence": [],
+  "sure": false
+ },
+ "lazygit": {
+  "platforms": [
+   "windows",
+   "mac",
+   "linux"
+  ],
+  "evidence": [
+   "windows: release file: lazygit_0.66.2_windows_arm64.zip",
+   "mac: release file: lazygit_0.66.2_darwin_arm64.tar.gz",
+   "linux: release file: lazygit_0.66.2_linux_32-bit.tar.gz"
+  ],
+  "sure": true
+ },
+ "lerobot": {
+  "platforms": [
+   "windows",
+   "mac",
+   "linux"
+  ],
+  "evidence": [
+   "AI (Haiku): It is a Python library installed via pip, but the README does not explicitly state which operating systems it supports, so only the generic Python-cross-platform inference applies."
+  ],
+  "sure": true
+ },
+ "letta": {
+  "platforms": [
+   "web",
+   "server"
+  ],
+  "evidence": [
+   "server: README: Docker / self-host mention",
+   "AI (Haiku): README says it is installed via npm (terminal UI, no explicit OS list), runs as a self-hosted App Server, and is usable in-browser at chat.letta.com including on mobile."
+  ],
+  "sure": true
+ },
+ "lgtv-companion": {
+  "platforms": [
+   "windows"
+  ],
+  "evidence": [
+   "windows: release file: LGTV.Companion.Setup.ARM64.msi"
+  ],
+  "sure": true
+ },
+ "liboqs": {
+  "platforms": [
+   "windows",
+   "mac",
+   "linux"
+  ],
+  "evidence": [
+   "AI (Haiku): The README has quickstart build sections for Linux and Mac and for Windows, but it is a C developer library with no mention of Android, iOS, web, or hosted use."
+  ],
+  "sure": true
+ },
+ "librecad": {
+  "platforms": [
+   "windows",
+   "mac",
+   "linux"
+  ],
+  "evidence": [
+   "windows: release file: LibreCAD-v2.2.1.6-2-g658c59ff8-msvc.exe",
+   "mac: release file: LibreCAD-v2.2.1.6-2-g658c59ff8.dmg",
+   "linux: release file: LibreCAD-v2.2.1.6-2-g658c59ff8-x86_64.AppImage"
+  ],
+  "sure": true
+ },
+ "libreelec": {
+  "platforms": [
+   "linux",
+   "server"
+  ],
+  "evidence": [
+   "server: kind: self_hosted",
+   "AI (Haiku): LibreELEC is an installable Linux-based OS for PCs and media-center hardware, and its self-hosted kind maps to server."
+  ],
+  "sure": true
+ },
+ "librenms": {
+  "platforms": [
+   "server"
+  ],
+  "evidence": [
+   "server: kind: self_hosted"
+  ],
+  "sure": false
+ },
+ "librepcb": {
+  "platforms": [
+   "windows",
+   "mac",
+   "linux",
+   "server"
+  ],
+  "evidence": [
+   "server: README: Docker / self-host mention",
+   "AI (Haiku): README and summary say LibrePCB is an installable desktop EDA suite for Windows, Linux and macOS; the server mention is only a Docker build image for developers, not a way for ordinary users to run it."
+  ],
+  "sure": true
+ },
+ "libresprite": {
+  "platforms": [
+   "windows",
+   "mac",
+   "linux",
+   "android"
+  ],
+  "evidence": [
+   "windows: release file: libresprite-v1.3-windows-x86_64-installer.exe",
+   "mac: release file: libresprite-v1.3-macos-arm64.dmg",
+   "linux: release file: libresprite-v1.3-linux-x86_64.AppImage",
+   "android: release file: libresprite-development-android.apk"
+  ],
+  "sure": true
+ },
+ "libratbag": {
+  "platforms": [
+   "linux"
+  ],
+  "evidence": [
+   "AI (Haiku): libratbag is a Linux-focused daemon for gaming mice, packaged for Linux distributions and built with meson; the README mentions no Windows, mac, mobile, or web support."
+  ],
+  "sure": true
+ },
+ "libsodium": {
+  "platforms": [
+   "windows"
+  ],
+  "evidence": [
+   "windows: release file: libsodium-1.0.22-mingw.tar.gz"
+  ],
+  "sure": true
+ },
+ "libsignal": {
+  "platforms": [],
+  "evidence": [],
+  "sure": false
+ },
+ "lidarr": {
+  "platforms": [
+   "windows",
+   "mac",
+   "linux",
+   "server"
+  ],
+  "evidence": [
+   "windows: release file: Lidarr.develop.3.2.0.5144.windows-core-x64.zip",
+   "mac: release file: Lidarr.develop.3.2.0.5144.osx-app-core-arm64.zip",
+   "linux: release file: Lidarr.develop.3.2.0.5144.linux-core-arm.tar.gz",
+   "server: kind: self_hosted"
+  ],
+  "sure": true
+ },
+ "lichess": {
+  "platforms": [
+   "android",
+   "ios",
+   "web",
+   "server"
+  ],
+  "evidence": [
+   "server: kind: self_hosted",
+   "AI (Haiku): The README describes lichess.org as a website with a mobile app and a self-hostable server (run via sbt), but an ordinary person would mainly use it via the browser or the mobile app; no desktop app is mentioned."
+  ],
+  "sure": true
+ },
+ "lighthouse": {
+  "platforms": [
+   "windows",
+   "mac",
+   "linux"
+  ],
+  "evidence": [
+   "AI (Haiku): Runs via Chrome DevTools, the Chrome extension, or the Node CLI (npm install -g lighthouse, Node 22+); the README does not explicitly name Windows, Mac, or Linux, but Chrome and Node are cross-platform, so these are supported on desktop systems."
+  ],
+  "sure": true
+ },
+ "linearmouse": {
+  "platforms": [
+   "mac"
+  ],
+  "evidence": [
+   "mac: release file: LinearMouse.dmg"
+  ],
+  "sure": true
+ },
+ "linkding": {
+  "platforms": [
+   "server"
+  ],
+  "evidence": [
+   "server: kind: self_hosted"
+  ],
+  "sure": false
+ },
+ "linux-wallpaperengine": {
+  "platforms": [
+   "linux"
+  ],
+  "evidence": [
+   "AI (Haiku): The README targets Linux only, with Linux-specific dependencies (X11/Wayland, Xrandr, PulseAudio), Linux install paths, and Arch/Ubuntu/Fedora instructions; no Windows, Mac, mobile, or web support is mentioned."
+  ],
+  "sure": true
+ },
+ "linkwarden": {
+  "platforms": [
+   "android",
+   "ios",
+   "server"
+  ],
+  "evidence": [
+   "android: README: Google Play link",
+   "ios: README: App Store link (iPhone/iPad)",
+   "server: README: Docker / self-host mention"
+  ],
+  "sure": true
+ },
+ "linuxgsm": {
+  "platforms": [
+   "linux",
+   "server"
+  ],
+  "evidence": [
+   "AI (Haiku): LinuxGSM is a command-line tool for Linux dedicated game servers, supporting Ubuntu, Debian and CentOS, so it runs on Linux machines the user operates as servers."
+  ],
+  "sure": true
+ },
+ "litellm": {
+  "platforms": [
+   "server"
+  ],
+  "evidence": [
+   "server: README: Docker / self-host mention"
+  ],
+  "sure": false
+ },
+ "llama-cpp": {
+  "platforms": [
+   "windows",
+   "mac",
+   "linux",
+   "android"
+  ],
+  "evidence": [
+   "windows: release file: cudart-llama-bin-win-cuda-12.4-x64.zip",
+   "mac: release file: llama-b11936-bin-macos-arm64.tar.gz",
+   "linux: release file: cudart-llama-b11936-bin-ubuntu-cuda-12.8-x64.tar.gz",
+   "android: release file: llama-b11936-bin-android-arm64-snapdragon.tar.gz"
+  ],
+  "sure": true
+ },
+ "listmonk": {
+  "platforms": [
+   "windows",
+   "mac",
+   "linux",
+   "server"
+  ],
+  "evidence": [
+   "windows: release file: listmonk_nightly_windows_amd64.tar.gz",
+   "mac: release file: listmonk_nightly_darwin_amd64.tar.gz",
+   "linux: release file: listmonk_nightly_linux_amd64.tar.gz",
+   "server: README: Docker / self-host mention"
+  ],
+  "sure": true
+ },
+ "livekit-agents": {
+  "platforms": [
+   "server"
+  ],
+  "evidence": [
+   "server: README: Docker / self-host mention"
+  ],
+  "sure": false
+ },
+ "localai": {
+  "platforms": [
+   "mac",
+   "linux"
+  ],
+  "evidence": [
+   "mac: release file: local-ai-v4.12.1-darwin-arm64",
+   "linux: release file: local-ai-v4.12.1-linux-amd64"
+  ],
+  "sure": true
+ },
+ "losslesscut": {
+  "platforms": [
+   "windows",
+   "mac",
+   "linux"
+  ],
+  "evidence": [
+   "windows: release file: LosslessCut-win-x64-DONT-USE-THIS-FILE.appx",
+   "mac: release file: LosslessCut-mac-universal-DONT-USE-THIS-FILE.pkg",
+   "linux: release file: LosslessCut-linux-x86_64.AppImage"
+  ],
+  "sure": true
+ },
+ "lsp-plugins": {
+  "platforms": [
+   "linux"
+  ],
+  "evidence": [
+   "linux: release file: lsp-plugins-1.2.35-Linux-aarch64.7z"
+  ],
+  "sure": true
+ },
+ "lsposed": {
+  "platforms": [
+   "android"
+  ],
+  "evidence": [
+   "AI (Haiku): LSPosed is an Android framework requiring Magisk root and supporting Android 8.1 to 14, so it runs only on Android devices."
+  ],
+  "sure": true
+ },
+ "lubelogger": {
+  "platforms": [
+   "windows",
+   "linux",
+   "server"
+  ],
+  "evidence": [
+   "windows: release file: LubeLogger_v174_win_x64.zip",
+   "linux: release file: LubeLogger_v174_linux_x64.zip",
+   "server: README: Docker / self-host mention"
+  ],
+  "sure": true
+ },
+ "lychee": {
+  "platforms": [
+   "server"
+  ],
+  "evidence": [
+   "server: README: Docker / self-host mention"
+  ],
+  "sure": true
+ },
+ "lutris": {
+  "platforms": [
+   "linux"
+  ],
+  "evidence": [
+   "linux: release file: lutris_0.5.22_all.deb"
+  ],
+  "sure": true
+ },
+ "maccy": {
+  "platforms": [
+   "mac"
+  ],
+  "evidence": [
+   "AI (Haiku): Maccy is a clipboard manager for macOS Sonoma 14 or higher, installable via GitHub releases or Homebrew, with no support for other platforms stated."
+  ],
+  "sure": true
+ },
+ "lyx": {
+  "platforms": [
+   "windows",
+   "mac",
+   "linux"
+  ],
+  "evidence": [
+   "AI (Haiku): README states LyX runs natively on Unix/Linux, Macintosh, and modern Windows (Vista or newer, Mac OS 10.4 or newer); no mobile, web, or server support is mentioned."
+  ],
+  "sure": true
+ },
+ "macro-deck": {
+  "platforms": [
+   "windows",
+   "mac",
+   "linux",
+   "android",
+   "ios",
+   "server"
+  ],
+  "evidence": [
+   "windows: release file: Macro.Deck_3.0.0-beta.19_x64-setup.exe",
+   "mac: release file: Macro.Deck_3.0.0-beta.19_aarch64.dmg",
+   "linux: release file: macro-deck-3.0.0-0.beta.19.x86_64.rpm",
+   "android: README: Google Play link",
+   "ios: README: App Store link (iPhone/iPad)",
+   "server: kind: self_hosted"
+  ],
+  "sure": true
+ },
+ "maestro": {
+  "platforms": [
+   "windows",
+   "mac",
+   "linux",
+   "android",
+   "ios"
+  ],
+  "evidence": [
+   "AI (Haiku): The CLI installs on macOS, Linux, or Windows via WSL/regular Windows install, and it runs tests on Android and iOS emulators, simulators, and physical Android devices (physical iOS not yet supported); web testing is done by running flows against browsers rather than using it as a hosted web app."
+  ],
+  "sure": true
+ },
+ "magisk": {
+  "platforms": [
+   "android"
+  ],
+  "evidence": [
+   "android: release file: Magisk-v31.1.apk"
+  ],
+  "sure": true
+ },
+ "magicmirror2": {
+  "platforms": [
+   "windows",
+   "mac",
+   "linux"
+  ],
+  "evidence": [
+   "AI (Haiku): The README says it uses Electron as an application wrapper with no web server or browser install needed, but it does not explicitly name Windows, Mac, or Linux; these are inferred from Electron's cross-platform support."
+  ],
+  "sure": true
+ },
+ "mailcow": {
+  "platforms": [
+   "server"
+  ],
+  "evidence": [
+   "server: kind: self_hosted"
+  ],
+  "sure": false
+ },
+ "mailspring": {
+  "platforms": [
+   "windows",
+   "linux"
+  ],
+  "evidence": [
+   "windows: release file: MailspringSetup.exe",
+   "linux: release file: mailspring-1.26.2-0.1.x86_64.rpm"
+  ],
+  "sure": true
+ },
+ "mangohud": {
+  "platforms": [
+   "linux"
+  ],
+  "evidence": [
+   "linux: README: AUR link"
+  ],
+  "sure": true
+ },
+ "mariadb": {
+  "platforms": [
+   "server"
+  ],
+  "evidence": [
+   "server: kind: self_hosted"
+  ],
+  "sure": false
+ },
+ "marker": {
+  "platforms": [
+   "mac"
+  ],
+  "evidence": [
+   "AI (Haiku): The README mentions Apple Silicon/MPS and a macOS Homebrew install, but does not explicitly name Windows or Linux, and it is a Python command-line/library tool rather than an app or hosted service."
+  ],
+  "sure": true
+ },
+ "manuskript": {
+  "platforms": [
+   "windows",
+   "mac",
+   "linux"
+  ],
+  "evidence": [
+   "windows: release file: manuskript-0.17.0-windows.zip",
+   "mac: release file: manuskript-0.16.1-osx.dmg",
+   "linux: release file: manuskript-0.17.0-1.noarch.rpm"
+  ],
+  "sure": true
+ },
+ "marktext": {
+  "platforms": [
+   "windows",
+   "mac",
+   "linux"
+  ],
+  "evidence": [
+   "windows: release file: marktext-win-x64-0.23.0-setup.exe.blockmap",
+   "mac: release file: marktext-mac-arm64-0.23.0.zip",
+   "linux: release file: latest-linux-arm64.yml"
+  ],
+  "sure": true
+ },
+ "markor": {
+  "platforms": [
+   "android"
+  ],
+  "evidence": [
+   "android: release file: net.gsantner.markor-v164-2026.10.0-flavorDefault-release.apk"
+  ],
+  "sure": true
+ },
+ "mautic": {
+  "platforms": [
+   "server"
+  ],
+  "evidence": [
+   "server: README: Docker / self-host mention"
+  ],
+  "sure": true
+ },
+ "mastra": {
+  "platforms": [
+   "server"
+  ],
+  "evidence": [
+   "AI (Haiku): Mastra is a TypeScript framework for developers, run via npm on a dev machine or deployed as a standalone server; it is not an end-user app for Windows, Mac, Linux, phones, or browsers."
+  ],
+  "sure": true
+ },
+ "mealie": {
+  "platforms": [
+   "server"
+  ],
+  "evidence": [
+   "server: README: Docker / self-host mention"
+  ],
+  "sure": true
+ },
+ "mem0": {
+  "platforms": [
+   "server"
+  ],
+  "evidence": [
+   "server: README: Docker / self-host mention"
+  ],
+  "sure": false
+ },
+ "mcaptcha": {
+  "platforms": [
+   "server"
+  ],
+  "evidence": [
+   "server: README: Docker / self-host mention"
+  ],
+  "sure": true
+ },
+ "mediatracker": {
+  "platforms": [
+   "server"
+  ],
+  "evidence": [
+   "server: README: Docker / self-host mention"
+  ],
+  "sure": true
+ },
+ "mermaid": {
+  "platforms": [
+   "web"
+  ],
+  "evidence": [
+   "AI (Haiku): The README promotes the public Live Editor at mermaid.live, which runs in a browser with no install; it does not say it runs as a desktop or mobile app."
+  ],
+  "sure": true
+ },
+ "metamcp": {
+  "platforms": [
+   "server"
+  ],
+  "evidence": [
+   "server: README: Docker / self-host mention"
+  ],
+  "sure": true
+ },
+ "micropython": {
+  "platforms": [
+   "windows",
+   "mac",
+   "linux"
+  ],
+  "evidence": [
+   "AI (Haiku): The README says the Unix port runs on Linux, BSD, macOS and WSL and the Windows port runs on Windows, but it doesn't mention Android, iOS, a hosted web version, or self-hosted server use."
+  ],
+  "sure": true
+ },
+ "metasploit-framework": {
+  "platforms": [
+   "mac",
+   "linux"
+  ],
+  "evidence": [
+   "AI (Haiku): The README recommends the official installers on Linux or macOS and says Kali ships it pre-installed, but it does not mention Windows, mobile, web, or server use."
+  ],
+  "sure": true
+ },
+ "mitmproxy": {
+  "platforms": [
+   "windows",
+   "mac",
+   "linux"
+  ],
+  "evidence": [
+   "AI (Haiku): The README points to installation docs and precompiled binaries but does not explicitly name operating systems; mitmproxy is a Python tool with known desktop builds for Windows, macOS and Linux, and it has no mobile or hosted web version."
+  ],
+  "sure": true
+ },
+ "mod-organizer-2": {
+  "platforms": [
+   "windows"
+  ],
+  "evidence": [
+   "windows: release file: Mod.Organizer-2.5.2.exe"
+  ],
+  "sure": true
+ },
+ "mkdocs": {
+  "platforms": [],
+  "evidence": [],
+  "sure": false
+ },
+ "mullvad-browser": {
+  "platforms": [],
+  "evidence": [],
+  "sure": false
+ },
+ "monitorcontrol": {
+  "platforms": [
+   "mac"
+  ],
+  "evidence": [
+   "mac: release file: MonitorControl.4.4.0.dmg"
+  ],
+  "sure": true
+ },
+ "mindustry": {
+  "platforms": [
+   "linux",
+   "android"
+  ],
+  "evidence": [
+   "linux: README: Flathub link",
+   "android: README: Google Play link"
+  ],
+  "sure": true
+ },
+ "mihon": {
+  "platforms": [
+   "android"
+  ],
+  "evidence": [
+   "android: release file: mihon-v0.21.3.apk"
+  ],
+  "sure": true
+ },
+ "monitorian": {
+  "platforms": [
+   "windows"
+  ],
+  "evidence": [
+   "windows: README: Microsoft Store / winget / Chocolatey / Scoop"
+  ],
+  "sure": true
+ },
+ "motrix": {
+  "platforms": [
+   "windows",
+   "mac",
+   "linux"
+  ],
+  "evidence": [
+   "windows: release file: Motrix-Setup-2.0.1.exe",
+   "mac: release file: latest-mac.yml",
+   "linux: release file: latest-linux.yml"
+  ],
+  "sure": true
+ },
+ "mox": {
+  "platforms": [
+   "server"
+  ],
+  "evidence": [
+   "server: README: Docker / self-host mention"
+  ],
+  "sure": true
+ },
+ "mission-center": {
+  "platforms": [
+   "linux"
+  ],
+  "evidence": [
+   "linux: release file: AppImage (x86_64) MissionCenter-1.2.0-x86_64.AppImage"
+  ],
+  "sure": true
+ },
+ "mpc-hc": {
+  "platforms": [
+   "windows"
+  ],
+  "evidence": [
+   "windows: release file: MPC-HC.2.8.4.17.x64.exe"
+  ],
+  "sure": true
+ },
+ "naps2": {
+  "platforms": [
+   "windows",
+   "mac",
+   "linux"
+  ],
+  "evidence": [
+   "windows: release file: naps2-8.6.0-win-x64.exe",
+   "mac: release file: naps2-8.6.0-mac-univ.pkg",
+   "linux: release file: naps2-8.6.0-linux-x64.deb"
+  ],
+  "sure": true
+ },
+ "mtr": {
+  "platforms": [
+   "windows",
+   "mac",
+   "linux"
+  ],
+  "evidence": [
+   "AI (Haiku): README says it builds on MacOS without special steps, runs on Windows via WSL (Linux), and provides Unix/Linux build instructions; no Android, iOS, or web support is mentioned."
+  ],
+  "sure": true
+ },
+ "nanazip": {
+  "platforms": [
+   "windows"
+  ],
+  "evidence": [
+   "windows: README: Microsoft Store / winget / Chocolatey / Scoop"
+  ],
+  "sure": true
+ },
+ "mpv": {
+  "platforms": [
+   "windows",
+   "mac"
+  ],
+  "evidence": [
+   "windows: release file: libmpv-v0.41.0-dev-gad5877eda-40559215985-x86_64-w64-mingw32-gpl.zip",
+   "mac: release file: mpv-v0.41.0-dev-gad5877eda-40559215985-macos-15-arm.zip"
+  ],
+  "sure": true
+ },
+ "nanobrowser": {
+  "platforms": [
+   "windows",
+   "mac",
+   "linux"
+  ],
+  "evidence": [
+   "AI (Haiku): It is a Chrome/Edge browser extension that runs on any desktop OS where those browsers run, but the README names no Android, iOS, or hosted web version, so only desktop platforms are included."
+  ],
+  "sure": true
+ },
+ "microsandbox": {
+  "platforms": [
+   "windows",
+   "mac",
+   "linux"
+  ],
+  "evidence": [
+   "windows: release file: libkrunfw-windows-x86_64.dll",
+   "mac: release file: libkrunfw-darwin-aarch64.dylib",
+   "linux: release file: libkrunfw-linux-aarch64.so"
+  ],
+  "sure": true
+ },
+ "mullvad-vpn": {
+  "platforms": [
+   "android",
+   "ios"
+  ],
+  "evidence": [
+   "android: release file: MullvadVPN-2026.12.apk",
+   "ios: README: App Store link (iPhone/iPad)"
+  ],
+  "sure": true
+ },
+ "neko": {
+  "platforms": [
+   "server"
+  ],
+  "evidence": [
+   "server: README: Docker / self-host mention"
+  ],
+  "sure": true
+ },
+ "netboot-xyz": {
+  "platforms": [
+   "linux",
+   "server"
+  ],
+  "evidence": [
+   "linux: release file: netboot.xyz-linux.bin",
+   "server: README: Docker / self-host mention"
+  ],
+  "sure": true
+ },
+ "netguard": {
+  "platforms": [
+   "android"
+  ],
+  "evidence": [
+   "android: release file: NetGuard-v2.337-release.apk"
+  ],
+  "sure": true
+ },
+ "nextcloud-talk": {
+  "platforms": [
+   "server"
+  ],
+  "evidence": [
+   "server: kind: self_hosted"
+  ],
+  "sure": false
+ },
+ "nextcloud-polls": {
+  "platforms": [
+   "server"
+  ],
+  "evidence": [
+   "server: kind: self_hosted"
+  ],
+  "sure": false
+ },
+ "nginx-proxy-manager": {
+  "platforms": [
+   "server"
+  ],
+  "evidence": [
+   "server: README: Docker / self-host mention"
+  ],
+  "sure": true
+ },
+ "ntfy": {
+  "platforms": [
+   "windows",
+   "mac",
+   "linux",
+   "android",
+   "ios",
+   "server"
+  ],
+  "evidence": [
+   "windows: release file: ntfy_2.34.0_windows_amd64.zip",
+   "mac: release file: ntfy_2.34.0_darwin_all.tar.gz",
+   "linux: release file: ntfy_2.34.0_linux_armv7.tar.gz",
+   "android: README: Google Play link",
+   "ios: README: App Store link (iPhone/iPad)",
+   "server: README: Docker / self-host mention"
+  ],
+  "sure": true
+ },
+ "nix": {
+  "platforms": [
+   "linux"
+  ],
+  "evidence": [
+   "AI (Haiku): The README and summary only tie Nix and NixOS to Linux; macOS and Windows support is not mentioned."
+  ],
+  "sure": true
+ },
+ "normcap": {
+  "platforms": [
+   "windows",
+   "mac",
+   "linux"
+  ],
+  "evidence": [
+   "windows: release file: NormCap-0.6.0-x86_64-Windows.zip",
+   "mac: release file: NormCap-0.6.0-arm64-macOS.dmg",
+   "linux: release file: NormCap-0.6.0-x86_64.AppImage"
+  ],
+  "sure": true
+ },
+ "novelwriter": {
+  "platforms": [
+   "windows",
+   "linux"
+  ],
+  "evidence": [
+   "windows: release file: novelwriter-26.3b1-amd64-setup.exe",
+   "linux: release file: novelwriter-26.3b1-linux.flatpak"
+  ],
+  "sure": true
+ },
+ "nomacs": {
+  "platforms": [
+   "windows",
+   "mac",
+   "linux"
+  ],
+  "evidence": [
+   "windows: release file: nomacs-setup-x64.msi",
+   "mac: release file: nomacs-macOS-arm64.dmg",
+   "linux: release file: nomacs-linux-x86_64.AppImage"
+  ],
+  "sure": true
+ },
+ "netalertx": {
+  "platforms": [
+   "server"
+  ],
+  "evidence": [
+   "server: README: Docker / self-host mention"
+  ],
+  "sure": true
+ },
+ "nushell": {
+  "platforms": [
+   "windows",
+   "mac",
+   "linux"
+  ],
+  "evidence": [
+   "windows: release file: nu-0.116.1-aarch64-pc-windows-msvc.msi",
+   "mac: release file: nu-0.116.1-aarch64-apple-darwin.tar.gz",
+   "linux: release file: nu-0.116.1-x86_64-unknown-linux-gnu.tar.gz"
+  ],
+  "sure": true
+ },
+ "nvda": {
+  "platforms": [
+   "windows"
+  ],
+  "evidence": [
+   "windows: release file: nvda_2026.3.exe"
+  ],
+  "sure": true
+ },
+ "oh-my-zsh": {
+  "platforms": [
+   "mac",
+   "linux",
+   "android"
+  ],
+  "evidence": [
+   "AI (Haiku): README compatibility table lists Android, Linux, macOS and Windows via WSL2 as supported; Windows is only supported through WSL2, not natively."
+  ],
+  "sure": true
+ },
+ "olmo": {
+  "platforms": [],
+  "evidence": [],
+  "sure": false
+ },
+ "nvidia-open-kernel-modules": {
+  "platforms": [
+   "linux",
+   "server"
+  ],
+  "evidence": [
+   "AI (Haiku): The README describes kernel modules built and installed on Linux (x86_64 or aarch64) with NVIDIA GPUs, a developer-oriented build; it does not support Windows, Mac, Android, iOS or web, and server use is only as a Linux host with NVIDIA GPUs."
+  ],
+  "sure": true
+ },
+ "omarchy": {
+  "platforms": [
+   "linux"
+  ],
+  "evidence": [
+   "AI (Haiku): Omarchy is a Linux distribution installed on a computer; the README and summary do not mention Windows, Mac, mobile, or web support, though the manual has a 'Mac support' page and 'Omarchy on...' page that hint at hardware, which I did not verify."
+  ],
+  "sure": true
+ },
+ "onboard": {
+  "platforms": [
+   "linux"
+  ],
+  "evidence": [
+   "AI (Haiku): README describes building and installing on Linux distributions (Ubuntu, Debian, Arch, Fedora, openSUSE, Mageia) with X11 support, plus FreeBSD unofficially; no Windows, Mac, mobile, or web support is mentioned."
+  ],
+  "sure": true
+ },
+ "open-library": {
+  "platforms": [
+   "server"
+  ],
+  "evidence": [
+   "server: kind: self_hosted"
+  ],
+  "sure": false
+ },
+ "o3de": {
+  "platforms": [
+   "windows"
+  ],
+  "evidence": [
+   "AI (Haiku): The README only documents build steps for Windows (Visual Studio, CMake with Windows paths); it does not mention mac or linux support, and the ordinary-user question concerns running the engine locally, not a hosted web or mobile app."
+  ],
+  "sure": true
+ },
+ "onetimesecret": {
+  "platforms": [
+   "server"
+  ],
+  "evidence": [
+   "server: README: Docker / self-host mention"
+  ],
+  "sure": true
+ },
+ "oneuptime": {
+  "platforms": [
+   "windows",
+   "mac",
+   "linux",
+   "android",
+   "ios",
+   "server"
+  ],
+  "evidence": [
+   "windows: release file: oneuptime-infrastructure-agent_windows_arm64.zip",
+   "mac: release file: oneuptime-infrastructure-agent_darwin_amd64.tar.gz",
+   "linux: release file: oneuptime-infrastructure-agent_amd64.deb",
+   "android: release file: oneuptime-infrastructure-agent_amd64.apk",
+   "ios: release file: oneuptime-on-call-ios-app.ipa",
+   "server: README: Docker / self-host mention"
+  ],
+  "sure": true
+ },
+ "opcode": {
+  "platforms": [
+   "mac",
+   "linux"
+  ],
+  "evidence": [
+   "mac: release file: opcode_v0.2.0_macos_universal.dmg",
+   "linux: release file: opcode_v0.2.0_linux_x86_64.AppImage"
+  ],
+  "sure": true
+ },
+ "open-notebook": {
+  "platforms": [
+   "server"
+  ],
+  "evidence": [
+   "server: README: Docker / self-host mention"
+  ],
+  "sure": true
+ },
+ "opencode": {
+  "platforms": [
+   "windows",
+   "mac",
+   "linux"
+  ],
+  "evidence": [
+   "windows: release file: opencode-desktop-win-arm64.exe",
+   "mac: release file: opencode-darwin-x64.zip",
+   "linux: release file: opencode-desktop-linux-aarch64.rpm"
+  ],
+  "sure": true
+ },
+ "open-llm-vtuber": {
+  "platforms": [
+   "windows",
+   "mac"
+  ],
+  "evidence": [
+   "windows: release file: open-llm-vtuber-1.2.1-setup.exe",
+   "mac: release file: open-llm-vtuber-1.2.1.dmg"
+  ],
+  "sure": true
+ },
+ "openclaw": {
+  "platforms": [
+   "mac",
+   "linux"
+  ],
+  "evidence": [
+   "mac: release file: OpenClaw-2026.10.8.dmg",
+   "linux: release file: OpenClaw-2026.10.8-amd64.AppImage"
+  ],
+  "sure": true
+ },
+ "opendeck": {
+  "platforms": [
+   "windows",
+   "mac",
+   "linux"
+  ],
+  "evidence": [
+   "windows: release file: OpenDeck_2.14.2_x64_en-US.msi",
+   "mac: release file: OpenDeck_2.14.2_x64.dmg",
+   "linux: release file: opendeck_2.14.2_arm64.deb"
+  ],
+  "sure": true
+ },
+ "opengrok": {
+  "platforms": [
+   "server"
+  ],
+  "evidence": [
+   "server: kind: self_hosted"
+  ],
+  "sure": false
+ },
+ "opennutritracker": {
+  "platforms": [
+   "android",
+   "ios"
+  ],
+  "evidence": [
+   "android: release file: app-release.apk",
+   "ios: release file: opennutritracker.ipa"
+  ],
+  "sure": true
+ },
+ "openpost": {
+  "platforms": [
+   "windows",
+   "mac",
+   "linux",
+   "android",
+   "server"
+  ],
+  "evidence": [
+   "windows: release file: openpost-cli-windows-amd64.exe",
+   "mac: release file: openpost-cli-darwin-arm64",
+   "linux: release file: openpost-cli-linux-arm64",
+   "android: release file: openpost-app-android.apk",
+   "server: README: Docker / self-host mention"
+  ],
+  "sure": true
+ },
+ "openreplay": {
+  "platforms": [
+   "server"
+  ],
+  "evidence": [
+   "server: README: Docker / self-host mention"
+  ],
+  "sure": true
+ },
+ "openmediavault": {
+  "platforms": [
+   "server"
+  ],
+  "evidence": [
+   "server: kind: self_hosted"
+  ],
+  "sure": false
+ },
+ "openrazer": {
+  "platforms": [
+   "linux"
+  ],
+  "evidence": [
+   "AI (Haiku): OpenRazer is a set of Linux kernel drivers, DBus services and Python bindings for Razer devices, and the README describes it only for Linux distributions."
+  ],
+  "sure": true
+ },
+ "openresume": {
+  "platforms": [
+   "web",
+   "server"
+  ],
+  "evidence": [
+   "server: README: Docker / self-host mention",
+   "AI (Haiku): OpenResume runs in any web browser at the official site open-resume.com with no install, and can also be self-hosted via npm or Docker, though those self-hosting routes are developer-oriented."
+  ],
+  "sure": true
+ },
+ "openlit": {
+  "platforms": [
+   "windows",
+   "mac",
+   "linux",
+   "server"
+  ],
+  "evidence": [
+   "windows: release file: opentelemetry-gpu-collector-1.0.0-windows-amd64.exe",
+   "mac: release file: opentelemetry-gpu-collector-1.0.0-darwin-amd64",
+   "linux: release file: opentelemetry-gpu-collector-1.0.0-linux-arm64",
+   "server: README: Docker / self-host mention"
+  ],
+  "sure": true
+ },
+ "openscad": {
+  "platforms": [
+   "windows",
+   "mac",
+   "linux"
+  ],
+  "evidence": [
+   "windows: release file: OpenSCAD-2021.01-x86-32-Installer.exe",
+   "mac: release file: OpenSCAD-2021.01.dmg",
+   "linux: release file: OpenSCAD-2021.01-x86_64.AppImage"
+  ],
+  "sure": true
+ },
+ "opensnitch": {
+  "platforms": [
+   "linux"
+  ],
+  "evidence": [
+   "linux: release file: opensnitch-1.8.0-1.i386.rpm"
+  ],
+  "sure": true
+ },
+ "orca": {
+  "platforms": [
+   "linux"
+  ],
+  "evidence": [
+   "AI (Haiku): The summary says Orca is meant for people who use Linux desktops with accessibility support, and it does not mention any other platform."
+  ],
+  "sure": true
+ },
+ "openbb": {
+  "platforms": [
+   "windows",
+   "mac"
+  ],
+  "evidence": [
+   "windows: release file: Open-Data-Platform_latest_x86_64.exe",
+   "mac: release file: Open-Data-Platform_latest_x86_64.dmg"
+  ],
+  "sure": true
+ },
+ "openttd": {
+  "platforms": [
+   "windows"
+  ],
+  "evidence": [
+   "windows: README: Microsoft Store / winget / Chocolatey / Scoop"
+  ],
+  "sure": true
+ },
+ "openspec": {
+  "platforms": [
+   "windows",
+   "mac",
+   "linux"
+  ],
+  "evidence": [
+   "windows: release file: openspec-windows-arm64.exe",
+   "mac: release file: openspec-darwin-x64",
+   "linux: release file: openspec-linux-arm64-musl"
+  ],
+  "sure": true
+ },
+ "openrgb": {
+  "platforms": [
+   "linux"
+  ],
+  "evidence": [
+   "linux: README: Flathub link"
+  ],
+  "sure": true
+ },
+ "opentofu": {
+  "platforms": [
+   "windows",
+   "mac",
+   "linux",
+   "android"
+  ],
+  "evidence": [
+   "windows: release file: tofu_1.13.2_windows_amd64.tar.gz",
+   "mac: release file: tofu_1.13.2_darwin_arm64.tar.gz",
+   "linux: release file: tofu_1.13.2_linux_amd64.tar.gz",
+   "android: release file: tofu_1.13.2_arm.apk"
+  ],
+  "sure": true
+ },
+ "openwrt": {
+  "platforms": [
+   "server"
+  ],
+  "evidence": [
+   "server: kind: self_hosted"
+  ],
+  "sure": false
+ },
+ "openvpn": {
+  "platforms": [
+   "server"
+  ],
+  "evidence": [
+   "server: kind: self_hosted"
+  ],
+  "sure": false
+ },
+ "opnsense": {
+  "platforms": [
+   "server"
+  ],
+  "evidence": [
+   "server: kind: self_hosted"
+  ],
+  "sure": false
+ },
+ "openzfs": {
+  "platforms": [
+   "linux"
+  ],
+  "evidence": [
+   "AI (Haiku): The README says OpenZFS runs on Linux and FreeBSD; Linux is the installable option listed, while FreeBSD has no matching platform category."
+  ],
+  "sure": true
+ },
+ "opik": {
+  "platforms": [
+   "web",
+   "server"
+  ],
+  "evidence": [
+   "server: README: Docker / self-host mention",
+   "AI (Haiku): Opik is a self-hosted server platform (Docker, self-host) with a web application UI; it is not an installable desktop or mobile app, and the README does not claim Windows, Mac, Linux, Android or iOS apps."
+  ],
+  "sure": true
+ },
+ "optikey": {
+  "platforms": [
+   "windows"
+  ],
+  "evidence": [
+   "windows: release file: OptiKeyChat.exe"
+  ],
+  "sure": true
+ },
+ "organize": {
+  "platforms": [
+   "windows",
+   "mac",
+   "linux"
+  ],
+  "evidence": [
+   "AI (Haiku): The README states it works on macOS, Windows and Linux and is installed via pip with Python 3.9+; it is a command-line tool, not a mobile or web app."
+  ],
+  "sure": true
+ },
+ "osv-scanner": {
+  "platforms": [
+   "windows",
+   "mac",
+   "linux"
+  ],
+  "evidence": [
+   "windows: release file: osv-scanner_windows_arm64.exe",
+   "mac: release file: osv-scanner_darwin_arm64",
+   "linux: release file: osv-scanner_linux_arm64"
+  ],
+  "sure": true
+ },
+ "overleaf-community-edition": {
+  "platforms": [
+   "server"
+  ],
+  "evidence": [
+   "server: kind: self_hosted"
+  ],
+  "sure": false
+ },
+ "pairdrop": {
+  "platforms": [
+   "windows",
+   "mac",
+   "linux",
+   "android",
+   "ios",
+   "web",
+   "server"
+  ],
+  "evidence": [
+   "AI (Haiku): Runs in any modern web browser at pairdrop.net (web, so Android, iOS, Windows, Mac and Linux devices via browser) and can be self-hosted on a server, but it is not a standalone installable app."
+  ],
+  "sure": true
+ },
+ "owncast": {
+  "platforms": [
+   "mac",
+   "linux",
+   "server"
+  ],
+  "evidence": [
+   "mac: release file: owncast-0.3.0-macOS-64bit.zip",
+   "linux: release file: owncast-0.3.0-linux-arm64.zip",
+   "server: README: Docker / self-host mention"
+  ],
+  "sure": true
+ },
+ "paperless-ngx": {
+  "platforms": [
+   "server"
+  ],
+  "evidence": [
+   "server: README: Docker / self-host mention"
+  ],
+  "sure": true
+ },
+ "pangolin": {
+  "platforms": [
+   "linux",
+   "server"
+  ],
+  "evidence": [
+   "linux: release file: installer_linux_arm64",
+   "server: README: Docker / self-host mention"
+  ],
+  "sure": true
+ },
+ "pake": {
+  "platforms": [
+   "windows",
+   "mac",
+   "linux"
+  ],
+  "evidence": [
+   "windows: release file: ChatGPT_x64.msi",
+   "mac: release file: Qwerty.dmg",
+   "linux: release file: Flomo_x86_64.deb"
+  ],
+  "sure": true
+ },
+ "oss-document-scanner": {
+  "platforms": [
+   "android"
+  ],
+  "evidence": [
+   "android: release file: app-arm64-v8a-release.apk"
+  ],
+  "sure": true
+ },
+ "papra": {
+  "platforms": [
+   "server"
+  ],
+  "evidence": [
+   "server: README: Docker / self-host mention"
+  ],
+  "sure": true
+ },
+ "password-pusher": {
+  "platforms": [
+   "server"
+  ],
+  "evidence": [
+   "server: README: Docker / self-host mention"
+  ],
+  "sure": true
+ },
+ "peazip": {
+  "platforms": [
+   "windows",
+   "mac",
+   "linux"
+  ],
+  "evidence": [
+   "windows: release file: PeaZip_11.4.0.0_x64__m1xx1d1szsx2y.msix",
+   "mac: release file: peazip-11.4.0.DARWIN.aarch64.dmg",
+   "linux: release file: peazip_11.4.0.LINUX.GTK2-1_amd64.deb"
+  ],
+  "sure": true
+ },
+ "outline-vpn": {
+  "platforms": [
+   "server"
+  ],
+  "evidence": [
+   "server: kind: self_hosted"
+  ],
+  "sure": false
+ },
+ "persepolis": {
+  "platforms": [
+   "windows",
+   "mac",
+   "linux"
+  ],
+  "evidence": [
+   "windows: release file: persepolis_5.2.0.0_windows_64bit.exe",
+   "mac: release file: persepolis_5.2.0_macos.dmg",
+   "linux: release file: persepolis_5.2.0_linux_x64"
+  ],
+  "sure": true
+ },
+ "picoshare": {
+  "platforms": [
+   "linux",
+   "server"
+  ],
+  "evidence": [
+   "linux: release file: picoshare-v1.5.4-linux-arm64.tar.gz",
+   "server: README: Docker / self-host mention"
+  ],
+  "sure": true
+ },
+ "pi-hole": {
+  "platforms": [
+   "linux",
+   "server"
+  ],
+  "evidence": [
+   "server: kind: self_hosted",
+   "AI (Haiku): Pi-hole is installed on your own Linux hardware (Raspberry Pi or server) via a bash installer or Docker, so it runs on Linux and as a self-hosted server; it is not offered for Windows, Mac, mobile, or as a public website."
+  ],
+  "sure": true
+ },
+ "pelican": {
+  "platforms": [
+   "server"
+  ],
+  "evidence": [
+   "server: README: Docker / self-host mention"
+  ],
+  "sure": true
+ },
+ "phoenix": {
+  "platforms": [],
+  "evidence": [],
+  "sure": false
+ },
+ "pgadmin": {
+  "platforms": [
+   "windows",
+   "mac",
+   "linux",
+   "server"
+  ],
+  "evidence": [
+   "AI (Haiku): README says pgAdmin 4 runs as a web app on a server or standalone on a workstation via Electron runtime; Windows and macOS packaging is documented, and Linux is a supported *nix build."
+  ],
+  "sure": true
+ },
+ "pinry": {
+  "platforms": [
+   "server"
+  ],
+  "evidence": [
+   "server: kind: self_hosted"
+  ],
+  "sure": false
+ },
+ "pinta": {
+  "platforms": [
+   "windows",
+   "mac",
+   "linux"
+  ],
+  "evidence": [
+   "windows: release file: Pinta-arm64.exe",
+   "mac: release file: Pinta-macos-arm64.dmg",
+   "linux: README: Flathub link"
+  ],
+  "sure": true
+ },
+ "piskel": {
+  "platforms": [
+   "windows",
+   "mac",
+   "linux",
+   "web",
+   "server"
+  ],
+  "evidence": [
+   "server: kind: self_hosted",
+   "AI (Haiku): README says it runs in Chrome, Firefox, Edge and Brave, is hosted at piskelapp.com, and offers offline builds (desktop apps); it explicitly has no mobile support."
+  ],
+  "sure": true
+ },
+ "pipecat": {
+  "platforms": [
+   "windows",
+   "mac",
+   "linux"
+  ],
+  "evidence": [
+   "AI (Haiku): Pipecat is a Python developer framework installed via pip/uv; it runs on desktop systems but is not an end-user app, and the README does not explicitly state OS support, so only the general developer-tool platforms are listed."
+  ],
+  "sure": true
+ },
+ "pixelorama": {
+  "platforms": [
+   "windows",
+   "mac",
+   "linux",
+   "android"
+  ],
+  "evidence": [
+   "windows: release file: Pixelorama_v1.2.3_setup.exe",
+   "mac: release file: Pixelorama-Mac.dmg",
+   "linux: release file: Pixelorama-Linux-ARM64.tar.gz",
+   "android: release file: Pixelorama.apk"
+  ],
+  "sure": true
+ },
+ "plantuml": {
+  "platforms": [
+   "web"
+  ],
+  "evidence": [
+   "AI (Haiku): It is a Chrome/Firefox browser extension that runs client-side inside GitHub pages, so it is usable only through a browser on GitHub, not as a standalone desktop, mobile, or self-hosted program."
+  ],
+  "sure": true
+ },
+ "platformio": {
+  "platforms": [],
+  "evidence": [],
+  "sure": false
+ },
+ "playnite": {
+  "platforms": [
+   "windows"
+  ],
+  "evidence": [
+   "windows: release file: 1061to1063.exe"
+  ],
+  "sure": true
+ },
+ "pop-os": {
+  "platforms": [],
+  "evidence": [],
+  "sure": false
+ },
+ "plop": {
+  "platforms": [],
+  "evidence": [],
+  "sure": false
+ },
+ "podman": {
+  "platforms": [],
+  "evidence": [],
+  "sure": false
+ },
+ "pnpm": {
+  "platforms": [
+   "windows",
+   "mac",
+   "linux",
+   "android"
+  ],
+  "evidence": [
+   "windows: release file: pnpm-win32-arm64.zip",
+   "mac: release file: pnpm-darwin-x64.tar.gz",
+   "linux: release file: pnpm-linux-ppc64.tar.gz",
+   "android: release file: pnpm-android-arm64.tar.gz"
+  ],
+  "sure": true
+ },
+ "playwright-mcp": {
+  "platforms": [
+   "server"
+  ],
+  "evidence": [
+   "server: README: Docker / self-host mention"
+  ],
+  "sure": false
+ },
+ "playwright": {
+  "platforms": [
+   "windows",
+   "mac",
+   "linux"
+  ],
+  "evidence": [
+   "AI (Haiku): The README says Playwright runs on Linux, macOS and Windows (headless and headed), but it is a developer library/CLI, not an end-user app, and it has no Android, iOS or hosted web app."
+  ],
+  "sure": true
+ },
+ "portkey-gateway": {
+  "platforms": [
+   "server"
+  ],
+  "evidence": [
+   "server: README: Docker / self-host mention"
+  ],
+  "sure": false
+ },
+ "portmaster": {
+  "platforms": [
+   "windows",
+   "linux"
+  ],
+  "evidence": [
+   "AI (Haiku): The README and summary state Portmaster is a privacy suite for Windows and Linux desktops; no Mac, mobile, web, or server support is mentioned."
+  ],
+  "sure": true
+ },
+ "pomatez": {
+  "platforms": [
+   "windows",
+   "mac",
+   "linux"
+  ],
+  "evidence": [
+   "windows: release file: Pomatez-v1.11.0-win-arm64-setup.exe",
+   "mac: release file: Pomatez-v1.11.0-mac-x64.zip",
+   "linux: release file: Pomatez-v1.11.0-linux-arm64.deb"
+  ],
+  "sure": true
+ },
+ "postal": {
+  "platforms": [
+   "server"
+  ],
+  "evidence": [
+   "server: kind: self_hosted"
+  ],
+  "sure": false
+ },
+ "postiz": {
+  "platforms": [
+   "server"
+  ],
+  "evidence": [
+   "server: README: Docker / self-host mention"
+  ],
+  "sure": true
+ },
+ "postgresql": {
+  "platforms": [
+   "server"
+  ],
+  "evidence": [
+   "server: kind: self_hosted"
+  ],
+  "sure": false
+ },
+ "posthog": {
+  "platforms": [
+   "server"
+  ],
+  "evidence": [
+   "server: README: Docker / self-host mention"
+  ],
+  "sure": true
+ },
+ "prism-launcher": {
+  "platforms": [
+   "windows",
+   "mac",
+   "linux"
+  ],
+  "evidence": [
+   "windows: release file: PrismLauncher-Windows-MSVC-arm64-Portable-11.1.1.zip",
+   "mac: release file: PrismLauncher-macOS-11.1.1.zip",
+   "linux: release file: PrismLauncher-Linux-aarch64.AppImage"
+  ],
+  "sure": true
+ },
+ "pricebuddy": {
+  "platforms": [
+   "server"
+  ],
+  "evidence": [
+   "server: README: Docker / self-host mention"
+  ],
+  "sure": true
+ },
+ "powertoys-powerrename": {
+  "platforms": [
+   "windows"
+  ],
+  "evidence": [
+   "windows: release file: PowerToysUserSetup-0.102.3001.0-arm64.exe"
+  ],
+  "sure": true
+ },
+ "privatebin": {
+  "platforms": [
+   "web",
+   "server"
+  ],
+  "evidence": [
+   "server: kind: self_hosted",
+   "AI (Haiku): PrivateBin is a self-hosted pastebin: it runs as a server you install (server) and is used through a browser at public or self-hosted instances (web)."
+  ],
+  "sure": true
+ },
+ "prowlarr": {
+  "platforms": [
+   "windows",
+   "mac",
+   "linux",
+   "server"
+  ],
+  "evidence": [
+   "windows: release file: Prowlarr.master.2.7.0.5723.windows-core-x64.zip",
+   "mac: release file: Prowlarr.master.2.7.0.5723.osx-app-core-arm64.zip",
+   "linux: release file: Prowlarr.master.2.7.0.5723.linux-core-arm.tar.gz",
+   "server: kind: self_hosted"
+  ],
+  "sure": true
+ },
+ "proton-vpn": {
+  "platforms": [
+   "android"
+  ],
+  "evidence": [
+   "android: release file: ProtonVPN-5.20.98.0.605209800.-production-vanilla-openSource-release-fdroid.apk"
+  ],
+  "sure": true
+ },
+ "probot": {
+  "platforms": [],
+  "evidence": [],
+  "sure": false
+ },
+ "pspp": {
+  "platforms": [
+   "linux"
+  ],
+  "evidence": [
+   "AI (Haiku): README gives source code and install instructions (INSTALL, prerequisites) and GNU FTP sources, indicating a Linux-buildable program; it does not explicitly name Windows, Mac, Android, iOS, or web support."
+  ],
+  "sure": true
+ },
+ "pterodactyl": {
+  "platforms": [
+   "server"
+  ],
+  "evidence": [
+   "server: kind: self_hosted"
+  ],
+  "sure": false
+ },
+ "pufferpanel": {
+  "platforms": [
+   "linux",
+   "server"
+  ],
+  "evidence": [
+   "linux: release file: pufferpanel-3.0.9-1.aarch64.rpm",
+   "server: kind: self_hosted"
+  ],
+  "sure": true
+ },
+ "px4": {
+  "platforms": [
+   "linux"
+  ],
+  "evidence": [
+   "linux: release file: voxl-px4_1.18.0.beta1_arm64.deb"
+  ],
+  "sure": true
+ },
+ "pr-agent": {
+  "platforms": [
+   "server"
+  ],
+  "evidence": [
+   "server: README: Docker / self-host mention"
+  ],
+  "sure": false
+ },
+ "pytest": {
+  "platforms": [],
+  "evidence": [],
+  "sure": false
+ },
+ "pydantic-ai": {
+  "platforms": [],
+  "evidence": [],
+  "sure": false
+ },
+ "qdirstat": {
+  "platforms": [
+   "mac",
+   "linux",
+   "server"
+  ],
+  "evidence": [
+   "server: README: Docker / self-host mention",
+   "AI (Haiku): README targets Linux, BSD, Unix-like systems and macOS (via community binaries); it runs on X11 desktops and in Docker, but no Windows, mobile, or hosted web support is stated."
+  ],
+  "sure": true
+ },
+ "qimgv": {
+  "platforms": [
+   "windows"
+  ],
+  "evidence": [
+   "windows: release file: qimgv-x64_1.0.2.exe"
+  ],
+  "sure": true
+ },
+ "qcad": {
+  "platforms": [],
+  "evidence": [],
+  "sure": false
+ },
+ "qmk": {
+  "platforms": [],
+  "evidence": [],
+  "sure": false
+ },
+ "qmodmaster": {
+  "platforms": [
+   "windows"
+  ],
+  "evidence": [
+   "windows: release file: qModMaster-Win64-exe-0.5.3-beta.zip"
+  ],
+  "sure": true
+ },
+ "quackback": {
+  "platforms": [
+   "server"
+  ],
+  "evidence": [
+   "server: README: Docker / self-host mention"
+  ],
+  "sure": true
+ },
+ "qucs-s": {
+  "platforms": [
+   "windows",
+   "mac",
+   "linux"
+  ],
+  "evidence": [
+   "windows: release file: Qucs-S-26.1.99-1d963fb-win-arm64-setup.exe",
+   "mac: release file: Qucs-S-26.1.99-macOS.dmg",
+   "linux: release file: Qucs-S-26.1.99-1d963fb-linux-x86_64.AppImage"
+  ],
+  "sure": true
+ },
+ "quicklook": {
+  "platforms": [
+   "windows"
+  ],
+  "evidence": [
+   "windows: release file: QuickLook-4.5.0-226-g2ec219aa.msi"
+  ],
+  "sure": true
+ },
+ "r2modman": {
+  "platforms": [
+   "windows",
+   "linux"
+  ],
+  "evidence": [
+   "windows: release file: r2modman-Setup-3.2.20.exe",
+   "linux: release file: r2modman-3.2.20.AppImage"
+  ],
+  "sure": true
+ },
+ "quickshell": {
+  "platforms": [
+   "linux"
+  ],
+  "evidence": [
+   "AI (Haiku): Quickshell is a toolkit for customizing Linux desktops, and the summary describes it only as a Linux tool with no mention of other platforms."
+  ],
+  "sure": true
+ },
+ "radarr": {
+  "platforms": [
+   "windows",
+   "mac",
+   "linux",
+   "server"
+  ],
+  "evidence": [
+   "windows: release file: Radarr.develop.7.0.0.10815.windows-core-x64.zip",
+   "mac: release file: Radarr.develop.7.0.0.10815.osx-app-core-arm64.zip",
+   "linux: release file: Radarr.develop.7.0.0.10815.linux-core-arm.tar.gz",
+   "server: kind: self_hosted"
+  ],
+  "sure": true
+ },
+ "rainmeter": {
+  "platforms": [
+   "windows"
+  ],
+  "evidence": [
+   "windows: release file: Rainmeter-5.0.0.5293-RC1.exe"
+  ],
+  "sure": true
+ },
+ "raylib": {
+  "platforms": [
+   "windows",
+   "mac",
+   "linux"
+  ],
+  "evidence": [
+   "windows: release file: raylib-6.2_win32_mingw-w64.zip",
+   "mac: release file: raylib-6.2_macos.tar.gz",
+   "linux: release file: raylib-6.2_linux_i386.tar.gz"
+  ],
+  "sure": true
+ },
+ "rathole": {
+  "platforms": [
+   "windows",
+   "mac",
+   "linux"
+  ],
+  "evidence": [
+   "windows: release file: rathole-dev-x86_64-pc-windows-msvc.tar.gz",
+   "mac: release file: rathole-dev-aarch64-apple-darwin.tar.gz",
+   "linux: release file: rathole-dev-aarch64-unknown-linux-musl-embedded.tar.gz"
+  ],
+  "sure": true
+ },
+ "radix-ui": {
+  "platforms": [
+   "web",
+   "server"
+  ],
+  "evidence": [
+   "AI (Haiku): Radix Themes is a React component library for building websites and web apps, so it is used via code rather than as a standalone app on any device; it is not an installable program for windows, mac, linux, android or ios."
+  ],
+  "sure": true
+ },
+ "ragflow": {
+  "platforms": [
+   "windows",
+   "mac",
+   "linux",
+   "server"
+  ],
+  "evidence": [
+   "windows: release file: ragflow_cli-nightly-windows-arm64.exe",
+   "mac: release file: ragflow_cli-nightly-darwin-amd64",
+   "linux: release file: ragflow_cli-nightly-linux-arm64",
+   "server: README: Docker / self-host mention"
+  ],
+  "sure": true
+ },
+ "rasa": {
+  "platforms": [
+   "windows",
+   "mac",
+   "linux"
+  ],
+  "evidence": [
+   "AI (Haiku): Rasa is a Python framework installed via pip/Poetry, with the README mentioning macOS and Ubuntu/Debian setup steps; Windows is not explicitly named, so it is included only on the basis of Python package support, which the README does not state directly."
+  ],
+  "sure": true
+ },
+ "reactive-resume": {
+  "platforms": [
+   "web",
+   "server"
+  ],
+  "evidence": [
+   "server: README: Docker / self-host mention",
+   "AI (Haiku): Usable in a browser at the hosted rxresu.me site with no install, and self-hostable on your own server via Docker, Vercel, or Cloudflare Workers; no native desktop or mobile app is mentioned."
+  ],
+  "sure": true
+ },
+ "react": {
+  "platforms": [
+   "android",
+   "ios",
+   "web",
+   "server"
+  ],
+  "evidence": [
+   "AI (Haiku): React is a developer library, not an end-user app; the README and summary cover web pages, server rendering with Node, and mobile apps via React Native, but no desktop OS is mentioned."
+  ],
+  "sure": true
+ },
+ "readsb": {
+  "platforms": [
+   "mac",
+   "linux"
+  ],
+  "evidence": [
+   "AI (Haiku): README gives Debian/Linux build and install instructions (Raspbian too) and a macOS section with Homebrew and manual builds; no Windows, Android, iOS, or web app is described."
+  ],
+  "sure": true
+ },
+ "rectangle": {
+  "platforms": [
+   "mac"
+  ],
+  "evidence": [
+   "mac: release file: Rectangle2.0.4.pkg"
+  ],
+  "sure": true
+ },
+ "redlib": {
+  "platforms": [
+   "windows",
+   "linux",
+   "server"
+  ],
+  "evidence": [
+   "windows: README: Microsoft Store / winget / Chocolatey / Scoop",
+   "linux: release file: redlib-x86_64-unknown-linux-musl.tar.gz",
+   "server: README: Docker / self-host mention"
+  ],
+  "sure": true
+ },
+ "redis": {
+  "platforms": [
+   "server"
+  ],
+  "evidence": [
+   "server: README: Docker / self-host mention"
+  ],
+  "sure": true
+ },
+ "repomix": {
+  "platforms": [
+   "mac",
+   "linux",
+   "web",
+   "server"
+  ],
+  "evidence": [
+   "server: README: Docker / self-host mention",
+   "AI (Haiku): README names Homebrew for macOS/Linux and a free public website at repomix.com; Windows is not stated, and the Docker/self-host mention is not in the README excerpt."
+  ],
+  "sure": true
+ },
+ "redox-os": {
+  "platforms": [],
+  "evidence": [],
+  "sure": false
+ },
+ "rendercv": {
+  "platforms": [
+   "windows",
+   "mac",
+   "linux"
+  ],
+  "evidence": [
+   "windows: release file: rendercv-windows-x86_64.zip",
+   "mac: release file: rendercv-macos-ARM64.zip",
+   "linux: release file: rendercv-linux-x86_64.zip"
+  ],
+  "sure": true
+ },
+ "renovate": {
+  "platforms": [
+   "server"
+  ],
+  "evidence": [
+   "server: README: Docker / self-host mention"
+  ],
+  "sure": false
+ },
+ "ripgrep": {
+  "platforms": [
+   "windows",
+   "mac",
+   "linux"
+  ],
+  "evidence": [
+   "windows: release file: ripgrep-15.2.0-x86_64-pc-windows-msvc.zip",
+   "mac: release file: ripgrep-15.2.0-aarch64-apple-darwin.tar.gz",
+   "linux: release file: ripgrep-15.2.0-aarch64-unknown-linux-gnu.tar.gz"
+  ],
+  "sure": true
+ },
+ "recoll": {
+  "platforms": [
+   "server"
+  ],
+  "evidence": [
+   "server: README: Docker / self-host mention"
+  ],
+  "sure": true
+ },
+ "rockstor": {
+  "platforms": [
+   "server"
+  ],
+  "evidence": [
+   "server: kind: self_hosted"
+  ],
+  "sure": false
+ },
+ "reviewdog": {
+  "platforms": [
+   "windows",
+   "mac",
+   "linux"
+  ],
+  "evidence": [
+   "windows: release file: reviewdog_0.21.2_Windows_x86_64.tar.gz",
+   "mac: release file: reviewdog_0.21.2_Darwin_arm64.tar.gz",
+   "linux: release file: reviewdog_0.21.2_Linux_armv6.tar.gz"
+  ],
+  "sure": true
+ },
+ "rojo": {
+  "platforms": [
+   "windows",
+   "mac",
+   "linux"
+  ],
+  "evidence": [
+   "windows: release file: rojo-7.7.1-windows-aarch64.zip",
+   "mac: release file: rojo-7.7.1-macos-x86_64.zip",
+   "linux: release file: rojo-7.7.1-linux-aarch64.zip"
+  ],
+  "sure": true
+ },
+ "rufus": {
+  "platforms": [
+   "windows"
+  ],
+  "evidence": [
+   "windows: release file: rufus-4.15.exe"
+  ],
+  "sure": true
+ },
+ "ruff": {
+  "platforms": [
+   "windows",
+   "mac",
+   "linux"
+  ],
+  "evidence": [
+   "windows: release file: ruff-aarch64-pc-windows-msvc.zip",
+   "mac: release file: ruff-aarch64-apple-darwin.tar.gz",
+   "linux: release file: ruff-aarch64-unknown-linux-gnu.tar.gz"
+  ],
+  "sure": true
+ },
+ "rowy": {
+  "platforms": [],
+  "evidence": [],
+  "sure": false
+ },
+ "rootmytv": {
+  "platforms": [
+   "web"
+  ],
+  "evidence": [
+   "AI (Haiku): RootMyTV is used by visiting https://rootmy.tv in the LG TV's own web browser, so it runs on the TV itself rather than on a listed desktop, mobile, or server platform, and it only works on older webOS firmware."
+  ],
+  "sure": true
+ },
+ "ryot": {
+  "platforms": [
+   "server"
+  ],
+  "evidence": [
+   "server: README: Docker / self-host mention"
+  ],
+  "sure": true
+ },
+ "rofi": {
+  "platforms": [
+   "linux"
+  ],
+  "evidence": [
+   "AI (Haiku): Rofi is a Linux and BSD tool per the README; it is not documented for Windows, Mac, mobile, or web, so only Linux is listed."
+  ],
+  "sure": true
+ },
+ "sagemath": {
+  "platforms": [
+   "windows",
+   "mac",
+   "linux",
+   "web",
+   "server"
+  ],
+  "evidence": [
+   "server: README: Docker / self-host mention",
+   "AI (Haiku): README says Sage supports Linux, recent macOS and Windows via WSL or virtualization, plus browser use via Binder/Gitpod/Codespaces and Docker self-hosting."
+  ],
+  "sure": true
+ },
+ "scrapy": {
+  "platforms": [
+   "windows",
+   "mac",
+   "linux"
+  ],
+  "evidence": [
+   "AI (Haiku): README says Scrapy is cross-platform and installable via pip with Python 3.11+, but it does not explicitly name Windows, Mac, or Linux, and it is a developer library rather than an end-user app."
+  ],
+  "sure": true
+ },
+ "scrcpy": {
+  "platforms": [
+   "windows",
+   "mac",
+   "linux"
+  ],
+  "evidence": [
+   "windows: release file: scrcpy-win32-v5.0.1.zip",
+   "mac: release file: scrcpy-macos-aarch64-v5.0.1.tar.gz",
+   "linux: release file: scrcpy-linux-x86_64-v5.0.1.tar.gz"
+  ],
+  "sure": true
+ },
+ "seal": {
+  "platforms": [
+   "android"
+  ],
+  "evidence": [
+   "android: release file: Seal-2.0.0-alpha.5-githubPreview-arm64-v8a-release.apk"
+  ],
+  "sure": true
+ },
+ "serpbear": {
+  "platforms": [
+   "server"
+  ],
+  "evidence": [
+   "server: README: Docker / self-host mention"
+  ],
+  "sure": true
+ },
+ "sdr": {
+  "platforms": [],
+  "evidence": [],
+  "sure": false
+ },
+ "serena": {
+  "platforms": [],
+  "evidence": [],
+  "sure": false
+ },
+ "readeck": {
+  "platforms": [
+   "windows",
+   "mac",
+   "linux",
+   "server"
+  ],
+  "evidence": [
+   "windows: release file: readeck-0.23.5-windows-386.exe",
+   "mac: release file: readeck-0.23.5-macos-amd64",
+   "linux: release file: readeck-0.23.5-linux-386",
+   "server: README: Docker / self-host mention"
+  ],
+  "sure": true
+ },
+ "semgrep-community-edition": {
+  "platforms": [
+   "mac",
+   "linux",
+   "server"
+  ],
+  "evidence": [
+   "server: README: Docker / self-host mention",
+   "AI (Haiku): The README gives install paths for macOS (Homebrew, pip) and Linux (pip on Ubuntu/Linux), plus a Docker option that can run on a server; Windows is only mentioned via WSL, which is Linux."
+  ],
+  "sure": true
+ },
+ "sharex": {
+  "platforms": [
+   "windows"
+  ],
+  "evidence": [
+   "windows: release file: ShareX-22.0.0-setup-x64.exe"
+  ],
+  "sure": true
+ },
+ "shizuku": {
+  "platforms": [
+   "android"
+  ],
+  "evidence": [
+   "android: release file: shizuku-v13.6.0.r1086.2650830c-release.apk"
+  ],
+  "sure": true
+ },
+ "shadcn-ui": {
+  "platforms": [],
+  "evidence": [],
+  "sure": false
+ },
+ "sandbox-runtime": {
+  "platforms": [
+   "windows",
+   "mac",
+   "linux"
+  ],
+  "evidence": [
+   "AI (Haiku): README describes native sandboxing on macOS (sandbox-exec), Linux (bubblewrap) and Windows (srt-win), installed via npm as a CLI; no Android, iOS, web or hosted service."
+  ],
+  "sure": true
+ },
+ "silverbullet": {
+  "platforms": [
+   "windows",
+   "mac",
+   "linux",
+   "server"
+  ],
+  "evidence": [
+   "windows: release file: sb-windows-x86_64.zip",
+   "mac: release file: sb-darwin-x86_64.zip",
+   "linux: release file: sb-linux-x86_64.zip",
+   "server: README: Docker / self-host mention"
+  ],
+  "sure": true
+ },
+ "sillytavern": {
+  "platforms": [
+   "windows",
+   "mac",
+   "linux",
+   "android",
+   "server"
+  ],
+  "evidence": [
+   "server: kind: self_hosted",
+   "AI (Haiku): README lists Windows, MacOS/Linux, Android (Termux) and Docker installation guides, and says it runs on anything that can run NodeJS 20+; it is self-hosted, not a public website, and no iOS support is mentioned."
+  ],
+  "sure": true
+ },
+ "simplewall": {
+  "platforms": [
+   "windows"
+  ],
+  "evidence": [
+   "windows: release file: simplewall-3.9.1-setup.exe"
+  ],
+  "sure": true
+ },
+ "skyvern": {
+  "platforms": [
+   "windows",
+   "mac",
+   "linux",
+   "server"
+  ],
+  "evidence": [
+   "server: README: Docker / self-host mention",
+   "AI (Haiku): Skyvern runs locally via pip or Docker Compose (self-hosted server with UI at localhost), with Windows needing extra build tools; Skyvern Cloud is a hosted option but the software itself is self-hosted on a user's machine or server."
+  ],
+  "sure": true
+ },
+ "smarttube": {
+  "platforms": [
+   "android"
+  ],
+  "evidence": [
+   "android: release file: SmartTube_stable_32.68_arm64-v8a.apk"
+  ],
+  "sure": true
+ },
+ "skippy-tv": {
+  "platforms": [
+   "android"
+  ],
+  "evidence": [
+   "AI (Haiku): Skippy TV is an Android app for Android TV and Fire TV boxes (Fire OS is Android-based), installed via adb; it is not offered for Windows, Mac, Linux, iOS or web."
+  ],
+  "sure": true
+ },
+ "simplelogin": {
+  "platforms": [
+   "server"
+  ],
+  "evidence": [
+   "server: README: Docker / self-host mention"
+  ],
+  "sure": true
+ },
+ "socket-io": {
+  "platforms": [
+   "web",
+   "server"
+  ],
+  "evidence": [
+   "AI (Haiku): Socket.IO is a Node.js library run on a developer's own server and used by browser clients; the README does not state Windows, Mac, Linux, Android or iOS support directly."
+  ],
+  "sure": true
+ },
+ "soketi": {
+  "platforms": [
+   "server"
+  ],
+  "evidence": [
+   "server: kind: self_hosted"
+  ],
+  "sure": false
+ },
+ "sniffnet": {
+  "platforms": [
+   "windows",
+   "mac",
+   "linux"
+  ],
+  "evidence": [
+   "windows: release file: Sniffnet_Windows_x86.msi",
+   "mac: release file: Sniffnet_macOS_Intel.dmg",
+   "linux: release file: Sniffnet_LinuxRPM_aarch64.rpm"
+  ],
+  "sure": true
+ },
+ "solaar": {
+  "platforms": [
+   "linux"
+  ],
+  "evidence": [
+   "AI (Haiku): Solaar is a Linux-only desktop manager for Logitech devices; the README and summary specify Linux and list only Linux distribution packages."
+  ],
+  "sure": true
+ },
+ "sourcebot": {
+  "platforms": [
+   "server"
+  ],
+  "evidence": [
+   "server: README: Docker / self-host mention"
+  ],
+  "sure": true
+ },
+ "sonarr": {
+  "platforms": [
+   "windows",
+   "mac",
+   "linux",
+   "server"
+  ],
+  "evidence": [
+   "windows: release file: Sonarr.develop.5.0.0.2800.win-x86.zip",
+   "mac: release file: Sonarr.develop.5.0.0.2800.osx-x64.tar.gz",
+   "linux: release file: Sonarr.develop.5.0.0.2800.linux-x64.tar.gz",
+   "server: kind: self_hosted"
+  ],
+  "sure": true
+ },
+ "solvespace": {
+  "platforms": [
+   "windows",
+   "mac",
+   "linux"
+  ],
+  "evidence": [
+   "windows: release file: solvespace_x64.exe",
+   "mac: release file: SolveSpace.dmg",
+   "linux: README: Flathub link"
+  ],
+  "sure": true
+ },
+ "sparrow-wallet": {
+  "platforms": [
+   "windows",
+   "mac",
+   "linux"
+  ],
+  "evidence": [
+   "windows: release file: Sparrow-2.5.5.msi",
+   "mac: release file: Sparrow-2.5.5-aarch64.dmg",
+   "linux: release file: sparrowserver_2.5.5-1_amd64.deb"
+  ],
+  "sure": true
+ },
+ "special-k": {
+  "platforms": [
+   "windows"
+  ],
+  "evidence": [
+   "AI (Haiku): Summary and README describe Special K as a Windows PC gaming tool; it runs on Windows 8.1+ (and Windows 7 with reduced features), with Linux usable only via WINE, which the README does not present as a supported platform."
+  ],
+  "sure": true
+ },
+ "sqlalchemy": {
+  "platforms": [
+   "windows",
+   "mac"
+  ],
+  "evidence": [
+   "windows: release file: sqlalchemy-2.1.6-cp311-cp311-win32.whl",
+   "mac: release file: sqlalchemy-2.1.6-cp314-cp314t-macosx_11_0_arm64.whl"
+  ],
+  "sure": true
+ },
+ "spec-kit": {
+  "platforms": [
+   "windows",
+   "mac",
+   "linux",
+   "server"
+  ],
+  "evidence": [
+   "server: README: Docker / self-host mention",
+   "AI (Haiku): It is a command-line toolkit installed with uv and Python 3.11+, and the README says it works on Linux, macOS, or Windows."
+  ],
+  "sure": true
+ },
+ "squoosh": {
+  "platforms": [
+   "web"
+  ],
+  "evidence": [
+   "AI (Haiku): Squoosh is a web app usable in a browser at squoosh.app with no install; it can also be installed as a PWA, but the README and summary only clearly support browser use."
+  ],
+  "sure": true
+ },
+ "stagehand": {
+  "platforms": [
+   "windows",
+   "mac",
+   "linux"
+  ],
+  "evidence": [
+   "windows: release file: stagehand-server-v3-win32-x64.exe",
+   "mac: release file: stagehand-server-v3-darwin-arm64",
+   "linux: release file: stagehand-server-v3-linux-x64"
+  ],
+  "sure": true
+ },
+ "starlight": {
+  "platforms": [],
+  "evidence": [],
+  "sure": false
+ },
+ "stats": {
+  "platforms": [
+   "mac"
+  ],
+  "evidence": [
+   "mac: release file: Stats.dmg"
+  ],
+  "sure": true
+ },
+ "starship": {
+  "platforms": [
+   "windows",
+   "mac",
+   "linux"
+  ],
+  "evidence": [
+   "windows: release file: starship-aarch64-pc-windows-msvc.zip",
+   "mac: release file: starship-aarch64-apple-darwin.tar.gz",
+   "linux: release file: starship-aarch64-unknown-linux-musl.tar.gz"
+  ],
+  "sure": true
+ },
+ "streamcontroller": {
+  "platforms": [
+   "linux"
+  ],
+  "evidence": [
+   "linux: README: Flathub link"
+  ],
+  "sure": true
+ },
+ "strawberry": {
+  "platforms": [
+   "linux"
+  ],
+  "evidence": [
+   "linux: release file: strawberry-1.2.31-1.lp160.src.rpm"
+  ],
+  "sure": true
+ },
+ "superpowers": {
+  "platforms": [],
+  "evidence": [],
+  "sure": false
+ },
+ "stretchly": {
+  "platforms": [
+   "windows",
+   "mac",
+   "linux",
+   "android"
+  ],
+  "evidence": [
+   "windows: release file: Stretchly-1.22.1.appx",
+   "mac: release file: Stretchly-1.22.1.dmg",
+   "linux: release file: Stretchly-1.22.1.AppImage",
+   "android: release file: Stretchly-1.22.1.apk"
+  ],
+  "sure": true
+ },
+ "superclaude": {
+  "platforms": [],
+  "evidence": [],
+  "sure": false
+ },
+ "supertuxkart": {
+  "platforms": [
+   "windows",
+   "mac",
+   "linux",
+   "android"
+  ],
+  "evidence": [
+   "windows: release file: SuperTuxKart-1.5-win.zip",
+   "mac: release file: SuperTuxKart-1.5-mac-signed.zip",
+   "linux: release file: SuperTuxKart-1.5-linux-armv7.tar.gz",
+   "android: release file: SuperTuxKart-1.5.apk"
+  ],
+  "sure": true
+ },
+ "surfsense": {
+  "platforms": [
+   "windows",
+   "mac",
+   "linux"
+  ],
+  "evidence": [
+   "windows: release file: SurfSense-Setup.exe",
+   "mac: release file: SurfSense-arm64.dmg",
+   "linux: release file: SurfSense.AppImage"
+  ],
+  "sure": true
+ },
+ "suricata": {
+  "platforms": [
+   "linux"
+  ],
+  "evidence": [
+   "AI (Haiku): The README and summary describe Suricata as a network IDS/IPS engine for security teams and IT staff, with no mention of Windows, Mac, mobile, or web builds; it is a server-side network tool that does not explicitly list Linux as a platform, so this is the only tentative fit from the materials provided."
+  ],
+  "sure": true
+ },
+ "suwayomi": {
+  "platforms": [
+   "windows",
+   "mac",
+   "linux",
+   "server"
+  ],
+  "evidence": [
+   "windows: release file: Suwayomi-Server-v2.4.2366-windows-x64.msi",
+   "mac: release file: Suwayomi-Server-v2.4.2366-macOS-x64.tar.gz",
+   "linux: release file: Suwayomi-Server-v2.4.2366-linux-x64.tar.gz",
+   "server: kind: self_hosted"
+  ],
+  "sure": true
+ },
+ "svix": {
+  "platforms": [
+   "windows",
+   "mac",
+   "linux"
+  ],
+  "evidence": [
+   "windows: release file: svix-cli-x86_64-pc-windows-msvc-update",
+   "mac: release file: svix-cli-aarch64-apple-darwin-update",
+   "linux: release file: svix-cli-aarch64-unknown-linux-gnu-update"
+  ],
+  "sure": true
+ },
+ "swag": {
+  "platforms": [
+   "server"
+  ],
+  "evidence": [
+   "server: README: Docker / self-host mention"
+  ],
+  "sure": true
+ },
+ "svelte": {
+  "platforms": [],
+  "evidence": [],
+  "sure": false
+ },
+ "syncplay": {
+  "platforms": [
+   "windows",
+   "mac",
+   "linux"
+  ],
+  "evidence": [
+   "windows: release file: Syncplay-1.7.6-Setup.exe",
+   "mac: release file: Syncplay_1.7.6.dmg",
+   "linux: release file: syncplay_1.7.6.deb"
+  ],
+  "sure": true
+ },
+ "systemd": {
+  "platforms": [
+   "linux"
+  ],
+  "evidence": [
+   "AI (Haiku): systemd is a Linux system and service manager that ships inside Linux distributions; it is not an app for Windows, Mac, Android, iOS, or the web, and it is aimed at system builders and administrators rather than ordinary users."
+  ],
+  "sure": true
+ },
+ "system-informer": {
+  "platforms": [
+   "windows"
+  ],
+  "evidence": [
+   "windows: release file: systeminformer-4.0.26241.138-release-setup.exe"
+  ],
+  "sure": true
+ },
+ "thunar": {
+  "platforms": [
+   "linux"
+  ],
+  "evidence": [
+   "AI (Haiku): Thunar is a file manager for the Xfce desktop, which runs on Linux (and BSD); the summary only ties it to Xfce, so Linux is the supported platform."
+  ],
+  "sure": true
+ },
+ "tabby": {
+  "platforms": [
+   "windows",
+   "mac",
+   "server"
+  ],
+  "evidence": [
+   "windows: release file: tabby_x86_64-windows-msvc-vulkan.zip",
+   "mac: release file: tabby_aarch64-apple-darwin.tar.gz",
+   "server: README: Docker / self-host mention"
+  ],
+  "sure": true
+ },
+ "table-habit": {
+  "platforms": [
+   "windows",
+   "mac",
+   "linux",
+   "android",
+   "ios"
+  ],
+  "evidence": [
+   "windows: release file: mhabit_x64.msix",
+   "mac: release file: mhabit.dmg",
+   "linux: release file: mhabit-aarch64.flatpak",
+   "android: release file: app-release.apk",
+   "ios: release file: mhabit-unsigned.ipa"
+  ],
+  "sure": true
+ },
+ "tor-browser": {
+  "platforms": [],
+  "evidence": [],
+  "sure": false
+ },
+ "tagspaces": {
+  "platforms": [
+   "windows",
+   "mac",
+   "linux",
+   "android"
+  ],
+  "evidence": [
+   "windows: release file: tagspaces-win-arm64-6.14.3.exe",
+   "mac: release file: tagspaces-mac-arm64-6.14.3.dmg",
+   "linux: release file: tagspaces-linux-amd64-6.14.3.deb",
+   "android: release file: tagspaces-android-6.14.3.apk"
+  ],
+  "sure": true
+ },
+ "tasmota": {
+  "platforms": [
+   "server"
+  ],
+  "evidence": [
+   "server: kind: self_hosted"
+  ],
+  "sure": false
+ },
+ "tar1090": {
+  "platforms": [
+   "linux",
+   "server"
+  ],
+  "evidence": [
+   "server: kind: self_hosted",
+   "AI (Haiku): tar1090 is a web interface installed via an apt-based install script on Raspberry Pi/Debian/Ubuntu systems that run readsb or dump1090-fa, so it is self-hosted on Linux servers or Pis rather than a native app for windows, mac, android or ios."
+  ],
+  "sure": true
+ },
+ "technitium-dns-server": {
+  "platforms": [
+   "server"
+  ],
+  "evidence": [
+   "server: README: Docker / self-host mention"
+  ],
+  "sure": true
+ },
+ "tauri": {
+  "platforms": [
+   "windows",
+   "mac",
+   "linux"
+  ],
+  "evidence": [
+   "windows: release file: cargo-tauri-aarch64-pc-windows-msvc.zip",
+   "mac: release file: cargo-tauri-x86_64-apple-darwin.zip",
+   "linux: release file: cargo-tauri-riscv64gc-unknown-linux-gnu.tgz"
+  ],
+  "sure": true
+ },
+ "textsnatcher": {
+  "platforms": [
+   "linux"
+  ],
+  "evidence": [
+   "linux: README: Flathub link"
+  ],
+  "sure": true
+ },
+ "texstudio": {
+  "platforms": [
+   "windows",
+   "mac",
+   "linux"
+  ],
+  "evidence": [
+   "windows: release file: texstudio-4.9.9-win-qt6-signed.exe",
+   "mac: release file: texstudio-4.9.9-osx.zip",
+   "linux: release file: texstudio-4.9.9-x86_64.AppImage"
+  ],
+  "sure": true
+ },
+ "threadfin": {
+  "platforms": [
+   "windows",
+   "mac",
+   "linux",
+   "server"
+  ],
+  "evidence": [
+   "windows: release file: Threadfin_windows_amd64.exe",
+   "mac: release file: Threadfin_darwin_arm64",
+   "linux: release file: Threadfin_linux_arm64",
+   "server: README: Docker / self-host mention"
+  ],
+  "sure": true
+ },
+ "tmux": {
+  "platforms": [
+   "mac",
+   "linux"
+  ],
+  "evidence": [
+   "AI (Haiku): README says it runs on OpenBSD, FreeBSD, NetBSD, Linux, macOS and Solaris, so only mac and linux are among the listed platforms; it is not stated to run on Windows, Android, iOS, or web."
+  ],
+  "sure": true
+ },
+ "switcheroo": {
+  "platforms": [
+   "linux"
+  ],
+  "evidence": [
+   "linux: README: Flathub link"
+  ],
+  "sure": true
+ },
+ "tolgee": {
+  "platforms": [
+   "server"
+  ],
+  "evidence": [
+   "server: README: Docker / self-host mention"
+  ],
+  "sure": true
+ },
+ "traccar": {
+  "platforms": [
+   "windows",
+   "linux",
+   "server"
+  ],
+  "evidence": [
+   "windows: release file: traccar-windows-64-6.16.0.zip",
+   "linux: release file: traccar-linux-arm-6.16.0.zip",
+   "server: README: Docker / self-host mention"
+  ],
+  "sure": true
+ },
+ "traefik": {
+  "platforms": [
+   "windows",
+   "mac",
+   "linux"
+  ],
+  "evidence": [
+   "windows: release file: traefik_v3.7.16_windows_arm64.zip",
+   "mac: release file: traefik_v3.7.16_darwin_amd64.tar.gz",
+   "linux: release file: traefik_v3.7.16_linux_386.tar.gz"
+  ],
+  "sure": true
+ },
+ "transmission": {
+  "platforms": [
+   "windows",
+   "mac"
+  ],
+  "evidence": [
+   "windows: release file: transmission-4.1.4-qt5-x64.msi",
+   "mac: release file: Transmission-4.1.4.dmg"
+  ],
+  "sure": true
+ },
+ "trivy": {
+  "platforms": [
+   "windows",
+   "mac",
+   "linux"
+  ],
+  "evidence": [
+   "windows: release file: trivy_0.76.1_windows-64bit.zip",
+   "mac: release file: trivy_0.76.1_macOS-64bit.tar.gz",
+   "linux: release file: trivy_0.76.1_Linux-32bit.tar.gz"
+  ],
+  "sure": true
+ },
+ "tunarr": {
+  "platforms": [
+   "windows",
+   "mac",
+   "linux",
+   "server"
+  ],
+  "evidence": [
+   "windows: release file: tunarr-v2026.10.4-win-x64.exe.zip",
+   "mac: release file: Tunarr-v2026.10.4-macos-arm64.dmg",
+   "linux: release file: tunarr-v2026.10.4-linux-x64.tar.gz",
+   "server: README: Docker / self-host mention"
+  ],
+  "sure": true
+ },
+ "tube-archivist": {
+  "platforms": [
+   "server"
+  ],
+  "evidence": [
+   "server: README: Docker / self-host mention"
+  ],
+  "sure": true
+ },
+ "u-bersicht": {
+  "platforms": [
+   "mac"
+  ],
+  "evidence": [
+   "AI (Haiku): Übersicht is described as a free Mac program, and the README relies on macOS features like AppleScript and the menu bar, with no mention of Windows, Linux, mobile, or web versions."
+  ],
+  "sure": true
+ },
+ "twinkle-tray": {
+  "platforms": [
+   "windows"
+  ],
+  "evidence": [
+   "windows: release file: Twinkle.Tray.v1.18.0-beta2.exe"
+  ],
+  "sure": true
+ },
+ "typst": {
+  "platforms": [
+   "windows",
+   "mac",
+   "linux"
+  ],
+  "evidence": [
+   "windows: release file: typst-x86_64-pc-windows-msvc.zip",
+   "mac: release file: typst-aarch64-apple-darwin.tar.xz",
+   "linux: release file: typst-aarch64-unknown-linux-musl.tar.xz"
+  ],
+  "sure": true
+ },
+ "tvheadend": {
+  "platforms": [
+   "server"
+  ],
+  "evidence": [
+   "server: README: Docker / self-host mention"
+  ],
+  "sure": true
+ },
+ "ublock-origin": {
+  "platforms": [
+   "windows",
+   "mac",
+   "linux",
+   "android"
+  ],
+  "evidence": [
+   "AI (Haiku): The README says Firefox is available for desktop and Android, and Chromium and Thunderbird versions are desktop-only; it names no specific operating systems and does not mention iOS."
+  ],
+  "sure": true
+ },
+ "ubuntu-touch": {
+  "platforms": [],
+  "evidence": [],
+  "sure": false
+ },
+ "upptime": {
+  "platforms": [
+   "server"
+  ],
+  "evidence": [
+   "server: README: Docker / self-host mention"
+  ],
+  "sure": true
+ },
+ "tv-vibehack": {
+  "platforms": [],
+  "evidence": [],
+  "sure": false
+ },
+ "ulauncher": {
+  "platforms": [
+   "linux"
+  ],
+  "evidence": [
+   "linux: release file: ulauncher_6.0.0.beta35_all.deb"
+  ],
+  "sure": true
+ },
+ "uptime-kuma": {
+  "platforms": [
+   "server"
+  ],
+  "evidence": [
+   "server: README: Docker / self-host mention"
+  ],
+  "sure": true
+ },
+ "unlighthouse": {
+  "platforms": [
+   "windows",
+   "mac",
+   "linux"
+  ],
+  "evidence": [
+   "AI (Haiku): It is a Node.js command-line tool run via npx or pnpm, but the README does not explicitly name Windows, macOS, or Linux, so support is inferred from Node >= 22.18.0 being required."
+  ],
+  "sure": true
+ },
+ "utm": {
+  "platforms": [
+   "mac",
+   "linux",
+   "ios"
+  ],
+  "evidence": [
+   "mac: release file: UTM.dmg",
+   "linux: release file: UTM.deb",
+   "ios: release file: UTM-visionOS.ipa"
+  ],
+  "sure": true
+ },
+ "uv": {
+  "platforms": [
+   "windows",
+   "mac",
+   "linux"
+  ],
+  "evidence": [
+   "windows: release file: uv-aarch64-pc-windows-msvc.zip",
+   "mac: release file: uv-aarch64-apple-darwin.tar.gz",
+   "linux: release file: uv-aarch64-unknown-linux-gnu.tar.gz"
+  ],
+  "sure": true
+ },
+ "uxplay": {
+  "platforms": [
+   "mac",
+   "ios"
+  ],
+  "evidence": [
+   "mac: README: Homebrew cask / MacPorts",
+   "ios: README: App Store link (iPhone/iPad)"
+  ],
+  "sure": true
+ },
+ "valent": {
+  "platforms": [
+   "linux"
+  ],
+  "evidence": [
+   "AI (Haiku): Valent is a Linux desktop app built on GNOME libraries and distributed as a Flatpak; it works with phones via the KDE Connect protocol, but the app itself runs only on Linux desktops."
+  ],
+  "sure": true
+ },
+ "variety": {
+  "platforms": [
+   "linux"
+  ],
+  "evidence": [
+   "AI (Haiku): Variety is a Linux wallpaper manager installed via Linux distribution repositories or from source; the README names no Windows, mac, mobile, web, or server support."
+  ],
+  "sure": true
+ },
+ "valkey": {
+  "platforms": [
+   "server"
+  ],
+  "evidence": [
+   "server: kind: self_hosted"
+  ],
+  "sure": false
+ },
+ "velociraptor": {
+  "platforms": [
+   "windows",
+   "mac",
+   "linux"
+  ],
+  "evidence": [
+   "windows: release file: velociraptor-v0.77.3-windows-arm64.exe.gz",
+   "mac: release file: velociraptor-v0.77.3-darwin-arm64.gz",
+   "linux: release file: velociraptor-v0.77.3-linux-arm64.gz"
+  ],
+  "sure": true
+ },
+ "verilator": {
+  "platforms": [],
+  "evidence": [],
+  "sure": false
+ },
+ "vesktop": {
+  "platforms": [
+   "windows",
+   "mac",
+   "linux"
+  ],
+  "evidence": [
+   "windows: release file: Vesktop-1.6.8-win.zip",
+   "mac: release file: Vesktop-1.6.8-universal.dmg",
+   "linux: release file: Vesktop-1.6.8.AppImage"
+  ],
+  "sure": true
+ },
+ "vial": {
+  "platforms": [],
+  "evidence": [],
+  "sure": false
+ },
+ "ventoy": {
+  "platforms": [
+   "windows",
+   "linux"
+  ],
+  "evidence": [
+   "windows: release file: ventoy-1.1.18-windows.zip",
+   "linux: release file: ventoy-1.1.18-linux.tar.gz"
+  ],
+  "sure": true
+ },
+ "unigetui": {
+  "platforms": [
+   "windows",
+   "mac",
+   "linux"
+  ],
+  "evidence": [
+   "windows: release file: UniGetUI.Installer.arm64.exe",
+   "mac: release file: UniGetUI.macos-arm64.dmg",
+   "linux: release file: UniGetUI.linux-arm64.deb"
+  ],
+  "sure": true
+ },
+ "virt-manager": {
+  "platforms": [
+   "linux"
+  ],
+  "evidence": [
+   "AI (Haiku): virt-manager is a Linux desktop app that manages libvirt VMs; the README only describes it as a graphical tool for managing VMs on Linux with QEMU/KVM, Xen, and LXC, with no mention of Windows, Mac, mobile, or web support."
+  ],
+  "sure": true
+ },
+ "vibe-kanban": {
+  "platforms": [
+   "windows",
+   "mac",
+   "linux"
+  ],
+  "evidence": [
+   "windows: release file: Vibe-Kanban-0.1.44-aarch64.msi",
+   "mac: release file: Vibe.Kanban_0.1.44_aarch64.dmg",
+   "linux: release file: Vibe.Kanban_0.1.44_arm64.deb"
+  ],
+  "sure": true
+ },
+ "virtualbox": {
+  "platforms": [
+   "windows",
+   "mac",
+   "linux"
+  ],
+  "evidence": [
+   "AI (Haiku): The README says VirtualBox is available for Linux, Windows and macOS (macOS support for Arm in version 7.1), and it targets laptops, desktops and servers, but it is not offered as a web or mobile app."
+  ],
+  "sure": true
+ },
+ "vkbasalt": {
+  "platforms": [
+   "linux"
+  ],
+  "evidence": [
+   "AI (Haiku): vkBasalt is a Vulkan layer for Linux games, installed via distro packages or built from source; no Windows, Mac, mobile, web, or server support is mentioned."
+  ],
+  "sure": true
+ },
+ "vocode": {
+  "platforms": [
+   "server"
+  ],
+  "evidence": [
+   "server: README: Docker / self-host mention"
+  ],
+  "sure": false
+ },
+ "vscodium": {
+  "platforms": [
+   "windows",
+   "mac",
+   "linux"
+  ],
+  "evidence": [
+   "windows: README: Microsoft Store / winget / Chocolatey / Scoop",
+   "mac: release file: VSCodium-darwin-arm64-1.143.17183.zip",
+   "linux: release file: VSCodium-linux-riscv64-1.143.17183.tar.gz"
+  ],
+  "sure": true
+ },
+ "wails": {
+  "platforms": [
+   "windows",
+   "mac",
+   "linux"
+  ],
+  "evidence": [
+   "AI (Haiku): The README describes Wails as a tool for building desktop applications and lists it as multiplatform, but it does not name specific operating systems."
+  ],
+  "sure": true
+ },
+ "void-linux": {
+  "platforms": [
+   "linux"
+  ],
+  "evidence": [
+   "AI (Haiku): XBPS is a Linux package manager used from the command line; the README and summary only support Linux (Void Linux), with no mention of Windows, Mac, mobile, or web."
+  ],
+  "sure": true
+ },
+ "waistline": {
+  "platforms": [
+   "android"
+  ],
+  "evidence": [
+   "android: release file: waistline-release.aab"
+  ],
+  "sure": true
+ },
+ "vlc": {
+  "platforms": [
+   "windows",
+   "mac",
+   "linux",
+   "android",
+   "ios"
+  ],
+  "evidence": [
+   "AI (Haiku): The README lists Windows, macOS, GNU/Linux and BSD, Android, and iOS (including iPadOS) as supported platforms for VLC."
+  ],
+  "sure": true
+ },
+ "vortex": {
+  "platforms": [
+   "windows"
+  ],
+  "evidence": [
+   "windows: release file: vortex-setup-2.10.0-beta.3.exe"
+  ],
+  "sure": true
+ },
+ "wanderer": {
+  "platforms": [
+   "android",
+   "server"
+  ],
+  "evidence": [
+   "android: release file: wanderer-0.1.0-beta.21-android.apk",
+   "server: README: Docker / self-host mention"
+  ],
+  "sure": true
+ },
+ "watcharr": {
+  "platforms": [
+   "server"
+  ],
+  "evidence": [
+   "server: README: Docker / self-host mention"
+  ],
+  "sure": true
+ },
+ "waybar": {
+  "platforms": [
+   "linux"
+  ],
+  "evidence": [
+   "AI (Haiku): Waybar is a status bar for Linux Wayland desktops (Sway, wlroots-based compositors), so it runs only on Linux."
+  ],
+  "sure": true
+ },
+ "waydroid": {
+  "platforms": [
+   "linux"
+  ],
+  "evidence": [
+   "AI (Haiku): Waydroid runs Android inside a container on any GNU/Linux system, so it is installable only on Linux computers."
+  ],
+  "sure": true
+ },
+ "web-app-manager": {
+  "platforms": [
+   "linux"
+  ],
+  "evidence": [
+   "AI (Haiku): The project is from Linux Mint and its README and FAQ describe it as a desktop app for running websites as separate windows, with no mention of Windows, Mac, mobile, or web hosting; it is a Linux desktop program."
+  ],
+  "sure": true
+ },
+ "webcamoid": {
+  "platforms": [
+   "windows",
+   "mac",
+   "linux",
+   "android"
+  ],
+  "evidence": [
+   "AI (Haiku): README says it is available on GNU/Linux, Mac, Windows, Android and FreeBSD, with pre-compiled packages for Linux, Windows and Android; no iOS or web version is mentioned."
+  ],
+  "sure": true
+ },
+ "webhook": {
+  "platforms": [
+   "windows",
+   "mac",
+   "linux",
+   "server"
+  ],
+  "evidence": [
+   "windows: release file: webhook-windows-386.tar.gz",
+   "mac: release file: webhook-darwin-amd64.tar.gz",
+   "linux: release file: webhook-linux-arm64.tar.gz",
+   "server: README: Docker / self-host mention"
+  ],
+  "sure": true
+ },
+ "wezterm": {
+  "platforms": [
+   "windows",
+   "mac",
+   "linux"
+  ],
+  "evidence": [
+   "windows: release file: WezTerm-20240203-110809-5046fc22-setup.exe",
+   "mac: release file: WezTerm-macos-20240203-110809-5046fc22.zip",
+   "linux: release file: wezterm-20240203_110809_5046fc22-1.centos8.x86_64.rpm"
+  ],
+  "sure": true
+ },
+ "webmin": {
+  "platforms": [
+   "linux",
+   "server"
+  ],
+  "evidence": [
+   "linux: release file: webmin_2.670_all.deb",
+   "server: kind: self_hosted"
+  ],
+  "sure": true
+ },
+ "whisperx": {
+  "platforms": [
+   "windows",
+   "mac",
+   "linux",
+   "web"
+  ],
+  "evidence": [
+   "AI (Haiku): README gives setup for Windows and Linux (CUDA), runs on Mac OS X via CPU, and links Replicate browser demos; it is a command-line/Python tool, not a consumer app."
+  ],
+  "sure": true
+ },
+ "wger": {
+  "platforms": [
+   "linux",
+   "android",
+   "ios",
+   "server"
+  ],
+  "evidence": [
+   "linux: README: Flathub link",
+   "android: README: Google Play link",
+   "ios: README: App Store link (iPhone/iPad)",
+   "server: README: Docker / self-host mention"
+  ],
+  "sure": true
+ },
+ "win11debloat": {
+  "platforms": [
+   "windows"
+  ],
+  "evidence": [
+   "AI (Haiku): Win11Debloat is a PowerShell script for Windows 11 only, run locally on the PC (via Run.bat or PowerShell), so it supports only Windows."
+  ],
+  "sure": true
+ },
+ "willow": {
+  "platforms": [
+   "server"
+  ],
+  "evidence": [
+   "server: README: Docker / self-host mention"
+  ],
+  "sure": true
+ },
+ "windirstat": {
+  "platforms": [
+   "windows"
+  ],
+  "evidence": [
+   "windows: release file: WinDirStat_x86.msix"
+  ],
+  "sure": true
+ },
+ "winget": {
+  "platforms": [
+   "windows"
+  ],
+  "evidence": [
+   "windows: README: Microsoft Store / winget / Chocolatey / Scoop"
+  ],
+  "sure": true
+ },
+ "winutil": {
+  "platforms": [
+   "windows"
+  ],
+  "evidence": [
+   "AI (Haiku): WinUtil is a PowerShell script that must be run as Administrator on Windows, per the README and summary."
+  ],
+  "sure": true
+ },
+ "winscp": {
+  "platforms": [
+   "windows"
+  ],
+  "evidence": [
+   "AI (Haiku): The summary and README describe WinSCP as a free file manager for Windows, with no mention of mac, linux, mobile, web, or server versions."
+  ],
+  "sure": true
+ },
+ "xbackbone": {
+  "platforms": [
+   "server"
+  ],
+  "evidence": [
+   "server: README: Docker / self-host mention"
+  ],
+  "sure": true
+ },
+ "xibo": {
+  "platforms": [
+   "windows",
+   "linux",
+   "server"
+  ],
+  "evidence": [
+   "server: kind: self_hosted",
+   "AI (Haiku): README lists a Linux/Windows player app and the CMS run via Docker or self-hosting; no mac, android or ios support is mentioned."
+  ],
+  "sure": true
+ },
+ "xtreme-download-manager": {
+  "platforms": [
+   "windows",
+   "mac",
+   "linux"
+  ],
+  "evidence": [
+   "windows: release file: xdm-9.0.8-arm64.msi",
+   "mac: release file: xdm-app-9.0.8-arm64.dmg",
+   "linux: release file: xdm-app_9.0.8_amd64.deb"
+  ],
+  "sure": true
+ },
+ "yamlresume": {
+  "platforms": [
+   "windows",
+   "mac",
+   "linux",
+   "server"
+  ],
+  "evidence": [
+   "server: README: Docker / self-host mention",
+   "AI (Haiku): Installable via npm/pnpm/yarn/bun (Node.js 22+) and Homebrew for macOS, and Docker is offered as a self-host option; the README does not explicitly name Windows or Linux, so those are included only through the Node.js/npm install and Docker mention."
+  ],
+  "sure": true
+ },
+ "yacreader": {
+  "platforms": [
+   "windows",
+   "mac",
+   "linux"
+  ],
+  "evidence": [
+   "windows: release file: YACReader-v10.4.0.261009428-winarm64-7z-qt6.exe",
+   "mac: release file: YACReader-10.4.0.261009428.MacOSX-U.Qt6.dmg",
+   "linux: README: Flathub link"
+  ],
+  "sure": true
+ },
+ "yazi": {
+  "platforms": [
+   "windows",
+   "mac",
+   "linux"
+  ],
+  "evidence": [
+   "windows: release file: yazi-aarch64-pc-windows-msvc.zip",
+   "mac: release file: yazi-x86_64-apple-darwin.zip",
+   "linux: release file: yazi-riscv64gc-unknown-linux-gnu.zip"
+  ],
+  "sure": true
+ },
+ "yeoman": {
+  "platforms": [],
+  "evidence": [],
+  "sure": false
+ },
+ "yamtrack": {
+  "platforms": [
+   "server"
+  ],
+  "evidence": [
+   "server: README: Docker / self-host mention"
+  ],
+  "sure": true
+ },
+ "yadm": {
+  "platforms": [
+   "mac",
+   "linux"
+  ],
+  "evidence": [
+   "AI (Haiku): The README names Linux and MacOS (Darwin) as supported systems via yadm's OS-specific file syntax and Homebrew/Arch packages, but does not explicitly claim Windows support."
+  ],
+  "sure": true
+ },
+ "yjs": {
+  "platforms": [
+   "server"
+  ],
+  "evidence": [
+   "server: README: Docker / self-host mention"
+  ],
+  "sure": false
+ },
+ "yopass": {
+  "platforms": [
+   "windows",
+   "mac",
+   "linux",
+   "server"
+  ],
+  "evidence": [
+   "windows: release file: yopass_16.0.1_windows_arm64.zip",
+   "mac: release file: yopass_16.0.1_darwin_arm64.tar.gz",
+   "linux: release file: yopass_16.0.1_linux_amd64.tar.gz",
+   "server: README: Docker / self-host mention"
+  ],
+  "sure": true
+ },
+ "yt-dlp": {
+  "platforms": [
+   "windows",
+   "mac",
+   "linux"
+  ],
+  "evidence": [
+   "windows: release file: yt-dlp.exe",
+   "mac: release file: yt-dlp_macos",
+   "linux: release file: yt-dlp_linux"
+  ],
+  "sure": true
+ },
+ "yunohost": {
+  "platforms": [
+   "server"
+  ],
+  "evidence": [
+   "server: kind: self_hosted"
+  ],
+  "sure": false
+ },
+ "zellij": {
+  "platforms": [
+   "windows",
+   "mac",
+   "linux"
+  ],
+  "evidence": [
+   "windows: release file: zellij-no-web-x86_64-pc-windows-msvc.zip",
+   "mac: release file: zellij-aarch64-apple-darwin.tar.gz",
+   "linux: release file: zellij-no-web-aarch64-unknown-linux-musl.tar.gz"
+  ],
+  "sure": true
+ },
+ "zap": {
+  "platforms": [],
+  "evidence": [],
+  "sure": false
+ },
+ "zed": {
+  "platforms": [
+   "windows",
+   "mac",
+   "linux"
+  ],
+  "evidence": [
+   "windows: release file: Zed-aarch64.exe",
+   "mac: release file: Zed-x86_64.dmg",
+   "linux: release file: bwrap-linux-aarch64.gz"
+  ],
+  "sure": true
+ },
+ "zettlr": {
+  "platforms": [
+   "windows",
+   "mac",
+   "linux"
+  ],
+  "evidence": [
+   "windows: release file: Zettlr-4.9.0-x64.exe",
+   "mac: release file: Zettlr-4.9.0-arm64.dmg",
+   "linux: release file: Zettlr-4.9.0-x86_64.AppImage"
+  ],
+  "sure": true
+ },
+ "zen-kernel": {
+  "platforms": [
+   "linux"
+  ],
+  "evidence": [
+   "AI (Haiku): Zen kernel is a Linux kernel variant; the README describes the Linux kernel and it runs as the core of Linux operating systems, so it is only usable on Linux, not Windows, Mac, or mobile."
+  ],
+  "sure": true
+ },
+ "yosys": {
+  "platforms": [
+   "windows",
+   "mac",
+   "linux"
+  ],
+  "evidence": [
+   "AI (Haiku): README gives Linux (apt, Ubuntu build), macOS (Homebrew) instructions and OSS CAD Suite binaries; Windows is implied via OSS CAD Suite but not explicitly detailed, and no web, mobile, or hosted option is offered."
+  ],
+  "sure": true
+ },
+ "zipline": {
+  "platforms": [
+   "server"
+  ],
+  "evidence": [
+   "server: README: Docker / self-host mention"
+  ],
+  "sure": true
+ },
+ "zoraxy": {
+  "platforms": [
+   "windows",
+   "mac",
+   "linux",
+   "server"
+  ],
+  "evidence": [
+   "windows: release file: zoraxy_windows_amd64.exe",
+   "mac: release file: zoraxy_darwin_amd64",
+   "linux: release file: zoraxy_linux_amd64",
+   "server: kind: self_hosted"
+  ],
+  "sure": true
+ },
+ "zmk": {
+  "platforms": [],
+  "evidence": [],
+  "sure": false
+ },
+ "zig": {
+  "platforms": [
+   "windows",
+   "mac",
+   "linux"
+  ],
+  "evidence": [
+   "AI (Haiku): Zig's toolchain is a command-line developer tool that runs on desktop systems; the provided summary does not explicitly list platforms, but Zig is known to ship builds for Windows, macOS and Linux."
+  ],
+  "sure": true
+ },
+ "zotero": {
+  "platforms": [],
+  "evidence": [],
+  "sure": false
+ },
+ "zoxide": {
+  "platforms": [
+   "windows",
+   "mac",
+   "linux",
+   "android"
+  ],
+  "evidence": [
+   "windows: release file: zoxide-0.10.0-aarch64-pc-windows-msvc.zip",
+   "mac: release file: zoxide-0.10.0-x86_64-apple-darwin.tar.gz",
+   "linux: release file: zoxide-0.10.0-armv7-unknown-linux-musleabihf.tar.gz",
+   "android: release file: zoxide-0.10.0-aarch64-linux-android.tar.gz"
+  ],
+  "sure": true
+ },
+ "zrok": {
+  "platforms": [
+   "windows",
+   "mac",
+   "linux"
+  ],
+  "evidence": [
+   "windows: release file: zrok_2.0.8_windows_amd64.tar.gz",
+   "mac: release file: zrok_2.0.8_darwin_arm64.tar.gz",
+   "linux: release file: zrok_2.0.8_linux_amd64.tar.gz"
+  ],
+  "sure": true
  }
 }

@@ -2,7 +2,7 @@
 // It obeys docs/server-rules.md exactly, so it doubles as the blueprint the real server (Cloudflare) must match:
 // same calls, same answers, same rules. Everything is kept in this browser only and starts from sample posts.
 (function () {
-  const KEY = 'ose-demo-v2';
+  const KEY = 'ose-demo-v4';
   const RULES = { minAgeDays: 14, confirmsNeeded: 3, popularVotes: 25 };
   const now = Date.now(), H = 3600e3, D = 24 * H;
   const u = (login, days = 400) => ({ login, created: now - days * D, trusted: days >= 14 });
@@ -10,8 +10,39 @@
     me: null, nextId: 100, banned: [], mods: ['itsdestin'],
     users: Object.fromEntries(['erin', 'gus', 'hana', 'ivan', 'jo', 'kim', 'lee'].map((n) => [`${n}-sample`, u(`${n}-sample`)]).concat([['newbie-sample', u('newbie-sample', 3)]])),
     ratings: {}, // "group/project" → { login: 1 | -1 }
+    // "I want this too": key → voters, plus made-up extra votes so the preview has a ranking (docs/server-rules.md → Requests)
+    reqVoters: {}, reqExtra: { 'group:music': 88, 'group:graphic-design': 64, 'app:LinkedIn': 41, 'group:pro-network': 31, 'group:search': 17, 'issue:201': 23, 'issue:203': 9, 'group:icons': 6 },
+    // The pretend GitHub: suggestion issues. state/reason/labels work like the real ones; `robot` is the robot's verdict label.
+    issues: sampleIssues(),
+    // "Tag my project": a developer's pitch per listed project (live = approved, pending = waiting for a mod)
+    pitches: samplePitches(),
+    // Contributor preferences ("How you'd like help"), one set per claimed project; docs/server-rules.md -> Contributor preferences
+    prefs: { penpot: { ai: 'traditional-developers-only', aiTicks: ['no-agents'], start: 'issue', startLink: '', startSmall: true, wanted: ['translation', 'testing', 'co-maintainers'], newcomers: 'help', disclose: ['pr'], sign: 'dco', signLink: '', review: 'weeks', note: 'We are rewriting the interface for v3; please hold interface changes until then.', updated: now - 2 * D } },
     notes: sampleNotes().map((n) => ({ voters: [], extraVotes: 0, status: 'open', replies: [], reports: [], body: '', ...n })),
   });
+  const day = (n) => now - n * D;
+  function sampleIssues() {
+    const mk = (number, name, kind, author, days, extra = {}) => ({ number, name, kind, author, created: day(days), state: 'open', labels: [], ...extra });
+    const mine = (who) => [
+      mk(210 + who.length, 'Zorblax Draw', 'add-closed-app', who, 1, {}),
+      mk(220 + who.length, 'Notability', 'add-closed-app', who, 3, { labels: ['needs-mod'] }),
+      mk(230 + who.length, 'Linear', 'add-closed-app', who, 6, { labels: ['approved'] }),
+      mk(240 + who.length, 'Procreate', 'add-closed-app', who, 20, { state: 'closed', reason: 'completed', live: '/alternatives-to/procreate/' }),
+      mk(250 + who.length, 'Habit tracking', 'new-group', who, 30, { state: 'closed', reason: 'not_planned', why: 'Habit tracking is already part of the group "Task management"; add the closed apps there instead.' }),
+    ];
+    return [
+      mk(201, 'Notion Calendar', 'add-closed-app', 'erin-sample', 9, { labels: ['robot-ok'] }), mk(202, 'Cleanshot', 'add-closed-app', 'newbie-sample', 2, { labels: ['needs-mod'] }),
+      mk(203, 'Podcast hosting', 'new-group', 'gus-sample', 5, { labels: ['robot-ok'] }), mk(204, 'Add: Zorblax (project)', 'add-project', 'hana-sample', 4, { labels: ['robot-ok'] }),
+      ...mine('you-sample'), ...mine('member-sample'),
+    ];
+  }
+  function samplePitches() {
+    return [
+      { id: 1, owner: 'penpot-team-sample', project: 'penpot', repo: 'github.com/penpot/penpot', proof: 'file', token: 'ose-sample', verified: true, needsConfirm: true, confirmed: true, confirmedBy: 'itsdestin', flags: ['owner-unverified'], status: 'live', updated: day(8),
+        live: { groups: ['graphic-design'], differs: 'It works the way designers do, in a browser, and the design files are open code, so developers can build from the same source.', strengths: 'Real-time teamwork. Runs in a browser, or on your own server.', weaknesses: 'Fewer plugins than Figma. Large files can feel slow.', reusable: 'The plugin system, and the exporter that turns designs into code.', help: 'Plugin authors, and translators for the interface.', built: 'hand-built' } },
+      { id: 2, owner: 'inkscape-sample', project: 'inkscape', repo: 'gitlab.com/inkscape/inkscape', proof: 'file', token: 'ose-sample2', verified: true, needsConfirm: true, confirmed: false, flags: ['owner-unverified', 'high-profile'], status: 'pending', updated: day(0.1), pending: { groups: ['vector-graphics'], differs: 'A drawing program that saves its files in an open web format, so other programs can read them.', strengths: 'Precise drawing tools.', weaknesses: 'Less polished for page layout.', reusable: 'The path math library.', help: 'Documentation writers.', built: 'ai-assisted' }, live: null },
+    ];
+  }
   function sampleNotes() {
     return [
       { id: 1, kind: 'missing', category: 'office', group: 'documents', projects: ['libreoffice-writer', 'onlyoffice-docs'], closedApps: ['Google Docs', 'Microsoft Word'], title: 'No live co-editing: two people can\'t type in one document', body: 'Collabora and OnlyOffice can do it in a browser, but they need a server. See https://www.collaboraonline.com for one.', author: 'erin-sample', created: now - 30 * D, voters: ['gus-sample', 'hana-sample', 'ivan-sample', 'jo-sample', 'kim-sample'], extraVotes: 43, replies: [{ id: 1, author: 'gus-sample', body: 'This is the one thing that keeps my team on Google Docs.', created: now - 20 * D }] },
@@ -61,15 +92,39 @@
   const view = (n) => {
     const x = me();
     return { id: n.id, kind: n.kind, category: n.category, group: n.group, projects: n.projects, closedApps: n.closedApps, title: n.title, body: n.body,
-      author: n.author, created: n.created, edited: n.edited ?? null, status: n.status, held: !!n.held,
+      author: n.author, created: n.created, edited: n.edited ?? null, status: n.status, held: !!n.held, ...(n.flag && (isMod(x) || x?.login === n.author) ? { flag: n.flag } : {}),
       votes: n.voters.length + n.extraVotes, mine: !!x && n.voters.includes(x.login),
       replies: n.replies.filter((r) => sees(r, x)).length,
       fixed: n.fixed ? { by: n.fixed.by, link: n.fixed.link, confirms: n.fixed.confirms.length } : null,
       building: n.building ?? null, can: can(n, x) };
   };
+  const BUILT = { 'hand-built': 'Hand-built', 'ai-assisted': 'AI-assisted', agentic: 'Agentic engineering', 'vibe-coded': 'Vibe-coded' };
+  // Same link reading as the server (worker/src/rules.js parseRepo).
+  function parseRepo(input) {
+    let u; try { u = new URL(/^https?:\/\//i.test(String(input).trim()) ? String(input).trim() : `https://${String(input).trim()}`); } catch { return null; }
+    const host = u.hostname.replace(/^www\./, '').toLowerCase(); if (!['github.com', 'gitlab.com', 'codeberg.org'].includes(host)) return null;
+    const [owner, raw] = u.pathname.split('/').filter(Boolean); const name = (raw ?? '').replace(/\.git$/, '');
+    if (!owner || !name || !/^[\w.-]+$/.test(owner) || !/^[\w.-]+$/.test(name)) return null;
+    return { host, owner, name, repo: `${host}/${owner}/${name}`.toLowerCase() };
+  }
+  let namesP = null; const names = () => namesP || (namesP = fetch((window.OI?.base || '/') + 'data/names.json').then((r) => r.json()));
+  async function pitchView(p, mine) {
+    const N = await names();
+    return { id: p.id, project: p.project, projectName: N.projects[p.project] ?? p.project, repo: p.repo, proof: p.proof, verified: !!p.verified, status: p.status, reason: p.reason ?? null, live: p.live ?? null, pending: p.pending ?? null, updated: p.updated, by: p.owner,
+      needsConfirm: !!p.needsConfirm, confirmed: !!p.confirmed, flags: p.flags ?? [],
+      ...(mine && !p.verified && p.proof === 'file' ? { proofFile: '.opensourceeverything', proofText: p.token } : {}) };
+  }
   const delay = (v) => new Promise((r) => setTimeout(() => r(structuredClone(v)), 120));
   const fail = (status, message) => Promise.reject(Object.assign(new Error(message), { status }));
   const find = (id) => S.notes.find((n) => n.id === +id && sees(n, me()));
+  // The content filter is the SAME file the real server uses (assets/filter.js), so the preview and the server cannot disagree.
+  const filterP = import('./filter.js'); let F = null; filterP.then((m) => { F = m; });
+  const flagTextSync = (f) => F.flagText(f);
+  // → { error, flags } for several texts at once (docs/server-rules.md → "What people write").
+  const screen = async (...t) => (await filterP).screenAll(...t);
+  const flagWords = async (flags) => (await filterP).flagText(flags);
+  // A link someone submits on its own: http(s) only, no shorteners, hidden passwords or look-alike sites. → error text or null
+  const linkError = async (l) => { if (!/^https?:\/\/[^\s]{3,500}$/.test(l ?? '')) return 'bad'; return (await filterP).screenLink(l).error ?? null; };
   const link = (l) => (/^https?:\/\/[^\s]{3,500}$/.test(l ?? '') ? l : null);
   // Every check below mirrors one row of the rules table; a refusal says what the person can do instead.
   const guard = (ok, status, msg) => (ok ? null : fail(status, msg));
@@ -90,6 +145,7 @@
       S.notes = S.notes.filter((n) => n.author !== x.login);
       for (const n of S.notes) { n.voters = n.voters.filter((v) => v !== x.login); n.replies = n.replies.filter((r) => r.author !== x.login); n.reports = n.reports.filter((r) => r.by !== x.login); if (n.fixed) n.fixed.confirms = n.fixed.confirms.filter((c) => c !== x.login); }
       for (const g of Object.values(S.ratings)) delete g[x.login];
+      S.pitches = S.pitches.filter((p) => p.owner !== x.login); for (const k of Object.keys(S.reqVoters)) S.reqVoters[k] = S.reqVoters[k].filter((v) => v !== x.login);
       delete S.users[x.login]; S.me = null; save(); return delay({ ok: true });
     },
 
@@ -132,19 +188,22 @@
         reports: isMod(x) ? n.reports : undefined });
     },
     async addNote(n) {
-      const x = me();
-      return guard(x, ...NEED_SIGNIN) ?? guard(!banned(x), 403, 'This account can no longer post here.') ?? guard(n.title?.trim(), 400, 'Give it a short title.')
+      const x = me(); const sc = await screen(n?.title, n?.body);
+      return guard(!sc.error, 400, sc.error) ?? guard(x, ...NEED_SIGNIN) ?? guard(!banned(x), 403, 'This account can no longer post here.') ?? guard(n.title?.trim(), 400, 'Give it a short title.')
         ?? guard(n.kind !== 'missing' || n.projects?.length, 400, 'Pick the project, or projects, it applies to.') ?? (() => {
           const note = { id: S.nextId++, kind: n.kind, category: n.category, group: n.group, projects: n.projects ?? [], closedApps: n.closedApps ?? [],
             title: n.title.trim().slice(0, 140), body: (n.body ?? '').trim().slice(0, 4000), author: x.login, created: Date.now(),
-            voters: n.kind === 'talk' ? [] : [x.login], extraVotes: 0, status: 'open', replies: [], reports: [], held: heldFor(x) };
+            voters: n.kind === 'talk' ? [] : [x.login], extraVotes: 0, status: 'open', replies: [], reports: [], held: heldFor(x) || sc.flags.length > 0, flag: sc.flags.length ? flagTextSync(sc.flags) : undefined };
           S.notes.push(note); save(); return delay(view(note));
         })();
     },
     async editNote(id, { title, body }) {
-      const n = find(id); const x = me();
-      return guard(n && x?.login === n.author, 403, 'Only the person who wrote it can change it.') ?? guard(title?.trim(), 400, 'Give it a short title.') ?? (() => {
-        n.title = title.trim().slice(0, 140); n.body = (body ?? '').trim().slice(0, 4000); n.edited = Date.now(); save(); return delay(view(n));
+      const n = find(id); const x = me(); const sc = await screen(title, body);
+      return guard(n && x?.login === n.author, 403, 'Only the person who wrote it can change it.') ?? guard(title?.trim(), 400, 'Give it a short title.') ?? guard(!sc.error, 400, sc.error) ?? (() => {
+        n.title = title.trim().slice(0, 140); n.body = (body ?? '').trim().slice(0, 4000); n.edited = Date.now();
+        // An edit that trips the filter puts the note back on hold, like the server.
+        if (sc.flags.length) { n.held = true; n.flag = flagTextSync(sc.flags); }
+        save(); return delay(view(n));
       })();
     },
     async deleteNote(id) {
@@ -158,22 +217,22 @@
       })();
     },
     async reply(id, body) {
-      const n = find(id); const x = me();
-      return guard(x, ...NEED_SIGNIN) ?? guard(n && can(n, x).reply, 400, "This note can't take replies.") ?? guard(body?.trim(), 400, 'Write something first.') ?? (() => {
-        const r = { id: S.nextId++, author: x.login, body: body.trim().slice(0, 4000), created: Date.now(), held: heldFor(x) };
+      const n = find(id); const x = me(); const sc = await screen(body);
+      return guard(x, ...NEED_SIGNIN) ?? guard(n && can(n, x).reply, 400, "This note can't take replies.") ?? guard(body?.trim(), 400, 'Write something first.') ?? guard(!sc.error, 400, sc.error) ?? (() => {
+        const r = { id: S.nextId++, author: x.login, body: body.trim().slice(0, 4000), created: Date.now(), held: heldFor(x) || sc.flags.length > 0, flag: sc.flags.length ? flagTextSync(sc.flags) : undefined };
         n.replies.push(r); save(); return delay({ ok: true, held: r.held });
       })();
     },
     async editReply(id, rid, body) {
-      const r = find(id)?.replies.find((y) => y.id === +rid);
-      return guard(r && me()?.login === r.author, 403, 'Only the person who wrote it can change it.') ?? guard(body?.trim(), 400, 'Write something first.') ?? (() => { r.body = body.trim().slice(0, 4000); r.edited = Date.now(); save(); return delay({ ok: true }); })();
+      const r = find(id)?.replies.find((y) => y.id === +rid); const sc = await screen(body);
+      return guard(r && me()?.login === r.author, 403, 'Only the person who wrote it can change it.') ?? guard(body?.trim(), 400, 'Write something first.') ?? guard(!sc.error, 400, sc.error) ?? (() => { r.body = body.trim().slice(0, 4000); r.edited = Date.now(); if (sc.flags.length) { r.held = true; r.flag = flagTextSync(sc.flags); } save(); return delay({ ok: true }); })();
     },
     async deleteReply(id, rid) {
       const n = find(id); const r = n?.replies.find((y) => y.id === +rid);
       return guard(r && me()?.login === r.author, 403, 'Only the person who wrote it can delete it.') ?? (() => { n.replies = n.replies.filter((y) => y !== r); save(); return delay({ ok: true }); })();
     },
     async claimFixed(id, l) {
-      const n = find(id); const x = me();
+      const n = find(id); const x = me(); const le = await linkError(l); if (le && le !== 'bad') return fail(400, le);
       return guard(x, ...NEED_SIGNIN) ?? guard(n && can(n, x).claimFixed, 400, 'Someone has already said this is fixed; confirm it instead.') ?? guard(link(l), 400, 'Add a link that shows it, like the release notes.') ?? (() => {
         n.fixed = { by: x.login, link: l, confirms: [] }; save(); return delay(view(n));
       })();
@@ -191,7 +250,7 @@
       })();
     },
     async building(id, l) {
-      const n = find(id); const x = me();
+      const n = find(id); const x = me(); const le = await linkError(l); if (le && le !== 'bad') return fail(400, le);
       return guard(x, ...NEED_SIGNIN) ?? guard(n && can(n, x).building, 400, 'Someone already said they are building this.') ?? guard(link(l), 400, 'Add a link to the project.') ?? (() => {
         n.building = { by: x.login, link: l }; save(); return delay(view(n));
       })();
@@ -202,6 +261,129 @@
     async report(id, reason) {
       const n = find(id); const x = me();
       return guard(x, ...NEED_SIGNIN) ?? guard(n && can(n, x).report, 400, "You've already reported this.") ?? (() => { n.reports.push({ by: x.login, reason: (reason ?? '').slice(0, 500) }); save(); return delay({ ok: true }); })();
+    },
+
+
+    // ── "I want this too": requests (docs/server-rules.md → Requests) ──
+    async requests(q = {}) {
+      const x = me(); const N = await names();
+      const info = (key) => {
+        const [kind, ...r] = key.split(':'); const v = r.join(':');
+        if (kind === 'group') return N.groups[v]?.gap ? { kind, name: N.groups[v].n, href: `g/${v}/` } : null;
+        if (kind === 'app') { const gs = Object.values(N.groups).filter((g) => g.closed.includes(v)); return gs.length && gs.every((g) => g.gap) ? { kind, name: v, href: `alternatives-to/${v.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, '')}/` } : null; }
+        const i = S.issues.find((y) => `issue:${y.number}` === key && y.state === 'open' && ['add-closed-app', 'new-group'].includes(y.kind));
+        return i ? { kind, name: i.name, url: `https://github.com/itsdestin/opensourceeverything/issues/${i.number}`, number: i.number, type: i.kind, waiting: true } : null;
+      };
+      const item = (key) => { const i = info(key); if (!i) return null; const vs = S.reqVoters[key] ?? []; return { key, ...i, votes: vs.length + (S.reqExtra[key] ?? 0), mine: !!x && vs.includes(x.login) }; };
+      const can = { vote: oldEnough(x) };
+      if (q.keys) return delay({ items: q.keys.split(',').map(item).filter(Boolean), can });
+      const keys = new Set([...Object.keys(S.reqExtra), ...Object.keys(S.reqVoters), ...S.issues.filter((y) => y.state === 'open' && ['add-closed-app', 'new-group'].includes(y.kind)).map((y) => `issue:${y.number}`)]);
+      const items = [...keys].map(item).filter(Boolean).sort((a, b) => b.votes - a.votes || (b.number ?? 0) - (a.number ?? 0));
+      return delay({ items: items.slice(0, Math.min(+(q.limit ?? 10), 30)), total: items.length, can });
+    },
+    async requestVote(key, on) {
+      const x = me();
+      return guard(x, ...NEED_SIGNIN) ?? guard(oldEnough(x), ...TOO_NEW()) ?? guard((await api.requests({ keys: key })).items.length, 400, "That isn't open for requests.") ?? (() => {
+        const vs = (S.reqVoters[key] ??= []).filter((v) => v !== x.login); if (on) vs.push(x.login); S.reqVoters[key] = vs; save(); return delay({ ok: true });
+      })();
+    },
+
+    // ── Your suggestions: the person's own issues on the pretend GitHub ──
+    async mySuggestions() {
+      const x = me(); if (!x) return fail(...NEED_SIGNIN);
+      const status = (i) => (i.state === 'closed' ? (i.reason === 'completed' ? 'live' : 'turned-down') : i.labels.includes('approved') ? 'approved' : i.labels.includes('needs-mod') ? 'needs-mod' : 'waiting');
+      return delay({ items: S.issues.filter((i) => i.author === x.login).sort((a, b) => b.created - a.created).map((i) => ({ number: i.number, name: i.name, kind: i.kind, url: `https://github.com/itsdestin/opensourceeverything/issues/${i.number}`, author: i.author, created: i.created, status: status(i), ...(i.live ? { liveUrl: location.origin + i.live } : {}), ...(i.why ? { reason: i.why } : {}) })) });
+    },
+    async modSuggestions() {
+      if (!isMod(me())) return fail(403, 'Mods only.');
+      return delay({ items: S.issues.filter((i) => i.state === 'open').sort((a, b) => a.number - b.number).map((i) => ({ number: i.number, name: i.name, kind: i.kind, url: `https://github.com/itsdestin/opensourceeverything/issues/${i.number}`, author: i.author, created: i.created,
+        status: i.labels.includes('approved') ? 'approved' : i.labels.includes('needs-mod') ? 'needs-mod' : 'waiting', votes: (S.reqVoters[`issue:${i.number}`] ?? []).length + (S.reqExtra[`issue:${i.number}`] ?? 0), verdict: i.labels.includes('needs-mod') ? 'needs-mod' : i.labels.includes('robot-ok') ? 'ok' : 'unchecked' })) });
+    },
+
+    // ── Tag my project ──
+    async pitchStart(link) {
+      const x = me(); if (!x) return fail(...NEED_SIGNIN);
+      if (!oldEnough(x)) return fail(403, `Your GitHub account needs to be ${RULES.minAgeDays} days old before it can claim a project.`);
+      const r = parseRepo(link); if (!r) return fail(400, 'Paste the link to its code page on GitHub, GitLab or Codeberg.');
+      const N = await names(); const project = N.codes?.[r.repo];
+      if (!project) return delay({ listed: false, repo: r.repo, name: r.name });
+      let p = S.pitches.find((y) => y.owner === x.login && y.repo === r.repo);
+      if (!p) {
+        // Under their own GitHub account → proven at once. Otherwise they need the one-line file.
+        // Preview only: a sample login "mozilla-firefox-sample" owns github.com/mozilla-firefox, so the signed-in-owner case can be seen.
+        const own = r.host === 'github.com' && r.owner.toLowerCase() === x.login.toLowerCase().replace(/-sample$/, '');
+        p = { id: S.nextId++, owner: x.login, project, repo: r.repo, proof: own ? 'own-account' : 'file', token: 'ose-' + Math.random().toString(16).slice(2, 14).padEnd(12, '0'), verified: own,
+          // Same rule as the server: a mod must confirm the owner for anything not proven by GitHub alone, and for well-known projects (names.json "hp").
+          needsConfirm: !own || !Array.isArray(N.hp) || N.hp.includes(project), confirmed: false, flags: [...(own ? [] : ['owner-unverified']), ...(!Array.isArray(N.hp) || N.hp.includes(project) ? ['high-profile'] : [])], status: 'draft', live: null, pending: null, updated: Date.now(), checks: 0 };
+        S.pitches.push(p); save();
+      }
+      return delay({ listed: true, pitch: await pitchView(p, true) });
+    },
+    async pitchVerify(id) {
+      const p = S.pitches.find((y) => y.id === +id && y.owner === me()?.login); if (!p) return fail(404, "That isn't one of your projects.");
+      // Preview only: the first check says the file isn't there yet, the second finds it, so both screens can be seen.
+      if (!p.verified) { p.checks = (p.checks ?? 0) + 1; if (p.checks < 2) return fail(400, "We didn't find .opensourceeverything with the right text in that project yet. Add it to the project's main page (the top folder), then check again."); p.verified = true; save(); }
+      return delay(await pitchView(p, true));
+    },
+    async pitchSave(id, b) {
+      const p = S.pitches.find((y) => y.id === +id && y.owner === me()?.login); if (!p) return fail(404, "That isn't one of your projects.");
+      if (!p.verified) return fail(403, 'Prove the project is yours first.');
+      const N = await names(); const groups = [...new Set(b.groups ?? [])].filter((g) => N.groups[g]);
+      const t = (k) => (b[k] ?? '').trim().slice(0, 1000);
+      const sc = await screen(b.differs, t('strengths'), t('weaknesses'), t('reusable'), t('help')); if (sc.error) return fail(400, sc.error);
+      p.flag = sc.flags.length ? flagTextSync(sc.flags) : null;
+      if (!groups.length) return fail(400, 'Pick at least one group it belongs in.');
+      if (!(b.differs ?? '').trim()) return fail(400, 'Write a description.');
+      // WHY back to waiting on every edit: nothing a developer writes goes public until a mod has read it.
+      p.pending = { groups: groups.slice(0, 5), differs: b.differs.trim().slice(0, 600), strengths: t('strengths'), weaknesses: t('weaknesses'), reusable: t('reusable'), help: t('help') };
+      p.status = 'pending'; p.reason = null; p.updated = Date.now(); save(); return delay(await pitchView(p, true));
+    },
+    async pitchDelete(id) { S.pitches = S.pitches.filter((y) => !(y.id === +id && y.owner === me()?.login)); save(); return delay({ ok: true }); },
+    async myPitches() { const x = me(); if (!x) return fail(...NEED_SIGNIN); const out = []; for (const p of S.pitches.filter((y) => y.owner === x.login)) out.push(await pitchView(p, true)); return delay({ items: out }); },
+    async livePitches(ids) {
+      const out = {}; for (const id of ids) { const p = S.pitches.find((y) => y.project === id && y.live && y.verified && (!y.needsConfirm || y.confirmed) && !banned({ login: y.owner })); if (p) out[id] = { ...p.live, by: p.owner, repo: p.repo, ownerCheck: p.confirmed ? 'mods' : 'github', updated: p.updated }; }
+      return delay(out);
+    },
+
+    // ── Contributor preferences: shown to everyone as rows under How to help; set by the project's approved owner, changed any time, saved as they change ──
+    async prefs(ids) { S.prefs ??= {}; const out = {}; for (const id of ids) if (S.prefs[id]) out[id] = S.prefs[id]; return delay(out); },
+    async prefsSave(project, b) {
+      const x = me(); if (!x) return fail(...NEED_SIGNIN);
+      // Only the account whose claim was approved for this project may set them.
+      if (!S.pitches.some((y) => y.project === project && y.owner === x.login && y.live && y.verified)) return fail(403, 'Only the project\'s approved owner can change this.');
+      const one = (v, list) => (list.includes(v) ? v : '');
+      const many = (v, list, max = 9) => [...new Set(Array.isArray(v) ? v : [])].filter((i) => list.includes(i)).slice(0, max);
+      const link = (l) => (/^(https?:\/\/[^\s]{3,300}|[^\s@]{1,64}@[^\s@]{1,120})$/.test(l ?? '') ? l : '');
+      const c = {
+        ai: one(b.ai, ['non-developers-welcome', 'traditional-developers-only', 'not-accepted', 'see-policy']), aiPolicy: String(b.aiPolicy ?? '').slice(0, 200),
+        aiTicks: many(b.aiTicks, ['beginner', 'own-words', 'no-agents']),
+        start: one(b.start, ['pr', 'issue', 'forum', 'email', 'closed']), startLink: link(b.startLink), startSmall: !!b.startSmall,
+        wanted: many(b.wanted, ['code', 'design', 'docs', 'translation', 'testing', 'triage', 'co-maintainers', 'funding'], 3),
+        newcomers: one(b.newcomers, ['help', 'self', 'experienced']),
+        disclose: many(b.disclose, ['none', 'pr', 'form', 'commit']),
+        sign: one(b.sign, ['none', 'dco', 'cla']), signLink: link(b.signLink),
+        review: one(b.review, ['days', 'weeks', 'month', 'hide']), note: String(b.note ?? '').slice(0, 200), updated: Date.now(),
+      };
+      S.prefs ??= {}; S.prefs[project] = c; save(); return delay(c);
+    },
+    async modPitches() {
+      if (!isMod(me())) return fail(403, 'Mods only.');
+      const out = []; for (const p of S.pitches.filter((y) => y.pending || y.live)) out.push({ ...(await pitchView(p, false)), owner: p.owner, ownerDays: ageDays(S.users[p.owner] ?? { created: now - 400 * D }), stars: null, flag: p.flag ?? null, confirmedBy: p.confirmedBy ?? null, rivalClaims: S.pitches.filter((o) => o !== p && o.project === p.project && o.live && o.owner !== p.owner).length });
+      return delay({ items: out });
+    },
+    async modPitchAct(id, action, reason) {
+      const p = S.pitches.find((y) => y.id === +id);
+      if (!isMod(me())) return fail(403, 'Mods only.'); if (!p) return fail(404, 'That claim is gone.');
+      if (action === 'confirm-claim') { p.confirmed = true; p.confirmedBy = me().login; }
+      else if (action === 'approve') {
+        if (!p.pending) return fail(404, 'Nothing waiting there.');
+        if (p.needsConfirm && !p.confirmed) return fail(409, 'Confirm that they own or administer this project first.');
+        if (S.pitches.some((o) => o !== p && o.project === p.project && o.live && o.owner !== p.owner)) return fail(409, 'Another person already has a claim showing on this project. Revoke that one first if it is wrong.');
+        p.live = p.pending; p.pending = null; p.flag = null; p.status = 'live'; p.reason = null;
+      } else if (action === 'reject') { if (!p.pending) return fail(404, 'Nothing waiting there.'); p.pending = null; p.flag = null; p.status = p.live ? 'live' : 'turned-down'; p.reason = (reason ?? '').slice(0, 500) || null; }
+      else if (action === 'revoke') { Object.assign(p, { live: null, pending: null, flag: null, verified: false, confirmed: false, confirmedBy: null, status: 'turned-down', reason: (reason ?? '').slice(0, 500) || null, proof: 'file', needsConfirm: true }); }
+      else return fail(400, 'Not a valid action.');
+      p.updated = Date.now(); save(); return delay({ ok: true });
     },
 
     // ── Mods ──
@@ -228,11 +410,11 @@
       const n = S.notes.find((x) => x.id === +id); const r = rid && n.replies.find((y) => y.id === +rid);
       const trust = (login) => { if (S.users[login]) S.users[login].trusted = true; };
       if (r) {
-        if (action === 'approve') { r.held = false; trust(r.author); }
+        if (action === 'approve') { r.held = false; if (!r.flag) trust(r.author); r.flag = undefined; }
         if (action === 'hide') n.replies = n.replies.filter((y) => y !== r);
         if (action === 'ban') { S.banned.push(r.author); n.replies = n.replies.filter((y) => y !== r); }
       } else {
-        if (action === 'approve') { n.held = false; trust(n.author); }
+        if (action === 'approve') { n.held = false; if (!n.flag) trust(n.author); n.flag = undefined; }
         if (action === 'hide') S.notes = S.notes.filter((x) => x !== n);
         if (action === 'dismiss') n.reports = [];
         if (action === 'reject-fix') n.fixed = null;

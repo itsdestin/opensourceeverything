@@ -18,7 +18,7 @@ export default function credits() {
     <div class="btns-row"><a class="btn md secondary" href="https://creativecommons.org/licenses/by-sa/4.0/" rel="noopener">Read the license</a><a class="btn md primary" href="${url('data/groups.json')}">Download the data</a></div>
   </div>
   <section class="surface sec">
-    <div class="sec-head"><div><h2 class="h-large">Where the first listings came from</h2><p class="desc12">The map was filled in once, in October 2026, from these free lists. Thank you to everyone who maintains them.</p></div></div>
+    <div class="sec-head"><div><h2 class="h-large">Where the first listings came from</h2><p class="desc12">The map was filled in once, in October 2026, from these free lists.</p></div></div>
     <div class="lvl2 tablewrap"><table class="credits">
       <thead><tr><th>List</th><th>License</th></tr></thead>
       <tbody>${rows.map((r) => `<tr><td><a href="${esc(r.link)}" rel="noopener">${esc(r.name)}</a></td><td>${esc(r.license)}</td></tr>`).join('')}</tbody>

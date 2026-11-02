@@ -1,8 +1,10 @@
 // One page per closed app (alternatives-to/<app>/): "Open-source alternatives to Notion".
 // WHY (Destin, Oct 27): people search by the app they want to leave, not by our group names. Each page shows the
 // alternatives from every group that replaces the app (Photoshop sits in both Photo editing and Painting).
-import { esc, url, SITE_URL } from '../lib.mjs';
-import { altCard, appSlug, appUrl, sortAlts, deviceFilter, buildBox } from '../cards.mjs';
+import { esc, url, SITE_URL, SOCIAL } from '../lib.mjs';
+import { altCard, appSlug, appUrl, sortAlts, deviceFilter, buildBox, chooseBox } from '../cards.mjs';
+import { switchGuide } from '../surfaces.mjs';
+import { mapTrail } from '../redesign.mjs';
 
 export default function appPages(d) {
   // WHY keyed by address, not spelling: the imported lists spell some apps two ways ("Datadog", "DataDog");
@@ -22,22 +24,25 @@ export default function appPages(d) {
 
     const section = ({ g, alts }) => `
   <section class="surface sec">
-    <div class="sec-head"><div><h2 class="h-large">${groups.length > 1 ? esc(g.name) : 'Open alternatives'}<span class="count">${alts.length}</span></h2>
-      <p class="desc12">${esc(g.job)}. <a class="crumb" href="${url(`g/${g.id}/`)}">See the whole group</a></p></div></div>
+    <div class="sec-head"><div><h2 class="h-large">${groups.length > 1 ? esc(g.name) : 'Open alternatives'}${alts.length > 1 ? `<span class="count">${alts.length}</span>` : ''}</h2></div><a class="btn sm secondary" href="${url(`g/${g.id}/`)}">See the whole group</a></div>
     ${alts.length
-      ? `<div class="grid" data-alts>${alts.map((x) => altCard(x.p, x.a, i++, g)).join('')}</div><div class="callout info" data-nomatch hidden>None of these match. Try another device.</div>`
+      ? `<div class="grid" data-alts>${alts.map((x) => altCard(x.p, x.a, i++, g, x.why)).join('')}</div><div class="callout info" data-nomatch hidden>None of these match. Try another device.</div>`
       : `<div class="callout info">Nothing open does this yet. It's one of the <a href="${url('gaps/')}">gaps on the map</a>: if you're building one, <a href="${url(`g/${g.id}/#build`)}">see what to reuse first</a>.</div>`}
   </section>`;
 
+    // WHY a trail here too (Nov 2): closed-app pages were the only deep pages with no way up a level.
     const body = `
+  ${mapTrail(d, { group: groups[0] }, name)}
   <div class="surface identity">
-    <div class="row"><div><div class="muted11">Closed app</div><h1 class="h-subject">Open-source alternatives to ${esc(name)}</h1>
-      <p class="desc12" style="margin-top:4px">${all.length
-        ? `${all.length} open-source ${all.length === 1 ? 'project' : 'projects'} that replace ${esc(name)}${full ? `, ${full === all.length ? 'all' : full} of them for the whole job` : ', each for part of the job'}.`
-        : `No open-source app replaces ${esc(name)} yet.`}</p></div>${all.length > 1 ? deviceFilter('devMenu') : ''}</div>
+    <div class="row"><div><h1 class="h-subject">Open-source alternatives to ${esc(name)}</h1>
+      ${all.length ? '' : `<p class="desc12" style="margin-top:4px">No open-source app replaces ${esc(name)} yet.</p>`}</div>${all.length > 1 ? deviceFilter('devMenu') : ''}</div>
     ${others.length ? `<div class="replaces-row"><span class="muted11">Also replaces</span><div class="chiprow">${others.map((c) => `<a class="chip" href="${appUrl(c)}">${esc(c)}</a>`).join('')}</div></div>` : ''}
   </div>
   ${sections.map(section).join('')}
+  ${switchGuide(appSlug(name), name, d)}
+  ${all.length > 1 ? chooseBox({ closed: [name], json: `data/groups/${groups[0].id}.json`, alts: all }) : ''}
+  ${SOCIAL && !all.some((x) => x.a.fit === 'full') ? `<!-- WHY: only when nothing open fully replaces it; the server checks the same rule -->
+  <section class="surface sec"><div class="sec-head"><div><h2 class="h-large">Want an open ${esc(name)}?</h2></div><div class="want" data-request data-key="app:${esc(name)}" hidden></div></div></section>` : ''}
   ${buildBox({ about: `an alternative to ${name}`, closed: [name], json: `data/groups/${groups[0].id}.json`, alts: all })}`;
 
     const description = all.length
@@ -45,7 +50,7 @@ export default function appPages(d) {
       : `No open-source app replaces ${name} yet. See what's missing, or build one.`;
     return {
       path: `alternatives-to/${appSlug(name)}/`, title: `Open-source alternatives to ${name}`, description, body,
-      styles: ['group.css'], scripts: ['group.js'],
+      styles: ['group.css', 'surfaces.css'], scripts: ['group.js', 'surfaces.js'],
       jsonLd: { '@context': 'https://schema.org', '@type': 'ItemList', name: `Open-source alternatives to ${name}`,
         itemListElement: all.map(({ p }, k) => ({ '@type': 'ListItem', position: k + 1, item: { '@type': 'SoftwareApplication', name: p.name, url: `${SITE_URL}p/${p.id}/` } })) },
     };

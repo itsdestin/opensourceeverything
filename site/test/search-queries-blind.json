@@ -1,0 +1,544 @@
+{
+ "_about": "Blind set (Oct 26, 2026, ai-search stream): 60 plain-language needs written from categories/group names/project summaries only, BEFORE reading any search code or other query sets. Must NOT be tuned against.",
+ "queries": [
+  {
+   "q": "I want to stop paying for Adobe",
+   "want": [
+    "g:photo-editing",
+    "g:pdf",
+    "g:video-editing",
+    "g:illustration",
+    "c:adobe-photoshop"
+   ],
+   "kind": "need"
+  },
+  {
+   "q": "app to plan a group trip and split costs",
+   "want": [
+    "g:shared-expenses",
+    "c:splitwise",
+    "p:spliit-app"
+   ],
+   "kind": "need"
+  },
+  {
+   "q": "keep my kids' photos without Google",
+   "want": [
+    "g:photo-backup",
+    "p:immich",
+    "p:ente-photos",
+    "c:google-photos"
+   ],
+   "kind": "need"
+  },
+  {
+   "q": "replace the app my band uses to share songs",
+   "want": [
+    "g:file-transfer",
+    "g:cloud-storage",
+    "g:audio",
+    "g:music"
+   ],
+   "kind": "need"
+  },
+  {
+   "q": "I need to send a huge video to my aunt",
+   "want": [
+    "g:file-transfer",
+    "c:wetransfer",
+    "p:localsend"
+   ],
+   "kind": "need"
+  },
+  {
+   "q": "something to write my novel with",
+   "want": [
+    "g:documents",
+    "g:notes",
+    "p:zettlr"
+   ],
+   "kind": "need"
+  },
+  {
+   "q": "I'm sick of Microsoft Office subscription",
+   "want": [
+    "g:documents",
+    "g:spreadsheets",
+    "g:slides",
+    "p:libreoffice-writer"
+   ],
+   "kind": "need"
+  },
+  {
+   "q": "a calendar that doesn't belong to Google",
+   "want": [
+    "g:calendars",
+    "p:etar-calendar",
+    "p:nextcloud-calendar"
+   ],
+   "kind": "need"
+  },
+  {
+   "q": "let people book time with me",
+   "want": [
+    "g:booking-pages",
+    "c:calendly",
+    "p:cal-com"
+   ],
+   "kind": "need"
+  },
+  {
+   "q": "my church needs a way to run sign up sheets and surveys",
+   "want": [
+    "g:forms",
+    "p:limesurvey",
+    "p:nextcloud-forms"
+   ],
+   "kind": "need"
+  },
+  {
+   "q": "private chat app for my family",
+   "want": [
+    "g:messaging",
+    "p:signal",
+    "p:element"
+   ],
+   "kind": "need"
+  },
+  {
+   "q": "we want a place for our club to hang out and talk by voice",
+   "want": [
+    "g:community-chat",
+    "p:mumble",
+    "c:discord"
+   ],
+   "kind": "need"
+  },
+  {
+   "q": "I don't trust Zoom",
+   "want": [
+    "g:video-calls",
+    "p:jitsi-meet",
+    "c:zoom"
+   ],
+   "kind": "need"
+  },
+  {
+   "q": "replace Slack at my small business",
+   "want": [
+    "g:team-chat",
+    "p:mattermost",
+    "p:zulip",
+    "c:slack"
+   ],
+   "kind": "need"
+  },
+  {
+   "q": "quit Twitter but still follow people",
+   "want": [
+    "g:microblogging",
+    "p:mastodon",
+    "p:bluesky"
+   ],
+   "kind": "need"
+  },
+  {
+   "q": "a place to post my pictures that isn't Instagram",
+   "want": [
+    "g:photo-sharing",
+    "p:pixelfed",
+    "c:instagram"
+   ],
+   "kind": "need"
+  },
+  {
+   "q": "watch YouTube without being tracked",
+   "want": [
+    "g:video-sharing",
+    "p:newpipe",
+    "p:freetube"
+   ],
+   "kind": "need"
+  },
+  {
+   "q": "start a newsletter for my customers",
+   "want": [
+    "g:newsletters",
+    "g:blogging",
+    "p:listmonk",
+    "p:ghost"
+   ],
+   "kind": "need"
+  },
+  {
+   "q": "I want to put out a free email newsletter for my writing",
+   "want": [
+    "g:blogging",
+    "p:ghost",
+    "p:writefreely"
+   ],
+   "kind": "need"
+  },
+  {
+   "q": "find a job-hunting profile site that's not LinkedIn",
+   "want": [
+    "g:pro-network"
+   ],
+   "kind": "need"
+  },
+  {
+   "q": "cut together home movies",
+   "want": [
+    "g:video-editing",
+    "p:kdenlive",
+    "p:openshot"
+   ],
+   "kind": "need"
+  },
+  {
+   "q": "edit my vacation photos",
+   "want": [
+    "g:photo-editing",
+    "p:gimp",
+    "p:darktable"
+   ],
+   "kind": "need"
+  },
+  {
+   "q": "draw digital art on a tablet",
+   "want": [
+    "g:painting",
+    "p:krita"
+   ],
+   "kind": "need"
+  },
+  {
+   "q": "make a logo for my bakery",
+   "want": [
+    "g:illustration",
+    "g:graphic-design",
+    "p:inkscape"
+   ],
+   "kind": "need"
+  },
+  {
+   "q": "design flyers and posters without paying for Canva",
+   "want": [
+    "g:graphic-design",
+    "g:layout",
+    "c:canva"
+   ],
+   "kind": "need"
+  },
+  {
+   "q": "record my podcast",
+   "want": [
+    "g:audio",
+    "p:audacity",
+    "p:ardour"
+   ],
+   "kind": "need"
+  },
+  {
+   "q": "get rid of GarageBand and make beats",
+   "want": [
+    "g:audio",
+    "p:lmms"
+   ],
+   "kind": "need"
+  },
+  {
+   "q": "turn my phone into something that doesn't spy on me",
+   "want": [
+    "g:phone-os",
+    "p:grapheneos",
+    "p:lineageos"
+   ],
+   "kind": "need"
+  },
+  {
+   "q": "my old laptop is slow, what can I put on it instead of Windows",
+   "want": [
+    "g:desktop-os",
+    "p:linux-mint",
+    "p:ubuntu"
+   ],
+   "kind": "need"
+  },
+  {
+   "q": "get apps on my Android without the Play Store",
+   "want": [
+    "g:app-stores",
+    "p:f-droid",
+    "p:aurora-store"
+   ],
+   "kind": "need"
+  },
+  {
+   "q": "a keyboard for my phone that doesn't send what I type to Google",
+   "want": [
+    "g:keyboards",
+    "p:florisboard",
+    "p:heliboard"
+   ],
+   "kind": "need"
+  },
+  {
+   "q": "help my dad fix his computer from far away",
+   "want": [
+    "g:remote-desktop",
+    "p:rustdesk",
+    "c:teamviewer"
+   ],
+   "kind": "need"
+  },
+  {
+   "q": "a browser that blocks ads and trackers",
+   "want": [
+    "g:browsers",
+    "p:brave",
+    "p:firefox"
+   ],
+   "kind": "need"
+  },
+  {
+   "q": "search the web without being profiled",
+   "want": [
+    "g:search",
+    "p:searxng"
+   ],
+   "kind": "need"
+  },
+  {
+   "q": "somewhere safe to keep all my passwords",
+   "want": [
+    "g:passwords",
+    "p:bitwarden",
+    "p:keepassxc"
+   ],
+   "kind": "need"
+  },
+  {
+   "q": "the codes my phone gives me when I log in",
+   "want": [
+    "g:2fa",
+    "p:aegis",
+    "p:2fas"
+   ],
+   "kind": "need"
+  },
+  {
+   "q": "ask an AI questions but keep my chats on my own computer",
+   "want": [
+    "g:ai-chat",
+    "p:ollama",
+    "p:jan"
+   ],
+   "kind": "need"
+  },
+  {
+   "q": "make pictures from a description without Midjourney",
+   "want": [
+    "g:ai-images",
+    "p:comfyui",
+    "p:stable-diffusion-web-ui"
+   ],
+   "kind": "need"
+  },
+  {
+   "q": "turn my recorded interviews into text",
+   "want": [
+    "g:transcription",
+    "p:whisper",
+    "p:buzz"
+   ],
+   "kind": "need"
+  },
+  {
+   "q": "a smart assistant that does tasks on my computer for me",
+   "want": [
+    "g:ai-agents",
+    "p:openclaw"
+   ],
+   "kind": "need"
+  },
+  {
+   "q": "stream my music collection from home",
+   "want": [
+    "g:music",
+    "p:navidrome",
+    "p:funkwhale"
+   ],
+   "kind": "need"
+  },
+  {
+   "q": "a Netflix for my own movies on a home server",
+   "want": [
+    "g:home-media",
+    "p:jellyfin",
+    "c:plex"
+   ],
+   "kind": "need"
+  },
+  {
+   "q": "listen to podcasts on my phone",
+   "want": [
+    "g:podcasts",
+    "p:antennapod"
+   ],
+   "kind": "need"
+  },
+  {
+   "q": "read ebooks and manage my library",
+   "want": [
+    "g:books",
+    "p:calibre",
+    "p:koreader"
+   ],
+   "kind": "need"
+  },
+  {
+   "q": "I want to go live on Twitch",
+   "want": [
+    "g:live-streaming",
+    "g:recording",
+    "p:obs-studio",
+    "p:owncast"
+   ],
+   "kind": "need"
+  },
+  {
+   "q": "keep up with blogs I like in one place",
+   "want": [
+    "g:feeds",
+    "p:freshrss",
+    "p:miniflux"
+   ],
+   "kind": "need"
+  },
+  {
+   "q": "share files between my devices without Dropbox",
+   "want": [
+    "g:cloud-storage",
+    "p:nextcloud",
+    "p:syncthing"
+   ],
+   "kind": "need"
+  },
+  {
+   "q": "automatic backup so I never lose my files",
+   "want": [
+    "g:backup",
+    "p:duplicati",
+    "p:restic"
+   ],
+   "kind": "need"
+  },
+  {
+   "q": "find my way around without Google Maps",
+   "want": [
+    "g:maps",
+    "p:organic-maps",
+    "p:osmand"
+   ],
+   "kind": "need"
+  },
+  {
+   "q": "translate a letter from my grandmother",
+   "want": [
+    "g:translation",
+    "p:libretranslate"
+   ],
+   "kind": "need"
+  },
+  {
+   "q": "turn on the lights with my voice but keep it local",
+   "want": [
+    "g:smart-home",
+    "p:home-assistant"
+   ],
+   "kind": "need"
+  },
+  {
+   "q": "track where my money goes each month",
+   "want": [
+    "g:budgeting",
+    "p:actual-budget",
+    "p:firefly-iii"
+   ],
+   "kind": "need"
+  },
+  {
+   "q": "see how many people visit my website",
+   "want": [
+    "g:analytics",
+    "p:plausible",
+    "p:matomo"
+   ],
+   "kind": "need"
+  },
+  {
+   "q": "open an online shop for my crafts",
+   "want": [
+    "g:shop",
+    "p:woocommerce",
+    "p:medusa"
+   ],
+   "kind": "need"
+  },
+  {
+   "q": "send invoices to my freelance clients",
+   "want": [
+    "g:invoicing",
+    "p:solidinvoice",
+    "p:crater"
+   ],
+   "kind": "need"
+  },
+  {
+   "q": "keep track of my hours for billing",
+   "want": [
+    "g:time-tracking",
+    "p:kimai",
+    "p:solidtime"
+   ],
+   "kind": "need"
+  },
+  {
+   "q": "keep a list of my customers and follow ups",
+   "want": [
+    "g:crm",
+    "p:twenty",
+    "p:espocrm"
+   ],
+   "kind": "need"
+  },
+  {
+   "q": "have clients sign a contract on their phone",
+   "want": [
+    "g:signing",
+    "p:documenso",
+    "p:docuseal"
+   ],
+   "kind": "need"
+  },
+  {
+   "q": "a to-do list that syncs and has boards for my team",
+   "want": [
+    "g:tasks",
+    "p:vikunja",
+    "p:wekan"
+   ],
+   "kind": "need"
+  },
+  {
+   "q": "put my class notes in one searchable place",
+   "want": [
+    "g:notes",
+    "p:joplin",
+    "p:logseq"
+   ],
+   "kind": "need"
+  }
+ ]
+}

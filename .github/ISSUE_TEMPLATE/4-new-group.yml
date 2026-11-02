@@ -19,7 +19,33 @@ body:
     id: category
     attributes:
       label: Category
-      options: ["Office & productivity", "Communication & social", "Creative", "Operating systems & phones", "Browsers, search & security", "AI tools", "Media & entertainment", "Files & cloud", "Everyday", "Developer & business", "Business & finance"]
+      options:
+        # BEGIN categories (written by prefill/sync-forms.mjs from data/categories.json; do not edit by hand)
+        - "Office & productivity"
+        - "Communication & social"
+        - "Creative"
+        - "Music, video & reading"
+        - "Games & gaming"
+        - "Files & cloud"
+        - "Everyday life"
+        - "Browsers, privacy & security"
+        - "Business & finance"
+        - "AI apps"
+        - "Coding agents & their tools"
+        - "Building with AI"
+        - "Computer systems & Linux"
+        - "Desktops & customization"
+        - "Phones & tablets"
+        - "TVs & streaming boxes"
+        - "Devices & accessories"
+        - "Making things: 3D printing, electronics, radio"
+        - "Writing code"
+        - "Hosting, shipping & running code"
+        - "Databases, data & science"
+        - "Building blocks for apps"
+        - "Home servers & security"
+        - "Computer utilities"
+        # END categories
     validations: { required: true }
   - type: textarea
     id: projects

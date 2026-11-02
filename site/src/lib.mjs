@@ -1,6 +1,9 @@
 // Shared helpers for building Open Source Everything's pages: loading the map data, links, small HTML pieces.
 import { readFileSync } from 'node:fs';
-import { join } from 'node:path';
+import { join, dirname } from 'node:path';
+import { fileURLToPath } from 'node:url';
+// The site/ folder (thumbnail paths like assets/shots/x.webp are relative to it).
+const SITE_DIR = join(dirname(fileURLToPath(import.meta.url)), '..');
 
 // WHY "/": the site has its own address, opensourceeverything.org (Destin registered it Oct 27). SITE_BASE is kept for
 // building a copy that lives in a folder, e.g. itsdestin.github.io/opensourceeverything/ before the address works.
@@ -21,10 +24,49 @@ export const REPO = 'https://github.com/itsdestin/opensourceeverything';
 export const suggestUrl = (template, fields = {}) => `${REPO}/issues/new?template=${template}.yml${Object.entries(fields).map(([k, v]) => `&${k}=${encodeURIComponent(v)}`).join('')}`;
 // The small copy of screenshot n (prefill/make-thumbs.mjs), or the project's original when none was made.
 export const shot = (p, n = 0) => (p.thumbs?.[n] ? url(p.thumbs[n]) : p.screenshots?.[n]);
+// The pixel size of one of our own screenshot thumbnails (WebP), read from the file's header; null for outside images.
+// WHY (Nov 2, flicker between pages): an image with no size takes no room until it loads, then pushes things over. Writing
+// width and height into the page lets the browser keep its room from the first paint.
+const sizeCache = new Map();
+export const shotSize = (p, n = 0) => {
+  const rel = p.thumbs?.[n]; if (!rel) return null;
+  if (sizeCache.has(rel)) return sizeCache.get(rel);
+  let size = null;
+  try {
+    const b = readFileSync(join(SITE_DIR, rel));
+    const kind = b.toString('ascii', 12, 16);
+    if (kind === 'VP8X') size = [1 + b.readUIntLE(24, 3), 1 + b.readUIntLE(27, 3)];
+    else if (kind === 'VP8 ') size = [b.readUInt16LE(26) & 0x3fff, b.readUInt16LE(28) & 0x3fff];
+    else if (kind === 'VP8L') { const v = b.readUInt32LE(21); size = [(v & 0x3fff) + 1, ((v >> 14) & 0x3fff) + 1]; }
+  } catch {}
+  sizeCache.set(rel, size); return size;
+};
+// Ready-made width/height attributes for an <img>, or nothing.
+export const shotDims = (p, n = 0) => { const s = shotSize(p, n); return s ? ` width="${s[0]}" height="${s[1]}"` : ''; };
 export const url = (path = '') => BASE + path.replace(/^\//, '');
 export const esc = (s) => String(s ?? '').replace(/[&<>"']/g, (c) => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c]));
 export const fmtStars = (n) => (n >= 1000 ? (n / 1000).toFixed(n >= 10000 ? 0 : 1).replace(/\.0$/, '') + 'k' : String(n));
-export const KIND = { app: 'App', self_hosted: 'Runs on your own server', developer_tool: 'For developers', library: 'Code library' };
+// WHY "Server software", not "Runs on your own server" (Destin, Oct 26: the old wording meant nothing to a newcomer): the
+// plain-words judgement now lives in the setup rating below; this label only says what sort of thing it is.
+export const KIND = { app: 'App', self_hosted: 'Server software', developer_tool: 'For developers', library: 'Code library' };
+
+// The setup rating (Destin's words, Oct 26): "Easy setup" or "Advanced setup", from data/projects.json "setup", which
+// prefill/assemble.mjs fills in from the project's kind plus hand-researched exceptions (prefill/setup-ratings.json).
+export const SETUP = { easy: 'Easy setup', advanced: 'Advanced setup' };
+// One plain sentence per rating, for the tooltip and the "About this page" box. No jargon: say what you would have to DO.
+export const SETUP_MEANING = {
+  easy: 'Easy setup: install it like a normal app, use it in your browser.',
+  advanced: 'Advanced setup: you have to run it on your own server or use the command line, or it is a tool for developers. Fine if you are technical, hard if not.',
+};
+const SETUP_DEFAULT_WHY = {
+  app: 'Install it like a normal app, or use it in your browser.',
+  self_hosted: 'You run it on your own server (a computer you set up and keep running), or from the command line.',
+  developer_tool: 'Made for developers: you use it from code or the command line.',
+  library: 'A building block for developers, not a ready-to-use app.',
+};
+export const setupOf = (p) => (p.setup === 'easy' ? 'easy' : 'advanced');
+// The reason shown for this project's rating: its hand-written one if it has one, else the plain sentence for its kind.
+export const setupWhy = (p) => p.setupWhy ?? (setupOf(p) === 'easy' && p.kind !== 'app' ? 'It is a website you open in your browser.' : SETUP_DEFAULT_WHY[p.kind] ?? SETUP_DEFAULT_WHY.app);
 // WHY both forms: API-read hosts are stored as "github.com/owner/repo"; hand-added ones (GIMP, KDE) as full https links.
 export const codeUrl = (p) => (p.code ? (/^https?:\/\//.test(p.code) ? p.code : `https://${p.code}`) : null);
 export const hostOf = (p) => (p.code ? p.code.replace(/^https?:\/\//, '').split('/')[0] : null);
@@ -43,16 +85,51 @@ export function actions(p) {
   return l;
 }
 
+// ONE set of numbers for every place that states a size (home, About, meta descriptions, category pages).
+// WHY (found Oct 26: home said 431 projects, About "453 listings", the description 265 closed apps): each page counted
+// its own way. Closed apps are counted by address, so "Datadog" and "DataDog" are one app; projects are counted once
+// however many groups list them. "Listings" (a project once per group) is no longer shown to visitors.
+export const appKey = (name) => name.toLowerCase().normalize('NFKD').replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, '');
+export function counts(d) {
+  return { projects: d.projects.length, closedApps: new Set(d.groups.flatMap((g) => g.closed.map(appKey))).size, groups: d.groups.length };
+}
+
 export function loadData(root) {
   const read = (f) => JSON.parse(readFileSync(join(root, 'data', f), 'utf8'));
-  const categories = read('categories.json').categories;
-  const groups = read('groups.json').groups;
-  const projects = read('projects.json').projects;
+  const catFile = read('categories.json');
+  const categories = catFile.categories;
+  // WHY areas (taxonomy-v2, Oct 27): 6 areas hold the 27 categories. Older data without areas puts every category in one.
+  const areas = catFile.areas ?? [{ id: 'all', name: 'Everything', categories: categories.map((c) => c.id) }];
+  // WHY hide empty new groups (Destin picked "hide the 20 thinnest until a project lands in them", Oct 27): a group from the new
+  // structure with no checked project is not a gap (projects exist, they just haven't passed the checks yet), so it stays off
+  // every page, the search and the open data until it has one. Older groups with nothing open stay visible: those ARE gaps.
+  // WHY 3 for new groups (Destin, Oct 28: the structure looked cluttered; 33 new groups had only 1–2 projects): a new group shows once
+  // it has 3 checked projects. Its projects still show if any other visible group lists them.
+  const NEW_MIN = 3;
+  const groups = read('groups.json').groups.filter((g) => (g.source === 'taxonomy' ? g.alternatives.length >= NEW_MIN : g.alternatives.length || !g.waitForProject));
+  // WHY drop projects listed only in hidden groups: a project page with no group has no breadcrumb, no "Listed in" and no
+  // neighbours to compare. They stay in data/projects.json and come back when their group reaches 3 projects.
+  const shown = new Set(groups.flatMap((g) => g.alternatives.map((a) => a.project)));
+  const projects = read('projects.json').projects.filter((p) => shown.has(p.id));
+  // WHY merged here, not stored in projects.json (review Oct 26): "How to help" comes from two other files, one written weekly by
+  // prefill/help-facts.mjs and one edited by hand (data/plugin-docs.json), so neither fights with the data the map is built from.
+  const optional = (f) => { try { return JSON.parse(readFileSync(join(root, 'data', f), 'utf8')).projects ?? {}; } catch { return {}; } };
+  const helpFacts = optional('help.json'); const pluginDocs = optional('plugin-docs.json');
+  for (const p of projects) {
+    const h = helpFacts[p.id]; const gh = codeUrl(p)?.startsWith('https://github.com/') ? codeUrl(p) : null;
+    const list = (label) => `${gh}/issues?q=${encodeURIComponent(`is:open is:issue label:"${label}"`)}`;
+    const help = { contributing: h?.contributing ?? null, good: gh && h?.good ? { n: h.good, url: list('good first issue') } : null, wanted: gh && h?.wanted ? { n: h.wanted, url: list('help wanted') } : null, plugins: pluginDocs[p.id] ?? null };
+    if (help.contributing || help.good || help.wanted || help.plugins) p.help = help;
+  }
   const projById = new Map(projects.map((p) => [p.id, p]));
   const catById = new Map(categories.map((c) => [c.id, c]));
+  const areaOf = new Map(areas.flatMap((a) => a.categories.map((c) => [c, a])));
   const groupsByProject = new Map();
   for (const g of groups) for (const a of g.alternatives) (groupsByProject.get(a.project) ?? groupsByProject.set(a.project, []).get(a.project)).push({ group: g, alt: a });
-  return { categories, groups, projects, projById, catById, groupsByProject };
+  // Groups that were split (data/redirects.json): old id -> new ids. Optional, so older data still builds.
+  let moved = {}; let movedApps = {};
+  try { { const r = read('redirects.json'); moved = r.moved ?? {}; movedApps = r.apps ?? {}; } } catch { /* none yet */ }
+  return { areas, areaOf, mergedCategories: catFile.merged ?? {}, categories, groups, projects, projById, catById, groupsByProject, moved, movedApps };
 }
 
 export const ICON = {
@@ -82,6 +159,9 @@ export function factChips(p, alt, afterStars = '', { links = false } = {}) {
   // WHY GitHub stars first, as a bare number (Destin, Oct 27): the number people already know how to read; the star
   // says what it is. Projects hosted elsewhere (GIMP, LibreOffice) say so instead, so the first chip is never missing.
   const c = [];
+  // WHY the setup chip FIRST and never clipped (Destin, Oct 26): "can I actually start using this?" is the question that
+  // decides everything else on the card. It replaces the old "Runs on your own server" kind chip.
+  c.push(chip(SETUP[setupOf(p)], null, `${SETUP_MEANING[setupOf(p)]} ${setupWhy(p)}`).replace('class="chip"', `class="chip setup ${setupOf(p)}"`));
   if (p.stars) c.push(chip(`${ICON.star}${fmtStars(p.stars)}`, gh, `${p.stars.toLocaleString('en')} stars on GitHub`));
   else if (hostOf(p) !== 'github.com') c.push(chip('Not on GitHub', codeUrl(p) ?? p.website, 'Its code lives on its own site'));
   // WHY the rating right after stars: our own community's answer to "a good replacement?" sits beside GitHub's popularity.
@@ -89,13 +169,12 @@ export function factChips(p, alt, afterStars = '', { links = false } = {}) {
   // WHY activity next, as a plain chip (Destin, Oct 27): the card's corner is for the Actions menu.
   c.push(chip(p.inactive ? 'Quiet for a year' : 'Active', gh && `${gh}/commits`, p.inactive ? 'No changes in over a year' : 'Changed within the last year: see its latest work'));
   // WHY right after activity (Destin, Oct 27): "does it run on my computer or phone?" is a newcomer's first question.
-  // Server-only projects get no device chip; their "Runs on your own server" chip says it.
+  // Server-only projects get no device chip; their "Advanced setup" chip says it.
   const dl = p.download ?? (p.release && p.kind === 'app' ? p.release : null) ?? p.website;
   if (devicesText(p)) c.push(chip(esc(devicesText(p)), dl, 'Where to get it'));
   if (p.verified) c.push(chip(`${ICON.shield}Verified`, url('about/#verified'), 'r/TrueOpenSource mods vouch for it'));
   c.push(chip(esc(p.license ?? 'License being checked'), p.license && url(`licenses/#${licenseAnchor(p.license)}`), p.licenseNeedsCheck ? 'A mod is confirming this license' : 'What this license means'));
   if (p.licenseClass === 'open_core') c.push(chip('Open core', url('licenses/#open-core'), 'Open source, with some parts paid or under another license'));
   if (alt?.fit === 'partial') c.push(chip('Replaces partly', null, alt.note || 'Covers part of the job'));
-  if (KIND[p.kind]) c.push(chip(esc(KIND[p.kind])));
   return c.join('');
 }
