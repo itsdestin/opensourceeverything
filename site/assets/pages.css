@@ -77,11 +77,11 @@ table.credits a { color:var(--fg); }
 .fan img { position:absolute; width:46%; aspect-ratio:16/10; object-fit:cover; object-position:top; border-radius:var(--radius-md);
   border:1px solid var(--edge-card); box-shadow:0 10px 30px rgb(0 0 0 / .22), 0 2px 6px rgb(0 0 0 / .1); background:var(--inset); }
 /* WHY measured from the right (Destin, Nov 2: "the fanout more on the right side"): the fan hugs the card's right edge at any width. */
-/* WHY 7% in from flush and lower (Destin, Nov 2: "back to the left a smidge", then "down and left just another smidge"). */
-.fan .f0 { right:57%; top:40%; transform:rotate(-7deg); }
-.fan .f1 { right:40%; top:16%; transform:rotate(-2deg); z-index:1; }
-.fan .f2 { right:23%; top:26%; transform:rotate(3deg); z-index:2; }
-.fan .f3 { right:5%; top:46%; transform:rotate(8deg); z-index:3; }
+/* WHY 7% in from flush and lower (Destin, Nov 2: "back to the left a smidge", then "down and left just another smidge", then "down just another smidge"). */
+.fan .f0 { right:57%; top:46%; transform:rotate(-7deg); }
+.fan .f1 { right:40%; top:22%; transform:rotate(-2deg); z-index:1; }
+.fan .f2 { right:23%; top:32%; transform:rotate(3deg); z-index:2; }
+.fan .f3 { right:5%; top:52%; transform:rotate(8deg); z-index:3; }
 
 /* Popular alternatives: picture cards, five to a row in two rows (Destin, Nov 2), with shorter previews. */
 .swgrid { display:grid; grid-template-columns:repeat(5,minmax(0,1fr)); gap:12px; }
