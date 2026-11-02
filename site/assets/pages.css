@@ -111,6 +111,8 @@ table.credits a { color:var(--fg); }
 .arearow > .catgrid { padding:0 12px 12px; }
 /* While a fold animates (site.js), its content is clipped to the growing or shrinking height. */
 .arearow > .catgrid.animating { overflow:hidden; }
+/* WHY no scroll anchoring here: the browser would otherwise scroll the page itself to make up for a fold closing above. */
+#categories { overflow-anchor:none; }
 .catcard2 { position:relative; gap:12px; }
 .catcard2 .cardlink { position:absolute; inset:0; border-radius:inherit; }
 .cathead { display:flex; align-items:center; gap:12px; }

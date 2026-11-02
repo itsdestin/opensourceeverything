@@ -150,15 +150,12 @@
   rows.forEach((row) => row.querySelector('summary').addEventListener('click', (e) => {
     e.preventDefault();
     if (row.open && !row._anim) { slide(row, false); return; }
-    // WHY pin the clicked header (Destin, Nov 2: switching from Everyday apps to AI "feels very jumpy"): a tall row closing above
-    // this one used to drag it up the page mid-slide, then a scroll jumped it back. Now, every frame of the slide, the page
-    // scrolls by exactly how far the header moved, so the header stays under the pointer and the rows above fold away out of view.
-    const sum = row.querySelector('summary'); const y0 = sum.getBoundingClientRect().top;
+    // WHY the page doesn't scroll (Destin, Nov 2: "the whole page scrolls/moves when a category card collapses"): an earlier
+    // version scrolled the page to hold the clicked header still, which moved everything else. Now the page stays put and
+    // the list folds; only if the clicked header would end up above the window does it glide back into view afterwards.
+    const sum = row.querySelector('summary');
     openOnly(row);
-    if (still.matches) { window.scrollBy(0, sum.getBoundingClientRect().top - y0); return; }
-    const end = performance.now() + EASE.duration + 40;
-    const pin = () => { const dy = sum.getBoundingClientRect().top - y0; if (dy) window.scrollBy(0, dy); if (performance.now() < end) requestAnimationFrame(pin); };
-    requestAnimationFrame(pin);
+    setTimeout(() => { if (sum.getBoundingClientRect().top < 0) row.scrollIntoView({ block: 'start', behavior: still.matches ? 'auto' : 'smooth' }); }, EASE.duration + 20);
   }));
   const openArea = () => { const el = document.querySelector(`details.arearow${location.hash.replace(/[^#\w-]/g, '')}`); if (el) { openOnly(el, false); requestAnimationFrame(() => el.scrollIntoView({ block: 'start' })); } };
   if (location.hash.startsWith('#area-')) openArea();
