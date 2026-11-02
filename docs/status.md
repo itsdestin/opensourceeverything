@@ -74,7 +74,7 @@ Key files: `prefill/taxonomy.json` (areas, categories, moved and new groups), ha
 - No filler: drop anything that doesn't help someone find their way in a way nothing else on the page does. No repeated text.
 - GitHub stars come first when a project has them. "Easy setup" / "Advanced setup" are tags that explain themselves when clicked.
 - Filters are a single Filter button that opens a sheet (a full slide-up sheet on phones), not rows of chips.
-- Home: one "Browse by category" card; each area is a boxed fold; only "Everyday apps" starts open.
+- Home: one "Browse by category" card; each area is a boxed fold; all start closed and only one opens at a time (Nov 2).
 - The AI-assistance line reads: "This listing is managed by r/TrueOpenSource and was drafted with AI assistance.
   If you maintain this project, claim this listing here."
 - Developer pitches are labelled "From the Developer", never "Owner says".

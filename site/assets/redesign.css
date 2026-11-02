@@ -210,10 +210,12 @@ body { display:flex; flex-direction:column; }
    didn't read as "where you are". Wide screens show the whole trail; phones show one glass "‹ up a level" button. */
 .crumbs { display:flex; align-items:center; min-width:0; padding:0 4px; }
 .crumb-trail { list-style:none; margin:0; padding:0; display:flex; flex-wrap:wrap; align-items:center; row-gap:4px; font-size:13px; color:var(--fg-muted); }
-.crumb-trail li + li::before { content:"›"; margin:0 8px; color:var(--fg-faint); }
+.crumb-trail li + li::before { content:"›"; margin:0 8px; color:var(--fg-dim); }
 .crumb-trail a { color:var(--fg-2); text-decoration:none; }
 .crumb-trail a:hover { color:var(--fg); text-decoration:underline; }
 .crumb-trail [aria-current] { color:var(--fg); font-weight:500; }
+/* WHY: the browser's own focus ring is faint on the lilac wallpaper (design review, Nov 2). */
+.crumb-trail a:focus-visible, .crumbs .crumb-up:focus-visible { outline:2px solid var(--accent); outline-offset:2px; border-radius:4px; }
 /* WHY .crumbs in front: the shared glass rule below would otherwise show this phone-only button on wide screens too. */
 .crumbs .crumb-up { display:none; }
 @media (max-width:640px) {

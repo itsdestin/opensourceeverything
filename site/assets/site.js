@@ -122,25 +122,25 @@
     inp.addEventListener('input', sync);
     b.addEventListener('click', () => { inp.value = ''; inp.dispatchEvent(new Event('input', { bubbles: true })); inp.focus(); });
   });
-  // Home page area rows (<details>) start closed except Everyday apps (written into the page, home.mjs).
+  // Home page area rows (<details>) all start closed (home.mjs).
   // WHY open the row a link points at (#area-…): a category page's breadcrumb lands on its area, which must be open to show anything.
   // WHY scroll after a frame: opening the row changes the page's height, so the jump the browser made on load lands short.
-  // WHY one open at a time, sliding (Destin, Nov 2: "opening one should close the other… smoother animation"): the rows share
-  // name="areas" (browsers that know it keep one open themselves); this also does it for older browsers and animates the
-  // height so the rows slide instead of jumping. Reduced-motion visitors get the instant open/close.
+  // WHY one open at a time, sliding (Destin, Nov 2: "opening one should close the other… smoother animation"): this script keeps
+  // one row open and animates the height so rows slide instead of jumping. Reduced-motion visitors get the instant open/close.
   const rows = [...document.querySelectorAll('details.arearow')];
   const still = matchMedia('(prefers-reduced-motion: reduce)');
   const EASE = { duration: 240, easing: 'cubic-bezier(.2,.8,.2,1)' };
   const slide = (row, opening) => {
     const box = row.querySelector('.catgrid');
     if (!box || still.matches) { row.open = opening; return; }
+    // WHY start from where it is now (design review, Nov 2): a click mid-slide used to snap the row to nothing and start over.
+    const now = row._anim ? { height: getComputedStyle(box).height, paddingBottom: getComputedStyle(box).paddingBottom, opacity: getComputedStyle(box).opacity } : null;
     row._anim?.cancel();
     if (opening) row.open = true;
-    const full = box.scrollHeight;
     box.classList.add('animating');
     const pad = getComputedStyle(box).paddingBottom;
-    const shut = { height: '0px', paddingBottom: '0px', opacity: 0 }, shown = { height: full + 'px', paddingBottom: pad, opacity: 1 };
-    row._anim = box.animate(opening ? [shut, shown] : [shown, shut], EASE);
+    const shut = { height: '0px', paddingBottom: '0px', opacity: 0 }, shown = { height: box.scrollHeight + 'px', paddingBottom: pad, opacity: 1 };
+    row._anim = box.animate(opening ? [now ?? shut, shown] : [now ?? shown, shut], EASE);
     row._anim.onfinish = () => { box.classList.remove('animating'); if (!opening) row.open = false; row._anim = null; };
   };
   const openOnly = (row, animate = true) => {
@@ -150,10 +150,15 @@
   rows.forEach((row) => row.querySelector('summary').addEventListener('click', (e) => {
     e.preventDefault();
     if (row.open && !row._anim) { slide(row, false); return; }
-    const before = row.getBoundingClientRect().top;
+    // WHY pin the clicked header (Destin, Nov 2: switching from Everyday apps to AI "feels very jumpy"): a tall row closing above
+    // this one used to drag it up the page mid-slide, then a scroll jumped it back. Now, every frame of the slide, the page
+    // scrolls by exactly how far the header moved, so the header stays under the pointer and the rows above fold away out of view.
+    const sum = row.querySelector('summary'); const y0 = sum.getBoundingClientRect().top;
     openOnly(row);
-    // WHY: a row closing above this one pulls it up the page; once the slide ends, bring its header back into view if it left.
-    setTimeout(() => { const top = row.getBoundingClientRect().top; if (top < 60 && top < before) row.scrollIntoView({ block: 'start', behavior: still.matches ? 'auto' : 'smooth' }); }, EASE.duration + 20);
+    if (still.matches) { window.scrollBy(0, sum.getBoundingClientRect().top - y0); return; }
+    const end = performance.now() + EASE.duration + 40;
+    const pin = () => { const dy = sum.getBoundingClientRect().top - y0; if (dy) window.scrollBy(0, dy); if (performance.now() < end) requestAnimationFrame(pin); };
+    requestAnimationFrame(pin);
   }));
   const openArea = () => { const el = document.querySelector(`details.arearow${location.hash.replace(/[^#\w-]/g, '')}`); if (el) { openOnly(el, false); requestAnimationFrame(() => el.scrollIntoView({ block: 'start' })); } };
   if (location.hash.startsWith('#area-')) openArea();

@@ -104,7 +104,6 @@
 @media (max-width:640px) {
   /* ── A slim app header: the site's name, and Sign in or your avatar (Destin, Oct 27: sign-in isn't a tab) ── */
   .top { display:flex; padding:10px 16px 6px; gap:8px; }
-  .top .searchwrap:not(.topsearch) { display:none; }
 
   /* ── Less dead space ── */
   /* WHY the search count is spared (Destin, round 5: "results header w number subheader"): it is the only place the count shows. */
@@ -113,5 +112,4 @@
   .page { gap:10px; }
   .sec { padding:12px 12px 14px; }
   .idfoot .muted11 { display:none; }
-
 }

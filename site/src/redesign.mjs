@@ -47,6 +47,8 @@ export function rvFamilyA(p, fam) {
 // items: [[label, href], ...]; the last is this page (plain text).
 const UP = '<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m15 18-6-6 6-6"/></svg>';
 export const crumbs = (items) => {
+  // WHY nothing for a lone item (a project in no group): a trail of just the page's own name leads nowhere.
+  if (items.length < 2) return '';
   const parent = items.length > 1 ? items[items.length - 2] : null;
   return `<nav class="crumbs" aria-label="Breadcrumb">
     ${parent ? `<a class="crumb-up" href="${parent[1]}">${UP}${esc(parent[0])}</a>` : ''}

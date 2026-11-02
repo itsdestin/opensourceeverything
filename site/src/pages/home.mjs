@@ -67,7 +67,8 @@ export default function home(d) {
 
 
   // ── Categories: icon, name, a summary line and its first groups; the rest is one "+ more" chip ──
-  const fan = FAN.map(([id, n]) => d.projById.get(id)).map((p, i) => p && shot(p, FAN[i][1])).filter(Boolean);
+  // WHY stop the build if a fan screen is missing: a silently missing fan would look like a broken home page.
+  const fan = FAN.map(([id, n]) => { const p = d.projById.get(id); const u = p && shot(p, n); if (!u) throw new Error(`home fan: no screenshot ${n} for "${id}"`); return u; });
   const SHOWN = 6;
   const numbers = (gs) => { const n = new Set(gs.flatMap((g) => g.alternatives.map((a) => a.project))).size;
     return `<b class="num">${gs.length}</b> ${gs.length === 1 ? 'job' : 'jobs'} · <b class="num">${n}</b> open projects`; };
@@ -89,9 +90,11 @@ export default function home(d) {
   // The ids let a category page's breadcrumb jump back to its area's row.
   const areaRows = [everyday, ...d.areas.filter((a) => a !== everyday)].map((a) => ({ a, cs: catsIn(a) })).filter(({ cs }) => cs.length)
     // WHY <details> (Destin, hierarchy deck, Oct 30: "all collapsible sections", "on mobile especially"): every area row folds, with
-    // the browser's own keyboard and screen-reader support. WHY only Everyday apps starts open, on every screen (Destin, Oct 30): written
-    // into the page, so nothing flashes open then shut. site.js opens a row a link points at (#area-…, the category breadcrumb).
-    .map(({ a, cs }) => `<details class="arearow" name="areas" id="area-${a.id}"${a === everyday ? ' open' : ''}>
+    // the browser's own keyboard and screen-reader support. WHY no name="…" group: the browser would then shut the other row
+    // instantly, before site.js could slide it closed (the jump Destin saw, Nov 2). WHY every row starts closed (Destin, Nov 2; it was
+    // only Everyday apps open before): the card is a short list of six areas to pick from. site.js opens a row a link points at
+    // (#area-…, the trail's first link).
+    .map(({ a, cs }) => `<details class="arearow" id="area-${a.id}">
       <summary><span class="label">${esc(a === everyday ? 'Everyday apps' : a.name)}</span><span class="muted11">${cs.length} ${cs.length === 1 ? 'category' : 'categories'}</span></summary>
       <div class="catgrid">${cs.map((c) => catCard(c, a)).join('')}</div>
     </details>`).join('');
@@ -110,7 +113,7 @@ export default function home(d) {
        holds the headline and a fan of real app screens. -->
   <div class="surface hero3">
     <h1>Find free, open source replacements for almost any software</h1>
-    ${fan.length === 4 ? `<div class="fan" aria-hidden="true">${fan.map((u, i) => `<img class="f${i}" src="${esc(u)}" alt="" referrerpolicy="no-referrer">`).join('')}</div>` : ''}
+    <div class="fan" aria-hidden="true">${fan.map((u, i) => `<img class="f${i}" src="${esc(u)}" alt="" referrerpolicy="no-referrer">`).join('')}</div>
   </div>
 
   <section class="surface sec">
