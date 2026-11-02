@@ -16,13 +16,14 @@ export default function categories(d) {
     const n = gs.reduce((s, g) => s + g.alternatives.length, 0);
     const card = (g) => {
       const full = g.alternatives.filter((a) => a.fit === 'full').length;
-      // WHY a status pill only for gaps: "nothing does the whole job" is the fact worth flagging; the rest is a count.
-      const pill = g.alternatives.length === 0 ? '<span class="pill warn"><i></i>No open alternative yet</span>'
-        : full === 0 ? '<span class="pill warn"><i></i>Only partial replacements</span>' : '';
-      return `<a class="card gcard" href="${url(`g/${g.id}/`)}">
-        <div class="head"><h3>${esc(g.name)}</h3>${pill ? `<div class="corner" style="margin-right:0">${pill}</div>` : ''}</div>
-        <div class="chiprow"><span class="chip">${g.alternatives.length} ${g.alternatives.length === 1 ? 'alternative' : 'alternatives'}${full ? ` · ${full} full` : ''}</span></div>
-        ${g.closed.length ? `<div class="foot">Replaces ${esc(g.closed.join(', '))}</div>` : ''}</a>`;
+      // WHY this order and no status pill (Destin, Nov 2): name, then a two-line description of the job right under it, then
+      // what it replaces, with the count chip at the bottom, so every card is built the same way and the cards line up.
+      // The "Only partial replacements" pill is gone from this view; the Gaps page still lists those groups.
+      return `<a class="card gcard grpcard" href="${url(`g/${g.id}/`)}">
+        <h3>${esc(g.name)}</h3>
+        <p class="job">${esc(g.job)}</p>
+        ${g.closed.length ? `<div class="foot">Replaces ${esc(g.closed.join(', '))}</div>` : ''}
+        <div class="chiprow"><span class="chip">${g.alternatives.length} ${g.alternatives.length === 1 ? 'alternative' : 'alternatives'}${full ? ` · ${full} full` : ''}</span></div></a>`;
     };
     // WHY "Other categories" lists only this area's (taxonomy-v2, Oct 27): 26 chips across six areas was a wall; the neighbours
     // in the same area are the useful jumps, and the crumb's area link reaches the rest.
@@ -40,7 +41,7 @@ export default function categories(d) {
   </div>
   <section class="surface sec">
     <div class="sec-head"><div><h2 class="h-large">Groups<span class="count">${gs.length}</span></h2></div></div>
-    <div class="gaplist">${gs.map(card).join('')}</div>
+    <div class="gaplist grplist">${gs.map(card).join('')}</div>
   </section>`,
     };
   })];
