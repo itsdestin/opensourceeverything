@@ -147,22 +147,38 @@
     const { user } = await getMe(); const t = r.up + r.down; const p = t >= 5 ? Math.round((r.up / t) * 100) : null;
     const locked = user && !user.canVote;
     el.innerHTML = `<div class="rate-q"><div class="rate-text"></div>
-        <div class="rate-res">${p === null ? `<span class="muted11">${t ? `${t} ${t === 1 ? 'answer' : 'answers'} so far, not enough for a score` : 'No answers yet'}</span>`
-          : `<div class="meter"><i style="width:${p}%"></i></div><span class="muted11"><b class="num">${p}%</b> of ${t} say yes</span>`}${r.mine ? `<span class="muted11"> · You said ${r.mine > 0 ? 'yes' : 'not really'}</span>` : ''}</div></div>
+        <div class="rate-res">${p === null ? `<span class="muted11">${t ? `${r.up} yes · ${r.down} not really (a score from 5 answers)` : 'No answers yet'}</span>`
+          : `<div class="meter"><i style="width:${p}%"></i></div><span class="muted11"><b class="num">${p}%</b> of ${t} say yes</span>`}${r.mine ? `<span class="muted11">You said ${r.mine > 0 ? 'yes' : 'not really'}</span>` : ''}<button class="btn sm secondary" type="button" data-whys hidden></button></div></div>
       <div class="rate-btns"><button class="btn sm secondary${r.mine > 0 ? ' on' : ''}${locked ? ' locked' : ''}" type="button" data-v="1" aria-pressed="${r.mine > 0}">${icon.up}Yes</button>
         <button class="btn sm secondary${r.mine < 0 ? ' on' : ''}${locked ? ' locked' : ''}" type="button" data-v="-1" aria-pressed="${r.mine < 0}">${icon.down}Not really</button></div>`;
     $('.rate-text', el).textContent = el.dataset.question || 'Does it do the job?';
+    // WHY "what stopped it?" (Destin approved, redesign-3 Q-boards, Oct 27; built in step 2): the comments the removed boards
+    // were replaced with, tied to the answer that prompts them. Shown with GitHub names, like every comment.
+    api.whys?.(el.dataset.group, el.dataset.project).then(({ items }) => { const w = $('[data-whys]', el); if (items.length) { w.hidden = false; w.textContent = `${items.length} said what stopped it`; w.onclick = () => showWhys(el, items); } }).catch(() => {});
     el.onclick = async (e) => {
+      if (e.target.closest('[data-whys]')) return;
       const b = e.target.closest('[data-v]'); if (!b) return; e.preventDefault();
       const v = +b.dataset.v === r.mine ? 0 : +b.dataset.v;
       try {
         await api.rate(el.dataset.group, el.dataset.project, v);
         const n = (await api.ratings([{ group: el.dataset.group, project: el.dataset.project }]))[`${el.dataset.group}/${el.dataset.project}`];
-        if (!r.mine && v) toast('Thanks, your answer counted.');
+        if (!r.mine && v > 0) toast('Thanks, your answer counted.');
         drawRate(el, n);
+        if (v < 0 && r.mine >= 0) askWhy(el, n);
       } catch (err) { oops(err, { type: 'rate', group: el.dataset.group, project: el.dataset.project, value: v }); }
     };
   }
+
+  // WHY a one-job card with Send on top and Skip under it (guide: one-job popups; reviewer Nov 3): "Not really" is already saved,
+  // so the way out is "Skip", not "Cancel", and Send waits until something is written.
+  const askWhy = (el, n) => dialog('What stopped it?', `<div class="lvl1 op-card"><label class="label" for="whyIn">What stopped it?</label><textarea class="field" id="whyIn" rows="4" maxlength="1000"></textarea><p class="fieldhint">Optional. Shown with your GitHub name.</p>
+      <div class="stack"><button class="btn md primary" type="button" data-ok disabled>Send</button><button class="btn md secondary" type="button" data-close>Skip</button></div></div>`,
+    { size: 'narrow', onOpen: (s, close) => {
+      const t = $('#whyIn', s); const ok = $('[data-ok]', s); t.addEventListener('input', () => { ok.disabled = !t.value.trim(); });
+      ok.addEventListener('click', async () => { ok.disabled = true; try { await api.addWhy(el.dataset.group, el.dataset.project, t.value); close(); drawRate(el, n); toast('Thanks, that helps.'); } catch (e) { ok.disabled = false; oops(e); } });
+    } });
+  const showWhys = (el, items) => dialog('What stopped it', `<div class="comments lvl2">${items.map((w) => `<div class="cmt" data-wid="${w.id}"><div class="who"><span class="av">${esc(w.author[0].toUpperCase())}</span><span class="n">@${esc(w.author)}</span>${w.held ? '<span class="pill warn"><i></i>Waiting for a mod</span>' : ''}<span class="t">${ago(w.created)}</span></div><p></p></div>`).join('')}</div>`,
+    { size: 'narrow', onOpen: (s) => items.forEach((w) => fillText($(`[data-wid="${w.id}"] p`, s), w.body)) });
 
   // ── Notes lists ──
   function voteBtn(n, big) {

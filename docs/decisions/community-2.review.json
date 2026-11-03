@@ -1,0 +1,187 @@
+{
+  "title": "Step 2: what people say about each feature",
+  "key": "ose-community-2",
+  "out": "community-2.review.html",
+  "images": "images/community-2.review",
+  "runs": {
+    "before": "runs-community-2/before",
+    "after": "runs-community-2/after"
+  },
+  "labels": {
+    "before": "Step 1 (approved)",
+    "after": "Step 2 preview"
+  },
+  "themes": [
+    "light"
+  ],
+  "theme": "fixed",
+  "crops": {
+    "c1-few": [
+      "ose",
+      "c1-few",
+      "1440x900+0+0"
+    ],
+    "c2-took": [
+      "ose",
+      "c2-took",
+      "1440x900+0+0"
+    ],
+    "c3-blank": [
+      "ose",
+      "c3-blank",
+      "1440x900+0+0"
+    ],
+    "c4-dev": [
+      "ose",
+      "c4-dev",
+      "1440x900+0+0"
+    ],
+    "c5-phone": [
+      "ose",
+      "c5-phone",
+      "390x844+0+0"
+    ],
+    "c7-why": [
+      "ose",
+      "c7-why",
+      "1440x900+0+0"
+    ],
+    "c8-whylink": [
+      "ose",
+      "c8-whylink",
+      "1440x900+0+0"
+    ]
+  },
+  "steps": [
+    {
+      "id": "C-1",
+      "surface": "Subcategory page",
+      "path": "Presentations → Compare → tap a mark",
+      "crop": "c1-few",
+      "headline": "Tapping a mark opens a popup with what we found and what people say, and you can give your own answer.",
+      "changed": "The small tip becomes a popup. \"What we found\" is the same AI answer and source as before. Under it, \"What people say\": everyone's answers so far (\"3 people: 3 partly\"), your Yes / Partly / No, a comment box once you've answered, and the comments with GitHub names.",
+      "notice": "People's answers show from the very first one, as you asked. Totals carry no names; comments do.",
+      "risk": "The votes and comments in these pictures are made-up samples; the real site starts at zero. Votes and comments need the server step before they work for real.",
+      "highlight": {
+        "box": [
+          34,
+          5,
+          31,
+          66
+        ]
+      }
+    },
+    {
+      "id": "C-2",
+      "surface": "Subcategory page",
+      "path": "Presentations → Compare → reveal.js, \"Opens PowerPoint files\"",
+      "crop": "c2-took",
+      "headline": "Once 5 people have answered, the table's mark shows their average, and the AI's answer is no longer shown.",
+      "changed": "The AI said reveal.js can't open PowerPoint files (✗). In this sample 7 people answered, 6 yes and 1 no, so the mark becomes ✓ and the popup says \"Table shows: Yes\". The \"What we found\" card goes, as you chose.",
+      "notice": "The community's view outweighs the AI's once enough people agree.",
+      "risk": "Other marks in the sample table also moved, because the made-up voters don't always agree with the AI. The average counts partly as half a yes, so 3 yes and 2 no shows as partly.",
+      "highlight": {
+        "box": [
+          34,
+          5,
+          31,
+          41
+        ]
+      }
+    },
+    {
+      "id": "C-3",
+      "surface": "Subcategory page",
+      "path": "Interface design → Compare → a blank dot, signed out",
+      "crop": "c3-blank",
+      "headline": "A \"not checked yet\" dot can now be tapped, so anyone can give the first answer.",
+      "changed": "Before, the dot did nothing. Now it opens the same popup, with one card: \"Nobody has checked this yet. Be the first.\" Signed out, it says answering needs a GitHub sign-in; pressing an answer opens sign-in.",
+      "notice": "The blanks (about 1 in 5 paid-app answers) can be filled by people who use the app.",
+      "risk": "The dot looks the same as before, so people may not guess it's tappable; the key under the table now says \"Tap a mark to see its source or give your answer\".",
+      "highlight": {
+        "box": [
+          34,
+          5,
+          31,
+          28
+        ]
+      }
+    },
+    {
+      "id": "C-4",
+      "surface": "Subcategory page",
+      "path": "Interface design → Compare → Penpot, signed in as Penpot's developer, Edit",
+      "crop": "c4-dev",
+      "headline": "A project's verified developer gets their own \"From the developer\" answer, kept apart from everyone else's.",
+      "changed": "A \"From the developer\" card shows their answer, note and name. Their own Edit opens Yes / Partly / No, a note and Save. Their answer isn't counted in \"What people say\", and they can't also vote there.",
+      "notice": "Maintainers have a separate voice, as you described; it never tips the average.",
+      "risk": "Only developers who already claimed their project (\"Tag my project\") see this.",
+      "highlight": {
+        "box": [
+          34,
+          15,
+          31,
+          28
+        ]
+      }
+    },
+    {
+      "id": "C-5",
+      "surface": "Subcategory page",
+      "path": "Presentations → Compare → tap a mark, on a phone",
+      "crop": "c5-phone",
+      "headline": "On a phone the popup slides up from the bottom, like the site's other popups.",
+      "changed": "Same content; the Yes / Partly / No buttons fill the width so they're easy to tap.",
+      "notice": "Answering works one-handed.",
+      "risk": "Long comment lists scroll inside the sheet.",
+      "highlight": {
+        "box": [
+          0,
+          33,
+          100,
+          67
+        ]
+      }
+    },
+    {
+      "id": "C-6",
+      "surface": "Project page",
+      "path": "Penpot → Listed in → \"Does Penpot do this job?\" → Not really",
+      "crop": "c7-why",
+      "headline": "Answering \"Not really\" now asks what stopped it, the comment you approved in October when the boards were removed.",
+      "changed": "A small popup: one box, \"Optional. Shown with your GitHub name.\", Send (greyed until you type) and Skip. Your \"Not really\" is already saved either way.",
+      "notice": "Developers and visitors learn why a project falls short, not just that it does.",
+      "risk": "",
+      "highlight": {
+        "box": [
+          34,
+          5,
+          31,
+          39
+        ]
+      }
+    },
+    {
+      "id": "C-7",
+      "surface": "Project page",
+      "path": "Penpot → Listed in",
+      "crop": "c8-whylink",
+      "runs": [
+        "after"
+      ],
+      "new": true,
+      "headline": "Once someone has said what stopped it, a small button under the score opens what they wrote.",
+      "changed": "\"1 said what stopped it\" under the score; tapping it lists the comments with names. The score also now shows counts from the first answer (\"2 yes · 1 not really\") instead of \"not enough for a score\".",
+      "notice": "Something useful shows even with one answer, as you asked.",
+      "risk": "",
+      "highlight": {
+        "box": [
+          4,
+          82,
+          11,
+          6
+        ]
+      }
+    }
+  ]
+}

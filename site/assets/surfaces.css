@@ -178,3 +178,36 @@ html[data-v="b"] .rvfeat .fx-list { display:grid; grid-template-columns:repeat(2
 .cmpkey .kp { white-space:nowrap; display:inline-flex; align-items:center; gap:4px; } /* WHY: the mark and its word must not split across lines on a phone */
 .prov .prov-short { display:none; }
 @media (max-width:640px) { .prov .prov-long { display:none; } .prov .prov-short { display:inline; } }
+
+/* ── Step 2: what people say (assets/opinions.js, Nov 3) ── */
+/* WHY a blank mark looks the same as before, only tappable: no new mark in the tables (Destin, step-2 deck Q-6: "overcomplicated"). */
+.cell.unk { color:var(--fg-faint); background:transparent; font-weight:400; }
+.cell.unk:hover { background:var(--inset); }
+/* The project page's Yes / Partly / No pill as a button: same pill, opens the same popup as a table mark. */
+/* WHY only the button look is reset: the pill keeps its own tint and outline, so the page looks exactly as before. */
+.pill.pillbtn { font-family:inherit; font-size:11px; line-height:1.3; color:var(--fg-2); cursor:pointer; }
+.pill.pillbtn.unk { color:var(--fg-dim); border-style:dashed; }
+.pill.pillbtn:hover { box-shadow:0 0 0 1px var(--accent); }
+/* The popup: a small label, then one card per section (guide: Card levels). */
+[data-opslot] { display:flex; flex-direction:column; gap:16px; }
+.op-sec { display:flex; flex-direction:column; gap:6px; } .op-sec .label { margin:0; } .op-sec[hidden] { display:none; }
+.op-start { justify-content:flex-start; align-items:flex-start; flex-wrap:nowrap; }
+.op-card a { color:var(--fg); }
+.op-shows { display:inline-flex; align-items:center; gap:6px; }
+.seg.op-seg button { padding:5px 12px; } .seg.locked { opacity:.6; }
+/* WHY red-tinted (guide: a problem's notice box), only where the failed part was. */
+.callout.err { background:rgb(239 68 68 / .10); border-color:rgb(239 68 68 / .3); }
+.op-subj { margin:0; }
+.op-card { padding:12px; display:flex; flex-direction:column; gap:8px; }
+.op-card p, .op-card blockquote { margin:0; }
+.op-card .tipq { padding:6px 10px; border-left:3px solid var(--edge-strong); color:var(--fg-2); font-style:italic; font-size:12px; }
+.op-row { display:flex; align-items:center; justify-content:space-between; gap:8px; flex-wrap:wrap; }
+.op-btns { display:flex; gap:6px; }
+.op-devedit .field { flex:1; min-width:0; }
+.op-cmts { padding:4px 0 0; gap:12px; }
+.op-cmts .cmt p { font-size:13px; }
+.linkbtn { background:none; border:0; padding:0; font-family:inherit; color:inherit; text-decoration:underline; cursor:pointer; }
+@media (max-width:640px) { .op-seg { width:100%; } .op-seg button { flex:1; min-height:44px; } }
+.op-grow { flex:1; }
+.op-devedit { display:flex; flex-direction:column; gap:8px; }
+.op-devedit[hidden] { display:none; }

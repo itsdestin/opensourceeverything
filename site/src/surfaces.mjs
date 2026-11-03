@@ -40,6 +40,10 @@ export const provAttrs = (a, t) => (a?.source ? ` data-src="${esc(a.source)}" da
 // WHY "Source" alone on a phone (Nov 2 screenshots): the site name squeezed the feature's own text into a narrow column.
 export const provLabel = (a, t) => (a?.source ? `<button type="button" class="prov" data-name="${esc(t.name)}" data-v="${MARK[a.v][1]}"${a.note ? ` data-note="${esc(a.note)}"` : ''}${provAttrs(a, t)}><span class="prov-long">${esc(srcHost(a.source))} · AI</span><span class="prov-short">Source</span></button>` : '');
 
+// WHY which app and which feature on every mark (step 2, Nov 3): tapping one opens "What people say" for exactly that pair.
+// subj: "p:<project id>" or "c:<closed app name>"; the server keys answers by subj + "/" + tag.
+export const subjAttrs = (subj, sname, t) => (SOCIAL ? ` data-subj="${esc(subj)}" data-sname="${esc(sname)}" data-ftag="${esc(t.id)}" data-q="${esc(t.question ?? '')}"` : '');
+
 // Attributes for an alternative card: which tags it has (a "yes"). WHY yes only: "Must have" means the whole thing; partly and unknown never match.
 export function cardAttrs(p, g) {
   if (!g) return '';
@@ -80,8 +84,11 @@ const CHEV = '<svg viewBox="0 0 24 24" width="12" height="12" fill="none" stroke
 // WHY closed apps on top (design §1, Nov 2): the table answers "how does each open project compare with the app I'm leaving?".
 // They are tinted and tagged "Proprietary", so they never read as alternatives. A column where a closed app says
 // yes and no open project does is marked: that is a gap in a feature, not only a missing app (design §1).
-const cmpCell = (a, t, app) => { if (a?.v === 'own') a = { ...a, note: `This is about ${app}'s own files, so it doesn't apply.` };
-  return a ? `<td><button type="button" class="cell ${a.v}" data-name="${esc(t.name)}" data-v="${MARK[a.v][1]}"${a.note ? ` data-note="${esc(a.note)}"` : ''}${provAttrs(a, t)} title="${esc([t.name + ': ' + MARK[a.v][1], a.note].filter(Boolean).join(' · '))}">${MARK[a.v][0]}</button></td>` : '<td><span class="fm unk" aria-label="Not checked yet">·</span></td>'; };
+const cmpCell = (a, t, app, subj = `c:${app}`) => { if (a?.v === 'own') a = { ...a, note: `This is about ${app}'s own files, so it doesn't apply.` };
+  const s = a?.v === 'own' ? '' : subjAttrs(subj, app, t); // WHY no votes on "its own format": there is nothing to answer
+  // WHY a blank is a button once there's a server (Destin, step-2 deck Q-4: yes): people can give the first answer there.
+  return a ? `<td><button type="button" class="cell ${a.v}" data-name="${esc(t.name)}" data-v="${MARK[a.v][1]}"${a.note ? ` data-note="${esc(a.note)}"` : ''}${provAttrs(a, t)}${s} title="${esc([t.name + ': ' + MARK[a.v][1], a.note].filter(Boolean).join(' · '))}">${MARK[a.v][0]}</button></td>`
+    : s ? `<td><button type="button" class="cell unk" data-name="${esc(t.name)}" data-v="Not checked yet"${s} aria-label="${esc(t.name)}: not checked yet">·</button></td>` : '<td><span class="fm unk" aria-label="Not checked yet">·</span></td>'; };
 export function groupCompare(g, alts, closed = g.closed ?? []) {
   const tags = tagsOf(g); if (!tags.length || alts.length < 2) return '';
   const shut = closed.filter((c) => tags.some((t) => closedAnswerOf(c, t.id)));
@@ -89,9 +96,9 @@ export function groupCompare(g, alts, closed = g.closed ?? []) {
   // WHY no "Closed apps" / "Open source" divider rows and the tag reads "Proprietary" (Destin, deck E-2, Nov 2): the tag on
   // each row already says it; the dividers were extra lines.
   return `<div class="cmpwrap" data-compare hidden><div class="cmpscroll"><table class="cmp"><thead><tr><th scope="col">${shut.length ? 'App' : 'Project'}</th>${tags.map((t) => `<th scope="col"${gap(t) ? ' class="gapcol"' : ''}><button type="button" class="cmph" data-q="${esc(t.question)}" data-m="${esc(t.meaning)}" data-name="${esc(t.name)}"${gap(t) ? ' data-gap="1"' : ''}>${esc(t.name)}</button>${gap(t) ? '<span class="gapmark">No open project yet</span>' : ''}</th>`).join('')}</tr></thead>
-    <tbody>${shut.map((c) => `<tr class="closedrow"><th scope="row"><a href="${appUrl(c)}">${esc(c)}</a><span class="tag">Proprietary</span></th>${tags.map((t) => cmpCell(closedAnswerOf(c, t.id), t, c)).join('')}</tr>`).join('')}${alts.map((x) => `<tr data-pid="${esc(x.p.id)}"><th scope="row"><a href="${url(`p/${x.p.id}/`)}">${esc(x.p.name)}</a></th>${tags.map((t) => cmpCell(answerOf(x.p.id, t.id), t)).join('')}</tr>`).join('')}</tbody></table></div>
+    <tbody>${shut.map((c) => `<tr class="closedrow"><th scope="row"><a href="${appUrl(c)}">${esc(c)}</a><span class="tag">Proprietary</span></th>${tags.map((t) => cmpCell(closedAnswerOf(c, t.id), t, c)).join('')}</tr>`).join('')}${alts.map((x) => `<tr data-pid="${esc(x.p.id)}"><th scope="row"><a href="${url(`p/${x.p.id}/`)}">${esc(x.p.name)}</a></th>${tags.map((t) => cmpCell(answerOf(x.p.id, t.id), t, x.p.name, `p:${x.p.id}`)).join('')}</tr>`).join('')}</tbody></table></div>
     <!-- WHY a key (Destin, structure deck: yes to "add a one-line key"): the marks were only explained by tapping. Same marks as the cells. -->
-    <p class="cmpkey"><span class="fm yes" aria-hidden="true">✓</span><span>Yes</span><span class="fm partly" aria-hidden="true">~</span><span>Partly</span><span class="fm no" aria-hidden="true">✗</span><span>No</span><span class="fm unk" aria-hidden="true">·</span><span>Not checked yet</span>${shut.some((c) => tags.some((t) => closedAnswerOf(c, t.id)?.v === 'own')) ? '<span class="kp"><span class="fm own" aria-hidden="true">—</span> Its own format</span>' : ''}<span class="cmpkey-how">Tap a mark to see where it comes from</span></p><div class="callout info" data-cmp-none hidden>None of these have everything you picked.</div></div>
+    <p class="cmpkey"><span class="fm yes" aria-hidden="true">✓</span><span>Yes</span><span class="fm partly" aria-hidden="true">~</span><span>Partly</span><span class="fm no" aria-hidden="true">✗</span><span>No</span><span class="fm unk" aria-hidden="true">·</span><span>Not checked yet</span>${shut.some((c) => tags.some((t) => closedAnswerOf(c, t.id)?.v === 'own')) ? '<span class="kp"><span class="fm own" aria-hidden="true">—</span> Its own format</span>' : ''}<span class="cmpkey-how">${SOCIAL ? 'Tap a mark to see its source or give your answer' : 'Tap a mark to see where it comes from'}</span></p><div class="callout info" data-cmp-none hidden>None of these have everything you picked.</div></div>
   <div class="callout info" data-must-none hidden>None of these have everything you picked.</div>`;
 }
 
@@ -100,11 +107,15 @@ export function groupCompare(g, alts, closed = g.closed ?? []) {
 // Tags nobody has checked yet are left out: a row that says nothing is not worth a row.
 const PILL = { yes: ['ok', 'Yes', true], partly: ['warn', 'Partly', true], no: ['', 'No', false] };
 export function projectFeatures(p, listed) {
+  // WHY blank rows stay out (reviewer, Nov 3: rows of "Not checked yet" were the busiest addition): blanks are answered from the Compare table.
   const groups = listed.map(({ group }) => ({ group, rows: tagsOf(group).map((t) => ({ t, a: answerOf(p.id, t.id) })).filter((r) => r.a) })).filter((x) => x.rows.length);
   if (!groups.length) return '';
   // WHY the source at the row's right (reviewer, round 5): a "Source" line under every name repeated 20 times; now it is a small link on the same line as the Pill, and a row with no note is one line.
-  const row = ({ t, a }) => { const [tone, word, dot] = PILL[a.v];
-    return `<div class="frowx"><div class="fx-main"><span class="fx-name" title="${esc(t.question)}">${esc(t.name)}</span>${a.note ? `<span class="fx-note">${esc(a.note)}</span>` : ''}</div><div class="fx-end">${provLabel(a, t)}<span class="pill ${tone}">${dot ? '<i></i>' : ''}${word}</span></div></div>`; };
+  // WHY the answer itself is the button once there's a server (step 2): it opens the same popup as a table mark.
+  const row = ({ t, a }) => { const [tone, word, dot] = a ? PILL[a.v] : ['', 'Not checked yet', false]; const s = subjAttrs(`p:${p.id}`, p.name, t);
+    const pill = s ? `<button type="button" class="pill pillbtn ${tone}${a ? '' : ' unk'}" data-name="${esc(t.name)}" data-v="${a ? MARK[a.v][1] : 'Not checked yet'}"${a?.note ? ` data-note="${esc(a.note)}"` : ''}${provAttrs(a, t)}${s}>${dot ? '<i></i>' : ''}${word}</button>` : `<span class="pill ${tone}">${dot ? '<i></i>' : ''}${word}</span>`;
+    const label = a ? provLabel(a, t).replace('<button type="button" class="prov"', `<button type="button" class="prov"${s}`) : '';
+    return `<div class="frowx"><div class="fx-main"><span class="fx-name" title="${esc(t.question)}">${esc(t.name)}</span>${a?.note ? `<span class="fx-note">${esc(a.note)}</span>` : ''}</div><div class="fx-end">${label}${pill}</div></div>`; };
   return `<section class="surface sec fold-phone rvfeat"><div class="sec-head fold-head"><div><h2 class="h-large">Features</h2></div></div>
     ${groups.map(({ group, rows }) => `${groups.length > 1 ? `<h3 class="label fx-group">${esc(group.name)}</h3>` : ''}<div class="fx-list">${rows.map(row).join('')}</div>`).join('')}</section>`;
 }

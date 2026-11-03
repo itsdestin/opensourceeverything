@@ -60,6 +60,10 @@
   }
   const load = () => { try { return JSON.parse(localStorage.getItem(KEY)) || seed(); } catch { return seed(); } };
   let S = load();
+  // WHY ??=: older saved previews in this browser have no opinions yet.
+  S.op ??= {}; S.opc ??= {}; S.why ??= {};
+  // A sample developer answer (Penpot's developer, who has a claimed project in the preview).
+  S.dev ??= { 'p:penpot/figma-import': { v: 'partly', note: 'Imports Figma files through our free converter; some plugins are lost.', by: 'penpot-team-sample', updated: now - 3 * D } };
   const save = () => { try { localStorage.setItem(KEY, JSON.stringify(S)); } catch { /* preview only */ } };
   // Preview shortcut: ?preview-as=member | new | mod signs in as that kind of user, to try each state quickly.
   const as = new URLSearchParams(location.search).get('preview-as');
@@ -131,6 +135,33 @@
   const NEED_SIGNIN = [401, 'Sign in first.'];
   const TOO_NEW = () => [403, `GitHub accounts can vote once they're ${RULES.minAgeDays} days old.`];
 
+  // ── Pretend answers for the preview: steady made-up counts per feature, so every state shows somewhere.
+  // Real answers start at zero. About 1 in 4 features has none; others have 1–9, so some are under 5 and some over.
+  const hashOf = (k) => { let h = 7; for (const c of k) h = (h * 31 + c.charCodeAt(0)) >>> 0; return h; };
+  const SAMPLE_WHO = ['erin-sample', 'gus-sample', 'hana-sample', 'ivan-sample', 'jo-sample', 'kim-sample', 'lee-sample'];
+  const SAMPLE_SAY = {
+    yes: ['Works fine for me in daily use.', 'Did this last week on the latest version, no problems.'],
+    partly: ['Works, but only in the desktop app, not on the web.', 'Mostly fine; complex files lose some formatting.'],
+    no: ['Tried it on the latest version and it isn\'t there.', 'There is an open request for this, but it isn\'t built yet: https://example.org/issue/123'],
+  };
+  function sampleOp(k) {
+    const h = hashOf(k); const t = [0, 1, 2, 3, 6, 7, 9, 0][h % 8]; if (!t) return { yes: 0, partly: 0, no: 0, said: [] };
+    // WHY the sample voters mostly agree with the mark on the page (preview only): random answers flipped half the table, which
+    // would misrepresent what the feature does. About 1 in 9 disagrees, so the "people's answer took over" case still shows.
+    const i = k.lastIndexOf('/'); const el = typeof document !== 'undefined' && document.querySelector(`[data-subj="${CSS.escape(k.slice(0, i))}"][data-ftag="${CSS.escape(k.slice(i + 1))}"]`);
+    const ai = { Yes: 'yes', Partly: 'partly', No: 'no' }[el?.dataset.v] ?? 'yes';
+    const lean = h % 9 === 0 ? (ai === 'yes' ? 'partly' : 'yes') : ai; const c = { yes: 0, partly: 0, no: 0 };
+    for (let j = 0; j < t; j++) c[j < Math.ceil(t * 0.75) ? lean : ['yes', 'partly', 'no'][(h >>> (j + 6)) % 3]]++;
+    const said = Object.entries(c).filter(([, n]) => n).slice(0, 2).map(([v], i) => ({ id: -(h % 1e6) - i, author: SAMPLE_WHO[(h >>> (i * 3)) % 7], v, body: SAMPLE_SAY[v][(h >>> (i + 2)) % 2], created: now - ((h >>> (i * 5)) % 30 + 1) * D }));
+    return { ...c, said };
+  }
+  const opCounts = (k) => { const s = sampleOp(k); const c = { yes: s.yes, partly: s.partly, no: s.no }; for (const v of Object.values(S.op[k] ?? {})) c[v]++; return c; };
+  // Each comment shows its writer's current answer (comments are tied to an answer, never posted alone).
+  const opComments = (k, x) => [...sampleOp(k).said, ...(S.opc[k] ?? []).map((c) => ({ ...c, v: S.op[k]?.[c.author] ?? null }))]
+    .filter((c) => sees(c, x)).sort((a, b) => b.created - a.created).map((c) => ({ ...c, mine: !!x && c.author === x.login, held: !!c.held }));
+  const ownsProject = (x, pid) => !!x && S.pitches.some((p) => p.project === pid && p.owner === x.login && p.verified);
+  const sampleWhys = (k) => { const h = hashOf(k); return h % 3 ? [] : [{ id: -(h % 1e6), author: SAMPLE_WHO[h % 7], body: ['Crashed on my files with tracked changes.', 'Missing the sharing features my team needs.'][(h >>> 3) % 2], created: now - ((h >>> 5) % 20 + 1) * D }]; };
+
   const api = {
     demo: true,
     async me() {
@@ -163,6 +194,54 @@
     async rate(group, project, value) {
       const x = me(); return guard(x, ...NEED_SIGNIN) ?? guard(oldEnough(x), ...TOO_NEW()) ?? guard([1, -1, 0].includes(value), 400, 'Not a valid answer.') ?? (() => {
         const r = (S.ratings[`${group}/${project}`] ??= {}); if (value) r[x.login] = value; else delete r[x.login]; save(); return delay({ ok: true });
+      })();
+    },
+
+    // ── Opinions: each person's yes / partly / no on one feature of one app, with an optional comment ──
+    // WHY (Destin, Nov 3; docs/community-history.md): "a ratings/comments section with averages, not attribution to a single
+    // person … who 'correct' it". Everyone's answers are shown from the first one; from 5 answers the table shows their average.
+    // key: "p:<project id>/<tag>" or "c:<closed app name>/<tag>".
+    async opinions(keys) {
+      const x = me(); const out = {};
+      for (const k of keys) { const c = opCounts(k); out[k] = { ...c, mine: x ? (S.op[k]?.[x.login] ?? null) : null, comments: opComments(k, x).length }; }
+      return delay(out);
+    },
+    async opinion(key) {
+      const x = me(); const pid = key.startsWith('p:') ? key.slice(2).split('/')[0] : null;
+      return delay({ ...opCounts(key), mine: x ? (S.op[key]?.[x.login] ?? null) : null, comments: opComments(key, x),
+        dev: S.dev[key] ?? null, canDev: !!pid && ownsProject(x, pid) });
+    },
+    async opine(key, v) {
+      const x = me(); return guard(x, ...NEED_SIGNIN) ?? guard(oldEnough(x), ...TOO_NEW()) ?? guard(v === null || ['yes', 'partly', 'no'].includes(v), 400, 'Not a valid answer.') ?? (() => {
+        const r = (S.op[key] ??= {}); if (v) r[x.login] = v; else delete r[x.login]; save(); return delay({ ok: true });
+      })();
+    },
+    async comment(key, body) {
+      const x = me(); const sc = await screen(body);
+      return guard(x, ...NEED_SIGNIN) ?? guard(!banned(x), 403, 'This account can no longer post.') ?? guard(S.op[key]?.[x.login], 400, 'Pick your answer first.')
+        ?? guard(body?.trim(), 400, 'Write something first.') ?? guard(!sc.error, 400, sc.error) ?? (() => {
+          const c = { id: S.nextId++, author: x.login, body: body.trim().slice(0, 1000), created: Date.now(), held: heldFor(x) || sc.flags.length > 0 };
+          (S.opc[key] ??= []).push(c); save(); return delay({ ok: true, held: c.held });
+        })();
+    },
+    async deleteComment(key, id) {
+      const x = me(); const list = S.opc[key] ?? []; const c = list.find((y) => y.id === +id);
+      return guard(c && (c.author === x?.login || isMod(x)), 403, 'Only the person who wrote it can delete it.') ?? (() => { S.opc[key] = list.filter((y) => y !== c); save(); return delay({ ok: true }); })();
+    },
+    // WHY a separate answer for the project's developer (Destin, Nov 3, Q-8): shown in its own section, never counted as a vote.
+    async devAnswer(key, v, note) {
+      const x = me(); const pid = key.startsWith('p:') ? key.slice(2).split('/')[0] : null; const sc = await screen(note ?? '');
+      return guard(pid && ownsProject(x, pid), 403, "Only the project's verified developer can answer here.") ?? guard(v === null || ['yes', 'partly', 'no'].includes(v), 400, 'Not a valid answer.') ?? guard(!sc.error, 400, sc.error) ?? (() => {
+        if (v) S.dev[key] = { v, note: (note ?? '').trim().slice(0, 200) || null, by: x.login, updated: Date.now() }; else delete S.dev[key];
+        save(); return delay({ ok: true });
+      })();
+    },
+    // "What stopped it?" after a "Not really" on "Does it do the job?" (Destin approved, redesign-3 Q-boards, Oct 27).
+    async whys(group, project) { const k = `${group}/${project}`; return delay({ items: [...sampleWhys(k), ...(S.why[k] ?? [])].filter((w) => sees(w, me())).map((w) => ({ ...w, mine: w.author === me()?.login })) }); },
+    async addWhy(group, project, body) {
+      const x = me(); const sc = await screen(body); const k = `${group}/${project}`;
+      return guard(x, ...NEED_SIGNIN) ?? guard((S.ratings[k] ?? {})[x.login] === -1, 400, 'Answer "Not really" first.') ?? guard(body?.trim(), 400, 'Write something first.') ?? guard(!sc.error, 400, sc.error) ?? (() => {
+        (S.why[k] ??= []).push({ id: S.nextId++, author: x.login, body: body.trim().slice(0, 1000), created: Date.now(), held: heldFor(x) || sc.flags.length > 0 }); save(); return delay({ ok: true });
       })();
     },
 
