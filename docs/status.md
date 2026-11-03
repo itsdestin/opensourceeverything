@@ -26,9 +26,8 @@ The agreed next design is in `docs/evidence-map-design.md` (not built yet).
 |---|---|
 | Glass blur on the top controls | Live with the blur everywhere (the recommended choice). Drop it on phones only if it feels slow there |
 | $5/month Cloudflare plan for meaning search | Optional. The trial was a small gain; it's switched off. See `docs/ai-search.md` |
-| Delete the Anthropic API key pasted in chat | It's at Anthropic's console; the local copy is `~/.config/alternatives-map/anthropic-key` |
-| Launch post and esk message | Drafts in `docs/launch.md`; the project count in them is stale (980 shown now) |
-| Delete the 13 old seed notes | From the first "What's missing" seed; `worker/seed-notes.mjs` replaced them. Deleting live data: ask Destin first |
+| Delete the Anthropic API key pasted in chat | <!-- WHY: Nov 2 Destin is keeping it for the evidence-map research runs. --> Kept on purpose for the next phase's AI research runs; delete at Anthropic's console afterwards. Local copy: `~/.config/alternatives-map/anthropic-key` |
+| Swap the old "What's missing" notes | <!-- WHY: Nov 2 count on the live database corrected the earlier "13". --> Live has 96 notes from the first seed (0 votes, 0 replies). `worker/seed-notes.mjs` deletes those and adds 13 short ones under itsdestin. Not run yet: needs Destin's OK |
 
 ## Deploying
 
