@@ -1,0 +1,354 @@
+{
+  "title": "Step 2: letting people correct the answers",
+  "key": "ose-community-1",
+  "out": "community-1.questions.html",
+  "themes": ["light"],
+  "theme": "fixed",
+  "steps": [
+    {
+      "id": "P-1",
+      "page": "Sending a correction",
+      "intro": "Every yes / partly / no on the site now shows where it came from. These four decide how someone who knows better can fix one. (Our own robot tests come later, in the tests step, so they're not asked here.)"
+    },
+    {
+      "id": "Q-1",
+      "words": true,
+      "surface": "Comparison tables and project pages",
+      "path": "Tap any yes / partly / no mark → its pop-up",
+      "headline": "Where should someone send a correction to an answer?",
+      "today": "Tapping a mark shows the answer, the quote, the source and \"How we check\". The only way to report a wrong one is the GitHub \"Fix something\" form, which asks you to type the project, the group and what's wrong.",
+      "problem": "Fixing one answer means leaving the page and filling in a long form on GitHub. Almost nobody will, so wrong answers stay wrong.",
+      "proposal": "Pick where the correction is sent from.",
+      "options": [
+        {
+          "id": "popup",
+          "label": "Button in the pop-up",
+          "summary": "A \"Suggest a correction\" button in the pop-up opens a short form right there: the new answer, a link and a few words. It's saved by the site itself.",
+          "pros": [
+            "Two taps from the wrong answer, so people actually do it.",
+            "The form already knows which app and which question, so nothing to type twice.",
+            "Uses the GitHub sign-in the site already has."
+          ],
+          "cons": [
+            "One more button in the pop-up.",
+            "New server work, so it takes longer to build than reusing the GitHub form."
+          ],
+          "recommended": true
+        },
+        {
+          "id": "github",
+          "label": "The GitHub form",
+          "summary": "The pop-up links to the existing GitHub form, with the app and question filled in.",
+          "pros": [
+            "Quick to build; mods already review these forms.",
+            "Every correction is public on GitHub."
+          ],
+          "cons": [
+            "Leaves the site, and GitHub's pages are confusing for non-developers.",
+            "Slow: each one waits for a mod."
+          ]
+        },
+        {
+          "id": "both",
+          "label": "Both",
+          "summary": "The button in the pop-up, plus the GitHub form kept for people who prefer it.",
+          "pros": [
+            "Nobody loses a way they already use."
+          ],
+          "cons": [
+            "Two places to check for the same kind of correction."
+          ]
+        }
+      ]
+    },
+    {
+      "id": "Q-2",
+      "words": true,
+      "surface": "The correction form",
+      "path": "Pop-up → Suggest a correction",
+      "headline": "Must a correction include a link to a page that backs it up?",
+      "today": "Every AI answer must name a source page, or it's left blank. The How-we-check page promises every value links to its source.",
+      "problem": "A correction with no link is one person's word against a cited page. But some things people know first-hand (\"I use it daily, it does this\") have no page.",
+      "proposal": "Pick the rule.",
+      "options": [
+        {
+          "id": "required",
+          "label": "Link required",
+          "pros": [
+            "Keeps the site's promise: every answer shows where it came from.",
+            "Easy for a second person to check: open the link and look."
+          ],
+          "cons": [
+            "Someone who knows from using the app, but can't find a page, can't send it."
+          ],
+          "recommended": true
+        },
+        {
+          "id": "optional",
+          "label": "Link optional",
+          "summary": "Without a link, the answer is labelled \"From a user's own use\".",
+          "pros": [
+            "Catches first-hand knowledge no page states."
+          ],
+          "cons": [
+            "Harder to check, so easier to game.",
+            "Answers without a source break the \"every value links to its source\" promise."
+          ]
+        }
+      ]
+    },
+    {
+      "id": "Q-3",
+      "words": true,
+      "surface": "The correction form",
+      "path": "Pop-up → Suggest a correction",
+      "headline": "Who should be allowed to send a correction?",
+      "today": "Posting on the \"What's missing\" boards needs a GitHub sign-in, and votes need a GitHub account at least 14 days old. A new account's first post waits for a mod.",
+      "problem": "Too open and spam or a company boosting its own app gets in; too closed and few people help.",
+      "proposal": "Pick who can send one.",
+      "options": [
+        {
+          "id": "same-rules",
+          "label": "Same rules as the boards",
+          "summary": "Signed in with GitHub; accounts under 14 days old have their first correction checked by a mod first.",
+          "pros": [
+            "Rules people already meet; nothing new to explain.",
+            "Already proven against spam on the boards."
+          ],
+          "cons": [
+            "People without a GitHub account can't help (most everyday users don't have one)."
+          ],
+          "recommended": true
+        },
+        {
+          "id": "anyone",
+          "label": "Anyone, no sign-in",
+          "pros": [
+            "The most people can help."
+          ],
+          "cons": [
+            "Easy to spam, and impossible to tell one person from ten.",
+            "Every correction would need a mod to look at it."
+          ]
+        }
+      ]
+    },
+    {
+      "id": "Q-4",
+      "words": true,
+      "surface": "Comparison tables and project pages",
+      "path": "A \"Not checked yet\" dot",
+      "headline": "Should people also be able to fill in blank answers, not only correct existing ones?",
+      "today": "About 1 in 5 answers for paid apps, and about 527 for open projects, are blank and show a faint dot meaning \"Not checked yet\".",
+      "problem": "The blanks are where help matters most, but there is nothing to tap on them.",
+      "proposal": "Yes: the dot becomes tappable and opens the same short form, \"Add an answer\". No: only existing answers can be corrected."
+    },
+    {
+      "id": "P-2",
+      "page": "When a correction replaces the AI's answer",
+      "intro": "The plan we agreed said 5 well-rated, matching results from the community replace the AI's answer. These four check that rule against how small the community is today."
+    },
+    {
+      "id": "Q-5",
+      "words": true,
+      "surface": "Every answer",
+      "path": "Behind the scenes",
+      "headline": "What should it take for a correction to replace the AI's answer?",
+      "today": "Nothing can replace an answer yet. The agreed plan says 5 well-rated results that all match.",
+      "problem": "With a small community, most answers will never get 5 people, so wrong answers would stay for months. With too low a bar, one person can change an answer to suit themselves.",
+      "proposal": "Pick the bar.",
+      "options": [
+        {
+          "id": "one-plus-one",
+          "label": "A second person or a mod",
+          "summary": "The correction goes live once one other signed-in person agrees after opening the link, or a mod approves it.",
+          "pros": [
+            "Wrong answers get fixed in days, not months.",
+            "Still two people, so one person can't change an answer alone.",
+            "Mods can unblock corrections nobody else gets to."
+          ],
+          "cons": [
+            "Two friends could push a wrong answer through (mods can undo it)."
+          ],
+          "recommended": true
+        },
+        {
+          "id": "mod-only",
+          "label": "A mod approves each one",
+          "pros": [
+            "Every change is looked at by someone trusted."
+          ],
+          "cons": [
+            "Everything waits on a few mods; slow, and it piles up."
+          ]
+        },
+        {
+          "id": "five",
+          "label": "5 matching results (as planned)",
+          "pros": [
+            "Hardest to game."
+          ],
+          "cons": [
+            "Almost nothing changes until the community is much bigger."
+          ]
+        }
+      ]
+    },
+    {
+      "id": "Q-6",
+      "words": true,
+      "surface": "Comparison tables and project pages",
+      "path": "An answer with a correction waiting",
+      "headline": "While a correction waits for a second person, what should visitors see?",
+      "today": "Nothing: there are no corrections yet.",
+      "problem": "Visitors should know an answer is being questioned, and others need a way to find corrections to agree with. But marks across the tables make them busier.",
+      "proposal": "Pick how much shows.",
+      "options": [
+        {
+          "id": "popup-only",
+          "label": "Only in the pop-up",
+          "summary": "The table looks the same. Tapping the mark shows \"A correction is waiting: X says no\" with an \"I agree\" button and its link.",
+          "pros": [
+            "Tables stay exactly as clean as now.",
+            "The person who opens the pop-up is the one who can check it."
+          ],
+          "cons": [
+            "Nobody notices a waiting correction unless they tap that mark."
+          ],
+          "recommended": true
+        },
+        {
+          "id": "mark",
+          "label": "A small mark on the cell",
+          "pros": [
+            "Visitors see at a glance which answers are in question."
+          ],
+          "cons": [
+            "Busier tables; another mark to explain in the key."
+          ]
+        }
+      ]
+    },
+    {
+      "id": "Q-7",
+      "words": true,
+      "surface": "The answer's pop-up",
+      "path": "An answer that was corrected",
+      "headline": "Once replaced, should the AI's original answer stay visible?",
+      "today": "Every answer is from the AI, so there's no earlier version to show.",
+      "problem": "Showing the history proves nothing was quietly changed, but it adds a line to the pop-up.",
+      "proposal": "Yes: the pop-up gets one line at the bottom, \"Earlier: AI said partly (Nov 2026)\". No: only the current answer shows; the history stays in the site's public data files."
+    },
+    {
+      "id": "Q-8",
+      "words": true,
+      "surface": "The correction form",
+      "path": "A project's verified developer sends a correction",
+      "headline": "How should a correction from the project's own developer count?",
+      "today": "Developers can already prove they run a project (\"Tag my project\"). Their pitches show as \"From the Developer\".",
+      "problem": "Developers know their own project best, but have a reason to say \"yes\" to everything.",
+      "proposal": "Pick the rule.",
+      "options": [
+        {
+          "id": "labelled-needs-second",
+          "label": "Labelled, still needs a second person",
+          "summary": "Shown as \"From the developer\", and goes live the same way as anyone's.",
+          "pros": [
+            "Same fair rule for everyone; visitors see who said it."
+          ],
+          "cons": [
+            "A developer fixing an obvious mistake still waits."
+          ],
+          "recommended": true
+        },
+        {
+          "id": "labelled-instant",
+          "label": "Labelled, goes live at once",
+          "pros": [
+            "Developers fix their own listing straight away, which encourages them to help."
+          ],
+          "cons": [
+            "Easy for a developer to overstate their project; the label is the only guard."
+          ]
+        }
+      ]
+    },
+    {
+      "id": "P-3",
+      "page": "Opinions and credit",
+      "intro": "The plan also had star ratings and comments per question, kept separate from the facts. These two decide whether that comes now."
+    },
+    {
+      "id": "Q-9",
+      "words": true,
+      "surface": "Comparison tables and project pages",
+      "path": "Each checklist question",
+      "headline": "Should people be able to rate how well a feature works, not only say whether it exists?",
+      "today": "Each project already has a thumbs up / down on its subcategory page. The checklist only says yes / partly / no.",
+      "problem": "\"Opens Word files: yes\" doesn't say whether it does it well. Opinions would, but each one adds stars or comments to already-full pages.",
+      "proposal": "Pick when.",
+      "options": [
+        {
+          "id": "later",
+          "label": "Later",
+          "summary": "Build corrections first; add opinions once people are using them.",
+          "pros": [
+            "Pages stay as simple as now.",
+            "Step 2 ships sooner."
+          ],
+          "cons": [
+            "\"Yes, but badly\" can't be said, except as a \"partly\" with a note."
+          ],
+          "recommended": true
+        },
+        {
+          "id": "now",
+          "label": "Now, as stars and comments",
+          "summary": "\"What people think\" sits beside \"What was found\" in each pop-up.",
+          "pros": [
+            "Shows quality, not just whether a feature exists."
+          ],
+          "cons": [
+            "Busier pop-ups, and comments need moderating.",
+            "Step 2 takes noticeably longer."
+          ]
+        }
+      ]
+    },
+    {
+      "id": "Q-10",
+      "words": true,
+      "surface": "The answer's pop-up",
+      "path": "An answer someone corrected",
+      "headline": "Should the pop-up name who corrected an answer?",
+      "today": "Posts on the \"What's missing\" boards show the poster's GitHub name. AI answers say \"AI-researched\".",
+      "problem": "Credit encourages people to help, and names make answers accountable. But some people would rather help without being named.",
+      "proposal": "Pick one.",
+      "options": [
+        {
+          "id": "name",
+          "label": "Show their GitHub name",
+          "summary": "\"Corrected by @name · confirmed by @name\".",
+          "pros": [
+            "Credit for helping, the same as on the boards.",
+            "Visitors can see who stands behind an answer."
+          ],
+          "cons": [
+            "Someone who prefers privacy might not help."
+          ],
+          "recommended": true
+        },
+        {
+          "id": "anon",
+          "label": "Just \"Community-checked\"",
+          "pros": [
+            "Simpler; nobody is singled out."
+          ],
+          "cons": [
+            "No credit, so less reason to help."
+          ]
+        }
+      ]
+    }
+  ]
+}
