@@ -22,11 +22,12 @@ import { fileURLToPath } from 'node:url';
 
 const HERE = dirname(fileURLToPath(import.meta.url));
 const ROOT = join(HERE, '..');
-const OUT = join(HERE, 'out/closed-answers.json'); mkdirSync(dirname(OUT), { recursive: true });
+const arg = (name) => { const i = process.argv.indexOf(`--${name}`); return i > 0 ? process.argv[i + 1] : null; };
+// WHY --out: the pilot runs both models on the same apps; separate files keep one model's answers from skipping the other's.
+const OUT = join(HERE, arg('out') ?? 'out/closed-answers.json'); mkdirSync(dirname(OUT), { recursive: true });
 const read = (f) => JSON.parse(readFileSync(f, 'utf8'));
 const features = read(join(ROOT, 'data/features.json'));
 const groups = read(join(ROOT, 'data/groups.json')).groups;
-const arg = (name) => { const i = process.argv.indexOf(`--${name}`); return i > 0 ? process.argv[i + 1] : null; };
 
 // WHY two model choices: Haiku is ~20x cheaper per word read; Sonnet reads pages more carefully and gets the newer search
 // that filters pages before reading them. The pilot compares both before Destin picks one for the full run.
@@ -52,16 +53,21 @@ let todo = [...apps.values()].filter((a) => !done[a.name]);
 if (arg('only')) { const want = new Set(arg('only').split(',').map((s) => s.trim())); todo = todo.filter((a) => want.has(a.name)); }
 if (arg('limit')) todo = todo.slice(0, Number(arg('limit')));
 
+// WHY the source and paid-plan rules (pilot, Nov 2): 1 in 5 Haiku answers cited comparison blogs, and Slack's paid-only
+// single sign-on came back "no" while Dropbox's paid-only links came back "partly". One rule for both.
 const SYSTEM = `You fill in a feature checklist for one closed (not open-source) app, for a public map read by everyday people.
+Always search before answering: an app with no searches has no sources, and every answer then becomes a blank.
 Use web search and web fetch to check each item against the app maker's own pages (feature pages, help center, docs, pricing,
-system requirements) first; a well-known independent review is acceptable when the maker says nothing.
+system requirements, app store listings) first. When the maker says nothing, an established outlet (a major tech news
+site, Wikipedia) is acceptable; never a pricing-comparison, SEO or "alternatives" blog, or a page that looks machine-written.
 For each item give:
 - v: "yes", "partly" or "no", following the item's meaning; or "unknown" if you could not find a page that clearly says.
   Prefer "unknown" over a guess or over your own memory. Answer "no" only when a page makes it clear.
 - note: for "partly" (and optionally "no"), under 70 characters in plain words; otherwise null.
 - source: for yes / partly / no, the URL of the page that backs it; null for unknown.
 - quote: for yes / partly / no, a short exact phrase from that page; null for unknown.
-Answer about the app as offered today, in its normal paid or free version, not a discontinued one.
+Answer about the app as offered today, not a discontinued version. If something is only in some paid plans, answer "partly"
+and name the plan in the note (e.g. "Business plan and up only").
 When finished, reply with only the JSON object described below and nothing else:
 {"answers":[{"tag":"...","v":"yes|partly|no|unknown","note":null,"source":null,"quote":null}]}`;
 
@@ -69,7 +75,9 @@ const tagDef = (t) => features.tags[t];
 const input = (a) => `App: ${a.name}\nListed under: ${[...a.groups].join('; ')}\n\nItems:\n` +
   [...a.tags].map((t) => `- ${t}: ${tagDef(t).name}. ${tagDef(t).question} (${tagDef(t).meaning})`).join('\n');
 const tools = [
-  { type: M.search, name: 'web_search', max_uses: 5 },
+  // WHY more for Sonnet: its newer search runs several queries per step, so 5 ran out before 8-11 items were checked and it
+  // answered the rest "unknown" (pilot, Nov 2).
+  { type: M.search, name: 'web_search', max_uses: M.id.includes('sonnet') ? 12 : 5 },
   { type: M.fetch, name: 'web_fetch', max_uses: 5 },
 ];
 
@@ -99,7 +107,8 @@ async function ask(a) {
   const usage = { in: 0, out: 0, searches: 0, fetches: 0 };
   for (let round = 0; round < 6; round++) {
     const res = await client.messages.create({ model: M.id, max_tokens: 16000, system: SYSTEM, tools, messages,
-      output_config: { effort: 'low' } });
+      // WHY medium on Sonnet: at low it often answered every item "unknown" without searching (pilot, Nov 2).
+      output_config: { effort: M.id.includes('sonnet') ? 'medium' : 'low' } });
     usage.in += res.usage.input_tokens + (res.usage.cache_read_input_tokens ?? 0) + (res.usage.cache_creation_input_tokens ?? 0);
     usage.out += res.usage.output_tokens;
     usage.searches += res.usage.server_tool_use?.web_search_requests ?? 0;
@@ -126,7 +135,8 @@ await Promise.all(Array.from({ length: 4 }, async () => {
       // WHY drop answers without a source: design §2 — every value shows where it came from; an unsourced one is a blank.
       const kept = Object.fromEntries(answers.filter((x) => want.has(x.tag) && x.v !== 'unknown' && x.source)
         .map((x) => [x.tag, { v: x.v, ...(x.note ? { note: x.note } : {}), source: x.source, quote: x.quote, by: 'ai', checked: today }]));
-      done[a.name] = { answers: kept, model: M.id, usage, cost: Number(c.toFixed(4)) };
+      // WHY keep the dropped ones: shows how many were blank or unsourced, for the quality check and the error rate.
+      done[a.name] = { answers: kept, dropped: answers.filter((x) => !kept[x.tag]), model: M.id, usage, cost: Number(c.toFixed(4)) };
       writeFileSync(OUT, JSON.stringify(done, null, 1) + '\n');
       console.log(`${++n}/${todo.length} ${a.name}: ${Object.keys(kept).length}/${want.size} answered, ${usage.searches} searches, $${c.toFixed(3)}`);
     } catch (e) { failed++; console.error(`${a.name}: ${e.message}`); }
