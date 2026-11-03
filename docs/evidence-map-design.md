@@ -96,13 +96,17 @@ faithfulness for office apps (needs freely licensed tricky Word files; we may ha
 
 ## Order of work
 
+WHY the community step moved up to 2 (Destin, Nov 3): step 1 shows every answer and its source, but nobody can correct
+one until the community step exists.
+
+
 | Step | What | Waits on |
 |---|---|---|
 | 0 | Launch the current `redesign` as is (recommended: visitors and community data build up meanwhile) | Destin's go-ahead |
 | 1 | Source labels, closed apps answer the checklists, gaps page from features, methodology page | Paid AI step, counted first |
-| 2 | Connections lists, open data / building blocks kind, outside sources, search-engine stack page | Review decks |
-| 3 | Test kits and the office pilot | |
-| 4 | Community submissions, robot re-runs, ratings, opinions, hand-over | Server changes |
+| 2 | Community submissions, robot re-runs, ratings, opinions, hand-over (§4) | Server changes |
+| 3 | Connections lists, open data / building blocks kind, outside sources, search-engine stack page | Review decks |
+| 4 | Test kits and the office pilot | |
 | 5 | Deeper checklists, more stack pages, more tests | Ongoing |
 
 ## Risks to watch
