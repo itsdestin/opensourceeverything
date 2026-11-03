@@ -1,0 +1,74 @@
+{
+ "deck": "ose-evidence-1",
+ "started": "2026-11-03T04:23:13.109Z",
+ "submitted": "2026-11-03T04:27:51Z",
+ "cur": 8,
+ "answers": {
+  "E-1": {
+   "v": "yes",
+   "t": 1793679854684,
+   "seconds": 62,
+   "theme": "light",
+   "zoom": 1
+  },
+  "E-2": {
+   "v": "yes",
+   "t": 1793679906200,
+   "seconds": 47,
+   "theme": "light",
+   "zoom": 1,
+   "note": "we should remove the closed/open headers and replace the closed tag next to app names with a \"proprietary\" tag"
+  },
+  "E-3": {
+   "v": "yes",
+   "seconds": 27,
+   "theme": "light",
+   "zoom": 1,
+   "t": 1793679929267
+  },
+  "E-4": {
+   "v": "yes",
+   "t": 1793679962938,
+   "note": "also i thought our objective was to give the community a way to rate/change these features and whetehr they're approved?",
+   "seconds": 34,
+   "theme": "light",
+   "zoom": 1
+  },
+  "E-5": {
+   "v": "yes",
+   "t": 1793679966797,
+   "seconds": 4,
+   "theme": "light",
+   "zoom": 1
+  },
+  "E-6": {
+   "v": "yes",
+   "t": 1793679983117,
+   "seconds": 16,
+   "theme": "light",
+   "zoom": 1
+  },
+  "E-7": {
+   "v": "yes",
+   "t": 1793680014393,
+   "seconds": 31,
+   "theme": "light",
+   "zoom": 1
+  },
+  "E-8": {
+   "v": "yes",
+   "t": 1793680027675,
+   "seconds": 13,
+   "theme": "light",
+   "zoom": 1
+  },
+  "E-9": {
+   "note": "absolutely not. we just spent hours cleaning up and simplifiynig this ui, and you just dumped a bunch of overbusy slop in the middle of the header. no.",
+   "t": 1793680070112,
+   "v": "other",
+   "seconds": 42,
+   "theme": "light",
+   "zoom": 1
+  }
+ }
+}

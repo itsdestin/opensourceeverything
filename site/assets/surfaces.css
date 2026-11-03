@@ -153,14 +153,10 @@ html[data-v="b"] .rvfeat .fx-list { display:grid; grid-template-columns:repeat(2
 .cmp tr.closedrow > * { background:color-mix(in srgb,var(--panel) 80%,var(--inset)); }
 .cmp tr.closedrow > th { background:color-mix(in srgb,var(--panel) 72%,var(--inset)); }
 .cmp tr.closedrow .tag { margin-left:6px; font-size:11px; font-weight:500; color:var(--fg-dim); border:1px solid var(--edge-strong); border-radius:9999px; padding:0 6px; }
-/* WHY sentence case, 12px medium, no letter-spacing (guide: small labels; reviewer Nov 2). */
-.cmp tr.cmpsep > th { position:static; text-align:left; font-size:12px; font-weight:500; color:var(--fg-dim); background:transparent; border-right:0; padding:10px 10px 4px; }
 /* WHY a word under the column name in normal text, the amber only as a tint (guide: status colours only in a tint, never in text). */
 .cmp th.gapcol { background:rgb(245 158 11 / .14); }
 .cmp .gapmark { display:block; margin-top:3px; font-size:11px; font-weight:600; color:var(--fg); }
 .cmpkey-how { margin-left:auto; }
-.gone-line { margin:8px 0 0; display:flex; flex-direction:column; align-items:flex-start; gap:6px; }
-.gone-line p { margin:0; font-size:12px; color:var(--fg-dim); }
 @media (max-width:640px) {
   .cmpkey-how { margin-left:0; flex-basis:100%; }
   .prov { max-width:16ch; }
@@ -179,8 +175,6 @@ html[data-v="b"] .rvfeat .fx-list { display:grid; grid-template-columns:repeat(2
 .spot th { font-size:12px; font-weight:500; color:var(--fg-dim); }
 .spot .num { font-variant-numeric:tabular-nums; white-space:nowrap; }
 .prose h3 .fm { margin-right:4px; }
-/* Shut-down closed apps (cleanup §6): the word, not only a fade, says it. */
-.chip.gone { opacity:.8; } .chip .gone-word { color:var(--fg-dim); }
 .cmpkey .kp { white-space:nowrap; display:inline-flex; align-items:center; gap:4px; } /* WHY: the mark and its word must not split across lines on a phone */
 .prov .prov-short { display:none; }
 @media (max-width:640px) { .prov .prov-long { display:none; } .prov .prov-short { display:inline; } }

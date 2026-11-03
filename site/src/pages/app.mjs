@@ -3,7 +3,7 @@
 // alternatives from every group that replaces the app (Photoshop sits in both Photo editing and Painting).
 import { esc, url, SITE_URL, SOCIAL } from '../lib.mjs';
 import { altCard, appSlug, appUrl, sortAlts, deviceFilter, buildBox, chooseBox } from '../cards.mjs';
-import { switchGuide, groupCompare, closedStatus, srcHost } from '../surfaces.mjs';
+import { switchGuide, groupCompare } from '../surfaces.mjs';
 import { mapTrail } from '../redesign.mjs';
 
 export default function appPages(d) {
@@ -37,16 +37,14 @@ export default function appPages(d) {
     <div class="sec-head"><div><h2 class="h-large">How they compare with ${esc(name)}${groups.length > 1 ? `<span class="sub"><span class="dash"> – </span>${esc(g.name)}</span>` : ''}</h2></div></div>
     ${t}
   </section>` : ''; };
-    // WHY a status line (cleanup §6, Destin Nov 2): shut-down apps stay listed, because people look for alternatives exactly then.
-    const st = closedStatus(name);
-    // WHY the pill on its own line and the source as a chip (reviewer, Nov 2): like a card's chips above its description.
-    const gone = st ? `<div class="gone-line"><span class="pill">${st.is === 'renamed' ? 'Renamed' : 'Discontinued'}</span>${st.note ? `<p>${esc(st.note)}</p>` : ''}${st.source ? `<a class="chip" href="${esc(st.source)}" rel="noopener">Source: ${esc(srcHost(st.source))}</a>` : ''}</div>` : '';
+    // WHY no shut-down / renamed line in the header (Destin, deck E-9, Nov 2: "overbusy ... in the middle of the header. no.").
+    // The status stays in data/closed-apps.json, unshown.
     // WHY a trail here too (Nov 2): closed-app pages were the only deep pages with no way up a level.
     const body = `
   ${mapTrail(d, { group: groups[0] }, name)}
   <div class="surface identity">
     <div class="row"><div><h1 class="h-subject">Open-source alternatives to ${esc(name)}</h1>
-      ${all.length ? '' : `<p class="desc12" style="margin-top:4px">No open-source app replaces ${esc(name)} yet.</p>`}${gone}</div>${all.length > 1 ? deviceFilter('devMenu') : ''}</div>
+      ${all.length ? '' : `<p class="desc12" style="margin-top:4px">No open-source app replaces ${esc(name)} yet.</p>`}</div>${all.length > 1 ? deviceFilter('devMenu') : ''}</div>
     ${others.length ? `<div class="replaces-row"><span class="muted11">Also replaces</span><div class="chiprow">${others.map((c) => `<a class="chip" href="${appUrl(c)}">${esc(c)}</a>`).join('')}</div></div>` : ''}
   </div>
   ${sections.map(section).join('')}
