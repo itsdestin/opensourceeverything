@@ -1,0 +1,62 @@
+{
+ "deck": "ose-community-2",
+ "started": "2026-11-03T21:39:43.566Z",
+ "submitted": "2026-11-03T21:43:36Z",
+ "cur": 6,
+ "answers": {
+  "C-1": {
+   "note": "we can clean the popup up a bit. the already posted comments should probably be tiles/cards.there's also a lot of unnecessaru copy and dead space on this popup, and the line across the top feels like a unique style not used in any other popup. its way shorted for some reason",
+   "t": 1793742054300,
+   "v": "other",
+   "seconds": 71,
+   "theme": "light",
+   "zoom": 1
+  },
+  "C-2": {
+   "note": "still too busy with poor visual heirarchy and too many unique elements",
+   "t": 1793742075096,
+   "v": "other",
+   "seconds": 21,
+   "theme": "light",
+   "zoom": 1
+  },
+  "C-3": {
+   "note": "cards/compare and yes/partly/no sliders need to be closer to native youcoded styling with better rounding on hte corners and such",
+   "t": 1793742103440,
+   "v": "other",
+   "seconds": 28,
+   "theme": "light",
+   "zoom": 1
+  },
+  "C-4": {
+   "v": "yes",
+   "t": 1793742129323,
+   "seconds": 26,
+   "theme": "light",
+   "zoom": 1
+  },
+  "C-5": {
+   "v": "yes",
+   "t": 1793742137013,
+   "seconds": 8,
+   "theme": "light",
+   "zoom": 1
+  },
+  "C-6": {
+   "v": "other",
+   "t": 1793742180841,
+   "note": "repeating \"what stopped it\" twice with no indication of what question the user is actually answering... really?",
+   "seconds": 44,
+   "theme": "light",
+   "zoom": 1
+  },
+  "C-7": {
+   "v": "other",
+   "t": 1793742214909,
+   "note": "that styling is terrible. you really need to review the design guide. unacceptable positioning and styling",
+   "seconds": 34,
+   "theme": "light",
+   "zoom": 1
+  }
+ }
+}

@@ -218,7 +218,7 @@
     },
     async comment(key, body) {
       const x = me(); const sc = await screen(body);
-      return guard(x, ...NEED_SIGNIN) ?? guard(!banned(x), 403, 'This account can no longer post.') ?? guard(S.op[key]?.[x.login], 400, 'Pick your answer first.')
+      return guard(x, ...NEED_SIGNIN) ?? guard(!banned(x), 403, 'This account can no longer post.')
         ?? guard(body?.trim(), 400, 'Write something first.') ?? guard(!sc.error, 400, sc.error) ?? (() => {
           const c = { id: S.nextId++, author: x.login, body: body.trim().slice(0, 1000), created: Date.now(), held: heldFor(x) || sc.flags.length > 0 };
           (S.opc[key] ??= []).push(c); save(); return delay({ ok: true, held: c.held });

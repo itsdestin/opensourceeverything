@@ -59,9 +59,10 @@
   const oops = (e, action) => { if (e.status === 401) return signIn(action); toast(e.message || "That didn't work. Try again."); };
 
   // ── Popups (the site's Dialog look): title bar, body, buttons at the bottom right ──
-  function dialog(title, bodyHtml, { size = 'medium', onOpen } = {}) {
+  // WHY a subtitle (YouCoded's Dialog `subtitle`, step-2 round 2): what the popup is about, under the title, not a loose line in the body.
+  function dialog(title, bodyHtml, { size = 'medium', onOpen, subtitle } = {}) {
     const scrim = document.createElement('div'); scrim.className = 'scrim open';
-    scrim.innerHTML = `<div class="surface dialog ${size}" role="dialog" aria-modal="true" aria-label="${esc(title)}"><div class="bar"><div class="t">${esc(title)}</div><button class="icon-btn" type="button" data-close aria-label="Close">✕</button></div><div class="body">${bodyHtml}</div></div>`;
+    scrim.innerHTML = `<div class="surface dialog ${size}" role="dialog" aria-modal="true" aria-label="${esc(title)}"><div class="bar"><div class="tt"><div class="t">${esc(title)}</div>${subtitle ? `<p class="sub">${esc(subtitle)}</p>` : ''}</div><button class="icon-btn" type="button" data-close aria-label="Close">✕</button></div><div class="body">${bodyHtml}</div></div>`;
     const close = () => scrim.remove();
     scrim.addEventListener('click', (e) => { if (e.target === scrim || e.target.closest('[data-close]')) close(); });
     document.addEventListener('keydown', function k(e) { if (e.key === 'Escape') { close(); document.removeEventListener('keydown', k); } });
@@ -148,15 +149,14 @@
     const locked = user && !user.canVote;
     el.innerHTML = `<div class="rate-q"><div class="rate-text"></div>
         <div class="rate-res">${p === null ? `<span class="muted11">${t ? `${r.up} yes · ${r.down} not really (a score from 5 answers)` : 'No answers yet'}</span>`
-          : `<div class="meter"><i style="width:${p}%"></i></div><span class="muted11"><b class="num">${p}%</b> of ${t} say yes</span>`}${r.mine ? `<span class="muted11">You said ${r.mine > 0 ? 'yes' : 'not really'}</span>` : ''}<button class="btn sm secondary" type="button" data-whys hidden></button></div></div>
+          : `<div class="meter"><i style="width:${p}%"></i></div><span class="muted11"><b class="num">${p}%</b> of ${t} say yes</span>`}${r.mine ? `<span class="muted11">You said ${r.mine > 0 ? 'yes' : 'not really'}</span>` : ''}</div></div>
       <div class="rate-btns"><button class="btn sm secondary${r.mine > 0 ? ' on' : ''}${locked ? ' locked' : ''}" type="button" data-v="1" aria-pressed="${r.mine > 0}">${icon.up}Yes</button>
         <button class="btn sm secondary${r.mine < 0 ? ' on' : ''}${locked ? ' locked' : ''}" type="button" data-v="-1" aria-pressed="${r.mine < 0}">${icon.down}Not really</button></div>`;
     $('.rate-text', el).textContent = el.dataset.question || 'Does it do the job?';
     // WHY "what stopped it?" (Destin approved, redesign-3 Q-boards, Oct 27; built in step 2): the comments the removed boards
     // were replaced with, tied to the answer that prompts them. Shown with GitHub names, like every comment.
-    api.whys?.(el.dataset.group, el.dataset.project).then(({ items }) => { const w = $('[data-whys]', el); if (items.length) { w.hidden = false; w.textContent = `${items.length} said what stopped it`; w.onclick = () => showWhys(el, items); } }).catch(() => {});
+    api.whys?.(el.dataset.group, el.dataset.project).then(({ items }) => { if (!items.length) return; const w = document.createElement('div'); w.className = 'rate-whys'; w.innerHTML = whyRows(items); el.append(w); items.forEach((x) => fillText($(`[data-wid="${x.id}"] p`, w), x.body)); }).catch(() => {});
     el.onclick = async (e) => {
-      if (e.target.closest('[data-whys]')) return;
       const b = e.target.closest('[data-v]'); if (!b) return; e.preventDefault();
       const v = +b.dataset.v === r.mine ? 0 : +b.dataset.v;
       try {
@@ -169,16 +169,23 @@
     };
   }
 
-  // WHY a one-job card with Send on top and Skip under it (guide: one-job popups; reviewer Nov 3): "Not really" is already saved,
-  // so the way out is "Skip", not "Cancel", and Send waits until something is written.
-  const askWhy = (el, n) => dialog('What stopped it?', `<div class="lvl1 op-card"><label class="label" for="whyIn">What stopped it?</label><textarea class="field" id="whyIn" rows="4" maxlength="1000"></textarea><p class="fieldhint">Optional. Shown with your GitHub name.</p>
+  // "What stopped it?" after a "Not really" (approved Oct 27, redesign-3 Q-boards). WHY the title is the question they just
+  // answered and "what stopped it" is said once (Destin, step-2 deck C-6: "repeating 'what stopped it' twice with no indication
+  // of what question the user is actually answering... really?"). YouCoded's one-job popup: one card, a named box, its grey
+  // words under it, Send on top and Skip under it (Skip, not Cancel: "Not really" is already saved).
+  const askWhy = (el, n) => {
+    const job = el.closest('.listrow')?.querySelector('h3')?.textContent || el.closest('section')?.querySelector('h3, h2')?.textContent || '';
+    dialog(el.dataset.question || 'Does it do the job?', `<div class="lvl1 op-card"><p class="op-words">You said not really${job && job !== 'Listed in' ? ` for ${esc(job)}` : ''}.</p>
+      <div><label class="label" for="whyIn">What stopped it?</label><textarea class="field" id="whyIn" rows="3" maxlength="1000"></textarea><p class="fieldhint">Optional. Shown with your GitHub name.</p></div>
       <div class="stack"><button class="btn md primary" type="button" data-ok disabled>Send</button><button class="btn md secondary" type="button" data-close>Skip</button></div></div>`,
     { size: 'narrow', onOpen: (s, close) => {
       const t = $('#whyIn', s); const ok = $('[data-ok]', s); t.addEventListener('input', () => { ok.disabled = !t.value.trim(); });
       ok.addEventListener('click', async () => { ok.disabled = true; try { await api.addWhy(el.dataset.group, el.dataset.project, t.value); close(); drawRate(el, n); toast('Thanks, that helps.'); } catch (e) { ok.disabled = false; oops(e); } });
     } });
-  const showWhys = (el, items) => dialog('What stopped it', `<div class="comments lvl2">${items.map((w) => `<div class="cmt" data-wid="${w.id}"><div class="who"><span class="av">${esc(w.author[0].toUpperCase())}</span><span class="n">@${esc(w.author)}</span>${w.held ? '<span class="pill warn"><i></i>Waiting for a mod</span>' : ''}<span class="t">${ago(w.created)}</span></div><p></p></div>`).join('')}</div>`,
-    { size: 'narrow', onOpen: (s) => items.forEach((w) => fillText($(`[data-wid="${w.id}"] p`, s), w.body)) });
+  };
+  // WHY the comments themselves under the answer, not a button to open them (Destin, step-2 deck C-7: "unacceptable positioning
+  // and styling"): the app's comment list, plain rows in one shared box, newest first.
+  const whyRows = (items) => `<p class="label">What stopped people</p><div class="lvl2 op-list">${items.map((w) => `<div class="cmt" data-wid="${w.id}"><div class="who"><span class="av">${esc(w.author[0].toUpperCase())}</span><span class="n">${esc(w.author)}</span>${w.held ? '<span class="muted11">Held for review · only you can see it</span>' : ''}<span class="t">${ago(w.created)}</span></div><p></p></div>`).join('')}</div>`;
 
   // ── Notes lists ──
   function voteBtn(n, big) {

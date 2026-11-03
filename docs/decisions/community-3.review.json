@@ -1,0 +1,210 @@
+{
+  "title": "Step 2, round 2: what people say, rebuilt from YouCoded's own pieces",
+  "key": "ose-community-3",
+  "out": "community-3.review.html",
+  "images": "images/community-3.review",
+  "runs": {
+    "before": "runs-community-2/before",
+    "after": "runs-community-2/after"
+  },
+  "labels": {
+    "before": "Step 1 (approved)",
+    "after": "Round 2"
+  },
+  "themes": [
+    "light"
+  ],
+  "theme": "fixed",
+  "crops": {
+    "c1-few": [
+      "ose",
+      "c1-few",
+      "1440x900+0+0"
+    ],
+    "c2-took": [
+      "ose",
+      "c2-took",
+      "1440x900+0+0"
+    ],
+    "c3-blank": [
+      "ose",
+      "c3-blank",
+      "1440x900+0+0"
+    ],
+    "c4-dev": [
+      "ose",
+      "c4-dev",
+      "1440x900+0+0"
+    ],
+    "c5-phone": [
+      "ose",
+      "c5-phone",
+      "390x844+0+0"
+    ],
+    "c7-why": [
+      "ose",
+      "c7-why",
+      "1440x900+0+0"
+    ],
+    "c8-whylink": [
+      "ose",
+      "c8-whylink",
+      "1440x900+0+0"
+    ],
+    "c0-switch": [
+      "ose",
+      "c0-table",
+      "500x80+560+245"
+    ]
+  },
+  "steps": [
+    {
+      "id": "C-0",
+      "surface": "Subcategory page",
+      "path": "Presentations → the Cards / Compare switch",
+      "crop": "c0-switch",
+      "headline": "The Cards / Compare switch uses YouCoded's rounded switch.",
+      "changed": "Rounded segments inside one rounded holder, like the switch on YouCoded's Projects and Library screens, instead of square boxes joined by a line.",
+      "notice": "The same switch shape as the app.",
+      "risk": "The same switch appears in the Filter sheet on phones, which changes the same way.",
+      "highlight": {
+        "box": [
+          2,
+          5,
+          96,
+          90
+        ]
+      }
+    },
+    {
+      "id": "C-1",
+      "surface": "Subcategory page",
+      "path": "Presentations → Compare → tap a mark",
+      "crop": "c1-few",
+      "headline": "The popup now follows YouCoded's Marketplace \"Feedback\" section: fewer parts, less text, the app's own line under the title.",
+      "changed": "One line under the title (the app's full-width one, not the short one). The app's name sits under the title, as in the app's own popups. \"What we found\" is one card: the answer, the note, the quote and the source on one line. \"What people say\": the count on the left, Yes / Partly / No on the right (the Marketplace's small outlined buttons, your pick ringed), comments in one shared box, and one comment line with Post inside it. The question text, \"How we check\" and the \"at 5 answers\" hint are gone.",
+      "notice": "It reads like the app's own feedback area, with the same pieces in the same places.",
+      "risk": "Votes and comments here are made-up samples; the real site starts at zero.",
+      "highlight": {
+        "box": [
+          34,
+          5,
+          31,
+          66
+        ]
+      }
+    },
+    {
+      "id": "C-2",
+      "surface": "Subcategory page",
+      "path": "Presentations → Compare → reveal.js, \"Opens PowerPoint files\"",
+      "crop": "c2-took",
+      "headline": "Once 5 people have answered, the table shows their average and the popup only shows what people say.",
+      "changed": "Same layout as above, with the \"What we found\" card gone (your earlier choice). The extra \"Table shows\" label is gone; the mark in the table is the answer.",
+      "notice": "One card instead of three parts.",
+      "risk": "Other sample marks moved too, because the made-up voters don't always agree with the AI.",
+      "highlight": {
+        "box": [
+          34,
+          5,
+          31,
+          41
+        ]
+      }
+    },
+    {
+      "id": "C-3",
+      "surface": "Subcategory page",
+      "path": "Interface design → Compare → a blank dot, signed out",
+      "crop": "c3-blank",
+      "headline": "A blank dot opens the same popup with just \"No answers yet\", the three buttons and the comment line.",
+      "changed": "Signed out, the line under the count says \"Sign in to answer\" and the comment line says \"Sign in to comment\", as the Marketplace does.",
+      "notice": "Nothing extra to read before answering.",
+      "risk": "",
+      "highlight": {
+        "box": [
+          34,
+          5,
+          31,
+          28
+        ]
+      }
+    },
+    {
+      "id": "C-4",
+      "surface": "Subcategory page",
+      "path": "Interface design → Compare → Penpot, signed in as Penpot's developer, Edit",
+      "crop": "c4-dev",
+      "headline": "The developer's answer sits in its own card; Edit opens the same three buttons, a named note box and Save.",
+      "changed": "Same as round 1, now with the shared buttons and the Edit button kept at the right of their answer.",
+      "notice": "Maintainers keep a separate voice that never tips the average.",
+      "risk": "",
+      "highlight": {
+        "box": [
+          34,
+          15,
+          31,
+          28
+        ]
+      }
+    },
+    {
+      "id": "C-5",
+      "surface": "Subcategory page",
+      "path": "Presentations → Compare → tap a mark, on a phone",
+      "crop": "c5-phone",
+      "headline": "On a phone the popup slides up; the three buttons fill the width.",
+      "changed": "Same pieces as on a computer.",
+      "notice": "Answering works one-handed.",
+      "risk": "",
+      "highlight": {
+        "box": [
+          0,
+          33,
+          100,
+          67
+        ]
+      }
+    },
+    {
+      "id": "C-6",
+      "surface": "Project page",
+      "path": "Penpot → Listed in → \"Does Penpot do this job?\" → Not really",
+      "crop": "c7-why",
+      "headline": "After \"Not really\", the popup is titled with the question you answered and asks \"What stopped it?\" once.",
+      "changed": "Title: \"Does Penpot do this job?\". In the card: \"You said not really for Interface design.\", the box named \"What stopped it?\", the grey words under it, then Send and Skip (YouCoded's one-job popup).",
+      "notice": "You can see what you're explaining.",
+      "risk": "",
+      "highlight": {
+        "box": [
+          34,
+          5,
+          31,
+          39
+        ]
+      }
+    },
+    {
+      "id": "C-7",
+      "surface": "Project page",
+      "path": "Penpot → Listed in",
+      "crop": "c8-whylink",
+      "runs": [
+        "after"
+      ],
+      "new": true,
+      "headline": "What people wrote shows under the vote, as the app's comment list, not behind a button.",
+      "changed": "A small \"What stopped people\" label, then each comment: initial, name, when, the words. The vote count also shows from the first answer (\"2 yes · 1 not really\").",
+      "notice": "Developers and visitors see why a project falls short, right where the vote is.",
+      "risk": "",
+      "highlight": {
+        "box": [
+          3,
+          78,
+          68,
+          11
+        ]
+      }
+    }
+  ]
+}

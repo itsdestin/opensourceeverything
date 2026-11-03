@@ -17,9 +17,12 @@
 .cmpkey .fm.unk { font-weight:700; color:var(--fg-dim); }
 
 /* View switch and Must have menu. */
-.seg { display:inline-flex; border:1px solid var(--edge); border-radius:var(--radius-sm); overflow:hidden; flex:none; }
-.seg button { font:inherit; font-size:12px; padding:4px 10px; background:var(--inset); color:var(--fg-dim); border:0; cursor:pointer; }
-.seg button + button { border-left:1px solid var(--edge); }
+/* WHY YouCoded's pill switch (SegmentedTabs "pill"; Destin, step-2 deck C-3: "closer to native youcoded styling with better
+   rounding"): rounded segments inside one rounded holder, the holder's corner the segment's plus its 2px inset. */
+.seg { display:inline-flex; align-items:center; gap:2px; padding:2px; flex:none; background:color-mix(in srgb,var(--inset) 50%,transparent);
+  border:1px solid var(--edge-card); border-radius:calc(var(--radius-control) + 3px); }
+.seg button { font:inherit; font-size:12px; font-weight:500; padding:4px 12px; background:transparent; color:var(--fg-2); border:0; border-radius:var(--radius-control); cursor:pointer; }
+.seg button:hover { background:var(--inset); color:var(--fg); }
 .seg button.on { background:var(--accent); color:var(--on-accent); }
 .must-menu { min-width:260px; max-height:340px; overflow-y:auto; right:auto; left:0; }
 .must-menu .mi { justify-content:flex-start; font-size:13px; }
@@ -179,35 +182,36 @@ html[data-v="b"] .rvfeat .fx-list { display:grid; grid-template-columns:repeat(2
 .prov .prov-short { display:none; }
 @media (max-width:640px) { .prov .prov-long { display:none; } .prov .prov-short { display:inline; } }
 
-/* ── Step 2: what people say (assets/opinions.js, Nov 3) ── */
-/* WHY a blank mark looks the same as before, only tappable: no new mark in the tables (Destin, step-2 deck Q-6: "overcomplicated"). */
+/* ── Step 2: what people say (assets/opinions.js). Built from YouCoded's Marketplace "Feedback" section (FeedbackSection.tsx,
+   CommentList.tsx): words left and small outlined buttons right; comments as plain rows in one shared box; the comment line
+   with its Post button inside it. WHY (Destin, step-2 deck C-1/C-2: "too many unique elements", "closer to native"). ── */
+/* A blank mark looks the same as before, only tappable: no new mark in the tables (step-2 deck Q-6: "overcomplicated"). */
 .cell.unk { color:var(--fg-faint); background:transparent; font-weight:400; }
 .cell.unk:hover { background:var(--inset); }
 /* The project page's Yes / Partly / No pill as a button: same pill, opens the same popup as a table mark. */
-/* WHY only the button look is reset: the pill keeps its own tint and outline, so the page looks exactly as before. */
 .pill.pillbtn { font-family:inherit; font-size:11px; line-height:1.3; color:var(--fg-2); cursor:pointer; }
-.pill.pillbtn.unk { color:var(--fg-dim); border-style:dashed; }
 .pill.pillbtn:hover { box-shadow:0 0 0 1px var(--accent); }
-/* The popup: a small label, then one card per section (guide: Card levels). */
 [data-opslot] { display:flex; flex-direction:column; gap:16px; }
+.op-app { margin:-4px 0 0; }
 .op-sec { display:flex; flex-direction:column; gap:6px; } .op-sec .label { margin:0; } .op-sec[hidden] { display:none; }
-.op-start { justify-content:flex-start; align-items:flex-start; flex-wrap:nowrap; }
-.op-card a { color:var(--fg); }
-.op-shows { display:inline-flex; align-items:center; gap:6px; }
-.seg.op-seg button { padding:5px 12px; } .seg.locked { opacity:.6; }
-/* WHY red-tinted (guide: a problem's notice box), only where the failed part was. */
+.op-card { padding:12px; display:flex; flex-direction:column; gap:12px; }
+.op-card p { margin:0; } .op-card a { color:var(--fg); }
+.op-row { display:flex; align-items:center; justify-content:space-between; gap:8px 12px; flex-wrap:wrap; }
+.op-lead { display:flex; align-items:flex-start; gap:8px; } .op-lead .pill { margin-top:1px; }
+.op-words { min-width:0; font-size:13px; color:var(--fg-2); }
+.op-words b { color:var(--fg); font-weight:500; }
+.op-btns { display:flex; gap:6px; flex:none; }
+.op-list { padding:12px; display:flex; flex-direction:column; gap:16px; }
+.op-list .cmt p { font-size:13px; }
+.op-ig { display:flex; align-items:center; gap:8px; background:var(--inset); border:1px solid var(--edge-card); border-radius:var(--radius-control); padding:4px 4px 4px 12px; }
+.op-ig:focus-within { border-color:var(--accent); }
+.op-ig input { flex:1; min-width:0; background:transparent; border:0; outline:0; font:inherit; font-size:13px; color:var(--fg); }
+.op-ig input::placeholder { color:var(--fg-muted); }
+.op-devedit { display:flex; flex-direction:column; gap:12px; } .op-devedit[hidden] { display:none; }
 .callout.err { background:rgb(239 68 68 / .10); border-color:rgb(239 68 68 / .3); }
-.op-subj { margin:0; }
-.op-card { padding:12px; display:flex; flex-direction:column; gap:8px; }
-.op-card p, .op-card blockquote { margin:0; }
-.op-card .tipq { padding:6px 10px; border-left:3px solid var(--edge-strong); color:var(--fg-2); font-style:italic; font-size:12px; }
-.op-row { display:flex; align-items:center; justify-content:space-between; gap:8px; flex-wrap:wrap; }
-.op-btns { display:flex; gap:6px; }
-.op-devedit .field { flex:1; min-width:0; }
-.op-cmts { padding:4px 0 0; gap:12px; }
-.op-cmts .cmt p { font-size:13px; }
-.linkbtn { background:none; border:0; padding:0; font-family:inherit; color:inherit; text-decoration:underline; cursor:pointer; }
-@media (max-width:640px) { .op-seg { width:100%; } .op-seg button { flex:1; min-height:44px; } }
-.op-grow { flex:1; }
-.op-devedit { display:flex; flex-direction:column; gap:8px; }
-.op-devedit[hidden] { display:none; }
+.rate-whys { flex-basis:100%; }
+@media (max-width:640px) { .op-btns { width:100%; } .op-btns .btn { flex:1; min-height:44px; } }
+.op-row > .op-lead { flex:1 1 200px; min-width:0; }
+/* WHY plain rows here: the vote box is already the nested card, so a second box inside it would be a card in a card (guide: Card levels). */
+.rate-whys .op-list { background:none; border:0; padding:4px 0 0; }
+.rate-whys .label { margin:4px 0 0; }
