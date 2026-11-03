@@ -13,6 +13,7 @@ opensourceeverything.org went live on Oct 27 with the first version. On **Nov 2*
 deployed: the new look built to YouCoded's design guide, the new map structure (6 areas, 24 categories, 263 groups and 980
 projects shown), smarter search, feature checklists, switch guides, safer project claims and an AI connector. Database
 changes 0002–0004 ran on the live database (a copy taken just before is at `~/.local/share/ose-backups/db-before-0002-2026-11-02.sql`).
+<!-- WHY: Nov 2 Destin OK'd the note swap. --> The "What's missing" boards now hold the 13 short notes under itsdestin (the 96 first-seed notes were deleted; copy before the swap: `~/.local/share/ose-backups/db-before-seed-swap-2026-11-02.sql`).
 New work goes on a branch off `main`; every push to `main` republishes the pages, and `cd worker && npm run deploy` deploys the server.
 
 ## What comes after launch
@@ -27,7 +28,6 @@ The agreed next design is in `docs/evidence-map-design.md` (not built yet).
 | Glass blur on the top controls | Live with the blur everywhere (the recommended choice). Drop it on phones only if it feels slow there |
 | $5/month Cloudflare plan for meaning search | Optional. The trial was a small gain; it's switched off. See `docs/ai-search.md` |
 | Delete the Anthropic API key pasted in chat | <!-- WHY: Nov 2 Destin is keeping it for the evidence-map research runs. --> Kept on purpose for the next phase's AI research runs; delete at Anthropic's console afterwards. Local copy: `~/.config/alternatives-map/anthropic-key` |
-| Swap the old "What's missing" notes | <!-- WHY: Nov 2 count on the live database corrected the earlier "13". --> Live has 96 notes from the first seed (0 votes, 0 replies). `worker/seed-notes.mjs` deletes those and adds 13 short ones under itsdestin. Not run yet: needs Destin's OK |
 
 ## Deploying
 
