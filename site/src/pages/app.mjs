@@ -3,7 +3,7 @@
 // alternatives from every group that replaces the app (Photoshop sits in both Photo editing and Painting).
 import { esc, url, SITE_URL, SOCIAL } from '../lib.mjs';
 import { altCard, appSlug, appUrl, sortAlts, deviceFilter, buildBox, chooseBox } from '../cards.mjs';
-import { switchGuide } from '../surfaces.mjs';
+import { switchGuide, groupCompare, closedStatus, srcHost } from '../surfaces.mjs';
 import { mapTrail } from '../redesign.mjs';
 
 export default function appPages(d) {
@@ -30,15 +30,26 @@ export default function appPages(d) {
       : `<div class="callout info">Nothing open does this yet. It's one of the <a href="${url('gaps/')}">gaps on the map</a>: if you're building one, <a href="${url(`g/${g.id}/#build`)}">see what to reuse first</a>.</div>`}
   </section>`;
 
+    // WHY a compare table per group here (evidence map §1, Nov 2): "how does each alternative compare with the app I'm leaving?"
+    // is this page's question. Only this app's row sits above the alternatives; the group page shows every closed app.
+    const compare = ({ g, alts }) => { const t = groupCompare(g, alts, [name]).replace('data-compare hidden', 'data-compare'); return t ? `
+  <section class="surface sec">
+    <div class="sec-head"><div><h2 class="h-large">How they compare with ${esc(name)}${groups.length > 1 ? `<span class="sub"><span class="dash"> – </span>${esc(g.name)}</span>` : ''}</h2></div></div>
+    ${t}
+  </section>` : ''; };
+    // WHY a status line (cleanup §6, Destin Nov 2): shut-down apps stay listed, because people look for alternatives exactly then.
+    const st = closedStatus(name);
+    const gone = st ? `<p class="gone-line"><span class="pill">${st.is === 'renamed' ? 'Renamed' : 'Discontinued'}</span>${st.note ? `<span>${esc(st.note)}</span>` : ''}${st.source ? `<a class="fx-src" href="${esc(st.source)}" rel="noopener">${esc(srcHost(st.source))}</a>` : ''}</p>` : '';
     // WHY a trail here too (Nov 2): closed-app pages were the only deep pages with no way up a level.
     const body = `
   ${mapTrail(d, { group: groups[0] }, name)}
   <div class="surface identity">
     <div class="row"><div><h1 class="h-subject">Open-source alternatives to ${esc(name)}</h1>
-      ${all.length ? '' : `<p class="desc12" style="margin-top:4px">No open-source app replaces ${esc(name)} yet.</p>`}</div>${all.length > 1 ? deviceFilter('devMenu') : ''}</div>
+      ${all.length ? '' : `<p class="desc12" style="margin-top:4px">No open-source app replaces ${esc(name)} yet.</p>`}${gone}</div>${all.length > 1 ? deviceFilter('devMenu') : ''}</div>
     ${others.length ? `<div class="replaces-row"><span class="muted11">Also replaces</span><div class="chiprow">${others.map((c) => `<a class="chip" href="${appUrl(c)}">${esc(c)}</a>`).join('')}</div></div>` : ''}
   </div>
   ${sections.map(section).join('')}
+  ${sections.map(compare).join('')}
   ${switchGuide(appSlug(name), name, d)}
   ${all.length > 1 ? chooseBox({ closed: [name], json: `data/groups/${groups[0].id}.json`, alts: all }) : ''}
   ${SOCIAL && !all.some((x) => x.a.fit === 'full') ? `<!-- WHY: only when nothing open fully replaces it; the server checks the same rule -->

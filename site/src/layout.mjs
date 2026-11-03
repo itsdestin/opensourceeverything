@@ -45,11 +45,13 @@ export function tabbar(path) {
 
 // WHY one small footer (Destin, round 4: fewer, clearer links, nothing the phone's tab bar already has): About, Licenses, Privacy, Credits, the subreddit and the code.
 // Gaps stays on desktop only, where there is no tab bar.
+// WHY "How we check" (evidence map §2, Nov 2): the site-wide way to the methodology; every source label also links there.
 // WHY no "For AI agents" chip (agent-access merge, Oct 27): About's "Use it with an AI assistant" button already reaches ai/.
 export function footer() {
   return `<div class="footer">
   <a class="footchip deskonly" href="${url('gaps/')}">Gaps</a>
   <a class="footchip" href="${url('about/')}">About</a>
+  <a class="footchip" href="${url('how-we-check/')}">How we check</a>
   <a class="footchip" href="${url('licenses/')}">Licenses</a>
   <a class="footchip" href="${url('privacy/')}">Privacy</a>
   <a class="footchip" href="${url('credits/')}">Credits &amp; data</a>

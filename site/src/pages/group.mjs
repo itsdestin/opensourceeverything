@@ -6,7 +6,7 @@ import { altCard, appUrl, sortAlts, deviceFilter, buildBox, chooseBox, FILTERS }
 import { relatedGroups } from '../related.mjs';
 import { likedBox } from '../liked.mjs';
 import { mapTrail } from '../redesign.mjs';
-import { groupTools, groupCompare, tagsOf } from '../surfaces.mjs';
+import { groupTools, groupCompare, tagsOf, closedStatus } from '../surfaces.mjs';
 
 // WHY only the first letter, and not before a capital: "AI agents" and "PDF tools" keep their capitals mid-sentence.
 const midSentence = (name) => name.replace(/^[A-Z](?![A-Z])/, (c) => c.toLowerCase());
@@ -33,7 +33,8 @@ export default function groupPages(d) {
     // WHY no "Compared with" dropdown (Destin, Oct 27: "doesn't seem to do anything"): until the server adds
     // per-app sections ("Why people leave X"), switching apps changed only a label. The closed apps are shown as
     // chips instead; the one a visitor searched for (?compare=) is highlighted by group.js.
-    const replacesRow = g.closed.length ? `<div class="replaces-row"><span class="muted11">Replaces</span><div class="chiprow">${g.closed.map((c) => `<a class="chip" data-app="${esc(c)}" href="${appUrl(c)}">${esc(c)}</a>`).join('')}</div></div>` : '';
+    // WHY a word on shut-down apps' chips (cleanup §6, Destin Nov 2): they stay listed, marked, so nobody picks them by mistake.
+    const replacesRow = g.closed.length ? `<div class="replaces-row"><span class="muted11">Replaces</span><div class="chiprow">${g.closed.map((c) => { const st = closedStatus(c); return `<a class="chip${st ? ' gone' : ''}" data-app="${esc(c)}" href="${appUrl(c)}"${st ? ` title="${esc(st.note ?? '')}"` : ''}>${esc(c)}${st ? `<span class="gone-word"> · ${st.is === 'renamed' ? 'renamed' : 'shut down'}</span>` : ''}</a>`; }).join('')}</div></div>` : '';
 
     // WHY no job line under the group name (Destin, Oct 27: "Web browsers / Browsing the web" says nothing the name and the
     // Replaces row don't). Same for category cards, closed-app sections and See also. The AI prompts still get the job sentence.

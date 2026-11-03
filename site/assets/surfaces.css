@@ -136,3 +136,45 @@ html[data-v="b"] .rvfeat .fx-list { display:grid; grid-template-columns:repeat(2
 .popt .pt { display:flex; flex-direction:column; gap:1px; min-width:0; } .popt .pt b { font-size:13px; font-weight:500; color:var(--fg); } .popt .pt small { font-size:12px; color:var(--fg-dim); }
 .pfield { width:100%; } .pfield[hidden] { display:none; }
 .psaved { margin:0; text-align:right; }
+
+/* ───────── Evidence map step 1 (Nov 2) ───────── */
+/* WHY a quiet text button, not a link (design §2): tapping it opens the full label (quote, source, who, when) instead of leaving
+   the page; the source's site name is the visible part, so the evidence leads, not the AI. Same size and grey as the old "Source". */
+.prov { font:inherit; font-size:12px; color:var(--fg-dim); background:none; border:0; padding:2px 0; cursor:pointer; white-space:nowrap;
+  text-decoration:underline; text-decoration-color:var(--edge-strong); text-underline-offset:2px; max-width:22ch; overflow:hidden; text-overflow:ellipsis; }
+.prov:hover { color:var(--fg); }
+.prov:focus-visible { outline:2px solid var(--accent); outline-offset:2px; border-radius:4px; }
+.tip .tipq { margin:0 0 8px; padding:6px 10px; border-left:3px solid var(--edge-strong); color:var(--fg-2); font-style:italic; }
+.tip .tipsrc { margin:0 0 2px; }
+/* WHY closed rows tinted and tagged (design §1): they are what's being replaced, never an option; tint + a word, not tint alone. */
+.cmp tr.closedrow > * { background:color-mix(in srgb,var(--panel) 80%,var(--inset)); }
+.cmp tr.closedrow > th { background:color-mix(in srgb,var(--panel) 72%,var(--inset)); }
+.cmp tr.closedrow .tag { margin-left:6px; font-size:10px; font-weight:500; color:var(--fg-dim); border:1px solid var(--edge-strong); border-radius:9999px; padding:0 6px; vertical-align:1px; }
+.cmp tr.cmpsep > th { position:static; text-align:left; font-size:11px; font-weight:600; color:var(--fg-muted); text-transform:uppercase; letter-spacing:.04em;
+  background:transparent; border-right:0; padding:10px 10px 4px; }
+/* WHY a word under the column name, not a colour: the gap must read without colour (design guide). */
+.cmp th.gapcol { background:rgb(245 158 11 / .10); }
+.cmp .gapmark { display:block; margin-top:3px; font-size:10px; font-weight:600; color:rgb(146 64 14); }
+.cmpkey-how { margin-left:auto; }
+.cmpkey-how a { color:var(--fg-dim); }
+.gone-line { margin:6px 0 0; display:flex; flex-wrap:wrap; align-items:center; gap:6px 8px; font-size:12px; color:var(--fg-dim); }
+@media (max-width:640px) {
+  .cmp .gapmark { font-size:9px; }
+  .cmpkey-how { margin-left:0; flex-basis:100%; }
+  .prov { max-width:14ch; }
+}
+/* WHY a dash in a plain ring: "its own format" is neither good nor bad, so it takes no colour (merge-closed-answers.mjs "own"). */
+.cell.own, .fm.own { color:var(--fg-dim); background:transparent; border:1px solid var(--edge-strong); }
+/* Gaps page: each missing feature on its own line, with the closed apps that have it under it (Nov 2). */
+.gapfeat { list-style:none; margin:6px 0 0; padding:0; display:flex; flex-direction:column; gap:6px; }
+.gapfeat li { display:flex; flex-direction:column; }
+.gapfeat .gf-name { font-size:13px; font-weight:500; }
+.gapfeat .gf-has { font-size:12px; color:var(--fg-dim); }
+/* How we check: the hand-check table (Nov 2). */
+.spot { border-collapse:collapse; width:100%; font-size:13px; margin:8px 0; }
+.spot th, .spot td { text-align:left; padding:6px 8px; border-bottom:1px solid var(--edge-dim); vertical-align:top; }
+.spot th { font-size:12px; font-weight:500; color:var(--fg-dim); }
+.spot .num { font-variant-numeric:tabular-nums; white-space:nowrap; }
+.prose h3 .fm { margin-right:4px; }
+/* Shut-down closed apps (cleanup §6): the word, not only a fade, says it. */
+.chip.gone { opacity:.8; } .chip .gone-word { color:var(--fg-dim); }

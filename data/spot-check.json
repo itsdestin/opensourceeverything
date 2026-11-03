@@ -1,0 +1,7 @@
+{
+ "note": "Hand checks of AI-researched answers: a sample is opened at its source page and judged by a person. Shown on how-we-check/.",
+ "checks": [
+  { "date": "2026-11-02", "what": "Closed apps (8-app pilot: Word, Photoshop, Zoom, Google Maps, Notion, Spotify, Dropbox, Slack)", "checked": 56, "wrong": 3,
+    "fixes": "The research instructions now refuse comparison and advertising blogs as sources, and mark paid-plan-only features as Partly." }
+ ]
+}

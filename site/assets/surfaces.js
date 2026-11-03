@@ -17,7 +17,8 @@
     const cards = [...grid.children];
     cards.forEach((c) => { const has = (c.dataset.feat || '').split(' '); c.classList.toggle('feat-out', ![...sel].every((t) => has.includes(t))); });
     const shown = (c) => !c.hidden && !c.classList.contains('feat-out');
-    if (cmp) cmp.querySelectorAll('tbody tr').forEach((r) => { const c = cards.find((x) => x.dataset.pid === r.dataset.pid); r.hidden = !c || !shown(c); });
+    // WHY only rows with a project id: the closed-app rows and the divider above the alternatives always stay (Nov 2).
+    if (cmp) cmp.querySelectorAll('tbody tr[data-pid]').forEach((r) => { const c = cards.find((x) => x.dataset.pid === r.dataset.pid); r.hidden = !c || !shown(c); });
     if (none) none.hidden = !sel.size || cards.some(shown);
     const label = document.querySelector('[data-must-label]');
     if (label) label.textContent = sel.size ? `Must have: ${sel.size}` : 'Must have';
@@ -39,13 +40,19 @@
     if (v) { setView(v.dataset.view); return; }
     // The device filter hides cards too; keep the table rows in step with it.
     if (e.target.closest('[data-device]')) setTimeout(apply, 0);
-    const cell = e.target.closest('.cell');
+    // WHY one tip for a table mark and a project-page label (evidence map §2): the answer, the page's own words, where they're
+    // from, who found them and when, and how that's checked. The quote comes first: it is the evidence.
+    const cell = e.target.closest('.cell, .prov');
     if (cell && OI.tip) {
-      const body = `${cell.dataset.note ? `<p class="tipnote">${esc(cell.dataset.note)}</p>` : ''}${cell.dataset.src ? `<p><a href="${esc(cell.dataset.src)}" rel="noopener">Source</a></p>` : ''}`;
-      OI.tip(cell, `${esc(cell.dataset.name)}: ${esc(cell.dataset.v)}`, body || '<p class="tipsub">No note.</p>');
+      const d = cell.dataset;
+      const body = `${d.note ? `<p class="tipnote">${esc(d.note)}</p>` : ''}${d.quote ? `<blockquote class="tipq">“${esc(d.quote)}”</blockquote>` : ''}`
+        + (d.src ? `<p class="tipsrc">Source: <a href="${esc(d.src)}" rel="noopener">${esc(d.host)}</a></p><p class="tipsub">${esc(d.by)} · ${esc(d.when)} · <a href="${OI.base ?? '/'}how-we-check/">How we check</a></p>` : '');
+      OI.tip(cell, `${esc(d.name)}: ${esc(d.v)}`, body || '<p class="tipsub">No note.</p>');
       return;
     }
     const h = e.target.closest('.cmph');
-    if (h && OI.tip) OI.tip(h, esc(h.dataset.name), `<p>${esc(h.dataset.q)}</p><p class="tipsub">${esc(h.dataset.m)}</p>`);
+    if (h && OI.tip) OI.tip(h, esc(h.dataset.name), `<p>${esc(h.dataset.q)}</p><p class="tipsub">${esc(h.dataset.m)}</p>${h.dataset.gap ? '<p class="tipnote">A closed app here has this, and no open project in the list does yet.</p>' : ''}`);
   });
+  // WHY (Gaps page "Compare" button, Nov 2): ?view=compare opens a group straight on its table, where the gap is marked.
+  if (cmp && new URLSearchParams(location.search).get('view') === 'compare') setView('compare');
 })();
