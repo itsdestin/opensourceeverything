@@ -34,6 +34,16 @@
   "chatgpt-models-openai": "alternatives-to/chatgpt/",
   "official-youtube-reddit-and-discord-apps": "alternatives-to/youtube/",
   "vmware-workstation-vsphere": "alternatives-to/vmware-workstation/",
-  "aws-vpc": "g/vpn/"
+  "aws-vpc": "g/vpn/",
+  "convertkit": "alternatives-to/kit/",
+  "refworks": "alternatives-to/endnote-fusion/",
+  "notebooklm": "alternatives-to/gemini-notebook/",
+  "windsurf": "alternatives-to/devin-desktop/",
+  "affinity-photo": "alternatives-to/affinity/",
+  "affinity-designer": "alternatives-to/affinity/",
+  "affinity-publisher": "alternatives-to/affinity/",
+  "sourcegraph-amp": "alternatives-to/amp/",
+  "msty": "alternatives-to/msty-studio/",
+  "coinbase": "alternatives-to/coinbase-wallet/"
  }
 }

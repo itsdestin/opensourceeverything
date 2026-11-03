@@ -71,7 +71,7 @@
   // so these never trigger the "you named an app" boosts below (they still match normally).
   const EVERYDAY = new Set(('make square threads pocket buffer mode outlier render fly segment clover monday keep rev orbit ' +
     'common room canny loops cursor windsurf teams word pages numbers keynote ' +
-    'photos maps music meet drive news books play').split(' '));
+    'photos maps music meet drive news books play kit amp').split(' ')); // WHY kit, amp (Nov 3): new names of ConvertKit and Sourcegraph Amp
 
   // The words for each device code, and how a result names it ("Runs on iPhone").
   const DEVICE_WORDS = { windows: 'windows pc', mac: 'mac macos apple', linux: 'linux chromebook chromeos', android: 'android chromebook chromeos',

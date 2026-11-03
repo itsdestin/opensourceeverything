@@ -7,6 +7,7 @@
 //   node prefill/closed-answers.mjs --only "Microsoft Word,Zoom"   paid: just these apps (a pilot)
 //   node prefill/closed-answers.mjs --limit 10 --model sonnet     paid: the first 10 apps not done yet
 //   node prefill/closed-answers.mjs                               paid: everything not done yet
+//   add --assume-current to skip the shut-down/renamed check (for apps already checked by hand)
 //
 // WHY web search, unlike the open projects' step (which read each README): closed apps have no README; their help pages and
 // feature pages are the honest source. Every yes / partly / no must carry a URL and a short quote from that page, so the
@@ -80,7 +81,11 @@ When finished, reply with only the JSON object described below and nothing else:
  "answers":[{"tag":"...","v":"yes|partly|no|unknown","note":null,"source":null,"quote":null}]}`;
 
 const tagDef = (t) => features.tags[t];
-const input = (a) => `App: ${a.name}\nListed under: ${[...a.groups].join('; ')}\n\nItems:\n` +
+// WHY --assume-current (Nov 3): the full run wrongly flagged a few live apps (SendGrid, Fire OS...) as renamed or shut down and
+// left them blank. Their status was checked by hand, so the re-run is told so instead of re-checking it.
+const CURRENT = process.argv.includes('--assume-current')
+  ? '\nIts status was checked by hand: it is current (as named here). Set status to "current" and answer the items.\n' : '';
+const input = (a) => `App: ${a.name}\nListed under: ${[...a.groups].join('; ')}\n${CURRENT}\nItems:\n` +
   [...a.tags].map((t) => `- ${t}: ${tagDef(t).name}. ${tagDef(t).question} (${tagDef(t).meaning})`).join('\n');
 const tools = [
   // WHY more for Sonnet: its newer search runs several queries per step, so 5 ran out before 8-11 items were checked and it

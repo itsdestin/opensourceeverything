@@ -923,7 +923,7 @@
    "closed": [
     "EndNote",
     "Mendeley",
-    "RefWorks"
+    "EndNote Fusion"
    ],
    "source": "data-fixes",
    "alternatives": [
@@ -1412,7 +1412,7 @@
    "closed": [
     "Adobe Photoshop",
     "Adobe Lightroom",
-    "Affinity Photo"
+    "Affinity"
    ],
    "source": "starter",
    "alternatives": [
@@ -1487,7 +1487,7 @@
    "job": "Logos, icons and vector drawings",
    "closed": [
     "Adobe Illustrator",
-    "Affinity Designer",
+    "Affinity",
     "CorelDRAW"
    ],
    "source": "starter",
@@ -1562,7 +1562,7 @@
    "job": "Magazines, flyers and books",
    "closed": [
     "Adobe InDesign",
-    "Affinity Publisher"
+    "Affinity"
    ],
    "source": "starter",
    "alternatives": [
@@ -4651,7 +4651,7 @@
    "closed": [
     "Mailchimp",
     "Brevo",
-    "ConvertKit"
+    "Kit"
    ],
    "source": "placement",
    "alternatives": [
@@ -4772,7 +4772,7 @@
    "category": "business",
    "job": "Holding and sending cryptocurrency",
    "closed": [
-    "Coinbase",
+    "Coinbase Wallet",
     "Binance"
    ],
    "source": "taxonomy",
@@ -4980,7 +4980,7 @@
    "job": "Downloading AI models and running them privately on your own machine",
    "closed": [
     "LM Studio",
-    "Msty"
+    "Msty Studio"
    ],
    "source": "taxonomy",
    "alternatives": [
@@ -5166,7 +5166,7 @@
    "category": "ai",
    "job": "A notebook where AI answers questions from your own files and notes",
    "closed": [
-    "NotebookLM",
+    "Gemini Notebook",
     "Mem"
    ],
    "source": "taxonomy",
@@ -5201,7 +5201,7 @@
    "closed": [
     "GitHub Copilot",
     "Cursor",
-    "Windsurf",
+    "Devin Desktop",
     "Claude Code",
     "OpenAI Codex"
    ],
@@ -5470,7 +5470,7 @@
    "category": "coding-agents",
    "job": "Giving an agent a map of your codebase so it reads less and finds more",
    "closed": [
-    "Sourcegraph Amp",
+    "Amp",
     "Augment Code",
     "Greptile"
    ],

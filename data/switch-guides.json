@@ -1774,23 +1774,6 @@
    ],
    "tip": null
   },
-  "affinity-photo": {
-   "app": "Affinity Photo",
-   "export": [
-    "Use the app's Export option and pick PSD, TIFF or PDF (the help page lists these as exportable formats; exact menu path not confirmed)."
-   ],
-   "exportSource": "https://affinity.help/photo/fr.lproj/pages/Appendix/fileformat.html",
-   "formats": [
-    "PSD",
-    "TIFF",
-    "PDF"
-   ],
-   "wontComeOver": [
-    "Per an Affinity forum user, text is rasterized in PSD export."
-   ],
-   "opensIn": [],
-   "tip": "Page is in French; TIFF or PNG are safer for moving between apps (forum advice)."
-  },
   "google-authenticator": {
    "app": "Google Authenticator",
    "export": [
@@ -2270,6 +2253,23 @@
    ],
    "opensIn": [],
    "tip": null
+  },
+  "affinity": {
+   "app": "Affinity Photo",
+   "export": [
+    "Use the app's Export option and pick PSD, TIFF or PDF (the help page lists these as exportable formats; exact menu path not confirmed)."
+   ],
+   "exportSource": "https://affinity.help/photo/fr.lproj/pages/Appendix/fileformat.html",
+   "formats": [
+    "PSD",
+    "TIFF",
+    "PDF"
+   ],
+   "wontComeOver": [
+    "Per an Affinity forum user, text is rasterized in PSD export."
+   ],
+   "opensIn": [],
+   "tip": "Page is in French; TIFF or PNG are safer for moving between apps (forum advice)."
   }
  }
 }

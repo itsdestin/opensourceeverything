@@ -23195,108 +23195,6 @@
   },
   "cost": 0.0619
  },
- "OpenAI Codex": {
-  "status": {
-   "is": "renamed",
-   "note": "Codex app was merged into the ChatGPT desktop app on July 9, 2026, and now runs as a Codex mode there. Answers are unknown because the merged product was not verified against the maker's pages.",
-   "source": "https://en.wikipedia.org/wiki/OpenAI_Codex"
-  },
-  "answers": {},
-  "dropped": [
-   {
-    "tag": "agent-mode",
-    "v": "unknown",
-    "note": null,
-    "source": null,
-    "quote": null
-   },
-   {
-    "tag": "inside-editor",
-    "v": "unknown",
-    "note": null,
-    "source": null,
-    "quote": null
-   },
-   {
-    "tag": "any-provider",
-    "v": "unknown",
-    "note": null,
-    "source": null,
-    "quote": null
-   },
-   {
-    "tag": "local-models",
-    "v": "unknown",
-    "note": null,
-    "source": null,
-    "quote": null
-   },
-   {
-    "tag": "point-and-click",
-    "v": "unknown",
-    "note": null,
-    "source": null,
-    "quote": null
-   },
-   {
-    "tag": "mcp-tools",
-    "v": "unknown",
-    "note": null,
-    "source": null,
-    "quote": null
-   },
-   {
-    "tag": "works-with-many-agents",
-    "v": "unknown",
-    "note": null,
-    "source": null,
-    "quote": null
-   },
-   {
-    "tag": "phone-app",
-    "v": "unknown",
-    "note": null,
-    "source": null,
-    "quote": null
-   },
-   {
-    "tag": "works-in-browser",
-    "v": "unknown",
-    "note": null,
-    "source": null,
-    "quote": null
-   },
-   {
-    "tag": "uses-your-plan",
-    "v": "unknown",
-    "note": null,
-    "source": null,
-    "quote": null
-   },
-   {
-    "tag": "computer-app",
-    "v": "unknown",
-    "note": null,
-    "source": null,
-    "quote": null
-   },
-   {
-    "tag": "review-changes",
-    "v": "unknown",
-    "note": null,
-    "source": null,
-    "quote": null
-   }
-  ],
-  "model": "claude-haiku-5-5",
-  "usage": {
-   "in": 35780,
-   "out": 1686,
-   "searches": 3,
-   "fetches": 0
-  },
-  "cost": 0.0344
- },
  "Claude Code": {
   "status": {
    "is": "current",
@@ -24155,73 +24053,6 @@
    "fetches": 0
   },
   "cost": 0.0345
- },
- "Portkey": {
-  "status": {
-   "is": "renamed",
-   "note": "Portkey is now PRISMA AIRS AI Gateway (per the maker's docs banner).",
-   "source": "https://portkey.ai/docs/guides/use-cases/enforcing-limits-and-budgets"
-  },
-  "answers": {},
-  "dropped": [
-   {
-    "tag": "spend-limits",
-    "v": "unknown",
-    "note": null,
-    "source": null,
-    "quote": null
-   },
-   {
-    "tag": "auto-fallback",
-    "v": "unknown",
-    "note": null,
-    "source": null,
-    "quote": null
-   },
-   {
-    "tag": "managed-cloud",
-    "v": "unknown",
-    "note": null,
-    "source": null,
-    "quote": null
-   },
-   {
-    "tag": "no-paid-edition",
-    "v": "unknown",
-    "note": null,
-    "source": null,
-    "quote": null
-   },
-   {
-    "tag": "one-command-install",
-    "v": "unknown",
-    "note": null,
-    "source": null,
-    "quote": null
-   },
-   {
-    "tag": "response-cache",
-    "v": "unknown",
-    "note": null,
-    "source": null,
-    "quote": null
-   },
-   {
-    "tag": "company-sso",
-    "v": "unknown",
-    "note": null,
-    "source": null,
-    "quote": null
-   }
-  ],
-  "model": "claude-haiku-5-5",
-  "usage": {
-   "in": 51543,
-   "out": 1221,
-   "searches": 5,
-   "fetches": 0
-  },
-  "cost": 0.0558
  },
  "AWS SageMaker": {
   "status": {
@@ -26887,66 +26718,6 @@
    "fetches": 0
   },
   "cost": 0.0345
- },
- "Fire OS": {
-  "status": {
-   "is": "discontinued",
-   "note": "Replaced on newer Fire TV devices by Amazon's Vega OS, announced September 30, 2025; Fire OS continues only on existing devices.",
-   "source": "https://en.wikipedia.org/wiki/Fire_OS"
-  },
-  "answers": {},
-  "dropped": [
-   {
-    "tag": "keeps-streaming-apps",
-    "v": "unknown",
-    "note": null,
-    "source": null,
-    "quote": null
-   },
-   {
-    "tag": "undo-changes",
-    "v": "unknown",
-    "note": null,
-    "source": null,
-    "quote": null
-   },
-   {
-    "tag": "point-and-click",
-    "v": "unknown",
-    "note": null,
-    "source": null,
-    "quote": null
-   },
-   {
-    "tag": "plays-4k-hdr",
-    "v": "unknown",
-    "note": null,
-    "source": null,
-    "quote": null
-   },
-   {
-    "tag": "runs-on-tv-box",
-    "v": "unknown",
-    "note": null,
-    "source": null,
-    "quote": null
-   },
-   {
-    "tag": "plugins",
-    "v": "unknown",
-    "note": null,
-    "source": null,
-    "quote": null
-   }
-  ],
-  "model": "claude-haiku-5-5",
-  "usage": {
-   "in": 27533,
-   "out": 1162,
-   "searches": 2,
-   "fetches": 0
-  },
-  "cost": 0.0233
  },
  "Titan OS": {
   "status": {
@@ -35185,59 +34956,6 @@
   },
   "cost": 0.0283
  },
- "SendGrid": {
-  "status": {
-   "is": "renamed",
-   "note": "Now Twilio SendGrid, part of Twilio; the maker's page calls it Twilio's (formerly SendGrid).",
-   "source": "https://www.twilio.com/en-us/products/email-api/smtp-service"
-  },
-  "answers": {},
-  "dropped": [
-   {
-    "tag": "send-api-smtp",
-    "v": "unknown",
-    "note": null,
-    "source": null,
-    "quote": null
-   },
-   {
-    "tag": "deliverability",
-    "v": "unknown",
-    "note": null,
-    "source": null,
-    "quote": null
-   },
-   {
-    "tag": "tracking-stats",
-    "v": "unknown",
-    "note": null,
-    "source": null,
-    "quote": null
-   },
-   {
-    "tag": "managed-cloud",
-    "v": "unknown",
-    "note": null,
-    "source": null,
-    "quote": null
-   },
-   {
-    "tag": "one-command-install",
-    "v": "unknown",
-    "note": null,
-    "source": null,
-    "quote": null
-   }
-  ],
-  "model": "claude-haiku-5-5",
-  "usage": {
-   "in": 43259,
-   "out": 1282,
-   "searches": 4,
-   "fetches": 0
-  },
-  "cost": 0.045
- },
  "Mailgun": {
   "status": {
    "is": "current",
@@ -40930,5 +40648,839 @@
    "fetches": 0
   },
   "cost": 0.0234
+ },
+ "Coinbase Wallet": {
+  "status": {
+   "is": "current",
+   "note": null,
+   "source": null
+  },
+  "answers": {
+   "many-coins": {
+    "v": "yes",
+    "source": "https://www.coinbase.com/wallet",
+    "quote": "Trade BTC, ETH, SOL and dozens more chains",
+    "by": "ai",
+    "checked": "2026-11-03"
+   },
+   "hardware-wallet": {
+    "v": "partly",
+    "note": "Ledger only, and only through the browser extension",
+    "source": "https://www.coinbase.com/security/wallet-security",
+    "quote": "Coinbase Wallet’s browser extension is compatible with Ledger hardware wallets",
+    "by": "ai",
+    "checked": "2026-11-03"
+   },
+   "phone-app": {
+    "v": "yes",
+    "source": "https://www.coinbase.com/wallet/downloads",
+    "quote": "Base is accessible as a mobile app iOS and Android",
+    "by": "ai",
+    "checked": "2026-11-03"
+   },
+   "computer-app": {
+    "v": "partly",
+    "note": "Browser extension only (Chrome), no Windows/Mac/Linux app",
+    "source": "https://www.coinbase.com/learn/wallet/setting-up-coinbase-wallet-on-computer-via-chrome",
+    "quote": "there’s also a standalone browser extension available in Google Chrome",
+    "by": "ai",
+    "checked": "2026-11-03"
+   },
+   "built-in-swap": {
+    "v": "yes",
+    "source": "https://help.coinbase.com/en/wallet/getting-started/dex-swap",
+    "quote": "You can swap using a DEX on the Coinbase Wallet app and browser extension.",
+    "by": "ai",
+    "checked": "2026-11-03"
+   }
+  },
+  "dropped": [],
+  "model": "claude-haiku-5-5",
+  "usage": {
+   "in": 32318,
+   "out": 1607,
+   "searches": 3,
+   "fetches": 0
+  },
+  "cost": 0.034
+ },
+ "Kit": {
+  "status": {
+   "is": "current",
+   "note": null,
+   "source": null
+  },
+  "answers": {
+   "email-designer": {
+    "v": "partly",
+    "note": "Structured layouts and text editor; no full drag-and-drop builder",
+    "source": "https://www.emailsoftwareinsights.com/reviews/kit/",
+    "quote": "No true drag-and-drop email builder",
+    "by": "ai",
+    "checked": "2026-11-03"
+   },
+   "email-sequences": {
+    "v": "yes",
+    "source": "https://help.kit.com/en/articles/2502629-creating-and-sending-an-email-sequence-in-kit",
+    "quote": "Email Sequences are self-contained sets of automated emails.",
+    "by": "ai",
+    "checked": "2026-11-03"
+   },
+   "signup-forms": {
+    "v": "yes",
+    "source": "https://kit.com/features/forms",
+    "quote": "Kit's email signup forms are ready to go with no coding required.",
+    "by": "ai",
+    "checked": "2026-11-03"
+   },
+   "tracking-stats": {
+    "v": "yes",
+    "source": "https://help.kit.com/en/articles/2502503-the-kit-broadcasts-dashboard",
+    "quote": "Opened: Your Broadcast's number of opens",
+    "by": "ai",
+    "checked": "2026-11-03"
+   },
+   "mailchimp-import": {
+    "v": "yes",
+    "source": "https://help.kit.com/en/articles/4077011-migrating-to-kit-from-another-platform",
+    "quote": "use the dedicated importers we've built",
+    "by": "ai",
+    "checked": "2026-11-03"
+   },
+   "managed-cloud": {
+    "v": "yes",
+    "source": "https://wordpress.org/plugins/convertkit/",
+    "quote": "Landing pages are hosted on Kit's servers",
+    "by": "ai",
+    "checked": "2026-11-03"
+   }
+  },
+  "dropped": [],
+  "model": "claude-haiku-5-5",
+  "usage": {
+   "in": 50267,
+   "out": 2265,
+   "searches": 5,
+   "fetches": 0
+  },
+  "cost": 0.0562
+ },
+ "EndNote Fusion": {
+  "status": {
+   "is": "current",
+   "note": null,
+   "source": null
+  },
+  "answers": {
+   "browser-extension": {
+    "v": "yes",
+    "source": "https://fusion-endnote.zendesk.com/hc/en-us/articles/49619567513105-Connect-to-browser-Microsoft-Word-and-Google-Docs",
+    "quote": "Add to [Chrome] [Edge] [Firefox] or [Safari]",
+    "by": "ai",
+    "checked": "2026-11-03"
+   },
+   "word-plugin": {
+    "v": "yes",
+    "source": "https://fusion-endnote.zendesk.com/hc/en-us/articles/49619567513105-Connect-to-browser-Microsoft-Word-and-Google-Docs",
+    "quote": "Cite and create bibliography in Microsoft Word and Word Online",
+    "by": "ai",
+    "checked": "2026-11-03"
+   },
+   "syncs-devices": {
+    "v": "yes",
+    "source": "https://endnote.com/fusion/learn-more/",
+    "quote": "one cloud-based solution for organizing information",
+    "by": "ai",
+    "checked": "2026-11-03"
+   },
+   "group-libraries": {
+    "v": "yes",
+    "source": "https://endnote.com/fusion/learn-more/",
+    "quote": "share projects and cite as they write",
+    "by": "ai",
+    "checked": "2026-11-03"
+   }
+  },
+  "dropped": [
+   {
+    "tag": "pdf-annotate",
+    "v": "unknown",
+    "note": null,
+    "source": null,
+    "quote": null
+   }
+  ],
+  "model": "claude-haiku-5-5",
+  "usage": {
+   "in": 43223,
+   "out": 2682,
+   "searches": 4,
+   "fetches": 0
+  },
+  "cost": 0.0457
+ },
+ "Affinity": {
+  "status": {
+   "is": "current",
+   "note": null,
+   "source": null
+  },
+  "answers": {
+   "non-destructive": {
+    "v": "yes",
+    "source": "https://apps.apple.com/us/app/affinity-by-canva/id6751323445",
+    "quote": "Every edit in Affinity is non-destructive",
+    "by": "ai",
+    "checked": "2026-11-03"
+   },
+   "psd-files": {
+    "v": "partly",
+    "note": "Text and smart objects need a setting turned on",
+    "source": "https://www.affinity.studio/blog/how-to-open-a-psd-file",
+    "quote": "Layers come across intact and ready to edit.",
+    "by": "ai",
+    "checked": "2026-11-03"
+   },
+   "raw-photos": {
+    "v": "yes",
+    "source": "https://apps.apple.com/us/app/affinity-by-canva/id6751323445",
+    "quote": "fine-tune RAW files",
+    "by": "ai",
+    "checked": "2026-11-03"
+   },
+   "ai-photo-tools": {
+    "v": "partly",
+    "note": "AI tools need a paid Canva premium plan",
+    "source": "https://www.affinity.studio/get-affinity",
+    "quote": "unlock incredibly powerful AI tools",
+    "by": "ai",
+    "checked": "2026-11-03"
+   },
+   "cmyk-print": {
+    "v": "yes",
+    "source": "https://blog.lulu.com/affinity-by-canva/",
+    "quote": "export a CMYK, single-page, print-ready PDF",
+    "by": "ai",
+    "checked": "2026-11-03"
+   },
+   "image-trace": {
+    "v": "yes",
+    "source": "https://www.affinity.studio/get-affinity",
+    "quote": "Image Trace",
+    "by": "ai",
+    "checked": "2026-11-03"
+   },
+   "master-pages": {
+    "v": "yes",
+    "source": "https://en.wikipedia.org/wiki/Affinity_(software)",
+    "quote": "master pages, text styles",
+    "by": "ai",
+    "checked": "2026-11-03"
+   },
+   "long-documents": {
+    "v": "partly",
+    "note": "Contents and page numbers yes; index support unclear",
+    "source": "https://mikeloader.ca/2025/12/21/expert-guide-to-affinity-by-canva-3-0/",
+    "quote": "Tables of contents, the index, and cross-references",
+    "by": "ai",
+    "checked": "2026-11-03"
+   }
+  },
+  "dropped": [
+   {
+    "tag": "photo-library",
+    "v": "unknown",
+    "note": null,
+    "source": null,
+    "quote": null
+   },
+   {
+    "tag": "heal-remove",
+    "v": "unknown",
+    "note": null,
+    "source": null,
+    "quote": null
+   },
+   {
+    "tag": "ai-files",
+    "v": "unknown",
+    "note": null,
+    "source": null,
+    "quote": null
+   },
+   {
+    "tag": "works-in-browser",
+    "v": "unknown",
+    "note": null,
+    "source": null,
+    "quote": null
+   },
+   {
+    "tag": "pdf-x-export",
+    "v": "unknown",
+    "note": null,
+    "source": null,
+    "quote": null
+   },
+   {
+    "tag": "indesign-files",
+    "v": "unknown",
+    "note": null,
+    "source": null,
+    "quote": null
+   }
+  ],
+  "model": "claude-haiku-5-5",
+  "usage": {
+   "in": 83396,
+   "out": 3614,
+   "searches": 5,
+   "fetches": 0
+  },
+  "cost": 0.0601
+ },
+ "Msty Studio": {
+  "status": {
+   "is": "current",
+   "note": null,
+   "source": null
+  },
+  "answers": {
+   "point-and-click": {
+    "v": "partly",
+    "note": "Linux AppImage setup needs a terminal command",
+    "source": "https://docs.msty.ai/studio/getting-started/download",
+    "quote": "run the following command in your terminal to make the AppImage executable",
+    "by": "ai",
+    "checked": "2026-11-03"
+   },
+   "model-browser": {
+    "v": "yes",
+    "source": "https://msty.ai/resources/blog/getting-started-with-msty-studio/",
+    "quote": "Install new models with one click.",
+    "by": "ai",
+    "checked": "2026-11-03"
+   },
+   "computer-app": {
+    "v": "yes",
+    "source": "https://docs.msty.ai/studio/getting-started/download",
+    "quote": "Studio Desktop is available for Windows, Mac, and Linux.",
+    "by": "ai",
+    "checked": "2026-11-03"
+   },
+   "chat-with-files": {
+    "v": "yes",
+    "source": "https://msty.ai/resources/blog/msty-studio-free/",
+    "quote": "turn your own documents, notes, and transcripts into searchable",
+    "by": "ai",
+    "checked": "2026-11-03"
+   },
+   "makes-images": {
+    "v": "partly",
+    "note": "Needs an image model connected in Model Hub first",
+    "source": "https://docs.msty.ai/studio/studios/media-studio",
+    "quote": "Select from media-capable models configured in Model Hub image generation.",
+    "by": "ai",
+    "checked": "2026-11-03"
+   },
+   "mcp-tools": {
+    "v": "yes",
+    "source": "https://docs.msty.ai/studio/toolbox/tools",
+    "quote": "Msty Studio supports local MCP server",
+    "by": "ai",
+    "checked": "2026-11-03"
+   }
+  },
+  "dropped": [
+   {
+    "tag": "integrations-api",
+    "v": "unknown",
+    "note": null,
+    "source": null,
+    "quote": null
+   }
+  ],
+  "model": "claude-haiku-5-5",
+  "usage": {
+   "in": 77754,
+   "out": 2511,
+   "searches": 5,
+   "fetches": 0
+  },
+  "cost": 0.059
+ },
+ "Gemini Notebook": {
+  "status": {
+   "is": "current",
+   "note": null,
+   "source": null
+  },
+  "answers": {
+   "shows-sources": {
+    "v": "yes",
+    "source": "https://edu.google.com/intl/ALL_us/ai-gemini-notebook/",
+    "quote": "inline citations that link directly back to the original passage",
+    "by": "ai",
+    "checked": "2026-11-03"
+   },
+   "no-server-needed": {
+    "v": "yes",
+    "source": "https://edu.google.com/intl/ALL_us/ai-gemini-notebook/",
+    "quote": "downloading the standalone Gemini Notebook app",
+    "by": "ai",
+    "checked": "2026-11-03"
+   },
+   "audio-overview": {
+    "v": "yes",
+    "source": "https://support.google.com/gemininotebook/answer/16212820?hl=en",
+    "quote": "select \"Audio Overview\" to generate",
+    "by": "ai",
+    "checked": "2026-11-03"
+   },
+   "share-with-others": {
+    "v": "yes",
+    "source": "https://support.google.com/gemininotebook/answer/16206563?hl=en",
+    "quote": "Share notebooks privately",
+    "by": "ai",
+    "checked": "2026-11-03"
+   }
+  },
+  "dropped": [
+   {
+    "tag": "local-models",
+    "v": "unknown",
+    "note": null,
+    "source": null,
+    "quote": null
+   },
+   {
+    "tag": "ready-connectors",
+    "v": "unknown",
+    "note": null,
+    "source": null,
+    "quote": null
+   }
+  ],
+  "model": "claude-haiku-5-5",
+  "usage": {
+   "in": 64421,
+   "out": 2067,
+   "searches": 4,
+   "fetches": 0
+  },
+  "cost": 0.0475
+ },
+ "Devin Desktop": {
+  "status": {
+   "is": "current",
+   "note": null,
+   "source": null
+  },
+  "answers": {
+   "agent-mode": {
+    "v": "yes",
+    "source": "https://docs.devin.ai/desktop/terminal",
+    "quote": "The agent can run terminal commands on its own.",
+    "by": "ai",
+    "checked": "2026-11-03"
+   },
+   "any-provider": {
+    "v": "partly",
+    "note": "Only a few named cloud models via own key; no open choice",
+    "source": "https://docs.devin.ai/desktop/changelog",
+    "quote": "Bring your Own Anthropic Key",
+    "by": "ai",
+    "checked": "2026-11-03"
+   },
+   "local-models": {
+    "v": "partly",
+    "note": "Possible via a third-party agent and Ollama; extra setup",
+    "source": "https://www.xda-developers.com/devin-works-every-ai-model-ditched-expensive-cloud-setup-local-llm/",
+    "quote": "Devin Desktop can be paired with a locally running LLM",
+    "by": "ai",
+    "checked": "2026-11-03"
+   },
+   "point-and-click": {
+    "v": "yes",
+    "source": "https://x.com/cognition/status/2113671026286682500",
+    "quote": "Download the new Devin Desktop app for free",
+    "by": "ai",
+    "checked": "2026-11-03"
+   },
+   "mcp-tools": {
+    "v": "yes",
+    "source": "https://docs.devin.ai/desktop/changelog",
+    "quote": "Added support for connecting to MCP servers on protocol revision",
+    "by": "ai",
+    "checked": "2026-11-03"
+   }
+  },
+  "dropped": [
+   {
+    "tag": "inside-editor",
+    "v": "unknown",
+    "note": null,
+    "source": null,
+    "quote": null
+   }
+  ],
+  "model": "claude-haiku-5-5",
+  "usage": {
+   "in": 69851,
+   "out": 2484,
+   "searches": 5,
+   "fetches": 0
+  },
+  "cost": 0.0582
+ },
+ "Amp": {
+  "status": {
+   "is": "current",
+   "note": null,
+   "source": null
+  },
+  "answers": {
+   "mcp-tools": {
+    "v": "partly",
+    "note": "Tools only; MCP resources and prompts not supported",
+    "source": "https://ampcode.com/news/mcp-in-orbs",
+    "quote": "MCP Apps, Resources, and Prompts are not supported.",
+    "by": "ai",
+    "checked": "2026-11-03"
+   },
+   "searches-many-projects": {
+    "v": "partly",
+    "note": "Limited to GitHub repositories; one code-hosting site",
+    "source": "https://ampcode.com/docs/tools",
+    "quote": "The Librarian can search and read all public code on GitHub",
+    "by": "ai",
+    "checked": "2026-11-03"
+   },
+   "works-in-browser": {
+    "v": "yes",
+    "source": "https://ampcode.com/",
+    "quote": "Sign In",
+    "by": "ai",
+    "checked": "2026-11-03"
+   }
+  },
+  "dropped": [
+   {
+    "tag": "understands-code-structure",
+    "v": "unknown",
+    "note": null,
+    "source": null,
+    "quote": null
+   },
+   {
+    "tag": "shrinks-code",
+    "v": "unknown",
+    "note": null,
+    "source": null,
+    "quote": null
+   }
+  ],
+  "model": "claude-haiku-5-5",
+  "usage": {
+   "in": 60299,
+   "out": 1830,
+   "searches": 4,
+   "fetches": 0
+  },
+  "cost": 0.0469
+ },
+ "Fire OS": {
+  "status": {
+   "is": "current",
+   "note": null,
+   "source": null
+  },
+  "answers": {
+   "keeps-streaming-apps": {
+    "v": "yes",
+    "source": "https://tomsguide.com/entertainment/streaming-devices/your-fire-tv-stick-has-an-expiration-date-heres-when-support-ends",
+    "quote": "Netflix, Hulu, Disney+, YouTube — they're all in the Appstore.",
+    "by": "ai",
+    "checked": "2026-11-03"
+   },
+   "point-and-click": {
+    "v": "partly",
+    "note": "Apps install by tapping; OS replacement steps not covered",
+    "source": "https://help.netflix.com/en/node/23932",
+    "quote": "From the home screen, tap the Appstore.",
+    "by": "ai",
+    "checked": "2026-11-03"
+   },
+   "plays-4k-hdr": {
+    "v": "partly",
+    "note": "HDR10 on 4K models; Dolby Vision only on some models",
+    "source": "https://www.amazon.com/Amazon-newest-AI-powered-Search-million/dp/B0F7Z4QZTT",
+    "quote": "Dolby Vision, HDR10, HDR10+, HLG",
+    "by": "ai",
+    "checked": "2026-11-03"
+   },
+   "runs-on-tv-box": {
+    "v": "no",
+    "note": "Runs only on selected Amazon Fire TV and tablet hardware",
+    "source": "https://developer.amazon.com/sdk.html",
+    "quote": "Fire OS is the operating system that runs on selected Amazon's Fire TV and tablets.",
+    "by": "ai",
+    "checked": "2026-11-03"
+   }
+  },
+  "dropped": [
+   {
+    "tag": "undo-changes",
+    "v": "unknown",
+    "note": null,
+    "source": null,
+    "quote": null
+   },
+   {
+    "tag": "plugins",
+    "v": "unknown",
+    "note": null,
+    "source": null,
+    "quote": null
+   }
+  ],
+  "model": "claude-haiku-5-5",
+  "usage": {
+   "in": 33250,
+   "out": 2471,
+   "searches": 3,
+   "fetches": 0
+  },
+  "cost": 0.0346
+ },
+ "Portkey": {
+  "status": {
+   "is": "current",
+   "note": null,
+   "source": null
+  },
+  "answers": {
+   "spend-limits": {
+    "v": "partly",
+    "note": "Granular budgets are Enterprise plan only",
+    "source": "https://portkey.ai/pricing",
+    "quote": "Granular Budget & Rate Limits",
+    "by": "ai",
+    "checked": "2026-11-03"
+   },
+   "auto-fallback": {
+    "v": "yes",
+    "source": "https://github.com/Portkey-AI/gateway",
+    "quote": "Fallback to another provider or model on failed requests",
+    "by": "ai",
+    "checked": "2026-11-03"
+   },
+   "managed-cloud": {
+    "v": "yes",
+    "source": "https://portkey.ai/pricing",
+    "quote": "Free Forever",
+    "by": "ai",
+    "checked": "2026-11-03"
+   },
+   "no-paid-edition": {
+    "v": "partly",
+    "note": "Enterprise plan adds SSO and granular budgets",
+    "source": "https://portkey.ai/pricing",
+    "quote": "Granular Budget & Rate Limits",
+    "by": "ai",
+    "checked": "2026-11-03"
+   },
+   "one-command-install": {
+    "v": "yes",
+    "source": "https://github.com/Portkey-AI/gateway/blob/main/docs/installation-deployments.md",
+    "quote": "portkeyai/gateway:latest",
+    "by": "ai",
+    "checked": "2026-11-03"
+   },
+   "response-cache": {
+    "v": "partly",
+    "note": "Simple cache on all plans; semantic plan limits unclear",
+    "source": "https://portkey.ai/docs/product/ai-gateway/cache-simple-and-semantic.md",
+    "quote": "Simple caching is available for all plans.",
+    "by": "ai",
+    "checked": "2026-11-03"
+   },
+   "company-sso": {
+    "v": "no",
+    "note": "SSO is Enterprise plan only",
+    "source": "https://portkey.ai/pricing",
+    "quote": "Role-Based Access Control, SSO, Granular Budget & Rate Limits",
+    "by": "ai",
+    "checked": "2026-11-03"
+   }
+  },
+  "dropped": [],
+  "model": "claude-haiku-5-5",
+  "usage": {
+   "in": 49791,
+   "out": 3598,
+   "searches": 5,
+   "fetches": 0
+  },
+  "cost": 0.0568
+ },
+ "OpenAI Codex": {
+  "status": {
+   "is": "current",
+   "note": null,
+   "source": null
+  },
+  "answers": {
+   "agent-mode": {
+    "v": "yes",
+    "source": "https://developers.openai.com/codex/ide/features",
+    "quote": "By default, Codex runs in Agent mode.",
+    "by": "ai",
+    "checked": "2026-11-03"
+   },
+   "inside-editor": {
+    "v": "yes",
+    "source": "https://developers.openai.com/codex/ide",
+    "quote": "JetBrains IDEs provide their own integrations",
+    "by": "ai",
+    "checked": "2026-11-03"
+   },
+   "point-and-click": {
+    "v": "partly",
+    "note": "App is point-and-click; the CLI needs a terminal",
+    "source": "https://openai.com/codex/",
+    "quote": "Use Codex across ChatGPT, your editor, and the terminal",
+    "by": "ai",
+    "checked": "2026-11-03"
+   },
+   "mcp-tools": {
+    "v": "yes",
+    "source": "https://developers.openai.com/codex/mcp",
+    "quote": "The ChatGPT desktop app, Codex CLI, and IDE extension support MCP servers",
+    "by": "ai",
+    "checked": "2026-11-03"
+   },
+   "phone-app": {
+    "v": "yes",
+    "source": "https://openai.com/index/work-with-codex-from-anywhere/",
+    "quote": "rolling out in preview on iOS and Android",
+    "by": "ai",
+    "checked": "2026-11-03"
+   },
+   "works-in-browser": {
+    "v": "partly",
+    "note": "Cloud tasks in browser; local work needs the app",
+    "source": "https://developers.openai.com/codex/cloud",
+    "quote": "Review changes and continue from the web",
+    "by": "ai",
+    "checked": "2026-11-03"
+   },
+   "uses-your-plan": {
+    "v": "yes",
+    "source": "https://openai.com/codex/",
+    "quote": "all connected by your ChatGPT account",
+    "by": "ai",
+    "checked": "2026-11-03"
+   },
+   "review-changes": {
+    "v": "yes",
+    "source": "https://developers.openai.com/codex/ide",
+    "quote": "review edits in place",
+    "by": "ai",
+    "checked": "2026-11-03"
+   }
+  },
+  "dropped": [
+   {
+    "tag": "any-provider",
+    "v": "unknown",
+    "note": null,
+    "source": null,
+    "quote": null
+   },
+   {
+    "tag": "local-models",
+    "v": "unknown",
+    "note": null,
+    "source": null,
+    "quote": null
+   },
+   {
+    "tag": "works-with-many-agents",
+    "v": "unknown",
+    "note": null,
+    "source": null,
+    "quote": null
+   },
+   {
+    "tag": "computer-app",
+    "v": "unknown",
+    "note": null,
+    "source": null,
+    "quote": null
+   }
+  ],
+  "model": "claude-haiku-5-5",
+  "usage": {
+   "in": 128806,
+   "out": 4947,
+   "searches": 5,
+   "fetches": 2
+  },
+  "cost": 0.0654
+ },
+ "SendGrid": {
+  "status": {
+   "is": "current",
+   "note": null,
+   "source": null
+  },
+  "answers": {
+   "send-api-smtp": {
+    "v": "yes",
+    "source": "https://www.twilio.com/docs/sendgrid/for-developers/sending-email/v3-mail-send-faq",
+    "quote": "Sending email via the SMTP-Relay",
+    "by": "ai",
+    "checked": "2026-11-03"
+   },
+   "tracking-stats": {
+    "v": "yes",
+    "source": "https://www.twilio.com/docs/sendgrid/api-reference/stats/retrieve-global-email-statistics",
+    "quote": "Retrieve detailed global statistics like click rates, open rates, bounces, and more.",
+    "by": "ai",
+    "checked": "2026-11-03"
+   },
+   "managed-cloud": {
+    "v": "yes",
+    "source": "https://www.twilio.com/en-us/products/email-api/pricing",
+    "quote": "Plans run from a free 60-day trial",
+    "by": "ai",
+    "checked": "2026-11-03"
+   }
+  },
+  "dropped": [
+   {
+    "tag": "deliverability",
+    "v": "unknown",
+    "note": null,
+    "source": null,
+    "quote": null
+   },
+   {
+    "tag": "one-command-install",
+    "v": "unknown",
+    "note": null,
+    "source": null,
+    "quote": null
+   }
+  ],
+  "model": "claude-haiku-5-5",
+  "usage": {
+   "in": 87753,
+   "out": 2389,
+   "searches": 5,
+   "fetches": 0
+  },
+  "cost": 0.06
  }
 }

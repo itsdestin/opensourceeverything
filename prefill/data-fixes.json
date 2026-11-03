@@ -122,6 +122,60 @@
    "from": "VMware Workstation / vSphere",
    "to": "VMware Workstation",
    "why": "Nov 2 tidy before the closed-app research run (docs/closed-apps-cleanup.md, approved by Destin): two products in one name; vSphere added separately"
+  },
+  {
+   "group": "newsletters",
+   "from": "ConvertKit",
+   "to": "Kit",
+   "why": "Nov 3: the research run found the maker renamed it (Destin approved switching to the new name); became Kit in 2024 (kit.com)"
+  },
+  {
+   "group": "ai-notebooks",
+   "from": "NotebookLM",
+   "to": "Gemini Notebook",
+   "why": "Nov 3: the research run found the maker renamed it (Destin approved switching to the new name); Google renamed it on 16 Jul 2026"
+  },
+  {
+   "group": "ai-coding",
+   "from": "Windsurf",
+   "to": "Devin Desktop",
+   "why": "Nov 3: the research run found the maker renamed it (Destin approved switching to the new name); Cognition renamed it on 2 Jun 2026"
+  },
+  {
+   "group": "photo-editing",
+   "from": "Affinity Photo",
+   "to": "Affinity",
+   "why": "Nov 3: the research run found the maker renamed it (Destin approved switching to the new name); Canva merged Photo, Designer and Publisher into one free app, Affinity, in Oct 2025"
+  },
+  {
+   "group": "illustration",
+   "from": "Affinity Designer",
+   "to": "Affinity",
+   "why": "Nov 3: the research run found the maker renamed it (Destin approved switching to the new name); Canva merged Photo, Designer and Publisher into one free app, Affinity, in Oct 2025"
+  },
+  {
+   "group": "layout",
+   "from": "Affinity Publisher",
+   "to": "Affinity",
+   "why": "Nov 3: the research run found the maker renamed it (Destin approved switching to the new name); Canva merged Photo, Designer and Publisher into one free app, Affinity, in Oct 2025"
+  },
+  {
+   "group": "agent-context",
+   "from": "Sourcegraph Amp",
+   "to": "Amp",
+   "why": "Nov 3: the research run found the maker renamed it (Destin approved switching to the new name); spun out of Sourcegraph in Dec 2025"
+  },
+  {
+   "group": "local-ai",
+   "from": "Msty",
+   "to": "Msty Studio",
+   "why": "Nov 3: the research run found the maker renamed it (Destin approved switching to the new name); now sold as Msty Studio; the old Msty app is legacy"
+  },
+  {
+   "group": "crypto",
+   "from": "Coinbase",
+   "to": "Coinbase Wallet",
+   "why": "Nov 3: clearer name; the wallet app (not the exchange) is what this group means; its name is Coinbase Wallet again since Sep 2026"
   }
  ],
  "closedAdd": [
@@ -1281,7 +1335,7 @@
    "closed": [
     "EndNote",
     "Mendeley",
-    "RefWorks"
+    "EndNote Fusion"
    ],
    "alts": [
     {
@@ -1295,7 +1349,7 @@
      "note": "Built around BibTeX (LaTeX); fewer Word helpers"
     }
    ],
-   "why": "Zotero is the open alternative to EndNote and Mendeley (both closed); neither was on the map."
+   "why": "Zotero is the open alternative to EndNote and Mendeley (both closed); neither was on the map. Nov 3: RefWorks is now EndNote Fusion (Clarivate, 6 Oct 2026); the old RefWorks page forwards to it."
   },
   {
    "id": "game-stores",
@@ -1429,7 +1483,17 @@
   "chatgpt-models-openai": "alternatives-to/chatgpt/",
   "official-youtube-reddit-and-discord-apps": "alternatives-to/youtube/",
   "vmware-workstation-vsphere": "alternatives-to/vmware-workstation/",
-  "aws-vpc": "g/vpn/"
+  "aws-vpc": "g/vpn/",
+  "convertkit": "alternatives-to/kit/",
+  "refworks": "alternatives-to/endnote-fusion/",
+  "notebooklm": "alternatives-to/gemini-notebook/",
+  "windsurf": "alternatives-to/devin-desktop/",
+  "affinity-photo": "alternatives-to/affinity/",
+  "affinity-designer": "alternatives-to/affinity/",
+  "affinity-publisher": "alternatives-to/affinity/",
+  "sourcegraph-amp": "alternatives-to/amp/",
+  "msty": "alternatives-to/msty-studio/",
+  "coinbase": "alternatives-to/coinbase-wallet/"
  },
  "appRedirectsWhy": "Closed-app pages that existed before and no longer do (merged spelling, renamed, or no longer a closed app), so old links land somewhere useful.",
  "redirectNote": "splits above also produce data/redirects.json: {oldGroupId: [newGroupIds]}, which the site turns into 'this group was split' pages so old links keep working."

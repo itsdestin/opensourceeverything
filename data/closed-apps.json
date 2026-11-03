@@ -892,25 +892,67 @@
     }
    }
   },
-  "Affinity Designer": {
-   "status": {
-    "is": "renamed",
-    "note": "Replaced by the unified Affinity app (v3, by Canva), released October 2025.",
-    "source": "https://en.wikipedia.org/wiki/Affinity_Designer"
-   }
-  },
-  "Affinity Photo": {
-   "status": {
-    "is": "renamed",
-    "note": "Merged into a single app called Affinity; Affinity Photo is now the Pixel workspace",
-    "source": "https://www.xda-developers.com/free-lightroom-alternative-handles-raw-files-raw-therapee/"
-   }
-  },
-  "Affinity Publisher": {
-   "status": {
-    "is": "renamed",
-    "note": "Merged into the single Affinity app (Affinity by Canva) from October 2025; the Publisher app itself is no longer offered.",
-    "source": "https://en.wikipedia.org/wiki/Affinity_Publisher"
+  "Affinity": {
+   "answers": {
+    "non-destructive": {
+     "v": "yes",
+     "source": "https://apps.apple.com/us/app/affinity-by-canva/id6751323445",
+     "quote": "Every edit in Affinity is non-destructive",
+     "by": "ai",
+     "checked": "2026-11-03"
+    },
+    "psd-files": {
+     "v": "partly",
+     "note": "Text and smart objects need a setting turned on",
+     "source": "https://www.affinity.studio/blog/how-to-open-a-psd-file",
+     "quote": "Layers come across intact and ready to edit.",
+     "by": "ai",
+     "checked": "2026-11-03"
+    },
+    "raw-photos": {
+     "v": "yes",
+     "source": "https://apps.apple.com/us/app/affinity-by-canva/id6751323445",
+     "quote": "fine-tune RAW files",
+     "by": "ai",
+     "checked": "2026-11-03"
+    },
+    "ai-photo-tools": {
+     "v": "partly",
+     "note": "AI tools need a paid Canva premium plan",
+     "source": "https://www.affinity.studio/get-affinity",
+     "quote": "unlock incredibly powerful AI tools",
+     "by": "ai",
+     "checked": "2026-11-03"
+    },
+    "cmyk-print": {
+     "v": "yes",
+     "source": "https://blog.lulu.com/affinity-by-canva/",
+     "quote": "export a CMYK, single-page, print-ready PDF",
+     "by": "ai",
+     "checked": "2026-11-03"
+    },
+    "image-trace": {
+     "v": "yes",
+     "source": "https://www.affinity.studio/get-affinity",
+     "quote": "Image Trace",
+     "by": "ai",
+     "checked": "2026-11-03"
+    },
+    "master-pages": {
+     "v": "yes",
+     "source": "https://en.wikipedia.org/wiki/Affinity_(software)",
+     "quote": "master pages, text styles",
+     "by": "ai",
+     "checked": "2026-11-03"
+    },
+    "long-documents": {
+     "v": "partly",
+     "note": "Contents and page numbers yes; index support unclear",
+     "source": "https://mikeloader.ca/2025/12/21/expert-guide-to-affinity-by-canva-3-0/",
+     "quote": "Tables of contents, the index, and cross-references",
+     "by": "ai",
+     "checked": "2026-11-03"
+    }
    }
   },
   "AG Grid Enterprise": {
@@ -1434,6 +1476,33 @@
      "v": "yes",
      "source": "https://docs.aws.amazon.com/neptune/latest/userguide/intro.html",
      "quote": "fully managed graph database service",
+     "by": "ai",
+     "checked": "2026-11-03"
+    }
+   }
+  },
+  "Amp": {
+   "answers": {
+    "mcp-tools": {
+     "v": "partly",
+     "note": "Tools only; MCP resources and prompts not supported",
+     "source": "https://ampcode.com/news/mcp-in-orbs",
+     "quote": "MCP Apps, Resources, and Prompts are not supported.",
+     "by": "ai",
+     "checked": "2026-11-03"
+    },
+    "searches-many-projects": {
+     "v": "partly",
+     "note": "Limited to GitHub repositories; one code-hosting site",
+     "source": "https://ampcode.com/docs/tools",
+     "quote": "The Librarian can search and read all public code on GitHub",
+     "by": "ai",
+     "checked": "2026-11-03"
+    },
+    "works-in-browser": {
+     "v": "yes",
+     "source": "https://ampcode.com/",
+     "quote": "Sign In",
      "by": "ai",
      "checked": "2026-11-03"
     }
@@ -5486,11 +5555,45 @@
     }
    }
   },
-  "Coinbase": {
-   "status": {
-    "is": "renamed",
-    "note": "Coinbase Wallet was renamed Base App; the separate Coinbase exchange app is not the wallet listed here.",
-    "source": "https://www.coinbase.com/wallet/downloads"
+  "Coinbase Wallet": {
+   "answers": {
+    "many-coins": {
+     "v": "yes",
+     "source": "https://www.coinbase.com/wallet",
+     "quote": "Trade BTC, ETH, SOL and dozens more chains",
+     "by": "ai",
+     "checked": "2026-11-03"
+    },
+    "hardware-wallet": {
+     "v": "partly",
+     "note": "Ledger only, and only through the browser extension",
+     "source": "https://www.coinbase.com/security/wallet-security",
+     "quote": "Coinbase Wallet’s browser extension is compatible with Ledger hardware wallets",
+     "by": "ai",
+     "checked": "2026-11-03"
+    },
+    "phone-app": {
+     "v": "yes",
+     "source": "https://www.coinbase.com/wallet/downloads",
+     "quote": "Base is accessible as a mobile app iOS and Android",
+     "by": "ai",
+     "checked": "2026-11-03"
+    },
+    "computer-app": {
+     "v": "partly",
+     "note": "Browser extension only (Chrome), no Windows/Mac/Linux app",
+     "source": "https://www.coinbase.com/learn/wallet/setting-up-coinbase-wallet-on-computer-via-chrome",
+     "quote": "there’s also a standalone browser extension available in Google Chrome",
+     "by": "ai",
+     "checked": "2026-11-03"
+    },
+    "built-in-swap": {
+     "v": "yes",
+     "source": "https://help.coinbase.com/en/wallet/getting-started/dex-swap",
+     "quote": "You can swap using a DEX on the Coinbase Wallet app and browser extension.",
+     "by": "ai",
+     "checked": "2026-11-03"
+    }
    }
   },
   "Cold Turkey": {
@@ -5638,13 +5741,6 @@
      "by": "ai",
      "checked": "2026-11-03"
     }
-   }
-  },
-  "ConvertKit": {
-   "status": {
-    "is": "renamed",
-    "note": "ConvertKit officially became Kit (kit.com) in 2024; all items set to unknown per the renamed-product rule.",
-    "source": "https://kit.com/resources/blog/convertkit-is-now-kit"
    }
   },
   "CorelDRAW": {
@@ -6653,6 +6749,47 @@
     }
    }
   },
+  "Devin Desktop": {
+   "answers": {
+    "agent-mode": {
+     "v": "yes",
+     "source": "https://docs.devin.ai/desktop/terminal",
+     "quote": "The agent can run terminal commands on its own.",
+     "by": "ai",
+     "checked": "2026-11-03"
+    },
+    "any-provider": {
+     "v": "partly",
+     "note": "Only a few named cloud models via own key; no open choice",
+     "source": "https://docs.devin.ai/desktop/changelog",
+     "quote": "Bring your Own Anthropic Key",
+     "by": "ai",
+     "checked": "2026-11-03"
+    },
+    "local-models": {
+     "v": "partly",
+     "note": "Possible via a third-party agent and Ollama; extra setup",
+     "source": "https://www.xda-developers.com/devin-works-every-ai-model-ditched-expensive-cloud-setup-local-llm/",
+     "quote": "Devin Desktop can be paired with a locally running LLM",
+     "by": "ai",
+     "checked": "2026-11-03"
+    },
+    "point-and-click": {
+     "v": "yes",
+     "source": "https://x.com/cognition/status/2113671026286682500",
+     "quote": "Download the new Devin Desktop app for free",
+     "by": "ai",
+     "checked": "2026-11-03"
+    },
+    "mcp-tools": {
+     "v": "yes",
+     "source": "https://docs.devin.ai/desktop/changelog",
+     "quote": "Added support for connecting to MCP servers on protocol revision",
+     "by": "ai",
+     "checked": "2026-11-03"
+    }
+   }
+  },
   "Directory Opus": {
    "answers": {
     "dual-pane": {
@@ -7605,6 +7742,38 @@
     }
    }
   },
+  "EndNote Fusion": {
+   "answers": {
+    "browser-extension": {
+     "v": "yes",
+     "source": "https://fusion-endnote.zendesk.com/hc/en-us/articles/49619567513105-Connect-to-browser-Microsoft-Word-and-Google-Docs",
+     "quote": "Add to [Chrome] [Edge] [Firefox] or [Safari]",
+     "by": "ai",
+     "checked": "2026-11-03"
+    },
+    "word-plugin": {
+     "v": "yes",
+     "source": "https://fusion-endnote.zendesk.com/hc/en-us/articles/49619567513105-Connect-to-browser-Microsoft-Word-and-Google-Docs",
+     "quote": "Cite and create bibliography in Microsoft Word and Word Online",
+     "by": "ai",
+     "checked": "2026-11-03"
+    },
+    "syncs-devices": {
+     "v": "yes",
+     "source": "https://endnote.com/fusion/learn-more/",
+     "quote": "one cloud-based solution for organizing information",
+     "by": "ai",
+     "checked": "2026-11-03"
+    },
+    "group-libraries": {
+     "v": "yes",
+     "source": "https://endnote.com/fusion/learn-more/",
+     "quote": "share projects and cite as they write",
+     "by": "ai",
+     "checked": "2026-11-03"
+    }
+   }
+  },
   "Epic Games Store": {
    "answers": {
     "sells-games": {
@@ -8242,10 +8411,38 @@
    }
   },
   "Fire OS": {
-   "status": {
-    "is": "discontinued",
-    "note": "Replaced on newer Fire TV devices by Amazon's Vega OS, announced September 30, 2025; Fire OS continues only on existing devices.",
-    "source": "https://en.wikipedia.org/wiki/Fire_OS"
+   "answers": {
+    "keeps-streaming-apps": {
+     "v": "yes",
+     "source": "https://tomsguide.com/entertainment/streaming-devices/your-fire-tv-stick-has-an-expiration-date-heres-when-support-ends",
+     "quote": "Netflix, Hulu, Disney+, YouTube — they're all in the Appstore.",
+     "by": "ai",
+     "checked": "2026-11-03"
+    },
+    "point-and-click": {
+     "v": "partly",
+     "note": "Apps install by tapping; OS replacement steps not covered",
+     "source": "https://help.netflix.com/en/node/23932",
+     "quote": "From the home screen, tap the Appstore.",
+     "by": "ai",
+     "checked": "2026-11-03"
+    },
+    "plays-4k-hdr": {
+     "v": "partly",
+     "note": "HDR10 on 4K models; Dolby Vision only on some models",
+     "source": "https://www.amazon.com/Amazon-newest-AI-powered-Search-million/dp/B0F7Z4QZTT",
+     "quote": "Dolby Vision, HDR10, HDR10+, HLG",
+     "by": "ai",
+     "checked": "2026-11-03"
+    },
+    "runs-on-tv-box": {
+     "v": "no",
+     "note": "Runs only on selected Amazon Fire TV and tablet hardware",
+     "source": "https://developer.amazon.com/sdk.html",
+     "quote": "Fire OS is the operating system that runs on selected Amazon's Fire TV and tablets.",
+     "by": "ai",
+     "checked": "2026-11-03"
+    }
    }
   },
   "Fire TV home screen": {
@@ -9049,6 +9246,38 @@
      "note": "Usage stats are shared until you switch them off in Privacy",
      "source": "https://www.androidpolice.com/gboard-is-a-privacy-nightmare-what-you-can-do-about-it/",
      "quote": "This telemetry is opt-out by default",
+     "by": "ai",
+     "checked": "2026-11-03"
+    }
+   }
+  },
+  "Gemini Notebook": {
+   "answers": {
+    "shows-sources": {
+     "v": "yes",
+     "source": "https://edu.google.com/intl/ALL_us/ai-gemini-notebook/",
+     "quote": "inline citations that link directly back to the original passage",
+     "by": "ai",
+     "checked": "2026-11-03"
+    },
+    "no-server-needed": {
+     "v": "yes",
+     "source": "https://edu.google.com/intl/ALL_us/ai-gemini-notebook/",
+     "quote": "downloading the standalone Gemini Notebook app",
+     "by": "ai",
+     "checked": "2026-11-03"
+    },
+    "audio-overview": {
+     "v": "yes",
+     "source": "https://support.google.com/gemininotebook/answer/16212820?hl=en",
+     "quote": "select \"Audio Overview\" to generate",
+     "by": "ai",
+     "checked": "2026-11-03"
+    },
+    "share-with-others": {
+     "v": "yes",
+     "source": "https://support.google.com/gemininotebook/answer/16206563?hl=en",
+     "quote": "Share notebooks privately",
      "by": "ai",
      "checked": "2026-11-03"
     }
@@ -12736,6 +12965,53 @@
     }
    }
   },
+  "Kit": {
+   "answers": {
+    "email-designer": {
+     "v": "partly",
+     "note": "Structured layouts and text editor; no full drag-and-drop builder",
+     "source": "https://www.emailsoftwareinsights.com/reviews/kit/",
+     "quote": "No true drag-and-drop email builder",
+     "by": "ai",
+     "checked": "2026-11-03"
+    },
+    "email-sequences": {
+     "v": "yes",
+     "source": "https://help.kit.com/en/articles/2502629-creating-and-sending-an-email-sequence-in-kit",
+     "quote": "Email Sequences are self-contained sets of automated emails.",
+     "by": "ai",
+     "checked": "2026-11-03"
+    },
+    "signup-forms": {
+     "v": "yes",
+     "source": "https://kit.com/features/forms",
+     "quote": "Kit's email signup forms are ready to go with no coding required.",
+     "by": "ai",
+     "checked": "2026-11-03"
+    },
+    "tracking-stats": {
+     "v": "yes",
+     "source": "https://help.kit.com/en/articles/2502503-the-kit-broadcasts-dashboard",
+     "quote": "Opened: Your Broadcast's number of opens",
+     "by": "ai",
+     "checked": "2026-11-03"
+    },
+    "mailchimp-import": {
+     "v": "yes",
+     "source": "https://help.kit.com/en/articles/4077011-migrating-to-kit-from-another-platform",
+     "quote": "use the dedicated importers we've built",
+     "by": "ai",
+     "checked": "2026-11-03"
+    },
+    "managed-cloud": {
+     "v": "yes",
+     "source": "https://wordpress.org/plugins/convertkit/",
+     "quote": "Landing pages are hosted on Kit's servers",
+     "by": "ai",
+     "checked": "2026-11-03"
+    }
+   }
+  },
   "LangSmith": {
    "answers": {
     "managed-cloud": {
@@ -15712,11 +15988,52 @@
     }
    }
   },
-  "Msty": {
-   "status": {
-    "is": "renamed",
-    "note": "Now sold as Msty Studio; the Msty App 1.x line is legacy and its docs point to Studio.",
-    "source": "https://docs.msty.app/"
+  "Msty Studio": {
+   "answers": {
+    "point-and-click": {
+     "v": "partly",
+     "note": "Linux AppImage setup needs a terminal command",
+     "source": "https://docs.msty.ai/studio/getting-started/download",
+     "quote": "run the following command in your terminal to make the AppImage executable",
+     "by": "ai",
+     "checked": "2026-11-03"
+    },
+    "model-browser": {
+     "v": "yes",
+     "source": "https://msty.ai/resources/blog/getting-started-with-msty-studio/",
+     "quote": "Install new models with one click.",
+     "by": "ai",
+     "checked": "2026-11-03"
+    },
+    "computer-app": {
+     "v": "yes",
+     "source": "https://docs.msty.ai/studio/getting-started/download",
+     "quote": "Studio Desktop is available for Windows, Mac, and Linux.",
+     "by": "ai",
+     "checked": "2026-11-03"
+    },
+    "chat-with-files": {
+     "v": "yes",
+     "source": "https://msty.ai/resources/blog/msty-studio-free/",
+     "quote": "turn your own documents, notes, and transcripts into searchable",
+     "by": "ai",
+     "checked": "2026-11-03"
+    },
+    "makes-images": {
+     "v": "partly",
+     "note": "Needs an image model connected in Model Hub first",
+     "source": "https://docs.msty.ai/studio/studios/media-studio",
+     "quote": "Select from media-capable models configured in Model Hub image generation.",
+     "by": "ai",
+     "checked": "2026-11-03"
+    },
+    "mcp-tools": {
+     "v": "yes",
+     "source": "https://docs.msty.ai/studio/toolbox/tools",
+     "quote": "Msty Studio supports local MCP server",
+     "by": "ai",
+     "checked": "2026-11-03"
+    }
    }
   },
   "MyFitnessPal": {
@@ -16353,13 +16670,6 @@
     }
    }
   },
-  "NotebookLM": {
-   "status": {
-    "is": "renamed",
-    "note": "Now called Gemini Notebook; Google help pages are titled Gemini Notebook Help.",
-    "source": "https://support.google.com/notebooklm/answer/16206563?hl=en"
-   }
-  },
   "Notion": {
    "answers": {
     "phone-app": {
@@ -16843,10 +17153,65 @@
    }
   },
   "OpenAI Codex": {
-   "status": {
-    "is": "renamed",
-    "note": "Codex app was merged into the ChatGPT desktop app on July 9, 2026, and now runs as a Codex mode there. Answers are unknown because the merged product was not verified against the maker's pages.",
-    "source": "https://en.wikipedia.org/wiki/OpenAI_Codex"
+   "answers": {
+    "agent-mode": {
+     "v": "yes",
+     "source": "https://developers.openai.com/codex/ide/features",
+     "quote": "By default, Codex runs in Agent mode.",
+     "by": "ai",
+     "checked": "2026-11-03"
+    },
+    "inside-editor": {
+     "v": "yes",
+     "source": "https://developers.openai.com/codex/ide",
+     "quote": "JetBrains IDEs provide their own integrations",
+     "by": "ai",
+     "checked": "2026-11-03"
+    },
+    "point-and-click": {
+     "v": "partly",
+     "note": "App is point-and-click; the CLI needs a terminal",
+     "source": "https://openai.com/codex/",
+     "quote": "Use Codex across ChatGPT, your editor, and the terminal",
+     "by": "ai",
+     "checked": "2026-11-03"
+    },
+    "mcp-tools": {
+     "v": "yes",
+     "source": "https://developers.openai.com/codex/mcp",
+     "quote": "The ChatGPT desktop app, Codex CLI, and IDE extension support MCP servers",
+     "by": "ai",
+     "checked": "2026-11-03"
+    },
+    "phone-app": {
+     "v": "yes",
+     "source": "https://openai.com/index/work-with-codex-from-anywhere/",
+     "quote": "rolling out in preview on iOS and Android",
+     "by": "ai",
+     "checked": "2026-11-03"
+    },
+    "works-in-browser": {
+     "v": "partly",
+     "note": "Cloud tasks in browser; local work needs the app",
+     "source": "https://developers.openai.com/codex/cloud",
+     "quote": "Review changes and continue from the web",
+     "by": "ai",
+     "checked": "2026-11-03"
+    },
+    "uses-your-plan": {
+     "v": "yes",
+     "source": "https://openai.com/codex/",
+     "quote": "all connected by your ChatGPT account",
+     "by": "ai",
+     "checked": "2026-11-03"
+    },
+    "review-changes": {
+     "v": "yes",
+     "source": "https://developers.openai.com/codex/ide",
+     "quote": "review edits in place",
+     "by": "ai",
+     "checked": "2026-11-03"
+    }
    }
   },
   "OpenRouter": {
@@ -18095,10 +18460,60 @@
    }
   },
   "Portkey": {
-   "status": {
-    "is": "renamed",
-    "note": "Portkey is now PRISMA AIRS AI Gateway (per the maker's docs banner).",
-    "source": "https://portkey.ai/docs/guides/use-cases/enforcing-limits-and-budgets"
+   "answers": {
+    "spend-limits": {
+     "v": "partly",
+     "note": "Granular budgets are Enterprise plan only",
+     "source": "https://portkey.ai/pricing",
+     "quote": "Granular Budget & Rate Limits",
+     "by": "ai",
+     "checked": "2026-11-03"
+    },
+    "auto-fallback": {
+     "v": "yes",
+     "source": "https://github.com/Portkey-AI/gateway",
+     "quote": "Fallback to another provider or model on failed requests",
+     "by": "ai",
+     "checked": "2026-11-03"
+    },
+    "managed-cloud": {
+     "v": "yes",
+     "source": "https://portkey.ai/pricing",
+     "quote": "Free Forever",
+     "by": "ai",
+     "checked": "2026-11-03"
+    },
+    "no-paid-edition": {
+     "v": "partly",
+     "note": "Enterprise plan adds SSO and granular budgets",
+     "source": "https://portkey.ai/pricing",
+     "quote": "Granular Budget & Rate Limits",
+     "by": "ai",
+     "checked": "2026-11-03"
+    },
+    "one-command-install": {
+     "v": "yes",
+     "source": "https://github.com/Portkey-AI/gateway/blob/main/docs/installation-deployments.md",
+     "quote": "portkeyai/gateway:latest",
+     "by": "ai",
+     "checked": "2026-11-03"
+    },
+    "response-cache": {
+     "v": "partly",
+     "note": "Simple cache on all plans; semantic plan limits unclear",
+     "source": "https://portkey.ai/docs/product/ai-gateway/cache-simple-and-semantic.md",
+     "quote": "Simple caching is available for all plans.",
+     "by": "ai",
+     "checked": "2026-11-03"
+    },
+    "company-sso": {
+     "v": "no",
+     "note": "SSO is Enterprise plan only",
+     "source": "https://portkey.ai/pricing",
+     "quote": "Role-Based Access Control, SSO, Granular Budget & Rate Limits",
+     "by": "ai",
+     "checked": "2026-11-03"
+    }
    }
   },
   "Postman": {
@@ -19172,13 +19587,6 @@
      "by": "ai",
      "checked": "2026-11-03"
     }
-   }
-  },
-  "RefWorks": {
-   "status": {
-    "is": "renamed",
-    "note": "RefWorks was renamed EndNote Fusion from 6 October 2026, per the library announcements; the features were not described as changing.",
-    "source": "https://guides.ulster.ac.uk/blogs/system/refworks-is-now-endnote-fusion"
    }
   },
   "Render": {
@@ -20436,10 +20844,28 @@
    }
   },
   "SendGrid": {
-   "status": {
-    "is": "renamed",
-    "note": "Now Twilio SendGrid, part of Twilio; the maker's page calls it Twilio's (formerly SendGrid).",
-    "source": "https://www.twilio.com/en-us/products/email-api/smtp-service"
+   "answers": {
+    "send-api-smtp": {
+     "v": "yes",
+     "source": "https://www.twilio.com/docs/sendgrid/for-developers/sending-email/v3-mail-send-faq",
+     "quote": "Sending email via the SMTP-Relay",
+     "by": "ai",
+     "checked": "2026-11-03"
+    },
+    "tracking-stats": {
+     "v": "yes",
+     "source": "https://www.twilio.com/docs/sendgrid/api-reference/stats/retrieve-global-email-statistics",
+     "quote": "Retrieve detailed global statistics like click rates, open rates, bounces, and more.",
+     "by": "ai",
+     "checked": "2026-11-03"
+    },
+    "managed-cloud": {
+     "v": "yes",
+     "source": "https://www.twilio.com/en-us/products/email-api/pricing",
+     "quote": "Plans run from a free 60-day trial",
+     "by": "ai",
+     "checked": "2026-11-03"
+    }
    }
   },
   "SentinelOne": {
@@ -21345,13 +21771,6 @@
      "by": "ai",
      "checked": "2026-11-03"
     }
-   }
-  },
-  "Sourcegraph Amp": {
-   "status": {
-    "is": "renamed",
-    "note": "Now Amp by Amp Frontier Corporation; spun out of Sourcegraph in Dec 2025 and no longer part of Sourcegraph",
-    "source": "https://innfactory.ai/en/ai-harness/amp/"
    }
   },
   "Sourcetree": {
@@ -24995,13 +25414,6 @@
      "by": "ai",
      "checked": "2026-11-03"
     }
-   }
-  },
-  "Windsurf": {
-   "status": {
-    "is": "renamed",
-    "note": "Windsurf was renamed Devin Desktop by Cognition on June 2, 2026; Cascade was replaced by Devin Local. Answers are unknown because the checklist was not re-verified against the renamed product's pages.",
-    "source": "https://devin.ai/blog/windsurf-is-now-devin-desktop/"
    }
   },
   "WinRAR": {
