@@ -32,11 +32,13 @@ const srcLink = (a) => (a?.source ? `<a href="${esc(a.source)}" rel="noopener">S
 // evidence; the AI only found it. WHY a default month for the open answers: they were researched Oct 26–31 and carry no date.
 const OPEN_CHECKED = '2026-10';
 const BY = { ai: 'AI-researched', test: 'Our test', community: 'Community-tested' };
-export const srcHost = (u) => { try { return new URL(u).hostname.replace(/^www\./, ''); } catch { return ''; } };
+// WHY GitHub's file host shows as "github.com": raw.githubusercontent.com is the same source, and too long for a chip.
+export const srcHost = (u) => { try { const h = new URL(u).hostname.replace(/^www\./, ''); return h === 'raw.githubusercontent.com' ? 'github.com' : h; } catch { return ''; } };
 const month = (d) => { const [y, m] = String(d).split('-'); return m ? `${['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'][+m - 1]} ${y}` : ''; };
 // The data-* a tip needs; surfaces.js draws the tip from them.
 export const provAttrs = (a, t) => (a?.source ? ` data-src="${esc(a.source)}" data-host="${esc(srcHost(a.source))}" data-by="${esc(BY[a.by ?? 'ai'])}" data-when="${esc(month(a.checked ?? OPEN_CHECKED))}"${a.quote ? ` data-quote="${esc(a.quote)}"` : ''}${t?.meaning ? ` data-m="${esc(t.meaning)}"` : ''}` : '');
-export const provLabel = (a, t) => (a?.source ? `<button type="button" class="prov" data-name="${esc(t.name)}" data-v="${MARK[a.v][1]}"${a.note ? ` data-note="${esc(a.note)}"` : ''}${provAttrs(a, t)}>${esc(srcHost(a.source))} · AI</button>` : '');
+// WHY "Source" alone on a phone (Nov 2 screenshots): the site name squeezed the feature's own text into a narrow column.
+export const provLabel = (a, t) => (a?.source ? `<button type="button" class="prov" data-name="${esc(t.name)}" data-v="${MARK[a.v][1]}"${a.note ? ` data-note="${esc(a.note)}"` : ''}${provAttrs(a, t)}><span class="prov-long">${esc(srcHost(a.source))} · AI</span><span class="prov-short">Source</span></button>` : '');
 
 // Attributes for an alternative card: which tags it has (a "yes"). WHY yes only: "Must have" means the whole thing; partly and unknown never match.
 export function cardAttrs(p, g) {
@@ -76,7 +78,8 @@ const CHEV = '<svg viewBox="0 0 24 24" width="12" height="12" fill="none" stroke
 
 // The compare table. Rows are in the same best-first order as the cards. A cell with a note or source opens it on tap / hover.
 // WHY closed apps on top (design §1, Nov 2): the table answers "how does each open project compare with the app I'm leaving?".
-// They sit above a divider, tinted and tagged "Closed", so they never read as alternatives. A column where a closed app says
+// They sit under their own "Closed apps" divider, tinted and tagged "Closed", so they never read as alternatives; the dividers say
+// "Closed apps" / "Open source", not "Open alternatives", which the card's title already says (reviewer, Nov 2). A column where a closed app says
 // yes and no open project does is marked: that is a gap in a feature, not only a missing app (design §1).
 const cmpCell = (a, t, app) => { if (a?.v === 'own') a = { ...a, note: `This is about ${app}'s own files, so it doesn't apply.` };
   return a ? `<td><button type="button" class="cell ${a.v}" data-name="${esc(t.name)}" data-v="${MARK[a.v][1]}"${a.note ? ` data-note="${esc(a.note)}"` : ''}${provAttrs(a, t)} title="${esc([t.name + ': ' + MARK[a.v][1], a.note].filter(Boolean).join(' · '))}">${MARK[a.v][0]}</button></td>` : '<td><span class="fm unk" aria-label="Not checked yet">·</span></td>'; };
@@ -85,10 +88,10 @@ export function groupCompare(g, alts, closed = g.closed ?? []) {
   const shut = closed.filter((c) => tags.some((t) => closedAnswerOf(c, t.id)));
   const gap = (t) => shut.some((c) => closedAnswerOf(c, t.id)?.v === 'yes') && alts.every((x) => answerOf(x.p.id, t.id)?.v !== 'yes') && alts.some((x) => answerOf(x.p.id, t.id));
   const span = tags.length + 1;
-  return `<div class="cmpwrap" data-compare hidden><div class="cmpscroll"><table class="cmp"><thead><tr><th scope="col">${shut.length ? 'App' : 'Project'}</th>${tags.map((t) => `<th scope="col"${gap(t) ? ' class="gapcol"' : ''}><button type="button" class="cmph" data-q="${esc(t.question)}" data-m="${esc(t.meaning)}" data-name="${esc(t.name)}"${gap(t) ? ' data-gap="1"' : ''}>${esc(t.name)}</button>${gap(t) ? '<span class="gapmark">Not in open source yet</span>' : ''}</th>`).join('')}</tr></thead>
-    <tbody>${shut.length ? `${shut.map((c) => `<tr class="closedrow"><th scope="row"><a href="${appUrl(c)}">${esc(c)}</a><span class="tag">Closed</span></th>${tags.map((t) => cmpCell(closedAnswerOf(c, t.id), t, c)).join('')}</tr>`).join('')}<tr class="cmpsep"><th scope="rowgroup" colspan="${span}">Open alternatives</th></tr>` : ''}${alts.map((x) => `<tr data-pid="${esc(x.p.id)}"><th scope="row"><a href="${url(`p/${x.p.id}/`)}">${esc(x.p.name)}</a></th>${tags.map((t) => cmpCell(answerOf(x.p.id, t.id), t)).join('')}</tr>`).join('')}</tbody></table></div>
+  return `<div class="cmpwrap" data-compare hidden><div class="cmpscroll"><table class="cmp"><thead><tr><th scope="col">${shut.length ? 'App' : 'Project'}</th>${tags.map((t) => `<th scope="col"${gap(t) ? ' class="gapcol"' : ''}><button type="button" class="cmph" data-q="${esc(t.question)}" data-m="${esc(t.meaning)}" data-name="${esc(t.name)}"${gap(t) ? ' data-gap="1"' : ''}>${esc(t.name)}</button>${gap(t) ? '<span class="gapmark">No open project yet</span>' : ''}</th>`).join('')}</tr></thead>
+    <tbody>${shut.length ? `<tr class="cmpsep"><th scope="rowgroup" colspan="${span}">Closed apps</th></tr>${shut.map((c) => `<tr class="closedrow"><th scope="row"><a href="${appUrl(c)}">${esc(c)}</a><span class="tag">Closed</span></th>${tags.map((t) => cmpCell(closedAnswerOf(c, t.id), t, c)).join('')}</tr>`).join('')}<tr class="cmpsep"><th scope="rowgroup" colspan="${span}">Open source</th></tr>` : ''}${alts.map((x) => `<tr data-pid="${esc(x.p.id)}"><th scope="row"><a href="${url(`p/${x.p.id}/`)}">${esc(x.p.name)}</a></th>${tags.map((t) => cmpCell(answerOf(x.p.id, t.id), t)).join('')}</tr>`).join('')}</tbody></table></div>
     <!-- WHY a key (Destin, structure deck: yes to "add a one-line key"): the marks were only explained by tapping. Same marks as the cells. -->
-    <p class="cmpkey"><span class="fm yes" aria-hidden="true">✓</span><span>Yes</span><span class="fm partly" aria-hidden="true">~</span><span>Partly</span><span class="fm no" aria-hidden="true">✗</span><span>No</span><span class="fm unk" aria-hidden="true">·</span><span>Not checked yet</span>${shut.some((c) => tags.some((t) => closedAnswerOf(c, t.id)?.v === 'own')) ? '<span class="fm own" aria-hidden="true">—</span><span>Its own format</span>' : ''}<span class="cmpkey-how">Tap any mark for its source · <a href="${url('how-we-check/')}">How we check</a></span></p><div class="callout info" data-cmp-none hidden>None of these have everything you picked.</div></div>
+    <p class="cmpkey"><span class="fm yes" aria-hidden="true">✓</span><span>Yes</span><span class="fm partly" aria-hidden="true">~</span><span>Partly</span><span class="fm no" aria-hidden="true">✗</span><span>No</span><span class="fm unk" aria-hidden="true">·</span><span>Not checked yet</span>${shut.some((c) => tags.some((t) => closedAnswerOf(c, t.id)?.v === 'own')) ? '<span class="kp"><span class="fm own" aria-hidden="true">—</span> Its own format</span>' : ''}<span class="cmpkey-how">Tap a mark to see where it comes from</span></p><div class="callout info" data-cmp-none hidden>None of these have everything you picked.</div></div>
   <div class="callout info" data-must-none hidden>None of these have everything you picked.</div>`;
 }
 

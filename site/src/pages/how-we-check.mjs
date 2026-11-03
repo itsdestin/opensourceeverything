@@ -34,6 +34,7 @@ export default function howWeCheck() {
       <div class="lvl1"><h3><span class="fm own" aria-hidden="true">—</span> Its own format</h3><p class="small2">The question is about this app's own files, like "Opens Word files" for Microsoft Word.</p></div>
     </div>`)}
   ${section('accuracy', 'How accurate it is', last ? `
+    <p class="body2"><b>${last.checked - last.wrong} of ${last.checked}</b> answers were right when we last checked them by hand (${when(last.date)}).</p>
     <p class="body2">AI can point to a real page that doesn't say what it claims. So we open a sample of answers at their source and check them by hand.</p>
     <table class="spot"><thead><tr><th scope="col">When</th><th scope="col">What was checked</th><th scope="col">Answers</th><th scope="col">Wrong</th></tr></thead>
       <tbody>${spot.map((c) => `<tr><td>${when(c.date)}</td><td>${esc(c.what)}</td><td class="num">${c.checked}</td><td class="num">${c.wrong} (${Math.round((c.wrong / c.checked) * 100)}%)</td></tr>`).join('')}</tbody></table>

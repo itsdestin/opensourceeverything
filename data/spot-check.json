@@ -1,7 +1,19 @@
 {
  "note": "Hand checks of AI-researched answers: a sample is opened at its source page and judged by a person. Shown on how-we-check/.",
  "checks": [
-  { "date": "2026-11-02", "what": "Closed apps (8-app pilot: Word, Photoshop, Zoom, Google Maps, Notion, Spotify, Dropbox, Slack)", "checked": 56, "wrong": 3,
-    "fixes": "The research instructions now refuse comparison and advertising blogs as sources, and mark paid-plan-only features as Partly." }
+  {
+   "date": "2026-11-02",
+   "what": "Closed apps (8-app pilot: Word, Photoshop, Zoom, Google Maps, Notion, Spotify, Dropbox, Slack)",
+   "checked": 56,
+   "wrong": 3,
+   "fixes": "The research instructions now refuse comparison and advertising blogs as sources, and mark paid-plan-only features as Partly."
+  },
+  {
+   "date": "2026-11-03",
+   "what": "Closed apps, full run: 60 answers picked at random from 650 apps (the 8 trial apps left out)",
+   "checked": 60,
+   "wrong": 1,
+   "fixes": "The one wrong answer (Bright Data marked partly free; it is paid only) is corrected. 2 answers were right but backed by weak words (a customer quote, a review site); 6 source pages refuse automated reading and were judged by hand."
+  }
  ]
 }

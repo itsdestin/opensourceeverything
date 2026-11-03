@@ -39,7 +39,8 @@ export default function appPages(d) {
   </section>` : ''; };
     // WHY a status line (cleanup §6, Destin Nov 2): shut-down apps stay listed, because people look for alternatives exactly then.
     const st = closedStatus(name);
-    const gone = st ? `<p class="gone-line"><span class="pill">${st.is === 'renamed' ? 'Renamed' : 'Discontinued'}</span>${st.note ? `<span>${esc(st.note)}</span>` : ''}${st.source ? `<a class="fx-src" href="${esc(st.source)}" rel="noopener">${esc(srcHost(st.source))}</a>` : ''}</p>` : '';
+    // WHY the pill on its own line and the source as a chip (reviewer, Nov 2): like a card's chips above its description.
+    const gone = st ? `<div class="gone-line"><span class="pill">${st.is === 'renamed' ? 'Renamed' : 'Discontinued'}</span>${st.note ? `<p>${esc(st.note)}</p>` : ''}${st.source ? `<a class="chip" href="${esc(st.source)}" rel="noopener">Source: ${esc(srcHost(st.source))}</a>` : ''}</div>` : '';
     // WHY a trail here too (Nov 2): closed-app pages were the only deep pages with no way up a level.
     const body = `
   ${mapTrail(d, { group: groups[0] }, name)}

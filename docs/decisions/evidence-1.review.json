@@ -1,0 +1,233 @@
+{
+ "title": "Evidence map, step 1: where every answer comes from, and how the closed apps compare",
+ "key": "ose-evidence-1",
+ "out": "evidence-1.review.html",
+ "images": "images/evidence-1.review",
+ "runs": {
+  "before": "runs-evidence-1/before",
+  "after": "runs-evidence-1/after"
+ },
+ "labels": {
+  "before": "Live site today",
+  "after": "Preview"
+ },
+ "themes": [
+  "light"
+ ],
+ "theme": "fixed",
+ "crops": {
+  "compare-documents": [
+   "ose",
+   "compare-documents",
+   "1440x900+0+0"
+  ],
+  "compare-gap": [
+   "ose",
+   "compare-gap",
+   "1440x900+0+0"
+  ],
+  "compare-phone": [
+   "ose",
+   "compare-phone",
+   "390x844+0+0"
+  ],
+  "project-label": [
+   "ose",
+   "project-label",
+   "1440x900+0+0"
+  ],
+  "project-label-phone": [
+   "ose",
+   "project-label-phone",
+   "390x844+0+0"
+  ],
+  "app-compare": [
+   "ose",
+   "app-compare",
+   "1440x900+0+0"
+  ],
+  "gaps-features": [
+   "ose",
+   "gaps-features",
+   "1440x900+0+0"
+  ],
+  "how-we-check": [
+   "ose",
+   "how-we-check",
+   "1440x900+0+0"
+  ],
+  "pocket": [
+   "ose",
+   "pocket",
+   "1440x900+0+0"
+  ]
+ },
+ "steps": [
+  {
+   "id": "E-1",
+   "surface": "Subcategory page",
+   "path": "Documents → Compare",
+   "crop": "compare-documents",
+   "headline": "The closed apps now sit in the comparison table, above the open projects, answering the same questions.",
+   "changed": "Google Docs, Word and Pages are rows under a \"Closed apps\" divider, shaded and tagged \"Closed\". The open projects follow under \"Open source\". A dash in a ring means the question is about that app's own files (Word opening Word files).",
+   "notice": "You can see at a glance which open project matches what you use today, feature by feature.",
+   "risk": "Only about a quarter of the closed apps are researched so far (the run finishes in a few hours); until then some tables show no closed rows. Tables get 3–5 rows taller.",
+   "highlight": {
+    "box": [
+     2.5,
+     35,
+     69,
+     18
+    ]
+   }
+  },
+  {
+   "id": "E-2",
+   "surface": "Subcategory page",
+   "path": "Presentations → Compare, tap the shaded column name",
+   "crop": "compare-gap",
+   "headline": "A feature that closed apps have and no open project does gets marked in the table.",
+   "changed": "\"Ready-made slide designs\" is shaded with \"No open project yet\" under its name; tapping the name explains it.",
+   "notice": "Missing features show up where people compare, not only on the Gaps page.",
+   "risk": "It only appears when every open project has an answer for that question, so some real gaps stay unmarked until the blanks are filled.",
+   "highlight": {
+    "box": [
+     41,
+     30,
+     13,
+     10
+    ]
+   }
+  },
+  {
+   "id": "E-3",
+   "surface": "Subcategory page",
+   "path": "Presentations → Compare, on a phone",
+   "crop": "compare-phone",
+   "headline": "On a phone the table keeps the same layout you approved, with the closed rows on top.",
+   "changed": "Same as desktop. The \"Closed\" tag sits under the app's name; names still shorten to fit, as approved in round 5.",
+   "notice": "Scrolling sideways keeps the app names in view.",
+   "risk": "Long closed-app names are cut short (\"Microsoft …\"); tapping the name opens its page.",
+   "highlight": {
+    "box": [
+     7,
+     9,
+     83,
+     21
+    ]
+   }
+  },
+  {
+   "id": "E-4",
+   "surface": "Project page",
+   "path": "LibreOffice Writer → Features, tap the small label",
+   "crop": "project-label",
+   "headline": "The old \"Source\" link is now a small label naming the site and \"AI\", and tapping it shows the evidence.",
+   "changed": "\"libreoffice.org · AI\" opens a pop-up: the answer and note, the exact words from the page (when we have them), the source link, \"AI-researched · Oct 2026\", and \"How we check\".",
+   "notice": "You see where an answer came from and that AI found it without leaving the page.",
+   "risk": "Older answers for open projects have no quote saved, so their pop-up shows only the source and date.",
+   "highlight": {
+    "box": [
+     45,
+     39,
+     24,
+     21
+    ]
+   }
+  },
+  {
+   "id": "E-5",
+   "surface": "Project page",
+   "path": "LibreOffice Writer → Features, on a phone",
+   "crop": "project-label-phone",
+   "headline": "On a phone the label just says \"Source\", so the feature text keeps its room.",
+   "changed": "The site name moves into the pop-up on phones.",
+   "notice": "Rows stay as tall as before.",
+   "risk": "",
+   "highlight": {
+    "box": [
+     2,
+     44,
+     84,
+     26
+    ]
+   }
+  },
+  {
+   "id": "E-6",
+   "surface": "Closed-app page",
+   "path": "Alternatives to Microsoft Word → How they compare",
+   "crop": "app-compare",
+   "headline": "Every closed app's page gains a \"How they compare with Word\" table, with Word's row on top.",
+   "changed": "A new card between the alternatives and the switching guide, using the same table and marks.",
+   "notice": "Someone leaving Word sees which alternative keeps the features they rely on.",
+   "risk": "Pages for apps in big groups get long (Notion's table has about 20 rows).",
+   "highlight": {
+    "box": [
+     1.7,
+     0.5,
+     96.6,
+     55
+    ]
+   }
+  },
+  {
+   "id": "E-7",
+   "surface": "Gaps page",
+   "path": "Gaps → bottom sections",
+   "crop": "gaps-features",
+   "headline": "The Gaps page's missing-feature lists now count only features a closed app really has, and name those apps.",
+   "changed": "Renamed \"Features no open project has\" and \"Features open source only partly has\". Each feature says which closed apps have it, and each card has a Compare button that opens that table.",
+   "notice": "Builders see which missing features matter, because a popular closed app has them.",
+   "risk": "Until the run finishes, groups not yet researched still use the old rule and show no app names.",
+   "highlight": {
+    "box": [
+     1.7,
+     1.5,
+     96.6,
+     25
+    ]
+   }
+  },
+  {
+   "id": "E-8",
+   "surface": "How we check",
+   "path": "Any page → footer → How we check",
+   "crop": "how-we-check",
+   "runs": [
+    "after"
+   ],
+   "new": true,
+   "headline": "A new \"How we check\" page explains where answers come from, what the marks mean and how accurate the AI was.",
+   "changed": "New page, linked from every page's footer and from every pop-up. It shows the hand-check results: 53 of 56 right in the trial.",
+   "notice": "The site says openly that AI filled it in first, with a measured error rate instead of a promise.",
+   "risk": "The 53-of-56 figure is from the 8-app trial; it gets replaced by a bigger check after the full run.",
+   "highlight": {
+    "box": [
+     1.7,
+     60,
+     96.6,
+     23
+    ]
+   }
+  },
+  {
+   "id": "E-9",
+   "surface": "Closed-app page",
+   "path": "Alternatives to Pocket",
+   "crop": "pocket",
+   "headline": "Apps that shut down stay listed with a \"Discontinued\" label, what happened and the source.",
+   "changed": "Under the title: the label, one line on when and why, and the source as a chip. On subcategory pages the chip reads \"Pocket · shut down\".",
+   "notice": "People leaving a dead app still find the replacements, and nobody picks it by mistake.",
+   "risk": "Only three are found so far (Pocket, Microsoft Lens, RefWorks renamed); more will appear as the run finishes.",
+   "highlight": {
+    "box": [
+     2.5,
+     16.5,
+     57,
+     9
+    ]
+   }
+  }
+ ]
+}

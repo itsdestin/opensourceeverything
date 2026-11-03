@@ -46,7 +46,8 @@
     if (cell && OI.tip) {
       const d = cell.dataset;
       const body = `${d.note ? `<p class="tipnote">${esc(d.note)}</p>` : ''}${d.quote ? `<blockquote class="tipq">“${esc(d.quote)}”</blockquote>` : ''}`
-        + (d.src ? `<p class="tipsrc">Source: <a href="${esc(d.src)}" rel="noopener">${esc(d.host)}</a></p><p class="tipsub">${esc(d.by)} · ${esc(d.when)} · <a href="${OI.base ?? '/'}how-we-check/">How we check</a></p>` : '');
+        // WHY each part on its own line (reviewer, Nov 2): grey text beside a link on one line read as one blur.
+        + (d.src ? `<p class="tipsrc">Source: <a href="${esc(d.src)}" rel="noopener">${esc(d.host)}</a></p><p class="tipsub">${esc(d.by)} · ${esc(d.when)}</p><p class="tiplink"><a href="${OI.base ?? '/'}how-we-check/">How we check</a></p>` : '');
       OI.tip(cell, `${esc(d.name)}: ${esc(d.v)}`, body || '<p class="tipsub">No note.</p>');
       return;
     }
