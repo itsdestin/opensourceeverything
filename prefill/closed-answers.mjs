@@ -48,6 +48,10 @@ for (const g of groups) for (const name of g.closed ?? []) {
   tags.forEach((t) => a.tags.add(t)); a.groups.add(g.name);
   apps.set(name, a);
 }
+// WHY skipped (docs/closed-apps-cleanup.md §5, Destin Nov 2): the bundles' answers would only repeat Word, Excel and
+// PowerPoint's; the two generic names have no single maker to check. Their pages stay.
+const SKIP = new Set(['Microsoft Office', 'Microsoft 365', 'Google Workspace', 'Built-in smart TV software', 'Vendor router firmware']);
+for (const n of SKIP) apps.delete(n);
 const done = existsSync(OUT) ? read(OUT) : {};
 let todo = [...apps.values()].filter((a) => !done[a.name]);
 if (arg('only')) { const want = new Set(arg('only').split(',').map((s) => s.trim())); todo = todo.filter((a) => want.has(a.name)); }
@@ -66,10 +70,14 @@ For each item give:
 - note: for "partly" (and optionally "no"), under 70 characters in plain words; otherwise null.
 - source: for yes / partly / no, the URL of the page that backs it; null for unknown.
 - quote: for yes / partly / no, a short exact phrase from that page; null for unknown.
+First check that the app still exists. If it has shut down, or was merged into or replaced by another product, set
+status to "discontinued" (or "renamed"), give the page that says so in statusSource, name the replacement in statusNote,
+and answer every item "unknown". Otherwise status is "current" and statusSource and statusNote are null.
 Answer about the app as offered today, not a discontinued version. If something is only in some paid plans, answer "partly"
 and name the plan in the note (e.g. "Business plan and up only").
 When finished, reply with only the JSON object described below and nothing else:
-{"answers":[{"tag":"...","v":"yes|partly|no|unknown","note":null,"source":null,"quote":null}]}`;
+{"status":"current|discontinued|renamed","statusNote":null,"statusSource":null,
+ "answers":[{"tag":"...","v":"yes|partly|no|unknown","note":null,"source":null,"quote":null}]}`;
 
 const tagDef = (t) => features.tags[t];
 const input = (a) => `App: ${a.name}\nListed under: ${[...a.groups].join('; ')}\n\nItems:\n` +
@@ -117,7 +125,8 @@ async function ask(a) {
     if (res.stop_reason === 'refusal') throw new Error('refused');
     const text = res.content.filter((b) => b.type === 'text').map((b) => b.text).join('');
     const json = text.slice(text.indexOf('{'), text.lastIndexOf('}') + 1);
-    return { answers: JSON.parse(json).answers, usage };
+    const o = JSON.parse(json);
+    return { answers: o.answers, status: { is: o.status ?? 'current', note: o.statusNote, source: o.statusSource }, usage };
   }
   throw new Error('still researching after 6 rounds');
 }
@@ -128,7 +137,7 @@ const today = new Date().toISOString().slice(0, 10);
 await Promise.all(Array.from({ length: 4 }, async () => {
   for (let a = queue.shift(); a; a = queue.shift()) {
     try {
-      const { answers, usage } = await ask(a);
+      const { answers, status, usage } = await ask(a);
       const c = (usage.in * M.inPrice + usage.out * M.outPrice) / 1e6 + usage.searches * SEARCH_PRICE;
       cost += c;
       const want = new Set(a.tags);
@@ -136,9 +145,10 @@ await Promise.all(Array.from({ length: 4 }, async () => {
       const kept = Object.fromEntries(answers.filter((x) => want.has(x.tag) && x.v !== 'unknown' && x.source)
         .map((x) => [x.tag, { v: x.v, ...(x.note ? { note: x.note } : {}), source: x.source, quote: x.quote, by: 'ai', checked: today }]));
       // WHY keep the dropped ones: shows how many were blank or unsourced, for the quality check and the error rate.
-      done[a.name] = { answers: kept, dropped: answers.filter((x) => !kept[x.tag]), model: M.id, usage, cost: Number(c.toFixed(4)) };
+      // WHY status (cleanup §6): shut-down apps stay listed with a "Discontinued" label; this is where the label's facts come from.
+      done[a.name] = { status, answers: kept, dropped: answers.filter((x) => !kept[x.tag]), model: M.id, usage, cost: Number(c.toFixed(4)) };
       writeFileSync(OUT, JSON.stringify(done, null, 1) + '\n');
-      console.log(`${++n}/${todo.length} ${a.name}: ${Object.keys(kept).length}/${want.size} answered, ${usage.searches} searches, $${c.toFixed(3)}`);
+      console.log(`${++n}/${todo.length} ${a.name}: ${status.is === 'current' ? '' : status.is.toUpperCase() + ' '}${Object.keys(kept).length}/${want.size} answered, ${usage.searches} searches, $${c.toFixed(3)}`);
     } catch (e) { failed++; console.error(`${a.name}: ${e.message}`); }
   }
 }));

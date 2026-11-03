@@ -20,6 +20,16 @@
    "group": "data-pipelines",
    "app": "Airflow",
    "why": "Apache Airflow is open source (Apache-2.0), so it is not a closed app. It is listed as an alternative instead."
+  },
+  {
+   "group": "alt-frontends",
+   "app": "Official YouTube, Reddit and Discord apps",
+   "why": "Nov 2 tidy before the closed-app research run (docs/closed-apps-cleanup.md, approved by Destin): three products in one name; listed separately instead"
+  },
+  {
+   "group": "vpn",
+   "app": "AWS VPC",
+   "why": "Nov 2 tidy before the closed-app research run (docs/closed-apps-cleanup.md, approved by Destin): Amazon's private cloud networking, not a VPN app people replace with Tailscale-style tools"
   }
  ],
  "closedRename": [
@@ -34,6 +44,84 @@
    "from": "Orbit",
    "to": "Orbit (orbit.love)",
    "why": "The closed community-analytics service orbit.love shared its name with an unrelated open-source project, Orbit (a Jira-style task tool, listed under Task boards). Renamed so the two are not confused."
+  },
+  {
+   "group": "crm",
+   "from": "Hubspot",
+   "to": "HubSpot",
+   "why": "Nov 2 tidy before the closed-app research run (docs/closed-apps-cleanup.md, approved by Destin): official spelling"
+  },
+  {
+   "group": "events",
+   "from": "MeetUp",
+   "to": "Meetup",
+   "why": "Nov 2 tidy before the closed-app research run (docs/closed-apps-cleanup.md, approved by Destin): official spelling"
+  },
+  {
+   "group": "api-tools",
+   "from": "apigee",
+   "to": "Apigee",
+   "why": "Nov 2 tidy before the closed-app research run (docs/closed-apps-cleanup.md, approved by Destin): official spelling"
+  },
+  {
+   "group": "monitoring",
+   "from": "NewRelic",
+   "to": "New Relic",
+   "why": "Nov 2 tidy before the closed-app research run (docs/closed-apps-cleanup.md, approved by Destin): official spelling"
+  },
+  {
+   "group": "app-hosting",
+   "from": "Fly",
+   "to": "Fly.io",
+   "why": "Nov 2 tidy before the closed-app research run (docs/closed-apps-cleanup.md, approved by Destin): official name"
+  },
+  {
+   "group": "investment-research",
+   "from": "Bloomberg",
+   "to": "Bloomberg Terminal",
+   "why": "Nov 2 tidy before the closed-app research run (docs/closed-apps-cleanup.md, approved by Destin): the product people replace, not the company"
+  },
+  {
+   "group": "ai-coding",
+   "from": "OpenAI Codex app",
+   "to": "OpenAI Codex",
+   "why": "Nov 2 tidy before the closed-app research run (docs/closed-apps-cleanup.md, approved by Destin): same product as ChatGPT Codex app; one name"
+  },
+  {
+   "group": "agent-frontends",
+   "from": "ChatGPT Codex app",
+   "to": "OpenAI Codex",
+   "why": "Nov 2 tidy before the closed-app research run (docs/closed-apps-cleanup.md, approved by Destin): same product as OpenAI Codex app; one name"
+  },
+  {
+   "group": "gaming-performance",
+   "from": "MSI Afterburner / RivaTuner",
+   "to": "MSI Afterburner",
+   "why": "Nov 2 tidy before the closed-app research run (docs/closed-apps-cleanup.md, approved by Destin): already listed as MSI Afterburner in PC tuning; RivaTuner ships with it"
+  },
+  {
+   "group": "smart-home",
+   "from": "SmartThings",
+   "to": "Samsung SmartThings",
+   "why": "Nov 2 tidy before the closed-app research run (docs/closed-apps-cleanup.md, approved by Destin): already listed as Samsung SmartThings in TV remotes"
+  },
+  {
+   "group": "open-models",
+   "from": "Gemini",
+   "to": "Google Gemini",
+   "why": "Nov 2 tidy before the closed-app research run (docs/closed-apps-cleanup.md, approved by Destin): already listed as Google Gemini in AI chat"
+  },
+  {
+   "group": "open-models",
+   "from": "ChatGPT models (OpenAI)",
+   "to": "ChatGPT",
+   "why": "Nov 2 tidy before the closed-app research run (docs/closed-apps-cleanup.md, approved by Destin): one page per product, as Claude already is"
+  },
+  {
+   "group": "virtual-machines",
+   "from": "VMware Workstation / vSphere",
+   "to": "VMware Workstation",
+   "why": "Nov 2 tidy before the closed-app research run (docs/closed-apps-cleanup.md, approved by Destin): two products in one name; vSphere added separately"
   }
  ],
  "closedAdd": [
@@ -63,6 +151,26 @@
    ],
    "app": "Google Workspace",
    "why": "Google's bundle (Docs, Sheets, Slides); people search for the bundle name."
+  },
+  {
+   "group": "alt-frontends",
+   "app": "YouTube",
+   "why": "Nov 2 tidy before the closed-app research run (docs/closed-apps-cleanup.md, approved by Destin): split from 'Official YouTube, Reddit and Discord apps'"
+  },
+  {
+   "group": "alt-frontends",
+   "app": "Reddit",
+   "why": "Nov 2 tidy before the closed-app research run (docs/closed-apps-cleanup.md, approved by Destin): split from 'Official YouTube, Reddit and Discord apps'"
+  },
+  {
+   "group": "alt-frontends",
+   "app": "Discord",
+   "why": "Nov 2 tidy before the closed-app research run (docs/closed-apps-cleanup.md, approved by Destin): split from 'Official YouTube, Reddit and Discord apps'"
+  },
+  {
+   "group": "virtual-machines",
+   "app": "VMware vSphere",
+   "why": "Nov 2 tidy before the closed-app research run (docs/closed-apps-cleanup.md, approved by Destin): split from 'VMware Workstation / vSphere'"
   }
  ],
  "projectPatch": {
@@ -1309,7 +1417,19 @@
   "odoo": "alternatives-to/odoo-enterprise/",
   "orbit": "alternatives-to/orbit-orbit-love/",
   "openvpn": "alternatives-to/openvpn-access-server/",
-  "airflow": "p/airflow/"
+  "airflow": "p/airflow/",
+  "newrelic": "alternatives-to/new-relic/",
+  "fly": "alternatives-to/fly-io/",
+  "bloomberg": "alternatives-to/bloomberg-terminal/",
+  "openai-codex-app": "alternatives-to/openai-codex/",
+  "chatgpt-codex-app": "alternatives-to/openai-codex/",
+  "msi-afterburner-rivatuner": "alternatives-to/msi-afterburner/",
+  "smartthings": "alternatives-to/samsung-smartthings/",
+  "gemini": "alternatives-to/google-gemini/",
+  "chatgpt-models-openai": "alternatives-to/chatgpt/",
+  "official-youtube-reddit-and-discord-apps": "alternatives-to/youtube/",
+  "vmware-workstation-vsphere": "alternatives-to/vmware-workstation/",
+  "aws-vpc": "g/vpn/"
  },
  "appRedirectsWhy": "Closed-app pages that existed before and no longer do (merged spelling, renamed, or no longer a closed app), so old links land somewhere useful.",
  "redirectNote": "splits above also produce data/redirects.json: {oldGroupId: [newGroupIds]}, which the site turns into 'this group was split' pages so old links keep working."

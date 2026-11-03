@@ -1,6 +1,6 @@
 {
  "license": "CC BY-SA 4.0",
- "generated": "2026-10-30",
+ "generated": "2026-11-03",
  "credits": "See data/CREDITS.md",
  "groups": [
   {
@@ -1323,7 +1323,7 @@
    "category": "social",
    "job": "Organize and manage events",
    "closed": [
-    "MeetUp",
+    "Meetup",
     "EasyChair"
    ],
    "source": "lists",
@@ -2537,7 +2537,7 @@
    "category": "games",
    "job": "FPS counters, overlays, clips and tweaks that make games run better",
    "closed": [
-    "MSI Afterburner / RivaTuner",
+    "MSI Afterburner",
     "Razer Cortex",
     "NVIDIA App overlay"
    ],
@@ -3877,7 +3877,9 @@
    "category": "web",
    "job": "Using YouTube, Reddit or Discord through cleaner, private apps",
    "closed": [
-    "Official YouTube, Reddit and Discord apps"
+    "YouTube",
+    "Reddit",
+    "Discord"
    ],
    "source": "taxonomy",
    "alternatives": [
@@ -4527,7 +4529,7 @@
    "job": "Track customers and sales deals",
    "closed": [
     "Salesforce",
-    "Hubspot"
+    "HubSpot"
    ],
    "source": "lists",
    "alternatives": [
@@ -4594,7 +4596,7 @@
    "category": "business",
    "job": "Researching stocks and markets, and tracking your investments",
    "closed": [
-    "Bloomberg"
+    "Bloomberg Terminal"
    ],
    "source": "lists",
    "alternatives": [
@@ -5201,7 +5203,7 @@
     "Cursor",
     "Windsurf",
     "Claude Code",
-    "OpenAI Codex app"
+    "OpenAI Codex"
    ],
    "source": "starter",
    "alternatives": [
@@ -5354,7 +5356,7 @@
    "job": "Desktop, web, phone and chat apps for driving a coding agent",
    "closed": [
     "Claude Code desktop and web",
-    "ChatGPT Codex app"
+    "OpenAI Codex"
    ],
    "source": "taxonomy",
    "alternatives": [
@@ -5620,9 +5622,9 @@
    "category": "ai-build",
    "job": "AI models whose weights you can download and run yourself",
    "closed": [
-    "ChatGPT models (OpenAI)",
+    "ChatGPT",
     "Claude",
-    "Gemini"
+    "Google Gemini"
    ],
    "source": "taxonomy",
    "alternatives": [
@@ -6657,7 +6659,7 @@
    "closed": [
     "Google Home",
     "Amazon Alexa",
-    "SmartThings"
+    "Samsung SmartThings"
    ],
    "source": "starter",
    "alternatives": [
@@ -7239,7 +7241,7 @@
    "category": "dev",
    "job": "Building, testing and debugging APIs and web traffic",
    "closed": [
-    "apigee",
+    "Apigee",
     "Postman",
     "Checkly"
    ],
@@ -7871,7 +7873,7 @@
    "job": "Put your web apps online",
    "closed": [
     "Heroku",
-    "Fly",
+    "Fly.io",
     "Render",
     "Netlify",
     "Vercel"
@@ -7987,7 +7989,7 @@
    "job": "Watch servers and apps for problems",
    "closed": [
     "Datadog",
-    "NewRelic",
+    "New Relic",
     "Elastic Cloud"
    ],
    "source": "lists",
@@ -9210,8 +9212,7 @@
    "job": "Connect devices over a private network",
    "closed": [
     "OpenVPN Access Server",
-    "Tailscale",
-    "AWS VPC"
+    "Tailscale"
    ],
    "source": "lists",
    "alternatives": [
@@ -9322,8 +9323,9 @@
    "category": "selfhost",
    "job": "Running other operating systems inside your computer or server",
    "closed": [
-    "VMware Workstation / vSphere",
-    "Parallels Desktop"
+    "VMware Workstation",
+    "Parallels Desktop",
+    "VMware vSphere"
    ],
    "source": "taxonomy",
    "alternatives": [

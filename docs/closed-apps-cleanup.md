@@ -1,5 +1,5 @@
 ---
-status: draft
+status: active
 updated: 2026-11-02
 ---
 # Tidying the paid-app list before the AI research run
@@ -8,7 +8,7 @@ WHY this file: Destin chose "tidy first, then run" (Nov 2). Each paid app name i
 ("Open-source alternatives to X", at `alternatives-to/<name>/`), so every change below changes what visitors see.
 Renamed or removed pages send old links to the new page, so bookmarks and search results keep working.
 
-Answer per section: **OK**, **no**, or a change. One "all OK" is fine.
+Approved by Destin, Nov 2 (all sections). Sections 1–4 are in `prefill/data-fixes.json`; 5–6 are in `prefill/closed-answers.mjs`.
 
 ## 1. Spelling: use the official name (6)
 

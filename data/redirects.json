@@ -1,6 +1,6 @@
 {
  "license": "CC BY-SA 4.0",
- "generated": "2026-10-27",
+ "generated": "2026-11-03",
  "credits": "See data/CREDITS.md",
  "note": "Groups that were split: old group id → the groups that replaced it. The site keeps the old address working.",
  "moved": {
@@ -22,6 +22,18 @@
   "odoo": "alternatives-to/odoo-enterprise/",
   "orbit": "alternatives-to/orbit-orbit-love/",
   "openvpn": "alternatives-to/openvpn-access-server/",
-  "airflow": "p/airflow/"
+  "airflow": "p/airflow/",
+  "newrelic": "alternatives-to/new-relic/",
+  "fly": "alternatives-to/fly-io/",
+  "bloomberg": "alternatives-to/bloomberg-terminal/",
+  "openai-codex-app": "alternatives-to/openai-codex/",
+  "chatgpt-codex-app": "alternatives-to/openai-codex/",
+  "msi-afterburner-rivatuner": "alternatives-to/msi-afterburner/",
+  "smartthings": "alternatives-to/samsung-smartthings/",
+  "gemini": "alternatives-to/google-gemini/",
+  "chatgpt-models-openai": "alternatives-to/chatgpt/",
+  "official-youtube-reddit-and-discord-apps": "alternatives-to/youtube/",
+  "vmware-workstation-vsphere": "alternatives-to/vmware-workstation/",
+  "aws-vpc": "g/vpn/"
  }
 }
