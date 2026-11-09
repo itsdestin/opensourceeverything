@@ -93,7 +93,7 @@ One file, `site/assets/filter.js` (words in `site/assets/blocked-words.js`), is 
 - `POST /notes/:id/building { link }`, `DELETE /notes/:id/building`, `POST /notes/:id/report { reason }`
 - Mods: `POST /notes/:id/status { status }`, `GET /mod/queue`, `POST /mod/act { target, id, action }`
 
-### Requests, pitches, suggestions (added Oct 27; migration `0002_contrib.sql`, not yet run on the live database)
+### Requests, pitches, suggestions (added Oct 27; migration `0002_contrib.sql`, run on the live database Nov 2)
 - `GET /requests?limit&keys=a,b` → `{ items: [{ key, kind: group|app|issue, name, href|url, votes, mine, waiting? }], total, can: { vote } }`: ranked by votes, including every suggestion still waiting on GitHub (zero votes allowed)
 - `POST /requests/vote { key, on }`
 - `GET /me/suggestions` → `{ items: [{ number, name, kind, url, created, status: waiting|needs-mod|approved|live|turned-down, liveUrl?, reason? }] }`. Status comes from labels and how the issue closed: closed as completed = live; closed otherwise = turned down (reason = the last comment by a person); open + `approved` = approved; open + `needs-mod` = needs a mod; else waiting
@@ -102,9 +102,19 @@ One file, `site/assets/filter.js` (words in `site/assets/blocked-words.js`), is 
 - `GET /pitches/live?projects=a,b` → `{ projectId: { by, repo, …pitch, ownerCheck: github|mods, updated } }`: public, approved and (when required) mod-confirmed text only (drawn on cards and project pages by the page, so approval is live with no rebuild)
 - Mods: `GET /mod/pitches` (pending and live; with `needsConfirm`, `confirmed`, `flags`, `flag`, `stars`, `ownerDays`, `rivalClaims`), `POST /mod/pitches/:id { action: confirm-claim|approve|reject|revoke, reason }`, `GET /mod/suggestions` → `{ items: [{ number, name, kind, url, author, created, status, votes, verdict: ok|needs-mod|unchecked }] }` (verdict = the robot's `robot-ok` / `needs-mod` label)
 
-### Contributor preferences ("How you'd like help"; migration `0004_prefs.sql`, not yet run)
+### Contributor preferences ("How you'd like help"; migration `0004_prefs.sql`, run on the live database Nov 2)
 - `GET /prefs?projects=a,b` → `{ projectId: { ai, aiPolicy, aiTicks, start, startLink, startSmall, wanted (up to 3), newcomers, disclose, sign, signLink, review, note, updated } }`: public, only while the owner's approved claim still stands (the same rule as `/pitches/live`).
 - `PUT /prefs/:project { …the same fields }` → the saved set. Only the account whose claim for that project is approved; every answer must be on its fixed list (`cleanPrefs` in `worker/src/rules.js`), links must be web links or email addresses, text is cut to 200 characters and goes through the content filter (anything it would hold is refused instead, so there is no mod step). The page sends the whole set after every change, so it has its own limit (200 an hour).
+
+### Feature answers and "What stopped it?" (step 2): pretend server only, NOT on the real server yet
+<!-- WHY Nov 9: fake-api.js already answers these, and this file says the two servers match; mark the gap so nobody assumes the real one does. -->
+Designed Nov 3 (`docs/community-history.md`); only `site/assets/fake-api.js` answers these today. Planned rules: one
+yes / partly / no per person per feature (`key` = `p:<project>/<tag>` or `c:<paid app>/<tag>`), same account-age and
+first-post-held rules as above, comments need no answer first, a claimed project's approved developer gives a separate
+answer that is never counted, totals carry no names.
+- `POST /opinions/query { keys }` → `{ key: { yes, partly, no } }`; `GET /opinions?key=` → `{ yes, partly, no, mine, comments, dev, canDev }`
+- `POST /opinions { key, v }`, `POST /opinions/comments { key, body }`, `DELETE /opinions/comments/:id?key=`, `PUT /opinions/dev { key, v, note }`
+- `GET /ratings/why?group&project` → the "What stopped it?" comments; `POST /ratings/why { group, project, body }`
 
 ### The suggestion robot (GitHub forms stay the way to suggest)
 - Labels the robot sets: `robot-ok`, `needs-mod` (a problem it found, a GitHub account under 14 days old, an earlier open suggestion asking for the same thing, or a failed apply with the reason in a comment). Mods approve with the `approved` label as before.

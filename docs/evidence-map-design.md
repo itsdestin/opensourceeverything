@@ -1,11 +1,14 @@
 ---
 status: active
-updated: 2026-11-02
+updated: 2026-11-09
 ---
 # Design: the evidence map (agreed with Destin, Nov 2, 2026)
 
 WHY this file: Destin widened the site's purpose on Nov 2. This is the agreed design; `docs/status.md` points here.
-Nothing in it is built yet.
+<!-- WHY Nov 9: "nothing built" was no longer true; say where each step stands. -->
+Where it stands (Nov 9): step 1 is built and approved on the `evidence` branch, not live yet. Step 2 (the community)
+is designed and its look is in its third round; its decisions live in `docs/community-history.md`, which replaces §4
+points 5–7 below. Steps 3–5 are not started.
 
 ## What the site is
 
@@ -75,11 +78,9 @@ faithfulness for office apps (needs freely licensed tricky Word files; we may ha
    apps, human judgement) need a second person instead. Until then the result is labelled "not yet repeated".
 3. Results from a project's own developers are labelled as such.
 4. A result that doesn't match is shown as "disputed" and triggers more runs.
-5. People rate submissions.
-6. Hand-over: at 5 or more well-rated, matching community results, the community answer replaces the AI one; the AI's
-   original stays visible as history.
-7. Opinions are separate: star ratings and comments per question, shown as "What people think" beside "What was
-   measured", never blended into one number.
+5–7. **Replaced on Nov 3** (see `docs/community-history.md`): for feature answers, people vote yes / partly / no and
+   comment; at 5 answers the average replaces the AI's answer and the AI's original is no longer shown. No stars,
+   no separate "rate a submission" step. Points 1–4 (test results) still stand and come with the tests step.
 
 ## 5. Connections
 
@@ -102,15 +103,15 @@ one until the community step exists.
 
 | Step | What | Waits on |
 |---|---|---|
-| 0 | Launch the current `redesign` as is (recommended: visitors and community data build up meanwhile) | Destin's go-ahead |
-| 1 | Source labels, closed apps answer the checklists, gaps page from features, methodology page | Paid AI step, counted first |
-| 2 | Community submissions, robot re-runs, ratings, opinions, hand-over (§4) | Server changes |
+| 0 | Launch the `redesign` | **Done**: live Nov 2 |
+| 1 | Source labels, closed apps answer the checklists, gaps page from features, "How we check" page | **Built and approved** on `evidence`; goes live with Destin's word |
+| 2 | People's yes / partly / no and comments on each feature, developer answers, "What stopped it?" (`docs/community-history.md`) | Look: round 3. Then the real server part |
 | 3 | Connections lists, open data / building blocks kind, outside sources, search-engine stack page | Review decks |
-| 4 | Test kits and the office pilot | |
+| 4 | Test kits and the office pilot; community test results and robot re-runs (§3, §4 points 1–4) | |
 | 5 | Deeper checklists, more stack pages, more tests | Ongoing |
 
 ## Risks to watch
 
 - Denser pages: the simple path (type "Notion", get answers) stays as today; detail is one click deeper.
 - AI can cite a real source that doesn't say what it claims: the spot-check and published error rate address this.
-- Cost: about 4,038 closed-app answers; count and show Destin before running. Project AI spend so far: about $8.50.
+- Cost: count and show Destin before any paid run. Spend so far: see `docs/status.md`.

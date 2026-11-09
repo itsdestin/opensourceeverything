@@ -1,0 +1,77 @@
+{
+ "deck": "ose-community-1",
+ "started": "2026-11-03T07:28:38.247Z",
+ "submitted": "2026-11-03T07:34:24Z",
+ "cur": 2,
+ "answers": {
+  "Q-1": {
+   "v": "other",
+   "t": 1793691028793,
+   "note": "i'm kinda confused. it should definitely remain on the page. but what happened to our thumbs up/thumbs down rankings and comments for various features? i'm kinda confused about how these element interact",
+   "seconds": 28,
+   "theme": "light"
+  },
+  "Q-2": {
+   "v": "pick",
+   "pick": "optional",
+   "t": 1793691028793,
+   "seconds": 28,
+   "theme": "light"
+  },
+  "Q-3": {
+   "v": "pick",
+   "pick": "same-rules",
+   "t": 1793691028793,
+   "seconds": 28,
+   "theme": "light"
+  },
+  "Q-4": {
+   "v": "yes",
+   "t": 1793691028793,
+   "seconds": 28,
+   "theme": "light"
+  },
+  "Q-5": {
+   "v": "other",
+   "t": 1793691193448,
+   "note": "this should be like an average of reports or something after a certain threshold",
+   "seconds": 41,
+   "theme": "light"
+  },
+  "Q-6": {
+   "v": "other",
+   "t": 1793691193448,
+   "note": "confused about the way youre explaining this. it sounds overcomplicated",
+   "seconds": 41,
+   "theme": "light"
+  },
+  "Q-7": {
+   "v": "no",
+   "t": 1793691193448,
+   "seconds": 41,
+   "theme": "light"
+  },
+  "Q-8": {
+   "v": "other",
+   "t": 1793691193448,
+   "note": "we should have a separate section of answers as provided by project maintainers, then a community sentiment/ranking version ",
+   "seconds": 41,
+   "theme": "light"
+  },
+  "Q-9": {
+   "v": "pick",
+   "pick": "now",
+   "t": 1793691262222,
+   "note": "again i'm really confused because i thought we already built out a lot of these rating/comment features?",
+   "seconds": 35,
+   "theme": "light"
+  },
+  "Q-10": {
+   "v": "other",
+   "t": 1793691262222,
+   "note": "again this should be like a ratings/comments section with averages, not attribution to a single person or handlful of people who \"correct\" it?",
+   "seconds": 35,
+   "theme": "light"
+  }
+ }
+}

@@ -150,7 +150,8 @@ await Promise.all(Array.from({ length: 4 }, async () => {
       const kept = Object.fromEntries(answers.filter((x) => want.has(x.tag) && x.v !== 'unknown' && x.source)
         .map((x) => [x.tag, { v: x.v, ...(x.note ? { note: x.note } : {}), source: x.source, quote: x.quote, by: 'ai', checked: today }]));
       // WHY keep the dropped ones: shows how many were blank or unsourced, for the quality check and the error rate.
-      // WHY status (cleanup §6): shut-down apps stay listed with a "Discontinued" label; this is where the label's facts come from.
+      // WHY status (cleanup §6): records whether the app shut down or was renamed. Kept in the data only; Destin turned down
+      // showing any label (evidence-1 E-9), so it is used to spot renamed apps, never shown to visitors.
       done[a.name] = { status, answers: kept, dropped: answers.filter((x) => !kept[x.tag]), model: M.id, usage, cost: Number(c.toFixed(4)) };
       writeFileSync(OUT, JSON.stringify(done, null, 1) + '\n');
       console.log(`${++n}/${todo.length} ${a.name}: ${status.is === 'current' ? '' : status.is.toUpperCase() + ' '}${Object.keys(kept).length}/${want.size} answered, ${usage.searches} searches, $${c.toFixed(3)}`);

@@ -1,0 +1,67 @@
+{
+ "deck": "ose-community-3",
+ "started": "2026-11-03T21:52:30.529Z",
+ "submitted": "2026-11-03T21:54:46Z",
+ "cur": 7,
+ "answers": {
+  "C-0": {
+   "note": "these sliders still look odd. the internal fill isn't seated properly",
+   "t": 1793742768130,
+   "v": "other",
+   "seconds": 18,
+   "theme": "light",
+   "zoom": 1
+  },
+  "C-1": {
+   "v": "yes",
+   "t": 1793742774959,
+   "seconds": 7,
+   "theme": "light",
+   "zoom": 1
+  },
+  "C-2": {
+   "v": "yes",
+   "t": 1793742793908,
+   "seconds": 19,
+   "theme": "light",
+   "zoom": 1
+  },
+  "C-3": {
+   "v": "yes",
+   "t": 1793742797405,
+   "seconds": 3,
+   "theme": "light",
+   "zoom": 1
+  },
+  "C-4": {
+   "v": "yes",
+   "t": 1793742837248,
+   "note": "i still think the from the developer section can be simpliifed a bit",
+   "seconds": 40,
+   "theme": "light",
+   "zoom": 1
+  },
+  "C-5": {
+   "v": "yes",
+   "t": 1793742841512,
+   "seconds": 4,
+   "theme": "light",
+   "zoom": 1
+  },
+  "C-6": {
+   "v": "yes",
+   "t": 1793742845651,
+   "seconds": 4,
+   "theme": "light",
+   "zoom": 1
+  },
+  "C-7": {
+   "note": "no it should definitely still be hidden/expandable behind a button, but it needs to be styled properly. and comments here should also be grouped into cards",
+   "t": 1793742885661,
+   "v": "other",
+   "seconds": 40,
+   "theme": "light",
+   "zoom": 1
+  }
+ }
+}

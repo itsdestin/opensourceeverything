@@ -1,8 +1,15 @@
 ---
-status: active
-updated: 2026-11-02
+status: done
+updated: 2026-11-09
 ---
 # Tidying the paid-app list before the AI research run
+
+<!-- WHY Nov 9: this plan is finished; §6's label recommendation was turned down, so say so before anyone builds it. -->
+**Done (Nov 2–3), on the `evidence` branch.** Sections 1–5 were applied as written. **§6 outcome:** Destin turned down
+any "Discontinued" or "Renamed" label (evidence-1 E-9). Shut-down apps stay listed and look like any other app; the
+research's shut-down flag is kept in the data but shown nowhere. 8 apps that had been renamed now appear under their
+new names, with old links forwarding (Kit, EndNote Fusion, Gemini Notebook, Devin Desktop, Affinity, Amp, Msty Studio,
+Coinbase Wallet), and 4 apps wrongly flagged as shut down were researched again.
 
 WHY this file: Destin chose "tidy first, then run" (Nov 2). Each paid app name is also a page on the site
 ("Open-source alternatives to X", at `alternatives-to/<name>/`), so every change below changes what visitors see.
