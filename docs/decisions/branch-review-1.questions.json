@@ -1,0 +1,647 @@
+{
+  "title": "The evidence branch: full review and the decisions before it ships",
+  "key": "ose-branch-review-1",
+  "out": "branch-review-1.questions.html",
+  "themes": [
+    "light"
+  ],
+  "theme": "fixed",
+  "steps": [
+    {
+      "id": "P-1",
+      "page": "What this branch is, and how it scores",
+      "intro": "Two statements to confirm before any decision: what the work is for, and my honest verdict on it."
+    },
+    {
+      "id": "R-1",
+      "words": true,
+      "surface": "The whole branch",
+      "path": "Why this work exists",
+      "headline": "This is what I understand the branch is for. Is that right?",
+      "changed": "The live site lists open alternatives to paid apps. This branch turns it into an evidence map, in two steps. Step 1: paid apps answer the same feature questions as open projects, every answer shows where it came from, and the Gaps page lists features paid apps have that nothing open has. Step 2: people can answer Yes / Partly / No on any feature and comment, a project's developer gets a separate answer, and a \"Not really\" vote asks \"What stopped it?\".",
+      "notice": "Your words, Nov 2: \"show someone what the open source community is missing, as compared to everything that already exists\", so effort gathers around the best projects and stops being duplicated. Step 2 exists because step 1 shows answers nobody can correct.",
+      "yes": "That's the goal",
+      "no": "Not quite"
+    },
+    {
+      "id": "R-2",
+      "words": true,
+      "surface": "The whole branch",
+      "path": "How well it meets its goals today",
+      "headline": "My scorecard: step 1 works but its sources are unchecked; step 2 is a working mock-up with no real server.",
+      "changed": "Works well: 648 paid apps sit beside open projects in every Compare table, with 3,217 answers. The Gaps page shows 3 features nothing open has and 44 that open source only partly has. Weak: no machine ever checks that a quote is really on the page it cites; 151 answers cite only a homepage; 1 in 5 paid-app answers is blank; one of the branch's own tests fails (the Bloomberg rename broke it). Not real yet: everything in step 2. The popup, votes, comments and developer answer run only on the preview's pretend server.",
+      "notice": "The site's pitch is evidence, so an unchecked quote is the biggest risk to its name. Step 2's design also has gaps you have not been asked about yet: votes change the table but not the filter, five accounts can flip a mark, and comments cannot be reported. The next pages take these one at a time.",
+      "yes": "Fair summary",
+      "no": "I see it differently"
+    },
+    {
+      "id": "P-2",
+      "page": "Step 1: before it goes live",
+      "intro": "Step 1 is the approved part: paid apps in the tables, a source behind every mark, the Gaps page. Three decisions stand between it and the live site."
+    },
+    {
+      "id": "D-1",
+      "surface": "Any Yes / Partly / No mark",
+      "path": "Interface design → Compare → tap Penpot's tick under \"Reusable components\"",
+      "headline": "Should a machine check every quote against its source page before step 1 goes live?",
+      "today": "Each answer was researched by AI, which gave a source link and a quote. The site calls the quote the page's own words. People hand-checked 116 answers and found 4 wrong. Nothing ever opened the other 3,100 pages. One example: Penpot's tick under \"Reusable components\" cites only penpot.app, with no quote.",
+      "problem": "AI can cite a real page that does not say what it claims. A visitor who clicks one source and finds no such sentence will stop trusting every other mark.",
+      "proposal": "A free check that opens every source page and looks for the quote. Answers whose quote is missing become \"Not checked yet\" or go on a list for you. It takes about a day to build and costs nothing to run. Some pages block robots, so a share will come back as \"could not read\".",
+      "options": [
+        {
+          "id": "before",
+          "label": "Check before going live",
+          "pros": [
+            "The launch post goes to the most critical readers; this is what they will test first.",
+            "\"How we check\" can state a real number for all answers, not a sample of 60."
+          ],
+          "cons": [
+            "Step 1 goes live about a day or two later.",
+            "Could blank a noticeable share of answers, making tables emptier."
+          ],
+          "recommended": true
+        },
+        {
+          "id": "after",
+          "label": "Go live, check after",
+          "pros": [
+            "Step 1 is live sooner.",
+            "The same check still happens."
+          ],
+          "cons": [
+            "Wrong quotes are public in the meantime.",
+            "Answers may visibly disappear after launch."
+          ]
+        },
+        {
+          "id": "never",
+          "label": "Hand samples only",
+          "pros": [
+            "Nothing to build."
+          ],
+          "cons": [
+            "The error rate stays a guess from 60 answers.",
+            "Homepage-only sources stay unverifiable."
+          ]
+        }
+      ],
+      "words": true
+    },
+    {
+      "id": "D-11",
+      "surface": "Gaps page",
+      "path": "Gaps → \"Features no open project has\"",
+      "headline": "How sure should the site be before calling a feature a gap?",
+      "today": "A feature is a gap when at least one paid app is marked Yes and no open project is. 12 of the 42 rows that name paid apps rest on a single paid app's researched answer. In the Compare table the rule is looser still and can say \"No open project yet\" when most open projects are blank.",
+      "problem": "The Gaps page is the heart of your goal, and builders may act on it. One wrong researched Yes creates a gap that does not exist.",
+      "proposal": "Pick the bar. Either way I would make the table and the Gaps page use one shared rule, so they cannot disagree.",
+      "options": [
+        {
+          "id": "two",
+          "label": "Two paid apps, or a checked quote",
+          "pros": [
+            "Every gap rests on more than one unchecked answer.",
+            "Works together with the quote check asked about above."
+          ],
+          "cons": [
+            "Up to 12 rows leave the page until their quotes are checked.",
+            "Features only one paid app has are slower to appear."
+          ],
+          "recommended": true
+        },
+        {
+          "id": "one",
+          "label": "One is enough",
+          "summary": "As built.",
+          "pros": [
+            "The fullest page."
+          ],
+          "cons": [
+            "One wrong answer makes a false gap."
+          ]
+        }
+      ],
+      "words": true
+    },
+    {
+      "id": "D-2",
+      "surface": "Compare tables",
+      "path": "Interface design → Compare",
+      "headline": "Should step 1 go live on its own, before step 2 is finished?",
+      "today": "Step 1 is the Compare table with paid apps on top tagged Proprietary, the same questions for everyone, a source behind every mark. You approved it on Nov 2. It sits unseen on the branch while step 2 is designed.",
+      "problem": "Step 2 still needs a design round and a whole server part, which is weeks. As built, though, the branch cannot go live as it is: every tap on a mark would show \"Couldn't load what people said\", because the live server has no step-2 part.",
+      "proposal": "Add a switch that hides step 2, then put step 1 live. Visitors would tap a mark and see the plain source popup you approved, with no voting.",
+      "options": [
+        {
+          "id": "now",
+          "label": "Step 1 first",
+          "pros": [
+            "The approved work reaches people weeks sooner.",
+            "Real visitors show how much mod tooling step 2 actually needs.",
+            "Two smaller launches are easier to trace if something looks wrong."
+          ],
+          "cons": [
+            "Answers are visible but can only be corrected through the GitHub form until step 2.",
+            "The site visibly changes twice."
+          ],
+          "recommended": true
+        },
+        {
+          "id": "together",
+          "label": "One launch",
+          "pros": [
+            "From day one every answer can be corrected on the page.",
+            "One announcement."
+          ],
+          "cons": [
+            "Step 1 waits weeks.",
+            "A bigger launch has more that can go wrong at once."
+          ]
+        }
+      ],
+      "words": true
+    },
+    {
+      "id": "P-3",
+      "page": "Step 2: when people's answers count",
+      "intro": "Step 2 lets people answer Yes / Partly / No on any feature. These four decide when those answers change what the site says."
+    },
+    {
+      "id": "D-3",
+      "surface": "Compare tables and the Must have filter",
+      "path": "Interface design → Compare → Must have: Live co-editing",
+      "headline": "When people's answers change a mark, should it change at once in the table only, or everywhere overnight?",
+      "today": "At 5 answers the table's mark flips in the visitor's browser a moment after the page loads. The filter, the Gaps page, search and the AI connector do not know. In the preview, Quant-UX is hidden by \"Must have: Live co-editing\", although its mark in the table is a tick from 7 people.",
+      "problem": "The same page says two different things. A mark also never flips back if people withdraw answers. The plan had a nightly copy for the filter and Gaps, which still leaves the table a day ahead of them.",
+      "proposal": "Pick when and where people's answer takes over. In every option the popup's totals update instantly.",
+      "options": [
+        {
+          "id": "nightly",
+          "label": "Everywhere, overnight",
+          "summary": "Once a night the site is rebuilt with people's answers in it. Table, filter, Gaps, search and the AI connector always agree.",
+          "pros": [
+            "No contradictions anywhere.",
+            "Marks no longer flicker after the page loads.",
+            "A night's changes can be looked over before they go public."
+          ],
+          "cons": [
+            "The fifth voter does not see the mark change until the next day."
+          ],
+          "recommended": true
+        },
+        {
+          "id": "instant",
+          "label": "Table at once",
+          "summary": "As built today, plus the planned nightly copy for the rest.",
+          "pros": [
+            "Voting feels alive: the fifth answer flips the mark."
+          ],
+          "cons": [
+            "Table and filter disagree for up to a day.",
+            "Marks jump after the page loads."
+          ]
+        },
+        {
+          "id": "popup-only",
+          "label": "Popup only for now",
+          "summary": "Votes show in the popup; marks stay as researched until real voting has been seen.",
+          "pros": [
+            "Nothing can be gamed.",
+            "Least to build."
+          ],
+          "cons": [
+            "Goes against your \"average after a threshold\" decision.",
+            "A mark can stay wrong while 20 people say so."
+          ]
+        }
+      ],
+      "words": true
+    },
+    {
+      "id": "D-4",
+      "surface": "The popup on any mark",
+      "path": "Interface design → Compare → tap Penpot's mark under \"Imports Figma files\"",
+      "headline": "What should it take for people's answers to replace the researched one?",
+      "today": "Five answers, averaged: yes counts 1, partly a half, no 0, then rounded. Any GitHub account older than 14 days can answer. Votes are never looked at by a mod.",
+      "problem": "Five two-week-old accounts can flip any mark. The Gaps page is worked out from marks, so five fans can make a gap vanish, or five rivals can create one. Paid apps have no developer to object. The rounding also misleads: 3 yes and 2 no shows \"Partly\", which nobody said.",
+      "proposal": "Pick the rule. All options keep showing every answer from the first one, as you decided.",
+      "options": [
+        {
+          "id": "majority",
+          "label": "Clear majority, big flips checked",
+          "summary": "At least 5 answers and more than half of them the same. A flip straight between Yes and No waits for a mod's OK.",
+          "pros": [
+            "A split vote keeps the researched answer.",
+            "The flips that move the Gaps page get one human look.",
+            "Small changes (Partly to Yes) still need nobody."
+          ],
+          "cons": [
+            "A few items for you to approve each week once voting is busy.",
+            "One more rule to explain on \"How we check\"."
+          ],
+          "recommended": true
+        },
+        {
+          "id": "average",
+          "label": "Average of 5",
+          "summary": "As built.",
+          "pros": [
+            "Simple, and what you asked for on Nov 3."
+          ],
+          "cons": [
+            "Cheapest to game.",
+            "Shows \"Partly\" for a yes/no split."
+          ]
+        },
+        {
+          "id": "ten",
+          "label": "Average of 10",
+          "pros": [
+            "Twice as hard to game, still no mod step."
+          ],
+          "cons": [
+            "On a quiet site most marks would never reach 10.",
+            "Keeps the misleading \"Partly\"."
+          ]
+        }
+      ],
+      "words": true
+    },
+    {
+      "id": "D-10",
+      "surface": "Blank marks",
+      "path": "Any \"Not checked yet\" dot in a Compare table",
+      "headline": "Should blank answers be easier for people to fill than researched ones are to change?",
+      "today": "About 1 in 5 paid-app answers and about 527 open-project answers are blank dots. People can tap and answer them, and they follow the same rule as every other mark.",
+      "problem": "Blanks are where visitors help most, and there is no researched answer to protect. On a quiet site, waiting for 5 people per dot may leave them blank for a long time.",
+      "proposal": "Pick how blanks get filled.",
+      "options": [
+        {
+          "id": "three",
+          "label": "Fill at 3 answers",
+          "pros": [
+            "Tables fill in sooner where research found nothing.",
+            "Being wrong costs less: the other choice is no answer at all."
+          ],
+          "cons": [
+            "Easier to game than other marks.",
+            "Two rules to explain."
+          ],
+          "recommended": true
+        },
+        {
+          "id": "same",
+          "label": "Same rule everywhere",
+          "pros": [
+            "One rule."
+          ],
+          "cons": [
+            "Blanks last longer."
+          ]
+        },
+        {
+          "id": "research",
+          "label": "A second research pass",
+          "summary": "Run the AI again on the blanks only, with wider sources. I would count the cost and show you first.",
+          "pros": [
+            "Fills many at once, with sources."
+          ],
+          "cons": [
+            "Costs money (the first run was $30.67).",
+            "The first pass already failed on these, so many will stay blank."
+          ]
+        }
+      ],
+      "words": true
+    },
+    {
+      "id": "D-12",
+      "words": true,
+      "surface": "People's answers",
+      "path": "How long a vote counts",
+      "headline": "Should old answers stop counting after a while?",
+      "today": "An answer counts forever unless the person changes it.",
+      "problem": "Apps change. If five people said No in 2026 and the project adds the feature in 2027, the mark stays No until enough new people outvote them.",
+      "proposal": "Pick whether answers age out. The comments stay visible either way.",
+      "options": [
+        {
+          "id": "year",
+          "label": "Count for 12 months",
+          "pros": [
+            "Marks follow the app as it changes.",
+            "A mark with no recent answers falls back to the researched one."
+          ],
+          "cons": [
+            "On a quiet site, marks people settled can quietly revert after a year."
+          ],
+          "recommended": true
+        },
+        {
+          "id": "forever",
+          "label": "Count forever",
+          "pros": [
+            "Simplest; nothing reverts by surprise."
+          ],
+          "cons": [
+            "Out-of-date answers hold marks down."
+          ]
+        }
+      ]
+    },
+    {
+      "id": "P-4",
+      "page": "Step 2: what the popup shows",
+      "intro": "The popup opens when someone taps a mark. You approved its layout in round 2; these three are about what it leaves out."
+    },
+    {
+      "id": "D-5",
+      "surface": "The popup on any mark",
+      "path": "Interface design → Compare → tap a mark with few answers",
+      "headline": "Should the popup show the question people are answering?",
+      "today": "The popup shows the feature's short name and the Yes / Partly / No buttons. The full question and what each answer means were cut in round 2, after your note about unnecessary copy. They still exist behind a tap on the column's name in the table.",
+      "problem": "Someone voting on \"Reusable components\" is not told that Partly means \"reusable parts, but no shared libraries\". People will vote on different meanings, and the average will mean little.",
+      "proposal": "Put the question back, as small as it can be.",
+      "options": [
+        {
+          "id": "question",
+          "label": "One line under the title",
+          "summary": "One added line, for this mark: \"Can you make parts that update everywhere when you change the original?\"",
+          "pros": [
+            "Voters know what they are answering.",
+            "One line; no new boxes."
+          ],
+          "cons": [
+            "Slightly more text in a popup you asked to be leaner."
+          ],
+          "recommended": true
+        },
+        {
+          "id": "full",
+          "label": "Question and meanings",
+          "summary": "The question plus what Yes, Partly and No each mean.",
+          "pros": [
+            "The most consistent votes."
+          ],
+          "cons": [
+            "Three more lines; closest to the round-1 popup you called busy."
+          ]
+        },
+        {
+          "id": "leave",
+          "label": "Leave it out",
+          "pros": [
+            "The leanest popup."
+          ],
+          "cons": [
+            "Votes are made on guesses."
+          ]
+        }
+      ],
+      "words": true
+    },
+    {
+      "id": "D-6",
+      "surface": "The popup on any mark",
+      "path": "The same popup, once 5 people have answered",
+      "headline": "After people's answer takes over, should the source link stay?",
+      "today": "Once 5 people answer, \"What we found\" disappears completely: the researched answer, the quote and the source link. You decided on Nov 3 that the AI's earlier answer should not be shown.",
+      "problem": "The most-voted marks become the only ones on the site with no source, on a site that promises a source for everything. A voter has nothing to check a claim against.",
+      "proposal": "Keep your decision about the AI's answer, and decide only about the link.",
+      "options": [
+        {
+          "id": "link",
+          "label": "Keep one source line",
+          "summary": "One small line, \"Source: github.com\", with no answer and no quote.",
+          "pros": [
+            "Every mark still has a source.",
+            "The AI's answer stays hidden, as you decided."
+          ],
+          "cons": [
+            "One more line in the popup."
+          ],
+          "recommended": true
+        },
+        {
+          "id": "hide",
+          "label": "Hide everything",
+          "summary": "As built.",
+          "pros": [
+            "Leanest popup; people's answer stands alone."
+          ],
+          "cons": [
+            "No evidence behind the busiest marks."
+          ]
+        }
+      ],
+      "words": true
+    },
+    {
+      "id": "D-7",
+      "surface": "The popup on any mark",
+      "path": "A project whose developer answered differently from people",
+      "headline": "What should happen when the developer's answer and people's answer disagree?",
+      "today": "Both sit in the popup, the developer's on top. The table shows people's. Nobody is told they differ.",
+      "problem": "That disagreement is the strongest sign an answer is wrong one way or the other: a developer overselling, or voters out of date. Today it passes silently.",
+      "proposal": "Pick what a disagreement triggers. Nothing new appears in the table in any option.",
+      "options": [
+        {
+          "id": "modlist",
+          "label": "Tell the mods",
+          "summary": "Disagreements appear on a short list in Mod tools.",
+          "pros": [
+            "The likeliest wrong answers get looked at.",
+            "Visitors see no extra marks or labels."
+          ],
+          "cons": [
+            "One more list for you."
+          ],
+          "recommended": true
+        },
+        {
+          "id": "nothing",
+          "label": "Nothing",
+          "summary": "As built.",
+          "pros": [
+            "Nothing to build or watch."
+          ],
+          "cons": [
+            "A known signal is thrown away."
+          ]
+        },
+        {
+          "id": "devwins",
+          "label": "Developer's answer wins",
+          "summary": "The table shows the developer's answer when there is one.",
+          "pros": [
+            "Developers know their project best."
+          ],
+          "cons": [
+            "Developers have every reason to say Yes.",
+            "Against your Nov 3 decision to keep their answer apart."
+          ]
+        }
+      ],
+      "words": true
+    },
+    {
+      "id": "P-5",
+      "page": "Step 2: moderation and size",
+      "intro": "What you would have to police, and how much gets built first."
+    },
+    {
+      "id": "D-8",
+      "surface": "Mod tools",
+      "path": "Signed in as a mod → Mod tools",
+      "headline": "Comments in the popups cannot be reported or moderated. Add that before the real server is built?",
+      "today": "Mod tools cover the older notes: held first posts, reported notes, \"it's fixed\" claims. Popup comments and \"What stopped it?\" comments have no Report button and never appear there.",
+      "problem": "There would be about 8,000 popups, each able to hold comments. A bad one is unlikely to be noticed by chance, and you could not hide it without me.",
+      "proposal": "Give every popup comment a Report button and put held and reported ones in Mod tools, with the same Hide / Approve / Ban buttons.",
+      "options": [
+        {
+          "id": "yes",
+          "label": "Report and mod list",
+          "pros": [
+            "You can act on a bad comment in one press.",
+            "Reuses the screen and buttons you already know."
+          ],
+          "cons": [
+            "A small Report button on each comment row.",
+            "More server work before step 2 can go live."
+          ],
+          "recommended": true
+        },
+        {
+          "id": "mods-only",
+          "label": "Mod list only",
+          "summary": "Held comments reach Mod tools; visitors cannot report.",
+          "pros": [
+            "No new button in the popup."
+          ],
+          "cons": [
+            "A bad comment from an older account stays until you stumble on it."
+          ]
+        }
+      ],
+      "words": true
+    },
+    {
+      "id": "D-9",
+      "surface": "Step 2 as a whole",
+      "path": "What the first real version includes",
+      "headline": "How much of step 2 should the first real version carry?",
+      "today": "The mock-up has four parts: Yes / Partly / No votes, comments, the developer's answer, and \"What stopped it?\". None has a real server yet.",
+      "problem": "All four together is roughly as much server work as half of what exists today. The developer's answer is the second-riskiest part, because it leans on project claims and has to vanish if a claim is revoked.",
+      "proposal": "Pick what ships first. Anything left out follows later; nothing approved is thrown away.",
+      "options": [
+        {
+          "id": "all",
+          "label": "All four",
+          "pros": [
+            "What you approved, in one go.",
+            "Comments and \"What stopped it?\" can share one store, so the fourth part is nearly free."
+          ],
+          "cons": [
+            "The longest wait before any of it is real."
+          ],
+          "recommended": true
+        },
+        {
+          "id": "no-dev",
+          "label": "Developer answer later",
+          "pros": [
+            "About a fifth less to build and test.",
+            "The riskiest identity checks wait until voting has proved itself."
+          ],
+          "cons": [
+            "Developers cannot respond to votes at first, which is when they will care most."
+          ]
+        },
+        {
+          "id": "votes-only",
+          "label": "Votes only",
+          "pros": [
+            "Smallest and safest; nothing to moderate."
+          ],
+          "cons": [
+            "A \"No\" with no reason teaches nobody anything.",
+            "Drops the part you asked for most: discussion on the page."
+          ]
+        }
+      ],
+      "words": true
+    },
+    {
+      "id": "P-6",
+      "page": "The code, and the order of work",
+      "intro": "Is it well built, what I would fix without asking, and what happens next."
+    },
+    {
+      "id": "D-13",
+      "words": true,
+      "surface": "The code behind the branch",
+      "path": "Is it well written, and should any of it be rebuilt?",
+      "headline": "The code works but is dense and thinly tested. How much should be cleaned before the server is built on it?",
+      "today": "Two independent reviewers read it. It runs, it matches how the rest of the site is written, and its safety basics are sound: everything people type is shown as plain text. But the page-building code packs whole tables into single 300-character lines, the gap rule exists twice with different wording, and the vote average, the gap rule and the data merge have no tests at all. Paid apps are tracked by their display name, so a rename silently loses their answers, and would lose their votes.",
+      "problem": "You would not see any of this until something broke: a renamed app with an empty row, or the table and Gaps page disagreeing. Step 2's server would be built directly on these weak spots.",
+      "proposal": "Pick how deep the cleanup goes before the real server is started.",
+      "options": [
+        {
+          "id": "targeted",
+          "label": "Fix what step 2 stands on",
+          "summary": "Permanent ids for paid apps, one shared gap rule, tests for the average, the gap rule and the merge, and the popup code brought under the existing safety test. About a day.",
+          "pros": [
+            "Renames stop losing answers and votes.",
+            "Mistakes in the rules get caught by tests, not by visitors.",
+            "Nothing changes on screen."
+          ],
+          "cons": [
+            "A day with nothing new to look at."
+          ],
+          "recommended": true
+        },
+        {
+          "id": "rewrite",
+          "label": "Rewrite the page-building code",
+          "pros": [
+            "Easier for any future session to change safely."
+          ],
+          "cons": [
+            "Several days, with a real risk of small visual differences on pages you already approved."
+          ]
+        },
+        {
+          "id": "leave",
+          "label": "Build on it as is",
+          "pros": [
+            "Fastest to step 2."
+          ],
+          "cons": [
+            "The weak spots get more expensive once real votes depend on them."
+          ]
+        }
+      ]
+    },
+    {
+      "id": "D-14",
+      "words": true,
+      "surface": "The whole branch",
+      "path": "Smaller faults I would simply fix",
+      "headline": "These faults have one right answer. I will fix them all unless you object.",
+      "changed": "1. The failing search test (the Bloomberg rename). 2. Signed out, tapping Yes or Post closes the popup and forgets what you tapped or typed; it should carry on after sign-in. 3. The popup cannot be used properly by keyboard or screen reader. 4. \"How we check\" says \"59 of 60 right\" as a plain fact; a sample of 60 cannot say that precisely, so it should say what was sampled. 5. A developer's answer should disappear if their claim is revoked, like their pitch does. 6. A leftover note and unused data from the \"Discontinued\" label you turned down.",
+      "notice": "Mostly nothing you would see, apart from items 2 and 4. None reopens a decision you have made.",
+      "yes": "Fix them all",
+      "no": "Let's talk first"
+    },
+    {
+      "id": "D-15",
+      "words": true,
+      "surface": "The whole branch",
+      "path": "The order of work from here",
+      "headline": "If you take my recommendations, this is the order of work. Does it suit you?",
+      "changed": "1. Cleanup day: the small fixes, the targeted code cleanup, the switch that hides step 2. 2. The quote check runs; you see the numbers. 3. Step 1 goes live on your word. 4. One round-3 deck for step 2: your three open look notes (the switch fill, a simpler \"From the developer\", \"What stopped people\" behind a button with cards) plus the popup changes you chose here. 5. The real server for step 2, with tests and a code review. 6. A final check, then step 2 goes live on your word.",
+      "notice": "You would be asked twice more: the round-3 deck, and each go-live. The branch stays open until step 2 ships; step 1 reaches the live site from it part-way through.",
+      "yes": "Good order",
+      "no": "Change the order"
+    }
+  ]
+}
